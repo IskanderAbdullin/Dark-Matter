@@ -42,8 +42,8 @@ def audit():
          "relative_error_to_independent_instantaneous_Q":
            x["delta_Echi"]/dt/Q-1
         }
-    assert cases["16"]["forward_reverse_order_heat_discrepancy_GeV4"]<
-           cases["4"]["forward_reverse_order_heat_discrepancy_GeV4"]
+    assert (cases["16"]["forward_reverse_order_heat_discrepancy_GeV4"] <
+            cases["4"]["forward_reverse_order_heat_discrepancy_GeV4"])
     common=evolve(g,expit(.15-g["Echi"]),expit(-.2-g["Ee"]),1e7,substeps=4)
     assert abs(common["delta_Echi"])<1e-12
     return {
