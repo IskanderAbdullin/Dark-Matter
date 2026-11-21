@@ -1,0 +1,77 @@
+{
+  "status": "sandbox independent massive e/positron Pauli contact submodel numerical results; source CI must be verified",
+  "model": {
+    "Mchi_GeV": 0.01,
+    "G_GeVminus2": 0.001,
+    "gchi": 4,
+    "ge": 4,
+    "Tchi_Te": 0.8,
+    "mu_chi": "Mchi−2Te",
+    "mu_e": 0,
+    "e_mass_GeV": 0.00051099895,
+    "nchi": 100,
+    "ne": 100,
+    "deltaE": "Te/4",
+    "q_gauss": 8
+  },
+  "massless_limit_kernel_GeV": 2.456342406703604e-8,
+  "physical_me_kernel_same_shell_GeV": 2.4563422097345406e-8,
+  "qkernel_time_reversal_max_relative_below": 1e-12,
+  "heat_ratios_at_temperature_MeV": [
+    {
+      "Te": 2,
+      "ratio": 0.994212376291954
+    },
+    {
+      "Te": 1,
+      "ratio": 0.9857076168864495
+    },
+    {
+      "Te": 0.5,
+      "ratio": 0.9650708821003501
+    },
+    {
+      "Te": 0.2,
+      "ratio": 0.8097483652349178
+    },
+    {
+      "Te": 0.1,
+      "ratio": 0.35563312147637677,
+      "Q0_GeV5": 3.789246904293354e-43,
+      "Qme_GeV5": 1.347581704618543e-43,
+      "independent_e_pair_density_ratio": 0.06755440983155972
+    },
+    {
+      "Te": 0.05,
+      "ratio": 0.0196814226282147,
+      "Q0_GeV5": 1.1224449117274713e-45,
+      "Qme_GeV5": 2.2091312684597504e-47,
+      "independent_e_pair_density_ratio": 0.0009855186856153485
+    }
+  ],
+  "convergence_at_T0p1MeV": [
+    {
+      "nodes": 60,
+      "ratio": 0.35934110466102226
+    },
+    {
+      "nodes": 80,
+      "ratio": 0.3557700912695196
+    },
+    {
+      "nodes": 100,
+      "ratio": 0.35563312147637677
+    },
+    {
+      "nodes": 140,
+      "ratio": 0.3556295062682874
+    }
+  ],
+  "negative": "Number-density suppression alone does not reproduce weighted χe energy-transfer suppression near pair threshold",
+  "limitations": [
+    "Only symmetric thermal e± at chemical potential zero; ordinary residual electrons after e+e- annihilation omitted",
+    "No electron annihilation, photon entropy, weak neutrino decoupling, thermal masses, UV mediator, SM gstar, Friedmann",
+    "Mchi/Te 5..200 benchmark not original BEST .1; 86-eV relic, BEC, Omega or CLASS not established"
+  ],
+  "class_ready": false
+}
