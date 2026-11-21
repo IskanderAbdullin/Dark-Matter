@@ -2,28 +2,28 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Remove modified Wpair by physically paired 5D invariant quadrature; independently converge nonlinear χ/e kinetic dynamics and finite SM e±/ν plasma",
-  "objective": "Current all-quartet physical 5D contact-derived finite χ/e evolution is a good invariant-preserving numerical research reference, but is NOT the original exact microphysics because raw outgoing bin projected W is not reciprocal and was pair-averaged. Derive microreversible quadrature or exact energy-resolved positive collision transfer without posthoc rate modification, then converge grid/angles/cutoffs/dt and couple realistic evolving SM species. Do not yet use as BEST gamma_el or 86-eV relic.",
+  "title": "Independently validate direct χe invariant q-kernel CI, then derive finite-me and gauge-consistent lepton heat and evolve nonthermal spectrum under cosmological background",
+  "objective": "Directly reciprocal physical χe massless-electron vector-contact 2->2 kernel is now integrated from invariant event measure and has no post-hoc Wpair, but finite energy-lattice collocation still has nonmonotone errors. First verify actual full scientific GitHub CI and fix regressions. Then make the lepton interaction physically valid through the e mass/threshold, SU2 neutrino and mediator domain and full finite-temperature charge/energy ledger. Only then can it be coupled to Yukawa 1↔2 BEST and FRW freezeout.",
   "prerequisites": [
-    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG",
-    "Check current branch HEAD/draft PR #1 and actual GitHub Actions for 4308d4, 9b9ed2, ab3fab and current checkpoint; repair CI failures first",
-    "Read PAULI-CHI-E-QUARTET-AUDIT.md, PAULI-QUARTET-NETWORK-TIME-AUDIT.md, 5D strong/weak reference, Wraw/Wpair asymmetry and single-quartet or all-quartet integrators"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and full GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG; confirm current draft PR #1 head/CI",
+    "Check CI for previous syntax-failing f172/916f and fixes bcd47b/a3aa0a, plus latest aa851; repair all failures before scientific claim",
+    "Read INVARIANT-CHI-E-ENERGY-KERNEL.md, microreversible_chie_lattice.py, verify_microreversible_lattice.py, results JSON, and independent nonlinear 5D weak/strong reference"
   ],
   "experiments": [
-    "Implement paired forward/reverse quadrature on identical Lorentz-invariant 2→2 event manifold, or rigorously controlled energy-resolved cell functions with exact detailed-balance weighting; never hide raw-to-sym changes",
-    "Converge microscopic rate tensor and physical χ/e energy exchange independently under δE, qmax/kmax, CM polar/azimuth and incoming angle; quantify Pauli-weighted leakage and false FD source of raw grid",
-    "Construct sparse paired event graph and test full nonlinear nonthermal fχ and fe, separate particle number, energy/entropy, Pauli and global equilibrium; use operator-splitting with symmetric Strang or coupled implicit time stepping and measured order/dt convergence",
-    "Benchmark each time-evolution χ/e heat spectrum against direct nonlinear full 5D continuum weak and strong Cχ(p), and directly test logarithmic/IR distortions and true physical collision eigenmodes",
-    "Introduce gauge-consistent lepton doublet eL,νL,eR portal and UV mediator/constraints; include finite electron masses, thermal screening, separate lepton temperatures/chemical potentials and physical gstarT",
-    "Only after finite SM physically calibrated microphysics combine pinned BEST χ1↔χ2+86eV φ Bose/Pauli, gstarS/gstarRho and Friedmann, evolve through actual freezeout and independently test Ω/CLASS",
-    "Record both confirmed and negative outcomes; update checkpoint, evidence, compact data and commit/push without force, immediately start next useful stage in active session"
+    "Independently check q-interval convolution normalisation and azimuth-averaged trace by numerical 5D and brute-force azimuth evaluations. Verify forward/reverse K equality to machine precision for many physical shell configurations and full Fermi entropy gain at arbitrary μχ,μe.",
+    "Run additional independent 5D Gaussian p,k/angle and 1D ℓ+3D energy collocation convergence at M/T=.1: energy h=.5,.25,.125 and smaller, electron cutoff, χ endpoint and transfer Gauss orders; preserve currently non-monotonic negative case.",
+    "Extend exact invariant two-body q-kernel to finite m_e=0.51099895 MeV and relevant e+e− number-changing/chemical freezeout processes, verify m_e→0 and T≪m_e suppression; include physical neutrino left-doublet channels and distinguish eL/eR and ν baths under EWSB.",
+    "Derive UV mediator/gauge-complete χ1–SM theory and valid temperature/momentum domain; tabulate actual thermal masses, SM plasma gstarRho(T)/gstarS(T), electron/positron chemistry, finite heat transfer and cosmological H.",
+    "With physical rates and finite lepton bath, couple time evolution of nonlinear χ distribution and χ1↔χ2+φ Bose/Pauli in pinned BEST without old phenomenological BGK. Independently verify qmin/qmax/dt/seed and energy/entropy conservation through genuine late freezeout.",
+    "Measure actual physical Ω_phi, BEC only if IR zero-mode cutoff stable, then CLASS/linear observables subject to correct perturbation equations and observational constraints; otherwise state falsification scope.",
+    "At each completed stage update checkpoint/evidence with quantitative positive and negative results, fast-forward commit+push (never force), begin next research stage inside current run."
   ],
-  "hard_acceptance": [
-    "No posthoc rate sym forced to fake microscopic local detailed balance; physically matched forward and reverse 5D quadrature",
-    "Global Pauli/number/energy/entropy plus q/dt/angular and independent nonlinear collision comparison, not just invariant tests",
-    "Genuine temperature-dependent SM heat and no hidden thermal reset or fixed bath",
-    "No unvalidated 86-eV DM, Ω, BEC, freezeout, CLASS or BGK gamma"
+  "acceptance": [
+    "Direct physically time-reversal paired on-shell kernel, no arbitrary Wpair or BGK; exact nonthermal χ/e particle/energy/entropy and Pauli, independent 5D normalisation",
+    "Quantitative h,ℓ,cutoff,dt convergence and error budget; nonmonotone finite-grid case included",
+    "Gauge/UV-valid real thermal lepton/e±/ν and finite SM heat, not one ideal massless electron-only sample",
+    "Physically evolved χ1+χ2+φ+SM to freezeout with independent BEST/FRW/observational validation before any 86eV relic/ΩDM/BEC/CLASS claim"
   ],
-  "constraints": "Public research branch draft PR only. No force/merge main, no user PC or Computer Use without separate explicit permission, small GitHub Actions artifacts.",
-  "fallback": "If exact positive finite-cell microreversible mapping infeasible, preserve counterexamples and derive rigorous cell-width error estimates or energy-resolved alternative, not artificial cosmological gamma."
+  "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
+  "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma."
 }

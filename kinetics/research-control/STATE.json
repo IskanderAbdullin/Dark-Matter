@@ -85,6 +85,11 @@
       "claim": "Global Pauli/χ,e charge/total energy/entropy exact conservation of finite-quartet Lie splitting demonstrates reliable time-dependent physical collision evolution",
       "finding": "Refuted: 1092-quad network, dt=2e6 GeV^-1, one-step forward/reverse order shifts dark energy 1.44282e-4 GeV4; with 16 substeps still 5.43e-6, while conserved N/E errors ~1e-15 and entropy remains positive. Underlying Wpair also changes raw 5D projection.",
       "evidence": "kinetics/results/paired-quartet-network-2026-11-21.json; kinetics/PAULI-QUARTET-NETWORK-TIME-AUDIT.md"
+    },
+    {
+      "claim": "Direct microreversible q-transfer kernel energy-collocation heat converges monotonically when dE is halved",
+      "finding": "Refuted at benchmark M=.1,Tchi=.9/1.1,Te=1,G=.001, Ecut22. Cold relative Q error h1 +1.083%, h.5 +.0172%, h.25 -.0886%, h.125 -.00202%. Hot h.25 -.0776%, h.125 -.00682%. Independent 5D Gauss n28 and direct q formula with Gauss n12; finite-grid sampling/tail effects cannot be ignored.",
+      "evidence": "kinetics/INVARIANT-CHI-E-ENERGY-KERNEL.md and kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json"
     }
   ],
   "physical_unknowns": [
@@ -99,8 +104,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Run physical paired 5D chi-e vector-contact event quadrature on adapted IR bins; compare raw bin-center detailed-balance defect, physical strong/weak heat and corrected projection bias. See FINITE-BIN-RECOIL-PROJECTION-CONTROL.md.",
-  "last_checkpoint_git_sha": "ab3fab09774e6faf9ccdcad571e3e15b11e0f40d",
-  "current_phase": "A: globally time-evolving finite χ/e energy-quartet lattice with actual 5D contact-derived Pauli rates but explicitly pair-averaged W; χ/e number and total energy/entropy/Pauli invariant, dt/Lie-splitting and raw nonreversibility errors measured; no unmodified physical Boltzmann or Bose cosmology",
+  "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
+  "current_phase": "A: directly symmetric (NO posthoc W averaging) Lorentz-invariant χ+e contact 2->2 four-phase-space to 1D q-transfer kernel and energy-collocated Pauli quartet nonlinear operator; both species evolve with bounded implicit pair splitting; high/low energy-grid and time convergence partial; realistic thermal SM/Bose cosmology not done.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -216,7 +221,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "All-quartet finite χ/e time integration respects fermionic charge, energy, entropy and Pauli only for an explicitly symmetrised **modified** discretised rate network; raw microscopic 5D finite-bin W is not reverse-paired. Strong dt/order errors remain despite machine-precision invariants. No physical elastic gamma, 86eV DM, BEC or CLASS.",
+  "physics_scope_warning": "Direct invariant energy kernel avoids prior posthoc W averaging on one fixed electron-only contact model; true continuum Boltzmann and real SM electroweak+thermal interactions, 1↔2 thermal Yukawa, H,gstar, freezeout, f_phi, 86eV ΩDM, BEC, CLASS remain UNVALIDATED. Report deliberately records nonmonotonic energy-collocation convergence. Old CI syntax failures have been patched but need a new green run.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -238,23 +243,23 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "commit": "ab3fab09774e6faf9ccdcad571e3e15b11e0f40d",
-    "title": "All-allowed-quartet χ/e nonlinear Pauli time dynamics and explicit Lie-splitting ordering error",
-    "code": "kinetics/paired_quartet_network.py",
-    "tests": "tests/test_paired_quartet_network.py",
-    "report": "kinetics/PAULI-QUARTET-NETWORK-TIME-AUDIT.md",
-    "results": "kinetics/results/paired-quartet-network-2026-11-21.json",
-    "benchmark": "M=.1GeV, G=.001GeV^-2, 14 χ and 17 e energy bins, spacing=.5GeV, angular n8; 1092 connected pairs, total dt 2e6GeV^-1",
-    "proof_scope": "discrete Pauli and conservation/entropy of PAIR-AVERAGED finite-bin physical scattering kernel, not continuum dynamics",
-    "measured": {
-      "dEchi_step1_GeV4": -0.05791998857306879,
-      "dEchi_step16_GeV4": -0.05565715218530509,
-      "order_defect_step1_GeV4": 0.00014428194398363736,
-      "order_defect_step16_GeV4": 0.000005431561680424579,
-      "initial_Qchi_GeV5": -4.9674741941066356e-8
-    },
-    "CI": "source ab3fab; verify actual run before marking success",
-    "limitations": "No genuine raw microreversible W; no dt/domain/full 5D nonthermal convergence, SM gauge completion, Bose FRW or relic"
+    "commit": "aa85131687cb041203230cfee5b0e0339c4a66a2",
+    "title": "Physical directly microreversible 1D transfer-quadrature kernel for full-Pauli χe 2->2 plus all-paired energy-lattice kinetic time stepping WITHOUT arithmetic reverse averaging",
+    "source": "kinetics/microreversible_chie_lattice.py",
+    "tests": "tests/test_microreversible_chie_lattice.py",
+    "report": "kinetics/INVARIANT-CHI-E-ENERGY-KERNEL.md",
+    "compact": "kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json",
+    "run": "kinetics/verify_microreversible_lattice.py",
+    "physical_scope": "electron-only massless vector contact Mchi=.1GeV, Te=1GeV, G=.001GeV^-2, full Pauli χ/e, no SM plasma or cosmology",
+    "independent_5D_cold_Q_GeV5": 1.9851492233308662e-8,
+    "direct_qkernel_h0p5_cold_Q_GeV5": 1.9854909200454386e-8,
+    "independent_5D_hot_Q_GeV5": -4.432408224385169e-8,
+    "direct_qkernel_h0p5_hot_Q_GeV5": -4.4331454779896726e-8,
+    "h0p125_rel_error_cold": -0.000020157798846232033,
+    "h0p125_rel_error_hot": -0.00006816712891244414,
+    "engineering_negative": "CI runs for 916f source and f172 benchmark initially failed on unmatched parentheses/multiline assertion syntax respectively; fixes bcd47b and a3aa0a already pushed. Check CI on current head before marking success.",
+    "scientific_negative": "Energy-lattice collocation h convergence not monotonic: .5→.25 error increases; .125 recovers <7e-5 against independent 5D. Distinct from true physical rate/UV completion.",
+    "CI_status": "pending for a3aa source fix / aa851 report at checkpoint; do not claim scientific CI success before actual result."
   },
   "last_projection_control": {
     "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
