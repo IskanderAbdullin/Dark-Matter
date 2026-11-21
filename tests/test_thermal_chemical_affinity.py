@@ -10,7 +10,8 @@ from scipy.integrate import quad
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"kinetics"))
 from thermal_chemical_affinity import (
-    thermal_1to2_spectrum, integrated_thermal_source, independent_2d_integrand, run,
+    thermal_1to2_spectrum, integrated_thermal_source, independent_2d_integrand,
+    independent_physical_energy_reference, run,
 )
 from onshell_collision_2d import vacuum_reference
 
@@ -93,3 +94,28 @@ def test_cli_report_not_misrepresented_as_BEST_or_cosmological_freezeout():
     assert len(record["cases"])==3
     assert record["vacuum_relative_error"]<1e-9
     assert "no full nonlinear time evolution" in record["warning"]
+
+
+
+def test_all_three_physical_energy_fluxes_from_original_2d_quantum_integrand():
+    r=independent_physical_energy_reference()
+    d=r["physical_energy_derivatives"]
+    assert math.isclose(d["phi"],.0006730451878862239,rel_tol=1e-7)
+    assert math.isclose(d["chi2"],.0011371530981677406,rel_tol=1e-7)
+    assert math.isclose(d["chi1"],-.0018101982860539644,rel_tol=1e-7)
+    assert abs(r["energy_conservation_residual"])<1e-8
+    assert abs(r["analytic_vs_independent_2d_phi_energy_error"])<1e-8
+    assert r["two_dimensional_original_quantum_factors_used"]
+
+
+def test_inverse_dominated_chemical_snapshot_reverses_all_energy_flows():
+    forward=independent_physical_energy_reference(mu1=-.15)
+    backward=independent_physical_energy_reference(mu1=-.25)
+    for k in ("chi1","chi2","phi"):
+        assert forward["physical_energy_derivatives"][k]*backward["physical_energy_derivatives"][k]<0
+    assert abs(backward["energy_conservation_residual"])<1e-8
+
+
+def test_energy_reference_rejects_chemical_potentials_too_big_for_cutoff():
+    with pytest.raises(ValueError,match="requires"):
+        independent_physical_energy_reference(mu1=10.)

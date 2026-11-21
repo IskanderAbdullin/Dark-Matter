@@ -99,6 +99,51 @@ def independent_2d_integrand(q,y,mass=.1,mu1=-.15,mu2=.1,mu_phi=-.3):
     return float(a*(1-f)*(1+b)-(1-a)*f*b)
 
 
+def independent_physical_energy_reference(mass=.1,g1=4,rest_width=1.,
+                                          mu1=-.15,mu2=.1,mu_phi=-.3):
+    """Independent original 2D gain-loss quadrature for all three energy rates.
+
+    Unlike the closed-form daughter y-integration this evaluates the
+    ACTUAL Bose/Pauli terms inside two nested adaptive quadratures.
+    Upper q=50 has exponentially negligible tail for |chemical mu|<=5.
+    It is a fixed-temperature source ledger, not FRW pressure work.
+    """
+    if max(abs(mu1),abs(mu2),abs(mu_phi))>5:
+        raise ValueError("Finite 50T energy quadrature requires |mu|<=5")
+    _=thermal_1to2_spectrum(.1,mass,g1,rest_width,mu1,mu2,mu_phi)
+    pref=g1*mass*rest_width/(2*np.pi**2)
+    def nested(q,kind):
+        if q<=0:return 0.
+        ymin=mass*mass/(4*q)
+        def integrand(y):
+            net=independent_2d_integrand(q,y,mass,mu1,mu2,mu_phi)
+            E=q if kind=="phi" else (y if kind=="chi2" else q+y)
+            return E*net
+        return quad(integrand,ymin,np.inf,epsabs=1e-10,
+                    epsrel=1e-9,limit=200)[0]
+    energies={}
+    for species,sign in (("phi",1),("chi2",1),("chi1",-1)):
+        flux=quad(lambda q:nested(q,species),0,1,epsabs=1e-10,
+                  epsrel=1e-9,limit=200)[0]
+        flux+=quad(lambda q:nested(q,species),1,50,epsabs=1e-10,
+                   epsrel=1e-9,limit=200)[0]
+        energies[species]=sign*pref*flux
+    analytic_phi=integrated_thermal_source(
+        mass,g1,rest_width,mu1,mu2,mu_phi)["phi_net_physical_energy_rate"]
+    residual=sum(energies.values())
+    if abs(residual)>1e-8 or abs(energies["phi"]-analytic_phi)>1e-8:
+        raise ArithmeticError("Direct 2D energy or analytical phi source is inconsistent")
+    return {
+        "physical_energy_derivatives":energies,
+        "energy_conservation_residual":residual,
+        "analytic_phi_energy_rate":analytic_phi,
+        "analytic_vs_independent_2d_phi_energy_error":energies["phi"]-analytic_phi,
+        "two_dimensional_original_quantum_factors_used":True,
+        "q_upper_cutoff_for_this_reference":50.,
+        "strictly_instantaneous_1to2_source":True
+    }
+
+
 def run():
     cases=[integrated_thermal_source(mu1=value)
            for value in (-.25,-.2,-.15)]
