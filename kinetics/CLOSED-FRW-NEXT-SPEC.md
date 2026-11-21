@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВАЯ ФИЗИЧЕСКАЯ ЭНЕРГЕТИЧЕСКАЯ ПРОВЕРКА:** [FRW-ENERGY-WORK-AUDIT.md](FRW-ENERGY-WORK-AUDIT.md) выводит ∂(ρ/T⁴)/∂x=(ρ−3P)/(xT⁴) для free massive χ1 и сравнивает независимый Gauss по q×x с прямой разностью энергий. В двух связанных split-решателях явно проверяется полный физический энергетический ledger: законная FRW работа + физическая ошибка collision shell + искусственная энергия q³-remap. Закрытие тождества ledger не равно нулевой физической ошибке и не означает окончательного FRW energy conservation.
+
+
 **СИММЕТРИЧНЫЙ ВРЕМЕННОЙ ЭКСПЕРИМЕНТ:** [STRANG-FRW-COMPARISON.md](STRANG-FRW-COMPARISON.md) реализует collision(x_left)/2 → q³ Liouville remap → collision(x_right)/2 и численно сравнивает 2→4 x-шагов с прежним Lie split. Отчёт независимо ведёт энергию двух collision half-steps, physical shell bias, pressure-work и remap error. Из-за неаналитической перестройки пороговых on-shell каналов второй порядок не гарантирован, допуск к CLASS закрыт.
 
 

@@ -59,6 +59,12 @@ class SymmetricFRWPilot(NarrowClosedFRWPilot):
                 phys_mid)
             state=afterstate
             after=self._charges(right,state)
+            phys_after=self.physical_rho(right,self.parent_edges[index+1],state,y)
+            physical_energy_ledger_residual=(phys_after-phys0-
+                collision_left_physical-free_energy_change-remap_error-
+                collision_right_physical)
+            if abs(physical_energy_ledger_residual)>1e-10:
+                raise ArithmeticError("Strang physical energy error decomposition failed")
             charge_error=max(abs(before[0]-after[0]),abs(before[1]-after[1]))
             if charge_error>1e-8:
                 raise ArithmeticError("Comoving number charges not conserved")
@@ -77,6 +83,9 @@ class SymmetricFRWPilot(NarrowClosedFRWPilot):
                 "right_collision_physical_shell_error":collision_right_physical,
                 "physical_free_expansion_energy_change":free_energy_change,
                 "numerical_remap_energy_error":remap_error,
+                "physical_energy_change_from_start_to_end":phys_after-phys0,
+                "physical_energy_ledger_residual":physical_energy_ledger_residual,
+                "collision_plus_remap_non_FRW_energy_error":collision_left_physical+remap_error+collision_right_physical,
                 "left_nfev":ca["nfev"],"right_nfev":cb["nfev"]
             })
         final=self.models[-1].moments(state)

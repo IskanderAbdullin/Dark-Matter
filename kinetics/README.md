@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**SEPARATE PHYSICAL WORK FROM NUMERICAL ERROR:** [FRW-ENERGY-WORK-AUDIT.md](FRW-ENERGY-WORK-AUDIT.md) validates free massive-mother x-derivative against independent q×x integrals and adds actual physical-energy endpoint differences/closure to both short FRW split schemes. Collision-shell and mother-remap defects are displayed rather than hidden as a falsely conserved FRW energy.
+
+
 **TIME-INTEGRATION ALTERNATIVE:** [symmetric collision–Liouville–collision split](STRANG-FRW-COMPARISON.md) compares step-refinement of the early moving-on-shell 3-species FRW pilot against the original Lie operator split. It supports regridding when mother energy-mode counts change and reports both collision-half energy errors and Liouville/remap errors. This does not yet certify time convergence or full FRW physical energy closure.
 
 

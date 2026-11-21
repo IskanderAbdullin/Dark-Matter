@@ -130,6 +130,11 @@ class NarrowClosedFRWPilot:
             remap_energy_error=(
                 self.physical_rho(nxt,self.parent_edges[step+1],state,xnew)-
                 self.physical_rho(m,self.parent_edges[step],after_collision,xnew))
+            phys_after=self.physical_rho(nxt,self.parent_edges[step+1],state,xnew)
+            physical_energy_ledger_residual=(phys_after-phys_before-
+                collision_physical_error-phys_free_redshift-remap_energy_error)
+            if abs(physical_energy_ledger_residual)>1e-10:
+                raise ArithmeticError("Physical energy error decomposition failed")
             charge_drift=max(abs(after[0]-before[0]),abs(after[1]-before[1]))
             if abs(collision_discrete_error)>1e-8 or charge_drift>1e-8:
                 raise ArithmeticError("Collision/remap charge or discrete energy violated")
@@ -147,6 +152,9 @@ class NarrowClosedFRWPilot:
                 "collision_physical_shell_energy_error":collision_physical_error,
                 "collisionless_FRW_energy_change":phys_free_redshift,
                 "finite_volume_remap_energy_error":remap_energy_error,
+                "physical_energy_change_from_start_to_end":phys_after-phys_before,
+                "physical_energy_ledger_residual":physical_energy_ledger_residual,
+                "collision_plus_remap_non_FRW_energy_error":collision_physical_error+remap_energy_error,
                 "min_fermion_occupation":float(min(f.min(),remapped.min())),
                 "max_fermion_occupation":float(max(f.max(),remapped.max())),
                 **counts

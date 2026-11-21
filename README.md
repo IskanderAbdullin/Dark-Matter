@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FRW physical-energy audit:** [independent massive-mother pressure-work integration](kinetics/FRW-ENERGY-WORK-AUDIT.md) verifies the exact collisionless identity d(rho/T^4)/dx=(rho-3P)/(x T^4) via separate q/x quadratures. Both left-endpoint and symmetric split-step solvers now explicitly close a telescoping physical-energy ledger: legitimate pressure work, physical collision-shell bias and numerical mother-remap drift remain separate. Zero ledger residual does NOT imply the full physical energy equation is solved or a CLASS-ready relic exists.
+
+
 **Symmetric early-FRW split diagnostic:** [Strang-type collision–Liouville–collision](kinetics/STRANG-FRW-COMPARISON.md) tests the same closed dynamically rebuilt 1↔2 networks as the left-endpoint Lie scheme and measures, rather than assumes, step refinement. Both half-collision discrete-energy errors, mother physical shell-energy defects, free FRW work, projection energy drift and two global comoving charges are tracked separately. Threshold nonsmoothness prevents an automatic second-order claim; no CLASS-ready relic is inferred.
 
 
