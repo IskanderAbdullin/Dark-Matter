@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Independent dynamic-convergence audit:** [source evolution versus static FD moment errors](kinetics/CUTOFF-AND-TIME-ERROR.md) shows the closed Bose number at tΓ=.001 shifts ~0.44% between high-energy cutoffs 8.5 and 10T even though initial mother FD number is already accurate to ~5.6e−6 fraction. Tightening BDF rtol reduces number changes to ~0.014%, so cutoff error currently dominates numerical time error. This is NOT a converged primordial PSD or CLASS result.
+
+
 **Major numerical advance:** [exact Schur-complement implicit BDF](kinetics/SCHUR-BDF-RESULTS.md) now evolves the invariant-clean closed 1↔2 network with >10,000 mother energy modes by eliminating their diagonal Jacobian block *only inside Newton linear solves*, not from physics. The short-time M1/T=.1 production number changes by 0.44% from upper mesh cutoff 8.5 to 10T despite initial mother thermal-density error below 1e-5, so the frozen spectrum remains unvalidated.
 
 

@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**QUANTIFIED SHORT-TIME CUTOFF ERROR:** [full dynamic 1↔2 cutoff/time audit](CUTOFF-AND-TIME-ERROR.md) and [reproducible script](cutoff_and_time_convergence.py) compare independent parent FD-number/energy/pressure error, BDF time error and actual closed boson source for Rmax 5/7/8.5/10T. Near Rmax=8.5→10 the source number changes by ~0.44%, while the initial mother number error is tiny; full shape/freeze-out still not demonstrated.
+
+
 **SCHUR-BDF PROGRESS:** [exact daughter-block Schur complement](SCHUR-BDF-RESULTS.md) accelerates unchanged closed nonlinear quantum kinetics: 299 daughters + 10,199 unique mother states. A four-grid full dynamical study (Rmax 5000/7000/8500/10000) finds significant cutoff dependence of tGamma=.001 Bose abundance despite independently well-converged mother FD moments. No physical primordial spectrum/CLASS approved.
 
 
