@@ -1,0 +1,40 @@
+name: Bose CLASS small-scale precision sweep
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/bose-smallscale-precision.yml'
+      - 'cosmology/precision_cutoff_scan.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  precision-sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Install CLASS and fixed scientific dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Analytic number/energy conservation for eight PSDs
+        run: python cosmology/precision_cutoff_scan.py --analytic-only --output outputs/precision_analytic.json
+      - name: CLASS precision sweep (power half-mode, mass scale, PSD coarse vs fine)
+        run: python cosmology/precision_cutoff_scan.py --output outputs/precision_Bose_cutoffs.json
+      - name: Archive both successful and diagnostic outputs
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: Bose-CLASS-eight-PSD-resolution-sweep
+          path: outputs/*.json
+          retention-days: 21
+          if-no-files-found: error
