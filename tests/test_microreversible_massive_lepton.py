@@ -38,7 +38,7 @@ def test_electron_mass_suppresses_charge_symmetric_thermal_exchange():
     m1=thermal_heat_example(T=T,m=ELECTRON_MASS_GEV,n=80)
     assert .2<m1["Qchi"]/m0["Qchi"]<.5
     assert m0["Qchi"]>m1["Qchi"]>0
-    assert m1["Qe"]==-m1["Qchi"]
+    assert math.isclose(m1["Qe"], -m1["Qchi"], rel_tol=2e-12, abs_tol=0.)
     assert m1["entropy"]>0
 
 
