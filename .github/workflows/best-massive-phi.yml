@@ -1,0 +1,95 @@
+name: Massive Bose daughter exact-source verification (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-massive-phi.yml'
+      - 'kinetics/best_massive_daughter_reference.py'
+      - 'kinetics/massive_daughter_decay_source.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-massive-public-research
+  cancel-in-progress: true
+
+jobs:
+  finite-mass-on-shell:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Minimal MPI and numerical dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install numpy scipy mpi4py vegas
+      - name: Strict independent BEST scientific source pin
+        run: |
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          mpirun -np 2 python -c 'from mpi4py import MPI; print("rank",MPI.COMM_WORLD.Get_rank(),flush=True)'
+      - name: Test two nonzero scalar masses at 2 independent q grid sizes
+        run: |
+          mkdir -p outputs
+          for phi in .001 .010; do
+            for n in 56 96; do
+              if [ "$n" = "56" ]; then samples=6000; else samples=18000; fi
+              echo "Independent BEST mphi=$phi q-grid=$n Vegas=$samples"
+              label=$(echo "$phi" | sed 's/\./p/')
+              mpirun -np 2 python kinetics/best_massive_daughter_reference.py \
+                --execute --best-root /tmp/best --mphi "$phi" \
+                --grid-n "$n" --neval "$samples" \
+                --output "outputs/best_massive_${label}_${n}.json" \
+                > "outputs/best_massive_${label}_${n}.log" 2>&1
+            done
+          done
+      - name: Report exact finite-mass spectrum and all species energy checks
+        run: |
+          python - <<'PY'
+          import glob,json,math
+          files=sorted(glob.glob("outputs/best_massive_*.json"))
+          assert len(files)==4,files
+          for f in files:
+              x=json.load(open(f))
+              assert x["external_BEST_actually_executed"]
+              assert x["actual_git_sha"]=="c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+              assert x["CLASS_ready"] is False
+              p=x["protocol"]
+              print("EXTERNAL MASSIVE",f,"mphi/M=",p["mass_phi"]/p["mass_chi1"],
+                    "q=",p["grid_n"],"Vegas",p["vegas_neval_per_grid_point"])
+              print("  relative number",x["relative_phi_number_rate_error"],
+                    "mother energy",x["relative_mother_energy_loss_error"],
+                    "phi energy",x["relative_phi_energy_rate_error"])
+              print("  total physical energy residual",x["total_three_species_physical_energy_residual"],
+                    "dR/dq RMS/peak",x["positive_q_shape_peak_normalized_rms_error"])
+              print("  qmin dfphi/dt",x["best_df_phi_dt_at_smallest_positive_q"],
+                    "analytic qmin",x["analytic_df_phi_dt_at_smallest_positive_q"],
+                    "analytic q=0",x["analytic_true_q0_occupation_source"])
+              assert all(math.isfinite(x[key]) for key in (
+                "relative_phi_number_rate_error",
+                "relative_phi_energy_rate_error",
+                "total_three_species_physical_energy_residual"))
+          print("VACUUM source only: this does not validate BEC, nonlinear FRW or CLASS.")
+          PY
+      - name: Retain actual third-party output for reproducibility
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-massive-phi-two-masses-two-grids
+          path: |
+            outputs/best_massive_*.json
+            outputs/best_massive_*.log
+          retention-days: 7
+          if-no-files-found: warn
