@@ -2,7 +2,7 @@
   "schema_version": 1,
   "updated_utc": "2026-11-22",
   "research_status": "in_progress",
-  "claim_status": "No validated physical 86-eV relic, BEC or CLASS prediction",
+  "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
   "branch": "research/kinetic-equilibrium-audit-20261121",
   "pull_request": "https://github.com/IskanderAbdullin/Dark-Matter/pull/1",
@@ -300,5 +300,13 @@
     "contact_relative_10pct_mV_over_pstar_min": 8.599263452297555,
     "CI": "not yet checked on new head",
     "class_ready": false
+  },
+  "latest_angular_control": {
+    "commit": "9355bf0dcbfa6da63ee397390114579d35dc77ec",
+    "report": "kinetics/FINITE-MEDIATOR-ANGULAR-CONTROL.md",
+    "script": "kinetics/finite_mediator_angular_control.py",
+    "local_result": "analytic vs composite Simpson 32768 subintervals, eight mV/p* cases, max absolute discrepancy approximately 7.4e-12",
+    "scope": "isolated t-propagator only, constant CM angular numerator; no physical 5D χe/χν rate or gamma_el",
+    "ci": "pending verification for new branch HEAD"
   }
 }
