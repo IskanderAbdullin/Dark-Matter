@@ -1,40 +1,39 @@
 {
   "schema_version": 1,
-  "status": "ready",
   "priority": 1,
-  "title": "Generalize relativistic Pauli 2-to-2 collision to arbitrary isotropic nonthermal chi distribution; verify finite-grid conservation and entropy",
-  "objective": "Extend full-invariant electron-vector χe strong Cχ(p) beyond two-temperature FD trial functions to interpolated arbitrary 0≤fχ(p)≤1, preserving full Pauli, correct Møller flux and inverse source. Test that phase-space truncation/interpolation does not masquerade as physical chemistry or heat. Build conservation/positivity-preserving kinetic discretization only after independent convergence.",
+  "status": "ready",
+  "title": "Implement positivity-preserving, number/energy-conservative quantum 2-to-2 time evolution for arbitrary chi distribution, then couple finite SM bath",
+  "objective": "Convert a verified instantaneous full Pauli collision source into a true time-evolving, number-conserving nonlinear χ momentum distribution with explicit finite SM energy transfer. Do not use naive clipped Euler, unverified global charge projection or ad hoc thermal reset. Build a conservative finite-volume spectral discretization and independent continuum reference before BEST integration.",
   "prerequisites": [
-    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL.md, STATE.json, NEXT_ACTION.json, EVIDENCE.md, BACKLOG.md",
-    "Inspect GitHub PR #1 head and Scientific verification for last commit eb9de58d and checkpoint",
-    "Read actual 5D thermal-FD weak/source in kinetics/relativistic_weak_form_2to2.py and reference JSON and all tests"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, all research-control files and current GitHub/PR Actions; check CI #44935768129",
+    "Examine kinetics/relativistic_nonlinear_fermion.py, relativistic_weak_form_2to2.py, JSON numerical cutoff/interpolation negative controls and tests",
+    "Reproduce analytic FD stationary vs PCHIP equilibrium false heat; quantify errors before changing discretization"
   ],
-  "experimental_design": [
-    "Implement a callable momentum-distribution source Cχ(p) with exact Pauli fχ(p), fχ(p') and both electron FD directions; no implicit thermal reset or post-step Gaussian projection",
-    "Provide shape-preserving PCHIP tabulation with explicit qmin=0, qmax tail/extrapolation policy, positivity guards, and robust nonlinear gain/loss when F~R",
-    "Recover analytical thermal FD Cχ(p)=0 at common T as a control even with arbitrary µχ; recover previous integrated thermal Qχ and independent rest test-particle recoil with matched pmax/kmax",
-    "Perturb fχ(p) away from FD with an explicit nonthermal shape; measure nonzero collision source, nonnegative integrated entropy ∫(F−R)log(F/R), and Qχ+Qe=0",
-    "Independently evaluate unsymmetrised Cχ(p) number and energy moments against weak symmetrised moments; scan p/k cutoffs and interpolation resolutions. Preserve negative leakage.",
-    "Do NOT substitute a BGK relaxation gamma before an actual linearized eigenmode and SM physics constraints; check UV cutoff and gauge-required bath species",
-    "Once evidenced, checkpoint/commit/push, immediately select next step in this research run"
+  "steps": [
+    "Derive eventwise χ redistribution between initial and final p cells with nonnegative interpolation weights in physical energy or volume ensuring discrete N and E moment and Pauli 0..1; electron receives minus exact χ energy",
+    "Choose finite-volume q^3 cell measures and collision quadrature consistent with BEST log-Simpson or an explicitly independent continuum reference; avoid hidden grid-weight mismatch like prior BGK bug",
+    "Construct a substep integrator with rates and adaptive dt that guarantees 0<=fχ<=1 and number N in the absence of true number-changing processes; test entropy production in a finite bath with heat transfer QSM=-Qchi",
+    "Verify thermal FD fixed point at common T without allowing PCHIP tail artifact or strong/weak mismatch to dominate; include exact analytic FD, perturbed FD, and truncation negative control",
+    "Run joint convergence for n_q, p/k cutoffs, angular quadrature, time dt and bosonic 1↔2 stiffness; quantify leakage, SM heat feedback and detailed balance",
+    "Only then decide whether to integrate this kernel into pinned independent BEST 1↔2+FRW in a fully physical portal model; separately require gauge/UV-complete lepton channels and realistic SM gstar/thermal masses",
+    "At each completed verified stage append evidence and negative findings, update checkpoints, commit+push with no force, immediately start next stage in active run"
   ],
   "acceptance": [
-    "Genuine 2-to-2 finite-T collision for arbitrary isotropic χ occupation, not just FD trial functions",
-    "Reproduces existing FD result to numerical integration tolerance on identical p/k domains",
-    "Finite-grid χ number and total χ+e heat residuals measured, not declared zero by construction",
-    "Pauli bounds, entropy sign, thermal fixed point, nonzero nonlinear source and interpolation convergence tested",
-    "No physical 86-eV relic, Γ(T), BEC, or CLASS-ready claims"
-  ],
-  "deliverables": [
-    "kinetics/relativistic_nonlinear_fermion.py and tests",
-    "new compact results and scientific report",
-    "checkpoint update, commit/push",
-    "next independent science task"
+    "Independent unprojected Nχ conservation and Qdark+QSM with physically correct discrete quadrature",
+    "Pauli bounds maintained in true integrator without clipping and without self-bath thermal resets",
+    "Thermal common-T stationary test and nonthermal relaxation with positive entropy on converged phase-space/time meshes",
+    "Reproduction compared to independent weak 5D reference, explicit finite-q tail and interpolation error below physics signal",
+    "No gamma_el, 86-eV dark matter, BEC or CLASS claims without further physical validation"
   ],
   "fallback": [
-    "If nonthermal quadrature too expensive, use controlled reduced kernel and record its failure domain",
-    "If interpolation pollutes equilibrium, preserve a quantitative negative control and fix with a measured interpolation study",
-    "If collisions violate discrete number, implement a conservative gain-loss finite-volume remap only after reproducing continuum reference"
+    "If finite-volume conservative interpolation impossible cheaply, derive exact pairwise energy-bin reaction network with provable invariants on a restricted kernel",
+    "If electrons can’t be coupled dynamically, record external-reservoir approximation honestly and do not claim full SM entropy conservation",
+    "If CI fails, repair before further scientific claims"
   ],
-  "do_not": "Do not use Computer Use/user PC without explicit approval, private-repo Actions, force push, merge main, hide failed numerics, or claim work between runs without scheduler."
+  "deliverables": [
+    "quantum conservative finite-volume collision solver and tests",
+    "compact convergence JSON and updated scientific report",
+    "checkpoint/commit/push and next research gate"
+  ],
+  "scope": "Public repo, draft PR, no merge/force push; no user PC or Computer Use without separate approval."
 }

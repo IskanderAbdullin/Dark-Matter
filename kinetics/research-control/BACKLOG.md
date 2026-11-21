@@ -59,3 +59,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative quantitative discretisation control**: at cutoff15 strong Cχ number drifts and independent strong/weak energy differs by −1.54%; enlarging to cutoff32 reduces discrepancy to ~1e−7. Do not declare conservation from weak-form algebra alone.
 - [ ] **Immediate next**: extend from FD-only trial to arbitrary nonthermal χ occupations; explicit q-grid interpolation, Pauli fχ′, sampled Cχ(p), independent number/heat/entropy tests, and a genuinely conservative finite-volume time step. Then decide if and when a BGK approximation is defensible.
 - [ ] Electron-vector EFT still incomplete: full gauge/UV completion, muon/neutrino channels at physical T, finite me, medium effects, thermal 1↔2 collision, realistic gstar/H, and 86-eV late relic remain unvalidated.
+
+## 2026-11-21 full-Pauli nonlinear distribution follow-up
+
+- [x] **Replace FD-only assumption with actual arbitrary isotropic fχ(p)** in invariant 5D e± collision, including incoming/outgoing χ and electron Pauli, reverse processes, strong Cχ(p), symmetric weak Q and instantaneous entropy rate. Analytic FD comparison passes locally (code [here](../relativistic_nonlinear_fermion.py), CI #44935768129 pending in checkpoint).
+- [x] **Quantify false heat due to thermal FD interpolation**: PCHIP81 at qmax34 produces spurious Q~−2.57e−12 GeV5 and entropy~6.55e−14; PCHIP641 residual Q~+6.62e−15, analytic FD ~1.39e−24. Preserve, do not turn these into physical thermalization signatures.
+- [x] Perturbed FD with nonthermal ε=.03/.06/.12 yields approximately linear heat and quadratic total-entropy production as ε→0. 5D quadrature and qgrid refinements recorded in [JSON](../results/relativistic-nonlinear-pauli-2026-11-21.json).
+- [ ] **Next**: genuine time-evolving, Pauli-bounded, number- and energy-conservative finite-volume collision network; 2-sector SM Q and independent weak-form tests. SM UV/gauge/thermal rates and cosmological goals still unmet.

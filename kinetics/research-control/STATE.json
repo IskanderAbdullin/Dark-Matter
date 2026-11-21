@@ -40,6 +40,11 @@
       "claim": "A truncated 5D strong Cchi(p) can be declared number/energy conserving simply because the paired weak Q is conservative",
       "finding": "Refuted: cutoff=15 strong/weak Q discrepancy -1.54131%, number residual -3.865e-11 GeV4; cutoff=32 reduces mismatch to ~1.34e-7 and number to 3.78e-15",
       "evidence": "kinetics/results/relativistic-pauli-weakform-2026-11-21.json"
+    },
+    {
+      "claim": "Tabulated exact FD χ at common T is automatically stationary under nonlinear Pauli collisions on finite q grid",
+      "finding": "Refuted on finite PCHIP/hard-cutoff samples: qgrid=81 yields false Q≈−2.57e−12 GeV5 and entropy≈6.55e−14; qgrid=641 reduces to 6.62e−15,4.70e−16; analytic FD Q≈1.39e−24",
+      "evidence": "kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json"
     }
   ],
   "physical_unknowns": [
@@ -55,8 +60,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
-  "current_phase": "A: actual 5D Pauli-blocked 2->2 thermal-FD weak collision moments and sampled strong Cchi(p) done for electron-only vector EFT; arbitrary nonthermal kinetics missing",
+  "last_checkpoint_git_sha": "27f02d6ab961bdf38fd448cd2bf1463b2f1f72d6",
+  "current_phase": "A: full 5D Pauli 2-to-2 thermal and generic isotropic nonthermal instantaneous chi collision source; finite-grid interpolation and domain convergence not fully controlled",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -116,7 +121,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "No general arbitrary-f chi elastic 2->2 kernel, no SM species beyond electron/positron, no gamma_el, no freezeout or CLASS-ready. Pauli-inclusive FD thermal weak-form completed only.",
+  "physics_scope_warning": "Arbitrary isotropic χ collision source now exists, but no positivity/charge-conserving time integration and no self-consistent SM; physical gamma_el, 86-eV freezeout, BEC, CLASS remain unproven.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -138,18 +143,18 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "commit": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
-    "title": "Deterministic 5D invariant full-Pauli weak heat and independent unprojected strong Cchi(p), with cutoff-induced nonconservation exposed",
-    "code": "kinetics/relativistic_weak_form_2to2.py",
-    "tests": "tests/test_relativistic_weak_form_2to2.py",
-    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935320673",
-    "ci_status": "success Python 3.11 and Python 3.13 scientific regression",
-    "benchmark": "kinetics/results/relativistic-pauli-weakform-2026-11-21.json",
-    "benchmark_scope": "mchi=.1 GeV, Tchi=.8 GeV, Te=1 GeV, G=.001 GeV^-2, gchi=ge=4; non-observational electron-only EFT",
-    "weak_Q_GeV5": 2.4742564595135925e-8,
-    "weak_refinement_n28_Q_GeV5": 2.4742562992682186e-8,
-    "sampled_strong_number_GeV4": 3.783694303000851e-15,
-    "finite_cutoff_negative": "cut15 strong-vs-weak energy -1.5413%, cut32 1.34e-7; physically significant quadrature/truncation error in insufficient domain",
-    "physical_limits": "No arbitrary nonthermal phase-space integration, electroweak completion, real gamma, SM heat dynamics or 86 eV relic"
+    "commit": "27f02d6ab961bdf38fd448cd2bf1463b2f1f72d6",
+    "title": "Nonlinear Pauli strong Cχ(p) and weak energy/entropy for arbitrary isotropic χ with thermal electron bath; quantitative PCHIP false equilibrium signal",
+    "code": "kinetics/relativistic_nonlinear_fermion.py",
+    "tests": "tests/test_relativistic_nonlinear_fermion.py",
+    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935768129",
+    "ci_status": "in_progress at checkpoint (verify outcome on restart)",
+    "benchmark": "kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json",
+    "benchmark_scope": "χ=.1 GeV, Te=1 GeV, G=.001 GeV^-2, e± massless, qgrid PCHIP, no time evolution, electron bath fixed",
+    "real_nonthermal_chi_heat_GeV5": 5.09255754922211e-9,
+    "real_nonthermal_entropy_GeV4": 1.7811569558373922e-10,
+    "negative_tabulated_thermal_spurious_Q_coarse_GeV5": -2.5734441249791985e-12,
+    "negative_tabulated_thermal_spurious_Q_fine_GeV5": 6.620492517038575e-15,
+    "limitation": "Single-time collision, no bath evolution or coupling to BEST, no physical relic"
   }
 }
