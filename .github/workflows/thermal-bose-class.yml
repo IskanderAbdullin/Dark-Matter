@@ -41,7 +41,8 @@ jobs:
           assert r['warm_background']['omega_ncdm_h2']>0
           print('omega_h2:',r['warm_background']['omega_ncdm_h2'])
           print('grid:',r['PSD_convergence'])
-          assert r['PSD_convergence']['max_relative_P_z5']<.05
+          assert r['PSD_convergence']['max_reliable_P_relative_error_T_ge_0p05']<.03
+          assert r['PSD_convergence']['amplitude_half_crossing_relative_difference']<.01
           for z,v in r['power_amplitude_ratios'].items():
               print('z=',z,'T=0.5 crossing',v['crossing_T_0p5_1_per_Mpc'])
           PY

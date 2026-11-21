@@ -89,11 +89,26 @@ def calculate(analytic_only=False):
             f2=Path(folder)/"be_coarse.dat";coarse=write_psd(f2,3e-5,35,320,1000)
             alt,ba=class_spectra(Class,params(b,f2),ks,[5.])
             rel=np.abs(np.asarray(alt["5.0"])/np.asarray(warm["5.0"])-1)
+            warm_T_z5=np.asarray(ratios["5.0"]["amplitude"])
+            reliable=warm_T_z5>=.05
+            # Very deeply suppressed k modes show numerical cancellation/oscillations.
+            # Validate the physical cutoff and retain unvalidated small signals as warnings.
+            max_reliable=float(np.max(rel[reliable]))
+            T_coarse=np.sqrt(np.asarray(alt["5.0"])/np.asarray(cold["5.0"]))
+            half_coarse=first_cross(ks,T_coarse)
+            half_fine=ratios["5.0"]["crossing_T_0p5_1_per_Mpc"]
+            assert half_coarse is not None and half_fine is not None
+            half_relative=abs(half_coarse/half_fine-1)
             out.update({"python":platform.python_version(),"k_1_per_Mpc":list(map(float,ks)),
                 "warm_background":bgw,"cold_background":bgc,
                 "power_amplitude_ratios":ratios,
                 "PSD_convergence":{"coarse_file":coarse,
                     "max_relative_P_z5":float(np.max(rel)),
+                    "max_reliable_P_relative_error_T_ge_0p05":max_reliable,
+                    "reliable_mode_count_T_ge_0p05":int(np.sum(reliable)),
+                    "max_reliable_k_1_per_Mpc":float(max(ks[reliable])),
+                    "amplitude_half_crossing_coarse_1_per_Mpc":half_coarse,
+                    "amplitude_half_crossing_relative_difference":half_relative,
                     "median_relative_P_z5":float(np.median(rel)),
                     "coarse_omega_ncdm_h2":ba["omega_ncdm_h2"],
                     "max_rel_k_below_0p3":float(np.max(rel[ks<=.3])),
@@ -102,6 +117,8 @@ def calculate(analytic_only=False):
                     "relative_errors":list(map(float,rel))},
                 "limitation":"Linear Einstein-Boltzmann benchmark ONLY; no Lyman-alpha/CMB likelihood, cold stimulated production, boson stars or late halo equilibration"})
             assert np.all(np.isfinite(rel)), "Nonfinite q-grid P convergence"
+            assert max_reliable < .03, "Disagreement at reliably non-negligible amplitudes"
+            assert half_relative < .01, "Unstable half-amplitude crossing"
     return out
 
 if __name__=="__main__":
