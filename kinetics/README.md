@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**NEW ANGULAR-QUADRATURE RESULT:** the previous Gauss–Legendre decay-angle nodes miss the soft daughter-momentum endpoint, making the cold-burst mean momentum angle-grid dependent. [Angular IR audit](ANGULAR-ENDPOINT-IR-AUDIT.md) and [log-daughter-energy integration](LOGQ-ANGULAR-QUADRATURE.md) give the analytic explanation and a substantially better convergent *surrogate* benchmark. These do not solve the physical parent-energy/inverse-kinetic gap.
+
+
 **ERRATUM 21 Nov 2026:** The separate-bin Bose/Pauli reaction rates break exact *physical* parent-event energy conservation despite the exact geometric barycentric projection. Original event-level detailed balance does not establish discrete-ODE equilibrium. See [the energy defect audit](ENERGY-PROJECTION-DEFECT.md), [the equilibrium audit](EQUILIBRIUM-AND-IR-AUDIT.md), and [the entropy-balanced finite-grid surrogate](ENTROPY-BALANCED-LATTICE.md). The original solver is preserved for reproducibility; its output is NOT a physical CLASS spectrum.
 
 

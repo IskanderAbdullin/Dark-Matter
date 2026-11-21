@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**New numerical finding:** finite Gauss–Legendre angle sampling misses the strongly backward-collinear soft-boson endpoint in the 1↔2 source. A verified change of variables to log daughter energy dramatically reduces angle-resolution bias in the *finite-lattice surrogate*, but does not remove its independent physical parent-energy defect. See [angular endpoint audit](kinetics/ANGULAR-ENDPOINT-IR-AUDIT.md) and [new log-q quadrature](kinetics/LOGQ-ANGULAR-QUADRATURE.md).
+
+
 **Research status update (2026-11-21):** A separate audit found that the historic 1<->2 kinetic benchmark's event-level detailed balance and geometric energy remap do **not** imply discretized equilibrium or physical nonlinear energy conservation. See [audits](kinetics/EQUILIBRIUM-AND-IR-AUDIT.md), [energy defect](kinetics/ENERGY-PROJECTION-DEFECT.md), and [an entropy-balanced lattice surrogate](kinetics/ENTROPY-BALANCED-LATTICE.md). The latter has exact lattice equilibrium and H-theorem but changes mother energy in the finite-grid statistical factor; it is NOT a validated cosmological production model.
 
 **Date:** 2026-11-21 | **Status:** substantive preliminary research, five preprint-style research drafts; not submitted or peer reviewed.

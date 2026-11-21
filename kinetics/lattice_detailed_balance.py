@@ -19,10 +19,17 @@ from one_to_two_fixed_bath import FlatThermalDecay
 
 
 class EntropyBalancedLattice:
-    def __init__(self, nq=100, np1=140, nmu=72, qmin=1e-5):
+    def __init__(self, nq=100, np1=140, nmu=72, qmin=1e-5, angular_rule="mu"):
         if not (0 < qmin <= 1e-5):
             raise ValueError("qmin outside supported (0,1e-5] interval")
-        k = FlatThermalDecay(nq=nq, np1=np1, nmu=nmu)
+        self.angular_rule=angular_rule
+        if angular_rule=="mu":
+            k=FlatThermalDecay(nq=nq,np1=np1,nmu=nmu)
+        elif angular_rule=="logq":
+            from logq_angular_quadrature import LogQDaughterKernel
+            k=LogQDaughterKernel(nq=nq,np1=np1,nmu=nmu)
+        else:
+            raise ValueError("angular_rule must be mu or logq")
         self.nq, self.qmin = nq, qmin
         if qmin != 1e-5:
             k.edges=np.geomspace(qmin,32.,nq+1)
@@ -36,6 +43,8 @@ class EntropyBalancedLattice:
         self.vol_b=k.phi_volume
         self.vol_f=k.chi_volume
         self.qcentre=k.qcentre
+        self.min_quadrature_daughter_q=float(min(k.qphi.min(),k.qchi.min()))
+        self.angular_normalization_error=getattr(k,"angular_normalization_max_error",None)
         rows=[];cols=[];fwd=[];rev=[]
         true_vac=float(np.dot(k.rateprefactor,k.parent_fermi))
         abs_vac_err=0.;abs_ener_err=0.;weighted_ener=0.
@@ -137,8 +146,8 @@ class EntropyBalancedLattice:
         return result
 
 
-def scenario(nq,np1,nmu,qmin=1e-5,integrate=True):
-    model=EntropyBalancedLattice(nq,np1,nmu,qmin=qmin)
+def scenario(nq,np1,nmu,qmin=1e-5,integrate=True,angular_rule="mu"):
+    model=EntropyBalancedLattice(nq,np1,nmu,qmin=qmin,angular_rule=angular_rule)
     checks=model.checks()
     assert checks["thermal_equilibrium_max_bin_rate"]<1e-11,checks
     assert abs(checks["daughter_number_rate_mismatch"])<1e-10,checks
@@ -146,7 +155,9 @@ def scenario(nq,np1,nmu,qmin=1e-5,integrate=True):
     assert abs(checks["dF_plus_entropy_production"])<1e-9,checks
     assert checks["vacuum_inward"] and checks["fermion_ceiling_inward"],checks
     return {
-        "grid":[nq,np1,nmu],"qmin":qmin,
+        "grid":[nq,np1,nmu],"qmin":qmin,"angular_rule":angular_rule,
+        "lowest_quadrature_daughter_q":model.min_quadrature_daughter_q,
+        "angular_normalization_error":model.angular_normalization_error,
         "true_parent_vacuum_rate":model.true_vacuum_rate,
         "lattice_surrogate_vacuum_rate":model.lattice_vacuum_rate,
         "relative_total_vacuum_rate_shift":model.relative_vacuum_shift,
@@ -156,13 +167,14 @@ def scenario(nq,np1,nmu,qmin=1e-5,integrate=True):
         "evolution":model.evolve() if integrate else None}
 
 
-def run(quick=False):
+def run(quick=False,angular_rule="mu"):
     configs=[(50,64,48)] if quick else [
         (50,64,48),(100,140,72),(150,180,96),(180,240,120)]
-    grid=[scenario(*dims) for dims in configs]
-    ir=[] if quick else [scenario(150,180,96,qmin=q) for q in (1e-6,1e-7)]
+    grid=[scenario(*dims,angular_rule=angular_rule) for dims in configs]
+    ir=[] if quick else [scenario(150,180,96,qmin=q,angular_rule=angular_rule) for q in (1e-6,1e-7)]
     return {
         "model":"Entropy-balanced finite lattice with EFFECTIVE mother energy at recipient-pair centres",
+        "angular_rule":angular_rule,
         "baseline":"ea6ec461997600d5f00bf244ea808607d40ef8dd",
         "physical_parent_energy_not_exact":True,
         "not_a_frw_or_class_initial_condition":True,
@@ -175,9 +187,10 @@ def run(quick=False):
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
     parser.add_argument("--quick",action="store_true")
+    parser.add_argument("--angular-rule",choices=("mu","logq"),default="mu")
     parser.add_argument("--output",default="outputs/entropy_balanced_lattice.json")
     args=parser.parse_args()
-    output=run(args.quick)
+    output=run(args.quick,args.angular_rule)
     path=Path(args.output);path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(output,indent=2,ensure_ascii=False),encoding="utf-8")
     print(json.dumps(output,indent=2,ensure_ascii=False))
