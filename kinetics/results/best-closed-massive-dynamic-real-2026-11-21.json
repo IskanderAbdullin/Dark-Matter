@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "run_id": 44918653040,
+  "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44918653040",
+  "artifact_id": 14713151018,
+  "real_independent_best_v1_3_5_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "actual_Mpi_ranks": 2,
+  "model": "closed three-species chi1 ↔ chi2 + massive phi, M1=.1, mphi=.001, mchi2=0, T=a=1, Γrest=1, no FRW or plasma, BEST quantum Bose/Pauli rates",
+  "source_commit_before_workflow": "97ba3c5fde605f238adc0708332ff3637866cbc2",
+  "initial_occupation_seed": "1e-12 exp(-q) for both daughters; initial number and energy included in all charge budgets",
+  "initial_numbers": {
+    "chi1": 0.36468332345244897,
+    "phi": 1.0132155180306309e-13,
+    "chi2": 4.052862072121848e-13
+  },
+  "initial_total_energy": 1.1506398648173843,
+  "massive_phi_qmin": 0.0001,
+  "all_experiments_total_tGamma": 0.00004,
+  "experiments": [
+    {
+      "method": "exprb",
+      "steps": 4,
+      "dt": 0.00001,
+      "neval": 3000,
+      "final_phi_n": 6.605260834953427e-7,
+      "final_qmin_f": 1.9506085855767674,
+      "final_n0": 3.238352316142815e-14,
+      "charge_phi_rel": 5.496126226512012e-10,
+      "charge_chi2_rel": -1.5294257447155829e-10,
+      "energy_rel": -4.15274250984087e-11,
+      "steps_series": [
+        {
+          "t": 0.00001,
+          "nphi": 1.649926969132667e-7,
+          "f_qmin": 0.31057583186533205,
+          "n0": 5.183438536467409e-15
+        },
+        {
+          "t": 0.00002,
+          "nphi": 3.300843008513192e-7,
+          "f_qmin": 0.7176112001302521,
+          "n0": 1.195793669006884e-14
+        },
+        {
+          "t": 0.00003,
+          "nphi": 4.952522415689642e-7,
+          "f_qmin": 1.2513865335035426,
+          "n0": 2.0811870547041678e-14
+        },
+        {
+          "t": 0.00004,
+          "nphi": 6.605260834953427e-7,
+          "f_qmin": 1.9506085855767674,
+          "n0": 3.238352316142815e-14
+        }
+      ]
+    },
+    {
+      "method": "exprb",
+      "steps": 8,
+      "dt": 0.000005,
+      "neval": 3000,
+      "final_phi_n": 6.605034557703245e-7,
+      "final_qmin_f": 1.9492274687051605,
+      "final_n0": 3.2383522776690826e-14,
+      "charge_phi_rel": 2.5828341582600816e-10,
+      "charge_chi2_rel": -1.5580745835884842e-10,
+      "energy_rel": -3.5570097173108156e-11
+    },
+    {
+      "method": "exprb_full",
+      "steps": 4,
+      "dt": 0.00001,
+      "neval": 6000,
+      "final_phi_n": 6.604758026407246e-7,
+      "final_qmin_f": 1.951200132649729,
+      "final_n0": 3.2383523442785796e-14,
+      "charge_phi_rel": -9.701241794380626e-11,
+      "charge_chi2_rel": -2.7804793330421068e-11,
+      "energy_rel": -5.180198733243988e-11
+    }
+  ],
+  "analytic_open_reservoir_early": {
+    "source_A_qmin": 27046.973477458418,
+    "predicted_exponential_f_qmin": 1.9502176258293882,
+    "predicted_below_qmin_number": 3.2705325738051216e-14,
+    "linear_vacuum_below_qmin_number": 1.818e-14,
+    "analytically_assumes_fixed_mother_and_empty_chi2": true
+  },
+  "diagnostics": {
+    "actual_closed_phi_n_more_than_vacuum_linear": 0.0010453275636141957,
+    "exprb_time_refinement_phi_rel": 0.00003425829921188672,
+    "exprb_time_refinement_phi_qmin_rel": 0.0007085457668645212,
+    "closed_versus_approx_f_qmin_rel": 0.00020046980511367885,
+    "closed_versus_approx_n0_rel": -0.009839454870454456
+  },
+  "scoped_claims": {
+    "real_external_kinetic_time_evolution": true,
+    "physical_total_energy_and_two_charge_residuals_measured": true,
+    "dynamic_massive_bose_zero_mode_N0_reported": true,
+    "early_local_exponential_approx_cross_checked": true,
+    "true_macroscopic_BEC_established": false,
+    "relic_86eV_or_CLASS_established": false,
+    "FRW_expansion_or_SM_heat_exchange_included": false,
+    "time_qmin_qmax_seed_convergence_established": false
+  },
+  "warning": "High accuracy of global charges/energy relative to initially huge chi1 is NOT equivalent to high relative accuracy of newly produced low-q phi; time-step and Monte-Carlo fluctuations remain."
+}

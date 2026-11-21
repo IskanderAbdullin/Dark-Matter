@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**REAL CLOSED NONLINEAR TIME EVOLUTION:** [BEST-CLOSED-MASSIVE-DYNAMIC.md](BEST-CLOSED-MASSIVE-DYNAMIC.md) and [persisted run](results/best-closed-massive-dynamic-real-2026-11-21.json) now record actual pinned third-party BEST χ1/χ2/massive φ evolution at fixed a=1 on 4 versus 8 time steps and exprb_full; corrected finite initial daughter seed 1e−12 exp(−q). qmin occupancy fφ≈1.9506 and zero-mode N0≈3.238e−14; [analytical frozen-bath Bose exponential](BEST-EARLY-BOSE-EXPONENTIAL.md) predicts 1.95022 and N0≈3.2705e−14, with measured ~0.02% and ~1% differences, not a physical condensate or FRW dark-matter spectrum.
+
+
 **DYNAMIC FULL 3-SPECIES BEST PILOT:** [BEST-CLOSED-MASSIVE-DYNAMIC.md](BEST-CLOSED-MASSIVE-DYNAMIC.md) is a pinned BEST MPI-protocol for actual evolution of massive phi + massless chi2 + massive chi1 with quantum inverse channels, separate zero mode n0, total physical energy and two conserved charges after each step, no external thermal bath or FRW. Includes fail-closed validation and explicit time-step/spectral convergence TODO; no macroscopic BEC inference from a single low-q occupation.
 
 

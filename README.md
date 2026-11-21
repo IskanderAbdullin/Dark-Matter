@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FIRST real finite-time closed massive Bose three-species run:** [pinned BEST MPI run #44918653040](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44918653040) evolves χ1↔χ2+φ with mφ/T=.001, full quantum Bose/Pauli, separate massive zero-mode N0 and physical 3-species energy. Corrected exponentially decaying initial daughter seed eliminates spurious UV number. [Complete quantitative time-series and controlled caveats](kinetics/BEST-CLOSED-MASSIVE-DYNAMIC.md), [persistent evidence](kinetics/results/best-closed-massive-dynamic-real-2026-11-21.json). At tΓ=4e−5, fφ(qmin)≈1.95061, n0≈3.238e−14, global energy conserved to ≲5e−11 relative; independent [early exponential source approximation](kinetics/BEST-EARLY-BOSE-EXPONENTIAL.md) predicts f≈1.95022 (0.020% difference). This is true kinetic stimulation but NOT cosmological BEC or frozen 86-eV DM.
+
+
 **NEXT REAL KINETIC STEP:** [independent BEST χ1↔χ2+massive φ CLOSED TIME evolution](kinetics/BEST-CLOSED-MASSIVE-DYNAMIC.md) now defines the actual positive-occupation parent and both daughters over short constant-a time with fully dynamical Bose/Pauli and a separately measured massive zero-mode n0. It will record independent number charges, physical energy and IR occupation after each finite dt, rather than extrapolating from an instantaneous snapshot. External actual time stepping and dt/qmin convergence still required; NOT FRW, DM relic or CLASS.
 
 

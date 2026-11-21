@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**РЕАЛЬНАЯ ЗАМКНУТАЯ НЕЛИНЕЙНАЯ ВРЕМЕННАЯ ЭВОЛЮЦИЯ ПОДТВЕРЖДЕНА ВНЕШНИМ BEST (пока H=0):** [BEST-CLOSED-MASSIVE-DYNAMIC.md](BEST-CLOSED-MASSIVE-DYNAMIC.md), [Actions #44918653040](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44918653040). После устранения постоянного искусственного high-q seed и перехода 1e−12 exp(−q), χ1, χ2, massive φ действительно развиваются во времени, два charges и полная энергия сохраняются до ~1e−10 относительно исходной большой матери. fφ(qmin=1e−4)=1.9506 на tΓ=4e−5, independent early exponential estimate1.95022; massive zero-mode N0≈3.238e−14 против приблизительных 3.271e−14. [BEST-EARLY-BOSE-EXPONENTIAL.md](BEST-EARLY-BOSE-EXPONENTIAL.md). НЕТ доказательства поздней конденсации и физической 86-эВ реликтовой Ω, нет FRW/H и SM entropy/Γ(T) — следующий приоритет.
+
+
 **МАССИВНАЯ 86-eV-LIKE φ ПРОВЕРЕНА НЕЗАВИСИМЫМ BEST НА INITIAL SOURCE:** [BEST-MASSIVE-DAUGHTER-REFERENCE.md](BEST-MASSIVE-DAUGHTER-REFERENCE.md), [Actions #44917857964](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44917857964), [JSON](results/best-massive-phi-real-2026-11-21.json). Для r=mφ/M1=.01 и .1 начальный mass-dependent source qφ/energy согласуется с точной двухчастичной кинематикой на 96-q/18000 samples до ~7e−6 relative по числу. Тонкий момент: qmin=1e−4 не равен нулю, и при r=.01 occupation source в qmin уже на ~1.08% отличается от q0. [MASSIVE-BOSE-IR-CELL.md](MASSIVE-BOSE-IR-CELL.md) интегрирует честную физическую фазовую меру: при dfφ(0)/dt≈26758 доля всех born particles ниже q=1e−4 всего 2.76e−8. Следующая задача: самостоятельная DYNAMICAL zero mode и self-consistent FRW/SM, не CLASS.
 
 
