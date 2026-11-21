@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FIRST independent non-equilibrium quantum source protocol:** [BEST finite-Bose, Pauli and reverse-decay check](kinetics/BEST-CHEMICAL-AFFINITY.md) can run real pinned BEST at common T but nonzero chemical affinity Δµ=.05 and compare all three number+energy rates and differential phi source against [a separate exact analytic/full-2D thermal quantum collision benchmark](kinetics/THERMAL-CHEMICAL-AFFINITY.md). Targets nphi dot=0.00085650272535, physical energies χ1 −0.00181019828605, φ +0.00067304518789, χ2 +0.00113715309817. Tests at this stage are protocol-only, not an executed non-equilibrium BEST run or a FRW relic.
+
+
 **ACTUAL independent 2×2 BEST physics result:** [real MPI/Vegas 28-versus-56 q-grid survey, energy and inverse-decay detailed balance](kinetics/BEST-FIRST-REAL-RESULTS.md), [permanent numerical evidence JSON](kinetics/results/best-independent-2026-11-21.json), [successful Actions run #44916394684](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916394684). On 56 q nodes, neval=12000, independent φ rate differs −0.0006303% and parent energy loss +0.0006258% from our analytic 1↔2 source; on 28 q nodes energy error is still ~+0.40%. Nonempty Bose+Pauli equilibrium sources cancel to net/gross ~2e−5 or better. This validates initial reference only, NOT a nonlinear frozen DM or CLASS result.
 
 

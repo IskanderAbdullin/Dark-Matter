@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВАЯ ВНЕШНЯЯ ПРОВЕРКА НЕЛИНЕЙНЫХ 1↔2 SNAPSHOTS:** [BEST-CHEMICAL-AFFINITY.md](BEST-CHEMICAL-AFFINITY.md) задаёт χ1↔χ2+φ при µ1=-.15,µ2=.1,µφ=-.3, то есть Δµ=.05 и nonzero Bose/Pauli/inverse rate. Аналитические независимые 2D эталоны Rφ=+0.00085650272535, dρχ1=-.00181019828605, dρφ=+.00067304518789, dρχ2=+.00113715309817, энергия=0, entropy production=ΔµR>0. Подготовлен опциональный pinned BEST MPI и mode-resolved comparator. Внешний non-equilibrium BEST ещё необходимо реально исполнить; не смешивать с FRW/CLASS.
+
+
 **РЕАЛЬНЫЙ ВНЕШНИЙ BEST 2×2 КРОСС-ЧЕК ВЫПОЛНЕН:** [BEST-FIRST-REAL-RESULTS.md](BEST-FIRST-REAL-RESULTS.md), [JSON чисел](results/best-independent-2026-11-21.json), [Actions #44916394684](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916394684). На n=56,neval=12000 совпадение интегрального источника и материнской энергии с аналитическим benchmark на 6.3e−6 относительного масштаба, но n=28 имеет энергоошибку ~0.4%. Ненулевое thermal equilibrium BEST gain/loss почти сокращается. Всё ещё НЕТ away-from-equilibrium Bose/Pauli независимой проверки, FRW full energy closure, true freeze-out f(q), BEC zero mode или CLASS; не выдавать early rate за физический реликт.
 
 

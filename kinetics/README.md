@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**AWAY-FROM-EQUILIBRIUM BEST PROTOCOL:** [best_chemical_affinity_reference.py](best_chemical_affinity_reference.py), [physics and instructions](BEST-CHEMICAL-AFFINITY.md) compare real pinned external 1↔2 Bose enhancement + fermionic Pauli + inverse decay against independently derived thermal-affinity exact R, 3 separate physical energy fluxes and entropy sign. Analytic reference verified by original 2D gain/loss quadrature; external non-equilibrium BEST run is not yet executed at this stage.
+
+
 **EXTERNAL BEST 2×2 GRID RESULTS:** [genuine independent number/energy/thermal detailed-balance measurements](BEST-FIRST-REAL-RESULTS.md) in public [successful GitHub Actions run](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916394684). With grid n=56 and neval=12000, phi number −6.30e−6 relative and parent energy +6.26e−6 relative to exact source, but at n=28 energy still biases +0.004. Equilibrium µ1=µ2+µphi shows net/gross χ1=2.36e−5, φ=2.34e−6, χ2=3.40e−6. [Long-lived machine-readable evidence](results/best-independent-2026-11-21.json). No independent-seed, late-time FRW or zero-mode validation.
 
 
