@@ -204,3 +204,8 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Analytically derive exact spacelike t-channel vector propagator correction and both relative-error conventions; record U(1)' charge constraint for χ1–χ2–φ Yukawa in [note](../FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md).
 - [ ] **Immediate:** insert finite-mV propagator into independent full-Pauli χe/χν 5D heat; verify with separate t quadrature, angular/cutoff convergence, split baths, thermal-tail bound and actual charge/mediator constraints. Analytic bound is not numerical validation or physical gamma_el.
+
+## Finite mediator angular diagnostic (21 Nov 2026)
+
+- [x] Independently validate exact isolated propagator angular integrals, including transport weighting and extreme mass ratios (analytic vs 32768-step Simpson; local test). This is **not** a full physical χe/χν rate; [report](../FINITE-MEDIATOR-ANGULAR-CONTROL.md).
+- [ ] Replace contact propagator in full 5D Pauli χe/χν collision, check independent t quadrature and thermal-tail convergence, gauge charge assignment, and real plasma heat history.
