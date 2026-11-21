@@ -1,0 +1,88 @@
+name: BEST real radiation-FRW massive Bose three-species pilot (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-frw-massive.yml'
+      - 'kinetics/best_radiation_frw_pilot.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-massive-frw-pilot
+  cancel-in-progress: true
+
+jobs:
+  pinned-independent-frw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install independent MPI/Vegas solver and verify exact Git SHA
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install numpy scipy mpi4py vegas
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+      - name: Run real closed radiation FRW at multiple time-step sizes
+        run: |
+          mkdir -p outputs
+          for item in "4 .00001 exprb 6000" "8 .000005 exprb 6000" "4 .00001 exprb_full 12000"; do
+            read -r steps dt method neval <<< "$item"
+            label=$(echo "$dt" | sed 's/\./p/')
+            out="outputs/best_frw_"$method"_"$steps"_"$label".json"
+            log=$(echo "$out" | sed 's/\.json$/.log/')
+            echo "Prescribed a(t)=sqrt(t/t0), t0=.0001, steps=$steps dt=$dt method=$method neval=$neval"
+            mpirun -np 2 python kinetics/best_radiation_frw_pilot.py \
+              --execute --best-root /tmp/best --t0 .0001 \
+              --grid-n 56 --neval "$neval" --steps "$steps" --dt "$dt" --method "$method" \
+              --output "$out" > "$log" 2>&1
+          done
+      - name: Report independent comoving charges and genuine FRW pressure-work residual
+        run: |
+          python - <<'PY'
+          import glob,json,math
+          files=sorted(glob.glob("outputs/best_frw_*.json"))
+          assert len(files)==3,files
+          for path in files:
+              d=json.load(open(path))
+              assert d["real_independent_BEST_FRW_executed"]
+              assert d["verified_best_git_sha"]=="c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+              assert not d["frozen_dark_matter_PSD_or_CLASS_ready"]
+              a=d["time_series"][-1]
+              print("FRW",path,"a_end",a["a"],"M/T",a["x_M1_over_T"],
+                    "new phi N",a["species_comoving_numbers"]["phi"],
+                    "zero mode N0",a["phi_massive_zero_mode_N0"])
+              print("  energy change",d["observed_total_comoving_energy_change"],
+                    "phys predicted pressure work",d["accumulated_expected_radiation_FRW_pressure_work"],
+                    "closure",d["independent_physical_energy_closure_residual"])
+              print("  relative charge1",d["relative_charge_chi1_phi_error"],
+                    "charge2",d["relative_charge_chi1_chi2_error"],
+                    "relative physical work error",d["relative_closed_FRW_energy_error"])
+              assert math.isclose(a["a"],math.sqrt(1.4),rel_tol=1e-12)
+              assert all(math.isfinite(d[k]) for k in (
+                "independent_physical_energy_closure_residual",
+                "relative_charge_chi1_phi_error",
+                "relative_charge_chi1_chi2_error"))
+          print("This is prescribed radiation FRW only; no SM-plasma or physical DM relic.")
+          PY
+      - name: Retain real BEST FRW series and negative logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-massive-3species-rd-frw
+          path: outputs/best_frw_*
+          retention-days: 7
+          if-no-files-found: warn
