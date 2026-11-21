@@ -2,15 +2,17 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate chiral ν lepton portal CI; replace contact with full t-propagator, physical ν/e plasma T histories, then χ1+SM",
-  "objective": "Candidate anomaly-free gauged Le−Lmu with vectorlike χ, e vector and νe/νμ chiral left channels leads independent γ5 spin-trace equality and 5D Pauli heat. Under equal ν/e T, Qν/Qe=1086 at T/me=.1 and ~1.185 at T/me=1 for contact and Mχ=.1me. Under illustrative Tν/Tγ=.7138 at Tγ=.1me and Tχ=.09me, Qν/Qe changes sign (~−512): single electron/SM BGK bath gives wrong sign in this counterexample. Check CI; next model full finite Z' propagator t, EFT validity, kinetic mixing/constraints and SU2L/χ1χ2φ field consistency. Evolve physical ν/EM heat/number, strong QED/χ kinetic with Pauli/Bose before estimating Γel/H or 86eV.",
+  "title": "Implement full finite-mediator 5D χe/χν Pauli heat; angular propagator control passed",
+  "objective": "Full finite-mediator Pauli 5D heat and angular/thermal-tail convergence are still unverified. Independent propagator-only analytic vs Simpson control passed at 8 mV/p* ratios (max abs discrepancy ~7.4e-12); this is NOT a physical χSM rate. Verify actual CI for 9355bf0, then complete 5D physical kernel and UV charge/thermal plasma consistency before gamma_el or 86-eV claims.",
   "prerequisites": [
+    "Run python kinetics/finite_mediator_angular_control.py (restricted propagator-only Simpson control, committed 9355bf0); do not confuse with physical χe/χν thermal heat.",
     "Verify branch and actual GitHub Actions on new chiral ν/e portal commit and prior nonthermal QED weak commit b571c1 (run #44958176219 was in_progress at last check).",
     "Run python -m pytest -q tests/test_lepton_portal_neutrino_heat.py tests/test_lepton_portal_split_bath.py tests/test_qed_pair_nonthermal_weak.py",
     "Reproduce fixed 5D equal-T ν/e heat at T/me=.1,1,10 (n20→28→36) and split-bath Qν sign for Tν/Tγ=(4/11)^(1/3) and Tχ=.9Tγ; never treat ideal Tν as actual decoupling.",
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Implement exact 1/(mV²−t)² in 5D χe and χν integrands, with existing angle-dependent spin trace and full Fermi gain/loss; compare contact limit and direct t quadrature, thermal-tail convergence and split ν/e baths.",
     "Derive exact spin/helicity summed χe and χν t-channel massive Z' propagator 1/(mZ'²−t), test mZ'→∞ contact against prior 5D massive e and ν and independent angular trace; quantify EFT failure and forward-peaking/cutoff errors, with controlled coupling and thermal masses.",
     "Check Le−Lmu mediator gauge/Higgs breaking, kinetic mixing and laboratory/BBN/Neff constraints; reconstruct actual χ1χ2φ symmetry consistency or find a model-compatible alternative; never claim this candidate is already the real portal.",
     "Derive and evolve realistic e±γν temperature/momentum chemical and energy histories (ν decoupling, photon reheating, weak channels, QED mass), attach χe/χν full Pauli nonthermal coupled collision and true spectral eigenvalue; then χ1→χ2+φ Bose+FRW and Ω/observational terminal gates.",
