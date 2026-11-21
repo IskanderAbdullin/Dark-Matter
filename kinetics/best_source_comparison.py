@@ -78,6 +78,10 @@ def inspect_record(data,rate_tolerance=.1,charge_tolerance=.1):
     return {
         "BEST_git_commit_verified":BEST_PIN,
         "mass_over_T":required["parent_mass_over_T"],
+        "rest_width":required["rest_width"],
+        "parent_dof":required["parent_dof"],
+        "qmin":required["qmin"],
+        "qmax":required["qmax"],
         "grid_n":required["grid_n"],
         "vegas_neval":required["vegas_neval_per_grid_point"],
         "raw_rates":rates,
@@ -115,12 +119,19 @@ def evaluate_records(records,rate_tolerance=.1,charge_tolerance=.1):
     at_least_two_grids=len(grid_values)>=2
     at_least_two_neval=len(neval_values)>=2
     all_success=all(x["single_record_passes_preliminary_criteria"] for x in checks)
-    preliminary=all_success and at_least_two_grids and at_least_two_neval and len(checks)>=4
+    same_physics=all((x["mass_over_T"],x["rest_width"],x["parent_dof"],
+                      x["qmin"],x["qmax"])==(
+                      checks[0]["mass_over_T"],checks[0]["rest_width"],
+                      checks[0]["parent_dof"],checks[0]["qmin"],
+                      checks[0]["qmax"]) for x in checks)
+    preliminary=all_success and same_physics and at_least_two_grids and (
+        at_least_two_neval) and len(checks)>=4
     return {
        "status":("PRELIMINARY SOURCE RATE AGREEMENT OF SUPPLIED BEST RECORDS"
                  if preliminary else "UNVERIFIED OR FAILING INDEPENDENT RATE EVIDENCE"),
        "records_checked":len(checks),
        "q_grid_sizes":grid_values,"vegas_samples_per_grid_values":neval_values,
+       "same_physical_decay_scenario_across_all_runs":same_physics,
        "multiple_independent_momentum_grids":at_least_two_grids,
        "multiple_monte_carlo_sample_counts":at_least_two_neval,
        "all_pass_individual_rate_and_number_checks":all_success,

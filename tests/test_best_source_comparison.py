@@ -124,3 +124,33 @@ def test_missing_or_nonfinite_external_energy_moments_rejected():
     b["instantaneous_integrated_energy_rates"]["chi2"]=float("inf")
     with pytest.raises(ValueError,match="ENERGY"):
         inspect_record(b)
+
+
+def test_mixed_physical_masses_or_widths_are_not_a_valid_grid_convergence_study():
+    records=[synthetic_fixture(n,neval)
+             for n in (80,120) for neval in (20000,50000)]
+    changed_mass=copy.deepcopy(records)
+    p=benchmark_protocol(mass_over_T=.2,grid_n=120,vegas_neval=50000)
+    target=p["independently_derived_vacuum_source_n_over_T3_per_time"]
+    e=p["independently_derived_total_daughter_energy_gain_over_T4_per_time"]
+    changed_mass[-1]["model_and_protocol"]=p
+    changed_mass[-1]["instantaneous_integrated_number_rates"]={
+        "chi1":-target,"phi":target,"chi2":target}
+    changed_mass[-1]["instantaneous_integrated_energy_rates"]={
+        "chi1":-e,"phi":e/2,"chi2":e/2}
+    r=evaluate_records(changed_mass)
+    assert r["all_pass_individual_rate_and_number_checks"]
+    assert not r["same_physical_decay_scenario_across_all_runs"]
+    assert not r["source_agreement_verified"]
+    changed_width=copy.deepcopy(records)
+    p=benchmark_protocol(rest_width=2.,grid_n=120,vegas_neval=50000)
+    target=p["independently_derived_vacuum_source_n_over_T3_per_time"]
+    e=p["independently_derived_total_daughter_energy_gain_over_T4_per_time"]
+    changed_width[-1]["model_and_protocol"]=p
+    changed_width[-1]["instantaneous_integrated_number_rates"]={
+        "chi1":-target,"phi":target,"chi2":target}
+    changed_width[-1]["instantaneous_integrated_energy_rates"]={
+        "chi1":-e,"phi":e/2,"chi2":e/2}
+    q=evaluate_records(changed_width)
+    assert not q["same_physical_decay_scenario_across_all_runs"]
+    assert not q["source_agreement_verified"]
