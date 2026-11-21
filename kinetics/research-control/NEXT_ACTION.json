@@ -1,40 +1,38 @@
 {
   "schema_version": 1,
-  "status": "ready",
   "priority": 1,
-  "title": "Independent linearized nonthermal Pauli χe collision eigenmodes and physically conservative finite-volume time integration",
-  "objective": "Compute the linearized full Pauli 2->2 χe kinetic operator around FD for independent nonthermal perturbations at fixed N, including correct tail/interpolation and discrete conservation; compare its eigenmodes to conditional γ_T,moment. Then build an actual quantum positivity/number/energy-preserving finite-volume evolution coupled to a finite SM bath. Do not confuse fixed-N thermal energy-moment rate with true kinetic thermalization or replace the old phenomenological BGK.",
+  "status": "ready",
+  "title": "Prove or bound the slow Pauli χe collision spectrum using nonpolynomial IR/UV packets and time-domain evolution; then add finite SM heat and realistic portal",
+  "objective": "The two-to-five FD polynomial logit Galerkin basis has no stable low spectral Ritz estimate; verify how far the true slow collision space extends and whether a positive spectral gap exists in physically relevant weighted function space, without equating Ritz, thermal-moment gamma or heavy NR drag with real χ kinetic thermalisation. In parallel construct an actual positivity- and number/energy-conserving finite-volume time evolution for nonthermal fχ and a finite SM bath.",
   "prerequisites": [
-    "Check PR #1 HEAD; verify GitHub Actions #44936484677 for e10b683 and repair failures",
-    "Read AGENTS, CONTINUOUS-RESEARCH-SPEC, GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG",
-    "Read kinetic codes relativistic_nonlinear_fermion.py, conservative_energy_projection.py, thermal_energy_relaxation.py, lepton_portal_chirality.py, full-Pauli 5D quadrature reference"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG",
+    "Verify all GitHub Actions incl commit bd776da and full PR HEAD; fix tests before scientific promotion",
+    "Read kinetics/LINEARIZED-PAULI-EIGENMODES.md, PAULI-RITZ-BASIS-AUDIT.md, higher_order_pauli_modes.py, nonlinear source and conservative event projection, full previous numerical data"
   ],
-  "detailed_plan": [
-    "Pre-register physically relevant perturbations δfχ(p)=FD(1−FD) h(E), including constrained zero-number modes, thermal-temperature mode and oscillatory/IR/hard-tail distortions. Derive linearized collision J around common Te, from exact F−R and independently from analytic entropy dissipation.",
-    "Build an exact-FD-preserving logit-energy basis that captures arbitrary small perturbations without PCHIP false equilibrium signal; quantify finite qmax and interpolation error.",
-    "Compute small kinetic response matrix for a finite basis of h(p), with actual 5D Pauli collision integrals and independent angular/q convergence. Verify electron detailed balance, number-conserving null mode, nonpositive entropy quadratic form, stable complex spectra within estimated quadrature error.",
-    "Project conditional temperature variation at fixed N onto J and check whether energy moment matches γ_T,moment≈3.03183e−7 GeV in the electron-only benchmark; document why this need not equal slowest eigenvalue.",
-    "Construct a finite-volume event-pair transfer discretization with nonnegative deposition and correct capacity/Pauli bounds. Distinguish the moment projector from a valid timestep. Prove number and energy/SM Q transfer and track entropy under explicit or implicit quantum-compatible integrator.",
-    "Validate dynamic step under dt, qmin,qmax,p/k/angle refinement and external BEST density conventions. Never rethermalize χ by free resetting. Add SM gstar and heat dynamical equation once physically justified.",
-    "Check channel completion: G_L=G_R pure-vector e implies ν_L channel; at T above EW symmetry, need a full mediator and thermal masses. Do not extrapolate 6/4 ratio into general cosmological epochs.",
-    "Record measured positive AND negative results in compact JSON, append evidence, checkpoint and commit/push fast-forward, continue automatically to next independent scientific bottleneck in same active execution."
+  "predeclared_falsification": [
+    "Numerically converged eigenvalues in n and cutoff do NOT imply basis convergence. Test nested polynomial dimensions beyond 5 and localized logit IR/hard-tail basis; record actual Ritz descent.",
+    "Check susceptibility and collision Dirichlet forms independently. Identify if rare high-E χ states have very weak relaxation in the full continuous EFT, and do not claim gapless/gapped without analytic bounds.",
+    "Compare linearized mode rates with early time exponential decays from directly integrated nonlinear Pauli source, after constructing a physical conservation/Pauli-preserving finite-volume timestep.",
+    "Check ν_L and e_L/e_R channel completion for G_L=G_R, distinct temperatures and effects of finite plasma mass, mediator cutoff and perturbativity; no universal constant correction over cosmic expansion."
+  ],
+  "steps": [
+    "Add 6+ mode orthogonal weighted basis with stable reorthogonalization or orthogonal-polynomial recurrence; independent continuous susceptibility and endpoint localization. Include IR and far-UV compact support/trial packets.",
+    "Study nested Ritz eigenvalues vs N, n_p/n_k/CM angle, p/k cutoff and precision; fix numerical-conditioning artifacts, treat true null number direction separately.",
+    "Build conservative transition network of positive χ occupancy (fermionic mode capacity) that deposits each event to radial energy nodes and transfers −Qχ to finite SM bath. Do not claim Pauli stability from moment conservation alone; prove or empirically verify upper bound and entropy.",
+    "Evolve at short and long times for analytically thermal and nonthermal initial states, verify true kinetic heating/cooling and near-equilibrium mode rates independent of initial state, time step, angular mesh and cutoff.",
+    "Only after microkinetic and SM-sector verification consider BEST coupled 1↔2 Bose-stimulated pilot and actual Γ(T), realistic H/gstar/freezing; no 86-eV Ω/BEC/CLASS claims."
   ],
   "acceptance": [
-    "Independent finite-dimensional linearized collision basis convergence and N fixed point at common T, explicit entropy quadratic form",
-    "Measured comparison of slow modes and FD thermal-energy moment with honest errors and no false gamma_el identification",
-    "Actual Pauli-bounded time step in physically weighted radial energy bins, with Qχ+QSM=0 and no hidden heat reservoir",
-    "Class_ready false and 86eV DM/BEC/Ω freezeout unproven until separate full cosmological/observational validation"
+    "No artificial FD PCHIP equilibrium source or hidden reservoir",
+    "Independent gamma_E and Ritz spectral vs actual nonlinear evolution comparison, quantitative uncertainty/basis limit",
+    "Particle number and energy/QSM ledger with correct mode volumes and genuine Pauli bounds in actual stepping",
+    "Explicit fixed SM bath vs finite SM bath and gauge/UV validity scopes separated",
+    "New results/negative cases saved compactly, CI checked, checkpoint/commit/push then next phase"
   ],
   "fallback": [
-    "Start with two independent nonthermal perturbation modes and exact-FD logit interpolation, then enlarge basis only when strong/weak and cutoff errors controlled",
-    "If full conservative network is too costly, prove an analytically closed limited collision subspace and explicitly tag approximations",
-    "If CI fails or branch concurrent update, repair/reconcile first, preserve checkpoint and no force pushes"
+    "If full true spectral analysis is too expensive, derive controlled rigorous variational bounds for one localized momentum packet and do not interpret as physical late cosmology",
+    "If finite-volume collision transfer fails conservation or quantum bounds, preserve counterexample and implement monotone bounded update with explicit collision-invariant accounting",
+    "If CI unavailable, record exact blocker, keep CLASS-ready false, do not pretend background execution"
   ],
-  "deliverables": [
-    "kinetics/LINEARIZED-PAULI-EIGENMODES.md",
-    "tests and numerical results for linearized kernel",
-    "quantum conservative finite-volume time integrator and tests",
-    "checkpoint and next science stage"
-  ],
-  "scope": "Public research branch/draft PR only. No merge or force-push, no user's computer without separate approval."
+  "prohibited": "User PC/Computer Use without approval, changing main, force-push, secret/huge artifacts, fake scientific success."
 }

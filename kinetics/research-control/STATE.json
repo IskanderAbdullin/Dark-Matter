@@ -50,6 +50,11 @@
       "claim": "Finite-PCHIP thermal FD state is a true equilibrium of arbitrary nonthermal collision operator",
       "finding": "Refuted by artificial Q and entropy; exact-logit-in-energy interpolator removes this spurious thermal equilibrium source on tested coarse q nodes",
       "evidence": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md and tests/test_conservative_energy_projection.py"
+    },
+    {
+      "claim": "2-mode lowest Galerkin Ritz collision rate has converged to actual physical slowest kinetic relaxation",
+      "finding": "Refuted: adding FD-number-orthogonal logit polynomials 3→5 reduces smallest Ritz eigenvalue from 2.12537e-7 to 1.32934e-7 GeV (−37.45%), while 5D n20→24 shift is only 1.93e-4 relative. The full spectral gap is unknown.",
+      "evidence": "kinetics/results/pauli-ritz-basis-scan-2026-11-21.json; kinetics/PAULI-RITZ-BASIS-AUDIT.md"
     }
   ],
   "physical_unknowns": [
@@ -64,8 +69,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "e10b683b746d8e891992e8f659a519399bf322b2",
-  "current_phase": "A: relativistic full Pauli chi-e nonthermal collision source, conservative weak event moment and exact FD fixed-point interpolation, conditional EW lepton completion and fixed-N thermal-energy response; genuine collision spectral eigensystem and time dynamics missing",
+  "last_checkpoint_git_sha": "bd776da0460024891ebc7b488b0a8f32a19b9840",
+  "current_phase": "A: full-Pauli relativistic χe contact kinetics and nonthermal linearized Galerkin; two-to-five mode eigenvalue basis sensitivity shows no demonstrated full kinetic gap; still no physical evolving SM+dark cosmology",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -136,6 +141,20 @@
       "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936484677",
       "ci_conclusion": "in_progress at checkpoint",
       "scope": "one conditional FD thermal-energy response only, NOT full nonthermal eigenmode or kinetic gamma_el(p,T)"
+    },
+    {
+      "stage": "Independent 2-mode Dirichlet energy/shape Galerkin for full Pauli χe scattering, susceptibility, nonlinear heat finite-difference check and slow mode differs from thermal-energy Rayleigh",
+      "sha": "2bcc2402ec1cfd1b04eb9ea7905c6f13339e07a1",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936880435",
+      "ci_conclusion": "success",
+      "scope": "Two finite-basis Ritz rates, not full kinetic eigenvalue spectrum"
+    },
+    {
+      "stage": "Enlarge orthonormal FD susceptibility polynomial basis from 2 to 5; independent matrix construction reproduces 2-mode and shows 37.45% additional slow Ritz drop",
+      "sha": "bd776da0460024891ebc7b488b0a8f32a19b9840",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936997870",
+      "ci_conclusion": "not checked at checkpoint",
+      "scope": "Finite 5-mode Galerkin only; source does not prove nonzero full spectral gap"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -146,7 +165,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "The available kinetic coefficient gamma_T,moment is only a conditional, fixed-N thermal FD energy response. It must NOT replace gamma_el(p,T) nor validate any physical relic. CLASS-ready remains false.",
+  "physics_scope_warning": "The fixed-N thermal energy moment gamma_T is not universal. Even the five-mode Ritz low rate is NOT a demonstrated full spectral gap; continuum may contain slower modes. No Pauli-stable physical time integration, evolving SM heat or validated 86-eV DM.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -154,8 +173,8 @@
     "enabled": true,
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
-  "last_verified_commit": "9db26c25f46475258658da6fbbfd47358d945036",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936289831",
+  "last_verified_commit": "2bcc2402ec1cfd1b04eb9ea7905c6f13339e07a1",
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936880435",
   "last_event_audit": {
     "date": "2026-11-21",
     "script": "kinetics/relativistic_elastic_audit.py",
@@ -168,17 +187,19 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "commit": "e10b683b746d8e891992e8f659a519399bf322b2",
-    "title": "Conditional number-conserving thermal energy-moment relaxation, with independent FD thermodynamic derivatives, rooted mu(T) and finite ΔT/5D q convergence",
-    "code": "kinetics/thermal_energy_relaxation.py",
-    "tests": "tests/test_thermal_energy_relaxation.py",
-    "report": "kinetics/THERMAL-ENERGY-RELAXATION.md",
-    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936484677",
-    "ci_status": "in_progress at checkpoint",
-    "scope": "Electron-only low-energy vector contact, M=.1GeV, Te=1GeV, G=.001GeV^-2, gchi=ge=4, isotropic FD manifold, SM fixed",
-    "fixedN_cN_GeV3": 0.9987065945621287,
-    "gamma_T_moment_delta_0p01_n24_GeV": 3.03184730596502e-7,
-    "gamma_T_moment_delta_0p005_n28_GeV": 3.0318273716675174e-7,
-    "warning": "Not full nonthermal linearized collision eigenvalue, not BGK, no SM energy feedback or 86eV relic"
+    "title": "Five-mode Galerkin Pauli quantum collision eigenvalue basis audit (negative: slow Ritz unconverged)",
+    "commit": "bd776da0460024891ebc7b488b0a8f32a19b9840",
+    "code": "kinetics/higher_order_pauli_modes.py",
+    "tests": "tests/test_higher_order_pauli_modes.py",
+    "report": "kinetics/PAULI-RITZ-BASIS-AUDIT.md",
+    "data": "kinetics/results/pauli-ritz-basis-scan-2026-11-21.json",
+    "rate_2mode_GeV": 2.1253713826752981e-7,
+    "rate_3mode_GeV": 1.7258656857910595e-7,
+    "rate_4mode_GeV": 1.490332342631409e-7,
+    "rate_5mode_GeV": 1.3293418514028327e-7,
+    "thermal_FD_energy_Rayleigh_GeV": 3.031821176217816e-7,
+    "n20_to_n24_fractional_5mode_shift": 0.0001929447459640965,
+    "ci_status": "not yet checked at checkpoint",
+    "scope": "conditional electron-only vector contact M=.1GeV T=1GeV G=.001GeV^-2; 5D finite quadrature and 5-mode finite Galerkin"
   }
 }
