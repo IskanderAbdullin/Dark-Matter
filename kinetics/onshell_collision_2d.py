@@ -134,6 +134,36 @@ class OnShellCollision2D:
         loss=B.data*b[B.row]*f[B.col]
         return float(np.dot(gain-loss,np.log(gain/loss)))
 
+    def moment_budget(self,y):
+        """Audit paired daughter number and on-shell parent reservoir energy.
+
+        The parent is FIXED, not dynamically evolved. This is an explicit
+        required energy transfer from the external thermal reservoir.
+        """
+        n=self.nq
+        b,f=y[:n],y[n:]
+        d=self.rhs(0,y)
+        a=self.forward.tocoo()
+        r=self.reverse.tocoo()
+        assert np.array_equal(a.row,r.row) and np.array_equal(a.col,r.col)
+        pair_rate=a.data*(1+b[a.row])*(1-f[a.col])-r.data*b[r.row]*f[r.col]
+        pair_numbers=float(np.sum(pair_rate))
+        pair_parent_energy=float(np.dot(pair_rate,self.e[a.row]+self.e[a.col]))
+        nphi=float(np.dot(self.vol_phi,d[:n]))
+        nchi=float(np.dot(self.vol_chi,d[n:]))
+        Ephi=float(np.dot(self.e*self.vol_phi,d[:n]))
+        Echi=float(np.dot(self.e*self.vol_chi,d[n:]))
+        return {
+            "reaction_number_rate":pair_numbers,
+            "phi_number_rate":nphi,
+            "chi2_number_rate":nchi,
+            "daughter_number_difference_rate":nphi-nchi,
+            "daughter_total_energy_rate":Ephi+Echi,
+            "on_shell_parent_reservoir_energy_loss":-pair_parent_energy,
+            "on_shell_energy_ledger_residual":Ephi+Echi-pair_parent_energy,
+            "caveat":"Parent thermal distribution is fixed; only its required energy exchange is diagnosed."
+        }
+
     def checks(self):
         d=self.rhs(0,self.equilibrium(-.3))
         equilibrium_error=float(max(np.max(abs(d[:self.nq]*self.vol_phi)),

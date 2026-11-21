@@ -79,3 +79,16 @@ def test_on_shell_burst_number_and_mean_momentum_have_partial_grid_convergence()
     assert b["nphi_over_T3"]>a["nphi_over_T3"]>0.3
     assert abs(b["mean_phi_q"]/a["mean_phi_q"]-1)<.03
     assert b["max_fermion_occupation"]<=1.000001
+
+
+def test_on_shell_pair_flux_energy_and_number_ledgers():
+    m=OnShellCollision2D(100)
+    # Nonthermal but physically admissible Bose/fermion occupations.
+    y=np.r_[0.1*np.exp(-m.e/.2),0.25*np.exp(-m.e)]
+    b=m.moment_budget(y)
+    assert abs(b["daughter_number_difference_rate"])<1e-11
+    assert abs(b["phi_number_rate"]-b["reaction_number_rate"])<1e-11
+    assert abs(b["chi2_number_rate"]-b["reaction_number_rate"])<1e-11
+    assert abs(b["on_shell_energy_ledger_residual"])<1e-11
+    assert abs(b["daughter_total_energy_rate"]+
+               b["on_shell_parent_reservoir_energy_loss"])<1e-11
