@@ -194,3 +194,31 @@ eta_NR = Q_rest/(3*T)
 ```
 
 The input `Q_rest` is computed by the **fully recoil-sensitive, Pauli-blocked** microphysical electron scattering integral in [microphysics_recoil_heat.py](microphysics_recoil_heat.py). This construction is a controlled *asymptotic Fokker–Planck matching*, not an exact 2→2 collision operator. The module refuses `M/T < 100` by default and explicitly marks any chosen threshold as an approximation requiring validation. In particular the historical early BEST benchmark `M/T=0.1` is **out of scope**: inserting `eta_NR` as its BGK `gamma_el` would be unphysical. A second independent high-mass asymptote plus numerical rest collision result gives a finite error estimate; an actual full momentum/thermal operator and moving-particle Pauli still need development before realistic relativistic plasma calculations.
+
+## Gauge-completion obligation: electron vector coupling forces a neutrino bath channel
+
+For a gauge-singlet Dirac χ1 and the benchmark low-energy vector electron portal `G (bar χ gamma χ)(bar e gamma e)`, a **minimal SM SU(2)_L×U(1)_Y-invariant contact EFT** using lepton flavour e above electroweak breaking instead has separate chiral coefficients:
+
+```text
+L_eff = (bar chi1 gamma_mu chi1) [
+       G_L (bar L_e gamma^mu L_e) + G_R (bar e_R gamma^mu e_R) ],
+L_e=(nu_eL, eL).
+G_V,e = (G_L+G_R)/2; G_A,e=(G_R-G_L)/2.
+```
+
+The original **pure electron vector** amplitude (no axial contribution) demands `G_L=G_R=G` in this minimal dimension-6 completion. The doublet coefficient **necessarily also couples χ1 to νe_L (and antineutrino right-helicity)** with `G_L`. Choosing `G_L=0` suppresses the neutrino interaction but yields a *right-chiral*, not pure-vector, electron interaction; one cannot simply omit ν while keeping the old same vector operator at high temperature.
+
+For a **massless common-temperature** ideal lepton plasma, unpolarized vector χ with zero e/ν chemical potentials, and no neutrino mixing/mediator/SM threshold effects, the parity-odd piece of the chiral lepton spin trace drops out when contracted with the symmetric χ vector tensor. Each massless active lepton helicity contributes the same angular form as the existing vector electron kernel. The conditional spin/charge counts are
+
+```text
+eL and positron partners: 2 G_L^2
+eR and positron partners: 2 G_R^2
+nu_eL and anti-nu_eR:      2 G_L^2
+electron-only total:      2 (G_L^2 + G_R^2)
+electron + nu_e total:    4 G_L^2 + 2 G_R^2.
+For G_L=G_R=G: ratio completed / electron-only = 6/4 = 1.5.
+```
+
+Thus, **conditional on exactly the same temperature/massless/statistics and contact scattering approximation**, the electron-only χ heat and transport collision frequency previously computed undercount that deliberately specified lepton completion by **50%**. This is a *conditional coupling-and-degeneracy identity*, not a physical thermalization rate, measured relic density, universal 1.5 boost at arbitrary temperatures, or a complete electroweak calculation. If left/right couplings differ, the electron current also has axial structure; if electron and neutrino baths have unequal temperatures, each needs its own collision operator, Q and entropy ledger; EW unbroken/symmetric plasma requires actual in-medium rates and finite g*. Electroweak completion does not establish the UV origin, mediator mass or collider/precision/neutrino bounds.
+
+Check [lepton_portal_chirality.py](lepton_portal_chirality.py) and [unit tests](../tests/test_lepton_portal_chirality.py) comparing the 6/4 conditional rate directly in the 5D weak-form kernel. Background primary references: [Neutrino portals to dark matter, Eur. Phys. J. C (2019)](https://link.springer.com/article/10.1140/epjc/s10052-019-7060-5) and [SM-gauge-invariant leptophilic effective operators, Chinese Physics C (2021)](https://doi.org/10.1088/1674-1137/abce50). The exact spin/count ratio above is a calculation in the displayed model and requires extension for any distinct underlying Lorentz structures.
