@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВЫЙ ВНЕШНИЙ BEST ПИЛОТ С НАСТОЯЩИМ FRW a(t):** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md) реализует условное a=sqrt(t/t0), t0=1e−4, M/T=.1, massive φ/T=.001, с полным dynamic three-species Bose/Pauli + zero-mode, без искусственной mother FD-reset. Два числовых комовинговых заряда и физический закон d(a⁴ρ)/dln a=a⁴(ρ−3P) независимо контролируются из реальных P(q,t), с явно измеренным residual и короткой dt-sensitivity. Это пока предписанный RD фон, не самосогласованная SM gstarS/heat+dark Friedmann и не CLASS 86eV реликт.
+
+
 **РЕАЛЬНАЯ ЗАМКНУТАЯ НЕЛИНЕЙНАЯ ВРЕМЕННАЯ ЭВОЛЮЦИЯ ПОДТВЕРЖДЕНА ВНЕШНИМ BEST (пока H=0):** [BEST-CLOSED-MASSIVE-DYNAMIC.md](BEST-CLOSED-MASSIVE-DYNAMIC.md), [Actions #44918653040](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44918653040). После устранения постоянного искусственного high-q seed и перехода 1e−12 exp(−q), χ1, χ2, massive φ действительно развиваются во времени, два charges и полная энергия сохраняются до ~1e−10 относительно исходной большой матери. fφ(qmin=1e−4)=1.9506 на tΓ=4e−5, independent early exponential estimate1.95022; massive zero-mode N0≈3.238e−14 против приблизительных 3.271e−14. [BEST-EARLY-BOSE-EXPONENTIAL.md](BEST-EARLY-BOSE-EXPONENTIAL.md). НЕТ доказательства поздней конденсации и физической 86-эВ реликтовой Ω, нет FRW/H и SM entropy/Γ(T) — следующий приоритет.
 
 

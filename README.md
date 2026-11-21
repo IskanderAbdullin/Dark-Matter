@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**First independently executable CLOSED 3-species BEST + RADIATION FRW pilot:** [conditional genuine expansion with pressure-work budget](kinetics/BEST-RADIATION-FRW-PILOT.md) uses a=sqrt(t/t0), massive χ1 and massive φ, zero-mode, comoving momentum coordinates, no mother FD reset, full quantum collisions, and checks d(a⁴ρ)/dln a=a⁴(ρ−3P) against an independent pressure quadrature. Both reaction number charges are audited. It is a prescribed RD test, not fully self-consistent SM heat/entropy/gstar, a physical 86eV relic, or CLASS.
+
+
 **FIRST real finite-time closed massive Bose three-species run:** [pinned BEST MPI run #44918653040](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44918653040) evolves χ1↔χ2+φ with mφ/T=.001, full quantum Bose/Pauli, separate massive zero-mode N0 and physical 3-species energy. Corrected exponentially decaying initial daughter seed eliminates spurious UV number. [Complete quantitative time-series and controlled caveats](kinetics/BEST-CLOSED-MASSIVE-DYNAMIC.md), [persistent evidence](kinetics/results/best-closed-massive-dynamic-real-2026-11-21.json). At tΓ=4e−5, fφ(qmin)≈1.95061, n0≈3.238e−14, global energy conserved to ≲5e−11 relative; independent [early exponential source approximation](kinetics/BEST-EARLY-BOSE-EXPONENTIAL.md) predicts f≈1.95022 (0.020% difference). This is true kinetic stimulation but NOT cosmological BEC or frozen 86-eV DM.
 
 

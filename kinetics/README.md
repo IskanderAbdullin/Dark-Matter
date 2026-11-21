@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**PHYSICAL FRW EXPANSION BENCHMARK, NOT JUST H=0:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md) sets BEST a(t)=sqrt(t/t0) for the entire dynamic χ1,χ2,massive φ/zero mode collision network. Independently computes P from q⁴/E physical quadratures, proper Ecom=a⁴ρ work law, 2 comoving charges, and all kinetic spectra. This is a fixed RD background without SM entropy exchange or backreaction and not yet a converged dark-matter freezeout.
+
+
 **REAL CLOSED NONLINEAR TIME EVOLUTION:** [BEST-CLOSED-MASSIVE-DYNAMIC.md](BEST-CLOSED-MASSIVE-DYNAMIC.md) and [persisted run](results/best-closed-massive-dynamic-real-2026-11-21.json) now record actual pinned third-party BEST χ1/χ2/massive φ evolution at fixed a=1 on 4 versus 8 time steps and exprb_full; corrected finite initial daughter seed 1e−12 exp(−q). qmin occupancy fφ≈1.9506 and zero-mode N0≈3.238e−14; [analytical frozen-bath Bose exponential](BEST-EARLY-BOSE-EXPONENTIAL.md) predicts 1.95022 and N0≈3.2705e−14, with measured ~0.02% and ~1% differences, not a physical condensate or FRW dark-matter spectrum.
 
 
