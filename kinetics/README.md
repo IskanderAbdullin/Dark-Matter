@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**EXACT INITIAL DIFFERENTIAL 1↔2 SOURCE:** [BEST-VACUUM-SPECTRUM.md](BEST-VACUUM-SPECTRUM.md) and [best_vacuum_spectrum.py](best_vacuum_spectrum.py) analytically compute dR/dq=g1*MΓ/(2π²)*log(1+exp[-q−M²/(4q)]) with exact maximum q=M/(2T)=.05 at m=.1. Independent integration returns original Rvac=.0164959084596. The external BEST runner records a pointwise reference and robust q-shape diagnostic, not an observed cosmological freeze-out.
+
+
 **REPRODUCIBLE PROGRESS MANIFEST:** [status document](RESEARCH-STATUS-2026-11-21.md) and [JSON audit trail](results/research-status-2026-11-21.json) enumerate this continuation's 14 Git commits, analytic vacuum number+energy benchmarks, fail-closed independent BEST protocol, 25.66% Lie x-step nonconvergence and missing full FRW energy closure. They explicitly prevent claiming verified physical DM or a CLASS-ready PSD.
 
 

@@ -67,6 +67,8 @@ def benchmark_protocol(mass_over_T=.1,parent_dof=4,rest_width=1.,
        "independently_derived_vacuum_source_n_over_T3_per_time":
            float(target*rest_width),
        "independently_derived_total_daughter_energy_gain_over_T4_per_time":float(energy_flux),
+       "analytic_initial_bose_differential_source_q_peak":mass_over_T/2,
+       "reference_differential_source":"g1*m*Gamma/(2*pi²)*log(1+exp[-q-m²/(4q)]), vacuum-only",
        "expected_parent_mean_energy_per_decay":float(energy_flux/(target*rest_width)),
        "analytic_energy_identity":"-d(rho_parent)/dt=M1*Gamma_rest*n_parent(T), because Gamma_lab=Gamma_rest*M1/E_parent",
        "continuum_source_normalization":
@@ -132,6 +134,10 @@ def execute_best(protocol,best_root,output):
         on_shell_energy=np.hypot(q,mass) if species=="chi1" else q
         energy_integrals[species]=float(
            dof/(2*np.pi**2)*np.dot(grid_weights(q)*q**2*on_shell_energy,collision))
+    from best_vacuum_spectrum import compare_best_phi_grid
+    vacuum_shape=compare_best_phi_grid(
+        np.asarray(best.r_grids["phi"],float),np.asarray(rates["phi"],float),
+        m_over_T=mass,g1=g1,rest_width=protocol["rest_width"],gphi=1)
     produced_phi=rate_integrals["phi"]
     target=protocol["independently_derived_vacuum_source_n_over_T3_per_time"]
     result={
@@ -141,6 +147,7 @@ def execute_best(protocol,best_root,output):
         "model_and_protocol":protocol,
         "instantaneous_integrated_number_rates":rate_integrals,
         "instantaneous_integrated_energy_rates":energy_integrals,
+        "instantaneous_phi_vacuum_differential_source":vacuum_shape,
         "reference_analytic_parent_energy_loss_magnitude":protocol["independently_derived_total_daughter_energy_gain_over_T4_per_time"],
         "relative_BEST_mother_energy_loss_error":-energy_integrals["chi1"]/protocol["independently_derived_total_daughter_energy_gain_over_T4_per_time"]-1,
         "total_all_species_energy_rate_residual":sum(energy_integrals.values()),

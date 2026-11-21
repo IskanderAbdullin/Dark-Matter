@@ -71,3 +71,9 @@ def test_analytic_energy_loss_scales_with_width_and_mother_degeneracy():
         b["independently_derived_total_daughter_energy_gain_over_T4_per_time"],
         2*a["independently_derived_total_daughter_energy_gain_over_T4_per_time"],
         rel_tol=1e-15)
+
+
+def test_thermal_vacuum_bose_source_peak_is_independent_of_statistical_cutoff():
+    p=benchmark_protocol()
+    assert p["analytic_initial_bose_differential_source_q_peak"]==.05
+    assert "vacuum-only" in p["reference_differential_source"]

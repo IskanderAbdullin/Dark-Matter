@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Independent pointwise Bose source benchmark:** [exact initial dRvac/dqφ and peak at q=M1/(2T)](kinetics/BEST-VACUUM-SPECTRUM.md) extends the external BEST comparison beyond integrated rates. At M1/T=.1 the empty-daughter thermal source peaks at q=.05 and is exponentially suppressed at deep q, while the later stimulated Bose population may be much colder. The optional BEST runner now returns its grid-level differential source and robust relative shape errors; external BEST has still NOT run.
+
+
 **Research snapshot / audit trail (2026-11-21):** [14 consecutive commits, negative FRW step-convergence finding, known kinetic/energy gaps, precise next tasks and independent BEST status](kinetics/RESEARCH-STATUS-2026-11-21.md); [machine-readable evidence manifest](kinetics/results/research-status-2026-11-21.json). New independent BEST v1.3.5 is identified, but has NOT been executed; the full 86-eV physical DM model, CLASS PSD and observational likelihood remain **unvalidated**.
 
 
