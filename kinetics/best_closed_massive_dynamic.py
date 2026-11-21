@@ -42,6 +42,7 @@ def dynamic_protocol(mphi=.001,nq=56,vegas_neval=6000,
         "status":"OPTIONAL CLOSED BEST FINITE-TIME KINETICS; NOT EXECUTED BY DEFAULT",
         "massive_initial_vacuum_protocol":base,
         "daughter_initial_occupation":1e-12,
+        "daughter_initial_seed_shape":"1e-12 * exp(-q), not constant across the UV momentum domain",
         "initial_mother":"Fermi-Dirac chi1 mass=.1 at T=1",
         "real_BEST_physics":"time evolving mother+phi+chi2 with Bose/Pauli and detailed balance",
         "static_scale_factor":1.,
@@ -75,9 +76,13 @@ def execute_best(best_root,output,p):
     model.initialize_species("chi1",lambda q:expit(-np.hypot(q,m)),
                              stat="fermion",mass=m,dof=phys["g_chi1"])
     seed=p["daughter_initial_occupation"]
-    model.initialize_species("phi",lambda q:seed,
+    # Do NOT seed a constant floor all the way to qmax: its q² phase
+    # volume would add artificially large initial daughter numbers.
+    # Exponentially decaying small occupations are positive everywhere,
+    # avoid BEST automatic reseeding, and carry ~1e-13 initial number.
+    model.initialize_species("phi",lambda q:seed*np.exp(-q),
                              stat="boson",mass=mph,dof=phys["g_phi"])
-    model.initialize_species("chi2",lambda q:seed,
+    model.initialize_species("chi2",lambda q:seed*np.exp(-q),
                              stat="fermion",mass=mchi,dof=phys["g_chi2"])
     bare_m2=phys["spin_summed_fixed_width_matrix_element_squared"]
     model.add_process(

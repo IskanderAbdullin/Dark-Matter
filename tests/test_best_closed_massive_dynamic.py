@@ -19,6 +19,7 @@ def test_default_dynamic_bose_bath_protocol_has_no_external_run():
     assert "NOT EXECUTED" in p["status"]
     assert p["not_a_physical_86eV_FRW_or_CLASS"]
     assert p["daughter_initial_occupation"]==1e-12
+    assert p["daughter_initial_seed_shape"].startswith("1e-12 * exp(-q)")
     assert p["static_scale_factor"]==1.
 
 
