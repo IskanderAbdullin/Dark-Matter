@@ -164,3 +164,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [ ] Verify CI for both new massive 5D and e± EOS reports and independent regressions; 5D run #44956695501 is now fully successful on Python 3.11 and 3.13; next EM EOS CI pending.
 - [ ] **P0:** finite charge-constrained C and e+e−↔γγ Pauli/Bose matrix-element/rate, photon entropy/energy and neutrino weak-sector ledger, evolving SM heat without bath reset; gauge-consistent χ electron/ν portal and full nonthermal χe kinetic eigenvalue, then actual Bose decay FRW with convergence. No Γel/86eV Ω/BEC/CLASS claims.
 
+## 2026-11-22 fixed-volume charge-constrained electron-pair heat
+
+- [x] Derive exact finite-charge susceptibility C_e±|nQ /T³ = B−D²/S from Fermi electron/positron variances and Cauchy–Schwarz; verify positive heat and independently finite-different ρ(T±1e−4T) with μ recalculated to keep **physical net charge** constant. [Audit](../FIXED-CHARGE-PAIR-CAPACITY-AUDIT.md), [tests](../../tests/test_fixed_charge_pair_capacity.py).
+- [x] **Negative:** at T/me=.025, illustrative η=6e−10, the electron-only fixed μ/T heat is ~1086 times the correct fixed-nQ electron heat, although photon heat still dominates total EM heat. Fast pair chemistry is a hypothetical closure, not established via annihilation rate.
+- [ ] Verify new scientific CI and reproduce small/large y, quadrature/cutoff, independent FD; resolve thermal asymptotic T≪me for realistic physical baryon charge.
+- [ ] **P0:** derive actual e−+e+↔γ+γ microscopic finite-T Pauli/Bose source and test forward/backward equilibrium, charge/energy/entropy, e± freeze-out, full photon+ν heat and UV-valid χe/eν before nonlinear χ+Bose FRW. No Γel/86eV Ω/BEC/CLASS claims.
+

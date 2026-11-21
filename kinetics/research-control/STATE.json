@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active launch has bounded scope; next step executable via NEXT_ACTION at new scheduled invocation. No continuous background work asserted.",
+  "stop_reason": "Bounded active run: next executable scientific step remains ready. Hourly scheduled task exists but this chat is not itself a background worker.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Verify new Actions for 52c35df massive 5D and for this EM EOS stage; then construct actual e+e−↔γγ finite-T Pauli/Bose charge/energy collision and microscopic χe+ν portal/SM finite bath. Maintain proper thermodynamic derivatives at conserved charge; no reset. See NEXT_ACTION.",
+  "instruction": "Check actual CI on new fixed-charge heat stage and previous e± EOS; then implement explicit e+e−↔γγ thermal collision with Bose/Pauli and charge+energy ledgers, finite photons/ν heat and UV/gauge-consistent χe portal; do not label any thermal response Γel.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "Independent massive χe 5D transfer verified for six conditional EFT thermal benchmarks; now isolated equilibrium massive e−e+γ thermodynamic/charge-neutrality reference, NOT actual coupled SM plasma or Γel.",
+  "current_phase": "Conditional finite-mass χe 5D/ℓ heat checked independently; finite e±γ equilibrium EOS/charge neutrality checked, now charge-CONSTRAINED finite-volume heat susceptibility. No microscopic e+e−↔γγ or weak ν plasma dynamics / no validated physical γel.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -274,17 +274,17 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "Massive equilibrium e−e+γ finite heat capacity and illustrative neutrality gate",
-    "status": "numerically_reproduced_in_sandbox; source_and_tests_staged; new_GitHub_CI_pending",
-    "source": "kinetics/em_pair_thermodynamics.py",
-    "test": "tests/test_em_pair_thermodynamics.py",
-    "report": "kinetics/EM-PAIR-THERMODYNAMICS-AUDIT.md",
-    "data": "kinetics/results/em-pair-thermodynamics-2026-11-22.json",
-    "assumptions": "free ideal QED gas, μe±=0 and fast pair chemical equilibrium for C; illustrative net background charge eta=6e-10 for neutrality test, NO dynamical annihilation",
-    "positive": "FD radial integrals match independent Bessel K1,K2 fugacity series to ~1e-14; finite-difference C at .1 me agrees within 1.35e-7; EM gstarR tends 5.5/2",
-    "negative": "Massless e± gstarR=5.5 grossly wrong at T/me=.1 where equilibrium EM gstarR=2.01546; neutral net electron charge at T/me=.025 requires μe−/T=13.8377 (illustrative η), and e+/e−≈9.57e-13",
-    "prior_5d_stage": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md; commit 52c35df574f2057a2f6cd8cc456bf72cfa10c783, FULL CI #44956695501 successful, 3.11 and 3.13 jobs.",
-    "limitations": "No e+e−↔γγ rate, neutrino/QED thermal corrections, finite chemical-energy susceptibility, actual χe-to-EM coupling time evolution, realistic UV/EW, γel, 86eV Bose relic, Omega, BEC, CLASS"
+    "name": "Charge-constrained electron-positron thermal susceptibility in a finite electromagnetic volume",
+    "status": "locally quantified with independent fixed-charge finite differences; source and regression staged; CI pending",
+    "source": "kinetics/fixed_charge_pair_capacity.py",
+    "test": "tests/test_fixed_charge_pair_capacity.py",
+    "report": "kinetics/FIXED-CHARGE-PAIR-CAPACITY-AUDIT.md",
+    "data": "kinetics/results/fixed-charge-pair-capacity-2026-11-22.json",
+    "formula": "C_e± at fixed nQ/T^3=B-D^2/S, where B=∫q²ε²(a+b)/π², D=∫q²ε(a-b)/π², S=∫q²(a+b)/π²; a,b respective Fermi variances",
+    "independent_test": "Solve μ± at T±0.0001 T preserving the SAME net physical charge density; finite difference of ρ reproduces Schur complement to <8e−7 at T/me=.025,.05,.1,1",
+    "negative": "At T/me=.025, illustrative η=6e−10, electron pair fixed-y B=2.5249865e−7 versus fixed-charge C_Q=2.3242674e−10 in T³ units; ~1086-fold electron-only overestimate, but photons dominate total EM C.",
+    "prior_eos_commit": "35570f1ee42edd665a40b25f8289700ee9c38896",
+    "limits": "Assumes fast e−e+↔γγ chemical equilibration but no microscopic rate; illustrative fixed-volume charge and no baryons, no ν, γel, Bose relic, 86eV, BEC, Ω, CLASS"
   },
-  "last_checkpoint_parent_sha": "52c35df574f2057a2f6cd8cc456bf72cfa10c783"
+  "last_checkpoint_parent_sha": "35570f1ee42edd665a40b25f8289700ee9c38896"
 }
