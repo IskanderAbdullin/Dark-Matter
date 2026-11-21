@@ -83,9 +83,9 @@
   "class_ready": false,
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Next: compute paired microphysical 5D χe bin-to-bin coefficients with correct state capacities, bath electron FD recoil and identical forward/reverse quadrature. Test local detailed balance and compare weak/strong heat before evolving finite bath; see kinetics/BIN-LOCAL-DETAILED-BALANCE.md.",
-  "last_checkpoint_git_sha": "8e0d5e63fda79331ea1270e88f10b2e261078b7d",
-  "current_phase": "A: analytic finite-bin local detailed-balance and entropy acceptance gate derived; physical 5D-to-bin rates and finite-bath time evolution still unimplemented. Existing localized IR Ritz bound remains conditional.",
+  "instruction": "Run physical paired 5D chi-e vector-contact event quadrature on adapted IR bins; compare raw bin-center detailed-balance defect, physical strong/weak heat and corrected projection bias. See FINITE-BIN-RECOIL-PROJECTION-CONTROL.md.",
+  "last_checkpoint_git_sha": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
+  "current_phase": "Converged synthetic continuous-event bin-center detailed-balance negative control; actual 5D chi-e physical paired-bin rates still missing.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -238,5 +238,12 @@
     "comparator_11_polynomial_Ritz_GeV": 8.564757722572995e-8,
     "ci_status": "in progress at checkpoint, verify actual GitHub run before marking success",
     "scope": "conditional broken-EW vector contact fixed FD e bath only, local Rayleigh upper bounds; no true continuous rate"
+  },
+  "last_projection_control": {
+    "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
+    "scope": "synthetic positive paired micro-event measure only; not physical chi-e kernel",
+    "relative_defect_width_0p8": 0.02277004610530553,
+    "relative_defect_width_0p05": 0.0000892844613802346,
+    "ci": "pending"
   }
 }
