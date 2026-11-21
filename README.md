@@ -1,4 +1,7 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
+
+**Research status update (2026-11-21):** A separate audit found that the historic 1<->2 kinetic benchmark's event-level detailed balance and geometric energy remap do **not** imply discretized equilibrium or physical nonlinear energy conservation. See [audits](kinetics/EQUILIBRIUM-AND-IR-AUDIT.md), [energy defect](kinetics/ENERGY-PROJECTION-DEFECT.md), and [an entropy-balanced lattice surrogate](kinetics/ENTROPY-BALANCED-LATTICE.md). The latter has exact lattice equilibrium and H-theorem but changes mother energy in the finite-grid statistical factor; it is NOT a validated cosmological production model.
+
 **Date:** 2026-11-21 | **Status:** substantive preliminary research, five preprint-style research drafts; not submitted or peer reviewed.
 
 ## Provenance

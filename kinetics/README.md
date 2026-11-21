@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ERRATUM 21 Nov 2026:** The separate-bin Bose/Pauli reaction rates break exact *physical* parent-event energy conservation despite the exact geometric barycentric projection. Original event-level detailed balance does not establish discrete-ODE equilibrium. See [the energy defect audit](ENERGY-PROJECTION-DEFECT.md), [the equilibrium audit](EQUILIBRIUM-AND-IR-AUDIT.md), and [the entropy-balanced finite-grid surrogate](ENTROPY-BALANCED-LATTICE.md). The original solver is preserved for reproducibility; its output is NOT a physical CLASS spectrum.
+
+
 **Status: controlled benchmark, 2026-11-21.** Unlike the preceding ad hoc f_alpha cosmology scans, this test explicitly solves a discretized momentum-dependent quantum-statistical collision source from a *specific decay* process studied by Wen Yin, JHEP 05 (2023) 180 https://doi.org/10.1007/JHEP05(2023)180, eqs. (2.2)–(2.4), (2.9)–(2.11), section 3. However it is NOT yet the full paper's numerical calculation: important simplifying physical assumptions are stated below.
 
 ## Reaction and exact checks
@@ -42,4 +45,4 @@ Related primary papers: Yin (2023) https://doi.org/10.1007/JHEP05(2023)180; Saku
 
 ### Verified run: correct collision factor and conservation
 
-The current [verified quantum-stimulated production benchmark](VERIFIED-QUANTUM-BURST.md) passed GitHub Actions #44892708035. Three grid resolutions conserve daughter number and discrete energy, enforce fermionic Pauli ceiling, and yield a >760-fold number enhancement with over 99.8% of produced bosons having p/T<0.1 in this fixed-T fixed-source laboratory. Its integrated number shows ~1.06% grid spread; the mean boson momentum ~21.8% grid spread. Therefore the detailed spectrum **is not yet ready as CLASS input**, despite the robust qualitative burst. This separation of mathematical code validity and physical predictivity is intentional.
+The current [verified quantum-stimulated production benchmark](VERIFIED-QUANTUM-BURST.md) passed GitHub Actions #44892708035. Three grid resolutions conserve daughter number and enforce the fermionic Pauli ceiling, but the nonlinear operator does NOT exactly conserve physical parent-event energy, and yield a >760-fold number enhancement with over 99.8% of produced bosons having p/T<0.1 in this fixed-T fixed-source laboratory. Its integrated number shows ~1.06% grid spread; the mean boson momentum ~21.8% grid spread. Therefore the detailed spectrum **is not yet ready as CLASS input**, despite the robust qualitative burst. This separation of mathematical code validity and physical predictivity is intentional.
