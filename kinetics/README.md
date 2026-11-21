@@ -38,3 +38,8 @@ Related primary papers: Yin (2023) https://doi.org/10.1007/JHEP05(2023)180; Saku
 
 
 **Improvement (energy-conserving projection):** Instead of interpolation in log momentum, the discrete 1↔2 event is deposited barycentrically between the *exact momentum-shell mean energies* q̄ᵢ=(3/4)(q_hi⁴−q_lo⁴)/(q_hi³−q_lo³). This gives E_phi,event and E_chi2,event exactly after deposition, for every quadrature event inside the grid, while still matching parent energy E1 event by event. A numerical unit check enforces a maximum daughter projection error below 10⁻¹² in dimensionless energy. The gain/loss reaction is evaluated at all four receiving bin pairs and stiff BDF time stepping enforces positive occupations and Pauli ceiling. These are numerical **conservation** properties for the flat, fixed-mother-bath model, not the cosmological energy budget; the external mother χ1 reservoir is not evolved. The detailed f(p) remains grid-sensitive until an independent momentum-resolution study passes.
+
+
+### Verified run: correct collision factor and conservation
+
+The current [verified quantum-stimulated production benchmark](VERIFIED-QUANTUM-BURST.md) passed GitHub Actions #44892708035. Three grid resolutions conserve daughter number and discrete energy, enforce fermionic Pauli ceiling, and yield a >760-fold number enhancement with over 99.8% of produced bosons having p/T<0.1 in this fixed-T fixed-source laboratory. Its integrated number shows ~1.06% grid spread; the mean boson momentum ~21.8% grid spread. Therefore the detailed spectrum **is not yet ready as CLASS input**, despite the robust qualitative burst. This separation of mathematical code validity and physical predictivity is intentional.

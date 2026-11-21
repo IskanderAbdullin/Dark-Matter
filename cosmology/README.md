@@ -41,3 +41,8 @@ Store both sqrt(P_Bose/P_CDM), a shape normalized at the smallest sampled k, a p
 ### New verified nonthermal shape sensitivity scan
 
 [Verified 86-eV toy colder PSD CLASS results](COLDER-CLASS-RESULTS.md) calculate four positive phase-space distributions with identical particle mass and number density but momentum scales alpha=1,0.5,0.3,0.1. They shift the linear z=5 half-amplitude k from 0.433 to 2.870 inverse Mpc, **without any claim** that such nonthermal distributions can be physically generated. The analytic distribution scaling was separately checked. Only the alpha=1 benchmark has a systematic fine/coarse PSD precision check at present.
+
+
+### Latest confirmed cold+hot primordial population experiment
+
+The [ten-case CLASS hot-tail calculation](VERIFIED-HOT-TAIL-CLASS.md) holds mass 86 eV and present dark-matter abundance fixed, and varies both cold momentum scale α (.01 or .02) and primordial hot *particle-number fraction* w (0,1%,5%,10%,20%). The 20% hot tail moves the power-half geometric mass upward by ~585-fold for α=.01 and ~171-fold for α=.02. Six key cases have independent high-resolution PSD-grid comparisons. This is phenomenology, **not** the non-equilibrium distribution derived from a microscopic interaction. The next [kinetic production program](../kinetics/VERIFIED-QUANTUM-BURST.md) is therefore essential.
