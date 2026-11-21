@@ -1,4 +1,4 @@
-name: BEST real radiation-FRW massive Bose three-species pilot (experimental)
+name: BEST radiation-FRW massive Bose time-grid refinement (experimental)
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
       - name: Run real closed radiation FRW at multiple time-step sizes
         run: |
           mkdir -p outputs
-          for item in "4 .00001 exprb 6000" "8 .000005 exprb 6000" "4 .00001 exprb_full 12000"; do
+          for item in "4 .00001 exprb 6000" "8 .000005 exprb 6000" "16 .0000025 exprb 6000" "32 .00000125 exprb 6000" "4 .00001 exprb_full 12000"; do
             read -r steps dt method neval <<< "$item"
             label=$(echo "$dt" | sed 's/\./p/')
             out="outputs/best_frw_"$method"_"$steps"_"$label".json"
@@ -55,7 +55,7 @@ jobs:
           python - <<'PY'
           import glob,json,math
           files=sorted(glob.glob("outputs/best_frw_*.json"))
-          assert len(files)==3,files
+          assert len(files)==5,files
           for path in files:
               d=json.load(open(path))
               assert d["real_independent_BEST_FRW_executed"]
