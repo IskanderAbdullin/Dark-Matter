@@ -43,6 +43,7 @@ def one_source(core=100,stride=50,max_index=8500,mass=.1):
       "mesh":{"core":core,"stride":stride,"max_index":max_index,
               "delta":model.delta,"M1_over_T":mass},
       "daughter_modes":n,"parent_modes":model.nparent,
+      "daughter_domain_upper_edge":float(model.edges[-1]),
       "reaction_graph_invariants":model.graph["active_graph_collision_invariants"],
       "initial_grid_source_rate":rate_by_reaction,
       "ODE_initial_phi_number_rate":rate_by_ode,

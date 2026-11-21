@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**UV SOURCE ERROR DECOMPOSED:** [exact rectangular continuum source versus finite-cell bias](UV-SOURCE-DECOMPOSITION.md) analytically integrates the on-shell 1↔2 FD kernel with both daughter energies truncated at grid upper EDGE Q. The finite-cell error plateaus near −0.0103% across Q~5–10T while missing physical high-q phase space separately falls exponentially. Independent double integration tests validate the analytic expression. No nonlinear frozen f(q) claim.
+
+
 **SOURCE QUADRATURE AUDIT:** [vacuum source and nonlinear cutoff sensitivity](VACUUM-SOURCE-CONVERGENCE.md) compares exact continuum on-shell Rvac, finite-bin ΣK_ij fFD(ei+ej), and the actual closed nonlinear ODE initial derivative. It shows that even a near-correct initial vacuum rate does not ensure nonlinear production convergence; more bins can make center/cut-cell source errors worse.
 
 

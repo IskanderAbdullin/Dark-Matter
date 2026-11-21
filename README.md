@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Physical source-error decomposition solved analytically:** [finite daughter-domain cutoff vs cell discretization](kinetics/UV-SOURCE-DECOMPOSITION.md) uses the exact continuum qphi,qchi<Q on-shell FD integral. On the repaired 3-invariant mesh, Rmax=8500 incurs −0.0487% true phase-space truncation and −0.0103% finite-cell error; at Rmax=10000 both are around −0.011%. These are EMPTY-daughter source diagnostics, not bounds on the nonlinear Bose occupation, dark-matter PSD or cosmological relic.
+
+
 **Initial source vs nonlinear rate calibration:** [independent 1D vs finite-cell on-shell source audit](kinetics/VACUUM-SOURCE-CONVERGENCE.md) now verifies the complete CLOSED ODE's t=0 φ derivative equals its summed thermal reaction rates and compares both to exact continuum 0.0164959084596. Changing UV cutoff 8.5→10T alters this initial vacuum rate ~0.038% but the nonlinear tΓ=.001 φ number ~0.44%: this is a numerical sensitivity diagnostic, NOT the Bose enhancement factor.
 
 
