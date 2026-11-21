@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**CUT-CELL DIAGNOSTIC:** [exact threshold geometry + Fermi-Dirac source averages](CUT-CELL-SOURCE-DIAGNOSTIC.md) independently integrate the original on-shell domain over every cell (with 16→32 Gauss convergence), separating finite-cell FD center approximation from physical allowed regions incorrectly masked because the *central* reaction is off-shell. This is not a shortcut to including those off-shell center reactions in a conserved discrete kinetic network.
+
+
 **UV SOURCE ERROR DECOMPOSED:** [exact rectangular continuum source versus finite-cell bias](UV-SOURCE-DECOMPOSITION.md) analytically integrates the on-shell 1↔2 FD kernel with both daughter energies truncated at grid upper EDGE Q. The finite-cell error plateaus near −0.0103% across Q~5–10T while missing physical high-q phase space separately falls exponentially. Independent double integration tests validate the analytic expression. No nonlinear frozen f(q) claim.
 
 

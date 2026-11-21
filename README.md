@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**On-shell cut-cell error isolated:** [threshold-cut source diagnostic](kinetics/CUT-CELL-SOURCE-DIAGNOSTIC.md) now integrates the Fermi-Dirac gain exactly in one daughter energy inside every geometrically admissible cell and compares summed high-order Gauss quadrature against the independent rectangular continuum source. It separates centroid FD sampling bias from physically allowed cells discarded because their centroid is off-shell. This is a SOURCE-ONLY test, not an alteration or validation of the nonlinear Bose kinetic operator.
+
+
 **Physical source-error decomposition solved analytically:** [finite daughter-domain cutoff vs cell discretization](kinetics/UV-SOURCE-DECOMPOSITION.md) uses the exact continuum qphi,qchi<Q on-shell FD integral. On the repaired 3-invariant mesh, Rmax=8500 incurs −0.0487% true phase-space truncation and −0.0103% finite-cell error; at Rmax=10000 both are around −0.011%. These are EMPTY-daughter source diagnostics, not bounds on the nonlinear Bose occupation, dark-matter PSD or cosmological relic.
 
 
