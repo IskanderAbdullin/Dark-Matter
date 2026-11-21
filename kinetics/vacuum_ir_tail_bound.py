@@ -44,9 +44,13 @@ def thermal_vacuum_ir_fraction(epsilon,mass=.1,g1=4):
     pref=g1*mass/(2*math.pi**2)
     r_full=vacuum_reference(M1_T=mass,g1=g1)
     I_full=r_full/pref
-    I_low=quad(lambda q:_log_fd_integrand(q,c),0.,epsilon,
-               epsabs=1e-20,epsrel=1e-10,limit=300)[0]
     sharp=epsilon*float(expn(2,c/epsilon))
+    # The integral may be ~1e-116: an absolute tolerance of 1e-20
+    # allows QUADPACK to stop long before a rigorous inequality can
+    # be checked. Scale epsabs to the known analytic upper bound.
+    epsabs=min(1e-20,max(1e-300,sharp*1e-11))
+    I_low=quad(lambda q:_log_fd_integrand(q,c),0.,epsilon,
+               epsabs=epsabs,epsrel=1e-10,limit=300)[0]
     elementary=epsilon*math.exp(-c/epsilon)
     rel=I_low/I_full
     assert 0<=rel<=sharp/I_full*(1+1e-10)+1e-200
