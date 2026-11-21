@@ -69,3 +69,8 @@ S_{\chi_1}=-\frac{g_1}{2\pi^2}\int dq\,q^2
 ## Согласование дискретной физической меры с независимым BEST
 
 При интегрировании с внешним BEST **обязательно** передать quadrature_weights=besthep.grid_weights(q) во все FD-number, matter-energy и противоположные SM-heat шаги: BEST считает моменты на логарифмической сетке Simpson/3-8, не простой трапецией по dq. Ошибка обнаружена настоящим coupled-run [#44925693596](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44925693596): локальное сохранение энергии в неправильной мере не означало глобальной физической консервации. Физический протокол ошибки [здесь](BEST-SM-COUPLED-FRW.md), дополнительная fail-closed regression [здесь](../tests/test_sm_best_quadrature_regression.py).
+
+
+## Исправление дискретной меры подтверждено реальным BEST
+
+Независимый [повторный BEST+SM run #44929647245](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44929647245) выполнил весь quantum χ1↔χ2+massiveφ и ideal SM radiation heat ledger, теперь с точно такими же весами Simpson/3-8 для mother BGK и BEST global moments. При gamma_el=10⁵ и 4/8/16 шагах полный физический pressure-work residual убывает примерно в 4× при уменьшении шага в 2× (−9.70e−9, −2.43e−9, −6.08e−10), а обе глобальные charges находятся ~10⁻¹¹ от исходного уровня. Первоначальная ошибочная трапецеидальная реализация имела плато около −8.57e−8. [Полные измеренные итоги](results/best-sm-coupled-corrected-2026-11-21.json), подробно [в отчёте](BEST-SM-COUPLED-FRW.md).

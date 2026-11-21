@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВАЯ ПОДТВЕРЖДЁННАЯ ЧЕСТНАЯ BEST+SM ТЕПЛОВАЯ ФИЗИКА:** [реальный исправленный coupled run #44929647245](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44929647245) согласовал идентичные log-Simpson weights материнской BGK projection, number/energy и SM Q с внешним BEST. Теперь обе charges ~10⁻¹¹, every elastic substep ΔN<1.7e−16 и Qdark+QSM<1.8e−15; full FRW residual gamma1e5 при4/8/16: −9.70e−9, −2.43e−9, −6.08e−10 (приблизительно 4× уменьшение при dt/2). Исходный ошибочный трапецеидальный результат сохранён [как отрицательное свидетельство](kinetics/results/best-sm-coupled-original-2026-11-21.json), исправленный [JSON](kinetics/results/best-sm-coupled-corrected-2026-11-21.json). Всё ещё только phenom gamma, constant gstar, prescribed RD H; 86eV physical relic и CLASS невозможны без microphysics, gstarS(T), long freezeout и convergence.
+
+
 **СЛЕДУЮЩИЙ ФИЗИЧЕСКИЙ ПРОБЕЛ ЧАСТИЧНО ЗАКРЫТ ЧЕСТНЫМ SM ENERGY/T ЛЕДЖЕРОМ:** [SM-RADIATION-HEAT-FEEDBACK.md](SM-RADIATION-HEAT-FEEDBACK.md). Упругая number-conserving χ1↔SM FD relaxation теперь переносит измеренное Δ(a⁴ρχ1) в −Δ(a⁴ρSM) и обновляет Tb по конечной теплоёмкости идеального SM radiation с constant gstar; проверяет Pauli и рост total entropy, отрицательные шаги отвергает. Например при a1.18,Tb0=.82, gamma1.2,dt.4 отдаётся ΔEχ≈−.0130813, Tb растёт до .820169. Но это всего **fixed-a collision substep**, не полный FRW 1↔2+SM self-consistent system, Γelastic(T) и variable gstarS ещё отсутствуют.
 
 
