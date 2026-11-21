@@ -68,3 +68,15 @@
 - Следующий физический этап требует динамического **обратного** канала при уже большой дочерней occupation, конечной физической Γ(T,m), микрофизического Mχ1/86 эВ, настоящего SM-bath и \(g_{\*S}(T)\), self-consistent Friedmann, ранней и поздней BEC/zero-mode convergence, полного phase-space frozen f(q), CLASS/observational likelihood. Здесь всего этого пока **нет**.
 
 Код: [radiation_collisionless_parent_bose.py](radiation_collisionless_parent_bose.py). Регрессии: [test_radiation_collisionless_parent_bose.py](../tests/test_radiation_collisionless_parent_bose.py). Воспроизводимый запуск: python kinetics/radiation_collisionless_parent_bose.py.
+
+
+## Внешняя проверка через actual BEST 64/128 time steps (выполнена)
+
+[Успешный independent BEST #44923390224](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44923390224) измерил full closed χ1,χ2,massive φ+zero-mode kinetic system в заданном RD фоне при **64 и 128** шагах, сохранив исходное tΓ=4×10⁻⁵, конечное a=sqrt(1.4), Nq=56 и neval=6000.
+
+- fφ(qmin) 64 шагов = **1.02988196065**; 128 = **1.02467504042**.
+- Независимая точная **ранняя открытая** redshifted-collisionless-mother формула отсюда даёт fφ(qmin) = **1.01968398766**.
+- Элементарная **первопорядковая экстраполяция** 2f128−f64 = **1.01946812019**. Отличие от континуального приближения — **−0.02117%**.
+- Для подсеточной massive zero mode: BEST при 128 шагах N0=**1.698379206×10⁻¹⁴**, независимая интегральная q²dq оценка = **1.709258419×10⁻¹⁴** (−0.6365%). Она не доказывает BEC; n0 убывает ∝qmin³ в независимом трёхcutoff эксперименте.
+
+Получено количественное свидетельство, что источник Bose при настоящем расширении нельзя подставлять как фиксированную thermal-bath экспоненту \(f\simeq1.95\), тогда как физически правильное redshifted \(f\simeq1.02\) подтверждается сторонним kinetic solver даже при полной динамике χ1 и χ2. Данные permanently archived в [results/best-rd-time-64-128-real-2026-11-21.json](results/best-rd-time-64-128-real-2026-11-21.json). Не следует из этого делать вывод о late-time relic, макроскопической BEC или CLASS.

@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**64/128 actual BEST FRW time refinement now independently verified:** [successful Actions #44923390224](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44923390224), [permanent measurements](kinetics/results/best-rd-time-64-128-real-2026-11-21.json). At fixed a_end=sqrt1.4, Nq=56, tΓ=4e−5, BEST fφ(qmin) changes 1.02988196→1.02467504 on dt halving (still **0.508%** temporal sensitivity). 1st-order extrapolated f=1.019468 agrees with independent physically redshifted collisionless-parent Bose formula 1.019684 to **0.0212%**. Global charge and pressure-work errors are much smaller than actual cold-source time errors. Need q-grid/qmin/independent seed convergence before BEC, physical frozen 86-eV DM, CLASS.
+
+
 **NEW independent expanding-FRW soft Bose analytic benchmark:** [collisionless parent redshift + exact two-body gain](kinetics/RD-COLLISIONLESS-BOSE-REFERENCE.md), [code](kinetics/radiation_collisionless_parent_bose.py). Instead of incorrectly maintaining a thermal mother, freeze the original FD distribution in comoving momentum, integrate exact massive on-shell parent energies at each a(t), and solve Bose (1+f) growth at every q. At a_end=sqrt1.4, tΓ=4e−5, predicts fφ(qmin=1e−4)=1.019684 and sub-qmin number 1.70926e−14. First-order 16/32-step actual external BEST FRW extrapolation fφ≈1.019084 agrees within 0.06%, but time/grid and microphysics are NOT fully converged.
 
 

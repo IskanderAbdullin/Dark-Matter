@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**Actual FRW 64→128-stepping and analytic redshift crosscheck:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md), [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) and [permanent external data](results/best-rd-time-64-128-real-2026-11-21.json). fphi(qmin) 1.029882→1.024675, observed 0.508% temporal difference; 1st-order extrapolated 1.019468 vs independent analytic 1.019684 (0.021% apart). The exact early FRW kernel uses mother's initial FD frozen in qcom, not repeated thermal reservoir; no fully numerical or physical DM convergence yet.
+
+
 **INDEPENDENT ACTUAL FRW SOFT SOURCE BENCHMARK:** [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) derives the exact massive two-body Bose gain A(q,t) for initially thermal massive mother **held fixed in comoving momentum**, not rethermalized during prescribed radiation expansion. Integrating time-dependent A yields fphi(qmin=1e−4,tΓ=4e−5)≈1.019684 and sub-qmin number≈1.709258e−14, close to asymptotic extrapolation of independent real BEST 4/8/16/32 data. The initial A(qmin) drops 27047→10929 due to redshift; fixed-a Bose exponential 1.9502 would be wrong in FRW. No closed/SM-realistic/frozen 86-eV/CLASS claim.
 
 

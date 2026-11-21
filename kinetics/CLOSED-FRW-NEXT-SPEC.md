@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**БОЛЕЕ ТОНКАЯ FRW ЭВОЛЮЦИЯ НА 64/128 РЕАЛЬНЫХ ШАГАХ ВЫПОЛНЕНА:** [Actions #44923390224](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44923390224). Nφ при128 шагах=7.212682366e−7, fφ(qmin)=1.0246750, N0=1.698379206e−14. Отличие 64→128 по мягкому f 0.508%, ещё не numerical convergence. **Независимый непрерывный FRW gain** [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) вычисляет редшифт матери в комовинговом FD, предсказывает f(qmin)=1.019684, первый порядок extrap 2f128−f64=1.019468 (0.0212% различие). Требуется комплексная qmin/Nq/MC convergence, и затем физический SM gstarS/Friedmann/Γ(T) до CLASS.
+
+
 **НОВЫЙ АНАЛИТИЧЕСКИЙ ВНЕШНИЙ ЭТАЛОН РЕЛЯТИВИСТСКОГО FRW РЕДШИФТА МЯГКОГО BOSE ИСТОЧНИКА:** [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) точно интегрирует massive 1→2 gain из thermal-at-t0 матери, остающейся collisionless с постоянным fχ1(q_com) и a=sqrt(t/t0), не заменяя мать тепловой FD заново. При tΓ=4e−5, a=1.1832, A(qmin) падает 27047→10929, fφ(qmin)=1.019684, finite q<qmin N=1.70926e−14. Первопорядковая 16/32-extrap реального BEST f≈1.019084 (≈0.06% отличие), но это лишь ранний open-mother/no-χ2 континуальный benchmark: следующий шаг точные 64/128 и независимые q-grid/Γ(T)/SM источники.
 
 

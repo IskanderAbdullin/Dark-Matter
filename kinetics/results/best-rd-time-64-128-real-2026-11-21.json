@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "actual_BEST_run_id": 44923390224,
+  "run_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44923390224",
+  "external_git_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "actual_mpi_ranks": 2,
+  "raw_zip_artifact_id": 14714124787,
+  "retention_days": 7,
+  "geometry": "prescribed RD a(t)=sqrt(t/.0001), 3 dynamic species chi1(M=.1), phi(m=.001), chi2(m=0), Bose/Pauli and zero mode, T0=1, Gamma_rest=1; 56 log q bins, 6000 Vegas, end tΓ=4e-5",
+  "final_a": 1.1832159566199232,
+  "cases": [
+    {
+      "steps": 64,
+      "dtGamma": 6.25e-7,
+      "neval": 6000,
+      "phi_comoving_number": 7.208059889891847e-7,
+      "phi_f_at_qmin": 1.0298819606508083,
+      "phi_zero_mode_N0": 1.7069057439287368e-14,
+      "energy_change": 0.0003295340554283488,
+      "pressure_work_trapezoid": 0.00032953484325071793,
+      "energy_work_residual": -7.878223691362533e-10,
+      "relative_energy_work_residual": -6.846819697675666e-10,
+      "relative_chi1_phi_charge_error": 2.5426396287835144e-12,
+      "relative_chi1_chi2_charge_error": -4.155641865034129e-11
+    },
+    {
+      "steps": 128,
+      "dtGamma": 3.125e-7,
+      "neval": 6000,
+      "phi_comoving_number": 7.212682366168271e-7,
+      "phi_f_at_qmin": 1.0246750404199352,
+      "phi_zero_mode_N0": 1.6983792060746536e-14,
+      "energy_change": 0.0003295340527840196,
+      "pressure_work_trapezoid": 0.000329534278959143,
+      "energy_work_residual": -2.2617512338918636e-10,
+      "relative_energy_work_residual": -1.965646509432229e-10,
+      "relative_chi1_phi_charge_error": -2.2106991212111837e-11,
+      "relative_chi1_chi2_charge_error": -4.468372535372714e-11
+    }
+  ],
+  "independent_analytic_collisionless_parent_FRW": {
+    "f_qmin": 1.0196839876614525,
+    "N_below_qmin": 1.7092584190101826e-14
+  },
+  "comparisons": {
+    "phi_number_relative_64_to_128": -0.0006408817194150096,
+    "phi_soft_relative_64_to_128": 0.00508153319391802,
+    "phi_zero_mode_relative_64_to_128": 0.005020396990015996,
+    "analytic_f_qmin": 1.0196839876614525,
+    "best_128_f_to_analytic_relative": 0.004894705437053171,
+    "first_order_Richardson_64_128_f": 1.019468120189062,
+    "Richardson_vs_analytic_relative": -0.00021170036501749756,
+    "best_128_n0_to_analytic_relative": -0.006364873102002289,
+    "energy_work_residual_64_to_128_ratio": 3.4832405851311226
+  },
+  "claims": {
+    "true_external_BEST_time_evolution": true,
+    "fully_time_converged": false,
+    "analytic_frozen_bath_agreement_at_first_order_extrapolation": true,
+    "SM_plasma_and_entropy_included": false,
+    "macroscopic_BEC_established": false,
+    "primordial_86eV_dark_matter_CLASS_ready": false
+  },
+  "warning": "Conservation global energy/charges to a small relative residual does not establish a converged IR Bose spectrum; 128 time steps still change qmin occupancy by ~0.5% vs 64, 64/128 energy-work residual may contain Monte Carlo noise."
+}
