@@ -1,0 +1,37 @@
+# First genuine Bose-stimulated gain/loss calculation for dark matter production
+
+**Status: controlled benchmark, 2026-11-21.** Unlike the preceding ad hoc f_alpha cosmology scans, this test explicitly solves a discretized momentum-dependent quantum-statistical collision source from a *specific decay* process studied by Wen Yin, JHEP 05 (2023) 180 https://doi.org/10.1007/JHEP05(2023)180, eqs. (2.2)–(2.4), (2.9)–(2.11), section 3. However it is NOT yet the full paper's numerical calculation: important simplifying physical assumptions are stated below.
+
+## Reaction and exact checks
+
+Assume \(\chi_1\leftrightarrow\chi_2+\phi\), where \(\chi_1\) is a *thermally maintained* Dirac fermion, \(\chi_2\) another fermion, \(\phi\) a real boson. Choose \(M_1/T=0.1\), \(M_2=0\), neglect \(m_\phi\) during production, and measure time in units \(\Gamma_{\rm rest}^{-1}\). Ignore cosmic expansion during this diagnostic. Fix mother occupation \(f_1(E)=1/(e^{E/T}+1)\) but evolve both daughter distributions \(f_\phi(p,t)\) and \(f_2(p,t)\) from zero.
+
+The exact **quantum** gain–loss combination is
+\[
+S=f_1(1-f_2)(1+f_\phi)-(1-f_1)f_2f_\phi.
+\]
+It includes Bose stimulated emission, fermionic Pauli blocking, and inverse decay. The 2-body kinematics are
+\[
+E_\phi=(E_1+p_1\cos\theta)/2,\quad E_2=E_1-E_\phi.
+\]
+The source integrates the mother thermal phase-space density and time-dilated decay rate \(M_1\Gamma_{\rm rest}/E_1\) over momentum and isotropic rest-frame decay angle. Two *identical weighted reaction events* are deposited into the boson and fermion daughter momentum bins, preserving their number difference exactly. Log-momentum cloud-in-cell interpolation reduces (but does not eliminate) discrete momentum-grid biases.
+
+An exact event-level detailed-balance test at \(f_1,f_2\) Fermi–Dirac and \(f_\phi\) Bose–Einstein at the SAME T vanishes to roundoff, since \(E_1=E_2+E_\phi\). Event energy conservation is similarly machine-exact (bin-centroid energies are not). Numerically the conservation of \(n_\phi-n_{\chi_2}=0\) remains below \(10^{-8}\) relative during both stimulated and control simulations.
+
+## What is measured
+
+The public [reproducible script](one_to_two_fixed_bath.py) evolves up to \(t\Gamma_{\rm rest}=0.03\). The **control** artificially omits the factor \(1+f_\phi\) while keeping the rest of the gain/loss, so it is explicitly NOT an independent physically consistent collision model.
+
+The benchmark uses three independent grid configurations (100/140/72, 150/180/96, 180/240/120) for boson energy bins / parent momentum nodes / decay angle quadrature nodes. The output includes time series of exact daughter number conservation, finite fermion occupancies, boson number, low-momentum fraction, mean momentum, squared-momentum moment, and gross bosonic enhancement.
+
+**Crucial warning:** preliminary independent local tests find the *integrated* boson number agrees at the ~1% level between grids, and the strong Bose-enhanced production and very cold number fraction are qualitatively robust. But **the detailed momentum-distribution shape / mean momentum and peak occupation are not grid converged**; different grids exhibit a 20%-level difference in mean momentum and much larger peak changes. Therefore this distribution must NOT yet be supplied to CLASS or interpreted as a prediction for 86-eV DM. The code reports this limitation explicitly and does not falsely mark the shape as converged.
+
+## What remains to turn this into a physical production model
+
+1. Replace fixed bath by explicitly budgeted mother-state kinetics or a physically justified fast bath thermalization model.
+2. Implement the expanding FRW Universe through comoving momentum and temperature-dependent mother width, while conservatively tracking entropy and mother/daughter energy.
+3. Include nonzero daughter mass \(M_2\) and coupling-dependent \(\eta=1-M_2^2/M_1^2\), thermal mother mass, and inverse-driven hot-tail cooling.
+4. Improve full momentum-grid convergence of \(f_\phi(q)\) (not merely its integrated abundance) and physical IR regulation/condensate handling at immense Bose occupation.
+5. Only **after** that use the resulting frozen \(f(q)\) in CLASS and compare to the externally computed halo-like dark matter distribution, including galactic thermalization times. The existing cold-parameter α scans and mixed-hot-tail CLASS scenarios are explicitly phenomenological comparison benchmarks, NOT derived kinetic outputs.
+
+Related primary papers: Yin (2023) https://doi.org/10.1007/JHEP05(2023)180; Sakurai & Yin (2025) https://doi.org/10.1007/JHEP03(2025)202.

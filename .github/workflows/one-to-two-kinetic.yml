@@ -1,0 +1,50 @@
+name: Bose-stimulated 1to2 kinetic benchmark
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'kinetics/one_to_two_fixed_bath.py'
+      - '.github/workflows/one-to-two-kinetic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kinetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Install scientific dependencies
+        run: python -m pip install "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Quick conservation, detailed-balance and Bose-enhancement test
+        run: python kinetics/one_to_two_fixed_bath.py --quick --output outputs/kinetic_quick.json
+      - name: Three-grid convergence of the full fixed-bath kinetic experiment
+        run: python kinetics/one_to_two_fixed_bath.py --output outputs/kinetic_1to2_bose_burst.json
+      - name: Confirm number convergence and flag unresolved PSD shape
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("outputs/kinetic_1to2_bose_burst.json").read_text())
+          assert len(d["grids"])==3
+          assert d["relative_integrated_phi_number_spread"]<.03
+          print("Number density grid spread:",d["relative_integrated_phi_number_spread"])
+          print("Momentum shape spread, not guaranteed converged:",d["relative_mean_phi_momentum_spread"])
+          print("Pointwise convergence status:",d["momentum_shape_converged_to_5pct"])
+          PY
+      - name: Archive all time series and tests
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: first-kinetic-Bose-1to2-conservative
+          path: outputs/*.json
+          retention-days: 21
+          if-no-files-found: error
