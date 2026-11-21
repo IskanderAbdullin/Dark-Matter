@@ -1,0 +1,46 @@
+{
+  "provenance": {
+    "repo": "IskanderAbdullin/Dark-Matter",
+    "commit": "0393185c9d316ec62bcee04f6e4ccd1edd4705d9",
+    "workflow_run_id": 44890489385,
+    "classy_version": "3.4.3.0",
+    "date": "2026-11-21"
+  },
+  "m_eV": 86,
+  "omega_h2_CLASS_all": 0.119130120777,
+  "scenarios": [
+    {
+      "alpha": 1,
+      "Neff": 3.1088151179356105,
+      "DeltaNeff": 0.0648151179356105,
+      "khalf_z5": 0.43275347186520435,
+      "T_k_0p986_z5": 0.010280579679373994
+    },
+    {
+      "alpha": 0.5,
+      "Neff": 3.0764075589678055,
+      "DeltaNeff": 0.0324075589678055,
+      "khalf_z5": 0.7502375687430811,
+      "T_k_0p986_z5": 0.30751239565588334
+    },
+    {
+      "alpha": 0.3,
+      "Neff": 3.0634445353806834,
+      "DeltaNeff": 0.0194445353806834,
+      "khalf_z5": 1.1367586083123717,
+      "T_k_0p986_z5": 0.6184546509664335
+    },
+    {
+      "alpha": 0.1,
+      "Neff": 3.0504815117935613,
+      "DeltaNeff": 0.0064815117935613,
+      "khalf_z5": 2.870307683802917,
+      "T_k_0p986_z5": 0.9492970319129856
+    }
+  ],
+  "limitations": [
+    "Toy PSD not derived from particle-production Lagrangian or GP quantum kinetics",
+    "No observational likelihood",
+    "Independent q-grid convergence checked for thermal alpha=1, not all colder cases"
+  ]
+}

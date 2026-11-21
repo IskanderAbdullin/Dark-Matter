@@ -36,3 +36,8 @@ Store both sqrt(P_Bose/P_CDM), a shape normalized at the smallest sampled k, a p
 - A meaningful next paper must compare verified CLASS results with a physically derived colder f(q), keeping present abundance, temperature, chemical reactions and internal degrees-of-freedom consistent.
 
 **Research status:** the [verified CLASS run](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44890003670) completed successfully. See [actual transfer spectrum and numerical convergence](THERMAL-CLASS-VERIFIED.md), including the unresolved ultra-suppressed high-k numerical tail. An additional [nonthermal toy family](TOY-COLDER-PSD.md) explores dependence on primordial momentum shape without claiming any particle-production model.
+
+
+### New verified nonthermal shape sensitivity scan
+
+[Verified 86-eV toy colder PSD CLASS results](COLDER-CLASS-RESULTS.md) calculate four positive phase-space distributions with identical particle mass and number density but momentum scales alpha=1,0.5,0.3,0.1. They shift the linear z=5 half-amplitude k from 0.433 to 2.870 inverse Mpc, **without any claim** that such nonthermal distributions can be physically generated. The analytic distribution scaling was separately checked. Only the alpha=1 benchmark has a systematic fine/coarse PSD precision check at present.
