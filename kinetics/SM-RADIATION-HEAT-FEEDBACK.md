@@ -64,3 +64,8 @@ S_{\chi_1}=-\frac{g_1}{2\pi^2}\int dq\,q^2
 **Итог текущего строго ограниченного шага:** полноценный **физически учитываемый энергообмен матери↔идеализированной плазмы на отдельном collision substep** создан; **космологического SM+dark coupled решения пока нет**. Нельзя смешивать этот факт с готовностью relic.
 
 Код: [sm_radiation_heat_feedback.py](sm_radiation_heat_feedback.py). Тесты: [test_sm_radiation_heat_feedback.py](../tests/test_sm_radiation_heat_feedback.py). Выполнение примера: python kinetics/sm_radiation_heat_feedback.py.
+
+
+## Согласование дискретной физической меры с независимым BEST
+
+При интегрировании с внешним BEST **обязательно** передать quadrature_weights=besthep.grid_weights(q) во все FD-number, matter-energy и противоположные SM-heat шаги: BEST считает моменты на логарифмической сетке Simpson/3-8, не простой трапецией по dq. Ошибка обнаружена настоящим coupled-run [#44925693596](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44925693596): локальное сохранение энергии в неправильной мере не означало глобальной физической консервации. Физический протокол ошибки [здесь](BEST-SM-COUPLED-FRW.md), дополнительная fail-closed regression [здесь](../tests/test_sm_best_quadrature_regression.py).

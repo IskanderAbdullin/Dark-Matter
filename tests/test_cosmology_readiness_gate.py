@@ -55,3 +55,36 @@ def test_explicit_all_pass_is_possible_but_not_observational_validation():
 def test_nonpositive_parent_tolerance_rejected():
     with pytest.raises(ValueError):
         evaluate_candidate(audit_integer_grid(range(30),delta=.08),0.0,parent_bias_tolerance=0)
+
+
+
+def test_physically_unimplemented_plasma_and_late_time_checks_block_CLASS_even_if_old_checks_pass():
+    graph=audit_integer_grid(range(30),delta=.08)
+    from cosmology_readiness_gate import REQUIRED_EXTERNAL_CHECKS
+    historical_checks=(
+        "full_spectral_convergence",
+        "infrared_regulator_and_zero_mode_control",
+        "closed_FRW_energy_and_entropy",
+        "realistic_mother_depletion_and_rethermalization",
+        "physical_masses_and_width",
+        "correct_relic_density_without_rescaling"
+    )
+    evidence={key:True for key in historical_checks}
+    assert set(historical_checks)<set(REQUIRED_EXTERNAL_CHECKS)
+    report=evaluate_candidate(graph,0.0,evidence)
+    assert not report["approved_for_CLASS"]
+    assert "physical_SM_heat_reservoir_and_entropy_gstarS" in report["failed_or_unverified"]
+    assert "microphysical_bath_rates_and_stimulated_2to2_audit" in report["failed_or_unverified"]
+    assert "late_time_hot_tail_and_BEC_state_convergence" in report["failed_or_unverified"]
+    with pytest.raises(ValueError):
+        require_ready_for_CLASS(report)
+
+
+def test_partial_sm_bath_pilot_and_no_lagrangian_is_still_rejected():
+    graph=audit_integer_grid(range(30),delta=.08)
+    from cosmology_readiness_gate import REQUIRED_EXTERNAL_CHECKS
+    evidence={key:True for key in REQUIRED_EXTERNAL_CHECKS}
+    evidence["physical_SM_heat_reservoir_and_entropy_gstarS"]=False
+    evidence["microphysical_bath_rates_and_stimulated_2to2_audit"]=False
+    report=evaluate_candidate(graph,0,evidence)
+    assert not report["approved_for_CLASS"]

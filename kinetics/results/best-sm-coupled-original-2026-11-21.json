@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-21",
+  "verified_real_external_run_id": 44925693596,
+  "run_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44925693596",
+  "raw_artifact_id": 14714674696,
+  "raw_artifact_retention_days": 7,
+  "pinned_BEST_git_commit": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "model": "actual BEST MPI x2 χ1<->χ2+massive φ BE/FD 1↔2 dynamics in prescribed radiation a=sqrt(t/0.0001), TSM dynamically coupled to phenomenological number-conserving chi1 elastic BGK heat. M1=.1,mphi=.001,GammaRest1,SM gstar55, 56 log-q bins, Vegas6000 and Nt4,8,16 exprb2. End tΓ=4e-5.",
+  "prior_code_sha": "3e4e5b378f078dcfdc6e8eeac291194e4df04942",
+  "discovered_numerical_defect": "BGK step uses trapezoidal dq weights but BEST global moments use Simpson-in-log-q weights. Therefore apparent BGK number and SM heat closure in one quadrature DOES NOT preserve BEST's own charges and physical energy. Corrected implementation must project FD(mu) and SM heat/entropy with BEST exact grid_weights.",
+  "cases": [
+    {
+      "gamma_el": 0,
+      "steps": 8,
+      "dtGamma": 0.000005,
+      "final_T_SM": 0.8451542547285165,
+      "delta_SM_comoving_energy": 0,
+      "final_phi_n": 7.217078369242785e-7,
+      "final_phi_qmin_f": 1.0184317846678532,
+      "final_phi_N0": 1.687985252573265e-14,
+      "relative_total_FRW_energy_work_residual": -2.5012767005215957e-9,
+      "relative_charge_chi1_phi_error": -3.5696048337352465e-11,
+      "relative_charge_chi1_chi2_error": -3.924195292023752e-11,
+      "elastic_total_entropy_increase": 0
+    },
+    {
+      "gamma_el": 100000,
+      "steps": 4,
+      "dtGamma": 0.00001,
+      "final_T_SM": 0.8451520136622916,
+      "delta_SM_comoving_energy": -0.00019191907966842336,
+      "final_phi_n": 7.21536401970114e-7,
+      "final_phi_qmin_f": 1.0127274912213793,
+      "final_phi_N0": 1.6790031338668167e-14,
+      "relative_total_FRW_energy_work_residual": -9.593593340143598e-8,
+      "relative_charge_chi1_phi_error": 2.0342260183022676e-9,
+      "relative_charge_chi1_chi2_error": 2.0513491070523563e-9,
+      "elastic_total_entropy_increase": 2.561098710884835e-8
+    },
+    {
+      "gamma_el": 100000,
+      "steps": 8,
+      "dtGamma": 0.000005,
+      "final_T_SM": 0.8451520369803885,
+      "delta_SM_comoving_energy": -0.0001899221863688183,
+      "final_phi_n": 7.215965470635933e-7,
+      "final_phi_qmin_f": 1.018483565693743,
+      "final_phi_N0": 1.6882581770882338e-14,
+      "relative_total_FRW_energy_work_residual": -8.776996018068253e-8,
+      "relative_charge_chi1_phi_error": 1.953135389303093e-9,
+      "relative_charge_chi1_chi2_error": 1.9737444089762406e-9,
+      "elastic_total_entropy_increase": 2.2761266649240497e-8
+    },
+    {
+      "gamma_el": 100000,
+      "steps": 16,
+      "dtGamma": 0.0000025,
+      "final_T_SM": 0.845152043227217,
+      "delta_SM_comoving_energy": -0.0001893872262961338,
+      "final_phi_n": 7.216269730936902e-7,
+      "final_phi_qmin_f": 1.0194677848706084,
+      "final_phi_N0": 1.6897971905709587e-14,
+      "relative_total_FRW_energy_work_residual": -8.571155055125595e-8,
+      "relative_charge_chi1_phi_error": 1.9742561639111048e-9,
+      "relative_charge_chi1_chi2_error": 1.9722925593127265e-9,
+      "elastic_total_entropy_increase": 2.203430327085698e-8
+    }
+  ],
+  "negative_results": {
+    "gamma0_charge_relative_error_abs": 3.5696048337352465e-11,
+    "gamma1e5_charge_relative_error_plateau": 1.9742561639111048e-9,
+    "gamma0_total_energy_error_abs": 2.5012767005215957e-9,
+    "gamma1e5_total_energy_error_plateau": 8.571155055125595e-8,
+    "gamma1e5_error_decreases_4_to_8_to_16_very_weakly": true,
+    "same_grid_BGK_vs_BEST_moments_not_identical": true
+  },
+  "conclusions": {
+    "real_independent_BEST_plus_dynamic_SM_heat_ran": true,
+    "gamma0_no_spurious_sm_transfer": true,
+    "finite_SM_thermal_bath_feeds_back_temperature": true,
+    "global_charges_accurate_to_a_consistent_quadrature": false,
+    "physical_FRW_energy_convergence_certified": false,
+    "microphysical_SM_elastic_gamma_calculated": false,
+    "real_86eV_relic_or_CLASS_ready": false
+  },
+  "warning": "Recorded original first experiment as NEGATIVE convergence evidence. Do NOT cite successful GitHub Actions execution as complete quantitative energy conservation. Correct inconsistent quadrature and rerun."
+}

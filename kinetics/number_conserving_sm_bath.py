@@ -30,6 +30,13 @@ The pinned BEST solver supports adding (gain,loss) custom collisions,
 but using it does not by itself implement a physical SM heat reservoir.
 This module provides an independently testable conservative building
 block before coupling Q to a dynamic radiation bath.
+
+IMPORTANT: default integration uses trapezoidal dq weights. When coupled to
+BEST, pass quadrature_weights=besthep.grid_weights(q) at EVERY collision
+substep and in both matter and SM energy/entropy ledgers: BEST uses a
+Simpson rule in log(q), and mismatched quadratures silently violate its
+comoving number charges and physical energy even if the BGK's own
+trapezoidal budget is internally closed.
 """
 from __future__ import annotations
 
@@ -43,7 +50,7 @@ from scipy.optimize import brentq
 from scipy.special import expit, xlogy
 
 
-def _weights_and_state(q,f,g):
+def _weights_and_state(q,f,g,quadrature_weights=None):
     q=np.asarray(q,dtype=float)
     f=np.asarray(f,dtype=float)
     if (q.ndim!=1 or f.ndim!=1 or len(q)<4 or len(q)!=len(f)
@@ -52,15 +59,21 @@ def _weights_and_state(q,f,g):
             or np.any(f<0) or np.any(f>1)
             or not math.isfinite(g) or g<=0):
         raise ValueError("Require increasing positive finite q, fermion occupations 0..1, and g>0")
-    weights=np.zeros_like(q)
-    widths=np.diff(q)/2
-    weights[:-1]+=widths
-    weights[1:]+=widths
+    if quadrature_weights is None:
+        weights=np.zeros_like(q)
+        widths=np.diff(q)/2
+        weights[:-1]+=widths
+        weights[1:]+=widths
+    else:
+        weights=np.asarray(quadrature_weights,dtype=float)
+        if (weights.shape!=q.shape or np.any(~np.isfinite(weights))
+                or np.any(weights<0) or not np.any(weights>0)):
+            raise ValueError("Finite, nonnegative, nontrivial dq quadrature_weights must match q")
     return q,f,g/(2*np.pi**2)*weights*q*q
 
 
-def _projected_target(q,f,a,mass,Tbath,g):
-    q,f,W=_weights_and_state(q,f,g)
+def _projected_target(q,f,a,mass,Tbath,g,quadrature_weights=None):
+    q,f,W=_weights_and_state(q,f,g,quadrature_weights)
     if (not all(math.isfinite(x) for x in (a,mass,Tbath))
             or a<=0 or mass<=0 or Tbath<=0):
         raise ValueError("Require positive finite a, fermion mass, and thermal bath T")
@@ -80,8 +93,9 @@ def _projected_target(q,f,a,mass,Tbath,g):
     return q,f,W,physical_E,eq,float(mu)
 
 
-def number_conserving_bath_rates(q,f,a=1.18,mass=.1,Tbath=.82,g=4,gamma=1.2):
-    q,f,W,Ephys,eq,mu=_projected_target(q,f,a,mass,Tbath,g)
+def number_conserving_bath_rates(q,f,a=1.18,mass=.1,Tbath=.82,g=4,gamma=1.2,
+                                 quadrature_weights=None):
+    q,f,W,Ephys,eq,mu=_projected_target(q,f,a,mass,Tbath,g,quadrature_weights)
     if not math.isfinite(gamma) or gamma<0:
         raise ValueError("Require nonnegative finite relaxation rate")
     gain=gamma*eq
@@ -109,8 +123,8 @@ def _relative_FD_entropy(f,eq,weights):
 
 
 def exact_frozen_bath_step(q,f,a=1.18,mass=.1,Tbath=.82,
-                           g=4,gamma=1.2,dt=.4):
-    q,f,W,Ephys,eq,mu=_projected_target(q,f,a,mass,Tbath,g)
+                           g=4,gamma=1.2,dt=.4,quadrature_weights=None):
+    q,f,W,Ephys,eq,mu=_projected_target(q,f,a,mass,Tbath,g,quadrature_weights)
     if not all(math.isfinite(x) for x in (gamma,dt)) or gamma<0 or dt<0:
         raise ValueError("Require nonnegative finite collision rate and step")
     fraction=-math.expm1(-gamma*dt)

@@ -23,6 +23,9 @@ REQUIRED_EXTERNAL_CHECKS=(
     "realistic_mother_depletion_and_rethermalization",
     "physical_masses_and_width",
     "correct_relic_density_without_rescaling",
+    "physical_SM_heat_reservoir_and_entropy_gstarS",
+    "microphysical_bath_rates_and_stimulated_2to2_audit",
+    "late_time_hot_tail_and_BEC_state_convergence",
 )
 
 

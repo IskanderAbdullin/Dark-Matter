@@ -12,8 +12,12 @@ Physical ingredients that are REALLY coupled here:
 
 Strang-style splitting: elastic half-step at fixed initial a,
 BEST n<->m quantum decay full-step, elastic half-step at fixed final a.
-Each elastic substep conserves parent number and total dark+SM energy
-exactly in its finite quadrature and is Pauli-positivity preserving.
+Each elastic substep preserves BEST's OWN comoving-number and physical-
+energy moments by injecting EXACTLY its grid_weights(q) into the BGK
+chemical projection, mother entropy and opposite SM heat budget.
+An earlier exploratory run used trapezoidal BGK weights versus BEST's
+log-Simpson weights and thereby introduced fake global charge/energy
+nonconservation. Both historical and corrected outcomes are retained.
 The BEST collision plus the FRW splitting STILL have numerical
 time/grid/Monte Carlo errors that MUST be measured, not hidden.
 
@@ -111,7 +115,8 @@ def execute_best(best_root,output,protocol):
             update=radiation_elastic_exchange_step(
                 solver.r_grids["chi1"],solver.distributions_1d["chi1"],
                 a=a,mass=M,T_bath=T,g1=p["g_chi1"],
-                gamma_el=gamma_el,dt=dt,gstar=gstar)
+                gamma_el=gamma_el,dt=dt,gstar=gstar,
+                quadrature_weights=grid_weights(solver.r_grids["chi1"]))
             solver.distributions_1d["chi1"]=update["mother_after"]
             solver.interpolators["chi1"]=ExtrapolatingInterp(
                 solver.r_grids["chi1"],solver.distributions_1d["chi1"],
@@ -130,7 +135,9 @@ def execute_best(best_root,output,protocol):
                           update["SM_radiation_comoving_energy_before"]),
                 "mother_number_residual":float(update["mother_number_change"]),
                 "total_entropy_change":float(update["total_entropy_change"]),
-                "mu_chi1":float(update["mother_projected_mu"])
+                "mu_chi1":float(update["mother_projected_mu"]),
+                "BEST_identical_quadrature_used":bool(update["quadrature_matched_to_supplied_external_solver"]),
+                "mother_number_change_in_BEST_weights":float(update["mother_number_change"])
             }
         else:
             entry=None
@@ -231,6 +238,7 @@ def execute_best(best_root,output,protocol):
         "final_relative_charge_chi1_chi2_error":
             last["charge_chi1_plus_chi2_residual"]/charge0,
         "time_step_convergence_confirmed":False,
+        "finite_q_BEST_moment_quadrature_matched_for_SM_BGK":True,
         "SM_gstarS_temperature_dependence_included":False,
         "actual_SM_2to2_matrix_element_included":False,
         "Friedmann_dark_backreaction_included":False,

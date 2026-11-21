@@ -19,6 +19,12 @@ held-T bath approximation was too coarse and MUST be subdivided.
 
 This module is a conservatively coupled collision *substep* at fixed a.
 Full FRW evolution still requires physical pressure work separately.
+
+A previous genuine BEST+SM run exposed a crucial mismatch: this module
+originally used trapezoidal dq even when BEST's global moments employed
+log-grid Simpson weights. Pass quadrature_weights=besthep.grid_weights(q)
+for EXACTLY the same mother projection, heat, and entropy quadratures;
+otherwise an apparently balanced bath can violate BEST's full charges.
 """
 from __future__ import annotations
 
@@ -46,15 +52,15 @@ def comoving_radiation_entropy(a,T,gstar=55.):
     return float(2*math.pi**2/45*gstar*(a*T)**3)
 
 
-def _comoving_fermion_entropy(q,f,g):
-    _,occupation,W=_weights_and_state(q,f,g)
+def _comoving_fermion_entropy(q,f,g,quadrature_weights=None):
+    _,occupation,W=_weights_and_state(q,f,g,quadrature_weights)
     x=np.clip(occupation,1e-15,1-1e-15)
     return float(np.dot(W,-xlogy(x,x)-xlogy(1-x,1-x)))
 
 
 def radiation_elastic_exchange_step(q,f,a=1.18,mass=.1,
                                      T_bath=.82,g1=4.,gamma_el=1.2,
-                                     dt=.4,gstar=55.):
+                                     dt=.4,gstar=55.,quadrature_weights=None):
     """Exact conservative energy transfer with a finite radiation bath.
 
     Does NOT assert that mu=0, the bath is infinite, nor that Γ_el
@@ -62,17 +68,15 @@ def radiation_elastic_exchange_step(q,f,a=1.18,mass=.1,
     """
     E_bath_before=comoving_radiation_energy(a,T_bath,gstar)
     S_bath_before=comoving_radiation_entropy(a,T_bath,gstar)
-    S_mother_before=_comoving_fermion_entropy(q,f,g1)
+    S_mother_before=_comoving_fermion_entropy(q,f,g1,quadrature_weights)
     molecular=exact_frozen_bath_step(
         q,f,a=a,mass=mass,Tbath=T_bath,
-        g=g1,gamma=gamma_el,dt=dt)
-    qarr=np.asarray(q,dtype=float)
-    before=np.asarray(f,dtype=float)
-    norm=g1/(2*math.pi**2)
+        g=g1,gamma=gamma_el,dt=dt,
+        quadrature_weights=quadrature_weights)
+    qarr,before,W=_weights_and_state(q,f,g1,quadrature_weights)
     Ecom=np.hypot(qarr,a*mass)
-    E_mother_before=float(norm*np.trapezoid(qarr**2*Ecom*before,qarr))
-    E_mother_after=float(norm*np.trapezoid(
-        qarr**2*Ecom*molecular["after"],qarr))
+    E_mother_before=float(np.dot(W*Ecom,before))
+    E_mother_after=float(np.dot(W*Ecom,molecular["after"]))
     E_dark_delta=E_mother_after-E_mother_before
     E_bath_after=E_bath_before-E_dark_delta
     if not math.isfinite(E_bath_after) or E_bath_after<=0:
@@ -80,7 +84,7 @@ def radiation_elastic_exchange_step(q,f,a=1.18,mass=.1,
     T_after=float((E_bath_after/
                    (math.pi**2/30*gstar*a**4))**.25)
     S_after=(comoving_radiation_entropy(a,T_after,gstar)+
-             _comoving_fermion_entropy(q,molecular["after"],g1))
+             _comoving_fermion_entropy(q,molecular["after"],g1,quadrature_weights))
     S_before=S_bath_before+S_mother_before
     entropy_delta=S_after-S_before
     if entropy_delta<-1e-9*max(abs(S_before),1.):
@@ -112,6 +116,7 @@ def radiation_elastic_exchange_step(q,f,a=1.18,mass=.1,
         "Pauli_occupation_min_after":molecular["minimum_occupation"],
         "Pauli_occupation_max_after":molecular["maximum_occupation"],
         "finite_temperature_feedback_implemented":True,
+        "quadrature_matched_to_supplied_external_solver":quadrature_weights is not None,
         "time_integrator_first_order_bath_feedback":True,
         "is_one_fixed_a_collision_substep":True,
         "microphysical_SM_scattering_matrix_element_derived":False,
