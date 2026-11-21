@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**TWO-MOMENT FEASIBILITY:** [Pauli-limited shell energy bounds](PAULI-ENERGY-BOUNDS.md) compute exact finite-grid minimal and maximal energy for fixed mother number; an optional bounded transfer can enforce number+energy if feasible, but alters phase-space shape and must not be silently used in the actual FRW collision solver.
+
+
 **CONSERVATIVE LIOUVILLE REMAP:** [parent_q_remap.py](parent_q_remap.py) moves freely streaming χ1 occupations between fixed-energy parent meshes at different x=M1/T by conservative q³ overlaps. Pauli and comoving number preserved; finite-volume energy drift and numerical mixing explicitly reported; no hidden claim of full coupled FRW conservation or CLASS readiness.
 
 

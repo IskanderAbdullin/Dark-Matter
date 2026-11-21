@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Two-moment Pauli feasibility:** [exact attainable massive-parent energy interval at fixed number](kinetics/PAULI-ENERGY-BOUNDS.md) derives E_min/E_max by shell filling under fermion occupancy bounds. An optional artificial N+E correcting remap is diagnostic only: a changed momentum distribution can preserve both integrated moments but is NOT physical collisionless Liouville or guaranteed entropy/detailed balance.
+
+
 **Liouville momentum remap:** [number-exact Pauli-safe O(N) parent regridding](kinetics/PARENT-Q-REMAP.md) now transfers massive χ1 occupations between moving energy-resonant meshes using q³ cell overlaps. The scheme preserves comoving particle number and 0≤f≤1, but introduces a separately measured numerical energy/entropy error. This is a collisionless component, not a coupled energy-conserving FRW dark-matter solver.
 
 
