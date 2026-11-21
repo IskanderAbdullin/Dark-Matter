@@ -2,15 +2,22 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate finite-electron-mass invariant kernel in real CI, then independently compute 5D massive-lepton heat and plasma thresholds",
-  "objective": "New finite-mass vector-contact invariant kernel and regression were committed in ba83f58/dea914d7; first verify repository pytest/CI and correct any failure. Next obtain independent massive-electron CM 5D heat with Pauli and quantitative energy-grid/cutoff convergence at T/me=0.1,1,10. Never infer physical gamma or 86-eV relic from algebraic checks.",
+  "title": "Verify independent massive χe 5D benchmark CI, then implement finite e± plasma and UV/gauge-valid bath coupling",
+  "objective": "New independent full massive 5D CM + Dirac gamma trace checks found six conditional full-Fermi heat agreements <8.12e-7 vs direct ell kernel at n40/n160/ell24, and nonmonotone mesh/cutoff discrepancy. First check actual GitHub CI on new checkpoint commit and reproduce dataset across Te/me=.1,1,10 and χ/Te=.9,1.1; refine cutoff and nonthermal controls. Then move to physical finite e±γν energy/entropy and number-changing, EW gauge-consistent mediator, and coupled nonthermal Pauli time evolution. No physical gamma_el/86-eV claim.",
   "prerequisites": [
+    "Check current PR #1 head and actual Scientific CI for new independent massive 5D report/test; prior verified successful run #44954815892 is on 065644e only.",
+    "Run python -m pytest -q tests/test_independent_massive_chie_5d.py tests/test_finite_mass_dirac_trace.py tests/test_finite_mass_chie_kernel.py",
+    "Reproduce six cases: python -m kinetics.independent_massive_chie_5d --temperature-ratio {0.1,1,10} --chi-temperature-ratio {0.9,1.1}; do NOT infer global 1e-6 numerical accuracy from six collocation cases.",
     "Check latest PR head and scientific CI after finite-mass kernel commits ba83f58, dea914d7 and report 5a81a97; earlier run 44947528381 succeeded on 078c3c4.",
     "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and full GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG; confirm current draft PR #1 head/CI",
     "CI run 44946031231 failed 1/737 tests on exact floating-point Qe == -Qchi (relative 1.05e-13); test tolerance corrected in commit 832b5b3. Verify fresh CI on 832b5b3 and investigate any new failures before promotion.",
     "Read INVARIANT-CHI-E-ENERGY-KERNEL.md, microreversible_chie_lattice.py, verify_microreversible_lattice.py, results JSON, and independent nonlinear 5D weak/strong reference"
   ],
   "experiments": [
+    "Independently constrain thermal cutoff by computing both incoming and outgoing cut tails; asymptotic electron Boltzmann suppression at T/me=.1 with finite positron/electron chemical potentials and charge neutrality; preserve nonmonotonic n/cut negative results.",
+    "Derive and implement finite-T e−,e+,γ,ν number and energy budgets with e+e−↔γγ and weak ν interactions where applicable, Pauli/Bose and exact Qdark+QSM conservation, independent equilibrium checks, no hidden thermal reset.",
+    "Fix explicit SU(2)L×U(1)Y-consistent lepton portal and UV mediator mass/couplings; distinguish e_L,e_R,ν and temperature vs mW, EFT breakdown; compute physical thermal rates and error bounds.",
+    "Extend nonlinear Pauli kinetic evolution beyond equilibrium FD temperature perturbations and compare to independent direct 5D kernel with q/h/angular/dt cutoffs; do not claim gamma_el from heat moment alone.",
     "For finite me test energy-cutoff and quadrature 3+ refinements, Pauli at arbitrary independent chemical potentials and Tchi != Te, and finite heat capacity with e+e- annihilation; document EFT breakdown near electroweak restoration.",
     "Run python -m pytest -q tests/test_finite_mass_chie_kernel.py; independently check trace with finite-mass Dirac gamma matrices and CM 5D differential heat against 1D transfer kernel; preserve negative controls.",
     "Check new scientific-ci.yml Python 3.11/3.13 workflow for 832b5b3; if green, record run IDs and then independently validate massive-electron kernel threshold heat versus continuum and cutoff/mesh convergence.",
@@ -29,5 +36,12 @@
     "Physically evolved χ1+χ2+φ+SM to freezeout with independent BEST/FRW/observational validation before any 86eV relic/ΩDM/BEC/CLASS claim"
   ],
   "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
-  "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma."
+  "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma.",
+  "latest_completed_reference": {
+    "report": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md",
+    "data": "kinetics/results/finite-mass-5d-independent-2026-11-22.json",
+    "status": "locally measured; repo CI must be checked",
+    "prior_head": "065644e493492a6a1c579eb7728283570e9f6438",
+    "scope": "conditional vector-contact six thermal benchmarks, not physical plasma or 86eV DM"
+  }
 }

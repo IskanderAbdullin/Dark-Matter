@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-21",
+  "updated_utc": "2026-11-22",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC or CLASS prediction",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": null,
+  "stop_reason": "Active chat run is limited to finite verified stages. Recheck NEW CI and perform realistic finite e± thermal heat and crossing physics on restart; no background continuation implied beyond separately scheduled task.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Run physical paired 5D chi-e vector-contact event quadrature on adapted IR bins; compare raw bin-center detailed-balance defect, physical strong/weak heat and corrected projection bias. See FINITE-BIN-RECOIL-PROJECTION-CONTROL.md.",
+  "instruction": "Verify CI for newly committed independent massive 5D/source/trace benchmark, reproduce at Te/me=.1,1,10 and χ/Te=.9/1.1; adapt outgoing kinematics/cutoffs. Next implement e± finite thermal energy/number/chemical potential and annihilation ledger with a physically explicit gauge-consistent mediator, then fully nonthermal source; see NEXT_ACTION.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "A: directly symmetric (NO posthoc W averaging) Lorentz-invariant χ+e contact 2->2 four-phase-space to 1D q-transfer kernel and energy-collocated Pauli quartet nonlinear operator; both species evolve with bounded implicit pair splitting; high/low energy-grid and time convergence partial; realistic thermal SM/Bose cosmology not done.",
+  "current_phase": "A: independently verified conditional finite-mass χe vector-contact 1D invariant momentum-transfer heat against separate full massive 5D CM scattering with full Pauli and Dirac spin trace at T/me=.1,1,10. Numerically conditional EFT only; next P0 realistic finite e± plasma/ν, UV/EW gauge and nonthermal coupled source.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -221,7 +221,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "Direct invariant energy kernel avoids prior posthoc W averaging on one fixed electron-only contact model; true continuum Boltzmann and real SM electroweak+thermal interactions, 1↔2 thermal Yukawa, H,gstar, freezeout, f_phi, 86eV ΩDM, BEC, CLASS remain UNVALIDATED. Report deliberately records nonmonotonic energy-collocation convergence. Old CI syntax failures have been patched but need a new green run.",
+  "physics_scope_warning": "New independent massive 5D heat benchmark validates conditional direct ell kernel normalization in six thermal test cases at fixed cuts (nonmonotone finite-grid errors). No full gauge-complete SM e±/ν heat/annihilation/thermal masses, nonthermal eigenmodes, FRW Bose relic, BEC, absolute ΩDM or CLASS.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "078c3c4fb0d27ed7c30fbecad9cc591d31bde8ce",
-    "run_id": 44947528381,
+    "head_sha": "065644e493492a6a1c579eb7728283570e9f6438",
+    "run_id": 44954815892,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44947528381"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44954815892"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -274,16 +274,19 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "finite-electron-mass invariant chi-e transfer kernel",
-    "status": "implementation_and_local_algebraic_checks_only_CI_pending",
-    "source": "kinetics/finite_mass_chie_kernel.py",
-    "test": "tests/test_finite_mass_chie_kernel.py",
-    "report": "kinetics/FINITE-MASS-CHI-E-KERNEL.md",
-    "commits": [
-      "ba83f58c252eef2a838ba58e96c8b46bb5938aad",
-      "dea914d7a779d61317856da03ce608a7b6a190c6",
-      "5a81a971e70c3b90206aec1e02a586ff441338c0"
+    "name": "Massive χe invariant ℓ kernel vs independently constructed full 5D COM, full-Pauli heat, four-spin Dirac trace",
+    "status": "sandbox_reproducible_six_benchmarks_and_local_tests; new_GitHub_CI_pending",
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "tests": [
+      "tests/test_independent_massive_chie_5d.py",
+      "tests/test_finite_mass_dirac_trace.py"
     ],
-    "limits": "No independent finite-mass 5D heat or physically complete SM lepton plasma; no gamma_el, 86-eV relic, BEC, Omega or CLASS."
-  }
+    "report": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md",
+    "data": "kinetics/results/finite-mass-5d-independent-2026-11-22.json",
+    "conditions": "M/me=0.1, gchi=ge=4, Tchi/Te=.9/1.1, Te/me=.1/1/10; Pauli, no μ; cutoff kinetic 30 Te",
+    "result": "At n40 5D and n160 E,ω,Δ plus 24 ell, six relative errors |Qell/Q5D-1| <= 8.12e-7; strong nonmonotonic mesh and cutoff deviations preclude uniform accuracy claim.",
+    "extrapolation_prohibited": "not physical Γ_el or spectral gap, not a coupled e±γν SM plasma, no thermal Yukawa/BEST/FRW, no 86-eV relic/ΩDM/BEC/CLASS",
+    "commit_SHA": "Resolve from branch history: checkpoint committed in same Git tree; baseline parent 065644e493492a6a1c579eb7728283570e9f6438."
+  },
+  "last_checkpoint_parent_sha": "065644e493492a6a1c579eb7728283570e9f6438"
 }

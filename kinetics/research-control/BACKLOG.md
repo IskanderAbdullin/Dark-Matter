@@ -148,3 +148,12 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Derived and committed conditional finite-mass electron invariant ℓ kernel and massless/reversal/Pauli/forbidden-transfer regression; local standalone controls passed, **new repository CI still pending**. [Derivation](../FINITE-MASS-CHI-E-KERNEL.md).
 - [ ] Verify new real CI, independently derive massive spin trace, compare full massive 5D CM heat vs ℓ kernel at T/me=0.1,1,10 with at least three resolutions and electron cutoff; preserve negative results.
 - [ ] Build finite e± plasma with number-changing/chemical potentials and finite heat capacity, gauge-consistent portal and EFT temperature validity before cosmological evolution.
+
+## 2026-11-22 independent finite-electron-mass 5D CM and spin-trace audit
+
+- [x] Previous finite-me [Scientific verification #44954815892](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44954815892) **success** on 065644e; new benchmark commit CI not yet certified.
+- [x] Compute **independent** CM 5D p,k,μ,cosθ*,φ* with actual Lorentz boosts and Fermi forward/reverse, plus separate exact ℓ-cone energy integral at Te/me=.1,1,10, Tχ/Te=.9/1.1. Fixed n40/n160 comparison <8.12e−7 relative in all six benchmark cases; test hot and cold sign. [Audit](../FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md).
+- [x] Explicit independent Dirac 4×4 trace (four unequal-mass physical kinematics) matches finite-mass analytic |M|² to ≤1.5e−15 relative; massless previous 5D normalization reproduces.
+- [x] **Negative:** E/ω/Δ quadrature convergence nonmonotone and cutoff sensitivity at ~1e−5; n160 coincidence is not a uniform error bound. Full physical SM source and thermal rates remain unknown.
+- [ ] **Next P0:** verify CI for new 5D tests; tighten cutoff/crossing with e−/e+ chemistry and charge neutrality, finite γ/ν SM heat and e+e−↔γγ, plus explicit gauge/UV completion and actual G(T,q) validity. Follow with nonthermal Pauli χ spectra and time convergence coupled to physical finite bath. No physical gamma_el/BEC/86eV relic/ΩDM/CLASS.
+
