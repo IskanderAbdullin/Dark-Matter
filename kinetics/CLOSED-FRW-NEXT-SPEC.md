@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВЫЙ АНАЛИТИЧЕСКИЙ ВНЕШНИЙ ЭТАЛОН РЕЛЯТИВИСТСКОГО FRW РЕДШИФТА МЯГКОГО BOSE ИСТОЧНИКА:** [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) точно интегрирует massive 1→2 gain из thermal-at-t0 матери, остающейся collisionless с постоянным fχ1(q_com) и a=sqrt(t/t0), не заменяя мать тепловой FD заново. При tΓ=4e−5, a=1.1832, A(qmin) падает 27047→10929, fφ(qmin)=1.019684, finite q<qmin N=1.70926e−14. Первопорядковая 16/32-extrap реального BEST f≈1.019084 (≈0.06% отличие), но это лишь ранний open-mother/no-χ2 континуальный benchmark: следующий шаг точные 64/128 и независимые q-grid/Γ(T)/SM источники.
+
+
 **ПОДТВЕРЖДЕНО НЕЗАВИСИМО — настоящий ранний BEC пока НЕ возник:** [BEST-QMIN-ZERO-MODE-SCAN.md](BEST-QMIN-ZERO-MODE-SCAN.md), [GitHub Actions](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44920000218). При трех qmin число в zero mode N0 падает ∝qmin³: отношение N0(1e−4)/N0(5e−5)=7.9985 (теория 8), N0(5e−5)/N0(2e−5)=15.6267 (теория 15.625), разброс N0/qmin³ ~0.019%. Макроскопическая δ³(p) компонента не подтверждена для tΓ=4e−5, H=0; это не запрещает позднюю BEC. **ВНЕШНЯЯ FRW-ВРЕМЕННАЯ СХОДИМОСТЬ** [4/8/16/32](BEST-RADIATION-FRW-PILOT.md) выявила первый порядок ошибки Bose f(qmin), 16→32 ещё даёт 2.026%, хотя energy pressure-work trapezoid обладает вторым порядком и conserved charges ≲1e−9. Следующий этап более тонкий time grid, независимая q/MC resolution и SM gstarS прежде CLASS.
 
 

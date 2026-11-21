@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**NEW independent expanding-FRW soft Bose analytic benchmark:** [collisionless parent redshift + exact two-body gain](kinetics/RD-COLLISIONLESS-BOSE-REFERENCE.md), [code](kinetics/radiation_collisionless_parent_bose.py). Instead of incorrectly maintaining a thermal mother, freeze the original FD distribution in comoving momentum, integrate exact massive on-shell parent energies at each a(t), and solve Bose (1+f) growth at every q. At a_end=sqrt1.4, tΓ=4e−5, predicts fφ(qmin=1e−4)=1.019684 and sub-qmin number 1.70926e−14. First-order 16/32-step actual external BEST FRW extrapolation fφ≈1.019084 agrees within 0.06%, but time/grid and microphysics are NOT fully converged.
+
+
 **Early Bose zero-mode now DISPROVEN as a macroscopic condensate:** [real 3-cutoff independent BEST experiment](kinetics/BEST-QMIN-ZERO-MODE-SCAN.md), [GitHub Actions #44920000218](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44920000218), [measured permanent JSON](kinetics/results/best-qmin-real-2026-11-21.json): massive φ N0 shrinks precisely as qmin³ (ratios 7.9985 and 15.6267 vs 8 and 15.625) while full φ number stays stable; the small early-time zero mode is subgrid ordinary particles, not a macroscopic BEC. Separately, [real expanding-FRW BEST 4/8/16/32 time-step survey](kinetics/BEST-RADIATION-FRW-PILOT.md), [measured JSON](kinetics/results/best-rd-time-refinement-2026-11-21.json), shows 1st-order errors in soft Bose f(qmin) and 2nd-order pressure-work integration: 16→32 changes f(qmin) by 2.03% and full φ number 0.259%; cold spectrum not time-converged/CLASS-ready.
 
 

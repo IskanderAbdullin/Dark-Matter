@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**INDEPENDENT ACTUAL FRW SOFT SOURCE BENCHMARK:** [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) derives the exact massive two-body Bose gain A(q,t) for initially thermal massive mother **held fixed in comoving momentum**, not rethermalized during prescribed radiation expansion. Integrating time-dependent A yields fphi(qmin=1e−4,tΓ=4e−5)≈1.019684 and sub-qmin number≈1.709258e−14, close to asymptotic extrapolation of independent real BEST 4/8/16/32 data. The initial A(qmin) drops 27047→10929 due to redshift; fixed-a Bose exponential 1.9502 would be wrong in FRW. No closed/SM-realistic/frozen 86-eV/CLASS claim.
+
+
 **Independent BEST ZERO MODE qmin³ NEGATIVE TEST:** [actual 3-cutoff experiment](BEST-QMIN-ZERO-MODE-SCAN.md), [pinned real data](results/best-qmin-real-2026-11-21.json), shows N0/qmin³ invariant to 0.019% for qmin=1e−4, 5e−5, 2e−5, whereas number in all φ remains ~6.6055e−7. Thus early zero-mode is smooth massive Bose IR phase volume, NOT a condensate. **BEST RD-FRW time-step survey** [4/8/16/32 steps](BEST-RADIATION-FRW-PILOT.md) resolves ~first-order φ (Δφ 0.259% for 16→32) versus only ~second-order pressure-work quadrature; [measurements](results/best-rd-time-refinement-2026-11-21.json). Next stage higher temporal resolution plus q grid and SM/zero-mode physical closure before 86eV PSD/CLASS.
 
 
