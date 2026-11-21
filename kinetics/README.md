@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**NEW ON-SHELL 2D SOURCE:** [two-dimensional on-shell collision operator](ONSHELL-COLLISION-2D.md) removes parent/angular remapping entirely and integrates exact allowed daughter-energy cell areas. The independent continuum vacuum source (0.0164959084596) matches the historic quadrature to ~1.7e−10, with positivity, detailed-balance and H-theorem tests. Finite binning and fixed mother bath remain; this does NOT prove full physical production or an observational DM model.
+
+
 **NEW ANGULAR-QUADRATURE RESULT:** the previous Gauss–Legendre decay-angle nodes miss the soft daughter-momentum endpoint, making the cold-burst mean momentum angle-grid dependent. [Angular IR audit](ANGULAR-ENDPOINT-IR-AUDIT.md) and [log-daughter-energy integration](LOGQ-ANGULAR-QUADRATURE.md) give the analytic explanation and a substantially better convergent *surrogate* benchmark. These do not solve the physical parent-energy/inverse-kinetic gap.
 
 

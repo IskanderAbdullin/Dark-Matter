@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**New on-shell collision construction:** the 1↔2 measure transforms exactly to a two-dimensional daughter-energy domain (4q_phi q_{chi_2}ge M_1^2). An analytic 1D vacuum-source integral matches the original parent-angle quadrature at relative 1.7e−10; a finite-grid physically on-shell collision network now has exact daughter invariant, discrete balance and entropy tests. [Full derivation and numerical audit](kinetics/ONSHELL-COLLISION-2D.md). Still a fixed thermal mother bath; not FRW or validated 86-eV DM.
+
+
 **New numerical finding:** finite Gauss–Legendre angle sampling misses the strongly backward-collinear soft-boson endpoint in the 1↔2 source. A verified change of variables to log daughter energy dramatically reduces angle-resolution bias in the *finite-lattice surrogate*, but does not remove its independent physical parent-energy defect. See [angular endpoint audit](kinetics/ANGULAR-ENDPOINT-IR-AUDIT.md) and [new log-q quadrature](kinetics/LOGQ-ANGULAR-QUADRATURE.md).
 
 
