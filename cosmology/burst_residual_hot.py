@@ -23,11 +23,11 @@ def inv_expm1(x):
 def write_bimodal(path,alpha,hot_fraction,coarse=False):
     assert 0<alpha<1 and 0<=hot_fraction<=1
     if coarse:
-        q=np.unique(np.r_[np.geomspace(1e-6,.005,330),
-          np.geomspace(.005,.15,240),np.linspace(.15,45,1250)])
+        q=np.unique(np.r_[np.geomspace(1e-6,.005,450),
+          np.geomspace(.005,.8,900),np.linspace(.8,45,2300)])
     else:
-        q=np.unique(np.r_[np.geomspace(1e-7,.005,700),
-          np.geomspace(.005,.15,580),np.linspace(.15,50,3500)])
+        q=np.unique(np.r_[np.geomspace(1e-7,.005,800),
+          np.geomspace(.005,.8,1600),np.linspace(.8,45,3500)])
     # q=p/T_reference; same species, one REAL spin-zero degree of freedom.
     cold=(1-hot_fraction)*alpha**-3*inv_expm1(q/alpha)
     hot=hot_fraction*inv_expm1(q)

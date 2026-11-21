@@ -140,3 +140,17 @@ def test_number_preserving_toy_cold_PSD_analytic():
             value=toy.cold_psd_file(Path(folder)/("alpha"+str(alpha)+".dat"),alpha)
             assert abs(value["number_ratio"]-1)<1e-4
             assert abs(value["early_radiation_ratio"]/alpha-1)<1e-4
+
+
+def test_bimodal_bose_population_moments():
+    import tempfile
+    from pathlib import Path
+    mod=load("cosmology/burst_residual_hot.py")
+    with tempfile.TemporaryDirectory() as folder:
+        for alpha in (.02,.01):
+            for w in (0.,.01,.05,.1,.2):
+                data=mod.write_bimodal(Path(folder)/("b"+str(alpha)+"-"+str(w)+".txt"),alpha,w)
+                assert abs(data["number_moment_ratio"]-1)<1e-4
+                assert abs(data["radiation_moment_ratio"]-1)<1e-4
+                expect=w/((1-w)*alpha+w)
+                assert abs(data["hot_fraction_of_early_relativistic_energy"]-expect)<1e-12
