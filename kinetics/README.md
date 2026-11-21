@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**COLLISIONLESS MASSIVE FRW LIMIT:** [exact Liouville parent background](FRW-COLLISIONLESS-MOTHER.md) distinguishes free f1(q)=constant from external continuous FD rethermalization as M1/T rises; independent number/energy/pressure quadratures obey x d(ρ/T⁴)/dx=(ρ−3P)/T⁴ and dρ/dln a=−3(ρ+P). Required independent benchmark before coupling the closed 1↔2 collision solver to expanding FRW, not a dark matter PSD.
+
+
 **POSITIVE RESONANT RATE CALIBRATION:** [cut-cell FD averaged K_ij](CALIBRATED-CUT-CELL-RATES.md) retains exactly the same physical center-on-shell 1↔2 channels and unique mother states. Reference-thermal empty-daughter source matches the included continuum cut-cell integral; forward/reverse rates share one positive constant K, so conservation/H theorem remain. Dynamic nonequilibrium and zero-mode/freezeout accuracy remain unproven.
 
 

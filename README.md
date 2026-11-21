@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FRW Liouville benchmark for MASSIVE dynamically conserved mother:** [collisionless FRW χ1 energy/number/pressure check](kinetics/FRW-COLLISIONLESS-MOTHER.md) proves that after decoupling fχ1(q=p/T) stays fixed while E/T=sqrt(q²+x²) changes. Comoving parent n/T³=.3652061 remains constant, whereas artificially reapplying instantaneous FD at x=5 leaves only 7.35% of that inventory. Exact dρ/dln a=−3(ρ+P) is tested. This is a no-collision benchmark, NOT coupled closed Bose FRW production.
+
+
 **New positive quadrature variant:** [thermal cut-cell calibration of on-shell quantum reaction rates](kinetics/CALIBRATED-CUT-CELL-RATES.md) integrates the exact empty-daughter FD source within retained center-resonant cells and sets a positive constant rate that preserves the graph's two charges, energy, detailed balance, Pauli bounds and H theorem. It does NOT recover omitted off-shell-centroid regions or establish nonlinear/FRW primordial PSD accuracy.
 
 
