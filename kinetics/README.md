@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**PHYSICAL ON-SHELL IR THEOREM:** [vacuum small-q source bound](VACUUM-IR-TAIL-BOUND.md) integrates the exact Fermi–Dirac on-shell daughter-energy source and proves a sharp exponential-integral upper bound for empty daughters. For M1/T=.1, initial birth below q/T=.0005 is 6.1e−7 of total, but this does NOT constrain Bose-stimulated later f(q). Independent numeric tests enforce the bound.
+
+
 **SPECTRAL SHAPE DIAGNOSTICS:** [finite-bin CDF/number quantile audit](SHAPE-DIAGNOSTICS.md) reconstructs number-weighted momentum q01/10/50/90/99 from the unchanged Schur-BDF short-time daughter spectra. It checks exact q²dq shell-volume CDF and separates bin-dependent Bose heights from integrated observables. No physical CLASS prediction; must still verify IR/UV/time/FRW and condensate dynamics.
 
 

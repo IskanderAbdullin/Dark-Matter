@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Analytic infrared control added:** [rigorous bound for the EMPTY-daughter on-shell vacuum source](kinetics/VACUUM-IR-TAIL-BOUND.md) yields a fractional birth rate below q/T=.0005 of ~6.1e-7 (bound 4.1e-6) for M1/T=.1. It is explicitly NOT a bound on the later nonlinear stimulated Bose population or zero-mode condensate; the factor 1+f can radically change production.
+
+
 **Beyond a single mean momentum:** [closed Bose-bin CDF and q01/q10/q50/q90/q99 diagnostics](kinetics/SHAPE-DIAGNOSTICS.md) now use the exact q²dq number measure of each kinetic shell, with independent analytic tests on constant-occupation spectra and normalized CDF comparisons across high-energy cutoffs. Snapshot analysis remains at short tΓ=.001, NOT cosmological freezeout, zero-mode BEC or CLASS input.
 
 
