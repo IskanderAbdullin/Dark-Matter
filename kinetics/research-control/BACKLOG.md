@@ -171,3 +171,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [ ] Verify new scientific CI and reproduce small/large y, quadrature/cutoff, independent FD; resolve thermal asymptotic T≪me for realistic physical baryon charge.
 - [ ] **P0:** derive actual e−+e+↔γ+γ microscopic finite-T Pauli/Bose source and test forward/backward equilibrium, charge/energy/entropy, e± freeze-out, full photon+ν heat and UV-valid χe/eν before nonlinear χ+Bose FRW. No Γel/86eV Ω/BEC/CLASS claims.
 
+## 2026-11-22 QED pair-annihilation microscopic partial gate
+
+- [x] Independently derive vacuum QED e−e+→2γ spin-averaged CM differential amplitude, exact Dirac σv and lab electron-rest Heitler/Geant4 σ; verify β threshold and identical-final-photon factor (<8e−13 at five β values). [Report](../QED-PAIR-ANNIHILATION-CONTROL.md), [tests](../../tests/test_qed_pair_annihilation_control.py).
+- [x] FD-initial collision **LOSS ONLY** R with correct Møller flux and spin degeneracy; compare Gauss radial/angular orders and low-T NR threshold. R/(n_e− n_e+ πα²/me²)=0.994852 at T/me=.025, .295344 at T/me=1. Not a physical net e± annihilation chemical rate.
+- [x] **Negative:** exact full Bose/Pauli local quantum event factors cancel thermal e−+e+↔γ+γ at μe−+μe+−2μγ=0 (including nonzero opposite electric μ). Loss-only R cannot drive a correct equilibrium.
+- [ ] Verify real CI for this stage and previous charge-constrained heat stage; add full 5D finite-T differential QED F−R with photon stimulation and inverse, independently check all number/charge/energy/entropy moments, λ/angle/temperature grids and finite-time chemical freezeout; add neutrino/UV-dark portal before full χe–BEST Bose FRW. No physical γel/BEC/86eV Ω/CLASS.
+

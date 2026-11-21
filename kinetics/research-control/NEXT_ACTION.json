@@ -2,9 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Check fixed-charge pair heat CI, then derive real finite-T e+e−↔γγ collision and charge/energy ledger",
-  "objective": "Charge-constrained electron/positron heat requires a Schur complement C_Q/T³=B−D²/S. Independent finite-difference at fixed physical charge supports it to <8e−7 for T/me=.025,.05,.1,1. Naive fixed-y heat exceeds C_Q electron-only by ~1086 at T/me=.025 with illustrative eta; photons dominate the total EM bath. Verify new CI, and do not use either fast-chemistry closure for χ evolution until finite-T pair annihilation and SM weak reactions justify rates. Next derive Pauli/Bose e+e−↔γγ collision, finite γ/ν entropy/energy, physical χe source + UV validity.",
+  "title": "Implement finite-temperature QED e−e+↔γγ full Pauli/Bose integral and evolving charge/energy ledger",
+  "objective": "Vacuum QED two-photon σv is independently matched to Geant4/Heitler, and initial FD e± loss rate was measured across T/me=.025..1, but loss is NOT full chemical relaxation. Full Pauli/Bose local shell F/R cancels at common T with μe−+μe+−2μγ=0. Next implement exact 5D differential QED event integral with both forward and inverse photon reactions and finite e±γ energy charge/entropy (no hidden bath reset), validate independent angular/CM normalization and time/cutoff convergence, then complete weak neutrino SM plasma and gauge/UV-valid χ1 portal.",
   "prerequisites": [
+    "Check PR #1 latest research head and GitHub Scientific CI on QED stage plus prior fixed-charge stage 42f71c (run #44957287286 was in progress when checked), and preserve any failure rather than claiming green.",
+    "Run python -m pytest -q tests/test_qed_pair_annihilation_control.py tests/test_fixed_charge_pair_capacity.py tests/test_em_pair_thermodynamics.py",
+    "Read kinetics/QED-PAIR-ANNIHILATION-CONTROL.md and verify Geant4 Heitler σ and beta->0 threshold with photon identical 1/2.",
     "Check actual GitHub Scientific CI for fixed_charge_pair_capacity stage commit and for EM EOS commit 35570f1; at checkpoint run #44957004790 for EOS was still in_progress.",
     "Run python -m pytest -q tests/test_fixed_charge_pair_capacity.py tests/test_em_pair_thermodynamics.py tests/test_independent_massive_chie_5d.py",
     "Independently reproduce C_Q fixed-net-charge finite differences for T/me=.025,.05,.1,1 by python -m kinetics.fixed_charge_pair_capacity --T-over-me 0.025",
@@ -20,6 +23,9 @@
     "Read INVARIANT-CHI-E-ENERGY-KERNEL.md, microreversible_chie_lattice.py, verify_microreversible_lattice.py, results JSON, and independent nonlinear 5D weak/strong reference"
   ],
   "experiments": [
+    "Compute true full 5D e− e+ ↔ γ γ QED amplitude with CM boosts of BOTH final photon energies and Fermi/Bose F−R for nonthermal distributions, no counting loss-only R as net Γ; test exact thermal stationarity with μe−=−μe+, μγ=0.",
+    "Implement conserved electric charge and total e±γ energy, photon number-changing (not conserved), and entropy in a finite bath; quantify reaction chemical timescales with photon Bose stimulation and electron Pauli, compare to fast/frozen pair limits.",
+    "Then include weak ν interactions, evolving photon/e±/ν gstar/entropy, explicit SU2×U1 valid χe/χν mediator and 5D nonlinear χe collision, followed by physical BEST Bose 1↔2, RD/FRW and late freezeout without unfounded 86eV claims.",
     "Implement physical 2↔2 e−+e+ ↔ γ+γ collision with exact on-shell electron mass, spin/polarisation and exchange symmetry factors, Pauli e± and stimulated Bose γ, and test detailed balance/charge/energy/entropy in a finite bath without resetting T.",
     "Compare fast chemical equilibrium versus frozen e+ and e− charges through pair freezeout, bracket actual C_Q with microscopic reaction rates and finite photon/ν heat capacity; include baryon charge and gstar background.",
     "Establish gauge invariant χ1-e,ν UV portal and temperature validity; then full nonthermal χ1/SM Pauli collision, real χ1↔χ2+φ Bose coupling to BEST, FRW convergence, no 86eV claim without terminal gates.",
@@ -50,9 +56,9 @@
   "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
   "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma.",
   "latest_completed_reference": {
-    "report": "kinetics/FIXED-CHARGE-PAIR-CAPACITY-AUDIT.md",
-    "data": "kinetics/results/fixed-charge-pair-capacity-2026-11-22.json",
-    "scope": "equilibrium ideal e± charge susceptibility and fixed-volume FD only; no annihilation dynamics",
-    "status": "numerical controls local; new CI pending"
+    "report": "kinetics/QED-PAIR-ANNIHILATION-CONTROL.md",
+    "data": "kinetics/results/qed-pair-annihilation-control-2026-11-22.json",
+    "status": "sandbox numeric and independent analytic/geant checks; new CI pending",
+    "warning": "FD incoming loss ONLY and local quantum event, no full thermal plasma rate"
   }
 }

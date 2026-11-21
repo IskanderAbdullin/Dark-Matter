@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Bounded active run: next executable scientific step remains ready. Hourly scheduled task exists but this chat is not itself a background worker.",
+  "stop_reason": "Active session has a finite runtime. NEXT_ACTION preserves executable next finite-temperature QED plasma step; hourly scheduler separate from this chat.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Check actual CI on new fixed-charge heat stage and previous e± EOS; then implement explicit e+e−↔γγ thermal collision with Bose/Pauli and charge+energy ledgers, finite photons/ν heat and UV/gauge-consistent χe portal; do not label any thermal response Γel.",
+  "instruction": "Check newest full GitHub CI for fixed-charge/QED stages; next integrate actual differential on-shell 5D e−e+↔γγ with BOTH Pauli and photon Bose F−R and finite e−/e+/γ ledger, then neutrino/UV χ portal. Never use LOSS alone as γchem or a cosmological rate.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "Conditional finite-mass χe 5D/ℓ heat checked independently; finite e±γ equilibrium EOS/charge neutrality checked, now charge-CONSTRAINED finite-volume heat susceptibility. No microscopic e+e−↔γγ or weak ν plasma dynamics / no validated physical γel.",
+  "current_phase": "QED e−e+→γγ vacuum reaction amplitude independently normalized vs Heitler/Geant4 and thermal FD-initial LOSS rate computed. Local quantum detailed balance affirmed; NO net finite-T photon Bose/Pauli collision, no physical χe bath/γel or 86eV.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -274,17 +274,16 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "Charge-constrained electron-positron thermal susceptibility in a finite electromagnetic volume",
-    "status": "locally quantified with independent fixed-charge finite differences; source and regression staged; CI pending",
-    "source": "kinetics/fixed_charge_pair_capacity.py",
-    "test": "tests/test_fixed_charge_pair_capacity.py",
-    "report": "kinetics/FIXED-CHARGE-PAIR-CAPACITY-AUDIT.md",
-    "data": "kinetics/results/fixed-charge-pair-capacity-2026-11-22.json",
-    "formula": "C_e± at fixed nQ/T^3=B-D^2/S, where B=∫q²ε²(a+b)/π², D=∫q²ε(a-b)/π², S=∫q²(a+b)/π²; a,b respective Fermi variances",
-    "independent_test": "Solve μ± at T±0.0001 T preserving the SAME net physical charge density; finite difference of ρ reproduces Schur complement to <8e−7 at T/me=.025,.05,.1,1",
-    "negative": "At T/me=.025, illustrative η=6e−10, electron pair fixed-y B=2.5249865e−7 versus fixed-charge C_Q=2.3242674e−10 in T³ units; ~1086-fold electron-only overestimate, but photons dominate total EM C.",
-    "prior_eos_commit": "35570f1ee42edd665a40b25f8289700ee9c38896",
-    "limits": "Assumes fast e−e+↔γγ chemical equilibration but no microscopic rate; illustrative fixed-volume charge and no baryons, no ν, γel, Bose relic, 86eV, BEC, Ω, CLASS"
+    "name": "QED e−e+→γγ exact two-photon cross section and thermal FD initial loss; local Pauli/Bose affinity",
+    "status": "independent_local_numeric_vacuum_cross_section_checks; CI_pending; deliberately_NOT_full_finite_temperature_collision",
+    "source": "kinetics/qed_pair_annihilation_control.py",
+    "tests": "tests/test_qed_pair_annihilation_control.py",
+    "report": "kinetics/QED-PAIR-ANNIHILATION-CONTROL.md",
+    "data": "kinetics/results/qed-pair-annihilation-control-2026-11-22.json",
+    "positive": "Exact σv from CM differential spin-pol amplitude, analytic Dirac expression and independent Geant4 Heitler rest-frame σ agree <8e−13 across beta .01,.1,.5,.8,.95; FD initial loss ratios .994852 at T/me=.025 to .295344 at T/me=1 (normalised by NR σv n_e−n_e+).",
+    "negative": "LOSS-only positive R cannot be used as net chemical relaxation. Local full Fermi electron/Bose photon F−R=0 at common T and μe−+μe+−2μγ=0, even at nonzero electron charge; inverse/Bose photon phase-space not integrated.",
+    "scope": "vacuum QED two-photon matrix element and thermal initial electron FD only, no full finite-T collision or time-dependent eγν plasma; no dark portal or CLASS",
+    "prior_checkpoint_sha": "42f71c1817960800972607b7fe6e3d97ca4597f7"
   },
-  "last_checkpoint_parent_sha": "35570f1ee42edd665a40b25f8289700ee9c38896"
+  "last_checkpoint_parent_sha": "42f71c1817960800972607b7fe6e3d97ca4597f7"
 }
