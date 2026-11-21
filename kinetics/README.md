@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ACTUAL CLOSED FRW BEST MPI BASELINE:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md) reports true third-party BESThep a=sqrt(t/t0), positive massive Bose + Pauli inverse collisions and dynamic mother, zero-mode; comoving charges conserved and physical d(a⁴ρ)/dln a=a⁴(ρ−3P) independently integrated. At tGamma=4e−5, a=1.1832: 4 vs8 steps phi 7.0678e−7 vs7.1429e−7 (**1.05% difference**); IR f and N0 **8.42% difference**, physical work residual decreases ~4×. [Permanent observed data](results/best-rd-frw-real-2026-11-21.json). Continue 16/32 steps; no SM gstarS / late-time 86-eV relic.
+
+
 **PHYSICAL FRW EXPANSION BENCHMARK, NOT JUST H=0:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md) sets BEST a(t)=sqrt(t/t0) for the entire dynamic χ1,χ2,massive φ/zero mode collision network. Independently computes P from q⁴/E physical quadratures, proper Ecom=a⁴ρ work law, 2 comoving charges, and all kinetic spectra. This is a fixed RD background without SM entropy exchange or backreaction and not yet a converged dark-matter freezeout.
 
 

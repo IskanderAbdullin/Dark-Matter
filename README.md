@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FIRST ACTUAL quantum 3-species RADIATION FRW independent BEST run:** [public verified Actions #44919387818](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44919387818) dynamically evolves χ1↔χ2+massive φ with a=sqrt(t/t0), t0=1e-4, a rises1→1.1832, both comoving numbers and independent physical pressure-work budget audited. [Measured results and NEGATIVE time-step finding](kinetics/BEST-RADIATION-FRW-PILOT.md), [persistent evidence](kinetics/results/best-rd-frw-real-2026-11-21.json): 4→8 steps changes produced φ number **1.05%**, soft-q f and N0 **8.42%**, although two charges agree ~1e−10. Independent FRW pressure-work trapezoid residual drops factor~4 (1.93e−7→4.82e−8), confirming separate quadrature convergence, NOT cold-source convergence. This is prescribed RD, not SM-coupled physical 86-eV DM/CLASS.
+
+
 **First independently executable CLOSED 3-species BEST + RADIATION FRW pilot:** [conditional genuine expansion with pressure-work budget](kinetics/BEST-RADIATION-FRW-PILOT.md) uses a=sqrt(t/t0), massive χ1 and massive φ, zero-mode, comoving momentum coordinates, no mother FD reset, full quantum collisions, and checks d(a⁴ρ)/dln a=a⁴(ρ−3P) against an independent pressure quadrature. Both reaction number charges are audited. It is a prescribed RD test, not fully self-consistent SM heat/entropy/gstar, a physical 86eV relic, or CLASS.
 
 

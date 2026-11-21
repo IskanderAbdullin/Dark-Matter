@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НАСТОЯЩАЯ RD FRW БОЗОННАЯ ЭВОЛЮЦИЯ ВО ВНЕШНЕМ BEST ВЫПОЛНЕНА:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md), [Actions #44919387818](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44919387818). Мать и дочери эволюционируют при a(t)=sqrt(t/t0), a:1→1.1832, two comoving charges ~1e−10. Нефиктивная работа давления +3.295e−4, независимая энергия residual ~−1.93e−7 при4 и −4.82e−8 при8 шагах (≈4× улучшение). Но nφ меняется на **1.05%**, fφ(qmin) и N0 на **8.42%** при4→8: незавершённая TIME CONVERGENCE холодного Bose источника даже в предписанном RD. Следующий шаг 16/32 (и затем IR/UV) без права выдавать количественно несходящийся спектр за physical 86eV DM/CLASS.
+
+
 **НОВЫЙ ВНЕШНИЙ BEST ПИЛОТ С НАСТОЯЩИМ FRW a(t):** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md) реализует условное a=sqrt(t/t0), t0=1e−4, M/T=.1, massive φ/T=.001, с полным dynamic three-species Bose/Pauli + zero-mode, без искусственной mother FD-reset. Два числовых комовинговых заряда и физический закон d(a⁴ρ)/dln a=a⁴(ρ−3P) независимо контролируются из реальных P(q,t), с явно измеренным residual и короткой dt-sensitivity. Это пока предписанный RD фон, не самосогласованная SM gstarS/heat+dark Friedmann и не CLASS 86eV реликт.
 
 
