@@ -50,10 +50,16 @@ class FlatThermalDecay:
         self.ic,self.wc=self._interp_weights(self.qchi)
 
     def _interp_weights(self,q):
-        logcentre=np.log(self.qcentre)
-        lo=np.clip(np.searchsorted(self.qcentre,q)-1,0,self.nq-2)
-        t=(np.log(q)-logcentre[lo])/(logcentre[lo+1]-logcentre[lo])
-        return lo,np.clip(t,0.,1.)
+        # Barycentric interpolation between shell-volume MEAN energies,
+        # not log-momentum centres: each deposited 1<->2 event then
+        # conserves discrete daughter kinetic energy (for massless daughters),
+        # simultaneously with daughter number, Pauli and Bose positivity.
+        mean=self.avg_q
+        lo=np.clip(np.searchsorted(mean,q)-1,0,self.nq-2)
+        t=(q-mean[lo])/(mean[lo+1]-mean[lo])
+        if np.any(t<0) or np.any(t>1):
+            raise ValueError("Momentum grid does not cover reaction energies")
+        return lo,t
 
     def event_gain_loss(self,y,stimulated=True):
         # Four paired subevents (phi low/high, chi low/high). Evaluating
@@ -130,6 +136,10 @@ def run(quick=False):
     results=[]
     for nq,np1,nmu in grids:
         kernel=FlatThermalDecay(nq,np1,nmu)
+        depp=kernel.avg_q[kernel.ip]*(1-kernel.wp)+kernel.avg_q[kernel.ip+1]*kernel.wp
+        depc=kernel.avg_q[kernel.ic]*(1-kernel.wc)+kernel.avg_q[kernel.ic+1]*kernel.wc
+        remap_error=float(max(np.max(abs(depp-kernel.qphi)),np.max(abs(depc-kernel.qchi))))
+        assert remap_error<1e-12,remap_error
         balance,energy=kernel.detailed_balance_error()
         assert balance<1e-10 and energy<1e-12,(balance,energy)
         empty=np.zeros(2*nq)
@@ -149,6 +159,7 @@ def run(quick=False):
                   "event_cells":np1*nmu},
           "thermal_event_detailed_balance_max_abs":float(balance),
           "event_energy_conservation_max_abs":float(energy),
+          "discrete_energy_conserving_projection_error":remap_error,
           "with_Bose_stimulation":bose,
           "without_stimulation_diagnostic_only":control,
           "number_amplification_final":b["nphi_over_T3"]/n["nphi_over_T3"]})
