@@ -38,3 +38,8 @@ See [automatic test coverage and limits](TESTING.md), [continuation V](continuat
 [Weekly deep theoretical numerics](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/deep-numerics.yml) reruns seven heavier mathematical checks every Sunday at 04:23 UTC or by manual dispatch. It keeps downloadable JSON outputs for 14 days. The lightweight push/PR suite now contains ten scientific checks, plus synthetic SPARC regressions.
 
 The follow-up [open energy-flux scaling study](continuation-06/02-generalized-open-diffusion-boundary.md) examines which boundary smoothness a power-law diffusion coefficient selects under a prescribed nonzero escape flux. Its equations are conditional transport models, not galactic evaporation measurements.
+
+
+## New cosmological transfer benchmark
+
+[Relativistically decoupled one-real-scalar 86-eV Bose relic](cosmology/README.md) — independently checked entropy, abundance, Delta Neff and correct CLASS noncold phase-space normalization, with automated [CLASS transfer workflow](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/thermal-bose-class.yml). This is a **conditional standard thermal relic model**, not a conclusion for all Bose-stimulated cold-production scenarios or a data exclusion.

@@ -1,0 +1,54 @@
+name: Thermal Bose CLASS cosmology
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/thermal-bose-class.yml'
+      - 'cosmology/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linear-bose-transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Install reproducible Einstein-Boltzmann solver
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "numpy>=1.26,<3" "scipy>=1.11,<2" "classy==3.4.3.0"
+          python -m pip show classy
+      - name: Independently check scalar abundance and Bose PSD
+        run: python cosmology/thermal_bose_class.py --analytic-only --output outputs/thermal_analytic.json
+      - name: Solve linear power spectra and q-grid convergence
+        run: python cosmology/thermal_bose_class.py --output outputs/thermal_bose_CLASS.json
+      - name: Validate saved CLASS results
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('outputs/thermal_bose_CLASS.json').read_text())
+          assert len(r['k_1_per_Mpc'])==95
+          assert r['warm_background']['omega_ncdm_h2']>0
+          assert r['PSD_convergence']['max_relative_P_z5']<.05
+          print('omega_h2:',r['warm_background']['omega_ncdm_h2'])
+          print('grid:',r['PSD_convergence'])
+          for z,v in r['power_amplitude_ratios'].items():
+              print('z=',z,'T=0.5 crossing',v['crossing_T_0p5_1_per_Mpc'])
+          PY
+      - name: Retain analysis as inspectable artifact
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: thermal-Bose86eV-CLASS
+          path: outputs/*.json
+          retention-days: 21
+          if-no-files-found: error
