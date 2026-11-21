@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Major numerical advance:** [exact Schur-complement implicit BDF](kinetics/SCHUR-BDF-RESULTS.md) now evolves the invariant-clean closed 1↔2 network with >10,000 mother energy modes by eliminating their diagonal Jacobian block *only inside Newton linear solves*, not from physics. The short-time M1/T=.1 production number changes by 0.44% from upper mesh cutoff 8.5 to 10T despite initial mother thermal-density error below 1e-5, so the frozen spectrum remains unvalidated.
+
+
 **Sparse closed evolution now runs on the repaired 3-invariant graph:** [sparse analytic-Jacobian solver](kinetics/SPARSE-CLOSED-KINETICS.md) evolves 199 daughter + 5,099 shared mother-energy states at M1/T=0.1. A short tΓ=.001 BDF run yields nφ/T³≈0.00859347, fully conservative at ~4.5e-16 for charge/energy, without a fake reaction-graph invariant. The initial mother energy grid is still biased (about −1.07%), and no FRW freezeout or CLASS PSD is claimed.
 
 

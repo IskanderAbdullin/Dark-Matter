@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**SCHUR-BDF PROGRESS:** [exact daughter-block Schur complement](SCHUR-BDF-RESULTS.md) accelerates unchanged closed nonlinear quantum kinetics: 299 daughters + 10,199 unique mother states. A four-grid full dynamical study (Rmax 5000/7000/8500/10000) finds significant cutoff dependence of tGamma=.001 Bose abundance despite independently well-converged mother FD moments. No physical primordial spectrum/CLASS approved.
+
+
 **SPARSE KINETIC DYNAMICS:** [analytic sparse Jacobian + closed three-species evolution](SPARSE-CLOSED-KINETICS.md) verifies the same nonlinear RHS against the original adaptive operator and independently checks Jacobian finite differences. A 5,497-state numerical test with 33,191 active 1↔2 pairs conserves physical charges/energy and dynamically depletes χ1. This is short fixed-T kinetics, NOT a cosmological freezeout or CLASS spectrum.
 
 
