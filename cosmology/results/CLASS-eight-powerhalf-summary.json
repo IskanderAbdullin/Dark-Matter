@@ -1,0 +1,101 @@
+{
+  "provenance": {
+    "repo": "IskanderAbdullin/Dark-Matter",
+    "action_run": 44891400124,
+    "code_commit": "e9e9d11c32aba42742f22206c681e9ca1a47c4ad",
+    "date": "2026-11-21",
+    "solver": "classy 3.4.3.0",
+    "z": 5,
+    "k_unit": "1/Mpc",
+    "ref_omega_m_h2": 0.1414994048612471,
+    "k_grid": [
+      0.002,
+      35,
+      180
+    ],
+    "PSD_fine_approx_points": 7700,
+    "PSD_coarse_approx_points": 4100
+  },
+  "definition": {
+    "half_power": "T^2=P_Bose/P_CDM=0.5",
+    "half_amplitude": "T=0.5",
+    "characteristic_mass": "4pi/3 * (2.77536627e11*omega_m_h2) * (pi/k_half_power)^3 Msun"
+  },
+  "scenarios": [
+    {
+      "alpha": 1,
+      "k_powerhalf": 0.316995,
+      "k_amphalf": 0.432763,
+      "mass_Msun": 160124293775748,
+      "precutoff_max_P_rel_diff": 0.00001,
+      "halfpower_k_rel_shift": 0.000001
+    },
+    {
+      "alpha": 0.5,
+      "k_powerhalf": 0.554836,
+      "k_amphalf": 0.749939,
+      "mass_Msun": 29862004586907,
+      "precutoff_max_P_rel_diff": 0.00001,
+      "halfpower_k_rel_shift": 0.000002
+    },
+    {
+      "alpha": 0.3,
+      "k_powerhalf": 0.84165,
+      "k_amphalf": 1.138475,
+      "mass_Msun": 8554961458104,
+      "precutoff_max_P_rel_diff": 0.00002,
+      "halfpower_k_rel_shift": 0.000001
+    },
+    {
+      "alpha": 0.1,
+      "k_powerhalf": 2.133044,
+      "k_amphalf": 2.87182,
+      "mass_Msun": 525549265459,
+      "precutoff_max_P_rel_diff": 0.00004,
+      "halfpower_k_rel_shift": 0.000005
+    },
+    {
+      "alpha": 0.05,
+      "k_powerhalf": 3.940069,
+      "k_amphalf": 5.04837,
+      "mass_Msun": 83387649841,
+      "precutoff_max_P_rel_diff": 0.00005,
+      "halfpower_k_rel_shift": 0.000017
+    },
+    {
+      "alpha": 0.03,
+      "k_powerhalf": 6.475857,
+      "k_amphalf": 7.509424,
+      "mass_Msun": 18781112852,
+      "precutoff_max_P_rel_diff": 0.0203,
+      "halfpower_k_rel_shift": 0.002978
+    },
+    {
+      "alpha": 0.02,
+      "k_powerhalf": 8.76157,
+      "k_amphalf": 11.675405,
+      "mass_Msun": 7583458662,
+      "precutoff_max_P_rel_diff": 0.00003,
+      "halfpower_k_rel_shift": 0
+    },
+    {
+      "alpha": 0.01,
+      "k_powerhalf": 16.710014,
+      "k_amphalf": 20.938135,
+      "mass_Msun": 1093157489,
+      "precutoff_max_P_rel_diff": 0.00015,
+      "halfpower_k_rel_shift": 0.000021
+    }
+  ],
+  "validation": {
+    "all_8_pass": true,
+    "unvalidated_deeply_suppressed_tail": true,
+    "worst_grid_sensitive_alpha": 0.03,
+    "max_high_k_P_rel_difference_at_alpha_0p03": 0.5739
+  },
+  "limitations": [
+    "Conditional nonthermal Bose momentum shape is not kinetically derived",
+    "No observational likelihood",
+    "Mass half-mode diagnostic is not a rigorous minimum halo mass"
+  ]
+}
