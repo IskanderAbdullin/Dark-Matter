@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Initial source vs nonlinear rate calibration:** [independent 1D vs finite-cell on-shell source audit](kinetics/VACUUM-SOURCE-CONVERGENCE.md) now verifies the complete CLOSED ODE's t=0 φ derivative equals its summed thermal reaction rates and compares both to exact continuum 0.0164959084596. Changing UV cutoff 8.5→10T alters this initial vacuum rate ~0.038% but the nonlinear tΓ=.001 φ number ~0.44%: this is a numerical sensitivity diagnostic, NOT the Bose enhancement factor.
+
+
 **Analytic infrared control added:** [rigorous bound for the EMPTY-daughter on-shell vacuum source](kinetics/VACUUM-IR-TAIL-BOUND.md) yields a fractional birth rate below q/T=.0005 of ~6.1e-7 (bound 4.1e-6) for M1/T=.1. It is explicitly NOT a bound on the later nonlinear stimulated Bose population or zero-mode condensate; the factor 1+f can radically change production.
 
 
