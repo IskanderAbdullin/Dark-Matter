@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-11-21",
+  "research_status": "in_progress",
+  "claim_status": "No validated physical 86-eV relic, BEC or CLASS prediction",
+  "repository": "IskanderAbdullin/Dark-Matter",
+  "branch": "research/kinetic-equilibrium-audit-20261121",
+  "pull_request": "https://github.com/IskanderAbdullin/Dark-Matter/pull/1",
+  "pull_request_draft": true,
+  "baseline_code_commit": "952ac05e5b679ab041e5cef099d45dd4b114a714",
+  "external_reference": {
+    "name": "BEST v1.3.5",
+    "commit": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+  },
+  "last_proven_scientific_milestone": {
+    "title": "Corrected BEST quadrature and finite SM BGK heat transfer in short coupled FRW",
+    "commit": "25fff84b2342acb67e38b3d6ea6a1862ae406781",
+    "action_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44929647245",
+    "result_json": "kinetics/results/best-sm-coupled-corrected-2026-11-21.json",
+    "report": "kinetics/BEST-SM-COUPLED-FRW.md",
+    "evidence_scope": "Numerical closure and short-time convergence of an explicitly phenomenological gamma_el model; not physical microscopic freeze-out"
+  },
+  "last_documentation_ci": {
+    "commit": "952ac05e5b679ab041e5cef099d45dd4b114a714",
+    "run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44930002607",
+    "conclusion": "success"
+  },
+  "known_negative_results": [
+    {
+      "claim": "Original BGK trapezoid measures match external BEST moments",
+      "finding": "refuted",
+      "evidence": "kinetics/results/best-sm-coupled-original-2026-11-21.json"
+    },
+    {
+      "claim": "Early IR number N0 at tGamma=4e-5 independently confirms macroscopic BEC",
+      "finding": "refuted for tested early RD/qmin configuration; N0 scales approximately as qmin cubed",
+      "evidence": "kinetics/results/best-rd-frw-qmin-real-2026-11-21.json"
+    }
+  ],
+  "physical_unknowns": [
+    "physical SM portal and |M|^2",
+    "temperature-dependent elastic and inelastic rates",
+    "gstarS(T)/gstarRho(T) and self-consistent H",
+    "late physical freeze-out",
+    "cutoff-independent zero-mode",
+    "absolute relic abundance",
+    "linear perturbations and observational likelihood"
+  ],
+  "class_ready": false,
+  "stop_reason": null,
+  "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
+  "instruction": "On next run verify branch head/CI and update this checkpoint after a completed, evidenced stage. This JSON is a snapshot, not a claim of autonomous background execution."
+}

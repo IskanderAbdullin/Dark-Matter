@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "priority": 1,
+  "status": "ready",
+  "title": "Derive a concrete microscopic SM–chi1 interaction and replace conditional gamma_el with a physically derived rate",
+  "objective": "Build an explicit, internally consistent Lagrangian/EFT candidate (chi1, chi2, phi and SM portal) and derive momentum/temperature-dependent matrix elements and elastic, inverse and competing channels. Quantify H/decay/elastic hierarchy and limitations of the present BGK model.",
+  "prerequisites": [
+    "Read kinetics/CONTINUOUS-RESEARCH-SPEC.md",
+    "Read kinetics/LITERATURE-PHYSICAL-SCOPE-2026-11-21.md and primary sources",
+    "Read kinetics/BEST-SM-COUPLED-FRW.md and corrected/negative JSON",
+    "Confirm current draft PR #1 branch HEAD and CI"
+  ],
+  "steps": [
+    "Audit quantum numbers, stability of phi, particle spins/degrees of freedom and decay threshold; distinguish toy assumptions from physical claims",
+    "Choose one minimal explicit SM portal; write interaction terms, allowed processes and parametric validity/domain",
+    "Derive vacuum decay width, thermal detailed-balance/chemical-potential relations, elastic momentum transfer rate gamma_el(p,T) and SM Q exchange with dimension checks; independently check at least one analytic limit",
+    "Estimate in physical regimes Gamma_decay/H, gamma_el/H, gamma_el/Gamma_decay and importance of 2->2 stimulated/number-changing channels",
+    "Implement reproducible dimensionful rates with unit/threshold/decoupling/detailed-balance tests and parameter scan; compare conservative BGK approximation to derived moments where valid",
+    "Document failures and distinguish inconclusive portal choice from falsified general hypothesis",
+    "Commit new code/tests/docs+checkpoint and push to research branch; immediately select and begin next most valuable step"
+  ],
+  "deliverables": [
+    "kinetics/MICROPHYSICS-MODEL.md",
+    "source code and independent physics tests",
+    "compact machine-readable rates/uncertainty study",
+    "updated GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG"
+  ],
+  "acceptance": [
+    "Every claimed physical gamma_el or Gamma(T) is derived from explicit interaction(s) and stated kinematics, not guessed",
+    "Dimension analysis, detailed balance and physical thresholds tested",
+    "Independent check and exact reproducible command, dependency/version, parameter values, test results and limitations",
+    "Counterexamples and negative results retained, not tuned away"
+  ],
+  "fallback": [
+    "If portal selection blocked: separately derive model-independent consistency/inequality bounds on gamma_el/H vs Gamma/H and thermal masses, explicitly conditional",
+    "If numerical run unavailable: implement deterministic analytic/unit benchmark and preflight next BEST comparison; record tool blocker",
+    "If a physical hypothesis fails: record it and move to next defensible microscopic candidate, not a convenient replacement without disclosure"
+  ],
+  "external_action_policy": "GitHub only on existing research branch; no destructive force push, no main merge; Computer Use needs explicit user consent.",
+  "resume_instructions": "Re-read AGENTS.md and these checkpoint files; reconcile PR #1 head SHA and latest CI; start by writing microphysics candidate and falsifiable acceptance, then code/tests. The next stage follows immediately after checkpoint/commit/push within available active runtime."
+}

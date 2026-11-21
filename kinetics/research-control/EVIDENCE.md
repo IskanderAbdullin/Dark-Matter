@@ -1,0 +1,12 @@
+# Evidence register — append/extend, do not rewrite away failures
+
+| ID | Claim / scope | Status | Primary evidence | Limitation |
+|---|---|---|---|---|
+| E-001 | Real independent pinned BEST performs χ1↔χ2+massive φ 1↔2 quantum kinetics in tested configurations | supported within tested grids/epochs | [BEST results index](../BEST-FIRST-REAL-RESULTS.md), pinned `c70875be714e7a6bc6d38578c34bb0dc9f5aefa9` | Not proof of physical DM relic |
+| E-002 | Short full coupled FRW BEST+SM BGK with corrected external grid weights conserves test stoichiometric numbers and SM heat ledger, dt/2 reduces global work error ~4× | supported **numerically, phenomenological γ** | [run #44929647245](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44929647245), [data](../results/best-sm-coupled-corrected-2026-11-21.json), [report](../BEST-SM-COUPLED-FRW.md), commit `25fff84b` | g*=55, chosen gamma_el; short integration and nonphysical temperature dependence |
+| E-003 | Original BGK trapezoid-based closure matches real BEST log-Simpson/3-8 measure | **refuted** | [first run #44925693596](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44925693596), [negative original JSON](../results/best-sm-coupled-original-2026-11-21.json) | Green CI alone did not detect global measure inconsistency |
+| E-004 | Early nonzero BEST zero-mode proves a cutoff-independent BEC | **refuted for tested early regime** | [real RD qmin scan](../BEST-FRW-QMIN-SCAN.md), [data](../results/best-rd-frw-qmin-real-2026-11-21.json) | At finite early time, N0~qmin³; no conclusion about all late epochs |
+| E-005 | Latest documentation commit's scientific verification completed | supported CI-only | [run #44930002607](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44930002607), `952ac05e` | CI checks documentation/tests; not new physical result |
+| E-006 | Physical SM portal/rate, long freezeout, absolute 86 eV Ωφ, CLASS P(k), observational viability | **unproven** | [physical scope](../LITERATURE-PHYSICAL-SCOPE-2026-11-21.md), [research spec](../CONTINUOUS-RESEARCH-SPEC.md) | Must complete microphysics and independent cosmology gates |
+
+When adding a claim: specify **exact code SHA, external SHA, workflow run, runnable command, parameters/units, all q/dt/seeds, uncertainty, raw or persistent JSON, independent check, negative controls and limitations**. Never promote proposed, mocked or synthetic results to measured status. Keep substantive results inside this repository; temporary Action artifacts may expire.
