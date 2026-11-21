@@ -12,3 +12,8 @@ To reproduce the small suite locally, install numpy, scipy, mpmath and pytest, t
 Further numerical programs in continuation-02 through continuation-05 are still research prototypes; individual JSON outputs are not assumed to be observations and have differing levels of independent verification. The assertions do not prove a global nonlinear Vlasov theorem, a physically generated Bose-star distribution, cosmological transfer or universal 86-eV dark-matter mass. Those require additional physical modeling and external validation.
 
 The migration was scoped to the dedicated science folder of the original Info repository. A pattern-based credential/contact scan did not find API keys, private keys, passwords, local home directories or email-address patterns in the 141 copied UTF-8 files. Automated pattern scans are not an absolute guarantee of absence of sensitive text. Source files were SHA-verified after migration.
+
+
+## Weekly numerical research benchmark
+
+A second read-only workflow [Weekly deep theoretical numerics](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/deep-numerics.yml) runs on Sundays at 04:23 UTC and supports manual dispatch. It executes seven Python scripts for energy-cutoff families, the singular critical limit, virial balance, a diffusion-escape toy and the two new state-density calculations; it verifies the resulting JSON and attaches all seven files to the run for 14 days. The main workflow also checks the new continuation VI geometry, giving **ten** fast scientific tests on each push/PR. A green run is numerical reproducibility only and not an observational confirmation.

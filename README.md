@@ -29,3 +29,10 @@ The 141 research files in this public repository were transferred **byte-for-byt
 See [automatic test coverage and limits](TESTING.md), [continuation V](continuation-05/README.md), [theoretical continuation IV](continuation-04/CONSOLIDATED-RESULTS-RU.md), and [SPARC/kinetic continuation II](continuation-02/CONSOLIDATED-REPORT-RU.md).
 
 **Research status:** exploratory mathematical and numerical work. A green CI run verifies specified reproducibility checks, not particle discovery, galaxy formation or cosmological viability.
+
+
+## New energy-space research and deeper CI
+
+[Continuation VI — tidal energy density of states](continuation-06/README.md) derives the static orbit-energy measure for finite Bose halos and the universal shallow-cutoff scaling. A quadratic energy cutoff yields approximately 19 times more states near escape than linear lowering in the same internal normalization, though their dimensionless masses are nearly equal. **This is not a measured evaporation rate.**
+
+[Weekly deep theoretical numerics](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/deep-numerics.yml) reruns seven heavier mathematical checks every Sunday at 04:23 UTC or by manual dispatch. It keeps downloadable JSON outputs for 14 days. The lightweight push/PR suite now contains ten scientific checks, plus synthetic SPARC regressions.

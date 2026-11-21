@@ -91,3 +91,17 @@ def test_open_flux_exact_riccati():
     answer = solver.run()
     assert answer["tests_passed"] >= 4
     assert math.isclose(answer["exact_finite_binding_pole_s"],4.67940655,abs_tol=1e-7)
+
+
+def test_finite_escape_state_density():
+    model=load("continuation-06/code/phase_density_edge.py")
+    result=model.run()
+    assert 18.5 < result["ratio_g0_quadratic_to_linear"] < 19.6
+    assert abs(result["ratio_mass_quadratic_to_linear"]-1.) < .01
+    assert all(x["g0"]>0 and x["gp0"]<0 for x in result["models"])
+
+def test_shallow_cutoff_state_density_scaling():
+    model=load("continuation-06/code/dos_scaling.py")
+    result=model.run()
+    assert abs(result["G0"] - 157.32910288) < .05
+    assert abs(result["points"][-1]["relative_error"]) < .001
