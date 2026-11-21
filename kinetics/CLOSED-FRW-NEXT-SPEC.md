@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВЫЙ НЕЗАВИСИМЫЙ QUANTUM EQUILIBRIUM PROTOCOL:** [BEST-THERMAL-BALANCE.md](BEST-THERMAL-BALANCE.md) проверяет точное равенство f1(1−f2)(1+bφ)=(1−f1)f2bφ при μ1=μ2+μφ на on-shell 1↔2 событиях и отдельный неравновесный знак. Опциональный внешний BEST v1.3.5 тест измерит три mode-resolved net/gross rates и энергетику; реального BEST прогона ещё НЕ было. Следующий микрофизический этап — away-from-equilibrium Bose stimulated kinetics и zero mode, не CLASS.
+
+
 **НОВЫЙ НЕЗАВИСИМЫЙ СПЕКТРАЛЬНЫЙ ЭТАЛОН:** [BEST-VACUUM-SPECTRUM.md](BEST-VACUUM-SPECTRUM.md) выводит точный on-shell thermal EMPTY-daughter dRvac/dqφ с максимумом q=M1/(2T)=.05 при m=.1 и ∝e^{-m²/(4q)} в глубоком IR; полный интеграл точно Rvac=.0164959084596. Опциональный BEST benchmark теперь сравнивает отдельные моды φ через q² dfφ/dt/(2π²), не только число/энергию. Это НЕ оценка позднего нелинейного Bose-пика и не подтверждение BEC.
 
 

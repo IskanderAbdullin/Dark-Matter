@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Independent quantum reverse-channel benchmark:** [exact thermal Bose–Fermi detailed balance with nonzero daughter occupations](kinetics/BEST-THERMAL-BALANCE.md) now tests the full on-shell A=f1(1−f2)(1+b) vs B=(1−f1)f2b identity at µ1=µphi+µchi2 and T=1, and deliberately breaks chemical equilibrium to verify gain/loss signs. An optional pinned BEST v1.3.5 runner tests mode-resolved physical gain/loss, all three number and energy rates. External BEST has NOT yet been executed; this is an analytical and CI protocol.
+
+
 **Independent pointwise Bose source benchmark:** [exact initial dRvac/dqφ and peak at q=M1/(2T)](kinetics/BEST-VACUUM-SPECTRUM.md) extends the external BEST comparison beyond integrated rates. At M1/T=.1 the empty-daughter thermal source peaks at q=.05 and is exponentially suppressed at deep q, while the later stimulated Bose population may be much colder. The optional BEST runner now returns its grid-level differential source and robust relative shape errors; external BEST has still NOT run.
 
 

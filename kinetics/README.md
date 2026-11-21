@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**EXTERNAL BEST QUANTUM DETAILED BALANCE:** [BEST-THERMAL-BALANCE.md](BEST-THERMAL-BALANCE.md) and [optional runner](best_thermal_balance_reference.py) define equilibrium mother FD, daughter FD and Bose distributions with µphi=-.3, µchi2=.1, µ1=-.2. On-shell quantum gain/loss cancel exactly (also tested under chemical-potential violation), while real BEST mode-resolved gain/loss integration is pending independently installed MPI/Vegas.
+
+
 **EXACT INITIAL DIFFERENTIAL 1↔2 SOURCE:** [BEST-VACUUM-SPECTRUM.md](BEST-VACUUM-SPECTRUM.md) and [best_vacuum_spectrum.py](best_vacuum_spectrum.py) analytically compute dR/dq=g1*MΓ/(2π²)*log(1+exp[-q−M²/(4q)]) with exact maximum q=M/(2T)=.05 at m=.1. Independent integration returns original Rvac=.0164959084596. The external BEST runner records a pointwise reference and robust q-shape diagnostic, not an observed cosmological freeze-out.
 
 
