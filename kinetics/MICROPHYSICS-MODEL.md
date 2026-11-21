@@ -160,3 +160,24 @@ nu_T(p,T) = g_e/(2*pi^2) int dk k^2 fFD(k/T)
 ```
 
 Tests require exact p=0 reduction to the earlier rest expression, continuous p→0, positive rates and coupling-square scaling. This is a **true momentum-dependent incoming test-particle collision frequency**, not the linearized kinetic relaxation `gamma_el(p,T)`: the electron's final-state Pauli, full 2→2 gain/loss, angular momentum exchange, moving χ blocking, thermal masses, neutrino channels and SM backreaction must all be integrated before it can replace phenomenological BGK. A CM transfer-weighted cross section is not itself a lab drag coefficient.
+
+
+## Signed lab-energy moment of a *moving* χ: exact outgoing angular integral, still unblocked
+
+[Moving χ heat reference](microphysics_moving_heat.py) goes beyond a frequency estimate. For χ with lab momentum p and initial isotropic e± bath, 2-body COM kinematics imply that the outgoing azimuth-averaged **lab energy kick** has the exact form
+
+```text
+Echi=sqrt(M^2+p^2), s=M^2+2k(Echi-p mu), v_M=1-p mu/Echi,
+D_E = -[Echi-gamma_cm Echi_cm*]
+    = k [ k(Echi-p mu)+Echi*p*mu-p^2 ]/s,    mu=cos(theta_in).
+int d sigma (Echi_final-Echi_initial) = D_E * sigma_transport(s).
+```
+
+The final equality follows from the boost identity `Echi_final-Echi_initial = (gamma_cm beta_cm dot pchi_cm_initial)(cos(theta*)-1)` averaged over outgoing azimuth. This **exactly** integrates the outgoing two-body differential cross section, *before final-state Pauli factors*. The remaining initial bath integral
+
+```text
+Q_chi(p) = g_e/(2*pi^2) int dk k^2 fFD(k/T)
+               (1/2) int_-1^1 dmu v_M * sigma_T(s) * D_E
+```
+
+is a physically derived *signed unblocked collision energy moment*, GeV² per χ. Independent tests integrate `d sigma/dt` against the COM recoil, verify the correct boost coefficient and recover the fully independent χ-at-rest no-blocked recoil integral. In a hot bath a very slow test χ gains energy, whereas a very energetic test χ loses energy, as expected for collisional drag. This is **still not** the equilibrating thermal χ Boltzmann kernel: omitting final electron/χ Pauli destroys detailed balance for a thermal ensemble; angular averaging cannot be applied unchanged once final-state e blocking is present. Proper finite-T full collision integrals (or controlled Fokker–Planck approximation), gauge-required neutrinos and simultaneous SM heat feedback remain mandatory.
