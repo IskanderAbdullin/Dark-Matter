@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active chat run is limited to finite verified stages. Recheck NEW CI and perform realistic finite e± thermal heat and crossing physics on restart; no background continuation implied beyond separately scheduled task.",
+  "stop_reason": "Active launch has bounded scope; next step executable via NEXT_ACTION at new scheduled invocation. No continuous background work asserted.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Verify CI for newly committed independent massive 5D/source/trace benchmark, reproduce at Te/me=.1,1,10 and χ/Te=.9/1.1; adapt outgoing kinematics/cutoffs. Next implement e± finite thermal energy/number/chemical potential and annihilation ledger with a physically explicit gauge-consistent mediator, then fully nonthermal source; see NEXT_ACTION.",
+  "instruction": "Verify new Actions for 52c35df massive 5D and for this EM EOS stage; then construct actual e+e−↔γγ finite-T Pauli/Bose charge/energy collision and microscopic χe+ν portal/SM finite bath. Maintain proper thermodynamic derivatives at conserved charge; no reset. See NEXT_ACTION.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "A: independently verified conditional finite-mass χe vector-contact 1D invariant momentum-transfer heat against separate full massive 5D CM scattering with full Pauli and Dirac spin trace at T/me=.1,1,10. Numerically conditional EFT only; next P0 realistic finite e± plasma/ν, UV/EW gauge and nonthermal coupled source.",
+  "current_phase": "Independent massive χe 5D transfer verified for six conditional EFT thermal benchmarks; now isolated equilibrium massive e−e+γ thermodynamic/charge-neutrality reference, NOT actual coupled SM plasma or Γel.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -221,7 +221,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "New independent massive 5D heat benchmark validates conditional direct ell kernel normalization in six thermal test cases at fixed cuts (nonmonotone finite-grid errors). No full gauge-complete SM e±/ν heat/annihilation/thermal masses, nonthermal eigenmodes, FRW Bose relic, BEC, absolute ΩDM or CLASS.",
+  "physics_scope_warning": "Equilibrium e±γ thermo/Bessel agrees; the e± number/heat response assumes μ=0 pair chemistry and separately a neutrality μQ; these are different closures and cannot be naively combined. No pair-annihilation or weak collision rates, no finite SM dynamic bath, no physical χe Γel or 86eV cosmic relic/CLASS.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "065644e493492a6a1c579eb7728283570e9f6438",
-    "run_id": 44954815892,
+    "head_sha": "52c35df574f2057a2f6cd8cc456bf72cfa10c783",
+    "run_id": 44956695501,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44954815892"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44956695501"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -274,19 +274,17 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "Massive χe invariant ℓ kernel vs independently constructed full 5D COM, full-Pauli heat, four-spin Dirac trace",
-    "status": "sandbox_reproducible_six_benchmarks_and_local_tests; new_GitHub_CI_pending",
-    "source": "kinetics/independent_massive_chie_5d.py",
-    "tests": [
-      "tests/test_independent_massive_chie_5d.py",
-      "tests/test_finite_mass_dirac_trace.py"
-    ],
-    "report": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md",
-    "data": "kinetics/results/finite-mass-5d-independent-2026-11-22.json",
-    "conditions": "M/me=0.1, gchi=ge=4, Tchi/Te=.9/1.1, Te/me=.1/1/10; Pauli, no μ; cutoff kinetic 30 Te",
-    "result": "At n40 5D and n160 E,ω,Δ plus 24 ell, six relative errors |Qell/Q5D-1| <= 8.12e-7; strong nonmonotonic mesh and cutoff deviations preclude uniform accuracy claim.",
-    "extrapolation_prohibited": "not physical Γ_el or spectral gap, not a coupled e±γν SM plasma, no thermal Yukawa/BEST/FRW, no 86-eV relic/ΩDM/BEC/CLASS",
-    "commit_SHA": "Resolve from branch history: checkpoint committed in same Git tree; baseline parent 065644e493492a6a1c579eb7728283570e9f6438."
+    "name": "Massive equilibrium e−e+γ finite heat capacity and illustrative neutrality gate",
+    "status": "numerically_reproduced_in_sandbox; source_and_tests_staged; new_GitHub_CI_pending",
+    "source": "kinetics/em_pair_thermodynamics.py",
+    "test": "tests/test_em_pair_thermodynamics.py",
+    "report": "kinetics/EM-PAIR-THERMODYNAMICS-AUDIT.md",
+    "data": "kinetics/results/em-pair-thermodynamics-2026-11-22.json",
+    "assumptions": "free ideal QED gas, μe±=0 and fast pair chemical equilibrium for C; illustrative net background charge eta=6e-10 for neutrality test, NO dynamical annihilation",
+    "positive": "FD radial integrals match independent Bessel K1,K2 fugacity series to ~1e-14; finite-difference C at .1 me agrees within 1.35e-7; EM gstarR tends 5.5/2",
+    "negative": "Massless e± gstarR=5.5 grossly wrong at T/me=.1 where equilibrium EM gstarR=2.01546; neutral net electron charge at T/me=.025 requires μe−/T=13.8377 (illustrative η), and e+/e−≈9.57e-13",
+    "prior_5d_stage": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md; commit 52c35df574f2057a2f6cd8cc456bf72cfa10c783, FULL CI #44956695501 successful, 3.11 and 3.13 jobs.",
+    "limitations": "No e+e−↔γγ rate, neutrino/QED thermal corrections, finite chemical-energy susceptibility, actual χe-to-EM coupling time evolution, realistic UV/EW, γel, 86eV Bose relic, Omega, BEC, CLASS"
   },
-  "last_checkpoint_parent_sha": "065644e493492a6a1c579eb7728283570e9f6438"
+  "last_checkpoint_parent_sha": "52c35df574f2057a2f6cd8cc456bf72cfa10c783"
 }

@@ -157,3 +157,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** E/ω/Δ quadrature convergence nonmonotone and cutoff sensitivity at ~1e−5; n160 coincidence is not a uniform error bound. Full physical SM source and thermal rates remain unknown.
 - [ ] **Next P0:** verify CI for new 5D tests; tighten cutoff/crossing with e−/e+ chemistry and charge neutrality, finite γ/ν SM heat and e+e−↔γγ, plus explicit gauge/UV completion and actual G(T,q) validity. Follow with nonthermal Pauli χ spectra and time convergence coupled to physical finite bath. No physical gamma_el/BEC/86eV relic/ΩDM/CLASS.
 
+## 2026-11-22 finite e±/γ thermal response and neutrality
+
+- [x] Derive finite-mass ideal e−+e++γ common-T equilibrium EOS with ρ, P, s, C at μ=0 from explicit FD phase-space and check against independent fugacity Bessel K₁/K₂ expansion and fixed-m finite-difference derivative. [Audit](../EM-PAIR-THERMODYNAMICS-AUDIT.md), [code](../em_pair_thermodynamics.py).
+- [x] **Negative:** massless g*ρ,EM=5.5 at T/me=.1 is wrong (actual 2.015461); charge-neutral illustrative η=6e−10 at T/me=.025 needs μe−/T=13.8377 and suppresses e+ by 10⁻¹² relative to e−. Explicitly NOT cosmological η evolution or an actual annihilation collision calculation.
+- [ ] Verify CI for both new massive 5D and e± EOS reports and independent regressions; 5D run #44956695501 is now fully successful on Python 3.11 and 3.13; next EM EOS CI pending.
+- [ ] **P0:** finite charge-constrained C and e+e−↔γγ Pauli/Bose matrix-element/rate, photon entropy/energy and neutrino weak-sector ledger, evolving SM heat without bath reset; gauge-consistent χ electron/ν portal and full nonthermal χe kinetic eigenvalue, then actual Bose decay FRW with convergence. No Γel/86eV Ω/BEC/CLASS claims.
+

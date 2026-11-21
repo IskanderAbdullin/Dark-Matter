@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-22",
+  "model": "ideal e- e+ photon at common T; mu0 and illustrative charge neutrality, no dynamical annihilation",
+  "me_GeV": 0.00051099895,
+  "gspin_pairs": 4,
+  "photon_degeneracy": 2,
+  "numerics": {
+    "method": "Legendre p/T [0,48] n256; independent FD fugacity Bessel K1/K2 400 terms",
+    "rho_pressure_bessel_relative_central_below": 1e-12,
+    "heat_finite_difference_h_over_T": 0.0001,
+    "heat_relative_error_T_me0p1": 1.3437564994056572e-7
+  },
+  "em_mu0_table": [
+    {
+      "T_me": 0.05,
+      "gstarR": 2.0000033668263697,
+      "gstarS": 2.0000026420819452,
+      "C_over_T3": 2.6319185059368357,
+      "npair_T3": 5.1305348021308993e-8
+    },
+    {
+      "T_me": 0.1,
+      "gstarR": 2.01546141741369,
+      "gstarS": 2.012589743048875,
+      "C_over_T3": 2.692048664538218,
+      "npair_T3": 0.000435873610799794
+    },
+    {
+      "T_me": 0.2,
+      "gstarR": 2.5557081341549313,
+      "gstarS": 2.478033350249732,
+      "C_over_T3": 3.930636576672244,
+      "npair_T3": 0.026841125895915856
+    },
+    {
+      "T_me": 1,
+      "gstarR": 5.230602734475031,
+      "gstarS": 5.147005737396548,
+      "C_over_T3": 7.060782408950066,
+      "npair_T3": 0.306993731891703
+    },
+    {
+      "T_me": 2,
+      "gstarR": 5.4341793667891505,
+      "gstarS": 5.406784476282452,
+      "C_over_T3": 7.195292591940051,
+      "npair_T3": 0.34885213548603566
+    },
+    {
+      "T_me": 10,
+      "gstarR": 5.497456879598837,
+      "gstarS": 5.496203340871052,
+      "C_over_T3": 7.23604196364688,
+      "npair_T3": 0.36468185706886513
+    }
+  ],
+  "illustrative_neutrality": {
+    "eta": 6e-10,
+    "charge_target_n_over_T3": 1.4615259388028767e-10,
+    "cases": [
+      {
+        "T_me": 1,
+        "mu_over_T": 5.081900820632805e-10,
+        "npos_to_nelectron": 0.9999999990478466
+      },
+      {
+        "T_me": 0.1,
+        "mu_over_T": 3.353145053597565e-7,
+        "npos_to_nelectron": 0.9999993293810815
+      },
+      {
+        "T_me": 0.05,
+        "mu_over_T": 0.002848677612527281,
+        "npos_to_nelectron": 0.99431884392847
+      },
+      {
+        "T_me": 0.025,
+        "mu_over_T": 13.837684683407725,
+        "npos_to_nelectron": 9.566207554323934e-13
+      },
+      {
+        "T_me": 0.02,
+        "mu_over_T": 23.51213620116554,
+        "npos_to_nelectron": 3.7810984042108855e-21
+      }
+    ]
+  },
+  "scope_warning": "not a dynamical SM bath; free ideal gas with fast pair chemistry assumed; no charge-neutral response C at nonzero mu derived; no e+e- annihilation rate, neutrinos, gauge portal, H, Bose or 86 eV relic",
+  "class_ready": false
+}

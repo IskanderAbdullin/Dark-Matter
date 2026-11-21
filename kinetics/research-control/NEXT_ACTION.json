@@ -2,9 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify independent massive χe 5D benchmark CI, then implement finite e± plasma and UV/gauge-valid bath coupling",
-  "objective": "New independent full massive 5D CM + Dirac gamma trace checks found six conditional full-Fermi heat agreements <8.12e-7 vs direct ell kernel at n40/n160/ell24, and nonmonotone mesh/cutoff discrepancy. First check actual GitHub CI on new checkpoint commit and reproduce dataset across Te/me=.1,1,10 and χ/Te=.9,1.1; refine cutoff and nonthermal controls. Then move to physical finite e±γν energy/entropy and number-changing, EW gauge-consistent mediator, and coupled nonthermal Pauli time evolution. No physical gamma_el/86-eV claim.",
+  "title": "Validate EM e±γ thermodynamics CI; derive charge-constrained finite bath with physical e+e− annihilation and weak ν channels",
+  "objective": "Independent massive χe 5D benchmark now quantified, but true EM plasma thermodynamics demonstrably deviates from massless e approximation and from zero-chemical-potential bath below pair annihilation. Verify CI for conditional 5D and new finite EM EOS tests; independently derive finite charge-constrained C and γ+e−+e+ energy/number ledgers. Implement physical e+e−↔γγ quantum collision with Pauli/Bose and finite photon bath (not implicit thermal reset), check number/charge/energy/entropy and T/me grids, then neutrino channels and gauge UV portal before χ1 Bose/FRW.",
   "prerequisites": [
+    "Verified successful Scientific run #44956695501 on 52c35df (both Python 3.11 and 3.13); new EM thermodynamics commit CI still to check.",
+    "Check new EM thermodynamics source/test CI and re-run python -m pytest -q tests/test_em_pair_thermodynamics.py; compare FD quadrature to independent Bessel/fixed-m C; use tests for consistency.",
+    "Read kinetics/EM-PAIR-THERMODYNAMICS-AUDIT.md and results/em-pair-thermodynamics-2026-11-22.json; at T/me=0.025 μe−/T≈13.84 is from illustrative eta=6e-10, NOT cosmological dynamic result.",
     "Check current PR #1 head and actual Scientific CI for new independent massive 5D report/test; prior verified successful run #44954815892 is on 065644e only.",
     "Run python -m pytest -q tests/test_independent_massive_chie_5d.py tests/test_finite_mass_dirac_trace.py tests/test_finite_mass_chie_kernel.py",
     "Reproduce six cases: python -m kinetics.independent_massive_chie_5d --temperature-ratio {0.1,1,10} --chi-temperature-ratio {0.9,1.1}; do NOT infer global 1e-6 numerical accuracy from six collocation cases.",
@@ -14,6 +17,9 @@
     "Read INVARIANT-CHI-E-ENERGY-KERNEL.md, microreversible_chie_lattice.py, verify_microreversible_lattice.py, results JSON, and independent nonlinear 5D weak/strong reference"
   ],
   "experiments": [
+    "Derive physically correct finite-SM heat at FIXED net charge when μe−(T) adjusts, rather than using naive ∂ρ/∂T|μ=0. Include susceptibility matrix and photon reheating where chemistry is fast.",
+    "Implement independent e+e−↔γγ quantum 2↔2 energy/momentum/charge ledger, Pauli for e±, Bose for γ, and a realistic rate to distinguish chemical equilibration/freeze-out; check crossing and units with external source.",
+    "Derive gauge-consistent χ portal to electron left/right and neutrinos, validity of point interaction at relevant T, thermal masses, and heat exchanged with neutrino bath and photons; refuse UV-extrapolated Γel.",
     "Independently constrain thermal cutoff by computing both incoming and outgoing cut tails; asymptotic electron Boltzmann suppression at T/me=.1 with finite positron/electron chemical potentials and charge neutrality; preserve nonmonotonic n/cut negative results.",
     "Derive and implement finite-T e−,e+,γ,ν number and energy budgets with e+e−↔γγ and weak ν interactions where applicable, Pauli/Bose and exact Qdark+QSM conservation, independent equilibrium checks, no hidden thermal reset.",
     "Fix explicit SU(2)L×U(1)Y-consistent lepton portal and UV mediator mass/couplings; distinguish e_L,e_R,ν and temperature vs mW, EFT breakdown; compute physical thermal rates and error bounds.",
@@ -38,10 +44,9 @@
   "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
   "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma.",
   "latest_completed_reference": {
-    "report": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md",
-    "data": "kinetics/results/finite-mass-5d-independent-2026-11-22.json",
-    "status": "locally measured; repo CI must be checked",
-    "prior_head": "065644e493492a6a1c579eb7728283570e9f6438",
-    "scope": "conditional vector-contact six thermal benchmarks, not physical plasma or 86eV DM"
+    "report": "kinetics/EM-PAIR-THERMODYNAMICS-AUDIT.md",
+    "data": "kinetics/results/em-pair-thermodynamics-2026-11-22.json",
+    "status": "local numerical controls finished, check new CI",
+    "assumptions": "massive ideal equilibrium e−e+γ; illustrative neutrality"
   }
 }
