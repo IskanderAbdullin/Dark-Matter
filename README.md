@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Adaptive-kinetics warning (2026-11-21):** A graph-rank audit of exact-resonance 1↔2 grids found additional numerical conservation laws beyond the two physical charges and energy. A sparse 27-bin cold/hot grid has 11 extra invariants, and a 56-bin three-band grid has one, despite conservation of the intended moments and the discrete H-theorem. A concrete extra invariant is conserved by the full nonlinear adaptive ODE. These grids are explicitly rejected as physical CLASS inputs. See [rank/ODE audit](kinetics/ADAPTIVE-INVARIANT-AUDIT.md), [code](kinetics/collision_invariant_rank.py) and [adaptive proof-of-concept](kinetics/adaptive_resonant_lattice.py).
+
+
 **Conditional 86-eV relic-density link:** [freeze-out number to Ωh² normalization](cosmology/FRW-RELIC-ABUNDANCE-BRIDGE.md) uses the existing checked thermal scalar benchmark and standard assumed entropy dilution, finding required nφ/T³≈0.12268 for Ωh²=.12 at mass 86 eV, g*Sprod=55. A closed initial-mother population would have to convert ≥33.6%, so source depletion matters even near the target. This is conditional amplitude normalization, not a kinetic, structure, or observational validation.
 
 

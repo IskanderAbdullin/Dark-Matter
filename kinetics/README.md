@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**NEW REJECTION GATE FOR ADAPTIVE GRIDS:** [the collision-invariant rank audit](ADAPTIVE-INVARIANT-AUDIT.md) proves that apparently conservative adaptive 1↔2 grids can have additional, nonphysical conserved quantities. The 27-node sparse mesh has 14 invariants rather than 3; the 56-node three-block mesh has 4. [Unique-mother adaptive ODE](adaptive_resonant_lattice.py) confirms an extra charge is conserved by the full nonlinear solver. Both illustrative spectra are rejected as cosmological predictions despite correct charge/energy/H checks.
+
+
 **Dark-matter abundance requirement:** a separate [conditional normalization to present Ωh²](../cosmology/FRW-RELIC-ABUNDANCE-BRIDGE.md) finds nφ/T³≈0.12268 for a 86-eV stable scalar at assumed g*Sprod=55 and Ωh²=.12. At initial mother M/T=.05 this corresponds to ≥33.6% closed-bath depletion. Thus matching abundance alone cannot justify the fixed thermal mother assumption or the cold primordial PSD.
 
 
