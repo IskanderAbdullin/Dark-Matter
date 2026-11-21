@@ -8,9 +8,11 @@
     "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG, latest PR and actual GitHub Actions for e14123a, repair failures",
     "Read reports PAULI-LOCALIZED-PACKET-AUDIT.md, PAULI-STIELTJES-11MODE-AUDIT.md, FINITE-BATH-QUANTUM-PAIR-REFERENCE.md, plus full nonlinear χe source and conservative energy projection",
     "Review negative evidence: PCHIP artificial heat, full 5D cutoff strong/weak leakage, uniform χ momentum IR false-slow Rayleigh, nonconverged polynomial basis and time splitting",
-    "Read kinetics/BIN-LOCAL-DETAILED-BALANCE.md and run python kinetics/test_bin_detailed_balance_identity.py (synthetic algebra only, NOT microphysical validation)."
+    "Read kinetics/BIN-LOCAL-DETAILED-BALANCE.md and run python kinetics/test_bin_detailed_balance_identity.py (synthetic algebra only, NOT microphysical validation).",
+    "Run python kinetics/finite_bin_recoil_projection_control.py and read FINITE-BIN-RECOIL-PROJECTION-CONTROL.md; its O(h²) defect is synthetic, not χe microphysics."
   ],
   "main_experiment": [
+    "Replace synthetic paired W with actual 5D χe matrix element and on-shell electron recoil; resolve finite-bin O(h²) equilibrium bias without hiding distortion in symmetrized rates.",
     "Check whether exact electron recoil Δ=E−E′ and finite χ center energy Δij mismatch causes false thermal heating; test paired quadrature local ratio Kij/Kji=exp(Δij/T) independently of integrated weak heat.",
     "Derive bin transfer rates per χ mode from the actual Lorentz-invariant 5D χe scattering amplitude, including electron and χ final Pauli, exact Møller flux and correct degeneracy; verify against independent strong Cχ(p) and weak heat on uniform/IR-adapted phase-space grids",
     "Design positive conservative redistribution of outgoing χ and e energies to physical radial q bins, with physical fermion state capacity. Check energy-bin B interpolation, logit-energy exact FD equilibrium and proper detailed balance for all cell rates.",
