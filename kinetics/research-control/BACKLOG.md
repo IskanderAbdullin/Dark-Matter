@@ -106,3 +106,8 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Derive per-state Kij/Kji thermal ratio, FD fixed point, finite-bath energy and entropy pair identities; independent seeded synthetic 10k algebra control (not χe physics). [Report](../BIN-LOCAL-DETAILED-BALANCE.md).
 - [ ] Integrate **actual** paired 5D χe rates on adapted IR physical phase-space bins, verify local detailed balance vs bin-center projection and independently converge heat/strong Cχ; if impossible with fixed center energies, retain negative result and use energy-resolved conservative discretization.
 - [ ] Pauli-bounded physical finite-SM evolution and realistic gauge/UV/thermal channels; no 86-eV relic or CLASS claim.
+
+## 2026-11-21 paired finite-bin recoil counterexample
+
+- [x] Synthetic continuous event measure with exact pointwise detailed balance exhibits converged finite-cell center-energy balance bias O(h²), +2.277% at width .8; [report](../FINITE-BIN-RECOIL-PROJECTION-CONTROL.md), [script](../finite_bin_recoil_projection_control.py). **Not physical χe 5D rates.**
+- [ ] P0 unchanged: evaluate actual paired 5D χe recoil event integrals with physical Pauli and phase-space capacities, quantify correction and heat error, then finite-SM time integration.
