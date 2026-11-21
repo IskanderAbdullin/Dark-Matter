@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**COSMOLOGICAL PILOT:** [FRW fixed-thermal-mother evolution](FRW-FIXED-BATH-PILOT.md) integrates the on-shell 2D source in comoving q=p/T, radiation H proportional to T² and a dimensionless coupling κ. Weak κ yields mean frozen q~2.5 versus instantaneous flat-bath q~0.003. The mother reservoir, temperature history and energy budget are not self-consistent; this is not CLASS input.
+
+
 **NEW ON-SHELL 2D SOURCE:** [two-dimensional on-shell collision operator](ONSHELL-COLLISION-2D.md) removes parent/angular remapping entirely and integrates exact allowed daughter-energy cell areas. The independent continuum vacuum source (0.0164959084596) matches the historic quadrature to ~1.7e−10, with positivity, detailed-balance and H-theorem tests. Finite binning and fixed mother bath remain; this does NOT prove full physical production or an observational DM model.
 
 

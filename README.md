@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FRW next-step pilot:** [radiation-dominated 1↔2 kinetic evolution in comoving q=p/T](kinetics/FRW-FIXED-BATH-PILOT.md) explicitly shows that a cold burst at fixed T does not automatically imply a cold frozen primordial population. The mother is still externally thermal, the coupling κ=Γ/H(T=M1) is illustrative, and the energy/entropy budget is not closed.
+
+
 **New on-shell collision construction:** the 1↔2 measure transforms exactly to a two-dimensional daughter-energy domain (4q_phi q_{chi_2}ge M_1^2). An analytic 1D vacuum-source integral matches the original parent-angle quadrature at relative 1.7e−10; a finite-grid physically on-shell collision network now has exact daughter invariant, discrete balance and entropy tests. [Full derivation and numerical audit](kinetics/ONSHELL-COLLISION-2D.md). Still a fixed thermal mother bath; not FRW or validated 86-eV DM.
 
 
