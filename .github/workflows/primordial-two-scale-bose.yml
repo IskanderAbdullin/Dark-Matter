@@ -1,0 +1,53 @@
+name: Primordial cold burst plus hot tail CLASS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/primordial-two-scale-bose.yml'
+      - 'cosmology/burst_residual_hot.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bimodal-initial-psd:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Install CLASS and scientific quadrature
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Check two-component number, energy and normalization
+        run: python cosmology/burst_residual_hot.py --analytic-only --output outputs/mixture_analytic.json
+      - name: Run ten linear Einstein-Boltzmann mixtures and coarse-grid checks
+        run: python cosmology/burst_residual_hot.py --output outputs/mixed_bose_primordial_CLASS.json
+      - name: Verify ten physical background runs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path("outputs/mixed_bose_primordial_CLASS.json").read_text())
+          assert len(r["scenarios"])==10
+          assert all(x["CLASS_background"]["omega_ncdm_h2"]>0 for x in r["scenarios"])
+          for row in r["scenarios"]:
+              assert abs(row["shape_moments"]["number_moment_ratio"]-1)<.0001
+              print("alpha",row["alpha"],"warm",row["hot_fraction"],
+                  "power_ratio_k10",row["P_over_CDM_k10"])
+          PY
+      - name: Preserve complete spectra and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: Bose-two-population-cold-hot-CLASS
+          path: outputs/*.json
+          retention-days: 21
+          if-no-files-found: error
