@@ -50,7 +50,7 @@ def test_large_physical_mass_chi1_is_dynamically_depleted_on_clean_graph():
     assert out["n_phi_over_T3"]>0
     assert out["n_mother_over_T3"]<model.mother_thermal_number_discretized
     assert out["graph_collision_invariants"]==3
-    assert out["minimum_occupation"]>=-1e-7
+    assert out["min_occupation"]>=-1e-7
     assert out["max_fermion_occupation"]<=1.000001
     assert max(abs(x) for x in out["number_and_energy_residuals"].values())<1e-8
 
