@@ -80,6 +80,11 @@
       "claim": "A shared energy lattice directly yields paired 5D χe transition coefficients equal in both directions without numerical correction and automatically agrees with continuous Q to all orders",
       "finding": "Refuted: raw Pauli-weighted W asymmetry ≈3.69% on χ36/e54/dE.5/nangular10; raw FD false Q +5.795e-12 GeV5. Explicit pair average restores stationary common-T FD but changes dynamics. Paired Q at Tchi=.9/1.1 differs from independent continuum by ~1.52% /1.12% at this grid.",
       "evidence": "kinetics/PAULI-CHI-E-QUARTET-AUDIT.md; kinetics/results/paired-energy-quartets-2026-11-21.json"
+    },
+    {
+      "claim": "Global Pauli/χ,e charge/total energy/entropy exact conservation of finite-quartet Lie splitting demonstrates reliable time-dependent physical collision evolution",
+      "finding": "Refuted: 1092-quad network, dt=2e6 GeV^-1, one-step forward/reverse order shifts dark energy 1.44282e-4 GeV4; with 16 substeps still 5.43e-6, while conserved N/E errors ~1e-15 and entropy remains positive. Underlying Wpair also changes raw 5D projection.",
+      "evidence": "kinetics/results/paired-quartet-network-2026-11-21.json; kinetics/PAULI-QUARTET-NETWORK-TIME-AUDIT.md"
     }
   ],
   "physical_unknowns": [
@@ -94,8 +99,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Run physical paired 5D chi-e vector-contact event quadrature on adapted IR bins; compare raw bin-center detailed-balance defect, physical strong/weak heat and corrected projection bias. See FINITE-BIN-RECOIL-PROJECTION-CONTROL.md.",
-  "last_checkpoint_git_sha": "4308d4a81a76bbc2313b0cdc913f67c91d654d68",
-  "current_phase": "A: physical 5D vector χe full-Pauli source projected onto shared χ/e energy-conserving fermion quartet lattice; declared pair averaging restores local detailed balance and a true bounded implicit single-quartet step, but unmodified 5D reverse rates and global evolution remain unsolved",
+  "last_checkpoint_git_sha": "ab3fab09774e6faf9ccdcad571e3e15b11e0f40d",
+  "current_phase": "A: globally time-evolving finite χ/e energy-quartet lattice with actual 5D contact-derived Pauli rates but explicitly pair-averaged W; χ/e number and total energy/entropy/Pauli invariant, dt/Lie-splitting and raw nonreversibility errors measured; no unmodified physical Boltzmann or Bose cosmology",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -211,7 +216,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "Although real 5D Pauli χe amplitudes now generate finite lattice quartet rates and an implicit bounded single-event χ/e evolution, reversible Wpair is a model-changing pair average of raw finite-bin microscopic weights. There is no validated all-quartet time evolution or physical 86-eV DM freezeout, Γ(T), BEC, Omega or CLASS.",
+  "physics_scope_warning": "All-quartet finite χ/e time integration respects fermionic charge, energy, entropy and Pauli only for an explicitly symmetrised **modified** discretised rate network; raw microscopic 5D finite-bin W is not reverse-paired. Strong dt/order errors remain despite machine-precision invariants. No physical elastic gamma, 86eV DM, BEC or CLASS.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -233,21 +238,23 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "commit": "4308d4a81a76bbc2313b0cdc913f67c91d654d68",
-    "title": "Shared energy-lattice microscopic 5D χe Pauli quartets and implicit fermion two-species time substep",
-    "code": "kinetics/paired_energy_quartets.py",
-    "tests": "tests/test_paired_energy_quartets.py",
-    "report": "kinetics/PAULI-CHI-E-QUARTET-AUDIT.md",
-    "results": "kinetics/results/paired-energy-quartets-2026-11-21.json",
-    "physical_benchmark": {
-      "Tchi_0p9_quad_Q_GeV5": 2.0155382190944986e-8,
-      "Tchi_0p9_independent_Q_GeV5": 1.9852809333031555e-8,
-      "Tchi_1p1_quad_Q_GeV5": -4.4821457500541896e-8,
-      "Tchi_1p1_independent_Q_GeV5": -4.432526721786192e-8
+    "commit": "ab3fab09774e6faf9ccdcad571e3e15b11e0f40d",
+    "title": "All-allowed-quartet χ/e nonlinear Pauli time dynamics and explicit Lie-splitting ordering error",
+    "code": "kinetics/paired_quartet_network.py",
+    "tests": "tests/test_paired_quartet_network.py",
+    "report": "kinetics/PAULI-QUARTET-NETWORK-TIME-AUDIT.md",
+    "results": "kinetics/results/paired-quartet-network-2026-11-21.json",
+    "benchmark": "M=.1GeV, G=.001GeV^-2, 14 χ and 17 e energy bins, spacing=.5GeV, angular n8; 1092 connected pairs, total dt 2e6GeV^-1",
+    "proof_scope": "discrete Pauli and conservation/entropy of PAIR-AVERAGED finite-bin physical scattering kernel, not continuum dynamics",
+    "measured": {
+      "dEchi_step1_GeV4": -0.05791998857306879,
+      "dEchi_step16_GeV4": -0.05565715218530509,
+      "order_defect_step1_GeV4": 0.00014428194398363736,
+      "order_defect_step16_GeV4": 0.000005431561680424579,
+      "initial_Qchi_GeV5": -4.9674741941066356e-8
     },
-    "negative": "Raw W tensor still nonreversible at finite center-energy bins: Pauli-weighted asymmetry 3.6935%, FD spurious heat +5.795e-12 GeV5 at chi36/e54/ang10. Pair averaging changes model.",
-    "CI": "new source commit 4308d4a8; inspect actual GitHub Actions before claiming success",
-    "limitations": "One-quartet implicit time substep, not full global nonlinear 2→2 microphysical evolution, SM-gauge completion or Bose 86eV relic"
+    "CI": "source ab3fab; verify actual run before marking success",
+    "limitations": "No genuine raw microreversible W; no dt/domain/full 5D nonthermal convergence, SM gauge completion, Bose FRW or relic"
   },
   "last_projection_control": {
     "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",

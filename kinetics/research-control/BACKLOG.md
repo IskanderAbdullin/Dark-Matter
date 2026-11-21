@@ -126,3 +126,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** raw microscopic finite energy-lattice W Pauli-weighted forward/reverse asymmetry 3.69%, false thermal Q+5.795e−12 GeV5; averaging W fixes exact FD but changes physical rates. Preserve and use as primary falsification gate.
 - [x] A single true 5D-derived *pair-averaged* quartet supports implicit physically bounded χ+e fermion time transfer conserving species numbers and total energy with entropy growth; this is NOT a full multi-quartet evolving χe bath.
 - [ ] **Immediate P0:** directly time-reversal-paired 5D finite-cell quadrature without posthoc W averaging; sparse all-quartet Pauli-safe quantum time integration with measured dt/grid convergence; full SM ν/e plasma and BEST Bose 1↔2 remain open.
+
+## 2026-11-21 full finite χ/e Pauli quartet network time evolution
+
+- [x] Actual coupled χ/e occupation evolution through all 1092 positive-rate energy-changing quartets for small physical 5D-derived (but explicitly rate-pair-averaged) lattice. No fixed electron thermostat. Each implicit Pauli substep preserves χ/e numbers, total energy and entropy monotonicity; globally verified at dt2e6GeV^-1 for 1,4,16,64 substeps. [Source](../paired_quartet_network.py), [time audit](../PAULI-QUARTET-NETWORK-TIME-AUDIT.md).
+- [x] Independent initial instantaneous Pauli Qχ and small-dt numerical derivative agree: dt1000 relative error 0.0347%; large dt nonlinear changes expected. Thermal common-T independent μχ/μe fixed point holds.
+- [x] **Negative:** exact conservation and positive entropy do NOT establish time/order convergence. One-step ordering discrepancy 1.44e−4 GeV4, shrinking to 1.35e−6 after 64 substeps; underlying raw W still requires a rate-changing symmetrization. No physical Γ_el, Bose freezeout or CLASS.
+- [ ] Immediate physical priority: derive directly microreversible paired 5D on-shell event quadrature without ad hoc W averaging, independent nonlinear χe q/t/cutoff/angular convergence and realistic SM lepton heat. Then pinned BEST Bose 1↔2 and 86-eV cosmology.
