@@ -1,0 +1,35 @@
+{
+  "status": "Numerically validated localized conditional Pauli 5D Rayleigh upper bounds, with explicit false-low quadrature negative control; CI not yet verified",
+  "model": "massless e-only full-Pauli chi-e contact G=.001 GeV^-2, Mchi=.1GeV, T=1GeV, gchi=ge=4, fixed e thermal bath",
+  "packet": "h(E)=Gaussian(E/T,center,width)-susceptibility-weighted mean, exact χ number-null projection",
+  "cases": {
+    "center0p25_width0p08": {
+      "uniform_n16_cut32": 3.938802239163728e-8,
+      "uniform_n20_cut32_FALSE": 2.6044472662459597e-8,
+      "uniform_n24_cut32": 2.896732305161916e-8,
+      "uniform_n32_cut32": 6.001795385532527e-8,
+      "uniform_n40_cut32": 3.763873407622964e-8,
+      "uniform_n48_cut32": 5.5581049761625827e-8,
+      "split_n12_cut32": 4.710312846580524e-8,
+      "split_n16_cut32": 4.8571769640364024e-8,
+      "split_n20_cut32": 4.856937695724728e-8,
+      "split_n24_cut32": 4.8535941602925195e-8,
+      "split_n20_cut20": 4.856743049048988e-8,
+      "split_n20_cut26": 4.856844362694007e-8,
+      "split_n20_cut40": 4.856920476841996e-8,
+      "susceptibility_S_GeV3": 0.0004243098535064153
+    },
+    "center0p15_width0p15": {
+      "split_n20_cut32": 4.5751768547471696e-8,
+      "split_n24_cut32": 4.5695764682073544e-8
+    },
+    "center0p5_width0p5": {
+      "split_n20_cut32": 1.1064488718403023e-7,
+      "split_n24_cut32": 1.106457513925038e-7
+    }
+  },
+  "comparison_11_polynomial_slow_Ritz_GeV": 8.564757722572995e-8,
+  "negative_result": "Naive 20-node Gauss across p/T[0,32] misses sharply localized physical IR phase-space and spuriously reports too small Rayleigh; composite p/k quadrature resolves support and exposes true conditional trial quotient.",
+  "limitations": "Finite localized trial Rayleigh upper bounds, not true spectral gap/no-gap theorem, no microphysical finite-SM energy evolution or physical Bose relic",
+  "class_ready": false
+}
