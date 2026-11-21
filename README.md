@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**NEXT PHYSICAL MODEL GAP STARTED — explicit number/energy conserving SM thermal contact:** [standalone finite-q FD elastic rethermalization operator](kinetics/SM-NUMBER-CONSERVING-BATH.md), [source](kinetics/number_conserving_sm_bath.py), [tests](tests/test_number_conserving_sm_bath.py). Rather than secretly resetting mother FD during FRW, this BGK-like elastic term projects to FD(T_SM,µ) with µ solved to conserve **the actual chi1 number on the very same q-grid**; exact convex exponential relaxation preserves Pauli 0≤f≤1, decreases Fermi relative entropy, and returns an explicit opposite SM energy transfer to close the collision ledger. It remains a *phenomenological* thermal-contact building block: no microphysical γ_el matrix element, evolving SM T/gstar/Friedmann or physical 86-eV relic yet. [Science/model literature audit](kinetics/LITERATURE-PHYSICAL-SCOPE-2026-11-21.md).
+
+
 **FULL genuine RD-FRW quantum BEST zero-mode qmin audit confirms NO early macroscopic BEC:** [public successful Actions #44924098843](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843), [three-run report](kinetics/BEST-FRW-QMIN-SCAN.md), [preserved measured JSON](kinetics/results/best-rd-frw-qmin-real-2026-11-21.json). At fixed 96 q-nodes, 128 time steps, Γrest=1, a_end=sqrt1.4, N0(qmin) falls by 7.99969 and 15.624999 as qmin shrinks 2× and 2.5×; N0/qmin³ variation only 0.00384%, total φ number stable to 1.33e−6 relative. Thus the zero mode is still regular low-q physical phase volume at this early stage, **not cutoff-independent condensate**. This does NOT exclude later BEC, physical 86-eV DM, SM plasma or CLASS.
 
 

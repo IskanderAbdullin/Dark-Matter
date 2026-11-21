@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**SM BATH CONSERVATIVE RE-THERMALIZATION BUILDING BLOCK:** [SM-NUMBER-CONSERVING-BATH.md](SM-NUMBER-CONSERVING-BATH.md) implements a finite-q fermionic BGK elastic relaxation with chemical µ determined from actual conserved mother number, exact positive/Pauli-bounded time substep, decreasing fermion KL distance, and explicit opposite SM energy transfer. No hidden thermal FD reset; still phenomenological γ_el, SM bath temperature/gstar and 2→2 microphysics NOT simulated. [Literature requirements](LITERATURE-PHYSICAL-SCOPE-2026-11-21.md) distinguish thermal-plasma Yin (2023) from our previously confirmed collisionless-mother RD-BEST scenario.
+
+
 **ACTUAL BEST RD-FRW 3-CUTOFF NO-BEC TEST:** [BEST-FRW-QMIN-SCAN.md](BEST-FRW-QMIN-SCAN.md) / [Actions #44924098843](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843) / [measurements](results/best-rd-frw-qmin-real-2026-11-21.json). At end tΓ=4e−5, N0 scales as qmin³ across qmin=1e−4,5e−5,2e−5 with N0/qmin³ scatter 0.00384%; total phi comoving number steady to 0.000133% across the cutoff sweep. This supports NO macroscopic early Bose-Einstein condensate in the particular RD model; further time/Nq/BEST integrator convergence and physical SM rethermalization remain necessary.
 
 

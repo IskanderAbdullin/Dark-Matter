@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НАЧАТА СЛЕДУЮЩАЯ КРИТИЧЕСКАЯ ФИЗИКА — ЯВНЫЙ SM THERMAL CONTACT:** [SM-NUMBER-CONSERVING-BATH.md](SM-NUMBER-CONSERVING-BATH.md) задаёт кинетический упругий BGK оператор для χ1 с fFD(TSM,µ), где µ определяется из точного конечносеточного числа χ1, а не заново задаётся0. Сохраняется χ1 number/две charges при упругом рассеянии, Pauli и относительная Fermi H/KL, вся переданная энергия Q_dark=−Q_SM явно записывается. Но γelastic пока феноменологическое, SM T,gstarS, actual plasma backreaction и microscopic matrix element ещё не динамичны. [Литературный пробел Yin2023 / Sakurai–Yin2025](LITERATURE-PHYSICAL-SCOPE-2026-11-21.md). Приоритет: реальное подключение thermal contact к BEST + SM energy/T динамика, затем физическая 86eV/CLASS.
+
+
 **НОВЫЙ РЕАЛЬНЫЙ RD-FRW QMIN AUDIT: ранний макроскопический БЭК НЕ обнаружен:** [BEST-FRW-QMIN-SCAN.md](BEST-FRW-QMIN-SCAN.md), [Actions #44924098843](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843). Реальная MPI BEST χ1↔χ2+massiveφ динамика при a_end=1.1832 и Nt128, Nq96, qmin=1e−4,5e−5,2e−5 даёт N0/qmin³ почти константу (разброс 0.00384%), отношение N0 на двух шагах 7.99969 и 15.624999 при теоретических 8 и15.625. Физическое полное Nφ cutoff-устойчиво ~1.33e−6. Это regular Bose low-q population, НЕ доказанный макроконденсат. Не исключает позднюю BEC; нужны реальная SM плазма, Γ(T), gstarS, physical 86эВ и CLASS.
 
 
