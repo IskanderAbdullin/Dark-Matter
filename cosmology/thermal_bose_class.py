@@ -23,8 +23,7 @@ def thermal_background(m=86.,gdec=55.,gtoday=3.909,T=2.7255):
 def write_psd(path,qmin=1e-5,qmax=40,nlog=620,nlin=2200):
     q=np.unique(np.r_[np.geomspace(qmin,.1,nlog),np.linspace(.1,qmax,nlin)])
     f=1/((2*math.pi)**3*np.expm1(q))
-    np.savetxt(path,np.c_[q,f],fmt="%.17e",
-        header="q=p/T_ncdm, f_CLASS(q)=1/((2pi)^3*(exp(q)-1)) one real boson")
+    np.savetxt(path,np.c_[q,f],fmt="%.17e")  # CLASS fscanf expects ONLY two numeric columns; NO header
     num=4*math.pi*trapezoid(q*q*f,q)
     rad=4*math.pi*trapezoid(q**3*f,q)
     return dict(qmin=qmin,qmax=qmax,npoints=len(q),
