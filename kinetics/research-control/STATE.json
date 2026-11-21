@@ -45,23 +45,27 @@
       "claim": "Tabulated exact FD χ at common T is automatically stationary under nonlinear Pauli collisions on finite q grid",
       "finding": "Refuted on finite PCHIP/hard-cutoff samples: qgrid=81 yields false Q≈−2.57e−12 GeV5 and entropy≈6.55e−14; qgrid=641 reduces to 6.62e−15,4.70e−16; analytic FD Q≈1.39e−24",
       "evidence": "kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json"
+    },
+    {
+      "claim": "Finite-PCHIP thermal FD state is a true equilibrium of arbitrary nonthermal collision operator",
+      "finding": "Refuted by artificial Q and entropy; exact-logit-in-energy interpolator removes this spurious thermal equilibrium source on tested coarse q nodes",
+      "evidence": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md and tests/test_conservative_energy_projection.py"
     }
   ],
   "physical_unknowns": [
-    "Gauge-consistent UV completion and portal bounds, neutrino channels",
-    "full moving-chi finite-T elastic collision integral with Pauli/blocking and drag/diffusion",
-    "temperature-dependent quantum 1->2 rates with thermal masses, optional 2->2 Bose source",
-    "calibrated number conserving BGK gamma_el(p,T) and its validity/domain",
-    "gstarS(T)/gstarRho(T), self-consistent H and coupled SM heat",
-    "late physical freeze-out, cutoff-independent zero-mode, absolute relic Omega",
-    "linear perturbations, CLASS and observational likelihood"
+    "gauge-complete UV mediator and coupling bounds, EW-temperature mass and chirality, realistic SM species and neutrino coupling",
+    "true 2-to-2 arbitrary nonthermal chi spectral eigenvalues and forward/backward kinetic relaxation; eigenmodes not captured by single thermal FD energy-moment rate",
+    "full Pauli-preserving time integrator with discrete number/energy/entropy and evolving SM heat; proper conservative radial q-bin measure",
+    "temperature-dependent 1->2 matrix collision, stimulated Bose and thermal masses, 2->2 IR Bose emission and actual BEST coupling",
+    "gstarS(T),gstarRho(T),Friedmann H and realistic cosmo thermodynamics",
+    "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "27f02d6ab961bdf38fd448cd2bf1463b2f1f72d6",
-  "current_phase": "A: full 5D Pauli 2-to-2 thermal and generic isotropic nonthermal instantaneous chi collision source; finite-grid interpolation and domain convergence not fully controlled",
+  "last_checkpoint_git_sha": "e10b683b746d8e891992e8f659a519399bf322b2",
+  "current_phase": "A: relativistic full Pauli chi-e nonthermal collision source, conservative weak event moment and exact FD fixed-point interpolation, conditional EW lepton completion and fixed-N thermal-energy response; genuine collision spectral eigensystem and time dynamics missing",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -111,6 +115,27 @@
       "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044",
       "ci_conclusion": "success",
       "scope": "controlled heavy nondegenerate chi M/T >=100 leading Fokker-Planck matching; specifically INVALID for original relativistic BEST M/T=.1"
+    },
+    {
+      "stage": "Exact-FD logit-energy interpolator removes false PCHIP equilibrium heat, conservative weak-event deposition matches number and energy moments; not a time integrator",
+      "sha": "cee52792b6eb26ea460146132a8aa96daad30f28",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936130211",
+      "ci_conclusion": "success",
+      "scope": "numerical FD/weak projection only, no proven Pauli-stable kinetics"
+    },
+    {
+      "stage": "Gauge-completed electron vector EFT requires left lepton-doublet neutrino channel (G_L=G_R): common massless lepton heat 6/4 electron-only conditional ratio",
+      "sha": "9db26c25f46475258658da6fbbfd47358d945036",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936289831",
+      "ci_conclusion": "success",
+      "scope": "SU2 operator/chiral state counting, not UV-completed model nor true plasma"
+    },
+    {
+      "stage": "Thermal FD fixed-number linear heat-moment relaxation gamma_T from physical 5D e-chi Pauli source; analytic thermodynamic heat capacity and root-matched chemical potential",
+      "sha": "e10b683b746d8e891992e8f659a519399bf322b2",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936484677",
+      "ci_conclusion": "in_progress at checkpoint",
+      "scope": "one conditional FD thermal-energy response only, NOT full nonthermal eigenmode or kinetic gamma_el(p,T)"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -121,7 +146,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "Arbitrary isotropic χ collision source now exists, but no positivity/charge-conserving time integration and no self-consistent SM; physical gamma_el, 86-eV freezeout, BEC, CLASS remain unproven.",
+  "physics_scope_warning": "The available kinetic coefficient gamma_T,moment is only a conditional, fixed-N thermal FD energy response. It must NOT replace gamma_el(p,T) nor validate any physical relic. CLASS-ready remains false.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -129,8 +154,8 @@
     "enabled": true,
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
-  "last_verified_commit": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935320673",
+  "last_verified_commit": "9db26c25f46475258658da6fbbfd47358d945036",
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936289831",
   "last_event_audit": {
     "date": "2026-11-21",
     "script": "kinetics/relativistic_elastic_audit.py",
@@ -143,18 +168,17 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "commit": "27f02d6ab961bdf38fd448cd2bf1463b2f1f72d6",
-    "title": "Nonlinear Pauli strong Cχ(p) and weak energy/entropy for arbitrary isotropic χ with thermal electron bath; quantitative PCHIP false equilibrium signal",
-    "code": "kinetics/relativistic_nonlinear_fermion.py",
-    "tests": "tests/test_relativistic_nonlinear_fermion.py",
-    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935768129",
-    "ci_status": "in_progress at checkpoint (verify outcome on restart)",
-    "benchmark": "kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json",
-    "benchmark_scope": "χ=.1 GeV, Te=1 GeV, G=.001 GeV^-2, e± massless, qgrid PCHIP, no time evolution, electron bath fixed",
-    "real_nonthermal_chi_heat_GeV5": 5.09255754922211e-9,
-    "real_nonthermal_entropy_GeV4": 1.7811569558373922e-10,
-    "negative_tabulated_thermal_spurious_Q_coarse_GeV5": -2.5734441249791985e-12,
-    "negative_tabulated_thermal_spurious_Q_fine_GeV5": 6.620492517038575e-15,
-    "limitation": "Single-time collision, no bath evolution or coupling to BEST, no physical relic"
+    "commit": "e10b683b746d8e891992e8f659a519399bf322b2",
+    "title": "Conditional number-conserving thermal energy-moment relaxation, with independent FD thermodynamic derivatives, rooted mu(T) and finite ΔT/5D q convergence",
+    "code": "kinetics/thermal_energy_relaxation.py",
+    "tests": "tests/test_thermal_energy_relaxation.py",
+    "report": "kinetics/THERMAL-ENERGY-RELAXATION.md",
+    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936484677",
+    "ci_status": "in_progress at checkpoint",
+    "scope": "Electron-only low-energy vector contact, M=.1GeV, Te=1GeV, G=.001GeV^-2, gchi=ge=4, isotropic FD manifold, SM fixed",
+    "fixedN_cN_GeV3": 0.9987065945621287,
+    "gamma_T_moment_delta_0p01_n24_GeV": 3.03184730596502e-7,
+    "gamma_T_moment_delta_0p005_n28_GeV": 3.0318273716675174e-7,
+    "warning": "Not full nonthermal linearized collision eigenvalue, not BGK, no SM energy feedback or 86eV relic"
   }
 }

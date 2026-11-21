@@ -1,39 +1,40 @@
 {
   "schema_version": 1,
-  "priority": 1,
   "status": "ready",
-  "title": "Implement positivity-preserving, number/energy-conservative quantum 2-to-2 time evolution for arbitrary chi distribution, then couple finite SM bath",
-  "objective": "Convert a verified instantaneous full Pauli collision source into a true time-evolving, number-conserving nonlinear χ momentum distribution with explicit finite SM energy transfer. Do not use naive clipped Euler, unverified global charge projection or ad hoc thermal reset. Build a conservative finite-volume spectral discretization and independent continuum reference before BEST integration.",
+  "priority": 1,
+  "title": "Independent linearized nonthermal Pauli χe collision eigenmodes and physically conservative finite-volume time integration",
+  "objective": "Compute the linearized full Pauli 2->2 χe kinetic operator around FD for independent nonthermal perturbations at fixed N, including correct tail/interpolation and discrete conservation; compare its eigenmodes to conditional γ_T,moment. Then build an actual quantum positivity/number/energy-preserving finite-volume evolution coupled to a finite SM bath. Do not confuse fixed-N thermal energy-moment rate with true kinetic thermalization or replace the old phenomenological BGK.",
   "prerequisites": [
-    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, all research-control files and current GitHub/PR Actions; check CI #44935768129",
-    "Examine kinetics/relativistic_nonlinear_fermion.py, relativistic_weak_form_2to2.py, JSON numerical cutoff/interpolation negative controls and tests",
-    "Reproduce analytic FD stationary vs PCHIP equilibrium false heat; quantify errors before changing discretization"
+    "Check PR #1 HEAD; verify GitHub Actions #44936484677 for e10b683 and repair failures",
+    "Read AGENTS, CONTINUOUS-RESEARCH-SPEC, GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG",
+    "Read kinetic codes relativistic_nonlinear_fermion.py, conservative_energy_projection.py, thermal_energy_relaxation.py, lepton_portal_chirality.py, full-Pauli 5D quadrature reference"
   ],
-  "steps": [
-    "Derive eventwise χ redistribution between initial and final p cells with nonnegative interpolation weights in physical energy or volume ensuring discrete N and E moment and Pauli 0..1; electron receives minus exact χ energy",
-    "Choose finite-volume q^3 cell measures and collision quadrature consistent with BEST log-Simpson or an explicitly independent continuum reference; avoid hidden grid-weight mismatch like prior BGK bug",
-    "Construct a substep integrator with rates and adaptive dt that guarantees 0<=fχ<=1 and number N in the absence of true number-changing processes; test entropy production in a finite bath with heat transfer QSM=-Qchi",
-    "Verify thermal FD fixed point at common T without allowing PCHIP tail artifact or strong/weak mismatch to dominate; include exact analytic FD, perturbed FD, and truncation negative control",
-    "Run joint convergence for n_q, p/k cutoffs, angular quadrature, time dt and bosonic 1↔2 stiffness; quantify leakage, SM heat feedback and detailed balance",
-    "Only then decide whether to integrate this kernel into pinned independent BEST 1↔2+FRW in a fully physical portal model; separately require gauge/UV-complete lepton channels and realistic SM gstar/thermal masses",
-    "At each completed verified stage append evidence and negative findings, update checkpoints, commit+push with no force, immediately start next stage in active run"
+  "detailed_plan": [
+    "Pre-register physically relevant perturbations δfχ(p)=FD(1−FD) h(E), including constrained zero-number modes, thermal-temperature mode and oscillatory/IR/hard-tail distortions. Derive linearized collision J around common Te, from exact F−R and independently from analytic entropy dissipation.",
+    "Build an exact-FD-preserving logit-energy basis that captures arbitrary small perturbations without PCHIP false equilibrium signal; quantify finite qmax and interpolation error.",
+    "Compute small kinetic response matrix for a finite basis of h(p), with actual 5D Pauli collision integrals and independent angular/q convergence. Verify electron detailed balance, number-conserving null mode, nonpositive entropy quadratic form, stable complex spectra within estimated quadrature error.",
+    "Project conditional temperature variation at fixed N onto J and check whether energy moment matches γ_T,moment≈3.03183e−7 GeV in the electron-only benchmark; document why this need not equal slowest eigenvalue.",
+    "Construct a finite-volume event-pair transfer discretization with nonnegative deposition and correct capacity/Pauli bounds. Distinguish the moment projector from a valid timestep. Prove number and energy/SM Q transfer and track entropy under explicit or implicit quantum-compatible integrator.",
+    "Validate dynamic step under dt, qmin,qmax,p/k/angle refinement and external BEST density conventions. Never rethermalize χ by free resetting. Add SM gstar and heat dynamical equation once physically justified.",
+    "Check channel completion: G_L=G_R pure-vector e implies ν_L channel; at T above EW symmetry, need a full mediator and thermal masses. Do not extrapolate 6/4 ratio into general cosmological epochs.",
+    "Record measured positive AND negative results in compact JSON, append evidence, checkpoint and commit/push fast-forward, continue automatically to next independent scientific bottleneck in same active execution."
   ],
   "acceptance": [
-    "Independent unprojected Nχ conservation and Qdark+QSM with physically correct discrete quadrature",
-    "Pauli bounds maintained in true integrator without clipping and without self-bath thermal resets",
-    "Thermal common-T stationary test and nonthermal relaxation with positive entropy on converged phase-space/time meshes",
-    "Reproduction compared to independent weak 5D reference, explicit finite-q tail and interpolation error below physics signal",
-    "No gamma_el, 86-eV dark matter, BEC or CLASS claims without further physical validation"
+    "Independent finite-dimensional linearized collision basis convergence and N fixed point at common T, explicit entropy quadratic form",
+    "Measured comparison of slow modes and FD thermal-energy moment with honest errors and no false gamma_el identification",
+    "Actual Pauli-bounded time step in physically weighted radial energy bins, with Qχ+QSM=0 and no hidden heat reservoir",
+    "Class_ready false and 86eV DM/BEC/Ω freezeout unproven until separate full cosmological/observational validation"
   ],
   "fallback": [
-    "If finite-volume conservative interpolation impossible cheaply, derive exact pairwise energy-bin reaction network with provable invariants on a restricted kernel",
-    "If electrons can’t be coupled dynamically, record external-reservoir approximation honestly and do not claim full SM entropy conservation",
-    "If CI fails, repair before further scientific claims"
+    "Start with two independent nonthermal perturbation modes and exact-FD logit interpolation, then enlarge basis only when strong/weak and cutoff errors controlled",
+    "If full conservative network is too costly, prove an analytically closed limited collision subspace and explicitly tag approximations",
+    "If CI fails or branch concurrent update, repair/reconcile first, preserve checkpoint and no force pushes"
   ],
   "deliverables": [
-    "quantum conservative finite-volume collision solver and tests",
-    "compact convergence JSON and updated scientific report",
-    "checkpoint/commit/push and next research gate"
+    "kinetics/LINEARIZED-PAULI-EIGENMODES.md",
+    "tests and numerical results for linearized kernel",
+    "quantum conservative finite-volume time integrator and tests",
+    "checkpoint and next science stage"
   ],
-  "scope": "Public repo, draft PR, no merge/force push; no user PC or Computer Use without separate approval."
+  "scope": "Public research branch/draft PR only. No merge or force-push, no user's computer without separate approval."
 }
