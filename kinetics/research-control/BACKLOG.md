@@ -141,3 +141,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Independent 5D Gauss CM n28 heat vs direct ℓ integral plus energy lattice: h=.5, cold/hot relative discrepancies ~0.017% each, h=.125 <0.007%; massless-e conditional benchmark only. Negative h nonmonotonicity preserved: h=.25 errors ~0.08–0.09% exceed h=.5 errors.
 - [ ] **Verify GitHub CI** after Python syntax fixes: old f172 and 916f failures were engineering regressions, corrections are a3aa and bcd47b; do not promote until all new tests pass and runner reproduces compact data.
 - [ ] Physics P0: finite electron mass and e± thresholds/annihilation, electroweak lepton doublet ν channel and UV mediator validity, real gstar and finite SM heat; couple genuine microphysical source to pinned BEST 1↔2 Bose/Pauli and FRW only after independently validated plasma/bath and h/dt/cutoff convergence. No 86-eV freezeout, ΩDM or CLASS claimed.
+
+## 2026-11-21 finite electron mass and CI gate
+
+- [x] Verified actual earlier [Scientific CI #44947528381](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44947528381) success for HEAD 078c3c4 (previous heat float tolerance correction).
+- [x] Derived and committed conditional finite-mass electron invariant ℓ kernel and massless/reversal/Pauli/forbidden-transfer regression; local standalone controls passed, **new repository CI still pending**. [Derivation](../FINITE-MASS-CHI-E-KERNEL.md).
+- [ ] Verify new real CI, independently derive massive spin trace, compare full massive 5D CM heat vs ℓ kernel at T/me=0.1,1,10 with at least three resolutions and electron cutoff; preserve negative results.
+- [ ] Build finite e± plasma with number-changing/chemical potentials and finite heat capacity, gauge-consistent portal and EFT temperature validity before cosmological evolution.
