@@ -1,38 +1,34 @@
 {
   "schema_version": 1,
-  "priority": 1,
   "status": "ready",
-  "title": "Prove or bound the slow Pauli χe collision spectrum using nonpolynomial IR/UV packets and time-domain evolution; then add finite SM heat and realistic portal",
-  "objective": "The two-to-five FD polynomial logit Galerkin basis has no stable low spectral Ritz estimate; verify how far the true slow collision space extends and whether a positive spectral gap exists in physically relevant weighted function space, without equating Ritz, thermal-moment gamma or heavy NR drag with real χ kinetic thermalisation. In parallel construct an actual positivity- and number/energy-conserving finite-volume time evolution for nonthermal fχ and a finite SM bath.",
+  "priority": 1,
+  "title": "Derive transition rates from the actual 5D relativistic χe Pauli scattering kernel and couple them to bounded conservative Fermi + SM time evolution",
+  "objective": "Bridge from the validated instantaneous 5D full-Pauli continuum χe collision source to the independently validated reduced implicit pairwise quantum kinetic network, with rates and energy transfers derived rather than assigned. Preserve finite χ mode capacities, electron Pauli and SM energy/entropy, avoid artificial charge/energy projection or hidden reservoir. Compare against strong and weak reference Cχ(p) and 2..5 logit Ritz modes. Until achieved do not claim a microscopic γ_el or physical 86-eV relic.",
   "prerequisites": [
-    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG",
-    "Verify all GitHub Actions incl commit bd776da and full PR HEAD; fix tests before scientific promotion",
-    "Read kinetics/LINEARIZED-PAULI-EIGENMODES.md, PAULI-RITZ-BASIS-AUDIT.md, higher_order_pauli_modes.py, nonlinear source and conservative event projection, full previous numerical data"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and all research-control files and CI",
+    "Check latest PR HEAD and CI for c373bca (tests/test_fermion_finite_bath_pairs.py); repair any failures first",
+    "Study 5D relativistic_nonlinear_fermion.py, conservative_energy_projection.py, higher_order_pauli_modes.py, finite-bath fermion_finite_bath_pairs.py and numerical evidence files"
   ],
-  "predeclared_falsification": [
-    "Numerically converged eigenvalues in n and cutoff do NOT imply basis convergence. Test nested polynomial dimensions beyond 5 and localized logit IR/hard-tail basis; record actual Ritz descent.",
-    "Check susceptibility and collision Dirichlet forms independently. Identify if rare high-E χ states have very weak relaxation in the full continuous EFT, and do not claim gapless/gapped without analytic bounds.",
-    "Compare linearized mode rates with early time exponential decays from directly integrated nonlinear Pauli source, after constructing a physical conservation/Pauli-preserving finite-volume timestep.",
-    "Check ν_L and e_L/e_R channel completion for G_L=G_R, distinct temperatures and effects of finite plasma mass, mediator cutoff and perturbativity; no universal constant correction over cosmic expansion."
+  "highest_value_actions": [
+    "Choose radial energy/phase-space cell volumes for χ, with exact quantum state capacity gχ V/(2π)^3, and for electrons+neutrinos. Define conservative interpolation of outgoing χ/e four-momenta to available cells such that microscopic Pauli blocking is not overcounted.",
+    "Derive physically correct pairwise collision transition matrix W_ij from the χe vector-contact |M|² and full Lorentz invariant integrals; distinguish χ transitions driven by finite e thermal occupations from arbitrary phenomenological Gamma. Verify a finite uniform-temperature FD fixed point and exact detailed balance ratios.",
+    "Check weak event Qχ and individual Cχ(p) against 5D quadrature and independent rest recoil reference. Explicitly show arbitrary finite cutoff leakage, and design corrections preserving physical invariants without numerical clipping or hidden resetting.",
+    "Couple finite electron/SM bath energy ESM(T), g*ρ(T), g*S(T), entropy, and radiation H to actual χ momentum modes; ν_L channel and UV completion needed for genuine early-Universe scenario.",
+    "Implement positive implicit/stiff timestep with discrete fermionic 0≤f≤1, exact charge, energy Qχ+QSM, monotone entropy and dt/q/CM/seed convergence. Confirm true-time responses against linear Ritz spectrum; keep two-vs-five basis negative evidence.",
+    "Then restore pinned BEST 1↔2 Bose χ1↔χ2+φ, thermal masses and stimulated soft 2↔2 where relevant, and integrate actual freezeout before any 86eV abundance/CLASS test.",
+    "After each completed verified step append EVIDENCE/backlog/results, checkpoint, nonforce commit+push, immediately continue next scientific bottleneck"
   ],
-  "steps": [
-    "Add 6+ mode orthogonal weighted basis with stable reorthogonalization or orthogonal-polynomial recurrence; independent continuous susceptibility and endpoint localization. Include IR and far-UV compact support/trial packets.",
-    "Study nested Ritz eigenvalues vs N, n_p/n_k/CM angle, p/k cutoff and precision; fix numerical-conditioning artifacts, treat true null number direction separately.",
-    "Build conservative transition network of positive χ occupancy (fermionic mode capacity) that deposits each event to radial energy nodes and transfers −Qχ to finite SM bath. Do not claim Pauli stability from moment conservation alone; prove or empirically verify upper bound and entropy.",
-    "Evolve at short and long times for analytically thermal and nonthermal initial states, verify true kinetic heating/cooling and near-equilibrium mode rates independent of initial state, time step, angular mesh and cutoff.",
-    "Only after microkinetic and SM-sector verification consider BEST coupled 1↔2 Bose-stimulated pilot and actual Γ(T), realistic H/gstar/freezing; no 86-eV Ω/BEC/CLASS claims."
-  ],
-  "acceptance": [
-    "No artificial FD PCHIP equilibrium source or hidden reservoir",
-    "Independent gamma_E and Ritz spectral vs actual nonlinear evolution comparison, quantitative uncertainty/basis limit",
-    "Particle number and energy/QSM ledger with correct mode volumes and genuine Pauli bounds in actual stepping",
-    "Explicit fixed SM bath vs finite SM bath and gauge/UV validity scopes separated",
-    "New results/negative cases saved compactly, CI checked, checkpoint/commit/push then next phase"
+  "quantitative_controls": [
+    "Full Pauli F/R and equal-T FD null on actual finite q grid",
+    "Independent particle-number/energy conservation and SM heat (not definitions only)",
+    "Exact f_i bounds at large stiffness, positive total entropy and actual number-changing channels distinguished from elastic",
+    "nq, ncm, qmin, qmax, dt and finite bath size convergence; controlled rate vs 5D scattering and localized basis modes",
+    "Physical 86eV production, macro BEC, ΩDM or CLASS-ready shall remain NOT VALIDATED until full terminal criteria pass"
   ],
   "fallback": [
-    "If full true spectral analysis is too expensive, derive controlled rigorous variational bounds for one localized momentum packet and do not interpret as physical late cosmology",
-    "If finite-volume collision transfer fails conservation or quantum bounds, preserve counterexample and implement monotone bounded update with explicit collision-invariant accounting",
-    "If CI unavailable, record exact blocker, keep CLASS-ready false, do not pretend background execution"
+    "If full 5D-to-bin positive mapping is not tractable, start with strictly physically derived two-bin weak transfer rate and quantify ignored high-q edges, with explicit no-time-physics conclusion",
+    "If SM E(T) and entropy data not verified, use constant gstar controlled toy only with explicit failure of physical cosmological claim",
+    "If CI fails, preserve error evidence and fix before claiming stage verified"
   ],
-  "prohibited": "User PC/Computer Use without approval, changing main, force-push, secret/huge artifacts, fake scientific success."
+  "scope": "Public repo research branch and draft PR only; no force or merge main; compact Actions allowed. User computer/Computer Use not without separate explicit approval."
 }
