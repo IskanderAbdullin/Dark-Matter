@@ -230,7 +230,12 @@
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937649234",
+  "last_verified_ci": {
+    "head_sha": "078c3c4fb0d27ed7c30fbecad9cc591d31bde8ce",
+    "run_id": 44947528381,
+    "conclusion": "success",
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44947528381"
+  },
   "last_event_audit": {
     "date": "2026-11-21",
     "script": "kinetics/relativistic_elastic_audit.py",
@@ -267,5 +272,18 @@
     "relative_defect_width_0p8": 0.02277004610530553,
     "relative_defect_width_0p05": 0.0000892844613802346,
     "ci": "pending"
+  },
+  "latest_stage": {
+    "name": "finite-electron-mass invariant chi-e transfer kernel",
+    "status": "implementation_and_local_algebraic_checks_only_CI_pending",
+    "source": "kinetics/finite_mass_chie_kernel.py",
+    "test": "tests/test_finite_mass_chie_kernel.py",
+    "report": "kinetics/FINITE-MASS-CHI-E-KERNEL.md",
+    "commits": [
+      "ba83f58c252eef2a838ba58e96c8b46bb5938aad",
+      "dea914d7a779d61317856da03ce608a7b6a190c6",
+      "5a81a971e70c3b90206aec1e02a586ff441338c0"
+    ],
+    "limits": "No independent finite-mass 5D heat or physically complete SM lepton plasma; no gamma_el, 86-eV relic, BEC, Omega or CLASS."
   }
 }
