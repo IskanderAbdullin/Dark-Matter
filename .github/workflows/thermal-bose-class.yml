@@ -5,7 +5,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/thermal-bose-class.yml'
-      - 'cosmology/*.py'
+      - 'cosmology/thermal_bose_class.py'
+      - 'cosmology/cold_psd_scan.py'
   workflow_dispatch:
 
 permissions:

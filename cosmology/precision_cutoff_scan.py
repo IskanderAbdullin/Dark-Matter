@@ -23,9 +23,9 @@ CRITICAL_RHO_PER_OMEGA_H2 = 2.77536627e11  # Msun / Mpc**3
 def psd_file(path, alpha, coarse=False):
     assert 0 < alpha <= 1
     if coarse:
-        q=np.unique(np.r_[np.geomspace(3e-5,.1,320),np.linspace(.1,35.,1000)])
+        q=np.unique(np.r_[np.geomspace(3e-6,.1,900),np.linspace(.1,45.,3200)])
     else:
-        q=np.unique(np.r_[np.geomspace(1e-5,.1,620),np.linspace(.1,40.,2200)])
+        q=np.unique(np.r_[np.geomspace(1e-7,.1,1500),np.linspace(.1,50.,6200)])
     f=alpha**-3 / ((2*math.pi)**3*np.expm1(q))
     np.savetxt(path,np.column_stack((q,f)),fmt="%.17e")
     number=alpha**3*4*math.pi*trapezoid(q*q*f,q)
@@ -119,6 +119,8 @@ def calculate(analytic_only=False):
                   "max_relative_P_error_up_to_1p2_kpower":float(max(rel[reliable])),
                   "k_amplitude_half_coarse":coarse_stats["k_amplitude_half_1_per_Mpc"],
                   "max_relative_P_error_all_k_unvalidated":float(max(rel)),
+                  "reliable_k_range_power":float(stats["k_power_half_1_per_Mpc"]*1.2),
+                  "P_grid_effect_at_khalf":float(at(ks,rel,stats["k_power_half_1_per_Mpc"])),
                   "max_error_k_1_per_Mpc":float(ks[np.argmax(rel)])
                   }
                 row["diagnostic_checks"]={
