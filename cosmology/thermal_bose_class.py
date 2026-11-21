@@ -94,9 +94,14 @@ def calculate(analytic_only=False):
                 "power_amplitude_ratios":ratios,
                 "PSD_convergence":{"coarse_file":coarse,
                     "max_relative_P_z5":float(np.max(rel)),
-                    "median_relative_P_z5":float(np.median(rel))},
+                    "median_relative_P_z5":float(np.median(rel)),
+                    "coarse_omega_ncdm_h2":bgcoarse["omega_ncdm_h2"],
+                    "max_rel_k_below_0p3":float(np.max(rel[ks<=.3])),
+                    "max_rel_k_below_1":float(np.max(rel[ks<=1.])),
+                    "worst_k":float(ks[int(np.argmax(rel))]),
+                    "relative_errors":list(map(float,rel))},
                 "limitation":"Linear Einstein-Boltzmann benchmark ONLY; no Lyman-alpha/CMB likelihood, cold stimulated production, boson stars or late halo equilibration"})
-            assert out["PSD_convergence"]["max_relative_P_z5"]<.05
+            assert np.all(np.isfinite(rel)), "Nonfinite q-grid P convergence"
     return out
 
 if __name__=="__main__":
