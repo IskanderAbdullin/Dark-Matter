@@ -2,14 +2,16 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Physical vector-contact χe 5D collision-to-bin transitions, finite SM heat and Pauli-stable time evolution; independently bound IR localized slow modes",
-  "objective": "Bridge the exact full-Pauli 5D vector-contact χe collision to positive finite-volume transitions in physical χ radial energy bins with correct microphysical rates, not toy arbitrary Γ. Couple to a finite SM bath preserving Nχ, total energy, and entropy. Independently explore localized IR packet variational bounds with adaptive integration and no spurious low estimates; no claim of full spectral gap until continuum proof.",
+  "title": "Implement and independently converge paired 5D χe microphysical finite-bin coefficients satisfying local detailed balance",
+  "objective": "Evaluate true vector-contact full-Pauli χe rates K_ij,K_ji using identical paired 5D event measure, physical bin capacities and electron recoil; reject naive bin-center energy projection if it fails exact equilibrium/heat tests. Then couple finite SM energy and integrate with Pauli bounds.",
   "prerequisites": [
     "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG, latest PR and actual GitHub Actions for e14123a, repair failures",
     "Read reports PAULI-LOCALIZED-PACKET-AUDIT.md, PAULI-STIELTJES-11MODE-AUDIT.md, FINITE-BATH-QUANTUM-PAIR-REFERENCE.md, plus full nonlinear χe source and conservative energy projection",
-    "Review negative evidence: PCHIP artificial heat, full 5D cutoff strong/weak leakage, uniform χ momentum IR false-slow Rayleigh, nonconverged polynomial basis and time splitting"
+    "Review negative evidence: PCHIP artificial heat, full 5D cutoff strong/weak leakage, uniform χ momentum IR false-slow Rayleigh, nonconverged polynomial basis and time splitting",
+    "Read kinetics/BIN-LOCAL-DETAILED-BALANCE.md and run python kinetics/test_bin_detailed_balance_identity.py (synthetic algebra only, NOT microphysical validation)."
   ],
   "main_experiment": [
+    "Check whether exact electron recoil Δ=E−E′ and finite χ center energy Δij mismatch causes false thermal heating; test paired quadrature local ratio Kij/Kji=exp(Δij/T) independently of integrated weak heat.",
     "Derive bin transfer rates per χ mode from the actual Lorentz-invariant 5D χe scattering amplitude, including electron and χ final Pauli, exact Møller flux and correct degeneracy; verify against independent strong Cχ(p) and weak heat on uniform/IR-adapted phase-space grids",
     "Design positive conservative redistribution of outgoing χ and e energies to physical radial q bins, with physical fermion state capacity. Check energy-bin B interpolation, logit-energy exact FD equilibrium and proper detailed balance for all cell rates.",
     "Dynamically couple finite electron/neutrino/SM energy and entropy to χ fermion collisions, no hidden heat reservoir. Preserve χ number and Qχ+QSM=0 and Pauli bounds under stiff implicit time integration; compare against the reduced toy pair exact invariant reference WITHOUT using its arbitrary Γ as physical input.",

@@ -100,3 +100,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative quadrature discovery**: uniform 20-node χ p-grid spanning [0,32T] falsely underestimates narrow IR Rayleigh by ~46% because it fails to resolve p/T≈.23; split p/k at 2T stabilizes n20→24 to ~0.069% and cutoff20→40 under 0.004%.
 - [x] IR packet E/T=.25,width=.08 R≈4.85e−8GeV below 11-mode polynomial Ritz 8.56e−8GeV, indicating still insufficient global polynomial basis. This is NOT the true kinetic eigenmode and no full spectral gap proof.
 - [ ] **Physics P0**: derive actual microphysical 5D Pauli χe transitions into finite-volume Fermi capacities and finite SM heat, compare to independent weak/strong, implement time integration. Constant toy pair Γ remains disallowed as physical γ_el. Gauge/UV cosmology and 86-eV Bose relic still open.
+
+## 2026-11-21 finite-bin local detailed balance gate
+
+- [x] Derive per-state Kij/Kji thermal ratio, FD fixed point, finite-bath energy and entropy pair identities; independent seeded synthetic 10k algebra control (not χe physics). [Report](../BIN-LOCAL-DETAILED-BALANCE.md).
+- [ ] Integrate **actual** paired 5D χe rates on adapted IR physical phase-space bins, verify local detailed balance vs bin-center projection and independently converge heat/strong Cχ; if impossible with fixed center energies, retain negative result and use energy-resolved conservative discretization.
+- [ ] Pauli-bounded physical finite-SM evolution and realistic gauge/UV/thermal channels; no 86-eV relic or CLASS claim.

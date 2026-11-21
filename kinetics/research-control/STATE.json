@@ -83,9 +83,9 @@
   "class_ready": false,
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "e14123a85b0ab23c03c87def759fdcb4da3bcd68",
-  "current_phase": "A: 5D χe full Pauli collision, variational polynomial Ritz 2..11 and number-orthogonal localized IR packet Rayleigh. Narrow-packet naive uniform p-grid fails badly and composite p/k grid resolves it. Reduced Fermi finite-SM implicit network is a conservation reference only; rates not microscopic.",
+  "instruction": "Next: compute paired microphysical 5D χe bin-to-bin coefficients with correct state capacities, bath electron FD recoil and identical forward/reverse quadrature. Test local detailed balance and compare weak/strong heat before evolving finite bath; see kinetics/BIN-LOCAL-DETAILED-BALANCE.md.",
+  "last_checkpoint_git_sha": "8e0d5e63fda79331ea1270e88f10b2e261078b7d",
+  "current_phase": "A: analytic finite-bin local detailed-balance and entropy acceptance gate derived; physical 5D-to-bin rates and finite-bath time evolution still unimplemented. Existing localized IR Ritz bound remains conditional.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
