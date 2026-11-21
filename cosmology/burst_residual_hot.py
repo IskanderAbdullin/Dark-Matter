@@ -48,9 +48,9 @@ def class_component_file(path,fraction,alpha,coarse=False):
     """One smooth PSD in its OWN CLASS q=p/T_ncdm variable, not the mixed-q table."""
     assert 0 < fraction <= 1 and 0 < alpha <= 1
     if coarse:
-        q=np.unique(np.r_[np.geomspace(3e-5,.1,320),np.linspace(.1,35.,1000)])
+        q=np.unique(np.r_[np.geomspace(3e-6,.1,900),np.linspace(.1,45.,3200)])
     else:
-        q=np.unique(np.r_[np.geomspace(1e-5,.1,620),np.linspace(.1,40.,2200)])
+        q=np.unique(np.r_[np.geomspace(1e-7,.1,1500),np.linspace(.1,50.,6200)])
     f=fraction*alpha**-3/((2*math.pi)**3*np.expm1(q))
     np.savetxt(path,np.column_stack((q,f)),fmt="%.17e")
     return {"fraction":fraction,"alpha":alpha,"q_points":int(len(q))}
@@ -134,8 +134,13 @@ def calculate(analytic_only=False,alpha_only=None):
                         Pco=np.array(alternate["5.0"])
                         rel=np.abs(Pco/np.array(spectrum["5.0"])-1)
                         pre=ks<=min(15.,row["k_first_power_half_1_per_Mpc"] or 15.)
+                        coarse_T=np.sqrt(Pco/cdp)
+                        coarse_khalf=first_cross(ks,coarse_T,1/math.sqrt(2))
+                        fine_khalf=row["k_first_power_half_1_per_Mpc"]
                         row["coarse_file_check"]={
                           "moments":coinfo,
+                          "coarse_powerhalf_k_1_per_Mpc":coarse_khalf,
+                          "powerhalf_k_grid_relative_shift":None if fine_khalf is None or coarse_khalf is None else abs(coarse_khalf/fine_khalf-1),
                           "max_relative_P_difference_before_first_power_half":float(max(rel[pre])),
                           "relative_P_difference_k1":interpolate(ks,rel,1.),
                           "relative_P_difference_k5":interpolate(ks,rel,5.),
