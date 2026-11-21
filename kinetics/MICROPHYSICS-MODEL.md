@@ -124,3 +124,24 @@ Q_rest ~ 31*g_e*pi^3/(252) * G^2*T^7/m1.
 ```
 
 This follows from `int dx x^6 fFD(x)(1-fFD(x))=31*pi^6/42`; the tests separately verify finite-angle recoil identity, final-state blocking suppressing the positive heating, quadratic coupling scaling and heavy-`m1/T` asymptote. Electron/SM bath backreaction, moving chi distribution, inverse thermal energy flow and full Fokker–Planck coefficients remain **uncomputed**. The rest particle is out of equilibrium by construction, so positive heating here is physically expected, **not** evidence of violating detailed balance. This power is not an elastic BGK rate and must not be substituted for `gamma_el`.
+
+
+## Next building block: exact Pauli gain/loss and entropy per elastic collision event
+
+[Microphysics elastic event](microphysics_elastic_event.py) and [independent tests](../tests/test_microphysics_elastic_event.py) implement the detailed-balance **local integrand** for `chi+e ↔ chi'+e'`, with **both** incoming/outgoing fermionic occupations:
+
+```text
+F = f_chi f_e (1-f_chi') (1-f_e')
+R = f_chi' f_e' (1-f_chi) (1-f_e)
+A = F-R.
+```
+
+When `E_chi+E_e=E_chi'+E_e'`, for FD temperatures T_chi and T_e (each species' chemical potential unchanged in elastic scattering),
+
+```text
+ln(F/R) = (E_chi' - E_chi) * (1/T_chi - 1/T_e).
+entropy_per_event = (F-R) * ln(F/R) >= 0.
+Q_chi,event = (E_chi'-E_chi) * (F-R) = -Q_e,event.
+```
+
+At common T, `F=R` independently of both chemical potentials. An electron bath hotter than χ drives positive Q_chi for a χ-rest initial recoil event; reversing the temperature hierarchy flips it, without violating the entropy sign. Separate exact rest-frame kinematics verify mass shell and 4-momentum identities rather than inferring conservation from a code ledger. These are **local phase-space identities only**: there is still no invariant phase-space measure, angular/thermal integration over moving χ, linearized drag eigenvalue, collision coupling to BEST or resolved SM temperature dynamics. An event-level entropy sign is not yet a global H theorem for the discretized solver. This is the next critical construction requirement.
