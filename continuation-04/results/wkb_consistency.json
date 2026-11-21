@@ -1,0 +1,63 @@
+{
+  "source": "Original JCAP 2021 noncondensed Bose-Poisson",
+  "model": "Local homogenous Bose Jeans vs WKB validity of stratified halo",
+  "R_pc": 600,
+  "crit_nu": 2.612375348685488,
+  "records": [
+    {
+      "nu": 2.2,
+      "delta": 0.015007418792902964,
+      "central_A": 5.914186381076048,
+      "response_half_radius_pc": 344.74791039836884,
+      "local_homogeneous_lambda_pc": 1550.185303702003,
+      "ratio": 4.49657635897113
+    },
+    {
+      "nu": 2.5,
+      "delta": 0.0010320563364906708,
+      "central_A": 21.484973011604616,
+      "response_half_radius_pc": 83.7325374183483,
+      "local_homogeneous_lambda_pc": 813.3242333786725,
+      "ratio": 9.713359447297112
+    },
+    {
+      "nu": 2.6,
+      "delta": 0.000012222411269244581,
+      "central_A": 194.4331763632598,
+      "response_half_radius_pc": 8.921726658084836,
+      "local_homogeneous_lambda_pc": 270.3621760034225,
+      "ratio": 30.30379503483457
+    },
+    {
+      "nu": 2.61,
+      "delta": 4.492465422192117e-7,
+      "central_A": 1012.633189832231,
+      "response_half_radius_pc": 1.707013290304011,
+      "local_homogeneous_lambda_pc": 118.46908656872255,
+      "ratio": 69.40138500481373
+    },
+    {
+      "nu": 2.612,
+      "delta": 1.1212380427603171e-8,
+      "central_A": 6407.888710221926,
+      "response_half_radius_pc": 0.2695684758545685,
+      "local_homogeneous_lambda_pc": 47.094873913260216,
+      "ratio": 174.70467851985694
+    }
+  ],
+  "F583_4": {
+    "nu": 2.61,
+    "inner_delta_radius_pc": 0.9850748860840466,
+    "response_half_radius_pc": 1.707013290304011,
+    "homogeneous_Jeans_pc": 118.46908656872255,
+    "lambda_over_half_radius": 69.401385
+  },
+  "exact_critical_HF": {
+    "b": 2.356077011282519e-13,
+    "contact_radius_pc": 4.698786501264478e-10,
+    "homogeneous_HF_Jeans_pc": 0.0018298936902836065,
+    "ratio_lambda_to_layer": 3894396.329331347
+  },
+  "tests_passed": 3,
+  "warning": "WKB approximation demonstrably inconsistent near critical central response; global linearized spherical Vlasov-Poisson must be analyzed before stability claims. At nu=2.2 the quadratic central potential approximation is rough."
+}

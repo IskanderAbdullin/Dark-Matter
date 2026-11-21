@@ -1,0 +1,25 @@
+{
+  "model": "one real relativistically decoupled BE boson with µ=0, no condensate",
+  "frozen_rel_moments": {
+    "mean_p_T": 2.701178032919064,
+    "mean_p2_T2": 10.351534132047986,
+    "mean_p4_T4": 301.9871512765622,
+    "one_dim_sigma_over_T_m": 1.8575552151549435,
+    "excess_kurtosis": 2.072844308234864
+  },
+  "source_benchmark": {
+    "m_eV": 86,
+    "gstarS_dec": 61.75,
+    "Tgamma0_K": 2.7255,
+    "gstarS_today": 3.909,
+    "photons_cm3": 410.72684792484506,
+    "standard_scalar_cm3": 13.000253024600966,
+    "source_DMabundance_coefficient_TcTd_eq1_cm3": 6.651446929957005,
+    "ratio": 1.9545,
+    "Omega_h2_standard": 0.1060999014788433,
+    "Omega_h2_source_no_condensate": 0.054284932964360856
+  },
+  "limits": "No automatic late NR kinetic Bose f(p²) after a relativistically frozen f(p); NR frozen subcritical fugacity stays fixed under homogeneous Hubble free expansion.",
+  "tests_passed": 3,
+  "disclaimer": "Do not call the source's different condensate/species normalizations erroneous without resolving its conventions."
+}

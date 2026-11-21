@@ -1,0 +1,39 @@
+{
+  "critical_nu": 2.612375348685488,
+  "coefficient": 3.385138187803574,
+  "asymptotic": "lambda_J_over_r_half ~ (2*pi*sqrt(nu_crit)/3)/sqrt(nu_crit-nu)",
+  "rows": [
+    {
+      "nu": 2.2,
+      "exact": 4.49657635897113,
+      "asymptotic": 5.271449546775274,
+      "asym_over_exact": 1.1723251482782433
+    },
+    {
+      "nu": 2.5,
+      "exact": 9.713359447297112,
+      "asymptotic": 10.098128107376855,
+      "asym_over_exact": 1.0396123156120627
+    },
+    {
+      "nu": 2.6,
+      "exact": 30.30379503483457,
+      "asymptotic": 30.42970064200688,
+      "asym_over_exact": 1.004154780186032
+    },
+    {
+      "nu": 2.61,
+      "exact": 69.40138500481373,
+      "asymptotic": 69.45647155325223,
+      "asym_over_exact": 1.0007937384597536
+    },
+    {
+      "nu": 2.612,
+      "exact": 174.70467851985694,
+      "asymptotic": 174.72657039465162,
+      "asym_over_exact": 1.000125307890894
+    }
+  ],
+  "tests_passed": 2,
+  "warning": "No global halo stability conclusion."
+}

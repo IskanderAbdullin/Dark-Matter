@@ -1,0 +1,42 @@
+{
+  "critical_nu": 2.612375348685488,
+  "central_cstar": 1.356967215141875,
+  "ideal_volume_exponent": -3,
+  "interacting_HF_volume_exponent": -2.25,
+  "ideal_Lp_threshold": 3,
+  "interacting_HF_Lp_threshold": 2.25,
+  "ideal_C": 214.81778625526937,
+  "interacting_C_for_b1": 552.5489577392177,
+  "implicit_HF_b": 0.01,
+  "limit_t_over_y_squared": 5430.768494621266,
+  "numerical_ratios": [
+    {
+      "y": 0.0001,
+      "ratio": 0.5184346351050538
+    },
+    {
+      "y": 0.00001,
+      "ratio": 0.904674646766377
+    },
+    {
+      "y": 0.000001,
+      "ratio": 0.9893428327844641
+    },
+    {
+      "y": 1e-7,
+      "ratio": 0.9989213740726294
+    },
+    {
+      "y": 1e-8,
+      "ratio": 0.9998920063852873
+    }
+  ],
+  "numerical_slopes": {
+    "ideal": -2.9998633299368573,
+    "HF": -2.2498974974526447
+  },
+  "source_86eV_example_b": 2.356077011282519e-13,
+  "estimated_critical_occupation_crossover": "F much greater than 1e25, beyond credible Hartree-Fock microscopic validity",
+  "checks_passed": 3,
+  "limitation": "Local static critical EOS, not global halo stability, kinetic collision rates, or observed astrophysical constraint"
+}

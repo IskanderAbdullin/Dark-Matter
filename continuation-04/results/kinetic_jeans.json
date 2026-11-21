@@ -1,0 +1,57 @@
+{
+  "model": "homogeneous local collisionless Bose Vlasov marginal response; NOT a global halo stability result",
+  "critical_nu": 2.612375348685488,
+  "F583_4": {
+    "R_kpc": 0.6,
+    "V0_km_s": 44.1,
+    "nu_source_rounded": 2.61,
+    "sigma_per_m_illustrative_cm2_g": 1.25,
+    "HF_b": 2.356077011282519e-13
+  },
+  "test_direct_momentum_integral_A": 1012.6331898322308,
+  "test_polylog_A": 1012.633189832231,
+  "relative_error": 2.220446049250313e-16,
+  "profiles": [
+    {
+      "nu": 0.03,
+      "A": 1.010729422352465,
+      "lambdaJ_ideal_pc": 3749.8480057949578
+    },
+    {
+      "nu": 0.5,
+      "A": 1.2184846663070892,
+      "lambdaJ_ideal_pc": 3415.238869350932
+    },
+    {
+      "nu": 1,
+      "A": 1.5721217158892653,
+      "lambdaJ_ideal_pc": 3006.685723061153
+    },
+    {
+      "nu": 1.5,
+      "A": 2.2431651551568526,
+      "lambdaJ_ideal_pc": 2517.100139308702
+    },
+    {
+      "nu": 2.2,
+      "A": 5.914186381076048,
+      "lambdaJ_ideal_pc": 1550.185303702003
+    },
+    {
+      "nu": 2.61,
+      "z0": 0.9999995507535587,
+      "delta": 4.492465422192117e-7,
+      "A": 1012.633189832231,
+      "kJR": 31.82189796087328,
+      "lambdaJ_ideal_pc": 118.46908656872255,
+      "lambdaJ_HF_pc": 118.46908658285497
+    },
+    {
+      "nu": 2.612375348685488,
+      "A": "diverges at b=0",
+      "lambdaJ_ideal_pc_limit": 0,
+      "lambdaJ_repulsive_HF_pc": 0.0018298936902836065
+    }
+  ],
+  "checks_passed": 4
+}

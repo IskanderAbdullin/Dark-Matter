@@ -1,0 +1,50 @@
+{
+  "eta": 4,
+  "psi0": 4,
+  "Icritical": 1.0872575049973003,
+  "analytic_one_sided_density_slope": 0.5898096008843134,
+  "radial_numerical_slopes": [
+    {
+      "xi": 0.002,
+      "slope": 0.5894517996351545
+    },
+    {
+      "xi": 0.001,
+      "slope": 0.5896266533492733
+    },
+    {
+      "xi": 0.0005,
+      "slope": 0.5897622188171248
+    }
+  ],
+  "direct_integral_sqrt_y_coefficients": [
+    {
+      "y": 0.000001,
+      "value": 1.570128435657736
+    },
+    {
+      "y": 1e-7,
+      "value": 1.5705850550238403
+    },
+    {
+      "y": 1e-8,
+      "value": 1.5708847829221106
+    }
+  ],
+  "rt_over_R": 40.298792111382085,
+  "total_mass_Q": 26.357019420099693,
+  "nu_lowered_c": 2.453677435814398,
+  "same_arbitrary_RV0_particle_mass_eV": 87.56625456132416,
+  "same_arbitrary_RV0_rt_kpc": 24.17927526682925,
+  "same_arbitrary_RV0_mass_Msun": 7150732044.592991,
+  "casimir": {
+    "c": 0.01865736036377405,
+    "fmax_subcritical": 4.497998205763221,
+    "C_double_prime_f0": 52.616465672032966,
+    "C_double_prime_fmax": 0.0401335112381517
+  },
+  "quad_nodes_96_rt_R": 40.29878998641329,
+  "quad_nodes_512_rt_R": 40.298792111382085,
+  "checks_passed": 5,
+  "warning": "No global stability theorem, no actual observed galaxy fit, no thermodynamic formation."
+}

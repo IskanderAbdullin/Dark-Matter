@@ -1,0 +1,1599 @@
+{
+  "summary": {
+    "source": "https://astroweb.cwru.edu/SPARC/MassModels_Lelli2016c.mrt",
+    "mirror": "https://github.com/LoaneShark/gravity-sandbox/blob/main/sparc/MassModels_Lelli2016c.mrt",
+    "mirror_blob_sha": "3f0ea8e3577ec9e0226e4f6a65f1019d45f1aec6",
+    "galaxies": 175,
+    "rows": 3391,
+    "min_points": 4,
+    "median_points": 14,
+    "max_points": 115,
+    "invalid_measurements": 0,
+    "negative_gas_rows": 361,
+    "fixed_ML_exploration": {
+      "Udisk": 0.5,
+      "Ubulge": 0.7,
+      "negative_dm2_points": 214,
+      "galaxies_any_negative_dm2": 48,
+      "galaxies_median_dm2_fraction_gt_0_7": 80
+    },
+    "disclaimer": "Descriptive signed-gas data audit with illustrative fixed M/L. Not a halo fit."
+  },
+  "by_galaxy": [
+    {
+      "id": "CamB",
+      "n": 9,
+      "rmin_kpc": 0.16,
+      "rmax_kpc": 1.79,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 6,
+      "median_nominal_dm2_fraction": -0.42995454928036364
+    },
+    {
+      "id": "D512-2",
+      "n": 4,
+      "rmin_kpc": 0.96,
+      "rmax_kpc": 3.83,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.792792343324462
+    },
+    {
+      "id": "D564-8",
+      "n": 6,
+      "rmin_kpc": 0.51,
+      "rmax_kpc": 3.07,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8220619878651404
+    },
+    {
+      "id": "D631-7",
+      "n": 16,
+      "rmin_kpc": 0.45,
+      "rmax_kpc": 7.19,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 1,
+      "median_nominal_dm2_fraction": 0.7759914799449072
+    },
+    {
+      "id": "DDO064",
+      "n": 14,
+      "rmin_kpc": 0.1,
+      "rmax_kpc": 2.98,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7711068569439611
+    },
+    {
+      "id": "DDO154",
+      "n": 12,
+      "rmin_kpc": 0.49,
+      "rmax_kpc": 5.92,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8274417233560091
+    },
+    {
+      "id": "DDO161",
+      "n": 31,
+      "rmin_kpc": 0.6,
+      "rmax_kpc": 13.37,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6504429090909091
+    },
+    {
+      "id": "DDO168",
+      "n": 10,
+      "rmin_kpc": 0.41,
+      "rmax_kpc": 4.12,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7579115351033926
+    },
+    {
+      "id": "DDO170",
+      "n": 8,
+      "rmin_kpc": 1.87,
+      "rmax_kpc": 12.33,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7651571805555556
+    },
+    {
+      "id": "ESO079-G014",
+      "n": 15,
+      "rmin_kpc": 0.41,
+      "rmax_kpc": 16.67,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6660953705446196
+    },
+    {
+      "id": "ESO116-G012",
+      "n": 15,
+      "rmin_kpc": 0.25,
+      "rmax_kpc": 9.86,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7407816897347175
+    },
+    {
+      "id": "ESO444-G084",
+      "n": 7,
+      "rmin_kpc": 0.26,
+      "rmax_kpc": 4.44,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8366338455578514
+    },
+    {
+      "id": "ESO563-G021",
+      "n": 30,
+      "rmin_kpc": 0.45,
+      "rmax_kpc": 42.41,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.6203195640995215
+    },
+    {
+      "id": "F561-1",
+      "n": 6,
+      "rmin_kpc": 1.61,
+      "rmax_kpc": 9.66,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.4187803019036289
+    },
+    {
+      "id": "F563-1",
+      "n": 17,
+      "rmin_kpc": 1.07,
+      "rmax_kpc": 20.1,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.887302589075562
+    },
+    {
+      "id": "F563-V1",
+      "n": 6,
+      "rmin_kpc": 1.31,
+      "rmax_kpc": 7.87,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.42446249999999996
+    },
+    {
+      "id": "F563-V2",
+      "n": 10,
+      "rmin_kpc": 0.28,
+      "rmax_kpc": 10.47,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8644390771568238
+    },
+    {
+      "id": "F565-V2",
+      "n": 7,
+      "rmin_kpc": 1.26,
+      "rmax_kpc": 8.8,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8683065942038429
+    },
+    {
+      "id": "F567-2",
+      "n": 5,
+      "rmin_kpc": 1.92,
+      "rmax_kpc": 9.59,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6786214950042149
+    },
+    {
+      "id": "F568-1",
+      "n": 12,
+      "rmin_kpc": 0.44,
+      "rmax_kpc": 13.23,
+      "signed_negative_gas_rows": 4,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8747881802855269
+    },
+    {
+      "id": "F568-3",
+      "n": 18,
+      "rmin_kpc": 0.64,
+      "rmax_kpc": 17.98,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.801980966469428
+    },
+    {
+      "id": "F568-V1",
+      "n": 15,
+      "rmin_kpc": 0.39,
+      "rmax_kpc": 17.63,
+      "signed_negative_gas_rows": 4,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.884145651307398
+    },
+    {
+      "id": "F571-8",
+      "n": 13,
+      "rmin_kpc": 0.22,
+      "rmax_kpc": 15.55,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 4,
+      "median_nominal_dm2_fraction": 0.609464231292517
+    },
+    {
+      "id": "F571-V1",
+      "n": 7,
+      "rmin_kpc": 1.95,
+      "rmax_kpc": 13.59,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7992594703997301
+    },
+    {
+      "id": "F574-1",
+      "n": 14,
+      "rmin_kpc": 0.47,
+      "rmax_kpc": 12.6,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8308025338349674
+    },
+    {
+      "id": "F574-2",
+      "n": 5,
+      "rmin_kpc": 2.17,
+      "rmax_kpc": 10.83,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 1,
+      "median_nominal_dm2_fraction": 0.09179993749999994
+    },
+    {
+      "id": "F579-V1",
+      "n": 14,
+      "rmin_kpc": 0.42,
+      "rmax_kpc": 15.16,
+      "signed_negative_gas_rows": 4,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7788734069063725
+    },
+    {
+      "id": "F583-1",
+      "n": 25,
+      "rmin_kpc": 0.26,
+      "rmax_kpc": 16.26,
+      "signed_negative_gas_rows": 13,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8971296746579157
+    },
+    {
+      "id": "F583-4",
+      "n": 12,
+      "rmin_kpc": 0.22,
+      "rmax_kpc": 7.29,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7688225406101737
+    },
+    {
+      "id": "IC2574",
+      "n": 34,
+      "rmin_kpc": 0.85,
+      "rmax_kpc": 10.23,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7539898851456922
+    },
+    {
+      "id": "IC4202",
+      "n": 32,
+      "rmin_kpc": 0.77,
+      "rmax_kpc": 25.9,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.4806544300927171
+    },
+    {
+      "id": "KK98-251",
+      "n": 15,
+      "rmin_kpc": 0.25,
+      "rmax_kpc": 3.13,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5961433709047849
+    },
+    {
+      "id": "NGC0024",
+      "n": 29,
+      "rmin_kpc": 0.21,
+      "rmax_kpc": 11.27,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7555457769668922
+    },
+    {
+      "id": "NGC0055",
+      "n": 21,
+      "rmin_kpc": 1.23,
+      "rmax_kpc": 13.5,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6526311312918278
+    },
+    {
+      "id": "NGC0100",
+      "n": 21,
+      "rmin_kpc": 0.23,
+      "rmax_kpc": 9.62,
+      "signed_negative_gas_rows": 5,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7288638721657932
+    },
+    {
+      "id": "NGC0247",
+      "n": 26,
+      "rmin_kpc": 1.08,
+      "rmax_kpc": 14.54,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7451567923742372
+    },
+    {
+      "id": "NGC0289",
+      "n": 28,
+      "rmin_kpc": 1.5,
+      "rmax_kpc": 71.12,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7208684981742144
+    },
+    {
+      "id": "NGC0300",
+      "n": 25,
+      "rmin_kpc": 0.91,
+      "rmax_kpc": 11.8,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7963545240262315
+    },
+    {
+      "id": "NGC0801",
+      "n": 13,
+      "rmin_kpc": 1.17,
+      "rmax_kpc": 59.82,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.3861978943209876
+    },
+    {
+      "id": "NGC0891",
+      "n": 18,
+      "rmin_kpc": 0.92,
+      "rmax_kpc": 17.11,
+      "signed_negative_gas_rows": 7,
+      "negative_nominal_dm2_rows": 4,
+      "median_nominal_dm2_fraction": 0.3088153172000234
+    },
+    {
+      "id": "NGC1003",
+      "n": 36,
+      "rmin_kpc": 1.25,
+      "rmax_kpc": 30.24,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8116247272559172
+    },
+    {
+      "id": "NGC1090",
+      "n": 24,
+      "rmin_kpc": 0.35,
+      "rmax_kpc": 30.09,
+      "signed_negative_gas_rows": 7,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.5291163739669423
+    },
+    {
+      "id": "NGC1705",
+      "n": 14,
+      "rmin_kpc": 0.22,
+      "rmax_kpc": 6,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8891927536145876
+    },
+    {
+      "id": "NGC2366",
+      "n": 26,
+      "rmin_kpc": 0.12,
+      "rmax_kpc": 6.06,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6787773604812295
+    },
+    {
+      "id": "NGC2403",
+      "n": 73,
+      "rmin_kpc": 0.16,
+      "rmax_kpc": 20.87,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5608687249923052
+    },
+    {
+      "id": "NGC2683",
+      "n": 11,
+      "rmin_kpc": 2.89,
+      "rmax_kpc": 34.62,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6232095297777779
+    },
+    {
+      "id": "NGC2841",
+      "n": 50,
+      "rmin_kpc": 3.44,
+      "rmax_kpc": 63.64,
+      "signed_negative_gas_rows": 9,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6308450838729965
+    },
+    {
+      "id": "NGC2903",
+      "n": 34,
+      "rmin_kpc": 0.32,
+      "rmax_kpc": 24.96,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 5,
+      "median_nominal_dm2_fraction": 0.4898082126680033
+    },
+    {
+      "id": "NGC2915",
+      "n": 30,
+      "rmin_kpc": 0.34,
+      "rmax_kpc": 10.04,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.9210101331294906
+    },
+    {
+      "id": "NGC2955",
+      "n": 24,
+      "rmin_kpc": 0.75,
+      "rmax_kpc": 35.43,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.17773606867819713
+    },
+    {
+      "id": "NGC2976",
+      "n": 27,
+      "rmin_kpc": 0.11,
+      "rmax_kpc": 2.27,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.41012154168860593
+    },
+    {
+      "id": "NGC2998",
+      "n": 13,
+      "rmin_kpc": 0.33,
+      "rmax_kpc": 42.28,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6304627870370371
+    },
+    {
+      "id": "NGC3109",
+      "n": 25,
+      "rmin_kpc": 0.26,
+      "rmax_kpc": 6.45,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8692770760548241
+    },
+    {
+      "id": "NGC3198",
+      "n": 43,
+      "rmin_kpc": 0.32,
+      "rmax_kpc": 44.08,
+      "signed_negative_gas_rows": 6,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.5616102873802582
+    },
+    {
+      "id": "NGC3521",
+      "n": 41,
+      "rmin_kpc": 0.51,
+      "rmax_kpc": 17.74,
+      "signed_negative_gas_rows": 18,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.19248444878545917
+    },
+    {
+      "id": "NGC3726",
+      "n": 12,
+      "rmin_kpc": 3.5,
+      "rmax_kpc": 32.52,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.38924323841222874
+    },
+    {
+      "id": "NGC3741",
+      "n": 21,
+      "rmin_kpc": 0.23,
+      "rmax_kpc": 7,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8968919497091387
+    },
+    {
+      "id": "NGC3769",
+      "n": 12,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 37.16,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 1,
+      "median_nominal_dm2_fraction": 0.6653102700373456
+    },
+    {
+      "id": "NGC3877",
+      "n": 13,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 11.35,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.3100647179930795
+    },
+    {
+      "id": "NGC3893",
+      "n": 10,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 19.05,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5747357274219105
+    },
+    {
+      "id": "NGC3917",
+      "n": 17,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 14.86,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 1,
+      "median_nominal_dm2_fraction": 0.6554344128460208
+    },
+    {
+      "id": "NGC3949",
+      "n": 7,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 7.07,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.23807056675727203
+    },
+    {
+      "id": "NGC3953",
+      "n": 8,
+      "rmin_kpc": 3.5,
+      "rmax_kpc": 15.68,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.41844809507631825
+    },
+    {
+      "id": "NGC3972",
+      "n": 10,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 8.72,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6470032968089197
+    },
+    {
+      "id": "NGC3992",
+      "n": 9,
+      "rmin_kpc": 9.19,
+      "rmax_kpc": 46.02,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6534881865530303
+    },
+    {
+      "id": "NGC4010",
+      "n": 12,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 10.47,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6276860220720442
+    },
+    {
+      "id": "NGC4013",
+      "n": 36,
+      "rmin_kpc": 5.49,
+      "rmax_kpc": 31.01,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5914131731746263
+    },
+    {
+      "id": "NGC4051",
+      "n": 7,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 12.19,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.28475075802615923
+    },
+    {
+      "id": "NGC4068",
+      "n": 6,
+      "rmin_kpc": 0.21,
+      "rmax_kpc": 2.33,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 1,
+      "median_nominal_dm2_fraction": 0.5356920879501386
+    },
+    {
+      "id": "NGC4085",
+      "n": 7,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 6.2,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.2545889378698224
+    },
+    {
+      "id": "NGC4088",
+      "n": 12,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 21.48,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.1215053822448096
+    },
+    {
+      "id": "NGC4100",
+      "n": 24,
+      "rmin_kpc": 2.61,
+      "rmax_kpc": 22.76,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6345324046749452
+    },
+    {
+      "id": "NGC4138",
+      "n": 7,
+      "rmin_kpc": 2.61,
+      "rmax_kpc": 18.58,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5886269394909311
+    },
+    {
+      "id": "NGC4157",
+      "n": 17,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 29.61,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.4447124902528355
+    },
+    {
+      "id": "NGC4183",
+      "n": 23,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 21.02,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.707011664734714
+    },
+    {
+      "id": "NGC4214",
+      "n": 14,
+      "rmin_kpc": 0.21,
+      "rmax_kpc": 5.63,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.831741152211421
+    },
+    {
+      "id": "NGC4217",
+      "n": 19,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 16.72,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 8,
+      "median_nominal_dm2_fraction": 0.16578970692520792
+    },
+    {
+      "id": "NGC4389",
+      "n": 6,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 5.32,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 5,
+      "median_nominal_dm2_fraction": -0.49659300082469787
+    },
+    {
+      "id": "NGC4559",
+      "n": 32,
+      "rmin_kpc": 0.67,
+      "rmax_kpc": 20.97,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5932305102110511
+    },
+    {
+      "id": "NGC5005",
+      "n": 18,
+      "rmin_kpc": 0.49,
+      "rmax_kpc": 11.47,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 5,
+      "median_nominal_dm2_fraction": 0.16018462637461703
+    },
+    {
+      "id": "NGC5033",
+      "n": 22,
+      "rmin_kpc": 0.76,
+      "rmax_kpc": 44.59,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.6782520330578513
+    },
+    {
+      "id": "NGC5055",
+      "n": 28,
+      "rmin_kpc": 0.72,
+      "rmax_kpc": 54.59,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 6,
+      "median_nominal_dm2_fraction": 0.4182386663107574
+    },
+    {
+      "id": "NGC5371",
+      "n": 19,
+      "rmin_kpc": 1.45,
+      "rmax_kpc": 46.24,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.34903296484586266
+    },
+    {
+      "id": "NGC5585",
+      "n": 24,
+      "rmin_kpc": 0.09,
+      "rmax_kpc": 10.96,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6687736892140451
+    },
+    {
+      "id": "NGC5907",
+      "n": 19,
+      "rmin_kpc": 5.03,
+      "rmax_kpc": 50.33,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6298501430255917
+    },
+    {
+      "id": "NGC5985",
+      "n": 33,
+      "rmin_kpc": 3.54,
+      "rmax_kpc": 34.72,
+      "signed_negative_gas_rows": 12,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7247653272160667
+    },
+    {
+      "id": "NGC6015",
+      "n": 44,
+      "rmin_kpc": 0.34,
+      "rmax_kpc": 29.23,
+      "signed_negative_gas_rows": 13,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6403306356529541
+    },
+    {
+      "id": "NGC6195",
+      "n": 23,
+      "rmin_kpc": 1.33,
+      "rmax_kpc": 36.43,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.1666934557267805
+    },
+    {
+      "id": "NGC6503",
+      "n": 31,
+      "rmin_kpc": 0.76,
+      "rmax_kpc": 23.5,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7750088911232405
+    },
+    {
+      "id": "NGC6674",
+      "n": 15,
+      "rmin_kpc": 2.5,
+      "rmax_kpc": 72.41,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7204356160781367
+    },
+    {
+      "id": "NGC6789",
+      "n": 4,
+      "rmin_kpc": 0.1,
+      "rmax_kpc": 0.71,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8481182682299429
+    },
+    {
+      "id": "NGC6946",
+      "n": 58,
+      "rmin_kpc": 0.19,
+      "rmax_kpc": 20.4,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.3996208951557093
+    },
+    {
+      "id": "NGC7331",
+      "n": 36,
+      "rmin_kpc": 2.67,
+      "rmax_kpc": 36.31,
+      "signed_negative_gas_rows": 7,
+      "negative_nominal_dm2_rows": 8,
+      "median_nominal_dm2_fraction": 0.3595582033019213
+    },
+    {
+      "id": "NGC7793",
+      "n": 46,
+      "rmin_kpc": 0.11,
+      "rmax_kpc": 7.87,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 4,
+      "median_nominal_dm2_fraction": 0.4872218325555585
+    },
+    {
+      "id": "NGC7814",
+      "n": 18,
+      "rmin_kpc": 0.63,
+      "rmax_kpc": 19.53,
+      "signed_negative_gas_rows": 6,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.5799062359000022
+    },
+    {
+      "id": "PGC51017",
+      "n": 6,
+      "rmin_kpc": 0.33,
+      "rmax_kpc": 3.63,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.08398280032249411
+    },
+    {
+      "id": "UGC00128",
+      "n": 22,
+      "rmin_kpc": 1.25,
+      "rmax_kpc": 53.75,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8495011440475377
+    },
+    {
+      "id": "UGC00191",
+      "n": 9,
+      "rmin_kpc": 0.62,
+      "rmax_kpc": 9.98,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7545442904524441
+    },
+    {
+      "id": "UGC00634",
+      "n": 4,
+      "rmin_kpc": 4.51,
+      "rmax_kpc": 18.01,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8198703317901234
+    },
+    {
+      "id": "UGC00731",
+      "n": 12,
+      "rmin_kpc": 0.91,
+      "rmax_kpc": 10.91,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8938827043852378
+    },
+    {
+      "id": "UGC00891",
+      "n": 5,
+      "rmin_kpc": 1.48,
+      "rmax_kpc": 7.39,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7591776203886301
+    },
+    {
+      "id": "UGC01230",
+      "n": 11,
+      "rmin_kpc": 0.78,
+      "rmax_kpc": 36.54,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8013051883467773
+    },
+    {
+      "id": "UGC01281",
+      "n": 25,
+      "rmin_kpc": 0.08,
+      "rmax_kpc": 4.99,
+      "signed_negative_gas_rows": 9,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8134886385375703
+    },
+    {
+      "id": "UGC02023",
+      "n": 5,
+      "rmin_kpc": 0.76,
+      "rmax_kpc": 3.78,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.42812075599818933
+    },
+    {
+      "id": "UGC02259",
+      "n": 8,
+      "rmin_kpc": 1.02,
+      "rmax_kpc": 8.14,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.842849332590146
+    },
+    {
+      "id": "UGC02455",
+      "n": 8,
+      "rmin_kpc": 0.5,
+      "rmax_kpc": 4.03,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 7,
+      "median_nominal_dm2_fraction": -1.093143915856123
+    },
+    {
+      "id": "UGC02487",
+      "n": 17,
+      "rmin_kpc": 9.93,
+      "rmax_kpc": 80.38,
+      "signed_negative_gas_rows": 4,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7486892014098538
+    },
+    {
+      "id": "UGC02885",
+      "n": 19,
+      "rmin_kpc": 1.7,
+      "rmax_kpc": 74.07,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6359019277871354
+    },
+    {
+      "id": "UGC02916",
+      "n": 43,
+      "rmin_kpc": 0.37,
+      "rmax_kpc": 38,
+      "signed_negative_gas_rows": 11,
+      "negative_nominal_dm2_rows": 11,
+      "median_nominal_dm2_fraction": 0.3039972197328463
+    },
+    {
+      "id": "UGC02953",
+      "n": 115,
+      "rmin_kpc": 0.09,
+      "rmax_kpc": 62.39,
+      "signed_negative_gas_rows": 69,
+      "negative_nominal_dm2_rows": 9,
+      "median_nominal_dm2_fraction": 0.38035419471153864
+    },
+    {
+      "id": "UGC03205",
+      "n": 48,
+      "rmin_kpc": 0.28,
+      "rmax_kpc": 40.04,
+      "signed_negative_gas_rows": 23,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.5126243666817565
+    },
+    {
+      "id": "UGC03546",
+      "n": 30,
+      "rmin_kpc": 0.63,
+      "rmax_kpc": 29.23,
+      "signed_negative_gas_rows": 10,
+      "negative_nominal_dm2_rows": 15,
+      "median_nominal_dm2_fraction": 0.06567417506925191
+    },
+    {
+      "id": "UGC03580",
+      "n": 47,
+      "rmin_kpc": 0.11,
+      "rmax_kpc": 27.06,
+      "signed_negative_gas_rows": 8,
+      "negative_nominal_dm2_rows": 22,
+      "median_nominal_dm2_fraction": 0.07838600113332359
+    },
+    {
+      "id": "UGC04278",
+      "n": 25,
+      "rmin_kpc": 0.14,
+      "rmax_kpc": 6.69,
+      "signed_negative_gas_rows": 13,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7926871795123918
+    },
+    {
+      "id": "UGC04305",
+      "n": 22,
+      "rmin_kpc": 0.25,
+      "rmax_kpc": 5.52,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 5,
+      "median_nominal_dm2_fraction": 0.1703571627751338
+    },
+    {
+      "id": "UGC04325",
+      "n": 8,
+      "rmin_kpc": 0.7,
+      "rmax_kpc": 5.59,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8093451000230055
+    },
+    {
+      "id": "UGC04483",
+      "n": 8,
+      "rmin_kpc": 0.08,
+      "rmax_kpc": 1.21,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6868625693636659
+    },
+    {
+      "id": "UGC04499",
+      "n": 9,
+      "rmin_kpc": 0.91,
+      "rmax_kpc": 8.18,
+      "signed_negative_gas_rows": 1,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.712011542453659
+    },
+    {
+      "id": "UGC05005",
+      "n": 11,
+      "rmin_kpc": 0.78,
+      "rmax_kpc": 28.61,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7345005755053509
+    },
+    {
+      "id": "UGC05253",
+      "n": 73,
+      "rmin_kpc": 0.13,
+      "rmax_kpc": 53.29,
+      "signed_negative_gas_rows": 8,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.16592377113683682
+    },
+    {
+      "id": "UGC05414",
+      "n": 6,
+      "rmin_kpc": 0.68,
+      "rmax_kpc": 4.11,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6396474411532327
+    },
+    {
+      "id": "UGC05716",
+      "n": 12,
+      "rmin_kpc": 1.03,
+      "rmax_kpc": 12.37,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8382614595923267
+    },
+    {
+      "id": "UGC05721",
+      "n": 23,
+      "rmin_kpc": 0.09,
+      "rmax_kpc": 6.74,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8474900602218419
+    },
+    {
+      "id": "UGC05750",
+      "n": 11,
+      "rmin_kpc": 0.31,
+      "rmax_kpc": 22.85,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.750341425431921
+    },
+    {
+      "id": "UGC05764",
+      "n": 10,
+      "rmin_kpc": 0.36,
+      "rmax_kpc": 3.62,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8738751777093846
+    },
+    {
+      "id": "UGC05829",
+      "n": 11,
+      "rmin_kpc": 0.63,
+      "rmax_kpc": 6.91,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7720551906590365
+    },
+    {
+      "id": "UGC05918",
+      "n": 8,
+      "rmin_kpc": 0.56,
+      "rmax_kpc": 4.46,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8438237380751117
+    },
+    {
+      "id": "UGC05986",
+      "n": 15,
+      "rmin_kpc": 0.63,
+      "rmax_kpc": 9.41,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7625569716446124
+    },
+    {
+      "id": "UGC05999",
+      "n": 5,
+      "rmin_kpc": 3.48,
+      "rmax_kpc": 16.22,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.787227650575177
+    },
+    {
+      "id": "UGC06399",
+      "n": 9,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 7.85,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7893048015845913
+    },
+    {
+      "id": "UGC06446",
+      "n": 17,
+      "rmin_kpc": 0.58,
+      "rmax_kpc": 10.22,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8322296670653139
+    },
+    {
+      "id": "UGC06614",
+      "n": 13,
+      "rmin_kpc": 3.23,
+      "rmax_kpc": 64.59,
+      "signed_negative_gas_rows": 7,
+      "negative_nominal_dm2_rows": 1,
+      "median_nominal_dm2_fraction": 0.3002391124983484
+    },
+    {
+      "id": "UGC06628",
+      "n": 7,
+      "rmin_kpc": 1.1,
+      "rmax_kpc": 7.69,
+      "signed_negative_gas_rows": 1,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.25253092254194953
+    },
+    {
+      "id": "UGC06667",
+      "n": 9,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 7.85,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.9152547240384986
+    },
+    {
+      "id": "UGC06786",
+      "n": 45,
+      "rmin_kpc": 0.16,
+      "rmax_kpc": 34.05,
+      "signed_negative_gas_rows": 5,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.49025935551802496
+    },
+    {
+      "id": "UGC06787",
+      "n": 71,
+      "rmin_kpc": 0.12,
+      "rmax_kpc": 37.19,
+      "signed_negative_gas_rows": 28,
+      "negative_nominal_dm2_rows": 16,
+      "median_nominal_dm2_fraction": 0.4043635239182891
+    },
+    {
+      "id": "UGC06818",
+      "n": 8,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 6.98,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7535959809228604
+    },
+    {
+      "id": "UGC06917",
+      "n": 11,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 10.47,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7427093864134405
+    },
+    {
+      "id": "UGC06923",
+      "n": 6,
+      "rmin_kpc": 0.93,
+      "rmax_kpc": 5.16,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6431332641063277
+    },
+    {
+      "id": "UGC06930",
+      "n": 10,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 16.61,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7133151486035791
+    },
+    {
+      "id": "UGC06973",
+      "n": 9,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 7.85,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 4,
+      "median_nominal_dm2_fraction": 0.12351781847406046
+    },
+    {
+      "id": "UGC06983",
+      "n": 17,
+      "rmin_kpc": 1.74,
+      "rmax_kpc": 15.68,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7878871473491135
+    },
+    {
+      "id": "UGC07089",
+      "n": 12,
+      "rmin_kpc": 0.87,
+      "rmax_kpc": 9.16,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6334952639786919
+    },
+    {
+      "id": "UGC07125",
+      "n": 13,
+      "rmin_kpc": 1.44,
+      "rmax_kpc": 18.68,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5651123943826117
+    },
+    {
+      "id": "UGC07151",
+      "n": 11,
+      "rmin_kpc": 0.5,
+      "rmax_kpc": 5.5,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6685856266349584
+    },
+    {
+      "id": "UGC07232",
+      "n": 4,
+      "rmin_kpc": 0.21,
+      "rmax_kpc": 0.82,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6499166290030992
+    },
+    {
+      "id": "UGC07261",
+      "n": 7,
+      "rmin_kpc": 0.95,
+      "rmax_kpc": 6.67,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7418187908917134
+    },
+    {
+      "id": "UGC07323",
+      "n": 10,
+      "rmin_kpc": 0.58,
+      "rmax_kpc": 5.82,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6079354930580277
+    },
+    {
+      "id": "UGC07399",
+      "n": 10,
+      "rmin_kpc": 0.61,
+      "rmax_kpc": 6.13,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8825897140759462
+    },
+    {
+      "id": "UGC07524",
+      "n": 31,
+      "rmin_kpc": 0.35,
+      "rmax_kpc": 10.69,
+      "signed_negative_gas_rows": 4,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7937757750158886
+    },
+    {
+      "id": "UGC07559",
+      "n": 7,
+      "rmin_kpc": 0.36,
+      "rmax_kpc": 2.53,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6212546947331645
+    },
+    {
+      "id": "UGC07577",
+      "n": 9,
+      "rmin_kpc": 0.19,
+      "rmax_kpc": 1.69,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.26053360930157704
+    },
+    {
+      "id": "UGC07603",
+      "n": 12,
+      "rmin_kpc": 0.34,
+      "rmax_kpc": 4.11,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8104562120073765
+    },
+    {
+      "id": "UGC07608",
+      "n": 8,
+      "rmin_kpc": 0.6,
+      "rmax_kpc": 4.78,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8770442789843924
+    },
+    {
+      "id": "UGC07690",
+      "n": 7,
+      "rmin_kpc": 0.59,
+      "rmax_kpc": 4.13,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6518711315143435
+    },
+    {
+      "id": "UGC07866",
+      "n": 7,
+      "rmin_kpc": 0.33,
+      "rmax_kpc": 2.32,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6604415648106232
+    },
+    {
+      "id": "UGC08286",
+      "n": 17,
+      "rmin_kpc": 0.47,
+      "rmax_kpc": 8.04,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8360609927741923
+    },
+    {
+      "id": "UGC08490",
+      "n": 30,
+      "rmin_kpc": 0.34,
+      "rmax_kpc": 10.15,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8469313400137938
+    },
+    {
+      "id": "UGC08550",
+      "n": 11,
+      "rmin_kpc": 0.49,
+      "rmax_kpc": 5.36,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8164161663516069
+    },
+    {
+      "id": "UGC08699",
+      "n": 41,
+      "rmin_kpc": 0.22,
+      "rmax_kpc": 25.7,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 4,
+      "median_nominal_dm2_fraction": 0.544509167974882
+    },
+    {
+      "id": "UGC08837",
+      "n": 8,
+      "rmin_kpc": 0.52,
+      "rmax_kpc": 4.2,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5076923416446644
+    },
+    {
+      "id": "UGC09037",
+      "n": 22,
+      "rmin_kpc": 2.43,
+      "rmax_kpc": 27.96,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.4435274224152471
+    },
+    {
+      "id": "UGC09133",
+      "n": 68,
+      "rmin_kpc": 0.32,
+      "rmax_kpc": 108.31,
+      "signed_negative_gas_rows": 3,
+      "negative_nominal_dm2_rows": 4,
+      "median_nominal_dm2_fraction": 0.4471090780599088
+    },
+    {
+      "id": "UGC09992",
+      "n": 5,
+      "rmin_kpc": 0.78,
+      "rmax_kpc": 3.89,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.5653151515151515
+    },
+    {
+      "id": "UGC10310",
+      "n": 7,
+      "rmin_kpc": 1.1,
+      "rmax_kpc": 7.74,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.769800245998864
+    },
+    {
+      "id": "UGC11455",
+      "n": 36,
+      "rmin_kpc": 0.62,
+      "rmax_kpc": 41.93,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 3,
+      "median_nominal_dm2_fraction": 0.34572930835629906
+    },
+    {
+      "id": "UGC11557",
+      "n": 12,
+      "rmin_kpc": 0.33,
+      "rmax_kpc": 10.56,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 5,
+      "median_nominal_dm2_fraction": 0.17711502835538745
+    },
+    {
+      "id": "UGC11820",
+      "n": 10,
+      "rmin_kpc": 0.26,
+      "rmax_kpc": 15.82,
+      "signed_negative_gas_rows": 1,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8042742911066313
+    },
+    {
+      "id": "UGC11914",
+      "n": 65,
+      "rmin_kpc": 0.28,
+      "rmax_kpc": 9.83,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 2,
+      "median_nominal_dm2_fraction": 0.318998954423907
+    },
+    {
+      "id": "UGC12506",
+      "n": 31,
+      "rmin_kpc": 0.82,
+      "rmax_kpc": 49.99,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.7572282697053273
+    },
+    {
+      "id": "UGC12632",
+      "n": 15,
+      "rmin_kpc": 0.71,
+      "rmax_kpc": 10.66,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8210929239172297
+    },
+    {
+      "id": "UGC12732",
+      "n": 16,
+      "rmin_kpc": 0.96,
+      "rmax_kpc": 15.4,
+      "signed_negative_gas_rows": 2,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8373934680161788
+    },
+    {
+      "id": "UGCA281",
+      "n": 7,
+      "rmin_kpc": 0.09,
+      "rmax_kpc": 1.08,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.6824150743801654
+    },
+    {
+      "id": "UGCA442",
+      "n": 8,
+      "rmin_kpc": 0.42,
+      "rmax_kpc": 6.33,
+      "signed_negative_gas_rows": 0,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.8257235667526284
+    },
+    {
+      "id": "UGCA444",
+      "n": 36,
+      "rmin_kpc": 0.12,
+      "rmax_kpc": 2.62,
+      "signed_negative_gas_rows": 1,
+      "negative_nominal_dm2_rows": 0,
+      "median_nominal_dm2_fraction": 0.769345463991054
+    }
+  ]
+}

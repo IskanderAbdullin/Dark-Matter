@@ -1,0 +1,16 @@
+{
+  "status": "analytical hydrostatic identity and numerical consistency verification for η=ψ0=4 lowered-Bose finite-radius collisionless equilibrium",
+  "eta": 4,
+  "psi0": 4,
+  "rt_over_R": 40.29879202672244,
+  "Q_total": 26.357019770968357,
+  "dimensionless_kinetic_K": 17.503121767313775,
+  "dimensionless_gravitational_energy_W": -35.00624353607218,
+  "relative_virial_residual": -4.126786286836713e-11,
+  "max_relative_pressure_density_derivative_error": 0.000001435741465106185,
+  "pressure_edge": 1.0589297365854726e-61,
+  "kinetic_pressure_normalization": "P/(rho0 V0^2)=(2/3)J/I_c, J=int_0^sqrt(psi) q^4 f dq",
+  "exact_identity": "dJ/dpsi = (3/2)I -> dP/dr=-rho dPhi/dr -> 2K+W=0 (vanishing edge P)",
+  "checks_passed": 3,
+  "warning": "Virial theorem and positive DF do not imply thermodynamic or Vlasov global nonlinear stability"
+}

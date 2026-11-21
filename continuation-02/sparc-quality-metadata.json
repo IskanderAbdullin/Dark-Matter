@@ -1,0 +1,1789 @@
+{
+  "summary": {
+    "source": "https://astroweb.cwru.edu/SPARC/SPARC_Lelli2016c.mrt",
+    "source_mirror": "https://github.com/LoaneShark/gravity-sandbox/blob/main/sparc/SPARC_Lelli2016c.mrt",
+    "git_blob_sha": "8cdfb503c58bf5f4fc6321e976f7caec6e353bf3",
+    "galaxies": 175,
+    "quality_high": 99,
+    "quality_medium": 64,
+    "quality_low": 12,
+    "inc_under_30": 12,
+    "quality_le2_inc_ge30": 153,
+    "pilot_quality_le2_inc_ge30": 19,
+    "pilot_excluded_by_inc": [
+      "F563-1"
+    ]
+  },
+  "pilot_sensitivity": {
+    "after_excluding_F563_1": {
+      "n_gal": 19,
+      "n_hold": 126,
+      "n_train": 341,
+      "Bose": {
+        "train": 1744.9652725599656,
+        "hold": 613.8373394278755
+      },
+      "Burkert": {
+        "train": 956.5022149633608,
+        "hold": 408.1533275767615
+      },
+      "PIS": {
+        "train": 546.4624801423665,
+        "hold": 248.23486602794128
+      }
+    },
+    "note": "Exact subtraction from published pilot group sums and per-galaxy F563-1 in executed pilot; no new refit"
+  },
+  "galaxies": [
+    {
+      "id": "CamB",
+      "quality": 2,
+      "inc_deg": 65,
+      "e_inc_deg": 5,
+      "D_Mpc": 3.36,
+      "e_D_Mpc": 0.26,
+      "dist_method": 2,
+      "literature_source": "Bm03"
+    },
+    {
+      "id": "D512-2",
+      "quality": 2,
+      "inc_deg": 56,
+      "e_inc_deg": 10,
+      "D_Mpc": 15.2,
+      "e_D_Mpc": 4.56,
+      "dist_method": 1,
+      "literature_source": "Tr09"
+    },
+    {
+      "id": "D564-8",
+      "quality": 2,
+      "inc_deg": 63,
+      "e_inc_deg": 7,
+      "D_Mpc": 8.79,
+      "e_D_Mpc": 0.28,
+      "dist_method": 2,
+      "literature_source": "Tr09"
+    },
+    {
+      "id": "D631-7",
+      "quality": 1,
+      "inc_deg": 59,
+      "e_inc_deg": 3,
+      "D_Mpc": 7.72,
+      "e_D_Mpc": 0.18,
+      "dist_method": 2,
+      "literature_source": "Tr09,dB01"
+    },
+    {
+      "id": "DDO064",
+      "quality": 1,
+      "inc_deg": 60,
+      "e_inc_deg": 5,
+      "D_Mpc": 6.8,
+      "e_D_Mpc": 2.04,
+      "dist_method": 1,
+      "literature_source": "dB02,Sw02"
+    },
+    {
+      "id": "DDO154",
+      "quality": 2,
+      "inc_deg": 64,
+      "e_inc_deg": 3,
+      "D_Mpc": 4.04,
+      "e_D_Mpc": 0.2,
+      "dist_method": 2,
+      "literature_source": "Be91,CB89"
+    },
+    {
+      "id": "DDO161",
+      "quality": 1,
+      "inc_deg": 70,
+      "e_inc_deg": 10,
+      "D_Mpc": 7.5,
+      "e_D_Mpc": 2.25,
+      "dist_method": 1,
+      "literature_source": "Co00"
+    },
+    {
+      "id": "DDO168",
+      "quality": 2,
+      "inc_deg": 63,
+      "e_inc_deg": 6,
+      "D_Mpc": 4.25,
+      "e_D_Mpc": 0.21,
+      "dist_method": 2,
+      "literature_source": "Sa96,Br92"
+    },
+    {
+      "id": "DDO170",
+      "quality": 2,
+      "inc_deg": 66,
+      "e_inc_deg": 7,
+      "D_Mpc": 15.4,
+      "e_D_Mpc": 4.62,
+      "dist_method": 1,
+      "literature_source": "Be91,La90"
+    },
+    {
+      "id": "ESO079-G014",
+      "quality": 1,
+      "inc_deg": 79,
+      "e_inc_deg": 5,
+      "D_Mpc": 28.7,
+      "e_D_Mpc": 7.17,
+      "dist_method": 1,
+      "literature_source": "Ge04"
+    },
+    {
+      "id": "ESO116-G012",
+      "quality": 1,
+      "inc_deg": 74,
+      "e_inc_deg": 3,
+      "D_Mpc": 13,
+      "e_D_Mpc": 3.9,
+      "dist_method": 1,
+      "literature_source": "Ge04"
+    },
+    {
+      "id": "ESO444-G084",
+      "quality": 2,
+      "inc_deg": 32,
+      "e_inc_deg": 6,
+      "D_Mpc": 4.83,
+      "e_D_Mpc": 0.48,
+      "dist_method": 2,
+      "literature_source": "Co00"
+    },
+    {
+      "id": "ESO563-G021",
+      "quality": 1,
+      "inc_deg": 83,
+      "e_inc_deg": 3,
+      "D_Mpc": 60.8,
+      "e_D_Mpc": 9.1,
+      "dist_method": 1,
+      "literature_source": "SG06"
+    },
+    {
+      "id": "F561-1",
+      "quality": 3,
+      "inc_deg": 24,
+      "e_inc_deg": 10,
+      "D_Mpc": 66.4,
+      "e_D_Mpc": 10,
+      "dist_method": 1,
+      "literature_source": "dB97,dB96"
+    },
+    {
+      "id": "F563-1",
+      "quality": 1,
+      "inc_deg": 25,
+      "e_inc_deg": 5,
+      "D_Mpc": 48.9,
+      "e_D_Mpc": 9.8,
+      "dist_method": 1,
+      "literature_source": "KN08,dB96"
+    },
+    {
+      "id": "F563-V1",
+      "quality": 3,
+      "inc_deg": 60,
+      "e_inc_deg": 10,
+      "D_Mpc": 54,
+      "e_D_Mpc": 10.8,
+      "dist_method": 1,
+      "literature_source": "dB97,dB96"
+    },
+    {
+      "id": "F563-V2",
+      "quality": 1,
+      "inc_deg": 29,
+      "e_inc_deg": 10,
+      "D_Mpc": 59.7,
+      "e_D_Mpc": 11.9,
+      "dist_method": 1,
+      "literature_source": "dB01,dB96"
+    },
+    {
+      "id": "F565-V2",
+      "quality": 2,
+      "inc_deg": 60,
+      "e_inc_deg": 10,
+      "D_Mpc": 51.8,
+      "e_D_Mpc": 10.4,
+      "dist_method": 1,
+      "literature_source": "dB97,dB96"
+    },
+    {
+      "id": "F567-2",
+      "quality": 3,
+      "inc_deg": 20,
+      "e_inc_deg": 10,
+      "D_Mpc": 79,
+      "e_D_Mpc": 11.8,
+      "dist_method": 1,
+      "literature_source": "dB97,dB96"
+    },
+    {
+      "id": "F568-1",
+      "quality": 1,
+      "inc_deg": 26,
+      "e_inc_deg": 5,
+      "D_Mpc": 90.7,
+      "e_D_Mpc": 9.7,
+      "dist_method": 1,
+      "literature_source": "dB01,dB96"
+    },
+    {
+      "id": "F568-3",
+      "quality": 1,
+      "inc_deg": 40,
+      "e_inc_deg": 10,
+      "D_Mpc": 82.4,
+      "e_D_Mpc": 8.24,
+      "dist_method": 1,
+      "literature_source": "KN08,dB96"
+    },
+    {
+      "id": "F568-V1",
+      "quality": 1,
+      "inc_deg": 40,
+      "e_inc_deg": 10,
+      "D_Mpc": 80.6,
+      "e_D_Mpc": 8.06,
+      "dist_method": 1,
+      "literature_source": "dB01,dB96"
+    },
+    {
+      "id": "F571-8",
+      "quality": 1,
+      "inc_deg": 85,
+      "e_inc_deg": 5,
+      "D_Mpc": 53.3,
+      "e_D_Mpc": 10.7,
+      "dist_method": 1,
+      "literature_source": "dB01,dB96"
+    },
+    {
+      "id": "F571-V1",
+      "quality": 2,
+      "inc_deg": 30,
+      "e_inc_deg": 10,
+      "D_Mpc": 80.1,
+      "e_D_Mpc": 8,
+      "dist_method": 1,
+      "literature_source": "dB97,dB96"
+    },
+    {
+      "id": "F574-1",
+      "quality": 1,
+      "inc_deg": 65,
+      "e_inc_deg": 10,
+      "D_Mpc": 96.8,
+      "e_D_Mpc": 9.68,
+      "dist_method": 1,
+      "literature_source": "dB01,dB96"
+    },
+    {
+      "id": "F574-2",
+      "quality": 3,
+      "inc_deg": 30,
+      "e_inc_deg": 10,
+      "D_Mpc": 89.1,
+      "e_D_Mpc": 8.91,
+      "dist_method": 1,
+      "literature_source": "dB97,dB96"
+    },
+    {
+      "id": "F579-V1",
+      "quality": 1,
+      "inc_deg": 26,
+      "e_inc_deg": 10,
+      "D_Mpc": 89.5,
+      "e_D_Mpc": 8.95,
+      "dist_method": 1,
+      "literature_source": "dB01,dB96"
+    },
+    {
+      "id": "F583-1",
+      "quality": 1,
+      "inc_deg": 63,
+      "e_inc_deg": 5,
+      "D_Mpc": 35.4,
+      "e_D_Mpc": 8.85,
+      "dist_method": 1,
+      "literature_source": "KN08,dB96"
+    },
+    {
+      "id": "F583-4",
+      "quality": 1,
+      "inc_deg": 55,
+      "e_inc_deg": 10,
+      "D_Mpc": 53.3,
+      "e_D_Mpc": 10.7,
+      "dist_method": 1,
+      "literature_source": "KN08,dB96"
+    },
+    {
+      "id": "IC2574",
+      "quality": 2,
+      "inc_deg": 75,
+      "e_inc_deg": 7,
+      "D_Mpc": 3.91,
+      "e_D_Mpc": 0.2,
+      "dist_method": 2,
+      "literature_source": "Sa96,MC94"
+    },
+    {
+      "id": "IC4202",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 1,
+      "D_Mpc": 100.4,
+      "e_D_Mpc": 10,
+      "dist_method": 1,
+      "literature_source": "SG06"
+    },
+    {
+      "id": "KK98-251",
+      "quality": 2,
+      "inc_deg": 59,
+      "e_inc_deg": 5,
+      "D_Mpc": 6.8,
+      "e_D_Mpc": 2.04,
+      "dist_method": 1,
+      "literature_source": "BC04"
+    },
+    {
+      "id": "NGC0024",
+      "quality": 1,
+      "inc_deg": 64,
+      "e_inc_deg": 3,
+      "D_Mpc": 7.3,
+      "e_D_Mpc": 0.36,
+      "dist_method": 2,
+      "literature_source": "Di08,Ch06"
+    },
+    {
+      "id": "NGC0055",
+      "quality": 2,
+      "inc_deg": 77,
+      "e_inc_deg": 3,
+      "D_Mpc": 2.11,
+      "e_D_Mpc": 0.11,
+      "dist_method": 2,
+      "literature_source": "Sa96,Pu91"
+    },
+    {
+      "id": "NGC0100",
+      "quality": 1,
+      "inc_deg": 89,
+      "e_inc_deg": 1,
+      "D_Mpc": 13.5,
+      "e_D_Mpc": 4.05,
+      "dist_method": 1,
+      "literature_source": "dB02,Rh96"
+    },
+    {
+      "id": "NGC0247",
+      "quality": 2,
+      "inc_deg": 74,
+      "e_inc_deg": 3,
+      "D_Mpc": 3.7,
+      "e_D_Mpc": 0.19,
+      "dist_method": 2,
+      "literature_source": "Sa96,Ca90"
+    },
+    {
+      "id": "NGC0289",
+      "quality": 2,
+      "inc_deg": 46,
+      "e_inc_deg": 5,
+      "D_Mpc": 20.8,
+      "e_D_Mpc": 5.2,
+      "dist_method": 1,
+      "literature_source": "Wa97"
+    },
+    {
+      "id": "NGC0300",
+      "quality": 2,
+      "inc_deg": 42,
+      "e_inc_deg": 10,
+      "D_Mpc": 2.08,
+      "e_D_Mpc": 0.1,
+      "dist_method": 2,
+      "literature_source": "Sa96,CP90"
+    },
+    {
+      "id": "NGC0801",
+      "quality": 1,
+      "inc_deg": 80,
+      "e_inc_deg": 1,
+      "D_Mpc": 80.7,
+      "e_D_Mpc": 8.07,
+      "dist_method": 1,
+      "literature_source": "Sa96,Br92"
+    },
+    {
+      "id": "NGC0891",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 1,
+      "D_Mpc": 9.91,
+      "e_D_Mpc": 0.5,
+      "dist_method": 2,
+      "literature_source": "Fr11"
+    },
+    {
+      "id": "NGC1003",
+      "quality": 1,
+      "inc_deg": 67,
+      "e_inc_deg": 5,
+      "D_Mpc": 11.4,
+      "e_D_Mpc": 3.42,
+      "dist_method": 1,
+      "literature_source": "Sa96,Br92"
+    },
+    {
+      "id": "NGC1090",
+      "quality": 1,
+      "inc_deg": 64,
+      "e_inc_deg": 3,
+      "D_Mpc": 37,
+      "e_D_Mpc": 9.25,
+      "dist_method": 1,
+      "literature_source": "Ge04"
+    },
+    {
+      "id": "NGC1705",
+      "quality": 3,
+      "inc_deg": 80,
+      "e_inc_deg": 10,
+      "D_Mpc": 5.73,
+      "e_D_Mpc": 0.29,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "NGC2366",
+      "quality": 3,
+      "inc_deg": 68,
+      "e_inc_deg": 5,
+      "D_Mpc": 3.27,
+      "e_D_Mpc": 0.16,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "NGC2403",
+      "quality": 1,
+      "inc_deg": 63,
+      "e_inc_deg": 3,
+      "D_Mpc": 3.16,
+      "e_D_Mpc": 0.16,
+      "dist_method": 2,
+      "literature_source": "Da06,Fr02"
+    },
+    {
+      "id": "NGC2683",
+      "quality": 2,
+      "inc_deg": 80,
+      "e_inc_deg": 5,
+      "D_Mpc": 9.81,
+      "e_D_Mpc": 0.49,
+      "dist_method": 2,
+      "literature_source": "Sa96,Br92"
+    },
+    {
+      "id": "NGC2841",
+      "quality": 1,
+      "inc_deg": 76,
+      "e_inc_deg": 10,
+      "D_Mpc": 14.1,
+      "e_D_Mpc": 1.4,
+      "dist_method": 3,
+      "literature_source": "Di08,Be91"
+    },
+    {
+      "id": "NGC2903",
+      "quality": 1,
+      "inc_deg": 66,
+      "e_inc_deg": 3,
+      "D_Mpc": 6.6,
+      "e_D_Mpc": 1.98,
+      "dist_method": 1,
+      "literature_source": "Be91,Be87"
+    },
+    {
+      "id": "NGC2915",
+      "quality": 2,
+      "inc_deg": 56,
+      "e_inc_deg": 4,
+      "D_Mpc": 4.06,
+      "e_D_Mpc": 0.2,
+      "dist_method": 2,
+      "literature_source": "El10"
+    },
+    {
+      "id": "NGC2955",
+      "quality": 1,
+      "inc_deg": 56,
+      "e_inc_deg": 7,
+      "D_Mpc": 97.9,
+      "e_D_Mpc": 9.8,
+      "dist_method": 1,
+      "literature_source": "SG06"
+    },
+    {
+      "id": "NGC2976",
+      "quality": 2,
+      "inc_deg": 61,
+      "e_inc_deg": 10,
+      "D_Mpc": 3.58,
+      "e_D_Mpc": 0.18,
+      "dist_method": 2,
+      "literature_source": "Si03"
+    },
+    {
+      "id": "NGC2998",
+      "quality": 1,
+      "inc_deg": 58,
+      "e_inc_deg": 2,
+      "D_Mpc": 68.1,
+      "e_D_Mpc": 10.2,
+      "dist_method": 1,
+      "literature_source": "Sa96,Br92"
+    },
+    {
+      "id": "NGC3109",
+      "quality": 1,
+      "inc_deg": 70,
+      "e_inc_deg": 5,
+      "D_Mpc": 1.33,
+      "e_D_Mpc": 0.07,
+      "dist_method": 2,
+      "literature_source": "Be91,JC90"
+    },
+    {
+      "id": "NGC3198",
+      "quality": 1,
+      "inc_deg": 73,
+      "e_inc_deg": 3,
+      "D_Mpc": 13.8,
+      "e_D_Mpc": 1.4,
+      "dist_method": 3,
+      "literature_source": "Da06,Be91,Be87"
+    },
+    {
+      "id": "NGC3521",
+      "quality": 1,
+      "inc_deg": 75,
+      "e_inc_deg": 5,
+      "D_Mpc": 7.7,
+      "e_D_Mpc": 2.3,
+      "dist_method": 1,
+      "literature_source": "Da06,Sa96"
+    },
+    {
+      "id": "NGC3726",
+      "quality": 2,
+      "inc_deg": 53,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3741",
+      "quality": 1,
+      "inc_deg": 70,
+      "e_inc_deg": 4,
+      "D_Mpc": 3.21,
+      "e_D_Mpc": 0.17,
+      "dist_method": 2,
+      "literature_source": "Ge07,Bm05"
+    },
+    {
+      "id": "NGC3769",
+      "quality": 2,
+      "inc_deg": 70,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3877",
+      "quality": 2,
+      "inc_deg": 76,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3893",
+      "quality": 1,
+      "inc_deg": 49,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3917",
+      "quality": 1,
+      "inc_deg": 79,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3949",
+      "quality": 2,
+      "inc_deg": 55,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3953",
+      "quality": 1,
+      "inc_deg": 62,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3972",
+      "quality": 1,
+      "inc_deg": 77,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC3992",
+      "quality": 1,
+      "inc_deg": 56,
+      "e_inc_deg": 2,
+      "D_Mpc": 23.7,
+      "e_D_Mpc": 2.3,
+      "dist_method": 5,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4010",
+      "quality": 2,
+      "inc_deg": 89,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4013",
+      "quality": 2,
+      "inc_deg": 89,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4051",
+      "quality": 2,
+      "inc_deg": 49,
+      "e_inc_deg": 3,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4068",
+      "quality": 2,
+      "inc_deg": 44,
+      "e_inc_deg": 6,
+      "D_Mpc": 4.37,
+      "e_D_Mpc": 0.22,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "NGC4085",
+      "quality": 2,
+      "inc_deg": 82,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4088",
+      "quality": 1,
+      "inc_deg": 69,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4100",
+      "quality": 1,
+      "inc_deg": 73,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4138",
+      "quality": 2,
+      "inc_deg": 53,
+      "e_inc_deg": 3,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4157",
+      "quality": 1,
+      "inc_deg": 82,
+      "e_inc_deg": 3,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4183",
+      "quality": 1,
+      "inc_deg": 82,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4214",
+      "quality": 2,
+      "inc_deg": 15,
+      "e_inc_deg": 10,
+      "D_Mpc": 2.87,
+      "e_D_Mpc": 0.14,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "NGC4217",
+      "quality": 1,
+      "inc_deg": 86,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4389",
+      "quality": 3,
+      "inc_deg": 50,
+      "e_inc_deg": 4,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "NGC4559",
+      "quality": 1,
+      "inc_deg": 67,
+      "e_inc_deg": 1,
+      "D_Mpc": 9,
+      "e_D_Mpc": 2.7,
+      "dist_method": 1,
+      "literature_source": "Ba05"
+    },
+    {
+      "id": "NGC5005",
+      "quality": 1,
+      "inc_deg": 68,
+      "e_inc_deg": 2,
+      "D_Mpc": 16.9,
+      "e_D_Mpc": 1.5,
+      "dist_method": 5,
+      "literature_source": "Ri15"
+    },
+    {
+      "id": "NGC5033",
+      "quality": 1,
+      "inc_deg": 66,
+      "e_inc_deg": 1,
+      "D_Mpc": 15.7,
+      "e_D_Mpc": 4.7,
+      "dist_method": 1,
+      "literature_source": "Sa96,Be87"
+    },
+    {
+      "id": "NGC5055",
+      "quality": 1,
+      "inc_deg": 55,
+      "e_inc_deg": 6,
+      "D_Mpc": 9.9,
+      "e_D_Mpc": 0.3,
+      "dist_method": 2,
+      "literature_source": "Ba06,Bl04"
+    },
+    {
+      "id": "NGC5371",
+      "quality": 1,
+      "inc_deg": 53,
+      "e_inc_deg": 2,
+      "D_Mpc": 39.7,
+      "e_D_Mpc": 9.92,
+      "dist_method": 1,
+      "literature_source": "Sa96,Be87"
+    },
+    {
+      "id": "NGC5585",
+      "quality": 1,
+      "inc_deg": 51,
+      "e_inc_deg": 2,
+      "D_Mpc": 7.06,
+      "e_D_Mpc": 2.12,
+      "dist_method": 1,
+      "literature_source": "Bl99,Sa96,Co91"
+    },
+    {
+      "id": "NGC5907",
+      "quality": 1,
+      "inc_deg": 88,
+      "e_inc_deg": 2,
+      "D_Mpc": 17.3,
+      "e_D_Mpc": 0.9,
+      "dist_method": 2,
+      "literature_source": "Sa96,SA87"
+    },
+    {
+      "id": "NGC5985",
+      "quality": 1,
+      "inc_deg": 60,
+      "e_inc_deg": 2,
+      "D_Mpc": 39.7,
+      "e_D_Mpc": 9.9,
+      "dist_method": 1,
+      "literature_source": "Bl04,Br92"
+    },
+    {
+      "id": "NGC6015",
+      "quality": 2,
+      "inc_deg": 60,
+      "e_inc_deg": 2,
+      "D_Mpc": 17,
+      "e_D_Mpc": 5.1,
+      "dist_method": 1,
+      "literature_source": "VM97"
+    },
+    {
+      "id": "NGC6195",
+      "quality": 1,
+      "inc_deg": 62,
+      "e_inc_deg": 5,
+      "D_Mpc": 127.8,
+      "e_D_Mpc": 12.8,
+      "dist_method": 1,
+      "literature_source": "SG06"
+    },
+    {
+      "id": "NGC6503",
+      "quality": 1,
+      "inc_deg": 74,
+      "e_inc_deg": 2,
+      "D_Mpc": 6.26,
+      "e_D_Mpc": 0.31,
+      "dist_method": 2,
+      "literature_source": "Be91,Be87"
+    },
+    {
+      "id": "NGC6674",
+      "quality": 1,
+      "inc_deg": 54,
+      "e_inc_deg": 6,
+      "D_Mpc": 51.2,
+      "e_D_Mpc": 10.2,
+      "dist_method": 1,
+      "literature_source": "Sa96,Br92"
+    },
+    {
+      "id": "NGC6789",
+      "quality": 2,
+      "inc_deg": 43,
+      "e_inc_deg": 7,
+      "D_Mpc": 3.52,
+      "e_D_Mpc": 0.18,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "NGC6946",
+      "quality": 1,
+      "inc_deg": 38,
+      "e_inc_deg": 2,
+      "D_Mpc": 5.52,
+      "e_D_Mpc": 1.66,
+      "dist_method": 2,
+      "literature_source": "Bo08"
+    },
+    {
+      "id": "NGC7331",
+      "quality": 1,
+      "inc_deg": 75,
+      "e_inc_deg": 2,
+      "D_Mpc": 14.7,
+      "e_D_Mpc": 1.5,
+      "dist_method": 3,
+      "literature_source": "Be91,Be87"
+    },
+    {
+      "id": "NGC7793",
+      "quality": 1,
+      "inc_deg": 47,
+      "e_inc_deg": 9,
+      "D_Mpc": 3.61,
+      "e_D_Mpc": 0.18,
+      "dist_method": 2,
+      "literature_source": "Di08,Sa96,CP90"
+    },
+    {
+      "id": "NGC7814",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 1,
+      "D_Mpc": 14.4,
+      "e_D_Mpc": 0.66,
+      "dist_method": 2,
+      "literature_source": "Fr11"
+    },
+    {
+      "id": "PGC51017",
+      "quality": 3,
+      "inc_deg": 66,
+      "e_inc_deg": 3,
+      "D_Mpc": 13.6,
+      "e_D_Mpc": 1.4,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "UGC00128",
+      "quality": 1,
+      "inc_deg": 57,
+      "e_inc_deg": 10,
+      "D_Mpc": 64.5,
+      "e_D_Mpc": 9.7,
+      "dist_method": 1,
+      "literature_source": "VB99,VH93"
+    },
+    {
+      "id": "UGC00191",
+      "quality": 1,
+      "inc_deg": 45,
+      "e_inc_deg": 5,
+      "D_Mpc": 17.1,
+      "e_D_Mpc": 5.1,
+      "dist_method": 1,
+      "literature_source": "KN08,vZ97"
+    },
+    {
+      "id": "UGC00634",
+      "quality": 2,
+      "inc_deg": 37,
+      "e_inc_deg": 8,
+      "D_Mpc": 30.9,
+      "e_D_Mpc": 7.7,
+      "dist_method": 1,
+      "literature_source": "vZ97"
+    },
+    {
+      "id": "UGC00731",
+      "quality": 1,
+      "inc_deg": 57,
+      "e_inc_deg": 3,
+      "D_Mpc": 12.5,
+      "e_D_Mpc": 3.75,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC00891",
+      "quality": 2,
+      "inc_deg": 60,
+      "e_inc_deg": 5,
+      "D_Mpc": 10.2,
+      "e_D_Mpc": 3.1,
+      "dist_method": 1,
+      "literature_source": "vZ97"
+    },
+    {
+      "id": "UGC01230",
+      "quality": 1,
+      "inc_deg": 22,
+      "e_inc_deg": 10,
+      "D_Mpc": 53.7,
+      "e_D_Mpc": 10.7,
+      "dist_method": 1,
+      "literature_source": "dB02,VdH93"
+    },
+    {
+      "id": "UGC01281",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 1,
+      "D_Mpc": 5.27,
+      "e_D_Mpc": 0.24,
+      "dist_method": 2,
+      "literature_source": "dB02,Sw02"
+    },
+    {
+      "id": "UGC02023",
+      "quality": 2,
+      "inc_deg": 19,
+      "e_inc_deg": 10,
+      "D_Mpc": 10.4,
+      "e_D_Mpc": 3.1,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC02259",
+      "quality": 2,
+      "inc_deg": 41,
+      "e_inc_deg": 3,
+      "D_Mpc": 10.5,
+      "e_D_Mpc": 3.1,
+      "dist_method": 1,
+      "literature_source": "Be91,Ca88"
+    },
+    {
+      "id": "UGC02455",
+      "quality": 3,
+      "inc_deg": 51,
+      "e_inc_deg": 5,
+      "D_Mpc": 6.92,
+      "e_D_Mpc": 2.08,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC02487",
+      "quality": 1,
+      "inc_deg": 36,
+      "e_inc_deg": 5,
+      "D_Mpc": 69.1,
+      "e_D_Mpc": 10.4,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC02885",
+      "quality": 1,
+      "inc_deg": 64,
+      "e_inc_deg": 4,
+      "D_Mpc": 80.6,
+      "e_D_Mpc": 8.06,
+      "dist_method": 1,
+      "literature_source": "Sa96,RA85"
+    },
+    {
+      "id": "UGC02916",
+      "quality": 2,
+      "inc_deg": 50,
+      "e_inc_deg": 5,
+      "D_Mpc": 65.4,
+      "e_D_Mpc": 9.8,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC02953",
+      "quality": 2,
+      "inc_deg": 50,
+      "e_inc_deg": 4,
+      "D_Mpc": 16.5,
+      "e_D_Mpc": 4.95,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC03205",
+      "quality": 1,
+      "inc_deg": 67,
+      "e_inc_deg": 4,
+      "D_Mpc": 50,
+      "e_D_Mpc": 10,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC03546",
+      "quality": 1,
+      "inc_deg": 55,
+      "e_inc_deg": 5,
+      "D_Mpc": 28.7,
+      "e_D_Mpc": 7.2,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC03580",
+      "quality": 2,
+      "inc_deg": 63,
+      "e_inc_deg": 4,
+      "D_Mpc": 20.7,
+      "e_D_Mpc": 5.2,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC04278",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 3,
+      "D_Mpc": 9.51,
+      "e_D_Mpc": 2.85,
+      "dist_method": 1,
+      "literature_source": "dB02,Sw02"
+    },
+    {
+      "id": "UGC04305",
+      "quality": 3,
+      "inc_deg": 40,
+      "e_inc_deg": 10,
+      "D_Mpc": 3.45,
+      "e_D_Mpc": 0.17,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC04325",
+      "quality": 1,
+      "inc_deg": 41,
+      "e_inc_deg": 3,
+      "D_Mpc": 9.6,
+      "e_D_Mpc": 2.88,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC04483",
+      "quality": 2,
+      "inc_deg": 58,
+      "e_inc_deg": 3,
+      "D_Mpc": 3.34,
+      "e_D_Mpc": 0.31,
+      "dist_method": 2,
+      "literature_source": "Le14,Le12"
+    },
+    {
+      "id": "UGC04499",
+      "quality": 1,
+      "inc_deg": 50,
+      "e_inc_deg": 3,
+      "D_Mpc": 12.5,
+      "e_D_Mpc": 3.75,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC05005",
+      "quality": 1,
+      "inc_deg": 41,
+      "e_inc_deg": 10,
+      "D_Mpc": 53.7,
+      "e_D_Mpc": 10.7,
+      "dist_method": 1,
+      "literature_source": "dB02,VH93"
+    },
+    {
+      "id": "UGC05253",
+      "quality": 2,
+      "inc_deg": 37,
+      "e_inc_deg": 4,
+      "D_Mpc": 22.9,
+      "e_D_Mpc": 5.72,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC05414",
+      "quality": 1,
+      "inc_deg": 55,
+      "e_inc_deg": 3,
+      "D_Mpc": 9.4,
+      "e_D_Mpc": 2.82,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC05716",
+      "quality": 2,
+      "inc_deg": 54,
+      "e_inc_deg": 10,
+      "D_Mpc": 21.3,
+      "e_D_Mpc": 5.3,
+      "dist_method": 1,
+      "literature_source": "vZ97"
+    },
+    {
+      "id": "UGC05721",
+      "quality": 1,
+      "inc_deg": 61,
+      "e_inc_deg": 5,
+      "D_Mpc": 6.18,
+      "e_D_Mpc": 1.85,
+      "dist_method": 1,
+      "literature_source": "dB02,Sw02"
+    },
+    {
+      "id": "UGC05750",
+      "quality": 1,
+      "inc_deg": 64,
+      "e_inc_deg": 10,
+      "D_Mpc": 58.7,
+      "e_D_Mpc": 11.7,
+      "dist_method": 1,
+      "literature_source": "dB01,VdH93"
+    },
+    {
+      "id": "UGC05764",
+      "quality": 2,
+      "inc_deg": 60,
+      "e_inc_deg": 10,
+      "D_Mpc": 7.47,
+      "e_D_Mpc": 2.24,
+      "dist_method": 1,
+      "literature_source": "vZ97"
+    },
+    {
+      "id": "UGC05829",
+      "quality": 2,
+      "inc_deg": 34,
+      "e_inc_deg": 10,
+      "D_Mpc": 8.64,
+      "e_D_Mpc": 2.59,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC05918",
+      "quality": 2,
+      "inc_deg": 46,
+      "e_inc_deg": 5,
+      "D_Mpc": 7.66,
+      "e_D_Mpc": 2.3,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC05986",
+      "quality": 2,
+      "inc_deg": 90,
+      "e_inc_deg": 3,
+      "D_Mpc": 8.63,
+      "e_D_Mpc": 2.59,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC05999",
+      "quality": 2,
+      "inc_deg": 22,
+      "e_inc_deg": 10,
+      "D_Mpc": 47.7,
+      "e_D_Mpc": 9.5,
+      "dist_method": 1,
+      "literature_source": "dB97,VH93"
+    },
+    {
+      "id": "UGC06399",
+      "quality": 1,
+      "inc_deg": 75,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06446",
+      "quality": 1,
+      "inc_deg": 51,
+      "e_inc_deg": 3,
+      "D_Mpc": 12,
+      "e_D_Mpc": 3.6,
+      "dist_method": 1,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06614",
+      "quality": 1,
+      "inc_deg": 36,
+      "e_inc_deg": 10,
+      "D_Mpc": 88.7,
+      "e_D_Mpc": 8.87,
+      "dist_method": 1,
+      "literature_source": "dB01,VH93"
+    },
+    {
+      "id": "UGC06628",
+      "quality": 2,
+      "inc_deg": 20,
+      "e_inc_deg": 10,
+      "D_Mpc": 15.1,
+      "e_D_Mpc": 4.53,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC06667",
+      "quality": 1,
+      "inc_deg": 89,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06786",
+      "quality": 1,
+      "inc_deg": 64,
+      "e_inc_deg": 3,
+      "D_Mpc": 29.3,
+      "e_D_Mpc": 7.32,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC06787",
+      "quality": 2,
+      "inc_deg": 66,
+      "e_inc_deg": 3,
+      "D_Mpc": 21.3,
+      "e_D_Mpc": 5.32,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC06818",
+      "quality": 2,
+      "inc_deg": 75,
+      "e_inc_deg": 3,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06917",
+      "quality": 1,
+      "inc_deg": 56,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06923",
+      "quality": 2,
+      "inc_deg": 65,
+      "e_inc_deg": 2,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06930",
+      "quality": 1,
+      "inc_deg": 32,
+      "e_inc_deg": 5,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06973",
+      "quality": 3,
+      "inc_deg": 71,
+      "e_inc_deg": 3,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC06983",
+      "quality": 1,
+      "inc_deg": 49,
+      "e_inc_deg": 1,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC07089",
+      "quality": 2,
+      "inc_deg": 80,
+      "e_inc_deg": 3,
+      "D_Mpc": 18,
+      "e_D_Mpc": 2.5,
+      "dist_method": 4,
+      "literature_source": "VS01,SV98"
+    },
+    {
+      "id": "UGC07125",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 3,
+      "D_Mpc": 19.8,
+      "e_D_Mpc": 5.9,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07151",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 3,
+      "D_Mpc": 6.87,
+      "e_D_Mpc": 0.34,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07232",
+      "quality": 2,
+      "inc_deg": 59,
+      "e_inc_deg": 5,
+      "D_Mpc": 2.83,
+      "e_D_Mpc": 0.17,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07261",
+      "quality": 2,
+      "inc_deg": 30,
+      "e_inc_deg": 10,
+      "D_Mpc": 13.1,
+      "e_D_Mpc": 3.93,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07323",
+      "quality": 1,
+      "inc_deg": 47,
+      "e_inc_deg": 3,
+      "D_Mpc": 8,
+      "e_D_Mpc": 2.4,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07399",
+      "quality": 1,
+      "inc_deg": 55,
+      "e_inc_deg": 3,
+      "D_Mpc": 8.43,
+      "e_D_Mpc": 2.53,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07524",
+      "quality": 1,
+      "inc_deg": 46,
+      "e_inc_deg": 3,
+      "D_Mpc": 4.74,
+      "e_D_Mpc": 0.24,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07559",
+      "quality": 2,
+      "inc_deg": 61,
+      "e_inc_deg": 3,
+      "D_Mpc": 4.97,
+      "e_D_Mpc": 0.25,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07577",
+      "quality": 2,
+      "inc_deg": 63,
+      "e_inc_deg": 3,
+      "D_Mpc": 2.59,
+      "e_D_Mpc": 0.13,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07603",
+      "quality": 1,
+      "inc_deg": 78,
+      "e_inc_deg": 3,
+      "D_Mpc": 4.7,
+      "e_D_Mpc": 1.41,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07608",
+      "quality": 1,
+      "inc_deg": 25,
+      "e_inc_deg": 10,
+      "D_Mpc": 8.21,
+      "e_D_Mpc": 2.46,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07690",
+      "quality": 2,
+      "inc_deg": 41,
+      "e_inc_deg": 5,
+      "D_Mpc": 8.11,
+      "e_D_Mpc": 2.43,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC07866",
+      "quality": 2,
+      "inc_deg": 44,
+      "e_inc_deg": 5,
+      "D_Mpc": 4.57,
+      "e_D_Mpc": 0.23,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC08286",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 3,
+      "D_Mpc": 6.5,
+      "e_D_Mpc": 0.21,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC08490",
+      "quality": 1,
+      "inc_deg": 50,
+      "e_inc_deg": 3,
+      "D_Mpc": 4.65,
+      "e_D_Mpc": 0.53,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC08550",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 3,
+      "D_Mpc": 6.7,
+      "e_D_Mpc": 2,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC08699",
+      "quality": 2,
+      "inc_deg": 73,
+      "e_inc_deg": 9,
+      "D_Mpc": 39.3,
+      "e_D_Mpc": 9.82,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC08837",
+      "quality": 2,
+      "inc_deg": 80,
+      "e_inc_deg": 5,
+      "D_Mpc": 7.21,
+      "e_D_Mpc": 0.36,
+      "dist_method": 2,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC09037",
+      "quality": 2,
+      "inc_deg": 65,
+      "e_inc_deg": 5,
+      "D_Mpc": 83.6,
+      "e_D_Mpc": 8.4,
+      "dist_method": 1,
+      "literature_source": "Ha14"
+    },
+    {
+      "id": "UGC09133",
+      "quality": 1,
+      "inc_deg": 53,
+      "e_inc_deg": 6,
+      "D_Mpc": 57.1,
+      "e_D_Mpc": 11.4,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC09992",
+      "quality": 2,
+      "inc_deg": 30,
+      "e_inc_deg": 10,
+      "D_Mpc": 10.7,
+      "e_D_Mpc": 3.21,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC10310",
+      "quality": 1,
+      "inc_deg": 34,
+      "e_inc_deg": 6,
+      "D_Mpc": 15.2,
+      "e_D_Mpc": 4.6,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC11455",
+      "quality": 1,
+      "inc_deg": 90,
+      "e_inc_deg": 1,
+      "D_Mpc": 78.6,
+      "e_D_Mpc": 11.8,
+      "dist_method": 1,
+      "literature_source": "SG06"
+    },
+    {
+      "id": "UGC11557",
+      "quality": 2,
+      "inc_deg": 30,
+      "e_inc_deg": 10,
+      "D_Mpc": 24.2,
+      "e_D_Mpc": 6.05,
+      "dist_method": 1,
+      "literature_source": "Sw02,dB01"
+    },
+    {
+      "id": "UGC11820",
+      "quality": 1,
+      "inc_deg": 45,
+      "e_inc_deg": 10,
+      "D_Mpc": 18.1,
+      "e_D_Mpc": 5.43,
+      "dist_method": 1,
+      "literature_source": "KN08,vZ97"
+    },
+    {
+      "id": "UGC11914",
+      "quality": 1,
+      "inc_deg": 31,
+      "e_inc_deg": 5,
+      "D_Mpc": 16.9,
+      "e_D_Mpc": 5.1,
+      "dist_method": 1,
+      "literature_source": "No07,No05"
+    },
+    {
+      "id": "UGC12506",
+      "quality": 2,
+      "inc_deg": 86,
+      "e_inc_deg": 4,
+      "D_Mpc": 100.6,
+      "e_D_Mpc": 10.1,
+      "dist_method": 1,
+      "literature_source": "Ha14"
+    },
+    {
+      "id": "UGC12632",
+      "quality": 1,
+      "inc_deg": 46,
+      "e_inc_deg": 3,
+      "D_Mpc": 9.77,
+      "e_D_Mpc": 2.93,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGC12732",
+      "quality": 1,
+      "inc_deg": 39,
+      "e_inc_deg": 6,
+      "D_Mpc": 13.2,
+      "e_D_Mpc": 4,
+      "dist_method": 1,
+      "literature_source": "Sw09,Sw02"
+    },
+    {
+      "id": "UGCA281",
+      "quality": 3,
+      "inc_deg": 67,
+      "e_inc_deg": 3,
+      "D_Mpc": 5.68,
+      "e_D_Mpc": 0.28,
+      "dist_method": 2,
+      "literature_source": "Le14"
+    },
+    {
+      "id": "UGCA442",
+      "quality": 1,
+      "inc_deg": 64,
+      "e_inc_deg": 7,
+      "D_Mpc": 4.35,
+      "e_D_Mpc": 0.22,
+      "dist_method": 2,
+      "literature_source": "Co00"
+    },
+    {
+      "id": "UGCA444",
+      "quality": 2,
+      "inc_deg": 78,
+      "e_inc_deg": 4,
+      "D_Mpc": 0.98,
+      "e_D_Mpc": 0.05,
+      "dist_method": 2,
+      "literature_source": "Ke07"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "eta": 4,
+  "Icritical": 1.0872575050404985,
+  "B": 0.8409100052628827,
+  "results": [
+    {
+      "F": 100,
+      "phase_ratio": 1.089529990355004,
+      "first_order": 1.0838741189611394,
+      "abs_error": 0.0056558713938646
+    },
+    {
+      "F": 1000,
+      "phase_ratio": 1.027131066270148,
+      "first_order": 1.0265850169817379,
+      "abs_error": 0.0005460492884101602
+    },
+    {
+      "F": 10000,
+      "phase_ratio": 1.0084628402957165,
+      "first_order": 1.0084088819925328,
+      "abs_error": 0.00005395830318370015
+    },
+    {
+      "F": 100000,
+      "phase_ratio": 1.002664485699367,
+      "first_order": 1.002659184027848,
+      "abs_error": 0.000005301671518880523
+    },
+    {
+      "F": 1000000,
+      "phase_ratio": 1.0008414380001902,
+      "first_order": 1.0008409097871909,
+      "abs_error": 5.282129992879858e-7
+    }
+  ],
+  "checks_passed": 3,
+  "source": "Independent high-resolution DOP853 plus Gauss quadrature; low-precision initial run had ~1e-4 numerical error and was corrected."
+}

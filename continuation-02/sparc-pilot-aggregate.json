@@ -1,0 +1,52 @@
+{
+  "status": "exploratory 20-galaxy SPARC model fit, conditional, not a general mass exclusion",
+  "dataset_source": "https://astroweb.cwru.edu/SPARC/MassModels_Lelli2016c.mrt",
+  "mirror_blob_sha": "3f0ea8e3577ec9e0226e4f6a65f1019d45f1aec6",
+  "selection": "first 20 alphabetically n>=15, median nominal DM2 frac >0.7, no negative nominal DM2",
+  "selected": [
+    "ESO116-G012",
+    "F563-1",
+    "F568-3",
+    "F568-V1",
+    "F583-1",
+    "IC2574",
+    "NGC0024",
+    "NGC0100",
+    "NGC0247",
+    "NGC0289",
+    "NGC0300",
+    "NGC1003",
+    "NGC3109",
+    "NGC3741",
+    "NGC4183",
+    "NGC5985",
+    "NGC6503",
+    "NGC6674",
+    "UGC00128",
+    "UGC01281"
+  ],
+  "mass_eV_fixed": 86,
+  "upsilon_disk": 0.5,
+  "upsilon_bulge": 0.7,
+  "n_train": 353,
+  "n_holdout": 131,
+  "models_two_halo_parameters_each": {
+    "Bose86": {
+      "chi2_train": 1749.9501520434108,
+      "chi2_holdout": 616.8262863039695,
+      "holdout_wins": 5
+    },
+    "Burkert": {
+      "chi2_train": 961.8377864045559,
+      "chi2_holdout": 411.52074728965584,
+      "holdout_wins": 4
+    },
+    "PIS": {
+      "chi2_train": 550.7877382215559,
+      "chi2_holdout": 252.9488235110777,
+      "holdout_wins": 11
+    }
+  },
+  "code": "continuation-02/code/sparc_pilot_compare.js",
+  "critical_caveat": "No galaxy quality selection, no M/L nuisance, covariances, systematic errors, observational mass inference or formal rejection"
+}

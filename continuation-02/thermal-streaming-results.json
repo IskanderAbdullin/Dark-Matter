@@ -1,0 +1,63 @@
+{
+  "assumptions": {
+    "scalar": "one real; relativistically decoupled; zero primordial mu; no cold component",
+    "H0_km_s_Mpc": 67.4,
+    "Omega_m": 0.315,
+    "Omega_r": 0.000092
+  },
+  "m_86": {
+    "m_eV": 86,
+    "gstar_dec": 55,
+    "Tb0_eV": 0.00009751904177142422,
+    "Omega_h2": 0.12031415724780552,
+    "DeltaNeff": 0.06481710817130303,
+    "z_nr": 326478.4249513674,
+    "equality": {
+      "z": 3400,
+      "lambda_comoving_Mpc": 6.658261547838467,
+      "v_mean_km_s": 3122.5712002295613
+    },
+    "recombination": {
+      "z": 1100,
+      "lambda_comoving_Mpc": 7.620193962917402,
+      "v_mean_km_s": 1011.0001833781273
+    },
+    "z5": {
+      "z": 5,
+      "lambda_comoving_Mpc": 9.036353668414865,
+      "v_mean_km_s": 5.509729556609765
+    },
+    "today": {
+      "z": 0,
+      "lambda_comoving_Mpc": 9.100113580663379,
+      "v_mean_km_s": 0.9182583497904467
+    }
+  },
+  "mass_grid_fixed_abundance": [
+    {
+      "m_eV": 29,
+      "gstar": 18.55,
+      "lambda_eq_Mpc": 19.73,
+      "lambda_z5_Mpc": 29.86
+    },
+    {
+      "m_eV": 50,
+      "gstar": 31.98,
+      "lambda_eq_Mpc": 11.63,
+      "lambda_z5_Mpc": 16.53
+    },
+    {
+      "m_eV": 86,
+      "gstar": 55,
+      "lambda_eq_Mpc": 6.66,
+      "lambda_z5_Mpc": 9.04
+    },
+    {
+      "m_eV": 152,
+      "gstar": 97.21,
+      "lambda_eq_Mpc": 3.62,
+      "lambda_z5_Mpc": 4.73
+    }
+  ],
+  "disclaimer": "ballistic distance, not linear transfer function, WDM half-mode scale or observational exclusion"
+}

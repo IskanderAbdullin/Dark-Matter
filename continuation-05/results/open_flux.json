@@ -1,0 +1,26 @@
+{
+  "exact_finite_binding_pole_s": 4.679406550517849,
+  "exact_Riccati_solution_max_abs_err": 3.2029934260435766e-14,
+  "analytical_boundary_slope_fprime_in_s": 0.01,
+  "sample_values": {
+    "s_0_01": 0.00010050170451020879,
+    "s_1": 0.017278660355966972,
+    "s_2": 0.06639476062759464
+  },
+  "energy_boundary_k_tests": [
+    {
+      "k": 1,
+      "power": 1.000011149987568
+    },
+    {
+      "k": 2,
+      "power": 2.000007695916712
+    },
+    {
+      "k": 3,
+      "power": 3.0000061456591953
+    }
+  ],
+  "tests_passed": 6,
+  "caveat": "A local scalar energy-space FP model, not real galaxy orbit-averaged Bose collision transport or a global halo distribution."
+}

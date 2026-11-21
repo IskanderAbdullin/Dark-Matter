@@ -1,0 +1,58 @@
+{
+  "benchmark": "F583-4 article rounded scales R=0.6 kpc V0=44.1km/s, illustrative m=86 eV, sigma/m=1.25 cm2/g",
+  "radius_source_RbsSIDM_AU": 42.477223993165495,
+  "radius_consistent_first_zero_AU": 133.44613484181684,
+  "radius_ratio": 3.141592653589793,
+  "thermal_lambda_m": 0.000039098497344212414,
+  "particle_separation_m": 0.000028298916846253807,
+  "number_density_m3": 44125593613758.53,
+  "phase_density_nlambda3_rounding": 2.637368172802624,
+  "critical_nu": 2.612375348685488,
+  "minimum_mass_eV_at_fixed_R_V0_for_nu_lecritical": 86.20495852353572,
+  "critical_sigma_to_V0": 0.7165978277912848,
+  "critical_kurtosis_excess": 1.9068759279380605,
+  "fraction_number_particles_above_occupation_F": {
+    "1": 0.6418668875231933,
+    "3": 0.4417690378802341,
+    "10": 0.262501484422328,
+    "30": 0.15557754800409654,
+    "100": 0.08602964479870466,
+    "1000": 0.027306661364367442
+  },
+  "hartree_fock_b": 2.3560770112825197e-13,
+  "local_fluid_Jeans_pc": 0.0018298936902836065,
+  "local_Jeans_to_TF_first_zero": 2.8284271247461894,
+  "conditional_mixed_growth": [
+    {
+      "fw": 0.01,
+      "p": 0.993985530462473,
+      "power_suppression": 0.9081325497605505
+    },
+    {
+      "fw": 0.03,
+      "p": 0.981868499475492,
+      "power_suppression": 0.7476441046429503
+    },
+    {
+      "fw": 0.05,
+      "p": 0.9696310917650468,
+      "power_suppression": 0.6140565142414721
+    },
+    {
+      "fw": 0.1,
+      "p": 0.9384864324004714,
+      "power_suppression": 0.37130884213514964
+    },
+    {
+      "fw": 0.2,
+      "p": 0.8736102527122116,
+      "power_suppression": 0.1288732895717567
+    },
+    {
+      "fw": 0.5,
+      "p": 0.6513878188659973,
+      "power_suppression": 0.0030072105494649663
+    }
+  ],
+  "limitations": "Conditional source parameters; no real-galaxy or Einstein-Boltzmann fit; code has local Python/SciPy/mpmath numerical assertions; GitHub Actions not used."
+}

@@ -1,0 +1,14 @@
+# Research log — theoretical continuation V, 2026-11-21
+Original reference: Abdullin & Popov, JCAP 2021, and continuation-04 and its quantitative checks.
+No Computer Use or GitHub Actions used.
+
+1. Checked a general hierarchy of positive Taylor-remainder Bose energy cutoffs F_k at fixed eta, proved f(E)>0, df/dE<0, C^(k-1) escape-edge regularity and outer density power n=k+3/2.
+2. Calculated spherical equilibrium profiles (numerical checks across k1..6 and multiple central depths). With eta4 critical center k3 radius ~1.6011e9R, while k4..6 no zero before 1e10R on tested branches. This is numerical evidence, not a global infinite-radius theorem.
+3. Derived the log-radius Emden phase portrait. A singular solution has u*=2/(n-1), trace T=(5-n)/(n-1), determinant 2(n-3)/(n-1), and asymptotic Q~r^[(n-3)/(n-1)]. Explains k3 near separatrix and k4+ attracting outer tail; agrees with numerical mass slopes.
+4. Corrected the prior statement that stability of all finite-mass Bose f(E) is unknown: under their documented assumptions, Antonov, Doremus–Feix–Baumann and Pérez–Aly suffice for bounded isotropic monotone collisionless equilibria. Full assumptions must be verified; they do not cover thermodynamic equilibration, universal nonlinear stability or the exact critical singular fmax=infinity endpoint.
+5. Computed subcritical k2 solutions near exact central saturation delta=eta-psi0; fmax~1/delta and quadratic density curvature diverges as delta^(-1/2) although the outer equilibrium radius tends to a finite limit.
+6. Derived necessary detailed-balance no-go for exact hard-lowered Bose DF under *closed*, connected, elastic Uehling–Uhlenbeck 2-to-2 collisions. A physical open/escaping tidal halo may be quasi-stationary, so no bosonic particle exclusion is asserted.
+7. Built a one-dimensional open energy-space Bose Fokker–Planck boundary toy. Finite D(Et)>0 and positive steady escape J>0 select linear f~J(Et-E)/D; C1 quadratic cutoff forces zero boundary flux under same assumptions. An exact constant-coefficient Riccati solution matches independent IVP to 3.3e-14 and has a finite-binding pole at s=4.67940655 when beta=D=1,J=.01. This toy is not a real galactic collision operator.
+8. Local standalone scripts were exercised for cutoff profiles, singular critical approach, Bose collision witness and open flux. Full source and complete JSON are in the ZIP archive; compact reproducer files and selected output are in this GitHub directory.
+9. New literature compared: Rein–Rendall compact support, King escape models, 2012 tidal escaper Fokker–Planck https://doi.org/10.1111/j.1365-2966.2011.20183.x, Uehling–Uhlenbeck H theorem and established radial/nonradial collisionless linear stability.
+Unresolved: true quantum kinetic C22/C12 rates, open tidal orbit-average, global exactly-critical stability, one consistent cosmological f(q), matter transfer and observed galaxy likelihood.

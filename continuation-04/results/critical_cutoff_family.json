@@ -1,0 +1,65 @@
+{
+  "source": "Standalone local computation of the exactly critical lowered Bose family, source scripts in code/critical_cutoff_family.py",
+  "ideal_untruncated_Ic": 1.1575786866970583,
+  "ideal_untruncated_slope": 0.5539795457971796,
+  "profiles": [
+    {
+      "eta": 0.5,
+      "Ic": 0.46945388240851427,
+      "nu": 1.059443961643748,
+      "slope": 1.3660019420670182,
+      "rt_over_R": 8.453644898633781,
+      "Qt": 1.0255097781785871
+    },
+    {
+      "eta": 1,
+      "Ic": 0.655855939489547,
+      "nu": 1.48010835747172,
+      "slope": 0.9777679463877945,
+      "rt_over_R": 12.244498667720112,
+      "Qt": 2.9157949588028176
+    },
+    {
+      "eta": 2,
+      "Ic": 0.8862457667480201,
+      "nu": 2.0000425202501098,
+      "slope": 0.7235858710321617,
+      "rt_over_R": 19.071226650137856,
+      "Qt": 8.428139998430675
+    },
+    {
+      "eta": 3,
+      "Ic": 1.0161750577054578,
+      "nu": 2.293261530473838,
+      "slope": 0.63106736405137,
+      "rt_over_R": 27.52661856816079,
+      "Qt": 16.10075787756361
+    },
+    {
+      "eta": 4,
+      "Ic": 1.0872575050453652,
+      "nu": 2.453677435922869,
+      "slope": 0.5898096008582394,
+      "rt_over_R": 40.29879272504359,
+      "Qt": 26.357019846010076
+    },
+    {
+      "eta": 5,
+      "Ic": 1.1240438820798662,
+      "nu": 2.536695398880172,
+      "slope": 0.5705070107177256,
+      "rt_over_R": 61.91871567406325,
+      "Qt": 40.37409616178858
+    },
+    {
+      "eta": 6,
+      "Ic": 1.1421296577951279,
+      "nu": 2.5775106239558987,
+      "slope": 0.5614729559854947,
+      "rt_over_R": 101.74073154111511,
+      "Qt": 60.74485852863615
+    }
+  ],
+  "tests_passed": 4,
+  "caveat": "Monotonicity checked only at sample grid; not a global theorem. Eta infinity untruncated ideal mass diverges, is not a numerical finite-mass profile."
+}

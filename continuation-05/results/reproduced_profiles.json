@@ -1,0 +1,77 @@
+{
+  "eta": 4,
+  "checks": "Independent local Python 3.13 / scipy / numpy runs: 6 positive/monotone edge checks + 8 Poisson profile cases; extended separate scan: 24 profiles with k=1..6 and psi0=1,3,3.8,4; all pass.",
+  "source": "Abdullin-Popov JCAP 2021 and Taylor-remainder escape-energy extension",
+  "central_critical": [
+    {
+      "k": 1,
+      "nu": 2.4536774359,
+      "edge": true,
+      "radius_R": 40.29876707,
+      "Q": 26.3570158
+    },
+    {
+      "k": 2,
+      "nu": 2.2706770113,
+      "edge": true,
+      "radius_R": 130.17837983,
+      "Q": 26.31939434
+    },
+    {
+      "k": 3,
+      "nu": 2.0537295435,
+      "edge": true,
+      "radius_R": 1601119214.22,
+      "Q": 24154.02646
+    },
+    {
+      "k": 4,
+      "nu": 1.8466250708,
+      "edge": false,
+      "explored_to_R": 10000000000,
+      "Q_at_limit": 1032285.9974,
+      "mass_log_slope": 0.56751843,
+      "predicted_asymptotic_slope": 0.5555555555555556
+    },
+    {
+      "k": 5,
+      "nu": 1.6743902759,
+      "edge": false,
+      "explored_to_R": 10000000000,
+      "Q_at_limit": 5204307.3978,
+      "mass_log_slope": 0.63813161,
+      "predicted_asymptotic_slope": 0.6363636363636364
+    },
+    {
+      "k": 6,
+      "nu": 1.5401426091,
+      "edge": false,
+      "explored_to_R": 10000000000,
+      "Q_at_limit": 15214034.9535,
+      "mass_log_slope": 0.69296028,
+      "predicted_asymptotic_slope": 0.6923076923076923
+    }
+  ],
+  "subcritical": [
+    {
+      "k": 2,
+      "psi0": 3.8,
+      "nu": 1.0045878294,
+      "radius_R": 78.42542216,
+      "Q": 17.90741868
+    },
+    {
+      "k": 3,
+      "psi0": 3.8,
+      "nu": 0.8232922544,
+      "radius_R": 2951707586.08,
+      "Q": 33227.8113
+    }
+  ],
+  "important_limitations": [
+    "Nonzero edge out to 1e10 R is numerical, not a global theorem for all eta and psi0.",
+    "Existing Antonov radial/nonradial linear-stability criteria require a careful check of regularity and perturbation classes.",
+    "The singular critical-center distribution fmax=infinity is not directly within ordinary bounded-DF theorems.",
+    "No production physics, galaxy fit, or modern CLASS/CAMB transfer function computed in this continuation."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Critical lowered-Bose phase-space mixing check; mass conservation closed thermal Lagrangian patch",
+  "Cmass": 7.828288948590376,
+  "threshold_highF_eta_approx": 1.3516722,
+  "numerical_cases": [
+    {
+      "eta": 0.5,
+      "s": 0.1387877,
+      "D_ratio_F1": 6.5528,
+      "D_ratio_F10": 9.2932
+    },
+    {
+      "eta": 1,
+      "s": 0.5512944,
+      "D_ratio_F1": 2.7101,
+      "D_ratio_F100": 2.0115
+    },
+    {
+      "eta": 1.35,
+      "s": 0.9975651,
+      "D_ratio_F1": 1.7026,
+      "D_ratio_F100": 1.1
+    },
+    {
+      "eta": 1.4,
+      "s": 1.0715953,
+      "D_ratio_F1": 1.6043,
+      "D_ratio_F100": 1.0228
+    },
+    {
+      "eta": 2,
+      "s": 2.1532978,
+      "D_ratio_F_0_001": 1.06372,
+      "D_ratio_F1": 0.86674
+    },
+    {
+      "eta": 4,
+      "s": 8.2612721,
+      "D_ratio_F_0_001": 1.0158136,
+      "D_ratio_F1": 0.23062,
+      "D_ratio_F100": 0.12957,
+      "D_ratio_F1e_minus8": 1.0000090765
+    },
+    {
+      "eta": 6,
+      "s": 20.0006042,
+      "D_ratio_F_0_001": 0.81474,
+      "D_ratio_F1": 0.09376
+    }
+  ],
+  "analytic_highF": "Vfinal/C0 = L_(F+c)^3[1+B_eta sqrt(L)+O(L)], B_eta=32/(35 Ic)",
+  "analytic_lowF": "For exactly bounded final phase-space support and unbounded initial thermal momentum, with equal total N, D_final(F)-D_initial(F) ~ +C_initial F [ln(1/F)]^3 as F->0; so no exact closed collisionless mixing.",
+  "limitations": "Not a fundamental 86-eV exclusion. Tidal escaping, nonthermal initial spectra, noise, finite sensitivity and collisions can evade strict closed sharp-cutoff assumptions.",
+  "code": "code/lowered_excess_mass.py"
+}

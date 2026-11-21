@@ -1,0 +1,39 @@
+{
+  "source": "original uploaded 2021 LaTeX, and new 2026-11-21 numerical scripts",
+  "status": "verified arithmetic and independent toy-model integration, not cosmological/observational fit",
+  "critical_degeneracy": 2.612375348685488,
+  "ideal_cusp_slope": 0.5539795457971796,
+  "fiducial": {
+    "m_eV": 86,
+    "R_kpc": 0.6,
+    "V0_km_s": 44.1,
+    "sigma_over_m_cm2_g": 1.25,
+    "rho_g_cm3": 6.764847333384804e-24,
+    "scattering_length_m": 8.73210192251034e-19,
+    "b": 2.356077011282519e-13,
+    "xi_cross_order": 7.831310835440796e-13,
+    "r_cross_pc_order": 4.698786501264478e-10,
+    "classical_scattering_time_Gyr": 0.8497465898882433
+  },
+  "density_at_xi_0_03": {
+    "b0": 0.9835325871478678,
+    "b0.001": 0.9844079007105021,
+    "b0.01": 0.9902481087694807,
+    "b0.05": 0.9970945121768051
+  },
+  "original_table": {
+    "n_galaxies": 22,
+    "n_used_for_common_mass_scan": 20,
+    "n_nu_ge_2_6": 13,
+    "n_nu_0": 3,
+    "n_best_mass_recorded": 19,
+    "n_bose86_reduced_chi2_less_than_IS": 12,
+    "n_equal_IS": 6,
+    "n_less_than_Burkert": 6,
+    "n_less_than_PIS": 5,
+    "median_delta_IS": -0.0055,
+    "median_delta_Burkert": 0.02
+  },
+  "model_assumption": "Hartree-Fock contact repulsion; sigma=8*pi*a^2; isotropic spherical equilibrium",
+  "test_status": "8 numerical checks passed"
+}

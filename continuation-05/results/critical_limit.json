@@ -1,0 +1,71 @@
+{
+  "eta": 4,
+  "k": 2,
+  "analytic_curvature_sqrt_delta_limit": 0.13009731180548406,
+  "critical_radius_over_R": 130.17826568736726,
+  "critical_Q": 26.31939237433135,
+  "rows": [
+    {
+      "delta": 0.2,
+      "fmax": 4.425777467417049,
+      "curvature_times_sqrt_delta": 0.17749420363043658,
+      "radius_over_R": 78.42542248640034
+    },
+    {
+      "delta": 0.1,
+      "fmax": 9.415553300319147,
+      "curvature_times_sqrt_delta": 0.16121644308243918,
+      "radius_over_R": 93.9652262941511
+    },
+    {
+      "delta": 0.03,
+      "fmax": 32.7417242693563,
+      "curvature_times_sqrt_delta": 0.14591699712534237,
+      "radius_over_R": 111.22798056618241
+    },
+    {
+      "delta": 0.01,
+      "fmax": 99.40634419631932,
+      "curvature_times_sqrt_delta": 0.1389086602516136,
+      "radius_over_R": 119.5849140104295
+    },
+    {
+      "delta": 0.003,
+      "fmax": 332.7389611594537,
+      "curvature_times_sqrt_delta": 0.13482089658818563,
+      "radius_over_R": 124.49160077503709
+    },
+    {
+      "delta": 0.001,
+      "fmax": 999.4054231486977,
+      "curvature_times_sqrt_delta": 0.132795178405996,
+      "radius_over_R": 126.92651078616133
+    },
+    {
+      "delta": 0.0003,
+      "fmax": 3332.738684842669,
+      "curvature_times_sqrt_delta": 0.13156526193153492,
+      "radius_over_R": 128.4071427067868
+    },
+    {
+      "delta": 0.0001,
+      "fmax": 9999.405331022574,
+      "curvature_times_sqrt_delta": 0.13094198749177774,
+      "radius_over_R": 129.15851576362175
+    },
+    {
+      "delta": 0.00003,
+      "fmax": 33332.73865699492,
+      "curvature_times_sqrt_delta": 0.13055900229989195,
+      "radius_over_R": 129.62063420841943
+    },
+    {
+      "delta": 0.00001,
+      "fmax": 99999.40532117807,
+      "curvature_times_sqrt_delta": 0.13036358694312133,
+      "radius_over_R": 129.8565430187267
+    }
+  ],
+  "checks_passed": 3,
+  "warning": "Bounded subcritical phase-space distribution does not converge in sup norm to exact unbounded critical equilibrium; no passage of stability theorem is implied."
+}
