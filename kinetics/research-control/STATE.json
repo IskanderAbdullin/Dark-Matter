@@ -111,7 +111,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "NO late freezeout, no genuine cosmological 86 eV distribution, no 2->2 full relativistic collision operator, no CLASS readiness",
+  "physics_scope_warning": "Full relativistic finite-temperature collision integral still missing; no gamma_el, no relic, no CLASS-ready",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -120,5 +120,16 @@
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
   "last_verified_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044"
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044",
+  "last_event_audit": {
+    "date": "2026-11-21",
+    "script": "kinetics/relativistic_elastic_audit.py",
+    "seed": 21112026,
+    "n": 4000,
+    "scope": "local on-shell event audit only; not full 2->2 operator",
+    "max_relative_shell": 3.6938160863364544e-13,
+    "max_relative_equilibrium_gain_loss": 1.3319660326089454e-14,
+    "ci": "not checked",
+    "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
+  }
 }
