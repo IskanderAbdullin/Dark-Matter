@@ -2,40 +2,40 @@
   "schema_version": 1,
   "priority": 1,
   "status": "ready",
-  "title": "Derive a concrete microscopic SM–chi1 interaction and replace conditional gamma_el with a physically derived rate",
-  "objective": "Build an explicit, internally consistent Lagrangian/EFT candidate (chi1, chi2, phi and SM portal) and derive momentum/temperature-dependent matrix elements and elastic, inverse and competing channels. Quantify H/decay/elastic hierarchy and limitations of the present BGK model.",
+  "title": "Derive equilibrium-preserving momentum-dependent chi1-electron and neutrino thermal collision operator; compute drag/diffusion and SM Q",
+  "objective": "From the chosen gauge-qualified vector EFT or an explicit UV portal, derive the finite-T collision integral C_el[f_chi1] for moving chi1, including Pauli blocking of both species, detailed balance for FD chi, and correct SM energy/number accounting. Compare the linearized kinetic relaxation eigenmodes or drag coefficient with the existing phenomenological number-conserving BGK; avoid equating rest transport frequency or recoil heat with gamma_el.",
   "prerequisites": [
-    "Read kinetics/CONTINUOUS-RESEARCH-SPEC.md",
-    "Read kinetics/LITERATURE-PHYSICAL-SCOPE-2026-11-21.md and primary sources",
-    "Read kinetics/BEST-SM-COUPLED-FRW.md and corrected/negative JSON",
-    "Confirm current draft PR #1 branch HEAD and CI"
+    "Check latest CI and PR head; read GOAL, STATE, EVIDENCE, BACKLOG",
+    "Read kinetics/MICROPHYSICS-MODEL.md, microphysics_portal.py, microphysics_recoil_heat.py and their real tests",
+    "Check the scalar Yukawa 1<->2 and Dirac charges/gamma conventions against pinned BEST and explicit primary physical sources"
   ],
   "steps": [
-    "Audit quantum numbers, stability of phi, particle spins/degrees of freedom and decay threshold; distinguish toy assumptions from physical claims",
-    "Choose one minimal explicit SM portal; write interaction terms, allowed processes and parametric validity/domain",
-    "Derive vacuum decay width, thermal detailed-balance/chemical-potential relations, elastic momentum transfer rate gamma_el(p,T) and SM Q exchange with dimension checks; independently check at least one analytic limit",
-    "Estimate in physical regimes Gamma_decay/H, gamma_el/H, gamma_el/Gamma_decay and importance of 2->2 stimulated/number-changing channels",
-    "Implement reproducible dimensionful rates with unit/threshold/decoupling/detailed-balance tests and parameter scan; compare conservative BGK approximation to derived moments where valid",
-    "Document failures and distinguish inconclusive portal choice from falsified general hypothesis",
-    "Commit new code/tests/docs+checkpoint and push to research branch; immediately select and begin next most valuable step"
-  ],
-  "deliverables": [
-    "kinetics/MICROPHYSICS-MODEL.md",
-    "source code and independent physics tests",
-    "compact machine-readable rates/uncertainty study",
-    "updated GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG"
+    "Write down fully differential Lorentz invariant 2->2 collision source including initial f_chi f_e, final-state (1-f_chi')(1-f_e') and inverse process, correct energy transfer Q and both signs",
+    "Check gauge invariant electroweak lepton doublet completion, neutrino contributions and required UV cutoff before applying above EWSB; quantify neglected electron mass and screening",
+    "Derive analytically exact equilibrium C_el=0 for common T and chemical potentials and conservation of chi number, total dark+SM energy and momentum, then implement independent quadrature reference for representative moving momenta",
+    "Extract physically correct momentum-drag/diffusion or relaxation eigenvalue by linearization around equilibrium, report domain and numerical error vs q/angular/thermal grid; test against rest-particle heating limit and no-block reference",
+    "Only with measured error bars consider a calibrated BGK projection; prove same kinetic relaxation/number/heat moments and show when scalar gamma is invalid",
+    "Execute tests and appropriate public CI; add new evidence including failures; checkpoint and commit/push then immediately select another bottleneck"
   ],
   "acceptance": [
-    "Every claimed physical gamma_el or Gamma(T) is derived from explicit interaction(s) and stated kinematics, not guessed",
-    "Dimension analysis, detailed balance and physical thresholds tested",
-    "Independent check and exact reproducible command, dependency/version, parameter values, test results and limitations",
-    "Counterexamples and negative results retained, not tuned away"
+    "Full Lorentz invariant elastic 2->2 collision source and physical energy/number moment; no hidden temperature reset",
+    "Detailed balance at common T and exact zero coupling; Pauli positivity and both-sign energy flow under perturbations",
+    "Independent analytic or numerical reference, q/time/angle convergence and preserved failures with measurable error budgets",
+    "No use of nu_T(rest) or Q_rest as gamma_el without derivation/calibration",
+    "Document UV/gauge and thermodynamic approximation validity"
   ],
   "fallback": [
-    "If portal selection blocked: separately derive model-independent consistency/inequality bounds on gamma_el/H vs Gamma/H and thermal masses, explicitly conditional",
-    "If numerical run unavailable: implement deterministic analytic/unit benchmark and preflight next BEST comparison; record tool blocker",
-    "If a physical hypothesis fails: record it and move to next defensible microscopic candidate, not a convenient replacement without disclosure"
+    "If full moving-particle 9D collision integral is too expensive, derive a controlled small-transfer Fokker–Planck kernel, assess its domain and compare to a low-dimensional exact collision reference",
+    "If UV completion requires missing species, explicitly enlarge model and stoichiometric charge ledger",
+    "If CI/blocking problem occurs, maintain independent analytic threshold and chemical-affinity tests and record blocker"
   ],
-  "external_action_policy": "GitHub only on existing research branch; no destructive force push, no main merge; Computer Use needs explicit user consent.",
-  "resume_instructions": "Re-read AGENTS.md and these checkpoint files; reconcile PR #1 head SHA and latest CI; start by writing microphysics candidate and falsifiable acceptance, then code/tests. The next stage follows immediately after checkpoint/commit/push within available active runtime."
+  "deliverables": [
+    "kinetics/ELASTIC-COLLISION-OPERATOR.md",
+    "new kinetic kernel and tests",
+    "controlled reduced numerical reference and compact JSON",
+    "updated checkpoints and next science stage"
+  ],
+  "scope_notes": "The current completed pilots are tree-level EFT and rest-test-particle observables only. A physical 86 eV relic or CLASS input is not yet computed.",
+  "external_action_policy": "Only GitHub research branch, no force push/merge. Public Actions allowed compactly. No Computer Use/PC without explicit user approval.",
+  "resume_instructions": "Start from this file and explicit STATE/CI SHA, choose kernel/phase-space parameterization, independently verify detailed balance before using it to replace phenomenological BGK."
 }

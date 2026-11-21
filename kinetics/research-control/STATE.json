@@ -38,16 +38,41 @@
     }
   ],
   "physical_unknowns": [
-    "physical SM portal and |M|^2",
-    "temperature-dependent elastic and inelastic rates",
-    "gstarS(T)/gstarRho(T) and self-consistent H",
-    "late physical freeze-out",
-    "cutoff-independent zero-mode",
-    "absolute relic abundance",
-    "linear perturbations and observational likelihood"
+    "Gauge-consistent UV completion and portal bounds, neutrino channels",
+    "full moving-chi finite-T elastic collision integral with Pauli/blocking and drag/diffusion",
+    "temperature-dependent quantum 1->2 rates with thermal masses, optional 2->2 Bose source",
+    "calibrated number conserving BGK gamma_el(p,T) and its validity/domain",
+    "gstarS(T)/gstarRho(T), self-consistent H and coupled SM heat",
+    "late physical freeze-out, cutoff-independent zero-mode, absolute relic Omega",
+    "linear perturbations, CLASS and observational likelihood"
   ],
   "class_ready": false,
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "On next run verify branch head/CI and update this checkpoint after a completed, evidenced stage. This JSON is a snapshot, not a claim of autonomous background execution."
+  "instruction": "Next action requires deriving FULL linearised elastic collision/thermal moment: neither sigma_T nor nu_T(rest) nor Q_rest are gamma_el. Resolve CI for 5d37d1 then continue without declaring physical relic.",
+  "last_checkpoint_git_sha": "5d37d1c0335552647889b9c1d1831661bcfdbf6c",
+  "current_phase": "A: tree-level microphysical pilot; full thermal collision physics not established",
+  "completed_research_steps": [
+    {
+      "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
+      "sha": "8873c40fdd13437807a9cb018c5613d0221a4e43",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44931903023",
+      "ci_conclusion": "success",
+      "scope": "tree vacuum and massless electron unblocked at-rest frequency; not gamma_el"
+    },
+    {
+      "stage": "Exact BE/FD on-shell chemical affinity and dimensionless BEST Yukawa bridge",
+      "sha": "59ce61ece86857d3b7f3d9bae05e5565ae9d830b",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932046451",
+      "ci_conclusion": "success",
+      "scope": "algebraic quantum factors and units only, no BEST run"
+    },
+    {
+      "stage": "Electron Pauli-blocked finite-recoil heating for chi at rest, checked vs angular identity and heavy limit",
+      "sha": "5d37d1c0335552647889b9c1d1831661bcfdbf6c",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932154301",
+      "ci_conclusion": "in_progress_at_checkpoint",
+      "scope": "thermal test-particle heating Q per chi, not full moving-particle collision operator"
+    }
+  ]
 }

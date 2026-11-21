@@ -31,3 +31,13 @@ This is a living scientific queue. For the next executable task see [NEXT_ACTION
 ## Execution conventions
 
 Every stage: hypothesis → control/independent proof → real measured experiment → uncertainty and negative test → checkpoint → commit/push → immediately choose the next stage. If one item is blocked, select another productive item and record blocker in STATE/NEXT_ACTION. Do not use PC/Computer Use without explicit user approval. Heavy public Actions only when justified; keep artifacts small.
+
+## New completed A-phase substeps (21 Nov 2026; not a completed P0)
+
+- [x] Derive explicit tree-level scalar-Yukawa vacuum width, threshold dependence and BEST sum-normalization crosscheck ([model](../MICROPHYSICS-MODEL.md), [CI #44931903023](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44931903023)).
+- [x] Derive vector EFT massless-electron total and transport cross sections, independently integrate dσ/dt, rest electron transport collision frequency and heavy-target asymptote; explicitly reject it as gamma_el.
+- [x] Derive on-shell FD/BE quantum detailed-balance identity for decay vs inverse, dimensional BEST coupling bridge ([CI #44932046451](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932046451)).
+- [x] Implement χ-at-rest Pauli-blocked electron recoil heating and independent angular/heavy χ controls (CI #44932154301 was running when checkpoint written).
+- [ ] **Immediate next:** complete moving χ thermal elastic operator, gauge-required neutrinos, final-state χ blocking and full SM transfer, then independently calibrate kinetic relaxation/drag gamma vs BGK. Do not substitute pilot observables.
+
+These completed substeps are tree-level partial models. Full first P0 item (UV-consistent portal, thermal masses and physical rates) remains unchecked. Check CI before promoting E-009.
