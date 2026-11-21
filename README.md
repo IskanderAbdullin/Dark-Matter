@@ -18,3 +18,14 @@ Source claims: noncondensed Bose component with equilibrium Thomas–Fermi densi
 
 ## Ground rules
 No fabricated catalog fits, posterior constraints, N-body simulations, particle-production model or observational detections. Paper 1 includes a self-contained analytical derivation; the other four are theory/protocol manuscripts with *testable* claims and clearly listed outstanding computations. The original particle-mass estimate is **not** presented as a cosmologically established mass measurement. All new equations are for clearly stated approximations.
+
+
+## Public migration and automated scientific checks
+
+The 141 research files in this public repository were transferred **byte-for-byte** from the dedicated research folder of the private Info repository at commit d3e341adfce7b6dc012a4b193e7b9d55a8369a2d. The original private repo and its other projects were left unchanged. Public-only workflow, provenance, and tests are maintained here.
+
+[![Scientific verification](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/scientific-ci.yml/badge.svg?branch=main)](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/scientific-ci.yml)
+
+See [automatic test coverage and limits](TESTING.md), [continuation V](continuation-05/README.md), [theoretical continuation IV](continuation-04/CONSOLIDATED-RESULTS-RU.md), and [SPARC/kinetic continuation II](continuation-02/CONSOLIDATED-REPORT-RU.md).
+
+**Research status:** exploratory mathematical and numerical work. A green CI run verifies specified reproducibility checks, not particle discovery, galaxy formation or cosmological viability.
