@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Exact finite-occupation 1↔2 source derived:** [thermal Bose/Pauli chemical-affinity benchmark](kinetics/THERMAL-CHEMICAL-AFFINITY.md) analytically integrates the full nonlinear forward-minus-inverse kernel over one on-shell daughter momentum at finite BE and FD occupations, proving its sign is sign(mu1−mu2−mu_phi) for common T. Independent direct double quadrature gives Rphi=-0.0008263650 / 0 / +0.0008565027 for mu1=-.25 / -.2 / -.15; its dilute daughter limit reproduces Rvac=.01649590846. This is instantaneous kinetics only, not frozen dark matter.
+
+
 **Independent quantum reverse-channel benchmark:** [exact thermal Bose–Fermi detailed balance with nonzero daughter occupations](kinetics/BEST-THERMAL-BALANCE.md) now tests the full on-shell A=f1(1−f2)(1+b) vs B=(1−f1)f2b identity at µ1=µphi+µchi2 and T=1, and deliberately breaks chemical equilibrium to verify gain/loss signs. An optional pinned BEST v1.3.5 runner tests mode-resolved physical gain/loss, all three number and energy rates. External BEST has NOT yet been executed; this is an analytical and CI protocol.
 
 

@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ANALYTIC THERMAL NONLINEAR CROSS-CHECK:** [THERMAL-CHEMICAL-AFFINITY.md](THERMAL-CHEMICAL-AFFINITY.md) derives a closed one-dimensional formula for finite-Bose/Pauli 1↔2 net source on exact two-daughter mass shell. Affinity Δµ=µ1−µchi2−µphi fixes gain/loss sign; qchi integral is analytic with a stable A=B limit. Direct independent quadratures and vacuum-limit tests validate it; not a coupled FRW or zero-mode computation.
+
+
 **EXTERNAL BEST QUANTUM DETAILED BALANCE:** [BEST-THERMAL-BALANCE.md](BEST-THERMAL-BALANCE.md) and [optional runner](best_thermal_balance_reference.py) define equilibrium mother FD, daughter FD and Bose distributions with µphi=-.3, µchi2=.1, µ1=-.2. On-shell quantum gain/loss cancel exactly (also tested under chemical-potential violation), while real BEST mode-resolved gain/loss integration is pending independently installed MPI/Vegas.
 
 

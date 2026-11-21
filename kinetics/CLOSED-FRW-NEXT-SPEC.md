@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**АНАЛИТИЧЕСКИЙ ЭТАЛОН КВАНТОВОЙ НЕЛИНЕЙНОСТИ:** [THERMAL-CHEMICAL-AFFINITY.md](THERMAL-CHEMICAL-AFFINITY.md) выводит точный finite-Bose/finite-Pauli net source при фиксированных термальных f1,f2,b и произвольных химических потенциалах, Δµ=µ1−µ2−µφ, позволяющий независимую проверку обратных распадов без full ODE. Для m=.1 µφ=-.3,µ2=.1 получено R=-0.0008263650 (µ1=-.25), 0 (µ1=-.2), +0.0008565027 (µ1=-.15); dilute limit Rvac=.01649590846. Следующий этап — реальный BEST Monte Carlo при тех же µ и q/energy convergence, не CLASS.
+
+
 **НОВЫЙ НЕЗАВИСИМЫЙ QUANTUM EQUILIBRIUM PROTOCOL:** [BEST-THERMAL-BALANCE.md](BEST-THERMAL-BALANCE.md) проверяет точное равенство f1(1−f2)(1+bφ)=(1−f1)f2bφ при μ1=μ2+μφ на on-shell 1↔2 событиях и отдельный неравновесный знак. Опциональный внешний BEST v1.3.5 тест измерит три mode-resolved net/gross rates и энергетику; реального BEST прогона ещё НЕ было. Следующий микрофизический этап — away-from-equilibrium Bose stimulated kinetics и zero mode, не CLASS.
 
 
