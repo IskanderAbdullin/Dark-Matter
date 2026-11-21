@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**New positive quadrature variant:** [thermal cut-cell calibration of on-shell quantum reaction rates](kinetics/CALIBRATED-CUT-CELL-RATES.md) integrates the exact empty-daughter FD source within retained center-resonant cells and sets a positive constant rate that preserves the graph's two charges, energy, detailed balance, Pauli bounds and H theorem. It does NOT recover omitted off-shell-centroid regions or establish nonlinear/FRW primordial PSD accuracy.
+
+
 **On-shell cut-cell error isolated:** [threshold-cut source diagnostic](kinetics/CUT-CELL-SOURCE-DIAGNOSTIC.md) now integrates the Fermi-Dirac gain exactly in one daughter energy inside every geometrically admissible cell and compares summed high-order Gauss quadrature against the independent rectangular continuum source. It separates centroid FD sampling bias from physically allowed cells discarded because their centroid is off-shell. This is a SOURCE-ONLY test, not an alteration or validation of the nonlinear Bose kinetic operator.
 
 

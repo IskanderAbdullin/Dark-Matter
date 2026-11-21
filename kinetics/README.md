@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**POSITIVE RESONANT RATE CALIBRATION:** [cut-cell FD averaged K_ij](CALIBRATED-CUT-CELL-RATES.md) retains exactly the same physical center-on-shell 1↔2 channels and unique mother states. Reference-thermal empty-daughter source matches the included continuum cut-cell integral; forward/reverse rates share one positive constant K, so conservation/H theorem remain. Dynamic nonequilibrium and zero-mode/freezeout accuracy remain unproven.
+
+
 **CUT-CELL DIAGNOSTIC:** [exact threshold geometry + Fermi-Dirac source averages](CUT-CELL-SOURCE-DIAGNOSTIC.md) independently integrate the original on-shell domain over every cell (with 16→32 Gauss convergence), separating finite-cell FD center approximation from physical allowed regions incorrectly masked because the *central* reaction is off-shell. This is not a shortcut to including those off-shell center reactions in a conserved discrete kinetic network.
 
 
