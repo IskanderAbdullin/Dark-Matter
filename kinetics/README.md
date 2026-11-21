@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**OPTIONAL REAL BEST MASSIVE BOSON:** [BEST-MASSIVE-DAUGHTER-REFERENCE.md](BEST-MASSIVE-DAUGHTER-REFERENCE.md) specifies an independently pinned BEST source run with nonzero mφ/T and exact physical width-adjusted spin-summed amplitude. Checks mode-resolved φ production, true finite mφ deep-IR occupation and 3-species energy. The qmin species point is NOT a condensate n0, and zero-mode dynamics or physical 86-eV ratio is still unresolved.
+
+
 **FINITE MASS BOSE IR SOURCE:** [MASSIVE-DAUGHTER-SOURCE.md](MASSIVE-DAUGHTER-SOURCE.md) derives the exact thermally averaged momentum-differential source for χ1→φ(mφ)+χ2(mχ), with continuous fixed-width number rate and finite φ occupation growth at q→0 whenever mφ>0. The strictly massless approximation has a nonuniform q0 limit: initial fφ(0) source can be enormous but the integrated low-q number is phase-volume suppressed; physical BEC is NOT proven.
 
 
