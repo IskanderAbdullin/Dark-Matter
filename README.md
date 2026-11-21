@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FIRST REAL FINITE-MASS BOSE DAUGHTER validation:** [BEST pinned MPI experiment #44917857964](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44917857964) confirms mass-dependent initial qφ spectra at mφ/M1=.01,.1 with 56/96 momentum nodes. On 96 q nodes, number rate differs ≲0.00070% and full physical energy sum improves to 5.6e−8 or 3.47e−9. [Full report](kinetics/BEST-MASSIVE-DAUGHTER-REFERENCE.md), [permanent 4-case evidence](kinetics/results/best-massive-phi-real-2026-11-21.json). Massive φ has large but finite q=0 occupation production; **a qmin value is not a condensate**. [Exact q³-cell number audit](kinetics/MASSIVE-BOSE-IR-CELL.md) proves a 2.76e−8 initial particle fraction below q=1e−4 even if df(0)/dt≈26758; no dynamical BEC/FRW/CLASS claim.
+
+
 **Independent BEST MASSIVE 86-eV-like scalar validation prepared:** [pinned BEST conditional mφ>0 on-shell 1→2 benchmark](kinetics/BEST-MASSIVE-DAUGHTER-REFERENCE.md) uses physical two-body matrix element M²=8π g1 M1²Γ/p* for fixed rest width, rather than invalid massless amplitude. Measures finite-mass differential φ source and analytically defined q0 occupation seed against independent formula, with three species number and physical energy. This reference is protocol-only until actual independent BEST run; no condensate/FRW/CLASS claim.
 
 

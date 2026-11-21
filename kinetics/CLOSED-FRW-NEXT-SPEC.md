@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**МАССИВНАЯ 86-eV-LIKE φ ПРОВЕРЕНА НЕЗАВИСИМЫМ BEST НА INITIAL SOURCE:** [BEST-MASSIVE-DAUGHTER-REFERENCE.md](BEST-MASSIVE-DAUGHTER-REFERENCE.md), [Actions #44917857964](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44917857964), [JSON](results/best-massive-phi-real-2026-11-21.json). Для r=mφ/M1=.01 и .1 начальный mass-dependent source qφ/energy согласуется с точной двухчастичной кинематикой на 96-q/18000 samples до ~7e−6 relative по числу. Тонкий момент: qmin=1e−4 не равен нулю, и при r=.01 occupation source в qmin уже на ~1.08% отличается от q0. [MASSIVE-BOSE-IR-CELL.md](MASSIVE-BOSE-IR-CELL.md) интегрирует честную физическую фазовую меру: при dfφ(0)/dt≈26758 доля всех born particles ниже q=1e−4 всего 2.76e−8. Следующая задача: самостоятельная DYNAMICAL zero mode и self-consistent FRW/SM, не CLASS.
+
+
 **КРИТИЧЕСКАЯ ПОПРАВКА ДЛЯ 86-эВ МАССЫ φ:** [MASSIVE-DAUGHTER-SOURCE.md](MASSIVE-DAUGHTER-SOURCE.md) выводит точный momentum-differential vacuum 1→2 для ненулевых mφ,mχ и аналитическую скорость первоначального Bose occupation при q→0. Массово-нулевой предел неравномерен по q: полный rate может совпадать, но deep-IR fφ и конденсатная мода зависят от массы. Нужны реальная mφ/M1, физическая Γ(M,mφ,mχ), независимый BEST massive φ тест, zero-mode и только затем closed FRW/CLASS.
 
 

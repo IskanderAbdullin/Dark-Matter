@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**REAL MASSIVE φ INDEPENDENT BEST CROSS-CHECK:** [BEST-MASSIVE-DAUGHTER-REFERENCE.md](BEST-MASSIVE-DAUGHTER-REFERENCE.md) verifies 2 actual phi masses × 2 q grids using pinned BEST v1.3.5 MPI in [Actions #44917857964](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44917857964); 96-q physical φ number error 6–7e−6 relative, physical energy sum 5.6e−8 or 3.47e−9. [Measurements](results/best-massive-phi-real-2026-11-21.json). [IR physical cell audit](MASSIVE-BOSE-IR-CELL.md) shows huge initial q0 occupancy does not imply macroscopic condensed particle number; qmin occupation differs from q=0 by ~1.08% at mφ/M1=.01.
+
+
 **OPTIONAL REAL BEST MASSIVE BOSON:** [BEST-MASSIVE-DAUGHTER-REFERENCE.md](BEST-MASSIVE-DAUGHTER-REFERENCE.md) specifies an independently pinned BEST source run with nonzero mφ/T and exact physical width-adjusted spin-summed amplitude. Checks mode-resolved φ production, true finite mφ deep-IR occupation and 3-species energy. The qmin species point is NOT a condensate n0, and zero-mode dynamics or physical 86-eV ratio is still unresolved.
 
 
