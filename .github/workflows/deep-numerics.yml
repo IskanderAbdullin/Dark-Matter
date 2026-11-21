@@ -1,6 +1,13 @@
 name: Weekly deep theoretical numerics
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deep-numerics.yml'
+      - 'continuation-04/code/**'
+      - 'continuation-05/**/*.py'
+      - 'continuation-06/code/**'
   workflow_dispatch:
   schedule:
     - cron: '23 4 * * 0'
