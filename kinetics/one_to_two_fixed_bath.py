@@ -56,22 +56,32 @@ class FlatThermalDecay:
         return lo,np.clip(t,0.,1.)
 
     def event_gain_loss(self,y,stimulated=True):
+        # Four paired subevents (phi low/high, chi low/high). Evaluating
+        # occupations AT each receiving daughter bin respects the quantum
+        # boundary f_phi=0 (outward derivative >=0) and Pauli bound f_chi=1
+        # (outward derivative <=0). Naive CIC interpolation in S but
+        # depositing a shared event into neighbouring bins violates Pauli.
         fp=y[:self.nq]
         fc=y[self.nq:]
-        phi=fp[self.ip]*(1-self.wp)+fp[self.ip+1]*self.wp
-        chi=fc[self.ic]*(1-self.wc)+fc[self.ic+1]*self.wc
         a=self.parent_fermi
-        # Both parent and chi2 are fermions. phi is a boson.
-        S=a*(1-chi)*((1+phi) if stimulated else 1.)-(1-a)*chi*phi
-        return self.rateprefactor*S
+        for i in (0,1):
+            ip=self.ip+i
+            wp=self.wp if i else (1-self.wp)
+            phi=fp[ip]
+            for j in (0,1):
+                ic=self.ic+j
+                wc=self.wc if j else (1-self.wc)
+                chi=fc[ic]
+                S=a*(1-chi)*((1+phi) if stimulated else 1.)-(1-a)*chi*phi
+                yield ip,ic,self.rateprefactor*wp*wc*S
 
     def rhs(self,t,y,stimulated=True):
-        rates=self.event_gain_loss(y,stimulated)
-        dotphi=(np.bincount(self.ip,weights=rates*(1-self.wp),minlength=self.nq)
-            +np.bincount(self.ip+1,weights=rates*self.wp,minlength=self.nq))/self.phi_volume
-        dotchi=(np.bincount(self.ic,weights=rates*(1-self.wc),minlength=self.nq)
-            +np.bincount(self.ic+1,weights=rates*self.wc,minlength=self.nq))/self.chi_volume
-        return np.r_[dotphi,dotchi]
+        dotphi=np.zeros(self.nq)
+        dotchi=np.zeros(self.nq)
+        for ip,ic,rates in self.event_gain_loss(y,stimulated):
+            dotphi+=np.bincount(ip,weights=rates,minlength=self.nq)
+            dotchi+=np.bincount(ic,weights=rates,minlength=self.nq)
+        return np.r_[dotphi/self.phi_volume,dotchi/self.chi_volume]
 
     def detailed_balance_error(self):
         # Exact equilibrium occupations at EVENT momenta, not interpolated
@@ -122,6 +132,12 @@ def run(quick=False):
         kernel=FlatThermalDecay(nq,np1,nmu)
         balance,energy=kernel.detailed_balance_error()
         assert balance<1e-10 and energy<1e-12,(balance,energy)
+        empty=np.zeros(2*nq)
+        assert np.min(kernel.rhs(0,empty,True))>=-1e-12
+        full_chi=empty.copy()
+        full_chi[:nq]=1.
+        full_chi[nq:]=1.
+        assert np.max(kernel.rhs(0,full_chi,True)[nq:])<=1e-12
         bose=kernel.evolve(True)
         control=kernel.evolve(False)
         b=bose["final"];n=control["final"]

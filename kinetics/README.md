@@ -14,7 +14,7 @@ It includes Bose stimulated emission, fermionic Pauli blocking, and inverse deca
 \[
 E_\phi=(E_1+p_1\cos\theta)/2,\quad E_2=E_1-E_\phi.
 \]
-The source integrates the mother thermal phase-space density and time-dilated decay rate \(M_1\Gamma_{\rm rest}/E_1\) over momentum and isotropic rest-frame decay angle. Two *identical weighted reaction events* are deposited into the boson and fermion daughter momentum bins, preserving their number difference exactly. Log-momentum cloud-in-cell interpolation reduces (but does not eliminate) discrete momentum-grid biases.
+The source integrates the mother thermal phase-space density and time-dilated decay rate \(M_1\Gamma_{\rm rest}/E_1\) over momentum and isotropic rest-frame decay angle. Two *identical weighted reaction events* are deposited into the boson and fermion daughter momentum bins, preserving their number difference exactly. Paired low/high momentum-cell collision events distribute the reaction into four weighted subevents. Crucially, gain/loss is evaluated using the *occupation of each receiving daughter bin*, rather than an interpolated common occupation: this preserves both a nonnegative Bose population and the fermionic Pauli upper bound at the ODE level while conserving the daughter number difference exactly. The grid still causes residual shape dependence.
 
 An exact event-level detailed-balance test at \(f_1,f_2\) Fermi–Dirac and \(f_\phi\) Bose–Einstein at the SAME T vanishes to roundoff, since \(E_1=E_2+E_\phi\). Event energy conservation is similarly machine-exact (bin-centroid energies are not). Numerically the conservation of \(n_\phi-n_{\chi_2}=0\) remains below \(10^{-8}\) relative during both stimulated and control simulations.
 
