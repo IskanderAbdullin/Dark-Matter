@@ -1,0 +1,123 @@
+{
+  "provenance": {
+    "run_id": 44892770728,
+    "commit": "cef0812fa8633d99a7585eb9edbfea52028a6980",
+    "date": "2026-11-21",
+    "class_version": "3.4.3.0",
+    "model": "One real 86eV scalar PSD approximated in CLASS as two collisionless NCDM tracers",
+    "z": 5
+  },
+  "definition": {
+    "kpowerhalf": "first P_Bose/P_CDM=0.5; 1/Mpc",
+    "mass": "(4pi/3)*rho_m*(pi/kpowerhalf)^3; geometric diagnostic not min halo mass",
+    "w": "primordial HOT NUMBER fraction; distinct from galaxy noncondensate fraction"
+  },
+  "results": [
+    {
+      "alpha": 0.02,
+      "w_hot_number": 0,
+      "k_Phalf_1_per_Mpc": 8.763247,
+      "P_k10_over_cdm": 0.3729,
+      "M_Phalf_solar": 7579000000,
+      "delta_Neff": 0.001296,
+      "max_coarse_fine_P_rel_error_before_half": 0.000013865799765255815,
+      "k_half_coarse_fine_relative_shift": 1.0507899639300433e-7
+    },
+    {
+      "alpha": 0.02,
+      "w_hot_number": 0.01,
+      "k_Phalf_1_per_Mpc": 8.427852,
+      "P_k10_over_cdm": 0.346764,
+      "M_Phalf_solar": 8520000000,
+      "delta_Neff": 0.001931,
+      "max_coarse_fine_P_rel_error_before_half": null,
+      "k_half_coarse_fine_relative_shift": null
+    },
+    {
+      "alpha": 0.02,
+      "w_hot_number": 0.05,
+      "k_Phalf_1_per_Mpc": 6.846115,
+      "P_k10_over_cdm": 0.258112,
+      "M_Phalf_solar": 15900000000,
+      "delta_Neff": 0.004472,
+      "max_coarse_fine_P_rel_error_before_half": 0.000017491912869038728,
+      "k_half_coarse_fine_relative_shift": 0.0000017562076145560823
+    },
+    {
+      "alpha": 0.02,
+      "w_hot_number": 0.1,
+      "k_Phalf_1_per_Mpc": 4.605946,
+      "P_k10_over_cdm": 0.176526,
+      "M_Phalf_solar": 52200000000,
+      "delta_Neff": 0.007648,
+      "max_coarse_fine_P_rel_error_before_half": null,
+      "k_half_coarse_fine_relative_shift": null
+    },
+    {
+      "alpha": 0.02,
+      "w_hot_number": 0.2,
+      "k_Phalf_1_per_Mpc": 1.580039,
+      "P_k10_over_cdm": 0.079229,
+      "M_Phalf_solar": 1293000000000,
+      "delta_Neff": 0.014,
+      "max_coarse_fine_P_rel_error_before_half": 0.00002770789394890283,
+      "k_half_coarse_fine_relative_shift": 0.0000175642049576874
+    },
+    {
+      "alpha": 0.01,
+      "w_hot_number": 0,
+      "k_Phalf_1_per_Mpc": 16.703145,
+      "P_k10_over_cdm": 0.854968,
+      "M_Phalf_solar": 1095000000,
+      "delta_Neff": 0.000648,
+      "max_coarse_fine_P_rel_error_before_half": 0.00001736310603062119,
+      "k_half_coarse_fine_relative_shift": 0.00001955960053967587
+    },
+    {
+      "alpha": 0.01,
+      "w_hot_number": 0.01,
+      "k_Phalf_1_per_Mpc": 16.039685,
+      "P_k10_over_cdm": 0.797164,
+      "M_Phalf_solar": 1236000000,
+      "delta_Neff": 0.00129,
+      "max_coarse_fine_P_rel_error_before_half": null,
+      "k_half_coarse_fine_relative_shift": null
+    },
+    {
+      "alpha": 0.01,
+      "w_hot_number": 0.05,
+      "k_Phalf_1_per_Mpc": 12.366648,
+      "P_k10_over_cdm": 0.599924,
+      "M_Phalf_solar": 2697000000,
+      "delta_Neff": 0.003856,
+      "max_coarse_fine_P_rel_error_before_half": 0.00001918577468706939,
+      "k_half_coarse_fine_relative_shift": 0.000009881460363292405
+    },
+    {
+      "alpha": 0.01,
+      "w_hot_number": 0.1,
+      "k_Phalf_1_per_Mpc": 7.452285,
+      "P_k10_over_cdm": 0.416312,
+      "M_Phalf_solar": 12320000000,
+      "delta_Neff": 0.007065,
+      "max_coarse_fine_P_rel_error_before_half": null,
+      "k_half_coarse_fine_relative_shift": null
+    },
+    {
+      "alpha": 0.01,
+      "w_hot_number": 0.2,
+      "k_Phalf_1_per_Mpc": 1.997163,
+      "P_k10_over_cdm": 0.193401,
+      "M_Phalf_solar": 640300000000,
+      "delta_Neff": 0.013482,
+      "max_coarse_fine_P_rel_error_before_half": 0.00003682732623500051,
+      "k_half_coarse_fine_relative_shift": 0.000021405399930118918
+    }
+  ],
+  "limitations": [
+    "Toy bimodal primordial PSD, not solved physical production",
+    "No observational likelihood or nonlinear formation",
+    "6/10 explicit PSD-grid crosschecks; others fine-grid only",
+    "Collisionless two numerical population decomposition, not two physical particle species"
+  ]
+}

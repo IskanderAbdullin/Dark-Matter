@@ -1,0 +1,64 @@
+{
+  "provenance": {
+    "run_id": 44892708035,
+    "commit": "3b808628f5075ba6f965b563b64a9bac9b933063",
+    "date": "2026-11-21",
+    "model": "1<->2 fixed-mother flat-spacetime source, T=1, M1=.1, Gamma=1",
+    "note": "single scalar daughter and single fermion daughter; 4/4/1 degrees of freedom"
+  },
+  "scenarios": [
+    {
+      "grid": [
+        100,
+        140,
+        72
+      ],
+      "bose_number": 0.36227114913931374,
+      "diagnostic_control_number": 0.0004752673195975662,
+      "ratio": 762.2471274609576,
+      "low_q_fraction": 0.9989712454169075,
+      "mean_q": 0.004709473675226699,
+      "maximum_fermion": 0.9988144159259923,
+      "energy_projection_error": 3.552713678800501e-15
+    },
+    {
+      "grid": [
+        150,
+        180,
+        96
+      ],
+      "bose_number": 0.3661012562818347,
+      "diagnostic_control_number": 0.000475432067546105,
+      "ratio": 770.0390471585765,
+      "low_q_fraction": 0.9989946349806589,
+      "mean_q": 0.004475924353888161,
+      "maximum_fermion": 0.999366787865881,
+      "energy_projection_error": 3.552713678800501e-15
+    },
+    {
+      "grid": [
+        180,
+        240,
+        120
+      ],
+      "bose_number": 0.36560260727210797,
+      "diagnostic_control_number": 0.00047548091111742,
+      "ratio": 768.911219617442,
+      "low_q_fraction": 0.9989930955249128,
+      "mean_q": 0.00386750754696247,
+      "maximum_fermion": 0.9995873772355937,
+      "energy_projection_error": 3.552713678800501e-15
+    }
+  ],
+  "number_grid_spread": 0.010572487352693116,
+  "mean_q_grid_spread": 0.21770251720012967,
+  "momentum_distribution_converged": false,
+  "limitations": [
+    "No FRW expansion",
+    "Thermally maintained mother source (energy not closed)",
+    "Not real freezeout 86eV abundance",
+    "Unresolved momentum shape may not be inserted as physical f(q) in CLASS",
+    "No Lyman-alpha/CMB likelihood",
+    "No late galactic self-consistent kinetic halo"
+  ]
+}

@@ -154,3 +154,38 @@ def test_bimodal_bose_population_moments():
                 assert abs(data["radiation_moment_ratio"]-1)<1e-4
                 expect=w/((1-w)*alpha+w)
                 assert abs(data["hot_fraction_of_early_relativistic_energy"]-expect)<1e-12
+
+
+def test_quantum_1to2_event_level_kinetic_conservation():
+    import numpy as np
+    model = load("kinetics/one_to_two_fixed_bath.py")
+    k = model.FlatThermalDecay(nq=50,np1=64,nmu=48)
+    balance,energy=k.detailed_balance_error()
+    assert balance<1e-10 and energy<1e-12
+    rp=k.avg_q[k.ip]*(1-k.wp)+k.avg_q[k.ip+1]*k.wp
+    rc=k.avg_q[k.ic]*(1-k.wc)+k.avg_q[k.ic+1]*k.wc
+    assert max(np.max(np.abs(rp-k.qphi)),np.max(np.abs(rc-k.qchi))) <1e-12
+    zero=np.zeros(2*k.nq)
+    assert np.min(k.rhs(0.,zero,True))>=-1e-12
+    saturated=zero.copy()
+    saturated[:k.nq]=1.
+    saturated[k.nq:]=1.
+    assert np.max(k.rhs(0.,saturated,True)[k.nq:])<=1e-12
+
+def test_CLASS_two_population_is_one_scalar_mass_invariant():
+    import tempfile
+    from pathlib import Path
+    model = load("cosmology/burst_residual_hot.py")
+    b = model.thermal_background()
+    with tempfile.TemporaryDirectory() as d:
+        cfg = model.class_mixture_params(b,.02,.05,d)
+        assert cfg["N_ncdm"] == 2
+        assert cfg["m_ncdm"] == "86,86"
+        assert cfg["deg_ncdm"] == "1,1"
+        assert cfg["use_ncdm_psd_files"] == "1,1"
+        for file in cfg["ncdm_psd_filenames"].split(","):
+            rows=Path(file).read_text().splitlines()
+            assert len(rows)>2000 and len(rows[0].split())==2
+        same = model.class_mixture_params(b,.02,0,d)
+        assert same["N_ncdm"] == 1
+        assert abs(same["T_ncdm"]/.02/b["T_ratio"]-1)<1e-12
