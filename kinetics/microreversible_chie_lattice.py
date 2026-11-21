@@ -128,20 +128,20 @@ def sources(g,fchi=None,fe=None):
 
 
 def _entropy(f):
+    """Safe elementwise 0<=f<=1 Fermi entropy, continuous endpoints."""
     f=np.asarray(f,float)
-    positive=(f>0)&(f<1)
-    p=f[positive]
-    return np.sum(-p*np.log(p)-(1-p)*np.log1p(-p))
+    result=np.zeros_like(f)
+    mid=(f>0)&(f<1)
+    v=f[mid]
+    result[mid]=-v*np.log(v)-(1-v)*np.log1p(-v)
+    return result
 
 
 def invariants(g,f,v):
     E=g["Echi"];k=g["Ee"];Vc=g["Vchi"];Ve=g["Ve"]
     return (float(np.dot(Vc,f)),float(np.dot(Ve,v)),
             float(np.dot(Vc*f,E)+np.dot(Ve*v,k)),
-            float(np.dot(Vc,-np.where((f>0)&(f<1),
-            f*np.log(np.clip(f,1e-290,1))+(1-f)*np.log1p(-np.clip(f,0,1-1e-15)),0.)))
-            +np.dot(Ve,-np.where((v>0)&(v<1),
-            v*np.log(np.clip(v,1e-290,1))+(1-v)*np.log1p(-np.clip(v,0,1-1e-15)),0.)))))
+            float(np.dot(Vc,_entropy(f))+np.dot(Ve,_entropy(v))))
 
 
 def evolve(g,fchi,fe,dt,substeps=1,reverse=False):
