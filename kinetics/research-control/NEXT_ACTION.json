@@ -6,10 +6,11 @@
   "objective": "Directly reciprocal physical χe massless-electron vector-contact 2->2 kernel is now integrated from invariant event measure and has no post-hoc Wpair, but finite energy-lattice collocation still has nonmonotone errors. First verify actual full scientific GitHub CI and fix regressions. Then make the lepton interaction physically valid through the e mass/threshold, SU2 neutrino and mediator domain and full finite-temperature charge/energy ledger. Only then can it be coupled to Yukawa 1↔2 BEST and FRW freezeout.",
   "prerequisites": [
     "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and full GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG; confirm current draft PR #1 head/CI",
-    "Check CI for previous syntax-failing f172/916f and fixes bcd47b/a3aa0a, plus latest aa851; repair all failures before scientific claim",
+    "CI run 44946031231 failed 1/737 tests on exact floating-point Qe == -Qchi (relative 1.05e-13); test tolerance corrected in commit 832b5b3. Verify fresh CI on 832b5b3 and investigate any new failures before promotion.",
     "Read INVARIANT-CHI-E-ENERGY-KERNEL.md, microreversible_chie_lattice.py, verify_microreversible_lattice.py, results JSON, and independent nonlinear 5D weak/strong reference"
   ],
   "experiments": [
+    "Check new scientific-ci.yml Python 3.11/3.13 workflow for 832b5b3; if green, record run IDs and then independently validate massive-electron kernel threshold heat versus continuum and cutoff/mesh convergence.",
     "Independently check q-interval convolution normalisation and azimuth-averaged trace by numerical 5D and brute-force azimuth evaluations. Verify forward/reverse K equality to machine precision for many physical shell configurations and full Fermi entropy gain at arbitrary μχ,μe.",
     "Run additional independent 5D Gaussian p,k/angle and 1D ℓ+3D energy collocation convergence at M/T=.1: energy h=.5,.25,.125 and smaller, electron cutoff, χ endpoint and transfer Gauss orders; preserve currently non-monotonic negative case.",
     "Extend exact invariant two-body q-kernel to finite m_e=0.51099895 MeV and relevant e+e− number-changing/chemical freezeout processes, verify m_e→0 and T≪m_e suppression; include physical neutrino left-doublet channels and distinguish eL/eR and ν baths under EWSB.",
