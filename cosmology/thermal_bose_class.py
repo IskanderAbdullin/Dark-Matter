@@ -88,7 +88,7 @@ def calculate(analytic_only=False):
                     "crossing_shape_0p5_1_per_Mpc":first_cross(ks,T/T[0])}
             f2=Path(folder)/"be_coarse.dat";coarse=write_psd(f2,3e-5,35,320,1000)
             alt,ba=class_spectra(Class,params(b,f2),ks,[5.])
-            rel=np.abs(np.asarray(alt["5."])/np.asarray(warm["5."])-1)
+            rel=np.abs(np.asarray(alt["5.0"])/np.asarray(warm["5.0"])-1)
             out.update({"python":platform.python_version(),"k_1_per_Mpc":list(map(float,ks)),
                 "warm_background":bgw,"cold_background":bgc,
                 "power_amplitude_ratios":ratios,
