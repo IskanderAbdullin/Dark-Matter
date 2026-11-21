@@ -291,5 +291,14 @@
     "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
     "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
   },
-  "last_checkpoint_parent_sha": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
+  "last_checkpoint_parent_sha": "b571c1ac19389e3a926f054800b25f52e0fcbb03",
+  "latest_analytic_gate": {
+    "commit": "f9587255171602bba91d836a5f381457ed70b294",
+    "checkpoint_commit": "fcf2bdcf21ba67c038bdbd1cb4bff94396c29f75",
+    "report": "kinetics/FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md",
+    "scope": "exact conditional spacelike vector t propagator angular contact error bound; no new 5D numerical integration or physical rate",
+    "contact_relative_10pct_mV_over_pstar_min": 8.599263452297555,
+    "CI": "not yet checked on new head",
+    "class_ready": false
+  }
 }
