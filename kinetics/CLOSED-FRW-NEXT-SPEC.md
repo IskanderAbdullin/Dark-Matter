@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**Новый контроль квантовой энтропии UV-REGRID:** [QUANTUM-REGRID-ENTROPY.md](QUANTUM-REGRID-ENTROPY.md) доказывает и проверяет рост численной coarse-grained энтропии χ1,χ2,φ при положительном q³ переносе из-за вогнутости квантового H; это НЕ реальное физическое entropy production и не замена полной H-теоремы collision+Liouville/сходимости. Большая Bose occupation не ограничивается 1; Pauli fermions проверяются отдельно.
+
+
 **ПОЛОЖИТЕЛЬНЫЙ UV-REGRID ДЛЯ ВСЕХ ТРЁХ КОМПОНЕНТ:** [DAUGHTER-UV-REGRID.md](DAUGHTER-UV-REGRID.md) поддерживает Bose f≫1 и Fermi f≤1, сохраняет отдельное число каждого вида и оба комовинговых заряда при изменении daughter grid Rmax300→500 (x=.02→.03). Parent phase volumes синхронизированы с q³ remap и moments нового кинетического ODE; выполнен короткий closed on-shell collision substep на новом графе. Непросчитанный UV хвост в новых бинах по явной гипотезе остаётся пустым: это не термальная физика, full FRW energy closure или CLASS PSD.
 
 

@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Quantum entropy audit on adaptive UV remaps:** [Bose/Fermi concavity under q³ averaging](kinetics/QUANTUM-REGRID-ENTROPY.md) shows nonnegative coarse-grained entropy change for all three species even with huge Bose f, alongside exact individual numbers and charge conservation. This is Jensen numerical mixing, NOT physical entropy generation or proof of physical FRW energy conservation; high-q domain still assumes unrepresented vacuum.
+
+
 **Three-species UV regrid + collision continuation:** [Bose/Pauli-safe daughter and mother momentum-space remapping](kinetics/DAUGHTER-UV-REGRID.md) now crosses x=.02→.03 with daughter Rmax 300→500 to keep an invariant-clean reaction graph. It exactly preserves all three species counts and two independent charges under q³ overlap while explicitly assuming unrepresented high-q cells are vacuum. Parent phase-volume normalization is synced to the new closed ODE, and a short new-grid collision continuation is tested. Physical momentum shape/energy remains unvalidated; not a CLASS relic.
 
 
