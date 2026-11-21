@@ -28,8 +28,22 @@ jobs:
           python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
       - name: Check two-component number, energy and normalization
         run: python cosmology/burst_residual_hot.py --analytic-only --output outputs/mixture_analytic.json
-      - name: Run ten linear Einstein-Boltzmann mixtures and coarse-grid checks
-        run: python cosmology/burst_residual_hot.py --output outputs/mixed_bose_primordial_CLASS.json
+      - name: Solve five two-tracer CLASS spectra with cold scale alpha 0.02
+        run: python cosmology/burst_residual_hot.py --alpha-only 0.02 --output outputs/mix_alpha_002.json
+      - name: Solve five two-tracer CLASS spectra with cold scale alpha 0.01
+        run: python cosmology/burst_residual_hot.py --alpha-only 0.01 --output outputs/mix_alpha_001.json
+      - name: Combine ten scenarios for independent background checks
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a=json.loads(Path("outputs/mix_alpha_002.json").read_text())
+          b=json.loads(Path("outputs/mix_alpha_001.json").read_text())
+          assert len(a["scenarios"])==len(b["scenarios"])==5
+          a["scenarios"].extend(b["scenarios"])
+          a["CLASS_representation"]="Two noninteracting numerical ncdm tracer populations of the SAME physical scalar; linear collisionless identity only."
+          Path("outputs/mixed_bose_primordial_CLASS.json").write_text(json.dumps(a,indent=2))
+          PY
       - name: Verify ten physical background runs
         run: |
           python - <<'PY'
