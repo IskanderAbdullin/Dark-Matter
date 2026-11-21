@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**Independent BEST ZERO MODE qmin³ NEGATIVE TEST:** [actual 3-cutoff experiment](BEST-QMIN-ZERO-MODE-SCAN.md), [pinned real data](results/best-qmin-real-2026-11-21.json), shows N0/qmin³ invariant to 0.019% for qmin=1e−4, 5e−5, 2e−5, whereas number in all φ remains ~6.6055e−7. Thus early zero-mode is smooth massive Bose IR phase volume, NOT a condensate. **BEST RD-FRW time-step survey** [4/8/16/32 steps](BEST-RADIATION-FRW-PILOT.md) resolves ~first-order φ (Δφ 0.259% for 16→32) versus only ~second-order pressure-work quadrature; [measurements](results/best-rd-time-refinement-2026-11-21.json). Next stage higher temporal resolution plus q grid and SM/zero-mode physical closure before 86eV PSD/CLASS.
+
+
 **ACTUAL CLOSED FRW BEST MPI BASELINE:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md) reports true third-party BESThep a=sqrt(t/t0), positive massive Bose + Pauli inverse collisions and dynamic mother, zero-mode; comoving charges conserved and physical d(a⁴ρ)/dln a=a⁴(ρ−3P) independently integrated. At tGamma=4e−5, a=1.1832: 4 vs8 steps phi 7.0678e−7 vs7.1429e−7 (**1.05% difference**); IR f and N0 **8.42% difference**, physical work residual decreases ~4×. [Permanent observed data](results/best-rd-frw-real-2026-11-21.json). Continue 16/32 steps; no SM gstarS / late-time 86-eV relic.
 
 

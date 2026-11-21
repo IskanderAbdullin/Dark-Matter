@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-21",
+  "external_best_run": 44919748455,
+  "workflow_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44919748455",
+  "artifact_id": 14713073282,
+  "artifact_retention_days": 7,
+  "best_pin": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "model": "actual pinned MPI BEST, prescribed RD a(t)=sqrt(t/.0001), chi1 M=.1, massive phi m=.001, chi2 massless, g=(4,1,4), Gamma_rest=1,T0=1, two active closed number charges; fixed qgrid56, neval6000 for exprb",
+  "initial_a": 1,
+  "final_a": 1.1832159566199232,
+  "final_tGamma": 0.00004,
+  "cases": [
+    {
+      "method": "exprb",
+      "steps": 4,
+      "dtGamma": 0.00001,
+      "neval": 6000,
+      "phi_n": 7.067828490552382e-7,
+      "phi_qmin_f": 1.1970926482928737,
+      "phi_zero_mode_n0": 1.9850798367926348e-14,
+      "physical_energy_change": 0.00032953392465473463,
+      "pressure_work_trapezoid": 0.00032972644791619173,
+      "energy_ledger_residual": -1.9252326145710033e-7,
+      "charge1_relative_error": 5.366768826528008e-10
+    },
+    {
+      "method": "exprb",
+      "steps": 8,
+      "dtGamma": 0.000005,
+      "neval": 6000,
+      "phi_n": 7.142827791280926e-7,
+      "phi_qmin_f": 1.104411694349799,
+      "phi_zero_mode_n0": 1.831191657738346e-14,
+      "physical_energy_change": 0.00032953399562352104,
+      "pressure_work_trapezoid": 0.0003295822100871174,
+      "energy_ledger_residual": -4.821446359634706e-8,
+      "charge1_relative_error": 2.4735207469206063e-10
+    },
+    {
+      "method": "exprb",
+      "steps": 16,
+      "dtGamma": 0.0000025,
+      "neval": 6000,
+      "phi_n": 7.180113286096783e-7,
+      "phi_qmin_f": 1.0612391722715813,
+      "phi_zero_mode_n0": 1.759034340089379e-14,
+      "physical_energy_change": 0.000329534032037726,
+      "pressure_work_trapezoid": 0.00032954612361687477,
+      "energy_ledger_residual": -1.2091579148750323e-8,
+      "charge1_relative_error": 1.0510764428108863e-10
+    },
+    {
+      "method": "exprb",
+      "steps": 32,
+      "dtGamma": 0.00000125,
+      "neval": 6000,
+      "phi_n": 7.198740469613053e-7,
+      "phi_qmin_f": 1.0401616689439126,
+      "phi_zero_mode_n0": 1.7240963487435712e-14,
+      "physical_energy_change": 0.00032953403847701956,
+      "pressure_work_trapezoid": 0.0003295370996853847,
+      "energy_ledger_residual": -3.0612083651380267e-9,
+      "charge1_relative_error": 2.9612070648005706e-11
+    },
+    {
+      "method": "exprb_full",
+      "steps": 4,
+      "dtGamma": 0.00001,
+      "neval": 12000,
+      "phi_n": 7.067452285173636e-7,
+      "phi_qmin_f": 1.1971287387355158,
+      "phi_zero_mode_n0": 1.985079835103881e-14,
+      "physical_energy_change": 0.0003295339448219359,
+      "pressure_work_trapezoid": 0.00032972644776527746,
+      "energy_ledger_residual": -1.9250294334158344e-7,
+      "charge1_relative_error": -3.770836250716318e-11
+    }
+  ],
+  "half_step_comparisons": [
+    {
+      "steps": "4->8",
+      "phi_n_relative_difference": -0.010499945248588327,
+      "qmin_f_relative_difference": 0.08391884513468395,
+      "N0_relative_difference": 0.08403717786938358,
+      "pressure_work_residual_ratio": 3.993060320423989
+    },
+    {
+      "steps": "8->16",
+      "phi_n_relative_difference": -0.005192883918427094,
+      "qmin_f_relative_difference": 0.04068123680904745,
+      "N0_relative_difference": 0.04102098293618339,
+      "pressure_work_residual_ratio": 3.987441425409689
+    },
+    {
+      "steps": "16->32",
+      "phi_n_relative_difference": -0.0025875614761913246,
+      "qmin_f_relative_difference": 0.020263680115292892,
+      "N0_relative_difference": 0.020264523714854432,
+      "pressure_work_residual_ratio": 3.9499366611083744
+    }
+  ],
+  "interpreted_convergence_order": {
+    "phi_n": "approximately first order in dt, differences halve on dt halving",
+    "phi_f_qmin": "approximately first order in dt",
+    "zero_mode_N0": "approximately first order in dt",
+    "physical_pressure_work_trapezoid": "approximately second order in dt, residual ratios ≈4",
+    "preliminary_Richardson_phi_n_16_32": 7.217367653129323e-7,
+    "preliminary_Richardson_f_qmin_16_32": 1.019084165616244,
+    "Richardson_is_not_physical_validation": true
+  },
+  "deficits": {
+    "phi_n_16_to_32_rel": 0.0025875614761913246,
+    "soft_phi_qmin_16_to_32_rel": 0.020263680115292892,
+    "N0_16_to_32_rel": 0.020264523714854432
+  },
+  "claimed_time_convergence": false,
+  "full_86eV_cosmology_or_CLASS_ready": false
+}

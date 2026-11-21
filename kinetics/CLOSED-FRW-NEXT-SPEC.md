@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**ПОДТВЕРЖДЕНО НЕЗАВИСИМО — настоящий ранний BEC пока НЕ возник:** [BEST-QMIN-ZERO-MODE-SCAN.md](BEST-QMIN-ZERO-MODE-SCAN.md), [GitHub Actions](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44920000218). При трех qmin число в zero mode N0 падает ∝qmin³: отношение N0(1e−4)/N0(5e−5)=7.9985 (теория 8), N0(5e−5)/N0(2e−5)=15.6267 (теория 15.625), разброс N0/qmin³ ~0.019%. Макроскопическая δ³(p) компонента не подтверждена для tΓ=4e−5, H=0; это не запрещает позднюю BEC. **ВНЕШНЯЯ FRW-ВРЕМЕННАЯ СХОДИМОСТЬ** [4/8/16/32](BEST-RADIATION-FRW-PILOT.md) выявила первый порядок ошибки Bose f(qmin), 16→32 ещё даёт 2.026%, хотя energy pressure-work trapezoid обладает вторым порядком и conserved charges ≲1e−9. Следующий этап более тонкий time grid, независимая q/MC resolution и SM gstarS прежде CLASS.
+
+
 **НАСТОЯЩАЯ RD FRW БОЗОННАЯ ЭВОЛЮЦИЯ ВО ВНЕШНЕМ BEST ВЫПОЛНЕНА:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md), [Actions #44919387818](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44919387818). Мать и дочери эволюционируют при a(t)=sqrt(t/t0), a:1→1.1832, two comoving charges ~1e−10. Нефиктивная работа давления +3.295e−4, независимая энергия residual ~−1.93e−7 при4 и −4.82e−8 при8 шагах (≈4× улучшение). Но nφ меняется на **1.05%**, fφ(qmin) и N0 на **8.42%** при4→8: незавершённая TIME CONVERGENCE холодного Bose источника даже в предписанном RD. Следующий шаг 16/32 (и затем IR/UV) без права выдавать количественно несходящийся спектр за physical 86eV DM/CLASS.
 
 
