@@ -113,8 +113,8 @@ class FlatThermalDecay:
         ts=sorted(set(t for t in ts if t<=tend))
         y0=np.zeros(2*self.nq)
         sol=solve_ivp(lambda t,y:self.rhs(t,y,stimulated),
-          [0,tend],y0,t_eval=ts,method="RK45",
-          max_step=.0006,rtol=1e-5,atol=2e-10)
+          [0,tend],y0,t_eval=ts,method="BDF",
+          max_step=.0003,rtol=2e-7,atol=1e-12)
         if not sol.success:
             raise RuntimeError(sol.message)
         records=[self.snapshot(y,t,stimulated) for y,t in zip(sol.y.T,sol.t)]
