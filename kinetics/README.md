@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**FINITE-VOLUME FRW MOTHER:** [constant-q-bin collisionless Liouville scheme](FRW-MOTHER-FINITE-VOLUME.md) preserves initial FD number at ~1e−12 and exactly obeys x d(ρ/T⁴)/dx=(ρ−3P)/T⁴ for every grid, but independently benchmarked pressure still errs +1.33% at 100 bins (x=5). Conservation is insufficient to certify phase-space resolution. Γ=0 only; no 1↔2 collisions yet.
+
+
 **COLLISIONLESS MASSIVE FRW LIMIT:** [exact Liouville parent background](FRW-COLLISIONLESS-MOTHER.md) distinguishes free f1(q)=constant from external continuous FD rethermalization as M1/T rises; independent number/energy/pressure quadratures obey x d(ρ/T⁴)/dx=(ρ−3P)/T⁴ and dρ/dln a=−3(ρ+P). Required independent benchmark before coupling the closed 1↔2 collision solver to expanding FRW, not a dark matter PSD.
 
 

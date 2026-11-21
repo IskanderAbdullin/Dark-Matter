@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Finite-volume FRW Liouville milestone:** [collisionless massive χ1 fixed-comoving-q bin model](kinetics/FRW-MOTHER-FINITE-VOLUME.md) now phase-volume-averages the initial FD state, preserving comoving number and physical FRW pressure-work continuity to roundoff. But at x=M/T=5, just 100 bins give 0.275% energy and 1.33% pressure error even though the initial number is accurate to ~1e-12. This is a strict Γ=0 prerequisite, NOT the coupled Bose-production or CLASS spectrum.
+
+
 **FRW Liouville benchmark for MASSIVE dynamically conserved mother:** [collisionless FRW χ1 energy/number/pressure check](kinetics/FRW-COLLISIONLESS-MOTHER.md) proves that after decoupling fχ1(q=p/T) stays fixed while E/T=sqrt(q²+x²) changes. Comoving parent n/T³=.3652061 remains constant, whereas artificially reapplying instantaneous FD at x=5 leaves only 7.35% of that inventory. Exact dρ/dln a=−3(ρ+P) is tested. This is a no-collision benchmark, NOT coupled closed Bose FRW production.
 
 
