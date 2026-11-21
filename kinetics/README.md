@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**DYNAMIC UV-GRAPH REPAIR:** [automatic scan across instantaneous M1/T](DYNAMIC-RANK-UV-REPAIR.md) identifies how increasing daughter qmax reconnects the actual on-shell 1↔2 graph and removes spurious invariants beyond x=.025. A separate parent FD-number/energy/pressure check highlights that rank=3 alone is insufficient. This is a mesh feasibility tool, NOT evolved or CLASS-ready Bose dark-matter PSD.
+
+
 **SEPARATE PHYSICAL WORK FROM NUMERICAL ERROR:** [FRW-ENERGY-WORK-AUDIT.md](FRW-ENERGY-WORK-AUDIT.md) validates free massive-mother x-derivative against independent q×x integrals and adds actual physical-energy endpoint differences/closure to both short FRW split schemes. Collision-shell and mother-remap defects are displayed rather than hidden as a falsely conserved FRW energy.
 
 

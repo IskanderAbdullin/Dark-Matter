@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Instantaneous FRW graph connectivity repair:** [dynamic upper-cutoff rank scan](kinetics/DYNAMIC-RANK-UV-REPAIR.md) finds how expanding the daughter momentum domain prevents fake conserved collision charges as M1/T rises: on the tested fine-core/comb meshes, x=.025/.03/.04/.05/.08/.1 first pass three-invariant gate at Rmax 400/500/1000/1500/3500/5000 respectively. The minimum graph-valid mesh is NOT necessarily thermal-moment or nonlinear-source converged; physical daughter remapping and full FRW energy closure remain unsolved.
+
+
 **FRW physical-energy audit:** [independent massive-mother pressure-work integration](kinetics/FRW-ENERGY-WORK-AUDIT.md) verifies the exact collisionless identity d(rho/T^4)/dx=(rho-3P)/(x T^4) via separate q/x quadratures. Both left-endpoint and symmetric split-step solvers now explicitly close a telescoping physical-energy ledger: legitimate pressure work, physical collision-shell bias and numerical mother-remap drift remain separate. Zero ledger residual does NOT imply the full physical energy equation is solved or a CLASS-ready relic exists.
 
 
