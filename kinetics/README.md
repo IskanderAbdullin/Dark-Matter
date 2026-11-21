@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**Closed-reservoir budget:** [necessary number-conservation bound](FRW-RESERVOIR-BUDGET.md) compares the fixed-bath FRW output to the thermal mother inventory at initial x=.05. At κ=.2 production exceeds the full original mother number, so external parent replenishment is unavoidable. At κ=.1, a closed reinterpretation would use ~66% of initial mothers, clearly outside passive fixed-source dynamics.
+
+
 **CLOSED-LATTICE PROGRESS:** [three-species resonant lattice](CLOSED-THREE-SPECIES.md) now evolves chi1 alongside chi2 and phi, with two independent number invariants, total discrete energy conservation and H-theorem tests. Its uniform grid is too coarse to assert physical cold Bose-burst production; the [next detailed specification](CLOSED-FRW-NEXT-SPEC.md) addresses adaptive discretization and closed FRW.
 
 

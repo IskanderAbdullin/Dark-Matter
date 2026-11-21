@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**New mother-budget falsifier:** [closed-system particle-number audit of the fixed-bath FRW pilot](kinetics/FRW-RESERVOIR-BUDGET.md). A closed χ1↔χ2+φ model beginning at M1/T=.05 with empty daughters has initial nχ1/T³≈0.365206. The high-coupling fixed-bath κ=.2 run produces nφ/T³≈0.36948, **exceeding the initial mother inventory**; it therefore necessarily relies on external replenishment. This is not an inconsistency of the explicitly open pilot, but prohibits presenting it as a closed relic-production calculation.
+
+
 **Closed three-species benchmark now implemented:** [resonant-energy on-shell decay lattice](kinetics/CLOSED-THREE-SPECIES.md) evolves the mother and both daughters without an external thermal reservoir. Its full nonlinear ODE conserves two independent number charges and total discrete energy, obeys Pauli/Bose bounds and a quantum H theorem. The deliberately coarse uniform lattice is a structural test, NOT an IR-resolved cosmological spectrum. [Next closed FRW specification](kinetics/CLOSED-FRW-NEXT-SPEC.md).
 
 
