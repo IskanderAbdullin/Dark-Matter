@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Beyond a single mean momentum:** [closed Bose-bin CDF and q01/q10/q50/q90/q99 diagnostics](kinetics/SHAPE-DIAGNOSTICS.md) now use the exact q²dq number measure of each kinetic shell, with independent analytic tests on constant-occupation spectra and normalized CDF comparisons across high-energy cutoffs. Snapshot analysis remains at short tΓ=.001, NOT cosmological freezeout, zero-mode BEC or CLASS input.
+
+
 **Independent dynamic-convergence audit:** [source evolution versus static FD moment errors](kinetics/CUTOFF-AND-TIME-ERROR.md) shows the closed Bose number at tΓ=.001 shifts ~0.44% between high-energy cutoffs 8.5 and 10T even though initial mother FD number is already accurate to ~5.6e−6 fraction. Tightening BDF rtol reduces number changes to ~0.014%, so cutoff error currently dominates numerical time error. This is NOT a converged primordial PSD or CLASS result.
 
 

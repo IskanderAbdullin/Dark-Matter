@@ -73,7 +73,7 @@ class SchurBDF(BDF):
 
 
 def solve_closed_schur(model,tend=.001,rtol=1e-5,atol=1e-11,
-                       max_step=.0003):
+                       max_step=.0003,return_spectrum=False):
     from scipy.special import expit
     n=model.nq
     initial=np.r_[np.zeros(2*n),expit(-model.parent_E)]
@@ -92,7 +92,7 @@ def solve_closed_schur(model,tend=.001,rtol=1e-5,atol=1e-11,
     assert max(abs(x) for x in residual.values())<1e-7,residual
     assert min(y)>=-1e-7 and max(f)<=1.000001 and max(g)<=1.000001
     phi=final["n_phi"]
-    return {
+    report={
        "solver":"BDF with mathematically exact daughter Schur / diagonal mother elimination",
        "t_Gamma":tend,"daughter_modes":n,"parent_modes":model.nparent,
        "state_variables":model.size,"active_pairs":model.active_pairs,
@@ -111,6 +111,18 @@ def solve_closed_schur(model,tend=.001,rtol=1e-5,atol=1e-11,
        "graph_collision_invariants":int(model.graph["active_graph_collision_invariants"]),
        "NOT_a_cosmological_freezeout":True,
     }
+    if return_spectrum:
+        report["daughter_spectrum"]={
+            "q_bin_edges":list(map(float,model.edges)),
+            "q_bin_representatives":list(map(float,model.e)),
+            "phi_occupations":list(map(float,b)),
+            "chi2_occupations":list(map(float,f)),
+            "phi_number_per_bin":list(map(float,b*model.vol_phi)),
+            "total_phi_number":float(phi),
+            "occupation_is_grid_dependent":True,
+            "spectral_status":"SHORT-TIME, NOT FROZEN, NOT VALIDATED FOR CLASS",
+        }
+    return report
 
 
 def compare_solvers_quick():

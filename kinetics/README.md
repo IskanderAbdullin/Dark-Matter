@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**SPECTRAL SHAPE DIAGNOSTICS:** [finite-bin CDF/number quantile audit](SHAPE-DIAGNOSTICS.md) reconstructs number-weighted momentum q01/10/50/90/99 from the unchanged Schur-BDF short-time daughter spectra. It checks exact q²dq shell-volume CDF and separates bin-dependent Bose heights from integrated observables. No physical CLASS prediction; must still verify IR/UV/time/FRW and condensate dynamics.
+
+
 **QUANTIFIED SHORT-TIME CUTOFF ERROR:** [full dynamic 1↔2 cutoff/time audit](CUTOFF-AND-TIME-ERROR.md) and [reproducible script](cutoff_and_time_convergence.py) compare independent parent FD-number/energy/pressure error, BDF time error and actual closed boson source for Rmax 5/7/8.5/10T. Near Rmax=8.5→10 the source number changes by ~0.44%, while the initial mother number error is tiny; full shape/freeze-out still not demonstrated.
 
 
