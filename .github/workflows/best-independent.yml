@@ -9,6 +9,7 @@ on:
       - 'kinetics/best_thermal_balance_reference.py'
       - 'kinetics/best_vacuum_spectrum.py'
       - 'kinetics/best_source_comparison.py'
+      - 'kinetics/best_chemical_affinity_reference.py'
   workflow_dispatch:
 
 permissions:
@@ -93,6 +94,40 @@ jobs:
               print(name,"net/gross",rate["number_relative_to_gross_gain_loss"],
                     "local max net/gross",rate["maximum_local_net_rate_relative_to_gross_on_support"])
           print("Equilibrium all-species energy residual:",x["total_net_energy_rate"])
+          PY
+      - name: Run independent non-equilibrium Bose enhancement and inverse decay
+        run: |
+          for scenario in "56 12000 -.15" "96 24000 -.15" "56 12000 -.25"; do
+            read -r n samples mu1 <<< "$scenario"
+            label=$(echo "$mu1" | sed 's/-/minus/;s/\./p/')
+            echo "BEST genuine nonlinear quantum snapshot: grid=$n neval=$samples mu1=$mu1"
+            mpirun -np 2 python kinetics/best_chemical_affinity_reference.py \
+              --execute --best-root /tmp/best --grid-n "$n" --neval "$samples" \
+              --mu1 "$mu1" \
+              --output "outputs/best_affinity_${n}_${samples}_${label}.json" \
+              > "outputs/best_affinity_stdout_${n}_${samples}_${label}.log" 2>&1
+          done
+          python - <<'PY'
+          import glob,json,math
+          files=sorted(glob.glob("outputs/best_affinity_*.json"))
+          assert len(files)==3,files
+          for file in files:
+              z=json.load(open(file))
+              assert z["independent_best_actually_executed"]
+              assert not z["nonlinear_time_evolution_or_cosmological_DM_validated"]
+              p=z["protocol"]
+              numbers=z["all_three_species_rates"]
+              print("AFFINITY",file,"mu1",p["mu_chi1"],
+                    "analytic phi n",p["exact_analytic_number_rate"],
+                    "BEST phi n",numbers["phi"]["number_rate"],
+                    "phi relative error",z["relative_phi_number_source_error"],
+                    "energy 3-species residual",z["net_total_physical_energy_rate"],
+                    "shape RMS/peak",z["phi_differential_source"]["source_shape_peak_normalized_rms"],
+                    "entropy measured/reference",z["observed_collisional_entropy_rate"],
+                    z["analytic_collisional_entropy_rate"])
+              assert math.isfinite(z["relative_phi_number_source_error"])
+              assert math.isfinite(z["net_total_physical_energy_rate"])
+          print("AWAY-FROM-EQUILIBRIUM instantaneous source only; no dynamical freezeout.")
           PY
       - name: Upload real BEST data, if produced
         if: always()
