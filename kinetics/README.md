@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**EXTERNAL INDEPENDENT VALIDATION PATH:** [BEST v1.3.5 protocol](BEST-INDEPENDENT-VALIDATION.md) inspects an MIT-licensed open-source independent collision+FRW Boltzmann solver with full quantum statistics and zero-mode examples. New [optional benchmark](best_external_vacuum_reference.py) prepares a mass=.1, gχ1=4, empty daughter 1↔2 rate test against exact analytic Rvac=.0164959084596. Ordinary scientific CI only tests PROTOCOL; no actual external Monte Carlo comparison has run.
+
+
 **QUANTUM REMAP ENTROPY:** [discrete Bose/Pauli entropy check](QUANTUM-REGRID-ENTROPY.md) verifies that positive q³ convex occupation averaging cannot decrease each species' quantum coarse-grained entropy under explicit vacuum UV extension; Pauli 0≤f≤1 and arbitrary Bose f≥0 preserved. This is numerical Jensen mixing, not a physical collision entropy theorem or validated f(q).
 
 

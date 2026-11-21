@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВАЯ НЕЗАВИСИМАЯ НАУЧНАЯ ВЕТКА ПРОВЕРКИ:** [BEST-INDEPENDENT-VALIDATION.md](BEST-INDEPENDENT-VALIDATION.md) исследован внешний BEST v1.3.5, open-source лицензия MIT, с проверяемыми on-shell 1→2, явным thermal bath, FRW, полной квантовой статистикой и zero modes. Создан optional benchmark для мгновенного пустого source при M/T=.1, gχ1=4, эталон 0.0164959084596, проверка трёх derivative числа. BEST пока НЕ запускался; независимое согласие НЕ подтверждено. Следующие этапы — реальный внешний прогон, gain/loss, энергия, BEC/FRW и физический freeze-out.
+
+
 **Новый контроль квантовой энтропии UV-REGRID:** [QUANTUM-REGRID-ENTROPY.md](QUANTUM-REGRID-ENTROPY.md) доказывает и проверяет рост численной coarse-grained энтропии χ1,χ2,φ при положительном q³ переносе из-за вогнутости квантового H; это НЕ реальное физическое entropy production и не замена полной H-теоремы collision+Liouville/сходимости. Большая Bose occupation не ограничивается 1; Pauli fermions проверяются отдельно.
 
 

@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Independent solver identified (not yet executed):** [BEST v1.3.5 momentum-resolved quantum Boltzmann framework](kinetics/BEST-INDEPENDENT-VALIDATION.md), source best-hep/best pinned c70875be. It supports on-shell 1↔2, evolving mother/daughters, Bose/Pauli, FRW, baths and zero-mode examples. A safe optional [standalone vacuum-source benchmark protocol](kinetics/best_external_vacuum_reference.py) specifies the independent analytic rate 0.0164959084596 at M/T=.1 and required stoichiometric tests. External BEST has NOT been run or verified; no claimed independent agreement.
+
+
 **Quantum entropy audit on adaptive UV remaps:** [Bose/Fermi concavity under q³ averaging](kinetics/QUANTUM-REGRID-ENTROPY.md) shows nonnegative coarse-grained entropy change for all three species even with huge Bose f, alongside exact individual numbers and charge conservation. This is Jensen numerical mixing, NOT physical entropy generation or proof of physical FRW energy conservation; high-q domain still assumes unrepresented vacuum.
 
 
