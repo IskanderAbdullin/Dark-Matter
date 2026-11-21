@@ -49,9 +49,9 @@
   "class_ready": false,
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Next action requires deriving FULL linearised elastic collision/thermal moment: neither sigma_T nor nu_T(rest) nor Q_rest are gamma_el. Resolve CI for 5d37d1 then continue without declaring physical relic.",
-  "last_checkpoint_git_sha": "5d37d1c0335552647889b9c1d1831661bcfdbf6c",
-  "current_phase": "A: tree-level microphysical pilot; full thermal collision physics not established",
+  "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
+  "last_checkpoint_git_sha": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
+  "current_phase": "A: Yukawa 1->2 plus vector portal microphysics, electron kinetic tests; coupled full thermal Boltzmann still open",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -71,8 +71,45 @@
       "stage": "Electron Pauli-blocked finite-recoil heating for chi at rest, checked vs angular identity and heavy limit",
       "sha": "5d37d1c0335552647889b9c1d1831661bcfdbf6c",
       "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932154301",
-      "ci_conclusion": "in_progress_at_checkpoint",
+      "ci_conclusion": "success",
       "scope": "thermal test-particle heating Q per chi, not full moving-particle collision operator"
+    },
+    {
+      "stage": "Full local Pauli 2->2 elastic event ledger, energy and entropy sign",
+      "sha": "98cea96448c97417ae3cb2dc3ed5824025242675",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932341208",
+      "ci_conclusion": "success",
+      "scope": "event-only Pauli balance, not physical integrated collision source"
+    },
+    {
+      "stage": "Moving chi incoming transport collision frequency with exact Moller flux",
+      "sha": "541435665fac71a230da1dda4e6722bcba985391",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932437443",
+      "ci_conclusion": "success",
+      "scope": "unblocked momentum-dependent collision frequency, not kinetic relaxation"
+    },
+    {
+      "stage": "Moving chi exact unblocked signed energy transfer moment via COM angular integration",
+      "sha": "7373e33f40332bb75c825abaf531077037c0370f",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932561256",
+      "ci_conclusion": "success",
+      "scope": "true tree-level moving energy moment but no final-state Pauli/detailed balance"
+    },
+    {
+      "stage": "Heavy nonrelativistic chi kinetic drag asymptote from Pauli-blocked rest recoil and Einstein relation",
+      "sha": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044",
+      "ci_conclusion": "in_progress_at_checkpoint",
+      "scope": "controlled heavy nondegenerate chi M/T >=100 leading Fokker-Planck matching; specifically INVALID for original relativistic BEST M/T=.1"
     }
-  ]
+  ],
+  "derived_physical_relaxation_scope": {
+    "rate": "eta_NR ~ [31*g_e*pi^3/756] G^2 T^6/M",
+    "source": "kinetics/microphysics_nr_drag.py",
+    "limitations": "FDT heavy nondegenerate chi and small energy transfer, not a general gamma_el. Requires electron final blocking and full integration outside M/T>>1.",
+    "previous_best_benchmark_applicable": false,
+    "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
+    "last_ci_at_checkpoint": "in_progress"
+  },
+  "physics_scope_warning": "NO late freezeout, no genuine cosmological 86 eV distribution, no 2->2 full relativistic collision operator, no CLASS readiness"
 }

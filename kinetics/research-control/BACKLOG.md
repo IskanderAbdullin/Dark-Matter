@@ -41,3 +41,11 @@ Every stage: hypothesis → control/independent proof → real measured experime
 - [ ] **Immediate next:** complete moving χ thermal elastic operator, gauge-required neutrinos, final-state χ blocking and full SM transfer, then independently calibrate kinetic relaxation/drag gamma vs BGK. Do not substitute pilot observables.
 
 These completed substeps are tree-level partial models. Full first P0 item (UV-consistent portal, thermal masses and physical rates) remains unchecked. Check CI before promoting E-009.
+
+## New completed A-phase steps (continued, 21 Nov 2026)
+
+- [x] On-shell elastic χe event gain/loss with both Fermi blocking factors, common-temperature detailed balance, entropy and energy exchange sign; no full physical integral yet ([CI](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932341208)).
+- [x] Moving-χ incoming flux and transport collision frequency ν_T(p,T), rest p→0 verified; still **not** a thermal gamma ([CI](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932437443)).
+- [x] Exact outgoing CM angular moment: moving χ signed laboratory energy heat Q(p) without final Pauli; positive for slow and negative for fast χ, independent t-integral validation ([CI](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932561256)).
+- [x] Nonrelativistic *conditional* Fokker–Planck eta_NR=Q_rest/(3T) from microscopic Pauli-blocked recoil and Einstein fluctuation–dissipation, with hard rejection for M/T<100; pending CI #44932655044 at this checkpoint. **Not applicable to historic M/T=.1**.
+- [ ] **Priority now:** full relativistic, final-state-Pauli electron+neutrino collision operator, physical matrix element, gauge-qualified UV validity and moving χ momentum/heat relaxation; only then couple to BEST/SM without phenomenological gamma.

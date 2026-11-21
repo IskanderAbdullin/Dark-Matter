@@ -1,41 +1,42 @@
 {
   "schema_version": 1,
-  "priority": 1,
   "status": "ready",
-  "title": "Derive equilibrium-preserving momentum-dependent chi1-electron and neutrino thermal collision operator; compute drag/diffusion and SM Q",
-  "objective": "From the chosen gauge-qualified vector EFT or an explicit UV portal, derive the finite-T collision integral C_el[f_chi1] for moving chi1, including Pauli blocking of both species, detailed balance for FD chi, and correct SM energy/number accounting. Compare the linearized kinetic relaxation eigenmodes or drag coefficient with the existing phenomenological number-conserving BGK; avoid equating rest transport frequency or recoil heat with gamma_el.",
+  "priority": 1,
+  "title": "Full relativistic finite-temperature chi1-e collision integral with Pauli, energy exchange and consistent BEST coupling",
+  "objective": "Complete a gauge-qualified χ1–SM thermal collision operator with 2->2 invariant phase-space measure, both initial/final Fermi statistics and independent convergence. The existing Yukawa decay, electron transport and nonrelativistic drag are baselines; none is a justified gamma_el for the relativistic BEST parent M/T=0.1.",
   "prerequisites": [
-    "Check latest CI and PR head; read GOAL, STATE, EVIDENCE, BACKLOG",
-    "Read kinetics/MICROPHYSICS-MODEL.md, microphysics_portal.py, microphysics_recoil_heat.py and their real tests",
-    "Check the scalar Yukawa 1<->2 and Dirac charges/gamma conventions against pinned BEST and explicit primary physical sources"
+    "Read AGENTS.md, GOAL.md, STATE.json, EVIDENCE.md, BACKLOG.md and full kinetics/MICROPHYSICS-MODEL.md",
+    "Check current PR #1 HEAD and latest Scientific verification CI including 44932655044; fix regressions before more physics",
+    "Check actual primary Yin 2023/Sakurai-Yin 2025 and external pinned BEST conventions"
   ],
   "steps": [
-    "Write down fully differential Lorentz invariant 2->2 collision source including initial f_chi f_e, final-state (1-f_chi')(1-f_e') and inverse process, correct energy transfer Q and both signs",
-    "Check gauge invariant electroweak lepton doublet completion, neutrino contributions and required UV cutoff before applying above EWSB; quantify neglected electron mass and screening",
-    "Derive analytically exact equilibrium C_el=0 for common T and chemical potentials and conservation of chi number, total dark+SM energy and momentum, then implement independent quadrature reference for representative moving momenta",
-    "Extract physically correct momentum-drag/diffusion or relaxation eigenvalue by linearization around equilibrium, report domain and numerical error vs q/angular/thermal grid; test against rest-particle heating limit and no-block reference",
-    "Only with measured error bars consider a calibrated BGK projection; prove same kinetic relaxation/number/heat moments and show when scalar gamma is invalid",
-    "Execute tests and appropriate public CI; add new evidence including failures; checkpoint and commit/push then immediately select another bottleneck"
+    "Choose explicitly UV/gauge-valid portal and quantify necessary e, neutrino, muon and number-changing channels in early thermal plasma; justify approximation domain",
+    "Derive Lorentz-invariant 2->2 source C_chi(p) with four phase-space measures and momentum delta plus |M|^2; both Pauli directions and e chemical potential; derive matching SM Q and source for each independent charge",
+    "Numerically integrate moving-particle differential collisions using t+CM azimuth or invariant phase-space variables, which retain final-state e and chi Pauli; validate physical phase space by exact 4-momentum conservation",
+    "Demonstrate C_chi[fFD(T_SM,mu_chi)] = 0 in equilibrium at matching T; number conservation, Pauli, total dark+SM energy, entropy positivity and sign of Q away from equilibrium",
+    "Benchmark collision energy/momentum moments against earlier independently validated rest exact Pauli Q, moving no-block energy moment, heavy NR eta and exact on-shell event gain/loss",
+    "Derive controlled Fokker-Planck approximation if exact collision integration too costly; quantify failure at relativistic M/T ~ 0.1 instead of using heavy eta there",
+    "Run mesh/angular/MC/time independent convergence tests and save compact measured data; replace phenomenological gamma_el in coupled BEST+SM only once kinetic rate/kernel is validated and BE/FD collision ledger correct",
+    "After each evidenced stage checkpoint/commit/push and immediately select next bottleneck: thermal masses, variable gstar, long freezeout or observed Omega depending results"
   ],
   "acceptance": [
-    "Full Lorentz invariant elastic 2->2 collision source and physical energy/number moment; no hidden temperature reset",
-    "Detailed balance at common T and exact zero coupling; Pauli positivity and both-sign energy flow under perturbations",
-    "Independent analytic or numerical reference, q/time/angle convergence and preserved failures with measurable error budgets",
-    "No use of nu_T(rest) or Q_rest as gamma_el without derivation/calibration",
-    "Document UV/gauge and thermodynamic approximation validity"
-  ],
-  "fallback": [
-    "If full moving-particle 9D collision integral is too expensive, derive a controlled small-transfer Fokker–Planck kernel, assess its domain and compare to a low-dimensional exact collision reference",
-    "If UV completion requires missing species, explicitly enlarge model and stoichiometric charge ledger",
-    "If CI/blocking problem occurs, maintain independent analytic threshold and chemical-affinity tests and record blocker"
+    "No final-state Pauli omission in relativistic collision operator; exact common-T detailed balance and independently measured error",
+    "Conserves chi number under elastic contact; Q_dark+Q_SM=0 and positive/Pauli bounds with finite numerical tolerance",
+    "Momentum-dependent collision kernel or validated reduced FP operator with explicit domain and error budget",
+    "Actual comparison to physical micro tree-level source, not substituted ad hoc gamma or unblocked frequency",
+    "Physical 86 eV/CLASS and BEC claims remain false until final cosmological criteria"
   ],
   "deliverables": [
-    "kinetics/ELASTIC-COLLISION-OPERATOR.md",
-    "new kinetic kernel and tests",
-    "controlled reduced numerical reference and compact JSON",
-    "updated checkpoints and next science stage"
+    "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md",
+    "tested source and independent quadrature/thermal scan",
+    "persistent compact physical numerical results",
+    "updated checkpoints and immediate next action"
   ],
-  "scope_notes": "The current completed pilots are tree-level EFT and rest-test-particle observables only. A physical 86 eV relic or CLASS input is not yet computed.",
-  "external_action_policy": "Only GitHub research branch, no force push/merge. Public Actions allowed compactly. No Computer Use/PC without explicit user approval.",
-  "resume_instructions": "Start from this file and explicit STATE/CI SHA, choose kernel/phase-space parameterization, independently verify detailed balance before using it to replace phenomenological BGK."
+  "fallback": [
+    "If full integral computationally intractable: derive controlled hard-momentum and soft-transfer bounds and verify a collision subspace numerically",
+    "If 1↔2+portal EFT invalid at T: replace with documented renormalizable UV theory and rederive all rates",
+    "If GitHub CI/tool access blocked: preserve checkpoint and independent analytic tests; do not claim continued background execution"
+  ],
+  "external_action_policy": "GitHub public research branch and compact Actions permitted. No force-push/merge. Computer Use or any user's Windows PC only after explicit approval.",
+  "resume_instructions": "Confirm CI for 08060dd4 and branch HEAD; begin full 2->2 collision kernel derivation and balance tests. Class ready=false."
 }
