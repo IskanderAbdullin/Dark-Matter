@@ -1,4 +1,4 @@
-name: BEST radiation-FRW massive Bose time-grid refinement (experimental)
+name: BEST radiation-FRW Bose time grid 64 to 128 (experimental)
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: best-massive-frw-pilot
+  group: best-massive-frw-time-64-128
   cancel-in-progress: true
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
       - name: Run real closed radiation FRW at multiple time-step sizes
         run: |
           mkdir -p outputs
-          for item in "4 .00001 exprb 6000" "8 .000005 exprb 6000" "16 .0000025 exprb 6000" "32 .00000125 exprb 6000" "4 .00001 exprb_full 12000"; do
+          for item in "64 .000000625 exprb 6000" "128 .0000003125 exprb 6000"; do
             read -r steps dt method neval <<< "$item"
             label=$(echo "$dt" | sed 's/\./p/')
             out="outputs/best_frw_"$method"_"$steps"_"$label".json"
@@ -55,7 +55,7 @@ jobs:
           python - <<'PY'
           import glob,json,math
           files=sorted(glob.glob("outputs/best_frw_*.json"))
-          assert len(files)==5,files
+          assert len(files)==2,files
           for path in files:
               d=json.load(open(path))
               assert d["real_independent_BEST_FRW_executed"]
