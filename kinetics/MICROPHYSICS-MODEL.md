@@ -99,3 +99,28 @@ D / I = exp[(mu1-mu2-muphi)/T].
 The test verifies `mu1=mu2` and `muphi=0` for equilibrium of a real self-conjugate scalar (if number changing is allowed), both signs of chemical affinity, strong low-energy Bose occupation and off-shell rejection. This is *not* a momentum-resolved thermal decay rate: matrix-element phase space, quantum statistical collision integrals and thermal masses remain necessary.
 
 The same module exports `yukawa_best_bridge`: dimensionful GeV masses and the explicit Yukawa y become dimensionless `BEST masses=m/T`, `BEST Gamma=Gamma_rest/T`, and `BEST amplitude=|M|^2/T^2`, exactly inverted against the earlier independent analytic width. It deliberately does **not** execute BEST, relabel a fixed-width run as fixed-coupling, or insert the unblocked electron transport frequency into the BGK. A true pinned external BEST experiment is the next numerical gate after the microscopic collision channels and normalization are audited.
+
+
+## Second scattering benchmark: Pauli-blocked recoil heat into chi at rest
+
+[Microphysics recoil heat](microphysics_recoil_heat.py) advances beyond the unblocked transport collision frequency by integrating **actual recoil energy** at each elastic electron collision, including the outgoing electron's Fermi blocking. For chi1 initially at rest and e initially massless with energy k, exact two-body kinematics yield `s=m1^2+2m1*k`, `t_min=-(s-m1^2)^2/s`, `k_final=k+t/(2m1)`. The kinetic energy gained by the rest chi is `Delta E_chi=-t/(2m1)` (positive).
+
+```text
+Q_rest (GeV^2 per chi) =
+  g_e/(2pi^2) integral_0^inf dk k^2 fFD(k/T)
+  integral_tmin^0 dt (d sigma/dt) [1-fFD(k_final/T)] (-t/2m1).
+```
+
+An entirely independent angular-moment identity for the **unblocked** case is
+
+```text
+int dt (d sigma/dt) (-t/(2m1)) = [p_cm^2/m1] sigma_transport(s).
+```
+
+For `m1/T -> infinity` and massless FD e± bath, the asymptotic *blocked* energy-gain rate is
+
+```text
+Q_rest ~ 31*g_e*pi^3/(252) * G^2*T^7/m1.
+```
+
+This follows from `int dx x^6 fFD(x)(1-fFD(x))=31*pi^6/42`; the tests separately verify finite-angle recoil identity, final-state blocking suppressing the positive heating, quadratic coupling scaling and heavy-`m1/T` asymptote. Electron/SM bath backreaction, moving chi distribution, inverse thermal energy flow and full Fokker–Planck coefficients remain **uncomputed**. The rest particle is out of equilibrium by construction, so positive heating here is physically expected, **not** evidence of violating detailed balance. This power is not an elastic BGK rate and must not be substituted for `gamma_el`.
