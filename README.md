@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Liouville momentum remap:** [number-exact Pauli-safe O(N) parent regridding](kinetics/PARENT-Q-REMAP.md) now transfers massive χ1 occupations between moving energy-resonant meshes using q³ cell overlaps. The scheme preserves comoving particle number and 0≤f≤1, but introduces a separately measured numerical energy/entropy error. This is a collisionless component, not a coupled energy-conserving FRW dark-matter solver.
+
+
 **A fundamental coupled-FRW obstacle is now proven:** [fixed resonance energies cannot stay on shell as a massive mother redshifts](kinetics/FRW-RESONANCE-DRIFT.md). For fixed daughter comoving energies e_i+e_j and the same freely streaming parent momentum, the latter's energy changes as sqrt(E_parent(x0)^2−x0²+x²), creating nonzero energy mismatch for every original channel whenever x!=x0. A future closed FRW 1↔2 solver must dynamically construct/reassign physically resonant channels and preserve full energy, positivity and charge. This is an exact kinematic obstruction, not a solved cosmological kinetic model.
 
 

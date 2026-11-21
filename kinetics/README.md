@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**CONSERVATIVE LIOUVILLE REMAP:** [parent_q_remap.py](parent_q_remap.py) moves freely streaming χ1 occupations between fixed-energy parent meshes at different x=M1/T by conservative q³ overlaps. Pauli and comoving number preserved; finite-volume energy drift and numerical mixing explicitly reported; no hidden claim of full coupled FRW conservation or CLASS readiness.
+
+
 **TIME-DEPENDENT FRW ON-SHELL GRAPH REQUIRED:** [fixed-energy resonance drift no-go](FRW-RESONANCE-DRIFT.md) derives an exact nonzero physical energy defect when the same massive parent comoving momentum/old daughter-energy triplet is reused after x=M1/T changes. The original Schur-BDF flat-space on-shell network cannot be converted to FRW by merely changing Γ/H. Need dynamic parent/comoving remeshing with full pressure-work and quantum invariants.
 
 
