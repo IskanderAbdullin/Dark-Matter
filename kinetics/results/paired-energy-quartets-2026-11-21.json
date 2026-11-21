@@ -1,0 +1,82 @@
+{
+  "status": "sandbox numerical tests passed; GitHub CI for source commit 4308d4a8 must be verified separately",
+  "model": {
+    "Mchi_GeV": 0.1,
+    "Te_GeV": 1,
+    "G_GeVminus2": 0.001,
+    "gchi": 4,
+    "ge": 4
+  },
+  "source": "kinetics/paired_energy_quartets.py",
+  "runner": "python kinetics/verify_paired_energy_quartets.py --output outputs/paired-quartets.json",
+  "independent_unbinned_5D_weak": {
+    "cold_Tchi_0p9_Q_GeV5": 1.9852809333031555e-8,
+    "hot_Tchi_1p1_Q_GeV5": -4.432526721786192e-8,
+    "integrator": "5D Gauss p,k,mu,uCM,phiCM 14 nodes each, p/k cutoff22GeV"
+  },
+  "measurements": [
+    {
+      "nchi": 24,
+      "ne": 48,
+      "dE": 0.5,
+      "angles": 10,
+      "physical_D_GeV4": 2.983996454047668e-7,
+      "discrete_quartet_D_GeV4": 2.950121000416195e-7,
+      "raw_FD_heat_GeV5": -1.1002997975399456e-11,
+      "raw_Pauli_asymmetry": 0.03675281627664509,
+      "FD_weighted_truncation": 0.0018680242006790457,
+      "cold_Q_GeV5": 1.9674271138355707e-8,
+      "hot_Q_GeV5": -4.220323728016153e-8
+    },
+    {
+      "nchi": 36,
+      "ne": 54,
+      "dE": 0.5,
+      "angles": 10,
+      "physical_D_GeV4": 3.0431681706662926e-7,
+      "discrete_quartet_D_GeV4": 3.0678716045828737e-7,
+      "raw_FD_heat_GeV5": 5.795062294463761e-12,
+      "raw_Pauli_asymmetry": 0.03693503332519634,
+      "FD_weighted_truncation": 0.00004160481452430738,
+      "cold_Q_GeV5": 2.0155382190944986e-8,
+      "hot_Q_GeV5": -4.4821457500541896e-8,
+      "hot_entropy_GeV4": 4.0746779545947244e-9
+    },
+    {
+      "nchi": 30,
+      "ne": 30,
+      "dE": 0.4,
+      "angles": 12,
+      "physical_D_GeV4": 2.9143651406339097e-7,
+      "discrete_quartet_D_GeV4": 2.8674949819087827e-7,
+      "raw_FD_heat_GeV5": 5.9060901008134824e-12,
+      "raw_Pauli_asymmetry": 0.02895411126340777,
+      "FD_weighted_truncation": 0.003008806338078104
+    },
+    {
+      "nchi": 30,
+      "ne": 30,
+      "dE": 0.4,
+      "angles": 16,
+      "physical_D_GeV4": 2.914367558003443e-7,
+      "discrete_quartet_D_GeV4": 2.8674591986104845e-7,
+      "raw_FD_heat_GeV5": 5.881681643424109e-12,
+      "raw_Pauli_asymmetry": 0.015264033162854108,
+      "FD_weighted_truncation": 0.0030122253283974393
+    }
+  ],
+  "validation": {
+    "actual_full_Pauli_directions": true,
+    "exact_discrete_quartet_chi_and_e_number": true,
+    "exact_discrete_total_energy": true,
+    "independent_mu_FD_fixed_point_after_pair_averaging": true,
+    "implicit_single_quartet_Pauli_entropy": true,
+    "unmodified_5D_microphysical_rates_locally_reversible": false,
+    "full_nonlinear_cosmological_evolution": false
+  },
+  "negatives": [
+    "Raw 5D-to-energy-bin tensor violates discrete microscopic detailed balance; pair average W is a declared model-changing approximation",
+    "Finite-bin phase-space coverage and energy projection produce nonconverged heat differences; 1-2% at chosen broad grid does not imply universal accuracy"
+  ],
+  "class_ready": false
+}

@@ -2,33 +2,28 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Construct paired microreversible χe energy-conserving collision quartets with full Pauli and finite SM energy, avoiding ad hoc L symmetrization",
-  "objective": "The real 5D χe equilibrium event graph shows positivity but fails finite-bin detailed balance and inflates linear response by Jensen variance. Derive a discretization where each 2→2 χ+e↔χ'+e' rate is paired at the identical total χ/e energy and phase-space weight. Preserve both χ and electron charges, total energy and Pauli bounds without post-hoc projection that modifies microphysics. Only then integrate physical time-dependent finite SM bath and BEST Yukawa/Bose production.",
+  "title": "Remove ad hoc reverse-rate averaging: microreversible paired collision manifold and global bounded χ/e Pauli evolution with independently converged heat",
+  "objective": "The χ/e common-energy quartet lattice enforces center energy/charges and an implicit Pauli-safe one-quartet substep using actual 5D amplitude, but bare projected rates are asymmetric and pair averaging changes the microscopic operator. Derive a genuinely paired invariant physical transition quadrature or an independently bounded within-cell closure and evolve all quartets with finite χ and electron distributions and complete entropy/energy accounting before attempting Bose FRW cosmology.",
   "prerequisites": [
-    "Read AGENTS.md and CONTINUOUS-RESEARCH-SPEC.md; GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG and latest PR HEAD/CI",
-    "Check CI for c81a525, 32c0a32 and this checkpoint; repair failures before a new scientific claim",
-    "Read kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md, microphysical_equilibrium_graph.py, BIN-LOCAL-DETAILED-BALANCE.md, FINITE-BIN-RECOIL-PROJECTION-CONTROL.md, prior full 5D weak/nonlinear source, finite-bath pairs and numerical scans"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and research-control GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG",
+    "Verify GitHub PR #1 current HEAD and actual Actions for 4308d4 and this checkpoint; fix any failing tests",
+    "Read PAULI-CHI-E-QUARTET-AUDIT.md, microphysical_equilibrium_graph.py, paired_energy_quartets.py, independent continuous weak/full Pauli, finite-bath quantum pairs and both prior projection-negative results"
   ],
-  "hypotheses_to_falsify": [
-    "A uniform common-energy lattice of χ and e occupations with event quartets satisfying Ei+ea=Ej+eb may yield exact microreversible Pauli rates at finite grid spacing without a forced L symmetrization; test against continuous 5D amplitudes and recoil",
-    "Direct E′ barycentric interpolation preserves first moment but adds exactly nonnegative variance to quadratic response; test whether physical quartet co-refinement removes it with controlled O(width²)",
-    "A reversible reference-T graph (L+L.T)/2 cannot be treated as a fully microscopic arbitrary-f/variable-T collision even if Pauli, entropy and number hold within a reduced network"
-  ],
-  "steps": [
-    "Derive energy-lattice χ and e state capacities and positive quadrature weights for collision quartets i,a↔j,b with equal center total energies. Test actual matrix element |M|² and spin counts; handle electron/neutrino and backreaction consistently",
-    "Independent small-grid forward/reverse Pauli source for every quartet: common-T FD null for arbitrary independent μχ, μe without post-hoc symmetrization; number χ/e and total energy charge ledgers",
-    "Compare quartet energy relaxation Dirichlet and nonlinear Q against continuous 5D χe source, electron recoil and strong-vs-weak; n_q, n_k, angular, cutoff convergence. Retain any systematic projection/aliasing as negative result",
-    "Feed physically derived rates into positivity-preserving implicit finite bath integrator, recomputing electron occupancy and Pauli at each bath temperature. Test entropy and temporal convergence; no hidden thermal reservoir",
-    "Add EW-gauge-consistent lepton channels/UV mediator, thermal masses, temperature-dependent gstar before FRW and pinned BEST Bose 1↔2; long 86-eV freezeout/CLASS only with independently validated physics",
-    "After each stage update detailed checkpoint/evidence and negative results, commit/push fast forward, start next best science task"
+  "physical_priorities": [
+    "Construct a forward/reverse matched 2→2 Lorentz-invariant event quadrature on the SAME physical scattering manifold to obtain nonnegative microreversible W_ia,jb without posthoc arithmetic averaging of two separately sampled raw rates. Compare against unaveraged 5D Q and angular/energy-grid/cutoff errors.",
+    "Quantify finite energy-lattice error: χ16/24/36/48, e cutoff, ΔE→0, angular n and finite FD-weighted omission, as distinct from exact center-energy conservation. Preserve raw W asymmetry/false thermal Q as negative evidence.",
+    "Use physically paired sparse quartets in a globally coupled time-evolution solver. Test implicit or operator-split 4-state substeps preserving chi/e Pauli, both particle numbers, full energy and quantum entropy; quantify dt and pair ordering errors, not just invariants.",
+    "Derive T-dependent couplings directly from evolving e distributions, never freeze Γ(T0) for large bath changes; include electron/positron sectors, SU2 neutrino channels and UV mediator/finite electron masses in their physical temperature domain.",
+    "Compare complete time-dependent collision Q and weak/strong Cχ(p) against independent 5D source on nonthermal trial shapes, and compare near-equilibrium projected modes against 11-mode and localized Pauli Ritz without declaring a universal BGK gamma.",
+    "Only after physical kernel and SM heat validation integrate realistic 1↔2 BEST χ1↔χ2+86-eV φ, variable gstar/S and FRW through actual late freezeout and independently verified Ω/CLASS constraints.",
+    "For each finished stage append evidence, checkpoints, compact JSON, no-force commit+push; proceed to next physics bottleneck within active execution."
   ],
   "acceptance": [
-    "Nonzero Γ from actual 5D χe matrix element for energy-matched paired processes without post-hoc symmetrization",
-    "Independent local detailed balance/Pauli/entropy and both χ/e particle number plus energy ledgers",
-    "Direct numerical comparison with true 5D weak/strong moments to a quantified convergence tolerance",
-    "Actual variable-T finite-bath dynamics with positive occupancies and consistent SM heat/entropy",
-    "No physical 86-eV relic, BEC, ΩDM, frozen f(q), CLASS-ready until full validation"
+    "Directly paired actual 5D χe rates, not posthoc sym/phenomenological Γ; physical local detailed balance on same collision manifold",
+    "Separate χ/e charges, total energy and entropy measured and Pauli bounds maintained across complete time integration",
+    "Physical weak/strong heat and nonlinear source independently converged under δE/angular/domain/dt",
+    "No premature BEC, ΩDM, frozen f(q), 86eV relic, CLASS-ready or full gamma_el claims."
   ],
-  "scope": "public branch and draft PR only; no force/merge main, no user PC or Computer Use without explicit approval; compact GitHub Actions",
-  "fallback": "If physically paired grid cannot be made with all scattering support, present a rigorously controlled restricted quartet and publish the truncation/aliasing as a negative result rather than invent a gamma."
+  "constraints": "Public research branch draft PR only, no merge main or force-push, use compact public CI; never use user's computer or Computer Use without separate explicit approval.",
+  "fallback": "If exact paired finite-bin quadrature is incompatible with positive barycentric projection, derive quantitative no-go/error bounds and switch to finer energy-resolved conservative event representation rather than hiding the mismatch."
 }

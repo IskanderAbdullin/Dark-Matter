@@ -75,6 +75,11 @@
       "claim": "5D microphysical χe event bin interpolation preserves exact FD fixed point and linearised collision Dirichlet without correction",
       "finding": "Refuted: directed L asymmetry 1.536% (nχ64/angle16), false common-T heat +1.696e-10 GeV5; Jensen excess +7.18% at 16 χ bins, +0.4119% at 64, +0.1013% at 128; closure by (L+L^T)/2 changes dynamics",
       "evidence": "kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md and kinetics/results/microphysical-bin-graph-2026-11-21.json"
+    },
+    {
+      "claim": "A shared energy lattice directly yields paired 5D χe transition coefficients equal in both directions without numerical correction and automatically agrees with continuous Q to all orders",
+      "finding": "Refuted: raw Pauli-weighted W asymmetry ≈3.69% on χ36/e54/dE.5/nangular10; raw FD false Q +5.795e-12 GeV5. Explicit pair average restores stationary common-T FD but changes dynamics. Paired Q at Tchi=.9/1.1 differs from independent continuum by ~1.52% /1.12% at this grid.",
+      "evidence": "kinetics/PAULI-CHI-E-QUARTET-AUDIT.md; kinetics/results/paired-energy-quartets-2026-11-21.json"
     }
   ],
   "physical_unknowns": [
@@ -89,8 +94,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Run physical paired 5D chi-e vector-contact event quadrature on adapted IR bins; compare raw bin-center detailed-balance defect, physical strong/weak heat and corrected projection bias. See FINITE-BIN-RECOIL-PROJECTION-CONTROL.md.",
-  "last_checkpoint_git_sha": "32c0a32df0b5f36b7fe3fb52cd64cab155666f58",
-  "current_phase": "A: exact 5D χe full-Pauli equilibrium event conductance projected to finite radial χ bins; measured nonreversibility and positive Jensen-variance transport bias. Strict joint χ/e microreversible collision lattice and full cosmology not achieved",
+  "last_checkpoint_git_sha": "4308d4a81a76bbc2313b0cdc913f67c91d654d68",
+  "current_phase": "A: physical 5D vector χe full-Pauli source projected onto shared χ/e energy-conserving fermion quartet lattice; declared pair averaging restores local detailed balance and a true bounded implicit single-quartet step, but unmodified 5D reverse rates and global evolution remain unsolved",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -206,7 +211,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "The physical 5D micro event projection to finite χ bins does not preserve local FD detailed balance and adds a positive quadratic Jensen bias. Symmetric L closure is model-changing. Do not use it as full Pauli χe microphysical temperature-dependent rates or validated BGK gamma. 86-eV DM/CLASS false.",
+  "physics_scope_warning": "Although real 5D Pauli χe amplitudes now generate finite lattice quartet rates and an implicit bounded single-event χ/e evolution, reversible Wpair is a model-changing pair average of raw finite-bin microscopic weights. There is no validated all-quartet time evolution or physical 86-eV DM freezeout, Γ(T), BEC, Omega or CLASS.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -228,22 +233,21 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "title": "Full 5D χe physical equilibrium positive event graph on finite p^3 state-capacity bins with quantified Jensen D error and raw FD nonreversibility",
-    "code": "kinetics/microphysical_equilibrium_graph.py",
-    "tests": "tests/test_microphysical_equilibrium_graph.py",
-    "report": "kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md",
-    "compact": "kinetics/results/microphysical-bin-graph-2026-11-21.json",
-    "commit": "32c0a32df0b5f36b7fe3fb52cd64cab155666f58",
-    "ci_status": "check actual GitHub Actions for c81a525 and 32c0a32 (not yet verified at this checkpoint)",
-    "numerical_measurements": {
-      "independent_continuum_D11_GeV4": 3.027899802221842e-7,
-      "projected_n16_D_overestimate_relative": 0.07181257947285358,
-      "projected_n128_D_overestimate_relative": 0.0010131351955273852,
-      "raw_FD_false_heat_nchi64_GeV5": 1.6964695450341278e-10,
-      "angular16_raw_L_asymmetry": 0.015360627687747043,
-      "angular24_raw_L_asymmetry": 0.005590764566404126
+    "commit": "4308d4a81a76bbc2313b0cdc913f67c91d654d68",
+    "title": "Shared energy-lattice microscopic 5D χe Pauli quartets and implicit fermion two-species time substep",
+    "code": "kinetics/paired_energy_quartets.py",
+    "tests": "tests/test_paired_energy_quartets.py",
+    "report": "kinetics/PAULI-CHI-E-QUARTET-AUDIT.md",
+    "results": "kinetics/results/paired-energy-quartets-2026-11-21.json",
+    "physical_benchmark": {
+      "Tchi_0p9_quad_Q_GeV5": 2.0155382190944986e-8,
+      "Tchi_0p9_independent_Q_GeV5": 1.9852809333031555e-8,
+      "Tchi_1p1_quad_Q_GeV5": -4.4821457500541896e-8,
+      "Tchi_1p1_independent_Q_GeV5": -4.432526721786192e-8
     },
-    "limitations": "Only equilibrium reference-T linear conductances plus imposed reversible closure; NOT arbitrary-fχ physical nonlinearity or bath thermal evolution"
+    "negative": "Raw W tensor still nonreversible at finite center-energy bins: Pauli-weighted asymmetry 3.6935%, FD spurious heat +5.795e-12 GeV5 at chi36/e54/ang10. Pair averaging changes model.",
+    "CI": "new source commit 4308d4a8; inspect actual GitHub Actions before claiming success",
+    "limitations": "One-quartet implicit time substep, not full global nonlinear 2→2 microphysical evolution, SM-gauge completion or Bose 86eV relic"
   },
   "last_projection_control": {
     "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
