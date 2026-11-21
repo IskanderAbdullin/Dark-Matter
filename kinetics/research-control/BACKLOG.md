@@ -49,3 +49,6 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Exact outgoing CM angular moment: moving χ signed laboratory energy heat Q(p) without final Pauli; positive for slow and negative for fast χ, independent t-integral validation ([CI](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932561256)).
 - [x] Nonrelativistic *conditional* Fokker–Planck eta_NR=Q_rest/(3T) from microscopic Pauli-blocked recoil and Einstein fluctuation–dissipation, with hard rejection for M/T<100; CI #44932655044 completed successfully. **Not applicable to historic M/T=.1**.
 - [ ] **Priority now:** full relativistic, final-state-Pauli electron+neutrino collision operator, physical matrix element, gauge-qualified UV validity and moving χ momentum/heat relaxation; only then couple to BEST/SM without phenomenological gamma.
+
+- [x] Relativistic on-shell event geometry and FD detailed-balance audit (4000 seeded local cases), plus formal invariant 2→2 gain/loss; **NOT** an integrated operator ([report](../RELATIVISTIC-ELASTIC-COLLISION.md)).
+- [ ] Next: integrate invariant weak-form Pauli collision moments with actual vector-contact |M|², independent angular refinement and all normalization/degeneracy factors.
