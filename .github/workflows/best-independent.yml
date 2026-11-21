@@ -1,0 +1,75 @@
+name: Independent BEST on-shell reference (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-independent.yml'
+      - 'kinetics/best_external_vacuum_reference.py'
+      - 'kinetics/best_thermal_balance_reference.py'
+      - 'kinetics/best_vacuum_spectrum.py'
+      - 'kinetics/best_source_comparison.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-research-branch
+  cancel-in-progress: true
+
+jobs:
+  independent-vacuum-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - name: Check out local research branch
+        uses: actions/checkout@v4
+      - name: Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: MPI and solver dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy mpi4py vegas
+      - name: Pin independent open-source BEST v1.3.5
+        run: |
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          mpirun --version | head -n 1
+          mpirun -np 2 python -c 'from mpi4py import MPI; print("MPI rank",MPI.COMM_WORLD.Get_rank(),flush=True)'
+      - name: Execute independent source (one exploratory grid only)
+        run: |
+          mkdir -p outputs
+          mpirun -np 2 python kinetics/best_external_vacuum_reference.py \
+            --execute --best-root /tmp/best --grid-n 28 --neval 3000 \
+            --output outputs/best_vacuum_smoke.json
+      - name: Report scientific confidence without inventing convergence
+        if: success()
+        run: |
+          python kinetics/best_source_comparison.py \
+            outputs/best_vacuum_smoke.json \
+            --output outputs/best_source_comparison_smoke.json
+          python - <<'PY'
+          import json
+          d=json.load(open("outputs/best_source_comparison_smoke.json"))
+          assert d["source_agreement_verified"] is False, "one smoke run is NOT independent convergence"
+          assert d["records_checked"]==1
+          print("SMOKE ONLY:",d["status"],flush=True)
+          PY
+      - name: Upload real BEST data, if produced
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-independent-smoke
+          path: outputs/best_*.json
+          if-no-files-found: warn
+          retention-days: 7
