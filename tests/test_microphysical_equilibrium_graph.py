@@ -90,3 +90,23 @@ def test_finite_bath_is_conditional_frozen_T0_graph_not_physical_all_T():
                                     {"nk":2},{"pmax":0.}])
 def test_reject_nonphysical_inputs(kwargs):
     with pytest.raises(ValueError):graph(**kwargs)
+
+
+def test_zero_portal_is_well_defined_without_spurious_division():
+    x=graph(G=0.,nchi=6,nk=4,nmu=3,ncm=4,nphi=4)
+    assert x["D_graph"]==x["D_true_all"]==0.
+    assert x["unpaired_asymmetry"]==0.
+    assert x["raw_FD_heat_without_reversible_closure_GeV5"]==0.
+    assert calibrated_pair_rates(x)==[]
+
+
+def test_raw_microprojected_FD_heat_is_false_before_reversible_closure():
+    x=graph(nchi=24,nk=12,nmu=10,ncm=10,nphi=10)
+    # At exactly equal χ/e temperatures the microscopic continuum heat is 0.
+    # Finite-bin quadrature creates a false signal, removed only by a
+    # declared model-changing symmetrization of equilibrium conductances.
+    assert x["raw_FD_heat_without_reversible_closure_GeV5"]>1e-9
+    assert abs(x["raw_FD_heat_without_reversible_closure_GeV5"]/
+               x["D_true_all"])>.003
+    q,_=graph_instantaneous_heat(x,expit(-x["E"]))
+    assert abs(q)<1e-17

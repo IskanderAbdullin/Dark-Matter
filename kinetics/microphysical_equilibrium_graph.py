@@ -97,6 +97,20 @@ def graph(*,M=.1,T=1.,G=.001,gchi=4.,ge=4.,nchi=32,pmax=22.,
     Dmap=.5*float(np.sum(L*d*d))
     total=float(np.sum(L))
     net=np.sum(L.T-L,axis=1)
+    raw_heat=float(np.sum(L*(E[None,:]-E[:,None])))
+    if allweight==0:
+        return {"E":E,"p":p,"capacities":caps,"directed":L,"symmetric":sym,
+                "D_true_all":0.,"D_true_inside":0.,"D_graph":0.,
+                "D_graph_symmetric":0.,"jensen_excess":0.,
+                "jensen_relative":0.,"unpaired_asymmetry":0.,
+                "raw_stationary_abs_number_source_GeV4":0.,
+                "raw_stationary_relative_L1":0.,
+                "raw_FD_heat_without_reversible_closure_GeV5":0.,
+                "outgoing_out_of_support_weight_fraction":0.,
+                "accepted_forward_weight_GeV4":0.,"all_forward_weight_GeV4":0.,
+                "params":dict(M=M,T=T,G=G,nchi=nchi,pmax=pmax,nk=nk,
+                              nmu=nmu,ncm=ncm,nphi=nphi,kmax=kmax,stretch=stretch),
+                "is_exact_nonlinear_microphysical_bin_kernel":False}
     return {
         "p":p,"E":E,"capacities":caps,"directed":L,"symmetric":sym,
         "D_true_all":physical_D_all,"D_true_inside":physical_D_inside,
@@ -106,6 +120,7 @@ def graph(*,M=.1,T=1.,G=.001,gchi=4.,ge=4.,nchi=32,pmax=22.,
         "unpaired_asymmetry":float(np.sum(np.abs(L-L.T)))/(2*total),
         "raw_stationary_abs_number_source_GeV4":float(np.sum(np.abs(net))),
         "raw_stationary_relative_L1":float(np.sum(np.abs(net)))/total,
+        "raw_FD_heat_without_reversible_closure_GeV5":raw_heat,
         "outgoing_out_of_support_weight_fraction":outweight/allweight,
         "accepted_forward_weight_GeV4":total,
         "all_forward_weight_GeV4":allweight,
