@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**A fundamental coupled-FRW obstacle is now proven:** [fixed resonance energies cannot stay on shell as a massive mother redshifts](kinetics/FRW-RESONANCE-DRIFT.md). For fixed daughter comoving energies e_i+e_j and the same freely streaming parent momentum, the latter's energy changes as sqrt(E_parent(x0)^2−x0²+x²), creating nonzero energy mismatch for every original channel whenever x!=x0. A future closed FRW 1↔2 solver must dynamically construct/reassign physically resonant channels and preserve full energy, positivity and charge. This is an exact kinematic obstruction, not a solved cosmological kinetic model.
+
+
 **Entropy-release FRW invariant solved:** [collisionless massive-parent background with variable SM gstarS](kinetics/FRW-ENTROPY-RELEASE.md) proves fixed q=p/T is invalid during entropy dumps; the conserved free variable is q_c=p/[T(gstarS/gstarS_dec)^(1/3)]. An independent synthetic 55→3.909 entropy-step test conserves n*a³ and exactly verifies energy-pressure continuity. This is no-collision physics, not a complete Bose production model or observed dark-matter relic.
 
 

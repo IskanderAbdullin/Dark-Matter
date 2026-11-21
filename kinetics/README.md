@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**TIME-DEPENDENT FRW ON-SHELL GRAPH REQUIRED:** [fixed-energy resonance drift no-go](FRW-RESONANCE-DRIFT.md) derives an exact nonzero physical energy defect when the same massive parent comoving momentum/old daughter-energy triplet is reused after x=M1/T changes. The original Schur-BDF flat-space on-shell network cannot be converted to FRW by merely changing Γ/H. Need dynamic parent/comoving remeshing with full pressure-work and quantum invariants.
+
+
 **ENTROPY-AWARE LIOUVILLE:** [variable gstarS collisionless χ1 benchmark](FRW-ENTROPY-RELEASE.md) derives d ln a/d ln x=1−(1/3)d ln gS/d ln x and x d(ρ/T⁴)/dx=(1+α)(ρ/T⁴)+(α−3)(P/T⁴). It verifies true comoving n a³ constancy while n/T³ varies with SM entropy dilution. gstarS step is a test function, not the actual SM thermal history or closed 1↔2 model.
 
 
