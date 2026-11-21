@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**CLOSED-LATTICE PROGRESS:** [three-species resonant lattice](CLOSED-THREE-SPECIES.md) now evolves chi1 alongside chi2 and phi, with two independent number invariants, total discrete energy conservation and H-theorem tests. Its uniform grid is too coarse to assert physical cold Bose-burst production; the [next detailed specification](CLOSED-FRW-NEXT-SPEC.md) addresses adaptive discretization and closed FRW.
+
+
 **COSMOLOGICAL PILOT:** [FRW fixed-thermal-mother evolution](FRW-FIXED-BATH-PILOT.md) integrates the on-shell 2D source in comoving q=p/T, radiation H proportional to T² and a dimensionless coupling κ. Weak κ yields mean frozen q~2.5 versus instantaneous flat-bath q~0.003. The mother reservoir, temperature history and energy budget are not self-consistent; this is not CLASS input.
 
 

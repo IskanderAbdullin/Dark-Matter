@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Closed three-species benchmark now implemented:** [resonant-energy on-shell decay lattice](kinetics/CLOSED-THREE-SPECIES.md) evolves the mother and both daughters without an external thermal reservoir. Its full nonlinear ODE conserves two independent number charges and total discrete energy, obeys Pauli/Bose bounds and a quantum H theorem. The deliberately coarse uniform lattice is a structural test, NOT an IR-resolved cosmological spectrum. [Next closed FRW specification](kinetics/CLOSED-FRW-NEXT-SPEC.md).
+
+
 **FRW next-step pilot:** [radiation-dominated 1↔2 kinetic evolution in comoving q=p/T](kinetics/FRW-FIXED-BATH-PILOT.md) explicitly shows that a cold burst at fixed T does not automatically imply a cold frozen primordial population. The mother is still externally thermal, the coupling κ=Γ/H(T=M1) is illustrative, and the energy/entropy budget is not closed.
 
 
