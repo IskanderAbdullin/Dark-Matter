@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Dynamic SM HEAT CAPACITY (one conservative elastic collision step) implemented:** [finite-radiation T feedback and total entropy ledger](kinetics/SM-RADIATION-HEAT-FEEDBACK.md), [module](kinetics/sm_radiation_heat_feedback.py), [tests](tests/test_sm_radiation_heat_feedback.py). After number-projecting the fermionic mother to FD(Tbath,µ), exactly transfer the actual chi1 comoving energy change to the opposite finite-heat-capacity radiation bath; update Tb via a⁴ρ_SM=(π²/30)gstar(aTb)^4. A test state transfers ~0.0130813 comoving energy from dark χ1 to SM, heats bath Tb .82→.820169, and increases total fermion+radiation entropy. This is an explicit fixed-a number/energy conserving thermo-BGK stage, NOT microphysical 2→2, dynamic gstarS or full coupled BEST+FRW DM.
+
+
 **NEXT PHYSICAL MODEL GAP STARTED — explicit number/energy conserving SM thermal contact:** [standalone finite-q FD elastic rethermalization operator](kinetics/SM-NUMBER-CONSERVING-BATH.md), [source](kinetics/number_conserving_sm_bath.py), [tests](tests/test_number_conserving_sm_bath.py). Rather than secretly resetting mother FD during FRW, this BGK-like elastic term projects to FD(T_SM,µ) with µ solved to conserve **the actual chi1 number on the very same q-grid**; exact convex exponential relaxation preserves Pauli 0≤f≤1, decreases Fermi relative entropy, and returns an explicit opposite SM energy transfer to close the collision ledger. It remains a *phenomenological* thermal-contact building block: no microphysical γ_el matrix element, evolving SM T/gstar/Friedmann or physical 86-eV relic yet. [Science/model literature audit](kinetics/LITERATURE-PHYSICAL-SCOPE-2026-11-21.md).
 
 

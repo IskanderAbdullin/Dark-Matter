@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**СЛЕДУЮЩИЙ ФИЗИЧЕСКИЙ ПРОБЕЛ ЧАСТИЧНО ЗАКРЫТ ЧЕСТНЫМ SM ENERGY/T ЛЕДЖЕРОМ:** [SM-RADIATION-HEAT-FEEDBACK.md](SM-RADIATION-HEAT-FEEDBACK.md). Упругая number-conserving χ1↔SM FD relaxation теперь переносит измеренное Δ(a⁴ρχ1) в −Δ(a⁴ρSM) и обновляет Tb по конечной теплоёмкости идеального SM radiation с constant gstar; проверяет Pauli и рост total entropy, отрицательные шаги отвергает. Например при a1.18,Tb0=.82, gamma1.2,dt.4 отдаётся ΔEχ≈−.0130813, Tb растёт до .820169. Но это всего **fixed-a collision substep**, не полный FRW 1↔2+SM self-consistent system, Γelastic(T) и variable gstarS ещё отсутствуют.
+
+
 **НАЧАТА СЛЕДУЮЩАЯ КРИТИЧЕСКАЯ ФИЗИКА — ЯВНЫЙ SM THERMAL CONTACT:** [SM-NUMBER-CONSERVING-BATH.md](SM-NUMBER-CONSERVING-BATH.md) задаёт кинетический упругий BGK оператор для χ1 с fFD(TSM,µ), где µ определяется из точного конечносеточного числа χ1, а не заново задаётся0. Сохраняется χ1 number/две charges при упругом рассеянии, Pauli и относительная Fermi H/KL, вся переданная энергия Q_dark=−Q_SM явно записывается. Но γelastic пока феноменологическое, SM T,gstarS, actual plasma backreaction и microscopic matrix element ещё не динамичны. [Литературный пробел Yin2023 / Sakurai–Yin2025](LITERATURE-PHYSICAL-SCOPE-2026-11-21.md). Приоритет: реальное подключение thermal contact к BEST + SM energy/T динамика, затем физическая 86eV/CLASS.
 
 

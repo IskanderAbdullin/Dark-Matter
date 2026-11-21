@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**FINITE SM HEAT FEEDBACK MODULE:** [SM-RADIATION-HEAT-FEEDBACK.md](SM-RADIATION-HEAT-FEEDBACK.md) updates ideal radiation bath energy and temperature from actual conserved-number χ1 elastic BGK energy transfer rather than forcing Tb constant. Verifies energy exchange, Pauli, fermionic KL and total radiation+chi entropy. Example Tb .82→.820169 when chi1 transfers −.0130813 comoving energy. This is a single fixed-a collision substep with constant gstar, not coupled 1↔2 full kinetic SM bath or a real 86-eV DM prediction.
+
+
 **SM BATH CONSERVATIVE RE-THERMALIZATION BUILDING BLOCK:** [SM-NUMBER-CONSERVING-BATH.md](SM-NUMBER-CONSERVING-BATH.md) implements a finite-q fermionic BGK elastic relaxation with chemical µ determined from actual conserved mother number, exact positive/Pauli-bounded time substep, decreasing fermion KL distance, and explicit opposite SM energy transfer. No hidden thermal FD reset; still phenomenological γ_el, SM bath temperature/gstar and 2→2 microphysics NOT simulated. [Literature requirements](LITERATURE-PHYSICAL-SCOPE-2026-11-21.md) distinguish thermal-plasma Yin (2023) from our previously confirmed collisionless-mother RD-BEST scenario.
 
 
