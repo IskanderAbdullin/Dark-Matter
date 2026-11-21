@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**FINITE MASS BOSE IR SOURCE:** [MASSIVE-DAUGHTER-SOURCE.md](MASSIVE-DAUGHTER-SOURCE.md) derives the exact thermally averaged momentum-differential source for χ1→φ(mφ)+χ2(mχ), with continuous fixed-width number rate and finite φ occupation growth at q→0 whenever mφ>0. The strictly massless approximation has a nonuniform q0 limit: initial fφ(0) source can be enormous but the integrated low-q number is phase-volume suppressed; physical BEC is NOT proven.
+
+
 **INDEPENDENT REAL FINITE-Bose/Pauli GAIN–LOSS:** [Actions #44916922599](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916922599) actually executes pinned BEST v1.3.5 with FD mother/FD chi2/BE phi at µ1=-.15,+.05 affinity, and µ1=-.25,-.05 affinity; both decay and inverse rate signs match exact 2D analytic source. At 96-q/24000 samples, best phi net 0.000856491254 vs exact 0.000856502725, but finite-grid physical energy −2.34e−7 and entropy relative bias −0.59% remain. [Full report](BEST-CHEMICAL-AFFINITY.md), [long-lived measured evidence](results/best-affinity-real-2026-11-21.json). No FRW or zero mode yet.
 
 

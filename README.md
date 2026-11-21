@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Finite 86-eV boson mass and deep-IR nonuniformity:** [exact massive two-body χ1→φ+χ2 vacuum source](kinetics/MASSIVE-DAUGHTER-SOURCE.md) gives physical two-body daughter energy spectrum and its nonzero finite-mφ q→0 Bose occupation source, contrasting the strictly massless q=0 limit. It analytically preserves number and physical energy with fixed rest width for arbitrary daughter masses below threshold. This is NOT condensate number, a physical chosen mφ/Mχ1 model or cosmological freezeout.
+
+
 **Genuine independent NON-EQUILIBRIUM Bose/Pauli 1↔2 verified:** [BEST GitHub Actions #44916922599](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916922599) directly ran externally pinned BEST at finite BE+FD occupation with nonzero chemical affinity and inverse decay. [Actual observed vs independent exact 2D rate+energy and entropy numbers](kinetics/BEST-CHEMICAL-AFFINITY.md), [permanent 3-case numerical evidence](kinetics/results/best-affinity-real-2026-11-21.json). At 96 q nodes/neval=24000, φ number rate differs −0.001339% and differential shape RMS/peak 9.60e−6; physical total energy residual −2.34e−7 and entropy still errs ~0.59%. Reverse-chemical driving changes signs as predicted. This validates a snapshot quantum source, NOT nonlinear cosmological time evolution, BEC or CLASS.
 
 

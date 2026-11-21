@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**КРИТИЧЕСКАЯ ПОПРАВКА ДЛЯ 86-эВ МАССЫ φ:** [MASSIVE-DAUGHTER-SOURCE.md](MASSIVE-DAUGHTER-SOURCE.md) выводит точный momentum-differential vacuum 1→2 для ненулевых mφ,mχ и аналитическую скорость первоначального Bose occupation при q→0. Массово-нулевой предел неравномерен по q: полный rate может совпадать, но deep-IR fφ и конденсатная мода зависят от массы. Нужны реальная mφ/M1, физическая Γ(M,mφ,mχ), независимый BEST massive φ тест, zero-mode и только затем closed FRW/CLASS.
+
+
 **НЕЛИНЕЙНОСТЬ 1↔2 С НЕНУЛЕВЫМИ BOSE/PAULI ПОДТВЕРЖДЕНА ВНЕШНИМ BEST НА МГНОВЕННОМ SNAPSHOT:** [BEST-CHEMICAL-AFFINITY.md](BEST-CHEMICAL-AFFINITY.md), [Actions #44916922599](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916922599). Прямые и обратные реакции проверены для Δµ=±.05, с отдельными 2D аналитическими эталонами числа/энергии; Nq=96 neval=24000 имеет ~0.00134% ошибку Rφ, но физический energy sum всё ещё −2.34e−7, а производная энтропии ~0.59% отличается из-за этих же численных погрешностей. Следующий физический рубеж — actual nonlinear TIME evolution, finite mφ=86eV и explicit Bose zero mode; никакой готовой FRW/CDM или CLASS спектр не следует.
 
 
