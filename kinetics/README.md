@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**BEST ENERGY GATE:** [external validation protocol](BEST-SOURCE-COMPARISON.md) now fails closed unless the independently executed BEST output includes rates of physical energy of χ1/φ/χ2, agrees with ΓM1nFD and has zero total energy flux within tolerance. CI fixtures are artificial and external BEST has NOT yet run.
+
+
 **BEST NUMBER+ENERGY CROSSCHECK:** [external BEST source protocol](BEST-INDEPENDENT-VALIDATION.md) now includes independent exact energy loss (M1 Gamma nFD), which at mass/T=.1 equals 0.0364681857069, in addition to 0.0164959084596 number rate; running BEST can reveal incorrect spin/dof factors or physical energy bookkeeping. No BEST external numerical result has yet been produced.
 
 

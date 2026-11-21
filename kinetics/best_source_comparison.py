@@ -48,6 +48,12 @@ def inspect_record(data,rate_tolerance=.1,charge_tolerance=.1):
     if not all(k in numeric for k in REQUIRED_SPECIES):
         raise ValueError("Missing one or more independent species rate moments")
     rates={k:float(numeric[k]) for k in REQUIRED_SPECIES}
+    eraw=data.get("instantaneous_integrated_energy_rates",{})
+    if not all(k in eraw for k in REQUIRED_SPECIES):
+        raise ValueError("Missing one or more independent species ENERGY rate moments")
+    energy_rates={k:float(eraw[k]) for k in REQUIRED_SPECIES}
+    if not all(math.isfinite(v) for v in energy_rates.values()):
+        raise ValueError("Non-finite external ENERGY rate data")
     if not all(math.isfinite(v) for v in rates.values()):
         raise ValueError("Non-finite external rate data")
     target=required["independently_derived_vacuum_source_n_over_T3_per_time"]
@@ -60,13 +66,28 @@ def inspect_record(data,rate_tolerance=.1,charge_tolerance=.1):
                      abs(rates["chi1"]+rates["chi2"]),
                      abs(rates["phi"]-rates["chi2"]))/scale
     signs=rates["chi1"]<0 and rates["phi"]>0 and rates["chi2"]>0
+    e_target=required["independently_derived_total_daughter_energy_gain_over_T4_per_time"]
+    e_scale=max(abs(x) for x in energy_rates.values())
+    e_scale=max(e_scale,1e-300)
+    energy_balance=abs(sum(energy_rates.values()))/e_scale
+    energy_reference_error=abs(-energy_rates["chi1"]/e_target-1)
+    energy_signs=(energy_rates["chi1"]<0 and energy_rates["phi"]>0 and
+                  energy_rates["chi2"]>0)
+    energy_pass=energy_signs and energy_balance<=charge_tolerance and (
+        energy_reference_error<=rate_tolerance)
     return {
         "BEST_git_commit_verified":BEST_PIN,
         "mass_over_T":required["parent_mass_over_T"],
         "grid_n":required["grid_n"],
         "vegas_neval":required["vegas_neval_per_grid_point"],
         "raw_rates":rates,
+        "raw_physical_energy_rates":energy_rates,
         "analytic_vacuum_source":target,
+        "independent_exact_parent_energy_loss":e_target,
+        "relative_parent_energy_loss_error":-energy_rates["chi1"]/e_target-1,
+        "relative_total_energy_rate_residual":energy_balance,
+        "energy_rate_signs_correct":energy_signs,
+        "physical_energy_rate_checks_pass":energy_pass,
         "relative_phi_rate_error":rates["phi"]/target-1,
         "relative_three_charge_stoichiometry_error":stoichiometry,
         "correct_physical_signs":signs,
@@ -74,7 +95,7 @@ def inspect_record(data,rate_tolerance=.1,charge_tolerance=.1):
         "all_three_numbers_within_charge_tolerance":
             stoichiometry<=charge_tolerance,
         "single_record_passes_preliminary_criteria":
-            signs and source_error<=rate_tolerance and stoichiometry<=charge_tolerance,
+            signs and source_error<=rate_tolerance and stoichiometry<=charge_tolerance and energy_pass,
         "warning":"A single stochastic BEST rate pass does not imply independent convergence or physically correct late-time dark matter."
     }
 

@@ -16,13 +16,16 @@ def synthetic_fixture(grid_n=100,neval=20000,phi_fractional_error=0.):
     p=benchmark_protocol(grid_n=grid_n,vegas_neval=neval)
     target=p["independently_derived_vacuum_source_n_over_T3_per_time"]
     rate=target*(1+phi_fractional_error)
+    energy=p["independently_derived_total_daughter_energy_gain_over_T4_per_time"]
     return {
         "external_solver_executed":True,
         "BEST_source_commit_verified":BEST_PIN,
         "BEST_git_revision_matched_pinned_protocol":True,
         "model_and_protocol":p,
         "instantaneous_integrated_number_rates":{
-            "chi1":-rate,"phi":rate,"chi2":rate}
+            "chi1":-rate,"phi":rate,"chi2":rate},
+        "instantaneous_integrated_energy_rates":{
+            "chi1":-energy,"phi":energy/2,"chi2":energy/2}
     }
 
 
@@ -97,3 +100,27 @@ def test_nonfinite_and_negative_tolerance_fail_closed():
         inspect_record(a)
     with pytest.raises(ValueError):
         inspect_record(synthetic_fixture(),rate_tolerance=0.)
+
+
+def test_exact_energy_reference_and_energy_conservation_required_for_acceptance():
+    a=synthetic_fixture()
+    result=inspect_record(a)
+    assert result["physical_energy_rate_checks_pass"]
+    assert abs(result["relative_parent_energy_loss_error"])<1e-12
+    assert result["relative_total_energy_rate_residual"]<1e-12
+    b=synthetic_fixture()
+    b["instantaneous_integrated_energy_rates"]["chi1"]*=.5
+    result=inspect_record(b)
+    assert not result["physical_energy_rate_checks_pass"]
+    assert not result["single_record_passes_preliminary_criteria"]
+
+
+def test_missing_or_nonfinite_external_energy_moments_rejected():
+    a=synthetic_fixture()
+    del a["instantaneous_integrated_energy_rates"]["chi2"]
+    with pytest.raises(ValueError,match="ENERGY"):
+        inspect_record(a)
+    b=synthetic_fixture()
+    b["instantaneous_integrated_energy_rates"]["chi2"]=float("inf")
+    with pytest.raises(ValueError,match="ENERGY"):
+        inspect_record(b)
