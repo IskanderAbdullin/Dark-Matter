@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**РЕАЛЬНЫЙ ВНЕШНИЙ BEST 2×2 КРОСС-ЧЕК ВЫПОЛНЕН:** [BEST-FIRST-REAL-RESULTS.md](BEST-FIRST-REAL-RESULTS.md), [JSON чисел](results/best-independent-2026-11-21.json), [Actions #44916394684](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916394684). На n=56,neval=12000 совпадение интегрального источника и материнской энергии с аналитическим benchmark на 6.3e−6 относительного масштаба, но n=28 имеет энергоошибку ~0.4%. Ненулевое thermal equilibrium BEST gain/loss почти сокращается. Всё ещё НЕТ away-from-equilibrium Bose/Pauli независимой проверки, FRW full energy closure, true freeze-out f(q), BEC zero mode или CLASS; не выдавать early rate за физический реликт.
+
+
 **АНАЛИТИЧЕСКИЙ ЭТАЛОН КВАНТОВОЙ НЕЛИНЕЙНОСТИ:** [THERMAL-CHEMICAL-AFFINITY.md](THERMAL-CHEMICAL-AFFINITY.md) выводит точный finite-Bose/finite-Pauli net source при фиксированных термальных f1,f2,b и произвольных химических потенциалах, Δµ=µ1−µ2−µφ, позволяющий независимую проверку обратных распадов без full ODE. Для m=.1 µφ=-.3,µ2=.1 получено R=-0.0008263650 (µ1=-.25), 0 (µ1=-.2), +0.0008565027 (µ1=-.15); dilute limit Rvac=.01649590846. Следующий этап — реальный BEST Monte Carlo при тех же µ и q/energy convergence, не CLASS.
 
 

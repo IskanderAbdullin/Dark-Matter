@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**ACTUAL independent 2×2 BEST physics result:** [real MPI/Vegas 28-versus-56 q-grid survey, energy and inverse-decay detailed balance](kinetics/BEST-FIRST-REAL-RESULTS.md), [permanent numerical evidence JSON](kinetics/results/best-independent-2026-11-21.json), [successful Actions run #44916394684](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916394684). On 56 q nodes, neval=12000, independent φ rate differs −0.0006303% and parent energy loss +0.0006258% from our analytic 1↔2 source; on 28 q nodes energy error is still ~+0.40%. Nonempty Bose+Pauli equilibrium sources cancel to net/gross ~2e−5 or better. This validates initial reference only, NOT a nonlinear frozen DM or CLASS result.
+
+
 **FIRST ACTUAL INDEPENDENT BEST RUN PASSED:** [public GitHub Actions #44915936135](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44915936135) executed pinned external BEST v1.3.5 with two MPI ranks, separate from our model. At M/T=.1, 28 q nodes and neval=3000, φ number rate 0.0164911055 vs exact 0.0164959085 (−0.0291%); mother energy loss 0.0366127458 vs exact 0.0364681857 (+0.3964%) with nonzero total energy imbalance. [Exact raw run and next 2×2 independent convergence workflow](kinetics/BEST-GITHUB-ACTIONS.md). This single coarse run is NOT a validated nonlinear or cosmological freeze-out; expanded 2×2 plus inverse-decay BEST checks are queued in code.
 
 
