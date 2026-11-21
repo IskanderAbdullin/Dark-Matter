@@ -2,42 +2,39 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Implement and converge full relativistic Pauli-blocked weak-form 2→2 collision moments",
-  "objective": "Complete a gauge-qualified χ1–SM thermal collision operator with 2->2 invariant phase-space measure, both initial/final Fermi statistics and independent convergence. The existing Yukawa decay, electron transport and nonrelativistic drag are baselines; none is a justified gamma_el for the relativistic BEST parent M/T=0.1.",
+  "title": "Generalize relativistic Pauli 2-to-2 collision to arbitrary isotropic nonthermal chi distribution; verify finite-grid conservation and entropy",
+  "objective": "Extend full-invariant electron-vector χe strong Cχ(p) beyond two-temperature FD trial functions to interpolated arbitrary 0≤fχ(p)≤1, preserving full Pauli, correct Møller flux and inverse source. Test that phase-space truncation/interpolation does not masquerade as physical chemistry or heat. Build conservation/positivity-preserving kinetic discretization only after independent convergence.",
   "prerequisites": [
-    "Read AGENTS.md, GOAL.md, STATE.json, EVIDENCE.md, BACKLOG.md and full kinetics/MICROPHYSICS-MODEL.md",
-    "Check current PR #1 HEAD and latest Scientific verification CI including 44932655044; fix regressions before more physics",
-    "Check actual primary Yin 2023/Sakurai-Yin 2025 and external pinned BEST conventions"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL.md, STATE.json, NEXT_ACTION.json, EVIDENCE.md, BACKLOG.md",
+    "Inspect GitHub PR #1 head and Scientific verification for last commit eb9de58d and checkpoint",
+    "Read actual 5D thermal-FD weak/source in kinetics/relativistic_weak_form_2to2.py and reference JSON and all tests"
   ],
-  "steps": [
-    "Choose explicitly UV/gauge-valid portal and quantify necessary e, neutrino, muon and number-changing channels in early thermal plasma; justify approximation domain",
-    "Derive Lorentz-invariant 2->2 source C_chi(p) with four phase-space measures and momentum delta plus |M|^2; both Pauli directions and e chemical potential; derive matching SM Q and source for each independent charge",
-    "Numerically integrate moving-particle differential collisions using t+CM azimuth or invariant phase-space variables, which retain final-state e and chi Pauli; validate physical phase space by exact 4-momentum conservation",
-    "Demonstrate C_chi[fFD(T_SM,mu_chi)] = 0 in equilibrium at matching T; number conservation, Pauli, total dark+SM energy, entropy positivity and sign of Q away from equilibrium",
-    "Benchmark collision energy/momentum moments against earlier independently validated rest exact Pauli Q, moving no-block energy moment, heavy NR eta and exact on-shell event gain/loss",
-    "Derive controlled Fokker-Planck approximation if exact collision integration too costly; quantify failure at relativistic M/T ~ 0.1 instead of using heavy eta there",
-    "Run mesh/angular/MC/time independent convergence tests and save compact measured data; replace phenomenological gamma_el in coupled BEST+SM only once kinetic rate/kernel is validated and BE/FD collision ledger correct",
-    "After each evidenced stage checkpoint/commit/push and immediately select next bottleneck: thermal masses, variable gstar, long freezeout or observed Omega depending results"
+  "experimental_design": [
+    "Implement a callable momentum-distribution source Cχ(p) with exact Pauli fχ(p), fχ(p') and both electron FD directions; no implicit thermal reset or post-step Gaussian projection",
+    "Provide shape-preserving PCHIP tabulation with explicit qmin=0, qmax tail/extrapolation policy, positivity guards, and robust nonlinear gain/loss when F~R",
+    "Recover analytical thermal FD Cχ(p)=0 at common T as a control even with arbitrary µχ; recover previous integrated thermal Qχ and independent rest test-particle recoil with matched pmax/kmax",
+    "Perturb fχ(p) away from FD with an explicit nonthermal shape; measure nonzero collision source, nonnegative integrated entropy ∫(F−R)log(F/R), and Qχ+Qe=0",
+    "Independently evaluate unsymmetrised Cχ(p) number and energy moments against weak symmetrised moments; scan p/k cutoffs and interpolation resolutions. Preserve negative leakage.",
+    "Do NOT substitute a BGK relaxation gamma before an actual linearized eigenmode and SM physics constraints; check UV cutoff and gauge-required bath species",
+    "Once evidenced, checkpoint/commit/push, immediately select next step in this research run"
   ],
   "acceptance": [
-    "No final-state Pauli omission in relativistic collision operator; exact common-T detailed balance and independently measured error",
-    "Conserves chi number under elastic contact; Q_dark+Q_SM=0 and positive/Pauli bounds with finite numerical tolerance",
-    "Momentum-dependent collision kernel or validated reduced FP operator with explicit domain and error budget",
-    "Actual comparison to physical micro tree-level source, not substituted ad hoc gamma or unblocked frequency",
-    "Physical 86 eV/CLASS and BEC claims remain false until final cosmological criteria"
+    "Genuine 2-to-2 finite-T collision for arbitrary isotropic χ occupation, not just FD trial functions",
+    "Reproduces existing FD result to numerical integration tolerance on identical p/k domains",
+    "Finite-grid χ number and total χ+e heat residuals measured, not declared zero by construction",
+    "Pauli bounds, entropy sign, thermal fixed point, nonzero nonlinear source and interpolation convergence tested",
+    "No physical 86-eV relic, Γ(T), BEC, or CLASS-ready claims"
   ],
   "deliverables": [
-    "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md",
-    "tested source and independent quadrature/thermal scan",
-    "persistent compact physical numerical results",
-    "updated checkpoints and immediate next action"
+    "kinetics/relativistic_nonlinear_fermion.py and tests",
+    "new compact results and scientific report",
+    "checkpoint update, commit/push",
+    "next independent science task"
   ],
   "fallback": [
-    "If full integral computationally intractable: derive controlled hard-momentum and soft-transfer bounds and verify a collision subspace numerically",
-    "If 1↔2+portal EFT invalid at T: replace with documented renormalizable UV theory and rederive all rates",
-    "If GitHub CI/tool access blocked: preserve checkpoint and independent analytic tests; do not claim continued background execution"
+    "If nonthermal quadrature too expensive, use controlled reduced kernel and record its failure domain",
+    "If interpolation pollutes equilibrium, preserve a quantitative negative control and fix with a measured interpolation study",
+    "If collisions violate discrete number, implement a conservative gain-loss finite-volume remap only after reproducing continuum reference"
   ],
-  "external_action_policy": "GitHub public research branch and compact Actions permitted. No force-push/merge. Computer Use or any user's Windows PC only after explicit approval.",
-  "resume_instructions": "Read latest HEAD and CI; rerun python kinetics/relativistic_elastic_audit.py; derive and implement invariant weak-form forward-minus-reverse kernel with dσ/dΩ and proper initial flux, both Pauli factors, all angular variables and degeneracies. Independently compare rest unblocked rate, exact common-T null, χ/e number and energy ledgers, entropy and Tχ≠Te Q sign; scan quadrature convergence. Do not substitute NR eta or claim gamma_el.",
-  "last_event_audit": "4000 local seeded on-shell events; no integrated source; report kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
+  "do_not": "Do not use Computer Use/user PC without explicit approval, private-repo Actions, force push, merge main, hide failed numerics, or claim work between runs without scheduler."
 }

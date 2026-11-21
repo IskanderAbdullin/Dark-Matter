@@ -35,6 +35,11 @@
       "claim": "Early IR number N0 at tGamma=4e-5 independently confirms macroscopic BEC",
       "finding": "refuted for tested early RD/qmin configuration; N0 scales approximately as qmin cubed",
       "evidence": "kinetics/results/best-rd-frw-qmin-real-2026-11-21.json"
+    },
+    {
+      "claim": "A truncated 5D strong Cchi(p) can be declared number/energy conserving simply because the paired weak Q is conservative",
+      "finding": "Refuted: cutoff=15 strong/weak Q discrepancy -1.54131%, number residual -3.865e-11 GeV4; cutoff=32 reduces mismatch to ~1.34e-7 and number to 3.78e-15",
+      "evidence": "kinetics/results/relativistic-pauli-weakform-2026-11-21.json"
     }
   ],
   "physical_unknowns": [
@@ -50,8 +55,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
-  "current_phase": "A: Yukawa 1->2 plus vector portal microphysics, electron kinetic tests; coupled full thermal Boltzmann still open",
+  "last_checkpoint_git_sha": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
+  "current_phase": "A: actual 5D Pauli-blocked 2->2 thermal-FD weak collision moments and sampled strong Cchi(p) done for electron-only vector EFT; arbitrary nonthermal kinetics missing",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -111,7 +116,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "Full relativistic finite-temperature collision integral still missing; no gamma_el, no relic, no CLASS-ready",
+  "physics_scope_warning": "No general arbitrary-f chi elastic 2->2 kernel, no SM species beyond electron/positron, no gamma_el, no freezeout or CLASS-ready. Pauli-inclusive FD thermal weak-form completed only.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -119,8 +124,8 @@
     "enabled": true,
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
-  "last_verified_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044",
+  "last_verified_commit": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935320673",
   "last_event_audit": {
     "date": "2026-11-21",
     "script": "kinetics/relativistic_elastic_audit.py",
@@ -131,5 +136,20 @@
     "max_relative_equilibrium_gain_loss": 1.3319660326089454e-14,
     "ci": "not checked",
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
+  },
+  "last_new_scientific_milestone": {
+    "commit": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
+    "title": "Deterministic 5D invariant full-Pauli weak heat and independent unprojected strong Cchi(p), with cutoff-induced nonconservation exposed",
+    "code": "kinetics/relativistic_weak_form_2to2.py",
+    "tests": "tests/test_relativistic_weak_form_2to2.py",
+    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935320673",
+    "ci_status": "success Python 3.11 and Python 3.13 scientific regression",
+    "benchmark": "kinetics/results/relativistic-pauli-weakform-2026-11-21.json",
+    "benchmark_scope": "mchi=.1 GeV, Tchi=.8 GeV, Te=1 GeV, G=.001 GeV^-2, gchi=ge=4; non-observational electron-only EFT",
+    "weak_Q_GeV5": 2.4742564595135925e-8,
+    "weak_refinement_n28_Q_GeV5": 2.4742562992682186e-8,
+    "sampled_strong_number_GeV4": 3.783694303000851e-15,
+    "finite_cutoff_negative": "cut15 strong-vs-weak energy -1.5413%, cut32 1.34e-7; physically significant quadrature/truncation error in insufficient domain",
+    "physical_limits": "No arbitrary nonthermal phase-space integration, electroweak completion, real gamma, SM heat dynamics or 86 eV relic"
   }
 }

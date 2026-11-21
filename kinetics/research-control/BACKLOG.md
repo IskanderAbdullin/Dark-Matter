@@ -52,3 +52,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Relativistic on-shell event geometry and FD detailed-balance audit (4000 seeded local cases), plus formal invariant 2→2 gain/loss; **NOT** an integrated operator ([report](../RELATIVISTIC-ELASTIC-COLLISION.md)).
 - [ ] Next: integrate invariant weak-form Pauli collision moments with actual vector-contact |M|², independent angular refinement and all normalization/degeneracy factors.
+
+## 2026-11-21 next 5D quantum thermal collision milestone
+
+- [x] **Full final-state Pauli 5D invariant weak 2→2 χe collision moments for isotropic FD(Tχ), FD(Te), and sampled unsymmetrised Cχ(p)**: temperature reversal, common-T fixed point, entropy sign, explicit Møller flux, CM outgoing azimuth and spin-degeneracy convention, and independent rest recoils. [CI success #44935320673](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935320673); [code](../relativistic_weak_form_2to2.py); [JSON](../results/relativistic-pauli-weakform-2026-11-21.json).
+- [x] **Negative quantitative discretisation control**: at cutoff15 strong Cχ number drifts and independent strong/weak energy differs by −1.54%; enlarging to cutoff32 reduces discrepancy to ~1e−7. Do not declare conservation from weak-form algebra alone.
+- [ ] **Immediate next**: extend from FD-only trial to arbitrary nonthermal χ occupations; explicit q-grid interpolation, Pauli fχ′, sampled Cχ(p), independent number/heat/entropy tests, and a genuinely conservative finite-volume time step. Then decide if and when a BGK approximation is defensible.
+- [ ] Electron-vector EFT still incomplete: full gauge/UV completion, muon/neutrino channels at physical T, finite me, medium effects, thermal 1↔2 collision, realistic gstar/H, and 86-eV late relic remain unvalidated.
