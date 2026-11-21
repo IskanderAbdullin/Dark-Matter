@@ -181,3 +181,16 @@ Q_chi(p) = g_e/(2*pi^2) int dk k^2 fFD(k/T)
 ```
 
 is a physically derived *signed unblocked collision energy moment*, GeV² per χ. Independent tests integrate `d sigma/dt` against the COM recoil, verify the correct boost coefficient and recover the fully independent χ-at-rest no-blocked recoil integral. In a hot bath a very slow test χ gains energy, whereas a very energetic test χ loses energy, as expected for collisional drag. This is **still not** the equilibrating thermal χ Boltzmann kernel: omitting final electron/χ Pauli destroys detailed balance for a thermal ensemble; angular averaging cannot be applied unchanged once final-state e blocking is present. Proper finite-T full collision integrals (or controlled Fokker–Planck approximation), gauge-required neutrinos and simultaneous SM heat feedback remain mandatory.
+
+
+## Physically derived *controlled heavy χ* momentum drag: Einstein/Fokker–Planck matching
+
+[Heavy NR drag pilot](microphysics_nr_drag.py) provides the **first coupling-dependent kinetic relaxation coefficient**, but **only** in the explicitly controlled limit of *dilute, nonrelativistic χ*, small momentum transfer, and a near-equilibrium e bath. With a Langevin process `dp_i=-eta*p_i dt+sqrt(kappa)dW_i`, `<dp_i^2>/dt=kappa`, the Maxwell stationary variance `<p_i^2>=M*T` demands the fluctuation–dissipation relation `eta=kappa/(2*M*T)`. At rest the 3 momentum components diffuse and heat a χ by `Q_rest=3*kappa/(2*M)`; hence
+
+```text
+kappa = 2*M*Q_rest/3,
+eta_NR = Q_rest/(3*T)
+       -> [31*g_e*pi^3/(756)] * G^2*T^6/M    (M/T -> infinity).
+```
+
+The input `Q_rest` is computed by the **fully recoil-sensitive, Pauli-blocked** microphysical electron scattering integral in [microphysics_recoil_heat.py](microphysics_recoil_heat.py). This construction is a controlled *asymptotic Fokker–Planck matching*, not an exact 2→2 collision operator. The module refuses `M/T < 100` by default and explicitly marks any chosen threshold as an approximation requiring validation. In particular the historical early BEST benchmark `M/T=0.1` is **out of scope**: inserting `eta_NR` as its BGK `gamma_el` would be unphysical. A second independent high-mass asymptote plus numerical rest collision result gives a finite error estimate; an actual full momentum/thermal operator and moving-particle Pauli still need development before realistic relativistic plasma calculations.
