@@ -108,7 +108,8 @@
     "Bose and Pauli boundary derivatives point inside admissible region",
     "discrete detailed balance holds at quantum thermal occupations",
     "finite graph H theorem verified",
-    "explicit additional nonphysical invariant has zero derivative in full nonlinear ODE"
+    "explicit additional nonphysical invariant has zero derivative in full nonlinear ODE",
+    "closed-form modulo-2500 fake charge conserved by full nonlinear three-block ODE"
   ],
   "unverified_required_properties": [
     "absence of spurious reaction graph invariants on adaptive mesh",
@@ -119,5 +120,18 @@
     "thermal SM source/rethermalization",
     "CLASS and observational likelihood"
   ],
-  "interpretation": "Negative but constructive result: exact conservation and entropy on an adaptive graph do not imply physically faithful kinetic evolution if its graph has surplus invariants. Do not treat pilot numbers as a dark-matter spectrum."
+  "interpretation": "Negative but constructive result: exact conservation and entropy on an adaptive graph do not imply physically faithful kinetic evolution if its graph has surplus invariants. Do not treat pilot numbers as a dark-matter spectrum.",
+  "analytic_modular_witness": {
+    "grid": "three_blocks",
+    "daughter_indices": "0..15;2500..2519;5000..5019",
+    "modulus": 2500,
+    "residue_max": 19,
+    "maximum_sum_of_residues": 38,
+    "active_reaction_modular_defect": 0,
+    "charge": "sum_i (i mod 2500) Nphi_i + sum_j (j mod 2500) Nchi2_j + sum_parent ((k-1) mod 2500) Nchi1_k",
+    "independent_from_number_number_energy": true,
+    "orthogonal_norm_from_physical_span": 57.99130429062957,
+    "nonlinear_ODE_derivative": "zero within floating-point tolerance in tests",
+    "physical_status": "spurious numerical aliasing invariant, NOT a physical symmetry"
+  }
 }

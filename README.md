@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Constructive proof of grid aliasing:** for the three-band adaptive mesh, a modulo-2500 weighting of daughter and mother energy-cell indices yields an additional *exactly conserved* pseudo-charge unrelated to physical number/energy. It is verified on the complete nonlinear collision ODE, not merely found by SVD. See [analytic formula](kinetics/ADAPTIVE-INVARIANT-AUDIT.md#8-явная-аналитическая-формула-для-лишнего-инварианта-трёхдиапазонной-сетки) and [regression program](kinetics/modular_invariant_witness.py). This mesh is rejected for any physical CLASS initial spectrum.
+
+
 **Reproducible negative-result artifact:** [JSON spurious-invariant benchmark](kinetics/results/spurious-invariants-2026-11-21.json) and [fail-closed CLASS readiness gate](kinetics/cosmology_readiness_gate.py) now block both unvalidated adaptive spectra, even when the nonlinear ODE conserves energy. All missing physical/IR/FRW evidence defaults to a failed release criterion.
 
 

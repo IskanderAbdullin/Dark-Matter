@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**Closed-form spurious conserved charge:** the [three-band modular-invariant witness](modular_invariant_witness.py) proves exactly that a residue-weighted pseudo-energy is conserved by every on-shell reaction and by the full nonlinear 3-species ODE. This falsifies the apparent uniqueness of the kinetic equilibrium even though energy, two number charges and H theorem hold. See [detailed derivation](ADAPTIVE-INVARIANT-AUDIT.md).
+
+
 **Automated safety of scientific interpretation:** [machine-readable adverse-result summary](results/spurious-invariants-2026-11-21.json) and [CLASS readiness gate](cosmology_readiness_gate.py) explicitly forbid marking the current adaptive f(q) spectra as cosmological predictions. A graph rank of three alone does not establish spectral/IR/FRW/microphysical convergence; missing evidence fails closed.
 
 
