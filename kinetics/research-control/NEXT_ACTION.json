@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Full relativistic finite-temperature chi1-e collision integral with Pauli, energy exchange and consistent BEST coupling",
+  "title": "Implement and converge full relativistic Pauli-blocked weak-form 2→2 collision moments",
   "objective": "Complete a gauge-qualified χ1–SM thermal collision operator with 2->2 invariant phase-space measure, both initial/final Fermi statistics and independent convergence. The existing Yukawa decay, electron transport and nonrelativistic drag are baselines; none is a justified gamma_el for the relativistic BEST parent M/T=0.1.",
   "prerequisites": [
     "Read AGENTS.md, GOAL.md, STATE.json, EVIDENCE.md, BACKLOG.md and full kinetics/MICROPHYSICS-MODEL.md",
@@ -38,5 +38,6 @@
     "If GitHub CI/tool access blocked: preserve checkpoint and independent analytic tests; do not claim continued background execution"
   ],
   "external_action_policy": "GitHub public research branch and compact Actions permitted. No force-push/merge. Computer Use or any user's Windows PC only after explicit approval.",
-  "resume_instructions": "Confirm CI for 08060dd4 and branch HEAD; begin full 2->2 collision kernel derivation and balance tests. Class ready=false."
+  "resume_instructions": "Read latest HEAD and CI; rerun python kinetics/relativistic_elastic_audit.py; derive and implement invariant weak-form forward-minus-reverse kernel with dσ/dΩ and proper initial flux, both Pauli factors, all angular variables and degeneracies. Independently compare rest unblocked rate, exact common-T null, χ/e number and energy ledgers, entropy and Tχ≠Te Q sign; scan quadrature convergence. Do not substitute NR eta or claim gamma_el.",
+  "last_event_audit": "4000 local seeded on-shell events; no integrated source; report kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
 }
