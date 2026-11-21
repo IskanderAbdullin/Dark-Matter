@@ -2,14 +2,17 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate full thermal QED 5D F−R CI; construct nonthermal Pauli/Bose strong operators and finite eγν time evolution",
-  "objective": "First full 5D finite-T QED e−e+↔γγ thermal FD/BE weak source with photon Bose and inverse is derived and independently checked versus prior vacuum total σv limit. Thermal μsum=0 fixed point exact, thermal pair chemical affinity .02 yields Rnet=1.51124370585e−19 for Te/me=.1 with physical Qγ and entropy, and positive entropy for hotter photon inverse. However this is NOT a general arbitrary-f(p) strong collision/time evolution, so next construct conservative e−,e+,γ phase-space finite-volume source and stiff time solver; validate positivity, electric charge, total energy and entropy, photon Bose/fermion Pauli, q/angle/dt/cutoff and chemical freezeout. Add ν weak channels and full gauge/UV dark portal before physically complete χ1+SM evolution.",
+  "title": "Build and independently validate strong nonthermal e−e+↔γγ Pauli/Bose mode sources and positive finite-volume time integrator",
+  "objective": "Full QED 5D weak moments were extended to arbitrary physical nonthermal electron/positron/photon occupations, with conservation/entropy and sign-changing electron/photon bumps. Yet only integrated weak rates exist; no energy/momentum-mode-resolved strong C[f] with positive occupations or time integration. Fix high-T F−R cancellation, then devise on-shell microreversible conservative event-deposition into physical fermion/Bose bins, check finite-bin equilibrium defects, independent weak/strong Q and entropy; implement bounded implicit time solver with dt/cutoff/angular convergence, real charge and finite eγν reservoirs. Add UV/gauge χ1 portal only after plasma validation.",
   "prerequisites": [
-    "Read new report kinetics/QED-PAIR-FULL5D-AUDIT.md and compact results/qed-pair-full5d-2026-11-22.json; check Scientific CI on head and prior QED vacuum stage b8af5e3 (run #44957592228 pending at last check).",
-    "Run python -m pytest -q tests/test_qed_pair_full5d.py tests/test_qed_pair_annihilation_control.py tests/test_fixed_charge_pair_capacity.py",
-    "Repeat direct independent loss check with gamma bath disabled: T/me=.025,.1 and matching p/T=32 vs prior QED sigma integral; test Tγ hotter/colder and charge μ=-μ equilibrium."
+    "Check actual Scientific CI on nonthermal weak new commit, previous full thermal QED commit 59123b (run #44957890224 was in_progress at earlier check), and prior QED vacuum b8af5e.",
+    "Run python -m pytest -q tests/test_qed_pair_nonthermal_weak.py tests/test_qed_pair_full5d.py tests/test_qed_pair_annihilation_control.py",
+    "Read kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md and result JSON, retain negative high-T 3.02e−6 F−R cancellation and photon bump ~1.14e−5 nrad shift."
   ],
   "experiments": [
+    "Design a pairwise conservative event source depositing each e−,e+,γ quartet into individual energy bins while preserving exact charge/energy, nonnegative entropy, electron Pauli 0..1 and photon b>=0; test discretized equilibrium against continuous thermal FD/BE and explicitly quantify any projection bias.",
+    "Use nonthermal 5D quantum weak integral as independent reference for every strong species energy/number source; build positivity-preserving implicit reversible 2↔2 finite-volume integrator with dt, grid and event-order error scans.",
+    "Then implement realistic photon/electron/positron chemical relaxation with neutrino weak channels, charge-neutral baryons, QED thermal masses, H, and validated gauge-invariant χ1/χ2+φ UV portal and quantum Bose production; no physical 86eV claims until terminal gates.",
     "Derive and implement strong mode-resolved e−e+↔γγ collision, no assuming FD/BE forms: distribute 5D on-shell events to conservative energy/momentum bins without losing exact detailed balance or creating fake heat; independent weak/strong moments, trial perturbed distributions, finite temperature scan.",
     "Evolve finite-volume electron/positron/photon states with positivity/Pauli and photon Bose, exact EM charge, photon number not conserved, full energy and entropy ledgers; determine chemical relaxation including inverse vs actual H, photon reheating and weak ν.",
     "Gauge-invariant finite-T χ1 lepton doublet + singlet portal and UV mediator, checked kinetic χ relaxation/electron heat + real χ1↔χ2+φ Bose production; only then FRW, 86eV freezeout, absolute Omega and observables after full convergence.",
@@ -46,9 +49,9 @@
   "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
   "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma.",
   "latest_completed_reference": {
-    "report": "kinetics/QED-PAIR-FULL5D-AUDIT.md",
-    "data": "kinetics/results/qed-pair-full5d-2026-11-22.json",
-    "status": "local independent positive/negative benchmark; repository CI to verify",
-    "scope": "thermal quantum QED 5D WEAK moment only, not arbitrary nonthermal operator or time"
+    "report": "kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md",
+    "data": "kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json",
+    "status": "independent local verification, new CI pending",
+    "limits": "Weak integrated QED nonthermal only; no mode-resolved strong or evolving SM"
   }
 }

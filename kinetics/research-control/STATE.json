@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite active session; next reproducible experiment explicitly saved in NEXT_ACTION. Existing hourly scheduler is separate and only actual runs count as progress.",
+  "stop_reason": "Finite session, next executable nonthermal strong collision step saved. Only separately scheduled hourly task may resume research.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Verify real CI on new QED 5D thermal stage and preceding QED vacuum stage, then implement arbitrary nonthermal mode-resolved strong e/e+/photon Boltzmann with forward/inverse and finite-volume time integration. Couple microscopic χe only when plasma/gauge/ν validated; no BGK physical gamma.",
+  "instruction": "Check real CI for latest full thermal QED and this nonthermal weak stage. Then derive exact strong mode-resolved quantum e−e+↔γγ with arbitrary f and conservative event projections, bound photon Bose, e Pauli, entropy/time/cutoff; add ν and UV valid χ1 portal. Preserve numerical negative high-T cancellation and packet grid errors.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "Full 5D finite-T QED e−e+↔γγ on-shell thermal FD/BE weak moments with photon Bose+inverse, independent vacuum σv normalization and total charge/energy/entropy ledgers. Actual general nonthermal strong C and time-dependent eγν bath, χ1 portal and γel still absent.",
+  "current_phase": "Beyond thermal QED pair 5D weak source: arbitrary smooth isotropic nonthermal e−,e+,γ occupations now probed in full QED on-shell 5D weak collision moments with Pauli/Bose, entropy, charge and energy checks. Strong mode-resolved C and time evolution still unproven, same for χ1 eν UV/γel.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -274,17 +274,16 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "Fully paired forward/inverse thermal quantum QED e−e+↔γγ 5D weak moments",
-    "status": "independent sandbox and compact numerical convergence completed; new GitHub Scientific CI still to check",
-    "source": "kinetics/qed_pair_full5d.py",
-    "test": "tests/test_qed_pair_full5d.py",
-    "report": "kinetics/QED-PAIR-FULL5D-AUDIT.md",
-    "data": "kinetics/results/qed-pair-full5d-2026-11-22.json",
-    "result": "5D CM-boost phase-space, full Pauli electrons and Bose photons F−R; exact thermal fixed point and chemical affinity ratio, positive entropy, charge and energy residual ~1e−15. At Te/me=.1 pair affinity .02, Rnet=1.51124370585e−19 me^4, Qγ=3.5120564751e−19 me^5 and entropy=3.02248741169e−21 me^4.",
-    "independent_normalization": "With empty photons, the independently integrated 5D amplitude recovers earlier FD+σv initial-loss at T/me=.025,.05,.1 to ~1e−14 relative for matched p/T cut and grid.",
-    "negative": "At T/me=1, photon Bose multiplies equilibrium forward by 1.34326026 yet inverse cancels it exactly; loss-only chemical rate is WRONG. p/T cutoff 24→36 changes .1-me benchmark by ~2e−6 then ~1e−9: no general nonthermal convergence inferred.",
-    "limits": "Restricted thermal FD e± and BE photons, QED tree vacuum point m_e; no mode-resolved collision, time stepping, real e± freezeout, ν weak sector/gstar, gauge UV χ1 portal or physical γel. No 86eV ΩDM/BEC/CLASS.",
-    "parent_commit": "b8af5e3f32df896a819da4cad5d05ad216e67967"
+    "name": "Arbitrary isotropic nonthermal QED e−e+↔γγ five-dimensional quantum weak moments",
+    "status": "local independent numerical and negative convergence checks completed; repo CI pending",
+    "source": "kinetics/qed_pair_nonthermal_weak.py",
+    "tests": "tests/test_qed_pair_nonthermal_weak.py",
+    "report": "kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md",
+    "data": "kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json",
+    "positive": "For T/me=.1, electron nonthermal +0.15 logit packet, Rnet=+1.69053734e−23 me^4, entropy=+6.12491e−29; negative packet reverses R but entropy positive. Photon +0.2 BE bump makes Rnet −1.57586871e−18 with entropy positive; energy/charge exact. Independent thermal FD/BE reference at +.02 affinity agrees relative +5.89e−8 at nrad24/nangle16.",
+    "negative": "Thermal Te/me=1 raw F−R vs thermodynamic-affinity stabilized weak source relative mismatch ~3.02e−6; photon-bump nrad24→32 rate shifts ~1.14e−5; qgrid convergence not universal.",
+    "scope": "Only weak integrated moments for isotropic, strictly interior occupation functions. NO strong C_e−(p),C_e+(p),Cγ(k), Pauli/Bose bounded time stepping, real e±/ν/χ1 cosmology; no physical Γel/86eV ΩDM/BEC/CLASS.",
+    "parent_commit": "59123b4d1a79b3e519c1abca0ceaae9c258789be"
   },
-  "last_checkpoint_parent_sha": "b8af5e3f32df896a819da4cad5d05ad216e67967"
+  "last_checkpoint_parent_sha": "59123b4d1a79b3e519c1abca0ceaae9c258789be"
 }

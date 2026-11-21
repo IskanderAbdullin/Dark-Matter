@@ -185,3 +185,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** despite forward Bose enhancement +34.326% at Te/me=1, inverse exactly cancels thermal equilibrium; treating forward rate as NET equilibrium depletion violates quantum detailed balance. p/T cutoff scan nonzero; no claim of uniform numerical accuracy.
 - [ ] Verify real CI for full 5D thermal stage, and prior vacuum QED stage. **Next P0:** nonthermal mode-resolved full strong source C_e±(p), Cγ(k), quantum Pauli/Bose, finite-volume positivity/energy/charge/entropy and stiff time evolution; include electron/proton charge neutrality, neutrino weak, thermal photon/QED corrections, gauge-valid χ1/eν portal before physical γel and 86eV Bose FRW freezeout. No ΩDM/BEC/CLASS.
 
+## 2026-11-22 nonthermal e±γ full 5D QED weak collision
+
+- [x] Generalize exact on-shell full-Pauli/Bose QED 5D forward-minus-reverse event flow to arbitrary positive bounded isotropic e−/e+ and γ occupation functions (no thermal FD/BE closure), with distinct charge/energy and positive entropy weak moments. [Audit](../QED-PAIR-NONTHERMAL-WEAK-AUDIT.md), [tests](../../tests/test_qed_pair_nonthermal_weak.py).
+- [x] Independent thermal FD/BE reference +.02 affinity matches nonthermal routine ~5.89e−8 relative at Te/me=.1; genuine nonthermal electron packet ±.15 flips R, both directions entropy positive. Photon ±.2 bump can flip sign and entropy remains positive.
+- [x] **Negative:** raw F−R may lose digits at Te/me=1 (~3e−6 relative vs stabilized), and photon bump nrad24→32 changes R ~1e−5. Uniform high-precision nonthermal QED operator not established.
+- [ ] Check real CI; **P0:** robust log-ratio numerics, phase-space mode-resolved C_e−,C_e+,Cγ with exact microreversible deposition and Pauli/Bose bounded energy/charge-conserving time evolution; q/angle/cutoff/dt independent error budget, then ν/eγ SM, gauge-valid χ1 mediator, full χ+Bose FRW. No physical Γel/86eV Ω/BEC/CLASS yet.
+
