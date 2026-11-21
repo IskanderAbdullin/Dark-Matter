@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "research_date": "2026-11-21",
+  "repository": "IskanderAbdullin/Dark-Matter",
+  "branch": "research/kinetic-equilibrium-audit-20261121",
+  "draft_pull_request": "https://github.com/IskanderAbdullin/Dark-Matter/pull/1",
+  "origin_commit": "ea6ec461997600d5f00bf244ea808607d40ef8dd",
+  "scope": "86-eV Bose dark matter exploratory kinetic and cosmology theory",
+  "status": "NUMERICAL STRUCTURE RESEARCH, NOT OBSERVATIONALLY OR MICROPHYSICALLY VALIDATED",
+  "last_verified_research_commit_before_manifest": "f1e86027de463b1283796fa1bf1ebfb974cd3d4f",
+  "last_ci_scientific_verification": {
+    "commit": "f1e86027de463b1283796fa1bf1ebfb974cd3d4f",
+    "workflow_run_id": 44914849963,
+    "conclusion": "success",
+    "python_versions": [
+      "3.11",
+      "3.13"
+    ]
+  },
+  "sequential_commits_this_continuation": [
+    {
+      "sha": "a825cecf72aa9cbeef9e17671bd263d42397db53",
+      "step": "parent q^3 remap",
+      "meaning": "number and Pauli exact; physical energy not exact"
+    },
+    {
+      "sha": "365fbca1f52f8dc17302983b6bab60fadc5bbf21",
+      "step": "Pauli-bounded energy feasibility",
+      "meaning": "independent LP reference; artificial correction not physical Liouville"
+    },
+    {
+      "sha": "24cba82681326b30a19d03f4b8a0cd3bf9a5179e",
+      "step": "initial narrow closed collision+FRW split",
+      "meaning": "2->4 time-step production discrepancy 25.66%; original CI failed and finding retained"
+    },
+    {
+      "sha": "835b191fe380b3481c23442600c1465452ca545c",
+      "step": "mother resonance-mode changes",
+      "meaning": "385->383 discrete parent energies; both closed charges conserved; earlier negative CI fixed"
+    },
+    {
+      "sha": "fd1e35a07b5efeb3c5d5a9882ac2f9e5f2982de0",
+      "step": "symmetric collision-Liouville-collision comparison",
+      "meaning": "independent relative step sensitivity; no second-order claim"
+    },
+    {
+      "sha": "4f6337324b983fe27edb85bcf751b798f47f0850",
+      "step": "physical FRW pressure-work ledger",
+      "meaning": "independent x quadrature, physical collision and remap defects separated"
+    },
+    {
+      "sha": "7653f9381d7e90f0ef22e30bd3258d580442f846",
+      "step": "repair reaction-graph rank via UV support",
+      "meaning": "instantaneous graphs have exactly three active invariants for tested cutoffs"
+    },
+    {
+      "sha": "437811d310f767949538f3492e4bfed6519bb9d1",
+      "step": "whole-three-species UV regrid and collision continuation",
+      "meaning": "positive Bose, Pauli fermion, two charges and discrete collision energy; unknown high UV set vacuum"
+    },
+    {
+      "sha": "ba4e40cb981b7dcf6c09d8b8a5ee5d99bb68f9e9",
+      "step": "quantum entropy of grid remapping",
+      "meaning": "Jensen numerical coarse-grained entropy nondecrease, not physical production"
+    },
+    {
+      "sha": "bfe76aa000a881d886e361d915e041ff3ac55cbd",
+      "step": "BEST v1.3.5 external reference protocol",
+      "meaning": "independent external code inspected and pinned, not yet executed"
+    },
+    {
+      "sha": "489a226be6e089858d81291cc6541fc86033256b",
+      "step": "BEST Git provenance and multi-run comparison gate",
+      "meaning": "no-run stays UNVERIFIED; dof/number/sign/convergence checks"
+    },
+    {
+      "sha": "5153c96474b838f0397b63392a152d0a9ddc03f7",
+      "step": "analytic thermal parent energy-loss benchmark",
+      "meaning": "Gamma*M*nFD=0.03646818570688685 and independent number R=0.0164959084596"
+    },
+    {
+      "sha": "f04ae83378404e1d3469cb868e87b47441f1eca7",
+      "step": "BEST 3-species energy conservation gate",
+      "meaning": "checks total physical energy and independent mother loss rate"
+    },
+    {
+      "sha": "f1e86027de463b1283796fa1bf1ebfb974cd3d4f",
+      "step": "BEST same-physics cross-run acceptance",
+      "meaning": "rejects falsely treating changes in M or Gamma as grid convergence"
+    }
+  ],
+  "main_physics_findings": [
+    "Shared mother occupations and exact on-shell discrete reactions can preserve two number charges and discrete collision energy, but moving FRW grids require remapping.",
+    "Fixed parent resonance energy triplets cannot remain on-shell as M1/T changes under collisionless free streaming.",
+    "A short Lie split at x=.0200->.0202,kappa=500 differs by 25.66% in number when the x-step count is doubled 2->4: NO time convergence.",
+    "Daughter UV grids must expand with x to keep exactly three intended collision invariants; independent parent thermal moments may still be inaccurate.",
+    "q^3 overlap preserves each species comoving number and statistical bounds but changes physical energy and artificial coarse-grained entropy.",
+    "Independent flat/FRW physical energy work is analytically known, and numerical collision-shell/remap energy defects are separately quantified."
+  ],
+  "diagnostics": {
+    "Lie_2_steps_nphi_T3": 0.000012513019806481464,
+    "Lie_4_steps_nphi_T3": 0.000009957546048665067,
+    "Lie_relative_drift": 0.2566369008315046,
+    "vacuum_exact_number_production_m_over_T_0p1_g1_4_Gamma_1": 0.0164959084596,
+    "thermal_parent_energy_loss_m_over_T_0p1_g1_4_Gamma_1": 0.03646818570688685,
+    "best_source_version": "v1.3.5",
+    "best_source_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+    "best_external_executed": false,
+    "best_independent_agreement_confirmed": false
+  },
+  "disallowed_claims": [
+    "physically predicted primordial dark-matter f(q)",
+    "self-consistent full FRW energy and entropy",
+    "BEC/condensate established",
+    "86-eV observed cosmology agreement",
+    "CLASS transfer spectrum validated",
+    "CMB/Lyman-alpha likelihood fitted",
+    "BEST-independent Monte Carlo agreement"
+  ],
+  "next_required_work": [
+    {
+      "priority": 1,
+      "task": "Execute independent BEST v1.3.5 reference with proven SHA under MPI/Vegas, measure number+energy rates across two q grids/two Vegas neval and multiple random seeds",
+      "condition": "optional external environment with BEST dependencies"
+    },
+    {
+      "priority": 2,
+      "task": "Build a truly energy-consistent positive coupled collision+Liouville FRW operator with dynamically changing physical mass shell, without fake conserved charges or large split-step error",
+      "condition": "prove both comoving charges, work/energy and quantum H theorem plus resolution/time convergence"
+    },
+    {
+      "priority": 3,
+      "task": "Add physical Lagrangian, Γ(T), finite daughter masses and explicit SM plasma entropy/energy exchange, including zero-mode/condensate kinetics",
+      "condition": "constrain independent microphysical input rather than tune free couplings for Ω"
+    },
+    {
+      "priority": 4,
+      "task": "Compute frozen number+shape with joint qmin/qmax/x-time convergence, then CLASS and independently calibrated observational likelihood",
+      "condition": "only after all preceding tests; fail closed otherwise"
+    }
+  ],
+  "CLASS_initial_spectrum_approved": false,
+  "main_branch_unmodified_by_this_work": true,
+  "external_BEST_runtime_status": "NOT EXECUTED; no independent agreement claims",
+  "source_documents": [
+    "kinetics/NARROW-CLOSED-FRW-SPLIT.md",
+    "kinetics/FRW-MODE-CHANGES.md",
+    "kinetics/STRANG-FRW-COMPARISON.md",
+    "kinetics/FRW-ENERGY-WORK-AUDIT.md",
+    "kinetics/DYNAMIC-RANK-UV-REPAIR.md",
+    "kinetics/DAUGHTER-UV-REGRID.md",
+    "kinetics/QUANTUM-REGRID-ENTROPY.md",
+    "kinetics/BEST-INDEPENDENT-VALIDATION.md",
+    "kinetics/BEST-SOURCE-COMPARISON.md"
+  ]
+}

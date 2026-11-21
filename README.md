@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Research snapshot / audit trail (2026-11-21):** [14 consecutive commits, negative FRW step-convergence finding, known kinetic/energy gaps, precise next tasks and independent BEST status](kinetics/RESEARCH-STATUS-2026-11-21.md); [machine-readable evidence manifest](kinetics/results/research-status-2026-11-21.json). New independent BEST v1.3.5 is identified, but has NOT been executed; the full 86-eV physical DM model, CLASS PSD and observational likelihood remain **unvalidated**.
+
+
 **Independent BEST checks strengthened:** [multi-run validator](kinetics/BEST-SOURCE-COMPARISON.md) now also requires all three energy source derivatives and their total conservation, plus analytic mother energy-loss magnitude ΓM1nFD=0.0364681857069. Missing/wrong energy is a failed preliminary comparison even when all three particle-number rates match. Still no external BEST run; this tests protocol/math only.
 
 

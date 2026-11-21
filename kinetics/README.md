@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**REPRODUCIBLE PROGRESS MANIFEST:** [status document](RESEARCH-STATUS-2026-11-21.md) and [JSON audit trail](results/research-status-2026-11-21.json) enumerate this continuation's 14 Git commits, analytic vacuum number+energy benchmarks, fail-closed independent BEST protocol, 25.66% Lie x-step nonconvergence and missing full FRW energy closure. They explicitly prevent claiming verified physical DM or a CLASS-ready PSD.
+
+
 **BEST ENERGY GATE:** [external validation protocol](BEST-SOURCE-COMPARISON.md) now fails closed unless the independently executed BEST output includes rates of physical energy of χ1/φ/χ2, agrees with ΓM1nFD and has zero total energy flux within tolerance. CI fixtures are artificial and external BEST has NOT yet run.
 
 
