@@ -85,3 +85,17 @@ python kinetics/microphysics_portal.py
 ```
 
 The command prints an **illustrative** benchmark (`m1=0.1 GeV, mphi=86e-9 GeV=86 eV`) with an arbitrary coupling, no assumption of observed ΩDM or freezeout. Its output is not an external BEST result; use independent CI or recomputation of this code before claiming numeric precision.
+
+
+## Follow-up stage: thermal gain/loss and dimensional BEST bridge
+
+[Microphysics thermal gain/loss](microphysics_thermal_gain_loss.py) checks the exact **on-shell occupation factors** from this Yukawa vertex, with explicit thermal Fermi and Bose functions. On an energy shell E1=E2+Ephi,
+
+```text
+D = f1(1-f2)(1+bphi), I=(1-f1)f2*bphi,
+D / I = exp[(mu1-mu2-muphi)/T].
+```
+
+The test verifies `mu1=mu2` and `muphi=0` for equilibrium of a real self-conjugate scalar (if number changing is allowed), both signs of chemical affinity, strong low-energy Bose occupation and off-shell rejection. This is *not* a momentum-resolved thermal decay rate: matrix-element phase space, quantum statistical collision integrals and thermal masses remain necessary.
+
+The same module exports `yukawa_best_bridge`: dimensionful GeV masses and the explicit Yukawa y become dimensionless `BEST masses=m/T`, `BEST Gamma=Gamma_rest/T`, and `BEST amplitude=|M|^2/T^2`, exactly inverted against the earlier independent analytic width. It deliberately does **not** execute BEST, relabel a fixed-width run as fixed-coupling, or insert the unblocked electron transport frequency into the BGK. A true pinned external BEST experiment is the next numerical gate after the microscopic collision channels and normalization are audited.
