@@ -95,7 +95,7 @@ def calculate(analytic_only=False):
                 "PSD_convergence":{"coarse_file":coarse,
                     "max_relative_P_z5":float(np.max(rel)),
                     "median_relative_P_z5":float(np.median(rel)),
-                    "coarse_omega_ncdm_h2":bgcoarse["omega_ncdm_h2"],
+                    "coarse_omega_ncdm_h2":ba["omega_ncdm_h2"],
                     "max_rel_k_below_0p3":float(np.max(rel[ks<=.3])),
                     "max_rel_k_below_1":float(np.max(rel[ks<=1.])),
                     "worst_k":float(ks[int(np.argmax(rel))]),
