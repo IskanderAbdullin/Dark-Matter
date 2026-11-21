@@ -57,5 +57,12 @@
     "data": "kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json",
     "status": "conditional independent spin trace and full 5D heat local, new repo CI pending",
     "limits": "candidate gauge model not yet original χ1+χ2+φ; equal vs ideal split Tν not actual SM history"
+  },
+  "latest_analytic_gate": {
+    "report": "kinetics/FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md",
+    "commit": "f9587255171602bba91d836a5f381457ed70b294",
+    "status": "conditional analytic tree t-channel propagator bound, no new numerical 5D test",
+    "next": "Implement finite mV propagator in independent full-Pauli 5D χe/χν heat and t quadrature; validate 10% contact pointwise bound mV/pstar>=8.59926345 (relative to contact), thermal tail and gauge charge selection; then full SM/UV and nonthermal kinetics",
+    "negative": "Current constant-G thermal χe/χν pilot is not uniformly valid without mediator mass and tail bound"
   }
 }
