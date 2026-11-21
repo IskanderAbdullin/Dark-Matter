@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "verified_run": 44916922599,
+  "run_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916922599",
+  "workflow_head_sha": "393c11527655328bd81b73f377bc0f2c01ff7a84",
+  "artifact_id": 14712252454,
+  "artifact_retention_days": 7,
+  "independent_solver": "BEST v1.3.5",
+  "actual_best_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "MPI_ranks": 2,
+  "model": "initial T=1, mother M/T=.1, Γrest=1, gchi1=4,gphi=1,gchi2=4, finite nonzero BE+FD daughters, inverse 2->1 quantum collisions",
+  "analytic_source": "kinetics/thermal_chemical_affinity.py",
+  "analytical_reference_default": {
+    "mu1": -0.15,
+    "mu2": 0.1,
+    "mu_phi": -0.3,
+    "number_rate": 0.0008565027253502154,
+    "energy_rates": {
+      "chi1": -0.0018101982860539644,
+      "phi": 0.0006730451878862239,
+      "chi2": 0.0011371530981677406
+    },
+    "entropy_production": 0.00004282513626751076
+  },
+  "conditions": {
+    "common_temperature_only": true,
+    "non_equilibrium_chemical_affinity": true,
+    "dynamic_Bose_Pauli_gain_and_loss_snapshot": true,
+    "full_kinetic_time_evolution": false,
+    "expanding_FRW": false,
+    "finite_phi_mass": false,
+    "zero_mode": false,
+    "full_class_observational_likelihood": false
+  },
+  "cases": [
+    {
+      "n": 56,
+      "neval": 12000,
+      "mu1": -0.15,
+      "analytic_nphi": 0.0008565027253502154,
+      "best_nphi": 0.0008564101167898266,
+      "relative_nphi_error": -0.00010812406971738575,
+      "best_nchi1": -0.0008572945625215433,
+      "best_nchi2": 0.0008566242856152031,
+      "best_energy_chi1": -0.0018126525475434584,
+      "best_energy_phi": 0.0006729620745451528,
+      "best_energy_chi2": 0.0011377236892686458,
+      "physical_energy_residual": -0.000001966783729659676,
+      "shape_rms_over_peak": 0.000036144849984379035,
+      "best_entropy_rate": 0.00004069963836753716,
+      "analytic_entropy_rate": 0.00004282513626751076
+    },
+    {
+      "n": 96,
+      "neval": 24000,
+      "mu1": -0.15,
+      "analytic_nphi": 0.0008565027253502154,
+      "best_nphi": 0.000856491254326281,
+      "relative_nphi_error": -0.000013392863320693671,
+      "best_nchi1": -0.0008565960154468945,
+      "best_nchi2": 0.0008565120279565043,
+      "best_energy_chi1": -0.0018104897440931458,
+      "best_energy_phi": 0.0006730342646201352,
+      "best_energy_chi2": 0.001137221239328353,
+      "physical_energy_residual": -2.3424014465762977e-7,
+      "shape_rms_over_peak": 0.000009602041864269117,
+      "best_entropy_rate": 0.00004257253104054189,
+      "analytic_entropy_rate": 0.00004282513626751076
+    },
+    {
+      "n": 56,
+      "neval": 12000,
+      "mu1": -0.25,
+      "analytic_nphi": -0.0008263650403885266,
+      "best_nphi": -0.0008264104812514221,
+      "relative_nphi_error": 0.000054988849569559406,
+      "best_nchi1": 0.0008255650093554175,
+      "best_nchi2": -0.0008262387318171123,
+      "best_energy_chi1": 0.0017330773073613631,
+      "best_energy_phi": -0.0006454091657516307,
+      "best_energy_chi2": -0.001089635255694478,
+      "physical_energy_residual": -0.000001967114084745628,
+      "shape_rms_over_peak": 0.000040087827678920624,
+      "best_entropy_rate": 0.000039124867060393075,
+      "analytic_entropy_rate": 0.000041318252019426324
+    }
+  ],
+  "main_findings": [
+    "Independent BEST finite-occupation Bose enhancement/Pauli and inverse decay reproduces analytic on-shell net number and differential spectrum with improving q resolution.",
+    "At 96 q nodes, neval 24000 and positive affinity, phi number relative error is -1.34e-5 but physical energy total is still -2.34e-7 absolute.",
+    "Even when net rate agrees at ~1e-5, calculated entropy production has ~0.59% relative discrepancy because energy and charge budgets are numerically imperfect.",
+    "At mu1=-.25 the process reverses sign and entropy production remains positive; closed FRW time evolution and condensate dynamics remain unvalidated."
+  ],
+  "warning": "External runs real and pinned, but only two grid/sample combinations for the forward chemical scenario and one for reverse, no independent seed replication; no late-time or 86-eV primordial dark matter claims.",
+  "scientific_convergence_confirmed": false,
+  "CLASS_ready": false
+}

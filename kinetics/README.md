@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**INDEPENDENT REAL FINITE-Bose/Pauli GAIN–LOSS:** [Actions #44916922599](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916922599) actually executes pinned BEST v1.3.5 with FD mother/FD chi2/BE phi at µ1=-.15,+.05 affinity, and µ1=-.25,-.05 affinity; both decay and inverse rate signs match exact 2D analytic source. At 96-q/24000 samples, best phi net 0.000856491254 vs exact 0.000856502725, but finite-grid physical energy −2.34e−7 and entropy relative bias −0.59% remain. [Full report](BEST-CHEMICAL-AFFINITY.md), [long-lived measured evidence](results/best-affinity-real-2026-11-21.json). No FRW or zero mode yet.
+
+
 **AWAY-FROM-EQUILIBRIUM BEST PROTOCOL:** [best_chemical_affinity_reference.py](best_chemical_affinity_reference.py), [physics and instructions](BEST-CHEMICAL-AFFINITY.md) compare real pinned external 1↔2 Bose enhancement + fermionic Pauli + inverse decay against independently derived thermal-affinity exact R, 3 separate physical energy fluxes and entropy sign. Analytic reference verified by original 2D gain/loss quadrature; external non-equilibrium BEST run is not yet executed at this stage.
 
 

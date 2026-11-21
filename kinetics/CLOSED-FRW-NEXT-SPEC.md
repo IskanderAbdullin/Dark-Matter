@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НЕЛИНЕЙНОСТЬ 1↔2 С НЕНУЛЕВЫМИ BOSE/PAULI ПОДТВЕРЖДЕНА ВНЕШНИМ BEST НА МГНОВЕННОМ SNAPSHOT:** [BEST-CHEMICAL-AFFINITY.md](BEST-CHEMICAL-AFFINITY.md), [Actions #44916922599](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916922599). Прямые и обратные реакции проверены для Δµ=±.05, с отдельными 2D аналитическими эталонами числа/энергии; Nq=96 neval=24000 имеет ~0.00134% ошибку Rφ, но физический energy sum всё ещё −2.34e−7, а производная энтропии ~0.59% отличается из-за этих же численных погрешностей. Следующий физический рубеж — actual nonlinear TIME evolution, finite mφ=86eV и explicit Bose zero mode; никакой готовой FRW/CDM или CLASS спектр не следует.
+
+
 **НОВАЯ ВНЕШНЯЯ ПРОВЕРКА НЕЛИНЕЙНЫХ 1↔2 SNAPSHOTS:** [BEST-CHEMICAL-AFFINITY.md](BEST-CHEMICAL-AFFINITY.md) задаёт χ1↔χ2+φ при µ1=-.15,µ2=.1,µφ=-.3, то есть Δµ=.05 и nonzero Bose/Pauli/inverse rate. Аналитические независимые 2D эталоны Rφ=+0.00085650272535, dρχ1=-.00181019828605, dρφ=+.00067304518789, dρχ2=+.00113715309817, энергия=0, entropy production=ΔµR>0. Подготовлен опциональный pinned BEST MPI и mode-resolved comparator. Внешний non-equilibrium BEST ещё необходимо реально исполнить; не смешивать с FRW/CLASS.
 
 
