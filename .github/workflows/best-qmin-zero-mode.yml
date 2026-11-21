@@ -1,0 +1,80 @@
+name: BEST massive Bose zero-mode qmin resolution test (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-qmin-zero-mode.yml'
+      - 'kinetics/best_closed_massive_dynamic.py'
+      - 'kinetics/best_early_bose_exponential.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-bose-qmin-public
+  cancel-in-progress: true
+
+jobs:
+  genuine-massive-bose-ir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Independent BEST environment pinned by Git SHA
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install numpy scipy mpi4py vegas
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+      - name: Compute actual nonlinear Bose zero-mode versus three physical IR cutoffs
+        run: |
+          mkdir -p outputs
+          for qcut in .0001 .00005 .00002; do
+            label=$(echo "$qcut" | sed 's/\./p/')
+            out="outputs/best_zero_cutoff_"$label".json"
+            logfile=$(echo "$out" | sed 's/\.json$/.log/')
+            echo "Independent BEST: qmin=$qcut, 96 momentum bins, 12000 Vegas, 4 steps"
+            mpirun -np 2 python kinetics/best_closed_massive_dynamic.py \
+              --execute --best-root /tmp/best --qmin "$qcut" \
+              --mphi .001 --grid-n 96 --neval 12000 \
+              --steps 4 --dt .00001 --method exprb \
+              --output "$out" > "$logfile" 2>&1
+          done
+      - name: Report zero-mode volume scaling without claiming a macroscopic condensate
+        run: |
+          python - <<'PY'
+          import glob,json,math
+          records=[]
+          for name in sorted(glob.glob("outputs/best_zero_cutoff_*.json")):
+              data=json.load(open(name))
+              p=data["model"]["massive_initial_vacuum_protocol"]
+              qmin=p["qmin"]
+              final=data["time_evolution"][-1]
+              assert data["external_BEST_executed"] and data["not_relic_or_class"]
+              records.append((qmin,final["phi_massive_zero_mode_N0"],final["phi_smallest_q_occupation"],final["number_moments"]["phi"]))
+              print("QMIN",qmin,"N0",final["phi_massive_zero_mode_N0"],
+                    "N0/qmin^3",final["phi_massive_zero_mode_N0"]/qmin**3,
+                    "f(qmin)",final["phi_smallest_q_occupation"],
+                    "total_phi",final["number_moments"]["phi"])
+          assert len(records)==3
+          print("NOTE: N0 ~ qmin^3 suggests ordinary smooth IR phase-space volume, not a macroscopic condensate at this early time.")
+          PY
+      - name: Preserve measured zero mode and MPI logs, short retention
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-massive-bose-qmin-scan
+          path: outputs/best_zero_cutoff_*
+          retention-days: 7
+          if-no-files-found: warn
