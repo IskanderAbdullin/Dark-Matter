@@ -99,7 +99,7 @@
       "stage": "Heavy nonrelativistic chi kinetic drag asymptote from Pauli-blocked rest recoil and Einstein relation",
       "sha": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
       "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044",
-      "ci_conclusion": "in_progress_at_checkpoint",
+      "ci_conclusion": "success",
       "scope": "controlled heavy nondegenerate chi M/T >=100 leading Fokker-Planck matching; specifically INVALID for original relativistic BEST M/T=.1"
     }
   ],
@@ -109,7 +109,16 @@
     "limitations": "FDT heavy nondegenerate chi and small energy transfer, not a general gamma_el. Requires electron final blocking and full integration outside M/T>>1.",
     "previous_best_benchmark_applicable": false,
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
-    "last_ci_at_checkpoint": "in_progress"
+    "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "NO late freezeout, no genuine cosmological 86 eV distribution, no 2->2 full relativistic collision operator, no CLASS readiness"
+  "physics_scope_warning": "NO late freezeout, no genuine cosmological 86 eV distribution, no 2->2 full relativistic collision operator, no CLASS readiness",
+  "automation": {
+    "title": "Dark Matter — автономное исследование",
+    "id": "6b01db5ad8ec8191a71d1a703058d03a",
+    "schedule": "HOURLY",
+    "enabled": true,
+    "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
+  },
+  "last_verified_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044"
 }
