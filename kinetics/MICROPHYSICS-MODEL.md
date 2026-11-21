@@ -145,3 +145,18 @@ Q_chi,event = (E_chi'-E_chi) * (F-R) = -Q_e,event.
 ```
 
 At common T, `F=R` independently of both chemical potentials. An electron bath hotter than χ drives positive Q_chi for a χ-rest initial recoil event; reversing the temperature hierarchy flips it, without violating the entropy sign. Separate exact rest-frame kinematics verify mass shell and 4-momentum identities rather than inferring conservation from a code ledger. These are **local phase-space identities only**: there is still no invariant phase-space measure, angular/thermal integration over moving χ, linearized drag eigenvalue, collision coupling to BEST or resolved SM temperature dynamics. An event-level entropy sign is not yet a global H theorem for the discretized solver. This is the next critical construction requirement.
+
+
+## Momentum-dependent incoming transport frequency — still not gamma_el
+
+[Moving χ transport reference](microphysics_moving_transport.py) integrates the chosen contact scattering **with the correct Lorentz-invariant incoming flux** for a χ particle with physical momentum p in an isotropic, massless, unblocked electron/positron bath:
+
+```text
+Echi = sqrt(M^2+p^2), beta=p/Echi,
+s = M^2+2*k*Echi*(1-beta*cos(theta)),
+v_Moller = 1-beta*cos(theta),
+nu_T(p,T) = g_e/(2*pi^2) int dk k^2 fFD(k/T)
+                   * (1/2) int_-1^1 dcos(theta) v_Moller sigma_T(s).
+```
+
+Tests require exact p=0 reduction to the earlier rest expression, continuous p→0, positive rates and coupling-square scaling. This is a **true momentum-dependent incoming test-particle collision frequency**, not the linearized kinetic relaxation `gamma_el(p,T)`: the electron's final-state Pauli, full 2→2 gain/loss, angular momentum exchange, moving χ blocking, thermal masses, neutrino channels and SM backreaction must all be integrated before it can replace phenomenological BGK. A CM transfer-weighted cross section is not itself a lab drag coefficient.
