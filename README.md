@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Symmetric early-FRW split diagnostic:** [Strang-type collision–Liouville–collision](kinetics/STRANG-FRW-COMPARISON.md) tests the same closed dynamically rebuilt 1↔2 networks as the left-endpoint Lie scheme and measures, rather than assumes, step refinement. Both half-collision discrete-energy errors, mother physical shell-energy defects, free FRW work, projection energy drift and two global comoving charges are tracked separately. Threshold nonsmoothness prevents an automatic second-order claim; no CLASS-ready relic is inferred.
+
+
 **FRW parent-mode threshold crossing:** [dynamic q-conservative regridding across a changing parent-energy basis](kinetics/FRW-MODE-CHANGES.md) now allows mother resonance modes to disappear as GRID VARIABLES (385→383) without deleting physical mother particles, provided each freshly rebuilt on-shell graph still has precisely three invariants. The numerical x-stepping is NOT converged: 2 vs 4 split steps at κ=500 changes produced Bose number by ~25.66%. No full energy-conserving FRW relic or CLASS PSD is claimed.
 
 

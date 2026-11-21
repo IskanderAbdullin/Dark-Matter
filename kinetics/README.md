@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**TIME-INTEGRATION ALTERNATIVE:** [symmetric collision–Liouville–collision split](STRANG-FRW-COMPARISON.md) compares step-refinement of the early moving-on-shell 3-species FRW pilot against the original Lie operator split. It supports regridding when mother energy-mode counts change and reports both collision-half energy errors and Liouville/remap errors. This does not yet certify time convergence or full FRW physical energy closure.
+
+
 **FRW TOPOLOGY CHANGES:** [cross changing mother-mode sets](FRW-MODE-CHANGES.md) by exact q³-overlap: shared parent energy states can change from 385 to 383 with two charges intact, while all new on-shell graphs are independently rank audited. At larger x the daughter grid develops fake invariants and is rejected. Explicit time-grid negative result: 2→4 split steps changes nphi by 25.66%, so no convergence claim.
 
 
