@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FULL genuine RD-FRW quantum BEST zero-mode qmin audit confirms NO early macroscopic BEC:** [public successful Actions #44924098843](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843), [three-run report](kinetics/BEST-FRW-QMIN-SCAN.md), [preserved measured JSON](kinetics/results/best-rd-frw-qmin-real-2026-11-21.json). At fixed 96 q-nodes, 128 time steps, Γrest=1, a_end=sqrt1.4, N0(qmin) falls by 7.99969 and 15.624999 as qmin shrinks 2× and 2.5×; N0/qmin³ variation only 0.00384%, total φ number stable to 1.33e−6 relative. Thus the zero mode is still regular low-q physical phase volume at this early stage, **not cutoff-independent condensate**. This does NOT exclude later BEC, physical 86-eV DM, SM plasma or CLASS.
+
+
 **Actual independent BEST second-order FRW Bose integration succeeds:** [GitHub Actions #44924314432](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924314432) runs native two-stage exprb2 with full quantum 1↔2, dynamic massive φ/zero-mode and expansion. At only **32 time steps**, fφ(qmin)=**1.019622173** versus independent exact early redshifted collisionless-parent Bose **1.019683988** (relative −0.00606%). Former first-order exprb **128 steps** remained 0.489% away. [Time series and numerical error orders](kinetics/BEST-SECOND-ORDER-FRW-PILOT.md), [persisted pinned data](kinetics/results/best-frw-exprb2-real-2026-11-21.json). IR N0 still ~1.14% from independent regular-cell prediction; do not confuse better time integrator with physical zero-mode/SM/freezeout/CLASS validation.
 
 

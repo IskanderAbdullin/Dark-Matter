@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НОВЫЙ РЕАЛЬНЫЙ RD-FRW QMIN AUDIT: ранний макроскопический БЭК НЕ обнаружен:** [BEST-FRW-QMIN-SCAN.md](BEST-FRW-QMIN-SCAN.md), [Actions #44924098843](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843). Реальная MPI BEST χ1↔χ2+massiveφ динамика при a_end=1.1832 и Nt128, Nq96, qmin=1e−4,5e−5,2e−5 даёт N0/qmin³ почти константу (разброс 0.00384%), отношение N0 на двух шагах 7.99969 и 15.624999 при теоретических 8 и15.625. Физическое полное Nφ cutoff-устойчиво ~1.33e−6. Это regular Bose low-q population, НЕ доказанный макроконденсат. Не исключает позднюю BEC; нужны реальная SM плазма, Γ(T), gstarS, physical 86эВ и CLASS.
+
+
 **НАСТОЯЩАЯ ВНЕШНЯЯ BEST FRW ДИНАМИКА СО ВТОРЫМ ПОРЯДКОМ ВЫПОЛНЕНА:** [BEST-SECOND-ORDER-FRW-PILOT.md](BEST-SECOND-ORDER-FRW-PILOT.md), [Actions #44924314432](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924314432). При 32 шагах exprb2, Nq=56, Vegas6000: fφ(qmin)=1.019622173 vs независимый непрерывный A(q,t) в корректном collisionless-mother RD=1.019683988 (−0.00606%). Разности 4→8→16→32 убывают ~5× при dt/2. Прежний first-order exprb при128 шагах отличался на +0.489%. Нулевой mode N0 всё ещё отличается от регулярного аналитического числа на ~1.14%; qmin/MC time, SM bath с реальным Q, gstarS(T), физическая Γ(T) и CLASS остаются следующими этапами.
 
 

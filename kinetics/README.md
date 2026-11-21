@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ACTUAL BEST RD-FRW 3-CUTOFF NO-BEC TEST:** [BEST-FRW-QMIN-SCAN.md](BEST-FRW-QMIN-SCAN.md) / [Actions #44924098843](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843) / [measurements](results/best-rd-frw-qmin-real-2026-11-21.json). At end tΓ=4e−5, N0 scales as qmin³ across qmin=1e−4,5e−5,2e−5 with N0/qmin³ scatter 0.00384%; total phi comoving number steady to 0.000133% across the cutoff sweep. This supports NO macroscopic early Bose-Einstein condensate in the particular RD model; further time/Nq/BEST integrator convergence and physical SM rethermalization remain necessary.
+
+
 **SECOND-ORDER EXTERNAL BEST FRW IR VALIDATED:** [BEST-SECOND-ORDER-FRW-PILOT.md](BEST-SECOND-ORDER-FRW-PILOT.md) / [Actions #44924314432](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924314432). Native exprb2 (two quantum rate passes/time step) has fφ(qmin)=1.019622 at 32 steps versus separate physically redshifted early analytic 1.019684, only −0.00606% relative. 4→8→16→32 difference decreases ~5× per dt/2, unlike first-order exprb needing 128 steps with +0.49% error. [Permanent evidence](results/best-frw-exprb2-real-2026-11-21.json). The zero-mode n0 remains ~1% distinct from regular q<qmin analytic; full qmin/SM/frozen dark matter still unproven.
 
 
