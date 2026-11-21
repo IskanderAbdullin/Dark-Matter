@@ -1,0 +1,75 @@
+{
+  "status": "independent sandbox direct invariant transfer-angle derivation and energy-lattice quadrature; final new GitHub CI still to verify",
+  "model": "full-Pauli 2→2 chi+massless e vector contact, Mchi=.1 GeV, Tchi=.9/1.1, Te=1, G=.001 GeV^-2, gchi=ge=4",
+  "source": "kinetics/microreversible_chie_lattice.py",
+  "runner": "python kinetics/verify_microreversible_lattice.py --output outputs/direct-qkernel.json",
+  "amplitude": "2G^2[(s-M^2)^2+(u-M^2)^2+2M^2t]",
+  "direct_on_shell_symmetric_kernel": "gchi ge/(256 pi^5) ∫ dq <|M|^2>cone relative azimuth",
+  "independent_5D_CM_gauss_n28_p_and_k_up_to22_GeV": {
+    "cold_Tchi0p9_Q_GeV5": 1.9851492233308662e-8,
+    "hot_Tchi1p1_Q_GeV5": -4.432408224385169e-8
+  },
+  "energy_lattice_nq12_qintegral_h_scan": [
+    {
+      "dE_GeV": 1,
+      "nchi": 22,
+      "ne": 22,
+      "cold_Q_GeV5": 2.0066428148856442e-8,
+      "hot_Q_GeV5": -4.475030225116334e-8,
+      "cold_rel_error": 0.010827191881683351,
+      "hot_rel_error": 0.009615991707775606
+    },
+    {
+      "dE_GeV": 0.5,
+      "nchi": 44,
+      "ne": 44,
+      "cold_Q_GeV5": 1.9854909200454386e-8,
+      "hot_Q_GeV5": -4.4331454779896726e-8,
+      "cold_rel_error": 0.00017212646311737245,
+      "hot_rel_error": 0.000166332514331069
+    },
+    {
+      "dE_GeV": 0.25,
+      "nchi": 88,
+      "ne": 88,
+      "cold_Q_GeV5": 1.9833906119488718e-8,
+      "hot_Q_GeV5": -4.428968123117066e-8,
+      "cold_rel_error": -0.0008858837216497717,
+      "hot_rel_error": -0.0007761246469081273
+    },
+    {
+      "dE_GeV": 0.125,
+      "nchi": 176,
+      "ne": 176,
+      "cold_Q_GeV5": 1.9851092070921427e-8,
+      "hot_Q_GeV5": -4.432106079842345e-8,
+      "cold_rel_error": -0.000020157798846232033,
+      "hot_rel_error": -0.00006816712891244414
+    }
+  ],
+  "azimuth_amplitude_algebra_check": {
+    "M": 0.1,
+    "G": 0.001,
+    "E": 1.1,
+    "k": 2,
+    "Eprime": 1.7,
+    "kprime": 1.4,
+    "q": 1.5,
+    "direct_2048_azimuth_M2": 0.00008564963736000002,
+    "analytic_cone_M2": 0.00008564963736000002
+  },
+  "random_forward_reverse_rates_relative_error_below": 1e-12,
+  "numerical_q_Gauss8_to12_cold_shift_fraction_at_h0p5": -0.00001447991500447506,
+  "important_negative": "Energy collocation is NOT monotonically convergent as spacing halves: h=.25 has larger relative weak Q error than h=.5; fine h=.125 resolves it to <7e-5 relative. Continue convergence.",
+  "clearly_not_validated": [
+    "finite electron mass/annihilation/e± thresholds",
+    "gauge-required neutrino channels and UV mediator",
+    "full nonlinear continuum momentum-resolved true spectrum",
+    "full SM heat/gstar/Friedmann",
+    "Bose 1->2 and 86eV freezeout",
+    "BEC",
+    "Omega",
+    "CLASS"
+  ],
+  "class_ready": false
+}
