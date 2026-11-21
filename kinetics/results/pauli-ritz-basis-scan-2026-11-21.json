@@ -1,0 +1,94 @@
+{
+  "status": "sandbox independent finite 2..5-mode 5D quantum collisional Galerkin, GitHub CI will verify code regressions",
+  "model": "massless e+- chi Dirac contact EFT, full Pauli 5D, equilibrium FD at T=1GeV, M=.1GeV, G=.001GeV^-2, gchi=ge=4, chemical potentials zero",
+  "scope": "Ritz hierarchy basis-size sensitivity only; finite-basis results DO NOT imply the full spectral gap or actual kinetic freezeout",
+  "cases": {
+    "n12_cut32": {
+      "modes2": [
+        2.1306719350264457e-7,
+        7.343327042612298e-7
+      ],
+      "modes3": [
+        1.77392618454901e-7,
+        5.193784589031518e-7,
+        0.0000012296006757207004
+      ],
+      "modes4": [
+        1.5855533738481886e-7,
+        4.031713457557051e-7,
+        8.905438171924602e-7,
+        0.0000017464057644592493
+      ],
+      "modes5": [
+        1.385403952520929e-7,
+        3.0422533961717584e-7,
+        6.971825235469209e-7,
+        0.0000013370932379746768,
+        0.00000229764604334752
+      ]
+    },
+    "n20_cut32": {
+      "modes2": [
+        2.125357553619305e-7,
+        7.323041921117642e-7
+      ],
+      "modes3": [
+        1.725876976465724e-7,
+        5.131253488427259e-7,
+        0.0000012299034386025524
+      ],
+      "modes4": [
+        1.4904365791103295e-7,
+        4.034780822844156e-7,
+        9.04364056895753e-7,
+        0.0000017556347932303537
+      ],
+      "modes5": [
+        1.329598340928651e-7,
+        3.3646764006316606e-7,
+        7.255156908070286e-7,
+        0.0000013402647530606315,
+        0.0000022934025784983423
+      ]
+    },
+    "n24_cut32": {
+      "modes2": [
+        2.1253713826752981e-7,
+        7.32303482119886e-7
+      ],
+      "modes3": [
+        1.7258656857910595e-7,
+        5.131180579721358e-7,
+        0.0000012298988780899708
+      ],
+      "modes4": [
+        1.490332342631409e-7,
+        4.0345725955399083e-7,
+        9.043551885199046e-7,
+        0.0000017556334159034817
+      ],
+      "modes5": [
+        1.3293418514028327e-7,
+        3.36441608316847e-7,
+        7.255254629036977e-7,
+        0.000001340284914696717,
+        0.0000022934201023024304
+      ]
+    }
+  },
+  "findings": {
+    "five_mode_Ritz_vs_two_mode_fraction": 0.6254633247811646,
+    "five_mode_Ritz_vs_energy_moment_fraction": 0.4384631461216921,
+    "cutoff32_n20_to_n24_relative_change": 0.0001929447459640965,
+    "common_FD_number_null_and_orthogonal_basis": true,
+    "naive_single_gamma_or_two_mode_gap_is_invalid": true
+  },
+  "unsupported": [
+    "true full nonthermal kinetic spectrum",
+    "proved nonzero gap",
+    "time integrator",
+    "finite SM bath",
+    "cosmological Bose relic"
+  ],
+  "class_ready": false
+}
