@@ -199,3 +199,8 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** single SM bath Tν=Tγ can give even **wrong net χ heat sign** after photon reheating. Illustrative ideal split Tν/Tγ=(4/11)^(1/3) at Tγ=.1me, Tχ=.9Tγ leads Qν/Qe≈−512; this is NOT actual ν temperature history or 86eV DM prediction.
 - [ ] Check CI and **P0:** finite Z' mass t-propagator and independent chiral/electron 5D normalization, UV/EW completion for actual χ1/χ2φ, realistic ν weak decoupling and e±γ entropy, nonthermal Pauli χ+ν+e kinetics and spectral γel, Bose χ→φ+χ2 and FRW/Ω/CLASS after full convergence. Experimental constraints essential.
 
+
+## 2026-11-21 finite mediator EFT validity gate
+
+- [x] Analytically derive exact spacelike t-channel vector propagator correction and both relative-error conventions; record U(1)' charge constraint for χ1–χ2–φ Yukawa in [note](../FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md).
+- [ ] **Immediate:** insert finite-mV propagator into independent full-Pauli χe/χν 5D heat; verify with separate t quadrature, angular/cutoff convergence, split baths, thermal-tail bound and actual charge/mediator constraints. Analytic bound is not numerical validation or physical gamma_el.
