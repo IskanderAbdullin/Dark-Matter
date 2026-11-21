@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**Dark-matter abundance requirement:** a separate [conditional normalization to present Ωh²](../cosmology/FRW-RELIC-ABUNDANCE-BRIDGE.md) finds nφ/T³≈0.12268 for a 86-eV stable scalar at assumed g*Sprod=55 and Ωh²=.12. At initial mother M/T=.05 this corresponds to ≥33.6% closed-bath depletion. Thus matching abundance alone cannot justify the fixed thermal mother assumption or the cold primordial PSD.
+
+
 **Closed-reservoir budget:** [necessary number-conservation bound](FRW-RESERVOIR-BUDGET.md) compares the fixed-bath FRW output to the thermal mother inventory at initial x=.05. At κ=.2 production exceeds the full original mother number, so external parent replenishment is unavoidable. At κ=.1, a closed reinterpretation would use ~66% of initial mothers, clearly outside passive fixed-source dynamics.
 
 

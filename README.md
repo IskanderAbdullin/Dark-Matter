@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Conditional 86-eV relic-density link:** [freeze-out number to Ωh² normalization](cosmology/FRW-RELIC-ABUNDANCE-BRIDGE.md) uses the existing checked thermal scalar benchmark and standard assumed entropy dilution, finding required nφ/T³≈0.12268 for Ωh²=.12 at mass 86 eV, g*Sprod=55. A closed initial-mother population would have to convert ≥33.6%, so source depletion matters even near the target. This is conditional amplitude normalization, not a kinetic, structure, or observational validation.
+
+
 **New mother-budget falsifier:** [closed-system particle-number audit of the fixed-bath FRW pilot](kinetics/FRW-RESERVOIR-BUDGET.md). A closed χ1↔χ2+φ model beginning at M1/T=.05 with empty daughters has initial nχ1/T³≈0.365206. The high-coupling fixed-bath κ=.2 run produces nφ/T³≈0.36948, **exceeding the initial mother inventory**; it therefore necessarily relies on external replenishment. This is not an inconsistency of the explicitly open pilot, but prohibits presenting it as a closed relic-production calculation.
 
 
