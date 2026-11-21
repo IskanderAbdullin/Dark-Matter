@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**FRW TOPOLOGY CHANGES:** [cross changing mother-mode sets](FRW-MODE-CHANGES.md) by exact q³-overlap: shared parent energy states can change from 385 to 383 with two charges intact, while all new on-shell graphs are independently rank audited. At larger x the daughter grid develops fake invariants and is rejected. Explicit time-grid negative result: 2→4 split steps changes nphi by 25.66%, so no convergence claim.
+
+
 **COUPLED EARLY-FRW PILOT (STRUCTURAL):** [NARROW-CLOSED-FRW-SPLIT.md](NARROW-CLOSED-FRW-SPLIT.md) combines instantaneously rebuilt on-shell collision channels, all three dynamic species and mother Liouville q³ remapping in a tiny RD x-window. It tests two full comoving number charges and separates collision/discrete energy, true free redshift pressure work, and remap-energy bias. It refuses parent-state changes rather than silently fabricating conserved physics.
 
 

@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FRW parent-mode threshold crossing:** [dynamic q-conservative regridding across a changing parent-energy basis](kinetics/FRW-MODE-CHANGES.md) now allows mother resonance modes to disappear as GRID VARIABLES (385→383) without deleting physical mother particles, provided each freshly rebuilt on-shell graph still has precisely three invariants. The numerical x-stepping is NOT converged: 2 vs 4 split steps at κ=500 changes produced Bose number by ~25.66%. No full energy-conserving FRW relic or CLASS PSD is claimed.
+
+
 **First explicitly coupled early-FRW structural pilot:** [narrow closed collision+Liouville splitting](kinetics/NARROW-CLOSED-FRW-SPLIT.md) now rebuilds on-shell χ1↔χ2+φ reaction graphs as x=M1/T changes across .0200→.0202, evolves all species with sparse BDF, and conservatively remaps the massive mother on fixed q=p/T domains. Both independent comoving charges and collision-step discrete energy are checked, while physical shell-energy and remap errors are explicitly reported. This is NOT a self-consistent FRW relic calculation or validated spectrum.
 
 

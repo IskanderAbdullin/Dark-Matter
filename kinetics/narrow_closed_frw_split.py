@@ -38,24 +38,33 @@ from parent_q_remap import (
 
 class NarrowClosedFRWPilot:
     def __init__(self,x0=.02,xend=.0202,steps=4,kappa=500.,
-                 daughter_max_index=300):
+                 daughter_max_index=300,allow_mother_mode_changes=False):
         if x0<=0 or xend<=x0 or steps<1 or kappa<=0:
             raise ValueError("Positive narrow FRW range, steps, coupling required")
         self.xgrid=np.linspace(x0,xend,steps+1)
         self.kappa=kappa
+        self.allow_mother_mode_changes=bool(allow_mother_mode_changes)
         self.indices=bridged_indices(max_index=daughter_max_index)
-        self.models=[SparseClosedDecay(self.indices,M1_T=float(x))
-                     for x in self.xgrid]
+        try:
+            self.models=[SparseClosedDecay(self.indices,M1_T=float(x))
+                         for x in self.xgrid]
+        except AssertionError as exc:
+            if "Spurious invariant graph" not in str(exc):
+                raise
+            raise ValueError("Extra or missing reaction invariants: refuse evolution") from exc
         reference=self.models[0]
-        for model in self.models:
-            if not np.array_equal(model.parent_E,reference.parent_E):
+        for model,xx in zip(self.models,self.xgrid):
+            if not self.allow_mother_mode_changes and not np.array_equal(model.parent_E,reference.parent_E):
                 raise ValueError("Parent resonant energies changed: explicit graph rebuild required")
             if model.graph["active_graph_collision_invariants"]!=3:
                 raise ValueError("Extra or missing reaction invariants: refuse evolution")
-            if xend>=model.parent_E[0]:
-                raise ValueError("A parent energy center moved below physical rest mass")
-        upperE=reference.parent_E[-1]+.5*(reference.parent_E[-1]-reference.parent_E[-2])
-        self.qmax=math.sqrt(upperE**2-xend**2)
+            if xx>=model.parent_E[0]:
+                raise ValueError("Parent energy center below instantaneous physical rest mass")
+        # One global COMOVING momentum domain for every moving grid.
+        # Parent energy modes may appear/disappear if and only if their
+        # new exact on-shell graph independently passes the rank gate.
+        self.qmax=max(math.sqrt((model.parent_E[-1]+.5*(model.parent_E[-1]-model.parent_E[-2]))**2-xx**2)
+                      for model,xx in zip(self.models,self.xgrid))+1e-12
         self.parent_edges=[]
         for model,x in zip(self.models,self.xgrid):
             qedge=moving_parent_edges(model.parent_E,float(x),self.qmax)
@@ -129,6 +138,8 @@ class NarrowClosedFRWPilot:
                 "active_on_shell_channels_start":m.active_pairs,
                 "active_on_shell_channels_end":nxt.active_pairs,
                 "parent_states":m.nparent,
+                "next_parent_states":nxt.nparent,
+                "parent_mode_count_change":nxt.nparent-m.nparent,
                 "before_charge1":before[0],"before_charge2":before[1],
                 "after_charge1":after[0],"after_charge2":after[1],
                 "maximum_charge_drift":charge_drift,
@@ -149,12 +160,15 @@ class NarrowClosedFRWPilot:
             "x0":float(self.xgrid[0]),"xend":float(self.xgrid[-1]),
             "kappa":self.kappa,"daughter_modes":self.n,
             "shared_parent_modes":self.models[0].nparent,
+            "final_shared_parent_modes":self.models[-1].nparent,
+            "parent_mode_changes_permitted":self.allow_mother_mode_changes,
             "initial_charges":first_charges,"final":final,
             "max_global_charge_drift":max_initial_drift,
             "steps":rows,
             "maximum_energy_remap_defect":max(abs(r["finite_volume_remap_energy_error"]) for r in rows),
             "maximum_physical_shell_collision_energy_defect":
                 max(abs(r["collision_physical_shell_energy_error"]) for r in rows),
+            "time_step_convergence_not_established":True,
             "not_a_self_consistent_cosmological_model":True,
             "warning":"Prescribed RD H and constant entropy, tiny x interval, severe thermal UV truncation. Physical energy moments differ from discrete collision energies; remapping introduces an explicit error. No fully conserved FRW energy/SM bath, late freezeout, condensate or CLASS PSD."
         }
