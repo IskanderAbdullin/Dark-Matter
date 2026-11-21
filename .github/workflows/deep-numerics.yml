@@ -45,13 +45,15 @@ jobs:
           python continuation-05/reproduce_open_flux.py > outputs/05_open_flux.json
           python continuation-06/code/phase_density_edge.py > outputs/06_escape_density_of_states.json
           python continuation-06/code/dos_scaling.py > outputs/07_universal_state_density.json
+      - name: Test generalized energy-dependent open diffusion exponent
+        run: python continuation-06/code/generalized_escape_flux.py > outputs/08_generalized_flux.json
       - name: Verify each output is valid JSON with numerical assertions
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
           names=sorted(Path('outputs').glob('*.json'))
-          assert len(names)==7, names
+          assert len(names)==8, names
           for name in names:
               data=json.loads(name.read_text())
               assert isinstance(data,dict) and data, name

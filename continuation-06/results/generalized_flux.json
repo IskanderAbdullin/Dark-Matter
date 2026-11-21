@@ -1,0 +1,40 @@
+{
+  "model": "Simple 1D toy Bose FP at escape",
+  "J": 0.01,
+  "beta": 1,
+  "D0": 1,
+  "cases": [
+    {
+      "alpha": -2,
+      "predicted_k": 3,
+      "numerical_slope": 3.0000335191312937
+    },
+    {
+      "alpha": -1,
+      "predicted_k": 2,
+      "numerical_slope": 2.000044692533584
+    },
+    {
+      "alpha": -0.5,
+      "predicted_k": 1.5,
+      "numerical_slope": 1.500053631176313
+    },
+    {
+      "alpha": 0,
+      "predicted_k": 1,
+      "numerical_slope": 1.0000670392425197
+    },
+    {
+      "alpha": 0.5,
+      "predicted_k": 0.5,
+      "numerical_slope": 0.5000894253498114
+    },
+    {
+      "alpha": 0.8,
+      "predicted_k": 0.2,
+      "numerical_slope": 0.20011291895496655
+    }
+  ],
+  "tests_passed": 12,
+  "caveat": "Conditional local flux-asymptotic, not real galaxy diffusion or a quantum Boltzmann calculation"
+}

@@ -105,3 +105,11 @@ def test_shallow_cutoff_state_density_scaling():
     result=model.run()
     assert abs(result["G0"] - 157.32910288) < .05
     assert abs(result["points"][-1]["relative_error"]) < .001
+
+
+def test_power_law_open_diffusion_selection():
+    solver=load("continuation-06/code/generalized_escape_flux.py")
+    result=solver.run()
+    assert result["checks_passed"] == 12
+    for case in result["scenarios"]:
+        assert abs(case["predicted_edge_power"]-case["numerical_log_slope"]) < .03

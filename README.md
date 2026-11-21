@@ -36,3 +36,5 @@ See [automatic test coverage and limits](TESTING.md), [continuation V](continuat
 [Continuation VI — tidal energy density of states](continuation-06/README.md) derives the static orbit-energy measure for finite Bose halos and the universal shallow-cutoff scaling. A quadratic energy cutoff yields approximately 19 times more states near escape than linear lowering in the same internal normalization, though their dimensionless masses are nearly equal. **This is not a measured evaporation rate.**
 
 [Weekly deep theoretical numerics](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/deep-numerics.yml) reruns seven heavier mathematical checks every Sunday at 04:23 UTC or by manual dispatch. It keeps downloadable JSON outputs for 14 days. The lightweight push/PR suite now contains ten scientific checks, plus synthetic SPARC regressions.
+
+The follow-up [open energy-flux scaling study](continuation-06/02-generalized-open-diffusion-boundary.md) examines which boundary smoothness a power-law diffusion coefficient selects under a prescribed nonzero escape flux. Its equations are conditional transport models, not galactic evaporation measurements.

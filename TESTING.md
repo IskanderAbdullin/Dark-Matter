@@ -17,3 +17,5 @@ The migration was scoped to the dedicated science folder of the original Info re
 ## Weekly numerical research benchmark
 
 A second read-only workflow [Weekly deep theoretical numerics](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/deep-numerics.yml) runs on Sundays at 04:23 UTC and supports manual dispatch. It executes seven Python scripts for energy-cutoff families, the singular critical limit, virial balance, a diffusion-escape toy and the two new state-density calculations; it verifies the resulting JSON and attaches all seven files to the run for 14 days. The main workflow also checks the new continuation VI geometry, giving **ten** fast scientific tests on each push/PR. A green run is numerical reproducibility only and not an observational confirmation.
+
+A further eleventh mathematical regression checks the generalized power-law energy-flux boundary. The scheduled deep numerical workflow now archives eight JSON calculations including the generalized diffusion toy.
