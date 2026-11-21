@@ -1,0 +1,88 @@
+{
+  "status": "independently computed sandbox numerical 5D full-Pauli finite χ-bin equilibrium graph; two necessary negative results",
+  "code": "kinetics/microphysical_equilibrium_graph.py",
+  "runner": "python kinetics/verify_microphysical_bin_graph.py --output outputs/real-5d-bin-audit.json",
+  "model": {
+    "Mchi_GeV": 0.1,
+    "T_GeV": 1,
+    "G_GeVminus2": 0.001,
+    "gchi": 4,
+    "ge": 4,
+    "pmax_GeV": 22,
+    "kmax_GeV": 22
+  },
+  "reference_independent_5D_D11_GeV4": 3.027899802221842e-7,
+  "grid_scan": [
+    {
+      "nchi": 16,
+      "nk": 12,
+      "nmu": 10,
+      "ncm": 10,
+      "nphi": 10,
+      "D_true_GeV4": 3.120360077845734e-7,
+      "D_graph_GeV4": 3.344391392278199e-7,
+      "Jensen_relative": 0.07181257947285358,
+      "raw_L_asymmetry": 0.02850615897670485,
+      "raw_FD_heat_GeV5": 3.014496809559795e-9
+    },
+    {
+      "nchi": 24,
+      "nk": 12,
+      "nmu": 10,
+      "ncm": 10,
+      "nphi": 10,
+      "D_true_GeV4": 3.0669246612445095e-7,
+      "D_graph_GeV4": 3.1608872506283396e-7,
+      "Jensen_relative": 0.030652955355727346,
+      "raw_L_asymmetry": 0.020563005436806517,
+      "raw_FD_heat_GeV5": 1.2721562391866921e-9
+    },
+    {
+      "nchi": 64,
+      "nk": 16,
+      "nmu": 16,
+      "ncm": 16,
+      "nphi": 16,
+      "D_true_GeV4": 3.033011257939914e-7,
+      "D_graph_GeV4": 3.0454592802609747e-7,
+      "Jensen_relative": 0.004118905275528123,
+      "raw_L_asymmetry": 0.015360627687747043,
+      "raw_FD_heat_GeV5": 1.6964695450341278e-10
+    },
+    {
+      "nchi": 64,
+      "nk": 24,
+      "nmu": 24,
+      "ncm": 24,
+      "nphi": 24,
+      "D_true_GeV4": 3.0330163241995895e-7,
+      "D_graph_GeV4": 3.045456921291243e-7,
+      "Jensen_relative": 0.004116431318277366,
+      "raw_L_asymmetry": 0.005590764566404126,
+      "raw_FD_heat_GeV5": 1.691846976931197e-10
+    },
+    {
+      "nchi": 128,
+      "nk": 20,
+      "nmu": 16,
+      "ncm": 16,
+      "nphi": 16,
+      "D_true_GeV4": 3.029067730613992e-7,
+      "D_graph_GeV4": 3.032092078650917e-7,
+      "Jensen_relative": 0.0010131351955273852,
+      "raw_L_asymmetry": 0.021711011602604646,
+      "raw_FD_heat_GeV5": 4.103673015889623e-11
+    }
+  ],
+  "conditional_micro_graph_linear_logit_energy_slope_at_nchi64_GeV4": -3.045459736043927e-7,
+  "equilibrium_closed_Q_GeV5": -1.2705124510333848e-24,
+  "outgoing_out_of_support_weight_fraction_approximately": 5.2e-7,
+  "negative_claims": [
+    "Conserving each projected event's mean energy does not preserve its collision quadratic dissipation; 16-node excess +7.18%",
+    "Physical 5D directed event weights projected to finite χ bin centers do not themselves obey local detailed balance; symmetrization corrects stationary FD but changes the model"
+  ],
+  "next_action": "construct jointly energy-conserving χe physical microreversible Pauli collision quartets, then finite SM heat dynamics; no universal BGK",
+  "physical_86eV_DM_relic_validated": false,
+  "BEC_validated": false,
+  "CLASS_ready": false
+}

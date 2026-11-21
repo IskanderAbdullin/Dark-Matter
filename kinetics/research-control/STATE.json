@@ -70,6 +70,11 @@
       "claim": "Uniform 20-point Gauss p/k quadrature on [0,32T] is accurate for narrow IR χ logit packets",
       "finding": "Refuted. For center E/T=.25,width=.08 uniform rate≈2.604e-8 GeV, wildly grid dependent (16..48); adapted two-segment p/k n20 yields≈4.857e-8 and n24≈4.854e-8. Naive result artificially too small.",
       "evidence": "kinetics/results/pauli-localized-packet-2026-11-21.json and kinetics/PAULI-LOCALIZED-PACKET-AUDIT.md"
+    },
+    {
+      "claim": "5D microphysical χe event bin interpolation preserves exact FD fixed point and linearised collision Dirichlet without correction",
+      "finding": "Refuted: directed L asymmetry 1.536% (nχ64/angle16), false common-T heat +1.696e-10 GeV5; Jensen excess +7.18% at 16 χ bins, +0.4119% at 64, +0.1013% at 128; closure by (L+L^T)/2 changes dynamics",
+      "evidence": "kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md and kinetics/results/microphysical-bin-graph-2026-11-21.json"
     }
   ],
   "physical_unknowns": [
@@ -84,8 +89,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Run physical paired 5D chi-e vector-contact event quadrature on adapted IR bins; compare raw bin-center detailed-balance defect, physical strong/weak heat and corrected projection bias. See FINITE-BIN-RECOIL-PROJECTION-CONTROL.md.",
-  "last_checkpoint_git_sha": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
-  "current_phase": "Converged synthetic continuous-event bin-center detailed-balance negative control; actual 5D chi-e physical paired-bin rates still missing.",
+  "last_checkpoint_git_sha": "32c0a32df0b5f36b7fe3fb52cd64cab155666f58",
+  "current_phase": "A: exact 5D χe full-Pauli equilibrium event conductance projected to finite radial χ bins; measured nonreversibility and positive Jensen-variance transport bias. Strict joint χ/e microreversible collision lattice and full cosmology not achieved",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -201,7 +206,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "Naive uniform p quadrature can create a fictitious IR kinetic slow rate. Correct composite Rayleigh is an upper bound from a selected localized trial, NOT an eigenvalue or proof of continuum gapless spectrum. All full SM/Bose/FRW and 86eV relic/CLASS milestones remain unproven.",
+  "physics_scope_warning": "The physical 5D micro event projection to finite χ bins does not preserve local FD detailed balance and adds a positive quadratic Jensen bias. Symmetric L closure is model-changing. Do not use it as full Pauli χe microphysical temperature-dependent rates or validated BGK gamma. 86-eV DM/CLASS false.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -223,21 +228,22 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "title": "Localized IR trial Rayleigh with adapted composite quadrature, explicit spurious low-rate coarse-grid negative witness",
-    "commit": "e14123a85b0ab23c03c87def759fdcb4da3bcd68",
-    "code": "kinetics/localized_pauli_packets.py",
-    "tests": "tests/test_localized_pauli_packets.py",
-    "report": "kinetics/PAULI-LOCALIZED-PACKET-AUDIT.md",
-    "result": "kinetics/results/pauli-localized-packet-2026-11-21.json",
-    "fixed_trial_center_E_over_T": 0.25,
-    "fixed_trial_width_E_over_T": 0.08,
-    "fake_uniform_n20_Rayleigh_GeV": 2.6044472662459597e-8,
-    "converged_split_n20_Rayleigh_GeV": 4.856937695724728e-8,
-    "converged_split_n24_Rayleigh_GeV": 4.8535941602925195e-8,
-    "next_variant_center0p15_width0p15_Rayleigh_n20_GeV": 4.5751768547471696e-8,
-    "comparator_11_polynomial_Ritz_GeV": 8.564757722572995e-8,
-    "ci_status": "in progress at checkpoint, verify actual GitHub run before marking success",
-    "scope": "conditional broken-EW vector contact fixed FD e bath only, local Rayleigh upper bounds; no true continuous rate"
+    "title": "Full 5D χe physical equilibrium positive event graph on finite p^3 state-capacity bins with quantified Jensen D error and raw FD nonreversibility",
+    "code": "kinetics/microphysical_equilibrium_graph.py",
+    "tests": "tests/test_microphysical_equilibrium_graph.py",
+    "report": "kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md",
+    "compact": "kinetics/results/microphysical-bin-graph-2026-11-21.json",
+    "commit": "32c0a32df0b5f36b7fe3fb52cd64cab155666f58",
+    "ci_status": "check actual GitHub Actions for c81a525 and 32c0a32 (not yet verified at this checkpoint)",
+    "numerical_measurements": {
+      "independent_continuum_D11_GeV4": 3.027899802221842e-7,
+      "projected_n16_D_overestimate_relative": 0.07181257947285358,
+      "projected_n128_D_overestimate_relative": 0.0010131351955273852,
+      "raw_FD_false_heat_nchi64_GeV5": 1.6964695450341278e-10,
+      "angular16_raw_L_asymmetry": 0.015360627687747043,
+      "angular24_raw_L_asymmetry": 0.005590764566404126
+    },
+    "limitations": "Only equilibrium reference-T linear conductances plus imposed reversible closure; NOT arbitrary-fχ physical nonlinearity or bath thermal evolution"
   },
   "last_projection_control": {
     "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",

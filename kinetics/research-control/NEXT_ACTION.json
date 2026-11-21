@@ -2,33 +2,33 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Implement and independently converge paired 5D χe microphysical finite-bin coefficients satisfying local detailed balance",
-  "objective": "Evaluate true vector-contact full-Pauli χe rates K_ij,K_ji using identical paired 5D event measure, physical bin capacities and electron recoil; reject naive bin-center energy projection if it fails exact equilibrium/heat tests. Then couple finite SM energy and integrate with Pauli bounds.",
+  "title": "Construct paired microreversible χe energy-conserving collision quartets with full Pauli and finite SM energy, avoiding ad hoc L symmetrization",
+  "objective": "The real 5D χe equilibrium event graph shows positivity but fails finite-bin detailed balance and inflates linear response by Jensen variance. Derive a discretization where each 2→2 χ+e↔χ'+e' rate is paired at the identical total χ/e energy and phase-space weight. Preserve both χ and electron charges, total energy and Pauli bounds without post-hoc projection that modifies microphysics. Only then integrate physical time-dependent finite SM bath and BEST Yukawa/Bose production.",
   "prerequisites": [
-    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG, latest PR and actual GitHub Actions for e14123a, repair failures",
-    "Read reports PAULI-LOCALIZED-PACKET-AUDIT.md, PAULI-STIELTJES-11MODE-AUDIT.md, FINITE-BATH-QUANTUM-PAIR-REFERENCE.md, plus full nonlinear χe source and conservative energy projection",
-    "Review negative evidence: PCHIP artificial heat, full 5D cutoff strong/weak leakage, uniform χ momentum IR false-slow Rayleigh, nonconverged polynomial basis and time splitting",
-    "Read kinetics/BIN-LOCAL-DETAILED-BALANCE.md and run python kinetics/test_bin_detailed_balance_identity.py (synthetic algebra only, NOT microphysical validation).",
-    "Run python kinetics/finite_bin_recoil_projection_control.py and read FINITE-BIN-RECOIL-PROJECTION-CONTROL.md; its O(h²) defect is synthetic, not χe microphysics."
+    "Read AGENTS.md and CONTINUOUS-RESEARCH-SPEC.md; GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG and latest PR HEAD/CI",
+    "Check CI for c81a525, 32c0a32 and this checkpoint; repair failures before a new scientific claim",
+    "Read kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md, microphysical_equilibrium_graph.py, BIN-LOCAL-DETAILED-BALANCE.md, FINITE-BIN-RECOIL-PROJECTION-CONTROL.md, prior full 5D weak/nonlinear source, finite-bath pairs and numerical scans"
   ],
-  "main_experiment": [
-    "Replace synthetic paired W with actual 5D χe matrix element and on-shell electron recoil; resolve finite-bin O(h²) equilibrium bias without hiding distortion in symmetrized rates.",
-    "Check whether exact electron recoil Δ=E−E′ and finite χ center energy Δij mismatch causes false thermal heating; test paired quadrature local ratio Kij/Kji=exp(Δij/T) independently of integrated weak heat.",
-    "Derive bin transfer rates per χ mode from the actual Lorentz-invariant 5D χe scattering amplitude, including electron and χ final Pauli, exact Møller flux and correct degeneracy; verify against independent strong Cχ(p) and weak heat on uniform/IR-adapted phase-space grids",
-    "Design positive conservative redistribution of outgoing χ and e energies to physical radial q bins, with physical fermion state capacity. Check energy-bin B interpolation, logit-energy exact FD equilibrium and proper detailed balance for all cell rates.",
-    "Dynamically couple finite electron/neutrino/SM energy and entropy to χ fermion collisions, no hidden heat reservoir. Preserve χ number and Qχ+QSM=0 and Pauli bounds under stiff implicit time integration; compare against the reduced toy pair exact invariant reference WITHOUT using its arbitrary Γ as physical input.",
-    "Converge nonlinear thermalization vs dt,q/cell/CM/UV cutoff, compare measured time-moment relaxation to independent FD γ_T and variational two-to-eleven mode Ritz (not equal generically).",
-    "For localized low-p χ packets derive and numerically test variational Rayleigh at narrower widths via adaptive p/k and angular quadrature; if a spectral gap is suspected absent, seek analytic proof and precise assumptions rather than inference from finite basis.",
-    "Verify gauge-invariant e_L/ν_L/e_R portal, UV mediator, thermal masses, gstarS/gstarRho(T) and applicable temperature domain. Only thereafter couple pinned BEST quantum 1↔2 Bose production and proper Friedmann expansion through actual late freezeout.",
-    "Record new positive/negative results, compact reproducible JSON, scientific limitations, checkpoint, nonforce commit/push, immediately choose next physics bottleneck."
+  "hypotheses_to_falsify": [
+    "A uniform common-energy lattice of χ and e occupations with event quartets satisfying Ei+ea=Ej+eb may yield exact microreversible Pauli rates at finite grid spacing without a forced L symmetrization; test against continuous 5D amplitudes and recoil",
+    "Direct E′ barycentric interpolation preserves first moment but adds exactly nonnegative variance to quadratic response; test whether physical quartet co-refinement removes it with controlled O(width²)",
+    "A reversible reference-T graph (L+L.T)/2 cannot be treated as a fully microscopic arbitrary-f/variable-T collision even if Pauli, entropy and number hold within a reduced network"
+  ],
+  "steps": [
+    "Derive energy-lattice χ and e state capacities and positive quadrature weights for collision quartets i,a↔j,b with equal center total energies. Test actual matrix element |M|² and spin counts; handle electron/neutrino and backreaction consistently",
+    "Independent small-grid forward/reverse Pauli source for every quartet: common-T FD null for arbitrary independent μχ, μe without post-hoc symmetrization; number χ/e and total energy charge ledgers",
+    "Compare quartet energy relaxation Dirichlet and nonlinear Q against continuous 5D χe source, electron recoil and strong-vs-weak; n_q, n_k, angular, cutoff convergence. Retain any systematic projection/aliasing as negative result",
+    "Feed physically derived rates into positivity-preserving implicit finite bath integrator, recomputing electron occupancy and Pauli at each bath temperature. Test entropy and temporal convergence; no hidden thermal reservoir",
+    "Add EW-gauge-consistent lepton channels/UV mediator, thermal masses, temperature-dependent gstar before FRW and pinned BEST Bose 1↔2; long 86-eV freezeout/CLASS only with independently validated physics",
+    "After each stage update detailed checkpoint/evidence and negative results, commit/push fast forward, start next best science task"
   ],
   "acceptance": [
-    "Actual microphysical full-Pauli scattering transition rates, not arbitrary electron-contact BGK or toy pair Γ",
-    "Independent weak/strong χ heat and particle-number source benchmark plus detailed-balance and entropy checks on conservative q bins",
-    "Pauli-bounded true time integration and finite SM heat with q/dt/angular cutoff convergence",
-    "Correct IR adapted quadrature and spectral statements limited to rigorous variational bounds",
-    "86eV relic, BEC, CLASS, ΩDM and observational success remain explicitly unvalidated"
+    "Nonzero Γ from actual 5D χe matrix element for energy-matched paired processes without post-hoc symmetrization",
+    "Independent local detailed balance/Pauli/entropy and both χ/e particle number plus energy ledgers",
+    "Direct numerical comparison with true 5D weak/strong moments to a quantified convergence tolerance",
+    "Actual variable-T finite-bath dynamics with positive occupancies and consistent SM heat/entropy",
+    "No physical 86-eV relic, BEC, ΩDM, frozen f(q), CLASS-ready until full validation"
   ],
-  "constraints": "Work in public research branch draft PR only. No merge main, force push, secrets, user PC/Computer Use without explicit approval; Actions compact and physical results must be independently tested.",
-  "fallback": "If full 5D-to-bin collision too costly, derive exact reduced physically weighted pair integral in a controlled limit and preserve failure to match 5D reference; do not claim kernel fully implemented."
+  "scope": "public branch and draft PR only; no force/merge main, no user PC or Computer Use without explicit approval; compact GitHub Actions",
+  "fallback": "If physically paired grid cannot be made with all scattering support, present a rigorously controlled restricted quartet and publish the truncation/aliasing as a negative result rather than invent a gamma."
 }

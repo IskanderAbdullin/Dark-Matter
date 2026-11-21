@@ -111,3 +111,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Synthetic continuous event measure with exact pointwise detailed balance exhibits converged finite-cell center-energy balance bias O(h²), +2.277% at width .8; [report](../FINITE-BIN-RECOIL-PROJECTION-CONTROL.md), [script](../finite_bin_recoil_projection_control.py). **Not physical χe 5D rates.**
 - [ ] P0 unchanged: evaluate actual paired 5D χe recoil event integrals with physical Pauli and phase-space capacities, quantify correction and heat error, then finite-SM time integration.
+
+## 2026-11-21 full 5D χe microphysical finite-bin experiment
+
+- [x] First real physical 5D χe Pauli tree-level scattering event graph with exact radial p³-state capacities and positive outgoing energy-barycentric deposition. Physically normalized equilibrium energy-mode D agrees with independent continuum 5D source within 0.0386% at χ128 (specific EFT benchmark); see MICROPHYSICAL-BIN-GRAPH-AUDIT.md.
+- [x] **Negative result:** event-energy mean conserving does not preserve quadratic Dirichlet: +7.18% at χ16, +0.41% at χ64, +0.10% at χ128 from strictly positive Jensen variance; asymmetry of physical raw L creates spurious common-T FD heat even when true continuum Q=0.
+- [x] Symmetric finite-bin L graph can be used as a **declared linear-response model closure** with positive local Pauli pair rates at reference T, but it is not a fully paired nonlinear electron/χ Boltzmann kernel or physical all-T Γ.
+- [ ] **P0:** construct paired energy-conserving χ+e collision quartets with actual microphysical transition weight and full Pauli, no posthoc symmetry; compare physical Q and entropy/capacity and evolve with finite SM bath. Then EW-gauge/UV/Bose/FRW relic/CLASS only on validated source.
