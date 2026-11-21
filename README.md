@@ -43,3 +43,8 @@ The follow-up [open energy-flux scaling study](continuation-06/02-generalized-op
 ## New cosmological transfer benchmark
 
 [Relativistically decoupled one-real-scalar 86-eV Bose relic](cosmology/README.md) — independently checked entropy, abundance, Delta Neff and correct CLASS noncold phase-space normalization, with automated [CLASS transfer workflow](https://github.com/IskanderAbdullin/Dark-Matter/actions/workflows/thermal-bose-class.yml). This is a **conditional standard thermal relic model**, not a conclusion for all Bose-stimulated cold-production scenarios or a data exclusion.
+
+
+### Verified CLASS benchmark and colder-spectrum research
+
+The public [thermal 86-eV Bose CLASS analysis](cosmology/THERMAL-CLASS-VERIFIED.md) is a successful full linear Einstein–Boltzmann calculation (not just ballistic free-streaming), giving a conditional amplitude-half point k≈0.433/Mpc and correct analytic density. A [positive colder toy phase-space family](cosmology/TOY-COLDER-PSD.md) holds the present number density fixed while varying the momentum distribution; its CLASS transfer scans test sensitivity to nonthermal initial conditions without asserting a realizable production mechanism.

@@ -1,0 +1,70 @@
+{
+  "model": "one real scalar thermal relativistic Bose freeze-out, zero mu, gstarSdec=55, m=86eV",
+  "provenance": {
+    "action_run": 44890003670,
+    "commit": "bd1d65afa6b7a0cbea1d70b97a2037dd2252a832",
+    "classy": "3.4.3.0",
+    "date": "2026-11-21"
+  },
+  "background": {
+    "omega_h2_analytic": 0.11912939486124709,
+    "omega_h2_CLASS": 0.11913012077745594,
+    "deltaNeff": 0.0648151179356105,
+    "z_equality_bose": 3381.4301539951766,
+    "z_equality_cold": 3382.0775145743255
+  },
+  "half_amplitude": {
+    "z0_k": 0.43268689336050153,
+    "z5_k": 0.4327518116491164,
+    "z5_shape_normalized_k": 0.43187632365568845,
+    "coarse_z5_k": 0.4329127011329433,
+    "relative_grid_shift": 0.0003717823461297787
+  },
+  "grid_convergence": {
+    "max_relative_P_for_T_ge_0p05": 0.017075553669586796,
+    "n_reliable_modes": 65,
+    "max_reliable_k": 0.7471164413864971,
+    "max_relative_P_all_k": 710.2915471238939,
+    "worst_k": 4.335679425578831,
+    "warning": "deeply suppressed tail not converged; no exact quantitative high-k inference"
+  },
+  "sample_z5": [
+    [
+      0.0510256,
+      0.9977363
+    ],
+    [
+      0.0975304,
+      0.9808912
+    ],
+    [
+      0.204496,
+      0.8814861
+    ],
+    [
+      0.2961129,
+      0.7429524
+    ],
+    [
+      0.3908738,
+      0.5749826
+    ],
+    [
+      0.4287752,
+      0.5071828
+    ],
+    [
+      0.5159598,
+      0.3612968
+    ],
+    [
+      0.620872,
+      0.2148486
+    ],
+    [
+      0.6810754,
+      0.1689394
+    ]
+  ],
+  "observational_status": "No data likelihood; published standard fermion WDM keV bounds not directly converted to this bosonic PSD"
+}

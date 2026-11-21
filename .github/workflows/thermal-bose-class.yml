@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/thermal-bose-class.yml'
-      - 'cosmology/**'
+      - 'cosmology/*.py'
   workflow_dispatch:
 
 permissions:
@@ -31,6 +31,10 @@ jobs:
         run: python cosmology/thermal_bose_class.py --analytic-only --output outputs/thermal_analytic.json
       - name: Solve linear power spectra and q-grid convergence
         run: python cosmology/thermal_bose_class.py --output outputs/thermal_bose_CLASS.json
+      - name: Synthetic colder Bose momentum family — analytic check
+        run: python cosmology/cold_psd_scan.py --analytic-only --output outputs/cold_analytic.json
+      - name: CLASS transfer for normalized toy colder PSDs
+        run: python cosmology/cold_psd_scan.py --output outputs/cold_PSD_CLASS.json
       - name: Validate saved CLASS results
         run: |
           python - <<'PY'
@@ -39,6 +43,14 @@ jobs:
           r=json.loads(Path('outputs/thermal_bose_CLASS.json').read_text())
           assert len(r['k_1_per_Mpc'])==95
           assert r['warm_background']['omega_ncdm_h2']>0
+          toy=json.loads(Path('outputs/cold_PSD_CLASS.json').read_text())
+          assert len(toy['scenarios'])==4
+          for scenario in toy['scenarios']:
+              d=scenario['CLASS_background']['omega_ncdm_h2']
+              a=scenario['alpha']
+              assert abs(d/r['benchmark']['omega_h2']-1)<.02
+              half=scenario['ratio_to_equal_density_CDM']['5.0']['k_amplitude_0p5_1_per_Mpc']
+              print('Toy coldness alpha:',a,'omega_h2:',d,'k_half:',half)
           print('omega_h2:',r['warm_background']['omega_ncdm_h2'])
           print('grid:',r['PSD_convergence'])
           assert r['PSD_convergence']['max_reliable_P_relative_error_T_ge_0p05']<.03

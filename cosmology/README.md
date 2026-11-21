@@ -35,4 +35,4 @@ Store both sqrt(P_Bose/P_CDM), a shape normalized at the smallest sampled k, a p
 - The primordial Bose-stimulated cold production, coherent condensate, self-interacting kinetic terms, and large-scale formation history need separate physical models; a standard thermal relic may have warm spectrum even at the same particle mass.
 - A meaningful next paper must compare verified CLASS results with a physically derived colder f(q), keeping present abundance, temperature, chemical reactions and internal degrees-of-freedom consistent.
 
-**Research status:** until the GitHub Actions benchmark actually completes, only the independent analytic abundance and PSD normalization have been locally verified.
+**Research status:** the [verified CLASS run](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44890003670) completed successfully. See [actual transfer spectrum and numerical convergence](THERMAL-CLASS-VERIFIED.md), including the unresolved ultra-suppressed high-k numerical tail. An additional [nonthermal toy family](TOY-COLDER-PSD.md) explores dependence on primordial momentum shape without claiming any particle-production model.

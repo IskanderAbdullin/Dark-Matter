@@ -113,3 +113,30 @@ def test_power_law_open_diffusion_selection():
     assert result["checks_passed"] == 12
     for case in result["scenarios"]:
         assert abs(case["predicted_edge_power"]-case["numerical_log_slope"]) < .03
+
+
+def test_CLASS_file_format_and_analytic_moments():
+    import tempfile
+    from pathlib import Path
+    c = load("cosmology/thermal_bose_class.py")
+    with tempfile.TemporaryDirectory() as folder:
+        file = Path(folder)/"be-numeric-only.dat"
+        test = c.write_psd(file)
+        lines = file.read_text().splitlines()
+        assert len(lines)>2000
+        assert len(lines[0].split())==2  # CLASS fscanf cannot read an ASCII header
+        float(lines[0].split()[0]);float(lines[0].split()[1])
+        assert abs(test["relative_number_moment_error"])<1e-4
+        assert abs(test["relative_radiation_moment_error"])<1e-4
+    b = c.thermal_background()
+    assert abs(b["omega_h2"]-.11912939486124709)<1e-6
+
+def test_number_preserving_toy_cold_PSD_analytic():
+    import tempfile
+    from pathlib import Path
+    toy = load("cosmology/cold_psd_scan.py")
+    with tempfile.TemporaryDirectory() as folder:
+        for alpha in (1.,.5,.3,.1):
+            value=toy.cold_psd_file(Path(folder)/("alpha"+str(alpha)+".dat"),alpha)
+            assert abs(value["number_ratio"]-1)<1e-4
+            assert abs(value["early_radiation_ratio"]/alpha-1)<1e-4
