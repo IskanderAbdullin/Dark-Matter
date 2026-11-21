@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**SECOND-ORDER EXTERNAL BEST FRW IR VALIDATED:** [BEST-SECOND-ORDER-FRW-PILOT.md](BEST-SECOND-ORDER-FRW-PILOT.md) / [Actions #44924314432](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924314432). Native exprb2 (two quantum rate passes/time step) has fφ(qmin)=1.019622 at 32 steps versus separate physically redshifted early analytic 1.019684, only −0.00606% relative. 4→8→16→32 difference decreases ~5× per dt/2, unlike first-order exprb needing 128 steps with +0.49% error. [Permanent evidence](results/best-frw-exprb2-real-2026-11-21.json). The zero-mode n0 remains ~1% distinct from regular q<qmin analytic; full qmin/SM/frozen dark matter still unproven.
+
+
 **Actual FRW 64→128-stepping and analytic redshift crosscheck:** [BEST-RADIATION-FRW-PILOT.md](BEST-RADIATION-FRW-PILOT.md), [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) and [permanent external data](results/best-rd-time-64-128-real-2026-11-21.json). fphi(qmin) 1.029882→1.024675, observed 0.508% temporal difference; 1st-order extrapolated 1.019468 vs independent analytic 1.019684 (0.021% apart). The exact early FRW kernel uses mother's initial FD frozen in qcom, not repeated thermal reservoir; no fully numerical or physical DM convergence yet.
 
 

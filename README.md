@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Actual independent BEST second-order FRW Bose integration succeeds:** [GitHub Actions #44924314432](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924314432) runs native two-stage exprb2 with full quantum 1↔2, dynamic massive φ/zero-mode and expansion. At only **32 time steps**, fφ(qmin)=**1.019622173** versus independent exact early redshifted collisionless-parent Bose **1.019683988** (relative −0.00606%). Former first-order exprb **128 steps** remained 0.489% away. [Time series and numerical error orders](kinetics/BEST-SECOND-ORDER-FRW-PILOT.md), [persisted pinned data](kinetics/results/best-frw-exprb2-real-2026-11-21.json). IR N0 still ~1.14% from independent regular-cell prediction; do not confuse better time integrator with physical zero-mode/SM/freezeout/CLASS validation.
+
+
 **64/128 actual BEST FRW time refinement now independently verified:** [successful Actions #44923390224](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44923390224), [permanent measurements](kinetics/results/best-rd-time-64-128-real-2026-11-21.json). At fixed a_end=sqrt1.4, Nq=56, tΓ=4e−5, BEST fφ(qmin) changes 1.02988196→1.02467504 on dt halving (still **0.508%** temporal sensitivity). 1st-order extrapolated f=1.019468 agrees with independent physically redshifted collisionless-parent Bose formula 1.019684 to **0.0212%**. Global charge and pressure-work errors are much smaller than actual cold-source time errors. Need q-grid/qmin/independent seed convergence before BEC, physical frozen 86-eV DM, CLASS.
 
 

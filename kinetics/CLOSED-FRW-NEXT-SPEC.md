@@ -1,5 +1,8 @@
 # ТЗ следующего научного этапа: замкнутая трёхкомпонентная кинетика и физический freeze-out
 
+**НАСТОЯЩАЯ ВНЕШНЯЯ BEST FRW ДИНАМИКА СО ВТОРЫМ ПОРЯДКОМ ВЫПОЛНЕНА:** [BEST-SECOND-ORDER-FRW-PILOT.md](BEST-SECOND-ORDER-FRW-PILOT.md), [Actions #44924314432](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924314432). При 32 шагах exprb2, Nq=56, Vegas6000: fφ(qmin)=1.019622173 vs независимый непрерывный A(q,t) в корректном collisionless-mother RD=1.019683988 (−0.00606%). Разности 4→8→16→32 убывают ~5× при dt/2. Прежний first-order exprb при128 шагах отличался на +0.489%. Нулевой mode N0 всё ещё отличается от регулярного аналитического числа на ~1.14%; qmin/MC time, SM bath с реальным Q, gstarS(T), физическая Γ(T) и CLASS остаются следующими этапами.
+
+
 **БОЛЕЕ ТОНКАЯ FRW ЭВОЛЮЦИЯ НА 64/128 РЕАЛЬНЫХ ШАГАХ ВЫПОЛНЕНА:** [Actions #44923390224](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44923390224). Nφ при128 шагах=7.212682366e−7, fφ(qmin)=1.0246750, N0=1.698379206e−14. Отличие 64→128 по мягкому f 0.508%, ещё не numerical convergence. **Независимый непрерывный FRW gain** [RD-COLLISIONLESS-BOSE-REFERENCE.md](RD-COLLISIONLESS-BOSE-REFERENCE.md) вычисляет редшифт матери в комовинговом FD, предсказывает f(qmin)=1.019684, первый порядок extrap 2f128−f64=1.019468 (0.0212% различие). Требуется комплексная qmin/Nq/MC convergence, и затем физический SM gstarS/Friedmann/Γ(T) до CLASS.
 
 
