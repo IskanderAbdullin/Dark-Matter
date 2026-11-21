@@ -57,7 +57,7 @@ def test_bose_exponential_cold_f_peak_is_not_equal_to_total_relic_number():
 ])
 def test_invalid_short_time_inputs_rejected(bad):
     with pytest.raises(ValueError):
-        frozen_bath_phi_occupation(.001,**bad)
+        frozen_bath_phi_occupation(.001,**{"t":1e-5,**bad})
 
 
 def test_invalid_negative_q_cutoff_is_rejected():
