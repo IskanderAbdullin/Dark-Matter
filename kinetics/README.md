@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**Automated safety of scientific interpretation:** [machine-readable adverse-result summary](results/spurious-invariants-2026-11-21.json) and [CLASS readiness gate](cosmology_readiness_gate.py) explicitly forbid marking the current adaptive f(q) spectra as cosmological predictions. A graph rank of three alone does not establish spectral/IR/FRW/microphysical convergence; missing evidence fails closed.
+
+
 **NEW REJECTION GATE FOR ADAPTIVE GRIDS:** [the collision-invariant rank audit](ADAPTIVE-INVARIANT-AUDIT.md) proves that apparently conservative adaptive 1↔2 grids can have additional, nonphysical conserved quantities. The 27-node sparse mesh has 14 invariants rather than 3; the 56-node three-block mesh has 4. [Unique-mother adaptive ODE](adaptive_resonant_lattice.py) confirms an extra charge is conserved by the full nonlinear solver. Both illustrative spectra are rejected as cosmological predictions despite correct charge/energy/H checks.
 
 

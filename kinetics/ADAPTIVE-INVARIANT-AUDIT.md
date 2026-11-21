@@ -69,3 +69,12 @@ Niclas Bernhoff, *Discrete Quantum Kinetic Equation*, La Matematica 2, 836–860
     python -m pytest -q tests/test_collision_invariant_rank.py tests/test_adaptive_resonant.py
 
 **Статус:** математически проверенное ограничение и новые воспроизводимые модули; физический freeze-out f(q), 86-эВ сценарий и CLASS/наблюдательные выводы ещё не получены.
+
+
+## 7. Машинные контрольные результаты и запрет преждевременного CLASS
+
+Добавлен воспроизводимый JSON-реестр отрицательных проверок: [spurious-invariants-2026-11-21.json](results/spurious-invariants-2026-11-21.json). Его поля отдельно маркируют число нефизических инвариантов, смещение начальной материнской плотности, физически обязательные и пока непроверенные условия.
+
+Добавлена функция evaluate_candidate и проверка require_ready_for_CLASS в модуле [cosmology_readiness_gate.py](cosmology_readiness_gate.py). По умолчанию все не представленные свидетельства считаются **непроверенными и блокирующими**. Кроме правильной размерности ядра требуются отсутствие изолированных состояний, независимая нормировка матери, спектральная/ИК-сходимость, закрытый FRW энергетический бюджет, реалистичные массы и ширина, реальная реликтовая плотность без перескалирования. Текущие две адаптивные схемы всегда возвращают approved_for_CLASS=false. Даже когда все внешние критерии будут заявлены выполненными, автоматический gate не заменяет независимого научного рецензирования.
+
+Команда: python kinetics/cosmology_readiness_gate.py --output outputs/kinetic_class_readiness.json. Проверка: python -m pytest -q tests/test_cosmology_readiness_gate.py.

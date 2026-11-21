@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "negative_numerical_science_result",
+  "date": "2026-11-21",
+  "repository": "IskanderAbdullin/Dark-Matter",
+  "source_commit": "7377039e73a7f78a29c297f5763c67fabd4669d0",
+  "root_research_baseline": "ea6ec461997600d5f00bf244ea808607d40ef8dd",
+  "model": "flat Minkowski, closed chi1 <-> chi2 + phi, M1/T=0.1, g1=gchi2=4, gphi=1, Gamma_rest=1",
+  "origin_of_numbers": "Independent cloud Python numerical replication; scripts under kinetics/ reproduce results. Automated tests check invariants, not all continuous-spectrum convergence.",
+  "theoretical_nullity": 3,
+  "definitions": {
+    "active_nullity": "dimension of kernel of daughter-coefficient constraints after eliminating shared active mother energies",
+    "full_nullity": "active_nullity plus fully inactive declared parent bins",
+    "extra": "active_nullity minus expected three physical invariants",
+    "energy_basis": "daughter energies e_i=(integer_index_i+0.5)*delta; shared mother energies e_phi_i+e_chi2_j",
+    "grid_ready_for_class": false
+  },
+  "graph_audits": [
+    {
+      "mesh": "uniform",
+      "nq": 30,
+      "delta": 0.08,
+      "active_reaction_pairs": 899,
+      "active_mother_modes": 58,
+      "active_nullity": 3,
+      "inactive_declared_mother_modes": 1,
+      "full_nullity": 4,
+      "extra_active_invariants": 0
+    },
+    {
+      "mesh": "uniform",
+      "nq": 50,
+      "delta": 0.08,
+      "active_reaction_pairs": 2499,
+      "active_mother_modes": 98,
+      "active_nullity": 3,
+      "inactive_declared_mother_modes": 1,
+      "full_nullity": 4,
+      "extra_active_invariants": 0
+    },
+    {
+      "mesh": "uniform",
+      "nq": 30,
+      "delta": 0.02,
+      "active_nullity": 3,
+      "inactive_declared_mother_modes": 4,
+      "full_nullity": 7,
+      "extra_active_invariants": 0
+    },
+    {
+      "mesh": "sparse_cold_hot",
+      "nq": 27,
+      "delta": 0.001,
+      "active_reaction_pairs": 437,
+      "active_mother_modes": 197,
+      "active_nullity": 14,
+      "inactive_declared_mother_modes": 0,
+      "extra_active_invariants": 11,
+      "isolated_daughter_modes": 0
+    },
+    {
+      "mesh": "three_blocks",
+      "nq": 56,
+      "delta": 0.001,
+      "active_reaction_pairs": 2840,
+      "active_mother_modes": 151,
+      "active_nullity": 4,
+      "inactive_declared_mother_modes": 0,
+      "extra_active_invariants": 1,
+      "isolated_daughter_modes": 0
+    }
+  ],
+  "closed_adaptive_pilots": [
+    {
+      "mesh": "sparse_cold_hot",
+      "nq": 27,
+      "delta": 0.001,
+      "time_times_gamma_rest": 0.03,
+      "initial_thermal_mother_n_over_T3": 0.3655360968983486,
+      "exact_thermal_mother_n_over_T3": 0.3646818570688685,
+      "initial_mother_relative_quadrature_bias": 0.0023424248092460687,
+      "final_phi_n_over_T3": 0.018335634353581067,
+      "final_mean_phi_q": 0.0358996241050814,
+      "final_parent_n_over_T3": 0.3472004625447676,
+      "max_Bose_occupation_bin_dependent": 329847799.82842636,
+      "BDF_nfev": 1661,
+      "ready_for_cosmology": false
+    },
+    {
+      "mesh": "three_blocks",
+      "nq": 56,
+      "delta": 0.001,
+      "time_times_gamma_rest": 0.03,
+      "initial_thermal_mother_n_over_T3": 0.28948035795642235,
+      "exact_thermal_mother_n_over_T3": 0.3646818570688685,
+      "initial_mother_relative_quadrature_bias": -0.20621124318297168,
+      "final_phi_n_over_T3": 0.019418249462339943,
+      "final_mean_phi_q": 0.01756844637491706,
+      "final_parent_n_over_T3": 0.2700621084940823,
+      "max_Bose_occupation_bin_dependent": 975150450.5080497,
+      "BDF_nfev": 1528,
+      "ready_for_cosmology": false
+    }
+  ],
+  "verified_structural_properties": [
+    "two charge derivatives vanish on tested interior states",
+    "total discrete energy derivative vanishes on tested states",
+    "Bose and Pauli boundary derivatives point inside admissible region",
+    "discrete detailed balance holds at quantum thermal occupations",
+    "finite graph H theorem verified",
+    "explicit additional nonphysical invariant has zero derivative in full nonlinear ODE"
+  ],
+  "unverified_required_properties": [
+    "absence of spurious reaction graph invariants on adaptive mesh",
+    "independent full spectral convergence",
+    "zero-mode and BEC kinetics",
+    "closed FRW expansion and entropy accounting",
+    "finite daughter masses and physical microphysical width",
+    "thermal SM source/rethermalization",
+    "CLASS and observational likelihood"
+  ],
+  "interpretation": "Negative but constructive result: exact conservation and entropy on an adaptive graph do not imply physically faithful kinetic evolution if its graph has surplus invariants. Do not treat pilot numbers as a dark-matter spectrum."
+}

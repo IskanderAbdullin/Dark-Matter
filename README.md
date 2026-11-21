@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Reproducible negative-result artifact:** [JSON spurious-invariant benchmark](kinetics/results/spurious-invariants-2026-11-21.json) and [fail-closed CLASS readiness gate](kinetics/cosmology_readiness_gate.py) now block both unvalidated adaptive spectra, even when the nonlinear ODE conserves energy. All missing physical/IR/FRW evidence defaults to a failed release criterion.
+
+
 **Adaptive-kinetics warning (2026-11-21):** A graph-rank audit of exact-resonance 1↔2 grids found additional numerical conservation laws beyond the two physical charges and energy. A sparse 27-bin cold/hot grid has 11 extra invariants, and a 56-bin three-band grid has one, despite conservation of the intended moments and the discrete H-theorem. A concrete extra invariant is conserved by the full nonlinear adaptive ODE. These grids are explicitly rejected as physical CLASS inputs. See [rank/ODE audit](kinetics/ADAPTIVE-INVARIANT-AUDIT.md), [code](kinetics/collision_invariant_rank.py) and [adaptive proof-of-concept](kinetics/adaptive_resonant_lattice.py).
 
 
