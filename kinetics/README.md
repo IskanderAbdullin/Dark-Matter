@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ACTUAL EXTERNAL BEST SCIENTIFIC EXPERIMENT:** [GitHub Actions #44915936135](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44915936135) succeeded running independent BEST v1.3.5 MPI source. First 28-node result reproduces Bose newborn number rate within 0.0291%, but physical mother energy flux differs +0.3964% and the 3-species physical energy rate sum is nonzero. [Run log, table, expanding to independent 2-grid × 2-neval and equilibrium checks](BEST-GITHUB-ACTIONS.md). Unlike earlier protocol-only tests, this is genuine external execution but still NOT numerical convergence or physical dark matter PSD.
+
+
 **ANALYTIC THERMAL NONLINEAR CROSS-CHECK:** [THERMAL-CHEMICAL-AFFINITY.md](THERMAL-CHEMICAL-AFFINITY.md) derives a closed one-dimensional formula for finite-Bose/Pauli 1↔2 net source on exact two-daughter mass shell. Affinity Δµ=µ1−µchi2−µphi fixes gain/loss sign; qchi integral is analytic with a stable A=B limit. Direct independent quadratures and vacuum-limit tests validate it; not a coupled FRW or zero-mode computation.
 
 

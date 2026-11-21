@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**FIRST ACTUAL INDEPENDENT BEST RUN PASSED:** [public GitHub Actions #44915936135](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44915936135) executed pinned external BEST v1.3.5 with two MPI ranks, separate from our model. At M/T=.1, 28 q nodes and neval=3000, φ number rate 0.0164911055 vs exact 0.0164959085 (−0.0291%); mother energy loss 0.0366127458 vs exact 0.0364681857 (+0.3964%) with nonzero total energy imbalance. [Exact raw run and next 2×2 independent convergence workflow](kinetics/BEST-GITHUB-ACTIONS.md). This single coarse run is NOT a validated nonlinear or cosmological freeze-out; expanded 2×2 plus inverse-decay BEST checks are queued in code.
+
+
 **Exact finite-occupation 1↔2 source derived:** [thermal Bose/Pauli chemical-affinity benchmark](kinetics/THERMAL-CHEMICAL-AFFINITY.md) analytically integrates the full nonlinear forward-minus-inverse kernel over one on-shell daughter momentum at finite BE and FD occupations, proving its sign is sign(mu1−mu2−mu_phi) for common T. Independent direct double quadrature gives Rphi=-0.0008263650 / 0 / +0.0008565027 for mu1=-.25 / -.2 / -.15; its dilute daughter limit reproduces Rvac=.01649590846. This is instantaneous kinetics only, not frozen dark matter.
 
 
