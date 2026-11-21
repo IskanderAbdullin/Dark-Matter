@@ -2,14 +2,17 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Independently validate direct χe invariant q-kernel CI, then derive finite-me and gauge-consistent lepton heat and evolve nonthermal spectrum under cosmological background",
-  "objective": "Directly reciprocal physical χe massless-electron vector-contact 2->2 kernel is now integrated from invariant event measure and has no post-hoc Wpair, but finite energy-lattice collocation still has nonmonotone errors. First verify actual full scientific GitHub CI and fix regressions. Then make the lepton interaction physically valid through the e mass/threshold, SU2 neutrino and mediator domain and full finite-temperature charge/energy ledger. Only then can it be coupled to Yukawa 1↔2 BEST and FRW freezeout.",
+  "title": "Validate finite-electron-mass invariant kernel in real CI, then independently compute 5D massive-lepton heat and plasma thresholds",
+  "objective": "New finite-mass vector-contact invariant kernel and regression were committed in ba83f58/dea914d7; first verify repository pytest/CI and correct any failure. Next obtain independent massive-electron CM 5D heat with Pauli and quantitative energy-grid/cutoff convergence at T/me=0.1,1,10. Never infer physical gamma or 86-eV relic from algebraic checks.",
   "prerequisites": [
+    "Check latest PR head and scientific CI after finite-mass kernel commits ba83f58, dea914d7 and report 5a81a97; earlier run 44947528381 succeeded on 078c3c4.",
     "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and full GOAL, STATE, NEXT_ACTION, EVIDENCE, BACKLOG; confirm current draft PR #1 head/CI",
     "CI run 44946031231 failed 1/737 tests on exact floating-point Qe == -Qchi (relative 1.05e-13); test tolerance corrected in commit 832b5b3. Verify fresh CI on 832b5b3 and investigate any new failures before promotion.",
     "Read INVARIANT-CHI-E-ENERGY-KERNEL.md, microreversible_chie_lattice.py, verify_microreversible_lattice.py, results JSON, and independent nonlinear 5D weak/strong reference"
   ],
   "experiments": [
+    "For finite me test energy-cutoff and quadrature 3+ refinements, Pauli at arbitrary independent chemical potentials and Tchi != Te, and finite heat capacity with e+e- annihilation; document EFT breakdown near electroweak restoration.",
+    "Run python -m pytest -q tests/test_finite_mass_chie_kernel.py; independently check trace with finite-mass Dirac gamma matrices and CM 5D differential heat against 1D transfer kernel; preserve negative controls.",
     "Check new scientific-ci.yml Python 3.11/3.13 workflow for 832b5b3; if green, record run IDs and then independently validate massive-electron kernel threshold heat versus continuum and cutoff/mesh convergence.",
     "Independently check q-interval convolution normalisation and azimuth-averaged trace by numerical 5D and brute-force azimuth evaluations. Verify forward/reverse K equality to machine precision for many physical shell configurations and full Fermi entropy gain at arbitrary μχ,μe.",
     "Run additional independent 5D Gaussian p,k/angle and 1D ℓ+3D energy collocation convergence at M/T=.1: energy h=.5,.25,.125 and smaller, electron cutoff, χ endpoint and transfer Gauss orders; preserve currently non-monotonic negative case.",
