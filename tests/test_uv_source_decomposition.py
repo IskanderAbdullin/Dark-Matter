@@ -68,4 +68,4 @@ def test_quick_results_are_labeled_vacuum_only():
     assert len(out["cases"])==2
     assert out["alternative_meshing_at_same_approximate_Q"]==[]
     assert "NOT" not in out["main_result"]
-    assert "nonlinear" in out["caveat"]
+    assert "Bose gain" in out["caveat"]
