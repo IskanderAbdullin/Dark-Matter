@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ALL-THREE-SPECIES GRID EXTENSION:** [DAUGHTER-UV-REGRID.md](DAUGHTER-UV-REGRID.md) performs q³-accurate finite-volume transport of arbitrary positive Bose occupations (even f≫1) and Pauli-bounded fermions when daughter's upper energy domain grows to repair spurious reaction invariants. Tests exact individual numbers, both charges, parent phase volumes and a short closed new-grid collision continuation. UV-vacuum assumption and artificial energy/shape changes are reported explicitly.
+
+
 **DYNAMIC UV-GRAPH REPAIR:** [automatic scan across instantaneous M1/T](DYNAMIC-RANK-UV-REPAIR.md) identifies how increasing daughter qmax reconnects the actual on-shell 1↔2 graph and removes spurious invariants beyond x=.025. A separate parent FD-number/energy/pressure check highlights that rank=3 alone is insufficient. This is a mesh feasibility tool, NOT evolved or CLASS-ready Bose dark-matter PSD.
 
 

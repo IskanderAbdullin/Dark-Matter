@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Three-species UV regrid + collision continuation:** [Bose/Pauli-safe daughter and mother momentum-space remapping](kinetics/DAUGHTER-UV-REGRID.md) now crosses x=.02→.03 with daughter Rmax 300→500 to keep an invariant-clean reaction graph. It exactly preserves all three species counts and two independent charges under q³ overlap while explicitly assuming unrepresented high-q cells are vacuum. Parent phase-volume normalization is synced to the new closed ODE, and a short new-grid collision continuation is tested. Physical momentum shape/energy remains unvalidated; not a CLASS relic.
+
+
 **Instantaneous FRW graph connectivity repair:** [dynamic upper-cutoff rank scan](kinetics/DYNAMIC-RANK-UV-REPAIR.md) finds how expanding the daughter momentum domain prevents fake conserved collision charges as M1/T rises: on the tested fine-core/comb meshes, x=.025/.03/.04/.05/.08/.1 first pass three-invariant gate at Rmax 400/500/1000/1500/3500/5000 respectively. The minimum graph-valid mesh is NOT necessarily thermal-moment or nonlinear-source converged; physical daughter remapping and full FRW energy closure remain unsolved.
 
 
