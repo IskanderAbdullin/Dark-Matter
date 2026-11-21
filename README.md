@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Entropy-release FRW invariant solved:** [collisionless massive-parent background with variable SM gstarS](kinetics/FRW-ENTROPY-RELEASE.md) proves fixed q=p/T is invalid during entropy dumps; the conserved free variable is q_c=p/[T(gstarS/gstarS_dec)^(1/3)]. An independent synthetic 55→3.909 entropy-step test conserves n*a³ and exactly verifies energy-pressure continuity. This is no-collision physics, not a complete Bose production model or observed dark-matter relic.
+
+
 **Finite-volume FRW Liouville milestone:** [collisionless massive χ1 fixed-comoving-q bin model](kinetics/FRW-MOTHER-FINITE-VOLUME.md) now phase-volume-averages the initial FD state, preserving comoving number and physical FRW pressure-work continuity to roundoff. But at x=M/T=5, just 100 bins give 0.275% energy and 1.33% pressure error even though the initial number is accurate to ~1e-12. This is a strict Γ=0 prerequisite, NOT the coupled Bose-production or CLASS spectrum.
 
 

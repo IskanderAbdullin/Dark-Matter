@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**ENTROPY-AWARE LIOUVILLE:** [variable gstarS collisionless χ1 benchmark](FRW-ENTROPY-RELEASE.md) derives d ln a/d ln x=1−(1/3)d ln gS/d ln x and x d(ρ/T⁴)/dx=(1+α)(ρ/T⁴)+(α−3)(P/T⁴). It verifies true comoving n a³ constancy while n/T³ varies with SM entropy dilution. gstarS step is a test function, not the actual SM thermal history or closed 1↔2 model.
+
+
 **FINITE-VOLUME FRW MOTHER:** [constant-q-bin collisionless Liouville scheme](FRW-MOTHER-FINITE-VOLUME.md) preserves initial FD number at ~1e−12 and exactly obeys x d(ρ/T⁴)/dx=(ρ−3P)/T⁴ for every grid, but independently benchmarked pressure still errs +1.33% at 100 bins (x=5). Conservation is insufficient to certify phase-space resolution. Γ=0 only; no 1↔2 collisions yet.
 
 
