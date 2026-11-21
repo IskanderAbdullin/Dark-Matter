@@ -43,7 +43,10 @@ def benchmark_protocol(mass_over_T=.1,parent_dof=4,rest_width=1.,
             or qmin<=0 or qmax<=qmin or vegas_neval<1000):
         raise ValueError("Positive physical parameters and workable reference mesh required")
     from onshell_collision_2d import vacuum_reference
+    from frw_reservoir_budget import thermal_mother_number
     target=vacuum_reference(M1_T=mass_over_T,g1=parent_dof)
+    energy_flux=mass_over_T*rest_width*thermal_mother_number(
+        mass_over_T,g1=parent_dof)
     return {
        "status":"PROTOCOL ONLY — no external BEST Monte Carlo was executed",
        "independent_solver":"BEST v1.3.5, MIT-licensed, source best-hep/best",
@@ -63,6 +66,9 @@ def benchmark_protocol(mass_over_T=.1,parent_dof=4,rest_width=1.,
        "vegas_neval_per_grid_point":int(vegas_neval),
        "independently_derived_vacuum_source_n_over_T3_per_time":
            float(target*rest_width),
+       "independently_derived_total_daughter_energy_gain_over_T4_per_time":float(energy_flux),
+       "expected_parent_mean_energy_per_decay":float(energy_flux/(target*rest_width)),
+       "analytic_energy_identity":"-d(rho_parent)/dt=M1*Gamma_rest*n_parent(T), because Gamma_lab=Gamma_rest*M1/E_parent",
        "continuum_source_normalization":
            "g1*M1*Gamma_rest/(2pi²)*integral_0^inf log(1+exp[-q-M1²/(4q)]) dq",
        "validation_requirements":[
@@ -117,11 +123,15 @@ def execute_best(protocol,best_root,output):
     if best.world_rank!=0:
         return None
     rate_integrals={}
+    energy_integrals={}
     for species,dof in (("chi1",g1),("phi",1),("chi2",4)):
         q=np.asarray(best.r_grids[species],float)
         collision=np.asarray(rates[species],float)
         rate_integrals[species]=float(
            dof/(2*np.pi**2)*np.dot(grid_weights(q)*q**2,collision))
+        on_shell_energy=np.hypot(q,mass) if species=="chi1" else q
+        energy_integrals[species]=float(
+           dof/(2*np.pi**2)*np.dot(grid_weights(q)*q**2*on_shell_energy,collision))
     produced_phi=rate_integrals["phi"]
     target=protocol["independently_derived_vacuum_source_n_over_T3_per_time"]
     result={
@@ -130,6 +140,10 @@ def execute_best(protocol,best_root,output):
         "BEST_git_revision_matched_pinned_protocol":True,
         "model_and_protocol":protocol,
         "instantaneous_integrated_number_rates":rate_integrals,
+        "instantaneous_integrated_energy_rates":energy_integrals,
+        "reference_analytic_parent_energy_loss_magnitude":protocol["independently_derived_total_daughter_energy_gain_over_T4_per_time"],
+        "relative_BEST_mother_energy_loss_error":-energy_integrals["chi1"]/protocol["independently_derived_total_daughter_energy_gain_over_T4_per_time"]-1,
+        "total_all_species_energy_rate_residual":sum(energy_integrals.values()),
         "reference_analytic_phi_production":target,
         "relative_BEST_phi_rate_error":produced_phi/target-1,
         "chi1_plus_phi_rate_residual":rate_integrals["chi1"]+produced_phi,

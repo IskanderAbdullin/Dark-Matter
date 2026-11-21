@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Independent on-shell energy target:** the optional [BEST external rate benchmark](kinetics/BEST-INDEPENDENT-VALIDATION.md) now compares not only newborn daughter number Rvac=0.0164959084596 but also the exact mother energy loss rate ΓM1 nthermal=0.0364681857069 at M/T=.1,g1=4,T=1. All three species' BEST energy moments and their sum are part of the external JSON, pending a real run.
+
+
 **External BEST comparison now fail-closed:** [pinned SHA verification and multi-run source consistency checker](kinetics/BEST-SOURCE-COMPARISON.md) accept only supplied outputs created under matching BEST v1.3.5 Git SHA and compare thermal vacuum 1↔2 rates for mother and both daughters, with ≥2 grids/≥2 Vegas neval settings for a preliminary agreement label. No actual BEST Monte Carlo results have yet been supplied; current external status remains UNVERIFIED, and no nonlinear FRW or CLASS validation is claimed.
 
 

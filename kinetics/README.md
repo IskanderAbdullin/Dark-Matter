@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**BEST NUMBER+ENERGY CROSSCHECK:** [external BEST source protocol](BEST-INDEPENDENT-VALIDATION.md) now includes independent exact energy loss (M1 Gamma nFD), which at mass/T=.1 equals 0.0364681857069, in addition to 0.0164959084596 number rate; running BEST can reveal incorrect spin/dof factors or physical energy bookkeeping. No BEST external numerical result has yet been produced.
+
+
 **BEST INDEPENDENT SOURCE VALIDATOR:** [BEST-SOURCE-COMPARISON.md](BEST-SOURCE-COMPARISON.md) documents pinned external Git SHA check before executing BEST and a [multi-run comparator](best_source_comparison.py) that fails closed on missing data, wrong spin normalization, incomplete 3-species rate stoichiometry, or insufficient q/neval variation. Synthetic test fixtures are not independent physics evidence; external BEST has not run.
 
 

@@ -50,3 +50,24 @@ def test_unversioned_best_source_is_rejected_before_import(tmp_path):
     with pytest.raises(ValueError,match="provenance unavailable"):
         execute_best(benchmark_protocol(),tmp_path,tmp_path/"fake.json")
     assert not (tmp_path/"fake.json").exists()
+
+
+def test_independent_parent_energy_flux_is_mass_times_width_times_number():
+    from frw_reservoir_budget import thermal_mother_number
+    p=benchmark_protocol()
+    e=p["independently_derived_total_daughter_energy_gain_over_T4_per_time"]
+    assert math.isclose(e,.1*thermal_mother_number(.1,g1=4),rel_tol=1e-13)
+    assert math.isclose(e,.03646818570688685,rel_tol=1e-9)
+    assert math.isclose(
+        p["expected_parent_mean_energy_per_decay"],
+        e/p["independently_derived_vacuum_source_n_over_T3_per_time"],
+        rel_tol=1e-15)
+
+
+def test_analytic_energy_loss_scales_with_width_and_mother_degeneracy():
+    a=benchmark_protocol()
+    b=benchmark_protocol(rest_width=2.)
+    assert math.isclose(
+        b["independently_derived_total_daughter_energy_gain_over_T4_per_time"],
+        2*a["independently_derived_total_daughter_energy_gain_over_T4_per_time"],
+        rel_tol=1e-15)
