@@ -65,6 +65,11 @@
       "claim": "Increasing from 5 to 11 FD susceptibility orthogonal basis modes leaves slowest χe full-Pauli Ritz eigenvalue unchanged",
       "finding": "Refuted. Two→five→eleven mode rates (2.12537,1.32934,0.85648)×10^-7 GeV, even with n20→24 collision-grid variation ≈0.041%. True continuum spectral gap may or may not exist; no conclusion yet.",
       "evidence": "kinetics/results/pauli-stieltjes-11mode-2026-11-21.json and kinetics/PAULI-STIELTJES-11MODE-AUDIT.md"
+    },
+    {
+      "claim": "Uniform 20-point Gauss p/k quadrature on [0,32T] is accurate for narrow IR χ logit packets",
+      "finding": "Refuted. For center E/T=.25,width=.08 uniform rate≈2.604e-8 GeV, wildly grid dependent (16..48); adapted two-segment p/k n20 yields≈4.857e-8 and n24≈4.854e-8. Naive result artificially too small.",
+      "evidence": "kinetics/results/pauli-localized-packet-2026-11-21.json and kinetics/PAULI-LOCALIZED-PACKET-AUDIT.md"
     }
   ],
   "physical_unknowns": [
@@ -79,8 +84,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "a436f7f06cd1c22a489f4b03c222182c692a0952",
-  "current_phase": "A: 11-mode nested Ritz variational audit of full-Pauli χe contact collision; true continuum kinetic gap unresolved; reduced implicit finite-bath Pauli network validated only with phenomenological pair rates; full microphysical SM/Bose cosmology incomplete",
+  "last_checkpoint_git_sha": "e14123a85b0ab23c03c87def759fdcb4da3bcd68",
+  "current_phase": "A: 5D χe full Pauli collision, variational polynomial Ritz 2..11 and number-orthogonal localized IR packet Rayleigh. Narrow-packet naive uniform p-grid fails badly and composite p/k grid resolves it. Reduced Fermi finite-SM implicit network is a conservation reference only; rates not microscopic.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -176,9 +181,16 @@
     {
       "stage": "Independent Stieltjes orthogonal FD thermal collision Ritz hierarchy n=2..11 refutes stabilization of slow Pauli eigenvalue; tests vs previous 2/5 implementations, coupling scaling and collision 5D n20/24",
       "sha": "a436f7f06cd1c22a489f4b03c222182c692a0952",
-      "ci_run": null,
-      "ci_conclusion": "pending at checkpoint",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937649234",
+      "ci_conclusion": "success",
       "scope": "Finite basis eigenvalue upper bounds from electron-only vector EFT in fixed common-temperature bath; NOT proof of actual full kinetic spectral gap"
+    },
+    {
+      "stage": "Full 5D electron-contact Pauli Dirichlet with IR-localized number-orthogonal logit packet and composite split χ/e momentum quadrature; exposes artificial false-small rate on uniform 20-node grid",
+      "sha": "e14123a85b0ab23c03c87def759fdcb4da3bcd68",
+      "ci_run": null,
+      "ci_conclusion": "in_progress at checkpoint",
+      "scope": "Variational finite trial-function upper bounds only; no physical full kinetic eigenvalue/true spectral gap proof"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -189,7 +201,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "2..11-mode slow Ritz keeps falling; cannot use single γ_T or low Ritz as physically validated Γelastic or prove gapless/gapped. Toy bounded kinetic network has phenomenological Γ. No realistic SM portal, time-evolved Bose 86eV freezeout, physical relic abundance, BEC or CLASS.",
+  "physics_scope_warning": "Naive uniform p quadrature can create a fictitious IR kinetic slow rate. Correct composite Rayleigh is an upper bound from a selected localized trial, NOT an eigenvalue or proof of continuum gapless spectrum. All full SM/Bose/FRW and 86eV relic/CLASS milestones remain unproven.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -197,8 +209,8 @@
     "enabled": true,
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
-  "last_verified_commit": "9284516493f09fc127257c33797e526b22f64fba",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937452929",
+  "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937649234",
   "last_event_audit": {
     "date": "2026-11-21",
     "script": "kinetics/relativistic_elastic_audit.py",
@@ -211,17 +223,20 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "title": "Stieltjes 2..11-mode FD Pauli collision spectral nonconvergence audit",
-    "commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
-    "code": "kinetics/stieltjes_pauli_modes.py",
-    "tests": "tests/test_stieltjes_pauli_modes.py",
-    "report": "kinetics/PAULI-STIELTJES-11MODE-AUDIT.md",
-    "data": "kinetics/results/pauli-stieltjes-11mode-2026-11-21.json",
-    "low_2mode_GeV": 2.125371382675302e-7,
-    "low_5mode_GeV": 1.3293418514027366e-7,
-    "low_11mode_GeV": 8.564757722572995e-8,
-    "n20_to_n24_relative_11mode": -0.00041338112700939345,
-    "ci_status": "pending at checkpoint; check actual GitHub run before claiming success",
-    "physical_scope": "conditional electron-only EFT, FD linearisation; 11-mode Ritz is not true kinetic spectral eigenvalue"
+    "title": "Localized IR trial Rayleigh with adapted composite quadrature, explicit spurious low-rate coarse-grid negative witness",
+    "commit": "e14123a85b0ab23c03c87def759fdcb4da3bcd68",
+    "code": "kinetics/localized_pauli_packets.py",
+    "tests": "tests/test_localized_pauli_packets.py",
+    "report": "kinetics/PAULI-LOCALIZED-PACKET-AUDIT.md",
+    "result": "kinetics/results/pauli-localized-packet-2026-11-21.json",
+    "fixed_trial_center_E_over_T": 0.25,
+    "fixed_trial_width_E_over_T": 0.08,
+    "fake_uniform_n20_Rayleigh_GeV": 2.6044472662459597e-8,
+    "converged_split_n20_Rayleigh_GeV": 4.856937695724728e-8,
+    "converged_split_n24_Rayleigh_GeV": 4.8535941602925195e-8,
+    "next_variant_center0p15_width0p15_Rayleigh_n20_GeV": 4.5751768547471696e-8,
+    "comparator_11_polynomial_Ritz_GeV": 8.564757722572995e-8,
+    "ci_status": "in progress at checkpoint, verify actual GitHub run before marking success",
+    "scope": "conditional broken-EW vector contact fixed FD e bath only, local Rayleigh upper bounds; no true continuous rate"
   }
 }

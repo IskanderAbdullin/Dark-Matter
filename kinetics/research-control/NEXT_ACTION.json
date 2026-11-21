@@ -2,32 +2,29 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Variational IR/UV localized packet audit and physical χe-to-energy-bin transition mapping",
-  "objective": "Test whether slow χe full-Pauli relaxation tends toward a true small rate or zero as nonthermal perturbation basis extends beyond 11 modes, distinguishing finite-basis spectra from 5D collision quadrature. In parallel implement actual microphysically derived Pauli χe transitions into number/energy-conserving quantum capacities and finite SM heat. Only validated physical source can replace arbitrary Γ toy network or old BGK.",
+  "title": "Physical vector-contact χe 5D collision-to-bin transitions, finite SM heat and Pauli-stable time evolution; independently bound IR localized slow modes",
+  "objective": "Bridge the exact full-Pauli 5D vector-contact χe collision to positive finite-volume transitions in physical χ radial energy bins with correct microphysical rates, not toy arbitrary Γ. Couple to a finite SM bath preserving Nχ, total energy, and entropy. Independently explore localized IR packet variational bounds with adaptive integration and no spurious low estimates; no claim of full spectral gap until continuum proof.",
   "prerequisites": [
-    "Read full AGENTS.md and scientific spec and GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG",
-    "Check PR #1 head and exact GitHub Actions CI after a436f7, repair any failures",
-    "Read kinetics/PAULI-STIELTJES-11MODE-AUDIT.md, stieltjes_pauli_modes.py, quantitative scan JSON, and reduced implicit finite-bath network plus original 5D Pauli Cchi(p)"
+    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md, GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG, latest PR and actual GitHub Actions for e14123a, repair failures",
+    "Read reports PAULI-LOCALIZED-PACKET-AUDIT.md, PAULI-STIELTJES-11MODE-AUDIT.md, FINITE-BATH-QUANTUM-PAIR-REFERENCE.md, plus full nonlinear χe source and conservative energy projection",
+    "Review negative evidence: PCHIP artificial heat, full 5D cutoff strong/weak leakage, uniform χ momentum IR false-slow Rayleigh, nonconverged polynomial basis and time splitting"
   ],
-  "research_actions": [
-    "Compute spectral Rayleigh quotient for localized compact-support δlogit(fχ) packets at low and high physical p with correct FD susceptibility weight; compare analytically controlled scattering-frequency bounds to full 5D Dirichlet and check tail/cutoff convergence",
-    "Determine whether increasing polynomial/logit basis dimension causes continued monotone lowest Ritz decline without ill-conditioned numerical Gram matrices; never claim actual gap or lack of gap from finite data alone",
-    "Independently discretize χ energy bins with capacities gχ p²dp/(2π²) and vector χe collision events; use full Pauli factors for incoming/outgoing χ and e, microscopic |M|², Møller flux and CM angular measure",
-    "Ensure conservative event rebinning yields exact particle and energy/SM Q transfer and correct equilibrium detailed balance; test PCHIP false heat and number leakage negative controls before promoting",
-    "Replace prescribed Γ toy network only if a physical transition integral and finite lepton bath entropy are derived and verified; then test Pauli-bounded implicit time evolution vs continuum moments and mode rates",
-    "Extend SM lepton SU2/ν, thermal masses and gstar(T) with physically bounded UV portal; then pinned BEST 1↔2 Bose, correct expansion and actual late relic without posthoc Ω rescaling",
-    "After each verified stage update compact evidence and negative results, checkpoint, nonforce commit+push and immediately begin next science bottleneck"
+  "main_experiment": [
+    "Derive bin transfer rates per χ mode from the actual Lorentz-invariant 5D χe scattering amplitude, including electron and χ final Pauli, exact Møller flux and correct degeneracy; verify against independent strong Cχ(p) and weak heat on uniform/IR-adapted phase-space grids",
+    "Design positive conservative redistribution of outgoing χ and e energies to physical radial q bins, with physical fermion state capacity. Check energy-bin B interpolation, logit-energy exact FD equilibrium and proper detailed balance for all cell rates.",
+    "Dynamically couple finite electron/neutrino/SM energy and entropy to χ fermion collisions, no hidden heat reservoir. Preserve χ number and Qχ+QSM=0 and Pauli bounds under stiff implicit time integration; compare against the reduced toy pair exact invariant reference WITHOUT using its arbitrary Γ as physical input.",
+    "Converge nonlinear thermalization vs dt,q/cell/CM/UV cutoff, compare measured time-moment relaxation to independent FD γ_T and variational two-to-eleven mode Ritz (not equal generically).",
+    "For localized low-p χ packets derive and numerically test variational Rayleigh at narrower widths via adaptive p/k and angular quadrature; if a spectral gap is suspected absent, seek analytic proof and precise assumptions rather than inference from finite basis.",
+    "Verify gauge-invariant e_L/ν_L/e_R portal, UV mediator, thermal masses, gstarS/gstarRho(T) and applicable temperature domain. Only thereafter couple pinned BEST quantum 1↔2 Bose production and proper Friedmann expansion through actual late freezeout.",
+    "Record new positive/negative results, compact reproducible JSON, scientific limitations, checkpoint, nonforce commit/push, immediately choose next physics bottleneck."
   ],
   "acceptance": [
-    "Explicit quantified local IR/UV variational Rayleigh bounds and domain convergence, without inventing full spectral gap",
-    "Derivation and numerical independent measurement of microphysical χe transition matrix/bin weights with both Pauli directions",
-    "Actual finite SM bath Q and fermion phase-space positivity with correct physical bin capacity",
-    "Reproduced continuum strong/weak 5D Q, number and entropy; robust q/dt/angular refinement",
-    "No unsupported ΩDM, BEC, CLASS, freezeout or gamma_el claims"
+    "Actual microphysical full-Pauli scattering transition rates, not arbitrary electron-contact BGK or toy pair Γ",
+    "Independent weak/strong χ heat and particle-number source benchmark plus detailed-balance and entropy checks on conservative q bins",
+    "Pauli-bounded true time integration and finite SM heat with q/dt/angular cutoff convergence",
+    "Correct IR adapted quadrature and spectral statements limited to rigorous variational bounds",
+    "86eV relic, BEC, CLASS, ΩDM and observational success remain explicitly unvalidated"
   ],
-  "fallback": [
-    "If true full spectral analysis is infeasible, provide conditional variational upper bound only with fixed function class and units",
-    "If microphysical event bin collision is not conservative, preserve counterexample and test exact physical energy finite-volume weighting",
-    "Avoid user PC/Computer Use without separate approval, force push, merge main or huge GitHub Actions artifacts"
-  ]
+  "constraints": "Work in public research branch draft PR only. No merge main, force push, secrets, user PC/Computer Use without explicit approval; Actions compact and physical results must be independently tested.",
+  "fallback": "If full 5D-to-bin collision too costly, derive exact reduced physically weighted pair integral in a controlled limit and preserve failure to match 5D reference; do not claim kernel fully implemented."
 }

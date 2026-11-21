@@ -93,3 +93,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] New scientifically important **negative result**: smallest nested full-Pauli Ritz rate falls through 11 modes: 2.12537e−7 (2) → 1.32934e−7 (5) → 8.56476e−8 GeV (11), while n20/24 grid changes only 0.041% for 11 modes. No demonstrated physical kinetic spectral gap or reliable scalar gamma yet ([report](../PAULI-STIELTJES-11MODE-AUDIT.md)).
 - [ ] **Next priority**: local IR/high-energy packets and rigorous variational/tail bounds; convert 5D χe Pauli transitions into physically derived finite-volume conserved Fermi capacities, then finite SM heat and real time evolution. Do not count arbitrary Γ in reduced network as microphysical progress.
 - [ ] True cosmological 86-eV freezeout/Ω/BEC/CLASS and peer-independent observational test remain full future stages.
+
+## 2026-11-21 localized IR variational collision experiment
+
+- [x] Explicit susceptibility-number-orthogonal Gaussian χ logit packet and full 5D Pauli collision Dirichlet Rayleigh with exact CM/electron recoil. [Code](../localized_pauli_packets.py), [report](../PAULI-LOCALIZED-PACKET-AUDIT.md).
+- [x] **Negative quadrature discovery**: uniform 20-node χ p-grid spanning [0,32T] falsely underestimates narrow IR Rayleigh by ~46% because it fails to resolve p/T≈.23; split p/k at 2T stabilizes n20→24 to ~0.069% and cutoff20→40 under 0.004%.
+- [x] IR packet E/T=.25,width=.08 R≈4.85e−8GeV below 11-mode polynomial Ritz 8.56e−8GeV, indicating still insufficient global polynomial basis. This is NOT the true kinetic eigenmode and no full spectral gap proof.
+- [ ] **Physics P0**: derive actual microphysical 5D Pauli χe transitions into finite-volume Fermi capacities and finite SM heat, compare to independent weak/strong, implement time integration. Constant toy pair Γ remains disallowed as physical γ_el. Gauge/UV cosmology and 86-eV Bose relic still open.
