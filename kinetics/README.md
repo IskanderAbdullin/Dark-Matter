@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**SPARSE KINETIC DYNAMICS:** [analytic sparse Jacobian + closed three-species evolution](SPARSE-CLOSED-KINETICS.md) verifies the same nonlinear RHS against the original adaptive operator and independently checks Jacobian finite differences. A 5,497-state numerical test with 33,191 active 1↔2 pairs conserves physical charges/energy and dynamically depletes χ1. This is short fixed-T kinetics, NOT a cosmological freezeout or CLASS spectrum.
+
+
 **NEW INVARIANT-CLEAN GRID:** [resonant graph repair / initial parent FD moments](RESONANT-GRAPH-REPAIR.md) solves the *specific* spurious-invariant problem for tested bridged fine-core/coarse-comb meshes. Three physical graph invariants (not 4/14), no isolated daughters, and parent number/energy/pressure errors below 4e-5 by 269 daughter modes. Runtime cost is thousands of mother-energy states; this is NOT an evolved PSD or a physical DM spectrum.
 
 

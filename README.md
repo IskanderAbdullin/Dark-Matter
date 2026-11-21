@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Sparse closed evolution now runs on the repaired 3-invariant graph:** [sparse analytic-Jacobian solver](kinetics/SPARSE-CLOSED-KINETICS.md) evolves 199 daughter + 5,099 shared mother-energy states at M1/T=0.1. A short tΓ=.001 BDF run yields nφ/T³≈0.00859347, fully conservative at ~4.5e-16 for charge/energy, without a fake reaction-graph invariant. The initial mother energy grid is still biased (about −1.07%), and no FRW freezeout or CLASS PSD is claimed.
+
+
 **Adaptive graph obstacle partially solved:** [resonant graph repair](kinetics/RESONANT-GRAPH-REPAIR.md) bridges the infrared core (100 consecutive nodes) to a coarse energy comb. Tested grids with 199–299 daughter modes have exactly **three** active collision invariants, zero isolated daughters, and independently converging initial thermal mother number/energy/pressure (at 269 nodes: errors 5.6e-6, 3.8e-5, 3.8e-5). Important: these networks require 5–10k shared parent-energy states. No dynamic freeze-out or CLASS validation is claimed.
 
 
