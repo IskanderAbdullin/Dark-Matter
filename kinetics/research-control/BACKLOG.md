@@ -178,3 +178,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** exact full Bose/Pauli local quantum event factors cancel thermal e−+e+↔γ+γ at μe−+μe+−2μγ=0 (including nonzero opposite electric μ). Loss-only R cannot drive a correct equilibrium.
 - [ ] Verify real CI for this stage and previous charge-constrained heat stage; add full 5D finite-T differential QED F−R with photon stimulation and inverse, independently check all number/charge/energy/entropy moments, λ/angle/temperature grids and finite-time chemical freezeout; add neutrino/UV-dark portal before full χe–BEST Bose FRW. No physical γel/BEC/86eV Ω/CLASS.
 
+## 2026-11-22 QED full thermal 5D pair forward/inverse and heat ledgers
+
+- [x] Construct actual 5D CM scattering photons Lorentz-boosted to lab with exact tree QED differential amplitude and identical γ factor, full fermionic Pauli e± and photon Bose forward+inverse factors. Exact thermal FD/BE common-T cancellation at electron chemical sum zero including opposite charge μ; positive entropy for chemical/temperature affinity. [Report](../QED-PAIR-FULL5D-AUDIT.md), [source](../qed_pair_full5d.py).
+- [x] Independent microscopic normalization: empty γ initial state/absence of final enhancement reproduces separate exact vacuum σv×FD e± loss at T/me=.025,.05,.1 to ~1e−14; energies/charge and photon creation ledger consistent to rounding. [Tests](../../tests/test_qed_pair_full5d.py).
+- [x] **Negative:** despite forward Bose enhancement +34.326% at Te/me=1, inverse exactly cancels thermal equilibrium; treating forward rate as NET equilibrium depletion violates quantum detailed balance. p/T cutoff scan nonzero; no claim of uniform numerical accuracy.
+- [ ] Verify real CI for full 5D thermal stage, and prior vacuum QED stage. **Next P0:** nonthermal mode-resolved full strong source C_e±(p), Cγ(k), quantum Pauli/Bose, finite-volume positivity/energy/charge/entropy and stiff time evolution; include electron/proton charge neutrality, neutrino weak, thermal photon/QED corrections, gauge-valid χ1/eν portal before physical γel and 86eV Bose FRW freezeout. No ΩDM/BEC/CLASS.
+

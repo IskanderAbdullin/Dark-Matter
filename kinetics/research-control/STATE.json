@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active session has a finite runtime. NEXT_ACTION preserves executable next finite-temperature QED plasma step; hourly scheduler separate from this chat.",
+  "stop_reason": "Finite active session; next reproducible experiment explicitly saved in NEXT_ACTION. Existing hourly scheduler is separate and only actual runs count as progress.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Check newest full GitHub CI for fixed-charge/QED stages; next integrate actual differential on-shell 5D e−e+↔γγ with BOTH Pauli and photon Bose F−R and finite e−/e+/γ ledger, then neutrino/UV χ portal. Never use LOSS alone as γchem or a cosmological rate.",
+  "instruction": "Verify real CI on new QED 5D thermal stage and preceding QED vacuum stage, then implement arbitrary nonthermal mode-resolved strong e/e+/photon Boltzmann with forward/inverse and finite-volume time integration. Couple microscopic χe only when plasma/gauge/ν validated; no BGK physical gamma.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "QED e−e+→γγ vacuum reaction amplitude independently normalized vs Heitler/Geant4 and thermal FD-initial LOSS rate computed. Local quantum detailed balance affirmed; NO net finite-T photon Bose/Pauli collision, no physical χe bath/γel or 86eV.",
+  "current_phase": "Full 5D finite-T QED e−e+↔γγ on-shell thermal FD/BE weak moments with photon Bose+inverse, independent vacuum σv normalization and total charge/energy/entropy ledgers. Actual general nonthermal strong C and time-dependent eγν bath, χ1 portal and γel still absent.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -274,16 +274,17 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "QED e−e+→γγ exact two-photon cross section and thermal FD initial loss; local Pauli/Bose affinity",
-    "status": "independent_local_numeric_vacuum_cross_section_checks; CI_pending; deliberately_NOT_full_finite_temperature_collision",
-    "source": "kinetics/qed_pair_annihilation_control.py",
-    "tests": "tests/test_qed_pair_annihilation_control.py",
-    "report": "kinetics/QED-PAIR-ANNIHILATION-CONTROL.md",
-    "data": "kinetics/results/qed-pair-annihilation-control-2026-11-22.json",
-    "positive": "Exact σv from CM differential spin-pol amplitude, analytic Dirac expression and independent Geant4 Heitler rest-frame σ agree <8e−13 across beta .01,.1,.5,.8,.95; FD initial loss ratios .994852 at T/me=.025 to .295344 at T/me=1 (normalised by NR σv n_e−n_e+).",
-    "negative": "LOSS-only positive R cannot be used as net chemical relaxation. Local full Fermi electron/Bose photon F−R=0 at common T and μe−+μe+−2μγ=0, even at nonzero electron charge; inverse/Bose photon phase-space not integrated.",
-    "scope": "vacuum QED two-photon matrix element and thermal initial electron FD only, no full finite-T collision or time-dependent eγν plasma; no dark portal or CLASS",
-    "prior_checkpoint_sha": "42f71c1817960800972607b7fe6e3d97ca4597f7"
+    "name": "Fully paired forward/inverse thermal quantum QED e−e+↔γγ 5D weak moments",
+    "status": "independent sandbox and compact numerical convergence completed; new GitHub Scientific CI still to check",
+    "source": "kinetics/qed_pair_full5d.py",
+    "test": "tests/test_qed_pair_full5d.py",
+    "report": "kinetics/QED-PAIR-FULL5D-AUDIT.md",
+    "data": "kinetics/results/qed-pair-full5d-2026-11-22.json",
+    "result": "5D CM-boost phase-space, full Pauli electrons and Bose photons F−R; exact thermal fixed point and chemical affinity ratio, positive entropy, charge and energy residual ~1e−15. At Te/me=.1 pair affinity .02, Rnet=1.51124370585e−19 me^4, Qγ=3.5120564751e−19 me^5 and entropy=3.02248741169e−21 me^4.",
+    "independent_normalization": "With empty photons, the independently integrated 5D amplitude recovers earlier FD+σv initial-loss at T/me=.025,.05,.1 to ~1e−14 relative for matched p/T cut and grid.",
+    "negative": "At T/me=1, photon Bose multiplies equilibrium forward by 1.34326026 yet inverse cancels it exactly; loss-only chemical rate is WRONG. p/T cutoff 24→36 changes .1-me benchmark by ~2e−6 then ~1e−9: no general nonthermal convergence inferred.",
+    "limits": "Restricted thermal FD e± and BE photons, QED tree vacuum point m_e; no mode-resolved collision, time stepping, real e± freezeout, ν weak sector/gstar, gauge UV χ1 portal or physical γel. No 86eV ΩDM/BEC/CLASS.",
+    "parent_commit": "b8af5e3f32df896a819da4cad5d05ad216e67967"
   },
-  "last_checkpoint_parent_sha": "42f71c1817960800972607b7fe6e3d97ca4597f7"
+  "last_checkpoint_parent_sha": "b8af5e3f32df896a819da4cad5d05ad216e67967"
 }
