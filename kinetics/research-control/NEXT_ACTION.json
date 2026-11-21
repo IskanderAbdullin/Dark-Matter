@@ -2,14 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Build and independently validate strong nonthermal e−e+↔γγ Pauli/Bose mode sources and positive finite-volume time integrator",
-  "objective": "Full QED 5D weak moments were extended to arbitrary physical nonthermal electron/positron/photon occupations, with conservation/entropy and sign-changing electron/photon bumps. Yet only integrated weak rates exist; no energy/momentum-mode-resolved strong C[f] with positive occupations or time integration. Fix high-T F−R cancellation, then devise on-shell microreversible conservative event-deposition into physical fermion/Bose bins, check finite-bin equilibrium defects, independent weak/strong Q and entropy; implement bounded implicit time solver with dt/cutoff/angular convergence, real charge and finite eγν reservoirs. Add UV/gauge χ1 portal only after plasma validation.",
+  "title": "Validate chiral ν lepton portal CI; replace contact with full t-propagator, physical ν/e plasma T histories, then χ1+SM",
+  "objective": "Candidate anomaly-free gauged Le−Lmu with vectorlike χ, e vector and νe/νμ chiral left channels leads independent γ5 spin-trace equality and 5D Pauli heat. Under equal ν/e T, Qν/Qe=1086 at T/me=.1 and ~1.185 at T/me=1 for contact and Mχ=.1me. Under illustrative Tν/Tγ=.7138 at Tγ=.1me and Tχ=.09me, Qν/Qe changes sign (~−512): single electron/SM BGK bath gives wrong sign in this counterexample. Check CI; next model full finite Z' propagator t, EFT validity, kinetic mixing/constraints and SU2L/χ1χ2φ field consistency. Evolve physical ν/EM heat/number, strong QED/χ kinetic with Pauli/Bose before estimating Γel/H or 86eV.",
   "prerequisites": [
-    "Check actual Scientific CI on nonthermal weak new commit, previous full thermal QED commit 59123b (run #44957890224 was in_progress at earlier check), and prior QED vacuum b8af5e.",
-    "Run python -m pytest -q tests/test_qed_pair_nonthermal_weak.py tests/test_qed_pair_full5d.py tests/test_qed_pair_annihilation_control.py",
-    "Read kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md and result JSON, retain negative high-T 3.02e−6 F−R cancellation and photon bump ~1.14e−5 nrad shift."
+    "Verify branch and actual GitHub Actions on new chiral ν/e portal commit and prior nonthermal QED weak commit b571c1 (run #44958176219 was in_progress at last check).",
+    "Run python -m pytest -q tests/test_lepton_portal_neutrino_heat.py tests/test_lepton_portal_split_bath.py tests/test_qed_pair_nonthermal_weak.py",
+    "Reproduce fixed 5D equal-T ν/e heat at T/me=.1,1,10 (n20→28→36) and split-bath Qν sign for Tν/Tγ=(4/11)^(1/3) and Tχ=.9Tγ; never treat ideal Tν as actual decoupling.",
+    "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Derive exact spin/helicity summed χe and χν t-channel massive Z' propagator 1/(mZ'²−t), test mZ'→∞ contact against prior 5D massive e and ν and independent angular trace; quantify EFT failure and forward-peaking/cutoff errors, with controlled coupling and thermal masses.",
+    "Check Le−Lmu mediator gauge/Higgs breaking, kinetic mixing and laboratory/BBN/Neff constraints; reconstruct actual χ1χ2φ symmetry consistency or find a model-compatible alternative; never claim this candidate is already the real portal.",
+    "Derive and evolve realistic e±γν temperature/momentum chemical and energy histories (ν decoupling, photon reheating, weak channels, QED mass), attach χe/χν full Pauli nonthermal coupled collision and true spectral eigenvalue; then χ1→χ2+φ Bose+FRW and Ω/observational terminal gates.",
     "Design a pairwise conservative event source depositing each e−,e+,γ quartet into individual energy bins while preserving exact charge/energy, nonnegative entropy, electron Pauli 0..1 and photon b>=0; test discretized equilibrium against continuous thermal FD/BE and explicitly quantify any projection bias.",
     "Use nonthermal 5D quantum weak integral as independent reference for every strong species energy/number source; build positivity-preserving implicit reversible 2↔2 finite-volume integrator with dt, grid and event-order error scans.",
     "Then implement realistic photon/electron/positron chemical relaxation with neutrino weak channels, charge-neutral baryons, QED thermal masses, H, and validated gauge-invariant χ1/χ2+φ UV portal and quantum Bose production; no physical 86eV claims until terminal gates.",
@@ -49,9 +53,9 @@
   "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
   "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma.",
   "latest_completed_reference": {
-    "report": "kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md",
-    "data": "kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json",
-    "status": "independent local verification, new CI pending",
-    "limits": "Weak integrated QED nonthermal only; no mode-resolved strong or evolving SM"
+    "report": "kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md",
+    "data": "kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json",
+    "status": "conditional independent spin trace and full 5D heat local, new repo CI pending",
+    "limits": "candidate gauge model not yet original χ1+χ2+φ; equal vs ideal split Tν not actual SM history"
   }
 }

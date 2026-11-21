@@ -192,3 +192,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** raw F−R may lose digits at Te/me=1 (~3e−6 relative vs stabilized), and photon bump nrad24→32 changes R ~1e−5. Uniform high-precision nonthermal QED operator not established.
 - [ ] Check real CI; **P0:** robust log-ratio numerics, phase-space mode-resolved C_e−,C_e+,Cγ with exact microreversible deposition and Pauli/Bose bounded energy/charge-conserving time evolution; q/angle/cutoff/dt independent error budget, then ν/eγ SM, gauge-valid χ1 mediator, full χ+Bose FRW. No physical Γel/86eV Ω/BEC/CLASS yet.
 
+## 2026-11-22 gauge-covariant lepton vector portal and neutrino heat
+
+- [x] Identify explicit anomaly-free candidate U1_(Le−Lmu) with χ vectorlike singlet, lepton doublet+singlet currents, **mandatory active νe/νμ** for this vector e_L+e_R portal; independent gamma5 trace confirms one-helicity ν_L vector χ parity-symmetric amplitude equals massless Dirac-vector spin average. [Report](../LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md).
+- [x] Conditional full 5D Pauli contact EFT equal-T Qχ from two ν flavors vs electron e±: ratio 1086.37 at Te/me=.1, 1.185 at1, 1.00179 at10; finite cutoff/grid scans; no physical mediator/coupling assumed.
+- [x] **Negative:** single SM bath Tν=Tγ can give even **wrong net χ heat sign** after photon reheating. Illustrative ideal split Tν/Tγ=(4/11)^(1/3) at Tγ=.1me, Tχ=.9Tγ leads Qν/Qe≈−512; this is NOT actual ν temperature history or 86eV DM prediction.
+- [ ] Check CI and **P0:** finite Z' mass t-propagator and independent chiral/electron 5D normalization, UV/EW completion for actual χ1/χ2φ, realistic ν weak decoupling and e±γ entropy, nonthermal Pauli χ+ν+e kinetics and spectral γel, Bose χ→φ+χ2 and FRW/Ω/CLASS after full convergence. Experimental constraints essential.
+

@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite session, next executable nonthermal strong collision step saved. Only separately scheduled hourly task may resume research.",
+  "stop_reason": "Active run bounded; executable next physical mediator/SM distribution stage recorded; only separately scheduled automation can work after this chat ends.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Check real CI for latest full thermal QED and this nonthermal weak stage. Then derive exact strong mode-resolved quantum e−e+↔γγ with arbitrary f and conservative event projections, bound photon Bose, e Pauli, entropy/time/cutoff; add ν and UV valid χ1 portal. Preserve numerical negative high-T cancellation and packet grid errors.",
+  "instruction": "Check real Scientific CI for new candidate ν/e heat and preceding nonthermal QED weak stage. Next replace contact G by full finite mZ' t-propagator and construct χe,χν angular kernels with chiral/Pauli; test EFT limit and gauge UV constraints, neutrino decoupling and finite eγν bath, then genuine χ1/χ2 φ quantum cosmology. No gamma_el or 86eV claim.",
   "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-  "current_phase": "Beyond thermal QED pair 5D weak source: arbitrary smooth isotropic nonthermal e−,e+,γ occupations now probed in full QED on-shell 5D weak collision moments with Pauli/Bose, entropy, charge and energy checks. Strong mode-resolved C and time evolution still unproven, same for χ1 eν UV/γel.",
+  "current_phase": "Anomaly-free candidate U1_(Le−Lmu) vector portal explicitly exposes two ν species plus e±; independent left-chiral spin trace matches massless vector χν and COM 5D Pauli heat. Two-ν contribution equal-T/e at Te/me=.1 is 1086; split ν temperature ideal .714 Te changes χ heat sign. No physical UV validation, Γel or 86eV.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -274,16 +274,22 @@
     "ci": "pending"
   },
   "latest_stage": {
-    "name": "Arbitrary isotropic nonthermal QED e−e+↔γγ five-dimensional quantum weak moments",
-    "status": "local independent numerical and negative convergence checks completed; repo CI pending",
-    "source": "kinetics/qed_pair_nonthermal_weak.py",
-    "tests": "tests/test_qed_pair_nonthermal_weak.py",
-    "report": "kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md",
-    "data": "kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json",
-    "positive": "For T/me=.1, electron nonthermal +0.15 logit packet, Rnet=+1.69053734e−23 me^4, entropy=+6.12491e−29; negative packet reverses R but entropy positive. Photon +0.2 BE bump makes Rnet −1.57586871e−18 with entropy positive; energy/charge exact. Independent thermal FD/BE reference at +.02 affinity agrees relative +5.89e−8 at nrad24/nangle16.",
-    "negative": "Thermal Te/me=1 raw F−R vs thermodynamic-affinity stabilized weak source relative mismatch ~3.02e−6; photon-bump nrad24→32 rate shifts ~1.14e−5; qgrid convergence not universal.",
-    "scope": "Only weak integrated moments for isotropic, strictly interior occupation functions. NO strong C_e−(p),C_e+(p),Cγ(k), Pauli/Bose bounded time stepping, real e±/ν/χ1 cosmology; no physical Γel/86eV ΩDM/BEC/CLASS.",
-    "parent_commit": "59123b4d1a79b3e519c1abca0ceaae9c258789be"
+    "name": "Gauge-covariant lepton family-difference vector candidate, independent ν_L gamma5 trace and finite e± vs ν split-bath 5D heat counterexample",
+    "status": "independent chiral trace and conditional full 5D relative Pauli thermal heat locally verified; repo CI pending",
+    "source": [
+      "kinetics/lepton_portal_neutrino_heat.py",
+      "kinetics/lepton_portal_split_bath.py"
+    ],
+    "tests": [
+      "tests/test_lepton_portal_neutrino_heat.py",
+      "tests/test_lepton_portal_split_bath.py"
+    ],
+    "report": "kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md",
+    "data": "kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json",
+    "positive": "Candidate anomaly-free U1_(Le−Lmu) SU2L doublet vector electron portal necessarily includes νe,νμ with opposite charges; for Dirac-vector χ, chiral ν one-helicity spin trace = massless Dirac lepton spin average. With gν,2flavor=4 and ge±=4, full 5D Pauli heat Qν/Qe=1086.37 at T/me=.1, 1.18525 at 1, and 1.00179 at10 for equal baths and contact G.",
+    "negative": "Equal Tν=Te at Tγ=.1 me and Tχ=.09me would heat χ from both species; illustrative instantaneous e±-annihilation ratio Tν/Tγ=(4/11)^(1/3) yields Qν/Qe≈−512.2, dominating net cooling. Single SM thermal bath is not consistent; actual Tν must be evolved and portal checked against original χ1/χ2/φ and mediator constraints.",
+    "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
+    "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
   },
-  "last_checkpoint_parent_sha": "59123b4d1a79b3e519c1abca0ceaae9c258789be"
+  "last_checkpoint_parent_sha": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
 }
