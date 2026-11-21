@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**DYNAMIC FULL 3-SPECIES BEST PILOT:** [BEST-CLOSED-MASSIVE-DYNAMIC.md](BEST-CLOSED-MASSIVE-DYNAMIC.md) is a pinned BEST MPI-protocol for actual evolution of massive phi + massless chi2 + massive chi1 with quantum inverse channels, separate zero mode n0, total physical energy and two conserved charges after each step, no external thermal bath or FRW. Includes fail-closed validation and explicit time-step/spectral convergence TODO; no macroscopic BEC inference from a single low-q occupation.
+
+
 **REAL MASSIVE φ INDEPENDENT BEST CROSS-CHECK:** [BEST-MASSIVE-DAUGHTER-REFERENCE.md](BEST-MASSIVE-DAUGHTER-REFERENCE.md) verifies 2 actual phi masses × 2 q grids using pinned BEST v1.3.5 MPI in [Actions #44917857964](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44917857964); 96-q physical φ number error 6–7e−6 relative, physical energy sum 5.6e−8 or 3.47e−9. [Measurements](results/best-massive-phi-real-2026-11-21.json). [IR physical cell audit](MASSIVE-BOSE-IR-CELL.md) shows huge initial q0 occupancy does not imply macroscopic condensed particle number; qmin occupation differs from q=0 by ~1.08% at mφ/M1=.01.
 
 

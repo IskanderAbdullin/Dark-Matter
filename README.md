@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**NEXT REAL KINETIC STEP:** [independent BEST χ1↔χ2+massive φ CLOSED TIME evolution](kinetics/BEST-CLOSED-MASSIVE-DYNAMIC.md) now defines the actual positive-occupation parent and both daughters over short constant-a time with fully dynamical Bose/Pauli and a separately measured massive zero-mode n0. It will record independent number charges, physical energy and IR occupation after each finite dt, rather than extrapolating from an instantaneous snapshot. External actual time stepping and dt/qmin convergence still required; NOT FRW, DM relic or CLASS.
+
+
 **FIRST REAL FINITE-MASS BOSE DAUGHTER validation:** [BEST pinned MPI experiment #44917857964](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44917857964) confirms mass-dependent initial qφ spectra at mφ/M1=.01,.1 with 56/96 momentum nodes. On 96 q nodes, number rate differs ≲0.00070% and full physical energy sum improves to 5.6e−8 or 3.47e−9. [Full report](kinetics/BEST-MASSIVE-DAUGHTER-REFERENCE.md), [permanent 4-case evidence](kinetics/results/best-massive-phi-real-2026-11-21.json). Massive φ has large but finite q=0 occupation production; **a qmin value is not a condensate**. [Exact q³-cell number audit](kinetics/MASSIVE-BOSE-IR-CELL.md) proves a 2.76e−8 initial particle fraction below q=1e−4 even if df(0)/dt≈26758; no dynamical BEC/FRW/CLASS claim.
 
 
