@@ -16,7 +16,7 @@ Requiring δ_contact,max≤ε at all angles gives
 
     mV/p_* ≥ 2 / sqrt((1−ε)^(−1/2)−1).
 
-For ε=.1 the threshold is mV/p_*≥8.7178 (approximately); for ε=.01 it is ≥28.195 (approximately). These are exact algebraic bounds for the isolated propagator, not cross-section errors in a gauge-completed plasma.
+For ε=.1 the threshold is mV/p_*≥8.59926345 (approximately); for ε=.01 it is ≥28.17791644 (approximately). These are exact algebraic bounds for the isolated propagator, not cross-section errors in a gauge-completed plasma.
 
 **Alternative relative error convention:** relative to the exact result, the maximum contact overestimate is (1+4p_*²/mV²)²−1. Its ε threshold is mV/p_*≥2/sqrt(sqrt(1+ε)−1), i.e. ≈9.053 for ε=.1. Never mix these conventions.
 
