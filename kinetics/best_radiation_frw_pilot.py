@@ -40,7 +40,7 @@ from best_external_vacuum_reference import BEST_PIN
 def rd_protocol(t0=.0001,steps=4,dtGamma=1e-5,nq=56,
                 neval=6000,phi_mass=.001,method="exprb"):
     if (t0<=0 or steps<1 or dtGamma<=0 or
-            method not in ("exprb","exprb_full","heun")):
+            method not in ("exprb","exprb2","exprb_full","heun")):
         raise ValueError("Positive radiation cosmic time, step count and supported method required")
     kinetic=massive_protocol(mphi=phi_mass,grid_n=nq,
                             vegas_neval=neval)
@@ -203,7 +203,7 @@ def main():
     ap.add_argument("--dt",type=float,default=1e-5)
     ap.add_argument("--grid-n",type=int,default=56)
     ap.add_argument("--neval",type=int,default=6000)
-    ap.add_argument("--method",choices=["exprb","exprb_full","heun"],default="exprb")
+    ap.add_argument("--method",choices=["exprb","exprb2","exprb_full","heun"],default="exprb")
     o=ap.parse_args()
     p=rd_protocol(o.t0,o.steps,o.dt,o.grid_n,o.neval,method=o.method)
     if o.execute:

@@ -53,3 +53,10 @@ def test_external_rd_is_conditional_not_conservation_proof():
     assert p["full_SM_energy_transfer_or_entropy_included"] is False
     assert p["self_consistent_Hubble_from_dark_sector"] is False
     assert p["fixed_SM_entropy_degrees"]
+
+
+def test_independent_best_second_order_exprb2_is_an_explicit_supported_method():
+    p=rd_protocol(method="exprb2",steps=16,dtGamma=2.5e-6)
+    assert p["integrator"]=="exprb2"
+    assert p["steps"]==16
+    assert not p["primordial_86eV_relic_or_CLASS_ready"]
