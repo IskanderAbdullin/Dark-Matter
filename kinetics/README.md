@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**COUPLED EARLY-FRW PILOT (STRUCTURAL):** [NARROW-CLOSED-FRW-SPLIT.md](NARROW-CLOSED-FRW-SPLIT.md) combines instantaneously rebuilt on-shell collision channels, all three dynamic species and mother Liouville q³ remapping in a tiny RD x-window. It tests two full comoving number charges and separates collision/discrete energy, true free redshift pressure work, and remap-energy bias. It refuses parent-state changes rather than silently fabricating conserved physics.
+
+
 **TWO-MOMENT FEASIBILITY:** [Pauli-limited shell energy bounds](PAULI-ENERGY-BOUNDS.md) compute exact finite-grid minimal and maximal energy for fixed mother number; an optional bounded transfer can enforce number+energy if feasible, but alters phase-space shape and must not be silently used in the actual FRW collision solver.
 
 

@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**First explicitly coupled early-FRW structural pilot:** [narrow closed collision+Liouville splitting](kinetics/NARROW-CLOSED-FRW-SPLIT.md) now rebuilds on-shell χ1↔χ2+φ reaction graphs as x=M1/T changes across .0200→.0202, evolves all species with sparse BDF, and conservatively remaps the massive mother on fixed q=p/T domains. Both independent comoving charges and collision-step discrete energy are checked, while physical shell-energy and remap errors are explicitly reported. This is NOT a self-consistent FRW relic calculation or validated spectrum.
+
+
 **Two-moment Pauli feasibility:** [exact attainable massive-parent energy interval at fixed number](kinetics/PAULI-ENERGY-BOUNDS.md) derives E_min/E_max by shell filling under fermion occupancy bounds. An optional artificial N+E correcting remap is diagnostic only: a changed momentum distribution can preserve both integrated moments but is NOT physical collisionless Liouville or guaranteed entropy/detailed balance.
 
 
