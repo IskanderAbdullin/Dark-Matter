@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**Adaptive graph obstacle partially solved:** [resonant graph repair](kinetics/RESONANT-GRAPH-REPAIR.md) bridges the infrared core (100 consecutive nodes) to a coarse energy comb. Tested grids with 199–299 daughter modes have exactly **three** active collision invariants, zero isolated daughters, and independently converging initial thermal mother number/energy/pressure (at 269 nodes: errors 5.6e-6, 3.8e-5, 3.8e-5). Important: these networks require 5–10k shared parent-energy states. No dynamic freeze-out or CLASS validation is claimed.
+
+
 **Constructive proof of grid aliasing:** for the three-band adaptive mesh, a modulo-2500 weighting of daughter and mother energy-cell indices yields an additional *exactly conserved* pseudo-charge unrelated to physical number/energy. It is verified on the complete nonlinear collision ODE, not merely found by SVD. See [analytic formula](kinetics/ADAPTIVE-INVARIANT-AUDIT.md#8-явная-аналитическая-формула-для-лишнего-инварианта-трёхдиапазонной-сетки) and [regression program](kinetics/modular_invariant_witness.py). This mesh is rejected for any physical CLASS initial spectrum.
 
 

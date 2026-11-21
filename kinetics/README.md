@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**NEW INVARIANT-CLEAN GRID:** [resonant graph repair / initial parent FD moments](RESONANT-GRAPH-REPAIR.md) solves the *specific* spurious-invariant problem for tested bridged fine-core/coarse-comb meshes. Three physical graph invariants (not 4/14), no isolated daughters, and parent number/energy/pressure errors below 4e-5 by 269 daughter modes. Runtime cost is thousands of mother-energy states; this is NOT an evolved PSD or a physical DM spectrum.
+
+
 **Closed-form spurious conserved charge:** the [three-band modular-invariant witness](modular_invariant_witness.py) proves exactly that a residue-weighted pseudo-energy is conserved by every on-shell reaction and by the full nonlinear 3-species ODE. This falsifies the apparent uniqueness of the kinetic equilibrium even though energy, two number charges and H theorem hold. See [detailed derivation](ADAPTIVE-INVARIANT-AUDIT.md).
 
 
