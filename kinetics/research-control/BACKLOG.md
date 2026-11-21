@@ -86,3 +86,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Negative time-accuracy control: split 3-bin network passes all invariant/entropy tests but 10 vs 100 substeps at dt=1 differs in f by >0.001; time convergence remains necessary.
 - [ ] **Physics blocker P0 still open**: link reduced numerical transition Γ_ij to the **actual** full-Pauli 5D χe scattering kernel and gauge-required νe bath, with electron recoil/chemical µ and Pauli, physical phase-space cells; avoid identifying toy Γ with a derived kinetic relaxation gamma.
 - [ ] Then true finite-SM Q, gstar(T), Friedmann H, actual BEST Bose 1↔2 and late 86eV relic/zero-mode/observations. CLASS-ready=false.
+
+## 2026-11-21 further collision spectral audit and next physics
+
+- [x] Independent **three-term Stieltjes** recurrence avoids unstable high-degree monomials and matches earlier 2/5-mode Pauli matrix eigenvalues at same 5D mesh. [Test](../../tests/test_stieltjes_pauli_modes.py); CI must be checked.
+- [x] New scientifically important **negative result**: smallest nested full-Pauli Ritz rate falls through 11 modes: 2.12537e−7 (2) → 1.32934e−7 (5) → 8.56476e−8 GeV (11), while n20/24 grid changes only 0.041% for 11 modes. No demonstrated physical kinetic spectral gap or reliable scalar gamma yet ([report](../PAULI-STIELTJES-11MODE-AUDIT.md)).
+- [ ] **Next priority**: local IR/high-energy packets and rigorous variational/tail bounds; convert 5D χe Pauli transitions into physically derived finite-volume conserved Fermi capacities, then finite SM heat and real time evolution. Do not count arbitrary Γ in reduced network as microphysical progress.
+- [ ] True cosmological 86-eV freezeout/Ω/BEC/CLASS and peer-independent observational test remain full future stages.

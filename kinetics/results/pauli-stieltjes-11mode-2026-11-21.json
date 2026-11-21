@@ -1,6 +1,6 @@
 {
   "status": "Independent numerically convergent (n20->n24) but BASIS-NONCONVERGENT 2..11 Galerkin Pauli collision Ritz estimates",
-  "source_commit": "9284516493f09fc127257c33797e526b22f64fba",
+  "source_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "model": "full-Pauli 5D chi-e vector-contact weak collision, FD equilibrium susceptibility, Stieltjes FD orthogonal polynomials, electron-only fixed bath",
   "parameters": {
     "M_GeV": 0.1,
@@ -34,5 +34,6 @@
   "verified_basis_orthogonal_to_number_and_other_modes_approx": 1.5e-15,
   "important_negative": "low kinetic Ritz eigenvalue declines strongly with 2..11 modes despite small n20→24 5D integration change; NO continuum spectral gap proved",
   "scope_warning": "Not full continuum operator, physical γ_el, UV complete SM thermal rate, QSM time evolution, frozen 86-eV Bose relic, or observational CLASS.",
-  "class_ready": false
+  "class_ready": false,
+  "source_parent_commit": "9284516493f09fc127257c33797e526b22f64fba"
 }

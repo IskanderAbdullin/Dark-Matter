@@ -60,6 +60,11 @@
       "claim": "Exact conservation, Pauli and entropy of each split pairwise kinetic substep implies global time convergence",
       "finding": "Refuted in 3-bin reduced network: dt=1, 10 vs 100 split substeps yield max occupation difference above 0.001 despite machine-precision N and total energy and positive entropy.",
       "evidence": "kinetics/FINITE-BATH-QUANTUM-PAIR-REFERENCE.md and tests/test_fermion_finite_bath_pairs.py"
+    },
+    {
+      "claim": "Increasing from 5 to 11 FD susceptibility orthogonal basis modes leaves slowest χe full-Pauli Ritz eigenvalue unchanged",
+      "finding": "Refuted. Two→five→eleven mode rates (2.12537,1.32934,0.85648)×10^-7 GeV, even with n20→24 collision-grid variation ≈0.041%. True continuum spectral gap may or may not exist; no conclusion yet.",
+      "evidence": "kinetics/results/pauli-stieltjes-11mode-2026-11-21.json and kinetics/PAULI-STIELTJES-11MODE-AUDIT.md"
     }
   ],
   "physical_unknowns": [
@@ -74,8 +79,8 @@
   "stop_reason": null,
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "On restart check CI 44932655044, repair if failed; then derive full relativistic phase-space χe collision operator with final-state Pauli and gauge-complete SM species. Do not use heavy eta for BEST relativistic parent M/T=.1.",
-  "last_checkpoint_git_sha": "c373bca160116460c55832798094e042b0ee7842",
-  "current_phase": "A: Full-Pauli conditional χe kinetic integrals and 2..5 Ritz basis; now an independently number/energy/Pauli/entropy-conservative implicit finite-bath Fermi transition NETWORK numerical reference exists, but microscopic transition coefficients and full physical 5D time kernel are NOT linked",
+  "last_checkpoint_git_sha": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+  "current_phase": "A: 11-mode nested Ritz variational audit of full-Pauli χe contact collision; true continuum kinetic gap unresolved; reduced implicit finite-bath Pauli network validated only with phenomenological pair rates; full microphysical SM/Bose cosmology incomplete",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -165,8 +170,15 @@
       "stage": "Implicit fully Pauli-bounded reduced two-level and 3-bin quantum Fermi transition network with exactly finite SM radiation E=A T4, physical total entropy and discrete N/energy conservation; random tests and time-splitting negative control",
       "sha": "c373bca160116460c55832798094e042b0ee7842",
       "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937357618",
-      "ci_conclusion": "in_progress at 2026-11-21 checkpoint",
+      "ci_conclusion": "success",
       "scope": "Independent numerical DESIGN REFERENCE: pairwise Γ arbitrary positive and not derived from actual 5D χe scattering matrix element or UV portal"
+    },
+    {
+      "stage": "Independent Stieltjes orthogonal FD thermal collision Ritz hierarchy n=2..11 refutes stabilization of slow Pauli eigenvalue; tests vs previous 2/5 implementations, coupling scaling and collision 5D n20/24",
+      "sha": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+      "ci_run": null,
+      "ci_conclusion": "pending at checkpoint",
+      "scope": "Finite basis eigenvalue upper bounds from electron-only vector EFT in fixed common-temperature bath; NOT proof of actual full kinetic spectral gap"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -177,7 +189,7 @@
     "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
     "last_ci_at_checkpoint": "success"
   },
-  "physics_scope_warning": "The reduced bounded finite-bath step has *arbitrary pairwise Gamma*, not actual matrix-element-derived χe kernel. Its success cannot certify the true collision operator, full SM energy dynamics, 86eV Bose production, relic Ω, BEC, or CLASS-ready.",
+  "physics_scope_warning": "2..11-mode slow Ritz keeps falling; cannot use single γ_T or low Ritz as physically validated Γelastic or prove gapless/gapped. Toy bounded kinetic network has phenomenological Γ. No realistic SM portal, time-evolved Bose 86eV freezeout, physical relic abundance, BEC or CLASS.",
   "automation": {
     "title": "Dark Matter — автономное исследование",
     "id": "6b01db5ad8ec8191a71d1a703058d03a",
@@ -185,8 +197,8 @@
     "enabled": true,
     "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
   },
-  "last_verified_commit": "bd776da0460024891ebc7b488b0a8f32a19b9840",
-  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937070360",
+  "last_verified_commit": "9284516493f09fc127257c33797e526b22f64fba",
+  "last_verified_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937452929",
   "last_event_audit": {
     "date": "2026-11-21",
     "script": "kinetics/relativistic_elastic_audit.py",
@@ -199,14 +211,17 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "title": "Finite-bath reduced Fermi pair implicit kinetic integrator preserving Pauli, number, energy and H-theorem but NOT calibrated microphysical Γ",
-    "commit": "c373bca160116460c55832798094e042b0ee7842",
-    "code": "kinetics/fermion_finite_bath_pairs.py",
-    "tests": "tests/test_fermion_finite_bath_pairs.py",
-    "report": "kinetics/FINITE-BATH-QUANTUM-PAIR-REFERENCE.md",
-    "result": "kinetics/results/finite-bath-fermion-pair-reference-2026-11-21.json",
-    "scope": "Reduced two-level and three-bin rate network; no real high-dimensional χe kernel or cosmological evolution",
-    "ci_status": "pending_at_checkpoint",
-    "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937357618"
+    "title": "Stieltjes 2..11-mode FD Pauli collision spectral nonconvergence audit",
+    "commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+    "code": "kinetics/stieltjes_pauli_modes.py",
+    "tests": "tests/test_stieltjes_pauli_modes.py",
+    "report": "kinetics/PAULI-STIELTJES-11MODE-AUDIT.md",
+    "data": "kinetics/results/pauli-stieltjes-11mode-2026-11-21.json",
+    "low_2mode_GeV": 2.125371382675302e-7,
+    "low_5mode_GeV": 1.3293418514027366e-7,
+    "low_11mode_GeV": 8.564757722572995e-8,
+    "n20_to_n24_relative_11mode": -0.00041338112700939345,
+    "ci_status": "pending at checkpoint; check actual GitHub run before claiming success",
+    "physical_scope": "conditional electron-only EFT, FD linearisation; 11-mode Ritz is not true kinetic spectral eigenvalue"
   }
 }

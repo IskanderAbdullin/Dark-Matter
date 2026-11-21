@@ -2,33 +2,32 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Derive transition rates from the actual 5D relativistic χe Pauli scattering kernel and couple them to bounded conservative Fermi + SM time evolution",
-  "objective": "Bridge from the validated instantaneous 5D full-Pauli continuum χe collision source to the independently validated reduced implicit pairwise quantum kinetic network, with rates and energy transfers derived rather than assigned. Preserve finite χ mode capacities, electron Pauli and SM energy/entropy, avoid artificial charge/energy projection or hidden reservoir. Compare against strong and weak reference Cχ(p) and 2..5 logit Ritz modes. Until achieved do not claim a microscopic γ_el or physical 86-eV relic.",
+  "title": "Variational IR/UV localized packet audit and physical χe-to-energy-bin transition mapping",
+  "objective": "Test whether slow χe full-Pauli relaxation tends toward a true small rate or zero as nonthermal perturbation basis extends beyond 11 modes, distinguishing finite-basis spectra from 5D collision quadrature. In parallel implement actual microphysically derived Pauli χe transitions into number/energy-conserving quantum capacities and finite SM heat. Only validated physical source can replace arbitrary Γ toy network or old BGK.",
   "prerequisites": [
-    "Read AGENTS.md, CONTINUOUS-RESEARCH-SPEC.md and all research-control files and CI",
-    "Check latest PR HEAD and CI for c373bca (tests/test_fermion_finite_bath_pairs.py); repair any failures first",
-    "Study 5D relativistic_nonlinear_fermion.py, conservative_energy_projection.py, higher_order_pauli_modes.py, finite-bath fermion_finite_bath_pairs.py and numerical evidence files"
+    "Read full AGENTS.md and scientific spec and GOAL/STATE/NEXT_ACTION/EVIDENCE/BACKLOG",
+    "Check PR #1 head and exact GitHub Actions CI after a436f7, repair any failures",
+    "Read kinetics/PAULI-STIELTJES-11MODE-AUDIT.md, stieltjes_pauli_modes.py, quantitative scan JSON, and reduced implicit finite-bath network plus original 5D Pauli Cchi(p)"
   ],
-  "highest_value_actions": [
-    "Choose radial energy/phase-space cell volumes for χ, with exact quantum state capacity gχ V/(2π)^3, and for electrons+neutrinos. Define conservative interpolation of outgoing χ/e four-momenta to available cells such that microscopic Pauli blocking is not overcounted.",
-    "Derive physically correct pairwise collision transition matrix W_ij from the χe vector-contact |M|² and full Lorentz invariant integrals; distinguish χ transitions driven by finite e thermal occupations from arbitrary phenomenological Gamma. Verify a finite uniform-temperature FD fixed point and exact detailed balance ratios.",
-    "Check weak event Qχ and individual Cχ(p) against 5D quadrature and independent rest recoil reference. Explicitly show arbitrary finite cutoff leakage, and design corrections preserving physical invariants without numerical clipping or hidden resetting.",
-    "Couple finite electron/SM bath energy ESM(T), g*ρ(T), g*S(T), entropy, and radiation H to actual χ momentum modes; ν_L channel and UV completion needed for genuine early-Universe scenario.",
-    "Implement positive implicit/stiff timestep with discrete fermionic 0≤f≤1, exact charge, energy Qχ+QSM, monotone entropy and dt/q/CM/seed convergence. Confirm true-time responses against linear Ritz spectrum; keep two-vs-five basis negative evidence.",
-    "Then restore pinned BEST 1↔2 Bose χ1↔χ2+φ, thermal masses and stimulated soft 2↔2 where relevant, and integrate actual freezeout before any 86eV abundance/CLASS test.",
-    "After each completed verified step append EVIDENCE/backlog/results, checkpoint, nonforce commit+push, immediately continue next scientific bottleneck"
+  "research_actions": [
+    "Compute spectral Rayleigh quotient for localized compact-support δlogit(fχ) packets at low and high physical p with correct FD susceptibility weight; compare analytically controlled scattering-frequency bounds to full 5D Dirichlet and check tail/cutoff convergence",
+    "Determine whether increasing polynomial/logit basis dimension causes continued monotone lowest Ritz decline without ill-conditioned numerical Gram matrices; never claim actual gap or lack of gap from finite data alone",
+    "Independently discretize χ energy bins with capacities gχ p²dp/(2π²) and vector χe collision events; use full Pauli factors for incoming/outgoing χ and e, microscopic |M|², Møller flux and CM angular measure",
+    "Ensure conservative event rebinning yields exact particle and energy/SM Q transfer and correct equilibrium detailed balance; test PCHIP false heat and number leakage negative controls before promoting",
+    "Replace prescribed Γ toy network only if a physical transition integral and finite lepton bath entropy are derived and verified; then test Pauli-bounded implicit time evolution vs continuum moments and mode rates",
+    "Extend SM lepton SU2/ν, thermal masses and gstar(T) with physically bounded UV portal; then pinned BEST 1↔2 Bose, correct expansion and actual late relic without posthoc Ω rescaling",
+    "After each verified stage update compact evidence and negative results, checkpoint, nonforce commit+push and immediately begin next science bottleneck"
   ],
-  "quantitative_controls": [
-    "Full Pauli F/R and equal-T FD null on actual finite q grid",
-    "Independent particle-number/energy conservation and SM heat (not definitions only)",
-    "Exact f_i bounds at large stiffness, positive total entropy and actual number-changing channels distinguished from elastic",
-    "nq, ncm, qmin, qmax, dt and finite bath size convergence; controlled rate vs 5D scattering and localized basis modes",
-    "Physical 86eV production, macro BEC, ΩDM or CLASS-ready shall remain NOT VALIDATED until full terminal criteria pass"
+  "acceptance": [
+    "Explicit quantified local IR/UV variational Rayleigh bounds and domain convergence, without inventing full spectral gap",
+    "Derivation and numerical independent measurement of microphysical χe transition matrix/bin weights with both Pauli directions",
+    "Actual finite SM bath Q and fermion phase-space positivity with correct physical bin capacity",
+    "Reproduced continuum strong/weak 5D Q, number and entropy; robust q/dt/angular refinement",
+    "No unsupported ΩDM, BEC, CLASS, freezeout or gamma_el claims"
   ],
   "fallback": [
-    "If full 5D-to-bin positive mapping is not tractable, start with strictly physically derived two-bin weak transfer rate and quantify ignored high-q edges, with explicit no-time-physics conclusion",
-    "If SM E(T) and entropy data not verified, use constant gstar controlled toy only with explicit failure of physical cosmological claim",
-    "If CI fails, preserve error evidence and fix before claiming stage verified"
-  ],
-  "scope": "Public repo research branch and draft PR only; no force or merge main; compact Actions allowed. User computer/Computer Use not without separate explicit approval."
+    "If true full spectral analysis is infeasible, provide conditional variational upper bound only with fixed function class and units",
+    "If microphysical event bin collision is not conservative, preserve counterexample and test exact physical energy finite-volume weighting",
+    "Avoid user PC/Computer Use without separate approval, force push, merge main or huge GitHub Actions artifacts"
+  ]
 }
