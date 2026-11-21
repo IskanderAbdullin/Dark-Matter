@@ -27,6 +27,7 @@ import json
 import math
 from pathlib import Path
 import sys
+import subprocess
 
 import numpy as np
 from scipy.special import expit
@@ -81,6 +82,17 @@ def execute_best(protocol,best_root,output):
     path=Path(best_root).resolve()
     if not (path/"besthep.py").is_file():
         raise ValueError("BEST besthep.py not found at supplied root")
+    try:
+        actual_sha=subprocess.run(
+            ["git","-C",str(path),"rev-parse","HEAD"],check=True,
+            stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,
+            timeout=10).stdout.strip()
+    except (OSError,subprocess.SubprocessError) as error:
+        raise ValueError("Independent BEST Git commit provenance unavailable") from error
+    if actual_sha!=BEST_PIN:
+        raise ValueError(
+            "BEST source revision differs from pinned protocol: "+
+            actual_sha+" expected "+BEST_PIN)
     sys.path.insert(0,str(path))
     from besthep import BEST, grid_weights  # OPTIONAL external solver
     mass=protocol["parent_mass_over_T"]
@@ -114,7 +126,8 @@ def execute_best(protocol,best_root,output):
     target=protocol["independently_derived_vacuum_source_n_over_T3_per_time"]
     result={
         "external_solver_executed":True,
-        "BEST_version_source_commit_EXPECTED_NOT_VERIFIED":BEST_PIN,
+        "BEST_source_commit_verified":actual_sha,
+        "BEST_git_revision_matched_pinned_protocol":True,
         "model_and_protocol":protocol,
         "instantaneous_integrated_number_rates":rate_integrals,
         "reference_analytic_phi_production":target,

@@ -44,7 +44,7 @@ R_{\mathrm{vac}}=\frac{g_{\chi_1}M_{\chi_1}\Gamma}{2\pi^2}
     python kinetics/best_external_vacuum_reference.py --protocol
     mpirun -np 2 python kinetics/best_external_vacuum_reference.py --execute --best-root /path/to/best --output outputs/best_vacuum.json
 
-Важное техническое ограничение: скрипт сохраняет ожидаемый pinned SHA, но **не проверяет автоматически настоящий Git HEAD внешней директории**; перед научной интерпретацией нужно выполнить git rev-parse HEAD и записать его рядом с экспериментом. Пустой protocol или unit tests НЕ означают, что внешний solver действительно исполнялся.
+**Проверка версии внешнего кода:** скрипт перед импортом BEST выполняет git rev-parse HEAD, сравнивает результат с закреплённым SHA и при расхождении прекращает работу. Успешный действительно исполненный внешний результат включает проверенный Git SHA. Пустой protocol или unit tests НЕ означают, что внешний solver исполнялся. Для нескольких независимых результатов создан дополнительный [fail-closed comparator](BEST-SOURCE-COMPARISON.md).
 
 ## Следующий научный критерий
 

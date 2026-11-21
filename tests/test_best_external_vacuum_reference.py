@@ -43,3 +43,10 @@ def test_missing_best_dependency_cannot_manufacture_run(tmp_path):
     with pytest.raises(ValueError,match="not found"):
         execute_best(benchmark_protocol(),tmp_path,tmp_path/"fake.json")
     assert not (tmp_path/"fake.json").exists()
+
+
+def test_unversioned_best_source_is_rejected_before_import(tmp_path):
+    (tmp_path/"besthep.py").write_text("# mock only; not a Git checkout")
+    with pytest.raises(ValueError,match="provenance unavailable"):
+        execute_best(benchmark_protocol(),tmp_path,tmp_path/"fake.json")
+    assert not (tmp_path/"fake.json").exists()

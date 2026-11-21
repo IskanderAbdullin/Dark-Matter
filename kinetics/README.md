@@ -1,5 +1,8 @@
 # First genuine Bose-stimulated gain/loss calculation for dark matter production
 
+**BEST INDEPENDENT SOURCE VALIDATOR:** [BEST-SOURCE-COMPARISON.md](BEST-SOURCE-COMPARISON.md) documents pinned external Git SHA check before executing BEST and a [multi-run comparator](best_source_comparison.py) that fails closed on missing data, wrong spin normalization, incomplete 3-species rate stoichiometry, or insufficient q/neval variation. Synthetic test fixtures are not independent physics evidence; external BEST has not run.
+
+
 **EXTERNAL INDEPENDENT VALIDATION PATH:** [BEST v1.3.5 protocol](BEST-INDEPENDENT-VALIDATION.md) inspects an MIT-licensed open-source independent collision+FRW Boltzmann solver with full quantum statistics and zero-mode examples. New [optional benchmark](best_external_vacuum_reference.py) prepares a mass=.1, gχ1=4, empty daughter 1↔2 rate test against exact analytic Rvac=.0164959084596. Ordinary scientific CI only tests PROTOCOL; no actual external Monte Carlo comparison has run.
 
 

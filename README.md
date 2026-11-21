@@ -1,5 +1,8 @@
 # Bosonic dark-matter halos with a dominant noncondensed component — research program
 
+**External BEST comparison now fail-closed:** [pinned SHA verification and multi-run source consistency checker](kinetics/BEST-SOURCE-COMPARISON.md) accept only supplied outputs created under matching BEST v1.3.5 Git SHA and compare thermal vacuum 1↔2 rates for mother and both daughters, with ≥2 grids/≥2 Vegas neval settings for a preliminary agreement label. No actual BEST Monte Carlo results have yet been supplied; current external status remains UNVERIFIED, and no nonlinear FRW or CLASS validation is claimed.
+
+
 **Independent solver identified (not yet executed):** [BEST v1.3.5 momentum-resolved quantum Boltzmann framework](kinetics/BEST-INDEPENDENT-VALIDATION.md), source best-hep/best pinned c70875be. It supports on-shell 1↔2, evolving mother/daughters, Bose/Pauli, FRW, baths and zero-mode examples. A safe optional [standalone vacuum-source benchmark protocol](kinetics/best_external_vacuum_reference.py) specifies the independent analytic rate 0.0164959084596 at M/T=.1 and required stoichiometric tests. External BEST has NOT been run or verified; no claimed independent agreement.
 
 
