@@ -34,10 +34,11 @@ from best_massive_daughter_reference import massive_protocol
 
 
 def dynamic_protocol(mphi=.001,nq=56,vegas_neval=6000,
-                     steps=5,dtGamma=1e-5,method="exprb"):
+                     steps=5,dtGamma=1e-5,method="exprb",qmin=1e-4):
     if steps<1 or dtGamma<=0 or method not in ("exprb","exprb_full","heun"):
         raise ValueError("Positive short evolution steps, duration and supported method required")
-    base=massive_protocol(mphi=mphi,grid_n=nq,vegas_neval=vegas_neval)
+    base=massive_protocol(mphi=mphi,grid_n=nq,vegas_neval=vegas_neval,
+                          qmin=qmin)
     return {
         "status":"OPTIONAL CLOSED BEST FINITE-TIME KINETICS; NOT EXECUTED BY DEFAULT",
         "massive_initial_vacuum_protocol":base,
@@ -178,9 +179,10 @@ def main():
     parser.add_argument("--steps",type=int,default=5)
     parser.add_argument("--dt",type=float,default=1e-5)
     parser.add_argument("--method",choices=["exprb","exprb_full","heun"],default="exprb")
+    parser.add_argument("--qmin",type=float,default=1e-4)
     args=parser.parse_args()
     spec=dynamic_protocol(args.mphi,args.grid_n,args.neval,args.steps,
-                          args.dt,args.method)
+                          args.dt,args.method,args.qmin)
     if args.execute:
         if not args.best_root:raise ValueError("--best-root required")
         execute_best(args.best_root,args.output,spec)

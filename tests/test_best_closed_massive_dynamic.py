@@ -43,4 +43,8 @@ def test_dynamic_protocol_has_physical_massive_zero_mode_context_but_no_BEC_clai
     p=dynamic_protocol()
     assert p["massive_initial_vacuum_protocol"]["mass_phi"]>0
     assert "distinguish" in p["zero_mode"]
+    assert p["massive_initial_vacuum_protocol"]["qmin"]==1e-4
+    assert dynamic_protocol(qmin=5e-5)["massive_initial_vacuum_protocol"]["qmin"]==5e-5
+    with pytest.raises(ValueError):
+        dynamic_protocol(qmin=0)
     assert p["real_BEST_physics"].startswith("time evolving")
