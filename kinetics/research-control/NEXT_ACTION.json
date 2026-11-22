@@ -2,19 +2,19 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify exact Riccati+Strang Scientific CI and resolve stiff h=.1 dt/order before full SM/χ/Bose kinetics",
-  "objective": "A closed exact Pauli/Bose Riccati elementary vector↔ν+antinu event combined in palindromic Strang gives bounded source with discrete exact C,L,E, monotone entropy and distinct evolving ν/antinu. Independent local solve_ivp agrees ≤3.2e−16 in 18 events. h=.2 max spectral error relative dtref=1/256 at dt=.0625/.03125/.015625 = .007275/.002098/.0005215 (ratios3.47/4.02), but h=.1 with 808 events at dt=.125/.0625/.03125 errors .023212/.014168/.007222 (ratios1.64/1.96), NOT second-order regime. Verify full GH CI on new commit, then dt≤1/256 relative dtref<1/1024 at h=.1, adaptive positivity/entropy step and 3+ h/Emax/shape/cutoff to independently close continuum weak and strong moments. Then physical gauge-e±γν and both χ1/χ2 Pauli2→2 plus χ1↔χ2+86eV φ Bose+FRW. Never promote Γ0=1 to physical Γelastic or 86eV DM.",
+  "title": "Check Scientific CI for stiff Strang scan; implement conservative adaptive spectrum-level error controller and cross-cutoff physical rate gate",
+  "objective": "Exact micro-Riccati finite Zprime↔ν+antiν Strang now has *independent self convergence* at mV=.4,Emax4, tau=1 across h=.4/.2/.1 and dt=1/8…1/1024. Stiff h=.1 errors vs adjacent half dt initially increase (ratio .794), then approach 2nd order only at dt<1/128 (successive ratios 3.55,3.876,3.968). Quantum C,L,E preserved, entropy monotone. Check CI on parent a77ebe56 and new dt stage. Next build a positivity/entropy preserving adaptive timestep controller that compares full spectra (ν,antiν,V), not only energy/number, and demonstrate acceptance/rejection at h=.1 with tolerance and cost; then address 3+ h/Emax/nonthermal shape source convergence. Physical 86eV model/BGK Γel unverified.",
   "prerequisites": [
-    "Read current repo AGENTS.md and PROJECT_MAP.md routing: root PLAN is a concise map; physical route in plans/RESEARCH_ROADMAP_DETAIL.md and kinetics/RESEARCH_GUARDRAILS.md. Latest branch PR#1 must be draft.",
-    "Check actual GitHub Scientific verification for the new exact-event Strang commit, baseline context-map 92caea CI #45014249016 succeeded; prior constrained equilibrium 632ee72 CI #45013070487 succeeded.",
-    "Run python -m pytest -q tests/test_vector_neutrino_exact_event_strang.py tests/test_vector_neutrino_constrained_equilibrium.py tests/test_vector_neutrino_event_invariants.py",
-    "Run python -m kinetics.vector_neutrino_exact_event_strang --h 0.2 --tau 4 --dt 0.0625; independently repeat solve_ivp microextent (rtol2e−11,atol2e−17), three full spectra and exact C,L,E/S."
+    "Read AGENTS.md task-aware context map, PROJECT_MAP, kinetics/RESEARCH_GUARDRAILS and NEXT_ACTION; root PLAN is a router, detailed roadmap plans/RESEARCH_ROADMAP_DETAIL.md.",
+    "Check latest draft PR#1 HEAD and real Scientific verification for parent exact Strang commit a77ebe56 (run #45015296472 was in_progress), then verify new dt stage CI. Archive any test/collection failure.",
+    "Run python -m pytest -q tests/test_vector_neutrino_strang_dt_convergence.py tests/test_vector_neutrino_exact_event_strang.py; python -m kinetics.vector_neutrino_strang_dt_convergence --h 0.1 --tau 1",
+    "Independently check event graph h=.4/.2/.1, Emax4 tau1, dt halving list and full-spectrum self-errors plus all quantum constraints; do not confuse temporal order with physical χ/SM rate."
   ],
   "experiments": [
-    "Resolve stiff h=.1 with time dt=.015625,.0078125,.00390625,.001953125 and reference ≤.0009765625; compare full three-species spectra, stage-order and entropy to identify asymptotic temporal second order rather than assume it.",
-    "Measure 3+ h (including .4,.2,.1), Emax4/6/8 and at least two nonthermal spectra for vector weak and strong rates/entropy versus independently parameterized continuum 1↔2 operators, separate cutoff from time errors and check full stoichiometric nullity.",
-    "Only after rate and temporal convergence, implement true finite e±γν collision and charged/gauge-complete χ1/χ2 2→2 Pauli and χ1↔χ2+real φ Bose 1↔2 with H,gstar, mediator and ΔNeff constraints. CLASS-ready=false."
+    "Implement adaptive Strang step-doubling using full species infinity norm, with charged/energy/entropy and Bose/Pauli gates; test tolerance refinement, accepted/rejected dt and count, compare against fixed fine reference and time-symmetric leading-error cancellation only if verified.",
+    "At least three h and Emax4/6/8 and multiple initial shapes benchmark strong/weak spectra and collision moments with independent continuum angular/radial source and physical threshold; quantify numerical uncertainty separately from Γ0=1 toy physics.",
+    "Then gauge-consistent χ1/χ2 finite-T Pauli 2→2 with e±,ν and original real φ Bose 1↔2, finite SM eγν and genuine FRW/H,gstar, constraints and freeze-out. Class-ready remains false."
   ],
-  "constraints": "Only this public repo research branch, draft PR#1, no force push or main merge, no Computer Use/user PC without express permission, small CI, permanent archival source/JSON, negative results retained.",
+  "constraints": "Only public Dark-Matter research branch and draft PR, no force-push/merge main, no Computer Use/user PC without separate permission, small CI, archive source/data/negative findings in Git. Do not claim ΩDM/BEC/frozen f(q)/CLASS.",
   "class_ready": false
 }

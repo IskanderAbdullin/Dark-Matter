@@ -345,3 +345,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Positive scoped: h=.2 full three-species nonthermal spectral time error dt=.0625/.03125/.015625 vs dtref=.00390625 = .007275/.002098/.000522, ratios 3.47/4.02, consistent with formal order2 on fixed graph.
 - [x] **Negative:** h=.1 is stiff at tested dt and does not show order2, errors .02321/.01417/.00722; previous angular/radial/number/cutoff issues remain. This is **NOT** physical χ Gammael or 86eV relic production.
 - [ ] Verify current GH CI; P0 h=.1 smaller dt and 3+ Emax/h/shape comparison, then true finite e±γν/χ1χ2φ SM/FRW Bose, no CLASS-ready.
+
+## 2026-11-22 quantum Strang strong-time stiffness and self-convergence
+
+- [x] Independent full-three-spectrum dt vs dt/2 self-convergence for mV=.4 Emax4, tau1, h=.4/.2/.1, dt=1/8…1/1024. On coarse h=.1 first relative error ratio .794 despite decreasing dt, proving non-asymptotic strong-event stiffness. [Stage](../../archive/stages/2026/11/2026-11-22-vector-neutrino-strang-dt.md).
+- [x] Positive scoped: refined h=.1 ratios approach 3.55,3.876,3.968 while C/L/E ~1e−15, H entropy and Pauli/Bose. This validates second temporal order only on finite quantum reaction graph, not physical continuum or χ–SM.
+- [ ] Verify parent/new GH CI. P0 adaptive full-spectrum error-step controller, source h/Emax/shape independent convergence and gauge/SM χ1/χ2φ Bose+FRW. No Γelastic/86eV relic/CLASS.

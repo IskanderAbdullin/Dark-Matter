@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Source, independent local experiment, report and permanent stage ready; real CI of research commit to verify; subsequent time refinement is executable in NEXT_ACTION, no claim of inter-launch work.",
+  "stop_reason": "Positive and negative self-convergence data, code and stage prepared for Git; next physical continuum and adaptive step gate executable. No asynchronous work implied.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Physical incomplete: numerical quantum finite reaction network Zprime↔distinct ν+antinu has exact single-channel Riccati microflow plus symmetric Strang. Independently checked against solve_ivp; h=.2 temporal ratios near 4, h=.1 stiffness yields non-asymptotic 1.64/1.96; full continuum, χ1/χ2 φ and FRW absent.",
+  "current_phase": "Exact Riccati plus symmetric Strang for isolated finite Zprime↔ν+antiν reaction graph: newly independent full-spectra temporal self-convergence 3 h at tau1 shows stiff h=.1 pre-asymptotic error ratios .794,1.49,2.69,3.55,3.88,3.97, converging to 2nd order only at very fine dt. Physical χ1/χ2φ-SM and FRW untouched.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -523,5 +523,16 @@
     "positive": "Exact quantum Riccati microextent vs 6 independent solve_ivp ODE x3 time step absolute ≤3.2e-16; for fixed h=.2 Strang max spectral errors at dt=.0625,.03125,.015625 are .007275,.002098,.0005215 vs .00390625 reference, halving ratios3.47,4.02; discrete C,L,E to 1e-15, Bose/Pauli bounds, monotone entropy.",
     "negative": "At finer h=.1, dt=.125,.0625,.03125 errors .023212,.014168,.007222 vs dtref=.00390625, ratios1.64,1.96: stiff not asymptotic 2nd order. Time method does not fix finite UV/cutoff, actual χ Γelastic, φ Bose or 86eV DM.",
     "guardrails": "No physical χ Γel, ΩDM, BEC or CLASS-ready. All input thermal/particles synthetic, Γ0=1 numerical unit."
+  },
+  "latest_stiff_strang_time": {
+    "source": "kinetics/vector_neutrino_strang_dt_convergence.py",
+    "test": "tests/test_vector_neutrino_strang_dt_convergence.py",
+    "report": "kinetics/VECTOR-NEUTRINO-STRANG-DT-CONVERGENCE-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-strang-dt-convergence-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-strang-dt.md",
+    "status": "independent local three-grid full spectral dt scan, GH Scientific CI pending",
+    "positive": "At mV=.4 Emax4 tau1, Strang on finite h=.1 with 808 edges enters temporal second order: step-halving spectral self-difference ratios 0.794,1.493,2.688,3.550,3.876,3.968 for dt=.125/2→.001953125/2. h=.2/.4 ratios tend to 4. C/L/E residual ~1e-15, entropy positive and Pauli/Bose retained.",
+    "negative": "For h=.1 coarse dt refinement initially increases error; stronger stiffness and 3+ dt needed. Entire finite graph Γ0=1 synthetic, no continuum h/UV/physical Γelastic/86eV Ω/BEC/CLASS.",
+    "upstream": "Exact Riccati+Strang parent a77ebe56f6ccf6755b8d884750a6b3a34a392025 CI #45015296472 in_progress at last check, must confirm before declaring success."
   }
 }
