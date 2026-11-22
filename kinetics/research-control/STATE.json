@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T16:40:21Z",
+  "updated_utc": "2026-11-22T16:46:18Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -105,7 +105,7 @@
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Coupled four-species χ1/χ2/real φ/one lepton eventwise conservative full Pauli/Bose finite-vector+Yukawa synthetic model: independently orthogonal incoming-cut/mode-mesh has now five Fermi-logit grid levels and mathematical O(h²) remainder. At fixed 5D p/k/CM quadrature H energy-grid error improves -5.73% N256 to -0.02447% N4096, but Qχ errors nonmonotonic and full 5D/mphi IR/SM FRW unknown. No physical Γelastic/86eV relic.",
+  "current_phase": "Critical physical Bose φ IR negative: original coupled χ1χ2+real φ+lepton finite-energy mode solver assigns singular BE b(E0=mφ) at rest node to positive first cell physical capacity. For mφ=86eV=8.6e−8GeV,T=1GeV,Eupper12.1GeV,N64 illustrative, first cell number 756352× true p²dp integral, whole thermal total 1363.47× true; no δ(p) condensate. Physical Ω/BEC/Γelastic/CLASS not validated.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "74819fa4398582c2e40443772734144033bb5b0d",
-    "run_id": 45041474724,
+    "head_sha": "d85b7cfff3fd95ca31276c1be17aea1a733709de",
+    "run_id": 45044674246,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45041474724",
-    "scope": "prior four-species segmented elastic Pauli/Bose coupled synthetic stage, not this new mesh/cutoff separation"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45044674246",
+    "scope": "prior cutoff-mesh separation, not φ IR"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -702,7 +702,7 @@
     "class_ready": false
   },
   "latest_four_species_cutoff_mesh_separation": {
-    "status": "separate incoming cutoff introduced and local six targeted tests passed (4 new tests 26.11s; 2 related tests 13.30s), 9 earlier coupled regressions passed. New GH CI pending; no model-wide accuracy assertion.",
+    "status": "Scientific #45044674246 success. Only synthetic source and mesh alias.",
     "source": "kinetics/four_species_cutoff_mesh_separation.py",
     "scanner": "kinetics/four_species_rate_error_budget.py",
     "strong_sources": [
@@ -723,13 +723,13 @@
   },
   "session_active_launch": {
     "start_utc": "2026-11-22T16:22:01Z",
-    "last_clock_check_utc": "2026-11-22T16:40:21Z",
-    "elapsed_minutes_observed": 18.3333,
+    "last_clock_check_utc": "2026-11-22T16:46:18Z",
+    "elapsed_minutes_observed": 24.2833,
     "target_minutes": 55,
     "between_launch_execution": false
   },
   "latest_four_species_mode_refinement": {
-    "status": "three targeted local tests passed in 13.84s, analytic logit interpolation remainder and separate direct-weak on-shell 5D reference; current new GH CI pending",
+    "status": "Parent Scientific #45045253260 in_progress last check; three local tests passed, fixed-quadrature only.",
     "source": "kinetics/four_species_mode_refinement_gate.py",
     "tests": "tests/test_four_species_mode_refinement_gate.py",
     "report": "kinetics/FOUR-SPECIES-MODE-REFINEMENT-AUDIT.md",
@@ -737,6 +737,18 @@
     "archive": "archive/stages/2026/11/2026-11-22-four-species-mode-refinement.md",
     "positive": "On fixed χ1χ2+one lepton synthetic finite-vector Pauli 5D quadrature, Fermi logit interpolation proven bounded |L−Ih L|≤h² sup|L''|/8, direct 10k-point tests ×3 species ×3 grids. H error at N256/512/1024/2048/4096 = -5.7321/-1.4830/-0.4003/-0.09655/-0.02447%, halving ratios 3.865,3.705,4.146,3.946. Fixed mesh N1024 incoming cut16→20 χ1 Q shifts ~0.0127% on same low-order angles.",
     "negative": "Signed χ1 and χ2 Q errors can change sign with N; N4096 0.024% H concerns ONLY Fermi-logit mode interpolation at fixed quadrature and cannot establish full 5D physical Γelastic, actual φ time/IR, finite SM or Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_phi_ir_first_cell_artifact": {
+    "status": "analytical proof of first Bose energy-bin artifact, independent p²dp + zeta(3) test, 15 mass/bin cases, 5 focused local tests passed in 0.60s; new GH CI pending",
+    "source": "kinetics/phi_ir_first_cell_artifact.py",
+    "tests": "tests/test_phi_ir_first_cell_artifact.py",
+    "report": "kinetics/PHI-IR-FIRST-CELL-ARTIFACT-AUDIT.md",
+    "data": "kinetics/results/phi-ir-first-cell-artifact-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-ir-first-cell-artifact.md",
+    "proof": "mφ<<h<<T: w0≈gφ h³/(48π²), BE(mφ)≈T/mφ, n0,true≈gφTh²/(16π²). Thus n0,node/n0,true≈h/(3mφ) diverges as mφ→0; physical massless n=gφ ζ(3)T³/π² finite, no condensate δ(p).",
+    "positive": "Independent massless p integral 0.12179382823357311 and ζ3/π² 0.12179382823357308. Exact first cell thermal number diagnostic makes 86eV N16/64/256 total ratios 1.02708/1.003399/1.000320; not substituted into dynamic Yukawa.",
+    "negative": "For mφ=86eV=8.6e−8GeV,T=1GeV synthetic,Eupper12.1GeV,N64 first cell npoint165.873845 vs true0.0002193076 =×756352, full thermal total ×1363.47; N16 total ×87199, N256 ×22.29. This is numerical fake BEC/Ω, not physical dark matter. Simple replacement of first nodal Bose by averaged b may violate existing event log-fugacity detailed balance/H.",
     "class_ready": false
   }
 }

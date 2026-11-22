@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "stage": "thermal real φ first energy-bin collocation false condensate diagnostic",
+  "physical_definition": "n=g/(2π²) ∫_0^pmax p²dp / (exp(sqrt(p²+m²)/T)−1), μφ=0",
+  "existing_discrete_definition": "n_grid=Σ_i density_cells(E_i,m,g)*BE(E_i), E0=m, first cell spans [m,m+h/2]",
+  "asymptotic": "m<<h<<T: first node/bin number ratio = h/(3m)+corrections, while n_exc(m=0,T)=g ζ(3)T³/π² is finite",
+  "synthetic_units": {
+    "T_GeV": 1,
+    "energy_upper_GeV": 12.1,
+    "gphi": 1,
+    "masses_GeV": [
+      0.1,
+      0.01,
+      0.001,
+      0.0001,
+      8.6e-8
+    ],
+    "bins": [
+      16,
+      64,
+      256
+    ]
+  },
+  "massless_exact_zeta3_pi2": 0.12179382823357308,
+  "massless_quad_pmax50": 0.12179382823357311,
+  "selected_results": [
+    {
+      "m": 0.1,
+      "N": 64,
+      "first_ratio": 1.6211828113123776,
+      "total_ratio": 1.0049948505856465
+    },
+    {
+      "m": 0.01,
+      "N": 64,
+      "first_ratio": 7.31913823127624,
+      "total_ratio": 1.0166887001436553
+    },
+    {
+      "m": 0.001,
+      "N": 16,
+      "first_ratio": 287.1874522697928,
+      "total_ratio": 8.55367507927372,
+      "only_first_corrected_total_ratio": 1.0270350559469876
+    },
+    {
+      "m": 0.001,
+      "N": 64,
+      "first_ratio": 65.74965082147013,
+      "total_ratio": 1.1223708291718066,
+      "only_first_corrected_total_ratio": 1.003388329557394
+    },
+    {
+      "m": 0.001,
+      "N": 256,
+      "first_ratio": 16.6280787121458,
+      "total_ratio": 1.0022594041763475,
+      "only_first_corrected_total_ratio": 1.0003171403514932
+    },
+    {
+      "m": 0.0001,
+      "N": 64,
+      "first_ratio": 651.1392831968942,
+      "total_ratio": 2.1769444837561864,
+      "only_first_corrected_total_ratio": 1.0033983602946746
+    },
+    {
+      "m": 8.6e-8,
+      "N": 16,
+      "h": 0.756249994625,
+      "first_ratio": 3331266.1242735176,
+      "total_ratio": 87198.71585065925,
+      "only_first_corrected_total_ratio": 1.0270796970454392
+    },
+    {
+      "m": 8.6e-8,
+      "N": 64,
+      "h": 0.18906249865625,
+      "first_node_number": 165.873845197917,
+      "first_exact_number": 0.00021930761295836678,
+      "first_ratio": 756352.4264404192,
+      "total_ratio": 1363.4686830401417,
+      "only_first_corrected_total_ratio": 1.0033994810223048
+    },
+    {
+      "m": 8.6e-8,
+      "N": 256,
+      "h": 0.0472656246640625,
+      "first_ratio": 184651.07066602068,
+      "total_ratio": 22.28892703397962,
+      "only_first_corrected_total_ratio": 1.0003198180335524
+    }
+  ],
+  "method": "Independent SciPy quad p²dp εabs2e−13 εrel2e−11 vs existing exact radial cell weights and point BE(m), no physical condensate inserted.",
+  "positive": "Analytic massless ζ3 check at 3e−16, direct exact cell averaging fixes initial thermal number first-cell artifact but is NOT used in nonlinear Yukawa source.",
+  "negative": "Current φ first energy node b(m) multiplied by finite first-cell capacity can inflate 86eV initial thermal total by factor 1363 at synthetic T=1GeV/Eupper12.1GeV,N64; cannot interpret as BEC or cosmic Ω.",
+  "literature": "https://arxiv.org/abs/1510.04552",
+  "class_ready": false
+}

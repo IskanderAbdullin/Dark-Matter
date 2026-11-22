@@ -2,18 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify five-grid Fermi-logit Pauli mode CI, then independent joint phase-space 5D numerical error budget and Bose φ empty/IR boundary",
-  "objective": "Coupled χ1/χ2+real φ+one lepton event source now permits fixed common physical energy mode grid while varying elastic incoming cutoff separately. On legal oscillatory f, direct analytic-occupation same-5D weak χ1/χ2/S and node projection show Fermi-mode H bias N256 −5.73% to N4096 −0.02447%, with h-halving ratios 3.865/3.705/4.146/3.946 (O(h²) interpolation) and distinct signed Q heat errors changing sign. This does not validate underlying low-order nrad3/nμ6/CM12/φ12 and physical tail. Check new GH Scientific CI and then KEEP meshcut and >=1024/2048 nodes fixed to vary incoming cutoff and 3+ orders in p/k, μ, mapped CM and azimuth independently with two χ masses and nonzero electron mass, compare strong-vs-weak 5D moment/entropy. Independently check moving Yukawa φ low-q/inverse and zero initial Bose occupancy before any FRW/physical Γelastic.",
+  "title": "Verify φ IR false-first-cell CI; show chemical equilibrium can pass with wrong scalar N, then derive zero-mode-safe Bose kinetics",
+  "objective": "Original χ1↔χ2+real φ finite-energy strong code uses correct radial cell volume but singular point b(E0=mφ) at first energy cell, yielding n0,node/n0,true~h/(3mφ) as mφ→0. At synthetic mφ=86eV=8.6e−8GeV,T=1GeV,Eupper12.1GeV,N64 first cell inflated ×756352, whole thermal scalar number ×1363.47; massless BE number finite ζ3T³/π², no genuine δ(p) condensate. Next test full χ1χ2φ + one lepton at common-temperature chemical fixed point: F/R and entropy may be perfect while initial Nφ is grossly wrong, then design an IR-resolved physically on-shell Bose cell and explicit condensate only if separately justified. Preserve exact E/N/H and no hidden floors. Prior 5-grid Fermi entropy error −5.73 to −0.024% only fixed angular/radial.",
   "prerequisites": [
-    "Read repo AGENTS/GOAL/PLAN, kinetics CONTINUOUS-RESEARCH-SPEC and RESEARCH_GUARDRAILS; current STATE/EVIDENCE/BACKLOG and scientific reports FOUR-SPECIES-CUTOFF-MESH-SEPARATION-AUDIT and FOUR-SPECIES-MODE-REFINEMENT-AUDIT.",
-    "Check draft PR#1 HEAD and real Scientific CI for cutoff-mesh commit d85b7c and new refinement stage. Do not call in_progress CI success before completed.",
-    "Reproduce OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_four_species_mode_refinement_gate.py and report same analytic weak source, 5 grid H numbers, signed Q sign flips. Keep physical incoming radial/CM cutoff and mesh unchanged in convergence studies."
+    "Read AGENTS/GOAL/PLAN, kinetics CONTINUOUS-RESEARCH-SPEC/RESEARCH_GUARDRAILS, STATE/EVIDENCE and PHI-IR-FIRST-CELL-ARTIFACT-AUDIT. Check draft PR1 current HEAD/CI; previous cutoff-mesh #45044674246 successful, mode #45045253260 pending.",
+    "Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_ir_first_cell_artifact.py and python -m kinetics.phi_ir_first_cell_artifact --full. Verify massless ζ3 and h/(3m) plus 3 mesh values.",
+    "Inspect actual yukawa_bose_pauli_bounded_time.Config/thermal_initial and four_species_yukawa_shared_lepton.initial/ledger/rhs, distinguish true thermal number from collocated first node and 86eV conversion."
   ],
   "experiments": [
-    "At fixed sufficiently converged energy-mode grid >=1024-2048 and physical shared upper cut20 or higher, vary incoming segmentation/local Gaussian >=3, μ>=3, mapped CM >=3, azimuth >=3, physical incoming UV cut >=3, physical lepton mass e/ν and χ1/χ2, and independently compare full Qχ1/Qχ2/Qlep and H to analytic-occupation weak on exactly matched quads with honest errors.",
-    "For real-φ moving Yukawa χ1↔χ2+φ examine zero Bose occupancy bφ=0 finite-time entropy derivative (formally infinite), momentum/energy endpoint and qmin→0, finite-cell Bose density, time-reversal/inverse and 3+ q/IR/time; do not solve with silent numerical floors.",
-    "Only after full physical U1/Z2 gauge and actual e±γν/Zprime thermal plasma plus H/FRW and dimensionful masses/g*, observational constraints, attempt 86eV frozen fφ(q)/Ω/BEC/CLASS. All remain unvalidated."
+    "At T1=T2=Tφ=Tlepton and μ1=μ2+μφ, evaluate full fourpop RHS and ledger for mφ=86e−9 and bins16/64/256, test false scalar N remains while micro F/R≈0; preserve as negative control.",
+    "Derive a true cell-integrated real φ number/energy scheme with physical momentum IR, stable mφ→0 and separate zero-mode δ(p) only if physically warranted. Demonstrate any cell-average correction cannot be simply reused as nodal log fugacity without re-proving detailed balance/H.",
+    "Converge scalar 3+ m/q/IR and Yukawa moving parent angles/cutoff/time, then true finite e±γν/Zprime plasma and FRW and physical fφ(q)/Ω/BEC/CLASS only after terminal gates."
   ],
-  "constraints": "Current public Dark-Matter research branch, draft PR only; no force push, merge main, Computer Use/user PC/parallel agents. Minimal public CI, preserve compact evidence and negative results. CLASS-ready=false.",
+  "constraints": "Public research branch/draft PR only; no force/main merge, Computer Use/user PC/parallel agents, minimal public Actions, preserve negative data, CLASS-ready=false.",
   "class_ready": false
 }

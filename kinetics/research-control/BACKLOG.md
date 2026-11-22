@@ -456,3 +456,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Independent direct analytic-occupation 5D same quadrature vs conservative node Pauli source, N256/512/1024/2048/4096; H bias −5.73/−1.483/−0.4003/−0.0966/−0.02447%, ratios ≈4.0, 3 local tests passed. Fixed mesh N1024 incoming cut8 significantly incomplete vs cut20.
 - [x] **Negative:** individual χ1/χ2 Q errors change sign with mode-grid refinement; full incoming radial/μ/CM/φ/cutoff and actual SM/Bose/FRW not converged; no physical Γelastic or 86eV relic/CLASS.
 - [ ] Verify new GH CI; P0 joint physical 5D independent axis error budget at fixed sufficiently fine energy grid plus scalar φ exact b=0/IR and time, then realistic eγν/Zprime plasma/FRW.
+
+## 2026-11-22 critical real-φ Bose infrared first-cell pseudo-condensate gate
+
+- [x] Prove n0,node/n0,true≈h/(3mφ) for energy collocation BE(E=mφ) times exact first-cell p²dp physical volume, while massless integral is finite gζ3T³/π², and a physical BEC would require an independently normalized δ³(p) zero mode.
+- [x] Independently integrate 15 massive thermal Bose cell/full distributions using adaptive p-quadrature and original density_cells; 86eV illustrative GeV units N64 shows false first-cell ×756352 and total equilibrium scalar number ×1363.47, with no condensate. Five unit tests pass. One-cell *number-only* correction reduces total thermal bias to +0.34% but cannot be inserted into full collisional η interpolation without a new proof.
+- [x] Verified previous orthogonal cutoff mesh Scientific #45044674246 passed; new φ IR CI pending.
+- [ ] P0 show full four-pop model's chemical equilibrium/fixed point and zero Sdot can coexist with false giant Nφ; construct entropy/detailed-balance-preserving real φ IR/zero mode scheme and independent 3+ qmin/m/cutoff/time, full SM/FRW. No ΩDM/BEC/CLASS.
