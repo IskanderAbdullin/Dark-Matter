@@ -2,8 +2,8 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate nonconstant finite-vector angular trace CI, then independent full-Pauli finite-mV 5D heat convergence",
-  "objective": "Check real public CI for new angular trace source/tests and prior finite mediator 5D; compare full Pauli heat with independent t-based boosted-final-state calculation retaining azimuth, energy and Pauli; n/cutoff/mV/e/nu split-bath scans. Vacuum angular trace alone is not full thermal heat.",
+  "title": "Validate independent transfer-angle full 5D finite-mediator Pauli heat and quantify n/cutoff tails",
+  "objective": "Check CI for commits 2032662 and 6ffb9bf, compare transfer u=|t|/(mV²+|t|) with direct cosθ at n=12/16/24/32 and mediator masses .3/1/3/10, massive electron and massless neutrino, hot/cold and split baths. Verify Jacobian and report nonmonotone errors; then physical UV and thermal SM.",
   "prerequisites": [
     "Run python kinetics/finite_mediator_angular_control.py (restricted propagator-only Simpson control, committed 9355bf0); do not confuse with physical χe/χν thermal heat.",
     "Verify branch and actual GitHub Actions on new chiral ν/e portal commit and prior nonthermal QED weak commit b571c1 (run #44958176219 was in_progress at last check).",
@@ -76,10 +76,10 @@
     "next": "Independent angular and cutoff convergence; realistic χe/χν and finite SM bath"
   },
   "latest_checkpoint": {
-    "report": "kinetics/FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md",
-    "code": "kinetics/finite_mediator_trace_angular.py",
-    "tests": "tests/test_finite_mediator_trace_angular.py",
-    "previous_5D_CI": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762",
-    "new_CI": "pending"
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "test": "tests/test_finite_mediator_transfer_quadrature.py",
+    "commit": "6ffb9bfd9906bdb0d8a597a3e4d74c307d5a24f0",
+    "ci": "not yet confirmed",
+    "note": "Independent angular coordinate in same boosted 5D integrator, not independent spin amplitude or independent physics implementation"
   }
 }
