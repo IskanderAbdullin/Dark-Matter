@@ -36,14 +36,22 @@ def cm_heat(M, m, G, Te, Tchi, *, pmax, kmax, nr=24, nang=24,
     """
     if mediator_mass is not None and (not math.isfinite(mediator_mass) or mediator_mass<=0):
         raise ValueError('mediator_mass must be finite and positive')
-    if angular_scheme not in ('cosine', 'transfer'):\n        raise ValueError('angular_scheme must be cosine or transfer')\n    if angular_scheme == 'transfer' and mediator_mass is None:\n        raise ValueError('transfer quadrature requires finite mediator_mass')\n    p, wp = gauss(0., pmax, nr)
+    if angular_scheme not in ('cosine', 'transfer'):
+        raise ValueError('angular_scheme must be cosine or transfer')
+    if angular_scheme == 'transfer' and mediator_mass is None:
+        raise ValueError('transfer quadrature requires finite mediator_mass')
+    p, wp = gauss(0., pmax, nr)
     k, wk = gauss(0., kmax, nr)
     mu, wm = gauss(-1., 1., nang)
     c, wc = gauss(-1., 1., nang)
-    phi, wf = gauss(0., 2*math.pi, nphi)\n    if angular_scheme == 'transfer':\n        u, wu = gauss(0., 1., nang)\n        u, wu = u[None,None,:,None], wu[None,None,:,None]
+    phi, wf = gauss(0., 2*math.pi, nphi)
+    if angular_scheme == 'transfer':
+        u, wu = gauss(0., 1., nang)
+        u, wu = u[None,None,:,None], wu[None,None,:,None]
     k, wk = k[:,None,None,None], wk[:,None,None,None]
     mu, wm = mu[None,:,None,None], wm[None,:,None,None]
-    c, wc = c[None,None,:,None], wc[None,None,:,None]\n    c_base, wc_base = c, wc
+    c, wc = c[None,None,:,None], wc[None,None,:,None]
+    c_base, wc_base = c, wc
     phi, wf = phi[None,None,None,:], wf[None,None,None,:]
     w = np.sqrt(k*k+m*m)
     accum = 0.
@@ -55,7 +63,20 @@ def cm_heat(M, m, G, Te, Tchi, *, pmax, kmax, nr=24, nang=24,
         s = Et*Et-P2
         root = np.sqrt(s)
         ps2 = np.maximum(0., (s-(M+m)**2)*(s-(M-m)**2)/(4*s))
-        ps = np.sqrt(ps2)\n        if angular_scheme == 'transfer':\n            # u=|t|/(mV^2+|t|), 0<=u<=4ps^2/(mV^2+4ps^2).\n            # The exact Jacobian is dc/du=mV^2/[ps^2(1-u)^2].\n            # This is a separate angular quadrature, concentrating nodes\n            # near forward scattering for light mediators.\n            mv2 = mediator_mass**2\n            umax = 4*ps2/(mv2+4*ps2)\n            uu = umax*u\n            safe_ps2 = np.maximum(ps2, 1e-300)\n            c = np.clip(1-mv2*uu/(safe_ps2*(1-uu)), -1., 1.)\n            wc = wu*umax*mv2/(safe_ps2*(1-uu)**2)\n        else:\n            c, wc = c_base, wc_base
+        ps = np.sqrt(ps2)
+        if angular_scheme == 'transfer':
+            # u=|t|/(mV^2+|t|), 0<=u<=4ps^2/(mV^2+4ps^2).
+            # The exact Jacobian is dc/du=mV^2/[ps^2(1-u)^2].
+            # This is a separate angular quadrature, concentrating nodes
+            # near forward scattering for light mediators.
+            mv2 = mediator_mass**2
+            umax = 4*ps2/(mv2+4*ps2)
+            uu = umax*u
+            safe_ps2 = np.maximum(ps2, 1e-300)
+            c = np.clip(1-mv2*uu/(safe_ps2*(1-uu)), -1., 1.)
+            wc = wu*umax*mv2/(safe_ps2*(1-uu)**2)
+        else:
+            c, wc = c_base, wc_base
         beta = P/Et
         gamma = Et/root
         parallel = np.where(P>0, pi*(pi+k*mu)/np.maximum(P,1e-100),0.)
@@ -154,5 +175,6 @@ if __name__ == "__main__":
     if o.output:
         path = Path(o.output)
         path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_text(json.dumps(data,indent=2)+"\n",encoding="utf-8")
+        path.write_text(json.dumps(data,indent=2)+"
+",encoding="utf-8")
     print(json.dumps(data,indent=2))
