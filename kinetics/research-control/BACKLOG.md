@@ -475,3 +475,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Build independent Bose/Fermi inverse-fugacity energy-hat physical-momentum moments and 3-grid exact 86eV thermal Bose N/U/S. Massless ζ(3)/π² finite despite formally divergent b(p=0); no invented condensate. Physical energy, two Yukawa conserved charges and eventwise quantum entropy proven algebraically with same hats; symmetric negative Jacobian and finite-difference control. 8 focused local tests pass.
 - [x] **Real negative:** old first-cell bbar substitute into nodal Bose inverse fugacity makes thermal chemical fixed point fail: Rφ+0.7393057, H+0.1686855 for unit synthetic events vs consistent |Rφ|≈4.66e−15. Thus no trivial direct replacement of current coupled solver's bad first cell.
 - [ ] Verify new GH CI. P0 implicit/backtracking nonlinear moment inversion + positivity and finite-step H, 3+ dt and IR grids, actual Yukawa normalization and full χ1/χ2 SM/Zprime/FRW. No physical Γel, ΩDM/BEC/CLASS.
+
+## 2026-11-22 finite-step implicit physical Bose/Fermi Yukawa time
+
+- [x] Derive and solve fully implicit M(ηnew)-Mold=dt C(ηnew) on true p²dp entropy-dual Bose/Fermi energy hats, analytic dM/dη and Pauli/Bose collision Jacobian, positive ηphi safeguarded Newton, no f/b clipping. Mathematical concavity ΔS>=dt H>=0; chemical equilibrium, 2 charges, energy and finite physical H tested. Nine local focused tests pass.
+- [x] Test first-order time self-convergence 2..64 steps; actual vacuum tree Yukawa Γrest and boosted p/c weak rate independently match preexisting moving weak code. mphi86e−9 GeV no fake rest-cell condensate.
+- [x] **Negative:** sparse 16-event synthetic graph t2 q-mode ΔNphi not convergent at N8/16/32/64; physical tree normalization at t1e7 still N8→32 ΔNphi ≈9.7% difference, no SM/FRW. Do not claim physical Γelastic/frozen fφ(q)/ΩDM/BEC/CLASS.
+- [ ] Verify new Scientific CI; P0 3+ joint parent-p/CM/q/dt/UV/IR and φ zero-limit controls, then physically coupled χ1χ2 vector Pauli+shared lepton and finite eγν/Zprime FRW. Preserve all negative source figures.

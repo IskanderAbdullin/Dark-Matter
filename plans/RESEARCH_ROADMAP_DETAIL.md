@@ -112,6 +112,8 @@
 
 | 2026-11-22 | Критический реальный Bose IR gate: физическая ∫p²dp hat-энтропийная dual M_i(η) без ложного 86eV rest-cell condensate и с сохранённой on-shell χ1↔χ2+φ quantum H-теоремой; простой rest-node cell-average **ломает** химическое равновесие | [новый научный архив](../archive/stages/2026/11/2026-11-22-phi-bose-moment-galerkin.md); следующий P0 — положительный implicit M(η) time и реальная φ/SM FRW, no Ω/BEC |
 
+| 2026-11-22 | Переход от мгновенной true-p²dp Bose dual M_i к **реальной конечновременной** implicit Yukawa χ1↔χ2+φ Pauli/Bose H-схеме: concave entropy ΔS≥dt H, аналитический Jacobian/Newton, подтверждено совпадение физической tree Γrest parent weak | [этап и честная numerical alias](../archive/stages/2026/11/2026-11-22-phi-bose-implicit-moment-step.md). **Negative:** φ time при N8→32 меняется ≈9.7% даже с tree Yukawa Γrest; требуется q/p/CM/dt/IR + SM coupled прежде физического Ω/BEC |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

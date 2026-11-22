@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "physical p-space Bose/Fermi inverse-fugacity moment implicit finite Yukawa 1to2 only, no coupled SM/FRW or real 86eV Ω/BEC/CLASS",
+  "mathematics": {
+    "method": "M(eta_next)-M(eta_old)=dt*C(eta_next)",
+    "implicit_order": 1,
+    "newton": "analytic negative-symmetric M susceptibility + full Pauli/Bose event-Jacobian, positivity/backtracking eta_phi>0",
+    "entropy": "S_new-S_old >= eta_new·(Mnew-Mold) =dt ΣW(F-R)log(F/R)>=0 for admissible converged root",
+    "conservation": "N1+N2,N1+Nphi,total physical integrated energy",
+    "bose_zero_mode": "not included"
+  },
+  "synthetic_event_steps": [
+    {
+      "dt": 0.25,
+      "newton": 4,
+      "Nphi_delta": -0.00001479833094679417,
+      "entropy_gain": 0.0000012816095285028695,
+      "lower_bound": 0.0000011503269467832083
+    },
+    {
+      "dt": 0.5,
+      "newton": 4,
+      "Nphi_delta": -0.00002430059127987716,
+      "entropy_gain": 0.0000019998937123011373,
+      "lower_bound": 0.0000016596989871875833
+    },
+    {
+      "dt": 1,
+      "newton": 4,
+      "Nphi_delta": -0.000036707731324303605,
+      "entropy_gain": 0.000002793322941396781,
+      "lower_bound": 0.000002031855363515965
+    },
+    {
+      "dt": 2,
+      "newton": 5,
+      "Nphi_delta": -0.00005041771719910271,
+      "entropy_gain": 0.000003481044571929104,
+      "lower_bound": 0.0000020604255169761297
+    }
+  ],
+  "synthetic_time_steps": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "synthetic_time_delta_Nphi": [
+    -0.000056540074247324323,
+    -0.00006041269074973099,
+    -0.00006262143690637101,
+    -0.00006380529254049194,
+    -0.00006441869214873774,
+    -0.00006473097076245549
+  ],
+  "synthetic_time_self_diffs": [
+    0.000003872616502406667,
+    0.000002208746156640018,
+    0.0000011838556341209339,
+    6.133996082458015e-7,
+    3.1227861371774246e-7
+  ],
+  "synthetic_mode_bin8_16_32_64_at_tau2_delta_Nphi": [
+    -0.0000599290604813979,
+    -0.00006262143690637101,
+    -0.000028300045477103186,
+    -0.000016445006739515544
+  ],
+  "physical_tree_conditional": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "y_assumed": 0.001,
+    "g1": 4,
+    "pmax_GeV": 2,
+    "nrad": 12,
+    "nangle": 12,
+    "gamma_rest_GeV": 2.7501974166242436e-9,
+    "net_Rphi_initial": -1.16493012862968e-11,
+    "initial_event_entropy": 1.6484691107363662e-12,
+    "independent_weak_relative_error_less": 2e-12,
+    "Rphi_radial_nr8_12_16_24_32": [
+      -1.1649406465352738e-11,
+      -1.16493012862968e-11,
+      -1.1649299512619304e-11,
+      -1.1649299720505468e-11,
+      -1.1649299721153596e-11
+    ],
+    "implicit_step_1e7_dt_by_bins": [
+      {
+        "bins": 8,
+        "delta_Nphi": -0.00008525689912835394,
+        "delta_entropy": 0.000012308676397565499
+      },
+      {
+        "bins": 16,
+        "delta_Nphi": -0.00008068032569843314,
+        "delta_entropy": 0.000011693303840987213
+      },
+      {
+        "bins": 32,
+        "delta_Nphi": -0.00007773395832347957,
+        "delta_entropy": 0.00001129334002347715
+      }
+    ],
+    "negative": "Sparse synthetic event graph not q converged; even physical tree parent rate reference does not remove nonlinear N8->32 drift ≈9.7%, and b=0 / genuine BEC δ mode unresolved. No φ FRW relic predictions."
+  },
+  "files": {
+    "code": "kinetics/phi_bose_implicit_moment_step.py",
+    "tests": "tests/test_phi_bose_implicit_moment_step.py",
+    "report": "kinetics/PHI-BOSE-IMPLICIT-MOMENT-TIME-AUDIT.md",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-implicit-moment-step.md"
+  },
+  "tests": "9 new +8 prior focused sandbox tests passed; public GH Scientific CI of new HEAD pending",
+  "class_ready": false
+}
