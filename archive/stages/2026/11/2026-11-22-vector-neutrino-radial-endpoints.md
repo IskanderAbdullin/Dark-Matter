@@ -41,3 +41,7 @@ wV,j=3/(6π²)*[(U_j²−mV²)^(3/2)−(L_j²−mV²)^(3/2)], где U=min(Emax,
 ## Поправки
 
 Не отменяет [первый microreversible event graph](2026-11-22-vector-neutrino-reversible-event-graph.md) или [angular overlap stage](2026-11-22-vector-neutrino-shell-overlap.md), а уточняет их область точности; предыдущие CI-промахи остаются в архиве.
+
+## CI-подтверждение (append-only)
+
+- Фактически успешный [Scientific verification #45012189092](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012189092) на b37b7dd1715340680962db6061e78ffda1e30ff2. Подтверждены локальные регрессии поправки Emax, но не continuum/full SM/Bose cosmology.

@@ -2,19 +2,19 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Confirm three Scientific CI runs; close remaining vector threshold/ν number/dt errors, then physical plasma",
-  "objective": "Microreversible quantum ν/antiν/V event graph enforces discrete C/L/E, Pauli/Bose and entropy, and exact daughter angular cell overlap fixes flat shell measure. Exact clipped vector density-of-states endpoint cell now reduces h=.05 synthetic weak energy error +0.592% to −0.032% vs independent continuum p,cosθ reference. Yet ν/vector number bias −0.142%, coarser h=.4 may worsen, p=0 threshold cell, Emax tails and first-order time splitting are unresolved. Check real CI for stage 974d647 and stage 174e9b and new endpoint stage; then develop conservative threshold treatment and energy-weighted cell moments, physically independent strong/weak N/E/S and adaptive timestep errors before SM/χ/Bose FRW.",
+  "title": "Verify topology audit CI; independently solve constrained quantum FD/BE equilibrium on corrected ν/V network and time convergence",
+  "objective": "The conservative integer ν daughter lattice has TWO artificial frozen top modes at k=Emax: full event incidence nullity5 vs expected physical conserved C,L,E nullity3, independent modular and SVD verified for h=.4,.2,.1 and mV=.4,Emax4. The half-offset angular-overlap graph removes these two artificial invariants and has nullity3 at tested parameters. This is a stronger negative than mere continuum moment bias: no dt refinement can make the original graph forget frozen endpoints. Verify repo CI for the new audit and prior radial/overlap stages. Next solve maximum entropy constrained FD ν/antiν and BE Zprime with nonzero lepton asymmetry and the ACTUAL discrete weights, compare long-time positive event dynamics and spectral eigenmodes across h/dt/cutoff, then real gauge/SM/χ1χ2φ FRW.",
   "prerequisites": [
-    "Previous reversible event-graph 974d647 Scientific #45011435812 and shell-overlap 174e9b Scientific #45011770137 both succeeded. Check NEW radial endpoint stage CI.",
-    "Run python -m pytest -q tests/test_vector_neutrino_reversible_event_graph.py tests/test_vector_neutrino_shell_cell_overlap.py tests/test_vector_neutrino_shell_radial_endpoints.py tests/test_vector_neutrino_nonthermal_strong.py",
-    "Read the three 2026-11-22 permanent archive stages and related compact JSONs, preserve the coarse h/dt/cutoff negative results.",
-    "Reproduce mV=.4,Emax4, h=.4,.2,.1,.05, gV3/gnu2/gantinu2, continuous p,cosθ Gauss 144×144 and both positive shell radial schemes; avoid upgrading local hypotheses to CI-confirmed science."
+    "Previous 974d647 CI #45011435812, 174e9b CI #45011770137, and b37b7dd CI #45012189092 all successful; check NEW invariant audit CI.",
+    "Run python -m pytest -q tests/test_vector_neutrino_event_invariants.py tests/test_vector_neutrino_shell_radial_endpoints.py tests/test_vector_neutrino_shell_cell_overlap.py tests/test_vector_neutrino_reversible_event_graph.py",
+    "Read latest four archive stages and compact JSON. At mV=.4,Emax4 verify exact modular rank in primes 1000003,1000033 and SVD; identify k=Emax ν and antiν rows of original graph.",
+    "Do not interpret nullity3 alone as continuum ergodicity, SM ν thermalization or physical χ Gammael."
   ],
   "experiments": [
-    "Develop physically consistent threshold E∈[mV,mV+h/2] contribution with distinct k_i and kantiν_l and exact k1+k2=E; compare clipped vector number/energy moments and independent continuum weak at at least 3 h, 3 Emax and multiple nonthermal shapes.",
-    "Reduce first-order reaction-order and dt bias with joint positive high-order/IMEX implicit method; check conserved C/L/E, monotonic entropy, q/dt/time, full spectra, not only integrated sources.",
-    "Then evolve finite genuine weak e±γν chemistry, Zprime dark channels, both χ1/χ2 Pauli 2→2 and χ1→χ2+real φ Bose 1↔2 in FRW with full physical mediator constraints, 86eV absolute Ω/BEC/CLASS only after terminal independent gates."
+    "Independently derive and solve finite-grid maximum-entropy FD fν=expit((μν−k)/T), fantiν=expit((μanti−k)/T), BE bV=1/expm1((E−μν−μanti)/T) from true C,L,E of shifted graph, with positivity, uniqueness and numerical root controls; compare actual event graph long-time evolution and mode shapes, measure slow spectral gaps.",
+    "Repeat at 3+ h/dt and Emax with corrected radial/angle shell; diagnose extra approximate near-invariants, first-order splitting bias and threshold; preserve cutoff/physical moment failures.",
+    "After reliable nonthermal ν+Zprime strong source, include real weak ν/e±γ reactions, χ1/χ2 vector 2↔2 and φ Bose 1↔2, genuine finite SM heat and FRW plus observable 86eV tests; not CLASS-ready before all gates."
   ],
-  "constraints": "Public research branch, draft PR#1, no main merge or force push, no Computer Use/user PC absent permission, compact Git archive+minimal Actions, preserve scientific negatives.",
+  "constraints": "Public research branch/draft PR only, no force-push/merge main/Computer Use/user PC, GH Actions small, archive scientific negatives; no unsupported physical Γelastic/86eV ΩDM/BEC/CLASS.",
   "class_ready": false
 }

@@ -324,3 +324,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** h=.05 number −0.142%, h=.4 number error worsens −0.712→−2.694%; missing E=mV threshold cell, time splitting and cutoff not solved. No physical Γelastic/86eV Omega/BEC/CLASS.
 - [ ] Verify CI for angular stage 174e9b (#45011770137 pending last check) and new radial stage; P0 physical exact cell energy and threshold, high-order dt and continuum sources before SM/χ/Bose FRW.
 - [x] Real Scientific verification of angular overlap 174e9b: [run #45011770137](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45011770137) succeeded; vector endpoint/new stage CI still to confirm.
+
+## 2026-11-22 exact reaction-network conserved-charge topology gate
+
+- [x] Analyze stoichiometric integer event incidence for Zprime↔nu+antinu with two independent modular primes and SVD; C/L/E left residual zero, observed original integer grid nullity5 (2 artificial) vs shifted angular-overlap nullity3 (physical) for h=.4,.2,.1 at mV=.4,Emax4. [Audit](../VECTOR-NEUTRINO-EVENT-INVARIANTS-AUDIT.md).
+- [x] **Negative structural, not mere quadrature:** original integer grid has two isolated top k=Emax ν/antiν bins, whose occupation is exactly frozen by every event for any timestep. H-theorem/CLE conservation cannot prove physical constrained equilibrium on that grid.
+- [ ] Check new GH CI and prior stage. **P0:** independent maximum-entropy FD/BE constrained by actual discrete C,L,E with ν−antiν asymmetry; long-time event dynamics, full nullspace/slow modes and h/dt/Emax, then physical weak ν–SM, χ1χ2φ Bose FRW. CLASS-ready false.
+- [x] Previous shell-radial endpoints commit b37b7dd passed real [Scientific CI #45012189092](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012189092); new stoichiometric topology stage CI pending.
