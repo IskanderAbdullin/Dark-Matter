@@ -482,3 +482,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Test first-order time self-convergence 2..64 steps; actual vacuum tree Yukawa Γrest and boosted p/c weak rate independently match preexisting moving weak code. mphi86e−9 GeV no fake rest-cell condensate.
 - [x] **Negative:** sparse 16-event synthetic graph t2 q-mode ΔNphi not convergent at N8/16/32/64; physical tree normalization at t1e7 still N8→32 ΔNphi ≈9.7% difference, no SM/FRW. Do not claim physical Γelastic/frozen fφ(q)/ΩDM/BEC/CLASS.
 - [ ] Verify new Scientific CI; P0 3+ joint parent-p/CM/q/dt/UV/IR and φ zero-limit controls, then physically coupled χ1χ2 vector Pauli+shared lepton and finite eγν/Zprime FRW. Preserve all negative source figures.
+
+## 2026-11-22 orthogonal IR Bose mode shape and parent cutoff from tree Yukawa weak source
+
+- [x] Independently compare existing exact analytic ηφ 1↔2 moving Yukawa weak p/c with full physical Γrest same-hat source across six Bose mode grids. Thermal affine η reproduced to roundoff. Nonthermal curved η rate bias +68.15% N16 → −0.573% N512; broad η N16 rate +0.316% while microscopic H bias −16.83%. Four local tests pass.
+- [x] **Separate critical UV negative:** physical parent pmax2/4/6/8/12/16 at nrad72,nangle144 IR curved Rφ−5.952e−12→−1.7299e−11; pmax2 misses ~65.6% of net inverse rate magnitude. Parent Gaussian nr24×48 vs72×144 at pmax2 only 0.016% spread. Previous coarse implicit time cannot be promoted to physical production/relic.
+- [ ] Verify new GH Scientific CI. P0 IR-adaptive nonuniform scalar mode hats with exact p²dp and on-shell H/N/E, 3+ grid/dt/parent p/c/cutoff to close true nonlinear numerical error, then full shared χ1χ2+SM/Zprime+FRW. No physical Γelastic/ΩDM/BEC/CLASS.

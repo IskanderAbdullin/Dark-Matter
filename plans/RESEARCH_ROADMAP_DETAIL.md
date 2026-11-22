@@ -114,6 +114,8 @@
 
 | 2026-11-22 | Переход от мгновенной true-p²dp Bose dual M_i к **реальной конечновременной** implicit Yukawa χ1↔χ2+φ Pauli/Bose H-схеме: concave entropy ΔS≥dt H, аналитический Jacobian/Newton, подтверждено совпадение физической tree Γrest parent weak | [этап и честная numerical alias](../archive/stages/2026/11/2026-11-22-phi-bose-implicit-moment-step.md). **Negative:** φ time при N8→32 меняется ≈9.7% даже с tree Yukawa Γrest; требуется q/p/CM/dt/IR + SM coupled прежде физического Ω/BEC |
 
+| 2026-11-22 | Orthogonal physical tree Yukawa Bose-IR **shape vs parent UV tail** audit demonstrates thermodynamic entropy/chemical equilibrium pass not source convergence: affine η exact but curved φ η leads N16 +68% rate alias, N512 −0.57%, mother pmax2 omits 65.6% net source vs pmax16 | [stage](../archive/stages/2026/11/2026-11-22-phi-bose-ir-shape-gate.md), [scientific report](../kinetics/PHI-BOSE-IR-SHAPE-GATE-AUDIT.md); next IR-adaptive p/E hat + pmax12/16 fully nonlinear dt, then actual χ/SM/FRW |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

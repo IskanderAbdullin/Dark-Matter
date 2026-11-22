@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T21:36:00Z",
+  "updated_utc": "2026-11-22T21:43:00Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Second scoped finite-time entropy stable moment stage ready for Git push; latest CI on prior instant representation checked; next 3+ parent/mode/IR and shared χ/SM coupling task runnable.",
+  "stop_reason": "Third orthogonal weak IR interpolation/parent UV gate stored; run new GH CI after commit; next executable task physical mother tail and IR adaptive nonlinear time, no between-launch work.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0 φ Bose IR: physical p²dp Galerkin inverse-fugacity moment representation now has a fully nonlinear, physically admissible backward Euler χ1↔χ2+realφ on-shell time pilot, with symmetric negative susceptibility, analytic quantum event Jacobian, entropy concavity finite-step proof, full physical integrated N/U/S, no clipping. Tree-level conditional moving Yukawa Γrest source exactly matches independent existing weak rate. Synthetic time first-order; strong energy-mode alias remains (9.7% N8→N32 at physical Γrest t=1e7), so no cosmological φ 86eV Ω/BEC/CLASS.",
+  "current_phase": "P0 physical Bose scalar infrared: entropy-dual p²dp Galerkin and fully implicit Pauli/Bose time tested, but independent real Γrest parent moving χ1→χ2+φ weak source has substantial orthogonal *curved IR inverse-fugacity mode interpolation* and *parent momentum cutoff* errors. Affine thermal mode exact at N16..512, synthetic curved Bose η(E)=E+.40exp(-((E−.04)/.02)²) rate error +68.1/+29.6/−11.4/−6.2/−1.99/−0.573% at mode N16..512; parent pmax2 source misses ~65.6% net φ destruction vs pmax16 at independent angular+radial order. No physical cosmological relic or BEC.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -723,8 +723,8 @@
   },
   "session_active_launch": {
     "start_utc": "2026-11-22T21:20:21Z",
-    "last_clock_check_utc": "2026-11-22T21:36:00Z",
-    "elapsed_minutes_observed": 15.65,
+    "last_clock_check_utc": "2026-11-22T21:43:00Z",
+    "elapsed_minutes_observed": 22.65,
     "between_launch_execution": false
   },
   "latest_four_species_mode_refinement": {
@@ -783,5 +783,15 @@
     "positive": "At synthetic 16-event graph N16 mphi86e−9, dt=.25/.5/1/2, Newton 4/4/4/5 iters, ΔS positive 1.2816/1.9999/2.7933/3.4810e−6, always above dt·H; dark charges/E at ~1e−16, Fermi/Bose admissible. Time self-convergence 2/4/8/16/32/64 steps at t2 gives final halving ratio 1.964 (first order). Physical tree m1=.1,m2=.02,mphi86e−9,y=.001 Γrest2.7501974166e−9 GeV, Rphi−1.16493012863e−11 for cold mother Tchi1=.9 vs Tchi2=Tphi1 at parent pmax2, nrad12/nangle12; independent previously existing moving Yukawa weak code matches <2e−12 relative.",
     "negative": "The synthetic 16-event graph t2 N8/16/32/64 ΔNphi−5.993/−6.262/−2.830/−1.645×10−5 is not continuum-q converged despite exact H/charges. Even physically normalized vacuum Yukawa rate t1e7 at bins8/16/32 ΔNphi−8.526/−8.068/−7.773×10−5 (~9.7% mesh spread). Full SM/Zprime/FRW, φ zero-mode/b0, actual cosmological Ω/BEC/CLASS absent.",
     "class_ready": false
+  },
+  "latest_phi_bose_ir_shape_gate": {
+    "status": "Four focused local tests pass and independently computed physical mother p/c+Bose-mode sensitivity; new GitHub CI pending.",
+    "code": "kinetics/phi_bose_ir_shape_gate.py",
+    "tests": "tests/test_phi_bose_ir_shape_gate.py",
+    "report": "kinetics/PHI-BOSE-IR-SHAPE-GATE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-ir-shape-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-ir-shape-gate.md",
+    "positive": "The real vacuum width, moving p/c on-shell Pauli+Bose source, independent continuous Bose occupancy and physical-hat source agree to <8e−15 relative for affine thermal η(E)=E at mode N16–512; exact H and event charges. Incoming parent p/c n24×48→n72×144 changes curved case at pmax2 only ~0.016% at compared grids.",
+    "critical_negative": "Legal IR ηφ(E)=E+.4exp(-((E−.04)/.02)²) source relative alias N16/32/64/128/256/512 +68.15/+29.57/−11.35/−6.20/−1.99/−0.573%; broad η N16 rate error only +0.316% but microscopic H −16.83%. Separately parent physical pmax2/4/6/8/12/16 with analytic occupations and high orders Rφ−5.952e−12/−1.3934e−11/−1.656e−11/−1.716e−11/−1.7295e−11/−1.7299e−11. pmax2 omits ~65.6% rate magnitude relative pmax16. No joint physical mode/time+parent cutoff convergence, no actual SM/FRW Ω/BEC/CLASS."
   }
 }
