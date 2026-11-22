@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "One semidiscrete moving Yukawa three-species synthetic stage archived; next executable action four-species coupling and 3+ axes/IR convergence. No background execution claimed.",
+  "stop_reason": "Combined four species stage saved/pushed with executable physical normalization/convergence NEXT_ACTION; no between-launch background claim. Current active UTC start 2026-11-22T15:38:09Z.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Moving physically on-shell Yukawa χ1↔χ2+real φ Bose/Pauli source has a first true three-distribution nonlinear finite-volume time pilot with exact discrete stoichiometric N1+N2,N1+Nphi, total E and entropy and physically integrated radial capacities. One shared lepton Pauli operator exists separately but not coupled. Synthetic bins16/32/64 and local-tolerance scans show nonconvergence; no physical 86eV DM/FRW.",
+  "current_phase": "Combined four independently evolving χ1,χ2,lepton and real φ semidiscrete Pauli/Bose nonlinear collision network now exists: two finite-vector 2→2 χℓ channels share ONE lepton and both χ occupation grids/capacities are shared with moving χ1↔χ2+φ scalar Yukawa generator. Exact global N1+N2, N1+Nφ, Nℓ, energy and entropy at scoped synthetic cutoff/time; full SM/Zprime/FRW and physical rates remain absent.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "b08c4cae4da2d8d6cac362c13719cceee8791bb4",
-    "run_id": 45038184612,
+    "head_sha": "4a5bb336307503631d1bde9b39d90d21353aa46e",
+    "run_id": 45040188999,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45038184612",
-    "scope": "last confirmed successful run, conditional two-χ mass weak stage"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45040188999",
+    "scope": "prior three-species nonlinear Yukawa Bose/Pauli stage; NOT the new four-species current commit or physical 86eV relic"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -667,7 +667,7 @@
     "scope": "moving Yukawa weak; NOT the bounded-event stage"
   },
   "latest_bounded_yukawa_three_species_time": {
-    "status": "12 local tests passed including independent prior moving weak suite; new real GH Scientific CI pending",
+    "status": "Real Scientific CI #45040188999 passed on 4a5bb336; physical three-species toy finite-grid time only.",
     "source": "kinetics/yukawa_bose_pauli_bounded_time.py",
     "tests": "tests/test_yukawa_bose_pauli_bounded_time.py",
     "report": "kinetics/YUKAWA-THREE-SPECIES-BOUNDED-TIME-AUDIT.md",
@@ -676,6 +676,17 @@
     "archive": "archive/stages/2026/11/2026-11-22-yukawa-three-species-bounded-time.md",
     "positive": "Full F/R on-shell moving parent, χ1,χ2 Fermi logits and φ Bose ηφ=ln[(1+b)/b] interpolated with same positive energy deposition; 3-species H theorem identity event vs node to ~1e−27, N1+N2,N1+Nφ and E to ≤2e−15; thermal weak/strong matches at bins16/32/64 to <1e−10, nonzero μ chemical fixed point; hot T1=1.1 produces real φ and χ2 in dynamic time, cold T1=.9 absorbs both; entropy increases.",
     "negative": "At same illustrative toy time bins16 vs64 shifts |ΔNφ| by ~8.9% cold and ~2.6% hot; first-order adaptive local atol1e−5/1e−6/1e−7 changes ΔNφ .00126915/.00126852/.00126832. φ b=0 input fail closed; physical gspin, IR, parent radial convergence, SM/Zprime/FRW/physical 86eV benchmark/Ω/BEC/CLASS unresolved.",
+    "class_ready": false
+  },
+  "latest_four_species_yukawa_shared_lepton": {
+    "status": "18 local focused tests passed across combined + two source modules; new GH Scientific CI pending",
+    "code": "kinetics/four_species_yukawa_shared_lepton.py",
+    "tests": "tests/test_four_species_yukawa_shared_lepton.py",
+    "report": "kinetics/FOUR-SPECIES-YUKAWA-SHARED-LEPTON-AUDIT.md",
+    "data": "kinetics/results/four-species-yukawa-shared-lepton-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-shared-lepton-yukawa.md",
+    "positive": "Identical χ1/χ2 energy grids/cell weights in vector Pauli χℓ elastic and real-φ Yukawa channels; ONE evolving common lepton. Combined Sdot nodes vs F/R ~1.11e−25, global Nχ1+Nχ2,Nχ1+Nφ,Nlepton,E machine residual ~1e−16. mlep0 and .5 chemical μ fixed points; no vector coupling G=0 lepton heat 0 but φ still produced. Six bins12/16/24 T1=.9 and1.1 toy histories show φ absorption/production AND lepton cooling/heating, entropy rises.",
+    "negative": "Elastic full 5D radial nrad4/nmu4 is under-resolved for some nonthermal distributions (prior sign flips / 55× error); φ IR not validated, finite Pauli/Bose time first order with local tolerance changes, physical coupling/spin/flavors/Zprime/SM/FRW/86eV Ω/BEC/CLASS absent.",
     "class_ready": false
   }
 }

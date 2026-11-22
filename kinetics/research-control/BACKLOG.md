@@ -429,3 +429,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Run 12 local pytest cases including old moving weak comparison; 3 bins16/32/64 and hot/cold initial mother actual time: positive hot net φ/χ2 creation, negative cold net φ/χ2 destruction, entropy growth; dt 3 tolerances at bins32.
 - [x] **Negative:** bins16→64 time yield |ΔNφ| moves up to 8.9%; 1st order dt result shifts with atol; Bose endpoint b=0 fails closed. Physical UV/SM/FRW/86eV Ω still missing.
 - [ ] Verify CI, P0 couple existing one shared lepton χ1+χ2 elastic 2→2 with dynamic real φ Yukawa (four evolving species), then joint 3+ q/IR/angle/cutoff/time; no claims Γelastic/Ω/BEC/CLASS.
+
+## 2026-11-22 physically shared FOUR population Pauli/Bose kinetic pilot
+
+- [x] Mathematically compose physically on-shell χ1ℓ,χ2ℓ 2→2 Pauli with exact moving χ1↔χ2+real φ Yukawa 1↔2 Bose and ONE shared lepton. Force same two χ energy node grids and radial density-of-states capacities. Combined conserved global N1+N2,N1+φ,Nℓ and energy, not each χ species individually. Nonzero μ common-T equilibrium mℓ0/.5.
+- [x] 18 local tests; six hot/cold bins12/16/24 true four-population nonlinear histories with φ creation/absorption AND lepton heat/cool, real rejects, no clipping, H≥0. Previous three-pop real CI #45040188999 success.
+- [x] **Negative:** inherited χℓ nrad4 5D rates known grossly alias oscillatory sources, no joint angular/radial/cutoff/φ-IR accuracy, 1st order time and synthetic units, no physical SM/gauge/FRW/86eV relic.
+- [ ] Verify four-pop GH CI. P0 independent 3+ χℓ p/k/CM/φ and moving Yukawa mother/daughter E, IR/time/cutoff convergence, then actual ν/e±γ/Zprime FRW and physical constraints before any Γelastic/Ω/BEC/CLASS.

@@ -100,6 +100,8 @@
 
 | 2026-11-22 | Полный on-shell χ1↔χ2+real φ 1↔2 source стал *нелинейно* эволюционировать все **три** Fermi/Bose energy populations при согласованной logit/η интерполяции и парной консервативной deposition; проверены физические radial cell capacities и отдельные химические μ | [постоянный stage](../archive/stages/2026/11/2026-11-22-yukawa-three-species-bounded-time.md), [аудит](../kinetics/YUKAWA-THREE-SPECIES-BOUNDED-TIME-AUDIT.md). **Отрицательное:** при bins16→64 итоговый ΔNφ изменяется на ~8.9% для обратного χ2φ→χ1 и ~2.6% для производства; first-order dt, нет IR/SM/FRW/86eV Ω |
 
+| 2026-11-22 | Интегрированы в один semi-discrete нелинейный Pauli/Bose источник **четыре** реально изменяющихся fχ1,fχ2,fℓ,bφ, при этом χ1/χ2 разделяют точные energy cells и обе χ-упругие реакции используют **ОДИН** lepton bath | [сохранённый этап](../archive/stages/2026/11/2026-11-22-four-species-shared-lepton-yukawa.md), [полный аудит](../kinetics/FOUR-SPECIES-YUKAWA-SHARED-LEPTON-AUDIT.md). Глобальные N1+N2,N1+φ,Nℓ,E и H сохраняются, но inherited elastic nrad4/IR/SM FRW ещё не physical Γelastic/86eV Ω |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 
