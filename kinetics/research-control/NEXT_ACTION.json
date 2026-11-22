@@ -82,5 +82,13 @@
     "failure": "Unterminated string literal at independent_massive_chie_5d.py:178 in both Python 3.11 and 3.13, after prior literal backslash-n repair",
     "repair": "Replace physical newline inside JSON output string literal with escaped Python \\n; new CI pending",
     "command": "python -m pytest -q tests/test_finite_mediator_transfer_quadrature.py tests/test_finite_mediator_5d.py tests/test_independent_massive_chie_5d.py"
+  },
+  "latest_transfer_angle_ci": {
+    "failed_run": 44986169496,
+    "failed_head": "8bc490a36377f81376e6c2ff120c8a9ba29f3538",
+    "failure": "Three full 5D transfer-coordinate heat comparisons failed, 3 failed 803 passed; t-to-cos Jacobian missing factor 2",
+    "repair_commit": "ca2492b0c67e4368abe4cce138abf25af061d4bc",
+    "verification": "pending",
+    "next": "Check actual new HEAD CI and run pytest tests/test_finite_mediator_transfer_quadrature.py tests/test_finite_mediator_5d.py; independently converge n24/32/48, mediator mV/p*, thermal tails; do not relax tolerance without independent agreement."
   }
 }
