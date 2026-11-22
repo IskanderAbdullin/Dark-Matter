@@ -234,3 +234,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Previous repaired HEAD 25de5e55 passed real Scientific CI #44997020168.
 - [x] Independent adaptive scipy polar reference and exact propagator angular identity; three local regression tests pass, negative mV=.03 48-node transfer error +1.05%; previous transfer audit prose factor-two corrected.
 - [ ] Verify new CI. **P0:** integrate adaptive polar over full p,k,mu 5D physical e and active ν Pauli weak source with independent n/cutoff/mV/T and bath-splitting errors; then physical gauge/UV mediator+χ1χ2φ and nonthermal Bose FRW. No gamma_el/86eV Ω/BEC/CLASS claim.
+
+## 2026-11-22 full 5D independent adaptive finite-mediator angular pilot
+
+- [x] Upgrade fixed-event adaptive polar reference to full incoming Gauss p,k,mu 5D physical Pauli heat. At mV=.03 nrad=nmu=10, nphi16, angular Gauss32 transfer −9.559% and cosine −7.876% against adaptive reference on same incoming grid, both wrong far above 1%.
+- [x] Repeat two incoming resolutions nrad=nmu=8 and10; inspect positive/negative quantum heat signs for mlep=0 and mlep=.5 plus exact common-temperature cancellation. Source, compact JSON and tests recorded. Global cutoff and time convergence NOT proved.
+- [ ] Prior adaptive fixed-event CI #45006486258 passed; verify real GH CI for new full 5D stage. **P0:** massive e and chiral ν split baths; independently refine incoming radial, μ, azimuth, forward-polar n, energy cutoffs/mV; quantify absolute and signed heat uncertainties before physical e±γν+UV dark portal/Bose kinetic FRW. No gamma_el/86eV ΩDM/BEC/CLASS.

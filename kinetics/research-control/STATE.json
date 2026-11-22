@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active run finite; next independent full 5D thermal convergence stage ready in NEXT_ACTION. No background work implied beyond separately enabled schedule.",
+  "stop_reason": "Active session bounded; two angular audit checkpoints committed when finished; NEXT_ACTION executable for next autonomous scheduled invocation.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Corrected full 5D finite-mediator transfer-angle CI green at 25de5e55. Independent adaptive fixed-event polar weak Pauli heat now exposes +1.0507% transfer-u error (48 nodes) at light mV=.03. This is NOT global 5D rate or kinetic gamma.",
+  "current_phase": "Independent fixed-event and full incoming p,k,mu adaptive-polar Pauli heat pilots expose serious nonmonotone angular error for very light finite mediator; physical full 5D convergence and nonlinear spectrum still open.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "25de5e55e338a42a04f6e954ecede5fc7da0d8e2",
-    "run_id": 44997020168,
+    "head_sha": "3093d7e12c4369d4a787395721fbd4330f4aba0c",
+    "run_id": 45006486258,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44997020168"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45006486258"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -328,9 +328,19 @@
     "test": "tests/test_finite_mediator_forward_event_reference.py",
     "report": "kinetics/FINITE-MEDIATOR-FORWARD-EVENT-CONVERGENCE.md",
     "data": "kinetics/results/finite-mediator-forward-event-2026-11-22.json",
-    "status": "independent scipy adaptive polar integration; three standalone local tests passed; GitHub CI pending",
+    "status": "independent scipy adaptive polar integration; three standalone local tests passed AND full Scientific CI #45006486258 success at 3093d7e",
     "negative": "mV=.03, fixed incoming p=.9 k=1.2 mu=-.35: 48-point transfer +1.0507% and cosine +1.9318% heat error; transfer n96 still +0.05096%",
     "positive": "exact factor-two Jacobian analytic squared propagator integral and mV=.3 angular n48 to adaptive agreement <5e-13 in specific event",
     "scope": "Fixed single on-shell event angular weak moment only; full incoming momentum integration, physical SM, UV/gamma, and 86eV cosmology remain unverified"
+  },
+  "latest_adaptive_full_5d": {
+    "status": "two local incoming Gauss resolutions compared to independent scipy adaptive polar; new GH CI pending",
+    "code": "kinetics/finite_mediator_5d_adaptive_reference.py",
+    "tests": "tests/test_finite_mediator_5d_adaptive_reference.py",
+    "report": "kinetics/FINITE-MEDIATOR-5D-ADAPTIVE-AUDIT.md",
+    "data": "kinetics/results/finite-mediator-5d-adaptive-2026-11-22.json",
+    "benchmark": "Mχ=.1,mlep=0,Te=1,Tχ=.9,G=.001, incoming kinetic cutoff 14 T, nrad=nmu=8 and 10, nphi=16; polar Gauss 32",
+    "negative": "mV=.03, nrad/nmu=10: transfer angular n32 Qχ/QUAD−1=−9.5586%, direct cosine −7.876%; mV=.1 transfer −0.910%, cosine +0.812%; transform not uniformly better",
+    "positive": "Tχ/Te=.9 vs1.1 χ heat sign reverses; common T Pauli heat vanishes; adaptive 5D Qχ changes little for nrad8→10 in light mediator case but no full convergence"
   }
 }
