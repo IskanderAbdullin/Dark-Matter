@@ -86,6 +86,8 @@
 
 | 2026-11-22 | Физический приоритет возвращён к **независимому 5D Pauli quadrature error budget**: старые χℓ nrad4 rates/entropy даже при точном N/E/H не дают количественной γelastic; oscillatory weak heat меняет знак при разрешении сетки, refined rate в ~55× меньше | [архив доказанного отрицательного этапа](../archive/stages/2026/11/2026-11-22-chi-lepton-5d-quadrature-negative.md), [отчёт](../kinetics/CHI-LEPTON-5D-QUADRATURE-NEGATIVE-AUDIT.md); впереди adaptive/split p,k and CM quadrature, cutoff and true strong χ1χ2–SM/Bose FRW |
 
+| 2026-11-22 | Продвинут физический weak-rate gate: независимые energy-guided p Gauss сегменты с точным p²dp-объёмом и постоянной ΔE при изменении cutoff сокращают осциллирующую radial alias, но outgoing CM polar и энтропия **ещё не** сходятся монотонно | [положительные/отрицательные численные результаты](../archive/stages/2026/11/2026-11-22-chi-lepton-segmented-radial.md): segmented12×6 vs uniform nr64 Q сдвиг ~0.009% на фиксированном angle, CM orders16→64 Q/S различаются на проценты |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

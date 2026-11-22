@@ -31,3 +31,7 @@ Separate multi-axis refinement for oscillatory f: former inherited nrad4,nμ4,nc
 ## Scientific decision and next gate
 
 Old 10-bin logit Pauli time pilot passed consistency but its underlying low-resolution 5D rates are not quantitatively physical. **Do not overwrite/discard those results:** interpret as structural/instrument only. P0: segmented/transformed incoming momentum integration to resolve nonthermal oscillations, adaptive outgoing forward angular quadrature, 3+ independent resolutions/cutoffs and Q/S error budget; only then physical χ1+χ2 real φ Bose+ν/eγ/Zprime/FRW. No χ Γel, 86eV ΩDM, BEC or CLASS-ready claim. Not terminal.
+
+## Real CI status (append-only)
+
+- [Scientific verification #45035908197](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45035908197) passed on independent χℓ 5D negative quadrature commit c6d87db35a00bbce43af9be0885b4035b350139a. This confirms regression, NOT converged physics.

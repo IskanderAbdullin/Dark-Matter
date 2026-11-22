@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "First active-session scientific stage archived and pushed (once update_ref succeeds); NEXT_ACTION contains segmented/adaptive 5D weak benchmark and no claim of background continuation.",
+  "stop_reason": "Segmented radial/cutoff gate archived with exact runnable next CM angular gate; no between-invocation execution asserted.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0: independent χ-lepton relativistic finite-vector Pauli 5D weak quadrature NONCONVERGENCE confirmed. On legal oscillatory Fermi nonthermal f, incoming Gauss nrad4/6/8/10 changes Q sign, cutoff8/12/16 also flips sign, coarse χℓ heat 2.5586e-13 versus multi-axis refined 4.6148e-15 (~55.44x). Positive microscopic entropy/Pauli and exact Qchi=-Qlepton do NOT certify physical γelastic or 86eV relic.",
+  "current_phase": "P0: relativistic χℓ finite-mediator quantum Pauli 5D heat now independently has energy-guided momentum-segment quadrature; exact physical radial zeroth moment and stable fixed-resolution UV tail in synthetic oscillatory f. However outgoing CM angular 16→64 changes Q/S nonmonotonically; global physical Γelastic remains unvalidated.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "12e3874ccc50a89609add0a7b6781b2d71f73d88",
-    "run_id": 45017550678,
+    "head_sha": "c6d87db35a00bbce43af9be0885b4035b350139a",
+    "run_id": 45035908197,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45017550678",
-    "scope": "prior nonlinear Fermi-bounded 10-energy-bin synthetic χℓ time pilot, not physical rate/cutoff convergence"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45035908197",
+    "scope": "independent 5D nonthermal Q/S negative quadrature regression, not physical DM"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -579,7 +579,7 @@
     "negative": "Same previous oscillatory 10-bin H-consistent source STILL physically underestimates analytic continuous f event entropy by 93.4%; angular/radial/UV/cutoff not converged, only first-order temporal scheme; no actual χ2 daughter number, realistic SM/eγν/gauge/φ Bose/FRW, physical gamma/86eV Ω/BEC/CLASS."
   },
   "latest_independent_chi_lepton_quadrature": {
-    "status": "independent sandbox p/k/mu+outgoing CM 5D kernel and five axis scan plus 4 local tests passed; new GH CI pending",
+    "status": "Real Scientific CI #45035908197 success on c6d87db; negative 5D heat sign/cutoff instability verified.",
     "code": "kinetics/independent_chi_lepton_5d_quadrature.py",
     "scan": "kinetics/chi_lepton_5d_quadrature_gate.py",
     "tests": "tests/test_chi_lepton_quadrature_gate.py",
@@ -588,6 +588,18 @@
     "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-5d-quadrature-negative.md",
     "positive": "Independent thermal FD subset exactly matches published Qchi=6.935904667e-14 and entropy7.70656074e-15; common T finite chemical μ heat ≈2.87e−28, event energy ~3.6e−15 and Pauli entropy nonnegative.",
     "negative": "Oscillatory full 5D heat source sign flips radial4/6/8/10 and cutoff8/12/16; coarse nrad4/nmu4/ncos12/nphi12 Qχ=+2.55856732856e−13 vs nrad64/nmu16/ncos64/nphi32 +4.61478107e−15, 55.44×; even refined has angular residual and unknown physical cutoff/mass/coupling. Prior time pilot cannot infer Γelastic.",
+    "class_ready": false
+  },
+  "latest_segmented_chi_lepton_5d": {
+    "status": "locally verified energy-guided segmented p-Gauss with physical ∫p²dp, eight focused tests passed; new GH Scientific CI pending",
+    "source": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "runner": "kinetics/chi_lepton_segmented_5d_gate.py",
+    "tests": "tests/test_chi_lepton_segmented_5d_gate.py",
+    "report": "kinetics/CHI-LEPTON-SEGMENTED-5D-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-segmented-5d-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-segmented-radial.md",
+    "positive": "Momentum Gauss p slices at E-guided boundaries preserve ∫p²dp exactly (<3e−14) even for mℓ=.5; oscillatory f cutoff12 nseg12×local6 Qχ=4.556593552e−15 agrees independent unsegmented nr64 Qχ=4.55619107e−15 at same angular setting (~0.009%). Fixed ΔE≤1 tails cutoff16→20 Qχ shift ~0.0047% with nlocal5, not total uncertainty.",
+    "negative": "At nseg8 local3 vs4, oscillatory Q changes 2.27825e−14→1.29928e−15 (not universally converged); outgoing CM polar ncos16/24/32/48/64 yields Q4.8748/4.6063/4.5688/4.6216/4.6511 e−15 and nonmonotone entropy. Full coupled angular+radial+UV and actual χ1χ2φ/SM FRW unknown; no Γel/Ω/BEC/CLASS.",
     "class_ready": false
   }
 }

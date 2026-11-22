@@ -32,8 +32,36 @@ def legendre(a,b,n):
     return a+(b-a)*(x+1)/2,w*(b-a)/2
 
 
+def radial_nodes(mass, cutoff, n, *, scheme="uniform_p", segments=1):
+    """Exact p-Gauss or segmented E-guided p-Gauss; E-Gauss has threshold cusp.
+
+    For E integration p=sqrt(E²-m²), dp/dE=E/p. Segmented p
+    intervals use EXACT p(E) edges and preserve polynomial p²dp volume.
+    """
+    if not (mass>=0 and cutoff>0 and n>=2 and segments>=1):
+        raise ValueError("radial node input")
+    pmax=math.sqrt((mass+cutoff)**2-mass*mass)
+    if scheme=="uniform_p":
+        return legendre(0,pmax,n)
+    if scheme not in ("segmented_energy","segmented_p"):
+        raise ValueError("unknown radial integration scheme")
+    energy_edges=np.linspace(mass,mass+cutoff,segments+1)
+    radial_edges=np.sqrt(np.maximum(0,energy_edges**2-mass*mass))
+    pp=[];weights=[]
+    for j in range(segments):
+        if scheme=="segmented_p":
+            p,w=legendre(float(radial_edges[j]),float(radial_edges[j+1]),n)
+        else:
+            en,we=legendre(float(energy_edges[j]),float(energy_edges[j+1]),n)
+            p=np.sqrt(np.maximum(0,en*en-mass*mass))
+            w=we*en/p
+        pp.extend(p);weights.extend(w)
+    return np.asarray(pp),np.asarray(weights)
+
+
 def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
-             nr=4, nmu=4, nc=12, nphi=12, cutoff=12.):
+             nr=4, nmu=4, nc=12, nphi=12, cutoff=12.,
+             radial_scheme="uniform_p", segments=1):
     """Incoming p,k,mu + outgoing CM theta,phi on exactly on-shell 2->2."""
     if not (M>0 and m>=0 and g>0 and mv>0 and nr>=3 and
             nmu>=3 and nc>=3 and nphi>=8 and cutoff>0):
@@ -41,8 +69,8 @@ def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
     f,h=occupations(shape)
     pmax=math.sqrt((M+cutoff)**2-M*M)
     kmax=math.sqrt((m+cutoff)**2-m*m)
-    px,wp=legendre(0,pmax,nr)
-    kx,wk=legendre(0,kmax,nr)
+    px,wp=radial_nodes(M,cutoff,nr,scheme=radial_scheme,segments=segments)
+    kx,wk=radial_nodes(m,cutoff,nr,scheme=radial_scheme,segments=segments)
     mux,wmu=legendre(-1,1,nmu)
     cx,wc=leggauss(nc)
     ph=2*math.pi*np.arange(nphi)/nphi
@@ -96,7 +124,7 @@ def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
           entropy+=coeff*np.sum(wc[:,None]*amp*entropy_micro)/nphi
     pref=16/(512*math.pi**5)
     return {"shape":shape,"M":M,"m":m,"nr":nr,"nmu":nmu,
-            "nc":nc,"nphi":nphi,"cutoff":cutoff,
+            "nc":nc,"nphi":nphi,"cutoff":cutoff,"radial_scheme":radial_scheme,"segments":segments,
             "Qchi":float(heat*pref),"Qlepton":float(-heat*pref),
             "entropy":float(entropy*pref),
             "negative_entropy_events":neg_event_count,

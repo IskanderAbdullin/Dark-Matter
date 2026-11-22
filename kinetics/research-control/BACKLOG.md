@@ -383,3 +383,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] New completely independent on-shell relativistic 5D finite-vector Pauli weak code plus thermal fixed-point/FD independent control and five-axis deterministic grid scan. Four local tests pass; prior nonlinear pilot real CI #45017550678 succeeds.
 - [x] **Critical numerical negative:** oscillatory Qχ flips sign with low incoming radial quadrature and E-cutoff; nrad4/nmu4/ncos12/nphi12 inherited Qχ≈+2.56e−13 versus finer nrad64/nmu16/ncos64/nphi32 +4.615e−15 (55.44×). Microscopic H theorem and exact exchanged energy do not establish physical rate. Smooth outgoing CM ncos8→32 changes Q by ~18%.
 - [ ] Check new Scientific CI. **P0:** segmented adaptive incoming p/k integration and forward angular treatment, independent cutoff and full Q/S error convergence, then actual χ1/χ2/φ Bose+finite SM/FRW. No Γel/H/86eV ΩDM/BEC/CLASS certification.
+
+## 2026-11-22 segmented p/k Gauss 5D χℓ weak gate
+
+- [x] Derive and implement E-guided p(E) slices preserving analytic ∫p²dp, compare independently segmented momentum and energy quadrature threshold. m=.5 energy Gauss leaves ~4.52e−7 radial volume error nseg12×5, while p Gauss exact. Eight local focused tests passed.
+- [x] Numerically constrain oscillatory Q over three+ radial resolutions: segment12 local3/4/5/6 gives 4.645/4.500/4.569/4.557 ×10−15, vs uniform nr64 4.556 ×10−15; fixed ΔE cutoff16→20 Q change 0.0047%. Previous sign-flip stage real CI #45035908197 succeeded.
+- [x] **Negative:** outgoing CM cosθ16→64 Q and H remain nonmonotone at percent level; no total 5D physical collision accuracy or real χ1/χ2/φ/SM/FRW; positive H and exact radial volume do not determine Γelastic.
+- [ ] Verify new segmented Scientific CI; P0 derive forward-angle/t quadrature and joint angular/UV/mass/shape error, then real χ1χ2–SM strong and φ Bose+FRW.
