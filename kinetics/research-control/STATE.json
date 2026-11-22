@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active run closed with executable next step and evidence; last verification CI of azimuth repair must be checked. Autonomous ongoing work only if separately scheduled.",
+  "stop_reason": "Finite active run bounded; required scientific next action saved. New gauge-charge tests need real CI. Only separate hourly automation may continue after chat.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Adaptive full 5D finite-mediator Pauli weak heat: independent angular/cutoff failures tracked; conditional split electron/active-neutrino bath now shows opposite signs with significant channel-specific angular errors. Nonthermal strong and physical SM/UV remain open.",
+  "current_phase": "P0 shifted to gauge-consistent χ1,χ2,real-φ model completion: exact renormalizable U1' charge selection forces qchi1=qchi2 for a neutral real φ, so nonzero vector χ1 implies equally allowed χ2-SM gauge collision, omitted in χ1-only finite mediator pilots. Existing χe/χν thermal weak benchmarks remain conditional.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "3093d7e12c4369d4a787395721fbd4330f4aba0c",
-    "run_id": 45006486258,
+    "head_sha": "78662b3904d25d711fb271d13a5b1830fe977641",
+    "run_id": 45007251387,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45006486258"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45007251387"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -362,5 +362,15 @@
     "results": "mV=.03 electron heat +6.983e−16, two ν −9.047e−16, total −2.063e−16 me5; transfer n32 separate heat −10.71% e and −7.59% ν vs adaptive, total happens +2.962% relative. nrad/nmu10 total −2.053e−16, 0.52% shift.",
     "negative": "Split ν/e heat signs opposite only under ASSUMED ideal Tν/Tγ and equally coupled candidate Le−Lmu; numerical absolute channel errors must be bounded prior to cosmological inference. NOT real evolving neutrino decoupling.",
     "physical_unknowns": "no viable mZ' g couplings and original χ1χ2φ charge assignment, no full finite SM ν/eγ dynamics, no nonthermal Γel, 86eV relic, BEC, Ω, CLASS"
+  },
+  "latest_real_phi_gauge_gate": {
+    "status": "independently derived exact charge selection; four local rational tests passed; new GH CI pending",
+    "source": "kinetics/gauge_charge_yukawa_audit.py",
+    "test": "tests/test_gauge_charge_yukawa_audit.py",
+    "report": "kinetics/REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md",
+    "data": "kinetics/results/real-phi-gauge-charge-2026-11-22.json",
+    "scoped_result": "One real scalar under continuous U1' is neutral, qφ=0. Gauge Yukawa phase qφ-q2+q1 forces q1=q2; nonzero qchi1 implies nonzero qchi2 diagonal vector mediator coupling. χ1-only charged portal + qchi2=0 cannot coexist with original real-φ renormalizable decay.",
+    "alternatives": "Complex charged φ (adds scalar degree), symmetry breaking/mixing, higher-dimensional operators or other charges require explicitly different UV theory; not general no-go.",
+    "consequence": "Model cannot call χ1-only χe/χν heat physical for original three-species Yukawa before adding χ2-SM channels and validating full charge/energy ledger."
   }
 }

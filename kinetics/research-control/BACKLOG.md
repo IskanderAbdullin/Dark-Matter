@@ -249,3 +249,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Conditional full Pauli 5D adaptive χ−e± and χ−two-active-ν with assumed Tν/Tγ=.713765855, Te=1,Tχ=.9,Mχ=.1,G=.001,mV=.03,.1,.3; Qe>0, Qν<0 under this assumption, total <0; separate heat errors can exceed 7-10% even if net relative error ~3%. [Report](../FINITE-MEDIATOR-SPLIT-LEPTON-AUDIT.md).
 - [x] Negative radial scan at mV=.03: incoming nrad=nmu8→10 changes total heat by ~0.52%, so even polar-adaptive thermal total not fully converged; no physical cosmological sign claim.
 - [ ] Check repair CI #45007251387 and new split-stage CI; P0 independent absolute channel q/polar/phi/cutoff convergence and physical e±γν weak history, viable gauge mediator and complete nonthermal Bose production. CLASS-ready false.
+
+## 2026-11-22 real φ / χ1,χ2 gauge-consistency P0
+
+- [x] Analytic U1' selection: qφ−q2+q1=0; original single real φ necessarily qφ=0, hence q1=q2. Nonzero diagonal χ1 vector portal enforces allowed χ2 vector coupling. A χ1-only charged-Z' and χ2-neutral renormalizable real-φ decay is forbidden in this minimalist completion. [Audit](../REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md), 4 local rational tests.
+- [x] Preserved alternative complex charged φ or mixed gauge-breaking completion as a NEW model, not reinterpretation of original real φ; Z2 remains consistent for equal-charge case.
+- [x] Previous azimuth repair Scientific CI #45007251387 succeeded on 78662b.
+- [ ] **Immediate P0:** check new gauge-claim CI and previous split-bath CI. Choose coherent χ1/χ2/φ U1' + Z2 theory. If real φ and equal gauge charges, derive missing χ2e/χν finite-T full Pauli collisions and simultaneous SM heat before physical Γel. For charged complex scalar, rederive all width/Bose degrees and stability. Then actual mediator constraints, SM neutrino decoupling and nonthermal Bose FRW. No 86eV Ω/BEC/CLASS claim.
