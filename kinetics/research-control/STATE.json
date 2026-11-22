@@ -313,5 +313,14 @@
     "scope": "nonconstant vacuum vector spin-trace angular primitive only; cannot factor final-state Pauli/heat",
     "verification": "local scipy quadrature of J0,J1,J2 at b=.1,1,10 relative discrepancy <=3.5e-14; new repository CI pending",
     "previous_finite_5d_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762"
+  },
+  "last_finite_mediator_ci_failure": {
+    "run_id": 44979564709,
+    "head": "bfb39746b0d30eef70278d4d0c12621f577c09a8",
+    "conclusion": "failure",
+    "reason": "literal escaped newlines causing SyntaxError in 5D source",
+    "repair_commit": "99a15ea9c0c4d6f817d82bc130afe2e60f8285d5",
+    "repair_ci": "not yet confirmed",
+    "physics_validated": false
   }
 }
