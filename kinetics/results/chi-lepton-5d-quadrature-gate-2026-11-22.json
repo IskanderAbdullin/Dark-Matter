@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "stage": "nonthermal χℓ finite-vector 5D Pauli angular/radial/cutoff negative convergence",
+  "date_utc": "2026-11-22",
+  "units": "synthetic G=.001,mV=.1,Mχ=.1,mℓ=0,T=1,gχgℓ=4×4",
+  "reference_axes": {
+    "nr": 8,
+    "nmu": 8,
+    "nc": 24,
+    "nphi": 16,
+    "cutoff": 12
+  },
+  "baselines": {
+    "fd_cold_Q": 6.935904667187969e-14,
+    "fd_cold_H": 7.706560741319965e-15,
+    "fd_chem_eq_Q": 2.8717146951060717e-28,
+    "fd_chem_eq_H": 2.0196146758810484e-42
+  },
+  "axis_scan_Q_in_units_1e_minus_14": {
+    "smooth": {
+      "radial": [
+        8.208,
+        9.0759,
+        9.0116,
+        9.012,
+        9.0122,
+        9.0134
+      ],
+      "mu": [
+        9.0823,
+        9.029,
+        9.0116,
+        9.0042,
+        9.0008,
+        8.9981
+      ],
+      "cm_polar": [
+        7.6719,
+        8.4024,
+        8.7519,
+        9.0116,
+        9.0674,
+        9.0534
+      ],
+      "phi": [
+        9.0117,
+        9.0116,
+        9.0116,
+        9.0116,
+        9.0116
+      ],
+      "cutoff": [
+        8.7081,
+        9.0116,
+        9.033,
+        9.0852
+      ]
+    },
+    "oscillatory": {
+      "radial": [
+        30.9727,
+        -6.4605,
+        2.0409,
+        -41.1258,
+        14.2008,
+        0.0091
+      ],
+      "mu": [
+        2.0198,
+        2.0344,
+        2.0409,
+        2.0419,
+        2.0432,
+        2.0437
+      ],
+      "cm_polar": [
+        2.9528,
+        3.073,
+        2.8634,
+        2.0409,
+        1.4583,
+        1.0691
+      ],
+      "phi": [
+        2.2162,
+        2.0681,
+        2.0409,
+        2.0287,
+        2.0275
+      ],
+      "cutoff": [
+        -35.1256,
+        2.0409,
+        -25.1233,
+        -27.6789
+      ]
+    }
+  },
+  "axis_values": {
+    "radial": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      16
+    ],
+    "mu": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      16
+    ],
+    "cm_polar": [
+      8,
+      12,
+      16,
+      24,
+      32,
+      48
+    ],
+    "phi": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "cutoff": [
+      8,
+      12,
+      16,
+      20
+    ]
+  },
+  "separate_high_resolution": [
+    {
+      "nr": 4,
+      "nmu": 4,
+      "nc": 12,
+      "nphi": 12,
+      "Qosc": 2.558567328564453e-13
+    },
+    {
+      "nr": 40,
+      "nmu": 8,
+      "nc": 32,
+      "nphi": 16,
+      "Qosc": 4.5356579937e-15
+    },
+    {
+      "nr": 48,
+      "nmu": 16,
+      "nc": 64,
+      "nphi": 32,
+      "Qosc": 4.6197732351e-15
+    },
+    {
+      "nr": 64,
+      "nmu": 16,
+      "nc": 64,
+      "nphi": 32,
+      "Qosc": 4.6147810696e-15
+    }
+  ],
+  "positive": "independent local 5D implementation agrees with published thermal subset; micro H>=0, Qχ=-Qℓ, energy defect <5e−14.",
+  "negative": "oscillatory 5D Gauss heat sign flips across 4/6/8/10 radial and 8/12/16/20 cutoff; coarse Q magnitude ~55.44 times multi-axis refined estimate, no physical Γelastic/86eV rate",
+  "no_physical_dark_matter_claim": true
+}

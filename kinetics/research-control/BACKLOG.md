@@ -377,3 +377,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Local numerical six-run oscillatory/smooth at 10 bins, atol1e−6..1e−8: real rejected proposals, conserved individual N and total energy ≤4.5e−16, entropy increases, all Pauli bounds. Previous H repair Scientific #45016928429 and negative H case #45016584670 passed.
 - [x] **Negative:** 10-bin H-consistent projected source still misses analytic nonthermal 5D entropy by 93.4%, first-order time with only local estimate, radial/angular/cutoff nrad4 not converged. No physical Γel/frozen 86eV relic or Ω/BEC/CLASS.
 - [ ] Verify new GitHub CI; P0 independent 3+ energy/angle/radial/UV convergence + full weak/strong N/E/S and time; then two χ species, full Bose Yukawa/SM/Zprime/FRW and physical constraints.
+
+## 2026-11-22 independent χℓ 5D quadrature nonconvergence — physics P0
+
+- [x] New completely independent on-shell relativistic 5D finite-vector Pauli weak code plus thermal fixed-point/FD independent control and five-axis deterministic grid scan. Four local tests pass; prior nonlinear pilot real CI #45017550678 succeeds.
+- [x] **Critical numerical negative:** oscillatory Qχ flips sign with low incoming radial quadrature and E-cutoff; nrad4/nmu4/ncos12/nphi12 inherited Qχ≈+2.56e−13 versus finer nrad64/nmu16/ncos64/nphi32 +4.615e−15 (55.44×). Microscopic H theorem and exact exchanged energy do not establish physical rate. Smooth outgoing CM ncos8→32 changes Q by ~18%.
+- [ ] Check new Scientific CI. **P0:** segmented adaptive incoming p/k integration and forward angular treatment, independent cutoff and full Q/S error convergence, then actual χ1/χ2/φ Bose+finite SM/FRW. No Γel/H/86eV ΩDM/BEC/CLASS certification.

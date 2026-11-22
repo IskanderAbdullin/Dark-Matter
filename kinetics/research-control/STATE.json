@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite launch research stage with code, tests and permanent JSON/archive committed or pending push; latest verified CI only prior logit stage, new time CI requires actual verification; runnable NEXT_ACTION saved. No between-launch background execution claimed.",
+  "stop_reason": "First active-session scientific stage archived and pushed (once update_ref succeeds); NEXT_ACTION contains segmented/adaptive 5D weak benchmark and no claim of background continuation.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0 full physical χ1/χ2–lepton finite-vector 2→2: logit-consistent 5D Pauli weak-to-bins now has first *nodewise nonlinear* bounded adaptive-time pilot with exact physical zeroth radial Fermi cell weights and no thermal reset. On coarse ten bins, 6 local synthetic runs preserve number/energy/entropy/Pauli, but 93.4% oscillatory shape alias and nonconverged 5D/angular/UV remain; physical Γel and 86eV dark matter not validated.",
+  "current_phase": "P0: independent χ-lepton relativistic finite-vector Pauli 5D weak quadrature NONCONVERGENCE confirmed. On legal oscillatory Fermi nonthermal f, incoming Gauss nrad4/6/8/10 changes Q sign, cutoff8/12/16 also flips sign, coarse χℓ heat 2.5586e-13 versus multi-axis refined 4.6148e-15 (~55.44x). Positive microscopic entropy/Pauli and exact Qchi=-Qlepton do NOT certify physical γelastic or 86eV relic.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "8bc98b113bbef8e55d8f17640b771df08a744010",
-    "run_id": 45016928429,
+    "head_sha": "12e3874ccc50a89609add0a7b6781b2d71f73d88",
+    "run_id": 45017550678,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45016928429",
-    "scope": "instantaneous logit-Galerkin source H theorem; NOT the new nonlinear time stage"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45017550678",
+    "scope": "prior nonlinear Fermi-bounded 10-energy-bin synthetic χℓ time pilot, not physical rate/cutoff convergence"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -568,7 +568,7 @@
     "negative": "Physical oscillatory analytic-occupation 5D entropy +6.430366e-13; reconstituted logit-bin event entropy N10=+4.269218e-14 (-93.4%), N320=+6.341566e-13 (-1.38%), still no radial/CM/cutoff convergence, bounded time, actual χ2/φ/SM/FRW or physical Γelastic."
   },
   "latest_chi_lepton_bounded_time": {
-    "status": "independently executed local sandbox pilot, focused repo tests prepared; NEW GitHub CI pending",
+    "status": "Scientific verification #45017550678 success at 12e3874; only 10-bin synthetic first-order nonlinear time, numeric rate unverified.",
     "code": "kinetics/paired_chi_lepton_bounded_time.py",
     "test": "tests/test_paired_chi_lepton_bounded_time.py",
     "report": "kinetics/PAIRED-CHI-LEPTON-BOUNDED-TIME-AUDIT.md",
@@ -577,5 +577,17 @@
     "equations": "Physical finite energy cell radial 0th w_i=g/(6π²)[(U_i²−m²)^(3/2)−(L_i²−m²)^(3/2)]; nonlinear nodal ODE df_i=(dN_i)/w_i from the same logit-interpolated fully Pauli finite-mV χℓ weak 5D source. Adaptive two-half-Euler (FIRST order) accepts only strictly Fermi bounded, positive actual quantum entropy, full-spectrum step-doubling <=atol. No clipping/thermal FD reset.",
     "positive": "Synthetic Mχ=.1,mℓ0,G=.001,mV=.1,nrad4,nmu4,ncos12,nphi12,cut12,bins10,tau1e10: oscillatory mode atol1e−6/−7/−8 accepted/rejected 4/2,11/7,33/15; smooth 2/1,7/4,24/12; weighted Nχ,Nℓ and E residual <=4.5e−16, all accepted step entropy positive, Pauli strict.",
     "negative": "Same previous oscillatory 10-bin H-consistent source STILL physically underestimates analytic continuous f event entropy by 93.4%; angular/radial/UV/cutoff not converged, only first-order temporal scheme; no actual χ2 daughter number, realistic SM/eγν/gauge/φ Bose/FRW, physical gamma/86eV Ω/BEC/CLASS."
+  },
+  "latest_independent_chi_lepton_quadrature": {
+    "status": "independent sandbox p/k/mu+outgoing CM 5D kernel and five axis scan plus 4 local tests passed; new GH CI pending",
+    "code": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "scan": "kinetics/chi_lepton_5d_quadrature_gate.py",
+    "tests": "tests/test_chi_lepton_quadrature_gate.py",
+    "report": "kinetics/CHI-LEPTON-5D-QUADRATURE-NEGATIVE-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-5d-quadrature-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-5d-quadrature-negative.md",
+    "positive": "Independent thermal FD subset exactly matches published Qchi=6.935904667e-14 and entropy7.70656074e-15; common T finite chemical μ heat ≈2.87e−28, event energy ~3.6e−15 and Pauli entropy nonnegative.",
+    "negative": "Oscillatory full 5D heat source sign flips radial4/6/8/10 and cutoff8/12/16; coarse nrad4/nmu4/ncos12/nphi12 Qχ=+2.55856732856e−13 vs nrad64/nmu16/ncos64/nphi32 +4.61478107e−15, 55.44×; even refined has angular residual and unknown physical cutoff/mass/coupling. Prior time pilot cannot infer Γelastic.",
+    "class_ready": false
   }
 }

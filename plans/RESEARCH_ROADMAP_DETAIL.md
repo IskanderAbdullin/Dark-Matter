@@ -84,6 +84,8 @@
 
 | 2026-11-22 | Эволюция χ–лептонного энтропийно-согласованного 2→2 источника теперь должна иметь физическую конечную radial phase-space ёмкость и фактические Pauli bounds/entropy на каждом dt, с полным спектральным error rejection, а не просто N/E в weak моменте | [первый нелинейный time pilot](../archive/stages/2026/11/2026-11-22-chi-lepton-bounded-time.md), [скрипт/JSON](../kinetics/results/paired-chi-lepton-bounded-time-2026-11-22.json); **НЕ** закрыта 10-bin −93% osc shape error, time метод лишь первого порядка |
 
+| 2026-11-22 | Физический приоритет возвращён к **независимому 5D Pauli quadrature error budget**: старые χℓ nrad4 rates/entropy даже при точном N/E/H не дают количественной γelastic; oscillatory weak heat меняет знак при разрешении сетки, refined rate в ~55× меньше | [архив доказанного отрицательного этапа](../archive/stages/2026/11/2026-11-22-chi-lepton-5d-quadrature-negative.md), [отчёт](../kinetics/CHI-LEPTON-5D-QUADRATURE-NEGATIVE-AUDIT.md); впереди adaptive/split p,k and CM quadrature, cutoff and true strong χ1χ2–SM/Bose FRW |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 
