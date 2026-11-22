@@ -1,0 +1,52 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "Original real neutral phi Yukawa qchi1=qchi2 branch; mandatory conditional chi2-lepton vector scattering",
+  "units": "me=1; mphi=86eV as threshold input only",
+  "params": {
+    "M1_me": 0.1,
+    "M2_me": 0.02,
+    "mphi_me": 0.00016829780178608978,
+    "Tlep_me": 0.1,
+    "Tchi1_me": 0.09,
+    "Tchi2_me": 0.09,
+    "mV_me": 0.3,
+    "G_me_minus2": 0.001,
+    "gchi1": 4,
+    "gchi2": 4,
+    "g_e_minus_plus": 4,
+    "g_two_active_nu": 4,
+    "incoming_kinetic_cut_14_times_lepton_T": true
+  },
+  "incoming_grid_scan": [
+    {
+      "nr": 6,
+      "nmu": 6,
+      "Q1_nu": 1.7650842259269087e-18,
+      "Q2_nu": 2.249181012929532e-18,
+      "ratio": 1.2742627121651413,
+      "Q1_e": 1.0364478342511155e-21,
+      "Q2_e": 1.1189598325681327e-21,
+      "e_ratio": 1.0796103726500004
+    },
+    {
+      "nr": 8,
+      "nmu": 8,
+      "Q1_nu": 1.8329207124226974e-18,
+      "Q2_nu": 2.3411020823145066e-18,
+      "ratio": 1.2772522381615248,
+      "Q1_e": 1.0238001192021648e-21,
+      "Q2_e": 1.097399782126012e-21,
+      "e_ratio": 1.0718887032179705
+    },
+    {
+      "nr": 10,
+      "nmu": 10,
+      "Q1_nu": 1.820512740371601e-18,
+      "Q2_nu": 2.329687910340838e-18,
+      "ratio": 1.2796877817319228
+    }
+  ],
+  "claim": "In equal thermal FD μ=0 benchmark with same gauged vector coupling, chi2 lepton heat is kinematically comparable to chi1. No generic mass-only suppression justifies omitting chi2-SM.",
+  "limits": "True χ2 abundance, produced spectrum and chemical potential unknown, real mediator and lepton plasma not validated, finite radial/cutoff error, no kinetic gamma_el or 86eV DM relic",
+  "class_ready": false
+}

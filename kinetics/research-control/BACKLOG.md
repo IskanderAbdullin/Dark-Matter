@@ -256,3 +256,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Preserved alternative complex charged φ or mixed gauge-breaking completion as a NEW model, not reinterpretation of original real φ; Z2 remains consistent for equal-charge case.
 - [x] Previous azimuth repair Scientific CI #45007251387 succeeded on 78662b.
 - [ ] **Immediate P0:** check new gauge-claim CI and previous split-bath CI. Choose coherent χ1/χ2/φ U1' + Z2 theory. If real φ and equal gauge charges, derive missing χ2e/χν finite-T full Pauli collisions and simultaneous SM heat before physical Γel. For charged complex scalar, rederive all width/Bose degrees and stability. Then actual mediator constraints, SM neutrino decoupling and nonthermal Bose FRW. No 86eV Ω/BEC/CLASS claim.
+
+## 2026-11-22 χ2 SM interaction forced by equal-charge real-φ model
+
+- [x] Compute conditional independent full 5D thermal Pauli vector mediator heat separately for mother m1=.1me and daughter m2=.02me with real mφ=86eV threshold open. Same U1' charge and prescribed same thermal fχi: χ2/χ1 ν heat ratios 1.274 (incoming n6),1.277(n8),1.280(n10); massive e heat ratios ~1.08/1.07. Does NOT give daughter abundance or relic. [Audit](../CHI2-LEPTON-HEAT-GATE.md).
+- [x] **Negative:** daughter lepton scattering is not suppressed by daughter mass alone in this benchmark, so χ1-only BGK or 5D heat cannot represent a full real-φ equal-charge model without joint χ1+χ2+SM source.
+- [ ] Prior gauge-charge CI #45007616038 success; verify daughter-heat CI; P0 coherent χ1/χ2/φ gauge Lagrangian and bounds, full χ2/e/ν Pauli nonlinear collision with real fχ2(t,q), finite e±γν thermo & Bose Yukawa/FRW independent convergence before 86eV claims.

@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite active run bounded; required scientific next action saved. New gauge-charge tests need real CI. Only separate hourly automation may continue after chat.",
+  "stop_reason": "Active finite run checkpoint saved, next physical coupled χ1/χ2 vector channels and finite SM bath specified. Verify CI on current and previous commit before promotion.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0 shifted to gauge-consistent χ1,χ2,real-φ model completion: exact renormalizable U1' charge selection forces qchi1=qchi2 for a neutral real φ, so nonzero vector χ1 implies equally allowed χ2-SM gauge collision, omitted in χ1-only finite mediator pilots. Existing χe/χν thermal weak benchmarks remain conditional.",
+  "current_phase": "UV-completion gate: real φ Yukawa enforces equal χ1/χ2 U1' charges, hence χ2–SM 2→2. Conditional independent 5D heat mass scan demonstrates χ2 ν/e thermal heat not suppressed by daughter mass alone (Q2ν/Q1ν ≈1.28 at tested m2=.02me), but actual daughter distribution/bath/mediator unvalidated.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "78662b3904d25d711fb271d13a5b1830fe977641",
-    "run_id": 45007251387,
+    "head_sha": "481f87a3e7305880a7ac19b72c495847f40dc39c",
+    "run_id": 45007616038,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45007251387"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45007616038"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -364,7 +364,7 @@
     "physical_unknowns": "no viable mZ' g couplings and original χ1χ2φ charge assignment, no full finite SM ν/eγ dynamics, no nonthermal Γel, 86eV relic, BEC, Ω, CLASS"
   },
   "latest_real_phi_gauge_gate": {
-    "status": "independently derived exact charge selection; four local rational tests passed; new GH CI pending",
+    "status": "scoped charge-selection proof and rational tests passed local and full Scientific CI #45007616038",
     "source": "kinetics/gauge_charge_yukawa_audit.py",
     "test": "tests/test_gauge_charge_yukawa_audit.py",
     "report": "kinetics/REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md",
@@ -372,5 +372,15 @@
     "scoped_result": "One real scalar under continuous U1' is neutral, qφ=0. Gauge Yukawa phase qφ-q2+q1 forces q1=q2; nonzero qchi1 implies nonzero qchi2 diagonal vector mediator coupling. χ1-only charged portal + qchi2=0 cannot coexist with original real-φ renormalizable decay.",
     "alternatives": "Complex charged φ (adds scalar degree), symmetry breaking/mixing, higher-dimensional operators or other charges require explicitly different UV theory; not general no-go.",
     "consequence": "Model cannot call χ1-only χe/χν heat physical for original three-species Yukawa before adding χ2-SM channels and validating full charge/energy ledger."
+  },
+  "latest_chi2_thermal_mass_gate": {
+    "status": "local 2 tests and conditional full-5D adaptive Pauli scan reproduced; new GH CI pending",
+    "code": "kinetics/chi2_lepton_heat_gate.py",
+    "tests": "tests/test_chi2_lepton_heat_gate.py",
+    "report": "kinetics/CHI2-LEPTON-HEAT-GATE.md",
+    "data": "kinetics/results/chi2-lepton-heat-2026-11-22.json",
+    "benchmark": "m1=.1 me, m2=.02 me, mphi=86 eV, Te=Tnu=.1me, Tχ1=Tχ2=.09me, mV=.3me, G=.001me^-2, equal gauge charge",
+    "positive": "Full 5D Pauli Q2ν/Q1ν=1.27426,1.27725,1.27969 for nrad=nmu=6,8,10. Q2e/Q1e≈1.08/1.07 at n6/8. If same thermal FD occupations, daughter channel is not mass-suppressed away.",
+    "limits": "No actual χ2 number density or spectrum from decay; radial/cutoff not fully converged; 86eV φ only threshold input; no physical gamma/Ω/BEC/CLASS"
   }
 }

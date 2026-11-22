@@ -2,9 +2,13 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Resolve real-φ U1 gauge-charge obstruction: add χ2–SM collisions or explicitly revise UV theory",
-  "objective": "Exact gauge selection for the original y φ barχ2 χ1 + h.c. with φ a single real Z2-odd scalar and vectorlike Dirac U1' charges: qφ=0 implies qχ1=qχ2. Thus a nonzero diagonal χ1 Z' current necessarily allows χ2 Z' interactions, and χ1-only vector pilot is not a complete gauge embedding. Verify new numeric/rational regression CI, then pick an explicit viable gauge+Z2 Lagrangian: retain real φ and add full χ2e/χν Pauli channels, or change field content/charge and rederive mass/width/stability. Enforce finite SM e±γν charge/energy, mediator constraints, nonthermal both-species kinetic spectrum before Bose decay/FRW. Existing conditional split-bath angular source and errors remain useful but not physical Γel.",
+  "title": "Validate χ2 heat CI and couple both χ1/χ2–SM Pauli channels to Yukawa Bose source and finite SM",
+  "objective": "For original real φ neutral U1' and vectorlike χ1χ2 with equal nonzero gauge charge, χ2–SM vector channel is unavoidable. A conditional finite-mV full-Pauli 5D heat scan with m1=.1me,m2=.02me,Tχ=.09me,Te=Tν=.1me shows Qχ2/Qχ1 ~1.28 for two active ν at nrad/nmu6..10, and ~1.07-1.08 for e±; daughter heat is not automatically negligible. But these are independently prescribed thermal FD occupancies, not actual χ2 produced f or physical UV. Verify new CI; build full χ2e/χν strong collision kernels with real evolving fχ2 and exact finite SM heat/entropy/charges, coupled simultaneously to χ1↔χ2+φ Bose/Pauli with physical mediator/gauge charges. Independently validate q/dt/cutoff, no phenomenological BGK Γel or 86eV ΩDM claims.",
   "prerequisites": [
+    "Previous scoped real-phi gauge audit Scientific CI #45007616038 on 481f87a passed; check NEW daughter heat stage CI; split-bath #45007354082 passed.",
+    "Read original MICROPHYSICS-MODEL.md and REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md; never treat single χ1 vector portal as full equal-U1-charge UV completion.",
+    "Run python -m pytest -q tests/test_chi2_lepton_heat_gate.py tests/test_gauge_charge_yukawa_audit.py tests/test_finite_mediator_5d_adaptive_reference.py",
+    "Reproduce chi2 thermal benchmark at nr6,8,10, and distinguish finite-mass effect from actual evolving daughter abundance.",
     "Verify actual CI for new REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md stage and previous split-lepton commit 1296d2c; earlier repaired azimuth 78662b run #45007251387 success.",
     "Read kinetics/MICROPHYSICS-MODEL.md to confirm original real φ + two Dirac χ1/χ2 + exact Z2, and the new exact gauge-selection audit and tests.",
     "Run python -m pytest -q tests/test_gauge_charge_yukawa_audit.py and inspect finite integer charge grid; separately derive analytic U1 phase invariance without relying on enumerated charges.",
@@ -26,6 +30,9 @@
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Construct charge/gauge-complete joint Lagrangian with real φ and q1=q2, Z′ mass generation and electron/ν couplings, loop/thermal mediator and laboratory/BBN/Neff constraints; explain why both χ1 and χ2 scatter with lepton bath.",
+    "Implement shared finite SM bath conserving total energy, χ1 and χ2 number/chemical charges and Pauli, Bose φ production with realistic decay Γ(T) and inverse, rather than thermal reset.",
+    "Compute actual χ1 and χ2 nonthermal 5D collision kernels and time evolution, independently converge qmin/qmax/dt/angle/cutoff and stiff source; only then extract physical Γ_el/H, frozen 86eV fφ(q), Ω and observational constraints.",
     "For real φ neutral q1=q2≠0 branch: derive χ2ℓ→χ2ℓ exact finite-mass 2→2 full Pauli vector kernels and coupled χ1/χ2/e±γν energy/number/entropy, compare production + cooling across χ1→χ2+φ with real mass hierarchy.",
     "For χ1-only vector interaction q1≠q2 branch: choose explicitly a complex charged scalar/Higgs mixing or higher-dimension gauge-invariant operator; derive field multiplicities, Z2 stability and χ1↔χ2+φ amplitudes from new Lagrangian before simulation.",
     "Check actual mediator mV,gχ,gLe-Lmu parameter bounds and possible thermal mediator production, neutrino thermalization/ΔNeff; calculate UV-valid full SM finite bath and dynamic scattering spectrum rather than arbitrary gamma.",
@@ -145,5 +152,11 @@
     "data": "kinetics/results/real-phi-gauge-charge-2026-11-22.json",
     "result": "Scoped algebraic incompatibility of χ1-only U1' diagonal vector portal with real φ Yukawa unless χ2 same charge; therefore χ2-SM collision mandatory when χ1 charged in this simple completion.",
     "ci": "new commit pending"
+  },
+  "latest_chi2_heat_reference": {
+    "report": "kinetics/CHI2-LEPTON-HEAT-GATE.md",
+    "data": "kinetics/results/chi2-lepton-heat-2026-11-22.json",
+    "code": "kinetics/chi2_lepton_heat_gate.py",
+    "status": "measured local conditional thermal mass scan; GH CI pending"
   }
 }
