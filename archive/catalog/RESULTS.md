@@ -1,0 +1,94 @@
+# Реестр сохранённых машинных результатов — снимок 2026-11-22
+
+**83 файлов**, сохранённых непосредственно в публичном Git на коммите [`2eaf8ce7af7e`](https://github.com/IskanderAbdullin/Dark-Matter/commit/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235); ссылки ниже привязаны к этому SHA, а не к изменяемой ветке. Каждый файл дополнительно описан Git blob SHA и размером в [машинном каталоге](snapshot-2026-11-22.json).
+
+Наличие файла **не доказывает** его физическую валидность: статус утверждений подтверждается отчётами и [EVIDENCE](../../kinetics/research-control/EVIDENCE.md).
+
+| Путь и версия файла | Размер (байт) |
+|---|---:|
+| [`continuation-02/collision-tail-results.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/collision-tail-results.json) | 1557 |
+| [`continuation-02/lowered-bose-results.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/lowered-bose-results.json) | 928 |
+| [`continuation-02/numerical-summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/numerical-summary.json) | 1315 |
+| [`continuation-02/sparc-pilot-aggregate.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/sparc-pilot-aggregate.json) | 1410 |
+| [`continuation-02/sparc-qc-results.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/sparc-qc-results.json) | 41121 |
+| [`continuation-02/sparc-quality-metadata.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/sparc-quality-metadata.json) | 36874 |
+| [`continuation-02/thermal-streaming-results.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-02/thermal-streaming-results.json) | 1491 |
+| [`continuation-03/data/theory_consistency_results.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-03/data/theory_consistency_results.json) | 1904 |
+| [`continuation-04/results/asymptotic_wkb.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/asymptotic_wkb.json) | 984 |
+| [`continuation-04/results/bosestar_tides.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/bosestar_tides.json) | 801 |
+| [`continuation-04/results/casimir_ir_tail.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/casimir_ir_tail.json) | 1478 |
+| [`continuation-04/results/casimir_mass_anchor.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/casimir_mass_anchor.json) | 719 |
+| [`continuation-04/results/critical_cutoff_family.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/critical_cutoff_family.json) | 1813 |
+| [`continuation-04/results/critical_lowered.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/critical_lowered.json) | 1267 |
+| [`continuation-04/results/frozen_relic.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/frozen_relic.json) | 1052 |
+| [`continuation-04/results/ir_phase_volume_exponents.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/ir_phase_volume_exponents.json) | 1146 |
+| [`continuation-04/results/kinetic_growth.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/kinetic_growth.json) | 1632 |
+| [`continuation-04/results/kinetic_jeans.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/kinetic_jeans.json) | 1435 |
+| [`continuation-04/results/lowered_casimir_tail.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/lowered_casimir_tail.json) | 1026 |
+| [`continuation-04/results/lowered_excess_mass_summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/lowered_excess_mass_summary.json) | 1609 |
+| [`continuation-04/results/lowered_virial.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/lowered_virial.json) | 847 |
+| [`continuation-04/results/small_eta_universal.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/small_eta_universal.json) | 910 |
+| [`continuation-04/results/smooth_lowered_bose.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/smooth_lowered_bose.json) | 773 |
+| [`continuation-04/results/wkb_consistency.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-04/results/wkb_consistency.json) | 2145 |
+| [`continuation-05/results/critical_limit.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-05/results/critical_limit.json) | 2043 |
+| [`continuation-05/results/detailed_balance.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-05/results/detailed_balance.json) | 397 |
+| [`continuation-05/results/open_flux.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-05/results/open_flux.json) | 672 |
+| [`continuation-05/results/reproduced_profiles.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-05/results/reproduced_profiles.json) | 2179 |
+| [`continuation-06/results/dos_scaling.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-06/results/dos_scaling.json) | 1166 |
+| [`continuation-06/results/generalized_flux.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-06/results/generalized_flux.json) | 843 |
+| [`continuation-06/results/phase_density_edge.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/continuation-06/results/phase_density_edge.json) | 556 |
+| [`cosmology/results/CLASS-cold-family-summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/cosmology/results/CLASS-cold-family-summary.json) | 1269 |
+| [`cosmology/results/CLASS-eight-powerhalf-summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/cosmology/results/CLASS-eight-powerhalf-summary.json) | 2695 |
+| [`cosmology/results/CLASS-hot-tail-summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/cosmology/results/CLASS-hot-tail-summary.json) | 4075 |
+| [`cosmology/results/CLASS-thermal-summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/cosmology/results/CLASS-thermal-summary.json) | 1625 |
+| [`cosmology/thermal_analytic_benchmark.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/cosmology/thermal_analytic_benchmark.json) | 607 |
+| [`kinetics/research-control/NEXT_ACTION.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/research-control/NEXT_ACTION.json) | 30480 |
+| [`kinetics/research-control/STATE.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/research-control/STATE.json) | 34908 |
+| [`kinetics/results/best-affinity-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-affinity-real-2026-11-21.json) | 4245 |
+| [`kinetics/results/best-closed-massive-dynamic-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-closed-massive-dynamic-real-2026-11-21.json) | 4020 |
+| [`kinetics/results/best-frw-exprb2-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-frw-exprb2-real-2026-11-21.json) | 3760 |
+| [`kinetics/results/best-independent-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-independent-2026-11-21.json) | 4054 |
+| [`kinetics/results/best-massive-phi-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-massive-phi-real-2026-11-21.json) | 3681 |
+| [`kinetics/results/best-qmin-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-qmin-real-2026-11-21.json) | 2591 |
+| [`kinetics/results/best-rd-frw-qmin-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-rd-frw-qmin-real-2026-11-21.json) | 3432 |
+| [`kinetics/results/best-rd-frw-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-rd-frw-real-2026-11-21.json) | 3466 |
+| [`kinetics/results/best-rd-time-64-128-real-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-rd-time-64-128-real-2026-11-21.json) | 2944 |
+| [`kinetics/results/best-rd-time-refinement-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-rd-time-refinement-2026-11-21.json) | 4468 |
+| [`kinetics/results/best-sm-coupled-corrected-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-sm-coupled-corrected-2026-11-21.json) | 4698 |
+| [`kinetics/results/best-sm-coupled-original-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/best-sm-coupled-original-2026-11-21.json) | 4364 |
+| [`kinetics/results/chi2-lepton-heat-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/chi2-lepton-heat-2026-11-22.json) | 1682 |
+| [`kinetics/results/em-pair-thermodynamics-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/em-pair-thermodynamics-2026-11-22.json) | 2624 |
+| [`kinetics/results/finite-bath-fermion-pair-reference-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/finite-bath-fermion-pair-reference-2026-11-21.json) | 1988 |
+| [`kinetics/results/finite-mass-5d-independent-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/finite-mass-5d-independent-2026-11-22.json) | 2543 |
+| [`kinetics/results/finite-mediator-5d-adaptive-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/finite-mediator-5d-adaptive-2026-11-22.json) | 2411 |
+| [`kinetics/results/finite-mediator-forward-event-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/finite-mediator-forward-event-2026-11-22.json) | 1934 |
+| [`kinetics/results/finite-mediator-split-lepton-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/finite-mediator-split-lepton-2026-11-22.json) | 2177 |
+| [`kinetics/results/fixed-charge-pair-capacity-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/fixed-charge-pair-capacity-2026-11-22.json) | 2390 |
+| [`kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json) | 2399 |
+| [`kinetics/results/linearized-pauli-two-modes-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/linearized-pauli-two-modes-2026-11-21.json) | 2588 |
+| [`kinetics/results/massive-e-pair-threshold-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/massive-e-pair-threshold-2026-11-21.json) | 2098 |
+| [`kinetics/results/microphysical-bin-graph-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/microphysical-bin-graph-2026-11-21.json) | 2983 |
+| [`kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json) | 2725 |
+| [`kinetics/results/paired-energy-quartets-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/paired-energy-quartets-2026-11-21.json) | 2946 |
+| [`kinetics/results/paired-quartet-network-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/paired-quartet-network-2026-11-21.json) | 2512 |
+| [`kinetics/results/pauli-localized-packet-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/pauli-localized-packet-2026-11-21.json) | 1900 |
+| [`kinetics/results/pauli-ritz-basis-scan-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/pauli-ritz-basis-scan-2026-11-21.json) | 2659 |
+| [`kinetics/results/pauli-stieltjes-11mode-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/pauli-stieltjes-11mode-2026-11-21.json) | 1642 |
+| [`kinetics/results/qed-pair-annihilation-control-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/qed-pair-annihilation-control-2026-11-22.json) | 2039 |
+| [`kinetics/results/qed-pair-full5d-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/qed-pair-full5d-2026-11-22.json) | 2930 |
+| [`kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json) | 2499 |
+| [`kinetics/results/real-phi-gauge-charge-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/real-phi-gauge-charge-2026-11-22.json) | 1527 |
+| [`kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json) | 2403 |
+| [`kinetics/results/relativistic-pauli-weakform-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/relativistic-pauli-weakform-2026-11-21.json) | 2817 |
+| [`kinetics/results/research-status-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/research-status-2026-11-21.json) | 7502 |
+| [`kinetics/results/spurious-invariants-2026-11-21.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/spurious-invariants-2026-11-21.json) | 5440 |
+| [`kinetics/results/vector-mediator-inverse-decay-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/vector-mediator-inverse-decay-2026-11-22.json) | 2379 |
+| [`kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json) | 3201 |
+| [`kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json) | 2824 |
+| [`kinetics/results/vector-neutrino-finite-bath-time-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/vector-neutrino-finite-bath-time-2026-11-22.json) | 3070 |
+| [`kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json) | 2657 |
+| [`kinetics/results/verified-fixed-bath-summary.json`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/kinetics/results/verified-fixed-bath-summary.json) | 1947 |
+| [`literature/100-screened.csv`](https://github.com/IskanderAbdullin/Dark-Matter/blob/2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235/literature/100-screened.csv) | 19923 |
+
+**При последующих расчётах:** коммитить существенные массивы и JSON/CSV вместе с научной записью этапа. Никогда не ссылаться исключительно на временный Actions artifact. Для больших внешних наборов данных — первоисточник, лицензия, версия, SHA256, команда восстановления.
+ 
