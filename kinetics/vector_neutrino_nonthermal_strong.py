@@ -45,7 +45,8 @@ def vector_weak(m,f,b,*,pmax=12.,np_=64,nangle=64,Gamma0=1.):
     dEV=-float(np.dot(w,E*rate))
     entropy=float(np.sum(w[:,None]*Gamma0*m/E[:,None]*
                          wc[None,:]/2*J*np.log(F/R)))
-    dSV=float(np.dot(w,rate*np.log(np.asarray(b(p))/(1+np.asarray(b(p)))))
+    bb=np.asarray(b(p),float)
+    dSV=float(np.dot(w,rate*np.log(bb/(1+bb))))
     return {"dNV":dNV,"dEV":dEV,
             "dNnu_expected":-2*dNV,"dEnu_expected":-dEV,
             "entropy_weak":entropy,"entropy_vector":dSV}

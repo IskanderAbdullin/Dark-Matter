@@ -101,7 +101,7 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite active research launch close to hourly budget; source, results and executable next strong ν time stage checkpointed. No claim of background work outside existing separate schedule.",
+  "stop_reason": "Source syntax defect detected in real GH CI, targeted repair prepared and next CI verification explicitly required.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
@@ -444,10 +444,17 @@
     "report": "kinetics/VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md",
     "data": "kinetics/results/vector-neutrino-nonthermal-strong-2026-11-22.json",
     "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-nonthermal-strong.md",
-    "status": "six focused local tests passed; new GitHub Scientific CI to verify after push",
+    "status": "First GitHub Scientific CI #45010701908 FAIL on both Python 3.11/3.13 due an unmatched parenthesis in vector entropy assignment at source line 48; correction staged in subsequent fast-forward commit, physics local checks unchanged; verify new CI before promoting.",
     "formula": "Cν(k)=(2gV/gν) Γ0/k²∫_pmin^pmax dp p*mV/E J(p,k), pmin=abs(k-mV²/(4k)), J=bV(1-fν(k))(1-fν(E-k))-(1+bV)fν(k)fν(E-k), gV=3,gν=4",
     "positive": "At mV=.3, fν=expit(-k+.15exp(-k)), bV=.75BE(E), n64 per k support side, weak dNν=-.01691497049725492, strong relative N error7.15e−14, E error -2.44e−15 and entropy error7.35e−14; physical Qν=-QV, Nν=-2NV and entropy≥0 for four nonthermal test shapes.",
     "negative": "At mV=.3 naive unsplit k Gauss32 gives N mismatch -3.10827e−4, while split at k=mV/2 reduces <1e−6; mV=.03 has n32 relative mismatch +7.55e−4 and n96 -5.46e−8. Even weak-strong consistency at same pmax is no continuum cutoff certificate.",
-    "limits": "Equal fν=fνbar, strictly interior fermions and bV>0, no neutrino strong time integration, ν e/γ weak chemistry, dark χ1/χ2/φ, H/gstar, actual 86eV relic/Ω/BEC/CLASS."
+    "limits": "Equal fν=fνbar, strictly interior fermions and bV>0, no neutrino strong time integration, ν e/γ weak chemistry, dark χ1/χ2/φ, H/gstar, actual 86eV relic/Ω/BEC/CLASS.",
+    "engineering_negative": {
+      "run_id": 45010701908,
+      "commit": "f6f3eb396cd1c647ef6dd66c9653e0d55077207b",
+      "cause": "SyntaxError: '(' was never closed at vector_neutrino_nonthermal_strong.py:48, entropy vector dSV",
+      "fix": "Refactor to bb=np.asarray(b(p),float) and dSV=float(np.dot(w,rate*np.log(bb/(1+bb))))",
+      "new_ci": "pending"
+    }
   }
 }
