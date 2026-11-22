@@ -104,7 +104,7 @@
   "stop_reason": "Active run bounded; executable next physical mediator/SM distribution stage recorded; only separately scheduled automation can work after this chat ends.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check real Scientific CI for new candidate ν/e heat and preceding nonthermal QED weak stage. Next replace contact G by full finite mZ' t-propagator and construct χe,χν angular kernels with chiral/Pauli; test EFT limit and gauge UV constraints, neutrino decoupling and finite eγν bath, then genuine χ1/χ2 φ quantum cosmology. No gamma_el or 86eV claim.",
-  "last_checkpoint_git_sha": "aa85131687cb041203230cfee5b0e0339c4a66a2",
+  "last_checkpoint_git_sha": "a744da0dda2565ba57a99ba57379f3e1514c44e6",
   "current_phase": "Anomaly-free candidate U1_(Le−Lmu) vector portal explicitly exposes two ν species plus e±; independent left-chiral spin trace matches massless vector χν and COM 5D Pauli heat. Two-ν contribution equal-T/e at Te/me=.1 is 1086; split ν temperature ideal .714 Te changes χ heat sign. No physical UV validation, Γel or 86eV.",
   "completed_research_steps": [
     {
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "52c35df574f2057a2f6cd8cc456bf72cfa10c783",
-    "run_id": 44956695501,
+    "head_sha": "64d6321657001ea7be7a8a3774f87420684a535e",
+    "run_id": 44968592762,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44956695501"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -316,5 +316,13 @@
     "report": "kinetics/FINITE-MEDIATOR-5D-FIRST-GATE.md",
     "scope": "conditional tree-level full-angle 5D Pauli heat; no independent finite mediator crosscheck, no measured CI yet",
     "class_ready": false
+  },
+  "last_finite_mediator_angular_trace": {
+    "source": "kinetics/finite_mediator_trace_angular.py",
+    "tests": "tests/test_finite_mediator_trace_angular.py",
+    "report": "kinetics/FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md",
+    "scope": "nonconstant vacuum vector spin-trace angular primitive only; cannot factor final-state Pauli/heat",
+    "verification": "local scipy quadrature of J0,J1,J2 at b=.1,1,10 relative discrepancy <=3.5e-14; new repository CI pending",
+    "previous_finite_5d_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762"
   }
 }
