@@ -2,9 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate real Z′ threshold/thermodynamics CI; derive mediator quantum production and full χ1/χ2/φ+SM kinetics",
-  "objective": "Real-phi gauge consistency qχ1=qχ2 forces daughter lepton scattering. Furthermore earlier numerical mV=.03,.1,.3me are light near T≈me, so real vector Z′ production/decay and energy cannot automatically be neglected. Conditional massive Proca Z′ if equilibrium adds delta gstar≈3 (direct BE vs independent Bessel), but actual occupation and rates unknown. χ1χbar1→2Z′ is at-rest open for mV=.03me; Z′→χ2chi2bar open at mV=.1me; Z′→both dark pairs open at .3me, neutrino channel open in all. Check CI and then derive gauge-consistent production/decay and ν/e/χ reaction rates and H, not assume ideal thermal bath/constant gamma.",
+  "title": "Derive full moving-Zprime finite-T neutrino Pauli/Bose 1↔2 source and verify mediator thermalization conditions",
+  "objective": "At previous arbitrary Gme²=.001 with |gχqχ|≤sqrt4π, the conditional lower g′ gives vacuum Z′→2 active ν partial width and Maxwell–Boltzmann time-dilated Γν/H about 3372 (.03me),4.58e6(.1me),3.16e9(.3me) at Te=me, gstar assumed 10.75. Independent momentum integral verifies K1/K2. FD ν Pauli at μ=0 implies loss of EXISTING MB vectors >=Γ_MB/4, but neither ratio is net chemical relaxation or Z′ abundance. Verify repo CI, then derive exact mode-resolved moving-vector 1↔2 forward and inverse with Pauli ν and Bose Z′, full thermal detailed balance, number/energy/entropy and n/mV/T/cutoff. Determine Z′ inverse production/H and actual dynamics before including in Friedmann. Avoid physical γel or DM relic inference.",
   "prerequisites": [
+    "Prior vector threshold full Scientific CI #45008415213 on 253e992 succeeded; check new MB clock stage CI.",
+    "Run python -m pytest -q tests/test_vector_mediator_inverse_decay_gate.py tests/test_vector_mediator_threshold_thermal_gate.py",
+    "Read VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md and Bessel/independent Gaussian momentum K1/K2 controls; do NOT label MB clock Γelastic or thermalization.",
     "Verify latest draft PR HEAD and real Scientific CI for new vector thermal gate; preceding chi2-lepton checkpoint 854a20d passed run #45007896155.",
     "Run python -m pytest -q tests/test_vector_mediator_threshold_thermal_gate.py and reproduce direct BE vs Bessel K1/K2, threshold and partial width coefficients.",
     "Read VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md and original REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md before any model claim.",
@@ -33,6 +36,9 @@
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Derive exact unpolarized massive vector rest νν decay isotropic angle distribution and Lorentz boost to moving plasma: ν energies (E_V±p_V cosθ)/2; integrate FD ν blocking and inverse νν→Z′ with Bose occupancy and detailed balance at common T, μν+μνbar=0, μV=0.",
+    "Build mode-resolved Zprime strong C_V(b(p)) coupled to finite ν energy/particle/entropy ledgers and explicit 3-pol phase-space capacities; test positivity, BE equilibrium and thermal production times against H, and bounds across ν temperature.",
+    "Add real chi1 and chi2 vector channels, χ1χbar1↔2V and Zprime↔χ1/χ2 pairs, gauge scalar S and finite SM heat/ν decoupling, then full Pauli/Bose χ1→χ2+φ and FRW; no physical Gamma_el or 86eV relic/BEC/Omega/CLASS.",
     "Derive explicit real dark Z′ quantum 1↔2 Z′↔νeνbar_e and νμνbar_μ with Pauli/Bose and finite plasma, and χ1/χ2 pair 2↔2 to Z′Z′. Quantify ΓV/H using independent coupling g′ and gχ, mediator mass and thermal abundances rather than just contact G.",
     "Specify U1′ mass breaking via separate Z2-even charged complex scalar S or Stueckelberg; include scalar thermal degrees, neutrino/electron/muon constraints and possible symmetry restoration.",
     "Only then full χ1/χ2/φ/e±γν/Z′ charge/energy/entropy+FRW and nonthermal Bose collision, experimental constraints and independent 86eV frozen fφ/Ω/CLASS audits.",
@@ -171,5 +177,13 @@
     "report": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
     "data": "kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json",
     "status": "local 8 tests pass; new GH CI pending"
+  },
+  "latest_Zprime_MB_gate": {
+    "code": "kinetics/vector_mediator_inverse_decay_gate.py",
+    "test": "tests/test_vector_mediator_inverse_decay_gate.py",
+    "report": "kinetics/VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md",
+    "data": "kinetics/results/vector-mediator-inverse-decay-2026-11-22.json",
+    "status": "eight local numerical tests passed, new GitHub CI pending",
+    "scope": "Conditional vacuum νν width + MB clock, no Pauli/inverse thermal operator"
   }
 }

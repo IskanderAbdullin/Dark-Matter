@@ -270,3 +270,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Original real Z2-odd phi cannot act as charged Z2-even Higgs-breaking S; separate complex S or Stueckelberg alternative in coherent theory. Previous daughter heat scientific CI #45007896155 success.
 - [ ] Check new CI. P0 true vector quantum Γ/H and population, separate χ1/χ2 Pauli scattering, neutrino/eγ/φ heat, gauge/BBN constraints and real Bose+FRW before 86eV Omega/BEC/CLASS.
 
+## 2026-11-22 conditional Zprime-neutrino decay clock
+
+- [x] Exact two-active-ν rest partial width, independent MB momentum integral K1/K2 thermal time dilation and radiation H at explicitly assumed gstar=10.75. With fixed arbitrary Gme²=.001 and conventional |gχqχ|<=sqrt4π, minimum gprime gives ΓMB/H=3.37e3,4.58e6,3.16e9 at mV=.03,.1,.3me. No lab viability or actual Zprime population follows.
+- [x] Analytic ν FD μ=0 final-state Pauli bound: (1−fν)(1−fνbar)>=1/4. Only a conditional lower decay-loss clock for MB-distributed existing Zprime, NOT equilibrium or chemical relaxation.
+- [ ] Check GH CI. **P0:** full moving Zprime↔νν finite-T mode-resolved Pauli/Bose inverse production with exact boosts and finite neutrino heat/entropy, then actual Γ/H and number-changing modes plus χ1/χ2 SM, Yukawa/Bose FRW. No physical Gammael/86eV Omega/BEC/CLASS.
+

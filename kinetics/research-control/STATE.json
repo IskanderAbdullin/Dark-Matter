@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite active launch; next action Z′ production and gauge/SM backreaction specified. No background work outside separately enabled schedule.",
+  "stop_reason": "Active finite session will continue to quantum inverse-decay next, no work between launches except separately scheduled automation.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Real light Z′, gauge-breaking sector, neutrino/dark branching and possible thermal energy remain a major missing model channel after gauge-consistent real phi enforces both chi1 and chi2 vector lepton scattering.",
+  "current_phase": "New conditional two-active-neutrino Z′ rest decay and MB time-dilated Γ/H audit under fixed exploratory G,mV and conventional perturbative |gχqχ|≤sqrt4π. At Te=me, potential νν decay clock 3372,4.58e6,3.16e9 times H for mV=.03,.1,.3me. Full quantum inverse/Pauli+Bose and actual Z′ population remain unknown; no χ gamma_el or 86eV relic.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "854a20d50a0fb554e1e0990df37ca2789eb96b39",
-    "run_id": 45007896155,
+    "head_sha": "253e99233a3c5c7daf48ffcc8b62fd444b92980a",
+    "run_id": 45008415213,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45007896155"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45008415213"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -384,7 +384,7 @@
     "limits": "No actual χ2 number density or spectrum from decay; radial/cutoff not fully converged; 86eV φ only threshold input; no physical gamma/Ω/BEC/CLASS"
   },
   "latest_vector_thermal_gate": {
-    "status": "8 independent numerical tests locally passed; new GH CI pending",
+    "status": "8 local tests and full Scientific CI #45008415213 success",
     "code": "kinetics/vector_mediator_threshold_thermal_gate.py",
     "test": "tests/test_vector_mediator_threshold_thermal_gate.py",
     "report": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
@@ -392,5 +392,15 @@
     "positive": "If massive Z′ equilibrated at T=me, direct BE EOS and independent Bessel series give delta gstar_rho≈2.999658,2.996212,2.966484 at mV/me=.03,.1,.3",
     "negative": "Actual mediator abundance NOT measured. At rest χ1 pair annihilation to two Z′ opens at mV=.03me; Z′ dark pair decay to χ2 opens at .1me, to both χ species at .3me. Tree neutrino decay always open; e+e− closed under 2me. G*mV² determines only product of gauge couplings, not dark/ν widths.",
     "physical_scope": "Not a Z′ Boltzmann rate, gauge constraints, SM entropy or 86eV relic/BEC/CLASS, mV(T) or actual extra Neff."
+  },
+  "latest_Zprime_MB_decay_gate": {
+    "code": "kinetics/vector_mediator_inverse_decay_gate.py",
+    "test": "tests/test_vector_mediator_inverse_decay_gate.py",
+    "report": "kinetics/VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md",
+    "data": "kinetics/results/vector-mediator-inverse-decay-2026-11-22.json",
+    "status": "8 local numerical tests passed; new GitHub CI pending",
+    "assumptions": "Rest Γνν=g′²mV/(12π) two active left ν; MB time dilation K1/K2 independently checked; fixed Gme²=.001, |gχqχ|=sqrt4π maximum, gstar=10.75, T=me, no quantum Pauli/inverse or Z′ occupancy",
+    "result": "Conditional Γνnu,MB/H=3372 at mV/me=.03, 4.5768e6 at .1, 3.1644e9 at .3. At zero ν chemical potential final Pauli factors (1−f)(1−fbar)≥1/4 pointwise; for MB-distributed existing Z′ decay-loss lower/H at least Γ_MB/H/4, NOT net equilibration.",
+    "negative": "Virtual-only Z′ and freely chosen χ BGK cannot be promoted under this exploratory fixed contact coefficient without modeling real vector ν production/decay and gauge constraints."
   }
 }
