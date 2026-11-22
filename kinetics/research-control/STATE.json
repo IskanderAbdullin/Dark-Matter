@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Source syntax defect detected in real GH CI, targeted repair prepared and next CI verification explicitly required.",
+  "stop_reason": "Active session has archived stage; next action is executable and new CI must be checked. No work between launches unless separately scheduled.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0 full nonthermal moving Z′↔ννbar 1↔2. Independent momentum-resolved strong Cν(k) constructed for arbitrary positive isotropic equal fν=fνbar, bV. Strong k,p and weak vector p,CM-angle phase-space N/E/entropy match to ~1e-13 for mV=.3 on resolved split k support. No coupled nonthermal time evolution or SM weak/χ physics.",
+  "current_phase": "Nonthermal moving Z′↔ν+antiν paired strong operator now additionally has first bounded reversible event-graph TIME PILOT with distinct ν/antiν. Exact lattice C/L/energy and entropy, but E/h/dt errors remain significant; not continuum or physical dark relic.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235",
-    "run_id": 45009845364,
+    "head_sha": "64c39424b773c2f1e93127c1c0060fa44d58d0a7",
+    "run_id": 45010866936,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45009845364"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45010866936"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -444,7 +444,7 @@
     "report": "kinetics/VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md",
     "data": "kinetics/results/vector-neutrino-nonthermal-strong-2026-11-22.json",
     "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-nonthermal-strong.md",
-    "status": "First GitHub Scientific CI #45010701908 FAIL on both Python 3.11/3.13 due an unmatched parenthesis in vector entropy assignment at source line 48; correction staged in subsequent fast-forward commit, physics local checks unchanged; verify new CI before promoting.",
+    "status": "prior syntax repair 64c394 passes real Scientific CI #45010866936; physics remains conditional and nonthermal time absent in that original source",
     "formula": "Cν(k)=(2gV/gν) Γ0/k²∫_pmin^pmax dp p*mV/E J(p,k), pmin=abs(k-mV²/(4k)), J=bV(1-fν(k))(1-fν(E-k))-(1+bV)fν(k)fν(E-k), gV=3,gν=4",
     "positive": "At mV=.3, fν=expit(-k+.15exp(-k)), bV=.75BE(E), n64 per k support side, weak dNν=-.01691497049725492, strong relative N error7.15e−14, E error -2.44e−15 and entropy error7.35e−14; physical Qν=-QV, Nν=-2NV and entropy≥0 for four nonthermal test shapes.",
     "negative": "At mV=.3 naive unsplit k Gauss32 gives N mismatch -3.10827e−4, while split at k=mV/2 reduces <1e−6; mV=.03 has n32 relative mismatch +7.55e−4 and n96 -5.46e−8. Even weak-strong consistency at same pmax is no continuum cutoff certificate.",
@@ -456,5 +456,16 @@
       "fix": "Refactor to bb=np.asarray(b(p),float) and dSV=float(np.dot(w,rate*np.log(bb/(1+bb))))",
       "new_ci": "pending"
     }
+  },
+  "latest_reversible_event_graph": {
+    "status": "first local independently calculated conservatively bounded nonthermal ν/antiν/V time pilot; NEW GitHub Scientific CI pending",
+    "source": "kinetics/vector_neutrino_reversible_event_graph.py",
+    "test": "tests/test_vector_neutrino_reversible_event_graph.py",
+    "report": "kinetics/VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-reversible-graph-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-reversible-event-graph.md",
+    "positive": "Equal-energy event lattice implicit physical reaction extent preserves C=Nν+Nantiν+2NV, L=Nν−Nantiν and E to ~1e−16 at tested h=.2, monotone entropy, Pauli/Bose bounds, nonthermal ν/antiν distinct and empty vector inverse production. All conditional Γ0=1 synthetic.",
+    "negative": "Compared with independent continuum 144x144 vector weak, h=.4 number ~−21%, h=.05 +0.378%, energy +0.409%, entropy +0.330%; Emax4 vs8 weak energy −29.5%, timestep dt1 vs .125 low-energy vector b shifts ~3.6%; NOT continuum converged.",
+    "next": "Verify new GH CI and build angular-conservative higher-order time/energy quadrature with q/dt/cutoff error bounds; no Γelastic/86eV Omega/BEC/CLASS."
   }
 }

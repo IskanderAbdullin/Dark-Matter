@@ -2,147 +2,19 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify nonthermal Zprime-neutrino strong CI; implement positivity-preserving ν/V phase-space time evolution without instant FD closure",
-  "objective": "Independent physical Z′↔two-active-flavor ννbar strong Cν(k) now derived via exact inverse shell pmin(k)=abs(k-mV²/(4k)) and full nonthermal FD Pauli/BE factors, matches separately integrated vector weak N,E,S to ~1e−13 at mV=.3 n64 after splitting support cusp k=mV/2. Unsplit k quadrature n32 yields false number mismatch -3.1e−4; for light mV=.03 n96 still 5.46e−8 relative. Verify new full GitHub CI and then implement time evolution of arbitrary neutrino and vector distributions together, respecting fermionic 0<=f<=1, bosonic b>=0, total Nν+2NV and E, nondecreasing entropy, no hidden thermal reset, with q/cutoff/dt/angular convergence and split fν/fνbar as needed. Independent check against constrained closed equilibrium and finite bath FD closure only as separate reference. Then add weak e±γ, mediator dark channels, chi1/chi2 2↔2 and chi1↔chi2+φ physical Bose FRW; no physical gamma_el/86eV relic claims.",
+  "title": "Check reversible ν/antiν/V time graph CI; eliminate lattice-angle and dt bias before physical χ/SM coupling",
+  "objective": "First conservative quantum event time evolution with distinct nonthermal fν,fantiν,bV preserves discrete C/L/E, positivity and entropy, but continuum vector weak relative number is −21% at h=.4 and still +0.38% at h=.05; dt1 vs dt.125 low-energy bV changes ~3.6%. NOT a validated continuum or physical Γelastic. Verify real GitHub CI of new stage, then build corrected angle/energy projection and more accurate coupled time integration, 3+ resolution and cutoff/h/t error budgets; only then thermal ν–SM and χ1/χ2/φ Bose/FRW.",
   "prerequisites": [
-    "IMPORTANT: Initial nonthermal strong stage Scientific CI #45010701908 failed both Python versions because of missing closing parenthesis in vector entropy line 48. Syntax repair committed in follow-up; check new run and investigate any test failure before treating local numeric stage as CI-proven.",
-    "Check latest branch/pr HEAD and current real Scientific CI for newly committed nonthermal strong test; prior full finite ν time checkpoint 2eaf8ce7 passed run #45009845364.",
-    "Run python -m pytest -q tests/test_vector_neutrino_nonthermal_strong.py tests/test_vector_neutrino_finite_bath_time.py tests/test_vector_neutrino_quantum_1to2.py",
-    "Reproduce python -m kinetics.vector_neutrino_nonthermal_strong, and matrix mV=.03,.3,1, pmax8/12/16, n32,48,64,96; do not infer global convergence from same-cut weak/strong agreement.",
-    "Read kinetics/VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md and its archive stage; preserve negative unsplit-k cusp alias and light-vector grid bias."
+    "Confirm latest PR #1 draft HEAD and actual Scientific CI for new vector_neutrino_reversible_event_graph.py; prior repaired strong source 64c394 CI #45010866936 success.",
+    "Read kinetics/VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md and archive/stages/2026/11/2026-11-22-vector-neutrino-reversible-event-graph.md.",
+    "Run python -m pytest -q tests/test_vector_neutrino_reversible_event_graph.py tests/test_vector_neutrino_nonthermal_strong.py; python -m kinetics.vector_neutrino_reversible_event_graph.",
+    "Reproduce synthetic distinct fν,fantiν and bV, exact C,L,E/entropy and compare with continuous vector weak reference at h=.4,.2,.1,.05 and Emax=4,6,8."
   ],
   "experiments": [
-    "Construct exact matched nonthermal Z′ and ν strong 1↔2 event integration on physical momentum grids with Fermi and Bose positivity, full electric/lepton flavor and Nν+2NV charges where applicable, energy, entropy. Advance in time with implicit/Patankar/exponential microreversible scheme and independently test q/dt/shape/cutoff.",
-    "Compare integrated strong N/E/S to separately independently evaluated vector weak reference for arbitrary fν and fνbar with nonzero lepton asymmetry and bV shapes; match equilibrium limit as a consistency but never assume instant thermal redistribution.",
-    "Add actual weak ννbar↔e±/γ and ν scattering to test kinetic FD closure and violation of reduced number invariant; coupled Z′χiχbar_i and χi−e/ν full relativistic 2↔2 with original φ Yukawa/Bose+FRW after experimentally valid UV; no 86eV Omega/BEC/CLASS before terminal validation."
+    "Improve physical energy-grid/angular-shell weights or conservative remapping while retaining exact eventwise k1+k2=E, Pauli/Bose, reduced charges, independent absolute weak-vs-strong N/E/S and 3+ q/angle/tail resolutions.",
+    "Test coupled implicit high-order/IMEX time dynamics vs first-order event splitting with dt=1,.5,.25,.125,.0625, including arbitrary ν−antiν asymmetry, bV=0, chemical equilibrium; quantify spectra, not just conserved totals.",
+    "After source converges, restore all ν-e±γ weak number-changing/energy and gauge-consistent Z′χ1χ2/φ Bose plus expanding FRW, physical Γ/H and 86eV benchmarks only with independent terminal gates."
   ],
-  "acceptance": [
-    "Direct physically time-reversal paired on-shell kernel, no arbitrary Wpair or BGK; exact nonthermal χ/e particle/energy/entropy and Pauli, independent 5D normalisation",
-    "Quantitative h,ℓ,cutoff,dt convergence and error budget; nonmonotone finite-grid case included",
-    "Gauge/UV-valid real thermal lepton/e±/ν and finite SM heat, not one ideal massless electron-only sample",
-    "Physically evolved χ1+χ2+φ+SM to freezeout with independent BEST/FRW/observational validation before any 86eV relic/ΩDM/BEC/CLASS claim"
-  ],
-  "constraints": "Public research branch and draft PR only; never merge main, force-push, run Actions in private repositories, or use Computer Use/user PC without separately explicit permission.",
-  "fallback": "If full thermal gauge-consistent model requires new particle content or violates EFT bounds, record quantitative counterexample and revise portal rather than inventing physical gamma.",
-  "latest_completed_reference": {
-    "report": "kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md",
-    "data": "kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json",
-    "status": "conditional independent spin trace and full 5D heat local, new repo CI pending",
-    "limits": "candidate gauge model not yet original χ1+χ2+φ; equal vs ideal split Tν not actual SM history"
-  },
-  "latest_analytic_gate": {
-    "report": "kinetics/FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md",
-    "commit": "f9587255171602bba91d836a5f381457ed70b294",
-    "status": "conditional analytic tree t-channel propagator bound, no new numerical 5D test",
-    "next": "Implement finite mV propagator in independent full-Pauli 5D χe/χν heat and t quadrature; validate 10% contact pointwise bound mV/pstar>=8.59926345 (relative to contact), thermal tail and gauge charge selection; then full SM/UV and nonthermal kinetics",
-    "negative": "Current constant-G thermal χe/χν pilot is not uniformly valid without mediator mass and tail bound"
-  },
-  "latest_finite_mediator_implementation": {
-    "source": "kinetics/independent_massive_chie_5d.py",
-    "test": "tests/test_finite_mediator_5d.py",
-    "report": "kinetics/FINITE-MEDIATOR-5D-FIRST-GATE.md",
-    "ci": "not yet measured",
-    "command": "python -m pytest -q tests/test_finite_mediator_5d.py",
-    "next": "Independent angular and cutoff convergence; realistic χe/χν and finite SM bath"
-  },
-  "latest_checkpoint": {
-    "commit": "ffe1f8359ebce2d83c3d10bf1f31ad95a8dde251",
-    "prior_ci_run": 44983215621,
-    "prior_ci_conclusion": "failure",
-    "failure": "Unterminated string literal at independent_massive_chie_5d.py:178 in both Python 3.11 and 3.13, after prior literal backslash-n repair",
-    "repair": "Replace physical newline inside JSON output string literal with escaped Python \\n; new CI pending",
-    "command": "python -m pytest -q tests/test_finite_mediator_transfer_quadrature.py tests/test_finite_mediator_5d.py tests/test_independent_massive_chie_5d.py"
-  },
-  "latest_transfer_angle_ci": {
-    "failed_run": 44986169496,
-    "failed_head": "8bc490a36377f81376e6c2ff120c8a9ba29f3538",
-    "failure": "Three full 5D transfer-coordinate heat comparisons failed, 3 failed 803 passed; t-to-cos Jacobian missing factor 2",
-    "repair_commit": "ca2492b0c67e4368abe4cce138abf25af061d4bc",
-    "verification": "pending",
-    "next": "Check actual new HEAD CI and run pytest tests/test_finite_mediator_transfer_quadrature.py tests/test_finite_mediator_5d.py; independently converge n24/32/48, mediator mV/p*, thermal tails; do not relax tolerance without independent agreement."
-  },
-  "latest_forward_event": {
-    "source": "kinetics/finite_mediator_forward_event_reference.py",
-    "report": "kinetics/FINITE-MEDIATOR-FORWARD-EVENT-CONVERGENCE.md",
-    "data": "kinetics/results/finite-mediator-forward-event-2026-11-22.json",
-    "test": "tests/test_finite_mediator_forward_event_reference.py",
-    "status": "standalone 3 tests passed, new CI pending"
-  },
-  "latest_full_5d_adaptive": {
-    "report": "kinetics/FINITE-MEDIATOR-5D-ADAPTIVE-AUDIT.md",
-    "code": "kinetics/finite_mediator_5d_adaptive_reference.py",
-    "tests": "tests/test_finite_mediator_5d_adaptive_reference.py",
-    "data": "kinetics/results/finite-mediator-5d-adaptive-2026-11-22.json",
-    "status": "local numeric experiments completed, new GH CI pending"
-  },
-  "latest_split_lepton": {
-    "source": "kinetics/finite_mediator_split_lepton_reference.py",
-    "report": "kinetics/FINITE-MEDIATOR-SPLIT-LEPTON-AUDIT.md",
-    "tests": "tests/test_finite_mediator_split_lepton_reference.py",
-    "data": "kinetics/results/finite-mediator-split-lepton-2026-11-22.json",
-    "status": "local measurable benchmark, new GitHub CI pending",
-    "warning": "Assumed split baths and unvalidated couplings; no 86eV cosmological conclusion"
-  },
-  "latest_gauge_charge_gate": {
-    "report": "kinetics/REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md",
-    "code": "kinetics/gauge_charge_yukawa_audit.py",
-    "test": "tests/test_gauge_charge_yukawa_audit.py",
-    "data": "kinetics/results/real-phi-gauge-charge-2026-11-22.json",
-    "result": "Scoped algebraic incompatibility of χ1-only U1' diagonal vector portal with real φ Yukawa unless χ2 same charge; therefore χ2-SM collision mandatory when χ1 charged in this simple completion.",
-    "ci": "new commit pending"
-  },
-  "latest_chi2_heat_reference": {
-    "report": "kinetics/CHI2-LEPTON-HEAT-GATE.md",
-    "data": "kinetics/results/chi2-lepton-heat-2026-11-22.json",
-    "code": "kinetics/chi2_lepton_heat_gate.py",
-    "status": "measured local conditional thermal mass scan; GH CI pending"
-  },
-  "latest_vector_species": {
-    "code": "kinetics/vector_mediator_threshold_thermal_gate.py",
-    "test": "tests/test_vector_mediator_threshold_thermal_gate.py",
-    "report": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
-    "data": "kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json",
-    "status": "local 8 tests pass; new GH CI pending"
-  },
-  "latest_Zprime_MB_gate": {
-    "code": "kinetics/vector_mediator_inverse_decay_gate.py",
-    "test": "tests/test_vector_mediator_inverse_decay_gate.py",
-    "report": "kinetics/VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md",
-    "data": "kinetics/results/vector-mediator-inverse-decay-2026-11-22.json",
-    "status": "eight local numerical tests passed, new GitHub CI pending",
-    "scope": "Conditional vacuum νν width + MB clock, no Pauli/inverse thermal operator"
-  },
-  "latest_quantum_vector": {
-    "report": "kinetics/VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md",
-    "source": "kinetics/vector_neutrino_quantum_1to2.py",
-    "tests": "tests/test_vector_neutrino_quantum_1to2.py",
-    "data": "kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json",
-    "status": "10 local tests passed; GH CI pending; fixed ν thermal reservoir only",
-    "danger": "Rfill/H not an observed abundance, χ elastic Γel or 86eV dark matter result"
-  },
-  "latest_closed_equilibrium": {
-    "report": "kinetics/VECTOR-NEUTRINO-CLOSED-CHARGES-AUDIT.md",
-    "code": "kinetics/vector_neutrino_equilibrium_charges.py",
-    "test": "tests/test_vector_neutrino_equilibrium_charges.py",
-    "data": "kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json",
-    "status": "4 local tests and independent analytical series succeeded; repo CI pending",
-    "limitation": "closed ν↔Zprime only, no SM/FRW, equilibrium not time evolution"
-  },
-  "latest_finite_bath_time": {
-    "source": "kinetics/vector_neutrino_finite_bath_time.py",
-    "test": "tests/test_vector_neutrino_finite_bath_time.py",
-    "report": "kinetics/VECTOR-NEUTRINO-FINITE-BATH-TIME-AUDIT.md",
-    "data": "kinetics/results/vector-neutrino-finite-bath-time-2026-11-22.json",
-    "status": "4 local tests succeeded; new GH CI pending",
-    "scope": "finite ν FD number/energy-conserving closure; not real weak ν thermalization"
-  },
-  "latest_nonthermal_strong": {
-    "code": "kinetics/vector_neutrino_nonthermal_strong.py",
-    "test": "tests/test_vector_neutrino_nonthermal_strong.py",
-    "report": "kinetics/VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md",
-    "data": "kinetics/results/vector-neutrino-nonthermal-strong-2026-11-22.json",
-    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-nonthermal-strong.md",
-    "status": "local six tests pass, real GH CI pending",
-    "false_claims_forbidden": "No nonthermal time solver, full SM, χ Gammael or 86eV relic."
-  }
+  "constraints": "Only this public research branch + draft PR #1. No user PC/Computer Use, force-push, main merge or unsupported 86-eV ΩDM/BEC/CLASS claims.",
+  "class_ready": false
 }

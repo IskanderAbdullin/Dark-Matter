@@ -303,3 +303,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Previous closed ν/V finite bath time CI #45009845364 success.
 - [ ] Verify new CI. **P0:** coupled fν(k,t), fνbar(k,t), bV(p,t) physical positive strong time integration with actual Pauli/Bose gain/loss, exact N/E/entropy and q/dt/cutoff, no instantaneous ν-FD reservoir. Then weak e±γ/ν physics, gauge viable Z′/χ1/χ2/φ Bose and full FRW observables; Γel/86eV Ω/BEC/CLASS unproven.
 
+## 2026-11-22 distinct nonthermal ν/antiν/V bounded event time solver
+
+- [x] Independent full quantum 1↔2 positive event graph on exact integer energy shells with separate ν and antiν FD occupations, vector BE, implicit bounded extent and eventwise exact reduced number, lepton asymmetry and energy, entropy monotonic; local numeric pilot and permanent stage/JSON.
+- [x] **Negative:** single energy lattice angular quadrature can be badly biased: weak source N −21% at h=.4 vs 144×144 continuous reference, h=.05 still +0.38%; Emax4→8 large tail; dt1→.125 sizable low-energy bV shift. Do not call it continuum strong time solver or physical dark matter.
+- [x] Prior syntax repair 64c394 has real Scientific CI #45010866936 success.
+- [ ] Verify new GH CI. P0 fix angle/energy quadrature without sacrificing microreversibility, construct convergent higher-order time and multi-shell strong source; then finite ν/eγ and gauge-valid χ1χ2/φ Bose FRW. CLASS-ready false.

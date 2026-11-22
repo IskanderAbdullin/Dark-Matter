@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "name": "discrete microreversible quantum Zprime nu antinu 1to2 event graph nonthermal time pilot",
+  "model": "two active ν flavors gnu=2, antiν ganti=2, vector gV=3; exact E_j=(i+l)h and on-shell |ki-kl|≤pj, positive collisional angular shell weights, Γ0=1 numerical unit only",
+  "initial": "fnu=expit(-k+.15exp(-k)), fanti=expit(-k-.1exp(-.5k)), bV=.75/expm1(E)",
+  "mV": 0.4,
+  "Emax": 4,
+  "continuum_weak_144x144": {
+    "dNV": 0.0058088005769423995,
+    "dEV": 0.011577987316857136,
+    "entropy": 0.0014499198890293437
+  },
+  "lattice_scan": [
+    {
+      "h": 0.4,
+      "edges": 45,
+      "dNV": 0.004585757974617117,
+      "dEV": 0.010112071750732867,
+      "entropy": 0.001154948227994782,
+      "dNV_rel": -0.21054993817141165,
+      "dEV_rel": -0.12661229676680918,
+      "entropy_rel": -0.20343997159183191
+    },
+    {
+      "h": 0.2,
+      "edges": 189,
+      "dNV": 0.005339187781369247,
+      "dEV": 0.011021729993289271,
+      "entropy": 0.0013332139519765156,
+      "dNV_rel": -0.08084505387174867,
+      "dEV_rel": -0.048044388747772615,
+      "entropy_rel": -0.08049130019932171
+    },
+    {
+      "h": 0.1,
+      "edges": 774,
+      "dNV": 0.005757261835339679,
+      "dEV": 0.011481544880188784,
+      "entropy": 0.0014299146282751726,
+      "dNV_rel": -0.008872527283394716,
+      "dEV_rel": -0.008329810184533049,
+      "entropy_rel": -0.013797493851583575
+    },
+    {
+      "h": 0.05,
+      "edges": 3114,
+      "dNV": 0.005830744489301884,
+      "dEV": 0.011625397055544282,
+      "entropy": 0.0014547113265620758,
+      "dNV_rel": 0.0037777011052142484,
+      "dEV_rel": 0.004094816947857627,
+      "entropy_rel": 0.0033046222546404547
+    }
+  ],
+  "initial_ledger": {
+    "C": 0.6776889674852107,
+    "L": 0.006298718762211192,
+    "E": 1.087744100397007,
+    "S": 1.617320525669991
+  },
+  "time_scan": [
+    {
+      "dt": 1,
+      "steps": 4,
+      "b0": 0.8887712452983678,
+      "entropy_final": 1.6180141603359512
+    },
+    {
+      "dt": 0.5,
+      "steps": 8,
+      "b0": 0.8722947719601363,
+      "entropy_final": 1.6180692531052696
+    },
+    {
+      "dt": 0.25,
+      "steps": 16,
+      "b0": 0.8615340319656879,
+      "entropy_final": 1.618109194599084
+    },
+    {
+      "dt": 0.125,
+      "steps": 32,
+      "b0": 0.8578753697703032,
+      "entropy_final": 1.6181329138427307
+    }
+  ],
+  "verified_properties": [
+    "exact event quantum F-R with distinct ν and antiν",
+    "bracketing within physical f≤1 and b≥0",
+    "conserved C=Nnu+Nantinu+2NV and L=Nnu-Nantinu and E to ~1e-16 for tested h=.2",
+    "increasing entropy for each event and each tested time step",
+    "chemical equilibrium μV=μν+μantiν stationary",
+    "empty b initially creates vectors by inverse ννbar"
+  ],
+  "negative": [
+    "h=.05 still >.3% continuum moment error, coarse h=.4 >12%-21% errors",
+    "Emax4 versus 8 continuum energy source -29.5%, no UV-tail convergence",
+    "first-order event sequential time error: dt1 vs dt.125 b_low differs 3.6%"
+  ],
+  "status": "nonthermal conservative discrete lattice time pilot, not continuum-converged kinetics; synthetic initial distributions and arbitrary Gamma0, no dark matter cosmology",
+  "class_ready": false
+}
