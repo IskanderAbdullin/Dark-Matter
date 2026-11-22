@@ -219,3 +219,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Independently derive exact t-integrated **nonconstant** vector spin trace with finite mediator, stable small-b series and adaptive quadrature tests; local isolated Jn validation ≤3.5e−14 relative. [Report](../FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md). Prior full 5D finite mediator CI #44968592762 succeeded.
 - [ ] Check CI for new trace tests; independently integrate full boosted final-state χe/χν Pauli heat over t/azimuth (cannot factor vacuum angular trace), n/cutoff/mV scans, split ν/e baths and thermal-tail bounds. Then physical finite SM plasma, gauge completion and nonlinear kinetic eigenmodes; no 86eV relic/BEC/CLASS.
+
+## 2026-11-22 independent transfer-angle full-Pauli finite-mediator quadrature
+
+- [x] Implement exact rational transfer coordinate in boosted 5D Pauli heat, retain full outgoing-state Fermi factors, vector trace and energy transfer; add comparison/equilibrium tests and report.
+- [ ] Check new CI and independently scan mV/T, nrad/nangle/nphi and incoming/outgoing cutoff, massive e and massless chiral ν with split baths. If any discrepancy, retain numerical negative and repair before interpretation.
+- [ ] Actual UV-valid χ1/χ2φ portal, finite SM chemistry/weak bath and nonthermal kinetic spectrum; no 86eV relic/BEC/CLASS claim.
