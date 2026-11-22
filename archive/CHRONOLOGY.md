@@ -35,3 +35,7 @@
 - **Реальный CI:** радиальная cutoff-поправка на b37b7dd завершила [Scientific #45012189092](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012189092) успешно. Это численная регрессия, не законченная физическая модель.
 
 - **2026-11-22 — независимое равновесие с настоящими C/L/E и неравновесный long-time:** [этап](stages/2026/11/2026-11-22-vector-neutrino-constrained-equilibrium.md), [отчёт](../kinetics/VECTOR-NEUTRINO-CONSTRAINED-EQUILIBRIUM-AUDIT.md). Без FD-термостата ν/antiν/V эволюция стремится к независимо найденному трёхпараметрическому максимуму энтропии; h=.2 τ500 max mode err≈0.00104, τ1000≈0.000339. **Отрицательное:** dt-bias не монотонен и h/cutoff не закрыты. Предыдущий stoichiometric nullity CI [#45012556392](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012556392) успешен; текущий новый CI проверить.
+
+## 2026-11-22 — документационная навигация и сокращение AGENTS
+
+По запросу пользователя и на основании публикаций OpenAI (2026) и эмпирических статей о контекстных инструкциях сокращён корневой `AGENTS.md` до карты. [PROJECT_MAP](../PROJECT_MAP.md) распределяет вопросы по разделам, [PLAN](../PLAN.md) — короткая карта к [подробному плану](../plans/RESEARCH_ROADMAP_DETAIL.md), прежние научные запреты сохранены в [кинетических инвариантах](../kinetics/RESEARCH_GUARDRAILS.md). [Отчёт этапа](stages/2026/11/2026-11-22-context-map-refactor.md). **Это изменение навигации, а не новый физический результат.**
