@@ -403,3 +403,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Evaluate BOTH conditional χ masses and lepton massless/massive finite-mV on-shell full Fermi Pauli 5D weak Q/S with transformed CM and segmented incoming p. Chemical fixed point for nonzero species μ at common T and exact E/H verified; 3 local tests passed.
 - [x] Smooth mid conditional mℓ=.5 Q −9.47% for χ1 and −9.72% χ2 relative to mℓ=0. **Negative:** oscillatory χ2,mℓ=.5 Q shifts +1.74% mid→fine while multiple grids/cutoff change together; not a continuum rate certificate. Prior mapped CM CI #45037526409 success.
 - [ ] Verify new CI; **P0** build joint strong evolving χ1+χ2 + one shared lepton bath with Pauli/N/E/H and correct degeneracies; then true χ1→χ2+real φ Bose/finite SM/Zprime FRW. No physical Γelastic or 86eV Ω/BEC/CLASS.
+
+## 2026-11-22 two χ fermions with ONE shared lepton Pauli strong bath
+
+- [x] Semi-discrete nonlinear on-shell finite-vector χ1ℓ and χ2ℓ simultaneous Pauli source with separate χ energy grids and exactly one shared lepton grid, same event Fermi-logit/deposition α, species Nχ1,Nχ2,Nℓ, energy and quantum H. Independent 5D WEAK per-χ heat+entropy matches to 2e−11 relative. Four local tests pass.
+- [x] Actually evolve all three node f without FD reset or clipping; τ1e10 first-order adaptive Euler 11 accepted/7 rejected, conserved N/E to machine, positive entropy and physical f bounds. Prior synthetic joint-mass weak Scientific CI #45038184612 success.
+- [x] **Negative:** χ2 distribution initial synthetic rather than φ-produced; 5D nr4/CM8 rate not converged, historical spin factors not physical ν/e flavor, no physical Γelastic/86eV Ω/BEC/CLASS.
+- [ ] Check new CI. P0 derive full **real φ Yukawa Bose/Pauli 1↔2** χ1↔χ2+φ with proper threshold/chemical balance and shared lepton bath, then 3+ angular/energy/cutoff and SM/FRW cosmology.

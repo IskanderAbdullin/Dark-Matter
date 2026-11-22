@@ -24,3 +24,7 @@ At mid, smooth χ1 M=.1 massless Q=8.995854126e−14, mℓ=.5 Q=8.144078344e−1
 ## Scoped interpretation and next stage
 
 This is a **weak functional** with two prescribed χ masses, not a time-coupled χ1+χ2+SM model. No physical χ2 abundance, φ Bose source, Zprime population, charged/neutral SM lepton and antiparticle multiplicities, SM ν/e±γ heat/entropy or FRW/H. Even conditional lepton mass effects cannot be promoted to real cosmological electron drag. No physical Γel, 86eV ΩDM, BEC, frozen f(q) or CLASS-ready. Next P0: construct TWO χ species with ONE shared evolving finite lepton bath and Pauli/energy/entropy invariants using a physically anchored weak/strong event measure, test old numerical alias, then add real φ Bose and true finite SM/gauge/FRW.
+
+## Confirmed CI (append-only)
+
+- [Scientific verification #45038184612](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45038184612) passed for previous Mχ1/Mχ2 finite-mℓ conditional weak source commit b08c4cae4da2d8d6cac362c13719cceee8791bb4. This does not validate physical χ2 production.

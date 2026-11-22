@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Four scientific stages with archive and checkpoints at current active launch; new joint-mass CI needs independent verification. Next strong shared-lepton two-χ time gate executable; no work between invocations.",
+  "stop_reason": "Nonterminal shared-lepton two-χ strong stage archived and next on-shell real-φ Bose/Pauli source executable. No between-invocation work implied.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "First conditional physical pair of χ1/χ2 lepton mass channels has independently screened full 5D finite-mV Pauli weak Q/H using energy-guided p and exact CM transfer mapping. Both χ masses M=.1/.02 and lepton m=0/.5 have valid energy/H and common-T μ fixed point, but actual χ2 daughter/finite SM plasma not evolved and joint-grid massive-lepton oscillatory rate still changes +1.74% mid→fine.",
+  "current_phase": "Both Dirac χ mass nodes now independently evolve via shared fully Pauli finite-vector on-shell χiℓ2to2 strong source AND one common evolving lepton reservoir. Separate elastic Nχ1,Nχ2,Nℓ, total E and H theorem tested, but χ2 initial distribution synthetic, Pauli 5D nrad4/CM8 rate NOT converged, real φ Bose and complete SM/Zprime FRW absent.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "1e5b497a04c652a20b43cbdddb77efc697aa035b",
-    "run_id": 45037526409,
+    "head_sha": "b08c4cae4da2d8d6cac362c13719cceee8791bb4",
+    "run_id": 45038184612,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45037526409",
-    "scope": "prior exact log-transfer CM weak quadrature; no physical DM model"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45038184612",
+    "scope": "prior conditional weak both χ masses and lepton mass; not current shared-bath source."
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -615,7 +615,7 @@
     "class_ready": false
   },
   "latest_joint_mass_chi_lepton_5d": {
-    "status": "independent synthetic fixed-Fermi Pauli 5D weak Mχ=.1/.02,mℓ=0/.5 and 3 local regression tests; new GH CI pending",
+    "status": "Full Scientific CI #45038184612 passed on b08c4ca; synthetic weak masses only",
     "code": "kinetics/chi_lepton_joint_mass_gate.py",
     "test": "tests/test_chi_lepton_joint_mass_gate.py",
     "report": "kinetics/CHI-LEPTON-JOINT-MASS-5D-AUDIT.md",
@@ -623,6 +623,18 @@
     "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-joint-mass.md",
     "positive": "Smooth synthetic χ1 M=.1 weak mid mℓ0 Q8.995854e−14 vs mℓ=.5 Q8.144078e−14 (−9.47%); χ2 M=.02 massless Q9.066973e−14 vs mℓ=.5 Q8.185587e−14 (−9.72%). Both synthetic Pauli pair energy/entropy and common T independent chemical μ fixed point verified.",
     "negative": "Oscillatory χ2 M=.02,mℓ=.5 Q coarse1.88347e−15,mid1.93652e−15,fine1.97026e−15 (+1.74% mid→fine); joint levels change cutoff+angle+radial simultaneously, not an isolated error bound. Historical gspin4×4 convention not correct for all ν/e, actual χ2 abundance/φ Bose/SM FRW absent; no Γelastic/86eV relic.",
+    "class_ready": false
+  },
+  "latest_shared_lepton_two_chi_strong": {
+    "status": "4 local focused tests passed, independent weak/strong Q and H and numerical bounded time; new GitHub Scientific CI pending",
+    "source": "kinetics/chi1_chi2_shared_lepton_pauli.py",
+    "test": "tests/test_chi1_chi2_shared_lepton_pauli.py",
+    "independent_weak": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "report": "kinetics/CHI1-CHI2-SHARED-LEPTON-PAULI-AUDIT.md",
+    "data": "kinetics/results/chi1-chi2-shared-lepton-pauli-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi1-chi2-shared-lepton.md",
+    "positive": "Same shared nonthermal lepton fℓ for two distinct Mχ=.1/.02 Pauli vector scattering channels: Qχ1=+8.4690e−14,Qχ2=+1.03844e−13,Qℓ=−1.88534e−13; Sdot microscopic and nodal logit match to 3e−28. Independent 5D weak Q and H agree <2e−11 relative; separate χ1/χ2/lepton number and E drifts ≤4.5e−16 in adaptive first-order time τ1e10, 11 accepted and 7 rejected, S gain+0.000340048, all Pauli bounds.",
+    "negative": "χ2 abundance supplied as synthetic separate initial condition (NO actual φ decay); nrad4/nmu4/CM8 finite vector 5D rate known gross underresolution for nonthermal oscillatory shapes, gχgℓ4×4 historical numeric not SM; adaptive Euler local error not global. No φ Bose, e±γν, mediator plasma, FRW/H/86eV relic.",
     "class_ready": false
   }
 }

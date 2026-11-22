@@ -12,6 +12,8 @@ from scipy.special import expit
 
 
 def occupations(shape):
+    if isinstance(shape, tuple) and len(shape)==2 and all(callable(x) for x in shape):
+        return shape
     if shape == "smooth":
         return (lambda E: expit(-np.asarray(E)/.9+.15*np.exp(-np.asarray(E)/.9)),
                 lambda E: expit(-np.asarray(E)+.05*np.exp(-np.asarray(E))))
@@ -142,7 +144,7 @@ def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
           heat+=coeff*np.sum(wcm*amp*de*J)/nphi
           entropy+=coeff*np.sum(wcm*amp*entropy_micro)/nphi
     pref=16/(512*math.pi**5)
-    return {"shape":shape,"M":M,"m":m,"nr":nr,"nmu":nmu,
+    return {"shape":"custom" if isinstance(shape,tuple) else shape,"M":M,"m":m,"nr":nr,"nmu":nmu,
             "nc":nc,"nphi":nphi,"cutoff":cutoff,"radial_scheme":radial_scheme,"segments":segments,"angular_scheme":angular_scheme,
             "Qchi":float(heat*pref),"Qlepton":float(-heat*pref),
             "entropy":float(entropy*pref),
