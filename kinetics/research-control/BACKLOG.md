@@ -370,3 +370,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Derive exact H identity with same positive barycentric α in Fermi logit reconstruction and paired 2→2 event deposition. Sdot_bin=Sdot_event>=0 with separate species numbers and energy conserved; avoids arbitrary entropy clipping.
 - [x] **Negative:** for oscillatory physical 0<f<1, 10 bins under-resolve true event entropy by 93.4%; 320 bins still 1.38% at fixed coarse incoming 5D quadrature; no general strong/time convergence.
 - [ ] Check GitHub CI, then P0 Pauli-bounded nonlinear time and exact finite density-of-states, independent 3+ h/angle/UV controls and UV-consistent χ1χ2+φ Bose/eγν/Zprime FRW.
+
+## 2026-11-22 χℓ physical-cell nonlinear Pauli time pilot
+
+- [x] Positive finite χ and lepton 0th density-of-states w_i from exact clipped E√(E²−m²) radial cells; recompute finite-mV 5D Pauli 2→2 from evolving logit f node populations; adapt Euler two-halves with Fermi 0<f<1, actual entropy growth and full-spectral local error rejection. No clipping or thermal reset.
+- [x] Local numerical six-run oscillatory/smooth at 10 bins, atol1e−6..1e−8: real rejected proposals, conserved individual N and total energy ≤4.5e−16, entropy increases, all Pauli bounds. Previous H repair Scientific #45016928429 and negative H case #45016584670 passed.
+- [x] **Negative:** 10-bin H-consistent projected source still misses analytic nonthermal 5D entropy by 93.4%, first-order time with only local estimate, radial/angular/cutoff nrad4 not converged. No physical Γel/frozen 86eV relic or Ω/BEC/CLASS.
+- [ ] Verify new GitHub CI; P0 independent 3+ energy/angle/radial/UV convergence + full weak/strong N/E/S and time; then two χ species, full Bose Yukawa/SM/Zprime/FRW and physical constraints.

@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Current finite research launch: completed entropy-compatible structural H repair but full Pauli-bounded time/physical benchmark remains. Stage archived; next executable action set. No work between launches asserted.",
+  "stop_reason": "Finite launch research stage with code, tests and permanent JSON/archive committed or pending push; latest verified CI only prior logit stage, new time CI requires actual verification; runnable NEXT_ACTION saved. No between-launch background execution claimed.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0: gauge-consistent χ1/χ2-lepton Pauli 2→2 weak full 5D source plus entropy-compatible instantaneous projected energy-bin source with matching logit interpolation and barycentric deposition. Discrete Nχ,Nℓ,Qχ+Qℓ and H theorem exact, but severe nonthermal spectral alias; actual strong Fermi-bounded time, finite SM/Zprime/φ and FRW unvalidated.",
+  "current_phase": "P0 full physical χ1/χ2–lepton finite-vector 2→2: logit-consistent 5D Pauli weak-to-bins now has first *nodewise nonlinear* bounded adaptive-time pilot with exact physical zeroth radial Fermi cell weights and no thermal reset. On coarse ten bins, 6 local synthetic runs preserve number/energy/entropy/Pauli, but 93.4% oscillatory shape alias and nonconverged 5D/angular/UV remain; physical Γel and 86eV dark matter not validated.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "b4d6549504f60f8dbf87658db2f3df0e7aaa4ca7",
-    "run_id": 45016136831,
+    "head_sha": "8bc98b113bbef8e55d8f17640b771df08a744010",
+    "run_id": 45016928429,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45016136831",
-    "scope": "nonthermal χℓ 5D Pauli weak functional only, no physical strong operator/Γel/86eV model"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45016928429",
+    "scope": "instantaneous logit-Galerkin source H theorem; NOT the new nonlinear time stage"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -547,7 +547,7 @@
     "model": "Real Z2-odd neutral phi Yukawa in simple U1' vectorlike branch requires qchi1=qchi2; selected rates from same G,mV but no UV-valid parameter demonstration"
   },
   "latest_chi_lepton_entropy_projection": {
-    "status": "analytical partition-unity/first-energy-moment proof and independent local oscillatory numerical counterexample; new GH Scientific CI pending",
+    "status": "verified real Scientific CI #45016584670 on 05cac6; preserved negative binned entropy",
     "source": "kinetics/paired_chi_lepton_barycentric_5d.py",
     "tests": "tests/test_paired_chi_lepton_barycentric_5d.py",
     "report": "kinetics/PAIRED-CHI-LEPTON-BARYCENTRIC-5D-AUDIT.md",
@@ -558,7 +558,7 @@
     "scope": "Synthetic nrad4/nmu4 5D, not full physical χ1χ2 daughter bath or actual collision operator, no gamma/H/Ω/BEC/CLASS."
   },
   "latest_logit_galerkin_5d": {
-    "status": "analytic same-weight H-theorem proof plus independently executed local six-bin oscillatory benchmark; new GitHub Scientific CI pending",
+    "status": "verified real Scientific CI #45016928429 on 8bc98b; exact instantaneous H only, no physical full strong χ1χ2 time",
     "code": "kinetics/paired_chi_lepton_logit_galerkin_5d.py",
     "test": "tests/test_paired_chi_lepton_logit_galerkin_5d.py",
     "report": "kinetics/PAIRED-CHI-LEPTON-LOGIT-GALERKIN-5D-AUDIT.md",
@@ -566,5 +566,16 @@
     "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-logit-entropy-repair.md",
     "positive": "Same barycentric alpha in f_event=expit(sum alpha_i logit f_i) and signed species event deposition: Sdot_bin=event Jln(F/R)>=0 to relative ~4e-14 at 6 bins, species N and exchanged E exact.",
     "negative": "Physical oscillatory analytic-occupation 5D entropy +6.430366e-13; reconstituted logit-bin event entropy N10=+4.269218e-14 (-93.4%), N320=+6.341566e-13 (-1.38%), still no radial/CM/cutoff convergence, bounded time, actual χ2/φ/SM/FRW or physical Γelastic."
+  },
+  "latest_chi_lepton_bounded_time": {
+    "status": "independently executed local sandbox pilot, focused repo tests prepared; NEW GitHub CI pending",
+    "code": "kinetics/paired_chi_lepton_bounded_time.py",
+    "test": "tests/test_paired_chi_lepton_bounded_time.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-BOUNDED-TIME-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-bounded-time-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-bounded-time.md",
+    "equations": "Physical finite energy cell radial 0th w_i=g/(6π²)[(U_i²−m²)^(3/2)−(L_i²−m²)^(3/2)]; nonlinear nodal ODE df_i=(dN_i)/w_i from the same logit-interpolated fully Pauli finite-mV χℓ weak 5D source. Adaptive two-half-Euler (FIRST order) accepts only strictly Fermi bounded, positive actual quantum entropy, full-spectrum step-doubling <=atol. No clipping/thermal FD reset.",
+    "positive": "Synthetic Mχ=.1,mℓ0,G=.001,mV=.1,nrad4,nmu4,ncos12,nphi12,cut12,bins10,tau1e10: oscillatory mode atol1e−6/−7/−8 accepted/rejected 4/2,11/7,33/15; smooth 2/1,7/4,24/12; weighted Nχ,Nℓ and E residual <=4.5e−16, all accepted step entropy positive, Pauli strict.",
+    "negative": "Same previous oscillatory 10-bin H-consistent source STILL physically underestimates analytic continuous f event entropy by 93.4%; angular/radial/UV/cutoff not converged, only first-order temporal scheme; no actual χ2 daughter number, realistic SM/eγν/gauge/φ Bose/FRW, physical gamma/86eV Ω/BEC/CLASS."
   }
 }

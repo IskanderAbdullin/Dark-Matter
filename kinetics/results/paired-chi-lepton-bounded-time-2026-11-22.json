@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "stage": "First Fermi-bounded nonlinear χℓ 2to2 phase-space-cell time pilot, still synthetic not full χ1χ2φ FRW",
+  "parameters": {
+    "Mchi": 0.1,
+    "mlepton": 0,
+    "G": 0.001,
+    "mV": 0.1,
+    "Te_ref": 1,
+    "kinetic_cut_T": 12,
+    "nrad": 4,
+    "nmu": 4,
+    "ncos": 12,
+    "nphi": 12,
+    "energy_intervals": 10,
+    "gchi_numeric": 4,
+    "glepton_numeric": 4,
+    "total_numerical_time": 10000000000,
+    "initial_dt": 10000000000
+  },
+  "formulas": {
+    "w_cell": "g/(6π²)*[(U²-m²)^(3/2)-(L²-m²)^(3/2)]",
+    "node_ODE": "df_i/dt=(dN_i/dt)/w_i",
+    "event": "χℓ finite-vector 5D full Pauli with reconstructed logit via same barycentric deposition",
+    "entropy": "Sdot=∫W(F-R)log(F/R) >=0",
+    "time": "two accepted half Euler steps if full vs two half max spectral difference <= atol, Pauli bounds and actual finite entropy monotonic; otherwise dt halved, no clipping or FD reset",
+    "time_method_order": 1,
+    "global_error_certified": false
+  },
+  "initial_modes": {
+    "oscillatory": "fχ=expit(-E+.3sin(4E)),fℓ=expit(-ω+.3cos(4ω))",
+    "smooth": "fχ=expit(-E/.9+.15exp(-E/.9)),fℓ=expit(-ω+.05exp(-ω))"
+  },
+  "rows": [
+    {
+      "mode": "oscillatory",
+      "atol": 0.000001,
+      "accepted": 4,
+      "rejected": 2,
+      "max_local_error": 9.699681704500307e-7,
+      "entropy_gain": 0.00042146524893826864,
+      "first_fchi": 0.5030526300326467,
+      "first_flepton": 0.5725524649929096
+    },
+    {
+      "mode": "oscillatory",
+      "atol": 1e-7,
+      "accepted": 11,
+      "rejected": 7,
+      "max_local_error": 9.771578945994008e-8,
+      "entropy_gain": 0.000421146126275751,
+      "first_fchi": 0.5030535761643616,
+      "first_flepton": 0.572554003984779
+    },
+    {
+      "mode": "oscillatory",
+      "atol": 1e-8,
+      "accepted": 33,
+      "rejected": 15,
+      "max_local_error": 9.791828126104463e-9,
+      "entropy_gain": 0.0004210494260448172,
+      "first_fchi": 0.5030538628464291,
+      "first_flepton": 0.5725544703265992
+    },
+    {
+      "mode": "smooth",
+      "atol": 0.000001,
+      "accepted": 2,
+      "rejected": 1,
+      "max_local_error": 8.797885542310979e-7,
+      "entropy_gain": 0.00009945017247625643,
+      "first_fchi": 0.504927519880323,
+      "first_flepton": 0.5130638950750063
+    },
+    {
+      "mode": "smooth",
+      "atol": 1e-7,
+      "accepted": 7,
+      "rejected": 4,
+      "max_local_error": 9.754362506608771e-8,
+      "entropy_gain": 0.0000992978630662833,
+      "first_fchi": 0.504928743961611,
+      "first_flepton": 0.5130630097729344
+    },
+    {
+      "mode": "smooth",
+      "atol": 1e-8,
+      "accepted": 24,
+      "rejected": 12,
+      "max_local_error": 9.786242372022969e-9,
+      "entropy_gain": 0.00009925398357424342,
+      "first_fchi": 0.5049290966439408,
+      "first_flepton": 0.5130627547147784
+    }
+  ],
+  "checks": {
+    "max_abs_weighted_Nchi_Nlep_Etotal_drift": 4.5e-16,
+    "entropy_monotone": true,
+    "fermi_0_1_strict": true,
+    "phase_space_cell_sum": "exact analytic density g pmax³/(6π²)",
+    "step_rejection_response": true
+  },
+  "limits": [
+    "10 bins severely alias true physical nonthermal 5D shape, previous entropy bias -93.4% remains",
+    "nrad4/nmu4/outgoing12x12, UV cutoff12 unvalidated",
+    "step-doubling local estimator is not global error bound, retained first-order time",
+    "gchi and glepton both 4 only historic numerical convention",
+    "no physical gauge coupling, χ2 abundance, χ1→χ2+86eV real φ Bose, e±γν/Zprime finite plasma, FRW, ΩDM/BEC/CLASS"
+  ],
+  "class_ready": false,
+  "files": {
+    "source": "kinetics/paired_chi_lepton_bounded_time.py",
+    "tests": "tests/test_paired_chi_lepton_bounded_time.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-BOUNDED-TIME-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-bounded-time-2026-11-22.json",
+    "stage": "archive/stages/2026/11/2026-11-22-chi-lepton-bounded-time.md"
+  }
+}
