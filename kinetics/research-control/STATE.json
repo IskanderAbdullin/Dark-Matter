@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T16:33:59Z",
+  "updated_utc": "2026-11-22T16:40:21Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -105,7 +105,7 @@
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0: coupled four dynamic populations χ1,χ2,real φ and one lepton full quantum Pauli/Bose finite-vector+Yukawa is structurally conservative, but NEW independent numerical experiment separated 5D incoming cutoff from Fermi energy-mesh limit: for nonthermal f a previous moving cutoff grid causes spurious Qχ1 and entropy changes; even 256 energy bins underpredict true fixed-quadrature weak Sdot by 5.73%. Therefore physical Γelastic and 86eV cosmic history remain unvalidated.",
+  "current_phase": "Coupled four-species χ1/χ2/real φ/one lepton eventwise conservative full Pauli/Bose finite-vector+Yukawa synthetic model: independently orthogonal incoming-cut/mode-mesh has now five Fermi-logit grid levels and mathematical O(h²) remainder. At fixed 5D p/k/CM quadrature H energy-grid error improves -5.73% N256 to -0.02447% N4096, but Qχ errors nonmonotonic and full 5D/mphi IR/SM FRW unknown. No physical Γelastic/86eV relic.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -723,9 +723,20 @@
   },
   "session_active_launch": {
     "start_utc": "2026-11-22T16:22:01Z",
-    "last_clock_check_utc": "2026-11-22T16:33:59Z",
-    "elapsed_minutes_observed": 11.9667,
+    "last_clock_check_utc": "2026-11-22T16:40:21Z",
+    "elapsed_minutes_observed": 18.3333,
     "target_minutes": 55,
     "between_launch_execution": false
+  },
+  "latest_four_species_mode_refinement": {
+    "status": "three targeted local tests passed in 13.84s, analytic logit interpolation remainder and separate direct-weak on-shell 5D reference; current new GH CI pending",
+    "source": "kinetics/four_species_mode_refinement_gate.py",
+    "tests": "tests/test_four_species_mode_refinement_gate.py",
+    "report": "kinetics/FOUR-SPECIES-MODE-REFINEMENT-AUDIT.md",
+    "data": "kinetics/results/four-species-mode-refinement-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-mode-refinement.md",
+    "positive": "On fixed χ1χ2+one lepton synthetic finite-vector Pauli 5D quadrature, Fermi logit interpolation proven bounded |L−Ih L|≤h² sup|L''|/8, direct 10k-point tests ×3 species ×3 grids. H error at N256/512/1024/2048/4096 = -5.7321/-1.4830/-0.4003/-0.09655/-0.02447%, halving ratios 3.865,3.705,4.146,3.946. Fixed mesh N1024 incoming cut16→20 χ1 Q shifts ~0.0127% on same low-order angles.",
+    "negative": "Signed χ1 and χ2 Q errors can change sign with N; N4096 0.024% H concerns ONLY Fermi-logit mode interpolation at fixed quadrature and cannot establish full 5D physical Γelastic, actual φ time/IR, finite SM or Ω/BEC/CLASS.",
+    "class_ready": false
   }
 }

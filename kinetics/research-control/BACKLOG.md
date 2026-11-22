@@ -449,3 +449,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Added independent strong Pauli incoming elastic phase-space cut when shared χ1χ2,φ,lepton mesh is fixed; prior code default fully preserved and invalid cut beyond coverage fail-closed. Analytical FD affine logit collision exact-mesh positive control, previous coupled 9 regressions pass.
 - [x] Oscillatory physically legal nonthermal χ1,χ2,lepton **negative**: at incoming cut12/bins64 meshcut12 versus20 changes Qχ1 7.9% and entropy 45.6%; former cutoff runs conflated grid and physical tail. At fixed mesh bin32/64/128/256 true analytic-occupation 5D weak H biases −86.25/−49.21/−18.41/−5.73% despite exact N/E/H and positive Pauli event entropy; two independent code paths at identical quadrature.
 - [ ] Check new actual Scientific CI, then independent >=3 mode grids beyond N256, incoming/outgoing 5D orders and physical cutoffs with shared grid locked. Probe zero real φ occupation, bosonic IR and massive lepton/true SM and FRW. Do not promote to physical Γelastic/86eV relic.
+
+## 2026-11-22 higher-order conditional nonthermal Fermi-logit mode convergence
+
+- [x] Derive and test C² L=logit f linear interpolation error h²max|L''|/8, implied |Δf|≤h²max|L''|/32 for χ1,χ2 and lepton oscillatory legal distributions on 3+ grids.
+- [x] Independent direct analytic-occupation 5D same quadrature vs conservative node Pauli source, N256/512/1024/2048/4096; H bias −5.73/−1.483/−0.4003/−0.0966/−0.02447%, ratios ≈4.0, 3 local tests passed. Fixed mesh N1024 incoming cut8 significantly incomplete vs cut20.
+- [x] **Negative:** individual χ1/χ2 Q errors change sign with mode-grid refinement; full incoming radial/μ/CM/φ/cutoff and actual SM/Bose/FRW not converged; no physical Γelastic or 86eV relic/CLASS.
+- [ ] Verify new GH CI; P0 joint physical 5D independent axis error budget at fixed sufficiently fine energy grid plus scalar φ exact b=0/IR and time, then realistic eγν/Zprime plasma/FRW.
