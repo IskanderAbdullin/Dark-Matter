@@ -61,7 +61,7 @@ def radial_nodes(mass, cutoff, n, *, scheme="uniform_p", segments=1):
 
 def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
              nr=4, nmu=4, nc=12, nphi=12, cutoff=12.,
-             radial_scheme="uniform_p", segments=1):
+             radial_scheme="uniform_p", segments=1, angular_scheme="uniform_cos"):
     """Incoming p,k,mu + outgoing CM theta,phi on exactly on-shell 2->2."""
     if not (M>0 and m>=0 and g>0 and mv>0 and nr>=3 and
             nmu>=3 and nc>=3 and nphi>=8 and cutoff>0):
@@ -74,8 +74,8 @@ def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
     mux,wmu=legendre(-1,1,nmu)
     cx,wc=leggauss(nc)
     ph=2*math.pi*np.arange(nphi)/nphi
-    c=cx[:,None]
-    sin=np.sqrt(np.maximum(0,1-c*c))
+    if angular_scheme not in ("uniform_cos","propagator_compensated","log_transfer"):
+        raise ValueError("unknown outgoing angular rule")
     cphi=np.cos(ph)[None,:]
     heat=entropy=0.
     neg_event_count=0
@@ -98,13 +98,32 @@ def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
           projection=p*(p+k*mu)/P
           ca=max(-1.,min(1.,gamma*(projection-beta*E)/ps))
           Estar=(s+M*M-m*m)/(2*root)
+          if angular_scheme=="uniform_cos":
+              c=cx[:,None]
+              wcm=wc[:,None]
+              prop_factor=None
+          elif angular_scheme=="propagator_compensated":
+              A=2*ps2/(mv*mv)
+              c=(1-(1-cx)/(1+A*(1+cx)))[:,None]
+              wcm=wc[:,None]/(1+2*A)
+              prop_factor=1.
+          else:
+              A=2*ps2/(mv*mv)
+              ymax=math.log1p(2*A)
+              y=(cx+1)*ymax/2
+              c=(1-np.expm1(y)/A)[:,None]
+              wcm=(wc*ymax/(2*A)*np.exp(-y))[:,None]
+              prop_factor=1.
+          sin=np.sqrt(np.maximum(0,1-c*c))
           aligned=ca*c+math.sqrt(max(0,1-ca*ca))*sin*cphi
           Ep=gamma*(Estar+beta*ps*aligned)
           op=tot-Ep
           t=-2*ps2*(1-c)
           D=s-M*M-m*m
           U=-D-t
-          amp=2*g*g*(D*D+U*U+2*(M*M+m*m)*t)*(mv*mv/(mv*mv-t))**2
+          numerator=2*g*g*(D*D+U*U+2*(M*M+m*m)*t)
+          amp=(numerator*(mv*mv/(mv*mv-t))**2
+               if prop_factor is None else numerator)
           fe=float(f(E))
           ho=float(h(omega))
           fp=f(Ep)
@@ -120,11 +139,11 @@ def evaluate(shape="smooth", *, M=.1, m=0., g=.001, mv=.1,
           max_energy_defect=max(max_energy_defect,float(np.max(abs(de+op-omega))))
           vrel=math.sqrt(max(0,(E*omega-p*k*mu)**2-M*M*m*m))/(E*omega)
           coeff=ap*p*p*ak*k*k*au*vrel/s
-          heat+=coeff*np.sum(wc[:,None]*amp*de*J)/nphi
-          entropy+=coeff*np.sum(wc[:,None]*amp*entropy_micro)/nphi
+          heat+=coeff*np.sum(wcm*amp*de*J)/nphi
+          entropy+=coeff*np.sum(wcm*amp*entropy_micro)/nphi
     pref=16/(512*math.pi**5)
     return {"shape":shape,"M":M,"m":m,"nr":nr,"nmu":nmu,
-            "nc":nc,"nphi":nphi,"cutoff":cutoff,"radial_scheme":radial_scheme,"segments":segments,
+            "nc":nc,"nphi":nphi,"cutoff":cutoff,"radial_scheme":radial_scheme,"segments":segments,"angular_scheme":angular_scheme,
             "Qchi":float(heat*pref),"Qlepton":float(-heat*pref),
             "entropy":float(entropy*pref),
             "negative_entropy_events":neg_event_count,

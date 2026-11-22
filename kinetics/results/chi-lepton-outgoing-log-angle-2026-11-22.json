@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "synthetic full on-shell χℓ Pauli 2to2 finite vector outgoing angular quadrature, no physical DM cosmology",
+  "transform": "A=2pstar²/mV², z=1-cosθ, y=ln(1+Az), c=1-expm1(y)/A, propagator² dc=e^-y dy/A",
+  "analytic": {
+    "I0": "2/(1+2A)",
+    "I1": "[log1p(2A)-2A/(1+2A)]/A²",
+    "stable_small_A": "I1=2−16A/3+12A²−128A³/5+..."
+  },
+  "analytic_n8": [
+    {
+      "A": 1,
+      "uniform_I0_rel": -1.6905094324393133e-8,
+      "uniform_I1_rel": 2.3431495188575013e-8,
+      "u_I1_rel": -2.659897746504214e-9,
+      "log_I0_rel": 2.220446049250313e-16,
+      "log_I1_rel": 0
+    },
+    {
+      "A": 10,
+      "uniform_I0_rel": -0.011956135673330315,
+      "uniform_I1_rel": 0.00396122113101649,
+      "u_I1_rel": -0.0014814298364910217,
+      "log_I0_rel": 2.220446049250313e-16,
+      "log_I1_rel": 0
+    },
+    {
+      "A": 100,
+      "uniform_I0_rel": -0.5155838040841869,
+      "uniform_I1_rel": 0.013340991360523802,
+      "u_I1_rel": -0.10573639141612823,
+      "log_I0_rel": -2.751798788835913e-12,
+      "log_I1_rel": 6.354916592954396e-13
+    },
+    {
+      "A": 1000,
+      "uniform_I0_rel": -0.931141024704712,
+      "uniform_I1_rel": -0.19773168272118014,
+      "u_I1_rel": -0.3387025233849523,
+      "log_I0_rel": -4.3745584932253223e-10,
+      "log_I1_rel": 6.622791204335954e-11
+    },
+    {
+      "A": 10000,
+      "uniform_I0_rel": -0.9928324595089357,
+      "uniform_I1_rel": -0.3911034733884672,
+      "u_I1_rel": -0.5026071582714338,
+      "log_I0_rel": -1.4249543767164141e-8,
+      "log_I1_rel": 1.6003738334546824e-9
+    }
+  ],
+  "full_5d": {
+    "narrow_mV0p01_smooth": {
+      "incoming": "energy-guided 8x4, nmu6,nphi12,cut12",
+      "ncos": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "uniform_Q": [
+        8.8454130379e-18,
+        1.1400278738e-17,
+        1.3873970254e-17,
+        1.6005599045e-17
+      ],
+      "log_Q": [
+        1.799941528e-17,
+        1.79993945e-17,
+        1.7999394481e-17,
+        1.7999394481e-17
+      ],
+      "log_H_nc8": 2.236250202e-18,
+      "log_H_nc64": 2.2362441306e-18
+    },
+    "wide_mV0p1_oscillatory": {
+      "incoming": "energy-guided 12x5,nmu8,nphi16,cut12",
+      "ncos": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "log_Q": [
+        4.6749991664e-15,
+        4.6625449741e-15,
+        4.6587064485e-15,
+        4.6586687789e-15
+      ],
+      "log_H": [
+        7.4321990731e-13,
+        7.4323698172e-13,
+        7.4323835723e-13,
+        7.4323860132e-13
+      ],
+      "uniform_Q_nc16_32_64": [
+        4.8748012754e-15,
+        4.568755689e-15,
+        4.6511019617e-15
+      ]
+    }
+  },
+  "positive": "Analytic finite-vector transport I0 and I1 matched at n8 even for large A, full χℓ Pauli Q convergence improved on fixed incoming grids, H/energy exact.",
+  "negative": "Uniform c and u-only mapping fail strongly for A≫1; improved angular rule is not proof of full p/k/mu/φ/UV, physical Γelastic or 86eV Ω/BEC/CLASS.",
+  "class_ready": false
+}

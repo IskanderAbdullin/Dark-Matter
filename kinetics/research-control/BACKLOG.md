@@ -390,3 +390,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Numerically constrain oscillatory Q over three+ radial resolutions: segment12 local3/4/5/6 gives 4.645/4.500/4.569/4.557 ×10−15, vs uniform nr64 4.556 ×10−15; fixed ΔE cutoff16→20 Q change 0.0047%. Previous sign-flip stage real CI #45035908197 succeeded.
 - [x] **Negative:** outgoing CM cosθ16→64 Q and H remain nonmonotone at percent level; no total 5D physical collision accuracy or real χ1/χ2/φ/SM/FRW; positive H and exact radial volume do not determine Γelastic.
 - [ ] Verify new segmented Scientific CI; P0 derive forward-angle/t quadrature and joint angular/UV/mass/shape error, then real χ1χ2–SM strong and φ Bose+FRW.
+
+## 2026-11-22 analytic CM log-transfer angular gate
+
+- [x] Derive explicit on-shell finite t-channel vector factor and exact I0/I1 over outgoing CM angle. Use y=log1p[A(1−c)] with exact nonnegative Jacobian; independent analytic checks for A=.01–10000 and ncos8. Ten local pytest tests passed.
+- [x] Scoped positive: for mV=.01 smooth 5D synthetic heat Q, mapped ncos8≈ncos32≈1.79994e−17 but uniform ncos32 undercounts −22.9%; for mV=.1 oscillatory mapped ncos32→64 rate shift ~0.00081% at fixed incoming. Previous segmented stage CI #45036745455 succeeded.
+- [x] **Negative:** I0-only u-transform fails transport I1 by −33.9% at A1000; mapping alone doesn't prove full 5D radial/azimuth/cutoff or true χ1χ2/SM/φ/FRW. No physical Gamma, Ω/BEC/CLASS.
+- [ ] Verify new CI, joint 3+ energy/μ/CM/φ/cutoff with finite electron and both χ masses and actual lepton flavor/physical coupling, then full paired strong and real 86eV Bose kinetics.

@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Segmented radial/cutoff gate archived with exact runnable next CM angular gate; no between-invocation execution asserted.",
+  "stop_reason": "Third active stage archived/push pending; joint finite-mass+cutoff+angular and two-species physical model in NEXT_ACTION, no between-run claim.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0: relativistic χℓ finite-mediator quantum Pauli 5D heat now independently has energy-guided momentum-segment quadrature; exact physical radial zeroth moment and stable fixed-resolution UV tail in synthetic oscillatory f. However outgoing CM angular 16→64 changes Q/S nonmonotonically; global physical Γelastic remains unvalidated.",
+  "current_phase": "Independent nonthermal relativistic finite-vector χℓ 5D Pauli weak heat integration has segmented p radial normalization and analytically forward-compensated CM polar log-transfer mapping. Analytic I0/I1 and 3+ mapped angular grids remove severe forward alias at mV=.01 and .1. Still no full joint numerical uncertainty, strong χ1χ2/e±ν time or Yukawa real φ Bose+FRW.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "c6d87db35a00bbce43af9be0885b4035b350139a",
-    "run_id": 45035908197,
+    "head_sha": "78d401cdba2956c61aa664e1f30b44e2e9c9447e",
+    "run_id": 45036745455,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45035908197",
-    "scope": "independent 5D nonthermal Q/S negative quadrature regression, not physical DM"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45036745455",
+    "scope": "prior segmented χℓ 5D incoming radial/cutoff pilot; no physical gamma_el"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -591,7 +591,7 @@
     "class_ready": false
   },
   "latest_segmented_chi_lepton_5d": {
-    "status": "locally verified energy-guided segmented p-Gauss with physical ∫p²dp, eight focused tests passed; new GH Scientific CI pending",
+    "status": "Full Scientific CI #45036745455 passed on 78d401c. Scoped radial/UV conditional scheme.",
     "source": "kinetics/independent_chi_lepton_5d_quadrature.py",
     "runner": "kinetics/chi_lepton_segmented_5d_gate.py",
     "tests": "tests/test_chi_lepton_segmented_5d_gate.py",
@@ -600,6 +600,18 @@
     "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-segmented-radial.md",
     "positive": "Momentum Gauss p slices at E-guided boundaries preserve ∫p²dp exactly (<3e−14) even for mℓ=.5; oscillatory f cutoff12 nseg12×local6 Qχ=4.556593552e−15 agrees independent unsegmented nr64 Qχ=4.55619107e−15 at same angular setting (~0.009%). Fixed ΔE≤1 tails cutoff16→20 Qχ shift ~0.0047% with nlocal5, not total uncertainty.",
     "negative": "At nseg8 local3 vs4, oscillatory Q changes 2.27825e−14→1.29928e−15 (not universally converged); outgoing CM polar ncos16/24/32/48/64 yields Q4.8748/4.6063/4.5688/4.6216/4.6511 e−15 and nonmonotone entropy. Full coupled angular+radial+UV and actual χ1χ2φ/SM FRW unknown; no Γel/Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_log_transfer_angle_5d": {
+    "status": "independently derived exact CM finite-vector propagator² log-transfer Jacobian, analytic I0/I1 controls and full 5D synthetic physical-scattering checks; 10 local tests passed; new GH CI pending",
+    "source": "kinetics/chi_lepton_outgoing_log_angle.py",
+    "full_kernel": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "tests": "tests/test_chi_lepton_outgoing_log_angle.py",
+    "report": "kinetics/CHI-LEPTON-LOG-TRANSFER-ANGLE-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-outgoing-log-angle-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-log-transfer-angle.md",
+    "positive": "A=1000 uniform CM ncos8 angular I0 misses by −93.1%, log-transfer ncos8 I0 ~−4.37e−10 and I1 ~6.62e−11. Full on-shell mV=.01 smooth Pauli Qχ mapped ncos8=1.799941528e−17 vs mapped ncos32=1.799939448e−17; uniform ncos32 only 1.387397025e−17 (−22.92%). mV=.1 oscillatory mapped ncos32 and64 Qχ agree ~0.00081% at fixed incoming.",
+    "negative": "Uniform u compensation makes I0 exact but I1 misses −33.9% at A1000/−50.3% at A10000. Mapped angular accuracy does NOT remove correlated incoming radial/cutoff, nonzero electron mass, actual χ2, physical model/SM/real φ/FRW constraints; no Γelastic/86eV relic.",
     "class_ready": false
   }
 }

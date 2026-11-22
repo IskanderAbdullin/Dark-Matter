@@ -32,3 +32,7 @@ When raising cutoff **with ΔE kept ≤1** (and nlocal5), oscillatory Qχ for cu
 ## Decision and executable follow-up
 
 **Partial progress:** explicit energy-guided momentum segments and fixed-resolution cutoff comparisons resolve one demonstrated source of incoming radial numerical alias; historic unsegmented sign-flip remains a true negative. **Not established:** continuum angular/radial combined Q/S uncertainties, field-theoretic portal rate, physical χ1/χ2+real φ and SM bath. Next P0: forward-peaked CM angular segmentation or adaptive transform, cross-check independent 3+ ncos/nμ/nφ/radial/cutoff; then physical full Pauli+gauge+FRW. No 86eV Ω/BEC/CLASS claims. Update STATE/EVIDENCE/BACKLOG/NEXT_ACTION, commit+push, proceed if time budget allows.
+
+## Actual CI (append-only)
+
+- Prior segmented incoming χℓ pilot [Scientific verification #45036745455](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45036745455) passed on 78d401cdba2956c61aa664e1f30b44e2e9c9447e; synthetic numeric methodological result only.
