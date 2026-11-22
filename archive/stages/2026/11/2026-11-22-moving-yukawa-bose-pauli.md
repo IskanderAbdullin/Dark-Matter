@@ -23,3 +23,7 @@ Test m1=.1,m2=.02,mφ=.001,y=.001, Tφ=T2=1, parent FD T1=.9,1,1.1, pmax12. γre
 ## Limitation and next step
 
 All occupations are **prescribed** for this WEAK integral, and real φ is not dynamically evolved/zero-mode treated; this cannot be combined with the old 5D shared-lepton strong time until a consistent finite-grid three-species Pauli/Bose **strong** event graph is derived with exact physical energy/number and entropy. mφ=.001 is **not** the 86eV benchmark, g1=4 numeric convention, parent p Gauss at these smooth thermal shapes does not prove global nonthermal/IR daughter spectral convergence. No actual SM+mediator finite bath or FRW, ΩDM/Γelastic/BEC/CLASS-ready. **Next P0:** energy-matched fully positive χ1/χ2/φ reaction graph with accurate phase-space measures, Fermi/Bose bounds, full N/E/H and independent q/dt/IR/cutoff; integrate with shared-lepton strong source only after those gates. Archive and checkpoint remain permanent. User's 55-minute run target does not imply background work.
+
+## CI state (append-only)
+
+- Moving boosted χ1↔χ2+φ WEAK on commit 960980e5f59ee7878000a4b107e0cfad6f918c11 [Scientific #45039365150](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45039365150) observed status in_progress, conclusion null. This is not the present single-event strong stage.

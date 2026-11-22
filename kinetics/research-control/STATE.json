@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Moving real φ weak scientific stage archived; next executable strong χ1χ2φ conservative on-shell event graph. Session UTC start 14:52:42, no background work guaranteed.",
+  "stop_reason": "Single on-shell Bose/PF bounded event stage archived with executable physical full mode finite-volume next step. Session started at 2026-11-22T14:52:42Z; no between-invocation continuation.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0: two distinct χ1+χ2 now have one shared Pauli lepton strong/time pilot, and exact boosted relativistic real φ Yukawa χ1↔χ2+φ WEAK 1↔2 source with full Bose/Pauli forward-inverse and physical threshold. The latter shows reverse φ destruction for colder χ1 at fixed daughter bath, but is prescribed-spectrum weak only, not coupled strong/time or physical relic.",
+  "current_phase": "Moving real φ Yukawa χ1↔χ2+φ scalar Pauli/Bose weak moment with physical threshold plus one bounded on-shell elementary quantum reaction are now separately verified. Single event preserves Cfermion=Nχ1+Nχ2, C1φ=Nχ1+Nφ and total collocated energy, entropy increases, both directions and empty-boson creation checked. HOWEVER event capacities arbitrary, no physical multi-mode strong χφ time; shared lepton χ1χ2 remains elastic-only.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,12 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "1424760e9a811b15288d7993a4791fff7d10d9b8",
-    "run_id": 45038900605,
-    "conclusion": null,
-    "status": "in_progress",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45038900605",
-    "scope": "prior two-χ shared lepton nonlinear synthetic elastic model, not new scalar weak"
+    "head_sha": "b08c4cae4da2d8d6cac362c13719cceee8791bb4",
+    "run_id": 45038184612,
+    "conclusion": "success",
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45038184612",
+    "scope": "last confirmed successful run, conditional two-χ mass weak stage"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -639,7 +638,7 @@
     "class_ready": false
   },
   "latest_moving_yukawa_bose_pauli": {
-    "status": "physically derived moving on-shell scalar Yukawa weak with test threshold, chemical balance and both net directions, 4 local tests passed; new GitHub CI pending",
+    "status": "Scientific run #45039365150 in_progress at last check; must read actual completion",
     "code": "kinetics/moving_yukawa_bose_pauli_weak.py",
     "tests": "tests/test_moving_yukawa_bose_pauli_weak.py",
     "report": "kinetics/MOVING-YUKAWA-BOSE-PAULI-WEAK-AUDIT.md",
@@ -648,5 +647,23 @@
     "positive": "Mother-spin-averaged real φ Yukawa Γ_rest=y²[(m1+m2)²−mφ²]sqrtλ/(16πm1³), moving daughter E2+Eφ=E1, exact F=f1(1−f2)(1+bφ),R=(1−f1)f2 bφ, T=.8 nonzero μ1=.03,μ2=.05,μφ=−.02 fixed point Rφ≈4.88e−27, S≈1.21e−41; Pauli/Bose N stoichiometry and Qtotal~1e−26, entropy positive. T1=.9 vs T2=Tφ=1 gives net φ destruction −2.65824e−11; T1=1.1 gives φ production +2.73811e−11.",
     "negative": "Initial φ or χ2 are prescribed, not evolved. mφ=.001 toy ≠86eV; zero bφ has exactly zero inverse but formal +infinite entropy derivative, no finite zero-mode solver. Full strong 1↔2, physical coupled SM/Zprime/FRW and angular/q/IR convergence missing, no Γelastic/ΩDM/BEC/CLASS.",
     "class_ready": false
+  },
+  "latest_single_on_shell_bounded_bose_event": {
+    "status": "elementary implicit physical quantum event and 250 deterministic stress controls, 5 local tests passed; new GH CI pending",
+    "source": "kinetics/yukawa_on_shell_bounded_event.py",
+    "tests": "tests/test_yukawa_on_shell_bounded_event.py",
+    "report": "kinetics/YUKAWA-ON-SHELL-BOUNDED-EVENT-AUDIT.md",
+    "data": "kinetics/results/yukawa-on-shell-bounded-event-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-yukawa-bounded-on-shell-event.md",
+    "positive": "E1=.3162277660,E2=.1932193769,Eφ=.1230083891 exact moving on shell. Bounded one-event implicit reaction f1=a−x/w1,f2=d+x/w2,b=b0+x/wφ with full J=f1(1−f2)(1+b)−(1−f1)f2 b; forward, inverse and b0=0 grow/consume boson as allowed, energy and Nχ1+Nχ2, Nχ1+Nφ exactly conserved, H increases. 250 deterministic Fermi/Bose/capacity/stiffness samples pass.",
+    "negative": "w1,w2,wφ and W arbitrary positive test mode capacities, NOT physical phase-space weights nor global multimode collision/time, implicit Euler first order. Initially too-tight absolute-only 3e−12 numeric tolerance on total18858 corrected to 5e−14 REL+5e−13 ABS after demonstrating 2e−16 relative rounding; physics unchanged. No φ q-grid/SM/FRW/86eV relic.",
+    "class_ready": false
+  },
+  "latest_pending_ci": {
+    "head_sha": "960980e5f59ee7878000a4b107e0cfad6f918c11",
+    "run_id": 45039365150,
+    "observed_status": "in_progress",
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45039365150",
+    "scope": "moving Yukawa weak; NOT the bounded-event stage"
   }
 }

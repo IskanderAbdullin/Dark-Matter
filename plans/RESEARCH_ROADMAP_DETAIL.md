@@ -96,6 +96,8 @@
 
 | 2026-11-22 | От совместной χ1χ2–ℓ Pauli 2→2 временной системы перейти к строгому **движущемуся** релятивистскому χ1↔χ2+real φ Yukawa Pauli/Bose WEAK источнику: вывести boost daughters, threshold, полную инверсию и химическое равновесие, проверить ЗНАК чистой φ-скорости | [архив](../archive/stages/2026/11/2026-11-22-moving-yukawa-bose-pauli.md), [отчёт](../kinetics/MOVING-YUKAWA-BOSE-PAULI-WEAK-AUDIT.md): при фиксированной T2=Tφ=1 mother T1=.9 даёт **φ уничтожение**, T1=1.1 φ производство, entropy положительна в обоих; пока weak, без strong coupled φ/FRW |
 
+| 2026-11-22 | После физического движущегося χ1↔χ2+real φ WEAK источника проверен элементарный **строго on-shell energy-matched** Pauli/Bose 1↔2 implicit substep: явные физические bounds, две conserved charge, E и H, в том числе обратный процесс и bφ=0 | [научный bounded-event stage](../archive/stages/2026/11/2026-11-22-yukawa-bounded-on-shell-event.md), [отчёт](../kinetics/YUKAWA-ON-SHELL-BOUNDED-EVENT-AUDIT.md). Ключевое ограничение — modal weights ещё произвольны, НЕТ полного физического χ1χ2φ q-grid/time или SM/FRW |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

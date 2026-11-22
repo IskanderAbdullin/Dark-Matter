@@ -416,3 +416,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Derive/compute moving boosted daughter E, physical scalar threshold and Γrest, full Pauli F/R with Bose final stimulation and inverse. Four local tests: exact 4-energy/stoichiometric Q, nonzero chemical equilibrium μ1=μ2+μφ, threshold and exact massless daughter width, bφ=0 inverse zero.
 - [x] **Negative physical direction:** with synthetic f1 at T=.9 versus f2,bφ T=1, net φ Rφ−2.658e−11; hotter T1=1.1 Rφ+2.738e−11, entropy positive BOTH. Cannot assume positive Bose net growth without solving inverse and lepton rethermalization. mφ=.001 toy, not 86eV.
 - [ ] Verify GH CI, then true nonthermal φ Bose + χ1,χ2 STRONG time, with one shared χ1χ2 elastic lepton bath, exact N/E/H and 3+ q/dt/IR/cutoff, physical SM/Zprime FRW. No physical Ω/BEC/CLASS.
+
+## 2026-11-22 bounded exact-energy χ1↔χ2+real φ quantum microevent
+
+- [x] Use real boosted on-shell daughters to construct first bounded implicit single 1↔2 Pauli/Bose microextent; two conserved charges, total E, entropy, Fermi/Bose strict physical domain, both forward/inverse and initially empty boson. Five local tests incl 250 deterministic stiffness/Bose stress samples pass.
+- [x] **Negative:** positive arbitrarily assigned modal weights are NOT physical phase-space capacity and implicit Euler not exact/global, no real φ spectral or χ1χ2+lepton FRW time. Numerical stress exposed overstrict absolute-only 3e−12 conservation tolerance when totals~1.9e4; corrected abs+relative gate with no physical rule change.
+- [ ] Check new GH CI; P0 independent moving vacuum Yukawa number/heat vs 1D quad/BEST and physical χ2+φ daughter finite-volume mapped collision/H; then coupled shared lepton SM FRW. Ω/BEC/CLASS false.
