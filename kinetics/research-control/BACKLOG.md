@@ -364,3 +364,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Pair the full nonthermal χℓ 2→2 Pauli 5D events into species-resolved energy-bin total dN using positive first-moment conserving barycentric weights; exact discrete Nχ,Nℓ,Qχ+Qℓ, matched parent weak heat on same quadrature.
 - [x] **Real negative:** For physically legal nonthermal oscillatory Fermi f, true event Sdot=+6.430e−13 while naive bin-entropy N10=−3.605e−14, N20=−2.763e−15. Still negative despite conserved energy/number and f(E)∈(0,1). At N320 entropy rel error −0.7%; smooth f bins show nonmonotonic entropy bias. [Audit](../PAIRED-CHI-LEPTON-BARYCENTRIC-5D-AUDIT.md).
 - [ ] Verify new GitHub Scientific CI and prior nonthermal weak. **P0:** true paired microreversible Pauli strong χ+lepton grid with entropy, exact N/E, independent weak 5D control and 3+ q/angle/cutoffs. Then full χ1/χ2+real φ/Z′/eγν FRW; no Γelastic or 86eV ΩDM/BEC/CLASS.
+
+## 2026-11-22 entropy-compatible logit source after negative χℓ H gate
+
+- [x] Derive exact H identity with same positive barycentric α in Fermi logit reconstruction and paired 2→2 event deposition. Sdot_bin=Sdot_event>=0 with separate species numbers and energy conserved; avoids arbitrary entropy clipping.
+- [x] **Negative:** for oscillatory physical 0<f<1, 10 bins under-resolve true event entropy by 93.4%; 320 bins still 1.38% at fixed coarse incoming 5D quadrature; no general strong/time convergence.
+- [ ] Check GitHub CI, then P0 Pauli-bounded nonlinear time and exact finite density-of-states, independent 3+ h/angle/UV controls and UV-consistent χ1χ2+φ Bose/eγν/Zprime FRW.

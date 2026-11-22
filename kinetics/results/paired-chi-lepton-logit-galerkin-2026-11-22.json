@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "name": "Logit-consistent entropy-compatible paired χℓ 2to2 5D instantaneous bin projection",
+  "parameters": {
+    "Mchi": 0.1,
+    "mlepton": 0,
+    "G": 0.001,
+    "mV": 0.1,
+    "Te": 1,
+    "cut_kinetic_T": 12,
+    "nrad": 4,
+    "nmu": 4,
+    "nangle": 12,
+    "nphi": 12,
+    "bins": [
+      10,
+      20,
+      40,
+      80,
+      160,
+      320
+    ]
+  },
+  "method": "Reconstruct actual event Fermi f(E)=expit(sum_i alpha_i(E)*logit(f_i)), use identical positive barycentric alpha for both source deposition and log-odds; Sdot_bin=∑W J log(F/R)>=0 algebraically.",
+  "original_analytic_occupation_reference": {
+    "chi": "expit(-E+.3 sin(4E))",
+    "lepton": "expit(-ω+.3 cos(4ω))",
+    "event_entropy": 6.430366437767868e-13,
+    "Qchi": 2.558567328564454e-13
+  },
+  "logit_consistent_bin_scan": [
+    {
+      "bins": 10,
+      "Qchi": 1.8981405103571837e-14,
+      "event_and_bin_entropy": 4.269218391243112e-14,
+      "entropy_relative_to_continuum": -0.93360847422056
+    },
+    {
+      "bins": 20,
+      "Qchi": 6.913723342827473e-14,
+      "event_and_bin_entropy": 8.019647524514451e-14,
+      "entropy_relative_to_continuum": -0.8752847508438686
+    },
+    {
+      "bins": 40,
+      "Qchi": 1.734408261501191e-13,
+      "event_and_bin_entropy": 1.9381534540558328e-13,
+      "entropy_relative_to_continuum": -0.6985936224921248
+    },
+    {
+      "bins": 80,
+      "Qchi": 2.2660907478573766e-13,
+      "event_and_bin_entropy": 5.285160749235145e-13,
+      "entropy_relative_to_continuum": -0.17809337922120827
+    },
+    {
+      "bins": 160,
+      "Qchi": 2.475135397663945e-13,
+      "event_and_bin_entropy": 6.037665127014106e-13,
+      "entropy_relative_to_continuum": -0.06106981842392145
+    },
+    {
+      "bins": 320,
+      "Qchi": 2.544312467720239e-13,
+      "event_and_bin_entropy": 6.341565574291111e-13,
+      "entropy_relative_to_continuum": -0.013809611681722789
+    }
+  ],
+  "positive": "Discrete quantum H theorem recovered event-by-event (same interpolation/deposition) and number/energy preserved exactly on tested grids, without clipping entropy or flux.",
+  "negative": "Severe physical shape alias remains: 10-bin entropy 93.4% below original analytic-occupation 5D event, 320-bin still 1.38% with non-converged incoming quadrature. No time integration or Pauli-in-time bound, χ2 actual abundance, complete SM/FRW, Gamma_el or 86eV relic.",
+  "status": "scoped algebraic entropy-compatible projected instantaneous weak rate, not full strong Pauli time solver; third party CI pending",
+  "class_ready": false
+}

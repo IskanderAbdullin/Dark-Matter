@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Archived numerical physical-method negative and direct code stage; new repo CI to verify; next nonlinear entropy-consistent strong-pair operator specified, no asynchronous work implied.",
+  "stop_reason": "Current finite research launch: completed entropy-compatible structural H repair but full Pauli-bounded time/physical benchmark remains. Stage archived; next executable action set. No work between launches asserted.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Full nonthermal relativistic χ1/χ2-lepton Pauli 2→2 5D weak events now have a first exactly number-and-energy-conservative barycentric bin projection. Crucial negative: projected bin H theorem fails for oscillatory but legal Fermi occupations, although true event entropy ≥0; cannot promote to physical strong Cχ,Cℓ or evolve cosmological χ/φ.",
+  "current_phase": "P0: gauge-consistent χ1/χ2-lepton Pauli 2→2 weak full 5D source plus entropy-compatible instantaneous projected energy-bin source with matching logit interpolation and barycentric deposition. Discrete Nχ,Nℓ,Qχ+Qℓ and H theorem exact, but severe nonthermal spectral alias; actual strong Fermi-bounded time, finite SM/Zprime/φ and FRW unvalidated.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -556,5 +556,15 @@
     "positive": "Same 5D events barycentric signed deposition conserve each species N to ~1e−28, Qχ+Qℓ to ~1e−26 at fixed test quadrature and arbitrarily nonthermal f. For FD affine log-odds, projected entropy equals event entropy.",
     "rigorous_negative": "Legal oscillatory fχ=expit(-E+.3sin(4E)),fℓ=expit(-ω+.3cos(4ω)): microscopic Sdot_event=+6.4303664378e−13 while N=10 bin-projected Sdot=−3.6049435416e−14 and N=20 −2.7628702273e−15 despite exact N/E. At 40,80,160,320 bins entropy positive but relative bias -53.10%,-9.34%,-3.10%,-0.70%. DO NOT use as nonlinear strong collision.",
     "scope": "Synthetic nrad4/nmu4 5D, not full physical χ1χ2 daughter bath or actual collision operator, no gamma/H/Ω/BEC/CLASS."
+  },
+  "latest_logit_galerkin_5d": {
+    "status": "analytic same-weight H-theorem proof plus independently executed local six-bin oscillatory benchmark; new GitHub Scientific CI pending",
+    "code": "kinetics/paired_chi_lepton_logit_galerkin_5d.py",
+    "test": "tests/test_paired_chi_lepton_logit_galerkin_5d.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-LOGIT-GALERKIN-5D-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-logit-galerkin-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-logit-entropy-repair.md",
+    "positive": "Same barycentric alpha in f_event=expit(sum alpha_i logit f_i) and signed species event deposition: Sdot_bin=event Jln(F/R)>=0 to relative ~4e-14 at 6 bins, species N and exchanged E exact.",
+    "negative": "Physical oscillatory analytic-occupation 5D entropy +6.430366e-13; reconstituted logit-bin event entropy N10=+4.269218e-14 (-93.4%), N320=+6.341566e-13 (-1.38%), still no radial/CM/cutoff convergence, bounded time, actual χ2/φ/SM/FRW or physical Γelastic."
   }
 }

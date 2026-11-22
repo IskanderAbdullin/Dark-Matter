@@ -80,6 +80,8 @@
 
 | 2026-11-22 | Добавить **entropy-production gate** для любой парной discrete χ–SM 2→2 реконструкции: exact energy/number conservation и положительные barycentric weights недостаточны для H-теоремы при nonlinear log-odds | [доказанный численный контрпример](../archive/stages/2026/11/2026-11-22-chi-lepton-conservative-entropy-negative.md): микроскопическая Sdot_event=+6.43e−13, но N=10 бин-Sdot=−3.60e−14 при точном N/E; требуется microreversible entropic strong projection |
 
+| 2026-11-22 | При парном физическом χℓ Pauli 2→2 биннинге использовать **одинаковые** barycentric коэффициенты для logit(f) реконструкции в F/R и для source deposition: это строго восстанавливает дискретную H-теорему, но не доказательство точности χ/SM спектра | [этап H-repair](../archive/stages/2026/11/2026-11-22-chi-lepton-logit-entropy-repair.md): N10 истинная исходная entropy 5D уменьшается на 93.4% от alias, N320 всё ещё 1.38%; нужен Pauli-bounded time и 3+ angular/cutoff контроль |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 
