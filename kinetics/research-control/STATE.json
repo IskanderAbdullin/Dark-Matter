@@ -103,8 +103,8 @@
   "class_ready": false,
   "stop_reason": "Active run bounded; executable next physical mediator/SM distribution stage recorded; only separately scheduled automation can work after this chat ends.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Check real Scientific CI for new candidate ν/e heat and preceding nonthermal QED weak stage. Next replace contact G by full finite mZ' t-propagator and construct χe,χν angular kernels with chiral/Pauli; test EFT limit and gauge UV constraints, neutrino decoupling and finite eγν bath, then genuine χ1/χ2 φ quantum cosmology. No gamma_el or 86eV claim.",
-  "last_checkpoint_git_sha": "a744da0dda2565ba57a99ba57379f3e1514c44e6",
+  "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
+  "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
   "current_phase": "Anomaly-free candidate U1_(Le−Lmu) vector portal explicitly exposes two ν species plus e±; independent left-chiral spin trace matches massless vector χν and COM 5D Pauli heat. Two-ν contribution equal-T/e at Te/me=.1 is 1086; split ν temperature ideal .714 Te changes χ heat sign. No physical UV validation, Γel or 86eV.",
   "completed_research_steps": [
     {
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "64d6321657001ea7be7a8a3774f87420684a535e",
-    "run_id": 44968592762,
+    "head_sha": "23386aaadb95ffca51beb566721a32f515c5e573",
+    "run_id": 44975219960,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44975219960"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -248,23 +248,12 @@
     "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
   },
   "last_new_scientific_milestone": {
-    "commit": "aa85131687cb041203230cfee5b0e0339c4a66a2",
-    "title": "Physical directly microreversible 1D transfer-quadrature kernel for full-Pauli χe 2->2 plus all-paired energy-lattice kinetic time stepping WITHOUT arithmetic reverse averaging",
-    "source": "kinetics/microreversible_chie_lattice.py",
-    "tests": "tests/test_microreversible_chie_lattice.py",
-    "report": "kinetics/INVARIANT-CHI-E-ENERGY-KERNEL.md",
-    "compact": "kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json",
-    "run": "kinetics/verify_microreversible_lattice.py",
-    "physical_scope": "electron-only massless vector contact Mchi=.1GeV, Te=1GeV, G=.001GeV^-2, full Pauli χ/e, no SM plasma or cosmology",
-    "independent_5D_cold_Q_GeV5": 1.9851492233308662e-8,
-    "direct_qkernel_h0p5_cold_Q_GeV5": 1.9854909200454386e-8,
-    "independent_5D_hot_Q_GeV5": -4.432408224385169e-8,
-    "direct_qkernel_h0p5_hot_Q_GeV5": -4.4331454779896726e-8,
-    "h0p125_rel_error_cold": -0.000020157798846232033,
-    "h0p125_rel_error_hot": -0.00006816712891244414,
-    "engineering_negative": "CI runs for 916f source and f172 benchmark initially failed on unmatched parentheses/multiline assertion syntax respectively; fixes bcd47b and a3aa0a already pushed. Check CI on current head before marking success.",
-    "scientific_negative": "Energy-lattice collocation h convergence not monotonic: .5→.25 error increases; .125 recovers <7e-5 against independent 5D. Distinct from true physical rate/UV completion.",
-    "CI_status": "pending for a3aa source fix / aa851 report at checkpoint; do not claim scientific CI success before actual result."
+    "title": "Independent transfer-angle coordinate for full finite-mediator boosted 5D Pauli heat",
+    "report": "kinetics/FINITE-MEDIATOR-TRANSFER-ANGLE-AUDIT.md",
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "tests": "tests/test_finite_mediator_transfer_quadrature.py",
+    "scope": "Numerical implementation and tests, not yet measured CI or independently converged heat",
+    "ci": "pending"
   },
   "last_projection_control": {
     "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
