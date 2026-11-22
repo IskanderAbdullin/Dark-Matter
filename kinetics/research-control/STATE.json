@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Positive and negative self-convergence data, code and stage prepared for Git; next physical continuum and adaptive step gate executable. No asynchronous work implied.",
+  "stop_reason": "Latest 5D nonthermal chi-lepton weak scientific stage archived, new CI to check; immediate next action true paired strong chi+lepton collision. No inter-run background claim.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Exact Riccati plus symmetric Strang for isolated finite Zprime↔ν+antiν reaction graph: newly independent full-spectra temporal self-convergence 3 h at tau1 shows stiff h=.1 pre-asymptotic error ratios .794,1.49,2.69,3.55,3.88,3.97, converging to 2nd order only at very fine dt. Physical χ1/χ2φ-SM and FRW untouched.",
+  "current_phase": "Priority A/B: gauge-consistent χ1/χ2 physical nonthermal finite-mass χℓ full-Pauli 2→2 weak heat/entropy pilot now implemented with arbitrary isotropic occupation fχ,fℓ, paired energy ledger and exact common-temperature chemical detailed balance. Strong mode Cχ/Cℓ, actual χ2 distribution and complete SM/FRW remain absent.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "92caea7ad2ae4fa6f04d384e9fc37ea34b7ec2c7",
-    "run_id": 45014249016,
+    "head_sha": "b820abf487b1ffd4c85ec38c13239cb9e3cdd1a9",
+    "run_id": 45015624238,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45014249016",
-    "scope": "architecture/context restructuring, prior constrained thermodynamics Scientific #45013070487 also success"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45015624238",
+    "scope": "temporal self-convergence synthetic finite Zprime-neutrino graph; not physical dark matter validation"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -514,7 +514,7 @@
     "negative": "At h=.2 τ100 vector lowest b is .753052 dt2,.743975 dt1,.746678 dt.5,.748743 dt.25, nonmonotone timestep bias; h=.4→.1 equilibrium T and μ drift, no continuum Emax/threshold/Γel/86eV guarantee."
   },
   "latest_exact_event_strang": {
-    "status": "independently tested local equations and 18 event ODE comparisons; source/test/report archived in pending research commit; full GH Scientific CI must be confirmed",
+    "status": "Full Scientific CI #45015296472 passed; local exact Riccati/Strang still scoped to finite synthetic vector-neutrino event graph",
     "code": "kinetics/vector_neutrino_exact_event_strang.py",
     "tests": "tests/test_vector_neutrino_exact_event_strang.py",
     "report": "kinetics/VECTOR-NEUTRINO-EXACT-EVENT-STRANG-AUDIT.md",
@@ -530,9 +530,20 @@
     "report": "kinetics/VECTOR-NEUTRINO-STRANG-DT-CONVERGENCE-AUDIT.md",
     "data": "kinetics/results/vector-neutrino-strang-dt-convergence-2026-11-22.json",
     "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-strang-dt.md",
-    "status": "independent local three-grid full spectral dt scan, GH Scientific CI pending",
+    "status": "Full Scientific CI #45015624238 success, synthetic temporal self-convergence only",
     "positive": "At mV=.4 Emax4 tau1, Strang on finite h=.1 with 808 edges enters temporal second order: step-halving spectral self-difference ratios 0.794,1.493,2.688,3.550,3.876,3.968 for dt=.125/2→.001953125/2. h=.2/.4 ratios tend to 4. C/L/E residual ~1e-15, entropy positive and Pauli/Bose retained.",
     "negative": "For h=.1 coarse dt refinement initially increases error; stronger stiffness and 3+ dt needed. Entire finite graph Γ0=1 synthetic, no continuum h/UV/physical Γelastic/86eV Ω/BEC/CLASS.",
     "upstream": "Exact Riccati+Strang parent a77ebe56f6ccf6755b8d884750a6b3a34a392025 CI #45015296472 in_progress at last check, must confirm before declaring success."
+  },
+  "latest_nonthermal_chi_lepton_5d": {
+    "status": "independent local 5D weak Pauli heat/entropy calculation; new Scientific CI pending on branch",
+    "source": "kinetics/nonthermal_chi_lepton_5d_weak.py",
+    "tests": "tests/test_nonthermal_chi_lepton_5d_weak.py",
+    "report": "kinetics/NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md",
+    "data": "kinetics/results/nonthermal-chi-lepton-5d-weak-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-nonthermal-weak.md",
+    "positive": "Arbitrary isotropic fchi(E), flepton(omega) passed full on-shell finite-vector/lepton-mass Pauli forward/reverse, exact event Qchi+Qlepton=0, Sdot>=0. FD thermal subset Mchi1=.1,mlepton0/.5 at nrad4 Qchi=6.9359e-14 /6.0882e-14, common T yields Q~1e-29. Nonthermal Mchi1=.1 Mchi2=.02 Q>0 under same prescribed arbitrary f and explicit finite mV.",
+    "negative": "ONLY 5D incoming-integrated weak moments with nrad4/not radially converged, no strong mode Cchi/Clepton, actual daughter abundance, SM weak bath, Zprime species dynamics, actual couplings, FRW/gamma_el/86eV Omega/BEC/CLASS.",
+    "model": "Real Z2-odd neutral phi Yukawa in simple U1' vectorlike branch requires qchi1=qchi2; selected rates from same G,mV but no UV-valid parameter demonstration"
   }
 }

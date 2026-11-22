@@ -351,3 +351,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Independent full-three-spectrum dt vs dt/2 self-convergence for mV=.4 Emax4, tau1, h=.4/.2/.1, dt=1/8…1/1024. On coarse h=.1 first relative error ratio .794 despite decreasing dt, proving non-asymptotic strong-event stiffness. [Stage](../../archive/stages/2026/11/2026-11-22-vector-neutrino-strang-dt.md).
 - [x] Positive scoped: refined h=.1 ratios approach 3.55,3.876,3.968 while C/L/E ~1e−15, H entropy and Pauli/Bose. This validates second temporal order only on finite quantum reaction graph, not physical continuum or χ–SM.
 - [ ] Verify parent/new GH CI. P0 adaptive full-spectrum error-step controller, source h/Emax/shape independent convergence and gauge/SM χ1/χ2φ Bose+FRW. No Γelastic/86eV relic/CLASS.
+
+## 2026-11-22 nonthermal χ1/χ2–lepton 5D Pauli 2→2 weak gate
+
+- [x] Remove hardcoded FD thermal restriction for scoped full incoming 5D χℓ weak Q/entropy: arbitrary isotropic fχ,fℓ, finite mℓ and finite mV t-channel, complete F−R, exact energy exchange and positive quantum entropy. [Permanent report](../NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md).
+- [x] Independent local numerical tests: common-T/independent-μ detailed balance to ~1e−29 heat, cold-χ positive Q for massless and massive ℓ, explicit nonthermal χ1 M=.1/χ2 M=.02 conditional weak heat. **Not** actual χ2 created population.
+- [x] Previous Zprime-neutrino time tests actually CI passed #45015296472 and #45015624238; not dark-matter validation.
+- [ ] Check new CI and correct regressions; P0 construct paired strong mode Cχ,Cℓ with physically correct spin/flavor, energy/number/entropy and 3+ q/angle/cutoff convergence. Then finite e±γν/Zprime and χ1χ2φ Bose FRW; no physical Γelastic or 86eV relic/CLASS.

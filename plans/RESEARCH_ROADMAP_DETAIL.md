@@ -76,6 +76,8 @@
 
 | 2026-11-22 | Для фазы B заменить first-order последовательные implicit microevents на аналитически точный отдельный Pauli/Bose 1↔2 Riccati flow + Strang с независимым IVP эталоном и отдельным timestep/order gate; жёсткий h=.1 ещё НЕ в асимптотике | [архивный этап](../archive/stages/2026/11/2026-11-22-vector-neutrino-exact-strang.md), [версионированные числа](../kinetics/results/vector-neutrino-exact-strang-2026-11-22.json): h=.2 отношения ошибок dt/2 ≈3.47,4.02, h=.1 ~1.64,1.96 |
 
+| 2026-11-22 | Вернуться из исправления toy 1↔2 Strang жесткости к приоритетному **физическому** 2→2 χ1/χ2–лептонному оператору: отказаться от hardcoded FD в on-shell 5D Pauli weak source, затем строить парные mode-resolved strong Cχ,Cℓ | [stage и границы применимости](../archive/stages/2026/11/2026-11-22-chi-lepton-nonthermal-weak.md), [скрипт](../kinetics/nonthermal_chi_lepton_5d_weak.py), [отрицательные ограничения](../kinetics/NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md). Никакой физической Γelastic, фазы freeze-out или Ω пока нет |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

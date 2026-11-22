@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "stage": "full incoming 5D χℓ 2to2 weak Pauli heat+entropy generalized to arbitrary isotropic nonthermal occupation callbacks",
+  "physical_scope": "vectorlike equal-charge χ1/χ2 candidate, massive finite mV vector scattering, arbitrary Fermi fχ(E),fℓ(ω), not a complete gauge/SM physical cosmology",
+  "formula": "J=fχ fℓ(1-fχ')(1-fℓ')−fχ' fℓ'(1-fχ)(1-fℓ); Qχ=∫ phase-space (Eχ'−Eχ)|M|² J, Qℓ=−Qχ; Sdot=∫ phase-space |M|² J ln(F/R)≥0",
+  "parameters": {
+    "M1": 0.1,
+    "M2": 0.02,
+    "lepton_masses": [
+      0,
+      0.5
+    ],
+    "G": 0.001,
+    "mV": 0.1,
+    "Tlepton": 1,
+    "Tchi_fd": 0.9,
+    "cut_kinetic_T": 12,
+    "nrad": 4,
+    "nmu": 4,
+    "nangle": 12,
+    "nphi": 12,
+    "spin_factors": {
+      "chi": 4,
+      "lepton": 4
+    },
+    "units": "arbitrary common energy powers, not physical rate"
+  },
+  "fd_Tchi0p9_Tlep1": [
+    {
+      "M": 0.1,
+      "m": 0,
+      "Qchi": 6.935904667187969e-14,
+      "entropy": 7.706560741319965e-15
+    },
+    {
+      "M": 0.1,
+      "m": 0.5,
+      "Qchi": 6.088215657717978e-14,
+      "entropy": 6.764684064131082e-15
+    }
+  ],
+  "equal_T_fd": {
+    "m0_Qchi": -2.8049832266549075e-29,
+    "m0_entropy": 9.293956361850521e-43,
+    "m0p5_Qchi": -3.5019245402608075e-29,
+    "m0p5_entropy": 2.5044209056329154e-42,
+    "additional_mu_test": "μχ=.2, μℓ=−.1 at same T, J=0 by exact energy conservation"
+  },
+  "nonthermal_forms": {
+    "fchi": "expit(-E/.9+.15*exp(-E/.9))",
+    "flepton": "expit(-ω+.05*exp(-ω))"
+  },
+  "nonthermal": [
+    {
+      "M": 0.1,
+      "m": 0,
+      "Qchi": 7.725499230256873e-14,
+      "entropy": 9.784799605276125e-15
+    },
+    {
+      "M": 0.1,
+      "m": 0.5,
+      "Qchi": 6.839775254822521e-14,
+      "entropy": 8.73140633853065e-15
+    },
+    {
+      "M": 0.02,
+      "m": 0,
+      "Qchi": 7.799808433623222e-14,
+      "entropy": 9.896857907860409e-15
+    },
+    {
+      "M": 0.02,
+      "m": 0.5,
+      "Qchi": 6.889894767246861e-14,
+      "entropy": 8.807836843292569e-15
+    }
+  ],
+  "tests": "Compare thermal FD subset with original independently existing full_heat cosine quadrature at same numerical grid; common-T zero + chemical μ; eventwise E conservation and entropy nonnegative; strict FD interior",
+  "positive": "Genuine arbitrary isotropic fχ,fℓ accepted in full on-shell 5D weak moments with Pauli, energy and H theorem; nonthermal numbers have correct signs under this fixture.",
+  "negative": "Still only WEAK moments, not a mode-resolved strong χ or SM lepton collision operator, no actual χ2 density, no physical validity of G/mV, finite grid or cutoff convergence, no full mediator/plasma/FRW/86eV relic.",
+  "class_ready": false
+}
