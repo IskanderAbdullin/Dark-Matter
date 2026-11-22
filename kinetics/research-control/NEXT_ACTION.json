@@ -2,19 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify topology audit CI; independently solve constrained quantum FD/BE equilibrium on corrected ν/V network and time convergence",
-  "objective": "The conservative integer ν daughter lattice has TWO artificial frozen top modes at k=Emax: full event incidence nullity5 vs expected physical conserved C,L,E nullity3, independent modular and SVD verified for h=.4,.2,.1 and mV=.4,Emax4. The half-offset angular-overlap graph removes these two artificial invariants and has nullity3 at tested parameters. This is a stronger negative than mere continuum moment bias: no dt refinement can make the original graph forget frozen endpoints. Verify repo CI for the new audit and prior radial/overlap stages. Next solve maximum entropy constrained FD ν/antiν and BE Zprime with nonzero lepton asymmetry and the ACTUAL discrete weights, compare long-time positive event dynamics and spectral eigenmodes across h/dt/cutoff, then real gauge/SM/χ1χ2φ FRW.",
+  "title": "Verify independent constrained-equilibrium CI; reduce nonmonotone quantum event-time splitting while preserving bounds",
+  "objective": "Corrected half-offset Z′↔ν+antiν graph with exactly physical C,L,E nullity3 now independently reaches maximum-entropy BE/FD constrained by nonzero lepton asymmetry. At h=.2 root gives T/T0=1.0284211, μν/T=-.1058103, μanti/T=-.1609529; τ500(dt1) maximum occupancy difference .001037 and entropy gap1.86e−6; τ1000 .000339 and 3.99e−7. However temporal splitting bV_low at τ100 nonmonotone for dt2,1,.5,.25 (.75305,.74398,.74668,.74874). Check new CI, then compare opposite event order/Strang symmetric sweep or coupled implicit solver, retain positivity/entropy & exact C,L,E with 3+ dt/h/cutoff and full spectra; only then physical ν-e±γ and gauge χ1/χ2/φ Bose FRW, never claim physical γel/86eV ΩDM/BEC/CLASS prematurely.",
   "prerequisites": [
-    "Previous 974d647 CI #45011435812, 174e9b CI #45011770137, and b37b7dd CI #45012189092 all successful; check NEW invariant audit CI.",
-    "Run python -m pytest -q tests/test_vector_neutrino_event_invariants.py tests/test_vector_neutrino_shell_radial_endpoints.py tests/test_vector_neutrino_shell_cell_overlap.py tests/test_vector_neutrino_reversible_event_graph.py",
-    "Read latest four archive stages and compact JSON. At mV=.4,Emax4 verify exact modular rank in primes 1000003,1000033 and SVD; identify k=Emax ν and antiν rows of original graph.",
-    "Do not interpret nullity3 alone as continuum ergodicity, SM ν thermalization or physical χ Gammael."
+    "Check PR#1 latest HEAD/draft and Scientific verification on new constrained-equilibrium commit; prior stoichiometric nullity proof baa501e full Scientific #45012556392 success.",
+    "Read kinetics/VECTOR-NEUTRINO-CONSTRAINED-EQUILIBRIUM-AUDIT.md and corresponding archive stage, source/tests and JSON. Reproduce python -m pytest -q tests/test_vector_neutrino_constrained_equilibrium.py tests/test_vector_neutrino_event_invariants.py",
+    "Run python -m kinetics.vector_neutrino_constrained_equilibrium --h 0.2 --tau 500 --dt 1 and independently inspect root C,L,E, finite entropy gap, distinct μν and μanti, no imposed ν FD reset.",
+    "Keep negative nonmonotone τ100 b_low dt2/1/.5/.25 and h/cutoff errors; no physical rate/cosmological predictions."
   ],
   "experiments": [
-    "Independently derive and solve finite-grid maximum-entropy FD fν=expit((μν−k)/T), fantiν=expit((μanti−k)/T), BE bV=1/expm1((E−μν−μanti)/T) from true C,L,E of shifted graph, with positivity, uniqueness and numerical root controls; compare actual event graph long-time evolution and mode shapes, measure slow spectral gaps.",
-    "Repeat at 3+ h/dt and Emax with corrected radial/angle shell; diagnose extra approximate near-invariants, first-order splitting bias and threshold; preserve cutoff/physical moment failures.",
-    "After reliable nonthermal ν+Zprime strong source, include real weak ν/e±γ reactions, χ1/χ2 vector 2↔2 and φ Bose 1↔2, genuine finite SM heat and FRW plus observable 86eV tests; not CLASS-ready before all gates."
+    "Implement and compare deterministic reverse-order and symmetric(Strang) event sweeps with the exact bounded implicit microreaction map; verify if reversibility/symmetry truly improves convergence under 3+ dt refinements, while keeping C,L,E and H theorem, respecting that backward Euler scalar map is not exact reversible microflow.",
+    "Develop positive exact-local reversible reaction map or high-order coupled implicit solver if Strang is not actually second-order; calculate time-order & spectral error against a refined reference for ν,antiν,V at h=.4,.2, several τ.",
+    "Then 3+ h/Emax/angle/cutoff and independent continuum rate check including threshold bin and actual SM weak ν-eγ and χ1χ2φ/Bose FRW model; 86eV ΩDM/CLASS remains not ready."
   ],
-  "constraints": "Public research branch/draft PR only, no force-push/merge main/Computer Use/user PC, GH Actions small, archive scientific negatives; no unsupported physical Γelastic/86eV ΩDM/BEC/CLASS.",
-  "class_ready": false
+  "constraints": "Only current public research branch and draft PR, no force-push/merge main, no Computer Use/user PC, minimal public GH Actions, archive results and negative findings, CLASS-ready=false."
 }

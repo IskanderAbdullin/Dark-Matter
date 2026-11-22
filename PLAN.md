@@ -72,4 +72,6 @@
 
 | 2026-11-22 | Для фазы B добавлен обязательный stoichiometric-nullspace audit каждой conservative collision lattice до вывода о равновесии: правильные C/L/E и H-теорема могут сосуществовать с ложными frozen modes | [точный modular/SVD аудит](archive/stages/2026/11/2026-11-22-vector-neutrino-invariants.md): integer ν endpoint имеет 2 искусственных инварианта (nullity 5), shifted network — 3 физических при проверенных mV,Emax,h |
 
+| 2026-11-22 | В фазе B независимое максимум-энтропийное FD/BE constrained решение теперь используется как отдельная контрольная точка для настоящей неравновесной эволюции ν/antiν/Z′, без скрытого FD reset; остаточный timestep bias сохраняется | [аудит](archive/stages/2026/11/2026-11-22-vector-neutrino-constrained-equilibrium.md), [численный JSON](kinetics/results/vector-neutrino-constrained-equilibrium-2026-11-22.json); h=.2, τ500 spectral abs error ≈0.00104; dt-bias nonmonotone |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.

@@ -331,3 +331,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative structural, not mere quadrature:** original integer grid has two isolated top k=Emax ν/antiν bins, whose occupation is exactly frozen by every event for any timestep. H-theorem/CLE conservation cannot prove physical constrained equilibrium on that grid.
 - [ ] Check new GH CI and prior stage. **P0:** independent maximum-entropy FD/BE constrained by actual discrete C,L,E with ν−antiν asymmetry; long-time event dynamics, full nullspace/slow modes and h/dt/Emax, then physical weak ν–SM, χ1χ2φ Bose FRW. CLASS-ready false.
 - [x] Previous shell-radial endpoints commit b37b7dd passed real [Scientific CI #45012189092](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012189092); new stoichiometric topology stage CI pending.
+
+## 2026-11-22 independent maximum entropy versus nonthermal strong time
+
+- [x] Independent three-constraint maximum-entropy FD ν, antiν / BE vector with nonzero lepton asymmetry and true shifted discrete C,L,E, at h=.4,.2,.1. Compare to actual time evolution preserving all ν,antiν,bV distributions without thermal reset. τ500(dt1) h=.2 mode abs difference .001037, entropy gap1.86e−6; τ1000 .000339, gap3.99e−7.
+- [x] **Negative:** τ100 h=.2 vector lowest bV for dt2/1/.5/.25=.75305,.743975,.746678,.748743, not monotone, and h=.4→.1 equilibrium T/μ changes. No continuum physical time-rate certificate.
+- [x] Previous nullspace proof baa501e full Scientific CI #45012556392 successful.
+- [ ] Verify new CI. P0 compare symmetric / reverse event order vs actual higher-order time and fully implicit, with 3+ dt/h/cutoff spectral checks, then ν-e±γ/χ1χ2φ Bose FRW. No Γel/86eV relic/CLASS claim.

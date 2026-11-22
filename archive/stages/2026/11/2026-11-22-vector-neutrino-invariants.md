@@ -32,3 +32,7 @@ h=.4: 29 states, integer edges45/rank24/nullity5, shifted edges54/rank26/nullity
 ## Поправки/связи
 
 Исходный [reversible event graph](2026-11-22-vector-neutrino-reversible-event-graph.md) математически сохраняет C/L/E, но теперь документированы **две дополнительные искусственные invariant modes** в его integer сетке; не переписывать архив раннего этапа без append-only связи. Позитивный angular overlap [stage](2026-11-22-vector-neutrino-shell-overlap.md) получает новое независимое топологическое обоснование.
+
+## CI после архивного этапа (append-only)
+
+- На [baa501e5394c0fe52604025e2c7e2ebb4f534cd7](https://github.com/IskanderAbdullin/Dark-Matter/commit/baa501e5394c0fe52604025e2c7e2ebb4f534cd7) полноценный [Scientific verification #45012556392](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012556392) завершён **success**. Подтверждён регрессионный rank audit в Python 3.11 и 3.13, но не физическая космология.

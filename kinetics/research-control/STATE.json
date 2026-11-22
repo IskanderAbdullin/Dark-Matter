@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite active run checkpoint prepared; verify current CI and proceed to constrained equilibrium independent strong validation next. No claimed inter-run background execution.",
+  "stop_reason": "Active stage checkpoint archived; verify new CI and begin next full spectral dt/order/bounded scheme in a new invocation; no background work implied.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Nonthermal on-shell vector↔separate ν/antiν conservative time pilot audited not only for N/E/S and entropy but full stoichiometric invariant dimension. Original integer ν k=Emax endpoint adds 2 spurious frozen occupations, shifted half-cell grid has exactly physical C/L/E nullity3 at tested mV,Emax,h. No physical continuum/SM/Bose cosmology.",
+  "current_phase": "Half-offset Z′↔ν+antiν microreversible nonthermal event time approaches independently solved maximum-entropy FD/BE state preserving actual three C,L,E and nonzero lepton asymmetry, but h/cutoff/time bias and original χ1/χ2/φ/SM FRW remain unresolved.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "b37b7dd1715340680962db6061e78ffda1e30ff2",
-    "run_id": 45012189092,
+    "head_sha": "baa501e5394c0fe52604025e2c7e2ebb4f534cd7",
+    "run_id": 45012556392,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012189092"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012556392"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -492,7 +492,7 @@
     "prev_ci": "reversible-event source 974d647 run #45011435812 success; shell-overlap CI #45011770137 pending at last check"
   },
   "latest_event_graph_invariants": {
-    "status": "local exact modular-prime+SVD ranks, independently checked with optional SymPy at h=.4/.2; GitHub CI pending",
+    "status": "Full Scientific verification #45012556392 passed; exact finite stoichiometric graph proof in scoped domain, not continuum/SM physics",
     "source": "kinetics/vector_neutrino_event_invariants.py",
     "test": "tests/test_vector_neutrino_event_invariants.py",
     "report": "kinetics/VECTOR-NEUTRINO-EVENT-INVARIANTS-AUDIT.md",
@@ -501,5 +501,15 @@
     "positive": "At mV=.4,Emax4,h=.4/.2/.1, shifted half-offset graph left nullity3 exactly C,L,E, no isolated neutrino rows; modular ranks and float SVD agree.",
     "negative": "Original integer ν & antiν endpoint k=Emax never participates in Evector≤Emax decays, rows zero and left nullity5, 2 extra spurious conserved modes independent of dt. H theorem and C/L/E alone do NOT establish physical equilibrium.",
     "scope": "Finite synthetic on-shell 1↔2 network only, no physical neutrino self-thermalization, SM weak, χ or 86eV DM."
+  },
+  "latest_constrained_quantum_equilibrium": {
+    "source": "kinetics/vector_neutrino_constrained_equilibrium.py",
+    "test": "tests/test_vector_neutrino_constrained_equilibrium.py",
+    "report": "kinetics/VECTOR-NEUTRINO-CONSTRAINED-EQUILIBRIUM-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-constrained-equilibrium-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-constrained-equilibrium.md",
+    "status": "independent local nonlinear entropy constraints and long-time microreversible pilot, new GH CI pending",
+    "positive": "At h=.2, max-entropy root T/T0=1.0284211265, mu_nu/T=-.10581032, mu_antinu/T=-.16095289, Smax−S0=.0011307271; root satisfies C,L,E <5e−16; event sweep leaves fixed point. Nonthermal τ500 dt1 reaches max occupancy abs diff .0010372 and entropy gap 1.86e−6; τ1000 dt1 .00033923, entropy gap 3.99e−7.",
+    "negative": "At h=.2 τ100 vector lowest b is .753052 dt2,.743975 dt1,.746678 dt.5,.748743 dt.25, nonmonotone timestep bias; h=.4→.1 equilibrium T and μ drift, no continuum Emax/threshold/Γel/86eV guarantee."
   }
 }
