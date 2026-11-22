@@ -102,6 +102,8 @@
 
 | 2026-11-22 | Интегрированы в один semi-discrete нелинейный Pauli/Bose источник **четыре** реально изменяющихся fχ1,fχ2,fℓ,bφ, при этом χ1/χ2 разделяют точные energy cells и обе χ-упругие реакции используют **ОДИН** lepton bath | [сохранённый этап](../archive/stages/2026/11/2026-11-22-four-species-shared-lepton-yukawa.md), [полный аудит](../kinetics/FOUR-SPECIES-YUKAWA-SHARED-LEPTON-AUDIT.md). Глобальные N1+N2,N1+φ,Nℓ,E и H сохраняются, но inherited elastic nrad4/IR/SM FRW ещё не physical Γelastic/86eV Ω |
 
+| 2026-11-22 | Полный χ1χ2φ + ONE lepton dynamic Pauli/Bose теперь имеет energy-guided segmented p/k Gauss в **обоих** χℓ каналах и independently matches full 5D weak Q/H, НО **|Qχ1| cut6→10 +26.96%**, oscillatory uniform4 overstates segmented5 2.37× даже с точными charges/E/H | [негативный stage](../archive/stages/2026/11/2026-11-22-four-species-segmented-elastic.md), [audit](../kinetics/FOUR-SPECIES-SEGMENTED-ELASTIC-GATE-AUDIT.md). P0 cutoff12/16/20 и 3+ angle/IR controls перед Γelastic/86eV DM |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

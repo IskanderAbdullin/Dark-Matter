@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Combined four species stage saved/pushed with executable physical normalization/convergence NEXT_ACTION; no between-launch background claim. Current active UTC start 2026-11-22T15:38:09Z.",
+  "stop_reason": "Segmented four-population physical-rate negative stage ready for fast-forward commit; NEXT_ACTION requires cutoff12/16/20, 3+ angular/IR/time and full SM/FRW. Active UTC START 2026-11-22T15:38:09Z, no inter-turn work claimed.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Combined four independently evolving χ1,χ2,lepton and real φ semidiscrete Pauli/Bose nonlinear collision network now exists: two finite-vector 2→2 χℓ channels share ONE lepton and both χ occupation grids/capacities are shared with moving χ1↔χ2+φ scalar Yukawa generator. Exact global N1+N2, N1+Nφ, Nℓ, energy and entropy at scoped synthetic cutoff/time; full SM/Zprime/FRW and physical rates remain absent.",
+  "current_phase": "Four dynamically evolving χ1,χ2,real φ and ONE lepton Pauli/Bose network now has selectable physical energy-segmented p/k Gauss for BOTH full 5D finite-vector χ–lepton channels. At cut6 radial local Gauss converges, but cut6→10 |Qχ1| increases +26.96%; legal oscillatory Fermi uniform4 source overstates segmented5 Q by factor 2.37. Strict global N/E/H and earlier successful CI are not physical Gamma_el/86eV relic evidence.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "4a5bb336307503631d1bde9b39d90d21353aa46e",
-    "run_id": 45040188999,
+    "head_sha": "3e8b1069cee9d92b8369fbc9cf0cedf063c05161",
+    "run_id": 45040794111,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45040188999",
-    "scope": "prior three-species nonlinear Yukawa Bose/Pauli stage; NOT the new four-species current commit or physical 86eV relic"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45040794111",
+    "scope": "prior four-population synthetic quantum time, not new segmented elastic cutoff gate"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -679,7 +679,7 @@
     "class_ready": false
   },
   "latest_four_species_yukawa_shared_lepton": {
-    "status": "18 local focused tests passed across combined + two source modules; new GH Scientific CI pending",
+    "status": "verified real Scientific #45040794111 success at 3e8b1069, structural synthetic four-population model only",
     "code": "kinetics/four_species_yukawa_shared_lepton.py",
     "tests": "tests/test_four_species_yukawa_shared_lepton.py",
     "report": "kinetics/FOUR-SPECIES-YUKAWA-SHARED-LEPTON-AUDIT.md",
@@ -687,6 +687,18 @@
     "archive": "archive/stages/2026/11/2026-11-22-four-species-shared-lepton-yukawa.md",
     "positive": "Identical χ1/χ2 energy grids/cell weights in vector Pauli χℓ elastic and real-φ Yukawa channels; ONE evolving common lepton. Combined Sdot nodes vs F/R ~1.11e−25, global Nχ1+Nχ2,Nχ1+Nφ,Nlepton,E machine residual ~1e−16. mlep0 and .5 chemical μ fixed points; no vector coupling G=0 lepton heat 0 but φ still produced. Six bins12/16/24 T1=.9 and1.1 toy histories show φ absorption/production AND lepton cooling/heating, entropy rises.",
     "negative": "Elastic full 5D radial nrad4/nmu4 is under-resolved for some nonthermal distributions (prior sign flips / 55× error); φ IR not validated, finite Pauli/Bose time first order with local tolerance changes, physical coupling/spin/flavors/Zprime/SM/FRW/86eV Ω/BEC/CLASS absent.",
+    "class_ready": false
+  },
+  "latest_four_species_segmented_elastic": {
+    "status": "3 dedicated local tests passed in ~21s, parent 10 tests passed; current new GH CI pending",
+    "source": "kinetics/chi1_chi2_shared_lepton_pauli.py",
+    "coupled_source": "kinetics/four_species_yukawa_shared_lepton.py",
+    "tests": "tests/test_four_species_segmented_elastic_gate.py",
+    "report": "kinetics/FOUR-SPECIES-SEGMENTED-ELASTIC-GATE-AUDIT.md",
+    "data": "kinetics/results/four-species-segmented-elastic-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-segmented-elastic.md",
+    "positive": "Two χ species on shared physical capacity and ONE lepton, configurable energy-guided p/k radial segments. At fixed cut6, angular nmu8,ncos16,nphi16, 6×nlocal3/4/5/6 Qχ1=−9.9134855/−9.9139190/−9.9142792/−9.9144322 e−12, independently matches separate full on-shell 5D weak Q/S at ~1e−14 relative, preserves N/E/H; original uniform default unchanged.",
+    "negative": "cut6,8,10 Qχ1=−9.9139/−11.9702/−12.5864e−12 (26.96% increase magnitude 6→10); oscillatory legal f uniform4 Q+1.9511e−12 vs segmented local5 +.82364e−12 (factor2.37). No full χSM radial/UV/CM/φ IR/dt convergence, no physical Zprime/plasma FRW/86eV ΩDM/BEC/CLASS.",
     "class_ready": false
   }
 }

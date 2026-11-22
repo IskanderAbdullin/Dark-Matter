@@ -436,3 +436,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] 18 local tests; six hot/cold bins12/16/24 true four-population nonlinear histories with φ creation/absorption AND lepton heat/cool, real rejects, no clipping, H≥0. Previous three-pop real CI #45040188999 success.
 - [x] **Negative:** inherited χℓ nrad4 5D rates known grossly alias oscillatory sources, no joint angular/radial/cutoff/φ-IR accuracy, 1st order time and synthetic units, no physical SM/gauge/FRW/86eV relic.
 - [ ] Verify four-pop GH CI. P0 independent 3+ χℓ p/k/CM/φ and moving Yukawa mother/daughter E, IR/time/cutoff convergence, then actual ν/e±γ/Zprime FRW and physical constraints before any Γelastic/Ω/BEC/CLASS.
+
+## 2026-11-22 full four-population χ1χ2φℓ energy-guided elastic p/k and UV failure
+
+- [x] Both physical vector χ1ℓ and χ2ℓ Pauli 5D rates now have selectable p/k E-guided segmented Gauss, while χ1/χ2 share exactly the same physical cell capacities with moving real-φ Yukawa and both use ONE dynamical lepton bath. Independent weak 5D agrees with strong Q/H at matched quadrature, 3 focused ~21s local tests passed; old default unchanged.
+- [x] **Negative:** FD thermal locally stable Qχ1 cut6≈−9.914e−12 (segments6 local3/4/5/6), but fixed E-segment ΔE=1 incoming cutoff6→8→10 raises |Q| +26.96% from 6 to10. Legal oscillatory f uniform4 Qχ1 +1.9511e−12 versus segmented6 local5 +.82364e−12 = factor2.37 underresolution. No reliable physical Γelastic inferred.
+- [x] Previous four-population synthetic Scientific verification #45040794111 succeeded. Actual CI for new radial/cutoff gate pending.
+- [ ] P0 cutoff12/16/20 at fixed ΔE, 3+ radial/μ/log-CM/azimuth and χ2/electron, and real φ IR/cell/time convergence before physical SM+Zprime+FRW/86eV ΩDM/BEC/CLASS.

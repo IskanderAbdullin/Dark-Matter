@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "Synthetic 4pop χ1χ2φONE lepton shared full-Pauli elastic radial/cutoff error gate; all physical DM claims false",
+  "parameters": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 0.001,
+    "mlepton": 0,
+    "G": 0.01,
+    "mv": 0.1,
+    "y": 0.001,
+    "elastic_mu": 8,
+    "elastic_cm_polar": 16,
+    "elastic_azimuth": 16,
+    "elastic_segmentation_max_dE": 1,
+    "source_four_pop_same_node_weights": true
+  },
+  "smooth_fd_T1_1p1_T2_Tlep_Tphi1_radial": [
+    {
+      "segments": 6,
+      "nlocal": 3,
+      "Qchi1": -9.913485516030686e-12,
+      "entropy": 9.012259560027802e-13
+    },
+    {
+      "segments": 6,
+      "nlocal": 4,
+      "Qchi1": -9.913918974156517e-12,
+      "entropy": 9.012653612869611e-13
+    },
+    {
+      "segments": 6,
+      "nlocal": 5,
+      "Qchi1": -9.914279241724268e-12,
+      "entropy": 9.012981128840027e-13
+    },
+    {
+      "segments": 6,
+      "nlocal": 6,
+      "Qchi1": -9.914432222652224e-12,
+      "entropy": 9.013120202411083e-13
+    }
+  ],
+  "independent_weak_same_quadrature": "Qχ and microscopic H match projected 4population strong to ~1e-14 relative for same exact f(E), at least 3 local radial orders; Yukawa Rphi remains 2.737842123319e−11",
+  "cutoff_fixed_dE1_local4": [
+    {
+      "cut": 6,
+      "segments": 6,
+      "Qchi1": -9.913918974156517e-12,
+      "entropy": 9.012653612869611e-13
+    },
+    {
+      "cut": 8,
+      "segments": 8,
+      "Qchi1": -1.1970178503956049e-11,
+      "entropy": 1.088198045814262e-12
+    },
+    {
+      "cut": 10,
+      "segments": 10,
+      "Qchi1": -1.2586444621813906e-11,
+      "entropy": 1.1442222383466882e-12
+    }
+  ],
+  "oscillatory_nonthermal_cut6_bins64": [
+    {
+      "radial_scheme": "uniform_p",
+      "local": 4,
+      "segments": 1,
+      "Qchi1": 1.951100703246192e-12,
+      "entropy_elastic": 6.469882531135931e-11
+    },
+    {
+      "radial_scheme": "segmented_p",
+      "local": 3,
+      "segments": 6,
+      "Qchi1": 8.747049119565414e-13,
+      "entropy_elastic": 8.625991189673485e-11
+    },
+    {
+      "radial_scheme": "segmented_p",
+      "local": 4,
+      "segments": 6,
+      "Qchi1": 8.31056364987567e-13,
+      "entropy_elastic": 8.592697999638439e-11
+    },
+    {
+      "radial_scheme": "segmented_p",
+      "local": 5,
+      "segments": 6,
+      "Qchi1": 8.23637721126284e-13,
+      "entropy_elastic": 8.686130291998111e-11
+    }
+  ],
+  "positive": "Same physical grids and Pauli Q/H preserved when replacing uniform radial with segmented physical p. Original default remains unchanged for comparison; 3 dedicated tests pass locally.",
+  "negative": "cut6→10 smooth initial rate changes +26.96% in magnitude even with locally converged radial; uniform4 oscillatory heat 2.37x segmented5; actual χ2 produced/φ IR/SM/FRW not physically converged.",
+  "class_ready": false
+}

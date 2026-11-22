@@ -74,7 +74,8 @@ def ledger(cfg,chi,lep):
             "Etotal":E,"entropy":H}
 
 
-def rhs(cfg,chi,lep,*,nr=4,nmu=4,nc=8,nphi=8,G=.001,mv=.1):
+def rhs(cfg,chi,lep,*,nr=4,nmu=4,nc=8,nphi=8,G=.001,mv=.1,
+        radial_scheme='uniform_p',segments=1):
     if len(chi)!=2 or any(np.any((f<=0)|(f>=1)) for f in [*chi,lep]):
         raise ValueError("strict Fermi interior required")
     lepf=interp_fermi(cfg["lg"],lep)
@@ -86,8 +87,8 @@ def rhs(cfg,chi,lep,*,nr=4,nmu=4,nc=8,nphi=8,G=.001,mv=.1):
     entropy_direct=0.
     for species,(M,grid,ff) in enumerate(zip(cfg["masses"],cfg["chi_grid"],chi)):
       fch=interp_fermi(grid,ff)
-      px,wp=radial_nodes(M,cfg["cut"],nr,scheme="uniform_p")
-      kx,wk=radial_nodes(cfg["mlepton"],cfg["cut"],nr,scheme="uniform_p")
+      px,wp=radial_nodes(M,cfg["cut"],nr,scheme=radial_scheme,segments=segments)
+      kx,wk=radial_nodes(cfg["mlepton"],cfg["cut"],nr,scheme=radial_scheme,segments=segments)
       for p,ap in zip(px,wp):
         e=math.hypot(p,M)
         for k,ak in zip(kx,wk):
