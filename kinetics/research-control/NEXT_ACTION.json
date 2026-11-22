@@ -2,8 +2,8 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate full-angle finite-mediator 5D Pauli heat and independent angular reference",
-  "objective": "Run real CI for new tests/test_finite_mediator_5d.py; then independent t-integrated spin-trace angular kernel vs full 5D with n/cutoff/mV and electron/nu split bath scans. Do not claim gamma_el or 86eV relic.",
+  "title": "Validate nonconstant finite-vector angular trace CI, then independent full-Pauli finite-mV 5D heat convergence",
+  "objective": "Check real public CI for new angular trace source/tests and prior finite mediator 5D; compare full Pauli heat with independent t-based boosted-final-state calculation retaining azimuth, energy and Pauli; n/cutoff/mV/e/nu split-bath scans. Vacuum angular trace alone is not full thermal heat.",
   "prerequisites": [
     "Run python kinetics/finite_mediator_angular_control.py (restricted propagator-only Simpson control, committed 9355bf0); do not confuse with physical χe/χν thermal heat.",
     "Verify branch and actual GitHub Actions on new chiral ν/e portal commit and prior nonthermal QED weak commit b571c1 (run #44958176219 was in_progress at last check).",
@@ -74,5 +74,12 @@
     "ci": "not yet measured",
     "command": "python -m pytest -q tests/test_finite_mediator_5d.py",
     "next": "Independent angular and cutoff convergence; realistic χe/χν and finite SM bath"
+  },
+  "latest_checkpoint": {
+    "report": "kinetics/FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md",
+    "code": "kinetics/finite_mediator_trace_angular.py",
+    "tests": "tests/test_finite_mediator_trace_angular.py",
+    "previous_5D_CI": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762",
+    "new_CI": "pending"
   }
 }
