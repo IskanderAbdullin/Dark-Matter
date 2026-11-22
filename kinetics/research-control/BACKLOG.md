@@ -358,3 +358,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Independent local numerical tests: common-T/independent-μ detailed balance to ~1e−29 heat, cold-χ positive Q for massless and massive ℓ, explicit nonthermal χ1 M=.1/χ2 M=.02 conditional weak heat. **Not** actual χ2 created population.
 - [x] Previous Zprime-neutrino time tests actually CI passed #45015296472 and #45015624238; not dark-matter validation.
 - [ ] Check new CI and correct regressions; P0 construct paired strong mode Cχ,Cℓ with physically correct spin/flavor, energy/number/entropy and 3+ q/angle/cutoff convergence. Then finite e±γν/Zprime and χ1χ2φ Bose FRW; no physical Γelastic or 86eV relic/CLASS.
+
+## 2026-11-22 critical entropy obstruction in χ–SM strong projection
+
+- [x] Pair the full nonthermal χℓ 2→2 Pauli 5D events into species-resolved energy-bin total dN using positive first-moment conserving barycentric weights; exact discrete Nχ,Nℓ,Qχ+Qℓ, matched parent weak heat on same quadrature.
+- [x] **Real negative:** For physically legal nonthermal oscillatory Fermi f, true event Sdot=+6.430e−13 while naive bin-entropy N10=−3.605e−14, N20=−2.763e−15. Still negative despite conserved energy/number and f(E)∈(0,1). At N320 entropy rel error −0.7%; smooth f bins show nonmonotonic entropy bias. [Audit](../PAIRED-CHI-LEPTON-BARYCENTRIC-5D-AUDIT.md).
+- [ ] Verify new GitHub Scientific CI and prior nonthermal weak. **P0:** true paired microreversible Pauli strong χ+lepton grid with entropy, exact N/E, independent weak 5D control and 3+ q/angle/cutoffs. Then full χ1/χ2+real φ/Z′/eγν FRW; no Γelastic or 86eV ΩDM/BEC/CLASS.

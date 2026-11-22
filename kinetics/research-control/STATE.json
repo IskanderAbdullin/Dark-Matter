@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Latest 5D nonthermal chi-lepton weak scientific stage archived, new CI to check; immediate next action true paired strong chi+lepton collision. No inter-run background claim.",
+  "stop_reason": "Archived numerical physical-method negative and direct code stage; new repo CI to verify; next nonlinear entropy-consistent strong-pair operator specified, no asynchronous work implied.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Priority A/B: gauge-consistent χ1/χ2 physical nonthermal finite-mass χℓ full-Pauli 2→2 weak heat/entropy pilot now implemented with arbitrary isotropic occupation fχ,fℓ, paired energy ledger and exact common-temperature chemical detailed balance. Strong mode Cχ/Cℓ, actual χ2 distribution and complete SM/FRW remain absent.",
+  "current_phase": "Full nonthermal relativistic χ1/χ2-lepton Pauli 2→2 5D weak events now have a first exactly number-and-energy-conservative barycentric bin projection. Crucial negative: projected bin H theorem fails for oscillatory but legal Fermi occupations, although true event entropy ≥0; cannot promote to physical strong Cχ,Cℓ or evolve cosmological χ/φ.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "b820abf487b1ffd4c85ec38c13239cb9e3cdd1a9",
-    "run_id": 45015624238,
+    "head_sha": "b4d6549504f60f8dbf87658db2f3df0e7aaa4ca7",
+    "run_id": 45016136831,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45015624238",
-    "scope": "temporal self-convergence synthetic finite Zprime-neutrino graph; not physical dark matter validation"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45016136831",
+    "scope": "nonthermal χℓ 5D Pauli weak functional only, no physical strong operator/Γel/86eV model"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -536,7 +536,7 @@
     "upstream": "Exact Riccati+Strang parent a77ebe56f6ccf6755b8d884750a6b3a34a392025 CI #45015296472 in_progress at last check, must confirm before declaring success."
   },
   "latest_nonthermal_chi_lepton_5d": {
-    "status": "independent local 5D weak Pauli heat/entropy calculation; new Scientific CI pending on branch",
+    "status": "Full Scientific CI #45016136831 success on b4d6549. Full nonthermal finite-vector 5D WEAK heat/entropy only, no physical strong operator.",
     "source": "kinetics/nonthermal_chi_lepton_5d_weak.py",
     "tests": "tests/test_nonthermal_chi_lepton_5d_weak.py",
     "report": "kinetics/NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md",
@@ -545,5 +545,16 @@
     "positive": "Arbitrary isotropic fchi(E), flepton(omega) passed full on-shell finite-vector/lepton-mass Pauli forward/reverse, exact event Qchi+Qlepton=0, Sdot>=0. FD thermal subset Mchi1=.1,mlepton0/.5 at nrad4 Qchi=6.9359e-14 /6.0882e-14, common T yields Q~1e-29. Nonthermal Mchi1=.1 Mchi2=.02 Q>0 under same prescribed arbitrary f and explicit finite mV.",
     "negative": "ONLY 5D incoming-integrated weak moments with nrad4/not radially converged, no strong mode Cchi/Clepton, actual daughter abundance, SM weak bath, Zprime species dynamics, actual couplings, FRW/gamma_el/86eV Omega/BEC/CLASS.",
     "model": "Real Z2-odd neutral phi Yukawa in simple U1' vectorlike branch requires qchi1=qchi2; selected rates from same G,mV but no UV-valid parameter demonstration"
+  },
+  "latest_chi_lepton_entropy_projection": {
+    "status": "analytical partition-unity/first-energy-moment proof and independent local oscillatory numerical counterexample; new GH Scientific CI pending",
+    "source": "kinetics/paired_chi_lepton_barycentric_5d.py",
+    "tests": "tests/test_paired_chi_lepton_barycentric_5d.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-BARYCENTRIC-5D-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-barycentric-5d-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-conservative-entropy-negative.md",
+    "positive": "Same 5D events barycentric signed deposition conserve each species N to ~1e−28, Qχ+Qℓ to ~1e−26 at fixed test quadrature and arbitrarily nonthermal f. For FD affine log-odds, projected entropy equals event entropy.",
+    "rigorous_negative": "Legal oscillatory fχ=expit(-E+.3sin(4E)),fℓ=expit(-ω+.3cos(4ω)): microscopic Sdot_event=+6.4303664378e−13 while N=10 bin-projected Sdot=−3.6049435416e−14 and N=20 −2.7628702273e−15 despite exact N/E. At 40,80,160,320 bins entropy positive but relative bias -53.10%,-9.34%,-3.10%,-0.70%. DO NOT use as nonlinear strong collision.",
+    "scope": "Synthetic nrad4/nmu4 5D, not full physical χ1χ2 daughter bath or actual collision operator, no gamma/H/Ω/BEC/CLASS."
   }
 }

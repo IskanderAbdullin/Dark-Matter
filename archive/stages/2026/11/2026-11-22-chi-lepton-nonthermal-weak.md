@@ -40,3 +40,7 @@ Dirac χ1 и χ2 с одинаковым ненулевым vectorlike gauge cha
 Получен сквозной *неравновесный weak 2→2 phase-space functional* с конечными массами и полной Pauli, необходимый для будущего полноценного оператора. Следующее P0 — вывести **парные strong `Cχ(p)` и `Cℓ(k)`** из этого же event integral, добившись number/energy/entropy weak-strong equality с независимыми физическими мерами и хотя бы 3 разрешениями; затем одновременно χ1+χ2, ν/e±γ, Z′ и φ Bose FRW. Только после этого обсуждать физическую Γelastic/H и late 86eV f(q). Обновить [STATE](../../../../kinetics/research-control/STATE.json), [EVIDENCE](../../../../kinetics/research-control/EVIDENCE.md), [BACKLOG](../../../../kinetics/research-control/BACKLOG.md), подробный [план](../../../../plans/RESEARCH_ROADMAP_DETAIL.md) только если меняются научные ворота. `CLASS-ready=false`.
 
 **Связь:** это НЕ заменяет ранее выполненные 5D thermal benchmarks, [χ2 conditional thermal heat](../../../../kinetics/CHI2-LEPTON-HEAT-GATE.md) и отрицательный UV selection audit. Внешние временные CI artifacts не являются достаточным постоянным архивом.
+
+## Реальный CI после публикации (append-only)
+
+- На [b4d6549](https://github.com/IskanderAbdullin/Dark-Matter/commit/b4d6549504f60f8dbf87658db2f3df0e7aaa4ca7) успешно завершён [Scientific verification #45016136831](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45016136831). Это scoped weak 5D Pauli functional, а не физический strong Cχ/Cℓ или 86eV dark matter.

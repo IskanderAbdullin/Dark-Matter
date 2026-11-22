@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "name": "same event χℓ 2to2 barycentric weak-to-binned source: conservation without H theorem",
+  "scope": "synthetic finite G=.001,mV=.1, Mχ=.1, lepton m=0, outgoing relativistic kinematics, fixed arbitrary isotropic Fermi distributions, no nonlinear strong evolution",
+  "parameters": {
+    "Mchi": 0.1,
+    "mlepton": 0,
+    "G": 0.001,
+    "mV": 0.1,
+    "cut_T": 12,
+    "Te": 1,
+    "nrad": 4,
+    "nmu": 4,
+    "ncos": 12,
+    "nphi": 12,
+    "bins": [
+      10,
+      20,
+      40,
+      80,
+      160,
+      320
+    ]
+  },
+  "method": "For each physical 5D quantum event J=F−R deposit incoming/outgoing χ and lepton energies using adjacent positive linear weights, exact partition unity and first-moment reproduction.",
+  "analytic": [
+    "sum_i alpha_i=1",
+    "sum_i E_i alpha_i=x",
+    "dotNchi=dotNlepton=0, dotEchi+dotElepton=0 by exactly paired same events",
+    "Sdot_true=Jln(F/R)>=0, but projected bin entropy with interpolated log odds does not obey the H theorem for curved log odds"
+  ],
+  "smooth_f": {
+    "chi": "expit(-E/.9+.15 exp(-E/.9))",
+    "lepton": "expit(-ω+.05 exp(-ω))",
+    "event_entropy": 9.784799605276127e-15,
+    "entropy_relative_by_bins": {
+      "10": 0.008611655846132438,
+      "20": 0.032603894981156456,
+      "40": 0.0007442504873957922,
+      "80": 0.001558877577690243,
+      "160": 0.00004487279751619333
+    },
+    "Qchi": 7.725499230256876e-14
+  },
+  "oscillatory_counterexample": {
+    "chi": "expit(-E+.3 sin(4E))",
+    "lepton": "expit(-ω+.3 cos(4ω))",
+    "true_event_entropy": 6.430366437767868e-13,
+    "Qchi": 2.558567328564454e-13,
+    "table": [
+      {
+        "bins": 10,
+        "bin_entropy": -3.604943541595887e-14,
+        "rel_error": -1.0560612459100736
+      },
+      {
+        "bins": 20,
+        "bin_entropy": -2.7628702273264193e-15,
+        "rel_error": -1.0042965984194914
+      },
+      {
+        "bins": 40,
+        "bin_entropy": 3.016149477708486e-13,
+        "rel_error": -0.530952161607222
+      },
+      {
+        "bins": 80,
+        "bin_entropy": 5.829880433527877e-13,
+        "rel_error": -0.0933828592898095
+      },
+      {
+        "bins": 160,
+        "bin_entropy": 6.230719554480679e-13,
+        "rel_error": -0.031047512644783448
+      },
+      {
+        "bins": 320,
+        "bin_entropy": 6.385299850795116e-13,
+        "rel_error": -0.007008401062194469
+      }
+    ],
+    "chi_number_residual_at_bin10": 2.5345708966030175e-28,
+    "lepton_number_residual_at_bin10": -7.712436509246179e-29,
+    "energy_projected_χ_at_bin10": 2.558567328564456e-13,
+    "energy_projected_ℓ_at_bin10": -2.5585673285644515e-13
+  },
+  "status": "rigorous scoped numerical negative: exact discrete number and energy do not guarantee quantum entropy positivity for arbitrary nonlinear Fermi log odds under naïve barycentric strong projection",
+  "limitations": [
+    "not true strong Cχ/Clepton of evolving grid populations",
+    "no entropy-constrained microreversible deposition",
+    "no χ1↔χ2 real φ Bose dynamics",
+    "no physical SM finite plasma, H/FRW, Γelastic, Ω/BEC/CLASS"
+  ],
+  "class_ready": false
+}

@@ -78,6 +78,8 @@
 
 | 2026-11-22 | Вернуться из исправления toy 1↔2 Strang жесткости к приоритетному **физическому** 2→2 χ1/χ2–лептонному оператору: отказаться от hardcoded FD в on-shell 5D Pauli weak source, затем строить парные mode-resolved strong Cχ,Cℓ | [stage и границы применимости](../archive/stages/2026/11/2026-11-22-chi-lepton-nonthermal-weak.md), [скрипт](../kinetics/nonthermal_chi_lepton_5d_weak.py), [отрицательные ограничения](../kinetics/NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md). Никакой физической Γelastic, фазы freeze-out или Ω пока нет |
 
+| 2026-11-22 | Добавить **entropy-production gate** для любой парной discrete χ–SM 2→2 реконструкции: exact energy/number conservation и положительные barycentric weights недостаточны для H-теоремы при nonlinear log-odds | [доказанный численный контрпример](../archive/stages/2026/11/2026-11-22-chi-lepton-conservative-entropy-negative.md): микроскопическая Sdot_event=+6.43e−13, но N=10 бин-Sdot=−3.60e−14 при точном N/E; требуется microreversible entropic strong projection |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 
