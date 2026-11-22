@@ -2,9 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Validate χ2 heat CI and couple both χ1/χ2–SM Pauli channels to Yukawa Bose source and finite SM",
-  "objective": "For original real φ neutral U1' and vectorlike χ1χ2 with equal nonzero gauge charge, χ2–SM vector channel is unavoidable. A conditional finite-mV full-Pauli 5D heat scan with m1=.1me,m2=.02me,Tχ=.09me,Te=Tν=.1me shows Qχ2/Qχ1 ~1.28 for two active ν at nrad/nmu6..10, and ~1.07-1.08 for e±; daughter heat is not automatically negligible. But these are independently prescribed thermal FD occupancies, not actual χ2 produced f or physical UV. Verify new CI; build full χ2e/χν strong collision kernels with real evolving fχ2 and exact finite SM heat/entropy/charges, coupled simultaneously to χ1↔χ2+φ Bose/Pauli with physical mediator/gauge charges. Independently validate q/dt/cutoff, no phenomenological BGK Γel or 86eV ΩDM claims.",
+  "title": "Validate real Z′ threshold/thermodynamics CI; derive mediator quantum production and full χ1/χ2/φ+SM kinetics",
+  "objective": "Real-phi gauge consistency qχ1=qχ2 forces daughter lepton scattering. Furthermore earlier numerical mV=.03,.1,.3me are light near T≈me, so real vector Z′ production/decay and energy cannot automatically be neglected. Conditional massive Proca Z′ if equilibrium adds delta gstar≈3 (direct BE vs independent Bessel), but actual occupation and rates unknown. χ1χbar1→2Z′ is at-rest open for mV=.03me; Z′→χ2chi2bar open at mV=.1me; Z′→both dark pairs open at .3me, neutrino channel open in all. Check CI and then derive gauge-consistent production/decay and ν/e/χ reaction rates and H, not assume ideal thermal bath/constant gamma.",
   "prerequisites": [
+    "Verify latest draft PR HEAD and real Scientific CI for new vector thermal gate; preceding chi2-lepton checkpoint 854a20d passed run #45007896155.",
+    "Run python -m pytest -q tests/test_vector_mediator_threshold_thermal_gate.py and reproduce direct BE vs Bessel K1/K2, threshold and partial width coefficients.",
+    "Read VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md and original REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md before any model claim.",
     "Previous scoped real-phi gauge audit Scientific CI #45007616038 on 481f87a passed; check NEW daughter heat stage CI; split-bath #45007354082 passed.",
     "Read original MICROPHYSICS-MODEL.md and REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md; never treat single χ1 vector portal as full equal-U1-charge UV completion.",
     "Run python -m pytest -q tests/test_chi2_lepton_heat_gate.py tests/test_gauge_charge_yukawa_audit.py tests/test_finite_mediator_5d_adaptive_reference.py",
@@ -30,6 +33,9 @@
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Derive explicit real dark Z′ quantum 1↔2 Z′↔νeνbar_e and νμνbar_μ with Pauli/Bose and finite plasma, and χ1/χ2 pair 2↔2 to Z′Z′. Quantify ΓV/H using independent coupling g′ and gχ, mediator mass and thermal abundances rather than just contact G.",
+    "Specify U1′ mass breaking via separate Z2-even charged complex scalar S or Stueckelberg; include scalar thermal degrees, neutrino/electron/muon constraints and possible symmetry restoration.",
+    "Only then full χ1/χ2/φ/e±γν/Z′ charge/energy/entropy+FRW and nonthermal Bose collision, experimental constraints and independent 86eV frozen fφ/Ω/CLASS audits.",
     "Construct charge/gauge-complete joint Lagrangian with real φ and q1=q2, Z′ mass generation and electron/ν couplings, loop/thermal mediator and laboratory/BBN/Neff constraints; explain why both χ1 and χ2 scatter with lepton bath.",
     "Implement shared finite SM bath conserving total energy, χ1 and χ2 number/chemical charges and Pauli, Bose φ production with realistic decay Γ(T) and inverse, rather than thermal reset.",
     "Compute actual χ1 and χ2 nonthermal 5D collision kernels and time evolution, independently converge qmin/qmax/dt/angle/cutoff and stiff source; only then extract physical Γ_el/H, frozen 86eV fφ(q), Ω and observational constraints.",
@@ -158,5 +164,12 @@
     "data": "kinetics/results/chi2-lepton-heat-2026-11-22.json",
     "code": "kinetics/chi2_lepton_heat_gate.py",
     "status": "measured local conditional thermal mass scan; GH CI pending"
+  },
+  "latest_vector_species": {
+    "code": "kinetics/vector_mediator_threshold_thermal_gate.py",
+    "test": "tests/test_vector_mediator_threshold_thermal_gate.py",
+    "report": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
+    "data": "kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json",
+    "status": "local 8 tests pass; new GH CI pending"
   }
 }

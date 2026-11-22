@@ -262,3 +262,11 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Compute conditional independent full 5D thermal Pauli vector mediator heat separately for mother m1=.1me and daughter m2=.02me with real mφ=86eV threshold open. Same U1' charge and prescribed same thermal fχi: χ2/χ1 ν heat ratios 1.274 (incoming n6),1.277(n8),1.280(n10); massive e heat ratios ~1.08/1.07. Does NOT give daughter abundance or relic. [Audit](../CHI2-LEPTON-HEAT-GATE.md).
 - [x] **Negative:** daughter lepton scattering is not suppressed by daughter mass alone in this benchmark, so χ1-only BGK or 5D heat cannot represent a full real-φ equal-charge model without joint χ1+χ2+SM source.
 - [ ] Prior gauge-charge CI #45007616038 success; verify daughter-heat CI; P0 coherent χ1/χ2/φ gauge Lagrangian and bounds, full χ2/e/ν Pauli nonlinear collision with real fχ2(t,q), finite e±γν thermo & Bose Yukawa/FRW independent convergence before 86eV claims.
+
+## 2026-11-22 real Zprime population and gauge-breaking gate
+
+- [x] Exact mass thresholds for χ1/χ2 pair annihilation to 2 Zprime, Zprime decays to νe,νμ, to both dark χ pairs and electron pairs. Light mV=.03/.1/.3me have different open channels; vacuum widths depend on individual gprime and gchi rather than only product G mV².
+- [x] Conditional massive-vector g=3 thermal Bose EOS independently checked against K1/K2, delta gstarR near 3 at T=me for mV=.03/.1/.3me. **Negative:** virtual t-exchange-only model can omit physical real vector population and heat; no population or Neff demonstrated.
+- [x] Original real Z2-odd phi cannot act as charged Z2-even Higgs-breaking S; separate complex S or Stueckelberg alternative in coherent theory. Previous daughter heat scientific CI #45007896155 success.
+- [ ] Check new CI. P0 true vector quantum Γ/H and population, separate χ1/χ2 Pauli scattering, neutrino/eγ/φ heat, gauge/BBN constraints and real Bose+FRW before 86eV Omega/BEC/CLASS.
+

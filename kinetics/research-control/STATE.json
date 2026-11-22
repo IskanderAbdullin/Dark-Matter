@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active finite run checkpoint saved, next physical coupled χ1/χ2 vector channels and finite SM bath specified. Verify CI on current and previous commit before promotion.",
+  "stop_reason": "Finite active launch; next action Z′ production and gauge/SM backreaction specified. No background work outside separately enabled schedule.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "UV-completion gate: real φ Yukawa enforces equal χ1/χ2 U1' charges, hence χ2–SM 2→2. Conditional independent 5D heat mass scan demonstrates χ2 ν/e thermal heat not suppressed by daughter mass alone (Q2ν/Q1ν ≈1.28 at tested m2=.02me), but actual daughter distribution/bath/mediator unvalidated.",
+  "current_phase": "Real light Z′, gauge-breaking sector, neutrino/dark branching and possible thermal energy remain a major missing model channel after gauge-consistent real phi enforces both chi1 and chi2 vector lepton scattering.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "481f87a3e7305880a7ac19b72c495847f40dc39c",
-    "run_id": 45007616038,
+    "head_sha": "854a20d50a0fb554e1e0990df37ca2789eb96b39",
+    "run_id": 45007896155,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45007616038"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45007896155"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -382,5 +382,15 @@
     "benchmark": "m1=.1 me, m2=.02 me, mphi=86 eV, Te=Tnu=.1me, Tχ1=Tχ2=.09me, mV=.3me, G=.001me^-2, equal gauge charge",
     "positive": "Full 5D Pauli Q2ν/Q1ν=1.27426,1.27725,1.27969 for nrad=nmu=6,8,10. Q2e/Q1e≈1.08/1.07 at n6/8. If same thermal FD occupations, daughter channel is not mass-suppressed away.",
     "limits": "No actual χ2 number density or spectrum from decay; radial/cutoff not fully converged; 86eV φ only threshold input; no physical gamma/Ω/BEC/CLASS"
+  },
+  "latest_vector_thermal_gate": {
+    "status": "8 independent numerical tests locally passed; new GH CI pending",
+    "code": "kinetics/vector_mediator_threshold_thermal_gate.py",
+    "test": "tests/test_vector_mediator_threshold_thermal_gate.py",
+    "report": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
+    "data": "kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json",
+    "positive": "If massive Z′ equilibrated at T=me, direct BE EOS and independent Bessel series give delta gstar_rho≈2.999658,2.996212,2.966484 at mV/me=.03,.1,.3",
+    "negative": "Actual mediator abundance NOT measured. At rest χ1 pair annihilation to two Z′ opens at mV=.03me; Z′ dark pair decay to χ2 opens at .1me, to both χ species at .3me. Tree neutrino decay always open; e+e− closed under 2me. G*mV² determines only product of gauge couplings, not dark/ν widths.",
+    "physical_scope": "Not a Z′ Boltzmann rate, gauge constraints, SM entropy or 86eV relic/BEC/CLASS, mV(T) or actual extra Neff."
   }
 }
