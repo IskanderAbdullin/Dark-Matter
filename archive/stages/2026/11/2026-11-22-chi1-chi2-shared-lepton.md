@@ -26,3 +26,7 @@ Real nodewise time simulation (not cosmological) to numerical τ=1e10 with adapt
 ## Next executable scientific step
 
 Verify new GitHub Scientific CI and preserve failures. Priority: derive real neutral φ Yukawa χ1↔χ2+φ fully quantum Bose/Pauli on-shell decay/inverse source, threshold Mχ1>Mχ2+mφ, exact chemical equilibrium and total fermion number/energy, partner-mode occupation; then actually couple to the tested shared finite lepton strong system and independently converge physical 5D q/angle/cutoff at ≥3 grids, correct flavor/couplings and full SM/FRW. No terminal scientific result claimed.
+
+## Scientific CI status (append-only)
+
+- Previous χ1+χ2 with a single shared lepton nonlinear Pauli stage [run #45038900605](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45038900605) status in_progress / conclusion null at this checkpoint; no physical φ produced by that stage.

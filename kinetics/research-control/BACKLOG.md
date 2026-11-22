@@ -410,3 +410,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Actually evolve all three node f without FD reset or clipping; τ1e10 first-order adaptive Euler 11 accepted/7 rejected, conserved N/E to machine, positive entropy and physical f bounds. Prior synthetic joint-mass weak Scientific CI #45038184612 success.
 - [x] **Negative:** χ2 distribution initial synthetic rather than φ-produced; 5D nr4/CM8 rate not converged, historical spin factors not physical ν/e flavor, no physical Γelastic/86eV Ω/BEC/CLASS.
 - [ ] Check new CI. P0 derive full **real φ Yukawa Bose/Pauli 1↔2** χ1↔χ2+φ with proper threshold/chemical balance and shared lepton bath, then 3+ angular/energy/cutoff and SM/FRW cosmology.
+
+## 2026-11-22 moving relativistic Yukawa χ1↔χ2+real φ Pauli/Bose WEAK gate
+
+- [x] Derive/compute moving boosted daughter E, physical scalar threshold and Γrest, full Pauli F/R with Bose final stimulation and inverse. Four local tests: exact 4-energy/stoichiometric Q, nonzero chemical equilibrium μ1=μ2+μφ, threshold and exact massless daughter width, bφ=0 inverse zero.
+- [x] **Negative physical direction:** with synthetic f1 at T=.9 versus f2,bφ T=1, net φ Rφ−2.658e−11; hotter T1=1.1 Rφ+2.738e−11, entropy positive BOTH. Cannot assume positive Bose net growth without solving inverse and lepton rethermalization. mφ=.001 toy, not 86eV.
+- [ ] Verify GH CI, then true nonthermal φ Bose + χ1,χ2 STRONG time, with one shared χ1χ2 elastic lepton bath, exact N/E/H and 3+ q/dt/IR/cutoff, physical SM/Zprime FRW. No physical Ω/BEC/CLASS.
