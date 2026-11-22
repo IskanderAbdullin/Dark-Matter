@@ -2,18 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify φ IR false-first-cell CI; show chemical equilibrium can pass with wrong scalar N, then derive zero-mode-safe Bose kinetics",
-  "objective": "Original χ1↔χ2+real φ finite-energy strong code uses correct radial cell volume but singular point b(E0=mφ) at first energy cell, yielding n0,node/n0,true~h/(3mφ) as mφ→0. At synthetic mφ=86eV=8.6e−8GeV,T=1GeV,Eupper12.1GeV,N64 first cell inflated ×756352, whole thermal scalar number ×1363.47; massless BE number finite ζ3T³/π², no genuine δ(p) condensate. Next test full χ1χ2φ + one lepton at common-temperature chemical fixed point: F/R and entropy may be perfect while initial Nφ is grossly wrong, then design an IR-resolved physically on-shell Bose cell and explicit condensate only if separately justified. Preserve exact E/N/H and no hidden floors. Prior 5-grid Fermi entropy error −5.73 to −0.024% only fixed angular/radial.",
+  "title": "Develop IR-resolved Bose cell and quantum Yukawa H/theorem/energy-preserving interpolation after verifying fourpop equilibrium false scalar number CI",
+  "objective": "Explicit four-population χ1χ2φ+one lepton finite-grid thermal chemical equilibrium at T=1GeV, μ=0 gives |Rφ|<5e−26, microscopic H<4e−41 and N/E balance ~1e−41, yet mφ=86eV scalar Nφ is falsely 87199×/1363×/22× the exact thermally integrated excited Bose number at 16/64/256 energy intervals. This demonstrates micro detailed balance and green CI cannot validate ΩDM or BEC. Next construct a positive physically integrated Bose IR energy/number representation with zero-mode δ(p) separate only if physical, and derive matching inverse-fugacity event interpolation and nonlinear quantum H and energy before replacing any production solver. Investigate bφ=0 endpoint and cut/mass/mesh qmin scaling. Keep χ1χ2 elastic 5D q/mu/CM errors separately checked.",
   "prerequisites": [
-    "Read AGENTS/GOAL/PLAN, kinetics CONTINUOUS-RESEARCH-SPEC/RESEARCH_GUARDRAILS, STATE/EVIDENCE and PHI-IR-FIRST-CELL-ARTIFACT-AUDIT. Check draft PR1 current HEAD/CI; previous cutoff-mesh #45044674246 successful, mode #45045253260 pending.",
-    "Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_ir_first_cell_artifact.py and python -m kinetics.phi_ir_first_cell_artifact --full. Verify massless ζ3 and h/(3m) plus 3 mesh values.",
-    "Inspect actual yukawa_bose_pauli_bounded_time.Config/thermal_initial and four_species_yukawa_shared_lepton.initial/ledger/rhs, distinguish true thermal number from collocated first node and 86eV conversion."
+    "Verify draft PR1 latest head and actual Scientific CI on φ false-first-cell and fourpop false-equilibrium; preceding cutoff mesh #45044674246 succeeded and Fermi-logit five-grid #45045253260 pending at last check.",
+    "Read GOAL/AGENTS/PLAN and kinetics spec/guardrails; PHI-IR-FIRST-CELL-ARTIFACT-AUDIT and PHI-BOSE-FALSE-EQUILIBRIUM-AUDIT plus numeric JSON and permanent stage.",
+    "Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_ir_first_cell_artifact.py tests/test_phi_bose_false_equilibrium_gate.py and reproduce six common-T fixed points and false φ number factors."
   ],
   "experiments": [
-    "At T1=T2=Tφ=Tlepton and μ1=μ2+μφ, evaluate full fourpop RHS and ledger for mφ=86e−9 and bins16/64/256, test false scalar N remains while micro F/R≈0; preserve as negative control.",
-    "Derive a true cell-integrated real φ number/energy scheme with physical momentum IR, stable mφ→0 and separate zero-mode δ(p) only if physically warranted. Demonstrate any cell-average correction cannot be simply reused as nodal log fugacity without re-proving detailed balance/H.",
-    "Converge scalar 3+ m/q/IR and Yukawa moving parent angles/cutoff/time, then true finite e±γν/Zprime plasma and FRW and physical fφ(q)/Ω/BEC/CLASS only after terminal gates."
+    "Derive exact physical first/other φ thermal cell Bose number and energy moments for positive real mφ incl 86e−9 and m→0. Compare node BE and physical averages for three+ h/m, and prove why substituting bbar into nodal η(E) breaks chemical detailed balance/H except in special limits.",
+    "Develop physically mass/p-grid or cell-averaged reconstruction with positive on-shell quantum F/R and identical deposition guaranteeing number, total E and entropy, and separate δ(p) zero-mode dynamics if necessary, not artificially clipped singular Bose occupancy.",
+    "Then converge real φ Yukawa parent p/radial/angle and IR, electron/ν finite weak plasma, vector mediator, FRW H/T/g*(T), couplings and physical 86eV f(q)/Ω/BEC/CLASS. All still unvalidated."
   ],
-  "constraints": "Public research branch/draft PR only; no force/main merge, Computer Use/user PC/parallel agents, minimal public Actions, preserve negative data, CLASS-ready=false.",
+  "constraints": "Only public research branch/draft PR, no force-push/main merge or PC/Computer Use/parallel agents. Version source/data/negative outcomes in Git, reasonable public CI. CLASS-ready=false.",
   "class_ready": false
 }

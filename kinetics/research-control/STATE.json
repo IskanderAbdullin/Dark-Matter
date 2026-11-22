@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T16:46:18Z",
+  "updated_utc": "2026-11-22T16:51:11Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -105,7 +105,7 @@
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Critical physical Bose φ IR negative: original coupled χ1χ2+real φ+lepton finite-energy mode solver assigns singular BE b(E0=mφ) at rest node to positive first cell physical capacity. For mφ=86eV=8.6e−8GeV,T=1GeV,Eupper12.1GeV,N64 illustrative, first cell number 756352× true p²dp integral, whole thermal total 1363.47× true; no δ(p) condensate. Physical Ω/BEC/Γelastic/CLASS not validated.",
+  "current_phase": "Four-population χ1χ2+real φ+shared lepton quantum on-shell Yukawa equilibrium passes microscopic Pauli/Bose detailed balance and H theorem but absolute 86-eV scalar N is wildly wrong from Bose first energy node. Independently run common T chemical fixed point at mφ=86e-9 GeV N16/64/256: all source and energy/entropy residuals ~1e−26/1e−41 yet Nφ overestimates true noncondensate Bose integral by 87199/1363.47/22.289×. Cannot use φ low-mode count to infer BEC/ΩDM.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -723,8 +723,8 @@
   },
   "session_active_launch": {
     "start_utc": "2026-11-22T16:22:01Z",
-    "last_clock_check_utc": "2026-11-22T16:46:18Z",
-    "elapsed_minutes_observed": 24.2833,
+    "last_clock_check_utc": "2026-11-22T16:51:11Z",
+    "elapsed_minutes_observed": 29.1667,
     "target_minutes": 55,
     "between_launch_execution": false
   },
@@ -749,6 +749,17 @@
     "proof": "mφ<<h<<T: w0≈gφ h³/(48π²), BE(mφ)≈T/mφ, n0,true≈gφTh²/(16π²). Thus n0,node/n0,true≈h/(3mφ) diverges as mφ→0; physical massless n=gφ ζ(3)T³/π² finite, no condensate δ(p).",
     "positive": "Independent massless p integral 0.12179382823357311 and ζ3/π² 0.12179382823357308. Exact first cell thermal number diagnostic makes 86eV N16/64/256 total ratios 1.02708/1.003399/1.000320; not substituted into dynamic Yukawa.",
     "negative": "For mφ=86eV=8.6e−8GeV,T=1GeV synthetic,Eupper12.1GeV,N64 first cell npoint165.873845 vs true0.0002193076 =×756352, full thermal total ×1363.47; N16 total ×87199, N256 ×22.29. This is numerical fake BEC/Ω, not physical dark matter. Simple replacement of first nodal Bose by averaged b may violate existing event log-fugacity detailed balance/H.",
+    "class_ready": false
+  },
+  "latest_phi_bose_false_equilibrium": {
+    "status": "2 focused local tests passed 0.62s, six deterministic full four-population states independently checked vs exact Bose p²dp, new GH CI pending",
+    "source": "kinetics/phi_bose_false_equilibrium_gate.py",
+    "tests": "tests/test_phi_bose_false_equilibrium_gate.py",
+    "report": "kinetics/PHI-BOSE-FALSE-EQUILIBRIUM-AUDIT.md",
+    "data": "kinetics/results/phi-bose-false-equilibrium-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-false-equilibrium.md",
+    "positive": "All equal-T μ=0 moving Yukawa microscopic χ1↔χ2+φ F/R rates |Rφ|<5e−26, event H<4e−41, N/E/charge residuals <3e−41 at N16/64/256 for both mφ=.001 and86e−9 GeV.",
+    "critical_negative": "For mφ=86eV=8.6e−8 GeV,T=1GeV, upper E12.1, thermal scalar ledger Nφ=10616.026/165.9958/2.71357 vs physical excited thermal Nφ=0.1217452 (factors87199/1363.47/22.289) at N16/64/256, despite exact detailed balance. This is a numeric false scalar Ω/BEC positive; no physical condensate.",
     "class_ready": false
   }
 }

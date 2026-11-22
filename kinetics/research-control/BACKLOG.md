@@ -463,3 +463,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Independently integrate 15 massive thermal Bose cell/full distributions using adaptive p-quadrature and original density_cells; 86eV illustrative GeV units N64 shows false first-cell ×756352 and total equilibrium scalar number ×1363.47, with no condensate. Five unit tests pass. One-cell *number-only* correction reduces total thermal bias to +0.34% but cannot be inserted into full collisional η interpolation without a new proof.
 - [x] Verified previous orthogonal cutoff mesh Scientific #45044674246 passed; new φ IR CI pending.
 - [ ] P0 show full four-pop model's chemical equilibrium/fixed point and zero Sdot can coexist with false giant Nφ; construct entropy/detailed-balance-preserving real φ IR/zero mode scheme and independent 3+ qmin/m/cutoff/time, full SM/FRW. No ΩDM/BEC/CLASS.
+
+## 2026-11-22 four-population false thermal-equilibrium scalar abundance
+
+- [x] Explicitly evaluate complete shared χ1χ2+real φ+one lepton quantum RHS/ledger in common T=1, chemical μ=0 stationary states on 2 scalar masses and 3 energy grids; all Yukawa Pauli/Bose F/R/entropy/energy/charge residual ~machine zero.
+- [x] **Rigorous negative:** at mφ=86eV,N64 equilibrium ledger Nφ165.9958 while direct exact p²dp thermal noncondensed gas Nφ0.1217452 (×1363.47); at N16 ×87199, N256 ×22.289. Detailed-balance and H-theorem tests alone do NOT certify scalar number. Two tests pass.
+- [ ] Verify real CI; derive physically integrated Bose low-energy cell number/energy and a full coupled entropy-compatible source, preserving separate true zero-mode only if warranted. No physical φ Ω/BEC/CLASS or Γelastic.
