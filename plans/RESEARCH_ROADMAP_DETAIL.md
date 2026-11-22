@@ -116,6 +116,8 @@
 
 | 2026-11-22 | Orthogonal physical tree Yukawa Bose-IR **shape vs parent UV tail** audit demonstrates thermodynamic entropy/chemical equilibrium pass not source convergence: affine η exact but curved φ η leads N16 +68% rate alias, N512 −0.57%, mother pmax2 omits 65.6% net source vs pmax16 | [stage](../archive/stages/2026/11/2026-11-22-phi-bose-ir-shape-gate.md), [scientific report](../kinetics/PHI-BOSE-IR-SHAPE-GATE-AUDIT.md); next IR-adaptive p/E hat + pmax12/16 fully nonlinear dt, then actual χ/SM/FRW |
 
+| 2026-11-22 | Физически упорядоченная Bose IR неравномерная eta-hat сетка снижает источник φ curved q alias: cubic N64 −0.627% против uniform −11.35%, N256 −0.043% против −1.99%, но выявлен **нефизический near-critical moment-inverse failure** dt30 с Cφ≤0 | [negative+positive stage](../archive/stages/2026/11/2026-11-22-phi-bose-nonuniform-ir-grid.md); next tangent cone ηphi→0 and physical pmax12/16 nonlinear q/dt then SM/FRW, no Ω/BEC |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

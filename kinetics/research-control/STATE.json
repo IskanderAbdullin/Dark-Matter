@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T21:43:00Z",
+  "updated_utc": "2026-11-22T21:50:00Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Third orthogonal weak IR interpolation/parent UV gate stored; run new GH CI after commit; next executable task physical mother tail and IR adaptive nonlinear time, no between-launch work.",
+  "stop_reason": "Fourth scientific IR mesh and finite-step feasibility stage ready to commit/push; explicit tangent-cone next action, no between-invocation execution claimed.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "P0 physical Bose scalar infrared: entropy-dual p²dp Galerkin and fully implicit Pauli/Bose time tested, but independent real Γrest parent moving χ1→χ2+φ weak source has substantial orthogonal *curved IR inverse-fugacity mode interpolation* and *parent momentum cutoff* errors. Affine thermal mode exact at N16..512, synthetic curved Bose η(E)=E+.40exp(-((E−.04)/.02)²) rate error +68.1/+29.6/−11.4/−6.2/−1.99/−0.573% at mode N16..512; parent pmax2 source misses ~65.6% net φ destruction vs pmax16 at independent angular+radial order. No physical cosmological relic or BEC.",
+  "current_phase": "Physical φ Bose IR issue: 3+ families of nonuniform inverse-fugacity energy hats with true p²dp Galerkin moments improve sharply curved Pauli+Bose on-shell Yukawa weak rate source at fixed parent pmax: cubic N64 rate error -0.627% vs uniform -11.35% and cubic N256 -0.043% vs uniform -1.988%, thermal affine exact. Critical new negative: near ηphi(E=mphi)=8.6e-8 (86eV/T1GeV), N16 quadratic IR mesh implicit Newton fails for dt>=30 while first physical scalar hat collision source is zero, all other scalar hat sources <=0 (net destruction). This is numerical moment-manifold/near-critical feasibility obstruction, not physical BEC. Parent pmax2 still misses 65.6% tail vs pmax16; no coupled physical SM/FRW.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -723,8 +723,8 @@
   },
   "session_active_launch": {
     "start_utc": "2026-11-22T21:20:21Z",
-    "last_clock_check_utc": "2026-11-22T21:43:00Z",
-    "elapsed_minutes_observed": 22.65,
+    "last_clock_check_utc": "2026-11-22T21:50:00Z",
+    "elapsed_minutes_observed": 29.65,
     "between_launch_execution": false
   },
   "latest_four_species_mode_refinement": {
@@ -793,5 +793,15 @@
     "archive": "archive/stages/2026/11/2026-11-22-phi-bose-ir-shape-gate.md",
     "positive": "The real vacuum width, moving p/c on-shell Pauli+Bose source, independent continuous Bose occupancy and physical-hat source agree to <8e−15 relative for affine thermal η(E)=E at mode N16–512; exact H and event charges. Incoming parent p/c n24×48→n72×144 changes curved case at pmax2 only ~0.016% at compared grids.",
     "critical_negative": "Legal IR ηφ(E)=E+.4exp(-((E−.04)/.02)²) source relative alias N16/32/64/128/256/512 +68.15/+29.57/−11.35/−6.20/−1.99/−0.573%; broad η N16 rate error only +0.316% but microscopic H −16.83%. Separately parent physical pmax2/4/6/8/12/16 with analytic occupations and high orders Rφ−5.952e−12/−1.3934e−11/−1.656e−11/−1.716e−11/−1.7295e−11/−1.7299e−11. pmax2 omits ~65.6% rate magnitude relative pmax16. No joint physical mode/time+parent cutoff convergence, no actual SM/FRW Ω/BEC/CLASS."
+  },
+  "latest_phi_nonuniform_ir_hats": {
+    "status": "6 local tests passed (about 1.81s), new GH CI pending",
+    "code": "kinetics/phi_bose_nonuniform_ir_grid.py",
+    "tests": "tests/test_phi_bose_nonuniform_ir_grid.py",
+    "report": "kinetics/PHI-BOSE-NONUNIFORM-IR-GRID-AUDIT.md",
+    "data": "kinetics/results/phi-bose-nonuniform-ir-grid-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-nonuniform-ir-grid.md",
+    "positive": "For two legal synthetic nonlinear ηφ, 4 predeclared nonuniform mesh families and N16/32/64/128/256, physical p²dp and same-hat on-shell Pauli/Bose N/E/H unchanged. Affine thermal η exact. Narrow ηφ=E+.4exp(-((E−.04)/.02)^2): at N64 cubic E grid Q relative -0.62693% vs uniform -11.35098%; at N256 cubic -0.04302% vs uniform -1.98752%. Broad η N64 two-zone H error -0.26308% vs uniform -4.16774%.",
+    "critical_negative": "For mphi86e−9 GeV,Tphi1,ηphi(rest)=8.6e−8, N16 quadratic grid at physical Γrest tree Yukawa and cold parent Tχ1=.9 has Cφ,first=0 and Cφ,all<=0; still implicit Newton cannot decrease residual under ηphi>0 for dt30 or dt1000, although dt20 converges with ηmin2.60e−8 and positive entropy. N16 uniform dt1000 succeeds; N32/64 cubic dt1000 succeeds. This is a discrete nonlinear moment-feasibility/boundary obstruction, not evidence of an actual Bose δ-condensate. Parent pmax2 UV omission and full SM/Zprime/FRW remain unresolved; Ω/BEC/CLASS false."
   }
 }
