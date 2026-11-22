@@ -243,3 +243,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] **Negative CI:** Scientific #45006858598 failed 1/812 due unresolved 12-node conventional Gaussian vs periodic azimuth (relative 1.569e−5). Independent nphi24 agrees ~1.39e−8. Updated regression retains explicit low-nphi alias and tests converged nphi24; new CI pending.
 - [ ] Check corrected CI, continue independent full 5D nrad/nmu/nphi/cutoff convergence; preserve low-angle error report, then split ν/e and physical SM/UV + Bose kinetics.
+
+## 2026-11-22 split lepton finite-vector heat with error cancellation
+
+- [x] Conditional full Pauli 5D adaptive χ−e± and χ−two-active-ν with assumed Tν/Tγ=.713765855, Te=1,Tχ=.9,Mχ=.1,G=.001,mV=.03,.1,.3; Qe>0, Qν<0 under this assumption, total <0; separate heat errors can exceed 7-10% even if net relative error ~3%. [Report](../FINITE-MEDIATOR-SPLIT-LEPTON-AUDIT.md).
+- [x] Negative radial scan at mV=.03: incoming nrad=nmu8→10 changes total heat by ~0.52%, so even polar-adaptive thermal total not fully converged; no physical cosmological sign claim.
+- [ ] Check repair CI #45007251387 and new split-stage CI; P0 independent absolute channel q/polar/phi/cutoff convergence and physical e±γν weak history, viable gauge mediator and complete nonthermal Bose production. CLASS-ready false.

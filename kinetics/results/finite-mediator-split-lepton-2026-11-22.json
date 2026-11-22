@@ -1,0 +1,60 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "conditional U1(Le-Lmu) same squared vector contact G, massive t-mediator, e± and two active neutrino flavors, split prescribed baths",
+  "assumptions": {
+    "me": 1,
+    "Mchi": 0.1,
+    "G": 0.001,
+    "Tgamma": 1,
+    "Tchi": 0.9,
+    "Tnu_over_Tgamma": 0.7137658555036082,
+    "gchi": 4,
+    "g_e": 4,
+    "g_two_nu": 4,
+    "kinetic_cut_Tperchannel": 14,
+    "phi_nodes": 16,
+    "radial_nodes": 8,
+    "mu_nodes": 8,
+    "transfer_polar_nodes": 32
+  },
+  "rows": [
+    {
+      "mV": 0.03,
+      "Qe_adaptive": 6.98337798519656e-16,
+      "Qnu_adaptive": -9.046849634243926e-16,
+      "Qe_transfer": 6.235700986596881e-16,
+      "Qnu_transfer": -8.360300889878613e-16,
+      "total_adaptive": -2.0634716490473657e-16,
+      "total_transfer": -2.1245999032817314e-16,
+      "total_relative_transfer": 0.029623985511304074
+    },
+    {
+      "mV": 0.1,
+      "Qe_adaptive": 5.815267784862657e-14,
+      "Qnu_adaptive": -7.214694853581474e-14,
+      "Qe_transfer": 5.756992582556513e-14,
+      "Qnu_transfer": -7.174202611532874e-14,
+      "total_adaptive": -1.399427068718817e-14,
+      "total_transfer": -1.417210028976361e-14,
+      "total_relative_transfer": 0.012707314768338973
+    },
+    {
+      "mV": 0.3,
+      "Qe_adaptive": 2.7372770462538316e-12,
+      "Qnu_adaptive": -3.159808644096743e-12,
+      "Qe_transfer": 2.7362213114899214e-12,
+      "Qnu_transfer": -3.159080071090068e-12,
+      "total_adaptive": -4.225315978429112e-13,
+      "total_transfer": -4.2285875960014647e-13,
+      "total_relative_transfer": 0.0007742894470035289
+    }
+  ],
+  "radial_refinement_mV0p03": {
+    "nrad10_nmu10_Qe": 6.991621482186392e-16,
+    "Qnu": -9.044413708490734e-16,
+    "total": -2.052792226304342e-16
+  },
+  "negative": "The 3% net angular relative error at mV=.03 hides >7% errors in both separate e/nu channel heat rates. Order8 to10 radial changes the net ~0.52%; cannot declare cosmological sign/coupling.",
+  "limitations": "Prescribed split bath and arbitrary G; no UV/gauge embedding of original chi1 chi2 phi, no true Tnu(T) decoupling, no full SM chemical time, no physical gamma_el/relic",
+  "class_ready": false
+}

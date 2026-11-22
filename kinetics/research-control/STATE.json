@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "CI failed on unresolved CM azimuth quadrature, now scientific negative and targeted regression correction staged; next action check actual repair CI before interpreting 5D heat. No continuous work implied.",
+  "stop_reason": "Active run closed with executable next step and evidence; last verification CI of azimuth repair must be checked. Autonomous ongoing work only if separately scheduled.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Independent fixed-event and full incoming p,k,mu adaptive-polar Pauli heat pilots expose serious nonmonotone angular error for very light finite mediator; physical full 5D convergence and nonlinear spectrum still open.",
+  "current_phase": "Adaptive full 5D finite-mediator Pauli weak heat: independent angular/cutoff failures tracked; conditional split electron/active-neutrino bath now shows opposite signs with significant channel-specific angular errors. Nonthermal strong and physical SM/UV remain open.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -351,5 +351,16 @@
     "independent_24": "Gauss φ24 6.426358531743393e−14 vs periodic φ24 6.426358442329552e−14; relative ≈1.39e−8",
     "repair": "Test now retains explicit low-phi alias negative and compares nphi24 with same 2e−6 acceptance; corrected test commit CI pending",
     "physical_scope": "Engineering and quadrature precision failure, not full physical γel result"
+  },
+  "latest_split_electron_neutrino_5d": {
+    "status": "local full on-shell adaptive 5D conditional benchmark; new GH Scientific CI pending",
+    "source": "kinetics/finite_mediator_split_lepton_reference.py",
+    "tests": "tests/test_finite_mediator_split_lepton_reference.py",
+    "report": "kinetics/FINITE-MEDIATOR-SPLIT-LEPTON-AUDIT.md",
+    "data": "kinetics/results/finite-mediator-split-lepton-2026-11-22.json",
+    "benchmark": "Tγ=Te=1,Tχ=.9,Tν/Te=(4/11)^(1/3),Mχ=.1me, mV=.03/.1/.3, G=.001 me^-2, gχ=ge±=g_twoν=4, nrad/nmu8, polar adaptive",
+    "results": "mV=.03 electron heat +6.983e−16, two ν −9.047e−16, total −2.063e−16 me5; transfer n32 separate heat −10.71% e and −7.59% ν vs adaptive, total happens +2.962% relative. nrad/nmu10 total −2.053e−16, 0.52% shift.",
+    "negative": "Split ν/e heat signs opposite only under ASSUMED ideal Tν/Tγ and equally coupled candidate Le−Lmu; numerical absolute channel errors must be bounded prior to cosmological inference. NOT real evolving neutrino decoupling.",
+    "physical_unknowns": "no viable mZ' g couplings and original χ1χ2φ charge assignment, no full finite SM ν/eγ dynamics, no nonthermal Γel, 86eV relic, BEC, Ω, CLASS"
   }
 }
