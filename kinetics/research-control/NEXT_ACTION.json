@@ -2,9 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify exact Zprime-neutrino quantum source CI; evolve finite ν heat and mediator abundance with H",
-  "objective": "Derived physical 1↔2 moving-unpolarized massive vector quantum source under fixed FD thermal two-flavor neutrino bath: C_V=Γν0(mV/E)A(p,Tν)[BE-bV], with analytic A and independent angular Gauss, exact detailed balance, positive entropy and Qν=-QV. Under earlier arbitrary Gme²=.001 and perturbative gχeff max, inverse filling from initially empty Z′ gives Rfill/H≈1349.73,1.84904e6,1.33809e9 at mV=.03,.1,.3me, Tν=me, fixed gstar10.75. This is NOT actual Z′ equilibrium or χ Γel because ν bath is NOT evolved. Verify new CI and previous MB stage; next remove external ν reservoir, solve finite ν energy/entropy and Z′ b(p) with H, additional open dark vector channels, gauge/UV/SM constraints and both χi→real 86eV φ Bose dynamics.",
+  "title": "Implement finite neutrino bath evolving Tnu and chemical potential with exact quantum Zprime modes and charge/energy ledgers",
+  "objective": "Restricted closed ν+Z′ equilibrium analysis reveals genuine conserved Nν_total+2 NV (if ONLY ννbar↔Z′ reactions operate) and energy. Starting from FD ν at T0, zero chemical potential and empty vector, constrained max-entropy equilibrium has Tfinal/T0≈1.246, µν/T≈−1.136 and Zprime number only ~0.17 of independent µV=0 BE(T0), with entropy +7.3%. Independent massless Proca-3-pol fugacity reproduces finite mV=.03 limit. This refutes free zero-µ thermal reset even if microscopic Γ/H large, but is NOT cosmological prediction because SM weak reactions violate reduced number invariant. Verify CI; next evolve vector b(p,t) using exact moving FD/BE ν source while neutrino T(t), µ(t) are solved from N and energy conservation and entropy, with positivity q/dt/cutoff, then add physical ν/e± weak, Zprime/dark, FRW/χ1↔χ2+φ.",
   "prerequisites": [
+    "Check real Scientific CI on closed vector-neutrino equilibrium commit; previous quantum source 9582b5a CI #45009062951 was in_progress at last check, and earlier MB clock #45008707383 should be verified.",
+    "Run python -m pytest -q tests/test_vector_neutrino_equilibrium_charges.py tests/test_vector_neutrino_quantum_1to2.py",
+    "Read VECTOR-NEUTRINO-CLOSED-CHARGES-AUDIT.md, its JSON, physical conserved Nν+Nνbar+2NV and formal fixed-three-polarization massless series caveat.",
     "Check new draft PR head and real Scientific CI for quantum Z′ ν 1↔2 stage; preceding MB clock commit 235a73a had run #45008707383 in progress at last check.",
     "Run python -m pytest -q tests/test_vector_neutrino_quantum_1to2.py tests/test_vector_mediator_inverse_decay_gate.py",
     "Read VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md and JSON; verify independent log-FD blocking A and moving massless-ν kinematics without assuming γelastic.",
@@ -39,6 +42,9 @@
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Implement exact Pauli/Bose Zprime→ννbar mode source with evolving finite ν FD(T,mu) both neutrino and antineutrino equal effective PARTICLE-NUMBER chemical potential (not lepton asym); integrate positive bV using exact linear per-step quantum mode relaxation, solve ν T,mu from Nν+2NV and total energy every substep. Verify entropy increases, no hidden reset, time/grid/cutoff convergence, independently compare stationary state to analytic constrained equilibrium.",
+    "Quantify when weak ννbar↔e+e− and e±γ number-changing violate this reduced invariant; add their microscopic finite-T full Pauli/Bose rates and finite photon/electron/ν heat, physical mediator scalars and χ1/χ2 open channels, H/gstar and experimental couplings.",
+    "Then full χ1/χ2–SM nonthermal Pauli and original φ 1↔2 Bose/FRW/86eV cosmic freezeout and observations after microscopic/time/phase-space independent checks.",
     "Build finite ν bath Tν(t) from number/energy/entropy with Zprime b(p) quantum decay/inverse and FRW H, retain no hidden bath reset; solve stiff physical vector mode C with positivity and compare to equilibrium and initial inverse filling across dt,q,cutoff.",
     "Compare exact Pauli ν rate with independent 5D angular and published vector decay matrix element normalization; include ν chemical potentials and flavor, Zprime other dark/charged channels, mass generation and thermal/gauge constraints; check BBN/Neff only after full plasma.",
     "Add χ1/χ2 vector elastic 2↔2 full Pauli strong, Yukawa real φ full Bose/Pauli 1↔2, physical 86eV freeze-out/qmin/zero-mode and CLASS/observations only after independent convergence.",
@@ -199,5 +205,13 @@
     "data": "kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json",
     "status": "10 local tests passed; GH CI pending; fixed ν thermal reservoir only",
     "danger": "Rfill/H not an observed abundance, χ elastic Γel or 86eV dark matter result"
+  },
+  "latest_closed_equilibrium": {
+    "report": "kinetics/VECTOR-NEUTRINO-CLOSED-CHARGES-AUDIT.md",
+    "code": "kinetics/vector_neutrino_equilibrium_charges.py",
+    "test": "tests/test_vector_neutrino_equilibrium_charges.py",
+    "data": "kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json",
+    "status": "4 local tests and independent analytical series succeeded; repo CI pending",
+    "limitation": "closed ν↔Zprime only, no SM/FRW, equilibrium not time evolution"
   }
 }

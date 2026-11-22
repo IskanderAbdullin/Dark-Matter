@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Finite research launch checkpoint prepared; next stage fully coupled finite ν bath and vector+χ1/χ2 physical rates; no background work claimed beyond scheduled automation.",
+  "stop_reason": "Bounded active research run; executable next stage coupling exact vector source to finite ν bath and timestep convergence recorded.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Actual tree Z′↔two-active-ν 1↔2 momentum-resolved finite-T quantum Pauli/Bose collision derived with fixed neutrino FD bath, analytic angle-averaged blocking and independent Gauss, inverse population and H comparison. Still not χ elastic Γel, coupled finite ν or actual 86eV relic.",
+  "current_phase": "Microscopic moving Z′↔νν full Pauli/Bose 1↔2 now paired with independent **closed ν+Z′ chemical equilibrium** conserving Nν_total+2NV and energy. For initially empty Z′ thermal ν µ=0, full reduced equilibrium develops µν/T≈−1.136 and mediator number only ~17% of hypothetical zero-µ BE at initial T0; inverse fill/H alone does not justify free thermal reset.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -413,5 +413,17 @@
     "independent": "96-node FD decay angular Gauss agrees analytic A at 6 momentum/mass benchmarks rel≤2e−12; Bose equilibrium, sign of gain/loss and number/energy/entropy checked; radial n128→256 fill rate relative <1e−6",
     "results": "With same arbitrary Gme²=.001, gχeff=sqrt4π, Tnu=me and reference H at gstar10.75, initial empty Z′ inverse source normalized by its BE density has Rfill/H=1349.73,1.84904e6,1.33809e9 at mV/me=.03,.1,.3.",
     "physical_scope": "Fixed externally thermal FD ν reservoir, no ν density/temperature evolution, other Z′ channels, plasma masses, gstar dynamics, or physical 86eV ΩDM/BEC/CLASS; not χ elastic Γel."
+  },
+  "latest_closed_vector_nu_charge_gate": {
+    "code": "kinetics/vector_neutrino_equilibrium_charges.py",
+    "test": "tests/test_vector_neutrino_equilibrium_charges.py",
+    "report": "kinetics/VECTOR-NEUTRINO-CLOSED-CHARGES-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json",
+    "status": "4 local mass/number/energy/entropy and independent massless-fugacity tests pass; new GH CI pending",
+    "model": "Only νe,νμ and antineutrinos (g=4) + massive vector (g=3), ννbar↔Z′, fixed volume, initial ν FD(T0,µ0=0) and bV=0, exact conserved Nν+Nνbar+2 NV and energy, chemical µV=2µν, no other SM or H",
+    "results": "mV/T0=.03,.1,.3: Tfinal/T0≈1.24600,1.24566,1.24276; µν/T≈−1.1359,−1.1349,−1.1263; nVfinal/hypothetical mu0 BE at T0≈.16829,.16932,.17556; Stotal/Sinitial≈1.07290,1.07284,1.07233",
+    "independent": "Finite Gauss p/T n128/256 matches formal mV/T→0 fixed-Proca-g3 independent fugacity series, T∞=1.2460341, mu/T=−1.1360001; NOT physical restored-gauge massless phase",
+    "negative": "Fast exact Z′↔νν collision does NOT imply µV=µν=0 equilibrium in a closed number/energy conserving sector. Other weak ννbar↔e+e− violates reduced particle-number charge; full SM needed.",
+    "scope": "Thermodynamic equilibrium only, no vector/ν time evolution, no χ elastic Γel or real 86eV dark relic/BEC/Ω/CLASS."
   }
 }

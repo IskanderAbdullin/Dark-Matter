@@ -283,3 +283,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** MB unblocked clock differs by ~2.4× from fully quantum FD/BE inverse filling; neither arbitrary elastic BGK gamma nor prescribed equilibrium vector gstar justified for real FRW without backreaction.
 - [ ] Verify GH Scientific CI for new Zprime quantum stage and previous MB clock. **P0:** coupled finite ν energy/entropy and vector b(p) time/H, additional vector/dark/e± channels, then both χ1/χ2-SM Pauli strong plus original φ Bose/Yukawa/FRW, full independent q/dt/IR/observational gates.
 
+## 2026-11-22 closed Zprime/ν number+energy charge equilibrium counterexample
+
+- [x] Exact reduced charge for ννbar↔Zprime only: Nν+Nνbar+2NV and total E; with FD ν/antiν common number mu and BE vector muV=2mu solve fixed-volume maximum-entropy equilibrium independently with n128/256 radial and formal massless-3-pol fugacity sums. Initial bV=0, νmu=0 leads final muν/T≈−1.136 and nV only ~0.17 of zero-mu Bose T0, entropy +7.3% at mV/T0=.03..3.
+- [x] **Negative:** a large quantum inverse fill/H does NOT prove final ν and Zprime chemical potentials vanish. In reduced system an implicit zero-mu thermal reset breaks conserved Nν+2NV and energy; full weak ννbar↔e+e− can invalidate reduced conservation and must be modeled.
+- [ ] Check GH CI. **P0:** positive finite ν reservoir + exact vector mode time integration with T,mu determined by N/E, entropy, q/dt convergence; then real ν-e±γ weak number changing and vector/χ1/χ2+φ Bose/FRW. No physical Gamma_el, 86eV Omega/BEC/CLASS.
+
