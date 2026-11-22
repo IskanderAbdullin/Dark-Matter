@@ -73,8 +73,8 @@ def cm_heat(M, m, G, Te, Tchi, *, pmax, kmax, nr=24, nang=24,
             umax = 4*ps2/(mv2+4*ps2)
             uu = umax*u
             safe_ps2 = np.maximum(ps2, 1e-300)
-            c = np.clip(1-mv2*uu/(safe_ps2*(1-uu)), -1., 1.)
-            wc = wu*umax*mv2/(safe_ps2*(1-uu)**2)
+            c = np.clip(1-mv2*uu/(2*safe_ps2*(1-uu)), -1., 1.)
+            wc = wu*umax*mv2/(2*safe_ps2*(1-uu)**2)
         else:
             c, wc = c_base, wc_base
         beta = P/Et
