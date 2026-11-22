@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Bounded research run, checkpoint for next physical ν weak source before interpreting finite thermal closure; no background work claimed except independent scheduled runs.",
+  "stop_reason": "Finite active research launch close to hourly budget; source, results and executable next strong ν time stage checkpointed. No claim of background work outside existing separate schedule.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Full restricted finite-volume ν+Z′ nonlinear Bose-mode 1↔2 time integration with exact Pauli ν quantum source, finite ν T and effective number chemical potential matched to true Nν+2NV and E conserved, entropy monotonic. Actual fast ν redistribution is an explicit unverified closure; e± weak, χ1/χ2/φ and FRW still open.",
+  "current_phase": "P0 full nonthermal moving Z′↔ννbar 1↔2. Independent momentum-resolved strong Cν(k) constructed for arbitrary positive isotropic equal fν=fνbar, bV. Strong k,p and weak vector p,CM-angle phase-space N/E/entropy match to ~1e-13 for mV=.3 on resolved split k support. No coupled nonthermal time evolution or SM weak/χ physics.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "9582b5a6d261670c2e38d34ed1256a87c0b1a48c",
-    "run_id": 45009062951,
+    "head_sha": "2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235",
+    "run_id": 45009845364,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45009062951"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45009845364"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -436,5 +436,18 @@
     "positive": "At τ=5000 (Γ0 t), 500 substeps, n96 vector modes: Tnu/T0=1.246000156, y=−1.135899879, vector Nv=.061435497, entropy +7.28986%. Independent exact closed equilibrium T=1.24600008376,y=−1.13589977975, so ΔT=7.22e−8,Δy=−9.88e−8. Max N/E relative drift≈1e−14 for τ3000, and positive entropy each accepted substep.",
     "negative": "τ100 with 20→40→80 steps shows ~first-order T bias (T=1.24573957,1.24469364,1.24416424). τ3000 with 20 substeps overdraws finite ν particle budget and aborts with ArithmeticError, no hidden clamp. No actual ν kinetic redistribution or full SM.",
     "limits": "No H/FRW, e±γ weak channels, ν nonthermal strong, Z′→dark, original χ1/χ2/φ Bose, physical gamma_el or 86eV ΩDM/BEC/CLASS."
+  },
+  "latest_neutrino_strong": {
+    "stage": "Independent nonthermal active-neutrino strong Cν(k) from physical massive-vector 1↔2 and quantum Pauli/Bose",
+    "source": "kinetics/vector_neutrino_nonthermal_strong.py",
+    "test": "tests/test_vector_neutrino_nonthermal_strong.py",
+    "report": "kinetics/VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-nonthermal-strong-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-nonthermal-strong.md",
+    "status": "six focused local tests passed; new GitHub Scientific CI to verify after push",
+    "formula": "Cν(k)=(2gV/gν) Γ0/k²∫_pmin^pmax dp p*mV/E J(p,k), pmin=abs(k-mV²/(4k)), J=bV(1-fν(k))(1-fν(E-k))-(1+bV)fν(k)fν(E-k), gV=3,gν=4",
+    "positive": "At mV=.3, fν=expit(-k+.15exp(-k)), bV=.75BE(E), n64 per k support side, weak dNν=-.01691497049725492, strong relative N error7.15e−14, E error -2.44e−15 and entropy error7.35e−14; physical Qν=-QV, Nν=-2NV and entropy≥0 for four nonthermal test shapes.",
+    "negative": "At mV=.3 naive unsplit k Gauss32 gives N mismatch -3.10827e−4, while split at k=mV/2 reduces <1e−6; mV=.03 has n32 relative mismatch +7.55e−4 and n96 -5.46e−8. Even weak-strong consistency at same pmax is no continuum cutoff certificate.",
+    "limits": "Equal fν=fνbar, strictly interior fermions and bV>0, no neutrino strong time integration, ν e/γ weak chemistry, dark χ1/χ2/φ, H/gstar, actual 86eV relic/Ω/BEC/CLASS."
   }
 }

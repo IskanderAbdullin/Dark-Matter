@@ -296,3 +296,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Prior quantum vector finite-T CI #45009062951 on 9582b5a success.
 - [ ] Verify new CI and closed-equilibrium CI; **P0:** genuine nonthermal ν strong source and SM weak ννbar↔e± number-changing, finite e±γν entropy and Zprime dark pair channels; gauge constraints and both χ1/χ2 full Pauli + real-φ Bose FRW, no physical Γel/86eV ΩDM/BEC/CLASS claim.
 
+## 2026-11-22 nonthermal ν strong mode quantum source
+
+- [x] Derive independent ν-mode Cν(k) from on-shell moving unpolarized vector decay with fν=fνbar arbitrary isotropic, exact Pauli/Bose and 2gV/gν normalization; independently integrate vector weak p,cosθ and ν strong k,p and compare number, energy, entropy. Four nonthermal shapes pass to <1e−9 at mV=.3 n64, six local tests pass. [Audit](../VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md).
+- [x] **Negative:** exact inverse support pmin(k)=abs(k−mV²/4k) has cusp at k=mV/2. Unsplit 32-point k quadrature causes artificial ~−3.1e−4 weak/strong number discrepancy, reduced by splitting; mV=.03 needs far finer grids; same-cut agreement does not establish pmax tails.
+- [x] Previous closed ν/V finite bath time CI #45009845364 success.
+- [ ] Verify new CI. **P0:** coupled fν(k,t), fνbar(k,t), bV(p,t) physical positive strong time integration with actual Pauli/Bose gain/loss, exact N/E/entropy and q/dt/cutoff, no instantaneous ν-FD reservoir. Then weak e±γ/ν physics, gauge viable Z′/χ1/χ2/φ Bose and full FRW observables; Γel/86eV Ω/BEC/CLASS unproven.
+

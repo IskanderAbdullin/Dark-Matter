@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "exact on-shell moving unpolarized massive Zprime <-> two active ν and antiν massless 1<->2; arbitrary isotropic equal 0<fν=fνbar<1, positive bV; strong ν Cν(k) vs independently integrated vector weak p/angular",
+  "equations": {
+    "kinematic_inverse": "pmin(k)=|k-mV²/(4k)|, k range [(E-p)/2,(E+p)/2]",
+    "event": "J=bV(p)(1-fν(k))(1-fν(E-k)) - (1+bV(p))fν(k)fν(E-k)",
+    "strong": "Cν(k)=(2*gV/gν) Γ0/k² ∫dp_(pmin)^pmax p*mV/E*J",
+    "invariants": "Ndotνtotal=-2 NdotV, Qdotν=-QdotV, Sν+SV=∫positive event measure J log(F/R)>=0"
+  },
+  "degeneracy": {
+    "vector": 3,
+    "two_active_flavors_nu_plus_antinu": 4
+  },
+  "test_shapes": "fν=expit(-k+eps*exp(-k)), bV=r/expm1(sqrt(p²+mV²)), Γ0=1 normalization",
+  "params_main": {
+    "mV": 0.3,
+    "pmax": 12,
+    "epsilon": 0.15,
+    "r": 0.75,
+    "n_radial": 64,
+    "n_angle": 64,
+    "n_k_each_side": 64
+  },
+  "primary_result": {
+    "NdotV": 0.00845748524862746,
+    "Nnu_total_expected": -0.01691497049725492,
+    "entropy_total": 0.003142571340002542,
+    "relative_strong_weak_number": 7.149836278586008e-14,
+    "relative_strong_weak_energy": -2.4424906541753444e-15,
+    "relative_strong_weak_entropy": 7.349676423018536e-14
+  },
+  "relative_number_error_vs_n": [
+    {
+      "mV": 0.03,
+      "n32": 0.0007553479117732298,
+      "n48": -0.000018663506848759503,
+      "n64": -2.7495310128689e-7,
+      "n96": -5.463564745067373e-8
+    },
+    {
+      "mV": 0.3,
+      "n32": -2.4995696534801937e-7,
+      "n48": -5.3896442864243e-11,
+      "n64": 7.149836278586008e-14,
+      "n96": -3.0309088572266774e-14
+    },
+    {
+      "mV": 1,
+      "n32": -6.868394741843531e-12,
+      "n48": 2.2870594307278225e-14,
+      "n64": -8.326672684688674e-15,
+      "n96": -2.1094237467877974e-14
+    }
+  ],
+  "negative_controls": {
+    "unsplit_k32_relative_error": -0.00031082684456285037,
+    "split_at_k_equals_m_over2_strong_weak_error_under": 0.000001,
+    "cutoff_pmax": [
+      {
+        "pmax": 8,
+        "Nnu": -0.016852852677800186
+      },
+      {
+        "pmax": 12,
+        "Nnu": -0.016914970497256116
+      },
+      {
+        "pmax": 16,
+        "Nnu": -0.01691665823393585
+      }
+    ]
+  },
+  "limits": "No actual time integration or ν strong elastic thermalization, no weak e±γ source, H, χ1/χ2 vector or φ Bose, no 86eV physical relic/ΩDM/BEC/CLASS",
+  "class_ready": false
+}
