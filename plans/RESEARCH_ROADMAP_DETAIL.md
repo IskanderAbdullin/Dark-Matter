@@ -90,6 +90,8 @@
 
 | 2026-11-22 | Для физического t-channel vector χℓ 2→2 устранена принципиальная forward CM angular alias аналитическим y=log[1+2p*²(1−c)/mV²] и точной Jacobian, независимо проверены I0 и transport I1 | [научный этап](../archive/stages/2026/11/2026-11-22-chi-lepton-log-transfer-angle.md), [аудит](../kinetics/CHI-LEPTON-LOG-TRANSFER-ANGLE-AUDIT.md). При A=1000 uniform ncos8 I0 ошибается −93%, mapped ~4e−10; в полном 5D mV=.01 uniform ncos32 Q ниже mapped на 22.9%; полные χ1/χ2/SM/φ/FRW ворота всё ещё открыты |
 
+| 2026-11-22 | После независимых χℓ finite-vector radial+log-CM интегралов проверены ОБА χ вида с различными массами и массовое подавление электроноподобного лептона; пока только conditional 5D Pauli weak, нельзя подменять физическую coupled χ1χ2+SM/φ bath | [этап двух χ mass channels](../archive/stages/2026/11/2026-11-22-chi-lepton-joint-mass.md): mℓ/T=.5 на гладком f уменьшает Q ~9.5–9.7%, но oscillatory massive-lepton χ2 mid→fine меняется +1.74%; следующий этап shared lepton strong bath |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

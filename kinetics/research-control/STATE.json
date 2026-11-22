@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Third active stage archived/push pending; joint finite-mass+cutoff+angular and two-species physical model in NEXT_ACTION, no between-run claim.",
+  "stop_reason": "Four scientific stages with archive and checkpoints at current active launch; new joint-mass CI needs independent verification. Next strong shared-lepton two-χ time gate executable; no work between invocations.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Independent nonthermal relativistic finite-vector χℓ 5D Pauli weak heat integration has segmented p radial normalization and analytically forward-compensated CM polar log-transfer mapping. Analytic I0/I1 and 3+ mapped angular grids remove severe forward alias at mV=.01 and .1. Still no full joint numerical uncertainty, strong χ1χ2/e±ν time or Yukawa real φ Bose+FRW.",
+  "current_phase": "First conditional physical pair of χ1/χ2 lepton mass channels has independently screened full 5D finite-mV Pauli weak Q/H using energy-guided p and exact CM transfer mapping. Both χ masses M=.1/.02 and lepton m=0/.5 have valid energy/H and common-T μ fixed point, but actual χ2 daughter/finite SM plasma not evolved and joint-grid massive-lepton oscillatory rate still changes +1.74% mid→fine.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "78d401cdba2956c61aa664e1f30b44e2e9c9447e",
-    "run_id": 45036745455,
+    "head_sha": "1e5b497a04c652a20b43cbdddb77efc697aa035b",
+    "run_id": 45037526409,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45036745455",
-    "scope": "prior segmented χℓ 5D incoming radial/cutoff pilot; no physical gamma_el"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45037526409",
+    "scope": "prior exact log-transfer CM weak quadrature; no physical DM model"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -603,7 +603,7 @@
     "class_ready": false
   },
   "latest_log_transfer_angle_5d": {
-    "status": "independently derived exact CM finite-vector propagator² log-transfer Jacobian, analytic I0/I1 controls and full 5D synthetic physical-scattering checks; 10 local tests passed; new GH CI pending",
+    "status": "Full Scientific CI #45037526409 successful on 1e5b497; mathematical mapping and finite synthetic 5D Q/S validated at tested grids.",
     "source": "kinetics/chi_lepton_outgoing_log_angle.py",
     "full_kernel": "kinetics/independent_chi_lepton_5d_quadrature.py",
     "tests": "tests/test_chi_lepton_outgoing_log_angle.py",
@@ -612,6 +612,17 @@
     "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-log-transfer-angle.md",
     "positive": "A=1000 uniform CM ncos8 angular I0 misses by −93.1%, log-transfer ncos8 I0 ~−4.37e−10 and I1 ~6.62e−11. Full on-shell mV=.01 smooth Pauli Qχ mapped ncos8=1.799941528e−17 vs mapped ncos32=1.799939448e−17; uniform ncos32 only 1.387397025e−17 (−22.92%). mV=.1 oscillatory mapped ncos32 and64 Qχ agree ~0.00081% at fixed incoming.",
     "negative": "Uniform u compensation makes I0 exact but I1 misses −33.9% at A1000/−50.3% at A10000. Mapped angular accuracy does NOT remove correlated incoming radial/cutoff, nonzero electron mass, actual χ2, physical model/SM/real φ/FRW constraints; no Γelastic/86eV relic.",
+    "class_ready": false
+  },
+  "latest_joint_mass_chi_lepton_5d": {
+    "status": "independent synthetic fixed-Fermi Pauli 5D weak Mχ=.1/.02,mℓ=0/.5 and 3 local regression tests; new GH CI pending",
+    "code": "kinetics/chi_lepton_joint_mass_gate.py",
+    "test": "tests/test_chi_lepton_joint_mass_gate.py",
+    "report": "kinetics/CHI-LEPTON-JOINT-MASS-5D-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-joint-mass-5d-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-joint-mass.md",
+    "positive": "Smooth synthetic χ1 M=.1 weak mid mℓ0 Q8.995854e−14 vs mℓ=.5 Q8.144078e−14 (−9.47%); χ2 M=.02 massless Q9.066973e−14 vs mℓ=.5 Q8.185587e−14 (−9.72%). Both synthetic Pauli pair energy/entropy and common T independent chemical μ fixed point verified.",
+    "negative": "Oscillatory χ2 M=.02,mℓ=.5 Q coarse1.88347e−15,mid1.93652e−15,fine1.97026e−15 (+1.74% mid→fine); joint levels change cutoff+angle+radial simultaneously, not an isolated error bound. Historical gspin4×4 convention not correct for all ν/e, actual χ2 abundance/φ Bose/SM FRW absent; no Γelastic/86eV relic.",
     "class_ready": false
   }
 }

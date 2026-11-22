@@ -397,3 +397,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Scoped positive: for mV=.01 smooth 5D synthetic heat Q, mapped ncos8≈ncos32≈1.79994e−17 but uniform ncos32 undercounts −22.9%; for mV=.1 oscillatory mapped ncos32→64 rate shift ~0.00081% at fixed incoming. Previous segmented stage CI #45036745455 succeeded.
 - [x] **Negative:** I0-only u-transform fails transport I1 by −33.9% at A1000; mapping alone doesn't prove full 5D radial/azimuth/cutoff or true χ1χ2/SM/φ/FRW. No physical Gamma, Ω/BEC/CLASS.
 - [ ] Verify new CI, joint 3+ energy/μ/CM/φ/cutoff with finite electron and both χ masses and actual lepton flavor/physical coupling, then full paired strong and real 86eV Bose kinetics.
+
+## 2026-11-22 joint χ1/χ2 finite-vector lepton-mass weak gate
+
+- [x] Evaluate BOTH conditional χ masses and lepton massless/massive finite-mV on-shell full Fermi Pauli 5D weak Q/S with transformed CM and segmented incoming p. Chemical fixed point for nonzero species μ at common T and exact E/H verified; 3 local tests passed.
+- [x] Smooth mid conditional mℓ=.5 Q −9.47% for χ1 and −9.72% χ2 relative to mℓ=0. **Negative:** oscillatory χ2,mℓ=.5 Q shifts +1.74% mid→fine while multiple grids/cutoff change together; not a continuum rate certificate. Prior mapped CM CI #45037526409 success.
+- [ ] Verify new CI; **P0** build joint strong evolving χ1+χ2 + one shared lepton bath with Pauli/N/E/H and correct degeneracies; then true χ1→χ2+real φ Bose/finite SM/Zprime FRW. No physical Γelastic or 86eV Ω/BEC/CLASS.

@@ -26,3 +26,7 @@ For oscillatory f and **mV=.1** (segmented radial12×5,nμ8,nφ16,cut12), mapped
 ## Negative scientific boundary and next step
 
 Exact I0/I1 and dramatic forward-mapping improvement do NOT establish convergence in incoming radial, relative μ, outgoing φ, UV/cutoff or lepton mass, nor viability of the gauge model. No full strong Cχ1,Cχ2,Cℓ with actual fχ2 from χ1→χ2+real φ Bose, no e±γν/Zprime thermal plasma, no FRW H or freezeout. No 86eV ΩDM, BEC, or CLASS-ready claim. Next executable stage: joint grid/cutoff/finite-mass error controls **with this same mapped physical amplitude**, chemical detailed balance and explicit true-gspin/SM channel bookkeeping. Preserve earlier negative heat and angular results in evidence register.
+
+## Actual CI (append-only)
+
+- [Scientific verification #45037526409](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45037526409) on 1e5b497a04c652a20b43cbdddb77efc697aa035b completed success. It certifies scoped mathematical/numeric CM angular controls only.
