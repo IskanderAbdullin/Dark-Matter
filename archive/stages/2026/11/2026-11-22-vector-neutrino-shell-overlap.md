@@ -36,3 +36,7 @@
 ## Поправки
 
 Не заменяет [архив первого графа](2026-11-22-vector-neutrino-reversible-event-graph.md). Все отрицательные ошибки сохранены; отчёты/исходные коды/JSON версионированы в Git, не только в Actions.
+
+## CI-проверка (append-only)
+
+- На commit 174e9b4ed1fc2cc8b11f02caab7635cfda8ad65d фактически завершён успешный [Scientific verification #45011770137](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45011770137). Подтверждена регрессия угловой клеточной схемы, но не утверждается континуальная точность физической φ/χ DM модели.

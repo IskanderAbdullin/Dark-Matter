@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active finite stage checkpoint; next executable energy and dt convergence gate recorded, future work needs next invocation or separately scheduled task.",
+  "stop_reason": "Finite active session archives physical and negative stages; NEXT_ACTION executable. No implied work between launches beyond explicitly scheduled runner.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Independent conservative Z′ ν/antiν nonthermal time pilot now has exact angular daughter-cell overlap diagnostic: flat angular shell normalized per vector to <4e-15, h=.2 dNV bias +5.20%→+0.082%, but energy still +2.23%. Full continuum time/SM/χ/Bose FRW unverified.",
+  "current_phase": "Scoped physical on-shell Z′↔ν/antiν conservative discrete time now has exact angular cell overlap and vector E-cutoff endpoint measure corrections, reducing h=.05 weak energy bias +0.592%→−0.032%. However ν number error remains ~−0.142%, threshold/cutoff/dt and physical SM/χ1χ2φ/FRW unknown.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "64c39424b773c2f1e93127c1c0060fa44d58d0a7",
-    "run_id": 45010866936,
+    "head_sha": "174e9b4ed1fc2cc8b11f02caab7635cfda8ad65d",
+    "run_id": 45011770137,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45010866936"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45011770137"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -458,7 +458,7 @@
     }
   },
   "latest_reversible_event_graph": {
-    "status": "first local independently calculated conservatively bounded nonthermal ν/antiν/V time pilot; NEW GitHub Scientific CI pending",
+    "status": "full Scientific verification #45011435812 success; mathematically conservative DISCRETE numerical pilot only",
     "source": "kinetics/vector_neutrino_reversible_event_graph.py",
     "test": "tests/test_vector_neutrino_reversible_event_graph.py",
     "report": "kinetics/VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md",
@@ -469,7 +469,7 @@
     "next": "Verify new GH CI and build angular-conservative higher-order time/energy quadrature with q/dt/cutoff error bounds; no Γelastic/86eV Omega/BEC/CLASS."
   },
   "latest_vector_shell_overlap": {
-    "status": "independently derived and locally numerically verified exact angular cell intersection; new Scientific CI pending",
+    "status": "full Scientific verification #45011770137 success; angular normalization scoped, continuum E source not validated",
     "source": "kinetics/vector_neutrino_shell_cell_overlap.py",
     "test": "tests/test_vector_neutrino_shell_cell_overlap.py",
     "report": "kinetics/VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md",
@@ -479,5 +479,16 @@
     "positive": "Flat angular probability per vector residual <4e−15; at h=.2 continuum rate error +5.2037% center-hit falls to +0.0824% overlap at identical daughter grid; eventwise conservation and entropy still hold.",
     "negative": "At h=.2 energy moment error +2.2292% and at h=.05 +0.5922%; radial/energy discretization and cutoff/time errors unresolved; graph is NOT cosmological 86eV strong solver.",
     "prerequisite_ci": "new CI for both reversible_event_graph and shell_overlap"
+  },
+  "latest_vector_radial_endpoints": {
+    "status": "local analytic finite-cell measure and 3 numerical focused tests staged; new GH CI pending",
+    "source": "kinetics/vector_neutrino_shell_radial_endpoints.py",
+    "test": "tests/test_vector_neutrino_shell_radial_endpoints.py",
+    "report": "kinetics/VECTOR-NEUTRINO-SHELL-RADIAL-ENDPOINTS-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-shell-radial-endpoints-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-radial-endpoints.md",
+    "positive": "Exact positive vector 0th E-bin weight truncated at mV,Emax with E_j=integer*h; h=.05 weak vector energy relative error to independent continuum goes +0.592169% →−0.031990%; positive event W/Pauli/Bose conservation and shell norm retained.",
+    "negative": "h=.05 number error −0.1417%, coarse h=.4 number error worsens −0.712%→−2.694%, missing vector p=0 threshold bin and collocated energy; finite cutoff/dt/physical model not proven.",
+    "prev_ci": "reversible-event source 974d647 run #45011435812 success; shell-overlap CI #45011770137 pending at last check"
   }
 }

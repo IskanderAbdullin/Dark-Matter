@@ -316,3 +316,11 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Positive scoped:** at h=.2 same daughter grid center-hit vs overlap, number weak rate relative to independent continuum improves +5.2037%→+0.0824%, entropy +5.3046%→+0.8059%. [Audit](../VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md).
 - [x] **Negative:** exact angular weights still leave 2.229% energy-source bias at h=.2, 0.592% at h=.05, and unresolved Emax/dt errors. No strong continuum quantum cosmology rate claim.
 - [ ] Check both real CI runs; P0 vector energy/radial projection and higher-order positivity/entropy time, then finite ν/eγ/χ1/χ2/φ gauge/FRW and only later 86eV observables.
+
+## 2026-11-22 vector E-cutoff endpoint density measure gate
+
+- [x] Derive exact positive vector shell number density integral from E p(E)dE, clip upper Emax and lower mV; compare full h boundary, upper trapezoid and exact cell on identical energy/angular quantum event graph with 3+ h. [Audit](../VECTOR-NEUTRINO-SHELL-RADIAL-ENDPOINTS-AUDIT.md).
+- [x] Positive scoped: h=.05 energy weak bias +0.592%→−0.032%, angular normalization and discrete eventwise invariants unchanged. Prior reversible-event full Scientific CI #45011435812 success.
+- [x] **Negative:** h=.05 number −0.142%, h=.4 number error worsens −0.712→−2.694%; missing E=mV threshold cell, time splitting and cutoff not solved. No physical Γelastic/86eV Omega/BEC/CLASS.
+- [ ] Verify CI for angular stage 174e9b (#45011770137 pending last check) and new radial stage; P0 physical exact cell energy and threshold, high-order dt and continuum sources before SM/χ/Bose FRW.
+- [x] Real Scientific verification of angular overlap 174e9b: [run #45011770137](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45011770137) succeeded; vector endpoint/new stage CI still to confirm.

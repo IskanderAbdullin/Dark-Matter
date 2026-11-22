@@ -2,19 +2,19 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify full CI for two ν/antiν event stages; independently fix residual radial-energy/entropy and time convergence",
-  "objective": "After nonthermal quantum event graph and exact partial daughter-cell angular overlap, each Zprime shell integrates flat CM polar probability exactly (≤4e−15 error). At h=.2 on a common shifted ν grid, source number bias falls from +5.20% center-hit to +0.0824% overlap, but energy bias remains +2.229% and at h=.05 still +0.592%. The original first-order bounded time solver also has dt1 vs dt.125 b_low shift ~3.6%. This is not continuum-converged physics. Verify real Scientific CI of stage 974d647 and this stage, fix any failures with archived negative evidence, then improve vector E/p cell measures and exact daughter energy moments or fully conservative interpolation with 3+ grids/cutoff and higher-order time integration before evolving SM/χ/φ.",
+  "title": "Confirm three Scientific CI runs; close remaining vector threshold/ν number/dt errors, then physical plasma",
+  "objective": "Microreversible quantum ν/antiν/V event graph enforces discrete C/L/E, Pauli/Bose and entropy, and exact daughter angular cell overlap fixes flat shell measure. Exact clipped vector density-of-states endpoint cell now reduces h=.05 synthetic weak energy error +0.592% to −0.032% vs independent continuum p,cosθ reference. Yet ν/vector number bias −0.142%, coarser h=.4 may worsen, p=0 threshold cell, Emax tails and first-order time splitting are unresolved. Check real CI for stage 974d647 and stage 174e9b and new endpoint stage; then develop conservative threshold treatment and energy-weighted cell moments, physically independent strong/weak N/E/S and adaptive timestep errors before SM/χ/Bose FRW.",
   "prerequisites": [
-    "Check PR#1 draft HEAD; inspect actual GitHub Actions on reversible event graph commit 974d6474 and latest shell-overlap commit, do not assume success.",
-    "Read scientific reports VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md and VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md, both archive stages and JSON.",
-    "Run python -m pytest -q tests/test_vector_neutrino_reversible_event_graph.py tests/test_vector_neutrino_shell_cell_overlap.py tests/test_vector_neutrino_nonthermal_strong.py; use python -m kinetics.vector_neutrino_shell_cell_overlap.",
-    "Reproduce identical half-offset daughter-grid center-hit vs analytic overlap at h=.4,.2,.1,.05 and independent p,CM angle Gauss 144×144, including angular normalization, absolute N/E/S, tails Emax4,6,8."
+    "Previous reversible event-graph 974d647 Scientific #45011435812 and shell-overlap 174e9b Scientific #45011770137 both succeeded. Check NEW radial endpoint stage CI.",
+    "Run python -m pytest -q tests/test_vector_neutrino_reversible_event_graph.py tests/test_vector_neutrino_shell_cell_overlap.py tests/test_vector_neutrino_shell_radial_endpoints.py tests/test_vector_neutrino_nonthermal_strong.py",
+    "Read the three 2026-11-22 permanent archive stages and related compact JSONs, preserve the coarse h/dt/cutoff negative results.",
+    "Reproduce mV=.4,Emax4, h=.4,.2,.1,.05, gV3/gnu2/gantinu2, continuous p,cosθ Gauss 144×144 and both positive shell radial schemes; avoid upgrading local hypotheses to CI-confirmed science."
   ],
   "experiments": [
-    "Derive cell-integrated vector pE dE and neutrino k²dk/k³dk measures with exact microreversible energy-weighted deposition, prove positivity/entropy or explicitly measure the defect; extend independent weak N/E/S beyond a single smooth shape and compare finite cutoffs.",
-    "Replace first-order sequential implicit event sweep by a demonstrably higher-order positivity-preserving coupled method or measure Lie-splitting error with dt=1,.5,.25,.125,.0625; compare mode-resolved fν,fantiν,bV and independent conserved charges.",
-    "After convergence, add real finite ν/e±γ weak chemistry, on-shell physical mediator and both χ1/χ2 2→2 Pauli and χ1↔χ2+φ Bose coupling, FRW and 86eV observational gates. No physical Γelastic/BEC/ΩDM/CLASS until those pass."
+    "Develop physically consistent threshold E∈[mV,mV+h/2] contribution with distinct k_i and kantiν_l and exact k1+k2=E; compare clipped vector number/energy moments and independent continuum weak at at least 3 h, 3 Emax and multiple nonthermal shapes.",
+    "Reduce first-order reaction-order and dt bias with joint positive high-order/IMEX implicit method; check conserved C/L/E, monotonic entropy, q/dt/time, full spectra, not only integrated sources.",
+    "Then evolve finite genuine weak e±γν chemistry, Zprime dark channels, both χ1/χ2 Pauli 2→2 and χ1→χ2+real φ Bose 1↔2 in FRW with full physical mediator constraints, 86eV absolute Ω/BEC/CLASS only after terminal independent gates."
   ],
-  "constraints": "Only public research branch/draft PR, no force push, no main merge, no user PC or Computer Use without approval, minimal Actions, no fabricated terminal DM claims.",
+  "constraints": "Public research branch, draft PR#1, no main merge or force push, no Computer Use/user PC absent permission, compact Git archive+minimal Actions, preserve scientific negatives.",
   "class_ready": false
 }
