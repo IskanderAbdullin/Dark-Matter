@@ -118,6 +118,8 @@
 
 | 2026-11-22 | Физически упорядоченная Bose IR неравномерная eta-hat сетка снижает источник φ curved q alias: cubic N64 −0.627% против uniform −11.35%, N256 −0.043% против −1.99%, но выявлен **нефизический near-critical moment-inverse failure** dt30 с Cφ≤0 | [negative+positive stage](../archive/stages/2026/11/2026-11-22-phi-bose-nonuniform-ir-grid.md); next tangent cone ηphi→0 and physical pmax12/16 nonlinear q/dt then SM/FRW, no Ω/BEC |
 
+| 2026-11-22 | Strict near-critical Bose eta-dual tangent cone gate exposes structural **overlapping Galerkin hat moment** failure: source Cphi=(0,−q) can imply ηrest_dot<0 at ηrest=0 even though no φ microproduction and positive H | [analytic proof & physical N16 dt20/dt30](../archive/stages/2026/11/2026-11-22-phi-bose-moment-tangent.md), next nonoverlapping physical-cell moment alternative, not real BEC |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 
