@@ -2,18 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Develop IR-resolved Bose cell and quantum Yukawa H/theorem/energy-preserving interpolation after verifying fourpop equilibrium false scalar number CI",
-  "objective": "Explicit four-population χ1χ2φ+one lepton finite-grid thermal chemical equilibrium at T=1GeV, μ=0 gives |Rφ|<5e−26, microscopic H<4e−41 and N/E balance ~1e−41, yet mφ=86eV scalar Nφ is falsely 87199×/1363×/22× the exact thermally integrated excited Bose number at 16/64/256 energy intervals. This demonstrates micro detailed balance and green CI cannot validate ΩDM or BEC. Next construct a positive physically integrated Bose IR energy/number representation with zero-mode δ(p) separate only if physical, and derive matching inverse-fugacity event interpolation and nonlinear quantum H and energy before replacing any production solver. Investigate bφ=0 endpoint and cut/mass/mesh qmin scaling. Keep χ1χ2 elastic 5D q/mu/CM errors separately checked.",
+  "title": "Verify physical Bose moment-Galerkin CI; implement finite-step positive entropy-consistent implicit Yukawa χ1χ2φ moment solver with physical phase space",
+  "objective": "The previous φ rest-energy nodal BE scalar ledger falsely showed 86-eV thermal Nφ×87199/1363/22 at N16/64/256 despite green Yukawa H and detailed balance. New physical p-space Fermi/Bose inverse-fugacity hats h_i and moments M_i=∫dΠ h_i n(E) produce exact physical thermal Nφ≈0.121745212807917 at all 3 grids for mφ=86e−9 GeV,T=1GeV,Eupper12.1, without fake first-cell condensate. They preserve N=ΣM, U=ΣE_i M_i, dS=Ση_i dM_i, symmetric negative moment Jacobian and same-hat on-shell χ1↔χ2+φ event charges/E/H. A naive first-cell-average rest-node substitution definitively breaks common-T F/R (artificial Rphi+0.739 under synthetic unit events). P0 next is solve implicit Euler M(η_new)-M(η_old)-dt Source(η_new)=0 with admissible Bose η(E)>0, Fermi automatic 0<f<1 and acceptance on physical S; prove concavity S(M) gives entropy growth for backward Euler, test 3+ dt and IR grids including massless and86eV. Do NOT promote this instant pilot to coupled physical strong time or ΩDM/BEC/CLASS.",
   "prerequisites": [
-    "Verify draft PR1 latest head and actual Scientific CI on φ false-first-cell and fourpop false-equilibrium; preceding cutoff mesh #45044674246 succeeded and Fermi-logit five-grid #45045253260 pending at last check.",
-    "Read GOAL/AGENTS/PLAN and kinetics spec/guardrails; PHI-IR-FIRST-CELL-ARTIFACT-AUDIT and PHI-BOSE-FALSE-EQUILIBRIUM-AUDIT plus numeric JSON and permanent stage.",
-    "Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_ir_first_cell_artifact.py tests/test_phi_bose_false_equilibrium_gate.py and reproduce six common-T fixed points and false φ number factors."
+    "Read AGENTS/GOAL/PLAN/kinetics spec/guardrails, latest STATE and PHI-BOSE-MOMENT-GALERKIN-AUDIT.md; preserve earlier φ-first-cell and four-pop false-equilibrium negatives.",
+    "Check latest draft PR#1 and actual Scientific CI for new moment stage; prior four-pop false-equilibrium #45046227473 succeeded on a6c2e975.",
+    "Run OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_bose_moment_galerkin.py; reproduce 86-eV N16/64/256 relative errors ≤9e−15 and massless ζ3, and negative mean-occupation shortcut."
   ],
   "experiments": [
-    "Derive exact physical first/other φ thermal cell Bose number and energy moments for positive real mφ incl 86e−9 and m→0. Compare node BE and physical averages for three+ h/m, and prove why substituting bbar into nodal η(E) breaks chemical detailed balance/H except in special limits.",
-    "Develop physically mass/p-grid or cell-averaged reconstruction with positive on-shell quantum F/R and identical deposition guaranteeing number, total E and entropy, and separate δ(p) zero-mode dynamics if necessary, not artificially clipped singular Bose occupancy.",
-    "Then converge real φ Yukawa parent p/radial/angle and IR, electron/ν finite weak plasma, vector mediator, FRW H/T/g*(T), couplings and physical 86eV f(q)/Ω/BEC/CLASS. All still unvalidated."
+    "Derive and implement damped Newton inversion of SPD physical moment susceptibility dM/dη, with protected ηφ(E)>0 and strict feasible Fermi/Bose domain, to solve small positive on-shell quantum 1↔2 graph implicit step. Prove S(Mnew)−S(Mold)>=ηnew·(Mnew−Mold)=dt∑WJln(F/R)>=0 (concavity) and N/E exactly conserved. Test 3+ dt, ≥3 energy hat resolutions, chemical fixed point and strongly nonthermal sign.",
+    "Independent physical normalization: replace synthetic positive event weights with actual Γrest m1/E1 p²dp dc/2, count Dirac χ spin/antiparticle physical degeneracy and φ g=1, compare same weak parent continuous p+CM integral, sensitivity for 86eV and mphi=0, no artificial b=0 floor.",
+    "Couple real φ moment time with shared χ1/χ2–e±/ν finite-mV Pauli strong operator and physical SM ν/eγ heat/entropy plus vector mediator, FRW H,T,g*, observational constraints; only then frozen fφ(q), ΩDM/BEC/CLASS."
   ],
-  "constraints": "Only public research branch/draft PR, no force-push/main merge or PC/Computer Use/parallel agents. Version source/data/negative outcomes in Git, reasonable public CI. CLASS-ready=false.",
+  "constraints": "Public Dark-Matter research branch and draft PR only, no force-push/main merge, no Computer Use/user PC, no parallel research agents. Tiny focused tests, compact permanent Git sources/data and all negative cases, no unproved Γelastic/86eV Ω/BEC/CLASS.",
   "class_ready": false
 }

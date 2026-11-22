@@ -469,3 +469,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Explicitly evaluate complete shared χ1χ2+real φ+one lepton quantum RHS/ledger in common T=1, chemical μ=0 stationary states on 2 scalar masses and 3 energy grids; all Yukawa Pauli/Bose F/R/entropy/energy/charge residual ~machine zero.
 - [x] **Rigorous negative:** at mφ=86eV,N64 equilibrium ledger Nφ165.9958 while direct exact p²dp thermal noncondensed gas Nφ0.1217452 (×1363.47); at N16 ×87199, N256 ×22.289. Detailed-balance and H-theorem tests alone do NOT certify scalar number. Two tests pass.
 - [ ] Verify real CI; derive physically integrated Bose low-energy cell number/energy and a full coupled entropy-compatible source, preserving separate true zero-mode only if warranted. No physical φ Ω/BEC/CLASS or Γelastic.
+
+## 2026-11-22 true φ Bose physical p-space entropy-dual moment/IR gate
+
+- [x] Build independent Bose/Fermi inverse-fugacity energy-hat physical-momentum moments and 3-grid exact 86eV thermal Bose N/U/S. Massless ζ(3)/π² finite despite formally divergent b(p=0); no invented condensate. Physical energy, two Yukawa conserved charges and eventwise quantum entropy proven algebraically with same hats; symmetric negative Jacobian and finite-difference control. 8 focused local tests pass.
+- [x] **Real negative:** old first-cell bbar substitute into nodal Bose inverse fugacity makes thermal chemical fixed point fail: Rφ+0.7393057, H+0.1686855 for unit synthetic events vs consistent |Rφ|≈4.66e−15. Thus no trivial direct replacement of current coupled solver's bad first cell.
+- [ ] Verify new GH CI. P0 implicit/backtracking nonlinear moment inversion + positivity and finite-step H, 3+ dt and IR grids, actual Yukawa normalization and full χ1/χ2 SM/Zprime/FRW. No physical Γel, ΩDM/BEC/CLASS.

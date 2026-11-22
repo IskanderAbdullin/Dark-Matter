@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T16:51:11Z",
+  "updated_utc": "2026-11-22T21:27:26Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Segmented four-population physical-rate negative stage ready for fast-forward commit; NEXT_ACTION requires cutoff12/16/20, 3+ angular/IR/time and full SM/FRW. Active UTC START 2026-11-22T15:38:09Z, no inter-turn work claimed.",
+  "stop_reason": "Completed scoped physical Bose moment/H gate; GitHub commit and actual CI to verify, next executable task implicit bounded 1↔2 moment time. Do not infer physical DM or claim background execution.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Four-population χ1χ2+real φ+shared lepton quantum on-shell Yukawa equilibrium passes microscopic Pauli/Bose detailed balance and H theorem but absolute 86-eV scalar N is wildly wrong from Bose first energy node. Independently run common T chemical fixed point at mφ=86e-9 GeV N16/64/256: all source and energy/entropy residuals ~1e−26/1e−41 yet Nφ overestimates true noncondensate Bose integral by 87199/1363.47/22.289×. Cannot use φ low-mode count to infer BEC/ΩDM.",
+  "current_phase": "Physical Bose IR Galerkin proof: true momentum-integrated entropy-dual Bose moments for mφ=86eV reproduce Nφ thermal at N16/64/256 within 9e−15, massless ζ(3) and exact on-shell χ1↔χ2+φ micro H/energy/charges with same hat interpolation. Prior rest-node first-bin false Ω (87k×/1363×/22×) remains valid negative. A naive first-cell average substitution breaks common-T Yukawa fixed point. No finite-step nonlinear time inversion, SM/FRW/physical Γel or real BEC.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -722,10 +722,9 @@
     "class_ready": false
   },
   "session_active_launch": {
-    "start_utc": "2026-11-22T16:22:01Z",
-    "last_clock_check_utc": "2026-11-22T16:51:11Z",
-    "elapsed_minutes_observed": 29.1667,
-    "target_minutes": 55,
+    "start_utc": "2026-11-22T21:20:21Z",
+    "last_clock_check_utc": "2026-11-22T21:27:26Z",
+    "elapsed_minutes_observed": 7.0833,
     "between_launch_execution": false
   },
   "latest_four_species_mode_refinement": {
@@ -761,5 +760,16 @@
     "positive": "All equal-T μ=0 moving Yukawa microscopic χ1↔χ2+φ F/R rates |Rφ|<5e−26, event H<4e−41, N/E/charge residuals <3e−41 at N16/64/256 for both mφ=.001 and86e−9 GeV.",
     "critical_negative": "For mφ=86eV=8.6e−8 GeV,T=1GeV, upper E12.1, thermal scalar ledger Nφ=10616.026/165.9958/2.71357 vs physical excited thermal Nφ=0.1217452 (factors87199/1363.47/22.289) at N16/64/256, despite exact detailed balance. This is a numeric false scalar Ω/BEC positive; no physical condensate.",
     "class_ready": false
+  },
+  "latest_phi_bose_moment_galerkin": {
+    "status": "Mathematical entropy-dual Galerkin physical-p integration and independent local 8 focused tests passed, new GH Scientific CI not yet checked",
+    "code": "kinetics/phi_bose_moment_galerkin.py",
+    "tests": "tests/test_phi_bose_moment_galerkin.py",
+    "report": "kinetics/PHI-BOSE-MOMENT-GALERKIN-AUDIT.md",
+    "data": "kinetics/results/phi-bose-moment-galerkin-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-moment-galerkin.md",
+    "positive": "Bose moment M_i=∫dΠ h_i(E)b(E) has physical N=ΣM_i, U=ΣE_i M_i, entropy differential dS=Ση_i dM_i and symmetric negative dM/dη. At mφ=86e−9 GeV T=1 Emax12.1 physical thermal N at N16/64/256 0.1217452128079166/0.1217452128079163/0.1217452128079161 vs independent pquad0.1217452128079171. Massless N cutoff50 0.12179382823357307 vs ζ3/π²0.12179382823357308. Same-hat Yukawa source conserves 2 charges and energy with eventwise H>=0, chemical fixed point correct.",
+    "negative": "Replacing only first thermal node b(E=mphi) with true first half-cell average bbar3.49054 makes inverse fugacity incorrectly shift and spoils common-T chemical fixed point, resulting artificial Rphi +0.7393057 and H+0.1686855 under unit event weights, whereas consistent source Rphi≈4.66e−15. The new representation is NOT nonlinear finite-step time solver nor physical coupling/relic/true BEC.",
+    "provenance": "Independently written and tested in isolated sandbox, no user PC/Computer Use, no unrelated projects. Synthetic rates and illustrative GeV units."
   }
 }
