@@ -276,3 +276,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Analytic ν FD μ=0 final-state Pauli bound: (1−fν)(1−fνbar)>=1/4. Only a conditional lower decay-loss clock for MB-distributed existing Zprime, NOT equilibrium or chemical relaxation.
 - [ ] Check GH CI. **P0:** full moving Zprime↔νν finite-T mode-resolved Pauli/Bose inverse production with exact boosts and finite neutrino heat/entropy, then actual Γ/H and number-changing modes plus χ1/χ2 SM, Yukawa/Bose FRW. No physical Gammael/86eV Omega/BEC/CLASS.
 
+## 2026-11-22 full moving Zprime-neutrino quantum 1<->2 inverse production
+
+- [x] Derive exact finite-T Zprime ννbar 1<->2 quantum loss/inverse with full Pauli final ν, BE vector occupation and on-shell moving-vector angular E1,2=(E±p cosθ)/2; show A(p,T) closed log and p→0 tanh(mV/(4T)), independent Gauss test, equal-T BE fixed point, entropy and energy/number ledgers. Not a χ elastic operator.
+- [x] In explicitly fixed thermal ν reservoir T=me, zero ν chemical potentials, initial empty mediator and numerical product Gme²=.001 with |gχeff|=sqrt4π, compute physical restricted inverse vector fill/H at mV=.03,.1,.3me =1.34973e3,1.84904e6,1.33809e9; independent radial convergence. This is conditional reservoir-only, not cosmological thermalization.
+- [x] **Negative:** MB unblocked clock differs by ~2.4× from fully quantum FD/BE inverse filling; neither arbitrary elastic BGK gamma nor prescribed equilibrium vector gstar justified for real FRW without backreaction.
+- [ ] Verify GH Scientific CI for new Zprime quantum stage and previous MB clock. **P0:** coupled finite ν energy/entropy and vector b(p) time/H, additional vector/dark/e± channels, then both χ1/χ2-SM Pauli strong plus original φ Bose/Yukawa/FRW, full independent q/dt/IR/observational gates.
+

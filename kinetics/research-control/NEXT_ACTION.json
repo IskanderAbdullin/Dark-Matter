@@ -2,9 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Derive full moving-Zprime finite-T neutrino Pauli/Bose 1↔2 source and verify mediator thermalization conditions",
-  "objective": "At previous arbitrary Gme²=.001 with |gχqχ|≤sqrt4π, the conditional lower g′ gives vacuum Z′→2 active ν partial width and Maxwell–Boltzmann time-dilated Γν/H about 3372 (.03me),4.58e6(.1me),3.16e9(.3me) at Te=me, gstar assumed 10.75. Independent momentum integral verifies K1/K2. FD ν Pauli at μ=0 implies loss of EXISTING MB vectors >=Γ_MB/4, but neither ratio is net chemical relaxation or Z′ abundance. Verify repo CI, then derive exact mode-resolved moving-vector 1↔2 forward and inverse with Pauli ν and Bose Z′, full thermal detailed balance, number/energy/entropy and n/mV/T/cutoff. Determine Z′ inverse production/H and actual dynamics before including in Friedmann. Avoid physical γel or DM relic inference.",
+  "title": "Verify exact Zprime-neutrino quantum source CI; evolve finite ν heat and mediator abundance with H",
+  "objective": "Derived physical 1↔2 moving-unpolarized massive vector quantum source under fixed FD thermal two-flavor neutrino bath: C_V=Γν0(mV/E)A(p,Tν)[BE-bV], with analytic A and independent angular Gauss, exact detailed balance, positive entropy and Qν=-QV. Under earlier arbitrary Gme²=.001 and perturbative gχeff max, inverse filling from initially empty Z′ gives Rfill/H≈1349.73,1.84904e6,1.33809e9 at mV=.03,.1,.3me, Tν=me, fixed gstar10.75. This is NOT actual Z′ equilibrium or χ Γel because ν bath is NOT evolved. Verify new CI and previous MB stage; next remove external ν reservoir, solve finite ν energy/entropy and Z′ b(p) with H, additional open dark vector channels, gauge/UV/SM constraints and both χi→real 86eV φ Bose dynamics.",
   "prerequisites": [
+    "Check new draft PR head and real Scientific CI for quantum Z′ ν 1↔2 stage; preceding MB clock commit 235a73a had run #45008707383 in progress at last check.",
+    "Run python -m pytest -q tests/test_vector_neutrino_quantum_1to2.py tests/test_vector_mediator_inverse_decay_gate.py",
+    "Read VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md and JSON; verify independent log-FD blocking A and moving massless-ν kinematics without assuming γelastic.",
     "Prior vector threshold full Scientific CI #45008415213 on 253e992 succeeded; check new MB clock stage CI.",
     "Run python -m pytest -q tests/test_vector_mediator_inverse_decay_gate.py tests/test_vector_mediator_threshold_thermal_gate.py",
     "Read VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md and Bessel/independent Gaussian momentum K1/K2 controls; do NOT label MB clock Γelastic or thermalization.",
@@ -36,6 +39,9 @@
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Build finite ν bath Tν(t) from number/energy/entropy with Zprime b(p) quantum decay/inverse and FRW H, retain no hidden bath reset; solve stiff physical vector mode C with positivity and compare to equilibrium and initial inverse filling across dt,q,cutoff.",
+    "Compare exact Pauli ν rate with independent 5D angular and published vector decay matrix element normalization; include ν chemical potentials and flavor, Zprime other dark/charged channels, mass generation and thermal/gauge constraints; check BBN/Neff only after full plasma.",
+    "Add χ1/χ2 vector elastic 2↔2 full Pauli strong, Yukawa real φ full Bose/Pauli 1↔2, physical 86eV freeze-out/qmin/zero-mode and CLASS/observations only after independent convergence.",
     "Derive exact unpolarized massive vector rest νν decay isotropic angle distribution and Lorentz boost to moving plasma: ν energies (E_V±p_V cosθ)/2; integrate FD ν blocking and inverse νν→Z′ with Bose occupancy and detailed balance at common T, μν+μνbar=0, μV=0.",
     "Build mode-resolved Zprime strong C_V(b(p)) coupled to finite ν energy/particle/entropy ledgers and explicit 3-pol phase-space capacities; test positivity, BE equilibrium and thermal production times against H, and bounds across ν temperature.",
     "Add real chi1 and chi2 vector channels, χ1χbar1↔2V and Zprime↔χ1/χ2 pairs, gauge scalar S and finite SM heat/ν decoupling, then full Pauli/Bose χ1→χ2+φ and FRW; no physical Gamma_el or 86eV relic/BEC/Omega/CLASS.",
@@ -185,5 +191,13 @@
     "data": "kinetics/results/vector-mediator-inverse-decay-2026-11-22.json",
     "status": "eight local numerical tests passed, new GitHub CI pending",
     "scope": "Conditional vacuum νν width + MB clock, no Pauli/inverse thermal operator"
+  },
+  "latest_quantum_vector": {
+    "report": "kinetics/VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md",
+    "source": "kinetics/vector_neutrino_quantum_1to2.py",
+    "tests": "tests/test_vector_neutrino_quantum_1to2.py",
+    "data": "kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json",
+    "status": "10 local tests passed; GH CI pending; fixed ν thermal reservoir only",
+    "danger": "Rfill/H not an observed abundance, χ elastic Γel or 86eV dark matter result"
   }
 }

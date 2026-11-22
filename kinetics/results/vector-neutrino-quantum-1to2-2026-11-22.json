@@ -1,0 +1,73 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "full on-shell moving massive unpolarized Z′ <-> νe/νμ + antineutrinos with exact FD Pauli and BE Zprime, ν bath T prescribed",
+  "formula": "C_Zprime(p)=Gamma_rest*(mV/E)*A(p,Tnu)*(BE(E/Tnu)-bV(p)), Gamma_rest=gprime²*mV/(12π), A=<1-fν(E1)-fνbar(E2)>",
+  "analytic_A": "A=1-(2T/p)*log[(1+exp(-(E-p)/2T))/(1+exp(-(E+p)/2T))]; A(p=0)=tanh(mV/(4T))",
+  "acceptance": "Gauss 96 cone FD average vs analytic A rel<2e-12; BE equilibrium fixed point; Qnu=-Qv, N_nu+anti=-2N_v, positive entropy for interior occupations, n128/256 fill convergence <1e-6",
+  "parameters": {
+    "me_GeV": 0.00051099895,
+    "Tnu_me": 1,
+    "gstar_assumed": 10.75,
+    "H_GeV": 1.1640516262946154e-25,
+    "G_me_minus2": 0.001,
+    "gchi_eff_assumed": 3.5449077018110318,
+    "vector_polarizations": 3
+  },
+  "angular_A_mV0p03": {
+    "p_T0": 0.00749985937816399,
+    "p_T1": 0.24033296419087902,
+    "p_T3": 0.5703160750991565
+  },
+  "inverse_initial_empty": [
+    {
+      "mV_me": 0.03,
+      "gprime": 2.5388531259649034e-7,
+      "fill_rate_GeV": 1.571155832614799e-22,
+      "fill_over_H": 1349.7303703067441,
+      "n128_fill_over_H": 1349.730360372005,
+      "n256_fill_over_H": 1349.7303703067441,
+      "nBE_GeV3": 4.8710696386215417e-11,
+      "Q_Zprime_GeV5": 9.289507085356906e-36
+    },
+    {
+      "mV_me": 0.1,
+      "gprime": 0.0000028209479177387817,
+      "fill_rate_GeV": 2.152377831826964e-19,
+      "fill_over_H": 1849039.839133568,
+      "nBE_GeV3": 4.839902264835595e-11,
+      "Q_Zprime_GeV5": 1.2725249747808074e-32
+    },
+    {
+      "mV_me": 0.3,
+      "gprime": 0.000025388531259649033,
+      "fill_rate_GeV": 1.5576087964220053e-16,
+      "fill_over_H": 1338092539.228825,
+      "nBE_GeV3": 4.6559122397180053e-11,
+      "Q_Zprime_GeV5": 9.166611002393589e-30
+    }
+  ],
+  "nonthermal_spectrum_mV0p03": {
+    "bV_half_BE": {
+      "dN_V_GeV4": 3.826604736896548e-33,
+      "dQ_V_GeV5": 4.644753542678453e-36,
+      "total_entropy_GeV4": 2.23340381030445e-33
+    },
+    "bV_equal_BE": {
+      "dN_V_GeV4": 0,
+      "dQ_V_GeV5": 0,
+      "total_entropy_GeV4": 0
+    },
+    "bV_double_BE": {
+      "dN_V_GeV4": -7.653209473793096e-33,
+      "dQ_V_GeV5": -9.289507085356906e-36,
+      "total_entropy_GeV4": 4.032734968155355e-33
+    }
+  },
+  "caveats": [
+    "Fixed external FD ν bath, no evolving Tν, χ1χ2 interactions absent",
+    "mV constant broken phase, massless neutrinos, zero µ, unpolarized 3-pol Z′",
+    "If initially vector absent, inverse production calculated but not a full expanding-universe population",
+    "No χ elastic Γel or 86-eV ΩDM/BEC/CLASS"
+  ],
+  "class_ready": false
+}

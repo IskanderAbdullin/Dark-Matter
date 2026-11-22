@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active finite session will continue to quantum inverse-decay next, no work between launches except separately scheduled automation.",
+  "stop_reason": "Finite research launch checkpoint prepared; next stage fully coupled finite ν bath and vector+χ1/χ2 physical rates; no background work claimed beyond scheduled automation.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "New conditional two-active-neutrino Z′ rest decay and MB time-dilated Γ/H audit under fixed exploratory G,mV and conventional perturbative |gχqχ|≤sqrt4π. At Te=me, potential νν decay clock 3372,4.58e6,3.16e9 times H for mV=.03,.1,.3me. Full quantum inverse/Pauli+Bose and actual Z′ population remain unknown; no χ gamma_el or 86eV relic.",
+  "current_phase": "Actual tree Z′↔two-active-ν 1↔2 momentum-resolved finite-T quantum Pauli/Bose collision derived with fixed neutrino FD bath, analytic angle-averaged blocking and independent Gauss, inverse population and H comparison. Still not χ elastic Γel, coupled finite ν or actual 86eV relic.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -402,5 +402,16 @@
     "assumptions": "Rest Γνν=g′²mV/(12π) two active left ν; MB time dilation K1/K2 independently checked; fixed Gme²=.001, |gχqχ|=sqrt4π maximum, gstar=10.75, T=me, no quantum Pauli/inverse or Z′ occupancy",
     "result": "Conditional Γνnu,MB/H=3372 at mV/me=.03, 4.5768e6 at .1, 3.1644e9 at .3. At zero ν chemical potential final Pauli factors (1−f)(1−fbar)≥1/4 pointwise; for MB-distributed existing Z′ decay-loss lower/H at least Γ_MB/H/4, NOT net equilibration.",
     "negative": "Virtual-only Z′ and freely chosen χ BGK cannot be promoted under this exploratory fixed contact coefficient without modeling real vector ν production/decay and gauge constraints."
+  },
+  "latest_vector_quantum_neutrino": {
+    "status": "10 local tests passed for exact moving Z′ FD/BE quantum source; new GH Scientific CI pending",
+    "code": "kinetics/vector_neutrino_quantum_1to2.py",
+    "test": "tests/test_vector_neutrino_quantum_1to2.py",
+    "report": "kinetics/VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json",
+    "derivation": "C_V(p)=Γν0(mV/E)A(p,Tnu)[bBE(E/Tnu)-b(p)], Γν0=gprime²mV/(12π), A=1-(2Tnu/p)log[(1+exp(-(E-p)/2Tnu))/(1+exp(-(E+p)/2Tnu))], A(p=0)=tanh(mV/4Tnu). This is exact under unpolarized vector massless ν zero μ with prescribed Tnu, not χ kinetic gamma.",
+    "independent": "96-node FD decay angular Gauss agrees analytic A at 6 momentum/mass benchmarks rel≤2e−12; Bose equilibrium, sign of gain/loss and number/energy/entropy checked; radial n128→256 fill rate relative <1e−6",
+    "results": "With same arbitrary Gme²=.001, gχeff=sqrt4π, Tnu=me and reference H at gstar10.75, initial empty Z′ inverse source normalized by its BE density has Rfill/H=1349.73,1.84904e6,1.33809e9 at mV/me=.03,.1,.3.",
+    "physical_scope": "Fixed externally thermal FD ν reservoir, no ν density/temperature evolution, other Z′ channels, plasma masses, gstar dynamics, or physical 86eV ΩDM/BEC/CLASS; not χ elastic Γel."
   }
 }
