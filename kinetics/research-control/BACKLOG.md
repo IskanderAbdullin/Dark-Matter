@@ -225,3 +225,6 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Implement exact rational transfer coordinate in boosted 5D Pauli heat, retain full outgoing-state Fermi factors, vector trace and energy transfer; add comparison/equilibrium tests and report.
 - [ ] Check new CI and independently scan mV/T, nrad/nangle/nphi and incoming/outgoing cutoff, massive e and massless chiral ν with split baths. If any discrepancy, retain numerical negative and repair before interpretation.
 - [ ] Actual UV-valid χ1/χ2φ portal, finite SM chemistry/weak bath and nonthermal kinetic spectrum; no 86eV relic/BEC/CLASS claim.
+
+- [x] Identify actual failed 5D transfer-angle CI [44979564709](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44979564709): Python 3.11/3.13 SyntaxError from literal `\\n` in source; repair in `99a15ea9`.
+- [ ] Verify CI after syntax repair, resolve remaining failures; only then independent n/cutoff/mV thermal heat convergence, including negative cases.
