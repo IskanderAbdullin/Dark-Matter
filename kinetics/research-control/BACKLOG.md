@@ -228,3 +228,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Identify actual failed 5D transfer-angle CI [44979564709](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44979564709): Python 3.11/3.13 SyntaxError from literal `\\n` in source; repair in `99a15ea9`.
 - [ ] Verify CI after syntax repair, resolve remaining failures; only then independent n/cutoff/mV thermal heat convergence, including negative cases.
+
+## 2026-11-22 adaptive forward mediator angular gate
+
+- [x] Previous repaired HEAD 25de5e55 passed real Scientific CI #44997020168.
+- [x] Independent adaptive scipy polar reference and exact propagator angular identity; three local regression tests pass, negative mV=.03 48-node transfer error +1.05%; previous transfer audit prose factor-two corrected.
+- [ ] Verify new CI. **P0:** integrate adaptive polar over full p,k,mu 5D physical e and active ν Pauli weak source with independent n/cutoff/mV/T and bath-splitting errors; then physical gauge/UV mediator+χ1χ2φ and nonthermal Bose FRW. No gamma_el/86eV Ω/BEC/CLASS claim.

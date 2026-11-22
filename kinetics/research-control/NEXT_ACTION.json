@@ -2,9 +2,11 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify repaired finite-mediator 5D CI, then independently converge transfer-angle heat",
-  "objective": "Check Scientific verification for ffe1f835, fix remaining test failures if any; then independently converge finite-mediator 5D full-Pauli χe/χν heat vs transfer-angle quadrature, cutoff and mediator mass.",
+  "title": "Check adaptive forward-event CI and independently converge full finite-mediator χe/χν 5D heat",
+  "objective": "Independent adaptive on-shell polar reference quantifies significant residual light-vector angular error despite correct u Jacobian: mV=.03 transfer n48 +1.0507% and cosine n48 +1.9318%; n96 transfer +0.05096%. Verify repository CI for new test and analytic note correction. Then integrate adaptive polar reference over full p,k,mu thermal distribution for massive e and chiral active ν with mV/T, incoming cutoffs, radial/azimuth resolution, distinct electron/neutrino bath temperatures, physical finite volume and absolute Q uncertainty; maintain gauge/UV and 86 eV caveats.",
   "prerequisites": [
+    "Check latest PR HEAD and new GitHub Scientific verification; prior successful 25de5e55 run 44997020168.",
+    "Read independent angular audit and JSON; reproduce python -m pytest -q tests/test_finite_mediator_forward_event_reference.py tests/test_finite_mediator_transfer_quadrature.py tests/test_finite_mediator_5d.py",
     "Run python kinetics/finite_mediator_angular_control.py (restricted propagator-only Simpson control, committed 9355bf0); do not confuse with physical χe/χν thermal heat.",
     "Verify branch and actual GitHub Actions on new chiral ν/e portal commit and prior nonthermal QED weak commit b571c1 (run #44958176219 was in_progress at last check).",
     "Run python -m pytest -q tests/test_lepton_portal_neutrino_heat.py tests/test_lepton_portal_split_bath.py tests/test_qed_pair_nonthermal_weak.py",
@@ -12,6 +14,8 @@
     "Read kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md and the compact JSON; check physics of actual original χ1/χ2/φ charges and vectorlike assumptions before importing benchmark as physical model."
   ],
   "experiments": [
+    "Build full adaptive-angle 5D weak Pauli heat with p,k,mu integration, compare transfer/cosine n24/48/96 and adaptive; include mV/T=.03,.1,.3 with massive e and active left-handed ν.",
+    "Refine radial, azimuth and incoming/outgoing energy tails; inspect absolute uncertainties before sign conclusions when e and ν heat cancel.",
     "Implement exact 1/(mV²−t)² in 5D χe and χν integrands, with existing angle-dependent spin trace and full Fermi gain/loss; compare contact limit and direct t quadrature, thermal-tail convergence and split ν/e baths.",
     "Derive exact spin/helicity summed χe and χν t-channel massive Z' propagator 1/(mZ'²−t), test mZ'→∞ contact against prior 5D massive e and ν and independent angular trace; quantify EFT failure and forward-peaking/cutoff errors, with controlled coupling and thermal masses.",
     "Check Le−Lmu mediator gauge/Higgs breaking, kinetic mixing and laboratory/BBN/Neff constraints; reconstruct actual χ1χ2φ symmetry consistency or find a model-compatible alternative; never claim this candidate is already the real portal.",
@@ -90,5 +94,12 @@
     "repair_commit": "ca2492b0c67e4368abe4cce138abf25af061d4bc",
     "verification": "pending",
     "next": "Check actual new HEAD CI and run pytest tests/test_finite_mediator_transfer_quadrature.py tests/test_finite_mediator_5d.py; independently converge n24/32/48, mediator mV/p*, thermal tails; do not relax tolerance without independent agreement."
+  },
+  "latest_forward_event": {
+    "source": "kinetics/finite_mediator_forward_event_reference.py",
+    "report": "kinetics/FINITE-MEDIATOR-FORWARD-EVENT-CONVERGENCE.md",
+    "data": "kinetics/results/finite-mediator-forward-event-2026-11-22.json",
+    "test": "tests/test_finite_mediator_forward_event_reference.py",
+    "status": "standalone 3 tests passed, new CI pending"
   }
 }
