@@ -98,6 +98,8 @@
 
 | 2026-11-22 | После физического движущегося χ1↔χ2+real φ WEAK источника проверен элементарный **строго on-shell energy-matched** Pauli/Bose 1↔2 implicit substep: явные физические bounds, две conserved charge, E и H, в том числе обратный процесс и bφ=0 | [научный bounded-event stage](../archive/stages/2026/11/2026-11-22-yukawa-bounded-on-shell-event.md), [отчёт](../kinetics/YUKAWA-ON-SHELL-BOUNDED-EVENT-AUDIT.md). Ключевое ограничение — modal weights ещё произвольны, НЕТ полного физического χ1χ2φ q-grid/time или SM/FRW |
 
+| 2026-11-22 | Полный on-shell χ1↔χ2+real φ 1↔2 source стал *нелинейно* эволюционировать все **три** Fermi/Bose energy populations при согласованной logit/η интерполяции и парной консервативной deposition; проверены физические radial cell capacities и отдельные химические μ | [постоянный stage](../archive/stages/2026/11/2026-11-22-yukawa-three-species-bounded-time.md), [аудит](../kinetics/YUKAWA-THREE-SPECIES-BOUNDED-TIME-AUDIT.md). **Отрицательное:** при bins16→64 итоговый ΔNφ изменяется на ~8.9% для обратного χ2φ→χ1 и ~2.6% для производства; first-order dt, нет IR/SM/FRW/86eV Ω |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

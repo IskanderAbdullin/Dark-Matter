@@ -422,3 +422,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Use real boosted on-shell daughters to construct first bounded implicit single 1↔2 Pauli/Bose microextent; two conserved charges, total E, entropy, Fermi/Bose strict physical domain, both forward/inverse and initially empty boson. Five local tests incl 250 deterministic stiffness/Bose stress samples pass.
 - [x] **Negative:** positive arbitrarily assigned modal weights are NOT physical phase-space capacity and implicit Euler not exact/global, no real φ spectral or χ1χ2+lepton FRW time. Numerical stress exposed overstrict absolute-only 3e−12 conservation tolerance when totals~1.9e4; corrected abs+relative gate with no physical rule change.
 - [ ] Check new GH CI; P0 independent moving vacuum Yukawa number/heat vs 1D quad/BEST and physical χ2+φ daughter finite-volume mapped collision/H; then coupled shared lepton SM FRW. Ω/BEC/CLASS false.
+
+## 2026-11-22 moving χ1χ2φ fully evolving B/F physical-cell 1↔2 source
+
+- [x] Derive same-weight Fermi logit/φ Bose η interpolation and parent/daughter physical-energy barycentric deposition. Prove two independent Yukawa charge nulls N1+N2,N1+Nφ, total E and eventwise H≥0. Capacity uses exact radial p³ cell integrals for each distinct m and g; no clipping or thermal reset.
+- [x] Run 12 local pytest cases including old moving weak comparison; 3 bins16/32/64 and hot/cold initial mother actual time: positive hot net φ/χ2 creation, negative cold net φ/χ2 destruction, entropy growth; dt 3 tolerances at bins32.
+- [x] **Negative:** bins16→64 time yield |ΔNφ| moves up to 8.9%; 1st order dt result shifts with atol; Bose endpoint b=0 fails closed. Physical UV/SM/FRW/86eV Ω still missing.
+- [ ] Verify CI, P0 couple existing one shared lepton χ1+χ2 elastic 2→2 with dynamic real φ Yukawa (four evolving species), then joint 3+ q/IR/angle/cutoff/time; no claims Γelastic/Ω/BEC/CLASS.

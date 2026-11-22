@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Single on-shell Bose/PF bounded event stage archived with executable physical full mode finite-volume next step. Session started at 2026-11-22T14:52:42Z; no between-invocation continuation.",
+  "stop_reason": "One semidiscrete moving Yukawa three-species synthetic stage archived; next executable action four-species coupling and 3+ axes/IR convergence. No background execution claimed.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Moving real φ Yukawa χ1↔χ2+φ scalar Pauli/Bose weak moment with physical threshold plus one bounded on-shell elementary quantum reaction are now separately verified. Single event preserves Cfermion=Nχ1+Nχ2, C1φ=Nχ1+Nφ and total collocated energy, entropy increases, both directions and empty-boson creation checked. HOWEVER event capacities arbitrary, no physical multi-mode strong χφ time; shared lepton χ1χ2 remains elastic-only.",
+  "current_phase": "Moving physically on-shell Yukawa χ1↔χ2+real φ Bose/Pauli source has a first true three-distribution nonlinear finite-volume time pilot with exact discrete stoichiometric N1+N2,N1+Nphi, total E and entropy and physically integrated radial capacities. One shared lepton Pauli operator exists separately but not coupled. Synthetic bins16/32/64 and local-tolerance scans show nonconvergence; no physical 86eV DM/FRW.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -665,5 +665,17 @@
     "observed_status": "in_progress",
     "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45039365150",
     "scope": "moving Yukawa weak; NOT the bounded-event stage"
+  },
+  "latest_bounded_yukawa_three_species_time": {
+    "status": "12 local tests passed including independent prior moving weak suite; new real GH Scientific CI pending",
+    "source": "kinetics/yukawa_bose_pauli_bounded_time.py",
+    "tests": "tests/test_yukawa_bose_pauli_bounded_time.py",
+    "report": "kinetics/YUKAWA-THREE-SPECIES-BOUNDED-TIME-AUDIT.md",
+    "data": "kinetics/results/yukawa-three-species-pauli-bose-time-2026-11-22.json",
+    "temporal_data": "kinetics/results/yukawa-bose-pauli-temporal-tolerance-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-yukawa-three-species-bounded-time.md",
+    "positive": "Full F/R on-shell moving parent, χ1,χ2 Fermi logits and φ Bose ηφ=ln[(1+b)/b] interpolated with same positive energy deposition; 3-species H theorem identity event vs node to ~1e−27, N1+N2,N1+Nφ and E to ≤2e−15; thermal weak/strong matches at bins16/32/64 to <1e−10, nonzero μ chemical fixed point; hot T1=1.1 produces real φ and χ2 in dynamic time, cold T1=.9 absorbs both; entropy increases.",
+    "negative": "At same illustrative toy time bins16 vs64 shifts |ΔNφ| by ~8.9% cold and ~2.6% hot; first-order adaptive local atol1e−5/1e−6/1e−7 changes ΔNφ .00126915/.00126852/.00126832. φ b=0 input fail closed; physical gspin, IR, parent radial convergence, SM/Zprime/FRW/physical 86eV benchmark/Ω/BEC/CLASS unresolved.",
+    "class_ready": false
   }
 }
