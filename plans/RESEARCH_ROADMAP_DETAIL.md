@@ -104,6 +104,8 @@
 
 | 2026-11-22 | Полный χ1χ2φ + ONE lepton dynamic Pauli/Bose теперь имеет energy-guided segmented p/k Gauss в **обоих** χℓ каналах и independently matches full 5D weak Q/H, НО **|Qχ1| cut6→10 +26.96%**, oscillatory uniform4 overstates segmented5 2.37× даже с точными charges/E/H | [негативный stage](../archive/stages/2026/11/2026-11-22-four-species-segmented-elastic.md), [audit](../kinetics/FOUR-SPECIES-SEGMENTED-ELASTIC-GATE-AUDIT.md). P0 cutoff12/16/20 и 3+ angle/IR controls перед Γelastic/86eV DM |
 
+| 2026-11-22 | **Развести два независимых численных приближения** в χ1χ2–φ–shared-lepton системе: cutoff входных 5D p,k и энергосетку логитов χ/ℓ. Для FD logit сетка точна, но на nonthermal f cutoff-скан меняет и спектральную ошибку; данные о Γelastic без фиксированной сетки неинтерпретируемы | [этап](../archive/stages/2026/11/2026-11-22-four-species-cutoff-mesh-separation.md), [отрицательная H/Q спектральная проверка](../kinetics/FOUR-SPECIES-CUTOFF-MESH-SEPARATION-AUDIT.md): на cut12/bin64 смена сетки меняет Qχ1~7.9%, H~45.6%; при фиксированной сетке N256 H bias −5.7% относительно analytic-f 5D weak |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

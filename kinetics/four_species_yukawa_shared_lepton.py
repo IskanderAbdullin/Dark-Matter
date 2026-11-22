@@ -26,7 +26,12 @@ def configuration(*,bins=24,masses=(.1,.02),mphi=.001,mlepton=0.,
                   elastic_G=.01,elastic_mv=.1,
                   elastic_nr=4,elastic_nmu=4,elastic_nc=8,elastic_nphi=8,
                   yukawa_nr=12,yukawa_nangle=12,
-                  elastic_radial_scheme='uniform_p',elastic_segments=1):
+                  elastic_radial_scheme='uniform_p',elastic_segments=1,
+                  elastic_integration_cut=None):
+    if (elastic_integration_cut is not None and
+        not (math.isfinite(elastic_integration_cut) and
+             0<elastic_integration_cut<=elastic_cut)):
+        raise ValueError('elastic integration cutoff outside common mode grid')
     elastic=elastic_system(masses=masses,mlepton=mlepton,bins=bins,cut=elastic_cut)
     yuk=YukawaConfig(m1=masses[0],m2=masses[1],mphi=mphi,y=y,
                      pmax=yukawa_pmax,bins=bins,nr=yukawa_nr,
@@ -46,7 +51,8 @@ def configuration(*,bins=24,masses=(.1,.02),mphi=.001,mlepton=0.,
             'elastic_nc':elastic_nc,'elastic_nphi':elastic_nphi,
             'shared_energy_upper':upper,
             'elastic_radial_scheme':elastic_radial_scheme,
-            'elastic_segments':elastic_segments}
+            'elastic_segments':elastic_segments,
+            'elastic_integration_cut':elastic_integration_cut}
 
 
 def initial(cfg,*,T1=1.1,T2=1.,Tlep=1.,Tphi=1.,mu_phi=0.):
@@ -80,7 +86,8 @@ def rhs(cfg,state):
             nmu=cfg['elastic_nmu'],nc=cfg['elastic_nc'],
             nphi=cfg['elastic_nphi'],G=cfg['G'],mv=cfg['mv'],
             radial_scheme=cfg['elastic_radial_scheme'],
-            segments=cfg['elastic_segments'])
+            segments=cfg['elastic_segments'],
+            incoming_cut=cfg['elastic_integration_cut'])
     d1,d2,db,yuk=yukawa_rhs(y,f1,f2,b)
     ds=(de[0]+d1,de[1]+d2,dl,db)
     sgrad=(-float(np.dot(y.w1*ds[0],logit(f1)))

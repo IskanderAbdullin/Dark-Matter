@@ -443,3 +443,9 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** FD thermal locally stable Qχ1 cut6≈−9.914e−12 (segments6 local3/4/5/6), but fixed E-segment ΔE=1 incoming cutoff6→8→10 raises |Q| +26.96% from 6 to10. Legal oscillatory f uniform4 Qχ1 +1.9511e−12 versus segmented6 local5 +.82364e−12 = factor2.37 underresolution. No reliable physical Γelastic inferred.
 - [x] Previous four-population synthetic Scientific verification #45040794111 succeeded. Actual CI for new radial/cutoff gate pending.
 - [ ] P0 cutoff12/16/20 at fixed ΔE, 3+ radial/μ/log-CM/azimuth and χ2/electron, and real φ IR/cell/time convergence before physical SM+Zprime+FRW/86eV ΩDM/BEC/CLASS.
+
+## 2026-11-22 cutoff/mode-grid orthogonality — critical conditional four-pop numerical gate
+
+- [x] Added independent strong Pauli incoming elastic phase-space cut when shared χ1χ2,φ,lepton mesh is fixed; prior code default fully preserved and invalid cut beyond coverage fail-closed. Analytical FD affine logit collision exact-mesh positive control, previous coupled 9 regressions pass.
+- [x] Oscillatory physically legal nonthermal χ1,χ2,lepton **negative**: at incoming cut12/bins64 meshcut12 versus20 changes Qχ1 7.9% and entropy 45.6%; former cutoff runs conflated grid and physical tail. At fixed mesh bin32/64/128/256 true analytic-occupation 5D weak H biases −86.25/−49.21/−18.41/−5.73% despite exact N/E/H and positive Pauli event entropy; two independent code paths at identical quadrature.
+- [ ] Check new actual Scientific CI, then independent >=3 mode grids beyond N256, incoming/outgoing 5D orders and physical cutoffs with shared grid locked. Probe zero real φ occupation, bosonic IR and massive lepton/true SM and FRW. Do not promote to physical Γelastic/86eV relic.
