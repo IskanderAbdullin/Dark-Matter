@@ -1,0 +1,99 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "finite-volume massive vector modes + two-active-flavor massless nu/antinu thermal FD(T,mu) constrained closure, only Zprime↔ννbar on-shell quantum Pauli/Bose",
+  "method": "exact vector exponential 1<->2 microphysical mode updates at momentarily frozen Tnu,mu, re-solve FD T,mu from Nnu+2NV and total energy each step; assumed fast ν number/energy-conserving redistribution",
+  "time_unit": "tau=Gamma_nunu_rest*t, not Hubble time",
+  "params": {
+    "mV_T0": 0.03,
+    "gV": 3,
+    "gnu": 4,
+    "mu0": 0,
+    "bV_initial": 0,
+    "vector_p_cut_T0": 35,
+    "nu_q_cut": 50,
+    "n_modes": 96
+  },
+  "phase_space_formula": "dbV/dtau=(mV/E)A(p,T,mu)[BE((E-2mu)/T)-bV], A=1-(2T/p)log[(1+exp(mu/T-(E-p)/2T))/(1+exp(mu/T-(E+p)/2T))]",
+  "scan": [
+    {
+      "tau": 100,
+      "steps": 20,
+      "T": 1.2457395553397752,
+      "y": -1.0610212985354306,
+      "Nv": 0.05244342568898846,
+      "S": 1.0700143547494643
+    },
+    {
+      "tau": 100,
+      "steps": 40,
+      "T": 1.2446936256398444,
+      "y": -1.0570607261139477,
+      "Nv": 0.05227501643569061,
+      "S": 1.0699846040201009
+    },
+    {
+      "tau": 100,
+      "steps": 100,
+      "T": 1.2440579138106393,
+      "y": -1.054651334461131,
+      "Nv": 0.052172446544482186,
+      "S": 1.0699659557572123
+    },
+    {
+      "tau": 500,
+      "steps": 100,
+      "T": 1.2489289057851767,
+      "y": -1.1356189791303466,
+      "Nv": 0.0605453434089627,
+      "S": 1.072840654830041
+    },
+    {
+      "tau": 1000,
+      "steps": 100,
+      "T": 1.2465787050088284,
+      "y": -1.1362705849086845,
+      "Nv": 0.06130993935875086,
+      "S": 1.0728963733241128
+    },
+    {
+      "tau": 2000,
+      "steps": 200,
+      "T": 1.2460365158975124,
+      "y": -1.135938234410286,
+      "Nv": 0.061429369193974306,
+      "S": 1.0728986112612096
+    },
+    {
+      "tau": 3000,
+      "steps": 300,
+      "T": 1.2460036590592862,
+      "y": -1.135904135911392,
+      "Nv": 0.06143497200973676,
+      "S": 1.0728986292825964
+    },
+    {
+      "tau": 5000,
+      "steps": 500,
+      "T": 1.2460001560026048,
+      "y": -1.1358998785749717,
+      "Nv": 0.06143549659398156,
+      "S": 1.0728986296874805
+    }
+  ],
+  "independent_final_equilibrium": {
+    "T": 1.246000083762047,
+    "y": -1.1358997797528676,
+    "S": 1.0728986296994165
+  },
+  "number_energy_max_residual_for_tau3000_n96": {
+    "N": 1.3988810110276972e-14,
+    "E": 1.965094753586527e-14
+  },
+  "negative": {
+    "time_splitting_tau100": "20,40,80 substeps T=1.24573957,1.24469364,1.24416424, approximately first order ~1.98; conservation/entropy alone do not prove convergence",
+    "huge_timestep": "tau=3000 with 20 substeps fails physical nu particle/energy target, raises ArithmeticError; do not clamp",
+    "cutoff": "cut p/T0=25 vs35 shifts T by 4.32e-7 at tau3000; smooth benchmark not full nonthermal uncertainty"
+  },
+  "limitation": "Fast ν thermal redistribution assumed not derived; no actual e/γ weak chemistry, H, χ1/χ2/φ dynamics, Γel or 86eV ΩDM/BEC/CLASS",
+  "class_ready": false
+}

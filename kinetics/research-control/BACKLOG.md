@@ -289,3 +289,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** a large quantum inverse fill/H does NOT prove final ν and Zprime chemical potentials vanish. In reduced system an implicit zero-mu thermal reset breaks conserved Nν+2NV and energy; full weak ννbar↔e+e− can invalidate reduced conservation and must be modeled.
 - [ ] Check GH CI. **P0:** positive finite ν reservoir + exact vector mode time integration with T,mu determined by N/E, entropy, q/dt convergence; then real ν-e±γ weak number changing and vector/χ1/χ2+φ Bose/FRW. No physical Gamma_el, 86eV Omega/BEC/CLASS.
 
+## 2026-11-22 finite ν chemical/thermal reservoir and Zprime Bose 1<->2 time
+
+- [x] Evolve Zprime b(p) via exact mode exponential of physical ν Pauli+Bose inverse source; update finite massless ν FD(T,μ) to preserve true reduced Nν+2NV and total E, recompute entropy each step. Under explicit instant ν self-rethermalization closure, τ5000 steps500 reaches independent constrained equilibrium T to 7e−8 and µ/T to 1e−7, N/E errors ~1e−14, entropy monotonic. [Audit](../VECTOR-NEUTRINO-FINITE-BATH-TIME-AUDIT.md).
+- [x] **Negative numerical:** τ100/20,40,80 has visible ~first-order splitting drift despite exact charge/energy/entropy; τ3000 in 20 substeps overdraws ν number budget and is rejected. Convergence and stiff adaptation remain P0.
+- [x] Prior quantum vector finite-T CI #45009062951 on 9582b5a success.
+- [ ] Verify new CI and closed-equilibrium CI; **P0:** genuine nonthermal ν strong source and SM weak ννbar↔e± number-changing, finite e±γν entropy and Zprime dark pair channels; gauge constraints and both χ1/χ2 full Pauli + real-φ Bose FRW, no physical Γel/86eV ΩDM/BEC/CLASS claim.
+

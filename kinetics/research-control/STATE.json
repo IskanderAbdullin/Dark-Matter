@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Bounded active research run; executable next stage coupling exact vector source to finite ν bath and timestep convergence recorded.",
+  "stop_reason": "Bounded research run, checkpoint for next physical ν weak source before interpreting finite thermal closure; no background work claimed except independent scheduled runs.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Microscopic moving Z′↔νν full Pauli/Bose 1↔2 now paired with independent **closed ν+Z′ chemical equilibrium** conserving Nν_total+2NV and energy. For initially empty Z′ thermal ν µ=0, full reduced equilibrium develops µν/T≈−1.136 and mediator number only ~17% of hypothetical zero-µ BE at initial T0; inverse fill/H alone does not justify free thermal reset.",
+  "current_phase": "Full restricted finite-volume ν+Z′ nonlinear Bose-mode 1↔2 time integration with exact Pauli ν quantum source, finite ν T and effective number chemical potential matched to true Nν+2NV and E conserved, entropy monotonic. Actual fast ν redistribution is an explicit unverified closure; e± weak, χ1/χ2/φ and FRW still open.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,10 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "253e99233a3c5c7daf48ffcc8b62fd444b92980a",
-    "run_id": 45008415213,
+    "head_sha": "9582b5a6d261670c2e38d34ed1256a87c0b1a48c",
+    "run_id": 45009062951,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45008415213"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45009062951"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -425,5 +425,16 @@
     "independent": "Finite Gauss p/T n128/256 matches formal mV/T→0 fixed-Proca-g3 independent fugacity series, T∞=1.2460341, mu/T=−1.1360001; NOT physical restored-gauge massless phase",
     "negative": "Fast exact Z′↔νν collision does NOT imply µV=µν=0 equilibrium in a closed number/energy conserving sector. Other weak ννbar↔e+e− violates reduced particle-number charge; full SM needed.",
     "scope": "Thermodynamic equilibrium only, no vector/ν time evolution, no χ elastic Γel or real 86eV dark relic/BEC/Ω/CLASS."
+  },
+  "latest_finite_nu_bath_vector_time": {
+    "source": "kinetics/vector_neutrino_finite_bath_time.py",
+    "test": "tests/test_vector_neutrino_finite_bath_time.py",
+    "report": "kinetics/VECTOR-NEUTRINO-FINITE-BATH-TIME-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-finite-bath-time-2026-11-22.json",
+    "status": "4 local tests passed, analytic independent stationary equilibrium, time and q/cutoff scan; new GitHub CI pending",
+    "construction": "Z′ b(p) exact per-step exponential from actual ννbar FD Pauli/Bose 1↔2; after each substep update ν FD T,y from conserving Nν+2NV and total energy. Assumes instantaneous number/energy-conserving ν self-thermalization (not modeled physical weak scattering).",
+    "positive": "At τ=5000 (Γ0 t), 500 substeps, n96 vector modes: Tnu/T0=1.246000156, y=−1.135899879, vector Nv=.061435497, entropy +7.28986%. Independent exact closed equilibrium T=1.24600008376,y=−1.13589977975, so ΔT=7.22e−8,Δy=−9.88e−8. Max N/E relative drift≈1e−14 for τ3000, and positive entropy each accepted substep.",
+    "negative": "τ100 with 20→40→80 steps shows ~first-order T bias (T=1.24573957,1.24469364,1.24416424). τ3000 with 20 substeps overdraws finite ν particle budget and aborts with ArithmeticError, no hidden clamp. No actual ν kinetic redistribution or full SM.",
+    "limits": "No H/FRW, e±γ weak channels, ν nonthermal strong, Z′→dark, original χ1/χ2/φ Bose, physical gamma_el or 86eV ΩDM/BEC/CLASS."
   }
 }
