@@ -175,6 +175,5 @@ if __name__ == "__main__":
     if o.output:
         path = Path(o.output)
         path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_text(json.dumps(data,indent=2)+"
-",encoding="utf-8")
+        path.write_text(json.dumps(data,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(data,indent=2))
