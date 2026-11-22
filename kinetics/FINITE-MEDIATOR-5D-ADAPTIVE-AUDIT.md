@@ -95,3 +95,7 @@ gauge portal mediator, χ1χ2φ charge consistency,
 e±γν SM evolution and the full nonthermal Pauli/Bose
 collision + FRW. No physical Γ_el, macroscopic
 BEC, 86-eV ΩDM, frozen f(q) or CLASS readiness.
+
+## Reproducible negative CI: azimuth aliases at 12 nodes
+
+Actual Scientific CI [#45006858598](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45006858598) **failed on both Python 3.11/3.13**: 1 failed, 811 passed. The failed test demanded 2e−6 relative agreement between the conventional 5D Gaussian 12-node CM azimuth rule (Q=6.426256971206314e−14) and the separately implemented 12-node uniform-periodic azimuth rule (Q=6.426357798018684e−14), differing by **1.56898e−5**. This is not evidence of a missing angular Jacobian or physical energy violation. Independent local azimuth refinement shows conventional Gaussian 24-node Q≈6.426358531743393e−14, periodic 24-node Q≈6.426358442329552e−14 (relative ~1.39e−8), establishing that the 12-node Gaussian angular rule was itself unresolved in this coarse 5D fixture. Keep the observed failure; the revised regression now **checks and records** the low-azimuth negative and compares only two independently refined nphi=24 implementations, without simply loosening the acceptance tolerance. Follow with real CI verification of the repair before any promotion. This remains a fixed thermal weak benchmark only.

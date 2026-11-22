@@ -101,7 +101,7 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active session bounded; two angular audit checkpoints committed when finished; NEXT_ACTION executable for next autonomous scheduled invocation.",
+  "stop_reason": "CI failed on unresolved CM azimuth quadrature, now scientific negative and targeted regression correction staged; next action check actual repair CI before interpreting 5D heat. No continuous work implied.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
@@ -342,5 +342,14 @@
     "benchmark": "Mχ=.1,mlep=0,Te=1,Tχ=.9,G=.001, incoming kinetic cutoff 14 T, nrad=nmu=8 and 10, nphi=16; polar Gauss 32",
     "negative": "mV=.03, nrad/nmu=10: transfer angular n32 Qχ/QUAD−1=−9.5586%, direct cosine −7.876%; mV=.1 transfer −0.910%, cosine +0.812%; transform not uniformly better",
     "positive": "Tχ/Te=.9 vs1.1 χ heat sign reverses; common T Pauli heat vanishes; adaptive 5D Qχ changes little for nrad8→10 in light mediator case but no full convergence"
+  },
+  "last_adaptive_full_5d_ci_failure": {
+    "run_id": 45006858598,
+    "head": "a111350d7d906ca7d60e519d9dcba8ac9e6615a1",
+    "outcome": "failure, 1/812 tests; both Python versions",
+    "issue": "coarse 12-node Gaussian azimuth Q=6.426256971206314e−14 differs by 1.56898e−5 relative from uniform 12-node azimuth Q=6.426357798018684e−14; Gaussian azimuth itself shifts at 24 nodes",
+    "independent_24": "Gauss φ24 6.426358531743393e−14 vs periodic φ24 6.426358442329552e−14; relative ≈1.39e−8",
+    "repair": "Test now retains explicit low-phi alias negative and compares nphi24 with same 2e−6 acceptance; corrected test commit CI pending",
+    "physical_scope": "Engineering and quadrature precision failure, not full physical γel result"
   }
 }
