@@ -2,18 +2,19 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Verify independent constrained-equilibrium CI; reduce nonmonotone quantum event-time splitting while preserving bounds",
-  "objective": "Corrected half-offset Z′↔ν+antiν graph with exactly physical C,L,E nullity3 now independently reaches maximum-entropy BE/FD constrained by nonzero lepton asymmetry. At h=.2 root gives T/T0=1.0284211, μν/T=-.1058103, μanti/T=-.1609529; τ500(dt1) maximum occupancy difference .001037 and entropy gap1.86e−6; τ1000 .000339 and 3.99e−7. However temporal splitting bV_low at τ100 nonmonotone for dt2,1,.5,.25 (.75305,.74398,.74668,.74874). Check new CI, then compare opposite event order/Strang symmetric sweep or coupled implicit solver, retain positivity/entropy & exact C,L,E with 3+ dt/h/cutoff and full spectra; only then physical ν-e±γ and gauge χ1/χ2/φ Bose FRW, never claim physical γel/86eV ΩDM/BEC/CLASS prematurely.",
+  "title": "Verify exact Riccati+Strang Scientific CI and resolve stiff h=.1 dt/order before full SM/χ/Bose kinetics",
+  "objective": "A closed exact Pauli/Bose Riccati elementary vector↔ν+antinu event combined in palindromic Strang gives bounded source with discrete exact C,L,E, monotone entropy and distinct evolving ν/antinu. Independent local solve_ivp agrees ≤3.2e−16 in 18 events. h=.2 max spectral error relative dtref=1/256 at dt=.0625/.03125/.015625 = .007275/.002098/.0005215 (ratios3.47/4.02), but h=.1 with 808 events at dt=.125/.0625/.03125 errors .023212/.014168/.007222 (ratios1.64/1.96), NOT second-order regime. Verify full GH CI on new commit, then dt≤1/256 relative dtref<1/1024 at h=.1, adaptive positivity/entropy step and 3+ h/Emax/shape/cutoff to independently close continuum weak and strong moments. Then physical gauge-e±γν and both χ1/χ2 Pauli2→2 plus χ1↔χ2+86eV φ Bose+FRW. Never promote Γ0=1 to physical Γelastic or 86eV DM.",
   "prerequisites": [
-    "Check PR#1 latest HEAD/draft and Scientific verification on new constrained-equilibrium commit; prior stoichiometric nullity proof baa501e full Scientific #45012556392 success.",
-    "Read kinetics/VECTOR-NEUTRINO-CONSTRAINED-EQUILIBRIUM-AUDIT.md and corresponding archive stage, source/tests and JSON. Reproduce python -m pytest -q tests/test_vector_neutrino_constrained_equilibrium.py tests/test_vector_neutrino_event_invariants.py",
-    "Run python -m kinetics.vector_neutrino_constrained_equilibrium --h 0.2 --tau 500 --dt 1 and independently inspect root C,L,E, finite entropy gap, distinct μν and μanti, no imposed ν FD reset.",
-    "Keep negative nonmonotone τ100 b_low dt2/1/.5/.25 and h/cutoff errors; no physical rate/cosmological predictions."
+    "Read current repo AGENTS.md and PROJECT_MAP.md routing: root PLAN is a concise map; physical route in plans/RESEARCH_ROADMAP_DETAIL.md and kinetics/RESEARCH_GUARDRAILS.md. Latest branch PR#1 must be draft.",
+    "Check actual GitHub Scientific verification for the new exact-event Strang commit, baseline context-map 92caea CI #45014249016 succeeded; prior constrained equilibrium 632ee72 CI #45013070487 succeeded.",
+    "Run python -m pytest -q tests/test_vector_neutrino_exact_event_strang.py tests/test_vector_neutrino_constrained_equilibrium.py tests/test_vector_neutrino_event_invariants.py",
+    "Run python -m kinetics.vector_neutrino_exact_event_strang --h 0.2 --tau 4 --dt 0.0625; independently repeat solve_ivp microextent (rtol2e−11,atol2e−17), three full spectra and exact C,L,E/S."
   ],
   "experiments": [
-    "Implement and compare deterministic reverse-order and symmetric(Strang) event sweeps with the exact bounded implicit microreaction map; verify if reversibility/symmetry truly improves convergence under 3+ dt refinements, while keeping C,L,E and H theorem, respecting that backward Euler scalar map is not exact reversible microflow.",
-    "Develop positive exact-local reversible reaction map or high-order coupled implicit solver if Strang is not actually second-order; calculate time-order & spectral error against a refined reference for ν,antiν,V at h=.4,.2, several τ.",
-    "Then 3+ h/Emax/angle/cutoff and independent continuum rate check including threshold bin and actual SM weak ν-eγ and χ1χ2φ/Bose FRW model; 86eV ΩDM/CLASS remains not ready."
+    "Resolve stiff h=.1 with time dt=.015625,.0078125,.00390625,.001953125 and reference ≤.0009765625; compare full three-species spectra, stage-order and entropy to identify asymptotic temporal second order rather than assume it.",
+    "Measure 3+ h (including .4,.2,.1), Emax4/6/8 and at least two nonthermal spectra for vector weak and strong rates/entropy versus independently parameterized continuum 1↔2 operators, separate cutoff from time errors and check full stoichiometric nullity.",
+    "Only after rate and temporal convergence, implement true finite e±γν collision and charged/gauge-complete χ1/χ2 2→2 Pauli and χ1↔χ2+real φ Bose 1↔2 with H,gstar, mediator and ΔNeff constraints. CLASS-ready=false."
   ],
-  "constraints": "Only current public research branch and draft PR, no force-push/merge main, no Computer Use/user PC, minimal public GH Actions, archive results and negative findings, CLASS-ready=false."
+  "constraints": "Only this public repo research branch, draft PR#1, no force push or main merge, no Computer Use/user PC without express permission, small CI, permanent archival source/JSON, negative results retained.",
+  "class_ready": false
 }

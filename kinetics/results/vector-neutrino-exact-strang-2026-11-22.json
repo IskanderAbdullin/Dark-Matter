@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "project": "Dark-Matter / kinetics",
+  "stage": "vector-neutrino-exact-event-strang",
+  "type": "synthetic nonthermal finite reaction graph numerical control, not cosmological model",
+  "physical_scope": {
+    "vector_degrees": 3,
+    "neutrino_degrees": 2,
+    "antineutrino_degrees": 2,
+    "reactions": "on-shell Zprime <-> nu + antinu",
+    "gamma0": 1,
+    "mV": 0.4,
+    "emax": 4,
+    "temperature_reference": 1,
+    "energy_grid": "half-offset neutrino; exact angular overlap; clipped vector radial cells",
+    "gauge_and_FRW": "not modeled",
+    "class_ready": false
+  },
+  "initial_distributions": {
+    "nu": "expit(-k+0.15 exp(-k))",
+    "antinu": "expit(-k-0.10 exp(-0.5k))",
+    "vector": "0.75/(exp(E)-1)"
+  },
+  "exact_microreaction": {
+    "flux": "J=b(1-fnu)(1-fantinu)-(1+b)fnu fantinu",
+    "extent": "b=B-x/wV, f=F+x/wnu, a=A+x/wantinu; dx/dt=W*(q0+q1*x+q2*x²)",
+    "q0": "B*(1-F-A)-F*A",
+    "q1": "-B*(1/wF+1/wA)-(1-F-A)/wV-F/wA-A/wF",
+    "q2": "(1/wF+1/wA)/wV-1/(wF*wA)",
+    "root": "D=sqrt(q1²-4q2q0), r1=2q0/(D-q1), ratio=(-q1-D)/(D-q1), x(t)=r1*(1-exp(-DWt))/(1-ratio*exp(-DWt))",
+    "validation": "independent scipy.solve_ivp rtol 2e-11 atol 2e-17 across first 6 events, t=.02,.5,4; maximum absolute extent difference ≤3.20e-16",
+    "split": "forward half-step then reversed half-step of exact elementary event flows (palindromic Strang)"
+  },
+  "sandbox_validation": {
+    "source": "independent sandbox reconstruction of same equations, deterministic NumPy/SciPy, no external data",
+    "python_command": "OPENBLAS_NUM_THREADS=1 python /mnt/data/dm_scratch/split.py",
+    "h_0p2": {
+      "n_edges": 207,
+      "tau": 4,
+      "reference_dt": 0.00390625,
+      "reference_vector_low": 0.8491372937963584,
+      "strang": [
+        {
+          "dt": 0.0625,
+          "max_spectral_abs_error": 0.007275135562761492,
+          "b_low": 0.8564124293591199,
+          "entropy_gain": 0.0008233832499673355
+        },
+        {
+          "dt": 0.03125,
+          "max_spectral_abs_error": 0.0020979770692898247,
+          "b_low": 0.8512352708656482,
+          "entropy_gain": 0.0008327908143750395
+        },
+        {
+          "dt": 0.015625,
+          "max_spectral_abs_error": 0.00052151301685055,
+          "b_low": 0.8496588068132089,
+          "entropy_gain": 0.000835601619241011
+        },
+        {
+          "dt": 0.0078125,
+          "max_spectral_abs_error": 0.00010546599324712247,
+          "b_low": 0.8492427597896055,
+          "entropy_gain": 0.0008363391484662586
+        }
+      ],
+      "forward_dt_0p0625": {
+        "max_spectral_abs_error": 0.012577326943709222
+      },
+      "reverse_dt_0p0625": {
+        "max_spectral_abs_error": 0.014870566134557839
+      },
+      "errors_halving_ratios": [
+        3.467690695601435,
+        4.022866163455786
+      ],
+      "max_conserved_C_L_E_drift_order": 1e-15,
+      "entropy_monotone": true,
+      "fermi_bose_bounded": true
+    },
+    "h_0p4": {
+      "edges": 54,
+      "tau": 4,
+      "ref_dt": 0.00390625,
+      "errors": [
+        {
+          "dt": 0.125,
+          "error": 0.0017441967768416777
+        },
+        {
+          "dt": 0.0625,
+          "error": 0.00045489763634243285
+        },
+        {
+          "dt": 0.03125,
+          "error": 0.00011369974780039982
+        }
+      ]
+    },
+    "h_0p1": {
+      "edges": 808,
+      "tau": 4,
+      "ref_dt": 0.00390625,
+      "errors": [
+        {
+          "dt": 0.125,
+          "error": 0.023212018079715735
+        },
+        {
+          "dt": 0.0625,
+          "error": 0.014167634781640848
+        },
+        {
+          "dt": 0.03125,
+          "error": 0.007222471299070776
+        }
+      ]
+    }
+  },
+  "positive": "Finite graph exact microevent integrator validated independently against adaptive ODE and improved temporal convergence around h=.2 and .4; exact discrete charges/energy and growing entropy.",
+  "negative": [
+    "At finer h=.1, time order NOT in asymptotic 2nd-order regime for tested dt due stiffness/graph size.",
+    "Changing time solver does not fix angular/cutoff/threshold and remaining independent continuum number error; no physical gammaelastic or eV relic."
+  ],
+  "provenance": {
+    "code": "kinetics/vector_neutrino_exact_event_strang.py",
+    "tests": "tests/test_vector_neutrino_exact_event_strang.py",
+    "report": "kinetics/VECTOR-NEUTRINO-EXACT-EVENT-STRANG-AUDIT.md",
+    "stage": "archive/stages/2026/11/2026-11-22-vector-neutrino-exact-strang.md",
+    "git_commit": "will be history commit containing this file"
+  },
+  "outside_scope": [
+    "physical finite SM/ν/eγ chemistry",
+    "full relativistic chi1 and chi2 elastic Pauli 2→2",
+    "chi1 <-> chi2+86eV phi Bose stimulation",
+    "full FRW, Ω, BEC, CLASS"
+  ]
+}

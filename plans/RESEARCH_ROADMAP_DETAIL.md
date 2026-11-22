@@ -74,6 +74,8 @@
 
 | 2026-11-22 | В фазе B независимое максимум-энтропийное FD/BE constrained решение теперь используется как отдельная контрольная точка для настоящей неравновесной эволюции ν/antiν/Z′, без скрытого FD reset; остаточный timestep bias сохраняется | [аудит](../archive/stages/2026/11/2026-11-22-vector-neutrino-constrained-equilibrium.md), [численный JSON](../kinetics/results/vector-neutrino-constrained-equilibrium-2026-11-22.json); h=.2, τ500 spectral abs error ≈0.00104; dt-bias nonmonotone |
 
+| 2026-11-22 | Для фазы B заменить first-order последовательные implicit microevents на аналитически точный отдельный Pauli/Bose 1↔2 Riccati flow + Strang с независимым IVP эталоном и отдельным timestep/order gate; жёсткий h=.1 ещё НЕ в асимптотике | [архивный этап](../archive/stages/2026/11/2026-11-22-vector-neutrino-exact-strang.md), [версионированные числа](../kinetics/results/vector-neutrino-exact-strang-2026-11-22.json): h=.2 отношения ошибок dt/2 ≈3.47,4.02, h=.1 ~1.64,1.96 |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

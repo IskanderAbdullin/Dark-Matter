@@ -338,3 +338,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** τ100 h=.2 vector lowest bV for dt2/1/.5/.25=.75305,.743975,.746678,.748743, not monotone, and h=.4→.1 equilibrium T/μ changes. No continuum physical time-rate certificate.
 - [x] Previous nullspace proof baa501e full Scientific CI #45012556392 successful.
 - [ ] Verify new CI. P0 compare symmetric / reverse event order vs actual higher-order time and fully implicit, with 3+ dt/h/cutoff spectral checks, then ν-e±γ/χ1χ2φ Bose FRW. No Γel/86eV relic/CLASS claim.
+
+## 2026-11-22 exact Pauli/Bose reaction flow and Strang temporal audit
+
+- [x] Derive exact local quantum 1↔2 Riccati reaction extent and compare 18 independent event/time ODE integrations at abs≤3.2e−16; use palindromic forward/reverse half-events, no thermal reset, hard quantum bounds, conserve discrete C/L/E and grow entropy.
+- [x] Positive scoped: h=.2 full three-species nonthermal spectral time error dt=.0625/.03125/.015625 vs dtref=.00390625 = .007275/.002098/.000522, ratios 3.47/4.02, consistent with formal order2 on fixed graph.
+- [x] **Negative:** h=.1 is stiff at tested dt and does not show order2, errors .02321/.01417/.00722; previous angular/radial/number/cutoff issues remain. This is **NOT** physical χ Gammael or 86eV relic production.
+- [ ] Verify current GH CI; P0 h=.1 smaller dt and 3+ Emax/h/shape comparison, then true finite e±γν/χ1χ2φ SM/FRW Bose, no CLASS-ready.

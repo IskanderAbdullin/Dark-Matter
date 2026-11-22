@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active stage checkpoint archived; verify new CI and begin next full spectral dt/order/bounded scheme in a new invocation; no background work implied.",
+  "stop_reason": "Source, independent local experiment, report and permanent stage ready; real CI of research commit to verify; subsequent time refinement is executable in NEXT_ACTION, no claim of inter-launch work.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Half-offset Z′↔ν+antiν microreversible nonthermal event time approaches independently solved maximum-entropy FD/BE state preserving actual three C,L,E and nonzero lepton asymmetry, but h/cutoff/time bias and original χ1/χ2/φ/SM FRW remain unresolved.",
+  "current_phase": "Physical incomplete: numerical quantum finite reaction network Zprime↔distinct ν+antinu has exact single-channel Riccati microflow plus symmetric Strang. Independently checked against solve_ivp; h=.2 temporal ratios near 4, h=.1 stiffness yields non-asymptotic 1.64/1.96; full continuum, χ1/χ2 φ and FRW absent.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,10 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "baa501e5394c0fe52604025e2c7e2ebb4f534cd7",
-    "run_id": 45012556392,
+    "head_sha": "92caea7ad2ae4fa6f04d384e9fc37ea34b7ec2c7",
+    "run_id": 45014249016,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45012556392"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45014249016",
+    "scope": "architecture/context restructuring, prior constrained thermodynamics Scientific #45013070487 also success"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -511,5 +512,16 @@
     "status": "independent local nonlinear entropy constraints and long-time microreversible pilot, new GH CI pending",
     "positive": "At h=.2, max-entropy root T/T0=1.0284211265, mu_nu/T=-.10581032, mu_antinu/T=-.16095289, Smax−S0=.0011307271; root satisfies C,L,E <5e−16; event sweep leaves fixed point. Nonthermal τ500 dt1 reaches max occupancy abs diff .0010372 and entropy gap 1.86e−6; τ1000 dt1 .00033923, entropy gap 3.99e−7.",
     "negative": "At h=.2 τ100 vector lowest b is .753052 dt2,.743975 dt1,.746678 dt.5,.748743 dt.25, nonmonotone timestep bias; h=.4→.1 equilibrium T and μ drift, no continuum Emax/threshold/Γel/86eV guarantee."
+  },
+  "latest_exact_event_strang": {
+    "status": "independently tested local equations and 18 event ODE comparisons; source/test/report archived in pending research commit; full GH Scientific CI must be confirmed",
+    "code": "kinetics/vector_neutrino_exact_event_strang.py",
+    "tests": "tests/test_vector_neutrino_exact_event_strang.py",
+    "report": "kinetics/VECTOR-NEUTRINO-EXACT-EVENT-STRANG-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-exact-strang-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-exact-strang.md",
+    "positive": "Exact quantum Riccati microextent vs 6 independent solve_ivp ODE x3 time step absolute ≤3.2e-16; for fixed h=.2 Strang max spectral errors at dt=.0625,.03125,.015625 are .007275,.002098,.0005215 vs .00390625 reference, halving ratios3.47,4.02; discrete C,L,E to 1e-15, Bose/Pauli bounds, monotone entropy.",
+    "negative": "At finer h=.1, dt=.125,.0625,.03125 errors .023212,.014168,.007222 vs dtref=.00390625, ratios1.64,1.96: stiff not asymptotic 2nd order. Time method does not fix finite UV/cutoff, actual χ Γelastic, φ Bose or 86eV DM.",
+    "guardrails": "No physical χ Γel, ΩDM, BEC or CLASS-ready. All input thermal/particles synthetic, Γ0=1 numerical unit."
   }
 }
