@@ -27,13 +27,15 @@ def gauss(a: float, b: float, n: int):
 
 
 def cm_heat(M, m, G, Te, Tchi, *, pmax, kmax, nr=24, nang=24,
-            nphi=24, gchi=4., ge=4.):
+            nphi=24, gchi=4., ge=4., mediator_mass=None):
     """Independent relativistic full 5D thermal weak Q_chi in GeV^5.
 
     The 1/2 multiplies the forward-minus-reverse integrand because the
     integration covers the ENTIRE initial/final domain, not one orientation.
     This independent code uses CM Lorentz boosts, not transfer cones.
     """
+    if mediator_mass is not None and (not math.isfinite(mediator_mass) or mediator_mass<=0):
+        raise ValueError('mediator_mass must be finite and positive')
     p, wp = gauss(0., pmax, nr)
     k, wk = gauss(0., kmax, nr)
     mu, wm = gauss(-1., 1., nang)
@@ -67,6 +69,10 @@ def cm_heat(M, m, G, Te, Tchi, *, pmax, kmax, nr=24, nang=24,
         D = s-M*M-m*m
         U = -D-t
         amplitude = 2*G*G*(D*D+U*U+2*(M*M+m*m)*t)
+        if mediator_mass is not None:
+            # G is the zero-transfer contact coefficient gchi*glep/mV^2.
+            # No width is needed for spacelike t<=0; this is tree-level only.
+            amplitude *= (mediator_mass**2/(mediator_mass**2-t))**2
         fi = expit(-E/Tchi)
         gi = expit(-w/Te)
         fo = expit(-Ep/Tchi)

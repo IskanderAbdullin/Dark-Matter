@@ -209,3 +209,8 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Independently validate exact isolated propagator angular integrals, including transport weighting and extreme mass ratios (analytic vs 32768-step Simpson; local test). This is **not** a full physical χe/χν rate; [report](../FINITE-MEDIATOR-ANGULAR-CONTROL.md).
 - [ ] Replace contact propagator in full 5D Pauli χe/χν collision, check independent t quadrature and thermal-tail convergence, gauge charge assignment, and real plasma heat history.
+
+## Finite-mediator 5D first gate (22 Nov 2026)
+
+- [x] Insert exact spacelike vector propagator factor into independently boosted full-Pauli 5D χ-lepton heat with full angular spin trace; retain old contact default.
+- [ ] Verify real public CI for contact/equilibrium/finite-mV test; independent nonconstant-numerator angular quadrature and n/cutoff/mediator scans for massive e and chiral ν, including split baths. No physical gamma or 86-eV claim.

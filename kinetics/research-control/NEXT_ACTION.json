@@ -2,8 +2,8 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Implement full finite-mediator 5D χe/χν Pauli heat; angular propagator control passed",
-  "objective": "Full finite-mediator Pauli 5D heat and angular/thermal-tail convergence are still unverified. Independent propagator-only analytic vs Simpson control passed at 8 mV/p* ratios (max abs discrepancy ~7.4e-12); this is NOT a physical χSM rate. Verify actual CI for 9355bf0, then complete 5D physical kernel and UV charge/thermal plasma consistency before gamma_el or 86-eV claims.",
+  "title": "Validate full-angle finite-mediator 5D Pauli heat and independent angular reference",
+  "objective": "Run real CI for new tests/test_finite_mediator_5d.py; then independent t-integrated spin-trace angular kernel vs full 5D with n/cutoff/mV and electron/nu split bath scans. Do not claim gamma_el or 86eV relic.",
   "prerequisites": [
     "Run python kinetics/finite_mediator_angular_control.py (restricted propagator-only Simpson control, committed 9355bf0); do not confuse with physical χe/χν thermal heat.",
     "Verify branch and actual GitHub Actions on new chiral ν/e portal commit and prior nonthermal QED weak commit b571c1 (run #44958176219 was in_progress at last check).",
@@ -66,5 +66,13 @@
     "status": "conditional analytic tree t-channel propagator bound, no new numerical 5D test",
     "next": "Implement finite mV propagator in independent full-Pauli 5D χe/χν heat and t quadrature; validate 10% contact pointwise bound mV/pstar>=8.59926345 (relative to contact), thermal tail and gauge charge selection; then full SM/UV and nonthermal kinetics",
     "negative": "Current constant-G thermal χe/χν pilot is not uniformly valid without mediator mass and tail bound"
+  },
+  "latest_finite_mediator_implementation": {
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "test": "tests/test_finite_mediator_5d.py",
+    "report": "kinetics/FINITE-MEDIATOR-5D-FIRST-GATE.md",
+    "ci": "not yet measured",
+    "command": "python -m pytest -q tests/test_finite_mediator_5d.py",
+    "next": "Independent angular and cutoff convergence; realistic χe/χν and finite SM bath"
   }
 }

@@ -308,5 +308,13 @@
     "local_result": "analytic vs composite Simpson 32768 subintervals, eight mV/p* cases, max absolute discrepancy approximately 7.4e-12",
     "scope": "isolated t-propagator only, constant CM angular numerator; no physical 5D χe/χν rate or gamma_el",
     "ci": "pending verification for new branch HEAD"
+  },
+  "latest_finite_mediator_5d": {
+    "status": "implementation_committed_pending_real_CI",
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "test": "tests/test_finite_mediator_5d.py",
+    "report": "kinetics/FINITE-MEDIATOR-5D-FIRST-GATE.md",
+    "scope": "conditional tree-level full-angle 5D Pauli heat; no independent finite mediator crosscheck, no measured CI yet",
+    "class_ready": false
   }
 }
