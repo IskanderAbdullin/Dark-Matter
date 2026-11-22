@@ -214,3 +214,8 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 
 - [x] Insert exact spacelike vector propagator factor into independently boosted full-Pauli 5D χ-lepton heat with full angular spin trace; retain old contact default.
 - [ ] Verify real public CI for contact/equilibrium/finite-mV test; independent nonconstant-numerator angular quadrature and n/cutoff/mediator scans for massive e and chiral ν, including split baths. No physical gamma or 86-eV claim.
+
+## 2026-11-22 finite mediator nonconstant spin trace angular gate
+
+- [x] Independently derive exact t-integrated **nonconstant** vector spin trace with finite mediator, stable small-b series and adaptive quadrature tests; local isolated Jn validation ≤3.5e−14 relative. [Report](../FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md). Prior full 5D finite mediator CI #44968592762 succeeded.
+- [ ] Check CI for new trace tests; independently integrate full boosted final-state χe/χν Pauli heat over t/azimuth (cannot factor vacuum angular trace), n/cutoff/mV scans, split ν/e baths and thermal-tail bounds. Then physical finite SM plasma, gauge completion and nonlinear kinetic eigenmodes; no 86eV relic/BEC/CLASS.
