@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active session has archived stage; next action is executable and new CI must be checked. No work between launches unless separately scheduled.",
+  "stop_reason": "Active finite stage checkpoint; next executable energy and dt convergence gate recorded, future work needs next invocation or separately scheduled task.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Nonthermal moving Z′↔ν+antiν paired strong operator now additionally has first bounded reversible event-graph TIME PILOT with distinct ν/antiν. Exact lattice C/L/energy and entropy, but E/h/dt errors remain significant; not continuum or physical dark relic.",
+  "current_phase": "Independent conservative Z′ ν/antiν nonthermal time pilot now has exact angular daughter-cell overlap diagnostic: flat angular shell normalized per vector to <4e-15, h=.2 dNV bias +5.20%→+0.082%, but energy still +2.23%. Full continuum time/SM/χ/Bose FRW unverified.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -467,5 +467,17 @@
     "positive": "Equal-energy event lattice implicit physical reaction extent preserves C=Nν+Nantiν+2NV, L=Nν−Nantiν and E to ~1e−16 at tested h=.2, monotone entropy, Pauli/Bose bounds, nonthermal ν/antiν distinct and empty vector inverse production. All conditional Γ0=1 synthetic.",
     "negative": "Compared with independent continuum 144x144 vector weak, h=.4 number ~−21%, h=.05 +0.378%, energy +0.409%, entropy +0.330%; Emax4 vs8 weak energy −29.5%, timestep dt1 vs .125 low-energy vector b shifts ~3.6%; NOT continuum converged.",
     "next": "Verify new GH CI and build angular-conservative higher-order time/energy quadrature with q/dt/cutoff error bounds; no Γelastic/86eV Omega/BEC/CLASS."
+  },
+  "latest_vector_shell_overlap": {
+    "status": "independently derived and locally numerically verified exact angular cell intersection; new Scientific CI pending",
+    "source": "kinetics/vector_neutrino_shell_cell_overlap.py",
+    "test": "tests/test_vector_neutrino_shell_cell_overlap.py",
+    "report": "kinetics/VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-shell-overlap-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-shell-overlap.md",
+    "formula": "k_i=(i+1/2)h, E_j=jh, j=i+l+1, Delta k_i=|[ih,(i+1)h] ∩ [(E_j-p_j)/2,(E_j+p_j)/2]|, W=wV Γ0 mV/E_j Delta k_i/p_j; sum_i Delta k=p_j",
+    "positive": "Flat angular probability per vector residual <4e−15; at h=.2 continuum rate error +5.2037% center-hit falls to +0.0824% overlap at identical daughter grid; eventwise conservation and entropy still hold.",
+    "negative": "At h=.2 energy moment error +2.2292% and at h=.05 +0.5922%; radial/energy discretization and cutoff/time errors unresolved; graph is NOT cosmological 86eV strong solver.",
+    "prerequisite_ci": "new CI for both reversible_event_graph and shell_overlap"
   }
 }

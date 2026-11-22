@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "description": "Exact partial angular cell overlap on half-offset daughter lattice; synthetic nonthermal ν,antiν,bV; Γ0=1; no FRW",
+  "parameters": {
+    "mV": 0.4,
+    "Emax": 4,
+    "T": 1,
+    "Gamma0": 1,
+    "gnu": 2,
+    "ganti": 2,
+    "gvector": 3,
+    "continuum_nr": 144,
+    "continuum_nangle": 144
+  },
+  "exact_identity": "For every vector j, ∑_i overlap([i h,(i+1)h],[(E-p)/2,(E+p)/2])=p, and ∑ W=wV Gamma0 mV/E_j",
+  "reference": {
+    "dNV": 0.0058088005769423995,
+    "dEV": 0.011577987316857136,
+    "entropy": 0.0014499198890293437
+  },
+  "scan": [
+    {
+      "h": 0.4,
+      "center_edges": 54,
+      "overlap_edges": 54,
+      "center_relN": 0.03353139857704135,
+      "overlap_relN": -0.007119422935057629,
+      "center_relE": 0.06780203955158925,
+      "overlap_relE": 0.042202427102051354,
+      "center_relS": 0.04529473252802463,
+      "overlap_relS": 0.008354634362367497,
+      "center_max_flat_error": 0.15470053837925124,
+      "overlap_max_flat_error": 3.3306690738754696e-16
+    },
+    {
+      "h": 0.2,
+      "center_edges": 207,
+      "overlap_edges": 207,
+      "center_relN": 0.05203654688417236,
+      "overlap_relN": 0.0008240113020201445,
+      "center_relE": 0.050405670981989115,
+      "overlap_relE": 0.022292352873273025,
+      "center_relS": 0.05304648533835832,
+      "overlap_relS": 0.008058821002491667,
+      "center_max_flat_error": 0.3416407864998736,
+      "overlap_max_flat_error": 8.881784197001252e-16
+    },
+    {
+      "h": 0.1,
+      "center_edges": 802,
+      "overlap_edges": 808,
+      "center_relN": 0.017525252666230173,
+      "overlap_relN": 0.0020560836737295585,
+      "center_relE": 0.027409596169316153,
+      "overlap_relE": 0.011546743987025598,
+      "center_relS": 0.024112167158703013,
+      "overlap_relS": 0.005042116578822364,
+      "center_max_flat_error": 0.1339745962155614,
+      "overlap_max_flat_error": 2.3314683517128287e-15
+    },
+    {
+      "h": 0.05,
+      "center_edges": 3148,
+      "overlap_edges": 3183,
+      "center_relN": 0.004030068118511032,
+      "overlap_relN": 0.0016403764949153299,
+      "center_relE": 0.010859646923506716,
+      "overlap_relE": 0.005921691500704984,
+      "center_relS": 0.006363319024413894,
+      "overlap_relS": 0.0028157540422319993,
+      "center_max_flat_error": 0.21267812518166518,
+      "overlap_max_flat_error": 3.6637359812630166e-15
+    }
+  ],
+  "positive": "Piecewise constant decay angle integrates exactly every vector shell, independent of h; bounded event graph preserves discrete energy/charges and entropy",
+  "negative": "h=.2 E error +2.23%, h=.05 E error +0.592%, vector energy radial and cutoff projection not yet converged; center vs overlap comparison only on same half-offset daughter grid",
+  "status": "conditional quadrature improvement, no continuum time dynamics/physical χ gamma or 86 eV DM",
+  "class_ready": false
+}

@@ -309,3 +309,10 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Negative:** single energy lattice angular quadrature can be badly biased: weak source N −21% at h=.4 vs 144×144 continuous reference, h=.05 still +0.38%; Emax4→8 large tail; dt1→.125 sizable low-energy bV shift. Do not call it continuum strong time solver or physical dark matter.
 - [x] Prior syntax repair 64c394 has real Scientific CI #45010866936 success.
 - [ ] Verify new GH CI. P0 fix angle/energy quadrature without sacrificing microreversibility, construct convergent higher-order time and multi-shell strong source; then finite ν/eγ and gauge-valid χ1χ2/φ Bose FRW. CLASS-ready false.
+
+## 2026-11-22 exact angular shell overlap diagnostic
+
+- [x] Shift ν and antiν energies to half-integer cells while maintaining EVector=jh=ki+kl. Use true length of each daughter's energy cell within k∈[(E−p)/2,(E+p)/2] for microreversible event rate W. Flat CM angular probability sums to unity per mother shell to <4e−15 at four grids; no posthoc rate renormalization.
+- [x] **Positive scoped:** at h=.2 same daughter grid center-hit vs overlap, number weak rate relative to independent continuum improves +5.2037%→+0.0824%, entropy +5.3046%→+0.8059%. [Audit](../VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md).
+- [x] **Negative:** exact angular weights still leave 2.229% energy-source bias at h=.2, 0.592% at h=.05, and unresolved Emax/dt errors. No strong continuum quantum cosmology rate claim.
+- [ ] Check both real CI runs; P0 vector energy/radial projection and higher-order positivity/entropy time, then finite ν/eγ/χ1/χ2/φ gauge/FRW and only later 86eV observables.

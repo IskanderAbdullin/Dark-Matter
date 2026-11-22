@@ -2,19 +2,19 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Check reversible ν/antiν/V time graph CI; eliminate lattice-angle and dt bias before physical χ/SM coupling",
-  "objective": "First conservative quantum event time evolution with distinct nonthermal fν,fantiν,bV preserves discrete C/L/E, positivity and entropy, but continuum vector weak relative number is −21% at h=.4 and still +0.38% at h=.05; dt1 vs dt.125 low-energy bV changes ~3.6%. NOT a validated continuum or physical Γelastic. Verify real GitHub CI of new stage, then build corrected angle/energy projection and more accurate coupled time integration, 3+ resolution and cutoff/h/t error budgets; only then thermal ν–SM and χ1/χ2/φ Bose/FRW.",
+  "title": "Verify full CI for two ν/antiν event stages; independently fix residual radial-energy/entropy and time convergence",
+  "objective": "After nonthermal quantum event graph and exact partial daughter-cell angular overlap, each Zprime shell integrates flat CM polar probability exactly (≤4e−15 error). At h=.2 on a common shifted ν grid, source number bias falls from +5.20% center-hit to +0.0824% overlap, but energy bias remains +2.229% and at h=.05 still +0.592%. The original first-order bounded time solver also has dt1 vs dt.125 b_low shift ~3.6%. This is not continuum-converged physics. Verify real Scientific CI of stage 974d647 and this stage, fix any failures with archived negative evidence, then improve vector E/p cell measures and exact daughter energy moments or fully conservative interpolation with 3+ grids/cutoff and higher-order time integration before evolving SM/χ/φ.",
   "prerequisites": [
-    "Confirm latest PR #1 draft HEAD and actual Scientific CI for new vector_neutrino_reversible_event_graph.py; prior repaired strong source 64c394 CI #45010866936 success.",
-    "Read kinetics/VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md and archive/stages/2026/11/2026-11-22-vector-neutrino-reversible-event-graph.md.",
-    "Run python -m pytest -q tests/test_vector_neutrino_reversible_event_graph.py tests/test_vector_neutrino_nonthermal_strong.py; python -m kinetics.vector_neutrino_reversible_event_graph.",
-    "Reproduce synthetic distinct fν,fantiν and bV, exact C,L,E/entropy and compare with continuous vector weak reference at h=.4,.2,.1,.05 and Emax=4,6,8."
+    "Check PR#1 draft HEAD; inspect actual GitHub Actions on reversible event graph commit 974d6474 and latest shell-overlap commit, do not assume success.",
+    "Read scientific reports VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md and VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md, both archive stages and JSON.",
+    "Run python -m pytest -q tests/test_vector_neutrino_reversible_event_graph.py tests/test_vector_neutrino_shell_cell_overlap.py tests/test_vector_neutrino_nonthermal_strong.py; use python -m kinetics.vector_neutrino_shell_cell_overlap.",
+    "Reproduce identical half-offset daughter-grid center-hit vs analytic overlap at h=.4,.2,.1,.05 and independent p,CM angle Gauss 144×144, including angular normalization, absolute N/E/S, tails Emax4,6,8."
   ],
   "experiments": [
-    "Improve physical energy-grid/angular-shell weights or conservative remapping while retaining exact eventwise k1+k2=E, Pauli/Bose, reduced charges, independent absolute weak-vs-strong N/E/S and 3+ q/angle/tail resolutions.",
-    "Test coupled implicit high-order/IMEX time dynamics vs first-order event splitting with dt=1,.5,.25,.125,.0625, including arbitrary ν−antiν asymmetry, bV=0, chemical equilibrium; quantify spectra, not just conserved totals.",
-    "After source converges, restore all ν-e±γ weak number-changing/energy and gauge-consistent Z′χ1χ2/φ Bose plus expanding FRW, physical Γ/H and 86eV benchmarks only with independent terminal gates."
+    "Derive cell-integrated vector pE dE and neutrino k²dk/k³dk measures with exact microreversible energy-weighted deposition, prove positivity/entropy or explicitly measure the defect; extend independent weak N/E/S beyond a single smooth shape and compare finite cutoffs.",
+    "Replace first-order sequential implicit event sweep by a demonstrably higher-order positivity-preserving coupled method or measure Lie-splitting error with dt=1,.5,.25,.125,.0625; compare mode-resolved fν,fantiν,bV and independent conserved charges.",
+    "After convergence, add real finite ν/e±γ weak chemistry, on-shell physical mediator and both χ1/χ2 2→2 Pauli and χ1↔χ2+φ Bose coupling, FRW and 86eV observational gates. No physical Γelastic/BEC/ΩDM/CLASS until those pass."
   ],
-  "constraints": "Only this public research branch + draft PR #1. No user PC/Computer Use, force-push, main merge or unsupported 86-eV ΩDM/BEC/CLASS claims.",
+  "constraints": "Only public research branch/draft PR, no force push, no main merge, no user PC or Computer Use without approval, minimal Actions, no fabricated terminal DM claims.",
   "class_ready": false
 }
