@@ -36,3 +36,16 @@ def test_bound_is_not_finite_at_bose_critical_limit():
         vals.append(forward_tail_upper(16.,1.,mup+.06,0.,mup))
     assert vals[0]<vals[1]<vals[2]
     assert vals[2]/vals[0]>50
+
+
+def test_all_three_physical_energy_tail_certificates():
+    from kinetics.phi_bose_chemical_uv_bound import forward_energy_tail_upper
+    from kinetics.phi_bose_chemical_weak_reference import analytic
+    full=analytic(60.,1.,1.,-.09,.05,-.2)
+    for pmax in (2.,8.,16.):
+        partial=analytic(pmax,1.,1.,-.09,.05,-.2)
+        bound=forward_energy_tail_upper(pmax,1.,-.09,.05,-.2)
+        for key in ('Qphi','Q1','Q2'):
+            tail=full[key]-partial[key]
+            assert abs(tail)<bound
+        assert abs(sum(full[k]-partial[k] for k in ('Qphi','Q1','Q2')))<1e-23
