@@ -2,18 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Physically normalize source-connected positive on-shell resonant event lattice with infrared support",
-  "objective": "Three new gates: (a) one constant η per scalar energy cell is inward for negative N but violates exact physical on-shell energy and thermal detailed balance; (b) a synthetic exact-shell graph proves quantum H/bounds and exactly three conserved linear charges, but lacks actual phase measures and scalar soft tail; (c) exact parent-cutoff on-shell support proves at pmax2 N>=43 first scalar quadratic cells are kinematically excluded. Build an energy-resolving microreversible collision discretization with Lorentz-invariant positive source weights and physical p²dp cell capacities on reachable shells, avoiding fictitious zero-mode population. Compare weak Rphi, Ephi and entropy to independent mapped-log-Ephi continuum with 3+ parent pmax/radial/angular/IR grids, audit spurious invariants and positive time convergence. Distinguish exact inaccessible cells from quadrature-missed accessible cells.",
+  "title": "Construct shared physical-capacity energy-resolving strong Yukawa source from exact 1D thermal weak reference",
+  "objective": "New independently derived FD×BE thermal daughter-energy primitive yields exact 1D parent-source Rphi and converged positive boosted-log-Ephi quadrature with physical Qphi/H at pmax2/8/16. Turn those *physical weak events* into one shared χ1/χ2/φ phase-space strong discretization with positive capacities, exact shell E1=E2+Ephi, correct 2 number charges+energy, microscopic detailed balance and H, and physically admissible finite-time Bose/Pauli inversion. Preserve known no-go: one constant Bose η loses exact energy/thermal equilibrium, DG-P1 can have negative inverse tangent, and simple exact-resonant synthetic lattice misses true soft φ; avoid artificial condensate or fake charge modes.",
   "prerequisites": [
-    "Check GH Scientific on e8582a95 shell graph and this finite-cutoff stage; the preceding one-η commit 54ecf594 passed CI #45179293650.",
-    "Review PHI-BOSE-PARENT-CUTOFF-KINEMATIC-IR-AUDIT.md and previous DG counterexample: N32 negative tangent remains genuine despite N48/N64 true first-cell exclusion.",
-    "Keep original mφ=86 eV rest mode and upper parent thermal domain explicitly; full distribution has extremely hard exponentially suppressed parent tail; finite pmax support is conditional only."
+    "Review PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md and measured JSON, prior one-eta, exact-shell and parent-cutoff IR audits.",
+    "Check public Scientific CI for commits e8582a95, bbf5fb86 and the new thermal weak stage; prior 54ecf594 passed #45179293650.",
+    "Do not identify weak Rphi/Qphi with fully validated strong source or normalized cosmological abundance."
   ],
   "experiments": [
-    "Build physical quadrature and capacities from g1 p²dp Γrest m1/E1 and exact positive boosted log-Ephi dc measures, conserve per-event E1=E2+Ephi, Pauli/Bose H and two charges.",
-    "On 3+ pmax, angle, radial and scalar IR grids report accessible-cell source, total weak rate, energy and time/positivity; graph left nullspace exactly expected physical invariants or preserve any spurious modes as a negative result.",
-    "Only after real microphysical source and numerical convergence consider SM e±νγ/Zprime, FRW, absolute Ω, frozen f(q) and observational limits."
+    "Derive physically positive p²dp phase capacities and microevent reaction extents from shared kinematic cell/shell measure; preserve F/R, N1+N2, N1+Nφ, exact physical energy and H at finite events.",
+    "Compare strong summed Rphi/Qphi and IR support to independent analytic 1D and positive log-angle weak references for pmax2/8/16 and ≥3 radial/angular/φ energy grids; compute event graph nullspace to detect spurious frozen modes.",
+    "Validate Pauli/Bose admissible finite-time timestep convergence and eventual addition of finite χ1χ2-SM e/ν plasma, FRW+g*, actual 86-eV relic and observations only after true model/physics is independently established."
   ],
-  "constraints": "Existing public draft PR #1 research branch only, no force/main merge, no user PC/Computer Use, no physical BEC/86-eV relic/CLASS claim; preserve historical negative cases.",
+  "constraints": "Public draft PR #1 existing branch only; no main merge/force/Computer Use, minimal meaningful CI and publish all negative numerical evidence, no premature BEC/Ω/CLASS.",
   "class_ready": false
 }
