@@ -516,3 +516,11 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Critical numerical correction:** physically boosted scalar Yukawa source thermal f1 FD(.9),f2 FD(1),φ BE(1), pmax2,nr48: uniform nangle12 Rφ−1.16493e−11 versus mapped nangle12/64 Rφ−1.29545396e−11, magnitude **10.08% undercount** despite earlier radial convergence; for pmax8/16 angle12 undercounts ~17.35/17.40%.
 - [x] **Negative:** nonthermal sharp Bose inverse fugacity ηφ=E+.4exp−((E−.04)/.02)^2 mapped angle n8 at parent pmax16 differs ~8.17% from n96. Parent pmax2 misses ~65.6% of inverse rate relative pmax16 despite angular mapping. No time/q/global error or actual 86eV ΩDM/φ BEC/CLASS.
 - [ ] Verify new GH Scientific CI. P0 mapped physical event source in both DG and old overlapping φ moments on 3+ matched DOFs, IR-sharp spectra, parent pmax2/8/16 and nrad/nangle/time independent convergence; then physical χ1χ2 elastic with finite SM/eγν/Zprime/FRW.
+
+
+## 2026-11-23 failure of nonoverlap DG Bose η positivity after correct boosted angular support
+
+- [x] Analytically disprove positivity of two-DOF *within-cell* Bose inverse susceptibility: physical J=-[[a,b],[b,c]] with b>0, C=(-u,-v) both removing scalar particles, yet ηrest_dot=(c*u-b*v)/(ac-b²)<0 possible; exact toy G[[3,1],[1,2]] and C(-.05,-1) yields −.18.
+- [x] **Physical mapped Yukawa negative:** mφ86eV, χ1 colder than χ2/φ at parent pmax2,nrad24, angle log Eφ n12/24/48/96. N32 quadratic first-cell Cφ=(-6.575e−14,-3.234e−13), H>0, all φ sources≤0 but ηrest_dot≈−3.523e−9; dt20 passes, dt30/1000 fails closed. N16 at same angle ηrest_dot>0/dt30 passes. Six focused local tests passed; old low-angle uniform N32 first-cell C=0 was an **underresolved numerical artifact**; previous DG success remains only conditional.
+- [x] Previous boosted daughter-angle real GH Scientific CI [#45128900651](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45128900651) passed. This new mapped-DG tangent must get separate full CI.
+- [ ] P0 genuinely physical one-DOF-per-cell Bose number/energy tradeoff, entropy-constrained positivity in fully microreversible Pauli/Bose Yukawa collision, 3+ IR/q/cutoff/p/angle/time and true zero-mode only if independently derived. No physical Γel, Ω/BEC/frozen f(q)/CLASS.
