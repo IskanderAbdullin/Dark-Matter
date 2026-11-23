@@ -5,6 +5,7 @@
   "title": "Derive physically normalized positive on-shell χ1↔χ2+real φ finite-volume event measure",
   "objective": "Read kinetics/YUKAWA-STRONG-DISCRETIZATION-GATE.md. Derive common positive invariant 1↔2 event weights and physical capacities for all three species; separately converge independent weak N and three Q moments at ≥3 radial/angle/daughter/IR levels; then bounded nonlinear Pauli/Bose time, reverse dominated negative control and shared-lepton coupling. Synthetic ≠ physical 86eV Ω/BEC/CLASS.",
   "prerequisites": [
+    "Analytic cut-cell geometric identity locally checked at four examples; commit 57cc4216fe245247a5a6e8d7ab5cd677bae14065; physical event measure/capacities still unproven.",
     "Check new Scientific CI on extended thermal weak stage; first stage one-η #45179293650 success and exact-shell #45180360539 success; verify parent-cutoff + initial weak stage statuses.",
     "Read updated PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md and weak JSON, plus parent IR support, one-eta and DG-P1 no-go.",
     "Keep weak and strong distinct, no arbitrary mode weights masquerading as physical p²dp capacity.",
@@ -15,6 +16,7 @@
     "Quantitative correction: kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md. Old 12x12 Yukawa pmax2 total rate underestimates continuous weak source by ~10.08%, and N16 first scalar cell missed ~21.32% of true total. Never use old 12x12 rate as continuum-normalization target."
   ],
   "experiments": [
+    "Use exact positive angular cut-cell geometry P=(h-l)/(2B), Mphi=P*(h+l)/2 from kinetics/PHI-BOSE-EXACT-CUTCELL-MOMENTS-2026-11-23.md as an independently checked geometric weak-control, NOT a strong operator; integrate energy-dependent Bose/Pauli factors inside each bin and verify all three physical Q and N against continuous Yukawa reference.",
     "Build conservative shared physical finite-volume Yukawa strong source from cut-cell exact angular integrals. First reproduce continuous P2 Rphi=-1.29545395549e-11 and first-cell Rphi=-2.76214936045e-12, Qphi=-1.22779976195e-14, then all 3 Q ledgers and 3+ angular/radial/scalar mesh levels; do not use old 12x12 -1.16493013e-11 as physical target.",
     "HIGH PRIORITY: compute positive cut-cell exact daughter-angle intersection and integrated first-cell Yukawa N/Q at N16,pmax2, compare to 12×12 false zero; verify physical kmin and sampled kmin separately before strong time.",
     "Derive physically positive p²dp phase capacities and microevent reaction extents from shared kinematic cell/shell measure; preserve F/R, N1+N2, N1+Nφ, exact physical energy and H at finite events.",
