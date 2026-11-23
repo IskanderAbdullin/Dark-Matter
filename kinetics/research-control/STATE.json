@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Constructive mathematical shell-graph study saved, not a physical continuum solver. More substantial source-normalization work requires positive physical quadrature and IR coverage; no between-session execution.",
+  "stop_reason": "Exact kinematic parent-cutoff IR support independently verified and archived; continuum microphysical phase capacities/source normalization remains future gate; no background execution.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "54ecf594a80e3d6187172e9670e76319154f5e67",
-  "current_phase": "Positive exact-energy quantum shell graph proves simultaneous 3 physical invariants, FD/BE fixed point and bounded implicit Pauli/Bose + entropy on a restricted synthetic physically on-shell lattice. Its arbitrary capacities/rates and missing true mphi IR make it nonphysical; next physical source-normalization gate is open.",
+  "last_checkpoint_git_sha": "e8582a95edbd5849aed819d123f39f4f45b42933",
+  "current_phase": "Exact finite-parent on-shell support theorem clarifies previous DG-P1 first-cell zero-source: at pmax2 N>=43 first scalar cells are physically unreachable, not just quadrature-missed; N32 negative eta tangent remains. The 1-eta no-go and synthetic exact-energy shell graph remain separate. Next physically normalize accessible source with matched cutoff/angular grid.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -281,7 +281,7 @@
     "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
     "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
   },
-  "last_checkpoint_parent_sha": "54ecf594a80e3d6187172e9670e76319154f5e67",
+  "last_checkpoint_parent_sha": "e8582a95edbd5849aed819d123f39f4f45b42933",
   "latest_analytic_gate": {
     "commit": "f9587255171602bba91d836a5f381457ed70b294",
     "checkpoint_commit": "fcf2bdcf21ba67c038bdbd1cb4bff94396c29f75",
@@ -866,6 +866,16 @@
     "data": "kinetics/results/phi-bose-exact-shell-graph-2026-11-23.json",
     "positive": "Exact E1=E2+Ephi physically permitted angles for N2/4/8/16 on-shell graph; left nullity exactly three; common-T FD/BE detailed balance <7e-16; bounded positive implicit event and increasing weighted entropy; N8 connected network charge/energy ~3e-14",
     "negative": "Rates and capacities arbitrary, scalar lowest Eφ=0.048 GeV omits actual 86-eV IR; N8 1 vs8 time subdivisions ΔNφ differs ~6.35%; no continuum closure or physical freezeout.",
+    "class_ready": false
+  },
+  "latest_phi_cutoff_kinematic_ir_20261123": {
+    "status": "Analytic on-shell proof and 2/2 local focused tests passed, new CI pending",
+    "source": "kinetics/phi_bose_parent_cutoff_kinematic_ir.py",
+    "tests": "tests/test_phi_bose_parent_cutoff_kinematic_ir.py",
+    "report": "kinetics/PHI-BOSE-PARENT-CUTOFF-KINEMATIC-IR-AUDIT.md",
+    "data": "kinetics/results/phi-bose-parent-cutoff-kinematic-ir-2026-11-23.json",
+    "positive": "At pmax2 GeV exact minimum daughter energy Ephi=0.00119925093758 GeV, quadratic first-cell exclusion N>=43; N48/N64 exact no 1->2 source independent of any daughter quadrature. At pmax8/16 N64 reachable.",
+    "negative": "Previous explanation as mere sparse angle sampling was incomplete; no physical real-BEC/no-BEC, infinite-parent thermal tail or SM/FRW/CLASS inference.",
     "class_ready": false
   }
 }

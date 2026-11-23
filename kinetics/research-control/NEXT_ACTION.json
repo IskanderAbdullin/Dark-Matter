@@ -2,18 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Normalize positive resonant Yukawa event shell network against exact continuum and restore soft-φ phase space",
-  "objective": "The new exact-resonant toy χ1↔χ2+φ event graph is on shell, positive, entropy-consistent, and has only three physical linear invariants. But all phase capacities and rates are illustrative and its Eφ,min=0.048 GeV misses physically allowed soft 86-eV daughters. Develop a positive microscopic Lorentz-invariant rate assignment to shared resonant shell cells/nodes, with physical p²dp and spin degeneracy. Recover the mapped boosted-log-Eφ continuum weak source and physical energy moment before invoking any time solution. If strict energy lattice cannot cover eV IR without spurious invariants or unmanageable resolution, document a constructive limitation and investigate adaptive resonant/cut-cell network or constrained energy-resolving entropy closure.",
+  "title": "Physically normalize source-connected positive on-shell resonant event lattice with infrared support",
+  "objective": "Three new gates: (a) one constant η per scalar energy cell is inward for negative N but violates exact physical on-shell energy and thermal detailed balance; (b) a synthetic exact-shell graph proves quantum H/bounds and exactly three conserved linear charges, but lacks actual phase measures and scalar soft tail; (c) exact parent-cutoff on-shell support proves at pmax2 N>=43 first scalar quadratic cells are kinematically excluded. Build an energy-resolving microreversible collision discretization with Lorentz-invariant positive source weights and physical p²dp cell capacities on reachable shells, avoiding fictitious zero-mode population. Compare weak Rphi, Ephi and entropy to independent mapped-log-Ephi continuum with 3+ parent pmax/radial/angular/IR grids, audit spurious invariants and positive time convergence. Distinguish exact inaccessible cells from quadrature-missed accessible cells.",
   "prerequisites": [
-    "Check public Scientific CI of first one-DOF commit 54ecf594 and new shell-graph commit; do not conflate local verification with external CI.",
-    "Read PHI-BOSE-EXACT-SHELL-GRAPH-AUDIT.md, PHI-BOSE-ONE-DOF-NO-GO-AUDIT.md and PHI-BOSE-DG-TANGENT-COUNTEREXAMPLE-AUDIT.md, and physical daughter log-angle reference.",
-    "Retain original mφ=86e−9 GeV and true pmax2/8/16 physical mapped weak rates; never treat toy Eφmin=.048 GeV as IR-resolved."
+    "Check GH Scientific on e8582a95 shell graph and this finite-cutoff stage; the preceding one-η commit 54ecf594 passed CI #45179293650.",
+    "Review PHI-BOSE-PARENT-CUTOFF-KINEMATIC-IR-AUDIT.md and previous DG counterexample: N32 negative tangent remains genuine despite N48/N64 true first-cell exclusion.",
+    "Keep original mφ=86 eV rest mode and upper parent thermal domain explicitly; full distribution has extremely hard exponentially suppressed parent tail; finite pmax support is conditional only."
   ],
   "experiments": [
-    "Build positive on-shell cell/event weights from actual decay measure g1 p²dp Γrest m1/E1 dcos/2 and physical Bose/FD phase-space capacities; independently reproduce thermal common-T J=0 and nonthermal F/R and energy weak source at 3+ (p,c,IR) meshes.",
-    "Audit conservation, quantum occupancy bounds, H and stoichiometric left nullspace on each physically truncated graph (no hidden frozen modes), and compare angular/UV rates to continuous log-Ephi reference.",
-    "Only if physical weak rates and IR converge, couple real χ1/χ2+SM elastic finite-bath dynamics and FRW/g* to study frozen fφ and Ω; observational checks remain a later distinct gate."
+    "Build physical quadrature and capacities from g1 p²dp Γrest m1/E1 and exact positive boosted log-Ephi dc measures, conserve per-event E1=E2+Ephi, Pauli/Bose H and two charges.",
+    "On 3+ pmax, angle, radial and scalar IR grids report accessible-cell source, total weak rate, energy and time/positivity; graph left nullspace exactly expected physical invariants or preserve any spurious modes as a negative result.",
+    "Only after real microphysical source and numerical convergence consider SM e±νγ/Zprime, FRW, absolute Ω, frozen f(q) and observational limits."
   ],
-  "constraints": "Only existing public Dark-Matter research branch and draft PR1; no main merge/force, no Computer Use/user PC, no ungrounded BEC/Ω/CLASS or physical Γ claim, minimal meaningful CI.",
+  "constraints": "Existing public draft PR #1 research branch only, no force/main merge, no user PC/Computer Use, no physical BEC/86-eV relic/CLASS claim; preserve historical negative cases.",
   "class_ready": false
 }
