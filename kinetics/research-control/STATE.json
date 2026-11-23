@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-23T18:13:30Z",
+  "updated_utc": "2026-11-23T18:40:06.178Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,12 +101,13 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Independent number+energy normalized weak references stored; next physical shared finite-capacity strong kinetic source still unresolved, no future asynchronous work.",
+  "stop_reason": "New independent nonzero-mu massive boson weak source added and locally tested; physical shared-capacity strong collision operator still unproven; no asynchronous work.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "3296c3d1a3a85750a686645e66818716e1efda27",
-  "current_phase": "Both on-shell fixed-thermal FD×BE φ source moments Rphi (log) and Qphi (real dilog) have independent exact 1D-parent benchmarks, matching separate physical positive 2D log-Ephi quadrature over pmax2/8/16 (number ~2e−9, energy ~2e−13 relative). Next derive actual shared physical phase-capacity strong solver; 86eV IR, finite SM and FRW remain open.",
+  "last_checkpoint_git_sha": "3d699da9f91d4a3eff921e35ace68148a02864e8",
+  "current_phase": "Independent physical massive 1-to-2 weak N and Q controls now cover both zero and nonzero chemical potentials, forward and reverse signs, exact chemical equilibrium and three parent cutoffs. Next prove shared physical daughter capacities, exact shell, graph nullspace and bounded nonlinear time; 86eV IR/SM/FRW/relic still unresolved.",
   "completed_research_steps": [
+    {"stage":"Independent massive Yukawa on-shell FD/BE chemical-potential weak number and three energy moments at T1 unequal/equal T0","sha":"bebf5e23069a9fba6767a7f987ac22856aee08b7","documentation_commit":"ed39b172cda2289041c58e6d57d4c47bf99c2812","report":"kinetics/PHI-BOSE-CHEMICAL-WEAK-REFERENCE-AUDIT.md","tests":"3/3 targeted local pytest passed; public Scientific CI pending","scope":"physical normalized prescribed-thermal weak source only, noncritical mu_phi; NOT strong finite-volume time/zero mode/relic"},
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
       "sha": "8873c40fdd13437807a9cb018c5613d0221a4e43",
