@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-23",
+  "scope": "Independent fully moving on-shell χ1↔χ2+real φ Yukawa Pauli/Bose WEAK angular quadrature for prescribed Fermi/Bose states; NOT full cosmological production",
+  "mass_GeV": {
+    "chi1": 0.1,
+    "chi2": 0.02,
+    "phi": 8.6e-8
+  },
+  "yukawa_y": 0.001,
+  "temperatures_GeV": {
+    "chi1": 0.9,
+    "chi2": 1,
+    "phi": 1
+  },
+  "gchi1_historic": 4,
+  "nrad": 48,
+  "math": {
+    "a": "E1/m1 * Ephi_star",
+    "b": "p/m1 * pstar",
+    "energy": "Ephi(c)=a-b*c",
+    "map": "y=ln(Ephi/Ephi_min), dc=Ephi dy/b; Gauss weight w_x*(ln(Emax/Emin)/2)*Ephi/b",
+    "exact_angle_I0": 2,
+    "exact_RJ": "ln(Ephi_max/Ephi_min)/b"
+  },
+  "angular_moments_n8": [
+    {
+      "mother_p": 1,
+      "uniform_RJ_rel": -0.1473155227174432,
+      "mapped_RJ_rel": 3.552713678800501e-15
+    },
+    {
+      "mother_p": 2,
+      "uniform_RJ_rel": -0.2752056002613319,
+      "mapped_RJ_rel": -5.88418203051333e-15
+    },
+    {
+      "mother_p": 8,
+      "uniform_RJ_rel": -0.4650372622948986,
+      "mapped_RJ_rel": 7.216449660063518e-14
+    },
+    {
+      "mother_p": 16,
+      "uniform_RJ_rel": -0.5289530939797464,
+      "mapped_RJ_rel": -3.029798634202052e-13,
+      "mapped_I0_rel": -9.49799377925052e-8
+    }
+  ],
+  "thermal_pauli_bose_rate_by_parent_pmax": [
+    {
+      "pmax": 2,
+      "uniform_n12": -1.1649299721152517e-11,
+      "log_n12": -1.2954539615349194e-11,
+      "log_n64": -1.2954539554916682e-11,
+      "log_n8": -1.2954514744246603e-11
+    },
+    {
+      "pmax": 8,
+      "uniform_n12": -2.65477015549446e-11,
+      "log_n12": -3.211995890329338e-11,
+      "log_n64": -3.212015333003121e-11,
+      "log_n8": -3.21197187918844e-11
+    },
+    {
+      "pmax": 16,
+      "uniform_n12": -2.669725105461997e-11,
+      "log_n12": -3.2320798033697554e-11,
+      "log_n64": -3.2321043143713195e-11,
+      "log_n8": -3.2321461226621956e-11
+    }
+  ],
+  "thermal_parent_pmax2_angular_n": [
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    144,
+    256
+  ],
+  "thermal_parent_pmax2_uniform_Rphi": [
+    -1.0679274453281474e-11,
+    -1.1649299721152517e-11,
+    -1.2177741724773732e-11,
+    -1.2664613787055889e-11,
+    -1.284242478319669e-11,
+    -1.2936842967427336e-11,
+    -1.2951616562183536e-11,
+    -1.2954452559887738e-11,
+    -1.2954539046239722e-11,
+    -1.29545395549137e-11
+  ],
+  "thermal_parent_pmax2_log_Rphi": [
+    -1.2954514744246603e-11,
+    -1.2954539615349194e-11,
+    -1.2954539554769046e-11,
+    -1.295453955491666e-11,
+    -1.2954539554916656e-11,
+    -1.2954539554916667e-11,
+    -1.2954539554916682e-11,
+    -1.2954539554916697e-11,
+    -1.2954539554916703e-11,
+    -1.2954539554916634e-11
+  ],
+  "sharp_ir_parent_pmax16_log_angle": [
+    {
+      "n": 8,
+      "Rphi": -1.8712144143919332e-11,
+      "H": 5.8596284486056425e-12
+    },
+    {
+      "n": 12,
+      "Rphi": -1.789441950249555e-11,
+      "H": 5.71305327109706e-12
+    },
+    {
+      "n": 16,
+      "Rphi": -1.7262040029216832e-11,
+      "H": 5.518037741758671e-12
+    },
+    {
+      "n": 24,
+      "Rphi": -1.718100978101777e-11,
+      "H": 5.4734142265852616e-12
+    },
+    {
+      "n": 48,
+      "Rphi": -1.7298669599623386e-11,
+      "H": 5.524397275179558e-12
+    },
+    {
+      "n": 96,
+      "Rphi": -1.7298551924713247e-11,
+      "H": 5.523636330768258e-12
+    }
+  ],
+  "sharp_ir_parent_pmax2_log_n96_rate": -5.951963727889357e-12,
+  "verification": {
+    "local_pytest": "10 passed 0.66s; real GitHub Scientific CI pending",
+    "independent_angle_analytic": "I0 and 1/Ephi angular moments, physical p0, p0.01..16 positive weights",
+    "physical_moving_decay": "Lorentz boost shell, quantum inverse+stimulation",
+    "no_randomness": true
+  },
+  "negative": [
+    "Previous nangle12 physical moving scalar weak Rphi at pmax2 underestimates magnitude ~10.08% despite mother-radial convergence; this is a numerical correction, not a new physical result.",
+    "For pmax16 sharp curved Bose eta, mapped n8 source differs from mapped n96 by >8%; log mapping does not guarantee shape convergence.",
+    "Parent cutoff2 misses ~65.6% of |Rphi| vs pmax16 for IR-sharp shape; full SM/χ1χ2φ/FRW and zero-mode still absent."
+  ],
+  "class_ready": false
+}

@@ -508,3 +508,11 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Scoped mathematical/numeric repair:** old N16 quadratic φ first hat C0=0 but ηrest_dot≈−2.9982e−9; old implicit dt30 fails. New DG first physical cell C=[0,0] ⇒ ηdot=[0,0]; actual implicit dt20/30/1000 passes without clipping or false condensate; physical Bose N integrated in p on three meshes.
 - [x] **Negative convergence:** at synthetic dt1e7 N8/16/32/64 ΔNφ−7.593/−7.281/−6.850/−6.423×10−5; N8→64 ~18.2% drift despite exact conservation/H. Parent pmax2 earlier misses IR-curved rate tails; DG interface discontinuity and doubled DOF unvalidated. No physical Γelastic/86eV ΩDM/BEC/frozen f(q)/CLASS.
 - [ ] Verify real Scientific CI; P0 isolate DG-vs-overlap nonthermal interface error on matched DOF, pmax4/8/12/16, nr12/24/48 and CM polar12/24/48, three+ IR mode/time meshes, then actual χ1χ2+φ shared SM/Zprime/eγν FRW.
+
+
+## 2026-11-23 boosted real φ daughter log-energy angular physical Yukawa gate
+
+- [x] Derive exact 1↔2 CM transform for Eφ=a−bcosθ: y=ln(Eφ/Emin), dc=Eφ/b dy, positive Gauss weights, exact analytic Rayleigh-Jeans ∫dc/Eφ and 0th ∫dc, independent p0/p0.01..16 GeV controls. Ten local tests passed, previous DG physical Bose stage full Scientific #45128030398 passed.
+- [x] **Critical numerical correction:** physically boosted scalar Yukawa source thermal f1 FD(.9),f2 FD(1),φ BE(1), pmax2,nr48: uniform nangle12 Rφ−1.16493e−11 versus mapped nangle12/64 Rφ−1.29545396e−11, magnitude **10.08% undercount** despite earlier radial convergence; for pmax8/16 angle12 undercounts ~17.35/17.40%.
+- [x] **Negative:** nonthermal sharp Bose inverse fugacity ηφ=E+.4exp−((E−.04)/.02)^2 mapped angle n8 at parent pmax16 differs ~8.17% from n96. Parent pmax2 misses ~65.6% of inverse rate relative pmax16 despite angular mapping. No time/q/global error or actual 86eV ΩDM/φ BEC/CLASS.
+- [ ] Verify new GH Scientific CI. P0 mapped physical event source in both DG and old overlapping φ moments on 3+ matched DOFs, IR-sharp spectra, parent pmax2/8/16 and nrad/nangle/time independent convergence; then physical χ1χ2 elastic with finite SM/eγν/Zprime/FRW.

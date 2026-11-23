@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "DG structural IR repair code, seven local tests and nonconverged N8..64/t1e7 evidence prepared for commit; new CI to check. Latest active session UTC start 2026-11-23T06:50:13Z; no asynchronous continuation implied.",
+  "stop_reason": "Two substantive scientific stages in this measured active session: nonoverlap DG physical Bose moment CI #45128030398 confirmed, exact boosted daughter angular log map with local 10 tests and severe previous nangle alias archived; next physical joint weak/dg angular/IR/UV convergence in NEXT_ACTION. No inter-launch automation asserted.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Kinetics P0: physically integrated Bose/Fermi entropy-dual piecewise-linear NONOVERLAPPING energy cells remove one proven overlapping-P1 fake scalar rest-node tangent obstruction in isolated on-shell Yukawa χ1↔χ2+φ. At N16 quadratic φ first-cell C=[0,0] implies ηdot=[0,0]; old continuous hats gave ηrest_dot≈−2.9982e−9 and dt30 fail, new DG implicit dt30/1000 pass. Physical N/E/H tested. However large t=1e7 numerical ΔNphi N8→64 drifts ~18.2%, parent pmax2/angular cutoff and full χ–SM/FRW remain unresolved.",
+  "current_phase": "Kinetics P0: physical on-shell Yukawa χ1↔χ2+real φ Bose Pauli 1↔2 has new exact boosted daughter log-Eφ CM angle map, analytically integrates Rayleigh-Jeans 1/Ephi and removes large uniform-angle rate alias. Previous pmax2 nangle12 thermal Rphi−1.16493e−11 is ~10.08% below mapped converged nangle64−1.29545e−11, pmax8/16 ~17% below. Thus old radial stability was NOT angular convergence. Nonoverlap DG physical p-space entropy moments previous stage CI passed, but joint source/IR/time/UV and SM FRW absent.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "01e93ff984021e4514d1c7564d8dff3419c10b57",
-    "run_id": 45074692117,
+    "head_sha": "54de58d9b44a323d8559ef01608c28e665a27270",
+    "run_id": 45128030398,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45074692117",
-    "scope": "prior overlapping-hat tangent negative study, not new nonoverlap cell solver"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45128030398",
+    "scope": "prior physical Bose nonoverlap entropy-dual DG tangent repair, does not certify new angular method or physical relic"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -815,7 +815,7 @@
     "negative": "N16 power2 mφ86e-9GeV eta_rest8.6e-8 has C_phi_rest=0, all other C_phi<=0, H1.6484691e-12>0, but inverse moment η_rest_dot=-2.9982e-9, linear positivity boundary dt28.68385 (actual dt20 passed/dt30 implicit Newton failed). Mass mphi×100 yields ~×100 positivity time (N16). This is **only continuous overlapping-hat Galerkin tangent-cone defect** with no physical microproduction at rest; no real BEC/δ(p) or cosmological relic."
   },
   "latest_nonoverlap_cell_entropy_20261123": {
-    "status": "new self-contained nonoverlap scalar/χ1/χ2 physical moment and implicit source, seven focused local tests passed 0.74s on latest code; new GitHub Scientific CI pending",
+    "status": "Real Scientific #45128030398 success on 54de58d, scoped DG physical Bose tangent and 7 tests; not cosmological or q-cutoff convergence.",
     "source": "kinetics/phi_bose_cell_entropy.py",
     "tests": "tests/test_phi_bose_cell_entropy.py",
     "report": "kinetics/PHI-BOSE-CELL-ENTROPY-AUDIT.md",
@@ -823,6 +823,17 @@
     "archive": "archive/stages/2026/11/2026-11-23-phi-bose-cell-entropy.md",
     "positive": "Two local inverse fugacity endpoints per physical p²dp E cell, block negative susceptibility, exact N1+N2,N1+Nφ,E total and quantum event entropy. Under isolated moving χ1↔χ2+φ Γrest, n16 quadratic φ Cfirst=[0,0], ηdot first=[0,0], dt30 and 1000 implicit accepted without η clipping whereas old overlapping P1 rejected dt30. ΔNφ(dt30)=−3.49474984e−10, ΔS=+4.94537744e−11; Rφ initial −1.16493012863e−11 and H+1.64846911e−12 matches independent reference. Integrated Bose thermal N 3 meshes match exact physical p integral to rel<5e−12.",
     "negative": "At synthetic dt1e7, ΔNφ for N8,16,32,64 = −7.592978/−7.280799/−6.850076/−6.423206 e−5; N8→64 ~18.2%, N32→64 ~6.2% residual mode dependence. Discontinuous intercell jumps, doubled DOFs, parent UV cutoff2 and no dynamical SM/Zprime/H/FRW, zero-mode, physical Γelastic, Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_phi_daughter_log_angle_20261123": {
+    "status": "original exact y=ln(Ephi/Emin) positive angle map, 10 independent local tests pass 0.66s; new GitHub Scientific CI pending",
+    "source": "kinetics/phi_bose_daughter_log_angle.py",
+    "test": "tests/test_phi_bose_daughter_log_angle.py",
+    "report": "kinetics/PHI-BOSE-DAUGHTER-LOG-ANGLE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-daughter-log-angle-2026-11-23.json",
+    "archive": "archive/stages/2026/11/2026-11-23-phi-bose-daughter-log-angle.md",
+    "positive": "For Ephi=a−b cosθ, map y=ln(Ephi/Emin), dc=Ephi dy/b: analytic I0=2 and I_RJ=ln(Emax/Emin)/b. At mother p16 n8 uniform 1/Ephi rel−52.9%, mapped <3.1e−13. Full on-shell thermal Pauli/Bose pmax2/nrad48 mapped nangle12 Rphi−1.2954539615e−11 matches mapped n64 −1.2954539555e−11 while uniform n12 −1.1649299721e−11 (10.08% magnitude undercount). Parent pmax8/16 uniform n12 ~17.4% undercount. Explicit inverse reactions and H retained.",
+    "negative": "For sharp nonthermal ηphi(E)=E+.4 exp−((E−.04)/.02)^2, mapped pmax16 nangle8 Rphi−1.8712e−11 vs nangle96 −1.729855e−11 (~8.17% error); log mapping does not solve arbitrary IR curvature. Parent pmax2→16 misses ~65.6% net reverse rate. Full nonlinear φ/χ+SM/FRW/H and actual 86eV relic/zero mode unvalidated.",
     "class_ready": false
   }
 }

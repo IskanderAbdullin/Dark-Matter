@@ -122,6 +122,8 @@
 
 | 2026-11-23 | Структурный следующий Gate после overlapping Bose ηrest false tangent: nonoverlap cellwise P1 with 2 independent η endpoints/cell, physical p²dp, identical on-shell Pauli/Bose source and implicit η>0; numerical error must be isolated before treating as physical scalar kinetics | [date archive](../archive/stages/2026/11/2026-11-23-phi-bose-cell-entropy.md): N16 quadratic φ first-cell source=0 implies ηdot=0, former dt30 failure now passes; synthetic dt1e7 mode N8→64 ΔNφ still varies ~18%, physical pmax and SM/FRW unresolved |
 
+| 2026-11-23 | Следующий численный обоснованный φ/Yukawa шаг: forward daughter Bose Eφ=a−bcosθ требует специальной положительной log Eφ angular quadrature; **radial convergence не доказывает angular convergence** и ранее опубликованное weak Rφ недооценено на ~10–17% при nangle12 | [арифметический/полный 1↔2 аудит](../archive/stages/2026/11/2026-11-23-phi-bose-daughter-log-angle.md): exact ∫dc/Eφ, mapped thermal nangle12~n64, но sharp IR и parent cutoff UV ещё не проверены |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 
