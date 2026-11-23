@@ -44,6 +44,33 @@ The bound is conservative (~4.5–5.2 times the directly measured tail over thes
 
 The same **P=2** source misses ~42.7% of the total, a substantial negative control. A fixed thermal cutoff benchmark does not justify freezing a nonthermal parent at P=16; in a cosmological evolution its tail and temperature must be checked afresh.
 
+
+## Extension: all three physical energy tails
+
+The same positive-event argument also bounds each **absolute energy source** (not merely its sum). On shell \(E_1=E_2+k\) with \(0<E_2,k<E_1\), so each event's physical energy weight is at most \(E_1\). This cancels the Lorentz time-dilation factor \(m_1/E_1\) in the positive number rate. Consequently,
+
+\[
+\boxed{\left|Q_s(\infty)-Q_s(P)\right|
+\le \frac{g_1\Gamma m_1}{2\pi^2}
+e^{\mu_1/T}(1+b_\phi(m_\phi))
+(1-e^{-\Delta\mu/T})\,
+T(P^2+2PT+2T^2)e^{-P/T},\quad
+s\in\{1,2,\phi\}.}
+\]
+
+The \(\chi_1\) sign is negative for forward decay, while \(\chi_2\) and \(\phi\) signs are positive. The inequality bounds their *magnitudes separately*, and uses \(\int_P^\infty p^2e^{-p/T}dp=T(P^2+2PT+2T^2)e^{-P/T}\). It is a stronger statement than merely requiring \(Q_1+Q_2+Q_\phi=0\), which can be true for very inaccurate components.
+
+| P (GeV) | rigorous bound on each \(|Q_s(\infty)-Q_s(P)|\) (GeV⁵) |
+|---:|---:|
+| 2 | 2.2145317533e−11 |
+| 8 | 4.5012058311e−13 |
+| 12 | 1.7091729630e−14 |
+| 16 | 5.3401955815e−16 |
+| 20 | 1.4907454996e−17 |
+| 24 | 3.8670309072e−19 |
+
+The updated regression checks each Q tail separately against the analytic upper bound at P=2,8,16, and checks the exact physical energy ledger of the omitted shell. This does **not** assert a finite-capacity strong operator, since all three Q sources here are integrals of *prescribed* thermal distributions. Nor does it bound energy tails for a nonthermal parent or nonzero temperature difference.
+
 ## Reproduction and next gate
 
 [Source](phi_bose_chemical_uv_bound.py), [focused tests](../tests/test_phi_bose_chemical_uv_bound.py). Commands:
@@ -53,4 +80,4 @@ OPENBLAS_NUM_THREADS=1 python -m kinetics.phi_bose_chemical_uv_bound
 OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_bose_chemical_uv_bound.py
 \`\`\`
 
-The table was calculated with SciPy independent interval quadrature locally; public GitHub CI of the new regression is to be verified. The strict analytic bound is the new scientific result. The test does **not** certify φ daughter IR resolution, physical strong cell density of states, three energy moments, microscopic rates, evolving bath/FRW, 86-eV relic, Bose condensate, or CLASS. Next: obtain an analogous energy-weighted tail bound and converge parent radial/angle/φ grids for a *shared physical finite-volume strong collision* before any cosmological interpretation.
+The table was calculated with SciPy independent interval quadrature locally; public GitHub CI of the new regression is to be verified. The strict analytic bound is the new scientific result. The test does **not** certify φ daughter IR resolution, physical strong cell density of states, three energy moments, microscopic rates, evolving bath/FRW, 86-eV relic, Bose condensate, or CLASS. The energy-weighted bound is now derived; next converge parent radial/angle/φ grids for a *shared physical finite-volume strong collision* before any cosmological interpretation.
