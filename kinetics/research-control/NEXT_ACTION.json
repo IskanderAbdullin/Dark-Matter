@@ -2,12 +2,12 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Construct shared physical-capacity energy-resolving strong Yukawa source from exact 1D thermal weak reference",
-  "objective": "New independently derived FD×BE thermal daughter-energy primitive yields exact 1D parent-source Rphi and converged positive boosted-log-Ephi quadrature with physical Qphi/H at pmax2/8/16. Turn those *physical weak events* into one shared χ1/χ2/φ phase-space strong discretization with positive capacities, exact shell E1=E2+Ephi, correct 2 number charges+energy, microscopic detailed balance and H, and physically admissible finite-time Bose/Pauli inversion. Preserve known no-go: one constant Bose η loses exact energy/thermal equilibrium, DG-P1 can have negative inverse tangent, and simple exact-resonant synthetic lattice misses true soft φ; avoid artificial condensate or fake charge modes.",
+  "title": "Construct physical finite-capacity strong Yukawa operator matching independent exact weak Rφ and Qφ",
+  "objective": "Both number and energy Bose×FD daughter-angle weak integrals now have closed forms (logs and real dilogarithms), reducing the two independent physical fixed-thermal benchmark moments to 1D parent quadrature. A physical positive event 2D solver matches the independent Rphi and Qphi at pmax2/8/16 to ~2e-9/~2e-13 relative. Next construct a shared χ1χ2φ finite-capacity p²dp strong collision with exact on-shell E1=E2+Ephi, quantum detailed balance, two number charges, energy, H and Bose/Pauli positivity, including actual 86eV soft-mode representation. Its integrated moments must match both independently exact references over ≥3 parent/angular/radial/IR grids; audit collision-graph nullspace, negative DG inverse tangent and finite-time convergence. Do not equate current weak benchmark with physically valid strong source or cosmological Ω/BEC/CLASS.",
   "prerequisites": [
-    "Review PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md and measured JSON, prior one-eta, exact-shell and parent-cutoff IR audits.",
-    "Check public Scientific CI for commits e8582a95, bbf5fb86 and the new thermal weak stage; prior 54ecf594 passed #45179293650.",
-    "Do not identify weak Rphi/Qphi with fully validated strong source or normalized cosmological abundance."
+    "Check new Scientific CI on extended thermal weak stage; first stage one-η #45179293650 success and exact-shell #45180360539 success; verify parent-cutoff + initial weak stage statuses.",
+    "Read updated PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md and weak JSON, plus parent IR support, one-eta and DG-P1 no-go.",
+    "Keep weak and strong distinct, no arbitrary mode weights masquerading as physical p²dp capacity."
   ],
   "experiments": [
     "Derive physically positive p²dp phase capacities and microevent reaction extents from shared kinematic cell/shell measure; preserve F/R, N1+N2, N1+Nφ, exact physical energy and H at finite events.",

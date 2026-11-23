@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Physically normalized weak reference and numerical controls saved; next open bottleneck is connecting this continuum source to a shared positive energy-resolving finite-phase-capacity strong collision without false invariant modes. No background continuation.",
+  "stop_reason": "Independent number+energy normalized weak references stored; next physical shared finite-capacity strong kinetic source still unresolved, no future asynchronous work.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "bbf5fb8649fc7de0a3690dbbaa9e3969e07307b6",
-  "current_phase": "Independent exact thermal FD×BE daughter angular primitive reduces physical Yukawa weak φ number source to single parent p integral, matching independent positive 2D log-Ephi quadrature over pmax2/8/16 to ~2e-9 relative and exact weak energy/H; no normalized strong finite capacities or full FRW. Previous one-eta no-go, exact-shell toy and IR support correction preserved.",
+  "last_checkpoint_git_sha": "3296c3d1a3a85750a686645e66818716e1efda27",
+  "current_phase": "Both on-shell fixed-thermal FD×BE φ source moments Rphi (log) and Qphi (real dilog) have independent exact 1D-parent benchmarks, matching separate physical positive 2D log-Ephi quadrature over pmax2/8/16 (number ~2e−9, energy ~2e−13 relative). Next derive actual shared physical phase-capacity strong solver; 86eV IR, finite SM and FRW remain open.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -281,7 +281,7 @@
     "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
     "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
   },
-  "last_checkpoint_parent_sha": "bbf5fb8649fc7de0a3690dbbaa9e3969e07307b6",
+  "last_checkpoint_parent_sha": "3296c3d1a3a85750a686645e66818716e1efda27",
   "latest_analytic_gate": {
     "commit": "f9587255171602bba91d836a5f381457ed70b294",
     "checkpoint_commit": "fcf2bdcf21ba67c038bdbd1cb4bff94396c29f75",
@@ -886,6 +886,16 @@
     "data": "kinetics/results/phi-bose-thermal-exact-weak-reference-2026-11-23.json",
     "positive": "Exact analytic daughter FD*BE energy integral at T2=Tphi plus 1D parent quadrature independently matches on-shell positive mapped-angle 2D weak source at pmax2/8/16 to ≤~2e-9 relative; exact per-event physical shell Q1+Q2+Qphi<4e-26, H>0; 3 parent/cosine grids.",
     "negative": "At pmax2 only ~40.1% of rate at pmax16; scalar mean emitted/absorbed E shifts .206→.445 GeV. Fixed distributions, no physical phase-capacity strong time solver, Γ(T), SM, FRW, Ω or BEC.",
+    "class_ready": false
+  },
+  "latest_phi_exact_thermal_energy_20261123": {
+    "status": "Five local tests passed 0.58 s, public Scientific CI unverified",
+    "source": "kinetics/phi_bose_thermal_exact_weak_reference.py",
+    "tests": "tests/test_phi_bose_thermal_exact_weak_reference.py",
+    "report": "kinetics/PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-thermal-exact-weak-reference-2026-11-23.json",
+    "positive": "Real Li2 exact daughter energy moment Qphi parent2/8/16=-2.670878687857882e-12/-1.394186043243065e-11/-1.438236797986059e-11, independent positive event 2D 96×48 agreement ≤2e-13 relative.",
+    "negative": "Only prescribed thermal source weak moments; no physical discrete strong time/SM/FRW/relic.",
     "class_ready": false
   }
 }

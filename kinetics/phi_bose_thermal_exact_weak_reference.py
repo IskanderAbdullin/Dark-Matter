@@ -104,17 +104,56 @@ def gauss_weak(pmax,nrad,nangle):
 
 def audit():
     independent=[analytic_number_rate(p) for p in (2.,8.,16.)]
+    independent_energy=[analytic_energy_rate(p) for p in (2.,8.,16.)]
     cases=[gauss_weak(p,nr,na) for p in (2.,8.,16.)
            for nr,na in ((24,12),(48,24),(96,48))]
     reference={v['pmax']:v['Rphi'] for v in independent}
+    ereference={v['pmax']:v['Qphi'] for v in independent_energy}
     for v in cases:
         v['relative_number_error_vs_analytic_1D']=v['Rphi']/reference[v['pmax']]-1
+        v['relative_energy_error_vs_analytic_1D']=v['Qphi']/ereference[v['pmax']]-1
     return {'schema_version':1,'analytic_number_rate':independent,
+            'analytic_energy_rate':independent_energy,
             'on_shell_positive_quadratures':cases,
             'mass_and_temperatures_GeV':{'m1':M1,'m2':M2,'mphi':MPH,
                                          'T1':T1,'T2':T0,'Tphi':T0},
             'scope':'Exact independent thermal number source with positive on-shell event weights, physical weak energy and entropy, not a physical strong time integrator.',
             'class_ready':False}
+
+
+def scalar_thermal_energy_integral(E1,elo,ehi):
+    """Exact ∫k FD(E1-k;T0) BE(k;T0) dk via real dilogarithms.
+
+    scipy.special.spence(z)=Li2(1-z). With t=exp(k/T0), A=exp(E1/T0):
+    primitive =[-Li2(1-t)-log(t)log(1+t/A)-Li2(-t/A)]/(1+A).
+    """
+    from scipy.special import spence
+    if not (0 < elo <= ehi <= E1-M2+1e-12):
+        raise ValueError('on-shell energies')
+    A0=math.exp(E1/T0)
+    def primitive(k):
+        t=math.exp(k/T0)
+        return -spence(t) - (k/T0)*math.log1p(t/A0) - spence(1+t/A0)
+    return T0*T0*expit(-E1/T0)*(primitive(ehi)-primitive(elo))
+
+
+def parent_differential_energy(p):
+    E1,elo,ehi,b=daughter_bounds(p)
+    prefactor=G1/(2*math.pi**2)*p*p*width()*M1/E1
+    affinity=E1*(1/T0-1/T1)
+    f1=expit(-E1/T1)
+    if p==0:
+        central=elo*expit(-(E1-elo)/T0)/math.expm1(elo/T0)
+    else:
+        central=scalar_thermal_energy_integral(E1,elo,ehi)/(2*b)
+    return prefactor*(1-f1)*math.expm1(affinity)*central
+
+
+def analytic_energy_rate(pmax):
+    if not pmax>0:raise ValueError('positive parent cutoff')
+    value,err=quad(parent_differential_energy,0,pmax,
+                   epsabs=1e-17,epsrel=2e-11,limit=240)
+    return {'Qphi':value,'quad_abserr':err,'pmax':pmax}
 
 
 if __name__=='__main__':

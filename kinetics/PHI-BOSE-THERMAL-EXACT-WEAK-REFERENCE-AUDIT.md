@@ -45,3 +45,16 @@ Importantly pmax2 omits about 59.9% of the **absolute** pmax16 rate (1.295/3.232
 - The energy-integral analytic primitive was independently checked against direct adaptive daughter integration for p=.1/1/2/8/16; initially excessive independent `epsabs=1e−9` produced an **artificial** ~10⁻⁷ relative discrepancy at a tiny integral and was corrected to `epsabs=1e−15`. All **three local focused tests passed** (~1.32 s) after choosing an appropriate independent numerical tolerance.
 
 This is a kinetic benchmark for a *prescribed* χ1/χ2/φ thermal population. No physical strong solver, gauge-complete portal, in-medium rates, finite SM, FRW, zero-mode/BEC or 86-eV relic/CLASS/observational likelihood. The next task is to turn this exact physically normalized **weak event measure** into a **shared positive energy-resolving finite phase-space capacity strong operator**, auditing unavoidable lattice resonance/disconnected graph issues and time+IR convergence.
+
+
+## Continued independent physical Qφ energy reference: a real-dilogarithm primitive
+
+Beyond the previously exact number primitive, let `t=exp(k/T0)`, `A0=exp(E1/T0)`. The positive angular Bose×FD energy moment is
+`I1=∫_{Emin}^{Emax} dk k fFD(E1−k;T0)bBE(k;T0)=T0² fFD(E1;T0)[P(Emax)−P(Emin)]`,
+where `P(k)=−Li₂(1−t)−ln(t)ln(1+t/A0)−Li₂(−t/A0)` using real dilogarithms. This follows directly by integrating `ln(t)/[(t−1)(t+A0)]` and is evaluated stably with `scipy.special.spence(z)=Li₂(1−z)`.
+
+Consequently the separately integrated **physical scalar energy weak moment** is
+`Qφ=∫₀^pmax dp [g1 p²/(2π²) Γrest m1/E1][(1−f1)expm1(E1(1/T0−1/T1))/(2b)] I1`.
+For parent pmax=2,8,16 GeV the exact 1D Qφ values are respectively **−2.670878687857882e−12, −1.3941860432430647e−11, −1.4382367979860587e−11**. The completely independent 2D positive on-shell weak event quadrature at nrad96/angular48 agrees to relative **9.1e−15, 7.1e−14 and 1.93e−13**. Direct adaptive daughter-energy integrals at parent p=.1/1/2/8/16 agree with the Li₂ primitive to ~1e−14.
+
+Two additional focused regressions have passed locally; **5/5 tests in 0.58 s** after extension. Previous source/JSON/stage are preserved and extended. This establishes **independent number and energy weak benchmarks**, not a coupled physical strong finite-mode time evolution, zero-mode, freezeout, Ω or CLASS.

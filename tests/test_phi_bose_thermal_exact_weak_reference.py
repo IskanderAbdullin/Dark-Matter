@@ -34,3 +34,22 @@ def test_three_resolution_sources_have_valid_energy_and_H_ledgers():
             assert a['Rphi']<0 and a['H']>0
             assert a['Qphi']<0 and a['Q1']>0 and a['Q2']<0
             assert abs(a['total_energy_defect'])<2e-24
+
+
+def test_analytic_dilog_scalar_energy_moment_vs_independent_energy_quad():
+    from kinetics.phi_bose_thermal_exact_weak_reference import scalar_thermal_energy_integral
+    for p in (.1,1.,2.,8.,16.):
+        E1,lo,hi,b=daughter_bounds(p)
+        actual=scalar_thermal_energy_integral(E1,lo,hi)
+        numeric,_=quad(lambda k:k*expit(-(E1-k)/T0)/math.expm1(k/T0),
+                       lo,hi,epsabs=1e-14,epsrel=1e-11)
+        assert abs(actual/numeric-1)<1e-11
+
+
+def test_analytic_parent_energy_matches_independent_2d_weak():
+    from kinetics.phi_bose_thermal_exact_weak_reference import analytic_energy_rate
+    for pmax in (2.,8.,16.):
+        exact=analytic_energy_rate(pmax)
+        measured=gauss_weak(pmax,96,48)
+        assert exact['Qphi']<0
+        assert abs(measured['Qphi']/exact['Qphi']-1)<1e-9
