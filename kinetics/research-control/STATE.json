@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-23",
+  "updated_utc": "2026-11-23T18:13:30Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -896,6 +896,13 @@
     "data": "kinetics/results/phi-bose-thermal-exact-weak-reference-2026-11-23.json",
     "positive": "Real Li2 exact daughter energy moment Qphi parent2/8/16=-2.670878687857882e-12/-1.394186043243065e-11/-1.438236797986059e-11, independent positive event 2D 96×48 agreement ≤2e-13 relative.",
     "negative": "Only prescribed thermal source weak moments; no physical discrete strong time/SM/FRW/relic.",
+    "class_ready": false
+  },
+  "latest_yukawa_strong_grid_gate": {
+    "status": "analytic positive/negative gate, not numerical solver",
+    "file": "kinetics/YUKAWA-STRONG-DISCRETIZATION-GATE.md",
+    "positive": "Exact on-shell positive reversible events with consistent capacities imply stoichiometry, E and interior H theorem.",
+    "negative": "Nearest-bin/split deposition or event-unique daughter nodes do not automatically preserve both quantum inverse H and physical DOS; no strong solver, no CLASS.",
     "class_ready": false
   }
 }
