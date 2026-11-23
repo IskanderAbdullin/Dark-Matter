@@ -2,18 +2,18 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Design an exact-energy positive quantum event network or realizable two-moment Bose closure",
-  "objective": "The independent single-eta physical p²dp cell experiment demonstrated strict one-DOF incompatibility: thermal Bose N can be exact yet cell U deviates and common-T Yukawa equilibrium is a false source. Keep prior resolved N32 DG-P1 negative inverse-tangent as separate failure. Seek a finite event-energy representation with exact on-shell E1=E2+Ephi and positive phase capacities, or a constrained two-moment Bose representation with physical η(E)>0. Require simultaneous exact two charges, energy, microscopic quantum detailed balance, positivity, H and non-spurious nullspace, rather than fixing only one of these.",
+  "title": "Normalize positive resonant Yukawa event shell network against exact continuum and restore soft-φ phase space",
+  "objective": "The new exact-resonant toy χ1↔χ2+φ event graph is on shell, positive, entropy-consistent, and has only three physical linear invariants. But all phase capacities and rates are illustrative and its Eφ,min=0.048 GeV misses physically allowed soft 86-eV daughters. Develop a positive microscopic Lorentz-invariant rate assignment to shared resonant shell cells/nodes, with physical p²dp and spin degeneracy. Recover the mapped boosted-log-Eφ continuum weak source and physical energy moment before invoking any time solution. If strict energy lattice cannot cover eV IR without spurious invariants or unmanageable resolution, document a constructive limitation and investigate adaptive resonant/cut-cell network or constrained energy-resolving entropy closure.",
   "prerequisites": [
-    "Read PHI-BOSE-ONE-DOF-NO-GO-AUDIT.md plus prior PHI-BOSE-DG-TANGENT-COUNTEREXAMPLE-AUDIT.md; preserve failed and successful scopes.",
-    "Check new public Scientific CI of one-DOF stage; earlier #45130112042 succeeded only on parent f0db3e9.",
-    "Avoid resetting scalar moments to thermal FD/BE or imposing η floors. Derive allowed moment cone / reaction extents before numerical stepping."
+    "Check public Scientific CI of first one-DOF commit 54ecf594 and new shell-graph commit; do not conflate local verification with external CI.",
+    "Read PHI-BOSE-EXACT-SHELL-GRAPH-AUDIT.md, PHI-BOSE-ONE-DOF-NO-GO-AUDIT.md and PHI-BOSE-DG-TANGENT-COUNTEREXAMPLE-AUDIT.md, and physical daughter log-angle reference.",
+    "Retain original mφ=86e−9 GeV and true pmax2/8/16 physical mapped weak rates; never treat toy Eφmin=.048 GeV as IR-resolved."
   ],
   "experiments": [
-    "Construct tiny event-resolved quantum χ1↔χ2+φ resonance graph with physical shell energies and finite positive capacities; prove source N1+N2, N1+Nphi, E and entropy, Pauli/Bose bounds and common-T chemical fixed point.",
-    "Audit rank/nullspace against expected 2 charges + physical energy and compare to continuum event source on 3+ energy/IR/angular/parent grids. Preserve spurious frozen modes if present.",
-    "Only after a valid microscopic discretization connect to joint χ1χ2–SM Pauli elastic, physical SM plasma FRW and absolute relic/observations."
+    "Build positive on-shell cell/event weights from actual decay measure g1 p²dp Γrest m1/E1 dcos/2 and physical Bose/FD phase-space capacities; independently reproduce thermal common-T J=0 and nonthermal F/R and energy weak source at 3+ (p,c,IR) meshes.",
+    "Audit conservation, quantum occupancy bounds, H and stoichiometric left nullspace on each physically truncated graph (no hidden frozen modes), and compare angular/UV rates to continuous log-Ephi reference.",
+    "Only if physical weak rates and IR converge, couple real χ1/χ2+SM elastic finite-bath dynamics and FRW/g* to study frozen fφ and Ω; observational checks remain a later distinct gate."
   ],
-  "constraints": "Public draft PR #1 branch only, no main merge/force/Computer Use, minimize public CI cost; preserve archive and failing examples; never label numerical BEC, Ω, f(q) or CLASS without separate physical proof.",
+  "constraints": "Only existing public Dark-Matter research branch and draft PR1; no main merge/force, no Computer Use/user PC, no ungrounded BEC/Ω/CLASS or physical Γ claim, minimal meaningful CI.",
   "class_ready": false
 }

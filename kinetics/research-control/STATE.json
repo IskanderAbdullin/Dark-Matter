@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Stage and evidence saved under current branch; no automatic between-session progress. Exact next experimental gate is event-energy positive microreversible closure and invariant audit.",
+  "stop_reason": "Constructive mathematical shell-graph study saved, not a physical continuum solver. More substantial source-normalization work requires positive physical quadrature and IR coverage; no between-session execution.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "One-eta Bose cell negative gate: number sink inward tangent but energy-conserving continuous decay and thermal fixed point impossible within finite-width constant η cell; DG two-eta remains subject to resolved IR tangent obstruction. Next candidate must be energy-resolving and realizability preserving.",
+  "last_checkpoint_git_sha": "54ecf594a80e3d6187172e9670e76319154f5e67",
+  "current_phase": "Positive exact-energy quantum shell graph proves simultaneous 3 physical invariants, FD/BE fixed point and bounded implicit Pauli/Bose + entropy on a restricted synthetic physically on-shell lattice. Its arbitrary capacities/rates and missing true mphi IR make it nonphysical; next physical source-normalization gate is open.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -281,7 +281,7 @@
     "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
     "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
   },
-  "last_checkpoint_parent_sha": "f0db3e936d738626d6b9b1defcb2ce3fda20cfb8",
+  "last_checkpoint_parent_sha": "54ecf594a80e3d6187172e9670e76319154f5e67",
   "latest_analytic_gate": {
     "commit": "f9587255171602bba91d836a5f381457ed70b294",
     "checkpoint_commit": "fcf2bdcf21ba67c038bdbd1cb4bff94396c29f75",
@@ -856,6 +856,16 @@
     "data": "kinetics/results/phi-bose-one-dof-no-go-2026-11-23.json",
     "negative": "For physical p²dp one constant eta per cell, monotonic dN/deta<0 but U=Ebar*N implies exact on-shell E mismatch; matching exact equilibrium Bose cell N creates false Rphi/H. N32 parent pmax2 false Rphi 5.558e-14 and H 1.481e-14 vs exact thermal Rphi ~5e-27; relative U bias +0.0998%. One-DOF is rejected as exact physical energy+thermal closure.",
     "scope": "Analytical and on-shell thermal negative control, not an actual coupled physical time evolution or a Bose condensate",
+    "class_ready": false
+  },
+  "latest_phi_exact_shell_graph_20261123": {
+    "status": "Four focused local tests passed (~0.11 s); CI pending for this commit",
+    "source": "kinetics/phi_bose_exact_shell_graph.py",
+    "tests": "tests/test_phi_bose_exact_shell_graph.py",
+    "report": "kinetics/PHI-BOSE-EXACT-SHELL-GRAPH-AUDIT.md",
+    "data": "kinetics/results/phi-bose-exact-shell-graph-2026-11-23.json",
+    "positive": "Exact E1=E2+Ephi physically permitted angles for N2/4/8/16 on-shell graph; left nullity exactly three; common-T FD/BE detailed balance <7e-16; bounded positive implicit event and increasing weighted entropy; N8 connected network charge/energy ~3e-14",
+    "negative": "Rates and capacities arbitrary, scalar lowest Eφ=0.048 GeV omits actual 86-eV IR; N8 1 vs8 time subdivisions ΔNφ differs ~6.35%; no continuum closure or physical freezeout.",
     "class_ready": false
   }
 }
