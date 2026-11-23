@@ -26,6 +26,23 @@ def forward_tail_upper(pmin, temp, mu1, mu2, muphi):
             temp*(pmin+temp)*math.exp(-pmin/temp))
 
 
+
+def forward_energy_tail_upper(pmin, temp, mu1, mu2, muphi):
+    """Upper bound on each absolute physical Q1,Q2,Qphi tail, forward Delta mu.
+
+    On shell 0<E2,Ephi<E1. Multiply the same positive event weight by
+    E1; the parent time dilation m1/E1 cancels, leaving p**2 dp.
+    """
+    assert pmin>=0 and temp>0 and muphi<MPH
+    delta=mu1-mu2-muphi
+    assert delta>0
+    bose_max=1/math.expm1((MPH-muphi)/temp)
+    c=G1*width()*M1/(2*math.pi**2)
+    return (c * math.exp(mu1/temp) *
+            (1+bose_max)*(-math.expm1(-delta/temp)) *
+            temp*(pmin*pmin+2*pmin*temp+2*temp*temp) *
+            math.exp(-pmin/temp))
+
 def finite_tail_scan(pmaxes=(2.,8.,12.,16.,20.,24.),temp=1.,
                      mu1=-.09,mu2=.05,muphi=-.2):
     """Finite-tail direct subtraction with certified *infinite* remainder."""
@@ -53,9 +70,11 @@ def finite_tail_scan(pmaxes=(2.,8.,12.,16.,20.,24.),temp=1.,
         tail_to_60=quad(integrand,pmax,pcut,epsabs=1e-28,
                         epsrel=1e-9,limit=300)[0]
         bound=forward_tail_upper(pmax,temp,mu1,mu2,muphi)
+        energy_bound=forward_energy_tail_upper(pmax,temp,mu1,mu2,muphi)
         remainder=forward_tail_upper(pcut,temp,mu1,mu2,muphi)
         rows.append(dict(pmax=pmax,rate=partial,tail_to_60=tail_to_60,
                          strict_tail_bound=bound,
+                         strict_each_energy_tail_bound=energy_bound,
                          upper_tail_fraction=bound/partial,
                          finite_60_remainder_bound=remainder,
                          relative_finite_60_tail=tail_to_60/full))
