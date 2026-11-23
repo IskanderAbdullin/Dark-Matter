@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "source": "kinetics/phi_bose_one_dof_no_go.py",
+  "model": "tree χ1↔χ2+φ, mχ1=.1,mχ2=.02,mφ=86e-9 GeV,y=.001,T1=T2=Tphi=1 GeV; physically matched scalar thermal cell N; quadratic physical-energy Bose cells; radial Gauss 64; mapped parent nr24/angular48 unless parent sweep",
+  "reference": "exact analytic Fermi/Bose at every physical on-shell event gives zero flux; single eta cell projection is distinct from exact equilibrium",
+  "grid": [
+    "n_cells",
+    "pmax_GeV",
+    "relative_thermal_U_error",
+    "false_Rphi",
+    "exact_Rphi",
+    "false_H",
+    "energy_residual",
+    "residual_over_abs_physical_energy_throughput"
+  ],
+  "results": [
+    [
+      8,
+      2,
+      0.015585289479292604,
+      9.537452010091378e-13,
+      4.777646753229974e-27,
+      2.276327846035501e-13,
+      2.3684381068304574e-13,
+      0.18079813451142246
+    ],
+    [
+      16,
+      2,
+      0.003971441568101386,
+      3.2252054327297986e-13,
+      4.777646753229974e-27,
+      5.755754030221886e-14,
+      5.842400435947138e-14,
+      0.08722244287541121
+    ],
+    [
+      32,
+      2,
+      0.0009977640797998988,
+      5.558183952346971e-14,
+      4.777646753229974e-27,
+      1.480894324345247e-14,
+      1.4848795391172937e-14,
+      0.04306846291901772
+    ],
+    [
+      64,
+      2,
+      0.00024975199566364614,
+      5.429291309701549e-15,
+      4.777646753229974e-27,
+      3.7285167451431466e-15,
+      3.729688548377083e-15,
+      0.021392983108350996
+    ],
+    [
+      128,
+      2,
+      0.0000624575245906878,
+      4.036117973120864e-15,
+      4.777646753229974e-27,
+      8.646899257575651e-16,
+      8.648793270572644e-16,
+      0.010538417367821946
+    ]
+  ],
+  "parent_cutoff_control_nr48": [
+    [
+      32,
+      2,
+      0.0009977640797998988,
+      4.080242479202605e-14,
+      2.935292426218927e-27,
+      1.4488899680112623e-14,
+      1.451689782678471e-14,
+      0.04251007299490474
+    ],
+    [
+      32,
+      8,
+      0.0029688648594917563,
+      3.6607892711284903e-13,
+      5.148717247596991e-27,
+      1.451893133610651e-13,
+      1.4613970914234223e-13,
+      0.055172385354167006
+    ],
+    [
+      32,
+      16,
+      0.005832916463300075,
+      7.512875358227595e-13,
+      2.2652877800107782e-27,
+      2.8802910393644674e-13,
+      2.9175660367234786e-13,
+      0.07645995522090873
+    ]
+  ],
+  "test_command": "OPENBLAS_NUM_THREADS=1 python -m pytest -q tests/test_phi_bose_one_dof_no_go.py",
+  "locally_observed": "3 passed in 0.10 s",
+  "class_ready": false,
+  "limitations": "Fixed-temperature zero-chemical-potential equilibrium negative-control only; no evolving χ, independent BEST, late FRW, 86-eV relic, BEC, physical SM plasma."
+}

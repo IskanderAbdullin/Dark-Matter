@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Source/tests/full negative proof and checkpoint committed after fast-forward GitHub update; next independent one-DOF energy vs entropy-conservation tradeoff executable. No between-session work claim.",
+  "stop_reason": "Stage and evidence saved under current branch; no automatic between-session progress. Exact next experimental gate is event-energy positive microreversible closure and invariant audit.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Critical negative: properly boosted daughter log-angle quadrature reveals *within-cell* ηphi feasible-tangent obstruction even for two-endpoint NONOVERLAPPING DG entropy-dual physical Bose moment cell, at mphi=86eV. At N32 quadratic all scalar moments remove bosons, yet ηrest_dot<0, actual dt30 implicit fails closed; N16 dt30 passes. Previous DG robustness conditional on coarse angular quadrature and first-cell event absence. No physical BEC/Ω/CLASS.",
+  "current_phase": "One-eta Bose cell negative gate: number sink inward tangent but energy-conserving continuous decay and thermal fixed point impossible within finite-width constant η cell; DG two-eta remains subject to resolved IR tangent obstruction. Next candidate must be energy-resolving and realizability preserving.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -281,7 +281,7 @@
     "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
     "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
   },
-  "last_checkpoint_parent_sha": "b571c1ac19389e3a926f054800b25f52e0fcbb03",
+  "last_checkpoint_parent_sha": "f0db3e936d738626d6b9b1defcb2ce3fda20cfb8",
   "latest_analytic_gate": {
     "commit": "f9587255171602bba91d836a5f381457ed70b294",
     "checkpoint_commit": "fcf2bdcf21ba67c038bdbd1cb4bff94396c29f75",
@@ -846,6 +846,16 @@
     "analytic": "Within each nonoverlapping DG cell J=-G, G=[[a,b],[b,c]], C=(-u,-v) with u,v>0; eta_dot_left=(c*u-b*v)/(ac-b²) may be negative. SPD example a3 b1 c2 u.05 v1 yields ηdot_left=-.18.",
     "numeric": "Mapped physical Yukawa (parent pmax2,nrad24,nangle48), N32 φ first cell C=(-6.575e−14,-3.234e−13), eta_rest_dot=-3.522727e−9, local dtlimit24.4129, real dt20 implicit succeeds, dt30/1000 fail positive η; all φ C≤0, H+1.869337e−12 and conserved charges/E. N16 eta_rest_dot=+5.837e−9, dt30 passes. N32 mapped nangle12/24/48/96 eta_rest_dot all negative, however uniform-c n12 misses events in first φ cell so eta_dot0=0 and dt30 falsely passes while Qphi is underestimated 10%.",
     "negative": "Nonoverlap only prevents cross-cell mixing, not the within-cell 2 local hat inverse susceptibility cone problem. Tangent N8..64 nonmonotone; weak integrated angle convergence does not certify near-zero scalar mode source. Not physical BEC or a true scalar condensate, q/time/UV/SM/FRW unresolved.",
+    "class_ready": false
+  },
+  "latest_phi_one_dof_energy_equilibrium_gate_20261123": {
+    "status": "Local 3/3 focused Python tests passed; public CI not yet checked on new commit",
+    "report": "kinetics/PHI-BOSE-ONE-DOF-NO-GO-AUDIT.md",
+    "source": "kinetics/phi_bose_one_dof_no_go.py",
+    "tests": "tests/test_phi_bose_one_dof_no_go.py",
+    "data": "kinetics/results/phi-bose-one-dof-no-go-2026-11-23.json",
+    "negative": "For physical p²dp one constant eta per cell, monotonic dN/deta<0 but U=Ebar*N implies exact on-shell E mismatch; matching exact equilibrium Bose cell N creates false Rphi/H. N32 parent pmax2 false Rphi 5.558e-14 and H 1.481e-14 vs exact thermal Rphi ~5e-27; relative U bias +0.0998%. One-DOF is rejected as exact physical energy+thermal closure.",
+    "scope": "Analytical and on-shell thermal negative control, not an actual coupled physical time evolution or a Bose condensate",
     "class_ready": false
   }
 }
