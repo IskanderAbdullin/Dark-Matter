@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-23T20:31:56.011Z",
+  "updated_utc": "2026-11-23T23:30:27Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -952,6 +952,14 @@
     "file": "kinetics/YUKAWA-STRONG-DISCRETIZATION-GATE.md",
     "positive": "Exact on-shell positive reversible events with consistent capacities imply stoichiometry, E and interior H theorem.",
     "negative": "Nearest-bin/split deposition or event-unique daughter nodes do not automatically preserve both quantum inverse H and physical DOS; no strong solver, no CLASS.",
+    "class_ready": false
+  },
+  "latest_phi_exact_shell_capacity_20261124": {
+    "status": "Analytic physical shell DOS and 3 independent Python stdlib midpoint negative checks; no public CI claimed",
+    "report": "kinetics/PHI-BOSE-EXACT-SHELL-CAPACITY-AUDIT-2026-11-24.md",
+    "evidence": "kinetics/research-control/EVIDENCE.md",
+    "positive": "Exact one-real-scalar shell capacity [(U²−m²)^(3/2)−(L²−m²)^(3/2)]/(6π²) with physical threshold",
+    "negative": "Coarse first-cell midpoint DOS errors -19.28%, -24.94%, -25.00% for U=1e-6,1e-4,0.0086036 GeV at m=86eV; exact capacity alone not reversible Yukawa event measure",
     "class_ready": false
   }
 }
