@@ -500,3 +500,11 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] Exact two-positive-hat Gram proof: J=−G symmetric negative with overlapping b>0; C=(0,−q) implies ηdot0=−bq/(ac−b²)<0 even though no microscopic source in first hat. At η0=0 this leaves positive inverse fugacity tangent cone, independently validates ηdot via finite difference and exact Gram [[3,1],[1,2]]. Four local focused tests pass.
 - [x] Real physical-p²dp Yukawa C and J on 4 grid families N8/16/32/64, mφ86e−9 GeV,Tphi1. N16 quadratic Cphi0=0, all Cphi≤0, H+1.648469e−12, ηrestdot−2.9982e−9, ηrest8.6e−8, local dtlimit28.68; true nonlinear dt20 pass/dt30 fail. mφ×100 predicts time bound×100. NO real BEC evidence.
 - [ ] Verify GH CI; P0 nonoverlapping energy-cell entropy dual moments and matching full Pauli/Bose event deposition/implicit time with physical p²dp and IR feasibility; then 3+ parent p/c/UV/q/time + SM/Zprime/FRW. Do not silently clip ηφ or invent δ-condensate.
+
+
+## 2026-11-23 nonoverlapping Bose/Fermi energy-cell entropy-dual IR realisability
+
+- [x] Replace cross-cell overlapping moment hats with two independent Fermi/Bose inverse-fugacity endpoints per physical p²dp energy cell, prove per-cell negative 2×2 moment susceptibility/no cross-cell mixing, same on-shell Yukawa Pauli/Bose event hats for exact two conserved dark charges, energy and quantum H. Seven local focused tests pass with on-shell full moving scalar tree and common-temperature μ1=μ2+μφ equilibrium.
+- [x] **Scoped mathematical/numeric repair:** old N16 quadratic φ first hat C0=0 but ηrest_dot≈−2.9982e−9; old implicit dt30 fails. New DG first physical cell C=[0,0] ⇒ ηdot=[0,0]; actual implicit dt20/30/1000 passes without clipping or false condensate; physical Bose N integrated in p on three meshes.
+- [x] **Negative convergence:** at synthetic dt1e7 N8/16/32/64 ΔNφ−7.593/−7.281/−6.850/−6.423×10−5; N8→64 ~18.2% drift despite exact conservation/H. Parent pmax2 earlier misses IR-curved rate tails; DG interface discontinuity and doubled DOF unvalidated. No physical Γelastic/86eV ΩDM/BEC/frozen f(q)/CLASS.
+- [ ] Verify real Scientific CI; P0 isolate DG-vs-overlap nonthermal interface error on matched DOF, pmax4/8/12/16, nr12/24/48 and CM polar12/24/48, three+ IR mode/time meshes, then actual χ1χ2+φ shared SM/Zprime/eγν FRW.

@@ -120,6 +120,8 @@
 
 | 2026-11-22 | Strict near-critical Bose eta-dual tangent cone gate exposes structural **overlapping Galerkin hat moment** failure: source Cphi=(0,−q) can imply ηrest_dot<0 at ηrest=0 even though no φ microproduction and positive H | [analytic proof & physical N16 dt20/dt30](../archive/stages/2026/11/2026-11-22-phi-bose-moment-tangent.md), next nonoverlapping physical-cell moment alternative, not real BEC |
 
+| 2026-11-23 | Структурный следующий Gate после overlapping Bose ηrest false tangent: nonoverlap cellwise P1 with 2 independent η endpoints/cell, physical p²dp, identical on-shell Pauli/Bose source and implicit η>0; numerical error must be isolated before treating as physical scalar kinetics | [date archive](../archive/stages/2026/11/2026-11-23-phi-bose-cell-entropy.md): N16 quadratic φ first-cell source=0 implies ηdot=0, former dt30 failure now passes; synthetic dt1e7 mode N8→64 ΔNφ still varies ~18%, physical pmax and SM/FRW unresolved |
+
 При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
 
 

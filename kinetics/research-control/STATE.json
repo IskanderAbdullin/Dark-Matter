@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-22T21:55:00Z",
+  "updated_utc": "2026-11-23",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,11 +101,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Fifth scientific tangent-cone stage prepared for commit; next independent non-overlapping physical Bose-cell entropy-dual source/time proof is executable, no ongoing work between messages.",
+  "stop_reason": "DG structural IR repair code, seven local tests and nonconverged N8..64/t1e7 evidence prepared for commit; new CI to check. Latest active session UTC start 2026-11-23T06:50:13Z; no asynchronous continuation implied.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "f325dc43c35b1203c0ec0a5292bb8276518be68c",
-  "current_phase": "Physical φ Bose IR p²dp entropy-dual Galerkin supports exact N/U/H but continuous overlapping energy hats have a provable near-critical positivity tangent obstruction even for *strictly boson-destroying* moving on-shell χ1↔χ2+φ events. Exact two-hat Gram J=-[[a,b],[b,c]], C=(0,-q) implies eta0dot=-bq/(ac-b²)<0, hence at eta0=0 outward tangent despite source at rest hat zero. Real mphi86eV,T1GeV,N16 power2 has eta0dot=-2.9982e-9, eta0=8.6e-8, linear bound dt28.68; implicit dt20 works dt30 fails under eta>0, with H positive and ALL scalar C<=0. This is a discretization/manifold defect, not real BEC. Need discontinuous/local-cell dual alternative and full physical SM/FRW, no ΩDM claim.",
+  "current_phase": "Kinetics P0: physically integrated Bose/Fermi entropy-dual piecewise-linear NONOVERLAPPING energy cells remove one proven overlapping-P1 fake scalar rest-node tangent obstruction in isolated on-shell Yukawa χ1↔χ2+φ. At N16 quadratic φ first-cell C=[0,0] implies ηdot=[0,0]; old continuous hats gave ηrest_dot≈−2.9982e−9 and dt30 fail, new DG implicit dt30/1000 pass. Physical N/E/H tested. However large t=1e7 numerical ΔNphi N8→64 drifts ~18.2%, parent pmax2/angular cutoff and full χ–SM/FRW remain unresolved.",
   "completed_research_steps": [
     {
       "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
@@ -231,11 +231,11 @@
   },
   "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
   "last_verified_ci": {
-    "head_sha": "a032279492c3878e58feb090b6a0bf926827bb4d",
-    "run_id": 45072297076,
+    "head_sha": "01e93ff984021e4514d1c7564d8dff3419c10b57",
+    "run_id": 45074692117,
     "conclusion": "success",
-    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45072297076",
-    "scope": "physical Bose IR instantaneous Galerkin source tests, NOT the new finite-step implicit time"
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45074692117",
+    "scope": "prior overlapping-hat tangent negative study, not new nonoverlap cell solver"
   },
   "last_event_audit": {
     "date": "2026-11-21",
@@ -813,5 +813,16 @@
     "archive": "archive/stages/2026/11/2026-11-22-phi-bose-moment-tangent.md",
     "positive": "Micro source preserves all dark charges and energy, entropy >0. A physical p²dp symmetric negative Bose susceptibility J gives a unique tangent ηdot=J^-1 C, independently reproduced by finite difference. Tiny overlap matrix [[3,1],[1,2]], C=(0,-1) yields ηdot=(-.2,.6) exactly. Benchmarks 4 mesh families at N8/16/32/64 and four scalar masses.",
     "negative": "N16 power2 mφ86e-9GeV eta_rest8.6e-8 has C_phi_rest=0, all other C_phi<=0, H1.6484691e-12>0, but inverse moment η_rest_dot=-2.9982e-9, linear positivity boundary dt28.68385 (actual dt20 passed/dt30 implicit Newton failed). Mass mphi×100 yields ~×100 positivity time (N16). This is **only continuous overlapping-hat Galerkin tangent-cone defect** with no physical microproduction at rest; no real BEC/δ(p) or cosmological relic."
+  },
+  "latest_nonoverlap_cell_entropy_20261123": {
+    "status": "new self-contained nonoverlap scalar/χ1/χ2 physical moment and implicit source, seven focused local tests passed 0.74s on latest code; new GitHub Scientific CI pending",
+    "source": "kinetics/phi_bose_cell_entropy.py",
+    "tests": "tests/test_phi_bose_cell_entropy.py",
+    "report": "kinetics/PHI-BOSE-CELL-ENTROPY-AUDIT.md",
+    "data": "kinetics/results/phi-bose-cell-entropy-2026-11-23.json",
+    "archive": "archive/stages/2026/11/2026-11-23-phi-bose-cell-entropy.md",
+    "positive": "Two local inverse fugacity endpoints per physical p²dp E cell, block negative susceptibility, exact N1+N2,N1+Nφ,E total and quantum event entropy. Under isolated moving χ1↔χ2+φ Γrest, n16 quadratic φ Cfirst=[0,0], ηdot first=[0,0], dt30 and 1000 implicit accepted without η clipping whereas old overlapping P1 rejected dt30. ΔNφ(dt30)=−3.49474984e−10, ΔS=+4.94537744e−11; Rφ initial −1.16493012863e−11 and H+1.64846911e−12 matches independent reference. Integrated Bose thermal N 3 meshes match exact physical p integral to rel<5e−12.",
+    "negative": "At synthetic dt1e7, ΔNφ for N8,16,32,64 = −7.592978/−7.280799/−6.850076/−6.423206 e−5; N8→64 ~18.2%, N32→64 ~6.2% residual mode dependence. Discontinuous intercell jumps, doubled DOFs, parent UV cutoff2 and no dynamical SM/Zprime/H/FRW, zero-mode, physical Γelastic, Ω/BEC/CLASS.",
+    "class_ready": false
   }
 }
