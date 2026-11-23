@@ -37,7 +37,7 @@ E_{\phi,\min}(p)=
 {m_1(E_1 E_\phi^*+p q_\phi^*)}.
 \]
 
-The physical daughter rest momentum \(q_\phi=0\) requires a parent with \(p_*=m_1 q_\phi^*/m_\phi\), not \(p\sim m_1\). For \(K\gg m_\phi\) but \(K\ll E_\phi^*\), \(p_{\rm required}(K)\approx m_1(E_\phi^*-q_\phi^*)/(2K)+m_1 q_\phi^*/(2K)\) is **not** a useful simplification; instead the ultrarelativistic inverse is \(p_{\rm required}\simeq m_1(E_\phi^*-q_\phi^*)/(2K)\) only on the *wrong branch*. The correct leading expression in the physical intermediate regime \(m_\phi\ll K\ll E_\phi^*\) is \(p_{\rm required}\simeq m_1(E_\phi^*+q_\phi^*)/(2K)\approx m_1 E_\phi^*/K\). The exact rapidity formula, not either approximation, is used for the table.
+The physical daughter rest momentum \(q_\phi=0\) requires a parent with \(p_*=m_1 q_\phi^*/m_\phi\), not \(p\sim m_1\). For the intermediate regime \(m_\phi\ll K\ll E_\phi^*\), the leading ultrarelativistic inversion is \(p_{\rm required}(K)\simeq m_1(E_\phi^*+q_\phi^*)/(2K)\simeq m_1E_\phi^*/K\). The exact rapidity formula, not this approximation, is used for the table.
 
 ## Reproducible numeric benchmark
 
