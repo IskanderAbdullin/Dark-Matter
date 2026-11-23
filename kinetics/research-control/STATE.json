@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-23T18:44:43.013Z",
+  "updated_utc": "2026-11-23T19:35:41.873Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -101,12 +101,13 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Nonzero-mu weak reference plus finite-parent near-critical Bose IR bound archived; next priority physically normalized strong 1-to-2 shared-capacity network, not validated relic. Public CI of latest commits pending.",
+  "stop_reason": "Thermal forward positive-affinity Yukawa N and each Q parent-UV error now have explicit analytic certificates; strong physical shared-capacity and nonthermal/IR convergence remain open. Latest public CI pending.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "b559b024d8877219e244abb107e93e13e8b63851",
+  "last_checkpoint_git_sha": "aef7c71dd40cb6ab3c2d9e9ddf6e9cf85e5020dd",
   "current_phase": "Independent physical massive 1-to-2 weak N and Q controls now cover both zero and nonzero chemical potentials, forward and reverse signs, exact chemical equilibrium and three parent cutoffs. Next prove shared physical daughter capacities, exact shell, graph nullspace and bounded nonlinear time; 86eV IR/SM/FRW/relic still unresolved.",
   "completed_research_steps": [
+    {"stage":"Analytic strict parent-UV tail certificates for forward massive Bose Yukawa thermal weak number and three separate physical energy sources","source":"kinetics/phi_bose_chemical_uv_bound.py","report":"kinetics/PHI-BOSE-CHEMICAL-UV-BOUND-AUDIT.md","commit":"1011208f07e8169da7517b09a6bc062122ffa12a","result":"pmax2 directly misses 42.7366% of forward R; at pmax16 observed number tail ~1.7607 ppm and rigorous bound ~9.01 ppm relative to partial; individual physical energy tails bounded by 5.3402e-16 GeV5 each at pmax16","validation":"Local independent direct SciPy positive tail quadrature for six cutoffs; new focused GitHub regression submitted, CI not yet verified","limitations":"common-T fixed positive chemical affinity, noncritical mu_phi and prescribed thermal parent only; no strong finite volume, nonthermal UV, daughter IR, BEC or relic"},
     {"stage":"Positive massive Yukawa forward weak source at fixed chemical affinity admits rigorous finite-parent-cutoff near-critical mu_phi bound","sha":"dbe867d1f2572a3742d3fe52880585a98478d0d8","evidence":"archive/stages/2026/11/2026-11-23-finite-parent-chemical-ir-bound.md","scope":"Analytical bound and deterministic local 1D scan only: pmax2/8/16 scalar IR support strictly above m_phi; μphi↑m_phi changes fixed-Δμ source 5.95/8.06/8.08 ppm, no zero-mode/BEC inference"},
     {"stage":"Independent massive Yukawa on-shell FD/BE chemical-potential weak number and three energy moments at T1 unequal/equal T0","sha":"bebf5e23069a9fba6767a7f987ac22856aee08b7","documentation_commit":"ed39b172cda2289041c58e6d57d4c47bf99c2812","report":"kinetics/PHI-BOSE-CHEMICAL-WEAK-REFERENCE-AUDIT.md","tests":"3/3 targeted local pytest passed; public Scientific CI pending","scope":"physical normalized prescribed-thermal weak source only, noncritical mu_phi; NOT strong finite-volume time/zero mode/relic"},
     {
