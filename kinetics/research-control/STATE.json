@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-23T20:28:41.128Z",
+  "updated_utc": "2026-11-23T20:31:56.011Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -26,6 +26,11 @@
     "conclusion": "success"
   },
   "known_negative_results": [
+    {
+      "claim": "The old pmax2,N16,12x12 Yukawa event graph's zero first scalar cell and Rphi=-1.16493e-11 are physically converged",
+      "finding": "Refuted by exact cut-cell weak Rfirst=-2.76214936e-12, Qfirst=-1.22779976e-14, Rtotal=-1.29545396e-11. Sparse 12x12 underestimates total by 10.08% and misses a cell contributing 21.32% of true net number.",
+      "evidence": "kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md"
+    },
     {
       "claim": "Original BGK trapezoid measures match external BEST moments",
       "finding": "refuted",
@@ -101,12 +106,19 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Exact on-shell boosted IR accessibility theorem and regression code archived; physical finite-capacity strong operator and low-energy additional channels remain open; public CI pending.",
+  "stop_reason": "Quantitative 12x12 IR alias correction documented and prior claims annotated; next derive physical shared-capacity strong cut-cell operator, independently converge all N/Q and nonlinear time. Latest public CI pending.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "896c3239cbbf732fe74aedc1bd423090d216f155",
+  "last_checkpoint_git_sha": "7cd3e7ec0e4db28e77c6c6770dcb42cf9ed1675d",
   "current_phase": "Independent physical massive 1-to-2 weak N and Q controls now cover both zero and nonzero chemical potentials, forward and reverse signs, exact chemical equilibrium and three parent cutoffs. Next prove shared physical daughter capacities, exact shell, graph nullspace and bounded nonlinear time; 86eV IR/SM/FRW/relic still unresolved.",
   "completed_research_steps": [
+    {
+      "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
+      "sha": "c4191a7a8d4f79d2c2e5dd06312982b6f06d3cd0",
+      "report": "kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md",
+      "tests": "Independent local SciPy adaptive cut-cell and NumPy direct Gauss n48/96/192 cross-check; public CI pending",
+      "finding": "At pmax2,N16,T1=.9,T2=Tphi=1, old sampled first-cell Rphi=0 but continuous first-cell Rphi=-2.76214936045e-12 GeV4, Qphi=-1.22779976195e-14 GeV5; true total Rphi=-1.29545395549e-11, old 12x12 -1.16493012863e-11 underestimates destruction magnitude 10.08%. First cell is 21.32% of true total. Earlier physical interpretation corrected in two audits."
+    },
     {
       "stage": "Exact inverse Lorentz threshold for 86-eV daughter infrared in physical Yukawa 1-to-2 on-shell decay",
       "sha": "b7923f38031fefbf5122983bda9f24535444890e",
