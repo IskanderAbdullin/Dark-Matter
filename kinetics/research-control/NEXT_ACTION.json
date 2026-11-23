@@ -11,9 +11,11 @@
     "New independent nonzero-chemical-potential massive φ weak N/Q reference: kinetics/PHI-BOSE-CHEMICAL-WEAK-REFERENCE-AUDIT.md; local 3/3 tests, public CI to verify.",
     "Thermal forward nonzero-mu φ parent UV number-tail bound and pmax2/8/12/16/20/24 scan: kinetics/PHI-BOSE-CHEMICAL-UV-BOUND-AUDIT.md. Distinguish bound for N from unproven Q and strong nonthermal convergence.",
     "New exact boost threshold: kinetics/PHI-BOSE-IR-ACCESSIBILITY-AUDIT.md. For pmax16 scalar E<150keV is on-shell inaccessible; scalar rest requires parent p~55.8TeV, not sampled at T~1GeV.",
-    "Mandatory negative finding: kinetics/PHI-BOSE-SPARSE-ANGLE-FALSE-ZERO-AUDIT.md shows N16,pmax2 first-cell zero in 12×12 event graph is a sparse quadrature miss, NOT physical kinematic zero. Prior DG-P1 report corrected."
+    "Mandatory negative finding: kinetics/PHI-BOSE-SPARSE-ANGLE-FALSE-ZERO-AUDIT.md shows N16,pmax2 first-cell zero in 12×12 event graph is a sparse quadrature miss, NOT physical kinematic zero. Prior DG-P1 report corrected.",
+    "Quantitative correction: kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md. Old 12x12 Yukawa pmax2 total rate underestimates continuous weak source by ~10.08%, and N16 first scalar cell missed ~21.32% of true total. Never use old 12x12 rate as continuum-normalization target."
   ],
   "experiments": [
+    "Build conservative shared physical finite-volume Yukawa strong source from cut-cell exact angular integrals. First reproduce continuous P2 Rphi=-1.29545395549e-11 and first-cell Rphi=-2.76214936045e-12, Qphi=-1.22779976195e-14, then all 3 Q ledgers and 3+ angular/radial/scalar mesh levels; do not use old 12x12 -1.16493013e-11 as physical target.",
     "HIGH PRIORITY: compute positive cut-cell exact daughter-angle intersection and integrated first-cell Yukawa N/Q at N16,pmax2, compare to 12×12 false zero; verify physical kmin and sampled kmin separately before strong time.",
     "Derive physically positive p²dp phase capacities and microevent reaction extents from shared kinematic cell/shell measure; preserve F/R, N1+N2, N1+Nφ, exact physical energy and H at finite events.",
     "Overlay exact daughter support floor on each physical scalar energy-cell edge for N=8/16/32/64 and P=2/8/16/24; report disconnected/null cells separately from numerical zero-mode and prove no forbidden energy deposition; test adding physically derived additional channels rather than inventing event edges.",
