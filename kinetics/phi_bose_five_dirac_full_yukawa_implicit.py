@@ -161,6 +161,19 @@ class FullDiracPhysicalMoments:
                 name,(i,j,4,4),(-1,-1,+1,+1),
                 (px.e_chi,px.e_anti,px.e_phi3,px.e_phi4),px.W,self))
         self.total_events=sum(len(c.W) for c in self.channels)
+        # A FULLY INACTIVE φ cell beneath ALL exact massive 1↔2 and 2↔2
+        # on-shell daughter supports is physically collision frozen at
+        # the chosen hard per-parent P. Hold its three independent cell
+        # moments fixed, rather than inverting tiny Bose susceptibilities
+        # in a null collision subspace and creating numerical IR drift.
+        self.active_dofs=np.ones(self.nvars,dtype=bool)
+        self.proven_frozen_phi_indices=np.arange(self.offsets[4],
+                                                self.offsets[4]+3)
+        for ch in self.channels:
+            impact=ch.S[:,self.proven_frozen_phi_indices]
+            if impact.nnz and np.max(np.abs(impact.data))>2e-15:
+                raise ArithmeticError('Physically claimed frozen φ first DOS cell is actually collision active')
+        self.active_dofs[self.proven_frozen_phi_indices]=False
         self.charge_nodal=asflat([
             np.full(s.nvars,CHARGES[i]) for i,s in enumerate(self.species)])
         self.energy_nodal=asflat([s.nodal_energies for s in self.species])
@@ -250,23 +263,27 @@ class FullDiracPhysicalMoments:
         errors=[]
         for i in range(maxiter):
             R,J,info=self.implicit_residual(vec,old,dt)
-            err=float(max(abs(R/scale)))
+            err=float(max(abs(R[self.active_dofs]/scale[self.active_dofs])))
             errors.append(err)
             if err<rtol:break
-            update=spsolve(J,-R)
+            update=np.zeros(self.nvars)
+            a=self.active_dofs
+            update[a]=spsolve(J[a][:,a],-R[a])
             if not np.all(np.isfinite(update)):
                 raise ArithmeticError("Non-finite 5-field sparse Newton update")
             alpha=1.
             accepted=False
             for _ in range(32):
                 trial=vec+alpha*update
+                trial[~self.active_dofs]=old[~self.active_dofs]
                 if np.min(trial[self.offsets[4]:])<=0:
                     alpha/=2;continue
                 try:
                     residual,_=self.implicit_residual(trial,old,dt,False)
                 except (ArithmeticError,ValueError,OverflowError,FloatingPointError):
                     alpha/=2;continue
-                next_err=float(max(abs(residual/scale)))
+                next_err=float(max(abs(residual[self.active_dofs]/
+                                       scale[self.active_dofs])))
                 if next_err<=err*(1-1e-4*alpha) or next_err<rtol:
                     vec=trial
                     accepted=True
