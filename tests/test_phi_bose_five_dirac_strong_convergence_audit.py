@@ -79,3 +79,27 @@ def test_full_pair_radial_Gauss_source_underresolution_at_large_hard_parent_cuto
         assert abs(src["exact_event_energy"])<1e-17
     print("PHYSICAL_5FIELD_RADIAL_QUADRATURE",repr(rows),flush=True)
     assert all(v["events"]>0 for v in rows)
+
+
+def test_independent_full_quantum_pair_radial_source_refines_beyond_n8():
+    from kinetics.phi_bose_five_dirac_full_yukawa_weak import FullDiracYukawaWeak
+    rows=[]
+    for nr in (8,12,16):
+        model=FullDiracYukawaWeak(
+            P=16.,Ppair=16.,nphi=12,nrad=8,nangle=8,
+            pair_nrad=nr,pair_nrelative=8,pair_ncm=32,pair_naz=4)
+        res=model.source(T=(.9,1.05,1.,1.1,.98))
+        ch=res["event_channels"]
+        rows.append(dict(nrad=nr,
+                         chi1_pair_rate=ch["chi1_pair"]["event_rate_GeV4"],
+                         chi2_pair_rate=ch["chi2_pair"]["event_rate_GeV4"],
+                         H=res["H_GeV4"],
+                         events=model.event_counts))
+        assert abs(res["vector_U1_defect_GeV4"])<1e-18
+        assert abs(res["total_energy_defect_GeV5"])<1e-17
+        assert res["H_GeV4"]>0
+    print("PHYSICAL_PAIR_RADIAL_8_12_16",repr(rows),flush=True)
+    # Positivity and conservation never imply convergence of a tiny
+    # pair contribution hidden under the much stronger 1->2 decay H.
+    assert all(v["chi1_pair_rate"]<0 for v in rows)
+    assert all(v["chi2_pair_rate"]>0 for v in rows)
