@@ -253,6 +253,14 @@ class FullDiracPhysicalMoments:
         flat_M=asflat([s.evaluate(e)["M"] for s,e in zip(self.species,etas)])
         scale=np.maximum.reduce([dt*np.abs(src0["C"]),
                     1e-14*np.abs(flat_M),np.full(self.nvars,1e-20)])
+        # A root residual cannot be driven below the precision of the
+        # *physical* occupied moments.  In the far scalar tail an eta step
+        # ~1e-16 at eta~4 is BELOW one representable float64 ulp.  Asking
+        # for 2e-7 relative accuracy in a 1e-16 source would falsely reject
+        # EVERY timestep.  The per-moment absolute roundoff floor is
+        # explicitly budgeted, not confused with physical truncation error.
+        machine_floor=16*np.finfo(float).eps*np.abs(flat_M)
+        solve_scale=np.maximum(scale,machine_floor/rtol)
         if max(abs(dt*src0["C"])/scale)<1e-9:
             return dict(etas=etas,iterations=0,scaled_residual=0.,
                         entropy_increase=0.,entropy_certificate=0.,
@@ -263,7 +271,7 @@ class FullDiracPhysicalMoments:
         errors=[]
         for i in range(maxiter):
             R,J,info=self.implicit_residual(vec,old,dt)
-            err=float(max(abs(R[self.active_dofs]/scale[self.active_dofs])))
+            err=float(max(abs(R[self.active_dofs]/solve_scale[self.active_dofs])))
             errors.append(err)
             if err<rtol:break
             update=np.zeros(self.nvars)
@@ -287,7 +295,7 @@ class FullDiracPhysicalMoments:
                 except (ArithmeticError,ValueError,OverflowError,FloatingPointError):
                     alpha/=2;continue
                 next_err=float(max(abs(residual[self.active_dofs]/
-                                       scale[self.active_dofs])))
+                                       solve_scale[self.active_dofs])))
                 if next_err<best_merit:
                     best_merit=next_err
                     best_alpha=alpha
@@ -313,6 +321,16 @@ class FullDiracPhysicalMoments:
                       max_abs_update=float(max(abs(update))))))
         else:
             raise ArithmeticError(("5field Newton failed",dt,errors[-1]))
+        # Report the original strict relative-flux error separately.
+        # The numerical root has a resolution-aware stopping criterion,
+        # not a claim of arbitrary-precision local chemical accuracy.
+        final_R,_=self.implicit_residual(vec,old,dt,with_jac=False)
+        raw_scaled_residual=float(max(abs(final_R[self.active_dofs]/
+                                        scale[self.active_dofs])))
+        maximum_abs_moment_residual=float(max(abs(final_R)))
+        precision_limited_dofs=int(np.count_nonzero(
+            (abs(final_R)>rtol*scale)&
+            (abs(final_R)<=machine_floor)&self.active_dofs))
         updated=unflat(self,vec)
         end=self.integrate_spectrum(updated)
         s=self.source(updated)
@@ -320,6 +338,9 @@ class FullDiracPhysicalMoments:
         energy=float(sum(end["Q"]-initial["Q"]))
         u1=float(end["U1"]-initial["U1"])
         return dict(etas=updated,iterations=i,scaled_residual=errors[-1],
+                    raw_scaled_residual=raw_scaled_residual,
+                    max_abs_moment_residual=maximum_abs_moment_residual,
+                    precision_limited_dofs=precision_limited_dofs,
                     entropy_increase=dS,entropy_certificate=dS-dt*s["H"],
                     energy_defect=energy,U1_defect=u1,physical_H=s["H"],
                     min_Bose_eta=float(min(updated[4])),
