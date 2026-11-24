@@ -18,7 +18,10 @@ def test_independent_physical_finite_mediator_weak_heat_reduces_to_existing_cont
     # The old module constructs its CM boost from the exact lab frame
     # and separately integrates the Pauli forward-reverse weak energy.
     m=.02
-    massive=1000.
+    # Genuine asymptotic contact check: mV=1000 GeV still has a finite
+    # 6.87e-5 high-energy-tail propagator correction on this cutoff grid;
+    # use 10 TeV to make the contact error <2e-6 instead of hiding it.
+    massive=10000.
     coupling=vector_portal_setup(mV=massive)["G_contact_GeV_minus2"]
     for n in (6,8,10):
         finite=one_dirac_charge_sector_weak_heat(
