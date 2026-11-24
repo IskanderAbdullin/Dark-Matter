@@ -45,11 +45,14 @@
   "class_ready": false,
   "existing_verified_CLASS_gstar55_independent_analytic_crosscheck": {
     "condition": "g*S,dec=55, one real BE scalar 86eV no condensate",
-    "omega_h2_analytic": 0.11912939486124709,
+    "omega_h2_analytic": 0.11912164989760488,
     "mean_comoving_freestream_path_to_eq_Mpc": 6.627211308933845,
     "existing_verified_CLASS_run_id": 44890003670,
     "existing_verified_CLASS_half_amplitude_k_z5_Mpc_inv": 0.43275181165,
     "k_times_mean_path": 2.867937700128489,
-    "scope": "new independent background free-streaming consistency, not new CLASS call or observational likelihood"
+    "scope": "new independent background free-streaming consistency, not new CLASS call or observational likelihood",
+    "older_CLASS_analytic_photon_normalization_omega_h2": 0.11912939486124709,
+    "relative_photon_normalization_delta": 0.00006501303604565787,
+    "CI_erratum": "First exact-equality test failed, since n_gamma rounded to 410.7 instead of previous more precise 410.7267 /cm3; do not compare absolute Omega as identical input."
   }
 }
