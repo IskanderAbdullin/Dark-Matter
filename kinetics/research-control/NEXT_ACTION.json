@@ -2,9 +2,10 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Construct a shared-capacity energy-resolving strong Yukawa operator with realizability and H theorem",
+  "title": "Construct entropy-stable realizable physical two-moment Yukawa strong collision step",
   "objective": "Use now independently converged physical cut-cell weak Nphi,Qphi,Q1,Q2 for pmax2/8/16 and forward/reverse/equilibrium (PHI-BOSE-PHYSICAL-CUTCELL-NQ-AUDIT-2026-11-24.md). Derive an exactly energy- and number-conserving physical phase-capacity χ1/χ2/φ strong event scheme that also preserves inverse Pauli/Bose detailed balance, entropy, and positive attainable occupations at finite time. First prove or falsify realizability for a 2-moment energy-resolving first φ cell; do not assign scalar ΔN at W/V (45.16% wrong Q on P2 N16). Then test graph rank, 3 grids, time and IR/UV convergence; no physical relic claims.",
   "prerequisites": [
+    "Exact physical cut-cell scalar first-bin DG-P1 tangent negative is now converged (N32 deta_left=-3.26407450395e-9, linear boundary 26.3474 GeV^-1; two negative source hats). Read PHI-BOSE-EXACT-CUTCELL-TANGENT-GATE-2026-11-24.md and its 4 passing local tests; CI pending.",
     "New exact positive shell-crossing physical weak N/Q benchmark and first-cell W/V ≠ Qφ/Rφ negative: kinetics/PHI-BOSE-PHYSICAL-CUTCELL-NQ-AUDIT-2026-11-24.md, JSON and tests.",
     "Scientific CI for new physical cut-cell source/test/report commits 20634587/c100bcf3/42ce2547, verify before promoting software evidence; local 5/5 passed and independent analytic N+all three Q agree.",
     "Analytic cut-cell geometric identity locally checked at four examples; commit 57cc4216fe245247a5a6e8d7ab5cd677bae14065; physical event measure/capacities still unproven.",
@@ -20,6 +21,7 @@
     "Conditional isotropic inclusive-width weak measure and exact species V/W capacity derived in PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md; no finite-volume strong operator established."
   ],
   "experiments": [
+    "For physically integrated energy-resolving Bose cells, derive the actual (M_N,M_E) realizability domain and a constrained finite-step update; compare the exact physical R/Q first-bin direction against its tangent cone, especially N24/N32, without floor/clipping or invented δ(p). Prove/exhibit finite-time existence or provide a scoped negative counterexample before coupling other species.",
     "Derive or reject a realizable positive finite-capacity energy-resolving parent/daughter/scalar moment representation with shared event extents and true k event energy, respecting FD/BE mode bounds, two dark charges, total energy, quantum entropy and chemical fixed point. Explicitly calculate the realizability cone for an individual scalar cell, not only global invariant ledgers.",
     "Compare newly designed evolving strong operator's weak limit cell-by-cell to independent physical parent-split Yukawa Rphi/Qphi/Q1/Q2 across P2/8/16, Nphi8/16/32, 3 angular and radial levels, forward/reverse/equilibrium, and first-cell target N16 Rphi=-2.762149360447387e-12/Qphi=-1.227799761951597e-14.",
     "Test nonlinear bounded implicit microsteps, possible extra left nullspace, dt convergence, UV/IR support and nonthermal initial occupations. Retain failures and note physical 86-eV q≈0 demands parent beyond finite P shell or other derived channels; no invented condensate, Γ(T), SM/FRW or CLASS-ready."
