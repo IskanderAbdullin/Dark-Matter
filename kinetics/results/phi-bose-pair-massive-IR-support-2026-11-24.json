@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "type": "positive massive on-shell pair 2↔2 scalar kinematic global hard-parent support and inverse near-rest parent threshold, independently re-evaluable from analytic rapidity",
+  "scope": "mφ=86eV, equal incoming Dirac+antidirac mass mχ, each 0<=p<=P, vacuum 2->2; NOT a quantum event population rate, SM plasma or FRW/BEC",
+  "formula": "kmin(P)=mφ*cosh(max(0,acosh(mχ/mφ)-asinh(P/mχ)))",
+  "inverse_formula": "E_pair_total_min(K)=2mχ*cosh(acosh(mχ/mφ)-acosh(K/mφ)) for mφ<=K<mχ",
+  "stages": [
+    {
+      "channel": "chi2_pair",
+      "parent_mass_GeV": 0.02,
+      "scalar_mass_GeV": 8.6e-8,
+      "rest_parent_threshold_GeV": 4651.162790654675,
+      "hard_cutoff_floor": [
+        {
+          "P_GeV": 2,
+          "kmin_GeV": 0.00009999751861499219
+        },
+        {
+          "P_GeV": 8,
+          "kmin_GeV": 0.000025000034897622055
+        },
+        {
+          "P_GeV": 16,
+          "kmin_GeV": 0.000012500143037191311
+        },
+        {
+          "P_GeV": 1000,
+          "kmin_GeV": 2.0924499998004268e-7
+        },
+        {
+          "P_GeV": 5000,
+          "kmin_GeV": 8.6e-8
+        },
+        {
+          "P_GeV": 60000,
+          "kmin_GeV": 8.6e-8
+        },
+        {
+          "P_GeV": 130000,
+          "kmin_GeV": 8.6e-8
+        }
+      ],
+      "sample_nearrest_k86p1eV_incoming_E_min_GeV": 8864.413877501365
+    },
+    {
+      "channel": "chi1_pair",
+      "parent_mass_GeV": 0.1,
+      "scalar_mass_GeV": 8.6e-8,
+      "rest_parent_threshold_GeV": 116279.06976739888,
+      "hard_cutoff_floor": [
+        {
+          "P_GeV": 2,
+          "kmin_GeV": 0.002498439450818174
+        },
+        {
+          "P_GeV": 8,
+          "kmin_GeV": 0.000624975590803062
+        },
+        {
+          "P_GeV": 16,
+          "kmin_GeV": 0.0003124969542185909
+        },
+        {
+          "P_GeV": 1000,
+          "kmin_GeV": 0.000005000369787500006
+        },
+        {
+          "P_GeV": 5000,
+          "kmin_GeV": 0.000001001848999900001
+        },
+        {
+          "P_GeV": 60000,
+          "kmin_GeV": 1.0552133333327962e-7
+        },
+        {
+          "P_GeV": 130000,
+          "kmin_GeV": 8.6e-8
+        }
+      ],
+      "sample_nearrest_k86p1eV_incoming_E_min_GeV": 221610.34693743472
+    }
+  ],
+  "class_ready": false
+}
