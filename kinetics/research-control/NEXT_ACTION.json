@@ -2,9 +2,11 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Implement and independently converge physical Yukawa weak cut-cell N/Q moments before strong discretization",
-  "objective": "Use PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md dW and exact physical V/W capacities; compute on-shell continuous cut-cell Rphi and all three Q for pmax2/8/16, >=3 radial/angular/scalar meshes, nonzero mu and reverse-dominated control. Compare independent thermal analytic reference. Only then construct common positive reversible strong operator and verify H, bounds, nullspace.",
+  "title": "Construct a shared-capacity energy-resolving strong Yukawa operator with realizability and H theorem",
+  "objective": "Use now independently converged physical cut-cell weak Nphi,Qphi,Q1,Q2 for pmax2/8/16 and forward/reverse/equilibrium (PHI-BOSE-PHYSICAL-CUTCELL-NQ-AUDIT-2026-11-24.md). Derive an exactly energy- and number-conserving physical phase-capacity χ1/χ2/φ strong event scheme that also preserves inverse Pauli/Bose detailed balance, entropy, and positive attainable occupations at finite time. First prove or falsify realizability for a 2-moment energy-resolving first φ cell; do not assign scalar ΔN at W/V (45.16% wrong Q on P2 N16). Then test graph rank, 3 grids, time and IR/UV convergence; no physical relic claims.",
   "prerequisites": [
+    "New exact positive shell-crossing physical weak N/Q benchmark and first-cell W/V ≠ Qφ/Rφ negative: kinetics/PHI-BOSE-PHYSICAL-CUTCELL-NQ-AUDIT-2026-11-24.md, JSON and tests.",
+    "Scientific CI for new physical cut-cell source/test/report commits 20634587/c100bcf3/42ce2547, verify before promoting software evidence; local 5/5 passed and independent analytic N+all three Q agree.",
     "Analytic cut-cell geometric identity locally checked at four examples; commit 57cc4216fe245247a5a6e8d7ab5cd677bae14065; physical event measure/capacities still unproven.",
     "Check new Scientific CI on extended thermal weak stage; first stage one-η #45179293650 success and exact-shell #45180360539 success; verify parent-cutoff + initial weak stage statuses.",
     "Read updated PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md and weak JSON, plus parent IR support, one-eta and DG-P1 no-go.",
@@ -18,16 +20,9 @@
     "Conditional isotropic inclusive-width weak measure and exact species V/W capacity derived in PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md; no finite-volume strong operator established."
   ],
   "experiments": [
-    "Derive common invariant Yukawa event weights using exact physical per-species shell capacities (not arbitrary node weights); first independently reproduce all 3 weak Q and Rphi on 3 radial/angle/phi levels; treat within-cell energy moments separately from number capacities.",
-    "Use exact positive angular cut-cell geometry P=(h-l)/(2B), Mphi=P*(h+l)/2 from kinetics/PHI-BOSE-EXACT-CUTCELL-MOMENTS-2026-11-23.md as an independently checked geometric weak-control, NOT a strong operator; integrate energy-dependent Bose/Pauli factors inside each bin and verify all three physical Q and N against continuous Yukawa reference.",
-    "Build conservative shared physical finite-volume Yukawa strong source from cut-cell exact angular integrals. First reproduce continuous P2 Rphi=-1.29545395549e-11 and first-cell Rphi=-2.76214936045e-12, Qphi=-1.22779976195e-14, then all 3 Q ledgers and 3+ angular/radial/scalar mesh levels; do not use old 12x12 -1.16493013e-11 as physical target.",
-    "HIGH PRIORITY: compute positive cut-cell exact daughter-angle intersection and integrated first-cell Yukawa N/Q at N16,pmax2, compare to 12×12 false zero; verify physical kmin and sampled kmin separately before strong time.",
-    "Derive physically positive p²dp phase capacities and microevent reaction extents from shared kinematic cell/shell measure; preserve F/R, N1+N2, N1+Nφ, exact physical energy and H at finite events.",
-    "Overlay exact daughter support floor on each physical scalar energy-cell edge for N=8/16/32/64 and P=2/8/16/24; report disconnected/null cells separately from numerical zero-mode and prove no forbidden energy deposition; test adding physically derived additional channels rather than inventing event edges.",
-    "Compare strong summed Rphi/Qphi and IR support to independent analytic 1D and positive log-angle weak references for pmax2/8/16 and ≥3 radial/angular/φ energy grids; compute event graph nullspace to detect spurious frozen modes.",
-    "Completed conditional analytic N and all-three-Q positive thermal UV bounds (see PHI-BOSE-CHEMICAL-UV-BOUND-AUDIT.md). Next: independently measure angle/daughter IR errors and nonthermal parent tails; establish shared physical finite-volume strong collision capacities.",
-    "Before nonlinear time: ensure shared physical-capacity strong operator reproduces exact μ1=μ2+μφ stationarity and reverse-dominated negative Rφ/Qφ at pmax2/8/16, with all three weak energy moments and positive microscopic entropy.",
-    "Validate Pauli/Bose admissible finite-time timestep convergence and eventual addition of finite χ1χ2-SM e/ν plasma, FRW+g*, actual 86-eV relic and observations only after true model/physics is independently established."
+    "Derive or reject a realizable positive finite-capacity energy-resolving parent/daughter/scalar moment representation with shared event extents and true k event energy, respecting FD/BE mode bounds, two dark charges, total energy, quantum entropy and chemical fixed point. Explicitly calculate the realizability cone for an individual scalar cell, not only global invariant ledgers.",
+    "Compare newly designed evolving strong operator's weak limit cell-by-cell to independent physical parent-split Yukawa Rphi/Qphi/Q1/Q2 across P2/8/16, Nphi8/16/32, 3 angular and radial levels, forward/reverse/equilibrium, and first-cell target N16 Rphi=-2.762149360447387e-12/Qphi=-1.227799761951597e-14.",
+    "Test nonlinear bounded implicit microsteps, possible extra left nullspace, dt convergence, UV/IR support and nonthermal initial occupations. Retain failures and note physical 86-eV q≈0 demands parent beyond finite P shell or other derived channels; no invented condensate, Γ(T), SM/FRW or CLASS-ready."
   ],
   "constraints": "Public draft PR #1 existing branch only; no main merge/force/Computer Use, minimal meaningful CI and publish all negative numerical evidence, no premature BEC/Ω/CLASS.",
   "class_ready": false
