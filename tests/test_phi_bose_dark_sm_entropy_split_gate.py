@@ -45,3 +45,21 @@ def test_reject_malformed_entropy_DoF():
         decoupled_entropy_temperature_ratio(gd_after=0)
     with pytest.raises(ValueError):
         decoupled_entropy_temperature_ratio(gsm_before=float("nan"))
+
+
+def test_finite_mass_FD_entropy_integral_quantifies_true_dark_gstar_near_crossing():
+    from kinetics.phi_bose_dark_sm_entropy_split_gate import (
+        physical_FD_dirac_entropy_gstar_s,physical_initial_dark_gstar_s,
+    )
+    assert math.isclose(physical_FD_dirac_entropy_gstar_s(0,4.),
+                        3.5,rel_tol=2e-12)
+    assert physical_FD_dirac_entropy_gstar_s(.15,4.)<3.5
+    assert physical_FD_dirac_entropy_gstar_s(10,4.)<1.
+    t=physical_initial_dark_gstar_s()
+    assert math.isclose(t,7.991670794968991,rel_tol=2e-10)
+    assert 0<8./t-1<.002
+    b=benchmark()
+    assert math.isclose(
+       b["actual_thermal_dark_gstar_s_with_mass_at_transport_crossing_T_0p688GeV"],t,
+       rel_tol=1e-12)
+    assert b["initial_massless_approx_error_fraction"]<.002
