@@ -28,3 +28,6 @@
 
 
 **FD pole source (2026-11-24):** [exact angular quantum occupation correction at vacuum pole](kinetics/PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md). Eight sampled positive MB pole inversions survive; FD total rate suppressed at T5 by 34%. Finite width matters for differential inversion, so no full FD or burst claim.
+
+
+**Full FD vacuum BW source (2026-11-24):** [finite-width electron injection and reduced gain](kinetics/PHI-BOSE-PORTAL-FD-BW-GATE-2026-11-24.md). Max reduced exponent 2.77e-5 on 8 samples; negative inversion in one cold .688 GeV point. Next actual stable chi2 depletion and full bath, not more pole-only diagnostics.

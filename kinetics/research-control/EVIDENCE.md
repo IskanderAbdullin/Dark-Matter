@@ -354,3 +354,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: FD electron inverse source at vacuum pole
 [Derivation/data](../PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md). Eight selected positive MB pole inversions survive; FD at T5 rate ~0.660 of MB, 32/64 Gauss stable, independent MB NWA normalization. Full finite width not included.
+
+
+## 2026-11-24 UTC: finite-width FD inverse portal
+[Derivation and evidence](../PHI-BOSE-PORTAL-FD-BW-GATE-2026-11-24.md). Independent swapped MB ratios within 8e-9 of direct BW; FD n12/16/24 stable at three points; reduced FD gain upper <2.78e-5 at 8 sampled points. All other visible channels, inverse/depletion and physical evolution unresolved.

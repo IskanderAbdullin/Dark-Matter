@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:46:20Z",
-    "elapsed_minutes_actual": 13.95,
-    "stage": "Electron FD pole injection and independent NWA normalization"
+    "last_check_utc": "2026-11-24T21:47:20Z",
+    "elapsed_minutes_actual": 14.95,
+    "stage": "Finite-width FD inverse electron source and reduced gain locally evaluated"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1311,6 +1311,15 @@
     "positive": "8 sampled positive MB pole inversion points retain sign in FD, 32/64 Gauss ratio stable; FD integrated rate at T5 suppressed 34%; independent MB NWA normalization agrees",
     "negative": "NWA only, not full finite-width FD, all other SM/feedback unresolved",
     "status": "local calculation executed; remote CI pending",
+    "class_ready": false
+  },
+  "latest_portal_fd_bw_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-FD-BW-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_fd_bw_gate.py",
+    "data": "kinetics/results/phi-bose-portal-fd-bw-gate-2026-11-24.json",
+    "positive": "independent swapped s/Eprime MB reproduces direct BW ratios within 8e-9; FD n12/16/24 ratios stable; reduced FD positive-gain upper 2.77347e-5 at T5 alpha.0001, max of 8 sampled points",
+    "negative": "no chi2 depletion/inverse, full SM, actual nonlinear kinetics, BEC/relic",
+    "status": "local numerical calculation, remote CI pending",
     "class_ready": false
   }
 }
