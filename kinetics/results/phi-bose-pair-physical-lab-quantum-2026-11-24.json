@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "positive physical finite-cutoff vacuum 2->2 LAB event measure, FD/BE occupation, energy/U1/H weak moment, not finite-time full plasma/FRW/real frozen DM",
+  "masses_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "y": 0.001,
+  "parent_cutoff_GeV": 20,
+  "independent_GG_MB_T1_GeV4": 2.0886349101080186e-16,
+  "grid_comparisons": [
+    {
+      "nrad": 12,
+      "nrel": 12,
+      "ncm": 32,
+      "naz": 4,
+      "MB": 2.1073503024379542e-16
+    },
+    {
+      "nrad": 16,
+      "nrel": 12,
+      "ncm": 48,
+      "naz": 8,
+      "MB": 2.0897650631736355e-16
+    },
+    {
+      "nrad": 20,
+      "nrel": 16,
+      "ncm": 64,
+      "naz": 8,
+      "MB": 2.089015367567241e-16
+    },
+    {
+      "nrad": 24,
+      "nrel": 24,
+      "ncm": 64,
+      "naz": 6,
+      "MB": 2.0888006452524947e-16
+    },
+    {
+      "nrad": 24,
+      "nrel": 32,
+      "ncm": 96,
+      "naz": 1,
+      "MB": 2.0886565136041006e-16
+    }
+  ],
+  "quantum_first_nontrivial": {
+    "grid": [
+      16,
+      12,
+      48,
+      8
+    ],
+    "mu_chi_GeV": 0.05,
+    "mu_antichi_GeV": -0.05,
+    "mu_phi_GeV": -0.2,
+    "T_GeV": 1,
+    "R_events_GeV4": 7.547876890384561e-17,
+    "H_GeV4": 3.0191507561538173e-17,
+    "energy_defect_GeV5": -5.423418723394456e-31
+  },
+  "curved_nonthermal": {
+    "grid": [
+      16,
+      12,
+      48,
+      8
+    ],
+    "Tchi": 0.9,
+    "Tanti": 1.1,
+    "Tphi": 1,
+    "bose_curv": 0.01,
+    "R_events_GeV4": 6.108938911686376e-19,
+    "H_GeV4": 1.2057047203591902e-17
+  },
+  "class_ready": false
+}
