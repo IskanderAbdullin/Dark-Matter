@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T21:34:36Z",
+  "updated_utc": "2026-11-24T21:36:55Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -108,8 +108,8 @@
   "class_ready": false,
   "stop_reason": "Active run continuing; previous completed checkpoint unchanged as baseline; not claiming 540 minutes.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
-  "instruction": "Assess cold/underpopulated initial histories and thermal scalar free-streaming diagnostic; actual heat and number-changing rates and BBN likelihood required.",
-  "last_checkpoint_git_sha": "59b5cfc55794f61f9bac151c955e5a8db39c0a15",
+  "instruction": "Quantify structure/velocity for pure BE scalar with required abundance, then physical number multiplication and initial entropy histories.",
+  "last_checkpoint_git_sha": "9797d2fcd583bff276416f8db6069469603b878c",
   "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo. Separate conditional SM/dark comoving entropy split after decoupling: entropy identity with g*S dark initial 8 relativistic, more accurately 7.991670795 at T0.688GeV using independent finite-mass FD integral; illustrative SM g*S61.75->10.75 yields xi=Tdark/TSM 0.558372 if no dark entropy transfer vs1.116745 if full transfer into φ only (the latter incompatible with surviving stable chi2). Both conditional extremes, NOT physical bounds. Electron vector transport νe/H crosses unity at T=.6882487043GeV using external fixed g*rho61.75, not actual kinetic eigenvalue; actual x8 T2.5MeV νe/H1.55656e−7, requires hypothetical epsilon~.0253465 to get frequency proxy/H~1, no experimental viability proof. Focused CI #45455721437 for entropy tests GREEN, FD mass refined current focused CI pending. True dark+SM FRW still unresolved, class_ready=false.",
   "completed_research_steps": [
     {
@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:34:36Z",
-    "elapsed_minutes_actual": 2.2166667,
-    "stage": "Variational entropy energy and count-constrained gates; local SciPy executed; no Agent PC"
+    "last_check_utc": "2026-11-24T21:36:55Z",
+    "elapsed_minutes_actual": 4.5333333,
+    "stage": "Entropy variational gate committed; low-reheat leptonic injection and heavy-depletion gate reproduced locally"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1275,6 +1275,15 @@
     "data": "kinetics/results/phi-bose-entropy-energy-gate-2026-11-24.json",
     "positive": "isolated initial thermal r=.12941977 implies rho_dark/rho_nu,1>=.8875117 near BBN independent of dark thermal closure; if number nondecreases after BBN and today Omega<=.120, rho_BBN>=47.319 neutrino units",
     "negative": "today entropy-only Omega lower bound .0837212 does not exclude .120; thermal scalar branch .847906 overproduces; full BBN likelihood, entropy export and initial thermalization unknown",
+    "class_ready": false
+  },
+  "latest_low_reheat_injection_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-LOW-REHEAT-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_low_reheat_gate.py",
+    "data": "kinetics/results/phi-bose-portal-low-reheat-gate-2026-11-24.json",
+    "status": "local SciPy contact normalization and 12 assertions; no remote CI claim",
+    "positive": "instantaneous empty-dark reheat T_R=20MeV lepton-only MB injection gives OmegaH=3.018 if no annihilation; even one-pass complete H->phi conversion gives Omega_phi=1.3354e-5; for 99% phi fraction one-pass heavy survival <=8.69e-8",
+    "negative": "not full quantum freeze-in or actual relic, no hadron/number multiplication; effective phi phi->chi1 antichi1->4phi can change count",
     "class_ready": false
   }
 }

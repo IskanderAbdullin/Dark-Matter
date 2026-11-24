@@ -338,3 +338,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: variational entropy-energy and count gate
 [Proof, assumptions and source](../PHI-BOSE-ENTROPY-ENERGY-GATE-2026-11-24.md). Local SciPy independent pressure/log partition and six assertions. BBN energy minimum ~0.8875 one-neutrino units under initially thermal isolated 9-state benchmark; conditional count-nondecrease plus present abundance yields >=47.319. Today entropy-only lower bound 0.08372 is NOT sufficient to exclude 0.120. Relativistically frozen BE scalar branch yields 0.8479; initial entropy and number histories need independent validation. ACT BBN-only comparison diagnostic, not a fit.
+
+
+## 2026-11-24 UTC: dilute low-reheat injection gate
+[Source, proof and reference](../PHI-BOSE-PORTAL-LOW-REHEAT-GATE-2026-11-24.md). Exact mass-dependent MB lepton source with physical finite vector BW, local contact analytic normalization (ratio 1.00000067855), 12 tail and finite-mass checks. TR20MeV one-pass full conversion Ωφ=1.335389e-5; 99% phi by mass needs H survival ≤8.68687e-8. Neither full FD/BE, actual reheating nor number multiplication established; no full-model exclusion.
