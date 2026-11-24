@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T15:18:12.032Z",
+  "updated_utc": "2026-11-24T15:43:10.181Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "ACTIVE sequential session checkpoint after two substantive independently verified stages; next selectively integrate fixed positive IR quadrature into five-field physical species DOS entropy/G and test all-cell q/dt/UV/nearcritical and full Scientific CI. Not a terminal goal.",
+  "stop_reason": "Active sequential research run; checkpoint after independent five-field time/UV/radial and thermal-closure no-go; next independent converged pair event quadrature plus gauge-consistent both-Dirac-SM mediator and closed FRW. Whole Scientific CI may queue while focused stage-specific CI successful; no physical cosmological DM validation yet.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "ab265e8c58afa36db6d61e446300964c83809f17",
-  "current_phase": "Full physically normalized five-population Dirac Yukawa (χ1,antiχ1,χ2,antiχ2,real φ) 4-channel backward-Euler finite-time source with actual U1/energy/H now verified for P2/8/16 in focused CI: old Newton 2 tests failed because demanded η update1.16e−16 below float64 ULP8.88e−16 at η4.09 (true moment residual<1e−18). Repaired by explicit 16eps |physical M| precision-aware stopping while preserving RAW residuals and original quantum U1/E/KL checks, plus stable sign-preserving affinity J≈F−R via expm1. Focused CI #45421790808/#45422074906/#45422175702 pass; full Scientific run status still inspect. Independent 50-digit nearcritical Bose first collision-frozen cell physical susceptibility severe underresolution: at μ=mφ−1e−16 G00 true2.8488e−4GeV³, n18 p-Gauss obtains only0.374% while number converged6e−6. Analytic G00~T²(2m)^(3/2)/(8πsqrtδ). Fixed 168 positive-node geometric p-Gauss, node-independent of μ, integrates exact DOS capacity and G to <2e−7 over tested six δ, focused CI #45423112252 passed. Not installed into five-field model yet; full physical SM/FRW and relic Ω/BEC/CLASS not established.",
+  "last_checkpoint_git_sha": "aa4953d6f98a1a8ffa257c2f84af601e4fbe3d3b",
+  "current_phase": "First robust FULL five-population Dirac/anti real-φ four-channel vacuum-Yukawa finite-time strong multi-grid audit completed: physical Nphi t20000 at P2 has true first-order BE dt Richardson ratios ~1.976–1.979 for Nphi8/12/16, but spectral N not monotone; P2/P8/P16 strong scalar ΔNphi ~−1.537e−7/−3.922e−7/−3.968e−7 at dt5000,N12, demonstrating P2 not UV converged (only38.7% P16) and P8/P16 still1.167% apart. Independently inspect pair radial source: individual χ1pair/χ2pair rates vary by percent with nrad4/6/8/12/16 though total H stable from decay; graded positive exact p² capacity radial n8 WORSE by7–12%, improved at 12/16 but not converged. Real strict scope full 5field hard-P physical Bose first collision-frozen IR 3 moments and rank2 dM/d(mu,T), active source6.74002746e−12 at T1GeV,muphi−.2: no global thermal BE(T(t),mu(t)) can follow actual collision operator. New optional 168-point static phi IR physical DOS grid corrected to leave all other Bose cell quadratures exactly original nq weights via zero-weight padding, CI successful. Full SM+FRW physical Γ(T), truly frozen fphi(q), Ω, BEC, CLASS/observational fit NOT reached.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -496,6 +496,23 @@
       "data": "kinetics/results/phi-bose-critical-ir-physical-susceptibility-2026-11-24.json",
       "tests": "7 targeted tests and focused GitHub CI #45423112252 success",
       "limitations": "first P2 collision-inactive φ cell and subcritical BE ideal reference only, fixed grid not yet in live strong solver, no BEC proof"
+    },
+    {
+      "stage": "Full physical 4channel 5field nonlinear backward Euler true first order time across 3 scalar meshes, and material P2/8/16 physical UV+quadrature cutoff bias, measured each pair channel nrad4/6/8/12/16, explicit negative crude graded radial n8 vs refined pair source",
+      "sha": "303a329ca2458edab18649e8b46e0ae80d435d3f",
+      "radial_src_sha": "6cf86a17140fadb5225c715a7d1b2aaec6027d9a",
+      "test_sha": "aa4953d6f98a1a8ffa257c2f84af601e4fbe3d3b",
+      "report": "kinetics/PHI-BOSE-FIVEFIELD-STRONG-TIME-GRID-UV-RADIAL-AUDIT-2026-11-24.md",
+      "tests": "Focused CI #45425641136/#45425995741/#45426294898/#45427815208 success; #45427342217 missing numpy test-only fail corrected; full Scientific latest check",
+      "limits": "No full pair radial/CM/angle convergence; P2 not UV; no FRW/relic"
+    },
+    {
+      "stage": "Rigorous on-shell hard-P full four-reaction five-population real φ global two-parameter BE Tphi,mu_phi closure non-invariance from frozen IR physical 3 moments rank2 and nonzero active scalar collision source",
+      "sha": "3e5e17de3b3f2e0ff68f53a559076da3632ffb8a",
+      "test_sha": "727631b752a03ba042bc74e78601466af4709772",
+      "report": "kinetics/PHI-BOSE-FROZEN-IR-GLOBAL-BE-THERMAL-CLOSURE-NOGO-2026-11-24.md",
+      "tests": "Focused CI #45426807185 success (4 targeted)",
+      "limits": "Strict hard parent P finite vacuum network only, no universal physical BEC/thermal no-go"
     }
   ],
   "derived_physical_relaxation_scope": {

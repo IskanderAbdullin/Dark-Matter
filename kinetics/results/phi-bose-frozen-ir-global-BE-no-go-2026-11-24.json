@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "Strict finite hard-parent P2/8/16 vacuum four-channel five-population Yukawa on-shell collision scalar thermal manifold noninvariance; NOT universal SM/FRW or actual thermal tail no-go",
+  "theorem": "If a nondegenerate physical Bose energy cell has exact zero collision source for each of three Bernstein moments and 3x2 Jacobian ∂Mfreeze/∂(μφ,Tφ) rank two, then any one-global-BE(T(t),μ(t)) ansatz matching its frozen moments must have µdot=Tdot=0; a simultaneously nonzero active φ collision source contradicts such a global ansatz.",
+  "numeric_P2_T1_mu_phi_minus_0p2": {
+    "first_scalar_cell_C": [
+      0,
+      0,
+      0
+    ],
+    "active_phi_source_GeV4": 6.740027458965697e-12,
+    "quantum_entropy_H_GeV4": 1.34800549179314e-12,
+    "frozen_3x2_singular_values": [
+      2.9071008398336545e-13,
+      2.2140481815876845e-18
+    ],
+    "rank": 2
+  },
+  "tested_parent_cutoffs_GeV": [
+    2,
+    8,
+    16
+  ],
+  "tested_nearcritical_phi_chemical_gaps_GeV": [
+    1e-12,
+    1e-14,
+    1e-16
+  ],
+  "focused_ci_success_run": 45426807185,
+  "physical_scope": "Finite hard P physically disconnected subthreshold scalar cell; full infinite thermal FD tail is astronomically slow not identically zero, extra interactions lift or change support; no BEC or relic statement",
+  "class_ready": false
+}

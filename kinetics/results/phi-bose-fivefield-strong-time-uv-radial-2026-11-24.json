@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "Illustrative 5-population χ1/antiχ1/χ2/antiχ2+realφ physical Yukawa 1↔2+2↔2 finite-time/UV/radial numerical convergence, NOT SM+FRW, BEC, Ω or CLASS",
+  "benchmark": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "y": 0.001,
+    "states": "five-species initial thermal temperature trial with nonequilibrium T",
+    "total_time_GeV_inv": 20000
+  },
+  "P2_three_Bose_grids_three_timesteps": [
+    {
+      "P": 2,
+      "Nphi": 8,
+      "deltaNphi_dt10000": -1.5359482924415246e-7,
+      "deltaNphi_dt5000": -1.5376978099168603e-7,
+      "deltaNphi_dt2500": -1.5385816552748732e-7,
+      "richardson_ratio": 1.9794384384945494
+    },
+    {
+      "P": 2,
+      "Nphi": 12,
+      "deltaNphi_dt10000": -1.5352677097679734e-7,
+      "deltaNphi_dt5000": -1.5371168797517765e-7,
+      "deltaNphi_dt2500": -1.538052431804271e-7,
+      "richardson_ratio": 1.9765548895675844
+    },
+    {
+      "P": 2,
+      "Nphi": 16,
+      "deltaNphi_dt10000": -1.5354135002310088e-7,
+      "deltaNphi_dt5000": -1.537243562166335e-7,
+      "deltaNphi_dt2500": -1.5381688922566639e-7,
+      "richardson_ratio": 1.9777395704009746
+    }
+  ],
+  "measured_timestep_convergence": "Backward Euler first order, ratios 1.977..1.979; 3 spatial grids do not prove monotone spatial convergence",
+  "cutoff_comparison_Nphi12_dt5000": [
+    {
+      "P": 2,
+      "deltaNphi": -1.5371168797517765e-7,
+      "initial_H": 9.737692995880774e-13,
+      "deltaS": 1.9346234281236718e-8
+    },
+    {
+      "P": 8,
+      "deltaNphi": -3.921625039288168e-7,
+      "initial_H": 4.9730577513526505e-12,
+      "deltaS": 9.727899952238772e-8
+    },
+    {
+      "P": 16,
+      "deltaNphi": -3.967922939801527e-7,
+      "initial_H": 5.09313995476867e-12,
+      "deltaS": 1.0009689743739614e-7
+    }
+  ],
+  "P16_pair_channel_radial_plain_single_segment": [
+    {
+      "nrad": 4,
+      "chi1pair": -1.2642535705199886e-17,
+      "chi2pair": 8.454062124303638e-17
+    },
+    {
+      "nrad": 6,
+      "chi1pair": -1.2879919553088938e-17,
+      "chi2pair": 8.45709319098652e-17
+    },
+    {
+      "nrad": 8,
+      "chi1pair": -1.306543041993941e-17,
+      "chi2pair": 8.302357141400126e-17
+    },
+    {
+      "nrad": 12,
+      "chi1pair": -1.3124489557740074e-17,
+      "chi2pair": 8.29782850839331e-17
+    },
+    {
+      "nrad": 16,
+      "chi1pair": -1.3089930785162934e-17,
+      "chi2pair": 8.279782200607071e-17
+    }
+  ],
+  "P16_pair_channel_radial_fixed_geometric_segments_0_0p25_1_4_16": [
+    {
+      "nper_segment": 2,
+      "total_radial_nodes": 8,
+      "chi1pair": -1.1549235937382272e-17,
+      "chi2pair": 7.710318776209487e-17
+    },
+    {
+      "nper_segment": 3,
+      "total_radial_nodes": 12,
+      "chi1pair": -1.2880768943510985e-17,
+      "chi2pair": 8.284811548552552e-17
+    },
+    {
+      "nper_segment": 4,
+      "total_radial_nodes": 16,
+      "chi1pair": -1.3118966914184088e-17,
+      "chi2pair": 8.291779662265849e-17
+    }
+  ],
+  "physical_capacity": "positive p²dp integrated exactly by nper>=2 on each momentum segment",
+  "negative": "Graded rule with 8 nodes is much worse than plain 8 for this source. Total H dominated by 1↔2 and hides percent-level pair rate quadrature error. P2 finite time scalar deltaN only 38.7% of P16, P8 vs16 differ1.17%; cutoff and grid both vary.",
+  "CI": {
+    "focused_success": [
+      45425641136,
+      45425995741,
+      45426294898,
+      45426807185,
+      45426980016,
+      45427815208
+    ],
+    "earlier_test_missing_numpy_failure": 45427342217
+  },
+  "class_ready": false
+}
