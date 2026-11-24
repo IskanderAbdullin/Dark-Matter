@@ -94,9 +94,24 @@ def test_subcritical_nearcritical_phi_optional_physical_root_and_KL():
     assert 0<trial["accepted_dt"]<=5000.
     assert trial["min_Bose_eta"]>0
     assert trial["scaled_residual"]<2e-7
+    # Critical full-S and full-E differ only below their float64 ULP.
+    # Accepted means no *RESOLVED* entropy or conservation violation;
+    # it does NOT imply a measurable positive entropy increment.
+    assert trial["roundoff_entropy_floor"]>0
+    assert trial["roundoff_energy_floor"]>0
+    assert trial["roundoff_U1_floor"]>0
+    assert not trial["entropy_certificate_sign_resolved"]
+    assert not trial["entropy_gain_sign_resolved"]
+    assert abs(trial["entropy_certificate"])<trial["roundoff_entropy_floor"]
+    assert abs(trial["energy_defect"])<trial["roundoff_energy_floor"]
     assert trial["entropy_increase"]>=-1e-10
     assert trial["entropy_certificate"]>=-1e-10
     assert abs(trial["energy_defect"])<3e-11
     assert abs(trial["U1_defect"])<3e-11
     certificate=quantum_KL_certificate(m,old,trial["etas"],trial["accepted_dt"])
     assert abs(certificate["exact_entropy_decomposition_defect"])<3e-10
+    assert certificate["microscopic_H_new"]>=0
+    # Check the nonnegative quantum entropy-dissipation event measure
+    # separately, even when direct total ΔS subtraction is inconclusive.
+    assert all(x>=-1e-11 for x in
+               certificate["physical_quantum_KL_by_species"])
