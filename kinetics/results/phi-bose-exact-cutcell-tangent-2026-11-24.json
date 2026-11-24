@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "units": {
+    "Rphi": "GeV^4",
+    "eta_dot": "GeV",
+    "linear_t": "GeV^-1"
+  },
+  "model": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "pmax_GeV": 2,
+    "temperature_parent_GeV": 0.9,
+    "temperature_daughters_GeV": 1
+  },
+  "grid": {
+    "parent_Gauss_per_segment": 10,
+    "log_daughter_Gauss": 16
+  },
+  "rows": [
+    {
+      "N": 8,
+      "firstcell_Rphi": -5.560284984612381e-12,
+      "deta_left": 6.3018001038614726e-9,
+      "linear_t_positive_eta_limit": null
+    },
+    {
+      "N": 12,
+      "firstcell_Rphi": -3.912375560090528e-12,
+      "deta_left": 7.201265405840413e-9,
+      "linear_t_positive_eta_limit": null
+    },
+    {
+      "N": 16,
+      "firstcell_Rphi": -2.7621493604473868e-12,
+      "deta_left": 5.704290652097743e-9,
+      "linear_t_positive_eta_limit": null
+    },
+    {
+      "N": 20,
+      "firstcell_Rphi": -1.8988718533098762e-12,
+      "deta_left": 2.7106233423865078e-9,
+      "linear_t_positive_eta_limit": null
+    },
+    {
+      "N": 24,
+      "firstcell_Rphi": -1.2366515807946101e-12,
+      "deta_left": -4.934728038985654e-10,
+      "linear_t_positive_eta_limit": 174.27505491807716
+    },
+    {
+      "N": 32,
+      "firstcell_Rphi": -3.7525005745245825e-13,
+      "deta_left": -3.2640745039529283e-9,
+      "linear_t_positive_eta_limit": 26.34743780996741
+    },
+    {
+      "N": 40,
+      "firstcell_Rphi": -2.3206899183525425e-14,
+      "deta_left": -5.764160436399143e-10,
+      "linear_t_positive_eta_limit": 149.19779029211753
+    },
+    {
+      "N": 48,
+      "firstcell_Rphi": 0,
+      "deta_left": 0,
+      "linear_t_positive_eta_limit": null
+    },
+    {
+      "N": 64,
+      "firstcell_Rphi": 0,
+      "deta_left": 0,
+      "linear_t_positive_eta_limit": null
+    }
+  ],
+  "N32": {
+    "firstcell_C": [
+      -6.581061116761629e-14,
+      -3.0943944628484195e-13
+    ],
+    "G": [
+      [
+        0.0000363190856,
+        0.0000181607833
+      ],
+      [
+        0.0000181607833,
+        0.0000363215638
+      ]
+    ],
+    "massless_thermal_asymptote_relative_error_max": "<1.5e-4"
+  },
+  "independence": "true shell cut-cell sources + separately integrated physical susceptibility; 6x8,10x16,16x32,32x48 agree",
+  "local_tests": "4/4 passed 6.82 seconds",
+  "scope": "negative tangent of chosen DG-P1 physical two-moment manifold only; not finite-time failure proof, BEC or cosmological relic",
+  "class_ready": false
+}
