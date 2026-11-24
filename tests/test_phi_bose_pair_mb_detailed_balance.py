@@ -42,11 +42,11 @@ def test_independent_forward_reverse_MB_reaction_densities_cancel_thermally():
         assert math.isclose(
             q["gamma_forward_equilibrium_GeV4"],
             direct["forward_pair_reaction_density_GeV4"],
-            rel_tol=5e-11)
-        assert abs(q["inverse_to_forward_ratio"]-1)<8e-11
+            rel_tol=2e-5)  # independent adaptive s-integrals: epsrel 3-5e-6
+        assert abs(q["inverse_to_forward_ratio"]-1)<2e-5
         assert math.isclose(
             q["gamma_forward_equilibrium_GeV4"],
-            q["gamma_inverse_equilibrium_GeV4"],rel_tol=8e-11)
+            q["gamma_inverse_equilibrium_GeV4"],rel_tol=2e-5)
         assert q["average_total_event_energy_GeV"]>2*M2
 
 
