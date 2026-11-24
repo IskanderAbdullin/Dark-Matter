@@ -227,9 +227,19 @@ class FullDiracPhysicalMoments:
         old=asflat(etas)
         initial=self.integrate_spectrum(etas)
         src0=self.source(etas)
+        # Exact common-T full-U1 chemical equilibrium has zero affinity.
+        # Prevent fake Newton drift from nearly cancelling quantum rates.
+        affinity=max(float(np.max(abs(ch.S@old))) for ch in self.channels)
+        machine_affinity=64*np.finfo(float).eps*max(1.,max(abs(old)))
+        if affinity<machine_affinity:
+            return dict(etas=etas,iterations=0,scaled_residual=0.,
+                        entropy_increase=0.,entropy_certificate=0.,
+                        energy_defect=0.,U1_defect=0.,physical_H=src0["H"],
+                        min_Bose_eta=float(min(etas[4])),
+                        stalled_at_precision=True,accepted_dt=dt)
         flat_M=asflat([s.evaluate(e)["M"] for s,e in zip(self.species,etas)])
         scale=np.maximum.reduce([dt*np.abs(src0["C"]),
-                    1e-14*np.abs(flat_M),np.full(self.nvars,1e-24)])
+                    1e-14*np.abs(flat_M),np.full(self.nvars,1e-20)])
         if max(abs(dt*src0["C"])/scale)<1e-9:
             return dict(etas=etas,iterations=0,scaled_residual=0.,
                         entropy_increase=0.,entropy_certificate=0.,
