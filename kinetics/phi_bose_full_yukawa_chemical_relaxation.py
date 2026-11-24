@@ -36,8 +36,11 @@ Q_U1=np.array([1.,-1.,1.,-1.,0.])
 def susceptibility(T,mass,g,statistics,mu=0.):
     """Physical thermal FD/BE per-species number susceptibility, GeV²."""
     if T<=0 or mass<0 or g<=0:raise ValueError("Nonpositive physical input")
-    if statistics=="boson" and mu>=mass:
-        raise ValueError('Subcritical Bose chemical potential required')
+    # A MASSLESS BE mode at mu=0 is a legitimate integrable limiting
+    # susceptibility (p^2 b(1+b) tends to T^2). A MASSIVE BE gas at
+    # mu=m is truly infrared divergent in dN/dmu and is excluded.
+    if statistics=="boson" and ((mass>0 and mu>=mass) or (mass==0 and mu>0)):
+        raise ValueError('Subcritical massive Bose chemical potential required')
     m=mass/T
     muhat=mu/T
     def f(x):
