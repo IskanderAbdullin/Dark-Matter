@@ -961,5 +961,12 @@
     "positive": "Exact one-real-scalar shell capacity [(U²−m²)^(3/2)−(L²−m²)^(3/2)]/(6π²) with physical threshold",
     "negative": "Coarse first-cell midpoint DOS errors -19.28%, -24.94%, -25.00% for U=1e-6,1e-4,0.0086036 GeV at m=86eV; exact capacity alone not reversible Yukawa event measure",
     "class_ready": false
+  },
+  "latest_phi_invariant_event_measure_20261124": {
+    "status": "Analytic conditional weak event normalization and physical species energy capacity; scalar stdlib checks only, no full 3-species numerical validation or new CI",
+    "report": "kinetics/PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md",
+    "positive": "dW=g1 Γrest M/E1 p²dp/(2π²) dc/2 with actual boosted on-shell E2/Ephi; exact species V and W capacities and pointwise weak charges/energy/thermal detailed balance",
+    "negative": "Finite-cell constant occupations and bin-average energies do not automatically preserve exact microevent energy, inverse Pauli/Bose or H theorem; spin/isotropy assumptions explicit",
+    "class_ready": false
   }
 }
