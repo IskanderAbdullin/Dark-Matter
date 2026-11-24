@@ -33,12 +33,15 @@ MPLANCK_GEV=1.2209e19
 Q_U1=np.array([1.,-1.,1.,-1.,0.])
 
 
-def susceptibility(T,mass,g,statistics):
+def susceptibility(T,mass,g,statistics,mu=0.):
     """Physical thermal FD/BE per-species number susceptibility, GeV²."""
     if T<=0 or mass<0 or g<=0:raise ValueError("Nonpositive physical input")
+    if statistics=="boson" and mu>=mass:
+        raise ValueError('Subcritical Bose chemical potential required')
     m=mass/T
+    muhat=mu/T
     def f(x):
-        E=math.hypot(x,m)
+        E=math.hypot(x,m)-muhat
         if statistics=="fermion":
             occ=float(expit(-E))
             var=occ*(1-occ)
@@ -94,7 +97,9 @@ def equilibrium_chemical_relaxation(model,T=1.,gstar=61.75,muU=0.):
     ms=(M1,M1,M2,M2,MPHI)
     ss=("fermion","fermion","fermion","fermion","boson")
     gs=(2,2,2,2,1)
-    chi=np.array([susceptibility(T,m,g,k) for m,g,k in zip(ms,gs,ss)])
+    chem=(muU,-muU,muU,-muU,0.)
+    chi=np.array([susceptibility(T,m,g,k,mu) for m,g,k,mu in
+                  zip(ms,gs,ss,chem)])
     gamma=np.array([equilibrium_event_rate_weight(c,T,muU)
                     for c in model.channels])
     if np.min(gamma)<=0 or np.min(chi)<=0:
