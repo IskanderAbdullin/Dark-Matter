@@ -27,8 +27,10 @@ def nodes(n):
     c=np.tanh(v)
     return c,14*w*(1-c*c)
 
-def sigma_independent(s,angle_order=128,y=Y):
+def sigma_independent(s,angle_order=128,y=Y,m_in=MLIGHT,m_virtual=MHEAVY):
     """Physical χ2+antiχ2→2 identical real φ vacuum tree σ in GeV^-2."""
+    MLIGHT=m_in;MHEAVY=m_virtual
+    if min(MLIGHT,MHEAVY)<=0 or y<0:raise ValueError('Positive masses and coupling')
     if s<=4*MLIGHT**2:return 0.
     e=math.sqrt(s)/2
     a=math.sqrt(e*e-MLIGHT**2)
@@ -52,17 +54,17 @@ def sigma_independent(s,angle_order=128,y=Y):
             accum+=tr/((qsq[i]-MHEAVY*MHEAVY)*(qsq[j]-MHEAVY*MHEAVY))
     return float(y**4*np.dot(w,accum)*p/(64*math.pi*s*a))
 
-def reaction_density_MB(T,angle_order=128,y=Y):
+def reaction_density_MB(T,angle_order=128,y=Y,m_in=MLIGHT,m_virtual=MHEAVY):
     """Physical forward MB rate and total incoming-pair energy moment.
 
     γ=4 T/(32π^4) int_{4m2²} ds sigma(s)(s-4m2²) sqrt(s) K1.
     Q_event = -∂γ/∂(1/T) at fixed Yukawa masses and y.
     """
     if T<=0:raise ValueError("T positive")
-    xmin=2*MLIGHT/T
+    xmin=2*m_in/T
     def pref(u):
         s=(T*u)**2
-        return 2*T**5*u*u*(u*u-xmin*xmin)*sigma_independent(s,angle_order,y)
+        return 2*T**5*u*u*(u*u-xmin*xmin)*sigma_independent(s,angle_order,y,m_in=m_in,m_virtual=m_virtual)
     gamma=quad(lambda u:pref(u)*kv(1,u),
                xmin,40.,epsabs=1e-33*(y/Y)**4,epsrel=3e-8)[0]
     energy=quad(lambda u:pref(u)*T*(2*kv(1,u)+u*kv(0,u)),
@@ -73,9 +75,9 @@ def reaction_density_MB(T,angle_order=128,y=Y):
                 mean_total_energy_per_event_GeV=energy/gamma,
                 scattering_order=angle_order)
 
-def ratio_to_H(T,gstar,angle_order=128):
-    x=reaction_density_MB(T,angle_order)
-    density=2*MLIGHT**2*T*kv(2,MLIGHT/T)/(2*math.pi**2)
+def ratio_to_H(T,gstar,angle_order=128,m_in=MLIGHT,m_virtual=MHEAVY):
+    x=reaction_density_MB(T,angle_order,m_in=m_in,m_virtual=m_virtual)
+    density=2*m_in**2*T*kv(2,m_in/T)/(2*math.pi**2)
     H=1.66*math.sqrt(gstar)*T*T/MPLANCK
     return x["gamma_forward_GeV4"]/density/H
 
