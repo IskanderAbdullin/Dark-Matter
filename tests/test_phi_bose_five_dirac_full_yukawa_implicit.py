@@ -186,3 +186,33 @@ def test_near_equilibrium_quantum_affinity_stable_flux_and_event_H_positive():
             assert np.all(result["J"]*affine>=-1e-26)
         assert abs(src["exact_event_U1"])<1e-21
         assert abs(src["exact_event_energy"])<1e-20
+
+
+def test_full_dirac_quantum_implicit_across_three_physical_parent_cutoffs():
+    from kinetics.phi_bose_five_dirac_kl_certificate import quantum_KL_certificate
+    for P in (2.,8.,16.):
+        m=FullDiracPhysicalMoments(
+            P=P,Ppair=P,N1=3,N2=3,Nphi=8,nq=18,
+            nrad=4,nangle=8,pair_nrad=4,
+            pair_nrelative=8,pair_ncm=32,pair_naz=4)
+        initial=m.initial_etas()
+        all_channels=m.source(initial)
+        assert len(all_channels["channels"])==4
+        assert all_channels["H"]>0
+        assert abs(all_channels["exact_event_U1"])<1e-18
+        assert abs(all_channels["exact_event_energy"])<1e-17
+        result=m.adaptive_step(initial,5000.)
+        assert 0<result["accepted_dt"]<=5000.
+        assert result["iterations"]>0
+        assert result["scaled_residual"]<2e-7
+        assert result["min_Bose_eta"]>0
+        assert result["entropy_increase"]>0
+        assert result["entropy_certificate"]>=-1e-10
+        certificate=quantum_KL_certificate(
+            m,initial,result["etas"],result["accepted_dt"])
+        assert all(v>=-1e-11 for v in
+                   certificate["physical_quantum_KL_by_species"])
+        assert abs(certificate["exact_entropy_decomposition_defect"])<3e-10
+        assert abs(result["energy_defect"])<3e-11
+        assert abs(result["U1_defect"])<3e-11
+        assert result["max_abs_moment_residual"]<3e-14
