@@ -2,8 +2,8 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Derive physically normalized positive on-shell χ1↔χ2+real φ finite-volume event measure",
-  "objective": "Read kinetics/YUKAWA-STRONG-DISCRETIZATION-GATE.md. Derive common positive invariant 1↔2 event weights and physical capacities for all three species; separately converge independent weak N and three Q moments at ≥3 radial/angle/daughter/IR levels; then bounded nonlinear Pauli/Bose time, reverse dominated negative control and shared-lepton coupling. Synthetic ≠ physical 86eV Ω/BEC/CLASS.",
+  "title": "Implement and independently converge physical Yukawa weak cut-cell N/Q moments before strong discretization",
+  "objective": "Use PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md dW and exact physical V/W capacities; compute on-shell continuous cut-cell Rphi and all three Q for pmax2/8/16, >=3 radial/angular/scalar meshes, nonzero mu and reverse-dominated control. Compare independent thermal analytic reference. Only then construct common positive reversible strong operator and verify H, bounds, nullspace.",
   "prerequisites": [
     "Analytic cut-cell geometric identity locally checked at four examples; commit 57cc4216fe245247a5a6e8d7ab5cd677bae14065; physical event measure/capacities still unproven.",
     "Check new Scientific CI on extended thermal weak stage; first stage one-η #45179293650 success and exact-shell #45180360539 success; verify parent-cutoff + initial weak stage statuses.",
@@ -14,7 +14,8 @@
     "New exact boost threshold: kinetics/PHI-BOSE-IR-ACCESSIBILITY-AUDIT.md. For pmax16 scalar E<150keV is on-shell inaccessible; scalar rest requires parent p~55.8TeV, not sampled at T~1GeV.",
     "Mandatory negative finding: kinetics/PHI-BOSE-SPARSE-ANGLE-FALSE-ZERO-AUDIT.md shows N16,pmax2 first-cell zero in 12×12 event graph is a sparse quadrature miss, NOT physical kinematic zero. Prior DG-P1 report corrected.",
     "Quantitative correction: kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md. Old 12x12 Yukawa pmax2 total rate underestimates continuous weak source by ~10.08%, and N16 first scalar cell missed ~21.32% of true total. Never use old 12x12 rate as continuum-normalization target.",
-    "New physical scalar DOS capacity and 19.3–25% coarse midpoint negative control: kinetics/PHI-BOSE-EXACT-SHELL-CAPACITY-AUDIT-2026-11-24.md; exact capacity is necessary but not sufficient for reversible physical strong operator."
+    "New physical scalar DOS capacity and 19.3–25% coarse midpoint negative control: kinetics/PHI-BOSE-EXACT-SHELL-CAPACITY-AUDIT-2026-11-24.md; exact capacity is necessary but not sufficient for reversible physical strong operator.",
+    "Conditional isotropic inclusive-width weak measure and exact species V/W capacity derived in PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md; no finite-volume strong operator established."
   ],
   "experiments": [
     "Derive common invariant Yukawa event weights using exact physical per-species shell capacities (not arbitrary node weights); first independently reproduce all 3 weak Q and Rphi on 3 radial/angle/phi levels; treat within-cell energy moments separately from number capacities.",
