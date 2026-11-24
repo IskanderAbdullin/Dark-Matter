@@ -37,5 +37,5 @@ def test_full_GG_thermal_pair_rate_consistent_with_NR_asymptotics_but_not_x3():
                         .4813328853691621,rel_tol=2e-8)
     assert math.isclose(b["exact_GG_to_pwave_6b_over_x"],
                         .888605994,rel_tol=5e-7)
-    assert not a["no_actual_relativistic_relic_prediction"] is False
+    assert a["no_actual_relativistic_relic_prediction"] is True
     assert b["dark_phi_thermal_contact_not_proven"]
