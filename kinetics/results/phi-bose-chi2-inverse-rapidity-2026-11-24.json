@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "Massive χ2 inverse parent rapidity geometry and conditional Pauli mode, not a full coupled strong kinetic solver",
+  "masses_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "P_GeV": [
+    2,
+    8,
+    16
+  ],
+  "rest_daughter2_parent_p_GeV": 0.23999999999979973,
+  "chi2_E2_star_GeV": 0.05199999999996302,
+  "chi2_parent_bounds_at_E2_0p0201_P2_GeV": [
+    0.21516752028696629,
+    0.26723247971263125
+  ],
+  "chi2_parent_bounds_at_E2star_P2_GeV": [
+    0,
+    1.2479999999990357
+  ],
+  "max_relative_error_all_N_and_3_Q": {
+    "pmax2": {
+      "z8_logk8": 0.00928073498766091,
+      "z64_logk64": 0.00002534705217871469,
+      "adaptive_z_logk36": 4.4297898682543746e-13
+    },
+    "pmax8": {
+      "z8_logk8": 0.0002533958186184959,
+      "z64_logk64": 0.000004015571184234901,
+      "adaptive_z_logk36": 3.5282887722587475e-13
+    },
+    "pmax16": {
+      "z8_logk8": 0.006553219595141102,
+      "z64_logk64": 8.80262351898864e-9,
+      "adaptive_z_logk36": 3.0291347208333264e-10
+    }
+  },
+  "negative_control_untransformed_p_gauss": {
+    "pmax16_n8_max_error": 0.533196614553989,
+    "pmax16_n64_max_error": 0.07792610269233247
+  },
+  "scalar_phi_mode_next": "Globally two-sided parent support must also apply for pmax > 55.8 TeV in 86-eV scalar branch",
+  "local_tests": "4 passed in 4.28 s",
+  "class_ready": false
+}
