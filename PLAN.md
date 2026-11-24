@@ -34,3 +34,6 @@
 
 
 **Vacuum stable partner depletion (2026-11-24):** [arbitrary-momentum envelope](kinetics/PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md). Exact σvM<=y⁴/(8πM1²). Conditional low-TR MB fixed injection + maximal vacuum scalar annihilation still leaves >=86.1% at TR20MeV. Need actual stimulated modes and additional channels; no full exclusion.
+
+
+**Low-reheat cold count (2026-11-24):** [kinematic/source-tail envelope](kinetics/PHI-BOSE-PORTAL-COLD-TAIL-BOUND-2026-11-24.md). At TR20MeV single-pass redshift+decay+terminal pair with arbitrary stimulation gives cold Ω<=2.27e-14 vs .060 needed for chosen rms reference. Not a full kinetic/LSS no-go; test redistribution/recycling or alternative initial production.

@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:49:40Z",
-    "elapsed_minutes_actual": 17.283333,
-    "stage": "Analytic arbitrary-momentum vacuum annihilation envelope and conditional depletion ODE"
+    "last_check_utc": "2026-11-24T21:50:55Z",
+    "elapsed_minutes_actual": 18.533333,
+    "stage": "Analytic low-reheat cold-tail production count envelope"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1329,6 +1329,15 @@
     "positive": "exact vacuum bound sigma vM<=y^4/(8pi M1^2)=3.97887e-12 arbitrary momenta; conditional MB fixed injection at TR20 survival>=.861265 with deliberately maximal vacuum loss; pointwise F must exceed7051 for 99% scalar by mass within one-pass history",
     "negative": "Bose stimulation, non-MB injection, visible and other dark removal, nonconstant gstar excluded; not full relic",
     "status": "analytic proof + locally solved comparison ODE; new CI pending",
+    "class_ready": false
+  },
+  "latest_cold_tail_bound_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-COLD-TAIL-BOUND-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_cold_tail_bound.py",
+    "data": "kinetics/results/phi-bose-portal-cold-tail-bound-2026-11-24.json",
+    "positive": "arbitrary stimulation but one-pass/only redshift history, exact hard progenitor thresholds + finite vector upper injection tail; TR20MeV Omega_cold<=2.26674e-14 for chosen rms diagnostic needing .060; generous bound crosses .060 at TR30.095MeV",
+    "negative": "redistribution/SM scattering, recycling/multiplication, hadron source, actual LSS criterion excluded; high TR uninformative",
+    "status": "analytic proof plus local closed form checks; new CI pending",
     "class_ready": false
   }
 }

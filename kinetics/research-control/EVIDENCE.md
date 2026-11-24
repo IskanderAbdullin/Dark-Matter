@@ -362,3 +362,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: arbitrary-momentum vacuum depletion envelope
 [Analytic trace proof and comparison ODE](../PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md). Vacuum sigma vM upper3.97887e-12, prompt conversion fixed MB lepton TR20 optimistic vacuum survival>=.861265, ΩH>=2.599 conditional. Uniform accessible fphi cap F would need >7051 to permit 99% scalar mass in one-pass branch. No full physical relic or Bose bound without occupation cap.
+
+
+## 2026-11-24 UTC: low-reheat one-pass cold count
+[Analytic proof and evidence](../PHI-BOSE-PORTAL-COLD-TAIL-BOUND-2026-11-24.md). Exact progenitor thresholds, generous finite-vector maximum all energies, FD<=MB tail and closed RD integral imply conditional cold Ω<=2.26674e-14 at TR20MeV despite arbitrary final stimulation. Crosses .060 at TR30.095MeV, then uninformative. No momentum redistribution/recycling/hadron source/actual LSS fit.
