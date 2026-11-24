@@ -31,3 +31,6 @@
 
 
 **Full FD vacuum BW source (2026-11-24):** [finite-width electron injection and reduced gain](kinetics/PHI-BOSE-PORTAL-FD-BW-GATE-2026-11-24.md). Max reduced exponent 2.77e-5 on 8 samples; negative inversion in one cold .688 GeV point. Next actual stable chi2 depletion and full bath, not more pole-only diagnostics.
+
+
+**Vacuum stable partner depletion (2026-11-24):** [arbitrary-momentum envelope](kinetics/PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md). Exact σvM<=y⁴/(8πM1²). Conditional low-TR MB fixed injection + maximal vacuum scalar annihilation still leaves >=86.1% at TR20MeV. Need actual stimulated modes and additional channels; no full exclusion.

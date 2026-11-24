@@ -358,3 +358,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: finite-width FD inverse portal
 [Derivation and evidence](../PHI-BOSE-PORTAL-FD-BW-GATE-2026-11-24.md). Independent swapped MB ratios within 8e-9 of direct BW; FD n12/16/24 stable at three points; reduced FD gain upper <2.78e-5 at 8 sampled points. All other visible channels, inverse/depletion and physical evolution unresolved.
+
+
+## 2026-11-24 UTC: arbitrary-momentum vacuum depletion envelope
+[Analytic trace proof and comparison ODE](../PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md). Vacuum sigma vM upper3.97887e-12, prompt conversion fixed MB lepton TR20 optimistic vacuum survival>=.861265, ΩH>=2.599 conditional. Uniform accessible fphi cap F would need >7051 to permit 99% scalar mass in one-pass branch. No full physical relic or Bose bound without occupation cap.

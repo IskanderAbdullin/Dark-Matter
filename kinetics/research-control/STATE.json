@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:47:20Z",
-    "elapsed_minutes_actual": 14.95,
-    "stage": "Finite-width FD inverse electron source and reduced gain locally evaluated"
+    "last_check_utc": "2026-11-24T21:49:40Z",
+    "elapsed_minutes_actual": 17.283333,
+    "stage": "Analytic arbitrary-momentum vacuum annihilation envelope and conditional depletion ODE"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1320,6 +1320,15 @@
     "positive": "independent swapped s/Eprime MB reproduces direct BW ratios within 8e-9; FD n12/16/24 ratios stable; reduced FD positive-gain upper 2.77347e-5 at T5 alpha.0001, max of 8 sampled points",
     "negative": "no chi2 depletion/inverse, full SM, actual nonlinear kinetics, BEC/relic",
     "status": "local numerical calculation, remote CI pending",
+    "class_ready": false
+  },
+  "latest_vacuum_depletion_envelope_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_vacuum_depletion_envelope.py",
+    "data": "kinetics/results/phi-bose-portal-vacuum-depletion-envelope-2026-11-24.json",
+    "positive": "exact vacuum bound sigma vM<=y^4/(8pi M1^2)=3.97887e-12 arbitrary momenta; conditional MB fixed injection at TR20 survival>=.861265 with deliberately maximal vacuum loss; pointwise F must exceed7051 for 99% scalar by mass within one-pass history",
+    "negative": "Bose stimulation, non-MB injection, visible and other dark removal, nonconstant gstar excluded; not full relic",
+    "status": "analytic proof + locally solved comparison ODE; new CI pending",
     "class_ready": false
   }
 }
