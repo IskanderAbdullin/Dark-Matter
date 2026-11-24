@@ -346,3 +346,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: cold PSD entropy and thermal free-stream diagnostic
 [Report and code](../PHI-BOSE-THERMAL-STREAM-ENTROPY-GATE-2026-11-24.md). Independent integration order gives equal-horizon relative agreement 2.95e-13 (BE),1.92e-8 (FD). 86eV BE 6.6504Mpc vs 5.7keV FD .05560Mpc. Conditional arbitrary ideal Bose entropy bound at chosen rms diagnostic, plus <=1% heavy energy: s_total<=.0793939 cm^-3, <=.000212182 of initial benchmark. No actual Ly-alpha exclusion, macroscopic condensate, or CLASS-ready claim.
+
+
+## 2026-11-24 UTC: empty-dark momentum portal initial gain and duration
+[Derivation and selected numerical evidence](../PHI-BOSE-PORTAL-INITIAL-GAIN-GATE-2026-11-24.md). Independent integrated rates agree 1.1e-9,4.33e-7,2.6e-9 at T=.03,.1,1. Reduced MB fixed injection + spontaneous decay/no chi2 depletion positive gain exponent <=3.47e-5 across 42 sampled points. Actual FD and full network unresolved; no exclusion of full nonthermal branch.

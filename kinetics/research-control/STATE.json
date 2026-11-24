@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:39:20Z",
-    "elapsed_minutes_actual": 6.95,
-    "stage": "Thermal free-stream and arbitrary cold-spectrum entropy gate locally verified"
+    "last_check_utc": "2026-11-24T21:44:43Z",
+    "elapsed_minutes_actual": 12.333333,
+    "stage": "Momentum-resolved empty-dark portal inversion and reduced positive-gain duration gate locally evaluated"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1293,6 +1293,15 @@
     "status": "local independent horizon integration, RD upper reference and pressure/entropy checks passed; new remote CI not verified",
     "positive": "all-DM BE 86eV equality free stream 6.6504Mpc vs FD 5.7keV .0555964Mpc, rms q/m ratio 274.627; chosen matching moment requires q_rms<=1.14255e-6eV and occupation average >=7.929e5; arbitrary cold PSD ideal entropy <=.07934cm^-3, with <=1% heavy energy total <=.07939cm^-3, <=.0212182% retained of initial thermal benchmark",
     "negative": "moment matching NOT observational bound; not actual relic/condensate/transfer function; strong conditional entropy constraint only",
+    "class_ready": false
+  },
+  "latest_portal_initial_gain_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-INITIAL-GAIN-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_initial_gain_gate.py",
+    "data": "kinetics/results/phi-bose-portal-initial-gain-gate-2026-11-24.json",
+    "positive": "42 sampled T/alpha points; analytic duration bound under fixed MB electron injection, spontaneous chi1 loss, no chi2 depletion; largest exponent upper 3.46364e-5",
+    "negative": "FD source, other SM, feedback and full nonlinear/FRW not included; no physical burst or exclusion",
+    "status": "locally evaluated, remote CI pending",
     "class_ready": false
   }
 }
