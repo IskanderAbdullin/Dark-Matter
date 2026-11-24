@@ -61,6 +61,10 @@ def test_independent_five_dimensional_weak_heat_positive_and_reverse_sign():
 
 def test_full_both_dirac_and_anti_dark_electron_heat_exact_conservation_and_H():
     r=four_dirac_sectors_electron_heat(Tc1=.8,Tc2=.9,Te=1.,n=8)
+    print("VECTOR_FOUR_DIRAC_ELASTIC_HEAT",repr(dict(
+        Qdark=r["Q_dark_from_e_GeV5"],Qe=r["Q_e_bath_GeV5"],
+        H=r["H_total_GeV4"],
+        channels=[(x["species"],x["Q_chi_GeV5"]) for x in r["components"]])),flush=True)
     assert len(r["components"])==4
     assert {x["species"] for x in r["components"]}=={
         "chi1","anti_chi1","chi2","anti_chi2"}
@@ -131,3 +135,10 @@ def test_finite_vector_Pauli_heat_grid_refinement_has_explicit_nonzero_error():
           flush=True)
     assert abs(vals[-1]/vals[-2]-1)<.02
     assert abs(vals[0]/vals[-1]-1)>.002
+    G=vector_portal_setup(mV=10.)["G_contact_GeV_minus2"]
+    contact=weak_energy_moments(M=.02,Tchi=.8,Te=1.,G=G,
+        gchi=2,ge=4,n_p=16,n_k=16,n_mu=16,n_cm=16,n_phi=16,cutoff=18.)
+    print("VECTOR_FINITE_VS_CONTACT_REFINED",repr(dict(
+        n=16,finite_Q=vals[-1],contact_Q=contact["Q_chi_GeV5"],
+        finite_to_contact=vals[-1]/contact["Q_chi_GeV5"])),flush=True)
+    assert .55<vals[-1]/contact["Q_chi_GeV5"]<.75
