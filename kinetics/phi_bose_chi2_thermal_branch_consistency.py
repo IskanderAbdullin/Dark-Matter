@@ -69,6 +69,50 @@ def instantaneous_thermal_consistency(x,gstar=10.75):
                 no_actual_relativistic_relic_prediction=True)
 
 
+
+def conditional_electron_transport_crossing(gstar_rho=61.75):
+    """Solve ν_T,e(T)/H(T)=1 at constant supplied external g*rho.
+
+    A positive transport frequency >H is NOT sufficient to assert
+    physical relativistic kinetic equilibrium (relaxation eigenmode
+    can be much slower). A crossing far ABOVE χ2 chemical freezeout
+    signals the particular shared-SM thermal toy assumption needs
+    actual full nonthermal and dark-bath treatment.
+    """
+    from scipy.optimize import brentq
+    def ratio(T):
+        return MB_transport_collision_proxy(
+            T,mchi=MCHI2,mV=10.,gD=.1,epsilon=1e-5,
+            gstar=gstar_rho,gchi=2,ge=4)[
+            "MB_transport_proxy_over_H_NOT_drag"]
+    Tcross=float(brentq(lambda T:ratio(T)-1.,.1,2.,xtol=1e-8))
+    return dict(fixed_gstar_rho=gstar_rho,
+                conditional_transport_proxy_crossing_T_GeV=Tcross,
+                ratio_below_cross_at_T_0p1GeV=ratio(.1),
+                ratio_above_cross_at_T_2GeV=ratio(2.),
+                mchi2_over_crossing_T=MCHI2/Tcross,
+                no_actual_physical_kinetic_decoupling_temperature=True,
+                BBN_and_neutrino_electron_mass_not_included=True)
+
+
+def epsilon_needed_for_illustrative_electron_transport_proxy_equal_H(
+        x=8.,epsilon_reference=1e-5):
+    """Mathematical rescaling εcrit=ε0/sqrt(ν_T/H) at target x.
+
+    The original mV10/gD.1 vector source is perturbative ∝ε² in
+    this prescribed vacuum/electron-only proxy. This is NOT a
+    phenomenologically permitted ε, excludes no real plasma models.
+    """
+    if epsilon_reference<=0:raise ValueError("Positive ε reference")
+    r=instantaneous_thermal_consistency(x)[
+        "finite_mediator_e_transport_proxy_over_H_NOT_drag"]
+    return dict(x=x,T_GeV=MCHI2/x,
+                original_epsilon=epsilon_reference,
+                original_transport_proxy_over_H=r,
+                epsilon_for_proxy_over_H_1=epsilon_reference/math.sqrt(r),
+                experimentally_allowed_unknown=True,
+                true_heat_relaxation_not_computed=True)
+
 def audit():
     rows=[instantaneous_thermal_consistency(x) for x in (3,5,8,10,12,15,20)]
     return dict(schema_version=1,scope="strictly conditional shared-MB bath and massless e vector transport proxy vs independent quantum-Yukawa exact GG pair forward at x3..20, not full selfconsistent cosmology",
