@@ -15,6 +15,12 @@ def test_five_field_finitedt_first_order_on_multiple_physical_phi_energy_grids()
         runs=[integrate_horizon(m,20000.,n) for n in (2,4,8)]
         n=[r["delta_Nphi_GeV3"] for r in runs]
         ratio=(n[0]-n[1])/(n[1]-n[2])
+        print("PHYSICAL_5FIELD_TIME_CONVERGENCE",repr(dict(
+            cutoff_GeV=2.,Nphi=nphi,dt_nominal_GeVinv=[10000.,5000.,2500.],
+            delta_Nphi_GeV3=n,observed_first_order_ratio=ratio,
+            entropy_changes=[x["delta_entropy_GeV3"] for x in runs],
+            energy_defects=[x["absolute_delta_total_energy"] for x in runs],
+            U1_defects=[x["absolute_U1_defect"] for x in runs])),flush=True)
         assert 1.4<ratio<2.6,(nphi,n,ratio)
         for v in runs:
             assert not v["rejected"]
