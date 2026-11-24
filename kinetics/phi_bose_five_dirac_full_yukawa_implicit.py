@@ -122,11 +122,12 @@ class FullDiracPhysicalMoments:
     def __init__(self,P=2.,Ppair=None,N1=3,N2=3,Nphi=8,
                  nq=24,nrad=4,nangle=8,pair_nrad=4,
                  pair_nrelative=8,pair_ncm=32,pair_naz=4,
-                 phi_IR_composite=False):
+                 phi_IR_composite=False,pair_radial_breaks=None):
         self.weak=FullDiracYukawaWeak(
             P=P,Ppair=Ppair,nphi=Nphi,nrad=nrad,nangle=nangle,
             pair_nrad=pair_nrad,pair_nrelative=pair_nrelative,
-            pair_ncm=pair_ncm,pair_naz=pair_naz)
+            pair_ncm=pair_ncm,pair_naz=pair_naz,
+            pair_radial_breaks=pair_radial_breaks)
         self.P=P
         self.Ppair=self.weak.Ppair
         e1hi=max(math.hypot(self.Ppair,M1),
