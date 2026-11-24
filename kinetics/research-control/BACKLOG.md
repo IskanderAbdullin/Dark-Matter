@@ -524,3 +524,11 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [x] **Physical mapped Yukawa negative:** mφ86eV, χ1 colder than χ2/φ at parent pmax2,nrad24, angle log Eφ n12/24/48/96. N32 quadratic first-cell Cφ=(-6.575e−14,-3.234e−13), H>0, all φ sources≤0 but ηrest_dot≈−3.523e−9; dt20 passes, dt30/1000 fails closed. N16 at same angle ηrest_dot>0/dt30 passes. Six focused local tests passed; old low-angle uniform N32 first-cell C=0 was an **underresolved numerical artifact**; previous DG success remains only conditional.
 - [x] Previous boosted daughter-angle real GH Scientific CI [#45128900651](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45128900651) passed. This new mapped-DG tangent must get separate full CI.
 - [ ] P0 genuinely physical one-DOF-per-cell Bose number/energy tradeoff, entropy-constrained positivity in fully microreversible Pauli/Bose Yukawa collision, 3+ IR/q/cutoff/p/angle/time and true zero-mode only if independently derived. No physical Γel, Ω/BEC/frozen f(q)/CLASS.
+
+## P0 2026-11-24: недооценённый стабильный компонент χ2 и полнота A'–SM
+
+- [ ] Ввести в физическую Ω **все** стабильные виды χ2+antiχ2 и φ: минимальный net Dirac U1 forbids χ2 decay; [условный toy overclosure](../PHI-BOSE-STABLE-CHI2-THERMAL-RELIC-GATE-2026-11-24.md) 879.96h² для симметричного MB и y=.001, но не полная космология.
+- [ ] Квантово (FD/BE) и с фактическим g*(T) проверить x~7, нерелятивистское p-wave 6b/x там на ~25% сильнее точного GG; включить χ1 inverse, φ, SM обратные каналы, источник и конечное число частиц.
+- [ ] Калибровать действительный A'→hadrons R(s) из первичных данных, muon/tau thresholds и ΓV(T) под петли/резонансы, прочие SM частицы и ограничения. Нельзя подставлять пример Rhad=3.5 за измерение.
+- [ ] Обосновать, можно ли избежать перепроизводства χ2 без нарушения Yukawa/Z2/U1 и одновременно получить Ωφ≈observed, реальную позднюю PSD и наблюдательные ограничения.
+- [ ] При одной блокировке перейти к безопасной независимой альтернативе согласно AGENTS; только полное объективное исчерпание полезной работы разрешает досрочное завершение.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T15:43:10.181Z",
+  "updated_utc": "2026-11-24T17:53:00.006Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active sequential research run; checkpoint after independent five-field time/UV/radial and thermal-closure no-go; next independent converged pair event quadrature plus gauge-consistent both-Dirac-SM mediator and closed FRW. Whole Scientific CI may queue while focused stage-specific CI successful; no physical cosmological DM validation yet.",
+  "stop_reason": "Active sequential 30min run since 2026-11-24T17:39:02.228Z, currently proceeding to physical stable-partner and measured SM visible data gates; NOT blocked. Absolute run stop only at actual 30min target or exhaustive independent blocked alternatives, not one CI.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "aa4953d6f98a1a8ffa257c2f84af601e4fbe3d3b",
-  "current_phase": "First robust FULL five-population Dirac/anti real-φ four-channel vacuum-Yukawa finite-time strong multi-grid audit completed: physical Nphi t20000 at P2 has true first-order BE dt Richardson ratios ~1.976–1.979 for Nphi8/12/16, but spectral N not monotone; P2/P8/P16 strong scalar ΔNphi ~−1.537e−7/−3.922e−7/−3.968e−7 at dt5000,N12, demonstrating P2 not UV converged (only38.7% P16) and P8/P16 still1.167% apart. Independently inspect pair radial source: individual χ1pair/χ2pair rates vary by percent with nrad4/6/8/12/16 though total H stable from decay; graded positive exact p² capacity radial n8 WORSE by7–12%, improved at 12/16 but not converged. Real strict scope full 5field hard-P physical Bose first collision-frozen IR 3 moments and rank2 dM/d(mu,T), active source6.74002746e−12 at T1GeV,muphi−.2: no global thermal BE(T(t),mu(t)) can follow actual collision operator. New optional 168-point static phi IR physical DOS grid corrected to leave all other Bose cell quadratures exactly original nq weights via zero-weight padding, CI successful. Full SM+FRW physical Γ(T), truly frozen fphi(q), Ω, BEC, CLASS/observational fit NOT reached.",
+  "last_checkpoint_git_sha": "bd5c54f6a0998023c0eabf090ba5303372c56c97",
+  "current_phase": "Goal clarified as independent falsifiable bosonic-DM origin+galactic-halo model/negative verdict; stop-on-block rule added to AGENTS: only after all useful authorized alternative work exhausted with evidence/checkpoint. New hard P0: real-φ Yukawa net Dirac U1 plus qchi1=qchi2 vector portal leaves stable χ2=20MeV. Exact Dirac t/u p-wave χ2χbar2→2φ b1.313082728e−12 GeV−2 at y.001; restricted symmetric thermal MB fixed g*=10.75 RD gives full relativistic GG Ωχ2pair h²≈879.959 vs leading p-wave≈761.289, 7333 times Planck .120, a severe conditional toy overclosure; not actual full five-population cosmological exclusion. Exact thermal grid n16/32/64 converges, separate nearcritical phi and 5field P8/16 unresolved. Gauge-consistent finite A'10GeV gD.1 epsilon1e−5 physical FD/Pauli 5D electron heat into BOTH Dirac pairs Qdark=-Qe H>=0, plus BW χχbar→ee resonance γforward3.4504e−16GeV4 vs contact ×1439, NWA works at T1, offshell at low T; forward/H not net. Open mu/tau widths ~3 electron, hadronic spectral R at mV10 unknown; no full SM/gstar/FRW, actual Ωφ/BEC/CLASS or galaxy likelihood.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -513,6 +513,20 @@
       "report": "kinetics/PHI-BOSE-FROZEN-IR-GLOBAL-BE-THERMAL-CLOSURE-NOGO-2026-11-24.md",
       "tests": "Focused CI #45426807185 success (4 targeted)",
       "limits": "Strict hard parent P finite vacuum network only, no universal physical BEC/thermal no-go"
+    },
+    {
+      "stage": "Physically consistent two-Dark-Dirac same-U1 10GeV finite vector partial electron five-dimensional FD/Pauli heat and BW resonant χχbar↔ee, mandatory charged mu/tau and unknown measured hadronic R",
+      "source_sha": "9b2328e1e64ded6ac1c78e7232297433b1290c6d",
+      "report": "kinetics/PHI-BOSE-VECTOR-PORTAL-PARTIAL-SM-GATE-2026-11-24.md",
+      "tests": "focused CI #45430331573 #45430926445 #45431671479 #45432164795 #45452679130 success; final current sha check",
+      "limitations": "electron only Pauli heat, no physical SM/hadrons, no thermal mass/width, no physical Γel or FRW"
+    },
+    {
+      "stage": "Analytically exact Dirac Yukawa χ2χbar2→real φφ p-wave; independent 4x4 gamma, full relativistic GG thermal freezeout of stable 20MeV partner, conditional symmetric fixed-g* overclosure factor>7000",
+      "source_sha": "b41f573a5579161062c4c5fc85079b8f94eac49a",
+      "report": "kinetics/PHI-BOSE-STABLE-CHI2-THERMAL-RELIC-GATE-2026-11-24.md",
+      "tests": "focused CI #45452412200 and #45452882647 success; full Scientific latest check",
+      "limitations": "thermal symmetric shared bath constant gstar, no coupled χ1/phi+SM FRW, no observed full model exclusion"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -1221,5 +1235,12 @@
     "positive": "dW=g1 Γrest M/E1 p²dp/(2π²) dc/2 with actual boosted on-shell E2/Ephi; exact species V and W capacities and pointwise weak charges/energy/thermal detailed balance",
     "negative": "Finite-cell constant occupations and bin-average energies do not automatically preserve exact microevent energy, inverse Pauli/Bose or H theorem; spin/isotropy assumptions explicit",
     "class_ready": false
+  },
+  "active_run": {
+    "start_utc": "2026-11-24T17:39:02.228Z",
+    "target_minutes": 30,
+    "blocker_policy": "all useful authorized independent tasks blocked -> record and stop with checkpoint; single failing tool/CI does not stop",
+    "status": "active",
+    "last_check_utc": "2026-11-24T17:53:00.006Z"
   }
 }
