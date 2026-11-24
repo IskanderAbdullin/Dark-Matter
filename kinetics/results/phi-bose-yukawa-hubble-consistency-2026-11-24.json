@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "scope": "illustrative Dirac Yukawa vacuum width and conditional RD Hubble with specified gstar, exact MB test-parent Lorentz average; NO full SM+FRW/chemical equilibration or actual dark relic",
+  "masses_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "yukawa_y": 0.001,
+  "rest_width_GeV": 2.7501974166242436e-9,
+  "rest_lifetime_seconds": 2.3933262133157286e-16,
+  "standard_H_formula": "H=1.66 sqrt(g*rho) T²/Mpl",
+  "Mplanck_GeV": 12209000000000000000,
+  "MB_lorentz_average": "K1(m1/T)/K2(m1/T), independently checked by physical p²dp thermal integrals",
+  "rows": [
+    {
+      "T": 0.1,
+      "gstar": 17.25,
+      "H": 5.647061844722748e-21,
+      "Gamma_rest_over_H": 487013865306.67065,
+      "dilation": 0.37044117463141796,
+      "mean_test_parent_Gamma_over_H": 180409988325.99026,
+      "y_for_rest_kappa_0p1": 4.5313680387910454e-10,
+      "y_for_MB_gamma_over_H_0p1": 7.445085863485619e-10
+    },
+    {
+      "T": 0.1,
+      "gstar": 61.75,
+      "Gamma_rest_over_H": 257405246471.77432,
+      "y_for_rest_kappa_0p1": 6.232916412306966e-10
+    },
+    {
+      "T": 1,
+      "gstar": 61.75,
+      "H": 1.0684309874491293e-18,
+      "Gamma_rest_over_H": 2574052464.7177434,
+      "dilation": 0.04939172411208572,
+      "mean_test_parent_Gamma_over_H": 127136889.18737303,
+      "y_for_rest_kappa_0p1": 6.232916412306965e-9
+    },
+    {
+      "T": 100,
+      "gstar": 106.75,
+      "mean_test_parent_Gamma_over_H": 97.88596187924604
+    },
+    {
+      "T": 500,
+      "gstar": 106.75,
+      "mean_test_parent_Gamma_over_H": 0.7830903099160983
+    },
+    {
+      "T": 1000,
+      "gstar": 106.75,
+      "mean_test_parent_Gamma_over_H": 0.0978863010762348
+    }
+  ],
+  "fixed_gstar_106p75_MB_test_parent_gamma_over_H_equal_one_T_GeV": 460.8652365658074,
+  "old_FRW_pilot_free_kappa": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    0.2
+  ],
+  "key_negative": "With y=.001 the actual tree vacuum κ(T=.1) is ~2.6e11 to 4.9e11 for assumed g*=61.75 to17.25, many orders outside κ<=.2 old FRW toy. Must not reuse old pilot as cosmological evolution of y=.001 physical collision prototype.",
+  "physical_charge_caveat": "N1+N2 and N1+Nphi invariants of isolated 1->2 channel only, not necessarily conserved Noether charges of completed Yukawa+SM model",
+  "class_ready": false
+}
