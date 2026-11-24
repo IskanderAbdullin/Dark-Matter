@@ -51,6 +51,7 @@ def test_positive_pair_energy_moment_matches_beta_finite_difference():
     assert math.isclose(q_num,e["pair_energy_forward_GeV5"],rel_tol=2e-4)
     assert math.isclose(e["mean_total_energy_per_event_GeV"],
                         4.409061907291514,rel_tol=5e-6)
-    eq=equilibrium_pair_densities(T,128)
+    eq=equilibrium_pair_densities(T,nangle=128)
+    # Explicit keyword guards against confusing y (coupling, positional 2) with nangle.
     assert math.isclose(eq["gamma_forward_equilibrium_GeV4"],
                         e["gamma_forward_GeV4"],rel_tol=2e-5)
