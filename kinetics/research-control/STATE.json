@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:50:55Z",
-    "elapsed_minutes_actual": 18.533333,
-    "stage": "Analytic low-reheat cold-tail production count envelope"
+    "last_check_utc": "2026-11-24T21:53:21Z",
+    "elapsed_minutes_actual": 20.966667,
+    "stage": "Energy moment ceiling including repeated scalar multiplication, fermion conversion, lepton elastic heat"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1338,6 +1338,15 @@
     "positive": "arbitrary stimulation but one-pass/only redshift history, exact hard progenitor thresholds + finite vector upper injection tail; TR20MeV Omega_cold<=2.26674e-14 for chosen rms diagnostic needing .060; generous bound crosses .060 at TR30.095MeV",
     "negative": "redistribution/SM scattering, recycling/multiplication, hadron source, actual LSS criterion excluded; high TR uninformative",
     "status": "analytic proof plus local closed form checks; new CI pending",
+    "class_ready": false
+  },
+  "latest_recycling_energy_bound_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-RECYCLING-ENERGY-BOUND-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_recycling_energy_bound.py",
+    "data": "kinetics/results/phi-bose-portal-recycling-energy-bound-2026-11-24.json",
+    "positive": "number ledger + energy-weighted inverse pair/fermion conversion rate upper, charged lepton elastic heat Gronwall; TR20 even arbitrary repeated listed cycles and stimulation Ωphi<=4.38678e-4, TR30<=.03844",
+    "negative": "selected tree network only, scalar self number-changing, complete SM/hadrons/thermal history/other A' processes omitted; numerical interpolation not certified",
+    "status": "analytic derivation + local computation; remote CI pending",
     "class_ready": false
   }
 }

@@ -366,3 +366,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: low-reheat one-pass cold count
 [Analytic proof and evidence](../PHI-BOSE-PORTAL-COLD-TAIL-BOUND-2026-11-24.md). Exact progenitor thresholds, generous finite-vector maximum all energies, FD<=MB tail and closed RD integral imply conditional cold Ω<=2.26674e-14 at TR20MeV despite arbitrary final stimulation. Crosses .060 at TR30.095MeV, then uninformative. No momentum redistribution/recycling/hadron source/actual LSS fit.
+
+
+## 2026-11-24 UTC: energy moment repeated-production bound
+[Proof and numerical evidence](../PHI-BOSE-PORTAL-RECYCLING-ENERGY-BOUND-2026-11-24.md). Exact number ledger, inverse pair Kinv7.95775e-10, fermion conversion KD6.599e-12, charged lepton elastic Gronwall J_R=.0005095 at TR20. Conditional scalar Ωupper4.38678e-4 (TR20), .0384376 (TR30) with arbitrary stimulated listed cycles. Other SM, scalar self number-changing, full QFT and actual FRW not validated.

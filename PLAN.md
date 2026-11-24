@@ -37,3 +37,6 @@
 
 
 **Low-reheat cold count (2026-11-24):** [kinematic/source-tail envelope](kinetics/PHI-BOSE-PORTAL-COLD-TAIL-BOUND-2026-11-24.md). At TR20MeV single-pass redshift+decay+terminal pair with arbitrary stimulation gives cold Ω<=2.27e-14 vs .060 needed for chosen rms reference. Not a full kinetic/LSS no-go; test redistribution/recycling or alternative initial production.
+
+
+**Repeated production energy gate (2026-11-24):** [number/energy upper bound](kinetics/PHI-BOSE-PORTAL-RECYCLING-ENERGY-BOUND-2026-11-24.md). Includes fermion conversion, repeated inverse pairs and lepton elastic heat under defined low-TR vacuum network. Arbitrary dark momentum redistribution/stimulation still gives Ωφ<=4.387e-4 at TR20, <=.03844 at TR30. Missing scalar self number-changing and full visible thermal channels remain; prioritize these and distinct initial histories.
