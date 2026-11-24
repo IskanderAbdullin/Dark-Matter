@@ -12,7 +12,7 @@ from kinetics.phi_bose_vector_portal_finite_mediator import ALPHA_EM
 from kinetics.phi_bose_vector_portal_annihilation_resonance import (
     MCHI1,MCHI2,vector_to_Dirac_width,minimal_vector_width,
     annihilation_sigma,inverse_ee_sigma,s_channel_thermodynamic_MB,
-    net_MB_two_temperature_ledger,
+    net_MB_two_temperature_ledger,narrow_width_vector_onshell_MB,
 )
 
 
@@ -187,3 +187,38 @@ def test_resonant_forward_MB_per_chi_T_and_H_gate_not_full_equilibration():
         assert z["gamma_forward_MB_GeV4"]>0
         assert z["energy_forward_MB_GeV5"]>0
         assert z["num_theta_segments"]>=10
+
+
+
+def test_independent_vector_three_spin_NWA_two_step_width_factorization():
+    # This independently calculates a thermally occupied real A' decaying
+    # into a χχbar pair and e+e− with physically normalized partial widths.
+    # Compare the same resonant contribution to an unrelated direct
+    # Breit-Wigner scattering-phase-space integral; no matching adjustment.
+    for m in (.02,.1):
+        for T,target_low,target_high in (
+                (.1,0.,1e-20),
+                (.5,.80,.82),
+                (1.,.998,1.001),
+                (2.,.999,1.002),
+                (5.,.999,1.002)):
+            full=s_channel_thermodynamic_MB(T,m)
+            nwa=narrow_width_vector_onshell_MB(T,m)
+            ratio=nwa["real_intermediate_onshell_forward_GeV4"]/full[
+                "gamma_forward_MB_GeV4"]
+            assert target_low<=ratio<target_high,(m,T,ratio)
+            if T>=1.:
+                assert math.isclose(nwa["real_intermediate_energy_forward_GeV5"],
+                                    full["energy_forward_MB_GeV5"],rel_tol=.003)
+    a=narrow_width_vector_onshell_MB(1.,.02)
+    assert math.isclose(a["real_intermediate_onshell_forward_GeV4"],
+                        3.447115845809919e-16,rel_tol=3e-12)
+    assert a["RIS_double_count_if_explicit_vector_species"]
+    print("VECTOR_RIS_INDEPENDENT_PARTIAL_WIDTH_NWA",
+          repr(dict(full=s_channel_thermodynamic_MB(1.,.02)[
+                    "gamma_forward_MB_GeV4"],
+                    NWA=a["real_intermediate_onshell_forward_GeV4"],
+                    branching_e=a["Br_electron"],
+                    ratio=a["real_intermediate_onshell_forward_GeV4"]/
+                          s_channel_thermodynamic_MB(1.,.02)[
+                          "gamma_forward_MB_GeV4"])),flush=True)
