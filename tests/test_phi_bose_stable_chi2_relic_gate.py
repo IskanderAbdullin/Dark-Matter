@@ -132,3 +132,35 @@ def test_conditional_cosmological_assumptions_are_explicit():
     # This test deliberately does NOT infer a full thermal chi2 population
     # from a forward/H event rate at GeV, and does not assert any
     # actual BEC, phi Omega, late frozen f(q) or observable fit.
+
+
+def test_exact_relativistic_MB_yukawa_rate_exposes_large_NR_expansion_bias_near_freezeout():
+    from kinetics.phi_bose_stable_chi2_relic_gate import exact_MB_pair_sigma_v
+    b=exact_scalar_pwave_b()
+    for x,ratio in ((3.,.48133290648),(8.,.7487591000),
+                    (20.,.888605994),(100.,.9764038716)):
+        exact=exact_MB_pair_sigma_v(x)
+        assert exact>0
+        assert math.isclose(exact/(6*b/x),ratio,rel_tol=8e-7)
+    # Strict p-wave coefficient remains the correct x->infinity
+    # asymptotic even though its x~7 application is NOT 1%-accurate.
+
+
+def test_exact_thermal_yukawa_Bessel_GG_relic_refines_and_constrains_stable_component():
+    from kinetics.phi_bose_stable_chi2_relic_gate import (
+        conditional_exact_MB_relic,
+    )
+    vals=[conditional_exact_MB_relic(grid=n) for n in (16,32,64)]
+    om=[v["Omega_chi2_plus_anti2_h2"] for v in vals]
+    print("STABLE_CHI2_EXACT_MB_RELIC",repr(dict(
+        grid=[16,32,64],Omega_chi2_pair_h2=om,
+        x3_GG_over_pwave=vals[-1]["exact_to_pwave_x3"],
+        x100_GG_over_pwave=vals[-1]["exact_to_pwave_x100"],
+        original_NR_pwave_relic=conditional_symmetric_relic()[
+            "Omega_chi2_plus_anti2_h2"])),flush=True)
+    assert abs(om[-1]/om[-2]-1)<3e-6
+    assert 879.7<om[-1]<880.3
+    naive=conditional_symmetric_relic()["Omega_chi2_plus_anti2_h2"]
+    assert 1.14<om[-1]/naive<1.17
+    assert om[-1]/.12>7000
+    assert not vals[-1]["full_physical_SM_Bose_FRW_or_relic"]
