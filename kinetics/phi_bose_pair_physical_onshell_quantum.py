@@ -57,7 +57,7 @@ class PhysicalPairEvents:
     nonnegative W per event; no arbitrary cell deposits or hidden sources.
     """
     def __init__(self,P=20.,nrad=16,nrelative=12,ncm=48,naz=8,
-                 m_in=M,m_virtual=MV,y=Y):
+                 m_in=M,m_virtual=MV,y=Y,radial_breaks=None):
         M=m_in; MV=m_virtual; Y=y
         self.m_in=m_in;self.m_virtual=m_virtual;self.y=y
         if m_in<=0 or m_virtual<=0 or y<0:raise ValueError('Invalid Yukawa pair masses or y')
@@ -66,8 +66,28 @@ class PhysicalPairEvents:
         self.P=P
         self.orders=(nrad,nrelative,ncm,naz)
         x,wx=leggauss(nrad)
-        p=P*(1+x)/2
-        wp=P*wx/2
+        if radial_breaks is None:
+            p=P*(1+x)/2
+            wp=P*wx/2
+            self.radial_segments=1
+        else:
+            # Fixed positive physical momentum subinterval Gauss. The
+            # segments are EXTERNAL geometry/accuracy controls, not a
+            # hidden function of FD/BE occupations, chemical potentials
+            # or cosmic time. nrad denotes nodes PER subinterval.
+            edges=np.asarray(radial_breaks,dtype=float)
+            if (edges.ndim!=1 or len(edges)<3 or edges[0]!=0.
+                or not np.isclose(edges[-1],P,rtol=0,atol=1e-12)
+                or np.any(np.diff(edges)<=0)):
+                raise ValueError("radial_breaks must be [0,...,P] strictly increasing")
+            p=(edges[:-1,None]+(edges[1:,None]-edges[:-1,None])*
+               (x[None,:]+1)/2).ravel()
+            wp=((edges[1:,None]-edges[:-1,None])*
+                wx[None,:]/2).ravel()
+            self.radial_segments=len(edges)-1
+        self.radial_p=np.asarray(p)
+        self.radial_weights=np.asarray(wp)
+        assert np.min(self.radial_weights)>0
         ci,wci=leggauss(nrelative)
         u,wu=leggauss(ncm)
         u=14*u
