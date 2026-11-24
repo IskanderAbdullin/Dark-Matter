@@ -370,3 +370,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: energy moment repeated-production bound
 [Proof and numerical evidence](../PHI-BOSE-PORTAL-RECYCLING-ENERGY-BOUND-2026-11-24.md). Exact number ledger, inverse pair Kinv7.95775e-10, fermion conversion KD6.599e-12, charged lepton elastic Gronwall J_R=.0005095 at TR20. Conditional scalar Ωupper4.38678e-4 (TR20), .0384376 (TR30) with arbitrary stimulated listed cycles. Other SM, scalar self number-changing, full QFT and actual FRW not validated.
+
+
+## 2026-11-24 UTC: scalar quantum completion
+[Analytic matching and high-precision checks](../PHI-BOSE-SCALAR-QUANTUM-COMPLETION-2026-11-24.md). δm²/mφ²8.273e4 at Q=.1, δλ−4.699e-13, c6 finite2.123e-16; independent 70-digit differentiation and RG log derivative. Illustrative positive loop-size quartic TF .468AU, invalid harmonic all-DM extrapolation TR20. Renormalized couplings not fixed; true self number-change/coherence remains open.

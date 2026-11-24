@@ -40,3 +40,6 @@
 
 
 **Repeated production energy gate (2026-11-24):** [number/energy upper bound](kinetics/PHI-BOSE-PORTAL-RECYCLING-ENERGY-BOUND-2026-11-24.md). Includes fermion conversion, repeated inverse pairs and lepton elastic heat under defined low-TR vacuum network. Arbitrary dark momentum redistribution/stimulation still gives Ωφ<=4.387e-4 at TR20, <=.03844 at TR30. Missing scalar self number-changing and full visible thermal channels remain; prioritize these and distinct initial histories.
+
+
+**Scalar radiative completion (2026-11-24):** [CW matching and halo/cold field diagnostic](kinetics/PHI-BOSE-SCALAR-QUANTUM-COMPLETION-2026-11-24.md). Renormalized scalar mass and quartic independent. At Q=.1 δm²/mφ²~8.27e4 (scheme-dependent), loop-size positive illustrative λ makes all-DM harmonic extrapolation inconsistent above ~6.97MeV. Need actual interacting background and scalar number-changing; no claim λ fixed.

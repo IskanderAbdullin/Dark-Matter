@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:53:21Z",
-    "elapsed_minutes_actual": 20.966667,
-    "stage": "Energy moment ceiling including repeated scalar multiplication, fermion conversion, lepton elastic heat"
+    "last_check_utc": "2026-11-24T21:55:58Z",
+    "elapsed_minutes_actual": 23.583333,
+    "stage": "One-loop scalar completion and independent high precision matching, halo and coherent cold diagnostic"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1348,5 +1348,30 @@
     "negative": "selected tree network only, scalar self number-changing, complete SM/hadrons/thermal history/other A' processes omitted; numerical interpolation not certified",
     "status": "analytic derivation + local computation; remote CI pending",
     "class_ready": false
+  },
+  "latest_scalar_quantum_completion_20261124": {
+    "report": "kinetics/PHI-BOSE-SCALAR-QUANTUM-COMPLETION-2026-11-24.md",
+    "source": "kinetics/phi_bose_scalar_quantum_completion.py",
+    "data": "kinetics/results/phi-bose-scalar-quantum-completion-2026-11-24.json",
+    "positive": "mandatory independent scalar mass/quartic matching; at Q=.1 δm²/mφ²=82731.8, δλ=-4.69888e-13, c6=2.12258e-16; positive illustrative loop-size quartic gives TF .468AU and all-DM harmonic cold ratio>1 above 6.97MeV",
+    "negative": "scheme-dependent correction not physical pole mass or λ; no naturalness exclusion, full scalar number change/fragmentation not solved",
+    "status": "analytic + local 70-digit derivative and primary formula crosscheck; remote CI pending",
+    "class_ready": false
+  },
+  "latest_ci_snapshot_20261124": {
+    "checked_utc": "2026-11-24T21:54:00Z",
+    "success": [
+      45492700366,
+      45493063988,
+      45493448348
+    ],
+    "in_progress": [
+      45494321351,
+      45494480306,
+      45494755901,
+      45495101710,
+      45495302729,
+      45495756543
+    ]
   }
 }
