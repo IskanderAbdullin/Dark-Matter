@@ -30,6 +30,7 @@ from kinetics.phi_bose_five_dirac_full_yukawa_weak import (
     FullDiracYukawaWeak,CHARGES,SPECIES
 )
 from kinetics.phi_bose_physical_cutcell_weak import M1,M2,MPHI
+from kinetics.phi_bose_pair_ir_parent_support import global_pair_scalar_support_floor
 
 def asflat(x):return np.concatenate(x)
 def unflat(m,x):return [np.asarray(x[a:b]) for a,b in
@@ -127,7 +128,15 @@ class FullDiracPhysicalMoments:
         # Pair COM boosted daughter energy may approach the sum of incoming
         # Echi+Eanti, not the old decay-only φ upper shell.
         phihi=2*math.hypot(self.Ppair,max(M1,M2))
+        # The lighter Dirac-antipair channel reaches a much lower
+        # physically allowed massive-scalar energy than 1↔2 decay.
+        # Split at BOTH exact hard-P pair support floors, so active pair
+        # source cannot leak through a broad first Bose entropy-dual cell
+        # into truly inaccessible φ energies below the first allowed event.
+        pair_minima=[global_pair_scalar_support_floor(self.Ppair,m)
+                     for m in (M1,M2)]
         phi_edges=np.unique(np.r_[self.weak.decay.species[2].edges,
+                                pair_minima,
                                 max(phihi,1.05*self.weak.decay.species[2].edges[-1])])
         s1=build_species("chi1",M1,2,"fermion",np.linspace(M1,e1hi,N1+1),nq)
         sa1=build_species("anti_chi1",M1,2,"fermion",
