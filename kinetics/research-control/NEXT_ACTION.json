@@ -5,6 +5,7 @@
   "title": "P0: escape the high-entropy thermal branch or test its actual BBN history; then nonthermal cold relic and halo",
   "objective": "New variational gate: initial common thermal benchmark r=.12942 followed by isolation implies BBN rho_dark>=.8875 neutrino energy units independent of equilibrium; thermal scalar-only freezeout Omega=.848. Establish actual initial entropy/heat leakage, number-changing, and time-dependent BBN; do not spend full solver effort on assumed common initial thermal branch without checking feasibility.",
   "prerequisites": [
+    "FD electron pole: kinetics/PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md. Eight tested small positive MB pole inversion points remain positive, T5 FD total rate suppression 34%; finite-width FD and other channels essential.",
     "Portal initial gain gate: kinetics/PHI-BOSE-PORTAL-INITIAL-GAIN-GATE-2026-11-24.md. Reduced fixed electron MB injection and spontaneous chi1 decay gives max sampled gain exponent upper 3.47e-5; actual FD and other channels can alter inversion, no full exclusion.",
     "Cold PSD gate: kinetics/PHI-BOSE-THERMAL-STREAM-ENTROPY-GATE-2026-11-24.md. 86eV ordinary all-DM BE free stream 6.65Mpc. 5.7keV FD reference rms-matching diagnostic q_rms<=1.14255e-6eV implies cold gas entropy <=.07934cm^-3 (arbitrary f), total with <=1% H <=.07939; <=.02122% of common-thermal benchmark. Not actual Ly-alpha constraint or BEC fraction.",
     "Low reheating gate: kinetics/PHI-BOSE-PORTAL-LOW-REHEAT-GATE-2026-11-24.md. Empty sector T_R=20MeV, MB lepton-only, one-pass scalar maximum Ω=1.335e-5, heavy survival <=8.69e-8 for phi>=99% by density. Need actual φφ→χ1antiχ1→4φ multiplier and FD/BE, hadrons, nonthermal histories.",
@@ -18,7 +19,7 @@
     "Optional fixed 168-node positive first scalar cell actual 5field physical DOS quadrature corrected to leave all other phi cells exactly original nq Gauss, pad unused slots with zero physical weight: source commit 064995d1, targeted CI #45426158199 success. Nearcritical entropy finite-step sign may remain below global float64 resolution and must be labelled unresolved."
   ],
   "experiments": [
-    "Compute true FD momentum-resolved inverse electron portal source, initially empty dark, compare tiny inversion to MB, then actual chi2 depletion/backreaction and full visible injection.",
+    "Compute finite-width momentum-resolved FD electron source beyond verified pole approximation, then actual chi2 depletion/backreaction and full visible injection.",
     "First explicitly solve coupled SM gstarS(T), dark quantum thermodynamics Tdark and χ1,χ2,φ entropy transfer through QCD/MeV with true finite rate and FRW, not assume pure-φ final dark gstar1 if stable χ2 remains. Independent physical number/U1/entropy and q refinement.",
     "Quantify actual vector A' kinetic/chemical SME channel with CLEO measured hadron R including energy mismatch near 10GeV, μ/τ/e and thermal width, collider bounds. Avoid A' on-shell RIS double counting.",
     "Scan initial thermal vs freeze-in χ2 and exact dark asymmetry; independent actual total Ω and 86eV φ frozen f(q) with Bose/Pauli rates, energy/entropy conserving.",

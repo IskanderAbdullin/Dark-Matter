@@ -25,3 +25,6 @@
 
 
 **P0 nonthermal source (2026-11-24, 21:44 UTC):** [momentum-resolved portal gain gate](kinetics/PHI-BOSE-PORTAL-INITIAL-GAIN-GATE-2026-11-24.md). Tiny MB initial inversion plus spontaneous parent depletion yields reduced gain exponent upper <3.47e-5 on 42 sampled points. No nonlinear or FD claim; prioritize actual FD angular source and depletion over assumed fixed mother bath.
+
+
+**FD pole source (2026-11-24):** [exact angular quantum occupation correction at vacuum pole](kinetics/PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md). Eight sampled positive MB pole inversions survive; FD total rate suppressed at T5 by 34%. Finite width matters for differential inversion, so no full FD or burst claim.

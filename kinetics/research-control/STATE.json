@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:44:43Z",
-    "elapsed_minutes_actual": 12.333333,
-    "stage": "Momentum-resolved empty-dark portal inversion and reduced positive-gain duration gate locally evaluated"
+    "last_check_utc": "2026-11-24T21:46:20Z",
+    "elapsed_minutes_actual": 13.95,
+    "stage": "Electron FD pole injection and independent NWA normalization"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1302,6 +1302,15 @@
     "positive": "42 sampled T/alpha points; analytic duration bound under fixed MB electron injection, spontaneous chi1 loss, no chi2 depletion; largest exponent upper 3.46364e-5",
     "negative": "FD source, other SM, feedback and full nonlinear/FRW not included; no physical burst or exclusion",
     "status": "locally evaluated, remote CI pending",
+    "class_ready": false
+  },
+  "latest_portal_fd_pole_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_fd_pole_gate.py",
+    "data": "kinetics/results/phi-bose-portal-fd-pole-gate-2026-11-24.json",
+    "positive": "8 sampled positive MB pole inversion points retain sign in FD, 32/64 Gauss ratio stable; FD integrated rate at T5 suppressed 34%; independent MB NWA normalization agrees",
+    "negative": "NWA only, not full finite-width FD, all other SM/feedback unresolved",
+    "status": "local calculation executed; remote CI pending",
     "class_ready": false
   }
 }

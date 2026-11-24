@@ -350,3 +350,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: empty-dark momentum portal initial gain and duration
 [Derivation and selected numerical evidence](../PHI-BOSE-PORTAL-INITIAL-GAIN-GATE-2026-11-24.md). Independent integrated rates agree 1.1e-9,4.33e-7,2.6e-9 at T=.03,.1,1. Reduced MB fixed injection + spontaneous decay/no chi2 depletion positive gain exponent <=3.47e-5 across 42 sampled points. Actual FD and full network unresolved; no exclusion of full nonthermal branch.
+
+
+## 2026-11-24 UTC: FD electron inverse source at vacuum pole
+[Derivation/data](../PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md). Eight selected positive MB pole inversions survive; FD at T5 rate ~0.660 of MB, 32/64 Gauss stable, independent MB NWA normalization. Full finite width not included.
