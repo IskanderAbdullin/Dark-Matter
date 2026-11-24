@@ -46,8 +46,33 @@ def decoupled_entropy_temperature_ratio(gsm_before=61.75,gsm_after=10.75,
     return ((gsm_after/gsm_before)*(gd_before/gd_after))**(1/3)
 
 
+
+def physical_FD_dirac_entropy_gstar_s(mass_over_T,g=4.):
+    """Independent exact Fermi-Dirac integral at zero chemical potential.
+
+    s=(rho+pressure)/T; E/T=hypot(p/T,m/T).
+    Works for massless and massive *thermal* fermions, not nonthermal
+    spectra or gstar entropy during interacting freezeout.
+    """
+    from scipy.integrate import quad
+    from scipy.special import expit
+    if not (math.isfinite(mass_over_T) and mass_over_T>=0 and g>0):
+        raise ValueError("physical m/T and degeneracy")
+    integrand=lambda y:y*y*(math.hypot(y,mass_over_T)+
+             y*y/(3*math.hypot(y,mass_over_T)))*expit(-math.hypot(y,mass_over_T))
+    integral=quad(integrand,0,60,epsabs=1e-11,epsrel=1e-11)[0]
+    return 45*g/(4*math.pi**4)*integral
+
+
+def physical_initial_dark_gstar_s(T=.6882487043309675):
+    """Physical finite masses mχ1=.1GeV, mχ2=.02GeV and real φ≈massless."""
+    if T<=0:raise ValueError("T positive")
+    return (1.+physical_FD_dirac_entropy_gstar_s(.1/T,4.)+
+                physical_FD_dirac_entropy_gstar_s(.02/T,4.))
+
 def benchmark():
     gd=relativistic_dark_gstar_s()
+    gd_finite=physical_initial_dark_gstar_s()
     no_dark_heat=decoupled_entropy_temperature_ratio(gd_before=gd,
                                                       gd_after=gd)
     all_into_phi=decoupled_entropy_temperature_ratio(gd_before=gd,
@@ -55,6 +80,8 @@ def benchmark():
     return dict(schema_version=1,
                 model="one real phi plus two Dirac χ species with anti states; 1+7/8*(4+4)=8 initial thermal entropy DOF",
                 initial_relativistic_dark_gstar_s=gd,
+                actual_thermal_dark_gstar_s_with_mass_at_transport_crossing_T_0p688GeV=gd_finite,
+                initial_massless_approx_error_fraction=(gd/gd_finite-1),
                 prescribed_external_SM_gstar_s_before=61.75,
                 prescribed_external_SM_gstar_s_MeV=10.75,
                 no_dark_internal_entropy_release_xi=no_dark_heat,
