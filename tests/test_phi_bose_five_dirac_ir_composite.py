@@ -49,6 +49,14 @@ def test_first_physical_massive_Bose_cell_G_and_N_improve_without_changing_capac
     assert math.isclose(new_phi.edges[1],orig_phi.edges[1],rel_tol=2e-13)
     assert np.min(new_phi.weights[0])>0
     assert np.min(new_phi.H[0])>=0
+    # Real IR-only improvement: all NON-first cells retain exactly the
+    # original physical nq nodes, Bernstein hats and positive weights,
+    # with extra rectangular slots carrying precisely zero physical DOS.
+    old_n=orig_phi.weights.shape[1]
+    assert np.array_equal(new_phi.weights[1:,:old_n],orig_phi.weights[1:])
+    assert np.array_equal(new_phi.H[1:,:old_n,:],orig_phi.H[1:])
+    assert np.array_equal(new_phi.energy[1:,:old_n],orig_phi.energy[1:])
+    assert np.max(abs(new_phi.weights[1:,old_n:]))==0
     for sp in fixed.species:
         p0=np.sqrt(np.maximum(0,(sp.edges[:-1]-sp.mass)*(sp.edges[:-1]+sp.mass)))
         p1=np.sqrt(np.maximum(0,(sp.edges[1:]-sp.mass)*(sp.edges[1:]+sp.mass)))
