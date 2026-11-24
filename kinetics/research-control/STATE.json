@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T08:05:28.584Z",
+  "updated_utc": "2026-11-24T08:24:43.476Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Substantial stages archived: exact χ2 two-sided support and independent all-Q daughter-first integration; universal massive daughter inverse parent theorem and corrected scalar fixed-bath upper bound. CI of new commits may still be running; no 3-field strong time/SM/FRW/CLASS or physical BEC/Ω. Continue constructing physical fully coupled mode source.",
+  "stop_reason": "Checkpoint saved after several substantive independent physical stages. New public Scientific CI for support and curvature files pending; continuation next: test quadratic Bernstein energy basis and full 3-species conserved finite-time operator. No true physical coupled strong time/SM/FRW/relic/BEC/CLASS.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "2fc5337d04aef5eaa9c736e8b9bac01d48569179",
-  "current_phase": "General massive daughter on-shell parent support has been solved exactly by inverse Lorentz rapidities: fixed χ2 energy requires two-sided finite parent interval (χ2 at rest p≈.24GeV, P2 E2=.0201 parent [.21517,.26723]); third independent χ2 rapidity-first / logarithmic scalar k / adaptive parent weak Rphi and all three Q match analytic to ≤3.1e−10 P16 (P2/8 ≲5e−13). Global scalar φ parent support must become two-sided for pmax beyond p_phi_rest≈55.81395TeV; scalar P100TeV shell(P).kmin falsely exceeds the reachable true rest mass. Fixed-bath scalar modal implementation corrected to global two-sided support; locally 3+5 tests passed with endpoint floating tolerance. All prior first two stages retained. Full arbitrary nonthermal self-consistent χ1/χ2/φ continuum gain/loss and finite-time strong solver NEXT.",
+  "last_checkpoint_git_sha": "8d0ffabc5cbbca8236ea3dda30f6a04bbdae0064",
+  "current_phase": "Full physical Yukawa nonthermal coupled CONTINUUM quantum generator f1/f2/bφ with parent/daughter/scalar positive modewise gains and shared 2 dark charges/Q1+Q2+Qφ/H now locally + CI validated. Independent scalar-mode versus event weak R/Q P2/8/16 converged. Conditional GeV-temperature 86–86.1eV IR thermal |Rφ| bound <10^-23093.3062. P2 first scalar DG-P1 moment false tangent repaired for N24/32/40 by clipping first cell at physical kmin (fixed-FD exact scalar time moments fit positive η through 100× previous t*), BUT P2 high-energy last active DG-P1 right tangent still negative from convex true scalar ηdot curvature, scaling −B h²/6 (B≈7.88945e-12); support alignment NOT global positivity. Next physically positive quadratic Bernstein energy representation and fully coupled finite-time strong solver.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -315,6 +315,27 @@
       "data": "kinetics/results/phi-bose-global-inverse-parent-support-2026-11-24.json",
       "tests": "3+5 local focused pytest passed 3.05s, after correcting one-ulp finite-P rapidity endpoint regression",
       "limitations": "Analytic geometry beyond P55.8TeV only; high-P physical UV thermal rates/zero mode not computed"
+    },
+    {
+      "stage": "Rigorous physically normalized near-rest 86eV fixed-subcritical-thermal Bose-enhanced Yukawa absolute forward+inverse rate upper bound using finite two-sided parent support and log-space Boltzmann",
+      "sha": "5948faa5398d057d05382907af1e287117d57bae",
+      "evidence": "kinetics/PHI-BOSE-NEAR-REST-THERMAL-ABSOLUTE-BOUND-2026-11-24.md",
+      "tests": "4/4 local 0.47s, public source/test CI success",
+      "limitations": "Fixed FD/BE GeV thermal subcritical only; not a critical/nonthermal/SM/FRW BEC no-go"
+    },
+    {
+      "stage": "Support-edge aligned Bose first-bin entropy-dual physical tangent and exact positive fixed-FD finite-time two-moment representability for N24/32/40",
+      "sha": "44eb995e4dfb7de6f0b95c2cc332a852e017afda",
+      "evidence": "kinetics/PHI-BOSE-SUPPORT-ALIGNED-ENERGY-CELL-AUDIT-2026-11-24.md",
+      "tests": "3/3 local 4.61s, public CI pending",
+      "limitations": "First cell fixed P2/frozen FD only; not full spectrum or finite-step physical 3-field"
+    },
+    {
+      "stage": "Physical hard upper support Bose DG-P1 false negative ηRight tangent persists due weighted L2 affine projection of positive ηdot and scales as −B*h²/6",
+      "sha": "be24354a53cd9f9af904060c3ea641af99260035",
+      "evidence": "kinetics/PHI-BOSE-UPPER-SUPPORT-CURVATURE-TANGENT-AUDIT-2026-11-24.md",
+      "tests": "3/3 local 1.20s, public CI pending",
+      "limitations": "Scoped P2 hard support/source curvature, no physical Bose creation/condensate or all-time no-go"
     }
   ],
   "derived_physical_relaxation_scope": {
