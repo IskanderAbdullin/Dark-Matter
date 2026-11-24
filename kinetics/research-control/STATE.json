@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T13:39:47.645Z",
+  "updated_utc": "2026-11-24T15:18:12.032Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Checkpoint during ACTIVE sequential run, not completion: 5field strong candidate not validated, early CI negative preserved and corrections pending. Continue with real physical finite-step nonthermal root/positive KL, independent cutoff/angle grids and true portal/thermal plasma.",
+  "stop_reason": "ACTIVE sequential session checkpoint after two substantive independently verified stages; next selectively integrate fixed positive IR quadrature into five-field physical species DOS entropy/G and test all-cell q/dt/UV/nearcritical and full Scientific CI. Not a terminal goal.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "e890029f76051cb56712950fc63beca3dd3ff8b6",
-  "current_phase": "Fully physical 4-reaction five-population Dirac/antiχ1,2+real φ on-shell positive shared-event quantum weak source established with U1/E/H and common full-U1 chemical equilibrium. First full physical-capacity 5-field P2 backward Euler with sparse analytic Jacobian currently FAILED initial all-dt Newton tests (CI #45402246480), remediation ongoing: exact pair-scalar IR supports P2 floor~100keV (versus 1decay 1.2MeV), freeze collision-inaccessible first φ cell, protect thermal zero-affinity, numerical residual scaling. New CI of corrections pending. Independent full FD/BE event-level chemical relaxation plus MB oracle gives 4 positive modes and one exact U1 chemical zero, not full momentum thermalization. Exact pair scalar rest at χ2 parent p≈4.65TeV; thermal T1 GeV pointwise nearrest occupation factor suppression enormous logF<-3842.7 for K86.1eV, NOT an integrated rate. Quartic thermal static Z2 and halo σ/m tension conditional. No actual SM/FRW/physical freezeout f(q)/Ω/BEC/CLASS.",
+  "last_checkpoint_git_sha": "ab265e8c58afa36db6d61e446300964c83809f17",
+  "current_phase": "Full physically normalized five-population Dirac Yukawa (χ1,antiχ1,χ2,antiχ2,real φ) 4-channel backward-Euler finite-time source with actual U1/energy/H now verified for P2/8/16 in focused CI: old Newton 2 tests failed because demanded η update1.16e−16 below float64 ULP8.88e−16 at η4.09 (true moment residual<1e−18). Repaired by explicit 16eps |physical M| precision-aware stopping while preserving RAW residuals and original quantum U1/E/KL checks, plus stable sign-preserving affinity J≈F−R via expm1. Focused CI #45421790808/#45422074906/#45422175702 pass; full Scientific run status still inspect. Independent 50-digit nearcritical Bose first collision-frozen cell physical susceptibility severe underresolution: at μ=mφ−1e−16 G00 true2.8488e−4GeV³, n18 p-Gauss obtains only0.374% while number converged6e−6. Analytic G00~T²(2m)^(3/2)/(8πsqrtδ). Fixed 168 positive-node geometric p-Gauss, node-independent of μ, integrates exact DOS capacity and G to <2e−7 over tested six δ, focused CI #45423112252 passed. Not installed into five-field model yet; full physical SM/FRW and relic Ω/BEC/CLASS not established.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -477,6 +477,25 @@
       "evidence": "Exact inverse χ+anti total energy requirement to emit one scalar ≤K: Epair,min(K)=2mχcosh(acosh(mχ/mφ)−acosh(K/mφ)); K86.1eV χ2 pair needs Etotal≥8864.4138775GeV, χ1 pair >221TeV. With prescribed equilibrium FDχ and strictly subcritical BEφ at T1GeV µ=0, upper bound on dimensionless per-event FORWARD F at χ2pair low φ≤86.1eV log10 F ≤−3842.70053 even including Bose stimulation; at T1000GeV bound exceeds unity and no net-production inference. The bound is on occupation factor, not integrated rate with W, NOT a general BEC no-go.",
       "limitations": "fixed thermal bath, subcritical μ, pointwise quantum factor only",
       "status": "scoped_research_established_CI_check_latest"
+    },
+    {
+      "stage": "Identify unresolvable floating five-field Newton far-tail root as physical moment <ULP, repair with explicit physical moment machine floor and preserve raw flux residual; improve microreversible FD/BE affinity exmp1 event sign; full real U1/E and KL finite-time P2/8/16",
+      "sha": "14885656ec623e68a43774ec9d83cb97b8e47acb",
+      "stable_flux_sha": "ad642eb7bafeb3ac25c5cb208fc648ac71bea3a2",
+      "final_test_sha": "a57372dafbc3cb48e10548a7999c902d920fabfc",
+      "report": "kinetics/PHI-BOSE-FIVEFIELD-FLOAT64-ROUNDING-AND-QUANTUM-AFFINITY-GATE-2026-11-24.md",
+      "tests": "focused GitHub CI 45421790808/45422074906/45422175702 success; full Scientific verification status separately inspect",
+      "limitations": "conditional float64 resolved roots only, raw far-tail relative flux errors documented, no SM/FRW/BEC/Ω"
+    },
+    {
+      "stage": "Prove massive φ physical P2 hard-pair frozen-cell ideal Bose G00 divergence ∼δ−1/2, show n18 physical Gauss underresolves 99.626% at δ1e−16 despite N converged, independently verify 50-digit mpmath and stable u-quadrature; construct fixed 168 positive-node geometric physical p-Gauss exact DOS capacity and <2e−7 G00 across six δ",
+      "sha": "cff009e48f167aa1b15e6c7b9e43cd0125307d34",
+      "composite_sha": "4041aca13cb02083075321adc390be46344cb9a5",
+      "test_sha": "9dfa1ff1ed3bdf11511570156f14e6a88f8996ef",
+      "report": "kinetics/PHI-BOSE-CRITICAL-IR-SUSCEPTIBILITY-AND-FIXED-GAUSS-GATE-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-critical-ir-physical-susceptibility-2026-11-24.json",
+      "tests": "7 targeted tests and focused GitHub CI #45423112252 success",
+      "limitations": "first P2 collision-inactive φ cell and subcritical BE ideal reference only, fixed grid not yet in live strong solver, no BEC proof"
     }
   ],
   "derived_physical_relaxation_scope": {
