@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "full Dirac chi1/chi2 and REAL scalar 4-channel chemical affinity odds only, not actual pair thermal rate/FRW/BEC",
+  "species": [
+    "chi1",
+    "anti_chi1",
+    "chi2",
+    "anti_chi2",
+    "phi"
+  ],
+  "restricted_mu_GeV": [
+    -0.15,
+    0.15,
+    0.05,
+    -0.05,
+    -0.2
+  ],
+  "chemical_affinities_per_full_four_channels_GeV": [
+    0,
+    0.4,
+    0.4,
+    0.4
+  ],
+  "full_equilibrium_example_mu_GeV": [
+    0.05,
+    -0.05,
+    0.05,
+    -0.05,
+    0
+  ],
+  "full_equilibrium_affinities_GeV": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "full_continuous_charge": [
+    1,
+    -1,
+    1,
+    -1,
+    0
+  ],
+  "pair_F_over_R_at_T1_mu_phi_minus0p2": 1.4918246976412703,
+  "pair_equilibrium_required_mu_phi_GeV": 0,
+  "condition": "mu_phi=0,mu_chi1=mu_chi2=mu_U1,mu_antichis=-mu_U1; only when all four reactions are actually in chemical equilibrium",
+  "class_ready": false
+}
