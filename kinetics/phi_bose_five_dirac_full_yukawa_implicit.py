@@ -121,7 +121,8 @@ class FullDiracPhysicalMoments:
     """Five-field physical DOS Bernstein-P2 strong finite-time model."""
     def __init__(self,P=2.,Ppair=None,N1=3,N2=3,Nphi=8,
                  nq=24,nrad=4,nangle=8,pair_nrad=4,
-                 pair_nrelative=8,pair_ncm=32,pair_naz=4):
+                 pair_nrelative=8,pair_ncm=32,pair_naz=4,
+                 phi_IR_composite=False):
         self.weak=FullDiracYukawaWeak(
             P=P,Ppair=Ppair,nphi=Nphi,nrad=nrad,nangle=nangle,
             pair_nrad=pair_nrad,pair_nrelative=pair_nrelative,
@@ -151,7 +152,34 @@ class FullDiracPhysicalMoments:
         s2=build_species("chi2",M2,2,"fermion",np.linspace(M2,e2hi,N2+1),nq)
         sa2=build_species("anti_chi2",M2,2,"fermion",
                            np.linspace(M2,e2hi,N2+1),nq)
-        sp=build_species("real_phi",MPHI,1,"boson",phi_edges,nq)
+        # OPTIONAL fixed, positive nearcritical Bose quadrature. The first
+        # phi cell is already rigorously collision-disconnected for finite
+        # Ppair, but its physical entropy/moment susceptibility diverges as
+        # mu_phi approaches m_phi. Ordinary n=18 physical p-Gauss can
+        # capture only 0.374% of G00 at mu_phi=m_phi-1e-16 GeV despite
+        # an apparently converged number moment. Use the SAME static grid
+        # for all physical moments, entropy, KL and susceptibility; never
+        # adapt its weights as a hidden function of the evolving eta.
+        self.phi_IR_composite=bool(phi_IR_composite)
+        if self.phi_IR_composite:
+            from kinetics.phi_bose_critical_ir_susceptibility import (
+                fixed_geometric_momentum_gauss_grid
+            )
+            p_ir,dp_ir=fixed_geometric_momentum_gauss_grid(self.Ppair)
+            sp=build_species("real_phi",MPHI,1,"boson",phi_edges,len(p_ir))
+            exact_pair_floor=global_pair_scalar_support_floor(self.Ppair,M2)
+            if abs(sp.edges[1]-exact_pair_floor)>2e-13:
+                raise ValueError("No exactly isolated first scalar IR cell")
+            Eir=np.hypot(p_ir,MPHI)
+            # Stable excitation for p << mphi: E-m=p^2/(E+m).
+            x_ir=p_ir*p_ir/(Eir+MPHI)/(sp.edges[1]-MPHI)
+            sp.H[0,:,:]=bernstein(x_ir)
+            sp.weights[0,:]=dp_ir*p_ir*p_ir/(2*math.pi**2)
+            sp.energy[0,:]=Eir
+            self.phi_IR_composite_nodes=len(p_ir)
+        else:
+            sp=build_species("real_phi",MPHI,1,"boson",phi_edges,nq)
+            self.phi_IR_composite_nodes=0
         self.species=[s1,sa1,s2,sa2,sp]
         self.offsets=np.cumsum([0]+[s.nvars for s in self.species])
         self.nvars=int(self.offsets[-1])
