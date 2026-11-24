@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "model": "two Dirac fermions M(phi)=[[.1,yphi],[yphi,.02]]GeV; real phi, phi-vacuum-mass=86eV, y=.001; zero-chemical-potential common FD thermal bath; static one-loop potential, no scalar portal or self-energy resummation",
+  "equation_delta_mphi2": "8 y² [m1 I_F(m1,T)-m2 I_F(m2,T)]/(m1-m2), I=∫d³p/(2π)³ f_F(E)/E",
+  "highT": "y²*T²/3",
+  "mphi_vacuum_squared_GeV2": 7.396e-15,
+  "negative_static_curvature_T_interval_GeV": [
+    0.0032453669477629813,
+    0.03548213975072978
+  ],
+  "max_required_scalar_quartic_lambda_phi4_over_4factorial": 0.0000010851571368922225,
+  "temperature_of_max_required_lambda_GeV": 0.018598494874987437,
+  "samples": [
+    {
+      "T": 0.002,
+      "delta_m2": -7.557943986527e-17
+    },
+    {
+      "T": 0.005,
+      "delta_m2": -1.257046762313e-13
+    },
+    {
+      "T": 0.01,
+      "delta_m2": -2.706702936452e-12
+    },
+    {
+      "T": 0.02,
+      "delta_m2": -1.791321099911e-11
+    },
+    {
+      "T": 0.03,
+      "delta_m2": -1.923807665207e-11
+    },
+    {
+      "T": 0.035,
+      "delta_m2": -2.439808512045e-12
+    },
+    {
+      "T": 0.04,
+      "delta_m2": 3.044558327032e-11
+    },
+    {
+      "T": 0.1,
+      "delta_m2": 1.944042383976e-9
+    },
+    {
+      "T": 1,
+      "delta_m2": 3.291148316328e-7
+    },
+    {
+      "T": 100,
+      "delta_m2": 0.00333332332965
+    }
+  ],
+  "T1GeV_static_curvature_mass_GeV": 0.000573685,
+  "T100GeV_static_curvature_mass_GeV": 0.0577349,
+  "phi_only_naive_decay_closure_GeV": 138.5640646054301,
+  "independent_checks": "high-T J_F asymptote, Tr M^2 exact, direct 2x2 eigenvalue FD determinant finite field φ central second derivative, numerical double root and scalar lambda envelope",
+  "limitations": "Not finite-temperature real-time pole mass, not full Yukawa cosmological solution; no SM portal, λ history, thermal population derivation, plasma widths, phase transition/resummation, BEC or Ω; assumes two equilibrium Dirac species.",
+  "references": [
+    "https://doi.org/10.1103/PhysRevD.9.3320",
+    "https://arxiv.org/abs/hep-ph/9901312"
+  ],
+  "class_ready": false
+}
