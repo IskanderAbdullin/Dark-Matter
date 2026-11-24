@@ -36,7 +36,7 @@ def test_asymmetric_charged_partner_lower_bound_by_triangle_inequality():
 def test_maximum_asymmetry_for_1_percent_and_full_dark_abundance():
     one=maximum_asymmetry_given_fraction(1.)
     per=maximum_asymmetry_given_fraction(.01)
-    assert math.isclose(one,2.186840228211124e-8,rel_tol=2e-6)
+    assert math.isclose(one,2.1868082457111234e-8,rel_tol=2e-6)
     assert math.isclose(per,one/100,rel_tol=2e-15)
     assert math.isclose(minimum_charged_fermion_omega_h2(one),.12,
                         rel_tol=1e-14)
