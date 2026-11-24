@@ -112,6 +112,46 @@ def narrow_resonant_all_charged_MB(T=1.,mchi=.02,R_had=None,
                 no_true_SM_plasma_or_dark_relic=True)
 
 
+
+def CLEO2007_measured_visible_gate(mV=10.,gD=.1,epsilon=1e-5,
+                                  max_gap_GeV=.01):
+    """Data-driven partial vacuum A' hadronic width from CLEO III R(s).
+
+    At target mV10, the actual measured energy is 9.996GeV, 4MeV
+    lower. This is an explicit local-continuum substitution WITH
+    measured 2.2% uncertainty, not an interpolated/dressed spectral
+    function or a claim of exact on-shell A' width.
+    """
+    from kinetics.cleo2007_hadronic_R_reference import measured_R_at_or_near
+    observation=measured_R_at_or_near(mV,max_gap_GeV)
+    R=observation["R_had_continuum_Born"]
+    unc=observation["total_one_point_quadrature_error"]
+    nominal=visible_width_gate(mV,gD,epsilon,R)
+    lower=visible_width_gate(mV,gD,epsilon,max(0.,R-unc))
+    upper=visible_width_gate(mV,gD,epsilon,R+unc)
+    nwa=narrow_resonant_all_charged_MB(1.,.02,R,mV,gD,epsilon)
+    nwa_low=narrow_resonant_all_charged_MB(1.,.02,max(0.,R-unc),
+                                         mV,gD,epsilon)
+    nwa_hi=narrow_resonant_all_charged_MB(1.,.02,R+unc,mV,gD,epsilon)
+    return dict(schema_version=1,
+                target_mV_GeV=mV,measured_primary=observation,
+                partial_width_GeV=nominal["dark_plus_visible_partial_GammaV_GeV"],
+                measured_onepoint_width_range_GeV=[
+                    lower["dark_plus_visible_partial_GammaV_GeV"],
+                    upper["dark_plus_visible_partial_GammaV_GeV"]],
+                physical_hadronic_Gamma_GeV=nominal["gamma_hadrons_data_driven_GeV"],
+                NWA_chi2_pair_to_all_visible_T1_forward_GeV4=nwa[
+                    "forward_lepton_plus_hadron_NWA_GeV4"],
+                measured_onepoint_NWA_range_GeV4=[
+                    nwa_low["forward_lepton_plus_hadron_NWA_GeV4"],
+                    nwa_hi["forward_lepton_plus_hadron_NWA_GeV4"]],
+                ratio_NWA_all_visible_to_prior_eonly=nwa[
+                    "forward_lepton_plus_hadron_NWA_GeV4"]/
+                    narrow_width_vector_onshell_MB(1.,.02,mV,gD,epsilon)[
+                    "real_intermediate_onshell_forward_GeV4"],
+                nonexperimental_4MeV_mediator_interpolation_uncertainty_omitted=True,
+                no_in_medium_SM_FWR_or_cosmological_relic=True)
+
 def audit():
     return dict(schema_version=1,
                 scope="mandatory e,mu,tau tree A' widths and user-supplied hadronic R, exact NWA ratio for visible channels, no observed R/final thermal plasma",
