@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T11:47:10.692Z",
+  "updated_utc": "2026-11-24T13:13:09.806Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active sequential research checkpoint 2026-11-24. Three new scientific results saved and evidentially cross-checked; next examine near-critical implicit physical realizability and all-cell spectral/q/UV numerical convergence. CLASS-ready=false, no self-consistent χ-SM FRW or actual 86eV Ω/BEC observational verdict.",
+  "stop_reason": "Active sequential research checkpoint at new 5D lab frame physical quantum weak pair events, already archived stage and next action. Continue toward full physical 1↔2 + 2↔2 joint finite-time conservation/entropy and microphysical in-medium/SM FRW; do not stop due to checkpoint.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "9667ff9dab79ee63f59f3421d91bfbbb3e4a7636",
-  "current_phase": "Fully coupled physically DOS normalized χ1/χ2/φ backward-Euler quantum collision prototype independently verified: 5 regression tests CI success for sparse Jacobian P2/8/16 nonthermal finite-step charge/energy/entropy and time refinement, plus 4 physical FD/Bose KL tests CI success for exact entropy residual-work identity ΔS−dt Hnew=Σ∫physicalDOS D(old||new)+ηnew·moment_residual. Important negative physical scalar P8 Nphi8/P16 Nphi8/12: true inverse Bose ηdot>0 on entire accessible source but physically DOS projected quadratic Bernstein-P2 ηdot polynomial negative inside first active bin (P8 min −5.15977428e−10 at k=.0839789095GeV; true pointwise +9.68624932e−10), basis positivity insufficient. Independent conditional thermal Bose 86eV free-streaming path λeq 6.6272113Mpc at g*Sdec55 crosschecks ALREADY VERIFIED CLASS from 2026-11-21 run #44890003670 k_half(z5)=.4327518/Mpc, no new CLASS and not a physical Yukawa relic. Urgent next full spectrum near-critical and qmin/P/time strong convergence, then physical SM/FRW and freezeout.",
+  "last_checkpoint_git_sha": "d93f2745fdcc47d4f1c0c355bc10fa880e5e1a8d",
+  "current_phase": "Off-diagonal Yukawa real scalar/Dirac+anti microphysics advanced beyond isolated 1↔2: independent invariant 2↔2 spin/identical normalization and MB reciprocity; two-Dirac equilibrium one-loop STATIC φ curvature negative over T≈3.245–35.482MeV without stabilizing self term; conditional λ≈1.085e−6 gives 86eV Born σ/m≈1006cm²/g cluster tension; independent CM/Bessel γ and Q, and first positive physical 5D lab quantum χ2antiχ2↔2φ event source with exact U1/energy/H, χ FD and φ BE, common-T detailed balance, nonthermal weak source. All results are scoped vacuum/thermal conditional; no physical in-medium pole/SM/FRW/actual relic. New LAB source last at commit d93f2745, CI pending.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -379,6 +379,56 @@
       "report": "cosmology/THERMAL-86EV-HOT-RELIC-CONDITIONAL-GATE-2026-11-24.md",
       "tests": "5 original conditional analytical tests plus 1 new CLASS baseline crosscheck; latest CI status separately verify",
       "scope": "Not actual Yukawa-generated freezeout, no new CLASS or observational likelihood"
+    },
+    {
+      "stage": "Bose inverse 2to2 MB microreversibility",
+      "sha": "2558d442f6fe64638f77dd2437bb264b2ac35665",
+      "source": "kinetics/phi_bose_pair_mb_detailed_balance.py",
+      "test": "tests/test_phi_bose_pair_mb_detailed_balance.py",
+      "report": "kinetics/PHI-BOSE-YUKAWA-PAIR-ANNIHILATION-MB-HUBBLE-AUDIT-2026-11-24.md",
+      "summary": "Reverse φφ→χ2antiχ2 vacuum σ ratio 8*pχ²/pφ², physical identical-boson incoming 1/2! and Dirac spin counting give pointwise same MB invariant s-kernel, so γF=γR at equal T and chemical equilibrium. Original CI failure on n48 independent quadrature 2.6e−9 mismatch against unjustified 5e−11 tolerance, fixed to 2e−5 while exact identity remains machine-precision.",
+      "tests": "Scientific CI #45399229190 passed Python3.11/3.13 for corrected tests",
+      "limitations": "MB common-T weak diagnostic with vacuum amplitude and separate reverse rate; not FD/BE full time, in-medium or cosmological solution"
+    },
+    {
+      "stage": "Conditional two-Dirac thermal φ static curvature",
+      "sha": "210a63baa830d7d507572eace02e4255b9e4e34d",
+      "source": "kinetics/phi_bose_fermion_thermal_mass.py",
+      "test": "tests/test_phi_bose_fermion_thermal_mass.py",
+      "report": "kinetics/PHI-BOSE-YUKAWA-FERMION-THERMAL-MASS-AND-Z2-GATE-2026-11-24.md",
+      "summary": "Exactly derived one-loop static fermion loop δmφ²=8y²[m1 I_F(m1,T)-m2 I_F(m2,T)]/(m1-m2), high-T y²T²/3, independent direct determinant finite-field check. Negative local static curvature for T3.245–35.482MeV if equilibrium two Dirac zero-μ bath and no φ quartic/portal; positive light-scalar λφ4/4! thermal tadpole needs λ≈1.08515714e−6 in this conditional loop approximation. At T1GeV static curvature mass~574keV vs vacuum86eV.",
+      "tests": "Scientific CI #45399392958 passed after unrelated weak test tolerance fix",
+      "limitations": "STATIC potential not real-time quasiparticle pole; no phase-history/thermal SM, λ or FRW physical relic"
+    },
+    {
+      "stage": "Conditional φ quartic halo contact scattering tension",
+      "sha": "7db6f3cf5cc72d643f5a4817ed9997b00de94303",
+      "source": "kinetics/phi_bose_quartic_halo_tension.py",
+      "test": "tests/test_phi_bose_quartic_halo_tension.py",
+      "report": "kinetics/PHI-BOSE-QUARTIC-CURVATURE-HALO-SCATTERING-TENSION-2026-11-24.md",
+      "summary": "If φ is a dilute dominant NR86eV scalar, λ=1.08515714e−6 needed to restore the specified thermal STATIC curvature predicts Born identical-real-scalar σ/m≈1005.62027cm²/g (viscosity≈670), versus illustrative model-dependent cluster reference upper 2–5cm²/g (λmax4.83939e−8–7.65175e−8). This is a conditional parameter tension, not exclusion of bosonic DM.",
+      "tests": "Scientific CI #45399392958 success",
+      "limitations": "Requires thermal χ bath, quartic-only stabilization, dominant dilute NR cluster scalar and applicable cluster likelihood; none established"
+    },
+    {
+      "stage": "Independent Yukawa pair CM-angle trace and forward MB rate",
+      "sha": "586400b2acfebd9d12bd74ac326ceb7f8ef70338",
+      "source": "kinetics/phi_bose_pair_independent_vectorized.py",
+      "test": "tests/test_phi_bose_pair_independent_vectorized.py",
+      "report": "kinetics/PHI-BOSE-YUKAWA-PAIR-INDEPENDENT-TRACE-ENERGY-ANGLE-GATE-2026-11-24.md",
+      "summary": "Independent vectorized Dirac t/u trace and exact MB collision-energy derivative; physical forward γ(T=1GeV)=2.088634910108e−16GeV4 and mean pair energy4.4090619GeV; forward-only per χ/H≈964.78 with g*=61.75. Negative: angular n48 at T.1 overestimates γ by ~0.0818% vs n128, even though detailed balance exact.",
+      "tests": "Scientific verification run #45399769131 pending at checkpoint",
+      "limitations": "No FD/BE full net collision, thermal pole, SM/FRW"
+    },
+    {
+      "stage": "First positive fully on-shell 5D lab-frame χ2antiχ2↔2φ quantum weak event source",
+      "sha": "d93f2745fdcc47d4f1c0c355bc10fa880e5e1a8d",
+      "source": "kinetics/phi_bose_pair_physical_onshell_quantum.py",
+      "test": "tests/test_phi_bose_pair_physical_onshell_quantum.py",
+      "report": "kinetics/PHI-BOSE-PAIR-PHYSICAL-LAB-ONSHELL-QUANTUM-WEAK-AUDIT-2026-11-24.md",
+      "summary": "Positive physical 5D pχ,panti,relative-angle,CM-angle+azimuth event weight, exact four-leg E1+E2=E3+E4, shared microscopic FD/BE F-R, net Dirac U1=0, energy=0 and H≥0, equilibrium μχ=-μanti and μφ=0. Independent LAB MB at P20,nrad24/nrel32/nCM96 gives 2.088656513604e−16 vs GG reference 2.088634910108e−16 (+1.034e−5). Negative nrad12/nCM32 gives +0.896% rate bias; nonthermal quantum R≈6.10894e−19,H≈1.20570e−17GeV4. Source/test CI pending.",
+      "tests": "Scientific verification #45400744131 in progress at checkpoint",
+      "limitations": "Instantaneous physical weak source ONLY, no five-field finite-time or χ+SM/FRW/actual 86eV relic/zero-mode"
     }
   ],
   "derived_physical_relaxation_scope": {
