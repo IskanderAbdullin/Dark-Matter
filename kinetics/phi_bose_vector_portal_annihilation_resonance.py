@@ -155,6 +155,44 @@ def s_channel_thermodynamic_MB(T,mchi=.02,mV=10.,gD=.1,epsilon=1e-5,
                 no_thermal_loop_or_full_SM_or_relic=True)
 
 
+
+def narrow_width_vector_onshell_MB(T,mchi=.02,mV=10.,gD=.1,epsilon=1e-5,
+                                   GammaV=None):
+    """INDEPENDENT narrow-width sequential χχbar↔A'→e+e− reference.
+
+    Exact tree two-body partial widths and a spin-3 massive real vector
+    MB equilibrium number nA', with Lorentz-averaged decay K1/K2:
+      γ_NWA=nA' Γ(A'→χχbar) Br(A'→e+e−) K1/K2.
+    This is a physical real-intermediate-state (RIS) contribution. If A'
+    is later explicitly evolved as a separate kinetic population, one MUST
+    subtract RIS from a simultaneous full 2->2 Breit-Wigner kernel to
+    avoid double counting. NWA is invalid when off-shell dominates at T≪mV.
+    """
+    if min(T,mchi,mV)<=0 or mV<=2*mchi:
+        raise ValueError("Open vector resonance, positive T required")
+    info=minimal_vector_width(mV,gD,epsilon)
+    if GammaV is None:GammaV=info["width_GeV"]
+    if GammaV<=0:raise ValueError("positive total vector width required")
+    partial_chi=vector_to_Dirac_width(mV,mchi,gD)
+    partial_e=info["channels_GeV"]["e-+e+"]
+    z=mV/T
+    nV=3*mV*mV*T*kve(2,z)*math.exp(-z)/(2*math.pi**2)
+    avg_dilation=kve(1,z)/kve(2,z)
+    gamma=nV*partial_chi*(partial_e/GammaV)*avg_dilation
+    energy_per_event=2*T+mV*kve(0,z)/kve(1,z)
+    return dict(T_GeV=T,mchi_GeV=mchi,mV_GeV=mV,
+                effective_total_GammaV_GeV=GammaV,
+                GammaV_to_chichi_GeV=partial_chi,
+                GammaV_to_electron_GeV=partial_e,
+                Br_electron=partial_e/GammaV,
+                spin_three_vector_MB_density_GeV3=nV,
+                decay_time_dilation_K1_over_K2=avg_dilation,
+                real_intermediate_onshell_forward_GeV4=gamma,
+                real_intermediate_energy_forward_GeV5=gamma*energy_per_event,
+                mean_lab_energy_per_event_GeV=energy_per_event,
+                RIS_double_count_if_explicit_vector_species=True,
+                NWA_valid_only_if_on_shell_peak_dominates=True)
+
 def net_MB_two_temperature_ledger(Tchi,Te,mchi=.02,
                                    mu_chi_sum=0.,mu_e_sum=0.,**kwargs):
     """Full forward-minus-reverse MB reaction and exact quantum-free entropy.
