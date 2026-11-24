@@ -1,0 +1,9 @@
+# 2026-11-24 — independent CONDITIONAL real 86-eV thermal relic abundance and free streaming
+
+Separate from the Yukawa 3-field collision-only code, analytically screen a ZERO-μ, non-condensed, relativistically decoupled, collisionless real scalar with adiabatic SM entropy. Planck Ωc h²≈.1200 and Ωm≈.315, PDG nγ=410.7 cm−3, ρcrit/h²≈1.053672e4 eV cm−3, Tcmb2.7255K, approximate g*S1GeV=61.75, g*S0=3.909 give Tφ/Tγ=.398543964, nφ≈12.9994/cm³, Ωφ h²≈.106100255, ΔNeff≈.055545. Required g*Sdec for Ω=.1200 is ≈54.5974. Abundance alone is not physical coldness.
+
+Integrating the full Bose momentum number weight x²/(exp(x)−1) and free collisionless path in RD+MD to zeq≈3402 gives mean comoving λfs≈**6.42844 Mpc** (illustrative g*S61.75), or **6.64002 Mpc** when scalar temperature is tuned to all DM Ω=.12. All-DM 5.7-keV two-state thermal FD comparator has ≈**.055475 Mpc**, >100× smaller. Iršič et al. 2024 Lyα 5.7keV lower bound is for specific FD-like thermal WDM likelihood, NOT a directly transferable 95% exclusion of Bose 86eV. Structure formation is a serious **conditional hot relic warning** demanding full Bose CLASS transfer function and actual observations, no generic 86-eV boson no-go. Full Yukawa+SM+FRW f(q) is not yet computed and might be nonthermal/colder.
+
+[Report](../../../../cosmology/THERMAL-86EV-HOT-RELIC-CONDITIONAL-GATE-2026-11-24.md), [code](../../../../cosmology/thermal_86ev_boson_screen.py), [tests](../../../../tests/test_thermal_86ev_boson_screen.py), [data](../../../../cosmology/results/thermal-86ev-boson-hot-screen-2026-11-24.json). References: Planck 2018 VI DOI 10.1051/0004-6361/201833910; PDG db2024; Iršič et al. PRD109 043511 (2024). Public CI pending for new code/tests.
+
+NEXT_ACTION: derive real dark-SM entropy exchange and frozen physical Bose q spectrum, absolute Ω, then CLASS/likelihood. Do not use near-abundance thermal coincidence as evidence of cold DM.
