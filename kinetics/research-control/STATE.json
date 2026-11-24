@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T18:04:28.939Z",
+  "updated_utc": "2026-11-24T18:07:52.626Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active research, start 2026-11-24T17:39:02.228Z, target 30 actual minutes; no total technical blocker. New primary experiment and independent physical gates preserved, while some GitHub multi-python CI runs queued; do not misclaim pending success.",
+  "stop_reason": "Active 30min run began 2026-11-24T17:39:02.228Z, new research archive and meaningful independent stage through current UTC; no total blocker. Need perform final CI/head verification and checkpoint actual UTC end near 18:09:02Z, don't invent duration or background work.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "7a36d08b54b1fcbf904e1931012810ff564ad4e0",
-  "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo.",
+  "last_checkpoint_git_sha": "606d21256db9169caf2148bb03605dc528960180",
+  "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo. Separate conditional SM/dark comoving entropy split after decoupling: entropy identity with g*S dark initial 8 relativistic, more accurately 7.991670795 at T0.688GeV using independent finite-mass FD integral; illustrative SM g*S61.75->10.75 yields xi=Tdark/TSM 0.558372 if no dark entropy transfer vs1.116745 if full transfer into φ only (the latter incompatible with surviving stable chi2). Both conditional extremes, NOT physical bounds. Electron vector transport νe/H crosses unity at T=.6882487043GeV using external fixed g*rho61.75, not actual kinetic eigenvalue; actual x8 T2.5MeV νe/H1.55656e−7, requires hypothetical epsilon~.0253465 to get frequency proxy/H~1, no experimental viability proof. Focused CI #45455721437 for entropy tests GREEN, FD mass refined current focused CI pending. True dark+SM FRW still unresolved, class_ready=false.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -544,6 +544,13 @@
       "source": "kinetics/phi_bose_chi2_thermal_branch_consistency.py",
       "tests": "focused CI #45454556730 passed for x3..15; crossing root new test pending",
       "limits": "massless e MB transport is not physical kinetic drag; dark entropy, e mass, full SM FRW absent"
+    },
+    {
+      "stage": "Conditional two-temperature entropy after dark-SM decoupling: gstar dark relativistic8, finite-mass FD7.991670795 at electron transport proxy crossing T.688GeV, SM illustrative gstar61.75→10.75 gives xi.558 no dark mass reheating vs1.1167 full to phi, not true bounds",
+      "source": "kinetics/phi_bose_dark_sm_entropy_split_gate.py",
+      "tests": "focused CI #45455721437 success for 4 baseline entropy tests; newer finite-mass FD test current CI pending",
+      "report": "kinetics/PHI-BOSE-DARK-SM-SEPARATE-ENTROPY-GATE-2026-11-24.md",
+      "limits": "not true SM QCD gstar, no actual dark internal equilibrium or χ2 abundance / FRW"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -1258,6 +1265,6 @@
     "target_minutes": 30,
     "blocker_policy": "all useful authorized independent tasks blocked -> record and stop with checkpoint; single failing tool/CI does not stop",
     "status": "active",
-    "last_check_utc": "2026-11-24T18:04:28.939Z"
+    "last_check_utc": "2026-11-24T18:07:52.626Z"
   }
 }
