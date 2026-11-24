@@ -92,8 +92,15 @@ class EventChannel:
             else:
                 if sgn!=1:raise ValueError("Only outgoing real Bose in listed Yukawa channels")
                 F*=1+f;R*=f
-        J=F-R
-        affinity=self.S@eta
+        # Quantum detailed balance F/R=exp(A), A=S@eta, holds for
+        # BOTH 1<->2 and 2<->2 with individual Dirac/anti and Bose legs.
+        # Avoid cancellation of F-R near equilibrium (which generated
+        # spurious 1e-30-scale reactions and fragile entropy signs).
+        affinity=np.asarray(self.S@eta).ravel()
+        J=np.empty_like(F)
+        positive=affinity>=0.
+        J[positive]=-F[positive]*np.expm1(-affinity[positive])
+        J[~positive]=R[~positive]*np.expm1(affinity[~positive])
         H=float(np.dot(self.W*J,affinity))
         out=dict(J=J,F=F,R=R,H=H,
                  event_rate=float(np.dot(self.W,J)),
