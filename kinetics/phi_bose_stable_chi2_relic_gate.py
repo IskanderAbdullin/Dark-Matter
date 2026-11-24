@@ -177,8 +177,8 @@ def conditional_exact_MB_relic(*,y=Y_REF,grid=32,x_initial=3.,
         raise ValueError("This exact table is calibrated for x_initial=3")
     xs,sv=_exact_thermal_table(grid)
     interpolation=PchipInterpolator(np.log(xs),np.log(sv))
-    lam=(2*math.pi**2/45)/1.66*(gstar_s/math.sqrt(gstar))*
-        MPL_NONREDUCED*MCHI2
+    lam=((2*math.pi**2/45)/1.66*(gstar_s/math.sqrt(gstar))*
+         MPL_NONREDUCED*MCHI2)
     a=vector_ee_swave_a()
     scale=(y/Y_REF)**4
     b=exact_scalar_pwave_b(y)
