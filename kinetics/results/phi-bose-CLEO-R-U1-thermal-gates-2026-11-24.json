@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "utc_date": "2026-11-24",
+  "scope": "Primary CLEO continuum R 9.996GeV near mV10, strict U1 asym floor and conditional MB vector electron transport / exact dark pair thermal rates. NO actual full SM thermal evolution, full φ relic or CLASS.",
+  "experiment": {
+    "collaboration": "CLEO III",
+    "paper": "PhysRevD.76.072008",
+    "arxiv": "0706.2813",
+    "table": "VII",
+    "sqrt_s_GeV": 9.996,
+    "mediator_mV_GeV": 10,
+    "energy_gap_GeV": 0.004,
+    "R": 3.497,
+    "stat": 0.004,
+    "systematic_common": 0.064,
+    "systematic_uncorr": 0.043,
+    "quadrature_one_point_error": 0.07720751258783047,
+    "energy_mismatch_uncertainty_not_included": true
+  },
+  "vector_width": {
+    "partial_all_dark_charged_visible_GeV": 0.005305164626087453,
+    "one_point_R_band_GeV": [
+      0.005305164625899649,
+      0.005305164626275256
+    ],
+    "all_visible_NWA_forward_T1_GeV4": 2.237435933268337e-15,
+    "NWA_onepoint_band_GeV4": [
+      2.2108216094078956e-15,
+      2.2640502571268946e-15
+    ],
+    "relative_previous_eonly_NWA": 6.490747724617416
+  },
+  "exact_dark_asymmetry": {
+    "charge": "Q=Nchi1-Nantichi1+Nchi2-Nantichi2",
+    "mchi2_GeV": 0.02,
+    "max_abs_dark_charge_per_today_SM_entropy_for_100pct_DM": 2.1868082457111234e-8,
+    "max_abs_dark_charge_per_today_SM_entropy_for_1pct_DM": 2.1868082457111235e-10,
+    "source": "exact noether charge triangle inequality, no thermal or FRW assumption",
+    "not_measured_dark_asymmetry": true
+  },
+  "conditional_massless_e_MB_thermal_source": [
+    {
+      "x": 3,
+      "T_MeV": 6.66666666667,
+      "pair_forward_perchi_over_H": 1060.3173342975713,
+      "electron_vector_transport_proxy_over_H": 0.0000029263159439440535
+    },
+    {
+      "x": 5,
+      "T_MeV": 4,
+      "pair_forward_perchi_over_H": 120.7637759686753,
+      "electron_vector_transport_proxy_over_H": 6.377101883579975e-7
+    },
+    {
+      "x": 8,
+      "T_MeV": 2.5,
+      "pair_forward_perchi_over_H": 4.969232938651236,
+      "electron_vector_transport_proxy_over_H": 1.5565565113647488e-7
+    },
+    {
+      "x": 10,
+      "T_MeV": 2,
+      "pair_forward_perchi_over_H": 0.6102047675111769,
+      "electron_vector_transport_proxy_over_H": 7.957676556401386e-8
+    },
+    {
+      "x": 12,
+      "T_MeV": 1.66666666667,
+      "pair_forward_perchi_over_H": 0.07610027884743882,
+      "electron_vector_transport_proxy_over_H": 4.59999517634371e-8
+    },
+    {
+      "x": 15,
+      "T_MeV": 1.33333333333,
+      "pair_forward_perchi_over_H": 0.003420459290946032,
+      "electron_vector_transport_proxy_over_H": 2.35370789002088e-8
+    }
+  ],
+  "thermal_result_scope": "Massless e MB transport frequency is NOT physical kinetic drag Γ_el; exact symmetric χ2 pair GG rate is a forward near-equilibrium reference; real full χ/φ/SM T history unresolved",
+  "class_ready": false
+}
