@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T08:24:43.476Z",
+  "updated_utc": "2026-11-24T08:39:09.170Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Checkpoint saved after several substantive independent physical stages. New public Scientific CI for support and curvature files pending; continuation next: test quadratic Bernstein energy basis and full 3-species conserved finite-time operator. No true physical coupled strong time/SM/FRW/relic/BEC/CLASS.",
+  "stop_reason": "Checkpoint after first complete 3-species finite-time physical-capacity quantum solver prototype; local pytest 5/5 passed 10.56s, new CI in progress. Next derive and test full implicit backward Euler entropy-dual collision step; no physical BEC/Ω/CLASS.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "8d0ffabc5cbbca8236ea3dda30f6a04bbdae0064",
-  "current_phase": "Full physical Yukawa nonthermal coupled CONTINUUM quantum generator f1/f2/bφ with parent/daughter/scalar positive modewise gains and shared 2 dark charges/Q1+Q2+Qφ/H now locally + CI validated. Independent scalar-mode versus event weak R/Q P2/8/16 converged. Conditional GeV-temperature 86–86.1eV IR thermal |Rφ| bound <10^-23093.3062. P2 first scalar DG-P1 moment false tangent repaired for N24/32/40 by clipping first cell at physical kmin (fixed-FD exact scalar time moments fit positive η through 100× previous t*), BUT P2 high-energy last active DG-P1 right tangent still negative from convex true scalar ηdot curvature, scaling −B h²/6 (B≈7.88945e-12); support alignment NOT global positivity. Next physically positive quadratic Bernstein energy representation and fully coupled finite-time strong solver.",
+  "last_checkpoint_git_sha": "45db44b46a8e1630a7ac5889628f9eabf908f06a",
+  "current_phase": "First physically capacity-normalized simultaneous χ1/χ2/φ finite-time on-shell Yukawa quantum collision prototype implemented: one shared exact-event physical W and nonnegative Bernstein P2 energy hats per DOS cell, all 3 species evolve together; source exact two charges+energy/H, 3 P×3 grid thermal analytic Rphi and all 3 Q relative errors ≤1.51e−7 coarse/1.22e−12 fine; SVD graph nullity three invariants plus actual physically frozen scalar mode DOFs (P2N16 nine frozen). Physical positive Bose local moment inverse and FD bounds, a posteriori entropy/conservation acceptance, 6 thermal/nonthermal accepted dt1e5 steps P2/8/16 with conservation abs ~1e−14, entropy increases. Explicit dt3e5 initially fails local Bose Newton inverse; adaptive dt1.5e5×2 succeeds (no nonrepresentability proof); first-order dt refinement ratio≈2.02683 for P2 Nphi16. Still requires fully implicit entropy-guaranteed finite time, UV/IR/SM/FRW/relic.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -336,6 +336,16 @@
       "evidence": "kinetics/PHI-BOSE-UPPER-SUPPORT-CURVATURE-TANGENT-AUDIT-2026-11-24.md",
       "tests": "3/3 local 1.20s, public CI pending",
       "limitations": "Scoped P2 hard support/source curvature, no physical Bose creation/condensate or all-time no-go"
+    },
+    {
+      "stage": "First joint physical-capacity 3-species Yukawa finite-time Bernstein-P2 energy/moment entropy-dual discrete solver and positive on-shell shared events, exact weak N/Q and H, graph rank, adaptive physical bounded moment inverse, joint time entropy/charge/energy and explicit first-order dt convergence",
+      "sha": "7ecf4b737ff05eb162a0a0ad3014f3b45047cfce",
+      "test_sha": "7cbe524b88e5fdd5dc4f18e101f04f6cd275ec51",
+      "report": "kinetics/PHI-BOSE-COUPLED-BERNSTEIN-P2-FINITE-TIME-AUDIT-2026-11-24.md",
+      "numerical_data": "kinetics/results/phi-bose-coupled-bernstein-p2-finite-2026-11-24.json",
+      "archive": "archive/stages/2026/11/2026-11-24-coupled-bernstein-P2-physical-finite-time.md",
+      "tests": "5/5 focused local pytest passed 10.56s, public Scientific CI of source/test pending",
+      "scope": "Physically normalized illustrative finite parent-cutoff simultaneous dark 3-species quantum moment time prototype, conditional numerical rejection rather than unconditional entropy or positive solution; no finite SM/FRW/relic/BEC"
     }
   ],
   "derived_physical_relaxation_scope": {
