@@ -38,3 +38,24 @@ def test_five_field_finite_time_not_a_spurious_source_of_net_U1_or_energy_at_P8(
     assert abs(x["absolute_delta_total_energy"])<3e-11
     assert x["min_step_entropy_gain"]>0
     assert x["min_Bose_eta"]>0
+
+
+def test_full_fivefield_physical_parent_UV_cutoff_sensitivity_at_same_finite_time():
+    # Three hard parent cutoffs are independent PHYSICAL model truncations.
+    # Strong-step positivity or tiny timestep residual is not evidence of
+    # convergence of the full thermal parent UV tail.
+    rows=[]
+    for P in (2.,8.,16.):
+        m=construct(12,P)
+        src=m.source(m.initial_etas())
+        out=integrate_horizon(m,20000.,4)
+        rows.append(dict(P=P,deltaNphi=out["delta_Nphi_GeV3"],
+                         rate_H=src["H"],energy_defect=out["absolute_delta_total_energy"],
+                         U1_defect=out["absolute_U1_defect"],
+                         entropy_change=out["delta_entropy_GeV3"],events=m.total_events))
+        assert src["H"]>=0
+        assert out["min_Bose_eta"]>0
+        assert abs(out["absolute_U1_defect"])<3e-11
+        assert abs(out["absolute_delta_total_energy"])<3e-11
+    print("PHYSICAL_5FIELD_UV_CUTOFF",repr(rows),flush=True)
+    assert all(v["entropy_change"]>0 for v in rows)
