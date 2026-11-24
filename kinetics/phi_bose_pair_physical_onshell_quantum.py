@@ -21,8 +21,10 @@ from kinetics.phi_bose_pair_annihilation_mb import (
     M1 as MV,M2 as M,MPHI as MP,Y
 )
 
-def differential_pair_sigma(s,cos_theta):
+def differential_pair_sigma(s,cos_theta,m_in=M,m_virtual=MV,y=Y):
     """Vectorized positive spin-average identical-real-phi dσ/dcos CM."""
+    M=m_in;MV=m_virtual;Y=y
+    if min(m_in,m_virtual)<=0 or y<0:raise ValueError('Positive Dirac masses and coupling required')
     cos_theta=np.atleast_1d(np.asarray(cos_theta,float))
     if s<=4*M*M:raise ValueError("CM pair threshold")
     E=math.sqrt(s)/2
@@ -54,7 +56,11 @@ class PhysicalPairEvents:
     moving LAB plasma frame. Outputs 4 physical LAB E and one shared
     nonnegative W per event; no arbitrary cell deposits or hidden sources.
     """
-    def __init__(self,P=20.,nrad=16,nrelative=12,ncm=48,naz=8):
+    def __init__(self,P=20.,nrad=16,nrelative=12,ncm=48,naz=8,
+                 m_in=M,m_virtual=MV,y=Y):
+        M=m_in; MV=m_virtual; Y=y
+        self.m_in=m_in;self.m_virtual=m_virtual;self.y=y
+        if m_in<=0 or m_virtual<=0 or y<0:raise ValueError('Invalid Yukawa pair masses or y')
         if P<=0 or min(nrad,nrelative,ncm,naz)<1:
             raise ValueError("Positive cutoff and Gaussian orders required")
         self.P=P
@@ -82,7 +88,7 @@ class PhysicalPairEvents:
                     ecm=math.sqrt(s)/2
                     kout=math.sqrt(s/4-MP*MP)
                     vm=math.sqrt(max(0.,s*(s-4*M*M)))/(2*ea*eb)
-                    ds=differential_pair_sigma(s,c)
+                    ds=differential_pair_sigma(s,c,m_in=M,m_virtual=MV,y=Y)
                     w=pref*pa*pa*wpa*pb*pb*wpb*wcij*vm*wc*ds
                     gamma=etot/math.sqrt(s)
                     bz=(ea/gamma-ecm)/pcm
