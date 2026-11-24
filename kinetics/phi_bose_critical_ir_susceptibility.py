@@ -82,6 +82,44 @@ def stretched_physical_moments(delta_mu,P=2.,T=1.):
                 first_number_moment_M0_GeV3=out[1])
 
 
+
+def fixed_geometric_momentum_gauss_grid(P=2.,n_geometric=20,nper=8,
+                                        p_min=1e-16):
+    """Fixed positive physical p²dp quadrature with log-spaced IR segments.
+
+    DOES NOT depend on Bose chemical potential, so the entropy, moment and
+    susceptibility discrete maps can all use the SAME weights; this is
+    essential for consistency of implicit quantum KL. The first [0,p_min]
+    interval is integrated separately, and all segment GL rules are exact
+    for p² capacity (nper>=2).
+    """
+    lo,hi=first_frozen_cell(P)
+    pmax=math.sqrt((hi-lo)*(hi+lo))
+    if not (0<p_min<pmax and n_geometric>=4 and nper>=2):
+        raise ValueError("Require physical positive geometric quadrature")
+    edges=np.r_[0.,np.geomspace(p_min,pmax,n_geometric+1)]
+    x,w=leggauss(nper)
+    p=(edges[:-1,None]+(edges[1:,None]-edges[:-1,None])*
+       (x[None,:]+1)/2).ravel()
+    dp=((edges[1:,None]-edges[:-1,None])*w[None,:]/2).ravel()
+    assert np.min(p)>0 and np.min(dp)>0
+    return p,dp
+
+
+def composite_physical_moments(delta_mu,P=2.,T=1.,n_geometric=20,nper=8,
+                               p_min=1e-16):
+    """Positive fixed-grid physical first frozen cell moments and exact DOS capacity."""
+    assert 0<delta_mu<=MPHI and T>0
+    lo,hi=first_frozen_cell(P)
+    pmax=math.sqrt((hi-lo)*(hi+lo))
+    p,dp=fixed_geometric_momentum_gauss_grid(P,n_geometric,nper,p_min)
+    DOS,B,b=_scalar_state(p,delta_mu,T,hi)
+    raw_capacity=float(np.dot(dp,p*p))
+    return dict(delta_mu_GeV=delta_mu,nodes=len(p),
+                susceptibility_G00_GeV3=float(np.dot(dp,DOS*B*B*b*(1+b))),
+                first_number_moment_M0_GeV3=float(np.dot(dp,DOS*B*b)),
+                relative_DOS_capacity_error=raw_capacity/(pmax**3/3)-1)
+
 def leading_asymptotic_G00(delta_mu,T=1.):
     """Exact leading δ→0 massive p~sqrt(2mδ) Bose susceptibility singularity."""
     assert 0<delta_mu and T>0
