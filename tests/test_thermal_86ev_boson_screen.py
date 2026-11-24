@@ -82,3 +82,14 @@ def test_stepfunction_gstar_and_collisionless_horizon_are_assumptions_not_yukawa
     assert math.isclose(r["mean_comoving_freestream_to_eq_Mpc"],
                         6.428442647590668,rel_tol=3e-6)
     assert r["mean_velocity_eq_over_c"]>.009
+
+
+def test_analytic_path_crosscheck_existing_verified_CLASS_86eV_real_boson_gstar55():
+    # CLASS was already run on 2026-11-21, see THERMAL-CLASS-VERIFIED.md.
+    a=thermal_abundance(86.,55.)
+    assert math.isclose(a["Omega_phi_h2"],.11912939486124709,rel_tol=3e-12)
+    q=mean_collisionless_horizon(86.,a["Tphi0_eV"],"real_boson",128)
+    assert math.isclose(q["mean_comoving_freestream_to_eq_Mpc"],6.627211308933845,rel_tol=3e-6)
+    khalf_existing_CLASS=.43275181165
+    assert math.isclose(khalf_existing_CLASS*q["mean_comoving_freestream_to_eq_Mpc"],2.867937700128489,rel_tol=3e-6)
+    # This product is a consistency diagnostic, NOT a universal mapping.

@@ -120,6 +120,10 @@ def audit():
     baseline=thermal_abundance(86.,61.75)
     v_baseline=mean_collisionless_horizon(
         86.,baseline["Tphi0_eV"],"real_boson",128)
+    # Independent cross-check for EXISTING verified CLASS real-Bose g*S,dec=55.
+    # See cosmology/THERMAL-CLASS-VERIFIED.md, run #44890003670.
+    classic=thermal_abundance(86.,55.)
+    classic_path=mean_collisionless_horizon(86.,classic["Tphi0_eV"],"real_boson",128)
     t_all=temperature_ratio_for_total_dark_matter(86.,"real_boson")
     v_all=mean_collisionless_horizon(
         86.,t_all*T_GAMMA_K*EV_PER_K,"real_boson",128)
@@ -130,6 +134,11 @@ def audit():
                 scope="strict conditional relativistic thermal decoupled scalar and characteristic free-streaming; not solved Yukawa relic, not CLASS/likelihood",
                 early_decoupling_real_boson_86eV_gstar61p75=baseline,
                 early_decoupling_free_streaming=v_baseline,
+                existing_verified_CLASS_gstar55_analytic_crosscheck=dict(
+                    abundance=classic,mean_collisionless_path=classic_path,
+                    verified_CLASS_z5_half_amplitude_k_Mpc_inv=.43275181165,
+                    product_khalf_times_mean_path=(.43275181165*classic_path["mean_comoving_freestream_to_eq_Mpc"]),
+                    origin="original actual CLASS 3.4.3.0 run 44890003670, do not treat as new CLASS execution"),
                 all_DM_real_boson_86eV=v_all,
                 comparison_all_DM_thermal_FD_two_fermion_5p7keV=v_wdm,
                 mean_comoving_path_ratio_scalar_to_WDM=
