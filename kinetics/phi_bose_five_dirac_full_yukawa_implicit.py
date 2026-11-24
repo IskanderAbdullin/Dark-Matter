@@ -389,11 +389,11 @@ class FullDiracPhysicalMoments:
                 scale=max(1e-25,dt*sum(abs(x["event_rate"]) for x in
                             self.source(etas)["channels"]))
                 if out["entropy_increase"]<-1e-8*scale:
-                    raise ArithmeticError("Negative entropy")
+                    raise ArithmeticError(("Negative entropy",out["entropy_increase"],scale,out["physical_H"],out["max_abs_moment_residual"]))
                 if out["entropy_certificate"]<-1e-8*scale:
-                    raise ArithmeticError("Negative quantum entropy gap")
+                    raise ArithmeticError(("Negative quantum entropy gap",out["entropy_certificate"],scale,out["physical_H"],out["max_abs_moment_residual"]))
                 if max(abs(out["energy_defect"]),abs(out["U1_defect"]))>1e-8*scale:
-                    raise ArithmeticError("Physical U1 or energy deficit")
+                    raise ArithmeticError(("Physical U1 or energy deficit",out["energy_defect"],out["U1_defect"],scale,out["max_abs_moment_residual"]))
                 if out["min_Bose_eta"]<=0:
                     raise ArithmeticError("Bose positivity lost")
                 out["rejections"]=failures
