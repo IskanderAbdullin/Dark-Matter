@@ -9,7 +9,7 @@ import math
 import json
 import numpy as np
 from numpy.polynomial.legendre import leggauss
-from scipy.optimize import brentq
+from kinetics.phi_bose_invariant_parent_support import parent_interval, global_support_floor
 from scipy.special import expit
 from kinetics.phi_bose_physical_cutcell_weak import (
     M1, MPHI, G1, KSTAR, ESTAR, WIDTH, shell, scalar_edges,
@@ -17,12 +17,9 @@ from kinetics.phi_bose_physical_cutcell_weak import (
 
 
 def threshold(k,pmax):
-    """Smallest physical parent momentum supporting a scalar with energy k."""
-    lower,upper=shell(pmax)[1:3]
-    if k<lower or k>upper:return None
-    if k==ESTAR:return 0.
-    edge=1 if k<ESTAR else 2
-    return brentq(lambda p:shell(p)[edge]-k,0.,pmax,xtol=2e-13)
+    """Legacy-compatible lowest parent momentum, extracted from exact [pL,pH]."""
+    bounds=parent_interval(k,MPHI,pmax)
+    return None if bounds is None else bounds[0]
 
 
 def mode_coefficients(k,pmax,nparent=24,T1=.9,T2=1.,mu1=0.,mu2=0.,gphi=1.):
@@ -33,11 +30,12 @@ def mode_coefficients(k,pmax,nparent=24,T1=.9,T2=1.,mu1=0.,mu2=0.,gphi=1.):
     Parent measure uses physical g1 Γrest M1/E1, exact on-shell angle cut.
     """
     assert k>MPHI and nparent>=2 and pmax>0 and T1>0 and T2>0 and gphi>0
-    p0=threshold(k,pmax)
-    if p0 is None:return 0.,0.,0.,0.
+    bounds=parent_interval(k,MPHI,pmax)
+    if bounds is None:return 0.,0.,0.,0.
+    p0,p1=bounds
     x,w=leggauss(nparent)
-    p=p0+(pmax-p0)*(x+1)/2
-    dp=(pmax-p0)*w/2
+    p=p0+(p1-p0)*(x+1)/2
+    dp=(p1-p0)*w/2
     e1=np.hypot(p,M1)
     e2=e1-k
     f1=expit(-(e1-mu1)/T1)
@@ -70,7 +68,8 @@ def integrate_weak(pmax,ncells=16,nk=32,nparent=32,
     """Independent integration-order-reversed Rphi,Qphi,Q1,Q2 moments."""
     assert muphi<MPHI
     edges=scalar_edges(pmax,ncells)
-    kmin,kmax=shell(pmax)[1:3]
+    kmin=global_support_floor(MPHI,pmax)
+    kmax=shell(pmax)[2]
     x,w=leggauss(nk)
     bycell=np.zeros((ncells,4))
     for j,(left,right) in enumerate(zip(edges[:-1],edges[1:])):
@@ -103,7 +102,7 @@ def firstcell_exact_delta_moments(n,pmax,dt,nk=48,nparent=32):
     Outside finite parent support, mode occupation is exactly unchanged.
     """
     upper=scalar_edges(pmax,n)[1]
-    low=shell(pmax)[1]
+    low=global_support_floor(MPHI,pmax)
     high=min(upper,shell(pmax)[2])
     if high<=low:return np.zeros(2)
     x,w=leggauss(nk)
