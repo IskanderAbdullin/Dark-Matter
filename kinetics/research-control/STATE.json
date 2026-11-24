@@ -1264,9 +1264,9 @@
     "start_utc": "2026-11-24T21:32:23Z",
     "target_minutes": 540,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:55:58Z",
-    "elapsed_minutes_actual": 23.583333,
-    "stage": "One-loop scalar completion and independent high precision matching, halo and coherent cold diagnostic"
+    "last_check_utc": "2026-11-24T21:59:30Z",
+    "elapsed_minutes_actual": 27.116667,
+    "stage": "Coherent initial-history mixed-potential adiabatic background and exact Lamé resonance"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1373,5 +1373,14 @@
       45495302729,
       45495756543
     ]
+  },
+  "latest_coherent_resonance_20261124": {
+    "report": "kinetics/PHI-BOSE-COHERENT-RESONANCE-2026-11-24.md",
+    "source": "kinetics/phi_bose_coherent_resonance.py",
+    "data": "kinetics/results/phi-bose-coherent-resonance-2026-11-24.json",
+    "positive": "exact action and Lamé n=2 physical gap; independent direct oscillator verification; at TR20 both illustrative positive λ branches μ/H>5.86e13 and small conditional energy ratio ρ/ρν,1; resonant q today 3.73e−9 or 1.56e−7 eV",
+    "negative": "normalized conditional homogeneous background not actual production; linear instability cannot predict nonlinear fragmentation, number change or final PSD; no BBN likelihood",
+    "status": "local analytic and independent numerical crosscheck; CI pending",
+    "class_ready": false
   }
 }

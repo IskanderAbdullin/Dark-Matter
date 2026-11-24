@@ -374,3 +374,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: scalar quantum completion
 [Analytic matching and high-precision checks](../PHI-BOSE-SCALAR-QUANTUM-COMPLETION-2026-11-24.md). δm²/mφ²8.273e4 at Q=.1, δλ−4.699e-13, c6 finite2.123e-16; independent 70-digit differentiation and RG log derivative. Illustrative positive loop-size quartic TF .468AU, invalid harmonic all-DM extrapolation TR20. Renormalized couplings not fixed; true self number-change/coherence remains open.
+
+
+## 2026-11-24 UTC: coherent adiabatic background and self-resonance
+[Derivation and checks](../PHI-BOSE-COHERENT-RESONANCE-2026-11-24.md). Exact action and physical Lamé gap, direct nonlinear oscillator plus perturbation matrix crosscheck. TR20 μ/H≈5.866e13 and 2.944e15 for two positive λ examples; formal linear exponents huge, invalid after backreaction. Small resonant q does not predict final PSD; independent initial history only.

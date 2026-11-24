@@ -43,3 +43,6 @@
 
 
 **Scalar radiative completion (2026-11-24):** [CW matching and halo/cold field diagnostic](kinetics/PHI-BOSE-SCALAR-QUANTUM-COMPLETION-2026-11-24.md). Renormalized scalar mass and quartic independent. At Q=.1 δm²/mφ²~8.27e4 (scheme-dependent), loop-size positive illustrative λ makes all-DM harmonic extrapolation inconsistent above ~6.97MeV. Need actual interacting background and scalar number-changing; no claim λ fixed.
+
+
+**Coherent alternative (2026-11-24):** [exact mixed-potential action and Lamé resonance](kinetics/PHI-BOSE-COHERENT-RESONANCE-2026-11-24.md). At TR20, conditional all-DM homogeneous positive-λ examples μ/H>5.86e13, but resonant q below the chosen cold rms diagnostic. Cannot extrapolate to nonlinear final PSD. Distinct coherent initial history not covered by particle-injection bounds.
