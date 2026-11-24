@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T17:53:00.006Z",
+  "updated_utc": "2026-11-24T18:04:28.939Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active sequential 30min run since 2026-11-24T17:39:02.228Z, currently proceeding to physical stable-partner and measured SM visible data gates; NOT blocked. Absolute run stop only at actual 30min target or exhaustive independent blocked alternatives, not one CI.",
+  "stop_reason": "Active research, start 2026-11-24T17:39:02.228Z, target 30 actual minutes; no total technical blocker. New primary experiment and independent physical gates preserved, while some GitHub multi-python CI runs queued; do not misclaim pending success.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "bd5c54f6a0998023c0eabf090ba5303372c56c97",
-  "current_phase": "Goal clarified as independent falsifiable bosonic-DM origin+galactic-halo model/negative verdict; stop-on-block rule added to AGENTS: only after all useful authorized alternative work exhausted with evidence/checkpoint. New hard P0: real-φ Yukawa net Dirac U1 plus qchi1=qchi2 vector portal leaves stable χ2=20MeV. Exact Dirac t/u p-wave χ2χbar2→2φ b1.313082728e−12 GeV−2 at y.001; restricted symmetric thermal MB fixed g*=10.75 RD gives full relativistic GG Ωχ2pair h²≈879.959 vs leading p-wave≈761.289, 7333 times Planck .120, a severe conditional toy overclosure; not actual full five-population cosmological exclusion. Exact thermal grid n16/32/64 converges, separate nearcritical phi and 5field P8/16 unresolved. Gauge-consistent finite A'10GeV gD.1 epsilon1e−5 physical FD/Pauli 5D electron heat into BOTH Dirac pairs Qdark=-Qe H>=0, plus BW χχbar→ee resonance γforward3.4504e−16GeV4 vs contact ×1439, NWA works at T1, offshell at low T; forward/H not net. Open mu/tau widths ~3 electron, hadronic spectral R at mV10 unknown; no full SM/gstar/FRW, actual Ωφ/BEC/CLASS or galaxy likelihood.",
+  "last_checkpoint_git_sha": "7a36d08b54b1fcbf904e1931012810ff564ad4e0",
+  "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -527,6 +527,23 @@
       "report": "kinetics/PHI-BOSE-STABLE-CHI2-THERMAL-RELIC-GATE-2026-11-24.md",
       "tests": "focused CI #45452412200 and #45452882647 success; full Scientific latest check",
       "limitations": "thermal symmetric shared bath constant gstar, no coupled χ1/phi+SM FRW, no observed full model exclusion"
+    },
+    {
+      "stage": "Replace R_had hypothetical 3.5 with PRIMARY CLEO III Table VII true 9.996GeV 3.497±.004±.064±.043; propagate mV10 visible A' widths, vector NWA and R-only uncertainty, explicitly 4MeV off data",
+      "report": "kinetics/PHI-BOSE-CLEO-HADRONIC-U1-ASYMMETRY-AND-THERMAL-GATES-2026-11-24.md",
+      "source": "kinetics/cleo2007_hadronic_R_reference.py",
+      "tests": "focused GitHub CI #45453980686 success"
+    },
+    {
+      "stage": "Exact U1 stoichiometry χ1−antiχ1+χ2−antiχ2 => stable 20MeV charged Ω floor and strict ηD(today) threshold 2.186808e−8 (100% Ω) and 2.186808e−10 (1% Ω)",
+      "source": "kinetics/phi_bose_dark_U1_asymmetry_floor.py",
+      "tests": "tests/test_phi_bose_dark_U1_asymmetry_floor.py, attached fivefield focused CI"
+    },
+    {
+      "stage": "Independent full GG Yukawa forward and finite 10GeV vector electron MB transport/H at x3..15 show electron transport <<H near χ2 toy chemical freezeout, invalidating shared-T ASSUMPTION, not physically excluding DM",
+      "source": "kinetics/phi_bose_chi2_thermal_branch_consistency.py",
+      "tests": "focused CI #45454556730 passed for x3..15; crossing root new test pending",
+      "limits": "massless e MB transport is not physical kinetic drag; dark entropy, e mass, full SM FRW absent"
     }
   ],
   "derived_physical_relaxation_scope": {
@@ -1241,6 +1258,6 @@
     "target_minutes": 30,
     "blocker_policy": "all useful authorized independent tasks blocked -> record and stop with checkpoint; single failing tool/CI does not stop",
     "status": "active",
-    "last_check_utc": "2026-11-24T17:53:00.006Z"
+    "last_check_utc": "2026-11-24T18:04:28.939Z"
   }
 }
