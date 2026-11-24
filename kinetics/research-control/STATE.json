@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T18:07:52.626Z",
+  "updated_utc": "2026-11-24T18:09:14.450Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,7 +106,7 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active 30min run began 2026-11-24T17:39:02.228Z, new research archive and meaningful independent stage through current UTC; no total blocker. Need perform final CI/head verification and checkpoint actual UTC end near 18:09:02Z, don't invent duration or background work.",
+  "stop_reason": "Completed user-requested 30 real-minute active session at 2026-11-24T18:09:14.450Z (elapsed 30.204 min), by actual elapsed-time stopping condition and after all stages safely archived. NOT blocked, final Bose DM+galaxy science goal NOT achieved. All work committed to research branch, no force, no merge, PR #1 remains draft. Focused CI on prior staged SHA success; most recent complete 3.11/3.13 Scientific and latest massive FD test runs remain queued/in_progress, must not claim success. NEXT_ACTION current. No background work promised.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
   "last_checkpoint_git_sha": "606d21256db9169caf2148bb03605dc528960180",
@@ -1264,7 +1264,10 @@
     "start_utc": "2026-11-24T17:39:02.228Z",
     "target_minutes": 30,
     "blocker_policy": "all useful authorized independent tasks blocked -> record and stop with checkpoint; single failing tool/CI does not stop",
-    "status": "active",
-    "last_check_utc": "2026-11-24T18:07:52.626Z"
+    "status": "completed_time_limit",
+    "last_check_utc": "2026-11-24T18:09:14.450Z",
+    "end_utc": "2026-11-24T18:09:14.450Z",
+    "elapsed_minutes_actual": 30.2037,
+    "stop_condition": "Actual 30-minute user-specified active run completed, nearest safe engineering stage archived; not blocked, final global goal not achieved"
   }
 }
