@@ -113,3 +113,21 @@ def test_full_vector_weak_chemical_potential_is_not_sm_bath_chemical_equilibrati
     assert a["number_e_source_GeV4"]==0
     # Purely elastic vector events preserve each number and are stationary
     # at common T even when the two FD chemical potentials differ.
+
+
+def test_finite_vector_Pauli_heat_grid_refinement_has_explicit_nonzero_error():
+    vals=[]
+    for n in (8,10,12,16):
+        v=one_dirac_charge_sector_weak_heat(
+            mchi=.02,Tchi=.8,Te=1.,mV=10.,
+            n_p=n,n_k=n,n_mu=n,n_cm=n,n_az=n,cutoff=18.)
+        assert v["Q_chi_GeV5"]>0
+        assert v["quantum_H_GeV4"]>0
+        assert v["max_four_shell_relative_defect"]<1e-12
+        vals.append(v["Q_chi_GeV5"])
+    print("VECTOR_FINITE_MASS_PAULI_HEAT_CONVERGENCE",
+          repr(dict(orders=[8,10,12,16],Q_chi_GeV5=vals,
+                    last_two_relative_change=vals[-1]/vals[-2]-1)),
+          flush=True)
+    assert abs(vals[-1]/vals[-2]-1)<.02
+    assert abs(vals[0]/vals[-1]-1)>.002
