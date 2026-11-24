@@ -273,6 +273,10 @@ class FullDiracPhysicalMoments:
                 raise ArithmeticError("Non-finite 5-field sparse Newton update")
             alpha=1.
             accepted=False
+            # Diagnostic must distinguish a real nonrealizable Bose root
+            # from an unresolvable tiny moment or ill-conditioned Newton.
+            best_merit=float("inf")
+            best_alpha=0.
             for _ in range(32):
                 trial=vec+alpha*update
                 trial[~self.active_dofs]=old[~self.active_dofs]
@@ -284,13 +288,29 @@ class FullDiracPhysicalMoments:
                     alpha/=2;continue
                 next_err=float(max(abs(residual[self.active_dofs]/
                                        scale[self.active_dofs])))
+                if next_err<best_merit:
+                    best_merit=next_err
+                    best_alpha=alpha
                 if next_err<=err*(1-1e-4*alpha) or next_err<rtol:
                     vec=trial
                     accepted=True
                     break
                 alpha/=2
-            if not accepted:raise ArithmeticError(("5field Newton line search stalled",
-                                                    dt,i,err))
+            if not accepted:
+                active_indices=np.flatnonzero(self.active_dofs)
+                worst=int(active_indices[np.argmax(abs(R[self.active_dofs]/
+                                                    scale[self.active_dofs]))])
+                raise ArithmeticError(("5field Newton line search stalled",
+                    dt,i,err,dict(worst_dof=worst,
+                      residual=float(R[worst]),scale=float(scale[worst]),
+                      initial_moment=float(flat_M[worst]),
+                      initial_source=float(src0["C"][worst]),
+                      eta=float(vec[worst]),
+                      proposed_eta_step=float(update[worst]),
+                      best_candidate_error=best_merit,
+                      best_candidate_alpha=best_alpha,
+                      eta_bose_min=float(min(vec[self.offsets[4]:])),
+                      max_abs_update=float(max(abs(update))))))
         else:
             raise ArithmeticError(("5field Newton failed",dt,errors[-1]))
         updated=unflat(self,vec)
