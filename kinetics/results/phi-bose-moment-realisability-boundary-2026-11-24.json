@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "model": "fixed thermal physical Yukawa weak first scalar-cell at P=2 GeV, mphi=86e-9 GeV",
+  "t_units": "GeV^-1",
+  "moment_units": "GeV^3",
+  "source_units": "GeV^4",
+  "scope": "Frozen weak-source ray M=M0+t*C; positivity of affine eta vs general positive occupation, NOT self-consistent collision dynamics",
+  "rows": [
+    {
+      "n": 24,
+      "deta_left": -4.934728038985654e-10,
+      "linear_t": 174.27505491807716,
+      "critical_t": 174.2362815813703,
+      "eta_right_at_left_zero": 0.0038261798035062063,
+      "gap_at_1p1_t": 4.1686743572886914e-13,
+      "positive_nonaffine_coefficients_at_2t": [
+        -0.0009833911757588228,
+        -0.001255841480618355
+      ]
+    },
+    {
+      "n": 32,
+      "deta_left": -3.2640745039529283e-9,
+      "linear_t": 26.34743780996741,
+      "critical_t": 26.384661164015654,
+      "eta_right_at_left_zero": 0.0021512311069491253,
+      "gap_at_1p1_t": 2.346327106388611e-13,
+      "positive_nonaffine_coefficients_at_2t": [
+        0.0001514518906412243,
+        -0.00032940753881833363
+      ],
+      "independent_mpmath_cross_times": [
+        26.384661164106987,
+        26.38466116403818
+      ]
+    },
+    {
+      "n": 40,
+      "deta_left": -5.764160436399143e-10,
+      "linear_t": 149.19779029211753,
+      "critical_t": 149.5283248384145,
+      "eta_right_at_left_zero": 0.00137683309755057,
+      "gap_at_1p1_t": 1.502773070290861e-13,
+      "positive_nonaffine_coefficients_at_2t": [
+        0.0003563103496501493,
+        -0.000395179610099564
+      ]
+    }
+  ],
+  "controls": {
+    "pmax2_n48_n64": "physical first bin forbidden by exact on-shell parent cutoff",
+    "pmax8_16_n16_n24_n32_n40": "left eta tangent positive; no local first-face crossing"
+  },
+  "local_tests": "5 passed in 7.85 s",
+  "public_CI": "pending independent check",
+  "next_action": "Test actual positive fixed-bath scalar semigroup and whether it also leaves affine eta family; then full physical coupled microreversible strong operator; no relic/BEC claim",
+  "class_ready": false
+}
