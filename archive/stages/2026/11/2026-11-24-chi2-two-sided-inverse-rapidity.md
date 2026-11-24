@@ -1,0 +1,9 @@
+# 2026-11-24 — two-sided massive χ2 parent support and independent χ2-first all-Q test
+
+In the explicit massive Yukawa χ1↔χ2+φ model (m1=.1, m2=.02, mφ=86e−9 GeV), use parent rapidity y=asinh(p/m1), daughter rest rapidity ξ=asinh(kstar/m2), observed χ2 rapidity ζ=asinh(p2/m2). The exact kinematic interval is |ξ−ζ|≤y≤ξ+ζ, bounded by the hard P. At χ2 near rest E2=.0201 GeV, P2 allowed parent p∈[.2151675203,.2672324797] GeV, NOT [pmin,2]; χ2 exactly at rest requires parent p=.24 GeV. This corrects a physically false one-sided inverse parent approximation.
+
+For fixed χ1 and φ populations, physical DOS gives χ2 Pauli generator df2/dt=G2(1−f2)−L2 f2 with G,L≥0 and an exact 0≤f2≤1 conditional time propagator; mode μ equilibrium checked. Transforming inner parent p/E1 dp=dE1=dk, integrate k logarithmically, then χ2 rapidity ζ adaptively. This **third independent** source route reproduces Rφ and Qφ/Q1/Q2 vs exact thermal parent log/dilog reference to max relative 4.5e−13/3.6e−13/3.1e−10 for P2/8/16. Coarse P16 χ2-rapidity+log-k 8×8 still errors ~0.655%, and original untransformed parent p Gauss showed **~53.3%** error at P16 8×8. These are reproducible negative numerical errors, not physical effects. Four focused tests passed locally (4.28s), public CI to verify.
+
+[Derivation](../../../../kinetics/PHI-BOSE-CHI2-INVERSE-RAPIDITY-AUDIT-2026-11-24.md), [source](../../../../kinetics/phi_bose_daughter_inverse_rapidity.py), [tests](../../../../tests/test_phi_bose_daughter_inverse_rapidity.py), [JSON](../../../../kinetics/results/phi-bose-chi2-inverse-rapidity-2026-11-24.json).
+
+No fully coupled χ1/χ2/φ finite-time energy exchange, no plasma/FRW, true 86-eV condensate, Ω or CLASS. NEXT_ACTION: use shared physical event on-shell capacities and full coupled Pauli/Bose strong rates; check global scalar inverse parent support beyond 55.8 TeV before claiming near-rest scalar access.
