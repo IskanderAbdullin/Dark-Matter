@@ -212,6 +212,20 @@ def conditional_exact_MB_relic(*,y=Y_REF,grid=32,x_initial=3.,
                 full_physical_SM_Bose_FRW_or_relic=False,
                 class_ready=False)
 
+
+def coupling_for_exact_MB_thermal_target(target=.12,low=.01,high=.02,grid=32):
+    """Specific artificial y threshold for this restricted thermal branch.
+
+    This is NOT a fit to actual cosmic dark/SM histories or φ production.
+    Scaling y changes decay rates and five-field relic, not modeled here.
+    """
+    if not (target>0 and low>0 and high>low):
+        raise ValueError("Positive target and bracket")
+    f=lambda y:conditional_exact_MB_relic(y=y,grid=grid)[
+        "Omega_chi2_plus_anti2_h2"]-target
+    if f(low)*f(high)>=0:raise ValueError("No exact-MB bracket")
+    return float(brentq(f,low,high,xtol=1e-7))
+
 def audit():
     rows=[conditional_symmetric_relic(y=y) for y in
           (.001,.002,.004,.008,.01,.012,.014,.02)]
