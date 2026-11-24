@@ -1,0 +1,59 @@
+{
+  "H0_km_s_Mpc": 67.4,
+  "Omega_r": 0.00009206480043484067,
+  "Omega_m": 0.315,
+  "a_eq": 0.0002922692077296529,
+  "scalar_BE": {
+    "mass_eV": 86,
+    "g": 1,
+    "fd": false,
+    "fraction": 1,
+    "n_cm3": 14.703488372093023,
+    "T0_eV": 0.00009752549660960909,
+    "q_rms_eV": 0.00031377658330709987,
+    "v_rms_today_km_s": 1.093812246171042,
+    "v_mean_eq_km_s": 3141.587331033631,
+    "v_rms_eq_km_s": 3741.6607485099,
+    "free_stream_to_eq_Mpc": 6.6504139565664895,
+    "free_stream_to_z3_Mpc": 9.05603441788713,
+    "pure_RD_to_eq_Mpc": 7.174780455585359
+  },
+  "reference_FD": {
+    "mass_eV": 5700,
+    "g": 2,
+    "fd": true,
+    "fraction": 1,
+    "n_cm3": 0.2218421052631579,
+    "T0_eV": 0.000021052109290801474,
+    "q_rms_eV": 0.00007572738876110926,
+    "v_rms_today_km_s": 0.003982894985010008,
+    "v_mean_eq_km_s": 11.938737380885069,
+    "v_rms_eq_km_s": 13.627486660684784,
+    "free_stream_to_eq_Mpc": 0.055596417993231104,
+    "free_stream_to_z3_Mpc": 0.06473725865163031,
+    "pure_RD_to_eq_Mpc": 0.05762744457295875
+  },
+  "rms_q_over_mass_ratio": 274.6274550943089,
+  "diagnostic_q_target_eV": 0.0000011425535848167361,
+  "occupation_ball_average_lower_if_matching_rms": 792913.9665046227,
+  "cold_plus_BE_rms_match_fraction_diagnostic": 0.0011844241586562894,
+  "mixed_tail_equality_horizon_Mpc": {
+    ".1": 3.5901932944893415,
+    ".01": 1.9006744276533913,
+    ".001": 0.9910830291504211
+  },
+  "cold_entropy_gate": {
+    "trial_beta_eV_minus2": 2480001976.360987,
+    "q2_density_eV5": 1.4747993835011948e-25,
+    "scalar_entropy_upper_cm3": 0.0793367331434302,
+    "saturating_excited_count_cm3": 0.06179926787642076,
+    "saturating_cold_count_fraction": 0.9957969655694962,
+    "heavy_entropy_upper_cm3_for_1pct_energy": 0.000057161590433543187,
+    "total_entropy_upper_cm3": 0.07939389473386374,
+    "retained_fraction_max_from_initial_thermal_benchmark": 0.00021218190701849406
+  },
+  "independent_log_a_horizon_Mpc": {
+    "scalar_BE": 6.650413956568449,
+    "reference_FD": 0.05559641905864579
+  }
+}

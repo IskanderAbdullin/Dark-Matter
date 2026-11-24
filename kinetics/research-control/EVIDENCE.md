@@ -342,3 +342,7 @@ When adding a claim: specify **exact code SHA, external SHA, workflow run, runna
 
 ## 2026-11-24 UTC: dilute low-reheat injection gate
 [Source, proof and reference](../PHI-BOSE-PORTAL-LOW-REHEAT-GATE-2026-11-24.md). Exact mass-dependent MB lepton source with physical finite vector BW, local contact analytic normalization (ratio 1.00000067855), 12 tail and finite-mass checks. TR20MeV one-pass full conversion Ωφ=1.335389e-5; 99% phi by mass needs H survival ≤8.68687e-8. Neither full FD/BE, actual reheating nor number multiplication established; no full-model exclusion.
+
+
+## 2026-11-24 UTC: cold PSD entropy and thermal free-stream diagnostic
+[Report and code](../PHI-BOSE-THERMAL-STREAM-ENTROPY-GATE-2026-11-24.md). Independent integration order gives equal-horizon relative agreement 2.95e-13 (BE),1.92e-8 (FD). 86eV BE 6.6504Mpc vs 5.7keV FD .05560Mpc. Conditional arbitrary ideal Bose entropy bound at chosen rms diagnostic, plus <=1% heavy energy: s_total<=.0793939 cm^-3, <=.000212182 of initial benchmark. No actual Ly-alpha exclusion, macroscopic condensate, or CLASS-ready claim.
