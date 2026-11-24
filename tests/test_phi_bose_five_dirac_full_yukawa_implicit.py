@@ -144,3 +144,45 @@ def test_true_massive_pair_IR_grid_splits_at_all_exact_hard_parent_support_edges
     src=m.source(m.initial_etas())
     # Below global pair2 kmin no physical full-network event reaches phi.
     assert np.max(abs(src["C"][m.offsets[4]:m.offsets[4]+3]))==0.
+
+
+def test_float64_far_tail_root_precision_is_reported_not_misclassified_as_no_solution():
+    m=_m()
+    old=m.initial_etas()
+    out=m.adaptive_step(old,10000.)
+    assert out["iterations"]>0
+    assert out["scaled_residual"]<2e-7
+    assert out["max_abs_moment_residual"]<1e-15
+    assert out["raw_scaled_residual"]>=out["scaled_residual"]
+    assert 0<=out["precision_limited_dofs"]<=m.nvars
+    assert abs(out["energy_defect"])<3e-11
+    assert abs(out["U1_defect"])<3e-11
+    assert out["entropy_certificate"]>=-1e-10
+    # CI previously requested eta correction <1 ulp in a far-tail mode.
+    far_eta=4.086731509081753
+    impossible_delta=1.1567543973059635e-16
+    assert far_eta+impossible_delta==far_eta
+    assert np.nextafter(far_eta,np.inf)-far_eta>impossible_delta
+
+
+def test_near_equilibrium_quantum_affinity_stable_flux_and_event_H_positive():
+    m=_m()
+    for mu_phi in (-1e-12,+1e-12):
+        etas=m.initial_etas(T=(1.,)*5,
+               mu=(.05,-.05,.05,-.05,mu_phi))
+        flat=asflat(etas)
+        src=m.source(etas)
+        assert src["H"]>=0
+        for channel in m.channels:
+            result=channel.weights_and_derivatives(flat)
+            affine=np.asarray(channel.S@flat)
+            assert np.min(result["J"]*affine)>=-1e-26
+            # F-R may lose relative accuracy by cancellation; its absolute
+            # distance from stable expm1 flux remains at float64 level.
+            old_diff=result["F"]-result["R"]
+            err=np.max(abs(result["J"]-old_diff)/
+                       np.maximum(result["F"]+result["R"],1e-300))
+            assert err<4e-15
+            assert np.all(result["J"]*affine>=-1e-26)
+        assert abs(src["exact_event_U1"])<1e-21
+        assert abs(src["exact_event_energy"])<1e-20
