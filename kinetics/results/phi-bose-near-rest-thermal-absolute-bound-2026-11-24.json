@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "scope": "rigorous UPPER bound on prescribed fixed FD1 FD2, strictly subcritical thermal BEphi, NOT actual rate/BEC/FRW/relic",
+  "model": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "g1": 4,
+    "yukawa": 0.001,
+    "T1_GeV": 0.9,
+    "T2_GeV": 1,
+    "Tphi_GeV": 1,
+    "mu1_GeV": 0,
+    "mu2_GeV": 0,
+    "muphi_GeV": 0
+  },
+  "thermal_Bose_mphi_upper": 11627906.476744194,
+  "rows": [
+    {
+      "K_GeV": 8.61e-8,
+      "parent_min_GeV": 53186.48326493459,
+      "parent_max_GeV": 58571.22360354974,
+      "log10_rate_upper_GeV4": -23093.306185861147,
+      "log10_heat_upper_GeV5": -23100.371182709692
+    },
+    {
+      "K_GeV": 8.7e-8,
+      "parent_min_GeV": 47926.69782279161,
+      "parent_max_GeV": 64999.20807219254,
+      "log10_rate_upper_GeV4": -20808.50474362544,
+      "log10_heat_upper_GeV5": -20815.565224372822
+    },
+    {
+      "K_GeV": 9.6e-8,
+      "parent_min_GeV": 34616.684900692664,
+      "parent_max_GeV": 89991.21125928985,
+      "log10_rate_upper_GeV4": -15027.485812870134,
+      "log10_heat_upper_GeV5": -15034.503541637096
+    },
+    {
+      "K_GeV": 1.86e-7,
+      "parent_min_GeV": 13678.16656031018,
+      "parent_max_GeV": 227749.63224965605,
+      "log10_rate_upper_GeV4": -5933.128347903696,
+      "log10_heat_upper_GeV5": -5939.8588349594775
+    }
+  ],
+  "rigorous_formula": "|Rphi_[m,K]| <= g1*GammaRest*M/(4*pi^2) (b^2-a^2) [exp(-(a-mu1)/T1)(1+bmax)+exp(-(a-K-mu2)/T2)*bmax], a,b exact union parent bounds",
+  "near_critical_subcase": {
+    "muphi": "mphi-1e-16 GeV",
+    "bmax_greater_than": 1000000000000000,
+    "near_rest_log_rate_bound_smaller_than": -23000
+  },
+  "local_tests": "4/4 passed 0.47 seconds",
+  "class_ready": false
+}
