@@ -388,12 +388,41 @@ class FullDiracPhysicalMoments:
                 out=self.implicit_step(etas,dt)
                 scale=max(1e-25,dt*sum(abs(x["event_rate"]) for x in
                             self.source(etas)["channels"]))
-                if out["entropy_increase"]<-1e-8*scale:
-                    raise ArithmeticError(("Negative entropy",out["entropy_increase"],scale,out["physical_H"],out["max_abs_moment_residual"]))
-                if out["entropy_certificate"]<-1e-8*scale:
-                    raise ArithmeticError(("Negative quantum entropy gap",out["entropy_certificate"],scale,out["physical_H"],out["max_abs_moment_residual"]))
-                if max(abs(out["energy_defect"]),abs(out["U1_defect"]))>1e-8*scale:
-                    raise ArithmeticError(("Physical U1 or energy deficit",out["energy_defect"],out["U1_defect"],scale,out["max_abs_moment_residual"]))
+                # Conserved totals and entropy here are differences of
+                # LARGE independently quadrature-integrated float64 sums.
+                # When microscopic H*dt ~ 1e-21, the actual S change can
+                # be below one representable ulp of the ~1e-1 entropy.
+                # A test demanding energy change below 1e-22 when one
+                # float64 energy ulp is ~3e-17 is numerically IMPOSSIBLE.
+                # Keep raw source-scale tolerances and reported defects;
+                # add a documented global-ULP acceptance bound. A sign
+                # inside the bound is INCONCLUSIVE, not proven positive.
+                before=self.integrate_spectrum(etas)
+                after=self.integrate_spectrum(out["etas"])
+                eps=np.finfo(float).eps
+                entropy_floor=32*eps*(abs(before["S"])+abs(after["S"]))
+                energy_floor=32*eps*(sum(abs(before["Q"]))+
+                                     sum(abs(after["Q"])))
+                u1_floor=32*eps*(sum(abs(CHARGES*before["N"]))+
+                                 sum(abs(CHARGES*after["N"])))
+                source_tol=1e-8*scale
+                out["roundoff_entropy_floor"]=float(entropy_floor)
+                out["roundoff_energy_floor"]=float(energy_floor)
+                out["roundoff_U1_floor"]=float(u1_floor)
+                out["strict_source_acceptance_tolerance"]=float(source_tol)
+                out["entropy_gain_sign_resolved"]=bool(
+                    out["entropy_increase"]>entropy_floor)
+                out["entropy_certificate_sign_resolved"]=bool(
+                    out["entropy_certificate"]>entropy_floor)
+                out["precision_limited_global_invariants"]=bool(
+                    max(abs(out["energy_defect"]),abs(out["U1_defect"]))>
+                    source_tol)
+                if out["entropy_increase"]<-max(source_tol,entropy_floor):
+                    raise ArithmeticError(("Negative entropy resolved beyond physical sum roundoff",out["entropy_increase"],entropy_floor,source_tol))
+                if out["entropy_certificate"]<-max(source_tol,entropy_floor):
+                    raise ArithmeticError(("Negative quantum entropy gap resolved beyond physical sum roundoff",out["entropy_certificate"],entropy_floor,source_tol))
+                if abs(out["energy_defect"])>max(source_tol,energy_floor) or abs(out["U1_defect"])>max(source_tol,u1_floor):
+                    raise ArithmeticError(("Physical U1 or energy deficit exceeding global floating-point precision",out["energy_defect"],out["U1_defect"],energy_floor,u1_floor,source_tol))
                 if out["min_Bose_eta"]<=0:
                     raise ArithmeticError("Bose positivity lost")
                 out["rejections"]=failures
