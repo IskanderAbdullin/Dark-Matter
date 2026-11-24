@@ -1,5 +1,6 @@
 """First finite-time and spectral grid convergence for real five-field Yukawa."""
 import math
+import numpy as np
 from kinetics.phi_bose_five_dirac_strong_convergence_audit import (
     construct,integrate_horizon,
 )
