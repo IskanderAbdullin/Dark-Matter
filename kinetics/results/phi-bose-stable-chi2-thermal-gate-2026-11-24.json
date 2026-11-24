@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "stable 20-MeV Dirac chi2+antichi2 under thermal symmetric constant-gstar toy, not full chi1/phi/SM FRW",
+  "masses_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "y": 0.001,
+  "gstar_rho_S": 10.75,
+  "initial_x": 3,
+  "thermal_exact_to_NR_pwave": [
+    {
+      "x": 3,
+      "ratio": 0.4813328853691621
+    },
+    {
+      "x": 8,
+      "ratio": 0.7487591
+    },
+    {
+      "x": 20,
+      "ratio": 0.888605994
+    },
+    {
+      "x": 100,
+      "ratio": 0.9764038088852958
+    }
+  ],
+  "analytic_yukawa_pwave_b_GeV_minus2": 1.3130827280563007e-12,
+  "vector_e_swave_a_GeV_minus2": 1.1676134457946275e-21,
+  "NR_only_Omega_h2": 761.2890677981483,
+  "exact_MB_thermal_grid_Omega_h2": [
+    {
+      "n": 16,
+      "omega": 879.9522636339037
+    },
+    {
+      "n": 32,
+      "omega": 879.9584433364654
+    },
+    {
+      "n": 64,
+      "omega": 879.9587690021837
+    }
+  ],
+  "assumed_observed_Omega_c_h2": 0.12,
+  "ratio_exact_to_observed": 7332.989741684864,
+  "NR_y_for_omega0p12": 0.01327,
+  "exact_MB_y_for_omega0p12_approx": 0.01353,
+  "external_observation": "https://doi.org/10.1051/0004-6361/201833910",
+  "physical_limits": "real yukawa five field, all reverse Bose/Pauli, changing gstar SM bath, mediator and chi1 replenishment, actual cosmology not solved",
+  "class_ready": false
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "partial gauge-compatible same-charge chi1 chi2 10GeV vector, e mu tau widths, unknown hadron R, 5D electron FD/Pauli heat and MB resonance, no full SM",
+  "params": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8,
+    "mV": 10,
+    "gD": 0.1,
+    "epsilon": 0.00001
+  },
+  "Qchi2_Pauli_5D_Tchi0p8_Te1_GeV5": [
+    {
+      "n": 6,
+      "Q": 6.935188564722757e-20
+    },
+    {
+      "n": 8,
+      "Q": 7.258831585953069e-20
+    },
+    {
+      "n": 10,
+      "Q": 7.163165470006419e-20
+    },
+    {
+      "n": 12,
+      "Q": 7.170933053373782e-20
+    },
+    {
+      "n": 16,
+      "Q": 7.170872467506347e-20
+    }
+  ],
+  "Qchi2_contact_n16_GeV5": 1.1354445939315288e-19,
+  "Q_finite_over_contact_n16": 0.6315475458539878,
+  "four_charge_sectors_example": {
+    "n": 8,
+    "Tchi1": 0.8,
+    "Tchi2": 0.9,
+    "Te": 1,
+    "Qdark": 2.5872112410093234e-19,
+    "Qe": -2.5872112410093234e-19,
+    "H": 4.903433626294158e-20
+  },
+  "resonance_T1_mchi2": {
+    "electron_only_GammaV_GeV": 0.005305164612731479,
+    "gamma_forward_MB_GeV4": 3.450407732922108e-16,
+    "naive_contact_gamma_MB_GeV4": 2.397263731440274e-19,
+    "enhancement": 1439.3108641614106,
+    "forward_over_H_NOT_net": 1593.8120419337426,
+    "onshell_NWA_GeV4": 3.447115845809919e-16
+  },
+  "mandatory_visible": {
+    "e_mu_tau_width_over_e": "~2.99",
+    "hadronic_R": "unknown data-driven",
+    "Rhad3p5_example_only_visible_width_over_e": "~6.50",
+    "full_SM_verified": false
+  },
+  "CI_success": [
+    45430331573,
+    45430926445,
+    45431671479,
+    45432164795,
+    45452679130
+  ],
+  "class_ready": false
+}
