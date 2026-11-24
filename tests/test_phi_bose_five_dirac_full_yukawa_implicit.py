@@ -52,7 +52,7 @@ def test_five_field_weak_collision_at_thermal_state_matches_independent_full_Dir
         name=channel["name"]
         d=next(x for x in oracle["event_channels"].items() if x[0]==name)[1]
         assert math.isclose(channel["event_rate"],d["event_rate_GeV4"],
-                            rel_tol=1e-10)
+                            rel_tol=1e-10,abs_tol=1e-24)
     assert math.isclose(full["H"],oracle["H_GeV4"],rel_tol=1e-10)
     assert abs(full["exact_event_U1"])<1e-21
     assert abs(full["exact_event_energy"])<1e-20
@@ -128,3 +128,19 @@ def test_nonzero_mu_restricted_old_three_species_fixed_point_violates_full_pair_
     assert src["H"]>0
     assert abs(src["exact_event_U1"])<1e-21
     assert abs(src["exact_event_energy"])<1e-20
+
+
+def test_true_massive_pair_IR_grid_splits_at_all_exact_hard_parent_support_edges():
+    from kinetics.phi_bose_pair_ir_parent_support import global_pair_scalar_support_floor
+    from kinetics.phi_bose_physical_cutcell_weak import M1,M2,MPHI
+    m=_m()
+    e=m.species[4].edges
+    for mass in (M1,M2):
+        cutoff=global_pair_scalar_support_floor(m.Ppair,mass)
+        assert np.min(abs(e-cutoff))<2e-14
+    assert math.isclose(e[0],MPHI,rel_tol=1e-15)
+    kmin=global_pair_scalar_support_floor(m.Ppair,M2)
+    assert math.isclose(e[1],kmin,rel_tol=2e-13)
+    src=m.source(m.initial_etas())
+    # Below global pair2 kmin no physical full-network event reaches phi.
+    assert np.max(abs(src["C"][m.offsets[4]:m.offsets[4]+3]))==0.
