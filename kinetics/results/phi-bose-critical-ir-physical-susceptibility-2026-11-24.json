@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "utc_date": "2026-11-24",
+  "scope": "conditional subcritical BE massive phi first on-shell disconnected P2 energy cell; no BEC, SM FRW or actual relic",
+  "mphi_GeV": 8.6e-8,
+  "upper_energy_GeV": 0.00009999751861499219,
+  "reference": "adaptive u=asinh(p/sqrt(2mδ)) physical DOS plus separate 50-digit mpmath",
+  "asymptotic_G00": "T²(2m)^(3/2)/(8π sqrt δ)",
+  "rows": [
+    {
+      "delta_GeV": 8.6e-8,
+      "exact_G00": 0.000001009868178203598,
+      "n18_G00_ratio": 1.0043378979886513,
+      "n18_M0_ratio": 1.000001509816438,
+      "fixed_168_ratio": 1.0000000002907483
+    },
+    {
+      "delta_GeV": 1e-10,
+      "exact_G00": 0.0000013398316744453085,
+      "n18_G00_ratio": 0.7947929585645124,
+      "n18_M0_ratio": 0.9999956309044253,
+      "fixed_168_ratio": 0.9999999809167803
+    },
+    {
+      "delta_GeV": 1e-12,
+      "exact_G00": 0.000003895412784361593,
+      "n18_G00_ratio": 0.2733884979208763,
+      "n18_M0_ratio": 0.9999944467754379,
+      "fixed_168_ratio": 0.999999990130954
+    },
+    {
+      "delta_GeV": 1e-14,
+      "exact_G00": 0.000029439901483350717,
+      "n18_G00_ratio": 0.03617409431237367,
+      "n18_M0_ratio": 0.9999943265602595,
+      "fixed_168_ratio": 1.000000004484032
+    },
+    {
+      "delta_GeV": 1e-16,
+      "exact_G00": 0.0002848836855027456,
+      "n18_G00_ratio": 0.0037382336519391503,
+      "n18_M0_ratio": 0.9999943145223955,
+      "fixed_168_ratio": 0.9999999132598714,
+      "n576_G00_ratio": 0.03867589101667375,
+      "mpmath_50_digit_G00": "0.0002848836855028987709311460285161055630817"
+    },
+    {
+      "delta_GeV": 1e-18,
+      "exact_G00": 0.002839321415695953,
+      "n18_G00_ratio": 0.00037507616229001976,
+      "n18_M0_ratio": 0.9999943133184478,
+      "fixed_168_ratio": 0.9999999867887119,
+      "n576_G00_ratio": 0.0038811127298177
+    }
+  ],
+  "fixed_positive_rule": {
+    "geometric_intervals": 20,
+    "first_zero_to_min_interval": 1,
+    "gauss_per_interval": 8,
+    "nodes": 168,
+    "p_min_GeV": 1e-16,
+    "independent_of_mu": true,
+    "cap_error_relative_below": 3e-14,
+    "G00_max_error_relative_below": 2e-7,
+    "nearcritical_delta_range_tested_GeV": [
+      1e-18,
+      8.6e-8
+    ]
+  },
+  "focused_CI_run": 45423112252,
+  "class_ready": false
+}
