@@ -59,3 +59,23 @@ def test_full_fivefield_physical_parent_UV_cutoff_sensitivity_at_same_finite_tim
         assert abs(out["absolute_delta_total_energy"])<3e-11
     print("PHYSICAL_5FIELD_UV_CUTOFF",repr(rows),flush=True)
     assert all(v["entropy_change"]>0 for v in rows)
+
+
+def test_full_pair_radial_Gauss_source_underresolution_at_large_hard_parent_cutoff():
+    # This is a *physical source convergence* test, not a claim that 4
+    # Gauss parent radial nodes at P=16 GeV sample thermal T~1 GeV.
+    # Change only pair/decay radial counts; keep relative & azimuth/CM
+    # fixed to separate radial from 2->2 scattering angular errors.
+    rows=[]
+    for nr in (4,6,8):
+        m=construct(12,16.,nrad=nr,nrelative=8,ncm=32,naz=4)
+        src=m.source(m.initial_etas())
+        row=dict(P_GeV=16.,nrad=nr,events=m.total_events,
+                 H=src["H"],rates={c["name"]:c["event_rate"] for c in src["channels"]},
+                 U1=src["exact_event_U1"],E=src["exact_event_energy"])
+        rows.append(row)
+        assert src["H"]>0
+        assert abs(src["exact_event_U1"])<1e-18
+        assert abs(src["exact_event_energy"])<1e-17
+    print("PHYSICAL_5FIELD_RADIAL_QUADRATURE",repr(rows),flush=True)
+    assert all(v["events"]>0 for v in rows)
