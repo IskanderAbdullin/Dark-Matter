@@ -166,17 +166,36 @@ class FullDiracPhysicalMoments:
                 fixed_geometric_momentum_gauss_grid
             )
             p_ir,dp_ir=fixed_geometric_momentum_gauss_grid(self.Ppair)
-            sp=build_species("real_phi",MPHI,1,"boson",phi_edges,len(p_ir))
+            # Preserve the ORIGINAL nq physical Gauss nodes/weights in all
+            # non-IR scalar cells. The rectangular Species storage must
+            # have one shared node count, so pad their extra columns with
+            # valid repeated eta/hat values but EXACT zero physical weight.
+            # Otherwise silently changing every scalar cell from n18 to
+            # n168 would confound a clean *IR-only* quadrature experiment.
+            sp=build_species("real_phi",MPHI,1,"boson",phi_edges,nq)
+            nc=sp.ncells
+            nbig=len(p_ir)
+            if nbig<=nq:
+                raise ValueError("Composite first-cell rule must refine base nq")
+            Hpad=np.repeat(sp.H[:,0:1,:],nbig,axis=1)
+            Epad=np.repeat(sp.energy[:,0:1],nbig,axis=1)
+            Wpad=np.zeros((nc,nbig),dtype=float)
+            Hpad[:,:nq,:]=sp.H
+            Epad[:,:nq]=sp.energy
+            Wpad[:,:nq]=sp.weights
             exact_pair_floor=global_pair_scalar_support_floor(self.Ppair,M2)
             if abs(sp.edges[1]-exact_pair_floor)>2e-13:
                 raise ValueError("No exactly isolated first scalar IR cell")
             Eir=np.hypot(p_ir,MPHI)
             # Stable excitation for p << mphi: E-m=p^2/(E+m).
             x_ir=p_ir*p_ir/(Eir+MPHI)/(sp.edges[1]-MPHI)
-            sp.H[0,:,:]=bernstein(x_ir)
-            sp.weights[0,:]=dp_ir*p_ir*p_ir/(2*math.pi**2)
-            sp.energy[0,:]=Eir
-            self.phi_IR_composite_nodes=len(p_ir)
+            Hpad[0,:,:]=bernstein(x_ir)
+            Wpad[0,:]=dp_ir*p_ir*p_ir/(2*math.pi**2)
+            Epad[0,:]=Eir
+            sp.H=Hpad
+            sp.weights=Wpad
+            sp.energy=Epad
+            self.phi_IR_composite_nodes=nbig
         else:
             sp=build_species("real_phi",MPHI,1,"boson",phi_edges,nq)
             self.phi_IR_composite_nodes=0
