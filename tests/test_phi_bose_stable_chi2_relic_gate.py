@@ -164,3 +164,13 @@ def test_exact_thermal_yukawa_Bessel_GG_relic_refines_and_constrains_stable_comp
     assert 1.14<om[-1]/naive<1.17
     assert om[-1]/.12>7000
     assert not vals[-1]["full_physical_SM_Bose_FRW_or_relic"]
+    from kinetics.phi_bose_stable_chi2_relic_gate import (
+        coupling_for_exact_MB_thermal_target,
+    )
+    ygoal=coupling_for_exact_MB_thermal_target(grid=32)
+    assert .0134<ygoal<.0137
+    print("STABLE_CHI2_EXACT_MB_COUPLING_TARGET",
+          repr(dict(y_for_omega0p120=ygoal,source_gstar=10.75)),flush=True)
+    assert math.isclose(conditional_exact_MB_relic(y=ygoal,grid=32)[
+        "Omega_chi2_plus_anti2_h2"],.12,rel_tol=2e-4)
+
