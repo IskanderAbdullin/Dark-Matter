@@ -75,8 +75,15 @@ def finite_T_direct_cold_fraction(T,alpha):
     qmin=bounds[0]/T
     if qmin>500:raise ValueError("Boltzmann tail too deep for direct floating integration")
     end=max(75.,qmin+70.)
+    # The inverse-rapidity lower parent threshold identifies FIRST PARTIAL
+    # on-shell overlap. If K>=ESTAR the low-parent shell is already
+    # COMPLETELY below K: it contributes unit cold probability, not zero.
+    # Omitting this full-overlap segment was a real 0.04-0.4% high-T error.
     N=quad(lambda q:_fd_decay_weight(q,T)*_angle_fraction(q,T,K),
            qmin,end,epsabs=1e-160,epsrel=3e-11,limit=350)[0]
+    if K>=ESTAR and qmin>0:
+        N+=quad(lambda q:_fd_decay_weight(q,T),0.,qmin,
+                epsabs=1e-22,epsrel=3e-12,limit=200)[0]
     D=quad(lambda q:_fd_decay_weight(q,T),
            0.,75.,epsabs=1e-12,epsrel=1e-12,limit=350)[0]
     return dict(T_GeV=T,x_threshold=alpha,
