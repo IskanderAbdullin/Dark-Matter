@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T07:23:55.089Z",
+  "updated_utc": "2026-11-24T07:27:44.129Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Checkpoint after physical weak N+all-three-Q gate; continue with feasible strong energy-resolving χ1/χ2/φ phase-capacity event operator. Public Scientific CI of newest files not yet confirmed; no cosmological relic, BEC or CLASS.",
+  "stop_reason": "Two physical/numerical stages archived, both 5+4 focused local tests passed. New public CI pending at this checkpoint. Next solve bounded physical energy-resolving multi-moment strong collision step. Do not confuse a negative DG η tangent with BEC; no physical 86-eV relic/CLASS.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "87da05726c1ad427255e3d33d8eb7e2c369967bf",
-  "current_phase": "Exact shell-edge parent partition now yields independent physically normalized positive weak Rphi/Qphi/Q1/Q2 (3 parent UV cuts ×3 grids × reverse, forward, common-T equilibrium). A new P2 N16 one-DOF DOS cell mean Q-bias +45.16% is documented. True shared-capacity, energy-resolving nonlinear strong finite-volume operator remains the next P0.",
+  "last_checkpoint_git_sha": "3d09fd12a640f2e08492e2fc974e62f31b899200",
+  "current_phase": "Physical positive on-shell shell-edge parent-partitioned χ1↔χ2+φ weak N and all three Q now independently validated against log/dilog 1D references over P2/8/16, three meshes and thermal reverse/chemical scenarios. NEW: first-cell W/V energy closure false by +45.16%; physical N32 Bose DG-P1 dual ηrest tangent negative −3.2640745e−9 (linear 26.347 GeV^-1) converged over 4 cut-cell angular/radial grids; no finite-time strong/realizability yet.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -269,6 +269,15 @@
       "machine_data": "kinetics/results/phi-bose-physical-cutcell-nq-2026-11-24.json",
       "tests": "5/5 local focused pytest passed 4.79 seconds; new CI still running at checkpoint",
       "scope": "Physical and independent prescribed-thermal WEAK N+Q only, not self-consistent strong time, SM/FRW, condensate or relic"
+    },
+    {
+      "stage": "Independent exact physical scalar cutcell Yukawa weak first-bin Rphi/Qphi feeding separately integrated positive p²dp Bose two-hat DG-P1 susceptibility; negative N32 eta_left tangent converged across four parent×angle grids; nonmonotone N and true hard cutoff null cells",
+      "sha": "ebb216ae8e2bf1820294c1b286997a5308f5a3b1",
+      "test_sha": "6cec238131c6c1aa164c01bfe6affb152732372c",
+      "report": "kinetics/PHI-BOSE-EXACT-CUTCELL-TANGENT-GATE-2026-11-24.md",
+      "machine_data": "kinetics/results/phi-bose-exact-cutcell-tangent-2026-11-24.json",
+      "tests": "4/4 focused local pytest passed 6.82 seconds; public Scientific CI pending",
+      "scope": "Negative exact finite-cell inverse-fugacity tangent (numerical manifold) only, not finite-time impossibility proof or physical Bose condensate"
     }
   ],
   "derived_physical_relaxation_scope": {
