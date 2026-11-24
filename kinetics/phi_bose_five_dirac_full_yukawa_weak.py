@@ -38,12 +38,13 @@ def _occ(eta,kind):
 class FullDiracYukawaWeak:
     """A physical shared-event four-reaction network over five populations."""
     def __init__(self,P=2.,Ppair=None,nphi=12,nrad=8,nangle=12,
-                 pair_nrad=8,pair_nrelative=8,pair_ncm=32,pair_naz=4):
+                 pair_nrad=8,pair_nrelative=8,pair_ncm=32,pair_naz=4,
+                 pair_radial_breaks=None):
         self.P=P
         self.Ppair=P if Ppair is None else Ppair
         self.decay=Coupled(P=P,Nphi=nphi,nrad=nrad,nangle=nangle)
         kw=dict(P=self.Ppair,nrad=pair_nrad,nrelative=pair_nrelative,
-                ncm=pair_ncm,naz=pair_naz)
+                ncm=pair_ncm,naz=pair_naz,radial_breaks=pair_radial_breaks)
         self.pair1=PhysicalPairEvents(
             **kw,m_in=M1,m_virtual=M2)
         self.pair2=PhysicalPairEvents(
