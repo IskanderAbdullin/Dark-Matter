@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T07:54:34.438Z",
+  "updated_utc": "2026-11-24T08:05:28.584Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Two new independent stages completed: rigorous finite affine-Bose moment-face feasibility and exact positive conditional scalar strong modal solver. Next full coupled physical three-species nonlinear on-shell solver with real mode capacities, two charges/energy and H; no physical BEC, relic, CLASS. Local 5+5 tests passed; check public Scientific CI status.",
+  "stop_reason": "Substantial stages archived: exact χ2 two-sided support and independent all-Q daughter-first integration; universal massive daughter inverse parent theorem and corrected scalar fixed-bath upper bound. CI of new commits may still be running; no 3-field strong time/SM/FRW/CLASS or physical BEC/Ω. Continue constructing physical fully coupled mode source.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "c23e80704e32796ee8deee7eb37a4f6cfd35cb79",
-  "current_phase": "New exact physical massive Bose first-cell affine inverse-eta moment realizability face proven; P2 N32 frozen weak-ray t*=26.384661164 GeV^-1, beyond-face positive nonaffine trial spectra exist. New physical fixed-fermion scalar-only on-shell *strong* mode equation db/dt=S-D b has positive exact finite-time semigroup, mode-by-mode BE chemical equilibrium and independent scalar-k-first physical Rphi plus ALL THREE Q numerical convergence vs analytic parent-first reference on P2/8/16; critical P16 8x8 error ~0.12%. Actual positive finite-time P2 N32 scalar spectrum at 1.1 frozen t* lies outside affine DG-P1 moment manifold (positive gap +2.34431118e-13 GeV³). Still no fully coupled self-consistent χ1/χ2/φ strong kinetic solver or FRW/SM/observations.",
+  "last_checkpoint_git_sha": "2fc5337d04aef5eaa9c736e8b9bac01d48569179",
+  "current_phase": "General massive daughter on-shell parent support has been solved exactly by inverse Lorentz rapidities: fixed χ2 energy requires two-sided finite parent interval (χ2 at rest p≈.24GeV, P2 E2=.0201 parent [.21517,.26723]); third independent χ2 rapidity-first / logarithmic scalar k / adaptive parent weak Rphi and all three Q match analytic to ≤3.1e−10 P16 (P2/8 ≲5e−13). Global scalar φ parent support must become two-sided for pmax beyond p_phi_rest≈55.81395TeV; scalar P100TeV shell(P).kmin falsely exceeds the reachable true rest mass. Fixed-bath scalar modal implementation corrected to global two-sided support; locally 3+5 tests passed with endpoint floating tolerance. All prior first two stages retained. Full arbitrary nonthermal self-consistent χ1/χ2/φ continuum gain/loss and finite-time strong solver NEXT.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -296,6 +296,25 @@
       "data": "kinetics/results/phi-bose-scalar-fixed-bath-strong-2026-11-24.json",
       "tests": "5/5 focused local pytest passed in 3.71s, after recognizing 0.0788% finite nonlinear temporal deviation; CI check needed",
       "limitations": "Fermion baths frozen, NOT self-consistent conserving three-species dark-sector evolution or SM/FRW relic"
+    },
+    {
+      "stage": "Exact χ2 massive daughter inverse parent rapidity finite two-sided support, independent daughter-rapidity + scalar-log-k adaptive physical N/Q1/Q2/Qphi, and positive conditional Pauli semigroup",
+      "sha": "de048f239efb7b3e79a61a7117532dc42ddcdfbf",
+      "test_sha": "927ebe72d6210f5c40a06145a6622ca1bf20c310",
+      "report": "kinetics/PHI-BOSE-CHI2-INVERSE-RAPIDITY-AUDIT-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-chi2-inverse-rapidity-2026-11-24.json",
+      "tests": "4/4 local focused pytest passed 4.28s, public CI verify",
+      "limitations": "Fixed other bath, 3 independent WEAK integration checks, not coupled physical strong evolution"
+    },
+    {
+      "stage": "Globally two-sided inverse parent support for all massive Yukawa daughters, true scalar 86-eV rest parent threshold≈55.81395 TeV; corrected conditional scalar strong source p upper bound/global energy support floor",
+      "sha": "7c06e4c239eaa13e715c602995bc8a7f42d12598",
+      "fix_sha": "008e2a53a3408d1e9d3a1965423b7eede79ac100",
+      "boundary_fix_sha": "eb26cda981a266bf954cd2986f1601fca82f9299",
+      "report": "kinetics/PHI-BOSE-GLOBAL-INVERSE-PARENT-SUPPORT-AUDIT-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-global-inverse-parent-support-2026-11-24.json",
+      "tests": "3+5 local focused pytest passed 3.05s, after correcting one-ulp finite-P rapidity endpoint regression",
+      "limitations": "Analytic geometry beyond P55.8TeV only; high-P physical UV thermal rates/zero mode not computed"
     }
   ],
   "derived_physical_relaxation_scope": {
