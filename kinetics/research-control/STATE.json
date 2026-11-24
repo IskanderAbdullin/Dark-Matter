@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T08:39:09.170Z",
+  "updated_utc": "2026-11-24T11:47:10.692Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,11 +106,11 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Checkpoint after first complete 3-species finite-time physical-capacity quantum solver prototype; local pytest 5/5 passed 10.56s, new CI in progress. Next derive and test full implicit backward Euler entropy-dual collision step; no physical BEC/Ω/CLASS.",
+  "stop_reason": "Active sequential research checkpoint 2026-11-24. Three new scientific results saved and evidentially cross-checked; next examine near-critical implicit physical realizability and all-cell spectral/q/UV numerical convergence. CLASS-ready=false, no self-consistent χ-SM FRW or actual 86eV Ω/BEC observational verdict.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Check new transfer-angle 5D test CI; if fails repair. Independently converge finite mediator heat angular/cutoff and split baths; no physical gamma or relic claim.",
-  "last_checkpoint_git_sha": "45db44b46a8e1630a7ac5889628f9eabf908f06a",
-  "current_phase": "First physically capacity-normalized simultaneous χ1/χ2/φ finite-time on-shell Yukawa quantum collision prototype implemented: one shared exact-event physical W and nonnegative Bernstein P2 energy hats per DOS cell, all 3 species evolve together; source exact two charges+energy/H, 3 P×3 grid thermal analytic Rphi and all 3 Q relative errors ≤1.51e−7 coarse/1.22e−12 fine; SVD graph nullity three invariants plus actual physically frozen scalar mode DOFs (P2N16 nine frozen). Physical positive Bose local moment inverse and FD bounds, a posteriori entropy/conservation acceptance, 6 thermal/nonthermal accepted dt1e5 steps P2/8/16 with conservation abs ~1e−14, entropy increases. Explicit dt3e5 initially fails local Bose Newton inverse; adaptive dt1.5e5×2 succeeds (no nonrepresentability proof); first-order dt refinement ratio≈2.02683 for P2 Nphi16. Still requires fully implicit entropy-guaranteed finite time, UV/IR/SM/FRW/relic.",
+  "last_checkpoint_git_sha": "9667ff9dab79ee63f59f3421d91bfbbb3e4a7636",
+  "current_phase": "Fully coupled physically DOS normalized χ1/χ2/φ backward-Euler quantum collision prototype independently verified: 5 regression tests CI success for sparse Jacobian P2/8/16 nonthermal finite-step charge/energy/entropy and time refinement, plus 4 physical FD/Bose KL tests CI success for exact entropy residual-work identity ΔS−dt Hnew=Σ∫physicalDOS D(old||new)+ηnew·moment_residual. Important negative physical scalar P8 Nphi8/P16 Nphi8/12: true inverse Bose ηdot>0 on entire accessible source but physically DOS projected quadratic Bernstein-P2 ηdot polynomial negative inside first active bin (P8 min −5.15977428e−10 at k=.0839789095GeV; true pointwise +9.68624932e−10), basis positivity insufficient. Independent conditional thermal Bose 86eV free-streaming path λeq 6.6272113Mpc at g*Sdec55 crosschecks ALREADY VERIFIED CLASS from 2026-11-21 run #44890003670 k_half(z5)=.4327518/Mpc, no new CLASS and not a physical Yukawa relic. Urgent next full spectrum near-critical and qmin/P/time strong convergence, then physical SM/FRW and freezeout.",
   "completed_research_steps": [
     {
       "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
@@ -346,6 +346,39 @@
       "archive": "archive/stages/2026/11/2026-11-24-coupled-bernstein-P2-physical-finite-time.md",
       "tests": "5/5 focused local pytest passed 10.56s, public Scientific CI of source/test pending",
       "scope": "Physically normalized illustrative finite parent-cutoff simultaneous dark 3-species quantum moment time prototype, conditional numerical rejection rather than unconditional entropy or positive solution; no finite SM/FRW/relic/BEC"
+    },
+    {
+      "stage": "Fully coupled physical finite-capacity Yukawa backward Euler: analytic sparse Jacobian finite-difference check, P2/8/16 thermal/nonthermal invariant+entropy, dt300000 implicit solves explicit failure, nonzero chemical fixed point and dt convergence",
+      "sha": "6dfdea2a87b7406d692a914d8aad4cebfca57b14",
+      "test_sha": "4207375aec06ec887763700c7eb00097af3f908a",
+      "report": "kinetics/PHI-BOSE-IMPLICIT-QUANTUM-KL-ENTROPY-GATE-2026-11-24.md",
+      "tests": "5/5 new focused CI success Python3.11/3.13",
+      "scope": "Illustrative closed dark Yukawa; no unconditional positive root or SM/FRW physical DM"
+    },
+    {
+      "stage": "Independent integrated physical FD/BE Bregman/KL exact finite-dimensional entropy certificate with root residual work for fully coupled implicit strong moments",
+      "sha": "8055d41ae3d508daabbdf810d6ac176393c143fb",
+      "test_sha": "d9f6cfa957d07a0289d2cd247c1b420bd5218685",
+      "report": "kinetics/PHI-BOSE-IMPLICIT-QUANTUM-KL-ENTROPY-GATE-2026-11-24.md",
+      "tests": "4/4 focused CI success Python3.11/3.13",
+      "scope": "Conditional positive root entropy theorem, no global existence"
+    },
+    {
+      "stage": "Quadratic positive Bernstein Bose inverse fugacity moment projected tangent physically negative despite positive true on-shell scalar eta_dot at P8 Nphi8 and P16 Nphi8/12",
+      "sha": "2233ca66784f4db2e55fb570d253b0e4ccb02796",
+      "test_sha": "c5915d9cc4a0278da6da1aa69b785aa65ec3548b",
+      "report": "kinetics/PHI-BOSE-BERNSTEIN-P2-PROJECTION-POSITIVITY-COUNTEREXAMPLE-2026-11-24.md",
+      "tests": "5/5 physical k-first vs parent-first focused CI success",
+      "scope": "Specific signed polynomial projection, not negative physical Bose occupation/BEC"
+    },
+    {
+      "stage": "Independent conditional thermal Bose 86eV RD+MD full momentum free-streaming and abundance cross-check of already published verified 2026-11-21 thermal CLASS baseline",
+      "sha": "4e1d45baa8444c199fca6c1ed63a540f7c51068c",
+      "test_sha": "9cbb2a200ff894d4b895b15bc5ca1e005484c372",
+      "correction_sha": "2bfdb019c00243d5ad2cafef486d3c0ea0f820c7",
+      "report": "cosmology/THERMAL-86EV-HOT-RELIC-CONDITIONAL-GATE-2026-11-24.md",
+      "tests": "5 original conditional analytical tests plus 1 new CLASS baseline crosscheck; latest CI status separately verify",
+      "scope": "Not actual Yukawa-generated freezeout, no new CLASS or observational likelihood"
     }
   ],
   "derived_physical_relaxation_scope": {
