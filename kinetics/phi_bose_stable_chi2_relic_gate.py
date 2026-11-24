@@ -36,8 +36,11 @@ diagnostics for this branch only, not an allowed/excluded full model.
 import math
 import json
 import numpy as np
-from scipy.integrate import solve_ivp
+from scipy.integrate import solve_ivp, quad
 from scipy.optimize import brentq
+from scipy.interpolate import PchipInterpolator
+from functools import lru_cache
+from kinetics.phi_bose_pair_independent_vectorized import sigma_independent
 from scipy.special import kve
 
 from kinetics.phi_bose_vector_portal_annihilation_resonance import (
@@ -123,6 +126,91 @@ def coupling_for_thermal_relic_target(target=.12,low=.01,high=.02):
         raise ValueError("Root not bracketed")
     return float(brentq(func,low,high,xtol=1e-7))
 
+
+
+def exact_MB_pair_sigma_v(x,nangle=96):
+    """TRUE relativistic MB thermal <sigma vM> from independent vacuum
+    t/u Dirac sigma(s) with identical Bose φ final state 1/2 included.
+
+    Shift u=sqrt(s)/T to u=2x+t. The Bessel exponential factors
+    e^(-2x) in number-density squared cancel analytically, avoiding
+    underflow for x>>1. The integrand still knows exact momenta and
+    virtual χ1 pole, rather than substituting 6b/x at x≈7.
+    """
+    if not (3<=x<=150):
+        raise ValueError("Reference intended only for 3<=x<=150")
+    T=MCHI2/x
+    k2=kve(2,x)
+    def f(t):
+        u=2*x+t
+        return (u*u*(u*u-4*x*x)*
+                sigma_independent((T*u)**2,nangle,
+                                  y=Y_REF,m_in=MCHI2,m_virtual=MCHI1)*
+                kve(1,u)*math.exp(-t))
+    integral=quad(f,0,65,epsabs=0,epsrel=3e-7,limit=180)[0]
+    return float(integral/(4*x**4*k2*k2))
+
+
+@lru_cache(maxsize=8)
+def _exact_thermal_table(n_grid=32,nangle=96):
+    """Fixed logarithmic sample grid, not a runtime-adaptive physical rate."""
+    if n_grid<12:raise ValueError("Need >=12 thermal sample points")
+    xs=np.geomspace(3.,100.,n_grid)
+    sigmas=np.array([exact_MB_pair_sigma_v(float(x),nangle=nangle)
+                      for x in xs])
+    if not (np.min(sigmas)>0 and np.all(np.isfinite(sigmas))):
+        raise ArithmeticError("Nonpositive exact thermal annihilation")
+    return xs,sigmas
+
+
+def conditional_exact_MB_relic(*,y=Y_REF,grid=32,x_initial=3.,
+                               gstar=10.75,gstar_s=10.75):
+    """Controlled improvement over the leading P-wave truncation at x~7.
+
+    Exact thermal MB χ2χbar2→φφ rate via full vacuum t/u amplitude
+    until x=100; from x=100 to infinity use analytic leading P-wave
+    tail. The physical next-to-leading tail is O(1/100) relative,
+    and the tail itself contributes negligibly to freezeout.
+    Other cosmological assumptions match conditional_symmetric_relic.
+    """
+    if not (x_initial==3. and gstar>0 and gstar_s>0):
+        raise ValueError("This exact table is calibrated for x_initial=3")
+    xs,sv=_exact_thermal_table(grid)
+    interpolation=PchipInterpolator(np.log(xs),np.log(sv))
+    lam=(2*math.pi**2/45)/1.66*(gstar_s/math.sqrt(gstar))*
+        MPL_NONREDUCED*MCHI2
+    a=vector_ee_swave_a()
+    scale=(y/Y_REF)**4
+    b=exact_scalar_pwave_b(y)
+    def source(x,Y):
+        y_eq=mb_yeq_single_dirac(x,gstar_s)
+        sigma_v=scale*math.exp(float(interpolation(math.log(x))))+a
+        return [-lam/x**2*sigma_v*(Y[0]**2-y_eq*y_eq)]
+    sol=solve_ivp(source,(3.,100.),
+                  [mb_yeq_single_dirac(3.,gstar_s)],
+                  method="Radau",rtol=3e-9,atol=1e-13)
+    if not sol.success or sol.y[0,-1]<=0:
+        raise ArithmeticError("Failed full t/u thermally averaged freezeout")
+    Y100=float(sol.y[0,-1])
+    # Conditional no-repopulation integral to infinity. Yeq at x100
+    # is exponentially zero; vector a adds the a/100 term.
+    Yinf=1/(1/Y100+lam*(a/100.+3*b/(100.**2)))
+    omega=2*MCHI2*H2_DENSITY_CONVERSION*Yinf
+    return dict(y=y,thermal_grid=grid,x_initial=3.,x_matching_to_NR_tail=100.,
+                full_MB_cross_section_reference="independent exact Dirac t/u sigma(s), GG Bessel thermal average",
+                exact_thermal_sigma_v_at_x3=scale*float(sv[0]),
+                exact_thermal_sigma_v_at_x100=scale*float(sv[-1]),
+                scalar_pwave_at_x3=6*b/3.,
+                scalar_pwave_at_x100=6*b/100.,
+                exact_to_pwave_x3=float(sv[0]/(6*exact_scalar_pwave_b(Y_REF)/3.)),
+                exact_to_pwave_x100=float(sv[-1]/(6*exact_scalar_pwave_b(Y_REF)/100.)),
+                Y_per_chi2_charge_at_x100=Y100,
+                Y_per_chi2_charge_final_with_NR_tail=Yinf,
+                Omega_chi2_plus_anti2_h2=omega,
+                relative_to_OmegaDM_0p120=omega/.120,
+                constant_gstar_toy_only=True,
+                full_physical_SM_Bose_FRW_or_relic=False,
+                class_ready=False)
 
 def audit():
     rows=[conditional_symmetric_relic(y=y) for y in
