@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "model": "real phi, two Dirac fermions m1=.1 m2=.02 GeV, y=.001; vacuum t/u exchanged χ1, forward χ2 antiχ2->2phi, positive tanh angular rule",
+  "independent_implementation": "vectorized Lorentz scalar trace separate from old nested four-vector source",
+  "physical_high_res_n128": [
+    {
+      "T_GeV": 0.1,
+      "gamma_GeV4": 7.859721803450021e-21,
+      "mean_total_energy_GeV": 0.44678868407283295,
+      "per_chi2_forward_ratio_H": 6936.017005351313
+    },
+    {
+      "T_GeV": 1,
+      "gamma_GeV4": 2.0886349101080186e-16,
+      "mean_total_energy_GeV": 4.409061907291514,
+      "per_chi2_forward_ratio_H": 964.7820572539009
+    },
+    {
+      "T_GeV": 100,
+      "gamma_GeV4": 6.661927466892796e-8,
+      "mean_total_energy_GeV": 415.32595156355853,
+      "per_chi2_forward_ratio_H": 23.40225556833799
+    }
+  ],
+  "gamma_T_0p1_vs_n": {
+    "24": 8.331403406878e-21,
+    "32": 7.992276376047e-21,
+    "48": 7.866150350903e-21,
+    "64": 7.859975281759e-21,
+    "80": 7.859730906424e-21,
+    "96": 7.859722113002e-21,
+    "128": 7.85972180345e-21,
+    "160": 7.859721803124e-21
+  },
+  "scope": "forward-only vacuum MB on-shell, not full FD BE or SM/FRW, no actual scalar freezeout",
+  "class_ready": false
+}
