@@ -103,3 +103,51 @@ def test_independent_full_quantum_pair_radial_source_refines_beyond_n8():
     # pair contribution hidden under the much stronger 1->2 decay H.
     assert all(v["chi1_pair_rate"]<0 for v in rows)
     assert all(v["chi2_pair_rate"]>0 for v in rows)
+
+
+def test_fixed_positive_graded_pair_radial_source_convergence_and_exact_capacity():
+    from kinetics.phi_bose_five_dirac_full_yukawa_weak import FullDiracYukawaWeak
+    # Explicit physical geometry breakpoints, independent of occupations.
+    P=16.
+    edges=[0.,.25,1.,4.,P]
+    rows=[]
+    for nper in (2,3,4):
+        m=FullDiracYukawaWeak(
+            P=P,Ppair=P,nphi=12,nrad=8,nangle=8,
+            pair_nrad=nper,pair_nrelative=8,pair_ncm=32,pair_naz=4,
+            pair_radial_breaks=edges)
+        assert m.pair1.radial_segments==m.pair2.radial_segments==4
+        for pair in (m.pair1,m.pair2):
+            assert len(pair.radial_p)==4*nper
+            assert np.min(pair.radial_weights)>0
+            capacity=float(np.dot(pair.radial_weights,pair.radial_p**2))
+            assert math.isclose(capacity,P**3/3,rel_tol=3e-14)
+        result=m.source(T=(.9,1.05,1.,1.1,.98))
+        chans=result["event_channels"]
+        assert abs(result["vector_U1_defect_GeV4"])<1e-18
+        assert abs(result["total_energy_defect_GeV5"])<1e-17
+        assert result["H_GeV4"]>0
+        rows.append(dict(graded_nper=nper,actual_radial_nodes=4*nper,
+                         chi1_pair_rate=chans["chi1_pair"]["event_rate_GeV4"],
+                         chi2_pair_rate=chans["chi2_pair"]["event_rate_GeV4"],
+                         total_H=result["H_GeV4"]))
+    print("PHYSICAL_PAIR_GRADED_RADIAL_NODES",repr(rows),flush=True)
+
+
+def test_graded_pair_radial_integrator_keeps_full_fivefield_finite_time_U1_E_entropy():
+    from kinetics.phi_bose_five_dirac_full_yukawa_implicit import FullDiracPhysicalMoments
+    from kinetics.phi_bose_five_dirac_kl_certificate import quantum_KL_certificate
+    m=FullDiracPhysicalMoments(
+        P=16.,Ppair=16.,N1=3,N2=3,Nphi=12,nq=18,
+        nrad=4,nangle=8,pair_nrad=2,
+        pair_nrelative=8,pair_ncm=32,pair_naz=4,
+        pair_radial_breaks=[0.,.25,1.,4.,16.])
+    old=m.initial_etas()
+    result=m.adaptive_step(old,5000.)
+    assert result["min_Bose_eta"]>0
+    assert result["entropy_increase"]>0
+    assert result["entropy_certificate"]>=-1e-10
+    assert abs(result["energy_defect"])<3e-11
+    assert abs(result["U1_defect"])<3e-11
+    cert=quantum_KL_certificate(m,old,result["etas"],result["accepted_dt"])
+    assert abs(cert["exact_entropy_decomposition_defect"])<3e-10
