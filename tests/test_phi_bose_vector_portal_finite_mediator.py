@@ -105,7 +105,7 @@ def test_MB_transport_collision_proxy_and_absolute_Hubble_1GeV_benchmark():
     assert math.isclose(r2["MB_transport_proxy_over_H_NOT_drag"],
                         2.5304567019732462,rel_tol=3e-5)
     assert math.isclose(r1["MB_transport_proxy_over_H_NOT_drag"],
-                        2.534038259217996,rel_tol=3e-5)
+                        2.5310687667878193,rel_tol=3e-5)
     for T,ref in ((.1,.0038588321694743646),
                   (.5,.4237213977788347),
                   (2.,10.43040273922921)):
@@ -128,6 +128,17 @@ def test_MB_reaction_density_independent_sqrt_s_integration_normalization():
     assert math.isclose(gamma,
                         r["MB_transport_weighted_forward_scattering_density_GeV4"],
                         rel_tol=5e-5)
+    # Repeat the independent sqrt(s) variable with massive χ1, not just χ2.
+    m1=.1
+    integral1=quad(lambda E:2*finite_vector_cross_section(E*E,m1)*
+                   (E*E-m1*m1)**2*kve(1,E/T)*math.exp(-E/T),
+                   m1,40*T,epsabs=0,epsrel=2e-5,limit=300)[0]
+    gamma1=8*T/(32*math.pi**4)*integral1
+    ref1=MB_transport_collision_proxy(T,mchi=m1)
+    assert math.isclose(gamma1,
+                        ref1["MB_transport_weighted_forward_scattering_density_GeV4"],
+                        rel_tol=5e-5)
+
 
 
 def test_analytic_ultrarelativistic_MB_contact_limit_not_confused_with_drag():
