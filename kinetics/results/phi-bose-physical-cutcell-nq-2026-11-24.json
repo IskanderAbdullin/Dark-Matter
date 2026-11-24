@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "description": "Independent 1D analytic daughter FD*BE log/dilog versus positive on-shell parent-partitioned scalar cut-cell weak sources, not strong kinetics",
+  "mass_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "yukawa": 0.001,
+  "g1": 4,
+  "mesh_nrad_per_parent_segment": 10,
+  "mesh_nlogangle_per_cell": 16,
+  "nscalar_cells": 16,
+  "units": {
+    "Rphi": "GeV^4",
+    "Q": "GeV^5"
+  },
+  "conditions": {
+    "temperature_split": {
+      "T1": 0.9,
+      "T2": 1,
+      "Tphi": 1,
+      "mu1": 0,
+      "mu2": 0,
+      "muphi": 0
+    },
+    "chemical_forward": {
+      "T1": 1,
+      "T2": 1,
+      "Tphi": 1,
+      "mu1": -0.09,
+      "mu2": 0.05,
+      "muphi": -0.2
+    },
+    "chemical_reverse": {
+      "T1": 1,
+      "T2": 1,
+      "Tphi": 1,
+      "mu1": -0.21,
+      "mu2": 0.05,
+      "muphi": -0.2
+    },
+    "chemical_equilibrium": {
+      "T1": 1,
+      "T2": 1,
+      "Tphi": 1,
+      "mu1": -0.15,
+      "mu2": 0.05,
+      "muphi": -0.2
+    }
+  },
+  "rows": [
+    {
+      "case": "temperature_split",
+      "pmax_GeV": 2,
+      "Rphi": -1.295453955491667e-11,
+      "Qphi": -2.670878687857877e-12,
+      "Q1": 1.682403591788566e-11,
+      "Q2": -1.415315723002778e-11,
+      "max_relative_difference_to_independent_analytic_reference": 3.810285420513537e-13
+    },
+    {
+      "case": "temperature_split",
+      "pmax_GeV": 8,
+      "Rphi": -3.212015333089339e-11,
+      "Qphi": -1.394186043243136e-11,
+      "Q1": 8.303046084591374e-11,
+      "Q2": -6.90886004134824e-11,
+      "max_relative_difference_to_independent_analytic_reference": 7.771561172376096e-14
+    },
+    {
+      "case": "temperature_split",
+      "pmax_GeV": 16,
+      "Rphi": -3.232104320686507e-11,
+      "Qphi": -1.438236797986129e-11,
+      "Q1": 8.486387403625802e-11,
+      "Q2": -7.048150605639672e-11,
+      "max_relative_difference_to_independent_analytic_reference": 7.66053886991358e-14
+    },
+    {
+      "case": "chemical_forward",
+      "pmax_GeV": 2,
+      "Rphi": 1.989714745249426e-12,
+      "Qphi": 7.731151004787994e-13,
+      "Q1": -2.234100882305023e-12,
+      "Q2": 1.460985781826224e-12,
+      "max_relative_difference_to_independent_analytic_reference": 2.9577451599038795e-12
+    },
+    {
+      "case": "chemical_forward",
+      "pmax_GeV": 8,
+      "Rphi": 3.464526349299475e-12,
+      "Qphi": 2.412899692149255e-12,
+      "Q1": -7.07122768166913e-12,
+      "Q2": 4.658327989519875e-12,
+      "max_relative_difference_to_independent_analytic_reference": 9.50794998288984e-13
+    },
+    {
+      "case": "chemical_forward",
+      "pmax_GeV": 16,
+      "Rphi": 3.474664979601323e-12,
+      "Qphi": 2.448885323000642e-12,
+      "Q1": -7.163445480450352e-12,
+      "Q2": 4.714560157449709e-12,
+      "max_relative_difference_to_independent_analytic_reference": 9.381384558082573e-13
+    },
+    {
+      "case": "chemical_reverse",
+      "pmax_GeV": 2,
+      "Rphi": -1.926451852643918e-12,
+      "Qphi": -7.454323074234687e-13,
+      "Q1": 2.153161624018614e-12,
+      "Q2": -1.407729316595145e-12,
+      "max_relative_difference_to_independent_analytic_reference": 3.064215547965432e-12
+    },
+    {
+      "case": "chemical_reverse",
+      "pmax_GeV": 8,
+      "Rphi": -3.323024260018381e-12,
+      "Qphi": -2.296361989918456e-12,
+      "Q1": 6.728612974338337e-12,
+      "Q2": -4.432250984419883e-12,
+      "max_relative_difference_to_independent_analytic_reference": 9.926504063173525e-13
+    },
+    {
+      "case": "chemical_reverse",
+      "pmax_GeV": 16,
+      "Rphi": -3.332572619668482e-12,
+      "Qphi": -2.33025249776627e-12,
+      "Q1": 6.815461767143487e-12,
+      "Q2": -4.485209269377215e-12,
+      "max_relative_difference_to_independent_analytic_reference": 9.805489753489383e-13
+    },
+    {
+      "case": "chemical_equilibrium",
+      "pmax_GeV": 2,
+      "Rphi": 1.058059113305686e-27,
+      "Qphi": 6.028600057626691e-28,
+      "Q1": -1.46561571129891e-27,
+      "Q2": 8.627557055362412e-28,
+      "max_relative_difference_to_independent_analytic_reference": null
+    },
+    {
+      "case": "chemical_equilibrium",
+      "pmax_GeV": 8,
+      "Rphi": 3.949145286908638e-27,
+      "Qphi": 1.809235494054067e-27,
+      "Q1": -7.758046944316809e-27,
+      "Q2": 5.948811450262745e-27,
+      "max_relative_difference_to_independent_analytic_reference": null
+    },
+    {
+      "case": "chemical_equilibrium",
+      "pmax_GeV": 16,
+      "Rphi": 4.056105800614722e-27,
+      "Qphi": 1.913808803218091e-27,
+      "Q1": -6.853137818580686e-27,
+      "Q2": 4.939329015362593e-27,
+      "max_relative_difference_to_independent_analytic_reference": null
+    }
+  ],
+  "refinement_meshes": [
+    [
+      6,
+      8,
+      8
+    ],
+    [
+      10,
+      16,
+      16
+    ],
+    [
+      16,
+      32,
+      32
+    ]
+  ],
+  "max_coarse_relative_error_non_equilibrium": 1.44e-7,
+  "first_cell_pmax2_n16": {
+    "Rphi": -2.762149360447387e-12,
+    "Qphi": -1.2277997619515968e-14,
+    "unsplit_parent48_Rphi": -2.7620687026457394e-12,
+    "collision_mean_energy_GeV": 0.004445096947960132,
+    "physical_DOS_mean_energy_GeV": 0.0064526963951956695,
+    "wrong_DOS_mean_energy_relative_Qbias": 0.45164641446261933,
+    "spurious_Q_GeV5": -5.545313601634911e-15
+  },
+  "local_focused_tests": "5 passed in 4.79 seconds",
+  "CI": "must check new commits separately",
+  "class_ready": false
+}
