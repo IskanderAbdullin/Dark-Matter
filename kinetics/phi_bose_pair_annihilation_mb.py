@@ -12,6 +12,7 @@ medium masses, SM/FRW backreaction. NOT a physical relic prediction.
 """
 import math
 import json
+from functools import lru_cache
 import numpy as np
 from scipy.integrate import quad
 from scipy.special import kv
@@ -76,7 +77,14 @@ def spin_averaged_amp2(s,c,y=Y):
     return max(0.,float(out))
 
 
-def cross_section(s,y=Y,nangle=36):
+@lru_cache(maxsize=24)
+def _log_angle_nodes(order):
+    # c=tanh(u) resolves narrow |cosθ|≈1 t/u exchange peaks.
+    z,w=leggauss(order)
+    return 14*z,14*w
+
+
+def cross_section(s,y=Y,nangle=96):
     """Total vacuum 2->2 cross section in GeV^-2.
 
     dσ/dcosθ = |M|²_av/(64πs) *pout/pin,
@@ -86,9 +94,11 @@ def cross_section(s,y=Y,nangle=36):
     E=math.sqrt(s)/2
     pin=math.sqrt(E*E-M2*M2)
     pout=math.sqrt(E*E-MPHI*MPHI)
-    x,w=leggauss(nangle)
-    amp=np.array([spin_averaged_amp2(s,float(c),y) for c in x])
-    return float(np.dot(w,amp)*pout/(64*math.pi*s*pin))
+    u,w=_log_angle_nodes(nangle)
+    c=np.tanh(u)
+    jac=1-c*c
+    amp=np.array([spin_averaged_amp2(s,float(ci),y) for ci in c])
+    return float(np.dot(w*jac,amp)*pout/(64*math.pi*s*pin))
 
 
 def nchi_MB(T):
@@ -97,7 +107,7 @@ def nchi_MB(T):
     return G_SPIN*M2*M2*T*kv(2,M2/T)/(2*math.pi**2)
 
 
-def thermal_forward_rate_MB(T,gstar,y=Y,nangle=36):
+def thermal_forward_rate_MB(T,gstar,y=Y,nangle=96):
     """Forward chi2-anti(chi2)->2phi MB per-chi rate, NOT net collision.
 
     Gondolo-Gelmini exact MB 2-particle reaction density:
@@ -113,7 +123,7 @@ def thermal_forward_rate_MB(T,gstar,y=Y,nangle=36):
         s=(T*u)**2
         return (2*T**5*u*u*(u*u-4*x*x)*cross_section(s,y,nangle)
                 *kv(1,u))
-    moment=quad(integrand,2*x,40.,epsabs=1e-34,
+    moment=quad(integrand,2*x,40.,epsabs=max(1e-300,1e-26*(y/Y)**4),
                 epsrel=3e-6,limit=140)[0]
     density=(G_SPIN**2*T/(32*math.pi**4))*moment
     n=nchi_MB(T)

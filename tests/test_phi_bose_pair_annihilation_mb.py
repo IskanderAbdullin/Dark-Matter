@@ -56,10 +56,10 @@ def test_invariant_trace_equals_independent_gamma_matrix_spin_sum():
 def test_identical_real_scalar_half_factor_and_angle_quadrature():
     for E,expected in ((.05,1.4462000244688534e-12),
                        (.1,1.2720976042160392e-12),
-                       (.5,8.584264566972495e-14),
-                       (1.,2.935381761088311e-14)):
-        coarse=cross_section(E*E,nangle=24)
-        fine=cross_section(E*E,nangle=64)
+                       (.5,8.584263024698827e-14),
+                       (1.,2.935350794935496e-14)):
+        coarse=cross_section(E*E,nangle=96)
+        fine=cross_section(E*E,nangle=128)
         assert fine>0
         assert math.isclose(fine,expected,rel_tol=1e-8)
         assert math.isclose(coarse,fine,rel_tol=2e-7)
@@ -81,16 +81,16 @@ def test_exact_Gondolo_Gelmini_MB_reaction_density_vs_separate_sigma_v_integral(
     assert math.isclose(gamma,ref["forward_pair_reaction_density_GeV4"],
                         rel_tol=5e-5)
     assert math.isclose(ref["forward_pair_rate_per_chi2_GeV"],
-                        1.0173602729290806e-15,rel_tol=4e-5)
+                        1.0308030420839305e-15,rel_tol=4e-5)
     assert math.isclose(ref["forward_pair_rate_over_H"],
-                        952.2002683187056,rel_tol=4e-5)
+                        964.7820534903847,rel_tol=4e-5)
 
 
 def test_MB_pair_forward_rate_exceeds_H_for_strong_y_but_not_weak_y():
-    for T,gstar,lo,hi in ((.1,17.25,6800,7100),
-                           (1.,61.75,900,1000),
-                           (100.,106.75,11,12)):
-        r=thermal_forward_rate_MB(T,gstar,nangle=36)
+    for T,gstar,lo,hi in ((.1,17.25,6900,7000),
+                           (1.,61.75,950,980),
+                           (100.,106.75,23,24)):
+        r=thermal_forward_rate_MB(T,gstar,nangle=96)
         assert lo<r["forward_pair_rate_over_H"]<hi
         assert r["forward_pair_reaction_density_GeV4"]>0
     # Scales y^4 in forward vacuum cross-section and thermal rate.
@@ -100,3 +100,21 @@ def test_MB_pair_forward_rate_exceeds_H_for_strong_y_but_not_weak_y():
                         strong["forward_pair_rate_over_H"],1e-24,
                         rel_tol=2e-9)
     assert feeble["forward_pair_rate_over_H"]<1e-18
+
+
+def test_raw_cosine_gauss_underresolves_ultrarelativistic_t_channel_peaks():
+    # Deliberately reproduce and reject the old 36-node plain-cos(theta)
+    # estimate: it undercounts 100-GeV scattering by ~46%, unlike
+    # logarithmically clustered hyperbolic-angle integration.
+    from numpy.polynomial.legendre import leggauss
+    z,w=leggauss(36)
+    for E,max_fraction in ((5.,.96),(100.,.60)):
+        s=E*E
+        pin=math.sqrt(s/4-M2*M2)
+        pout=math.sqrt(s/4-MPHI*MPHI)
+        old=sum(wi*spin_averaged_amp2(s,float(c)) for c,wi in zip(z,w))
+        old*=pout/(64*math.pi*s*pin)
+        new=cross_section(s,nangle=128)
+        assert old/new<max_fraction
+    assert math.isclose(cross_section(100.**2,nangle=96),
+                        cross_section(100.**2,nangle=128),rel_tol=1e-5)
