@@ -30,7 +30,9 @@ def parent_interval(daughter_energy,daughter_mass,parent_pmax):
     xi=math.asinh(KSTAR/daughter_mass)
     ymax=math.asinh(parent_pmax/M1)
     ylo=abs(xi-zeta)
-    if ylo>ymax:return None
+    if ylo>ymax:
+        if ylo-ymax>2e-13:return None
+        ylo=ymax  # floating roundoff at exact finite-parent support edge
     yhi=min(ymax,xi+zeta)
     return M1*math.sinh(ylo),M1*math.sinh(yhi)
 
