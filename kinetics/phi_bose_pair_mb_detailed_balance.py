@@ -80,7 +80,10 @@ def thermal_MB_chemical_source(T,mu_chi,mu_anti,mu_phi,y=Y,nangle=96):
     # Equal normalization by microscopic detailed balance; use
     # separately calculated forward/inverse for a numerical rate gate.
     gf=eq["gamma_forward_equilibrium_GeV4"]*zf
-    gr=eq["gamma_inverse_equilibrium_GeV4"]*zr
+    # A single shared physical invariant event measure must drive BOTH
+    # gain and loss. Separate inverse quadrature is a convergence CHECK,
+    # not a second source that can produce spurious thermal net flux.
+    gr=eq["gamma_forward_equilibrium_GeV4"]*zr
     net=gf-gr
     # Energy calculations use the same common physical forward/reverse
     # kernel; separately integrated normalized reverse γ is a check.
