@@ -1,0 +1,11 @@
+# 2026-11-24 — globally physical inverse massive daughter parent intervals
+
+General Lorentz boost rapidity theorem for any massive daughter d from χ1→χ2+φ: ξ=asinh(kstar/m_d), ζ=asinh(sqrt(E_d²−m_d²)/m_d), parent y=asinh(p/m1). On-shell support EXACTLY |ξ−ζ|≤y≤ξ+ζ, with finite hard parent upper yP. Therefore fixed daughter energy can have a true **finite upper parent momentum p_high<P**, and the global minimum over parent p≤P is m_d*cosh(max(0,ξ−yP)), not necessarily the antiparallel daughter energy at p=P.
+
+For mφ=86e−9 GeV, parent p to produce a rest φ is **55,813.9534883 GeV**. P=2/8/16 is strictly disconnected from scalar rest mode in isolated decay; P16 global minimum energy 149.9985475 keV. At P=60TeV scalar E=86.1eV is allowed only by parent p∈[53186.4833,58571.2236] GeV. At P=100TeV the antiparallel P-endpoint φ energy 1.01041666667e−7 GeV **overestimates** the true global floor mφ=8.6e−8. Using parent lower threshold alone at high P would add forbidden events, while using shell(P).kmin as global min would suppress valid near-rest events.
+
+Implemented general two-sided physical support [source](../../../../kinetics/phi_bose_invariant_parent_support.py) and corrected [conditional scalar mode](../../../../kinetics/phi_bose_scalar_fixed_bath_strong.py) to integrate the full finite parent interval and use correct global scalar floor. A one-ulp roundoff issue at exactly kmin(P) initially failed a regression; a tiny 2e−13 rapidity boundary tolerance identifies only the zero-width allowed boundary, no artificial finite support. Independent kinematic Lorentz checks [tests](../../../../tests/test_phi_bose_invariant_parent_support.py) and conditional scalar regressions 8/8 passed locally (3.05s). Public CI to verify.
+
+[Detailed derivation](../../../../kinetics/PHI-BOSE-GLOBAL-INVERSE-PARENT-SUPPORT-AUDIT-2026-11-24.md), [data](../../../../kinetics/results/phi-bose-global-inverse-parent-support-2026-11-24.json).
+
+Only Lorentz geometry beyond P=55.8TeV; no actual UV thermal source convergence or 86-eV condensate/Ω prediction. For parent thermal T~1GeV the relevant ~55TeV population is exponentially suppressed; do not confuse kinematic access with significant physical rate. NEXT_ACTION: globally supported full coupled three-species strong solver; all three weak Q/charge and entropy/positivity, physical spectra and proper SM/FRW.
