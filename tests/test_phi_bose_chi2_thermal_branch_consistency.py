@@ -39,3 +39,22 @@ def test_full_GG_thermal_pair_rate_consistent_with_NR_asymptotics_but_not_x3():
                         .888605994,rel_tol=5e-7)
     assert a["no_actual_relativistic_relic_prediction"] is True
     assert b["dark_phi_thermal_contact_not_proven"]
+
+
+def test_kinetic_massive_vector_electron_transport_crossing_not_solved_SM_gamma():
+    from kinetics.phi_bose_chi2_thermal_branch_consistency import (
+        conditional_electron_transport_crossing,
+        epsilon_needed_for_illustrative_electron_transport_proxy_equal_H,
+    )
+    root=conditional_electron_transport_crossing()
+    assert .5<root["conditional_transport_proxy_crossing_T_GeV"]<1.
+    assert root["ratio_below_cross_at_T_0p1GeV"]<.01
+    assert root["ratio_above_cross_at_T_2GeV"]>10
+    assert root["mchi2_over_crossing_T"]<.1
+    assert root["no_actual_physical_kinetic_decoupling_temperature"]
+    x8=epsilon_needed_for_illustrative_electron_transport_proxy_equal_H(8.)
+    assert x8["epsilon_for_proxy_over_H_1"]>.01
+    assert x8["epsilon_for_proxy_over_H_1"]>1000*x8["original_epsilon"]
+    assert x8["true_heat_relaxation_not_computed"]
+    print("VECTOR_ELASTIC_MB_PROXY_CROSSING",repr(root),flush=True)
+    print("VECTOR_EPSILON_REQUIRED_ONLY_TO_EQUAL_PROXY_H",repr(x8),flush=True)
