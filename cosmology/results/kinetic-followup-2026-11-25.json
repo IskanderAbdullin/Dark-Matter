@@ -1,0 +1,117 @@
+{
+  "source_commit": "d20429c995c4019f4afa98f6d92ecfff37eb6e01",
+  "early": {
+    "run_id": 45625981547,
+    "artifact_id": 15027508607,
+    "status": "success",
+    "k_range_Mpc_inv": [
+      0.003,
+      20
+    ],
+    "mesh_max_relative_drift": {
+      "z0": 0.002503619351877817,
+      "z5": 0.0025037791397569675
+    },
+    "rows": [
+      {
+        "n": 320,
+        "omega": 0.1198645053824897,
+        "z0": {
+          "half": null,
+          "P1": 0.8389999451986084,
+          "P10": 0.5924735339942598,
+          "partition_drift": 0.006871383133032483
+        },
+        "z5": {
+          "half": null,
+          "P1": 0.839090458055715,
+          "P10": 0.5970244322639573,
+          "partition_drift": 0.006871378049634003
+        }
+      },
+      {
+        "n": 480,
+        "omega": 0.11997126591740716,
+        "z0": {
+          "half": null,
+          "P1": 0.8409533372099062,
+          "P10": 0.593145909616087,
+          "partition_drift": 0.0084336490237914
+        },
+        "z5": {
+          "half": null,
+          "P1": 0.8410425651755611,
+          "P10": 0.597707840540395,
+          "partition_drift": 0.00843366475122509
+        }
+      }
+    ]
+  },
+  "hierarchy": {
+    "run_id": 45625885016,
+    "head": "55c9e31247b17092e852e80d7f5a109fd4b46b31",
+    "artifact_id": 15027749526,
+    "status": "success",
+    "k_range_Mpc_inv": [
+      0.003,
+      1.5
+    ],
+    "columns": [
+      "variant",
+      "z",
+      "half_power",
+      "P1"
+    ],
+    "rows": [
+      [
+        "default",
+        0,
+        0.689574133831623,
+        0.31053728654282226
+      ],
+      [
+        "default",
+        5,
+        0.6897315845230885,
+        0.3107046183885932
+      ],
+      [
+        "full_l30",
+        0,
+        0.7167988079684167,
+        0.36006212230441403
+      ],
+      [
+        "full_l30",
+        5,
+        0.7171970885664736,
+        0.36041096247116433
+      ],
+      [
+        "full_l45",
+        0,
+        0.7171923321137507,
+        0.36026257360638597
+      ],
+      [
+        "full_l45",
+        5,
+        0.7175808867275457,
+        0.36060683396069765
+      ]
+    ],
+    "checks": {
+      "z0": {
+        "half_shift": 0.0005487009937407139,
+        "max_pre_half_drift": 0.0005112962575386515,
+        "max_all_drift": 0.0006044225047227014
+      },
+      "z5": {
+        "half_shift": 0.000534850033175216,
+        "max_pre_half_drift": 0.000497992281519255,
+        "max_all_drift": 0.0005913366401144593
+      }
+    }
+  },
+  "limitations": "Early transfer uses default CLASS fluid approximation; its high-k precision and physical production remain unverified. Right-censored crossing at 20 is not a claim beyond range. Late full hierarchy validated only to 1.5 Mpc^-1. No observational likelihood."
+}

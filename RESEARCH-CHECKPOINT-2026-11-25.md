@@ -12,7 +12,7 @@ Canonical research goal is the physical chain from microphysics to production sp
 - [Verified corrected fixed-bath CLASS run 45625224041](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625224041): half-power at z=5 ~.6984 Mpc^-1, ratio at k=10 ~.0371, mesh/partition drift below .41%. No observation likelihood. [Retained numerical summary](cosmology/results/kinetic-psd-class-synchronous-45625224041.json).
 - [Two-mass geometry](kinetics/TWO-MASS-GEOMETRY-2026-11-25.md) verified reference integration but not evolution.
 - Corrected energy-closed [run 45625224293](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625224293) succeeded; half-power k=.68988 Mpc^-1 at z=5 on 480 cells, with mesh/partition drift <.5% before half. Full hierarchy changes power at k=1–1.5 substantially: [corrected results and limitation](cosmology/ENERGY-CLOSED-CLASS-CORRECTED-2026-11-25.md).
-- Earlier-onset [run 45625464842](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625464842) completed both kinetic and CLASS calculations but failed an incorrect final assertion requiring a half-crossing. Both reported crossings are null on .003–20 Mpc^-1; at z=5 the 480-cell P(k=10)/P_CDM=.597707, 320-cell .597024. Logs are retained; full transfer JSON was not written. Correct the right-censored guard and rerun; no final full-grid convergence claim yet.
+- Historical failed earlier-onset [run 45625464842](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625464842) completed both kinetic and CLASS calculations but failed an incorrect final assertion requiring a half-crossing. Both reported crossings are null on .003–20 Mpc^-1; at z=5 the 480-cell P(k=10)/P_CDM=.597707, 320-cell .597024. Logs are retained; full transfer JSON was not written. Correct the right-censored guard and rerun; no final full-grid convergence claim yet.
 
 ## Next actions (in order)
 
@@ -23,3 +23,8 @@ Canonical research goal is the physical chain from microphysics to production sp
 A new research program is not necessary. Continue this repository, branch main, preserve previous evidence. Computer use is optional and restricted to explicitly authorized project location; no personal machine resources required for this checkpoint.
 
 A [targeted full hierarchy convergence workflow](.github/workflows/class-hierarchy-precision.yml) is prepared to compare lmax=30/45 and 120/240 momentum nodes at k=.003–1.5 Mpc^-1, without the expensive and currently unnecessary high-k run. It saves raw comparison results even if the convergence threshold fails.
+
+
+## Follow-up: completed workflows
+
+[Verified follow-up](cosmology/KINETIC-CLASS-FOLLOWUP-2026-11-25.md): early x0=.005 has no half-power crossing up to 20 Mpc^-1 on two meshes (full-grid drift .251%); P/P_CDM=.597708 at k=10,z=5, conditional default fluid closure. Late x0=.1 full hierarchy yields k_half,P=.717581 Mpc^-1 (z=5), stable to .054% between two precision settings up to k=1.5. The default-fluid half power .68988 is superseded by this more accurate local calculation. Next: finite fermion mass/degeneracy and its physical cosmological fate; early full-hierarchy validation remains open.

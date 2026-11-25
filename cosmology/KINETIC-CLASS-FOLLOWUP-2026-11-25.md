@@ -1,0 +1,7 @@
+# Follow-up verified synchronous CLASS results (2026-11-25)
+
+The previous checkpoint's pending workflows have finished. [Early-onset run 45625981547](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625981547) passes the corrected right-censoring test: both independent kinetic meshes remain above P/P_CDM=.5 on all 125 sampled modes .003–20 Mpc^-1 at z=0 and 5. At z=5, the 480-cell spectrum gives P(1)/P_CDM=.841043 and P(10)/P_CDM=.597708, with full-grid mesh drift .251% and alternative partition/quadrature drift <.844% before k=10. This is a default-fluid-approximation result, not a constraint on Lyman-alpha observations or proof of viability.
+
+[Targeted hierarchy run 45625885016](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625885016) improves the late-onset result: with no fluid approximation, lmax=45 and 240 momentum nodes, k_half,P(z=5)=.717581 Mpc^-1 (default .689732), P(1)/P_CDM=.360607. Comparison with lmax=30, 120 nodes yields half shift .0535%, maximum drift .0592% over .003–1.5 Mpc^-1. This supersedes the default-fluid value around the half-power crossing; do not extrapolate the precision to higher k. The full arrays are in the workflow artifacts; selected verified outputs are preserved in [JSON](results/kinetic-followup-2026-11-25.json).
+
+Next: mass degeneracy, actual chemical/thermal rates, and fate of the fermion daughter. If it is massive and stable, the exact equal-number invariant would cause extra matter abundance; it must be treated explicitly rather than inserted as massless Delta Neff.
