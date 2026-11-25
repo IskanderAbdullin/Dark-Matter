@@ -15,7 +15,14 @@ from resolved_parent_bath import ResolvedParent
 from radiation_fixed_bath import omega_from_number
 from laine_portal_rates import PortalTable,make_models
 
-def run(row,table=None,xend=80.,rtol=2e-6):
+def handoff_passes(d):
+    return (d['x']>=1.5 and d['shape_TV']<1e-3 and
+            abs(d['parent_energy_relative_difference'])<1e-3 and
+            abs(d['relative_source_mismatch'])<.01 and
+            d['l1_source_mismatch_over_sum']<.005 and
+            abs(d['energy_matching_residual'])<1e-10)
+
+def run(row,table=None,xend=80.,rtol=2e-6,require_guard=False):
     spec=row['frozen_cell_spectrum'];f0=row['final'];x0=f0['x'];n=row['n']
     if not xend>x0: raise ValueError('Handoff requires unfinished production')
     kw=dict(n=n,qmin=spec['edges'][0],qmax=spec['edges'][-1],scalar_ratio=row['scalar_ratio'],
@@ -55,7 +62,10 @@ def run(row,table=None,xend=80.,rtol=2e-6):
         relative_source_mismatch=float((c-a)/max(abs(c),abs(a),1e-30)),
         l1_source_mismatch_over_sum=float(m.vol@np.abs(new[:n]-old[:n])/max(m.vol@(np.abs(new[:n])+np.abs(old[:n])),1e-30)),
         energy_matching_residual=float((th['rb']+th['rho']+m.ew@yd-target)/target))
+    diagnostics['accuracy_guard_passed']=handoff_passes(diagnostics)
     print('handoff',json.dumps(diagnostics),flush=True)
+    if require_guard and not diagnostics['accuracy_guard_passed']:
+        raise ValueError('Cross-kernel handoff accuracy guard failed')
     xs=sorted(set([x0]+[x for x in [.5,1,2,3,5,10,15,20,30,40,60,80] if x0<x<xend]+[xend]))
     atol=np.r_[np.full(n,1e-12),np.full(n,1e-15),1e-14,1e-13,1e-12,1e-13]
     sol=solve_ivp(m.rhs_full,[np.log(x0),np.log(xend)],y0,method='BDF',jac=m.jac_full,
@@ -91,12 +101,12 @@ def run(row,table=None,xend=80.,rtol=2e-6):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--input',nargs='+',required=True)
     p.add_argument('--table',default='.runtime/mesh_imPiR.dat');p.add_argument('--output',required=True)
-    p.add_argument('--xend',type=float,default=80.);a=p.parse_args()
+    p.add_argument('--xend',type=float,default=80.);p.add_argument('--require-guard',action='store_true');a=p.parse_args()
     out=[]
     for path in a.input:
         row=json.loads(Path(path).read_text())[0]
         table=PortalTable(a.table) if row.get('rate_source_sha256') else None
-        r=run(row,table,a.xend);out.append(r)
+        r=run(row,table,a.xend,require_guard=a.require_guard);out.append(r)
         print('final',path,json.dumps(r['final']),flush=True)
         Path(a.output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n')
 if __name__=='__main__':main()

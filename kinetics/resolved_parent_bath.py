@@ -207,15 +207,32 @@ class ResolvedParent(TwoMassBath):
         assert max(abs(r['ratio']-1) for r in gain)<.15,gain
         return checks
 
-    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF"):
+    def handoff_screen(self,x,y):
+        """Check equal-number thermal shape and actual spectral source on same grid."""
+        self.geometry(x);n=self.n
+        p=y[:n];f=y[n:2*n];g=y[2*n:self.dim];theta=np.exp(y[-4]);N=self.v1@g
+        if N<=1e-14:return dict(x=x,passed=False,reason='negligible parent')
+        xi=brentq(lambda u:self.v1@expit(u-self.e1/theta)-N,-750.,100.)
+        fit=expit(xi-self.e1/theta)
+        tv=float(.5*self.v1@np.abs(g-fit)/N)
+        energy=float((self.v1*self.e1)@g/((self.v1*self.e1)@fit)-1)
+        a=self.dark(y[:self.dim])[:n];b=self.dark(np.r_[p,f,fit])[:n]
+        l1=float(self.vol@np.abs(a-b)/max(self.vol@(np.abs(a)+np.abs(b)),1e-30))
+        net=float(abs(self.vol@(a-b))/max(abs(self.vol@a),abs(self.vol@b),1e-30))
+        # This is a switch heuristic, not a global error bound. A separate
+        # comparison to the number-closure kernel is required at handoff.
+        return dict(x=x,shape_TV=tv,energy_relative_difference=energy,spectral_source_L1=l1,
+            net_source_relative_difference=net,passed=bool(x>=1.5 and tv<1e-3 and abs(energy)<1e-3 and l1<.005 and net<.01))
+
+    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF",auto_handoff=False):
         check=self.validate();print('checks',json.dumps(check),flush=True)
         self.geometry(x0);ini=expit(-self.e1) if initial_parent=='thermal' else np.zeros(self.n1)
         y0=np.r_[np.zeros(2*self.n),ini,0.,0.,0.,0.]
         init=float(self.v1@ini);rho0=float(self.rad0+(self.v1*self.e1)@ini)
-        ts=sorted(set([x0]+[x for x in [.02,.03,.05,.075,.1,.125,.15,.175,.2,.3,.5,1,2,3,5,10,15,20,30,40,60,80,100,120] if x0<x<xend]+[xend]))
+        ts=sorted(set([x0]+[x for x in [.02,.03,.05,.075,.1,.125,.15,.175,.2,.3,.5,1,1.5,2,2.5,3,4,5,6,8,10,15,20,30,40,60,80,100,120] if x0<x<xend]+[xend]))
         atol=np.r_[np.full(self.n,1e-12),np.full(self.n+self.n1,fermion_atol),1e-13,1e-12,1e-13,1e-13]
         start=time.monotonic();last_print=start
-        zlist=np.log(ts);ys=[y0];actual_z=[zlist[0]];k=1;steps=0;message='Integration complete.'
+        zlist=np.log(ts);ys=[y0];actual_z=[zlist[0]];k=1;steps=0;message='Integration complete.';guards=[];handoff_reached=False;consecutive=0
         solver={"BDF":BDF,"Radau":Radau}[method](self.rhs,zlist[0],y0,zlist[-1],jac=self.jac,rtol=rtol,atol=atol,max_step=.035)
         while solver.status=='running':
             err=solver.step();steps+=1
@@ -229,10 +246,18 @@ class ResolvedParent(TwoMassBath):
                 interp=solver.dense_output()
                 while k<len(zlist) and solver.t>=zlist[k]:
                     ys.append(interp(zlist[k]));actual_z.append(zlist[k]);k+=1
+                    if auto_handoff and np.exp(actual_z[-1])>=1.5 and k<len(zlist):
+                        screen=self.handoff_screen(float(np.exp(actual_z[-1])),ys[-1])
+                        guards.append(screen);print('guard',json.dumps(screen),flush=True)
+                        consecutive=consecutive+1 if screen['passed'] else 0
+                        if consecutive>=2:
+                            message='Two consecutive momentum-closure guards passed.'
+                            handoff_reached=True;break
+            if handoff_reached:break
             if wall_limit>0 and now-start>=wall_limit and solver.status=='running':
                 message='Explicit wall-clock budget reached.';break
         success=solver.status=='finished'
-        if not success and solver.t>actual_z[-1]:
+        if not success and not handoff_reached and solver.t>actual_z[-1]:
             actual_z.append(solver.t);ys.append(solver.y.copy())
         sol=SimpleNamespace(t=np.array(actual_z),y=np.array(ys).T,success=success,message=message,
             nfev=solver.nfev,njev=solver.njev)
@@ -269,7 +294,7 @@ class ResolvedParent(TwoMassBath):
         out=dict(n=self.n,nparent=self.n1,x0=x0,xend=float(np.exp(sol.t[-1])),requested_xend=xend,kappa=self.kappa,kappa2=self.kappa2,
             kappa_sm1=self.kappa_sm1,gamma=self.gamma,scatter=self.scatter,scalar_ratio=self.scalar_ratio,fermion_ratio=self.fermion_ratio,
             parent_GeV=parent_gev,g_bath=self.g_bath,g_fermion=self.g_fermion,rtol=rtol,initial_parent=initial_parent,initial_mother_number=init,
-            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,success=bool(sol.success),message=sol.message,
+            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,success=bool(sol.success),message=sol.message,handoff_reached=handoff_reached,handoff_guard_checks=guards,
             max_dropped_equilibrium_fraction=self.max_dropped_equilibrium_fraction,max_projection_energy_error=self.max_projection_energy_error,
             history=history,final=history[-1] if history else None)
         if keep_psd:
@@ -291,17 +316,17 @@ def main():
     p.add_argument('--qmin',type=float,default=1e-8);p.add_argument('--rtol',type=float,default=2e-6)
     p.add_argument('--initial-parent',choices=['empty','thermal'],default='empty');p.add_argument('--no-scatter',action='store_true')
     p.add_argument('--parent-floor',type=float,default=0.);p.add_argument('--wall-limit',type=float,default=0.)
-    p.add_argument('--fermion-atol',type=float,default=1e-15);p.add_argument('--method',choices=['BDF','Radau'],default='BDF')
+    p.add_argument('--fermion-atol',type=float,default=1e-15);p.add_argument('--method',choices=['BDF','Radau'],default='BDF');p.add_argument('--auto-handoff',action='store_true')
     p.add_argument('--test-only',action='store_true');p.add_argument('--keep-psd',action='store_true');p.add_argument('--output')
     a=p.parse_args()
     m=ResolvedParent(n=a.n,nparent=a.nparent,g_fermion=a.g_fermion,kappa=a.kappa,kappa2=a.kappa2,kappa_sm1=a.kappa_sm1,
         gamma=a.gamma,scatter=not a.no_scatter,parent_floor=a.parent_floor,scalar_ratio=86./(a.parent_gev*1e9),fermion_ratio=a.fermion_ratio,qmin=a.qmin)
     if a.test_only:print(json.dumps(m.validate(),indent=2));return
     assert a.output
-    r=m.evolve(a.x0,a.xend,a.rtol,a.initial_parent,a.keep_psd,a.parent_gev,a.wall_limit,a.fermion_atol,a.method)
+    r=m.evolve(a.x0,a.xend,a.rtol,a.initial_parent,a.keep_psd,a.parent_gev,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff)
     Path(a.output).write_text(json.dumps([r],indent=2,allow_nan=False)+'\n')
     print('final',json.dumps({k:r[k] for k in ('n','nparent','success','message','nfev','max_dropped_equilibrium_fraction','final')}),flush=True)
-    if not r['success']:raise RuntimeError(r['message'])
+    if not r['success'] and not r['handoff_reached']:raise RuntimeError(r['message'])
 
 
 if __name__=='__main__':main()

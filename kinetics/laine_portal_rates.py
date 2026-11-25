@@ -131,21 +131,22 @@ def main():
     p.add_argument('--n',type=int,default=120);p.add_argument('--nparent',type=int,default=120);p.add_argument('--g-fermion',type=int,choices=[2,4],default=4)
     p.add_argument('--kappa',type=float,default=.005278180162600994)
     p.add_argument('--kappa-sm1',type=float,default=47.);p.add_argument('--kappa2',type=float,default=.03)
+    p.add_argument('--fermion-ratio',type=float,default=.9)
     p.add_argument('--x0',type=float,default=.1);p.add_argument('--xend',type=float,default=80.)
     p.add_argument('--wall-limit',type=float,default=0.);p.add_argument('--rtol',type=float,default=2e-6)
     p.add_argument('--fermion-atol',type=float,default=1e-15);p.add_argument('--parent-floor',type=float,default=1e-15)
-    p.add_argument('--method',choices=['BDF','Radau'],default='BDF')
+    p.add_argument('--method',choices=['BDF','Radau'],default='BDF');p.add_argument('--auto-handoff',action='store_true')
     a=p.parse_args();table=PortalTable(a.table)
     if a.mode=='screen':
         result=screen(table)
     else:
         C,R=make_models()
-        kwargs=dict(table=table,n=a.n,g_fermion=a.g_fermion,scalar_ratio=1e-12,fermion_ratio=.9,kappa=a.kappa,kappa2=a.kappa2,
+        kwargs=dict(table=table,n=a.n,g_fermion=a.g_fermion,scalar_ratio=1e-12,fermion_ratio=a.fermion_ratio,kappa=a.kappa,kappa2=a.kappa2,
                     kappa_sm1=a.kappa_sm1,qmin=1e-8)
         if a.mode=='closure':
             m=C(**kwargs);r=m.run(a.x0,a.xend,a.rtol,1e-15,True,86000.,'empty')
         else:
-            m=R(nparent=a.nparent,parent_floor=a.parent_floor,**kwargs);r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method)
+            m=R(nparent=a.nparent,parent_floor=a.parent_floor,**kwargs);r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff)
         r['rate_source_sha256']=table.sha
         result=[r]
         print('final',json.dumps(r['final']),flush=True)

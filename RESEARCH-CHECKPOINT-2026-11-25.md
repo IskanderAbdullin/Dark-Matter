@@ -86,3 +86,7 @@ A fractional-stoichiometry finite-volume collision operator interpolates the par
 ## Published portal rates and momentum-resolved evolution
 
 See kinetics/LAINE-AND-RESOLVED-PARENT-2026-11-25.md and kinetics/results/laine-and-resolved-parent-2026-11-25.json. Actual Ghisoiu-Laine high-T table changes g=4 fixed-width Omega=.115007 (320), retune .006 gives .119965 (240), while g=2 fixed-width underproduces .038792. Fully resolved n=80 reaches x=80 with .112865; strict n=120 budget-limited at x=7.758, late energy-matched hybrid to x=80 gives .115815. Early hybrid source mismatch 80% is a negative result; late handoff mismatch 0.39%. Fine and two-spin scan pending. These are conditional rates/kinetic models, not physical viability.
+
+## Spin scan, late-handoff refinement and identical-pair interpretation
+
+See kinetics/SPIN-AND-HANDOFF-2026-11-25.md. g=2 width scan up to .12 gives at most .076764 for tested single pair. g=4 exactly equals two independent identical Majorana pairs in the symmetric occupation subspace (numerical operator test passes), but flavor/neutrino mass and dark thermal self-energies remain unresolved. New table + explicit parent hybrid gives .098908 at old width; n=320 number closure at .006 gives .120218, and n=240 CLASS power ratio .984315 at k=10,z=5. Older-rate hybrid n=200 .117509; same-grid two late switches agree at 1.6e-5 relative. Adaptive two-check handoff and separate cross-kernel guard added; retuning pending. Existing and initial new tests 29 passed, extended targeted 6 passed.
