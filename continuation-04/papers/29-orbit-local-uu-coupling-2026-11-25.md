@@ -1,0 +1,21 @@
+# 29. Conservative nonlinear orbit/local UU coupling (bounded harmonic control)
+2026-11-25 UTC, following paper 28. Not a self-gravitating or open halo calculation.
+
+## Transfer lemma
+Let V_i be orbit-cell phase volume, W_li>=0 its overlap with local collision cell l, sum_l W_li=V_i. Define alpha_li=W_li/sum_j W_lj, F_l=sum_i alpha_li f_i. Overlaps preserve exact total single-particle energy e, so e_i=e_l on nonzero W_li. Expand every reversible local quartet into all four orbit-leg combinations with positive weights w alpha_ai alpha_bj alpha_ck alpha_dl. The full nonlinear Bose gain/loss is an independent product of four occupation or stimulation factors. Conditioning on a single orbit leg gives an affine rate, d(V_i f_i)/dt=sum_l alpha_li [G_l(1+f_i)-L_l f_i], where G_l,L_l>=0 are evaluated with means F of the other three legs. This factorization exactly implements the expanded event model, not naive deposition of C(F) through alpha. It is positivity preserving as an ODE, conserves N and e by event symmetry, has the Bose entropy H theorem, and BE(e) is stationary. Local projected momentum ledger is exact; physical orbit-cell radial momentum is not an exact event invariant. Indeed with independently sampled legs the variance of their signed p sum is the sum of four conditional variances, so no independent nondegenerate overlap can guarantee exact physical p. Conditioning and redistributing only collision rates avoids repeated full-f projection at zero collisions.
+
+Brute force 16-event independent test: max source error 1.72e-15; entropy production 2.026739582201209 vs event entropy 2.0267395822012095; N/E residuals <=3.2e-15. This is a discrete theorem/reference, not continuum convergence.
+
+## Oscillator prototype
+H=e=q²+r²/2, L=2r²(q²-p²), r²=e-sqrt(e²-L)cos(2πθ), period π. Exact phase volume per orbit ds dL T/(8√2) dθ (use de instead of ds). Radial shells in r²/2 align with e nodes and are subdivided. Integrate exact phase-shell intersections, sample angular hats with p rescaled to the local midpoint kinetic energy (μ held fixed); this is an approximation. Local quartets use paper 27 continuous geometry and joint rounding, no IPF; omit events with unsupported cells (lost weight recorded). Full nonlinear local source via factorization, positivity/entropy-checked SSPRK2 collision substep, Strang split frozen periodic streaming. Initial f=BE(e; β=1, μ=-.5)*(1+.3sin(2πθ))*(1+.15cos(2πθ)); Emax=6, finite energy cap, t=.2, dt=.02, Sobol m=7.
+
+|NE,K,nL,nphase,radial subdivisions|phase states|local volume L1 error|p-map rms|initial physical collision p derivative|entropy rate|weighted L1 difference from separately streamed solution|
+|---|---:|---:|---:|---:|---:|---:|
+|6,4,8,32,1|1536|.0373023|.0559903|-.00213930|.00196122|.00202759|
+|6,8,16,64,2|6144|.0200912|.0295064|-.000581509|.00103596|.00131967|
+|6,16,32,128,4|24576|.0179647|.0154902|-.000150547|.000737807|.00104452|
+|12,8,16,64,2|12288|.0321833|.0123277|-.000381753|.000762841|.000987032|
+
+All runs: N,E drift ~roundoff, projected local p ledger <=6.6e-18, BE residual <=3.3e-15, no rejected collision steps, f positive and collision entropy nondecreasing. Missing local states 0/2/2/6, omitted event weight <=7.91e-6. Overlap column ledger <=4.5e-16. Physical p defect falls ~14x on fixed NE=6 but does not vanish. The difference from separately streamed solution includes the difference of two half remaps vs one full remap and cannot be interpreted entirely as a physical collision effect. Collision entropy is evaluated separately, streaming numerical entropy also monitored. No convergence of collision rates or spatial response claimed; refine angular, orbit and energy resolution independently, and preserve actual local momentum before quantitative halo coupling.
+
+Reproduce: python lowered_bose_orbit_collision.py --NE 6 --K 16 --nL 32 --nphase 128 --radsub 4; repeat other rows. Local calculations only; remote CI unverified. Next: isolate the nonphysical overlap-induced momentum/entropy relaxation using exact local moving BE and collisional dipole controls; consider correlated conservative mapping or spatial finite volume if defects persist. Unbound and Poisson stages remain open.

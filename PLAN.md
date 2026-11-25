@@ -71,3 +71,5 @@ Paper 26: [well-balanced spherical streaming](continuation-04/papers/26-well-bal
 - Paper 27: exact axisymmetric elliptic UU kernel, negative cutcell singular quadrature result, and positive conservative rounded geometry projection. Refined local shear still 6.6% above continuum; next compatible spatial transport and angular support refinement.
 
 Paper 28: [orbit-invariant phase remap](continuation-04/papers/28-orbit-invariant-phase-remap-2026-11-25.md) reduces weak-binding transient error to 0.000765% for one step, 0.0204% for 100 remaps; bound frozen potential only. Next collision/orbit transfer without artificial projection diffusion.
+
+Paper 29: [orbit/local nonlinear collision coupling](continuation-04/papers/29-orbit-local-uu-coupling-2026-11-25.md) exact expanded-event factorization with discrete entropy theorem and N/E conservation, tested in harmonic trap; projected p conservation does not imply physical p conservation. Refine and isolate overlap momentum defect before physical halo.
