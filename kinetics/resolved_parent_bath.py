@@ -22,7 +22,7 @@ from yukawa_rate_bath import rate_mapping
 
 class ResolvedParent(TwoMassBath):
     def __init__(self,n=120,nparent=120,kappa_sm1=47.,kappa2=.03,gamma=.01,
-                 scatter=True,parent_floor=0.,**kwargs):
+                 scatter=True,parent_floor=0.,parent_grid="legacy",**kwargs):
         super().__init__(n=n,**kwargs)
         assert nparent>=32 and self.fermion_ratio>0 and kappa_sm1>=0 and kappa2>=0
         self.n1=nparent;self.dim=2*n+nparent
@@ -30,10 +30,23 @@ class ResolvedParent(TwoMassBath):
         assert 0<=parent_floor<=1e-8
         self.parent_floor=parent_floor
         # Parent momentum support covers both daughter momenta, up to 2*qmax.
-        nl=max(4,nparent//8);nm=3*nparent//4;nh=nparent-nl-nm
+        self.parent_grid=parent_grid
         qmax=max(90.,2*self.edges[-1]+10.)
-        self.parent_edges=np.r_[0.,np.geomspace(1e-4,.2,nl)[0:],
-            np.linspace(.2,24.,nm+1)[1:],np.geomspace(24.,qmax,nh+1)[1:]]
+        if parent_grid=='legacy':
+            nl=max(4,nparent//8);nm=3*nparent//4;nh=nparent-nl-nm
+            self.parent_edges=np.r_[0.,np.geomspace(1e-4,.2,nl)[0:],
+                np.linspace(.2,24.,nm+1)[1:],np.geomspace(24.,qmax,nh+1)[1:]]
+        elif parent_grid=='uniform':
+            nm=7*nparent//8;nh=nparent-nm
+            self.parent_edges=np.r_[np.linspace(0.,24.,nm+1),
+                np.geomspace(24.,qmax,nh+1)[1:]]
+        elif parent_grid=='balanced':
+            # FD parent distributions are smooth near rest; do not introduce
+            # q~1e-4 bins whose tiny volume amplifies partial-cell aliasing.
+            nl=nparent//4;nm=5*nparent//8;nh=nparent-nl-nm
+            self.parent_edges=np.r_[np.linspace(0.,2.,nl+1),
+                np.linspace(2.,24.,nm+1)[1:],np.geomspace(24.,qmax,nh+1)[1:]]
+        else:raise ValueError('Unknown parent grid')
         assert len(self.parent_edges)==nparent+1
         l,h=self.parent_edges[:-1],self.parent_edges[1:]
         self.v1=self.g_fermion*(h-l)*(h*h+h*l+l*l)/(6*np.pi**2)
@@ -224,7 +237,7 @@ class ResolvedParent(TwoMassBath):
         return dict(x=x,shape_TV=tv,energy_relative_difference=energy,spectral_source_L1=l1,
             net_source_relative_difference=net,passed=bool(x>=1.5 and tv<1e-3 and abs(energy)<1e-3 and l1<.005 and net<.01))
 
-    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF",auto_handoff=False):
+    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF",auto_handoff=False,step_guard=False,max_step=.035):
         check=self.validate();print('checks',json.dumps(check),flush=True)
         self.geometry(x0);ini=expit(-self.e1) if initial_parent=='thermal' else np.zeros(self.n1)
         y0=np.r_[np.zeros(2*self.n),ini,0.,0.,0.,0.]
@@ -233,11 +246,39 @@ class ResolvedParent(TwoMassBath):
         atol=np.r_[np.full(self.n,1e-12),np.full(self.n+self.n1,fermion_atol),1e-13,1e-12,1e-13,1e-13]
         start=time.monotonic();last_print=start
         zlist=np.log(ts);ys=[y0];actual_z=[zlist[0]];k=1;steps=0;message='Integration complete.';guards=[];handoff_reached=False;consecutive=0
-        solver={"BDF":BDF,"Radau":Radau}[method](self.rhs,zlist[0],y0,zlist[-1],jac=self.jac,rtol=rtol,atol=atol,max_step=.035)
+        solver_class={"BDF":BDF,"Radau":Radau}[method]
+        solver=solver_class(self.rhs,zlist[0],y0,zlist[-1],jac=self.jac,rtol=rtol,atol=atol,max_step=max_step)
+        rejects=[];worst_min=0.;worst_max=0.;old_nfev=old_njev=0
+        def violation(y):
+            d=y[:self.dim];f=d[self.n:]
+            return max(-float(np.min(d)),float(np.max(f))-1.)
         while solver.status=='running':
+            tprev=solver.t;yprev=solver.y.copy()
             err=solver.step();steps+=1
             if solver.status=='failed':
                 message=str(err);break
+            mn=float(np.min(solver.y[:self.dim]));mx=float(np.max(solver.y[self.n:self.dim]))
+            worst_min=min(worst_min,mn);worst_max=max(worst_max,mx)
+            if violation(solver.y)>1e-7:
+                idx=int(np.argmin(solver.y[:self.dim]))
+                ev=dict(x=float(np.exp(solver.t)),previous_x=float(np.exp(tprev)),index=idx,
+                    species='phi' if idx<self.n else ('chi2' if idx<2*self.n else 'parent'),
+                    min_occupation=mn,max_fermion=mx,previous_value=float(yprev[idx]),step=solver.t-tprev)
+                if len(rejects)<20:rejects.append(ev);print('invalid_step',json.dumps(ev),flush=True)
+                if not step_guard:
+                    message='Invalid accepted occupation (diagnostic stop).'
+                    # Return previous VALID accepted state rather than invalid endpoint.
+                    solver.t=tprev;solver.y=yprev;solver.status='failed';break
+                dh=(solver.t-tprev)/4
+                if len(rejects)>=20 or dh<1e-14:
+                    message='Positivity restart budget reached.'
+                    solver.t=tprev;solver.y=yprev;solver.status='failed';break
+                # Restart the adaptive solver from the last valid state; never
+                # clip occupations or change conserved quantities.
+                old_nfev+=solver.nfev;old_njev+=solver.njev
+                solver=solver_class(self.rhs,tprev,yprev,zlist[-1],jac=self.jac,
+                    rtol=rtol,atol=atol,max_step=max_step,first_step=min(dh,zlist[-1]-tprev))
+                continue
             now=time.monotonic()
             if now-last_print>=15. or (k<len(zlist) and solver.t>=zlist[k]):
                 print('progress',json.dumps(dict(x=float(np.exp(solver.t)),steps=steps,nfev=solver.nfev,
@@ -260,7 +301,7 @@ class ResolvedParent(TwoMassBath):
         if not success and not handoff_reached and solver.t>actual_z[-1]:
             actual_z.append(solver.t);ys.append(solver.y.copy())
         sol=SimpleNamespace(t=np.array(actual_z),y=np.array(ys).T,success=success,message=message,
-            nfev=solver.nfev,njev=solver.njev)
+            nfev=old_nfev+solver.nfev,njev=old_njev+solver.njev)
         history=[]
         for x,y in zip(np.exp(sol.t[1:]),sol.y.T[1:]):
             self.geometry(x);p=y[:self.n];f=y[self.n:2*self.n];g=y[2*self.n:self.dim]
@@ -294,7 +335,7 @@ class ResolvedParent(TwoMassBath):
         out=dict(n=self.n,nparent=self.n1,x0=x0,xend=float(np.exp(sol.t[-1])),requested_xend=xend,kappa=self.kappa,kappa2=self.kappa2,
             kappa_sm1=self.kappa_sm1,gamma=self.gamma,scatter=self.scatter,scalar_ratio=self.scalar_ratio,fermion_ratio=self.fermion_ratio,
             parent_GeV=parent_gev,g_bath=self.g_bath,g_fermion=self.g_fermion,rtol=rtol,initial_parent=initial_parent,initial_mother_number=init,
-            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,success=bool(sol.success),message=sol.message,handoff_reached=handoff_reached,handoff_guard_checks=guards,
+            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,parent_grid=self.parent_grid,step_guard=step_guard,max_step=max_step,invalid_accepted_steps=rejects,worst_trial_min=worst_min,worst_trial_max_fermion=worst_max,success=bool(sol.success),message=sol.message,handoff_reached=handoff_reached,handoff_guard_checks=guards,
             max_dropped_equilibrium_fraction=self.max_dropped_equilibrium_fraction,max_projection_energy_error=self.max_projection_energy_error,
             history=history,final=history[-1] if history else None)
         if keep_psd:
@@ -315,15 +356,16 @@ def main():
     p.add_argument('--x0',type=float,default=.1);p.add_argument('--xend',type=float,default=80.)
     p.add_argument('--qmin',type=float,default=1e-8);p.add_argument('--rtol',type=float,default=2e-6)
     p.add_argument('--initial-parent',choices=['empty','thermal'],default='empty');p.add_argument('--no-scatter',action='store_true')
+    p.add_argument('--parent-grid',choices=['legacy','uniform','balanced'],default='legacy');p.add_argument('--step-guard',action='store_true');p.add_argument('--max-step',type=float,default=.035)
     p.add_argument('--parent-floor',type=float,default=0.);p.add_argument('--wall-limit',type=float,default=0.)
     p.add_argument('--fermion-atol',type=float,default=1e-15);p.add_argument('--method',choices=['BDF','Radau'],default='BDF');p.add_argument('--auto-handoff',action='store_true')
     p.add_argument('--test-only',action='store_true');p.add_argument('--keep-psd',action='store_true');p.add_argument('--output')
     a=p.parse_args()
     m=ResolvedParent(n=a.n,nparent=a.nparent,g_fermion=a.g_fermion,kappa=a.kappa,kappa2=a.kappa2,kappa_sm1=a.kappa_sm1,
-        gamma=a.gamma,scatter=not a.no_scatter,parent_floor=a.parent_floor,scalar_ratio=86./(a.parent_gev*1e9),fermion_ratio=a.fermion_ratio,qmin=a.qmin)
+        gamma=a.gamma,scatter=not a.no_scatter,parent_floor=a.parent_floor,parent_grid=a.parent_grid,scalar_ratio=86./(a.parent_gev*1e9),fermion_ratio=a.fermion_ratio,qmin=a.qmin)
     if a.test_only:print(json.dumps(m.validate(),indent=2));return
     assert a.output
-    r=m.evolve(a.x0,a.xend,a.rtol,a.initial_parent,a.keep_psd,a.parent_gev,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff)
+    r=m.evolve(a.x0,a.xend,a.rtol,a.initial_parent,a.keep_psd,a.parent_gev,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff,a.step_guard,a.max_step)
     Path(a.output).write_text(json.dumps([r],indent=2,allow_nan=False)+'\n')
     print('final',json.dumps({k:r[k] for k in ('n','nparent','success','message','nfev','max_dropped_equilibrium_fraction','final')}),flush=True)
     if not r['success'] and not r['handoff_reached']:raise RuntimeError(r['message'])

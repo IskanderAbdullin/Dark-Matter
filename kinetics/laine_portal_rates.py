@@ -134,6 +134,7 @@ def main():
     p.add_argument('--fermion-ratio',type=float,default=.9)
     p.add_argument('--x0',type=float,default=.1);p.add_argument('--xend',type=float,default=80.)
     p.add_argument('--wall-limit',type=float,default=0.);p.add_argument('--rtol',type=float,default=2e-6)
+    p.add_argument('--parent-grid',choices=['legacy','uniform','balanced'],default='legacy');p.add_argument('--step-guard',action='store_true');p.add_argument('--max-step',type=float,default=.035)
     p.add_argument('--fermion-atol',type=float,default=1e-15);p.add_argument('--parent-floor',type=float,default=1e-15)
     p.add_argument('--method',choices=['BDF','Radau'],default='BDF');p.add_argument('--auto-handoff',action='store_true')
     a=p.parse_args();table=PortalTable(a.table)
@@ -146,7 +147,7 @@ def main():
         if a.mode=='closure':
             m=C(**kwargs);r=m.run(a.x0,a.xend,a.rtol,1e-15,True,86000.,'empty')
         else:
-            m=R(nparent=a.nparent,parent_floor=a.parent_floor,**kwargs);r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff)
+            m=R(nparent=a.nparent,parent_floor=a.parent_floor,parent_grid=a.parent_grid,**kwargs);r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff,a.step_guard,a.max_step)
         r['rate_source_sha256']=table.sha
         result=[r]
         print('final',json.dumps(r['final']),flush=True)

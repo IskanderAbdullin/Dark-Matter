@@ -94,3 +94,7 @@ See kinetics/SPIN-AND-HANDOFF-2026-11-25.md. g=2 width scan up to .12 gives at m
 ## Final width/transfer checkpoint
 
 [Final evidence and next priorities](kinetics/FINAL-AUTONOMOUS-RUN-2026-11-25.md). Published-rate closure CLASS converged on two meshes, but new resolved width trials rejected: positivity failure at 0.006 and 28.22% handoff mismatch at 0.012. No accepted full-kinetic abundance fit.
+
+## Parent-shell aliasing and independent angular quadrature
+
+See kinetics/PARENT-GRID-AND-ANGLE-2026-11-25.md and raw results. Found spurious legacy parent-shell loads up to 12543 times physical width; guarded BDF reproduces and rejects accepted negative parent step. Uniform parent grid reduces max load ratio to 3.60. Independent parent-angle kernel with separate heavy grids reaches x=80 quickly; at kappa=.006 n120/240 Omega=.116493/.115436, unlike old shared-grid hybrid .102325/.104607. Analytical spontaneous spectrum favors separated rectangle kernel (n480 peak bias .01565%) over angle (.3385%). Need full comparison at independent meshes and widths; no accepted physical fit yet.

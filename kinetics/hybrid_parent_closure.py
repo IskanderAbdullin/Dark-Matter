@@ -33,7 +33,7 @@ def run(row,table=None,xend=80.,rtol=2e-6,require_guard=False):
         if table is None: raise ValueError('Original rate table required')
         C,R=make_models();kw.update(table=table,parent_GeV=row['parent_GeV'])
     else:C,R=YukawaRateBath,ResolvedParent
-    m=C(**kw);r=R(nparent=row['nparent'],parent_floor=row['parent_floor'],**kw)
+    m=C(**kw);r=R(nparent=row['nparent'],parent_floor=row['parent_floor'],parent_grid=row.get('parent_grid','legacy'),**kw)
     m.geometry(x0);r.geometry(x0)
     p=np.asarray(spec['f_phi']);f=np.asarray(spec['f_chi2']);g=np.asarray(spec['f_parent'])
     assert np.allclose(m.edges,spec['edges'],rtol=1e-12,atol=0)
