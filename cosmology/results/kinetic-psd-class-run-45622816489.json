@@ -1,0 +1,40 @@
+{
+  "run_id": 45622816489,
+  "head_sha": "d2ec74adc922b3488cde9a3511c7667e0e7774d8",
+  "artifact_id": 15027460381,
+  "status": "success",
+  "control": "equal-density CDM with the same additional stable chi2 radiation",
+  "columns": [
+    "z",
+    "half_power_320_Mpc_inv",
+    "half_power_480_Mpc_inv",
+    "relative_half_shift",
+    "mesh_drift_before_half",
+    "partition_drift_before_half",
+    "P_ratio_k1_480",
+    "P_ratio_k10_480"
+  ],
+  "rows": [
+    [
+      0,
+      2.4637334840126686,
+      2.467414372974446,
+      0.0014918000811271481,
+      0.014893650229488964,
+      0.016590446800870406,
+      1.3753244344789723,
+      0.09631062145269968
+    ],
+    [
+      5,
+      2.4660908712466787,
+      2.4697692066124324,
+      0.0014893437637434337,
+      0.011504980191360481,
+      0.015736836593937875,
+      1.3738238703278078,
+      0.10001184979675763
+    ]
+  ],
+  "caveat": "Intermediate-scale enhancement is surprising; do not interpret as a physical prediction until independent perturbation/initial-condition controls. Full output in workflow artifact."
+}
