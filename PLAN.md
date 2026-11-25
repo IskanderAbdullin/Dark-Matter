@@ -91,3 +91,5 @@ Paper 36: [exact discrete energy and split work ledger](continuation-04/papers/3
 Paper 37: [energy-closure sensitivity control](continuation-04/papers/37-energy-closure-sensitivity-control-2026-11-25.md) closes discrete energy by positive conservative internal-face repair; small distribution change but imposed correction, not physical solver. M2 nonlinear run timed out. Next local work quadrature.
 
 Paper 38: [reversal symmetry and local orbit work](continuation-04/papers/38-reversal-and-local-orbit-work-flux-2026-11-25.md) reduces coarse energy residual to 1.33e-7 without global fitting; still ~12% field term. Next fine and adjoint-current controls.
+
+Paper 39: [discrete adjoint current work](continuation-04/papers/39-discrete-adjoint-current-work-2026-11-25.md) reduces coarse energy error to 1.19e-8 (~1% of field term) without imposed projection. Next temporal and binding convergence; no physical claim.
