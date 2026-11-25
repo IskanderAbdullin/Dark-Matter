@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-25T10:57:24Z",
+  "updated_utc": "2026-11-25T11:00:26Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -109,7 +109,7 @@
   "stop_reason": "Stage checkpoint; active run continues",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Evaluate on-shell decay source in physically cold q window, sign of Bose-stimulated gain with actual fermion occupancy; prioritize viable low-entropy initial conditions and number multiplier before full cosmological inference.",
-  "last_checkpoint_git_sha": "d10947c188fc64fcdbb61a6de5846640339e74a0",
+  "last_checkpoint_git_sha": "259765c47cf3ecaf276ea8ad9e28df2e4943e266",
   "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo. Separate conditional SM/dark comoving entropy split after decoupling: entropy identity with g*S dark initial 8 relativistic, more accurately 7.991670795 at T0.688GeV using independent finite-mass FD integral; illustrative SM g*S61.75->10.75 yields xi=Tdark/TSM 0.558372 if no dark entropy transfer vs1.116745 if full transfer into φ only (the latter incompatible with surviving stable chi2). Both conditional extremes, NOT physical bounds. Electron vector transport νe/H crosses unity at T=.6882487043GeV using external fixed g*rho61.75, not actual kinetic eigenvalue; actual x8 T2.5MeV νe/H1.55656e−7, requires hypothetical epsilon~.0253465 to get frequency proxy/H~1, no experimental viability proof. Focused CI #45455721437 for entropy tests GREEN, FD mass refined current focused CI pending. True dark+SM FRW still unresolved, class_ready=false.",
   "completed_research_steps": [
     {
@@ -1501,10 +1501,9 @@
     "class_ready": false
   },
   "last_halo_angular_stage": {
-    "report": "continuation-04/papers/24-angular-c22-quadrupole-and-velocity-lattice-2026-11-25.md",
-    "base": "d10947c188fc64fcdbb61a6de5846640339e74a0",
-    "started_utc": "2026-11-25T10:54:27Z",
-    "finding": "Continuous shear rate checked by exact classical MB 0.565685; finite reversible 3D lattice retains 11.8–13.7% coordinate-axis bias at K9 despite conserved N/P/E and entropy. Local angular time evolution works but not quantitative halo convergence.",
-    "next": "Rotation-covariant energy-dependent l=1,l=2 weak collision operator; momentum ledger and independent controls."
+    "report": "continuation-04/papers/25-rotation-covariant-harmonic-c22-2026-11-25.md",
+    "base": "259765c47cf3ecaf276ea8ad9e28df2e4943e266",
+    "finding": "SO(3)-covariant l0–2 weak C22: pressure rate ~0.5% continuous error at N240; momentum residual <4.5e−15; evolving f0+linear angular perturbation converges in time but slow modes and exterior PSD unresolved.",
+    "next": "Conservative spherical fixed-binding phase-space streaming; analytic oscillator and finite-age exterior controls."
   }
 }
