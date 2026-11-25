@@ -59,3 +59,8 @@ The [consolidated research status and falsifiability roadmap](THEORETICAL-STATUS
 
 - [Direct daughter-energy finite volumes](kinetics/DAUGHTER-ENERGY-FV-2026-11-25.md): fixed-bath moment convergence significantly improved.
 - [Radiation-era external-bath production](kinetics/RADIATION-FIXED-BATH-2026-11-25.md): conditional expanding-universe freeze-out, abundance and residual hot-tail calculation; feedback and physical production remain unresolved.
+
+- [Finite parent chemistry](kinetics/FINITE-MOTHER-BATH-2026-11-25.md) and [energy-closed background](kinetics/ENERGY-CLOSED-BATH-2026-11-25.md) include chemical replenishment and stress-energy feedback.
+- [Finite scalar mass](kinetics/FINITE-SCALAR-MASS-2026-11-25.md) and [two-mass geometry](kinetics/TWO-MASS-GEOMETRY-2026-11-25.md) address production kinematics.
+- [Earlier matched-abundance onset](kinetics/REHEATING-MATCHED-2026-11-25.md) reaches ~7.85% hot number fraction with x0=.005; the extreme occupancy is not yet a physical prediction.
+- **Important:** Newtonian-gauge ultra-cold numerical tracer spectra from early 25 November workflows are invalid due to [large-scale normalization failure](cosmology/CLASS-NORMALIZATION-NEGATIVE-2026-11-25.md). [Independent controls](cosmology/CLASS-NORMALIZATION-RECOVERED-2026-11-25.md) recover correct synchronous-gauge normalization. See [updated checkpoint](RESEARCH-CHECKPOINT-2026-11-25.md).

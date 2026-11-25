@@ -1,0 +1,41 @@
+{
+  "run_id": 45625224041,
+  "sha": "5205b04bb22635287bd431b703ddd85bb320d3fb",
+  "artifact_id": 15028418154,
+  "status": "success",
+  "gauge": "synchronous",
+  "scope": "external fixed bath, adiabatic post-production collisionless perturbations",
+  "columns": [
+    "z",
+    "half_320",
+    "half_480",
+    "half_relative_shift",
+    "mesh_drift_before_half",
+    "partition_drift_before_half",
+    "P_ratio_k1",
+    "P_ratio_k10"
+  ],
+  "rows": [
+    [
+      0,
+      0.7007038997160729,
+      0.6982358364674777,
+      0.003534712943239482,
+      0.004088068611064033,
+      0.003821566948638333,
+      0.31845616256127596,
+      0.035622618557426745
+    ],
+    [
+      5,
+      0.7008666559313215,
+      0.698397445105333,
+      0.0035355381714148315,
+      0.004088265764474519,
+      0.0038213788700935947,
+      0.3186239352917683,
+      0.037106462001122845
+    ]
+  ],
+  "note": "Supersedes Newtonian gauge output; large-scale normalization guard passed."
+}
