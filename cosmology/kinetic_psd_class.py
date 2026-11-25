@@ -56,7 +56,23 @@ def export_components(row,folder,tag='fine',split_multiple=10.,points=6000):
                 method='positive log-PCHIP with smooth partition; no abundance rescaling')
 
 
-def transfer(row,export,ks,zs,manual=False):
+def transformed_quadrature_check(export,bins):
+    # CLASS strategy 2: q=1/t-1 with equally spaced t in (0,1).
+    errors=[]
+    for c in export['components']:
+        u,f=np.loadtxt(c['file']).T
+        t=np.arange(1,bins+1)/(bins+1);x=1/t-1
+        values=np.zeros_like(x);inside=(x>=u[0])&(x<=u[-1])
+        values[inside]=CubicSpline(u,f)(x[inside]);values[x<u[0]]=f[0]
+        values[x>u[-1]]=f[-1]*np.exp((x[x>u[-1]]-u[-1])*(f[-1]-f[-2])/f[-1]/(u[-1]-u[-2]))
+        w=values/(bins+1)/t**2
+        errors.append([float(4*np.pi*c['scale']**(k+3)*(w@x**(k+2))/c[key]-1)
+                       for k,key in enumerate(['number','energy','q2'])])
+    assert np.max(np.abs(errors))<.001,errors
+    return errors
+
+
+def transfer(row,export,ks,zs,bins=120):
     from classy import Class
     base={'h':.674,'omega_b':.02237,'T_cmb':2.7255,'N_ur':3.044+row['final']['delta_Neff_chi2_if_stable_free_streaming'],
           'A_s':2.1e-9,'n_s':.965,'tau_reio':.0544,'gauge':'newtonian','output':'mPk',
@@ -75,8 +91,8 @@ def transfer(row,export,ks,zs,manual=False):
     comps=export['components'];tr=(3.909/106.75)**(1/3)
     p=dict(base,N_ncdm=2,m_ncdm='86,86',T_ncdm=','.join(str(c['scale']*tr) for c in comps),
            deg_ncdm='1,1',use_ncdm_psd_files='1,1',ncdm_psd_filenames=','.join(c['file'] for c in comps),omega_cdm=1e-8)
-    if manual:
-        p.update(ncdm_quadrature_strategy='3,3',ncdm_maximum_q='30,35',ncdm_N_momentum_bins='220,220')
+    p.update(ncdm_quadrature_strategy='2,2',ncdm_N_momentum_bins=f'{bins},{bins}')
+    quadrature_errors=transformed_quadrature_check(export,bins)
     warm=solve(p)
     target=row['final']['omega_phi_h2_m86_g106p75']
     assert abs(warm['omega_ncdm_h2']/target-1)<.025,(warm['omega_ncdm_h2'],target)
@@ -97,22 +113,24 @@ def transfer(row,export,ks,zs,manual=False):
                      'P_ratio_k1':float(np.interp(0.,np.log(ks),r)),'P_ratio_k10':float(np.interp(np.log(10),np.log(ks),r))}
     return {'warm_background':{k:v for k,v in warm.items() if k!='power'},'expected_omega':target,
             'delta_phi_early':float(delta_phi),'chi2_Nur':row['final']['delta_Neff_chi2_if_stable_free_streaming'],
-            'hot_tracer_mass_fraction':ratio,'ratios':result,'manual_quadrature':manual}
+            'hot_tracer_mass_fraction':ratio,'ratios':result,'quadrature_strategy':2,
+            'momentum_bins':bins,'quadrature_moment_relative_errors':quadrature_errors}
 
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--input',nargs='+',required=True);p.add_argument('--output',required=True)
-    p.add_argument('--analytic-only',action='store_true');p.add_argument('--manual',action='store_true');a=p.parse_args()
+    p.add_argument('--analytic-only',action='store_true');a=p.parse_args()
     ks=np.geomspace(.003,20.,125);zs=[0.,5.];rows=[]
     with tempfile.TemporaryDirectory() as folder:
         for i,path in enumerate(a.input):
             row=json.loads(Path(path).read_text())[0]
             export=export_components(row,folder,tag=str(i),points=6000)
             alt=export_components(row,folder,tag=str(i)+'_alternate',split_multiple=8.,points=8000)
-            result={'input':path,'n':row['n'],'x0':row['x0'],'kappa':row['kappa'],'export':export,'alternate_export':alt}
+            result={'input':path,'n':row['n'],'x0':row['x0'],'kappa':row['kappa'],'export':export,'alternate_export':alt,
+                    'quadrature_120':transformed_quadrature_check(export,120),'quadrature_240':transformed_quadrature_check(alt,240)}
             if not a.analytic_only:
                 result['CLASS']=transfer(row,export,ks,zs)
-                result['alternate_CLASS']=transfer(row,alt,ks,zs,a.manual)
+                result['alternate_CLASS']=transfer(row,alt,ks,zs,240)
                 for z in zs:
                     k=str(z);r=np.asarray(result['CLASS']['ratios'][k]['power_ratio']);r2=np.asarray(result['alternate_CLASS']['ratios'][k]['power_ratio'])
                     pre=ks<=min(10.,result['CLASS']['ratios'][k]['half_power_k_per_Mpc'] or 10.)
