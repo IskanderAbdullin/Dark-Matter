@@ -32,3 +32,7 @@ A [targeted full hierarchy convergence workflow](.github/workflows/class-hierarc
 ## Two-mass local continuation
 
 [Two-mass kinetic solver and scan](kinetics/TWO-MASS-BATH-2026-11-25.md): mass degeneracy sharply suppresses the hot component but makes stable daughter matter density untenable; .99 ratio integration failed. Next implement energy-closed chi2 bath relaxation with independent number-source accounting.
+
+## Daughter bath interaction
+
+[Energy-closed detailed-balanced chi2 relaxation](kinetics/DAUGHTER-BATH-2026-11-25.md): three validated exploratory cases return the massive fermion to the bath. Kappa=.05 overproduces the scalar. Match abundance by changing the channel width; verify independent meshes and physical rates. GitHub reference update encountered a server-side error; local commits in the authorized workspace preserve the work.
