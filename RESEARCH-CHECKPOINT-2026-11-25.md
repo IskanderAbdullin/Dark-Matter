@@ -141,3 +141,12 @@ See kinetics/LATE-DECAY-STIMULATED-LINE-2026-11-25.md. Exact invariant frozen et
 ## Observational profile and local decay follow-up
 
 See kinetics/SPARC-TWO-STATE-2026-11-25.md: 153 quality SPARC galaxies, fixed nuisance, independent library checks; two-state 86 improves aggregate holdout 5110.6 ->4917.9, but PIS3990.4 and best scanned one/two 200 eV ~4826/4833. Paired comparisons and 20-galaxy nuisance sensitivity limit interpretation; no mass measurement. See kinetics/LATE-DECAY-COUPLED-COHERENT-2026-11-25.md: local inverse+C22 .001 eV bursts on two meshes reach 49% at ~1303 s; coherent Doppler toy matches kinetic rate at weak coupling, flags strong collective regime at recoil <=1e-6. Next: medium self-energy/coherence and expanding coupled reaction/transport, then realistic multi-state halo + nuisance/finite profiles.
+
+## Revised priorities after the new evidence
+
+1. Highest scientific value: derive medium-dependent A/B/eta dispersions and collective transition response for the nearly degenerate decay EFT. Start with pstar=1e-5 and 1e-3 eV (independent weak-collective benchmarks at r=1e5); test whether the predicted high-density positive B shift actually blocks on-shell conversion, whether eta develops a medium pole/gap, and whether an energy-conserving expanding inverse+C22+4->2 model can remain cold without unacceptable number loss. Do not treat the density-cap screen as a physical solution. Adapt pair-correlation methods from the cited ALP literature for the strong-collective regime, and separate collisional from coherent validation.
+2. Retain soft mixing as a conditional comparator: early coherent bound is encouraging, but thermal halo chemistry produces ~46% heavy state and closing it exceeds the illustrative energy cap. No unique model selected or established.
+3. On observations, compare original 22 LSB sample with broader SPARC selection; fit all quality galaxies with nuisance uncertainties and a finite halo, then test chemically incomplete/inhomogeneous composition. The held-out radial pilot and classical control do not measure a preferred particle mass. Avoid retuning the primordial abundance until a microphysical branch is consistent.
+4. Once a physical branch is established, propagate its actual multi-component perturbations and residual hot tail, verify convergence of CLASS hierarchy/transfer, and test observational constraints with systematic uncertainties.
+
+Final complete regression: **71 passed in 66.71 s**. Classical profile and paired resampling evidence archived.
