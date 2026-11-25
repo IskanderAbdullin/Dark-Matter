@@ -89,3 +89,5 @@ Paper 35: [positivity-limited nonlinear gravity](continuation-04/papers/35-posit
 Paper 36: [exact discrete energy and split work ledger](continuation-04/papers/36-discrete-halo-energy-work-ledger-2026-11-25.md) identifies reference-stream/force work mismatch; phase refinement to 262k states leaves ~8e-7 energy error. Next parity and binding refinement.
 
 Paper 37: [energy-closure sensitivity control](continuation-04/papers/37-energy-closure-sensitivity-control-2026-11-25.md) closes discrete energy by positive conservative internal-face repair; small distribution change but imposed correction, not physical solver. M2 nonlinear run timed out. Next local work quadrature.
+
+Paper 38: [reversal symmetry and local orbit work](continuation-04/papers/38-reversal-and-local-orbit-work-flux-2026-11-25.md) reduces coarse energy residual to 1.33e-7 without global fitting; still ~12% field term. Next fine and adjoint-current controls.
