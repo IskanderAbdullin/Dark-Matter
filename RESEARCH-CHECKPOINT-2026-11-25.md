@@ -133,3 +133,7 @@ See kinetics/SOFT-MIXING-AND-DERIVATIVE-PORTAL-2026-11-25.md and archived raw re
 ## Two-state kinetic halo and crossing bounds
 
 See kinetics/TWO-STATE-KINETICS-CROSSING-GAP-2026-11-25.md. Under specified assumptions coherent transfer through arbitrary early diagonal crossings is tiny; vacuum postcut combined eigenstate transfer estimate <1.6e-15. Six-channel local NR Bose kinetic box now dynamically reaches ~46% heavy-state equilibrium, with represented N/E conservation and grid/independent source comparisons. Increasing splitting to close halo conversion exceeds illustrative late loop/thermal cap by ~584 at sigma=.3,z8,F583. These are conditional model tests, not a proven cosmological or halo model. Next: two-state SPARC profile fit, finite halo transport and direct early B collisions, UV protection. Three new targeted regressions passed.
+
+## Late decay: stimulated line and inverse kinetics
+
+See kinetics/LATE-DECAY-STIMULATED-LINE-2026-11-25.md. Exact invariant frozen eta-line gain = 2*pi^2 Gamma(nA-nB)/(H*pstar^3); at r=1e5,pstar=.001,tau=3.25e4. Explicit local inverse-decay Bose bursts at 1e-5 reach 49% conversion in ~.00213 s on two grids, with conservation and positive analytic seed; no C22/medium. At .001 elastic feedback is important. Toy density-cap branch may postpone conversion and suppress coherent 4->2 for small recoil, but no self-consistent medium or expanding solution. Six targeted regression checks passed.
