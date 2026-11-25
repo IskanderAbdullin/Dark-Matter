@@ -1261,12 +1261,11 @@
     "class_ready": false
   },
   "active_run": {
-    "start_utc": "2026-11-24T21:32:23Z",
-    "target_minutes": 540,
+    "start_utc": "2026-11-25T08:09:38Z",
+    "target_minutes": 30,
     "status": "in_progress",
-    "last_check_utc": "2026-11-24T21:59:30Z",
-    "elapsed_minutes_actual": 27.116667,
-    "stage": "Coherent initial-history mixed-potential adiabatic background and exact Lamé resonance"
+    "last_check_utc": "2026-11-25T08:12:00Z",
+    "stage": "Dilute coherent resonance sweep; kinetic and quantum vacuum normalization"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1381,6 +1380,15 @@
     "positive": "exact action and Lamé n=2 physical gap; independent direct oscillator verification; at TR20 both illustrative positive λ branches μ/H>5.86e13 and small conditional energy ratio ρ/ρν,1; resonant q today 3.73e−9 or 1.56e−7 eV",
     "negative": "normalized conditional homogeneous background not actual production; linear instability cannot predict nonlinear fragmentation, number change or final PSD; no BBN likelihood",
     "status": "local analytic and independent numerical crosscheck; CI pending",
+    "class_ready": false
+  },
+  "latest_narrow_sweep_20261125": {
+    "report": "kinetics/PHI-BOSE-NARROW-SWEEP-2026-11-25.md",
+    "source": "kinetics/phi_bose_narrow_sweep.py",
+    "source_commit": "33a7065db1022677a31908d0ca834dec781b6311",
+    "report_commit": "636242192b3d8d94cce4e2c0c529a242c702f5ee",
+    "positive": "Small-A I=3pi m A^8/(1024 H); independent elliptic monodromy and chirp checks; weak vacuum hard yield matches incoherent net 4->2 loss divided by 4!. For two lambda benchmarks I=1 at 324 keV / 4.712 keV, q=8.12e-8 / 7.425e-6 eV.",
+    "negative": "Unfragmented normalized branch, no backreaction or physical initial condition, scattering only vacuum diagnostic, no final PSD/relic; remote CI unverified.",
     "class_ready": false
   }
 }
