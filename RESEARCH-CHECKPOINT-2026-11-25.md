@@ -72,3 +72,5 @@ Raw numerical records: results/late-weak-and-class-2026-11-25.json. Local enviro
 ## Quadrature follow-up
 
 Both late weak-parent meshes and both partitions fail 120/240-node moment checks. All four pass at 480 nodes (max relative error 2.28e-5). Added explicit --bins 480 option with 960-node alternate check; analytic export passed both meshes. Recorded full checks in kinetics/results/late-weak-quadrature-2026-11-25.json and kinetics/results/late-weak-export-2026-11-25.json. The earlier failed coarse check is preserved. Next run actual CLASS at these validated settings; transfer and full hierarchy remain untested for this candidate.
+
+Final regression: 24 passed (16.74 s). Strong-candidate CLASS cross-mesh max relative transfer-power drift: 0.0008230023 at z=0 and 0.0008229460 at z=5. Full hierarchy and late weak CLASS transfer remain untested.
