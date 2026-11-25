@@ -1264,8 +1264,8 @@
     "start_utc": "2026-11-25T08:09:38Z",
     "target_minutes": 30,
     "status": "in_progress",
-    "last_check_utc": "2026-11-25T08:17:00Z",
-    "stage": "Swept-resonance backreaction and stable fermion coherent mass crossing"
+    "last_check_utc": "2026-11-25T08:35:25Z",
+    "stage": "Nonlinear coherent fragmentation, global halo stability, initial quantum collision escape and redistribution"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1403,6 +1403,42 @@
     "source": "kinetics/phi_bose_coherent_fermion_crossing.py",
     "positive": "Exact phi_crit44.721 GeV; both T20 examples subthreshold; conditional high-T crossing; exact 4x4 Dirac finite-lobe light occupancy .9881 at high lambda 1.1phi_crit p=.5pstar; local refinement and zero coupling control.",
     "negative": "Instantaneous prescribed vacuum and no expansion/backreaction; slow weak-lambda grid timed out, one point not converged; no physical stable relic.",
+    "class_ready": false
+  },
+  "latest_coherent_endpoints_20261125": {
+    "report": "kinetics/PHI-BOSE-COHERENT-ENDPOINTS-2026-11-25.md",
+    "positive": "Conditional chemical freeze Omega h²=.00015184/.004711 vs .12; count-preserved ideal cold endpoint rms q=3.08e-9/1.48e-8 eV. Repeated Dirac cycle first-cycle convergence at stronger coupling.",
+    "negative": "No physical thermalization, BEC or relic; high-cycle oscillatory phase and instantaneous vacuum UV sensitive.",
+    "class_ready": false
+  },
+  "latest_classical_fragmentation_20261125": {
+    "report": "kinetics/PHI-BOSE-CLASSICAL-FRAGMENTATION-2026-11-25.md",
+    "positive": "3D dealiased field 48³/64³, time refinement and independent Lamé growth check; nonlinear inhomogeneity at 64 periods.",
+    "negative": "Fixed Minkowski, UV spectrum not converged, classical seed not physical quantum vacuum.",
+    "class_ready": false
+  },
+  "latest_quantum_seed_20261125": {
+    "report": "kinetics/PHI-BOSE-QUANTUM-SEED-2026-11-25.md",
+    "positive": "Conditional finite-band Wigner vacuum seeds yield >10% fluctuation at period 77/42; linear 76/42; Hdt <3e-13. Stronger benchmark D=.452/.459 at period70 on 64³/48³.",
+    "negative": "No renormalized full vacuum, FRW transport or late PSD.",
+    "class_ready": false
+  },
+  "latest_fragmented_eos_20261125": {
+    "report": "kinetics/PHI-BOSE-FRAGMENTED-EOS-2026-11-25.md",
+    "positive": "Exact virial identity; local mixed w=.3023 and corrected quartic w=.33294.",
+    "negative": "Finite-time local field averages, no cosmological evolution.",
+    "class_ready": false
+  },
+  "latest_global_antonov_20261125": {
+    "report": "continuation-04/papers/15-global-projected-antonov-critical-halo-2026-11-25.md",
+    "positive": "Radial energy-shell projected form A-B>=A/4 including critical unbounded distribution; nonradial ground-state bound, l=1 translation, 3-grid Rayleigh results. Existing nonlinear theorem applies only bounded case.",
+    "negative": "Critical nonlinear orbital theorem and well-posedness not established; not collisional stability.",
+    "class_ready": false
+  },
+  "latest_halo_collision_escape_20261125": {
+    "source": "continuation-04/code/lowered_bose_collision_escape.py",
+    "positive": "Initial NR C22 birth above cutoff per Gyr .00266347/.000625507; above true isolated escape .000516493/.000350195 for linear/quadratic example; convergence checked.",
+    "negative": "Not actual evaporation or time evolution; independent signed redistribution quadrature in progress.",
     "class_ready": false
   }
 }
