@@ -1263,9 +1263,10 @@
   "active_run": {
     "start_utc": "2026-11-25T08:09:38Z",
     "target_minutes": 30,
-    "status": "in_progress",
-    "last_check_utc": "2026-11-25T08:35:25Z",
-    "stage": "Nonlinear coherent fragmentation, global halo stability, initial quantum collision escape and redistribution"
+    "status": "finalizing",
+    "last_check_utc": "2026-11-25T08:38:58Z",
+    "stage": "All scientific results archived; final checkpoint and email",
+    "class_ready": false
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1438,7 +1439,21 @@
   "latest_halo_collision_escape_20261125": {
     "source": "continuation-04/code/lowered_bose_collision_escape.py",
     "positive": "Initial NR C22 birth above cutoff per Gyr .00266347/.000625507; above true isolated escape .000516493/.000350195 for linear/quadratic example; convergence checked.",
-    "negative": "Not actual evaporation or time evolution; independent signed redistribution quadrature in progress.",
+    "negative": "Initial source only, not actual evaporation or time evolution; independent signed CM calculation agrees at <1.2e-6 for linear local tests.",
+    "class_ready": false,
+    "report": "continuation-04/papers/16-initial-bose-collision-escape-2026-11-25.md"
+  },
+  "latest_halo_deep_flux_20261125": {
+    "report": "continuation-04/papers/17-initial-bose-deep-state-flux-2026-11-25.md",
+    "source": "continuation-04/code/lowered_bose_weak_flux.py",
+    "positive": "Deep population positive initial flux; mapped n24/32 and independent log mapping; pointwise central coefficient .18491053/.36747410 per Gyr, tiny total transfer. Linear L''>0 and initial 4th moment increases.",
+    "negative": "Unmapped angular grid severely underestimates deepest flux. No condensate or nonlinear evolution.",
+    "class_ready": false
+  },
+  "latest_halo_exterior_capacity_20261125": {
+    "report": "continuation-04/papers/18-orbit-averaged-exterior-capacity-gate-2026-11-25.md",
+    "positive": "Exterior DOS diverges as πQt³/(32 ε^5/2), finite mass power p>3/2, Kepler period ∝ε^-3/2.",
+    "negative": "Phase-mixed exterior assumption fails at finite time near E=0; no actual orbit transport.",
     "class_ready": false
   }
 }
