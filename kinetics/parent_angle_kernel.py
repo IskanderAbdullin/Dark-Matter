@@ -241,7 +241,7 @@ def main():
     p.add_argument('--fermion-atol',type=float,default=1e-11);p.add_argument('--rtol',type=float,default=1e-5)
     p.add_argument('--x0',type=float,default=.1);p.add_argument('--xend',type=float,default=80.)
     p.add_argument('--method',choices=['BDF','Radau'],default='BDF');p.add_argument('--local-sparse-jac',action='store_true');p.add_argument('--history-psd',action='store_true')
-    p.add_argument('--wall-limit',type=float,default=480.)
+    p.add_argument('--wall-limit',type=float,default=480.);p.add_argument('--history-dense',action='store_true')
     p.add_argument('--auto-handoff',action='store_true');p.add_argument('--test-only',action='store_true');p.add_argument('--old-rates',action='store_true')
     p.add_argument('--output');a=p.parse_args()
     kw=dict(n=a.n,nparent=a.nparent,scalar_ratio=1e-12,fermion_ratio=a.fermion_ratio,
@@ -256,7 +256,7 @@ def main():
     if a.test_only:
         print(json.dumps(m.validate(),indent=2));return
     if not a.output:raise ValueError('output required')
-    r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff,True)
+    r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff,True,history_sample_x=(np.r_[np.linspace(.13,.22,37),np.linspace(1.,2.5,31)] if a.history_dense else ()))
     if table:r['rate_source_sha256']=table.sha
     Path(a.output).write_text(json.dumps([r],indent=2,allow_nan=False)+'\n')
     print('final',json.dumps({k:r[k] for k in ['success','message','n','nparent','wall_seconds','final']}),flush=True)

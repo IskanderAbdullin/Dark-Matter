@@ -257,12 +257,12 @@ class ResolvedParent(TwoMassBath):
         return dict(x=x,shape_TV=tv,energy_relative_difference=energy,spectral_source_L1=l1,
             net_source_relative_difference=net,passed=bool(x>=1.5 and tv<1e-3 and abs(energy)<1e-3 and l1<.005 and net<.01))
 
-    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF",auto_handoff=False,step_guard=False,max_step=.035):
+    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF",auto_handoff=False,step_guard=False,max_step=.035,history_sample_x=()):
         check=self.validate();print('checks',json.dumps(check),flush=True)
         self.geometry(x0);ini=expit(-self.e1) if initial_parent=='thermal' else np.zeros(self.n1)
         y0=np.r_[np.zeros(2*self.n),ini,0.,0.,0.,0.]
         init=float(self.v1@ini);rho0=float(self.rad0+(self.v1*self.e1)@ini)
-        ts=sorted(set([x0]+[x for x in [.02,.03,.05,.075,.1,.125,.15,.175,.2,.3,.5,1,1.5,2,2.5,3,4,5,6,8,10,15,20,30,40,60,80,100,120] if x0<x<xend]+[xend]))
+        ts=sorted(set([x0]+[x for x in [.02,.03,.05,.075,.1,.125,.15,.175,.2,.3,.5,1,1.5,2,2.5,3,4,5,6,8,10,15,20,30,40,60,80,100,120] if x0<x<xend]+[float(x) for x in history_sample_x if x0<x<xend]+[xend]))
         atol=np.r_[np.full(self.n,1e-12),np.full(self.n+self.n1,fermion_atol),1e-13,1e-12,1e-13,1e-13]
         start=time.monotonic();last_print=start
         zlist=np.log(ts);ys=[y0];actual_z=[zlist[0]];k=1;steps=0;message='Integration complete.';guards=[];handoff_reached=False;consecutive=0
@@ -363,7 +363,7 @@ class ResolvedParent(TwoMassBath):
                 parent_edges=self.parent_edges.tolist(),f_parent=sol.y[2*self.n:self.dim,-1].tolist(),g_phi=1,g_chi2=self.g_fermion,g_parent=self.g_fermion,
                 theta_freezeout=history[-1]['theta'] if history else 1.)
         if self.record_scalar_history:
-            out['scalar_history_psd']=[dict(x=float(np.exp(t)),theta=float(np.exp(y[-4])),f_phi=y[:self.n].tolist()) for t,y in zip(sol.t[1:],sol.y.T[1:])]
+            out['scalar_history_psd']=[dict(x=float(np.exp(t)),theta=float(np.exp(y[-4])),f_phi=y[:self.n].tolist(),f_chi2=y[self.n:2*self.n].tolist(),f_parent=y[2*self.n:self.dim].tolist()) for t,y in zip(sol.t[1:],sol.y.T[1:])]
         if sol.success:out['xend']=xend
         if self.kappa_sm1>0 and self.kappa2>0:
             out['mapping']=rate_mapping(parent_gev,self.fermion_ratio,self.kappa,self.kappa2,self.kappa_sm1)
