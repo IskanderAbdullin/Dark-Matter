@@ -93,3 +93,5 @@ Paper 37: [energy-closure sensitivity control](continuation-04/papers/37-energy-
 Paper 38: [reversal symmetry and local orbit work](continuation-04/papers/38-reversal-and-local-orbit-work-flux-2026-11-25.md) reduces coarse energy residual to 1.33e-7 without global fitting; still ~12% field term. Next fine and adjoint-current controls.
 
 Paper 39: [discrete adjoint current work](continuation-04/papers/39-discrete-adjoint-current-work-2026-11-25.md) reduces coarse energy error to 1.19e-8 (~1% of field term) without imposed projection. Next temporal and binding convergence; no physical claim.
+
+Paper 40: [adjoint time/locality checkpoint](continuation-04/papers/40-adjoint-time-and-collision-locality-checkpoint-2026-11-25.md) time refinement gives ~1e-8 residual with sign change; C22 shell-locality error now material. Next factorized vector constraints, common-L optimization, binding and angular convergence.

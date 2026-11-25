@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-25T11:48:15Z",
+  "updated_utc": "2026-11-25T11:49:02Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,10 +106,10 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Stage checkpoint; active run continues",
+  "stop_reason": "Target ~30-minute active session reached; final checkpoint and report delivery following. No goal completion claim.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Evaluate on-shell decay source in physically cold q window, sign of Bose-stimulated gain with actual fermion occupancy; prioritize viable low-entropy initial conditions and number multiplier before full cosmological inference.",
-  "last_checkpoint_git_sha": "77f1d5f654d423bc2c7bab851ad51691dcdc9758",
+  "last_checkpoint_git_sha": "ee0deab99a81544a1007116dd3c8335b1b256b57",
   "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo. Separate conditional SM/dark comoving entropy split after decoupling: entropy identity with g*S dark initial 8 relativistic, more accurately 7.991670795 at T0.688GeV using independent finite-mass FD integral; illustrative SM g*S61.75->10.75 yields xi=Tdark/TSM 0.558372 if no dark entropy transfer vs1.116745 if full transfer into φ only (the latter incompatible with surviving stable chi2). Both conditional extremes, NOT physical bounds. Electron vector transport νe/H crosses unity at T=.6882487043GeV using external fixed g*rho61.75, not actual kinetic eigenvalue; actual x8 T2.5MeV νe/H1.55656e−7, requires hypothetical epsilon~.0253465 to get frequency proxy/H~1, no experimental viability proof. Focused CI #45455721437 for entropy tests GREEN, FD mass refined current focused CI pending. True dark+SM FRW still unresolved, class_ready=false.",
   "completed_research_steps": [
     {
@@ -1629,5 +1629,15 @@
     "coarse_field": -0.0000011398406810003978,
     "center_fine_error": 7.84747067497111e-8,
     "limitation": "Finite-grid instantaneous work consistency; time splitting, collision locality, exterior and binding convergence unresolved."
+  },
+  "last_run": {
+    "start_utc": "2026-11-25T11:20:02Z",
+    "numerical_work_end_utc": "2026-11-25T11:49:02Z",
+    "numerical_work_minutes": 29,
+    "report": "continuation-04/papers/40-adjoint-time-and-collision-locality-checkpoint-2026-11-25.md",
+    "adjoint_fine_dt_error": 9.772802026542532e-9,
+    "coarse_dt_error": -1.1938175133265954e-8,
+    "collision_field_work": 1.9701674285988593e-8,
+    "limitations": "M2 nonlinear binding timeout; no convergence, no physical halo or cosmology validation; remote CI unverified."
   }
 }
