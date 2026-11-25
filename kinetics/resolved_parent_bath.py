@@ -22,13 +22,13 @@ from yukawa_rate_bath import rate_mapping
 
 class ResolvedParent(TwoMassBath):
     def __init__(self,n=120,nparent=120,kappa_sm1=47.,kappa2=.03,gamma=.01,
-                 scatter=True,parent_floor=0.,parent_grid="legacy",**kwargs):
+                 scatter=True,parent_floor=0.,parent_grid="legacy",local_sparse_jac=False,record_scalar_history=False,**kwargs):
         super().__init__(n=n,**kwargs)
         assert nparent>=32 and self.fermion_ratio>0 and kappa_sm1>=0 and kappa2>=0
         self.n1=nparent;self.dim=2*n+nparent
         self.kappa_sm1=kappa_sm1;self.kappa2=kappa2;self.gamma=gamma;self.scatter=scatter
         assert 0<=parent_floor<=1e-8
-        self.parent_floor=parent_floor
+        self.parent_floor=parent_floor;self.local_sparse_jac=local_sparse_jac;self.record_scalar_history=record_scalar_history
         # Parent momentum support covers both daughter momenta, up to 2*qmax.
         self.parent_grid=parent_grid
         qmax=max(90.,2*self.edges[-1]+10.)
@@ -182,7 +182,27 @@ class ResolvedParent(TwoMassBath):
             np.r_[self.source2@B,self.source2@BT,0.,0.,0.]))
 
     def rhs(self,z,y):return self.evaluate(z,y)
-    def jac(self,z,y):return self.evaluate(z,y,True)
+    def jac(self,z,y):
+        if not self.local_sparse_jac:return self.evaluate(z,y,True)
+        # Approximate Newton Jacobian only: freeze Hfactor in differentiation.
+        # The exact RHS still includes Hfactor from total energy. Dropping
+        # this rank-one term permits sparse factorization; verify solutions
+        # against the exact dense Jacobian, not just local convergence.
+        from scipy.sparse import csc_matrix,diags,hstack,vstack
+        x=np.exp(z);self.geometry(x)
+        yd=y[:self.dim];theta=np.exp(y[-4]);rb=self.rad0*theta**4
+        total=rb+self.energy_weights@yd;Hf=np.sqrt(self.rad0/total)
+        rate,rateT=self.rates(x,theta,Hf);eq=expit(-self.energies/theta)
+        bath=rate*(eq-yd);dt=-self.energy_weights@bath/(4*rb)
+        _,J=self.dark(yd,Hf,True)
+        J=csc_matrix(J)-diags(rate,format='csc')
+        BT=rate*eq*(1-eq)*self.energies/theta+rateT*(eq-yd)
+        jd=hstack([J,csc_matrix(BT[:,None]),csc_matrix((self.dim,3))],format='csc')
+        jtemp=np.r_[self.energy_weights*rate/(4*rb),-self.energy_weights@BT/(4*rb)-4*dt,0.,0.,0.]
+        rows=np.vstack((jtemp,np.r_[self.traces,0.,0.,0.,0.],
+            np.r_[-self.source1*rate,self.source1@BT,0.,0.,0.],
+            np.r_[-self.source2*rate,self.source2@BT,0.,0.,0.]))
+        return vstack([jd,csc_matrix(rows)],format='csc')
 
     def validate(self):
         checks={}
@@ -200,7 +220,7 @@ class ResolvedParent(TwoMassBath):
         assert energy<1e-12 and num<1e-12,(energy,num)
         dr=rng.normal(size=len(y));dr/=np.linalg.norm(dr);eps=1e-6
         fd=(self.rhs(np.log(.2),y+eps*dr)-self.rhs(np.log(.2),y-eps*dr))/(2*eps)
-        jd=self.jac(np.log(.2),y)@dr
+        jd=self.evaluate(np.log(.2),y,True)@dr
         jerr=float(np.linalg.norm(fd-jd)/max(np.linalg.norm(jd),1e-300));assert jerr<1e-5,jerr
         for bound in (0.,1.):
             q=y[:self.dim].copy();q[2*self.n::3]=bound;q[self.n:2*self.n:3]=bound
@@ -335,13 +355,15 @@ class ResolvedParent(TwoMassBath):
         out=dict(n=self.n,nparent=self.n1,x0=x0,xend=float(np.exp(sol.t[-1])),requested_xend=xend,kappa=self.kappa,kappa2=self.kappa2,
             kappa_sm1=self.kappa_sm1,gamma=self.gamma,scatter=self.scatter,scalar_ratio=self.scalar_ratio,fermion_ratio=self.fermion_ratio,
             parent_GeV=parent_gev,g_bath=self.g_bath,g_fermion=self.g_fermion,rtol=rtol,initial_parent=initial_parent,initial_mother_number=init,
-            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,parent_grid=self.parent_grid,step_guard=step_guard,max_step=max_step,invalid_accepted_steps=rejects,worst_trial_min=worst_min,worst_trial_max_fermion=worst_max,success=bool(sol.success),message=sol.message,handoff_reached=handoff_reached,handoff_guard_checks=guards,
+            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,parent_grid=self.parent_grid,local_sparse_jac=self.local_sparse_jac,step_guard=step_guard,max_step=max_step,invalid_accepted_steps=rejects,worst_trial_min=worst_min,worst_trial_max_fermion=worst_max,success=bool(sol.success),message=sol.message,handoff_reached=handoff_reached,handoff_guard_checks=guards,
             max_dropped_equilibrium_fraction=self.max_dropped_equilibrium_fraction,max_projection_energy_error=self.max_projection_energy_error,
             history=history,final=history[-1] if history else None)
         if keep_psd:
             out['frozen_cell_spectrum']=dict(edges=self.edges.tolist(),f_phi=sol.y[:self.n,-1].tolist(),f_chi2=sol.y[self.n:2*self.n,-1].tolist(),
                 parent_edges=self.parent_edges.tolist(),f_parent=sol.y[2*self.n:self.dim,-1].tolist(),g_phi=1,g_chi2=self.g_fermion,g_parent=self.g_fermion,
                 theta_freezeout=history[-1]['theta'] if history else 1.)
+        if self.record_scalar_history:
+            out['scalar_history_psd']=[dict(x=float(np.exp(t)),theta=float(np.exp(y[-4])),f_phi=y[:self.n].tolist()) for t,y in zip(sol.t[1:],sol.y.T[1:])]
         if sol.success:out['xend']=xend
         if self.kappa_sm1>0 and self.kappa2>0:
             out['mapping']=rate_mapping(parent_gev,self.fermion_ratio,self.kappa,self.kappa2,self.kappa_sm1)

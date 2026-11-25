@@ -98,3 +98,7 @@ See kinetics/SPIN-AND-HANDOFF-2026-11-25.md. g=2 width scan up to .12 gives at m
 ## Parent-shell aliasing and independent angular quadrature
 
 See kinetics/PARENT-GRID-AND-ANGLE-2026-11-25.md and raw results. Found spurious legacy parent-shell loads up to 12543 times physical width; guarded BDF reproduces and rejects accepted negative parent step. Uniform parent grid reduces max load ratio to 3.60. Independent parent-angle kernel with separate heavy grids reaches x=80 quickly; at kappa=.006 n120/240 Omega=.116493/.115436, unlike old shared-grid hybrid .102325/.104607. Analytical spontaneous spectrum favors separated rectangle kernel (n480 peak bias .01565%) over angle (.3385%). Need full comparison at independent meshes and widths; no accepted physical fit yet.
+
+## Matched-width independent kinetic kernels
+
+See kinetics/CONVERGED-INDEPENDENT-KERNELS-2026-11-25.md. At fixed kappa=.00685, full angle n240/320 yields .1203498/.1202148, same-grid independent rectangle hybrid .1197704/.1198517. Strict exact dense n240 .1203496. CLASS conditional P/P_CDM at z=5,k=10/Mpc=.983907/.983511. This supersedes earlier shared-grid positivity failures as a numerical solution, not a physical viability result. The highest-priority next issue is early scalar self-interaction and thermal dispersion, including possible condensate and number-changing reactions. Full CLASS hierarchy remains unverified.

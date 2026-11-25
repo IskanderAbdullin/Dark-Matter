@@ -45,3 +45,16 @@ def test_angle_regularization_small_enough_for_late_detailed_balance():
         eq=expit(-m.energies);eq[:m.n]=1/np.expm1(m.energy_phi)
         vals.append(float(abs(m.dark(eq))@m.vols/(m.event_rate0@expit(-m.e1[m.jp]))))
     assert vals[0]>1e-5 and vals[1]<1e-8,vals
+
+
+def test_separate_rectangle_same_grid_closure():
+    from parent_angle_kernel import SeparatedRectangle
+    from separated_grid_handoff import GridClosure
+    m=SeparatedRectangle(n=48,nparent=48,kappa=.00685,scalar_ratio=1e-12,
+                         fermion_ratio=.9,parent_grid='uniform',fermion_grid='balanced',
+                         parent_floor=0.,qmin=1e-8)
+    m.geometry(.4)
+    eq=expit(-m.energies);eq[:m.n]=1/np.expm1(m.energy_phi)
+    err=np.linalg.norm(m.dark(eq)*m.vols,ord=1)
+    assert err<1e-10
+    assert GridClosure(m).validate()['jacobian_relative_error']<1e-5

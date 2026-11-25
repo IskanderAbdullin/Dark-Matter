@@ -154,7 +154,7 @@ class ParentAngle(ResolvedParent):
         num=float(max(abs(Np-N2),abs(N1+Np))/max(denom,1e-300))
         dr=rng.normal(size=len(y));dr/=np.linalg.norm(dr);eps=1e-6
         fd=(self.rhs(np.log(.2),y+eps*dr)-self.rhs(np.log(.2),y-eps*dr))/(2*eps)
-        jd=self.jac(np.log(.2),y)@dr
+        jd=self.evaluate(np.log(.2),y,True)@dr
         jerr=float(np.linalg.norm(fd-jd)/max(np.linalg.norm(jd),1e-300))
         assert en<1e-12 and num<1e-12 and jerr<1e-5,(en,num,jerr)
         for bound in [0.,1.]:
@@ -240,13 +240,13 @@ def main():
     p.add_argument('--parent-floor',type=float,default=1e-18)
     p.add_argument('--fermion-atol',type=float,default=1e-11);p.add_argument('--rtol',type=float,default=1e-5)
     p.add_argument('--x0',type=float,default=.1);p.add_argument('--xend',type=float,default=80.)
-    p.add_argument('--method',choices=['BDF','Radau'],default='BDF')
+    p.add_argument('--method',choices=['BDF','Radau'],default='BDF');p.add_argument('--local-sparse-jac',action='store_true');p.add_argument('--history-psd',action='store_true')
     p.add_argument('--wall-limit',type=float,default=480.)
-    p.add_argument('--test-only',action='store_true');p.add_argument('--old-rates',action='store_true')
+    p.add_argument('--auto-handoff',action='store_true');p.add_argument('--test-only',action='store_true');p.add_argument('--old-rates',action='store_true')
     p.add_argument('--output');a=p.parse_args()
     kw=dict(n=a.n,nparent=a.nparent,scalar_ratio=1e-12,fermion_ratio=a.fermion_ratio,
         kappa=a.kappa,kappa_sm1=a.kappa_sm1,kappa2=a.kappa2,g_fermion=a.g_fermion,
-        parent_grid=a.parent_grid,fermion_grid=a.fermion_grid,parent_floor=a.parent_floor,qmin=1e-8)
+        parent_grid=a.parent_grid,fermion_grid=a.fermion_grid,parent_floor=a.parent_floor,local_sparse_jac=a.local_sparse_jac,record_scalar_history=a.history_psd,qmin=1e-8)
     K=ParentAngle if a.kernel=='angle' else SeparatedRectangle
     if a.old_rates:m=K(**kw);table=None
     else:
@@ -256,10 +256,10 @@ def main():
     if a.test_only:
         print(json.dumps(m.validate(),indent=2));return
     if not a.output:raise ValueError('output required')
-    r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,False,True)
+    r=m.evolve(a.x0,a.xend,a.rtol,'empty',True,86000.,a.wall_limit,a.fermion_atol,a.method,a.auto_handoff,True)
     if table:r['rate_source_sha256']=table.sha
     Path(a.output).write_text(json.dumps([r],indent=2,allow_nan=False)+'\n')
     print('final',json.dumps({k:r[k] for k in ['success','message','n','nparent','wall_seconds','final']}),flush=True)
-    if not r['success']:raise RuntimeError(r['message'])
+    if not r['success'] and not r['handoff_reached']:raise RuntimeError(r['message'])
 
 if __name__=='__main__':main()
