@@ -2,9 +2,10 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Direct pointwise and orbit-averaged C22 source after weak VP",
+  "title": "Evolving spatial/angular halo C22–Vlasov–Poisson and independent physical FRW gate",
   "objective": "Obtain an actual late PSD and total dark abundance including stable chi2; separately advance actual halo evolution, not merely static equilibria. Conditional homogeneous resonance is now nonlinearly disproved as a persistent fixed background; projected critical halo stability sign is established but initial C22 is nonzero.",
   "prerequisites": [
+    "Papers 21–23: causal self-gravity ~1.7–2x core, static orbital bound, weak field central slope unresolved, exact local min-energy C22 and nonlinear update; orbit relative rates divergent near cutoff, isotropic kernel not full angular operator.",
     "Halo paper 20: continuation-04/papers/20-signed-c22-source-and-frozen-response-2026-11-25.md, complete signed source and Born response, gravity omitted at same formal order. Paper 19: continuation-04/papers/19-finite-age-weak-binding-exterior-transport-2026-11-25.md, first-excursion and finite-age exterior transport.",
     "Halo exterior gate: continuation-04/papers/18-orbit-averaged-exterior-capacity-gate-2026-11-25.md, DOS ∝ ε^(-5/2), finite-mass tail p>3/2, orbital period diverges; use finite-time/radius streaming or explicit exterior treatment, no constant final bin to zero binding.",
     "2026-11-25 coherent: PHI-BOSE-QUANTUM-SEED-2026-11-25.md conditional vacuum-band seeds 77/42 periods to >10% fluctuations; stronger benchmark D=.452/.459 at period70, UV spectrum unresolved. PHI-BOSE-NARROW-SWEEP-2026-11-25.md coherent 4→2 normalization. PHI-BOSE-COHERENT-ENDPOINTS-2026-11-25.md chemical vs count endpoints are incompatible relic extremes, no actual freeze.",
@@ -29,9 +30,9 @@
     "Optional fixed 168-node positive first scalar cell actual 5field physical DOS quadrature corrected to leave all other phi cells exactly original nq Gauss, pad unused slots with zero physical weight: source commit 064995d1, targeted CI #45426158199 success. Nearcritical entropy finite-step sign may remain below global float64 resolution and must be labelled unresolved."
   ],
   "experiments": [
-    "Construct causal spherical Vlasov–Poisson linear response to constant initial C22 source, preserving total mass, with quadrature and time refinement; compare with frozen Born smooth and enclosed probes. Then evaluate C'[f0]delta f and full evolving halo.",
+    "Implement conservative spatial/velocity-angle transport with nonlinear C22 and weak Poisson, initially bounded IR. Validate isotropic limit against paper 23, streaming against 19–22, external population and number/energy/positivity. Do not impose f(E) or local isotropy without error estimates. Resolve IR/C12 and actual condensate; separately pursue physical FRW/relic.",
     "Derive expanding nonlinear scalar dynamics with independent physical initial production, number-changing/redistribution and stable fermion backreaction; establish volume/UV/seed and FRW convergence. Do not treat fixed-Minkowski fragmentation as final PSD.",
-    "Independent halo route: build orbit-averaged reversible quantum C22 solver with exact energy/number ledger, exterior bound and unbound energy states, evolving Poisson potential; benchmark initial signed flux against papers 16/17, derive actual mass/core evolution; only then GP exchange/condensation and observations.",
+    "Develop full anisotropic collision and streaming coupling; benchmark energy/angular conservation and genuine finite-age exterior populations. Use orbit averaging only where justified.",
     "First explicitly solve coupled SM gstarS(T), dark quantum thermodynamics Tdark and χ1,χ2,φ entropy transfer through QCD/MeV with true finite rate and FRW, not assume pure-φ final dark gstar1 if stable χ2 remains. Independent physical number/U1/entropy and q refinement.",
     "Quantify actual vector A' kinetic/chemical SME channel with CLEO measured hadron R including energy mismatch near 10GeV, μ/τ/e and thermal width, collider bounds. Avoid A' on-shell RIS double counting.",
     "Scan initial thermal vs freeze-in χ2 and exact dark asymmetry; independent actual total Ω and 86eV φ frozen f(q) with Bose/Pauli rates, energy/entropy conserving.",
@@ -40,5 +41,5 @@
   "constraints": "Public draft PR #1 existing branch only; no main merge/force/Computer Use, minimal meaningful CI and publish all negative numerical evidence, no premature BEC/Ω/CLASS.",
   "class_ready": false,
   "fallback_if_blocked": "A single blocked input, GitHub CI queue or unknown hadronic energy interpolation is not stopping rule. Switch to an independent useful dark-charge, entropy or halo task. Stop early only when ALL productive authorized paths objectively blocked, save exact UTC/checkpoint per AGENTS.",
-  "next_action": "Compute direct C22(q1) with full gain/loss, compare moments against signed event quadrature; orbit-average occupation-relative rates and use them for a positivity-aware evolving collision calculation."
+  "next_action": "Implement conservative spatial/velocity-angle transport with nonlinear C22 and weak Poisson, initially bounded IR. Validate isotropic limit against paper 23, streaming against 19–22, external population and number/energy/positivity. Do not impose f(E) or local isotropy without error estimates. Resolve IR/C12 and actual condensate; separately pursue physical FRW/relic."
 }
