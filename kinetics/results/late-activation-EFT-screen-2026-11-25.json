@@ -1,0 +1,56 @@
+{
+  "z": 3.0,
+  "Tgamma_eV": 0.0009394616722232399,
+  "total_density_eV4": 7.723444909215941e-10,
+  "assumptions": "illustrative coefficient lambda_eff=VEV^2/Lambda^2, vacuum scale lambda_chi*VEV^4/4, no cancellation, no specified finite-temperature potential or UV completion",
+  "rows": [
+    {
+      "sigma": 0.1,
+      "lambda_late": 1.0821204933331e-08,
+      "cutoff_eV": 86.0,
+      "vev_eV": 0.008946151780900885,
+      "vev_over_Tgamma": 9.522636255856805,
+      "max_chi_quartic_for_one_percent_total_vacuum": 0.004823096993658776
+    },
+    {
+      "sigma": 0.1,
+      "lambda_late": 1.0821204933331e-08,
+      "cutoff_eV": 860.0,
+      "vev_eV": 0.08946151780900885,
+      "vev_over_Tgamma": 95.22636255856804,
+      "max_chi_quartic_for_one_percent_total_vacuum": 4.823096993658776e-07
+    },
+    {
+      "sigma": 0.1,
+      "lambda_late": 1.0821204933331e-08,
+      "cutoff_eV": 8600.0,
+      "vev_eV": 0.8946151780900885,
+      "vev_over_Tgamma": 952.2636255856804,
+      "max_chi_quartic_for_one_percent_total_vacuum": 4.823096993658776e-11
+    },
+    {
+      "sigma": 1.25,
+      "lambda_late": 3.825873694483836e-08,
+      "cutoff_eV": 86.0,
+      "vev_eV": 0.016821463029238107,
+      "vev_over_Tgamma": 17.90542767905586,
+      "max_chi_quartic_for_one_percent_total_vacuum": 0.00038584775949270227
+    },
+    {
+      "sigma": 1.25,
+      "lambda_late": 3.825873694483836e-08,
+      "cutoff_eV": 860.0,
+      "vev_eV": 0.16821463029238107,
+      "vev_over_Tgamma": 179.05427679055865,
+      "max_chi_quartic_for_one_percent_total_vacuum": 3.858477594927022e-08
+    },
+    {
+      "sigma": 1.25,
+      "lambda_late": 3.825873694483836e-08,
+      "cutoff_eV": 8600.0,
+      "vev_eV": 1.6821463029238108,
+      "vev_over_Tgamma": 1790.5427679055865,
+      "max_chi_quartic_for_one_percent_total_vacuum": 3.85847759492702e-12
+    }
+  ]
+}
