@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-25T09:05:10Z",
+  "updated_utc": "2026-11-25T09:07:58Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -1471,19 +1471,25 @@
   },
   "current_session_20261125_DM2": {
     "start_utc": "2026-11-25T08:46:41Z",
-    "checkpoint_utc": "2026-11-25T09:05:10Z",
+    "checkpoint_utc": "2026-11-25T09:07:58Z",
     "status": "active",
     "target_minutes": 30,
     "local_clone": "DNS github.com unavailable; connector read/write; local numerical code reconstructed from fetched files",
     "head_before_checkpoint": "6da4b215b10c87c2b874234cfbc52ab25b04b57e",
-    "next": "orbit-projected radial static susceptibility; independent weak field basis",
-    "latest_stage": "causal linear VP",
-    "latest_report": "continuation-04/papers/21-causal-linear-vlasov-poisson-c22-response-2026-11-25.md"
+    "next": "direct pointwise C22 and orbit-averaged secular source",
+    "latest_stage": "orbital projected static and weak causal VP",
+    "latest_report": "continuation-04/papers/22-orbit-projected-and-weak-poisson-response-2026-11-25.md"
   },
   "latest_halo_linear_vp_20261125": {
     "report": "continuation-04/papers/21-causal-linear-vlasov-poisson-c22-response-2026-11-25.md",
     "positive": "Broad core amplification ~1.7–2x, 1 Gyr central Gaussian relative changes ~9–10%, mass ledger <4.2e-18.",
     "negative": "Unresolved central raw force, finite energy error, first order only.",
+    "class_ready": false
+  },
+  "latest_halo_weak_vp_20261125": {
+    "report": "continuation-04/papers/22-orbit-projected-and-weak-poisson-response-2026-11-25.md",
+    "positive": "Analytic radial B_EL<=B_E<=3A/4; independent orbit eigenvalues .552/.544; weak Poisson broad response within 1–4% and bounded absolute field.",
+    "negative": "Central slope not converged, first order only.",
     "class_ready": false
   }
 }
