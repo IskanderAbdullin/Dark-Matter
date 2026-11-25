@@ -12,3 +12,7 @@ Thermal Bose reference comparison with archived official CLASS 3.4.3: half-ampli
 Late weak candidate PSD export failed transformed quadrature tolerance: third tracer moment errors -0.00297, -0.02920, -0.000316. No CLASS spectrum for that candidate. Repartition/rescale tracer or refine quadrature and check moments before solver. Full hierarchy alternate run failed because CLASS-community 26 renamed tolerance input; adapter patched to source-confirmed tol_perturb_integration, not rerun. Prioritize late weak candidate with momentum-resolved parent including depletion and self-consistent finite-T self energies. No observational viability claim.
 
 Raw numerical records: results/late-weak-and-class-2026-11-25.json. Local environment and public research branch preserve all completed calculations. Main not updated (server-side ref error); workflow draft not activated (missing workflow scope).
+
+## Quadrature follow-up
+
+Both late weak-parent meshes and both partitions fail 120/240-node moment checks. All four pass at 480 nodes (max relative error 2.28e-5). Added explicit --bins 480 option with 960-node alternate check; analytic export passed both meshes. Recorded full checks in kinetics/results/late-weak-quadrature-2026-11-25.json and kinetics/results/late-weak-export-2026-11-25.json. The earlier failed coarse check is preserved. Next run actual CLASS at these validated settings; transfer and full hierarchy remain untested for this candidate.

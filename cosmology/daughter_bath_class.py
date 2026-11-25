@@ -78,7 +78,8 @@ def free_streaming(row,order=8,time_order=160):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--input',nargs='+',required=True);p.add_argument('--output',required=True)
     p.add_argument('--analytic-only',action='store_true');p.add_argument('--full-hierarchy',action='store_true')
-    p.add_argument('--kmax',type=float,default=20.);a=p.parse_args()
+    p.add_argument('--kmax',type=float,default=20.);p.add_argument('--bins',type=int,default=120);a=p.parse_args()
+    assert a.bins>=120
     ks=np.geomspace(.003,a.kmax,125);zs=[0.,5.];results=[]
     with tempfile.TemporaryDirectory() as folder:
         for i,path in enumerate(a.input):
@@ -92,13 +93,14 @@ def main():
             # Positive three-tracer export, independently varied partition.
             e=export_three(row,folder,tag=str(i))
             e2=export_three(row,folder,tag=str(i)+'_alt',cold_multiple=10.,middle_factor=.8,points=9000)
-            result.update(export=e,alternate_export=e2,quadrature120=transformed_quadrature_check(e,120),
-                          quadrature240=transformed_quadrature_check(e2,240))
+            result.update(export=e,alternate_export=e2)
+            result['quadrature'+str(a.bins)]=transformed_quadrature_check(e,a.bins)
+            result['quadrature'+str(2*a.bins)]=transformed_quadrature_check(e2,2*a.bins)
             if not a.analytic_only:
                 precision={'ncdm_fluid_approximation':3,'l_max_ncdm':30} if a.full_hierarchy else None
                 precision2={'ncdm_fluid_approximation':3,'l_max_ncdm':45,'tol_perturbations_integration':3e-6} if a.full_hierarchy else None
-                result['CLASS']=transfer(row,e,ks,zs,precision=precision,kmax_h=max(2.5,a.kmax/.674*1.15))
-                result['alternate_CLASS']=transfer(row,e2,ks,zs,240,precision=precision2,kmax_h=max(2.5,a.kmax/.674*1.15))
+                result['CLASS']=transfer(row,e,ks,zs,a.bins,precision=precision,kmax_h=max(2.5,a.kmax/.674*1.15))
+                result['alternate_CLASS']=transfer(row,e2,ks,zs,2*a.bins,precision=precision2,kmax_h=max(2.5,a.kmax/.674*1.15))
                 comparisons={}
                 for z in zs:
                     a1=result['CLASS']['ratios'][str(z)];a2=result['alternate_CLASS']['ratios'][str(z)]
