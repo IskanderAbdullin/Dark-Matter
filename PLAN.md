@@ -65,3 +65,5 @@ Paper 23: direct C22 and independent analytic min(q_i)/4 energy kernel; orbital 
 Paper 24: [angular C22 gate](continuation-04/papers/24-angular-c22-quadrupole-and-velocity-lattice-2026-11-25.md) derives continuous l=2 shear response and independent conservative 3D velocity lattice; 12–14% directional bias persists at K9 despite exact invariants. Prioritize rotation-covariant harmonic kernel, then spatial coupling.
 
 Paper 25: [rotation-covariant angular C22](continuation-04/papers/25-rotation-covariant-harmonic-c22-2026-11-25.md) exact l0–2 weak kernel, N240 shear within ~.5% independent continuous calculation; first-order quadrupole evolved with nonlinear f0, slow spectrum and exterior PSD not converged. Next conservative fixed-binding spherical streaming.
+
+Paper 26: [well-balanced spherical streaming](continuation-04/papers/26-well-balanced-spherical-streaming-2026-11-25.md) exact fixed-binding number/energy ledger and analytic oscillator convergence, but finite-age exterior crossing error 5.8% at 200×80. Prioritize fully nonlinear axisymmetric collision kernel and orbit-invariant transport rather than unvalidated angular closure.
