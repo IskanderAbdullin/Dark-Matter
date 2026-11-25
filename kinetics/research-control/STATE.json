@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-24T21:39:20Z",
+  "updated_utc": "2026-11-25T08:57:29Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,7 +106,7 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active run continuing; previous completed checkpoint unchanged as baseline; not claiming 540 minutes.",
+  "stop_reason": "Active session; continuing from finite-age signed halo response",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Evaluate on-shell decay source in physically cold q window, sign of Bose-stimulated gain with actual fermion occupancy; prioritize viable low-entropy initial conditions and number multiplier before full cosmological inference.",
   "last_checkpoint_git_sha": "f7cbd89f2c511df8a8226f45c605f594c093a570",
@@ -1456,5 +1456,26 @@
     "positive": "Exterior DOS diverges as πQt³/(32 ε^5/2), finite mass power p>3/2, Kepler period ∝ε^-3/2.",
     "negative": "Phase-mixed exterior assumption fails at finite time near E=0; no actual orbit transport.",
     "class_ready": false
+  },
+  "latest_halo_finite_age_transport_20261125": {
+    "report": "continuation-04/papers/19-finite-age-weak-binding-exterior-transport-2026-11-25.md",
+    "positive": "Exact exterior crossing/dwell/delay/front; first excursion outside .00602530/.00139538 at 13.8 Gyr; independent ODE delay error <5.36e-10.",
+    "negative": "Frozen potential, prescribed initial source, no rescattering.",
+    "class_ready": false
+  },
+  "latest_halo_signed_born_response_20261125": {
+    "report": "continuation-04/papers/20-signed-c22-source-and-frozen-response-2026-11-25.md",
+    "positive": "All four C22 legs with local count/energy conservation; full signed fixed-potential streaming, subpercent smooth probe convergence at 1 Gyr.",
+    "negative": "Hard-bin quadrature not fully converged; no gravitational response at same formal order; no evolving C22.",
+    "class_ready": false
+  },
+  "current_session_20261125_DM2": {
+    "start_utc": "2026-11-25T08:46:41Z",
+    "checkpoint_utc": "2026-11-25T08:57:29Z",
+    "status": "active",
+    "target_minutes": 30,
+    "local_clone": "DNS github.com unavailable; connector read/write; local numerical code reconstructed from fetched files",
+    "head_before_checkpoint": "6da4b215b10c87c2b874234cfbc52ab25b04b57e",
+    "next": "linearized self-consistent Vlasov–Poisson response"
   }
 }
