@@ -6,6 +6,7 @@ on:
     paths:
       - 'kinetics/energy_closed_bath.py'
       - 'cosmology/energy_closed_class.py'
+      - 'cosmology/kinetic_psd_class.py'
       - '.github/workflows/energy-closed-class.yml'
   workflow_dispatch:
 

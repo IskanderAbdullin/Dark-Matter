@@ -75,7 +75,7 @@ def transformed_quadrature_check(export,bins):
 def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     from classy import Class
     base={'h':.674,'omega_b':.02237,'T_cmb':2.7255,'N_ur':3.044+row['final']['delta_Neff_chi2_if_stable_free_streaming'],
-          'A_s':2.1e-9,'n_s':.965,'tau_reio':.0544,'gauge':'newtonian','output':'mPk',
+          'A_s':2.1e-9,'n_s':.965,'tau_reio':.0544,'gauge':'synchronous','output':'mPk',
           'P_k_max_h/Mpc':kmax_h,'z_max_pk':5.1}
     def solve(p):
         c=Class()
@@ -106,6 +106,10 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     result={}
     for z in zs:
         key=str(z);r=np.asarray(warm['power'][key])/np.asarray(cold['power'][key]);assert np.all(np.isfinite(r)) and np.all(r>0)
+        # Equal-density adiabatic models must approach the same large-scale power.
+        # The previous Newtonian ultra-cold-tracer run failed this condition.
+        large=ks<=.03
+        assert not np.any(large) or np.max(np.abs(r[large]-1))<.05,(z,r[large].tolist())
         crossings=np.flatnonzero((r[:-1]>=.5)&(r[1:]<.5))
         half=None
         if len(crossings):
@@ -115,7 +119,7 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     return {'warm_background':{k:v for k,v in warm.items() if k!='power'},'expected_omega':target,
             'delta_phi_early':float(delta_phi),'chi2_Nur':row['final']['delta_Neff_chi2_if_stable_free_streaming'],
             'hot_tracer_mass_fraction':ratio,'ratios':result,'quadrature_strategy':2,
-            'momentum_bins':bins,'quadrature_moment_relative_errors':quadrature_errors}
+            'momentum_bins':bins,'gauge':'synchronous','quadrature_moment_relative_errors':quadrature_errors}
 
 
 def main():
