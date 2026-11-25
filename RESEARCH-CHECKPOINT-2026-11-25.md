@@ -144,3 +144,7 @@ See kinetics/EARLY-BOSE-BOOTSTRAP-HARTREE-2026-11-25.md and kinetics/DIRECT-SUBT
 ## Restricted-field direct cubic matching
 
 [Matching audit and exact field-direction tests](kinetics/DIRECT-POLE-MATCHING-2026-11-25.md). Conditional global quartic witness requires λA≥7.38e−6 under the chosen finite radiative budgets, versus the already generous cap 1.08e−11. Over |χ|≤0.01 reduced Planck masses, a positive S quartic permits λA≈1.67e−21 and a conditional constant-contact L1 bound <1.29e−4. Keep this finite-field low-energy branch separate from any claim of UV completion. Next action: quantify trigger seed sensitivity and bound extra S populations, including possible inflationary misalignment and self-resonance, then assess cosmological background/perturbation significance and high-scale matching.
+
+## Initial conditions and conditional observational geometry
+
+[Results with DESI DR2 covariance and spectator initial-condition tests](kinetics/DIRECT-POLE-INITIAL-AND-GEOMETRY-2026-11-25.md). Reference trigger's half-onset z=4.345 with dz/dln(seed)=0.085. Near the coherent 1% relic budget, both scalar spectators have a long potential self-resonance interval. The light A stationary stochastic estimate is near the trigger's single-mode inflationary seed scale, and primordial S/η abundances remain unestablished. Fixed-density, free-ruler BAO Δχ²≈+1.99 and fixed-redshift acoustic angle +0.134%; no joint cosmology inference. Next: determine whether the coupled η–χ perturbations or the oscillating χ potential invalidate the smooth-background approximation.

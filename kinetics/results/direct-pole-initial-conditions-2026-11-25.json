@@ -1,0 +1,261 @@
+{
+  "trigger": {
+    "seed_chi_eV": 9.049809269161514e+16,
+    "seed_trials": [
+      {
+        "seed_over_reference": 0.1,
+        "first_z_half": 4.161189867548027,
+        "max_extra_fraction": 0.02045159969098284,
+        "H0_ratio": 1.0035995104773339,
+        "H_at_half_eV": 9.630377070202422e-33,
+        "tau": 1.3803699923247614e-10
+      },
+      {
+        "seed_over_reference": 0.5,
+        "first_z_half": 4.288146541490499,
+        "max_extra_fraction": 0.019070090213017764,
+        "H0_ratio": 1.0033456322279057,
+        "H_at_half_eV": 9.976292912955538e-33,
+        "tau": 1.4754075735266042e-10
+      },
+      {
+        "seed_over_reference": 0.990049833749168,
+        "first_z_half": 4.344528092102958,
+        "max_extra_fraction": 0.018494612213167186,
+        "H0_ratio": 1.0032381303179376,
+        "H_at_half_eV": 1.0131387208862118e-32,
+        "tau": 1.518848992377944e-10
+      },
+      {
+        "seed_over_reference": 1.0,
+        "first_z_half": 4.34532541967242,
+        "max_extra_fraction": 0.018486073366860766,
+        "H0_ratio": 1.003236540537974,
+        "H_at_half_eV": 1.0133584321341951e-32,
+        "tau": 1.5194996098825323e-10
+      },
+      {
+        "seed_over_reference": 1.010050167084168,
+        "first_z_half": 4.346227210409544,
+        "max_extra_fraction": 0.01847723659908414,
+        "H0_ratio": 1.0032349234952433,
+        "H_at_half_eV": 1.0136076473249671e-32,
+        "tau": 1.5201506700597347e-10
+      },
+      {
+        "seed_over_reference": 2.0,
+        "first_z_half": 4.404292571124519,
+        "max_extra_fraction": 0.017907876934428225,
+        "H0_ratio": 1.0031278473623721,
+        "H_at_half_eV": 1.0296770255550276e-32,
+        "tau": 1.5656933685436057e-10
+      },
+      {
+        "seed_over_reference": 10.0,
+        "first_z_half": 4.547950720934428,
+        "max_extra_fraction": 0.016596031214295162,
+        "H0_ratio": 1.0028796057773506,
+        "H_at_half_eV": 1.069838492486199e-32,
+        "tau": 1.6818254761635596e-10
+      }
+    ],
+    "dz_half_d_log_seed": 0.08495591532931002,
+    "H_inf_GeV_for_10_percent_seed_fluctuation_single_mode": 56861628.63277326,
+    "H_inf_GeV_for_10_percent_seed_fluctuation_60_efold_rms": 7340804.691098721,
+    "wall_tension_eV3_unmodified_double_well": 1.2176164041246663e+20,
+    "one_wall_per_hubble_fraction_at_half": 0.0006755044572228235,
+    "eta_chi_quartic_strength": 1.9584988929962564e-54,
+    "scope": "Separate homogeneous patches with fixed overdamped seed and shared background input. Inflationary estimates are conditional on an effectively light minimally coupled spectator. Neither nonlinear domains nor anisotropies were evolved."
+  },
+  "mediator": {
+    "mass_eV": 171.99999069526004,
+    "quartic": 3.4170831596658935e-06,
+    "gstar_matching": 106.75,
+    "H_inf_rms_factors": {
+      "random_walk_60": 1.2328088881229997,
+      "quartic_stationary": 13.213661107399348
+    },
+    "pure_quartic_linear_floquet": {
+      "k2": 1.6145000507758311,
+      "mu": 0.03597943394071085,
+      "trace_half": 1.0089132729435688,
+      "det": 0.999999999998149,
+      "band_low": 1.5,
+      "band_high": 1.7320508075688772
+    },
+    "budgets": [
+      {
+        "budget_omega_h2": 0.0012,
+        "amplitude_eV": 9.578130654761039e+23,
+        "matching_time": 800.0,
+        "omega_h2_coherent": 0.0011999999993693514,
+        "phase_span_relative": 0.056677215723800134,
+        "H_match_eV": 4.517653554936375e+17,
+        "temperature_match_GeV": 17932825186783.945,
+        "quartic_cycles_after_match_before_crossover": 5.740643844650957e+17,
+        "elliptic_parameter_at_match": 0.4999999999999999,
+        "fine_match": {
+          "amplitude_eV": 9.578130654761039e+23,
+          "matching_time": 2500.0,
+          "omega_h2_coherent": 0.0012020829935722383,
+          "phase_span_relative": 0.032170336913756425,
+          "H_match_eV": 1.44564913757964e+17,
+          "temperature_match_GeV": 10144337836326.273,
+          "quartic_cycles_after_match_before_crossover": 5.725168867659725e+17,
+          "elliptic_parameter_at_match": 0.5
+        },
+        "omega_h2_independent_conformal_reference": 0.001198244170696127,
+        "pure_quartic_peak_amplitude_efolds_after_matching_estimate": 1.531800277077945e+17,
+        "H_inf_GeV_for_60_efold_rms": 776935561305379.8,
+        "H_inf_GeV_for_equilibrium_rms": 72486577163671.2
+      },
+      {
+        "budget_omega_h2": 0.012,
+        "amplitude_eV": 4.4457744294023016e+24,
+        "matching_time": 800.0,
+        "omega_h2_coherent": 0.01199999999369347,
+        "phase_span_relative": 0.05667721572380146,
+        "H_match_eV": 2.0969090294723717e+18,
+        "temperature_match_GeV": 38635100672684.78,
+        "quartic_cycles_after_match_before_crossover": 2.6645708367079767e+18,
+        "elliptic_parameter_at_match": 0.5,
+        "fine_match": {
+          "amplitude_eV": 4.4457744294023016e+24,
+          "matching_time": 2500.0,
+          "omega_h2_coherent": 0.012020829935722356,
+          "phase_span_relative": 0.032170336913755454,
+          "H_match_eV": 6.710108894311589e+17,
+          "temperature_match_GeV": 21855313341984.28,
+          "quartic_cycles_after_match_before_crossover": 2.657387988667686e+18,
+          "elliptic_parameter_at_match": 0.49999999999999994
+        },
+        "omega_h2_independent_conformal_reference": 0.01198244170696123,
+        "pure_quartic_peak_amplitude_efolds_after_matching_estimate": 7.109987061409937e+17,
+        "H_inf_GeV_for_60_efold_rms": 3606215425791721.5,
+        "H_inf_GeV_for_equilibrium_rms": 336452887149706.75
+      },
+      {
+        "budget_omega_h2": 0.12,
+        "amplitude_eV": 2.0635456948274916e+25,
+        "matching_time": 800.0,
+        "omega_h2_coherent": 0.11999999993693457,
+        "phase_span_relative": 0.05667721572380129,
+        "H_match_eV": 9.732989536300755e+18,
+        "temperature_match_GeV": 83236801142106.2,
+        "quartic_cycles_after_match_before_crossover": 1.2367842242033986e+19,
+        "elliptic_parameter_at_match": 0.49999999999999994,
+        "fine_match": {
+          "amplitude_eV": 2.0635456948274916e+25,
+          "matching_time": 2500.0,
+          "omega_h2_coherent": 0.12020829935722321,
+          "phase_span_relative": 0.03217033691375598,
+          "H_match_eV": 3.1145566516162417e+18,
+          "temperature_match_GeV": 47085845225487.56,
+          "quartic_cycles_after_match_before_crossover": 1.2334502414776631e+19,
+          "elliptic_parameter_at_match": 0.4999999999999999
+        },
+        "omega_h2_independent_conformal_reference": 0.1198244170696121,
+        "pure_quartic_peak_amplitude_efolds_after_matching_estimate": 3.3001636551371653e+18,
+        "H_inf_GeV_for_60_efold_rms": 1.6738569251956982e+16,
+        "H_inf_GeV_for_equilibrium_rms": 1561675964030856.8
+      }
+    ],
+    "scope": "Instant radiation domination, constant high-T SM degrees at matching, homogeneous coherent branch only. Self-resonance and fragmentation can invalidate these otherwise adiabatic numbers."
+  },
+  "light_scalar": {
+    "mass_eV": 86.0,
+    "quartic": 1.6719925770562025e-21,
+    "gstar_matching": 106.75,
+    "H_inf_rms_factors": {
+      "random_walk_60": 1.2328088881229997,
+      "quartic_stationary": 88844.07395937906
+    },
+    "pure_quartic_linear_floquet": {
+      "k2": 1.6145000507758311,
+      "mu": 0.03597943394071085,
+      "trace_half": 1.0089132729435688,
+      "det": 0.999999999998149,
+      "band_low": 1.5,
+      "band_high": 1.7320508075688772
+    },
+    "budgets": [
+      {
+        "budget_omega_h2": 0.0012,
+        "amplitude_eV": 4.268060214224248e+21,
+        "matching_time": 800.0,
+        "omega_h2_coherent": 0.0011999999993693568,
+        "phase_span_relative": 0.05667721572380078,
+        "H_match_eV": 44529939.23814969,
+        "temperature_match_GeV": 178040294.75044176,
+        "quartic_cycles_after_match_before_crossover": 113169586.85303257,
+        "elliptic_parameter_at_match": 0.4999999999999992,
+        "fine_match": {
+          "amplitude_eV": 4.268060214224248e+21,
+          "matching_time": 2500.0,
+          "omega_h2_coherent": 0.0012020829935722296,
+          "phase_span_relative": 0.03217033691375666,
+          "H_match_eV": 14249580.5562079,
+          "temperature_match_GeV": 100714799.79399127,
+          "quartic_cycles_after_match_before_crossover": 112864512.14965367,
+          "elliptic_parameter_at_match": 0.4999999999999974
+        },
+        "omega_h2_independent_conformal_reference": 0.0011982458123950838,
+        "pure_quartic_peak_amplitude_efolds_after_matching_estimate": 30197519.509906486,
+        "H_inf_GeV_for_60_efold_rms": 3462061520924.4136,
+        "H_inf_GeV_for_equilibrium_rms": 48039897.58704304
+      },
+      {
+        "budget_omega_h2": 0.012,
+        "amplitude_eV": 1.98105806315302e+22,
+        "matching_time": 800.0,
+        "omega_h2_coherent": 0.01199999999369351,
+        "phase_span_relative": 0.05667721572379997,
+        "H_match_eV": 206689668.7292508,
+        "temperature_match_GeV": 383576187.2338529,
+        "quartic_cycles_after_match_before_crossover": 525286714.15107715,
+        "elliptic_parameter_at_match": 0.4999999999999999,
+        "fine_match": {
+          "amplitude_eV": 1.98105806315302e+22,
+          "matching_time": 2500.0,
+          "omega_h2_coherent": 0.012020829935722368,
+          "phase_span_relative": 0.032170336913755565,
+          "H_match_eV": 66140693.99336025,
+          "temperature_match_GeV": 216983458.4757906,
+          "quartic_cycles_after_match_before_crossover": 523870700.8081992,
+          "elliptic_parameter_at_match": 0.49999999999999983
+        },
+        "omega_h2_independent_conformal_reference": 0.011982447510921406,
+        "pure_quartic_peak_amplitude_efolds_after_matching_estimate": 140164475.63311717,
+        "H_inf_GeV_for_60_efold_rms": 16069466096803.207,
+        "H_inf_GeV_for_equilibrium_rms": 222981452.2079201
+      },
+      {
+        "budget_omega_h2": 0.12,
+        "amplitude_eV": 9.195256984669668e+22,
+        "matching_time": 800.0,
+        "omega_h2_coherent": 0.11999999993693511,
+        "phase_span_relative": 0.056677215723798836,
+        "H_match_eV": 959368458.3968202,
+        "temperature_match_GeV": 826389844.0467801,
+        "quartic_cycles_after_match_before_crossover": 2438164970.358262,
+        "elliptic_parameter_at_match": 0.5000000000000001,
+        "fine_match": {
+          "amplitude_eV": 9.195256984669668e+22,
+          "matching_time": 2500.0,
+          "omega_h2_coherent": 0.12020829935722545,
+          "phase_span_relative": 0.032170336913754344,
+          "H_match_eV": 306997906.68698245,
+          "temperature_match_GeV": 467476690.10333735,
+          "quartic_cycles_after_match_before_crossover": 2431592436.6314735,
+          "elliptic_parameter_at_match": 0.49999999999999994
+        },
+        "omega_h2_independent_conformal_reference": 0.1198244243242614,
+        "pure_quartic_peak_amplitude_efolds_after_matching_estimate": 650585871.2409998,
+        "H_inf_GeV_for_60_efold_rms": 74587854397041.3,
+        "H_inf_GeV_for_equilibrium_rms": 1034988218.6710492
+      }
+    ],
+    "scope": "Instant radiation domination, constant high-T SM degrees at matching, homogeneous coherent branch only. Self-resonance and fragmentation can invalidate these otherwise adiabatic numbers."
+  },
+  "numerical_note": "Initial fixed amplitude bracket [1e13,1e22] eV missed the S roots. Replaced by a conformal-quartic-scaled bracket and checked the independent reference."
+}

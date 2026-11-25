@@ -53,7 +53,7 @@ def solve_friedmann(row,p,rtol=1e-9,n=24000,order=48,return_history=False):
         x,dx=y;hh,dh,dU,_,_=local(t,x,dx)
         return [dx,-(3+dh)*dx-dU/(v*v*hh*hh)]
     t0=-np.log(1e14);ts=np.r_[np.linspace(t0,-np.log(101.),500),np.linspace(-np.log(101.),0.,n)[1:]]
-    sol=solve_ivp(fun,(t0,0.),[1e-8,0.],t_eval=ts,rtol=rtol,atol=rtol*1e-10,method='DOP853',max_step=.04,first_step=.01)
+    sol=solve_ivp(fun,(t0,0.),[p.get('seed',1e-8),0.],t_eval=ts,rtol=rtol,atol=rtol*1e-10,method='DOP853',max_step=.04,first_step=.01)
     assert sol.success,sol.message
     r=np.exp(-ts);x,dx=sol.y
     loc=np.array([local(t,xx,dd) for t,xx,dd in zip(ts,x,dx)]);hh=loc[:,0]/HBAR;rho=loc[:,3];pr=loc[:,4]
