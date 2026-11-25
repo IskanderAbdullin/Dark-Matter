@@ -53,3 +53,9 @@ The public [thermal 86-eV Bose CLASS analysis](cosmology/THERMAL-CLASS-VERIFIED.
 ## Research status: kinetic production and primordial hot-tail constraints
 
 The [consolidated research status and falsifiability roadmap](THEORETICAL-STATUS-2026-11-21.md) integrates the latest [verified ten-case CLASS cold+hot transfer study](cosmology/VERIFIED-HOT-TAIL-CLASS.md) and the first [verified Bose-stimulated 1↔2 quantum collision benchmark](kinetics/VERIFIED-QUANTUM-BURST.md). The former demonstrates potentially severe small-scale structure suppression from even a residual hot component within an **illustrative** initial momentum family. The latter shows a number-conserving, Pauli-respecting and discrete-energy-conserving very cold burst in a fixed thermal bath, but the momentum distribution is **not yet grid converged**, and no self-consistent cosmological production is claimed.
+
+
+## November 25 kinetic continuation
+
+- [Direct daughter-energy finite volumes](kinetics/DAUGHTER-ENERGY-FV-2026-11-25.md): fixed-bath moment convergence significantly improved.
+- [Radiation-era external-bath production](kinetics/RADIATION-FIXED-BATH-2026-11-25.md): conditional expanding-universe freeze-out, abundance and residual hot-tail calculation; feedback and physical production remain unresolved.
