@@ -77,3 +77,5 @@ Paper 29: [orbit/local nonlinear collision coupling](continuation-04/papers/29-o
 Paper 30: [entropy-compatible momentum tilt](continuation-04/papers/30-entropy-momentum-corrected-orbit-c22-2026-11-25.md) removes orbit-overlap artificial drag and conserves p in aggregate while preserving positive reversible factors and entropy; rate correction remains ~9% on refined trap grid. Port to actual lowered Bose potential and audit initial signed C22.
 
 Paper 31: [actual frozen halo with open characteristics](continuation-04/papers/31-frozen-halo-open-bound-orbit-c22-2026-11-25.md) adaptive L² partitions restore core-to-exterior coverage; independent initial continuum C22 gains reproduced at M2 within .51%/.35%. First nonlinear frozen evolution at .1 Gyr; gravity still fixed. Next controlled Vlasov-Poisson feedback.
+
+Paper 32: [evolving C22 + linearized VP](continuation-04/papers/32-nonlinear-c22-linear-vp-orbit-feedback-2026-11-25.md) gives robust broad feedback gain ~1.6–1.8 at .1 Gyr; inner energy resolution unresolved; reference-energy ledger exact but omitted nonlinear field energy. Next common-L canonical force transport.

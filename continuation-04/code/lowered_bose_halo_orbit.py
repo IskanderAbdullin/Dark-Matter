@@ -12,6 +12,7 @@ from lowered_antonov_hessian import Halo
 from lowered_bose_projected_axis import hats,rounded_distribution
 from lowered_bose_orbit_collision import Coupling
 from lowered_bose_orbit_tilt import Tilt
+from lowered_bose_orbit_batch import Streamer
 from lowered_bose_orbit_remap import mesh,shift,integrator,slopes
 R=.6*3.085677581491367e19;V=44100.;GYR=1e9*365.25*86400;TIME=R/V/GYR
 
@@ -115,15 +116,8 @@ def run(H,M,K,nL,nphase,nrad,m,kphase,rout,nz,tmax,dt,tilt):
     C,d=build(H,M,K,nL,nphase,nrad,m,kphase,rout,nz);f=C.f0.copy();mass=C.V@f;ref=reference(H);ref2=reference(H,32,128);g,b=C.derivative(f,True);e=C.e;ref2*=C.pref/(H.Ic*H.Qt);ref*=C.pref/(H.Ic*H.Qt)
     P=Tilt(C) if tilt else C
     g2,b2=P.derivative(f,True);d.update(reference=ref.tolist(),reference_fine=ref2.tolist(),raw_rate=[float(C.V[e>0]@g[e>0]/mass),float(C.V[e>C.e0]@g[e>C.e0]/mass)],selected_rate=[float(C.V[e>0]@g2[e>0]/mass),float(C.V[e>C.e0]@g2[e>C.e0]/mass)],raw=b,selected=b2,raw_source_L1=float(C.V@abs(g)/mass),correction_L1=float(C.V@abs(g2-g)/mass))
-    def stream(f,dt):
-        z=f.copy();out=np.zeros(3);minval=0.
-        for (O,ed,base),vol in zip(C.orbits,C.omass):
-            sl=slice(base,base+nphase);v=f[sl];a=dt/(TIME*O.T)
-            if O.open:
-                y,l=open_shift(ed,v,a);out+=vol*l*np.array([1,-O.s,float(-O.s>C.e0)])
-            else:y=shift(ed,v,a)
-            minval=min(minval,float(y.min()));assert y.min()>-1e-9;y=np.maximum(y,0);z[sl]=y
-        return z,out,minval
+    S=Streamer(C,TIME)
+    def stream(f,dt):return S.apply(f,dt)
     def rep(f,t,out):
         a=C.stats(f);a.update(t=t,out_count=float(out[0]/mass),out_energy=float(out[1]/mass),out_true_unbound=float(out[2]/mass),cutoff_population=float(C.V[e>0]@f[e>0]/mass),unbound_population=float(C.V[e>C.e0]@f[e>C.e0]/mass),outside_population=float((C.V*C.outside)@f/mass),gaussian=(C.dens.T@(C.V*f)/mass).tolist(),number_ledger=float((C.V@f+out[0])/mass-1),energy_ledger=float(((C.V*e)@f+out[1]-(C.V*e)@C.f0)/mass));return a
     t=0.;out=np.zeros(3);steps=0;reject=0;min_before=0.;d['rows']=[rep(f,t,out)]
