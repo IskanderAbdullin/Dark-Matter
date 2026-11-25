@@ -87,3 +87,5 @@ Paper 34: [nonlinear Poisson negative energy test](continuation-04/papers/34-non
 Paper 35: [positivity-limited nonlinear gravity](continuation-04/papers/35-positive-equilibrium-subtracted-halo-flux-2026-11-25.md) eliminates all 107 delta-f step rejections with negligible flux limiting; energy defect persists. Next exact work ledger and energy consistency.
 
 Paper 36: [exact discrete energy and split work ledger](continuation-04/papers/36-discrete-halo-energy-work-ledger-2026-11-25.md) identifies reference-stream/force work mismatch; phase refinement to 262k states leaves ~8e-7 energy error. Next parity and binding refinement.
+
+Paper 37: [energy-closure sensitivity control](continuation-04/papers/37-energy-closure-sensitivity-control-2026-11-25.md) closes discrete energy by positive conservative internal-face repair; small distribution change but imposed correction, not physical solver. M2 nonlinear run timed out. Next local work quadrature.
