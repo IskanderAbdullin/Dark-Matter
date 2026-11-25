@@ -48,9 +48,18 @@ def main():
     if len(results)==2 and not a.analytic_only:
         for z in zs:
             key=str(z);u,v=[r['CLASS']['ratios'][key] for r in results]
-            h1,h2=u['half_power_k_per_Mpc'],v['half_power_k_per_Mpc'];assert h1 and h2
-            pre=ks<=min(h1,h2);drift=float(np.max(np.abs(np.asarray(u['power_ratio'])[pre]/np.asarray(v['power_ratio'])[pre]-1)))
-            print('mesh',key,h1,h2,drift,flush=True);assert abs(h1/h2-1)<.05 and drift<.05
+            h1,h2=u['half_power_k_per_Mpc'],v['half_power_k_per_Mpc']
+            assert (h1 is None)==(h2 is None),(h1,h2)
+            if h1 is None:
+                # Both spectra must actually stay above half-power, not merely
+                # lack a downward crossing (e.g. start below the threshold).
+                assert min(u['power_ratio'])>.5 and min(v['power_ratio'])>.5
+                pre=np.ones(len(ks),dtype=bool);shift=None
+            else:
+                pre=ks<=min(h1,h2);shift=abs(h1/h2-1)
+            drift=float(np.max(np.abs(np.asarray(u['power_ratio'])[pre]/np.asarray(v['power_ratio'])[pre]-1)))
+            print('mesh',key,h1,h2,drift,'right_censored_at',float(ks[-1]) if h1 is None else None,flush=True)
+            assert (shift is None or shift<.05) and drift<.05
     Path(a.output).write_text(json.dumps(dict(k_per_Mpc=ks.tolist(),results=results),indent=2)+'\n')
 
 if __name__=='__main__':main()

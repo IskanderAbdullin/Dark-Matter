@@ -1,0 +1,45 @@
+{
+  "run_id": 45625464842,
+  "head": "9bbc338ab1c7dccf7205d2bbea1a711ebb870dcf",
+  "artifact_id": 15028558602,
+  "status": "failure after completed calculations: assertion requiring non-null half power",
+  "k_range": [
+    0.003,
+    20
+  ],
+  "rows": [
+    {
+      "n": 320,
+      "omega": 0.11986450514823244,
+      "z0": {
+        "half": null,
+        "P1": 0.8389999453984978,
+        "P10": 0.5924735333231786,
+        "partition_drift": 0.006871392105334162
+      },
+      "z5": {
+        "half": null,
+        "P1": 0.8390904582834815,
+        "P10": 0.5970244316175005,
+        "partition_drift": 0.0068713870248849895
+      }
+    },
+    {
+      "n": 480,
+      "omega": 0.11997128406958804,
+      "z0": {
+        "half": null,
+        "P1": 0.8409530935929833,
+        "P10": 0.5931455151573897,
+        "partition_drift": 0.008433644066960455
+      },
+      "z5": {
+        "half": null,
+        "P1": 0.8410423220299172,
+        "P10": 0.5977074485991758,
+        "partition_drift": 0.008433659795469284
+      }
+    }
+  ],
+  "caveat": "Full power arrays were not retained because assertion preceded output write; two reported k points and per-partition comparisons from logs only. Null crossing is not yet proof all grid points remain above .5; new guard checks that explicitly. No physical viability claim."
+}

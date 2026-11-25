@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'kinetics/reheating_matched_cases.py'
+      - 'cosmology/energy_closed_class.py'
       - '.github/workflows/early-onset-class.yml'
   workflow_dispatch:
 permissions:
