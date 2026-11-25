@@ -1,0 +1,81 @@
+{
+  "run_id": 45625224293,
+  "sha": "5205b04bb22635287bd431b703ddd85bb320d3fb",
+  "artifact_id": 15027668407,
+  "status": "success",
+  "gauge": "synchronous",
+  "scope": "energy-closed phenomenological production, adiabatic collisionless post-freezeout perturbations",
+  "columns": [
+    "z",
+    "half_320",
+    "half_480",
+    "mesh_drift_before_half",
+    "P_ratio_k1_480",
+    "P_ratio_k10_480"
+  ],
+  "rows": [
+    [
+      0,
+      0.6919497866783805,
+      0.6897248310395936,
+      0.0037303590707225,
+      0.3110142824705615,
+      0.03355033009879339
+    ],
+    [
+      5,
+      0.6921086973846301,
+      0.6898825790306721,
+      0.003730337109541404,
+      0.31118153072423477,
+      0.0349775991530887
+    ]
+  ],
+  "partition_drift_before_half_320": [
+    0.004719779225432097,
+    0.004719702230038703
+  ],
+  "partition_drift_before_half_480": [
+    0.0003543389117235396,
+    0.0003544401615747095
+  ],
+  "fluid_control": {
+    "k": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5,
+      1,
+      1.5
+    ],
+    "default": [
+      0.9998801974040352,
+      0.9980475156220385,
+      0.9900209422658358,
+      0.9478145506017219,
+      0.6764561475961283,
+      0.3104070705370379,
+      0.1906942276511995
+    ],
+    "late": [
+      0.999724121645777,
+      0.9979973891670042,
+      0.9896379304456392,
+      0.9451505421424459,
+      0.6774701303534189,
+      0.3586717542978483,
+      0.22809719758754723
+    ],
+    "none": [
+      0.9996035110291719,
+      0.9977172613629273,
+      0.9893110478685434,
+      0.9443357546056003,
+      0.673171479679896,
+      0.3599830597478622,
+      0.2408047683134471
+    ]
+  },
+  "warning": "Fluid approximation affects power beyond first half-crossing (relative ~16% at k=1, ~26% at 1.5 between default and no-fluid); mesh agreement alone does not establish absolute accuracy there. Full hierarchy precision scan next."
+}

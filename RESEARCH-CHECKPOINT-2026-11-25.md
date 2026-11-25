@@ -11,11 +11,12 @@ Canonical research goal is the physical chain from microphysics to production sp
 - CLASS automatic q quadrature failed, transformed quadrature passed moments. Newtonian two-tracer solution failed long-wave normalization even with no fluid closure; independent synchronous/hybrid controls resolved the symptom. [Failure](cosmology/CLASS-NORMALIZATION-NEGATIVE-2026-11-25.md), [control](cosmology/CLASS-NORMALIZATION-RECOVERED-2026-11-25.md).
 - [Verified corrected fixed-bath CLASS run 45625224041](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625224041): half-power at z=5 ~.6984 Mpc^-1, ratio at k=10 ~.0371, mesh/partition drift below .41%. No observation likelihood. [Retained numerical summary](cosmology/results/kinetic-psd-class-synchronous-45625224041.json).
 - [Two-mass geometry](kinetics/TWO-MASS-GEOMETRY-2026-11-25.md) verified reference integration but not evolution.
-- Corrected energy-closed [run 45625224293](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625224293) and earlier-onset [run 45625464842](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625464842) were running at checkpoint creation; collect actual output, do not infer success.
+- Corrected energy-closed [run 45625224293](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625224293) succeeded; half-power k=.68988 Mpc^-1 at z=5 on 480 cells, with mesh/partition drift <.5% before half. Full hierarchy changes power at k=1–1.5 substantially: [corrected results and limitation](cosmology/ENERGY-CLOSED-CLASS-CORRECTED-2026-11-25.md).
+- Earlier-onset [run 45625464842](https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45625464842) was running at checkpoint creation; collect actual output, do not infer success.
 
 ## Next actions (in order)
 
-1. Collect corrected energy-closed and earlier-onset CLASS results, independently check long-wave normalization and half-power/mesh consistency. If early spectrum has no crossing in tested range, extend the physical k range rather than assuming a result.
+1. Collect earlier-onset CLASS results and test normalization/half-power convergence. Refine the perturbation hierarchy around the half crossing and at high k (the new fluid control shows 16–26% differences at k=1–1.5). If early spectrum has no crossing in tested range, extend the physical k range rather than assuming a result.
 2. Implement finite fermion daughter in the conservative asymmetric energy collision kernel using the tested geometry; extend total stress-energy to both traces. Derive temperature-dependent dispersion/chemical rates for a physically specified Lagrangian, with the early burst's tiny IR scale as the decision criterion.
 3. Only after conditional production/transfer checks, compare admissible scenarios to CMB/Lyman-alpha and dwarf-galaxy likelihoods and close the nonlinear halo/relaxation link.
 

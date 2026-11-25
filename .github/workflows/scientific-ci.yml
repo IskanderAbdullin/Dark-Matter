@@ -35,3 +35,8 @@ jobs:
         run: python -m pytest -q tests
       - name: Run original synthetic SPARC likelihood checks
         run: PYTHONPATH=code python -m unittest discover -s code -p 'test_*.py' -v
+      - name: Validate finite-mass decay geometry against independent reference
+        env:
+          OPENBLAS_NUM_THREADS: 1
+          OMP_NUM_THREADS: 1
+        run: python kinetics/two_mass_geometry.py
