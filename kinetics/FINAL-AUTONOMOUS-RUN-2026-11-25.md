@@ -1,0 +1,10 @@
+# Final checkpoint: published rates, transfer, and rejected width trials
+
+- Published Ghisoiu-Laine rate table: https://www.laine.itp.unibe.ch/production-highT/ ; paper https://arxiv.org/abs/1411.1765. Input hash and interpolation caveats recorded in LAINE-AND-RESOLVED-PARENT-2026-11-25.md.
+- For the approximate number-closure model at kappa=0.006, 240/320 cells give Omega h^2=0.1199653/0.1202182; independent CLASS calculations give P/P_CDM(z=5,k=10/Mpc)=0.9843153/0.9835769. Fine minimum 0.9725120. Partition drift 0.00052277 on fine mesh. These are transfer results for an assumed spectrum, not a validation of full kinetics or observational viability.
+- Independent resolved-parent evolution plus late closure at original width gives Omega h^2=0.0989085 with published rates (handoff mismatch 0.429%). Early closure is unreliable. With old rates, same-grid late-handoff tolerance variation gives 0.1158147/0.1158165; 200-cell result 0.1175092. Full fine convergence remains unestablished.
+- Negative evidence: width 0.006 failed positivity at x=2.62660 (minimum parent occupation -0.1481371), despite small continuity residual. Width 0.012 hit wall budget at x=1.54219; exploratory closure reached Omega h^2=0.12525105, but failed handoff guard (28.22% source mismatch, 14.75% spectral L1). Neither is an accepted physical fit. Do not use an exploratory root bracket.
+- One Majorana pair, tested parameter region: width scan reaches Omega h^2=0.076764, insufficient. Ratio 0.95 at width 0.025 gives 0.07669744 with hot fraction 0.000373704. Two identical independent pairs are equivalent to four-state equations; realistic flavor, helicity, splittings and neutrino-mass constraints are not established.
+- Next: positivity-preserving resolved collision integration; inspect projection, scaling and stiff-step failure; then late guarded width fit, fine convergence, full CLASS hierarchy and microphysical constraints. Soft-corner repair screen is rate-weight diagnostic only.
+
+Raw data: [final-autonomous-run-2026-11-25.json](results/final-autonomous-run-2026-11-25.json).

@@ -90,3 +90,7 @@ See kinetics/LAINE-AND-RESOLVED-PARENT-2026-11-25.md and kinetics/results/laine-
 ## Spin scan, late-handoff refinement and identical-pair interpretation
 
 See kinetics/SPIN-AND-HANDOFF-2026-11-25.md. g=2 width scan up to .12 gives at most .076764 for tested single pair. g=4 exactly equals two independent identical Majorana pairs in the symmetric occupation subspace (numerical operator test passes), but flavor/neutrino mass and dark thermal self-energies remain unresolved. New table + explicit parent hybrid gives .098908 at old width; n=320 number closure at .006 gives .120218, and n=240 CLASS power ratio .984315 at k=10,z=5. Older-rate hybrid n=200 .117509; same-grid two late switches agree at 1.6e-5 relative. Adaptive two-check handoff and separate cross-kernel guard added; retuning pending. Existing and initial new tests 29 passed, extended targeted 6 passed.
+
+## Final width/transfer checkpoint
+
+[Final evidence and next priorities](kinetics/FINAL-AUTONOMOUS-RUN-2026-11-25.md). Published-rate closure CLASS converged on two meshes, but new resolved width trials rejected: positivity failure at 0.006 and 28.22% handoff mismatch at 0.012. No accepted full-kinetic abundance fit.
