@@ -115,7 +115,11 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
                  N_momentum_bins_bg_ncdm_standard=','.join([str(bins)]*nc))
     else:
         p.update(ncdm_quadrature_strategy=','.join(['2']*nc),ncdm_N_momentum_bins=','.join([str(bins)]*nc))
-    if precision: p.update(precision)
+    if precision:
+        precision=dict(precision)
+        if community and int(community.split(".")[0])>=26 and "tol_perturbations_integration" in precision:
+            precision["tol_perturb_integration"]=precision.pop("tol_perturbations_integration")
+        p.update(precision)
     quadrature_errors=transformed_quadrature_check(export,bins)
     warm=solve(p)
     target=row['final']['omega_phi_h2_m86_g106p75']
