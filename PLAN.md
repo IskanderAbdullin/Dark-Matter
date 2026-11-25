@@ -85,3 +85,5 @@ Paper 33: [canonical action/phase gravity control](continuation-04/papers/33-can
 Paper 34: [nonlinear Poisson negative energy test](continuation-04/papers/34-nonlinear-halo-poisson-energy-failure-2026-11-25.md) full-f artificial equilibrium diffusion dominates field energy; delta-f reduces residual 215x but still fails energy/positivity convergence. Next conservative limiter and work ledger.
 
 Paper 35: [positivity-limited nonlinear gravity](continuation-04/papers/35-positive-equilibrium-subtracted-halo-flux-2026-11-25.md) eliminates all 107 delta-f step rejections with negligible flux limiting; energy defect persists. Next exact work ledger and energy consistency.
+
+Paper 36: [exact discrete energy and split work ledger](continuation-04/papers/36-discrete-halo-energy-work-ledger-2026-11-25.md) identifies reference-stream/force work mismatch; phase refinement to 262k states leaves ~8e-7 energy error. Next parity and binding refinement.
