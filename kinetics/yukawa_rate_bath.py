@@ -45,14 +45,14 @@ class YukawaRateBath(DaughterBath):
             rate2=rate2+sc2;rate2T+=sc2*(1+2*V*V/(1+V*V))
         return rate2,rate2T,lam1,lam1T,True
 
-    def run(self,x0,xend,rtol,fermion_atol,keep_psd,parent_gev):
-        r=self.evolve_bath(x0,xend,rtol,fermion_atol,keep_psd,parent_gev)
+    def run(self,x0,xend,rtol,fermion_atol,keep_psd,parent_gev,initial_parent='thermal'):
+        r=self.evolve_bath(x0,xend,rtol,fermion_atol,keep_psd,parent_gev,initial_parent)
         # The inherited constant relaxation setting is not used.
         r.pop('relaxation_per_H')
         r.update(kappa_sm1=self.kappa_sm1,gamma=self.gamma,scatter=self.scatter,
                  rate_model='vacuum time-dilated decay + phenomenological tapered relativistic scattering')
         self.geometry(x0)
-        N=self.thermo(x0,0.,0.)['Neq']
+        N=r['initial_mother_number']
         y=np.r_[np.zeros(2*self.n),N,0.,0.,0.]
         _,th,rate,eq,bath=self.evaluate(np.log(x0),y)
         r['initial_parent_relaxation_over_H']=float(th['bath_rate1'])
@@ -89,11 +89,12 @@ def main():
     p.add_argument('--parent-gev',type=float,default=86000.)
     p.add_argument('--x0',type=float,default=.1);p.add_argument('--xend',type=float,default=80.)
     p.add_argument('--rtol',type=float,default=2e-6);p.add_argument('--qmin',type=float,default=1e-7)
+    p.add_argument('--initial-parent',choices=['thermal','empty'],default='thermal')
     p.add_argument('--keep-psd',action='store_true');p.add_argument('--output',required=True);a=p.parse_args();out=[]
     for k1 in a.kappa_sm1:
         m=YukawaRateBath(n=a.n,scalar_ratio=86./(a.parent_gev*1e9),fermion_ratio=a.fermion_ratio,
                         kappa=a.kappa,kappa2=a.kappa2,kappa_sm1=k1,gamma=a.gamma,scatter=not a.no_scatter,qmin=a.qmin)
-        row=m.run(a.x0,a.xend,a.rtol,1e-15,a.keep_psd,a.parent_gev)
+        row=m.run(a.x0,a.xend,a.rtol,1e-15,a.keep_psd,a.parent_gev,a.initial_parent)
         row['mapping']=rate_mapping(a.parent_gev,a.fermion_ratio,a.kappa,a.kappa2,k1)
         out.append(row);s=row['final']
         print(json.dumps(dict(n=a.n,kappa=a.kappa,kappa2=a.kappa2,kappa_sm1=k1,scatter=not a.no_scatter,

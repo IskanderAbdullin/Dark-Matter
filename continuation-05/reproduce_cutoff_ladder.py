@@ -46,7 +46,7 @@ def halo(k,psi0=4.,eta=4.,max_radius=1e10):
     edge.terminal=True;edge.direction=-1
     sol=solve_ivp(rhs,[log(a),log(max_radius)],
         [psi0-a*a/6,a*a/3],events=edge,method='DOP853',
-        max_step=.12,rtol=4e-9,atol=2e-11,dense_output=True)
+        first_step=.01,max_step=.12,rtol=4e-9,atol=2e-11,dense_output=True)
     hit=len(sol.t_events[0])>0
     te=float(sol.t_events[0][0]) if hit else log(max_radius)
     psi,v=sol.sol(te);r=exp(te)

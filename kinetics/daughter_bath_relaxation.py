@@ -104,9 +104,11 @@ class DaughterBath(TwoMassBath):
         assert err<1e-5,err
         return dict(balance=float(bal),jacobian=float(err))
 
-    def evolve_bath(self,x0=.1,xend=80.,rtol=2e-6,fermion_atol=1e-15,keep_psd=False,parent_gev=86.):
+    def evolve_bath(self,x0=.1,xend=80.,rtol=2e-6,fermion_atol=1e-15,keep_psd=False,parent_gev=86.,initial_parent='thermal'):
         checks=self.test_full();n=self.n
-        init=self.thermo(x0,0.,0.)['Neq'];rho0=self.thermo(x0,init,0.)['rho']+self.rad0
+        assert initial_parent in ('thermal','empty')
+        init=self.thermo(x0,0.,0.)['Neq'] if initial_parent=='thermal' else 0.
+        rho0=self.thermo(x0,init,0.)['rho']+self.rad0
         y0=np.r_[np.zeros(2*n),init,0.,0.,0.]
         samples=sorted(set([x0]+[x for x in [.01,.02,.03,.05,.075,.1,.15,.2,.3,.5,1,2,3,5,10,15,20,30,40,60,80,100,120] if x0<x<xend]+[xend]))
         atol=np.r_[np.full(n,1e-12),np.full(n,fermion_atol),1e-14,1e-13,1e-12,1e-13]
@@ -142,7 +144,7 @@ class DaughterBath(TwoMassBath):
         out=dict(n=n,x0=x0,xend=xend,kappa=self.kappa,kappa2=self.kappa2,scalar_ratio=self.scalar_ratio,
                  fermion_ratio=self.fermion_ratio,parent_GeV=parent_gev,relaxation_per_H=self.relaxation,
                  g_bath=self.g_bath,rtol=rtol,fermion_atol=fermion_atol,checks=checks,nfev=sol.nfev,
-                 initial_mother_number=init,initial_total_rho_Tref4=rho0,history=history,final=history[-1])
+                 initial_parent=initial_parent,initial_mother_number=init,initial_total_rho_Tref4=rho0,history=history,final=history[-1])
         if keep_psd:
             out['frozen_cell_spectrum']=dict(edges=self.edges.tolist(),f_phi=sol.y[:n,-1].tolist(),
                 f_chi2=sol.y[n:2*n,-1].tolist(),g_phi=1,g_chi2=4,theta_freezeout=history[-1]['theta'])
