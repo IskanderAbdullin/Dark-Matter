@@ -1,0 +1,16 @@
+# 33. Canonical radial action/phase gravity: independent nonlinear force control
+2026-11-25 UTC. Spherical geometry, fixed angular momentum L denotes L² in code. This is a transport discretization stage, not proof of a converged self-gravitating halo.
+
+For bound reference orbit with reference specific energy e, J=∮v_r dr has dJ/de=T. Normalized phase θ advances at 1/T. The spherical phase measure is dL dJ dθ/(8√2). For a finite open reference orbit use θ=flight time/T across incoming to outgoing boundary; the same local canonical measure follows from dJ=T(e,L)de. At fixed L, Hamiltonian h=δΦ(r(e,L,θ)) gives dJ/dτ=-∂θh and dθ/dτ=∂Jh. Thus finite-volume face fluxes F_J=-[h(Jface,θ_hi)-h(Jface,θ_lo)] and F_θ=h(J_hi,θface)-h(J_lo,θface) are exactly divergence-free as corner differences. Closed orbit phase is periodic; open inflow/outflow must be explicitly treated. On the circular boundary h independent of θ, radial action flux zero. Common L nodes across energy essential; gravity does not change L. Upwind limited FV conserves N and L, but not exact physical energy; energy convergence is a separate gate.
+
+Analytic harmonic control: reference e=(v²+r²)/2, J=π(e−sqrt(L)), r²=e+sqrt(e²−L)cos(2πθ), T=π. h=.2r²/2; compare both full Hamiltonian e+h to exact Cartesian oscillator with frequency sqrt(1.2), and pure kick h to exact v_r→v_r−.2r t, r constant. L=.3, emax8, smooth compact initial f, t=1, second-order minmod + SSPRK2.
+|NE=Nθ|full weighted L1|full relative H drift|kick weighted L1|kick relative h drift|
+|---:|---:|---:|---:|---:|
+|32|.0119113|.00237728|.00849222|.00212978|
+|64|.00393175|.000598205|.00284187|.000518884|
+|128|.00127955|.000148749|.00100638|.000122260|
+N ledger <2.3e−16; all steps positive, no rejects, upper outflow negligible, corner divergence <=1.4e−17. Energy error decreases ~4x per doubling but is not identically zero; pointwise near-circular errors remain larger than integrated error. Independent cell-quadrature reference energy drift <2.8e−5. No claim of arbitrary potential or self-consistent convergence.
+
+Actual lowered halo common-L build (finite gap .1, linear, M1,K4,nL1,nphase32,nrad10,nz64,kphase4): union all turning-boundary L cuts from every energy and radial shell, select same nodes for each accessible energy. Use common phase origin at pericenter θ=.5, for closed and open. First accessible e cell lower face adjusted to circular/accessibility energy; width .33527–1.00424 vs nominal .66956. Volume uses midpoint T*effective width, not exact energy-cell integral. 172 common L nodes, 1480 orbits, 47360 phase states, 325848 collision events, no missing local cells, overlap column error 4.8e−14. Initial mass 13.44901079 vs continuum 13.63712693 (-1.38%), initial above-cutoff and true-unbound source [.00433054437,.000795056792] vs continuum [.00425307629,.000771560959], errors +1.82%,+3.05%. This is acceptable for a prototype but not quantitative halo evolution.
+
+Reproduce oscillator: python lowered_bose_action_gravity_control.py --NE 128 --NT 128 (repeat --kick). Common grid via build(...,common=True) in lowered_bose_halo_orbit. Local execution; CI not verified. Next implement nonlinear self-consistent residual Poisson flux on common-L grid, compare with linear VP and frozen controls; monitor quadratic field-energy ledger and spurious even source.

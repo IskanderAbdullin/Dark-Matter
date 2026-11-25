@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-25T11:35:12Z",
+  "updated_utc": "2026-11-25T11:38:00Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -109,7 +109,7 @@
   "stop_reason": "Stage checkpoint; active run continues",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Evaluate on-shell decay source in physically cold q window, sign of Bose-stimulated gain with actual fermion occupancy; prioritize viable low-entropy initial conditions and number multiplier before full cosmological inference.",
-  "last_checkpoint_git_sha": "6afe564c051869d25f53d85a466fdf4f6ef99f3d",
+  "last_checkpoint_git_sha": "9f7dbf6db22f93f3803e040c72c4303de6e1db61",
   "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo. Separate conditional SM/dark comoving entropy split after decoupling: entropy identity with g*S dark initial 8 relativistic, more accurately 7.991670795 at T0.688GeV using independent finite-mass FD integral; illustrative SM g*S61.75->10.75 yields xi=Tdark/TSM 0.558372 if no dark entropy transfer vs1.116745 if full transfer into φ only (the latter incompatible with surviving stable chi2). Both conditional extremes, NOT physical bounds. Electron vector transport νe/H crosses unity at T=.6882487043GeV using external fixed g*rho61.75, not actual kinetic eigenvalue; actual x8 T2.5MeV νe/H1.55656e−7, requires hypothetical epsilon~.0253465 to get frequency proxy/H~1, no experimental viability proof. Focused CI #45455721437 for entropy tests GREEN, FD mass refined current focused CI pending. True dark+SM FRW still unresolved, class_ready=false.",
   "completed_research_steps": [
     {
@@ -1573,5 +1573,13 @@
       -0.000010034583121269603
     ],
     "limitation": "Linear force on initial f0 only, inner probe energy-resolution sensitive, outside tiny fraction unresolved."
+  },
+  "last_action_control": {
+    "report": "continuation-04/papers/33-canonical-action-phase-gravity-control-2026-11-25.md",
+    "base": "9f7dbf6db22f93f3803e040c72c4303de6e1db61",
+    "full_L1_128": 0.0012795511666518038,
+    "full_H_drift_128": 0.00014874939688902522,
+    "common_states": 47360,
+    "limitation": "Canonical FV conserves N,L but energy approximate; open/closed boundary topology and nonlinear halo convergence unresolved."
   }
 }

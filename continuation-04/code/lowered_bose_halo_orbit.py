@@ -25,8 +25,8 @@ def potential(H):
 def occ(H,s):return H.F(np.maximum(s,0))
 
 class Orbit:
- def __init__(self,psi,s,L,rmax,rc,isopen,nz=128):
-    self.s=s;self.L=L;self.open=isopen;self.psi=psi
+ def __init__(self,psi,s,L,rmax,rc,isopen,nz=128,middle=False):
+    self.s=s;self.L=L;self.open=isopen;self.middle=bool(isopen or middle);self.psi=psi
     g=lambda r:2*r*r*(float(psi(r))-s)-L
     lo=brentq(g,0,rc,xtol=1e-12);hi=rmax if isopen else brentq(g,rc,rmax,xtol=1e-12);self.lo=lo;self.hi=hi
     z=np.linspace(0,np.pi/2,nz+1);x,w=leggauss(6);a=(z[:-1,None]+z[1:,None])/2+np.diff(z)[:,None]*x/2;rr=lo+(hi-lo)*np.sin(a)**2
@@ -34,12 +34,12 @@ class Orbit:
     assert np.isfinite(self.T) and self.T>0 and np.all(np.diff(tt)>0)
     self.inv=PchipInterpolator(tt,lo+(hi-lo)*np.sin(z)**2);self.forward=PchipInterpolator(lo+(hi-lo)*np.sin(z)**2,tt)
  def coords(self,th):
-    th=np.asarray(th);t=self.T*(abs(th-.5) if self.open else np.minimum(th,1-th));r=self.inv(t);p=np.sign(th-.5 if self.open else .5-th)*np.sqrt(np.maximum(self.psi(r)-self.s-self.L/(2*r*r),0));return r,p
+    th=np.asarray(th);t=self.T*(abs(th-.5) if self.middle else np.minimum(th,1-th));r=self.inv(t);p=np.sign(th-.5 if self.middle else .5-th)*np.sqrt(np.maximum(self.psi(r)-self.s-self.L/(2*r*r),0));return r,p
  def intervals(self,a,b):
     a=max(a,self.lo);b=min(b,self.hi)
     if b<=a:return []
     l=float(self.forward(a)/self.T);h=float(self.forward(b)/self.T)
-    return [(max(0,.5-h),min(.5,.5-l)),(max(.5,.5+l),min(1,.5+h))] if self.open else [(max(0,l),min(.5,h)),(max(.5,1-h),min(1,1-l))]
+    return [(max(0,.5-h),min(.5,.5-l)),(max(.5,.5+l),min(1,.5+h))] if self.middle else [(max(0,l),min(.5,h)),(max(.5,1-h),min(1,1-l))]
 
 def open_shift(edges,f,dt,order=2):
     d=np.diff(edges);s=slopes(edges,f,order);s[0]=s[-1]=0.;prefix=np.r_[0,np.cumsum(d*f)]
@@ -61,7 +61,7 @@ def reference(H,n=24,nr=96):
         rows.append(float(total))
     return np.array(rows)
 
-def build(H,M=1,K=4,nL=6,nphase=64,nrad=12,m=5,kphase=6,rout=2.,nz=128):
+def build(H,M=1,K=4,nL=6,nphase=64,nrad=12,m=5,kphase=6,rout=2.,nz=128,common=False):
     psi=potential(H);e0=H.Qt/H.rt;de=e0/M;Npos=int(np.floor(H.psi0/de+.5));Nneg=int(np.ceil(H.psi0/de));ss=(np.arange(-Nneg,Npos)+.5)*de;NE=len(ss);rmax=rout*H.rt;dp=np.sqrt(H.psi0-ss[0])/K
     R=np.r_[0,np.geomspace(.03,rmax,nrad+1),H.rt,rmax];R=np.unique(np.clip(np.r_[R,[brentq(lambda r:float(psi(r))-s,0,rmax,xtol=1e-12) for s in ss if float(psi(rmax))<s<H.psi0]],0,rmax));R=R[np.r_[True,np.diff(R)>1e-10]];NR=len(R)-1
     tab=np.full((NR,NE,2*K+1),-1,int);le=[];lp=[];shell=[];expected=[];ranges=[]
@@ -71,22 +71,37 @@ def build(H,M=1,K=4,nL=6,nphase=64,nrad=12,m=5,kphase=6,rout=2.,nz=128):
             E=ps-ss[i];mom=hats(np.sqrt(E),dp,K);sel=np.flatnonzero(mom[:,0]>1e-16);tab[j,i,sel]=np.arange(len(le),len(le)+len(sel));le.extend([-ss[i]]*len(sel));lp.extend((sel-K)*dp);expected.extend(v*de*mom[sel,0]/4);shell.extend([j]*len(sel))
         ranges.append((active,ps,v))
     le=np.array(le);lp=np.array(lp);shell=np.array(shell);expected=np.array(expected);nlocal=len(le);vols=[];oe=[];op=[];oL=[];orbits=[];omass=[];rows=[];cols=[];data=[];dens=[];outside=[];x,w=leggauss(6);xl,wl=leggauss(nL);nopen=0;nbound=0
+    # A common L² quadrature across all binding centers is essential for gravity kicks.
+    geom=[]
     for i,s in enumerate(ss):
         if s>=H.psi0:continue
         rs=brentq(lambda r:float(psi(r))-s,0,rmax,xtol=1e-12) if s>float(psi(rmax)) else rmax
         g=lambda r:2*r*r*(float(psi(r))-s);res=minimize_scalar(lambda r:-g(r),bounds=(0,rs),method='bounded',options={'xatol':1e-9});rc=res.x;Lmax=-res.fun
         if g(rs)>Lmax:rc=rs;Lmax=g(rs)
         Lopen=max(0,g(rmax)) if rs==rmax else 0.;Lopen=min(Lopen,Lmax)
-        Lcuts=np.unique(np.clip(np.r_[0,Lopen,Lmax,[g(r) for r in R if r<rs]],0,Lmax));Lcuts=Lcuts[np.r_[True,np.diff(Lcuts)>1e-12]]
-        for a,b in zip(Lcuts[:-1],Lcuts[1:]):
-            isopen=(a+b)/2<Lopen
-            if b-a<1e-12:continue
-            for z,ww in zip(xl,wl):
-                L=(a+b)/2+(b-a)*z/2;WL=(b-a)*ww/2;O=Orbit(psi,s,L,rs,rc,isopen,nz);nopen+=int(isopen);nbound+=int(not isopen)
+        cuts=np.unique(np.clip(np.r_[0,Lopen,Lmax,[g(r) for r in R if r<rs]],0,Lmax));cuts=cuts[np.r_[True,np.diff(cuts)>1e-12]]
+        geom.append((i,s,rs,rc,Lmax,Lopen,cuts))
+    globalcuts=np.unique(np.concatenate([z[-1] for z in geom]));globalcuts=globalcuts[np.r_[True,np.diff(globalcuts)>1e-12]]
+    def nodes(cuts):
+        L=(cuts[:-1,None]+cuts[1:,None])/2+np.diff(cuts)[:,None]*xl/2;W=np.diff(cuts)[:,None]*wl/2
+        return L.ravel(),W.ravel()
+    Lglobal,Wglobal=nodes(globalcuts)
+    Lweights=[];energy_width=[]
+    for i,s,rs,rc,Lmax,Lopen,cuts in geom:
+        ls,ws=(Lglobal[Lglobal<Lmax],Wglobal[Lglobal<Lmax]) if common else nodes(cuts)
+        for L,WL in zip(ls,ws):
+                isopen=bool(L<Lopen);O=Orbit(psi,s,L,rs,rc,isopen,nz,middle=common);nopen+=int(isopen);nbound+=int(not isopen)
                 ed=mesh(nphase,kphase)
-                if isopen:ed=np.r_[0,np.sort(np.mod(ed[1:-1]+.5,1)),1];ed=np.unique(ed)
-                if isopen:ed=np.unique(np.r_[ed,.5]);assert len(ed)==nphase+1
-                d=np.diff(ed);mid=(ed[:-1]+ed[1:])/2;th=mid[:,None]+d[:,None]*x/2;r,p=O.coords(th);base=len(vols);mass=de*WL*O.T/(8*np.sqrt(2));vols.extend(mass*d);oe.extend([-s]*nphase);oL.extend([L]*nphase);op.extend(p@w/2);orbits.append((O,ed,base));omass.append(mass)
+                if isopen or common:ed=np.unique(np.r_[0,np.mod(ed[1:-1]+.5,1),.5,1]);assert len(ed)==nphase+1
+                de_eff=de
+                if common:
+                    # First represented center at a given L: extend/truncate its lower face to the circular/accessibility energy.
+                    prev=[z for z in geom if z[1]>s and L<z[4]]
+                    if not prev:
+                        fit=minimize_scalar(lambda r:-float(psi(r))+L/(2*r*r),bounds=(max(1e-10,rs*1e-10),rmax),method='bounded',options={'xatol':1e-9});emin=min(fit.fun,-float(psi(rmax))+L/(2*rmax*rmax));de_eff=-s+de/2-emin
+                        assert de_eff>0 and de_eff<1.51*de,(de_eff,de,s,L,emin)
+                Lweights.append(WL);energy_width.append(de_eff)
+                d=np.diff(ed);mid=(ed[:-1]+ed[1:])/2;th=mid[:,None]+d[:,None]*x/2;r,p=O.coords(th);base=len(vols);mass=de_eff*WL*O.T/(8*np.sqrt(2));vols.extend(mass*d);oe.extend([-s]*nphase);oL.extend([L]*nphase);op.extend(p@w/2);orbits.append((O,ed,base));omass.append(mass)
                 dens.extend(np.stack([(np.exp(-.5*(r/l)**2)@w/2) for l in [.5,1,2,5,10]],axis=1));frac=np.zeros(nphase)
                 for a0,b0 in O.intervals(H.rt,rmax):frac+=np.maximum(0,np.minimum(ed[1:],b0)-np.maximum(ed[:-1],a0))/d
                 outside.extend(frac)
@@ -107,8 +122,8 @@ def build(H,M=1,K=4,nL=6,nphase=64,nrad=12,m=5,kphase=6,rout=2.,nz=128):
             for a,b in zip(*np.triu_indices(len(pairs),0)):
                 es=active[np.array([pairs[a],other[a],pairs[b],other[b]])];E=ps-ss[es];momidx,v=rounded_distribution(E,dp,K,samples);ids=tab[j,es[:,None],momidx+K];assert np.all(ids>=0)
                 wq=pref*vr*de**3*np.sqrt(E).min()/8*(1 if es[0]==es[1] else 2)*(1 if es[2]==es[3] else 2)*(.5 if a==b else 1.)*v/v.sum();keep=~np.any(missing[ids],axis=0);lost+=wq[~keep].sum();total+=wq.sum();allids.append(ids[:,keep].astype(np.int32));allw.append(wq[keep])
-    C=Coupling(Vv,oe,W,le,lp,np.concatenate(allids,axis=1),np.concatenate(allw),op);C.shell=shell;C.orbits=orbits;C.omass=np.array(omass);C.dens=dens;C.outside=outside;C.oL=oL;C.e0=e0;C.pref=pref;C.nphase=nphase;C.R=R;C.f0=occ(H,-C.e)
-    return C,dict(model=H.model,delta=H.delta,rt=H.rt,e0=e0,de=de,Npos=Npos,Nneg=Nneg,M=M,K=K,nL=nL,nphase=nphase,nrad=nrad,m=m,kphase=kphase,nz=nz,rout=rout,radial_shells=NR,phase_states=len(Vv),local_states=nlocal,events=len(C.weights),closed=nbound,open=nopen,missing_local=int(missing.sum()),lost_event_weight=float(lost/total),overlap_ledger=cerr,volume_L1=float(abs(local_mass-expected).sum()/expected.sum()),pref=pref,initial_mass=float(C.V@C.f0),continuum_mass=H.Ic*H.Qt)
+    C=Coupling(Vv,oe,W,le,lp,np.concatenate(allids,axis=1),np.concatenate(allw),op);C.shell=shell;C.orbits=orbits;C.omass=np.array(omass);C.dens=dens;C.outside=outside;C.oL=oL;C.e0=e0;C.pref=pref;C.nphase=nphase;C.R=R;C.common=common;C.Lweights=np.array(Lweights);C.energy_width=np.array(energy_width);C.de=de;C.rmax=rmax;C.psi=psi;C.f0=occ(H,-C.e)
+    return C,dict(model=H.model,delta=H.delta,rt=H.rt,e0=e0,de=de,Npos=Npos,Nneg=Nneg,M=M,K=K,nL=nL,nphase=nphase,nrad=nrad,m=m,kphase=kphase,nz=nz,rout=rout,radial_shells=NR,common_L=common,common_L_nodes=len(Lglobal),phase_states=len(Vv),local_states=nlocal,events=len(C.weights),closed=nbound,open=nopen,missing_local=int(missing.sum()),lost_event_weight=float(lost/total),overlap_ledger=cerr,volume_L1=float(abs(local_mass-expected).sum()/expected.sum()),pref=pref,initial_mass=float(C.V@C.f0),continuum_mass=H.Ic*H.Qt)
 
 RCONST=R
 

@@ -79,3 +79,5 @@ Paper 30: [entropy-compatible momentum tilt](continuation-04/papers/30-entropy-m
 Paper 31: [actual frozen halo with open characteristics](continuation-04/papers/31-frozen-halo-open-bound-orbit-c22-2026-11-25.md) adaptive L² partitions restore core-to-exterior coverage; independent initial continuum C22 gains reproduced at M2 within .51%/.35%. First nonlinear frozen evolution at .1 Gyr; gravity still fixed. Next controlled Vlasov-Poisson feedback.
 
 Paper 32: [evolving C22 + linearized VP](continuation-04/papers/32-nonlinear-c22-linear-vp-orbit-feedback-2026-11-25.md) gives robust broad feedback gain ~1.6–1.8 at .1 Gyr; inner energy resolution unresolved; reference-energy ledger exact but omitted nonlinear field energy. Next common-L canonical force transport.
+
+Paper 33: [canonical action/phase gravity control](continuation-04/papers/33-canonical-action-phase-gravity-control-2026-11-25.md) exact phase-volume flux and L conservation; harmonic H error converges but not exact; common-L actual halo grid constructed. Next nonlinear self-consistent gravity transport and energy gate.
