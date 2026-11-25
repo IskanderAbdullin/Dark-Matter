@@ -67,3 +67,5 @@ Paper 24: [angular C22 gate](continuation-04/papers/24-angular-c22-quadrupole-an
 Paper 25: [rotation-covariant angular C22](continuation-04/papers/25-rotation-covariant-harmonic-c22-2026-11-25.md) exact l0–2 weak kernel, N240 shear within ~.5% independent continuous calculation; first-order quadrupole evolved with nonlinear f0, slow spectrum and exterior PSD not converged. Next conservative fixed-binding spherical streaming.
 
 Paper 26: [well-balanced spherical streaming](continuation-04/papers/26-well-balanced-spherical-streaming-2026-11-25.md) exact fixed-binding number/energy ledger and analytic oscillator convergence, but finite-age exterior crossing error 5.8% at 200×80. Prioritize fully nonlinear axisymmetric collision kernel and orbit-invariant transport rather than unvalidated angular closure.
+
+- Paper 27: exact axisymmetric elliptic UU kernel, negative cutcell singular quadrature result, and positive conservative rounded geometry projection. Refined local shear still 6.6% above continuum; next compatible spatial transport and angular support refinement.
