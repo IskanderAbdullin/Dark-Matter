@@ -114,3 +114,7 @@ Full regression after BOM correction: 40 passed in 48.67 s. All four new elastic
 ## BEST benchmark and conservative stiff relaxation
 
 See kinetics/BEST-AND-IMPLICIT-ELASTIC-FIRST-2026-11-25.md. BEST v1.3.5 actually runs in isolated Intel MPI environment and matches moderate direct moment benchmark to .265%, but high-occupancy actual PSD n160 gives spurious number and energy source +6.86/H, +109.98/H. Do not use that MC result for physical elastic evolution. Deterministic analytic Jacobian BDF completes fixed-mass fixed-geometry relaxation at sigma/m=1e-7; n64 over .1 Hubble time changes q2 by 3.3-3.5%, with machine-level number/energy conservation. Remesh errors remain material. Fine grid and coupled massless production/elastic trials in progress.
+
+## Coupled elastic, zero-mode and Hartree screens
+
+See [COUPLED-ELASTIC-CONDENSATE-SCREENS](kinetics/COUPLED-ELASTIC-CONDENSATE-SCREENS-2026-11-25.md). Coupled massless pilot conserves number/energy but develops cutoff-dependent IR accumulation and invalid effective mass/occupation even for sigma=1e-12 at late x. BEST high-statistics conservation failure persists. Hartree saturation and 4->2 screens are conditional and uncontrolled for coherent occupation. Zero-mode one-leg seed cutoff can produce spurious growth; singular formation needs controlled IR analysis. Priority: coherent-branch instability and energy-conserving dynamical-gap evolution, not a new abundance fit.

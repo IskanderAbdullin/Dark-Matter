@@ -6,7 +6,7 @@ Internal Newton iterates can leave f>=0; regularize those evaluations only,
 and stop on significant negative accepted occupations. No renormalization.
 This is not yet an expanding or chemically reacting calculation.
 """
-import argparse,json,time
+import argparse,json,time,os
 from pathlib import Path
 import numpy as np
 from scipy.integrate import BDF,Radau
@@ -21,7 +21,16 @@ class ImplicitElastic(Elastic):
         self.stoich=self.coef.copy();self.stoich[:2]*=-1
         self.vol_inv=1/self.vol
         self.floor=1e-90
+        self.compiled=os.environ.get("DM_ELASTIC_COMPILED")=="1"
+        if self.compiled:
+            from elastic_acceleration import compiled_rates
+            self.compiled_fn=compiled_rates
     def rates_jac(self,f,need_jac):
+        if self.compiled:
+            R,J=self.compiled_fn(f,self.idx,self.coef,self.stoich,self.rate,self.vol_inv,self.floor,need_jac)
+            return J if need_jac else R
+        return self.rates_jac_numpy(f,need_jac)
+    def rates_jac_numpy(self,f,need_jac):
         ff=np.maximum(f,self.floor)
         logf=np.log(ff);r=np.log1p(1/ff)
         i,j,k,l,h=self.idx
@@ -114,7 +123,7 @@ def evolve(e,f,m,factor,end,rtol=1e-5,wall=180.,method='BDF'):
                 print('progress',json.dumps(h),flush=True);last=time.monotonic()
         if time.monotonic()-start>wall:message='wall budget';break
     g=sol.y*norm
-    result=dict(success=sol.status=='finished' and not bad,message=message or sol.status,n=model.n,method=method,rtol=rtol,
+    result=dict(compiled=model.compiled,success=sol.status=='finished' and not bad,message=message or sol.status,n=model.n,method=method,rtol=rtol,
         requested_t_H=end,achieved_t_H=float(sol.t),steps=steps,nfev=sol.nfev,njev=sol.njev,wall_seconds=time.monotonic()-start,
         seed_number_fraction=seed_number/N0,seed_energy_fraction=seed_energy/E0,maximum_negative_fraction=worst_negative,
         initial_number=N0,initial_energy=E0,initial_q2=M20,initial_relative_q2_derivative=float((v*model.p**2)@rhs(0,ff/norm).__mul__(norm)/M20),
