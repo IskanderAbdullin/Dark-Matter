@@ -140,3 +140,7 @@ See kinetics/EARLY-BOSE-BOOTSTRAP-HARTREE-2026-11-25.md and kinetics/DIRECT-SUBT
 ## Direct-pole velocity-dependent elastic result
 
 [Calculation, independent normalization and raw data](kinetics/DIRECT-POLE-KINETICS-2026-11-25.md). At z≤100 the 220-bin velocity-dependent elastic calculations give N(q>2 q_peak) shifts −0.81022%/−0.81060%, under the fixed illustrative 1% cap. A localized homogeneous diagnostic remains promising. Next action: test whether a stable, technically acceptable microscopic trigger can avoid a primordial constant quartic and new population, or test the earliest production with the smallest viable constant quartic. Independent background, perturbation and halo evidence remains necessary.
+
+## Restricted-field direct cubic matching
+
+[Matching audit and exact field-direction tests](kinetics/DIRECT-POLE-MATCHING-2026-11-25.md). Conditional global quartic witness requires λA≥7.38e−6 under the chosen finite radiative budgets, versus the already generous cap 1.08e−11. Over |χ|≤0.01 reduced Planck masses, a positive S quartic permits λA≈1.67e−21 and a conditional constant-contact L1 bound <1.29e−4. Keep this finite-field low-energy branch separate from any claim of UV completion. Next action: quantify trigger seed sensitivity and bound extra S populations, including possible inflationary misalignment and self-resonance, then assess cosmological background/perturbation significance and high-scale matching.
