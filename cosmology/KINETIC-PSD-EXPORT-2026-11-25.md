@@ -1,0 +1,13 @@
+# Freeze-out spectrum export and conditional CLASS pipeline — 2026-11-25
+
+[Production solver](../kinetics/RADIATION-FIXED-BATH-2026-11-25.md) predicts a strongly bimodal frozen f(q). CLASS's numerical quadrature may miss the cold peak in a single physical q coordinate. Reuse the established two-tracer approach, but with the actual kinetic spectrum rather than analytic toy shapes.
+
+The [exporter](kinetic_psd_class.py) interpolates log f with positive log-PCHIP at logarithmic cell midpoints, separates smoothly with w_c=exp[-(q/q_s)^8], w_h=1-w_c, and uses q'=q/s, T'=s T for the cold coordinate. This change of variables preserves physical moment integrals, and the two numerical populations remain a single 86-eV species under the assumption of no subsequent collisions. There is no target-abundance normalization; CLASS's mass is fixed and density is inferred from the PSD. Positive negligible floors avoid zero-tail numerical division. The cold coordinate scale is the peak of q³f; the split is 10 times this scale (alternate 8 times). The two tracers are not the late condensed/noncondensed populations.
+
+## Executed local analytical export checks
+
+For the 480-cell abundance-matched kinetic solution, raw n/T³=.238318224, rho/T⁴=.240976109 and q² moment=.833520247. Exported number, energy and second moment relative errors are -0.06436%, -0.11339%, -0.17712%. The 320-cell alternative gives -0.14591%, -0.25495%, -0.39797%. Doubling/altering the partition/table does not change these materially. The cold coordinate scale is .00284026; the smooth hot-tracer number fraction is .43594 (different from q>.1 fraction). Cubic-spline negative-tail integrated number is <1e-29 in all tested variants. No local CLASS executable is installed; local network cannot clone/install GitHub sources.
+
+The public [workflow](../.github/workflows/kinetic-psd-class.yml) regenerates both raw spectra, checks the export, computes equal-density CDM and kinetic linear power at z=0,5 with CLASS 3.4.3.0, verifies total abundance, each tracer mass fraction and early relativistic density (conditional stable free-streaming chi2), and tests the half-power crossing against grid and partition changes. The independent kinetic meshes and partition tests are necessary: passing export moments alone does not validate the perturbations. No CLASS result is claimed until an actual run is verified.
+
+Reference for file inputs and q=p/T_ncdm: https://class-code.readthedocs.io/en/latest/explanatory.html ; CLASS IV, https://doi.org/10.1088/1475-7516/2011/09/032. The transfer assumes adiabatic primordial perturbations and collisionless propagation after freeze-out, an imposed standard radiation expansion, no particle production perturbation transfer, and no observation likelihood.

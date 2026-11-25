@@ -1,0 +1,70 @@
+name: Kinetic freeze-out spectrum to CLASS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'kinetics/daughter_energy_fv.py'
+      - 'kinetics/radiation_fixed_bath.py'
+      - 'cosmology/kinetic_psd_class.py'
+      - '.github/workflows/kinetic-psd-class.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kinetic-transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Install pinned CLASS solver
+        run: python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Solve production on independent kinetic meshes
+        run: |
+          mkdir -p outputs
+          python kinetics/radiation_fixed_bath.py --n 320 --kappa .1347 --xend 60 --keep-psd --output outputs/kinetic320.json
+          python kinetics/radiation_fixed_bath.py --n 480 --kappa .1347 --xend 60 --rtol 5e-7 --keep-psd --output outputs/kinetic480.json
+      - name: Verify export moments without renormalization
+        run: python cosmology/kinetic_psd_class.py --input outputs/kinetic320.json outputs/kinetic480.json --analytic-only --output outputs/kinetic_export.json
+      - name: Evolve linear perturbations on two independent spectra
+        run: python cosmology/kinetic_psd_class.py --input outputs/kinetic320.json outputs/kinetic480.json --output outputs/kinetic_transfer.json
+      - name: Check conditional transfer convergence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import numpy as np
+          d=json.loads(Path('outputs/kinetic_transfer.json').read_text())
+          a,b=d['results']; k=np.asarray(d['k_per_Mpc'])
+          checks={}
+          for z in ['0.0','5.0']:
+              r1=a['CLASS']['ratios'][z];r2=b['CLASS']['ratios'][z]
+              h1,h2=r1['half_power_k_per_Mpc'],r2['half_power_k_per_Mpc']
+              assert h1 is not None and h2 is not None
+              delta=abs(h1/h2-1)
+              pre=k<=min(h1,h2)
+              drift=float(np.max(np.abs(np.asarray(r1['power_ratio'])[pre]/np.asarray(r2['power_ratio'])[pre]-1)))
+              p=max(x['partition_and_sampling_comparison'][z]['max_relative_difference_before_half'] for x in [a,b])
+              checks[z]=dict(half1=h1,half2=h2,half_shift=delta,mesh_drift_before_half=drift,partition_drift_before_half=p,P_ratio_k1=r2['P_ratio_k1'],P_ratio_k10=r2['P_ratio_k10'])
+              assert delta<.05 and drift<.05 and p<.05, checks[z]
+          print(json.dumps(checks,indent=2))
+          Path('outputs/kinetic_convergence.json').write_text(json.dumps(checks,indent=2))
+          PY
+      - name: Preserve raw freeze-out distributions and numerical results
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: kinetic-freezeout-to-CLASS
+          path: outputs/*.json
+          retention-days: 21
+          if-no-files-found: warn
