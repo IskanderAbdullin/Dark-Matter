@@ -1264,8 +1264,8 @@
     "start_utc": "2026-11-25T08:09:38Z",
     "target_minutes": 30,
     "status": "in_progress",
-    "last_check_utc": "2026-11-25T08:12:00Z",
-    "stage": "Dilute coherent resonance sweep; kinetic and quantum vacuum normalization"
+    "last_check_utc": "2026-11-25T08:17:00Z",
+    "stage": "Swept-resonance backreaction and stable fermion coherent mass crossing"
   },
   "latest_entropy_energy_variational_20261124": {
     "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
@@ -1389,6 +1389,20 @@
     "report_commit": "636242192b3d8d94cce4e2c0c529a242c702f5ee",
     "positive": "Small-A I=3pi m A^8/(1024 H); independent elliptic monodromy and chirp checks; weak vacuum hard yield matches incoherent net 4->2 loss divided by 4!. For two lambda benchmarks I=1 at 324 keV / 4.712 keV, q=8.12e-8 / 7.425e-6 eV.",
     "negative": "Unfragmented normalized branch, no backreaction or physical initial condition, scattering only vacuum diagnostic, no final PSD/relic; remote CI unverified.",
+    "class_ready": false
+  },
+  "latest_sweep_consistency_20261125": {
+    "report": "kinetics/PHI-BOSE-SWEEP-CONSISTENCY-2026-11-25.md",
+    "source": "kinetics/phi_bose_sweep_consistency.py",
+    "positive": "Formal integrated cold depletion D=1 at T413.35/5.692 keV; q6.244e-8/6.146e-6 eV; vacuum band optical depth tiny but post-sweep optical depth .721/4.585e7.",
+    "negative": "Fixed background extrapolation fails; no physical final spectrum, scattering or abundance; no remote CI.",
+    "class_ready": false
+  },
+  "latest_coherent_fermion_crossing_20261125": {
+    "report": "kinetics/PHI-BOSE-COHERENT-FERMION-CROSSING-2026-11-25.md",
+    "source": "kinetics/phi_bose_coherent_fermion_crossing.py",
+    "positive": "Exact phi_crit44.721 GeV; both T20 examples subthreshold; conditional high-T crossing; exact 4x4 Dirac finite-lobe light occupancy .9881 at high lambda 1.1phi_crit p=.5pstar; local refinement and zero coupling control.",
+    "negative": "Instantaneous prescribed vacuum and no expansion/backreaction; slow weak-lambda grid timed out, one point not converged; no physical stable relic.",
     "class_ready": false
   }
 }
