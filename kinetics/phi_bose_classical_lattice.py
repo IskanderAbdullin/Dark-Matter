@@ -46,8 +46,8 @@ class Lattice:
   E=.5*np.sum(self.w*(vs+(self.k2+self.a)*us))+self.b/4*np.mean(u**4)
   mean=float(self.u[0,0,0].real);vel=float(self.v[0,0,0].real)
   Emean=.5*vel*vel+.5*self.a*mean*mean+self.b/4*mean**4
-  fluct=np.sum(self.w*us)-mean*mean;spec=self.w*(vs+self.k2*us)
-  uv=float(np.sum(spec[self.k2>4])/max(np.sum(spec)-vel*vel,1e-300))
+  us[0,0,0]=0;fluct=np.sum(self.w*us);spec=self.w*(vs+self.k2*us);spec[0,0,0]=0
+  uv=float(np.sum(spec[self.k2>4])/max(np.sum(spec),1e-300))
   return dict(step=self.i,z=self.i*self.dt,energy=float(E),mean=mean,sigma=math.sqrt(max(0,fluct)),nonmean=float(1-Emean/E),uv_k_gt_2=uv,band_variance=float(np.sum(self.w*us*self.band)))
  def record(self):
   d=self.measure();d['energy_rel']=d['energy']/self.E0-1;self.history.append(d);return d
