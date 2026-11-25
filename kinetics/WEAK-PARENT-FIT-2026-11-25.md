@@ -1,0 +1,15 @@
+# Weak parent coupling: physical-width fit and closure checks
+
+Use empty parent at x0=0.01, kappa_SM1=47 (nominal uncancelled seesaw contribution 0.05024 eV), kappa2=0.03, M1=86 TeV, m2/M1=0.9 and m_phi=86 eV. Fit the physical channel width, not the PSD normalization. Root of n=160 abundance condition: kappa=0.0043950631, Omega h^2=0.1199961. Independent n=240,320 at identical width give 0.1210766,0.1214589 and p/T>0.1 fractions 0.00363545,0.00362122. The residual finite-mesh abundance shift is retained. The 320-cell continuity residual is -5.70e-8. However the illustrative equilibrium thermal scalar mass/T=1.53e-6 reaches 26% of the cold peak during production; the simple vacuum-dispersion assumption is not secure.
+
+The independent bath-only parent-shape screen integrates the momentum-dependent time-dilated source on the prescribed saved background, with dark reactions OFF. At kappa_SM1=47 it finds integrated abundance closure discrepancy <0.066%, normalized shape TV up to 0.0387 and energy discrepancy at matched number up to 4.43%; the weak-coupling fine-fit background gives similar numbers. Strong late coupling 4000 has much smaller bath-only deviations. These tests do not establish closure during momentum-selective stimulated depletion. The data include ratios of spontaneous low-p seeds. A full parent momentum equation and genuine finite-T dispersion remain necessary.
+
+## Local CLASS backend
+
+Because workflow modification is not permitted by the current GitHub token, a portable Python 3.12.10 and classy-community 26.0.0 wheel were installed strictly in the project .runtime directory. Older 23.2.0 failed to read the PSD file. The new release uses renamed standard-NCDM quadrature aliases and different Python/background APIs; these were adapted after inspecting its published source. No installed system Python was changed.
+
+For the strong-coupling thermal-parent 320-cell candidate only, the actual synchronous CLASSpp result on 0.003 <= k <= 1.5 Mpc^-1 at z=0,5 has P/P_CDM near unity (minimum 1.00030,1.00056; at k=1, 1.00301). Independent partition and 120/240 quadrature drift ~0.2023%. Density and relative tracer fractions passed. The small enhancement is not a physical claim; broad-range, hierarchy and backend cross-checks are needed. Actual output in results/weak-parent-fit-2026-11-25.json. Full broad and full-hierarchy controls running at this checkpoint.
+
+## Tests and next step
+
+20/20 deterministic tests passed, including finite-mass near-degenerate geometry, empty-parent source, stable boost expression, actual three-scale PSD export/free streaming. Later initial empty x0=0.1 weak-coupling fit is running and may reduce the thermal correction. The next physical milestone is a finite-volume momentum-resolved parent with equilibrium detailed balance, exact collision number/energy checks and actual finite-temperature self-energies. All computed transfer functions are conditional on an adiabatic collisionless freeze-out distribution; no likelihood or microphysical viability established.

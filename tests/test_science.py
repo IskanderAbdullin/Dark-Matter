@@ -28,7 +28,7 @@ def ladder():
     return load("continuation-05/reproduce_cutoff_ladder.py")
 
 def test_python_source_syntax():
-    scripts = list(ROOT.rglob("*.py"))
+    scripts = [p for p in ROOT.rglob("*.py") if not set(p.relative_to(ROOT).parts)&{".git",".venv",".runtime","outputs","__pycache__"}]
     assert len(scripts) >= 25, "Missing research programs from migration"
     for src in scripts:
         ast.parse(src.read_text(encoding="utf-8"), filename=str(src))

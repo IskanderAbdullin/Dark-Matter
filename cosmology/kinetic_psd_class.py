@@ -80,10 +80,18 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     def solve(p):
         c=Class()
         try:
-            c.set(p);c.compute();h=float(c.h)
-            bg=c.get_background();keys=[k for k in bg if k.startswith('(.)rho_ncdm[')]
-            species=[float(bg[k][-1]) for k in sorted(keys)]
-            return {'omega_ncdm_h2':float(c.Omega_nu)*h*h,'Neff':float(c.Neff),'rho_species_z0':species,
+            c.set(p);c.compute()
+            def scalar(name):
+                v=getattr(c,name)
+                return float(v() if callable(v) else v)
+            h=scalar('h')
+            bg=c.get_background()
+            keys=[k for k in bg if k.startswith('(.)rho_ncdm[') or k.startswith('(.)rho_ncdm__')]
+            keys.sort(key=lambda k:int(k.split('[')[-1].rstrip(']')) if '[' in k else int(k.split('__')[-1]))
+            if not keys and 'N_ncdm' in p:
+                raise RuntimeError(('Unknown NCDM background keys',list(bg)))
+            species=[float(bg[k][-1]) for k in keys]
+            return {'omega_ncdm_h2':scalar('Omega_nu')*h*h,'Neff':scalar('Neff'),'rho_species_z0':species,
                     'power':{str(z):[float(c.pk_lin(float(k),float(z))) for k in ks] for z in zs}}
         finally:
             try:c.struct_cleanup();c.empty()
@@ -94,7 +102,19 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     p=dict(base,N_ncdm=nc,m_ncdm=','.join(['86']*nc),T_ncdm=','.join(str(c['scale']*tr) for c in comps),
            deg_ncdm=','.join(['1']*nc),use_ncdm_psd_files=','.join(['1']*nc),
            ncdm_psd_filenames=','.join(c['file'] for c in comps),omega_cdm=1e-8)
-    p.update(ncdm_quadrature_strategy=','.join(['2']*nc),ncdm_N_momentum_bins=','.join([str(bins)]*nc))
+    # CLASSpp 26 uses distinct legacy-to-instance aliases for standard NCDM.
+    # Its old CLASS input names otherwise silently trigger automatic sampling.
+    from importlib.metadata import version,PackageNotFoundError
+    try:
+        community=version('classy-community')
+    except PackageNotFoundError:
+        community=None
+    if community and int(community.split('.')[0])>=26:
+        p.update(quadrature_strategy_ncdm_standard=','.join(['2']*nc),
+                 N_momentum_bins_ncdm_standard=','.join([str(bins)]*nc),
+                 N_momentum_bins_bg_ncdm_standard=','.join([str(bins)]*nc))
+    else:
+        p.update(ncdm_quadrature_strategy=','.join(['2']*nc),ncdm_N_momentum_bins=','.join([str(bins)]*nc))
     if precision: p.update(precision)
     quadrature_errors=transformed_quadrature_check(export,bins)
     warm=solve(p)
@@ -128,7 +148,7 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     return {'warm_background':{k:v for k,v in warm.items() if k!='power'},'expected_omega':target,
             'delta_phi_early':float(delta_phi),'chi2_Nur':row['final']['delta_Neff_chi2_if_stable_free_streaming'],
             'hot_tracer_mass_fraction':ratio,'tracer_mass_fractions':fractions.tolist(),'ratios':result,'quadrature_strategy':2,
-            'momentum_bins':bins,'gauge':'synchronous','quadrature_moment_relative_errors':quadrature_errors}
+            'momentum_bins':bins,'classy_community_version':community,'gauge':'synchronous','quadrature_moment_relative_errors':quadrature_errors}
 
 
 def main():

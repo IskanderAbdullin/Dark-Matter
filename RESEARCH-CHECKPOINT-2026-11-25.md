@@ -47,3 +47,7 @@ Publication limitation: OAuth credential rejects workflow changes (missing workf
 ## Empty-parent and thermal screen
 
 See kinetics/EMPTY-PARENT-THERMAL-SCREEN-2026-11-25.md. Initial empty x0=.01 with kappa_SM1=47 gives Omega=.08354 at previous width; stronger parent couplings overproduce. Equilibrium simple-Yukawa thermal-mass/peak ratios reach 0.12-0.44 early vs 0.00354 late. Need genuine thermal dispersion and momentum-dependent parent production; do not interpret early results as predictions. Existing regression suite 16/16 after explicit halo initial integration step. CLASSpp 26 Windows wheel installed in isolated project Python; older 23.2 PSD-reader failure and new 26 alias incompatibility identified. Testing the corrected backend.
+
+## Weak-coupling fit and actual local CLASSpp
+
+See kinetics/WEAK-PARENT-FIT-2026-11-25.md, results/weak-parent-fit-2026-11-25.json. Empty-parent x0=.01, kappa_SM1=47, physical kappa=.0043950631; n=240/320 Omega=.121077/.121459, hot=.00363545/.00362122. Thermal benchmark mass/peak ~.26, not controlled. Bath-only parent-shape test TV 3.87%, energy mismatch 4.43% at same number for weak source. Actual CLASSpp 26 calculation of previous strong thermal-parent PSD completed to k=1.5, P/P_CDM near unity and partition drift .2023%; broad and hierarchy controls pending. Tests 20/20. Later weak empty-parent fit and full parent momentum/thermal physics are next priorities.
