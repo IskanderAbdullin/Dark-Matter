@@ -2,9 +2,10 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "P0: physical coherent/nonthermal FRW evolution and conservative orbit-averaged halo C22",
+  "title": "P0 halo: linearized self-consistent Vlasov–Poisson response to signed C22; independent FRW path remains open",
   "objective": "Obtain an actual late PSD and total dark abundance including stable chi2; separately advance actual halo evolution, not merely static equilibria. Conditional homogeneous resonance is now nonlinearly disproved as a persistent fixed background; projected critical halo stability sign is established but initial C22 is nonzero.",
   "prerequisites": [
+    "Halo paper 20: continuation-04/papers/20-signed-c22-source-and-frozen-response-2026-11-25.md, complete signed source and Born response, gravity omitted at same formal order. Paper 19: continuation-04/papers/19-finite-age-weak-binding-exterior-transport-2026-11-25.md, first-excursion and finite-age exterior transport.",
     "Halo exterior gate: continuation-04/papers/18-orbit-averaged-exterior-capacity-gate-2026-11-25.md, DOS ∝ ε^(-5/2), finite-mass tail p>3/2, orbital period diverges; use finite-time/radius streaming or explicit exterior treatment, no constant final bin to zero binding.",
     "2026-11-25 coherent: PHI-BOSE-QUANTUM-SEED-2026-11-25.md conditional vacuum-band seeds 77/42 periods to >10% fluctuations; stronger benchmark D=.452/.459 at period70, UV spectrum unresolved. PHI-BOSE-NARROW-SWEEP-2026-11-25.md coherent 4→2 normalization. PHI-BOSE-COHERENT-ENDPOINTS-2026-11-25.md chemical vs count endpoints are incompatible relic extremes, no actual freeze.",
     "2026-11-25 halo: continuation-04/papers/15-global-projected-antonov-critical-halo-2026-11-25.md radial projected A-B>=A/4; critical nonlinear theorem open. Papers 16/17 initial C22 escape and IR deep flux, mapped n24/32 agreement, independent central soft coefficient .18491/.36747/Gyr. Actual time evolution absent.",
@@ -28,6 +29,7 @@
     "Optional fixed 168-node positive first scalar cell actual 5field physical DOS quadrature corrected to leave all other phi cells exactly original nq Gauss, pad unused slots with zero physical weight: source commit 064995d1, targeted CI #45426158199 success. Nearcritical entropy finite-step sign may remain below global float64 resolution and must be labelled unresolved."
   ],
   "experiments": [
+    "Construct causal spherical Vlasov–Poisson linear response to constant initial C22 source, preserving total mass, with quadrature and time refinement; compare with frozen Born smooth and enclosed probes. Then evaluate C'[f0]delta f and full evolving halo.",
     "Derive expanding nonlinear scalar dynamics with independent physical initial production, number-changing/redistribution and stable fermion backreaction; establish volume/UV/seed and FRW convergence. Do not treat fixed-Minkowski fragmentation as final PSD.",
     "Independent halo route: build orbit-averaged reversible quantum C22 solver with exact energy/number ledger, exterior bound and unbound energy states, evolving Poisson potential; benchmark initial signed flux against papers 16/17, derive actual mass/core evolution; only then GP exchange/condensation and observations.",
     "First explicitly solve coupled SM gstarS(T), dark quantum thermodynamics Tdark and χ1,χ2,φ entropy transfer through QCD/MeV with true finite rate and FRW, not assume pure-φ final dark gstar1 if stable χ2 remains. Independent physical number/U1/entropy and q refinement.",
