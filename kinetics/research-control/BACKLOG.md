@@ -532,3 +532,8 @@ These completed substeps are tree-level partial models. Full first P0 item (UV-c
 - [ ] Калибровать действительный A'→hadrons R(s) из первичных данных, muon/tau thresholds и ΓV(T) под петли/резонансы, прочие SM частицы и ограничения. Нельзя подставлять пример Rhad=3.5 за измерение.
 - [ ] Обосновать, можно ли избежать перепроизводства χ2 без нарушения Yukawa/Z2/U1 и одновременно получить Ωφ≈observed, реальную позднюю PSD и наблюдательные ограничения.
 - [ ] При одной блокировке перейти к безопасной независимой альтернативе согласно AGENTS; только полное объективное исчерпание полезной работы разрешает досрочное завершение.
+
+## 2026-11-25 halo kinetic advances (Dark Matter 2)
+- [x] Initial finite-age exterior transport; all-leg signed C22 source and frozen response; causal first-order VP and weak field; fixed-(E,L) static susceptibility (papers 19–22).
+- [x] Direct pointwise and orbit rates, exact isotropic min-energy kernel, conservative nonlinear homogeneous cell update and Jacobian, conditional local saturation (paper 23).
+- [ ] Evolving spatial/velocity-angle C22–Vlasov–Poisson, conservative radial transport and external population; IR convergence and zero-mode/C12 treatment. Isotropic energy-only local kernel cannot be used as complete anisotropic collision operator. Keep independent cosmological FRW/PSD work active.
