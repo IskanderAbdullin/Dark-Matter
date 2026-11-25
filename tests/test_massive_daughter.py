@@ -58,3 +58,12 @@ def test_three_scale_export_actual_candidate(tmp_path):
     assert max(map(abs,e['moment_relative_errors']))<.006
     fs=free_streaming(row)
     assert .001<fs['through_equality']['quantiles_Mpc']['0.5']<.003
+
+
+def test_late_weak_energy_peak_export_and_class_reciprocal(tmp_path):
+    data=json.loads((ROOT/'kinetics/results/late-weak-and-class-2026-11-25.json').read_text())
+    row=canonical([r for r in data['yukawa_lateempty47_tune'] if r['n']==320][0])
+    e=export_three(row,tmp_path,energy_peak=True)
+    assert e['components'][-1]['scale']>.5
+    assert np.max(np.abs(transformed_quadrature_check(e,120)))<.001
+    assert np.max(np.abs(transformed_quadrature_check(e,960)))<.001

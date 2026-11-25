@@ -64,7 +64,14 @@ def transformed_quadrature_check(export,bins):
         t=np.arange(1,bins+1)/(bins+1);x=1/t-1
         values=np.zeros_like(x);inside=(x>=u[0])&(x<=u[-1])
         values[inside]=CubicSpline(u,f)(x[inside]);values[x<u[0]]=f[0]
+        assert f[-1]>0 and f[-2]>=f[-1],('invalid CLASS PSD extrapolation',c.get('label'),f[-2:])
         values[x>u[-1]]=f[-1]*np.exp((x[x>u[-1]]-u[-1])*(f[-1]-f[-2])/f[-1]/(u[-1]-u[-2]))
+        # CLASS computes q/f0 * df0/dq; an invisible subnormal tail can
+        # overflow the reciprocal even when all physical moments converge.
+        assert np.all(np.isfinite(values)),('nonfinite PSD',c.get('label'))
+        nz=values!=0
+        with np.errstate(over='ignore',divide='ignore',invalid='ignore'):
+            assert np.all(np.isfinite(x[nz]/values[nz])),('CLASS dlnf reciprocal overflow',c.get('label'),bins)
         w=values/(bins+1)/t**2
         errors.append([float(4*np.pi*c['scale']**(k+3)*(w@x**(k+2))/c[key]-1)
                        for k,key in enumerate(['number','energy','q2'])])

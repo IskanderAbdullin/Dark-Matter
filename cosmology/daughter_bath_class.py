@@ -78,7 +78,7 @@ def free_streaming(row,order=8,time_order=160):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--input',nargs='+',required=True);p.add_argument('--output',required=True)
     p.add_argument('--analytic-only',action='store_true');p.add_argument('--full-hierarchy',action='store_true')
-    p.add_argument('--kmax',type=float,default=20.);p.add_argument('--bins',type=int,default=120);a=p.parse_args()
+    p.add_argument('--kmax',type=float,default=20.);p.add_argument('--bins',type=int,default=120);p.add_argument('--energy-peak',action='store_true');a=p.parse_args()
     assert a.bins>=120
     ks=np.geomspace(.003,a.kmax,125);zs=[0.,5.];results=[]
     with tempfile.TemporaryDirectory() as folder:
@@ -91,8 +91,8 @@ def main():
                         freezeout=row['freezeout'],free_streaming=fs,free_streaming_moment_drift=drift)
             print('free_streaming',json.dumps(result),flush=True)
             # Positive three-tracer export, independently varied partition.
-            e=export_three(row,folder,tag=str(i))
-            e2=export_three(row,folder,tag=str(i)+'_alt',cold_multiple=10.,middle_factor=.8,points=9000)
+            e=export_three(row,folder,tag=str(i),energy_peak=a.energy_peak)
+            e2=export_three(row,folder,tag=str(i)+'_alt',cold_multiple=10.,middle_factor=.8,points=9000,energy_peak=a.energy_peak)
             result.update(export=e,alternate_export=e2)
             result['quadrature'+str(a.bins)]=transformed_quadrature_check(e,a.bins)
             result['quadrature'+str(2*a.bins)]=transformed_quadrature_check(e2,2*a.bins)

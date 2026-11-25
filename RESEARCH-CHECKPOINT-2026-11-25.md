@@ -74,3 +74,7 @@ Raw numerical records: results/late-weak-and-class-2026-11-25.json. Local enviro
 Both late weak-parent meshes and both partitions fail 120/240-node moment checks. All four pass at 480 nodes (max relative error 2.28e-5). Added explicit --bins 480 option with 960-node alternate check; analytic export passed both meshes. Recorded full checks in kinetics/results/late-weak-quadrature-2026-11-25.json and kinetics/results/late-weak-export-2026-11-25.json. The earlier failed coarse check is preserved. Next run actual CLASS at these validated settings; transfer and full hierarchy remain untested for this candidate.
 
 Final regression: 24 passed (16.74 s). Strong-candidate CLASS cross-mesh max relative transfer-power drift: 0.0008230023 at z=0 and 0.0008229460 at z=5. Full hierarchy and late weak CLASS transfer remain untested.
+
+## Actual late weak-parent CLASS
+
+See cosmology/LATE-WEAK-CLASS-VERIFIED-2026-11-25.md. Old 480-node run failed due to nonfinite state; nonzero subnormal tail causes q/f0 overflow. Slow negligible positive floor and q^5 f hot-scale selection resolve it; actual two-mesh CLASS at 120/240 nodes gives P/P_CDM(z=5,k=10)=.98518/.98453, minimum fine .97567 up to k=20/Mpc. Conditional only; full hierarchy in progress.

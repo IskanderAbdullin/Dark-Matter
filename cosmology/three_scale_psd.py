@@ -10,7 +10,7 @@ from scipy.interpolate import PchipInterpolator,CubicSpline
 from scipy.integrate import trapezoid
 
 
-def export_three(row,folder,tag='fine',cold_multiple=8.,middle_factor=1.,points=7000):
+def export_three(row,folder,tag='fine',cold_multiple=8.,middle_factor=1.,points=7000,energy_peak=False):
     raw=row['frozen_cell_spectrum'];edges=np.asarray(raw['edges']);f=np.asarray(raw['f_phi'])
     l,h=edges[:-1],edges[1:];cent=np.sqrt(l*h)
     assert np.min(f)>=-1e-7
@@ -21,7 +21,7 @@ def export_three(row,folder,tag='fine',cold_multiple=8.,middle_factor=1.,points=
     cold=float(cent[np.argmax(peak)])
     mask=cent>30*cold
     assert np.any(mask)
-    hot=float(cent[mask][np.argmax(peak[mask])])
+    hot=float(cent[mask][np.argmax((peak*cent**2 if energy_peak else peak)[mask])])
     s1=cold_multiple*cold
     s2=middle_factor*np.sqrt(s1*hot)
     assert s1<s2<hot,(s1,s2,hot)
@@ -47,7 +47,10 @@ def export_three(row,folder,tag='fine',cold_multiple=8.,middle_factor=1.,points=
         limit=max(60.,(4*s1 if i==0 else 4*s2 if i==1 else edges[-1]+5)/scale)
         u=np.unique(np.r_[np.geomspace(1e-7,.1,points//3),np.geomspace(.1,limit,2*points//3)])
         q=scale*u
-        occupation=np.maximum(evaluate(q)*weights(q)[i],1e-100*np.exp(-u))
+        # A strictly positive negligible floor prevents 0/0 in CLASS's
+        # logarithmic derivative and extrapolation, including large-u files.
+        occupation=np.maximum(evaluate(q)*weights(q)[i],1e-100*np.exp(-u/50.))
+        assert np.all(np.isfinite(occupation)) and np.min(occupation)>1e-290
         psd=occupation/(2*np.pi)**3
         file=Path(folder)/(tag+'_'+label+'.dat')
         np.savetxt(file,np.column_stack((u,psd)),fmt='%.17e')
@@ -62,4 +65,4 @@ def export_three(row,folder,tag='fine',cold_multiple=8.,middle_factor=1.,points=
     return dict(raw_number=moments[0],raw_energy=moments[1],raw_q2=moments[2],splits=[s1,s2],
                 components=comps,moment_relative_errors=errors,
                 reconstructed_hot_number_fraction=sum(c['number'] for c in comps[1:])/sums[0],
-                method='positive log-PCHIP with three smooth partitions; no abundance rescaling')
+                energy_peak=energy_peak,method='positive log-PCHIP with three smooth partitions; no abundance rescaling')
