@@ -69,3 +69,5 @@ Paper 25: [rotation-covariant angular C22](continuation-04/papers/25-rotation-co
 Paper 26: [well-balanced spherical streaming](continuation-04/papers/26-well-balanced-spherical-streaming-2026-11-25.md) exact fixed-binding number/energy ledger and analytic oscillator convergence, but finite-age exterior crossing error 5.8% at 200×80. Prioritize fully nonlinear axisymmetric collision kernel and orbit-invariant transport rather than unvalidated angular closure.
 
 - Paper 27: exact axisymmetric elliptic UU kernel, negative cutcell singular quadrature result, and positive conservative rounded geometry projection. Refined local shear still 6.6% above continuum; next compatible spatial transport and angular support refinement.
+
+Paper 28: [orbit-invariant phase remap](continuation-04/papers/28-orbit-invariant-phase-remap-2026-11-25.md) reduces weak-binding transient error to 0.000765% for one step, 0.0204% for 100 remaps; bound frozen potential only. Next collision/orbit transfer without artificial projection diffusion.
