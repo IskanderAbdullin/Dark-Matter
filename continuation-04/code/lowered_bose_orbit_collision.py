@@ -79,7 +79,7 @@ def build(NE,K,nL,nphase,m=7,radsub=1,Emax=6.,seed=0):
                 es=active[np.array([pairs[a],other[a],pairs[b],other[b]])];E=en[es]-u;momidx,v=rounded_distribution(E,dp,K,samples);ids=tab[j,es[:,None],momidx+K];assert np.all(ids>=0)
                 wq=vr*de**3*np.sqrt(E).min()/8*(1 if es[0]==es[1] else 2)*(1 if es[2]==es[3] else 2)*(.5 if a==b else 1.)*v/v.sum();keep=~np.any(missing[ids],axis=0);lost+=wq[~keep].sum();total+=wq.sum();allids.append(ids[:,keep]);allw.append(wq[keep])
     C=Coupling(V,oe,W,le,lp,np.concatenate(allids,axis=1),np.concatenate(allw),op)
-    C.nphase=nphase;C.norb=norb;C.oL=oL;C.phase=orph
+    C.nphase=nphase;C.norb=norb;C.oL=oL;C.phase=orph;C.shell=rc
     pp=(W.T@lp)/V
     diag=dict(NE=NE,K=K,nL=nL,nphase=nphase,m=m,radsub=radsub,states=len(V),local_states=nlocal,events=len(C.weights),missing_local=int(missing.sum()),lost_event_weight=float(lost/total),local_mass_l1=float(abs(local_mass-expected).sum()/expected.sum()),total_volume_rel=float(V.sum()/expected.sum()-1),p_map_rms=float(np.sqrt((V@(pp-op)**2)/V.sum())),overlap_column_relative=float(np.max(abs(np.asarray(W.sum(0)).ravel()/V-1))))
     return C,diag
