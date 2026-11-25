@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-25T09:07:58Z",
+  "updated_utc": "2026-11-25T09:16:15Z",
   "research_status": "in_progress",
   "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
   "repository": "IskanderAbdullin/Dark-Matter",
@@ -106,7 +106,7 @@
     "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
   ],
   "class_ready": false,
-  "stop_reason": "Active session; continuing from finite-age signed halo response",
+  "stop_reason": "Target ~30-minute active session reached; final checkpoint and report delivery following. No goal completion claim.",
   "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
   "instruction": "Evaluate on-shell decay source in physically cold q window, sign of Bose-stimulated gain with actual fermion occupancy; prioritize viable low-entropy initial conditions and number multiplier before full cosmological inference.",
   "last_checkpoint_git_sha": "f7cbd89f2c511df8a8226f45c605f594c093a570",
@@ -1471,14 +1471,16 @@
   },
   "current_session_20261125_DM2": {
     "start_utc": "2026-11-25T08:46:41Z",
-    "checkpoint_utc": "2026-11-25T09:07:58Z",
-    "status": "active",
+    "checkpoint_utc": "2026-11-25T09:16:15Z",
+    "status": "scientific_work_completed_final_reporting",
     "target_minutes": 30,
     "local_clone": "DNS github.com unavailable; connector read/write; local numerical code reconstructed from fetched files",
-    "head_before_checkpoint": "6da4b215b10c87c2b874234cfbc52ab25b04b57e",
-    "next": "direct pointwise C22 and orbit-averaged secular source",
-    "latest_stage": "orbital projected static and weak causal VP",
-    "latest_report": "continuation-04/papers/22-orbit-projected-and-weak-poisson-response-2026-11-25.md"
+    "head_before_checkpoint": "376440d0b61602f55a8e41753baf2bcab8fe2277",
+    "next": "Conservative spatial and angular transport + nonlinear C22 + weak Poisson, initially bounded IR; independent physical FRW/relic work",
+    "latest_stage": "nonlinear local C22, Jacobian and conditional criticality",
+    "latest_report": "continuation-04/papers/23-nonlinear-local-c22-orbits-and-criticality-2026-11-25.md",
+    "elapsed_seconds_to_checkpoint": 1774,
+    "verification": "Actual local runs, py_compile on new modules, weak stiffness quadrature agrees to 2.1e-16; remote CI unverified; no main merge or force push."
   },
   "latest_halo_linear_vp_20261125": {
     "report": "continuation-04/papers/21-causal-linear-vlasov-poisson-c22-response-2026-11-25.md",
@@ -1490,6 +1492,12 @@
     "report": "continuation-04/papers/22-orbit-projected-and-weak-poisson-response-2026-11-25.md",
     "positive": "Analytic radial B_EL<=B_E<=3A/4; independent orbit eigenvalues .552/.544; weak Poisson broad response within 1–4% and bounded absolute field.",
     "negative": "Central slope not converged, first order only.",
+    "class_ready": false
+  },
+  "latest_halo_nonlinear_local_20261125": {
+    "report": "continuation-04/papers/23-nonlinear-local-c22-orbits-and-criticality-2026-11-25.md",
+    "positive": "Exact angular reduction, independent 2D/3D, L-dependent orbit rates, nonlinear conservative local evolution, BE equilibrium residual <4.7e-16; conditional central excess only.",
+    "negative": "No spatial/angular nonlinear transport, near-critical IR resolution, evolving Poisson or C12; no cosmological validation.",
     "class_ready": false
   }
 }
