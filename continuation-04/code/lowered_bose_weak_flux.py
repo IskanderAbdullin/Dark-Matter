@@ -2,6 +2,7 @@
 import math,json,argparse
 import numpy as np
 from numpy.polynomial.legendre import leggauss
+from scipy.integrate import quad
 from lowered_antonov_hessian import Halo
 from lowered_bose_collision_escape import rate
 
@@ -47,8 +48,26 @@ def run(H,n=24,nr=48):
   qmax=np.sqrt(psi-s0);count=ww@(qmax**3*np.sum(wq*q*q*occ(H,psi[:,None],qmax[:,None]**2*q*q),axis=1))/(H.Ic*H.Qt)
   results.append(dict(deep_gap=d,J=J,fraction=count,per_halo_Gyr=pref*J,per_deep_Gyr=pref*J/count))
  return results
+def central_limit(H):
+ # Pointwise limiting soft-mode C/f, including inverse reactions with unoccupied partner.
+ assert H.delta==0 and H.model in ('linear','quadratic')
+ eta=H.eta;c=H.c
+ def f(x):return float(H.F(eta-x)) if 0<x<eta else 0.
+ def inn(S):
+  if H.model=='linear' and S<=eta:return c*(1+2/np.expm1(S))-c*c
+  z0=max(0.,1-eta/S);z1=min(1.,eta/S);f2=f(S)
+  def fun(z):
+   f3=f(S*z);f4=f(S*(1-z));return f3*f4-f2*(1+f3+f4)
+  return quad(fun,z0,z1,epsabs=1e-10,epsrel=1e-8)[0]
+ j1=quad(lambda S:S*.5*inn(S),0,eta,epsabs=1e-9)[0]
+ j2=quad(lambda S:S*.5*inn(S),eta,2*eta,epsabs=1e-9)[0]
+ rho=44100**2/(4*math.pi*6.6743e-11*(.6*3.085677581491367e19)**2)
+ pref=rho*.125*math.sqrt(2)*44100/H.Ic*1e9*365.25*86400
+ return dict(j_bound=j1,j_above_cutoff=j2,soft_fractional_rate_Gyr=pref*(j1+j2),deep_fraction_over_gap_squared=6**1.5*math.pi/(64*H.Ic*H.Qt))
+
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--model',default='linear');ap.add_argument('--delta',type=float,default=0);ap.add_argument('--n',type=int,default=24);ap.add_argument('--nr',type=int,default=40);a=ap.parse_args();H=Halo(model=a.model,delta=a.delta)
  for p in [1,3.9]:
   f=flux(H,p,p,a.n);print('escape',p,-f,rate(H,p,0,48)[1],flush=True)
  print(json.dumps(run(H,a.n,a.nr)),flush=True)
+ if a.delta==0 and a.model in ('linear','quadratic'):print(json.dumps(central_limit(H)),flush=True)
