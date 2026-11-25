@@ -1,0 +1,36 @@
+name: Earlier-onset kinetic CLASS benchmark
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'kinetics/reheating_matched_cases.py'
+      - '.github/workflows/early-onset-class.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  early-onset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - run: python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - run: |
+          mkdir -p outputs
+          python kinetics/reheating_matched_cases.py --case 3 --output outputs/early320.json
+          python kinetics/reheating_matched_cases.py --case 4 --output outputs/early480.json
+          python cosmology/energy_closed_class.py --input outputs/early320.json outputs/early480.json --output outputs/early_transfer.json
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: early-onset-kinetic-class
+          path: outputs/*.json
+          retention-days: 21
