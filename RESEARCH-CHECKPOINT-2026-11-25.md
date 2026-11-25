@@ -36,3 +36,10 @@ A [targeted full hierarchy convergence workflow](.github/workflows/class-hierarc
 ## Daughter bath interaction
 
 [Energy-closed detailed-balanced chi2 relaxation](kinetics/DAUGHTER-BATH-2026-11-25.md): three validated exploratory cases return the massive fermion to the bath. Kappa=.05 overproduces the scalar. Match abundance by changing the channel width; verify independent meshes and physical rates. GitHub reference update encountered a server-side error; local commits in the authorized workspace preserve the work.
+
+
+## Degeneracy + bath return + Yukawa-rate candidate
+
+See kinetics/YUKAWA-RATE-AND-DEGENERACY-2026-11-25.md and kinetics/results/yukawa-degeneracy-2026-11-25.json (actual local outputs). For M=86 TeV, m2/M=0.9, kappa=0.00224, kappaSM1=4000, kappa2=0.03, two independent meshes n=240,320 give Omega_phi h^2=0.120113,0.120224 and hot cut p/T>0.1 fractions 0.00351646,0.00351514; scalar number source, Pauli and energy checks pass. Three-scale analytic PSD export passes; CLASS transfer workflow added, outcome pending. The parent is initially thermal and assumed kinetic-equilibrium, SM rates approximate, and the illustrative uncancelled seesaw contribution is too large. Next: empty-parent initialization, weaker parent couplings and actual CLASS result; no claim of microscopic viability.
+
+Publication limitation: OAuth credential rejects workflow changes (missing workflow scope). The executable workflow is saved as a proposed configuration in cosmology/workflows/daughter-bath-class.proposed.yml; it is not installed or running. CLASS results remain uncomputed. Original local workflow commit c2b5790 preserved on checkpoint/unpublished-workflow-20261125.

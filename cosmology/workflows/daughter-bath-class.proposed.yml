@@ -1,0 +1,81 @@
+name: Massive daughter production and CLASS
+on:
+  push:
+    branches: [main, research/two-mass-20261125]
+    paths:
+      - 'kinetics/two_mass_bath.py'
+      - 'kinetics/daughter_bath_relaxation.py'
+      - 'kinetics/yukawa_rate_bath.py'
+      - 'cosmology/daughter_bath_class.py'
+      - 'cosmology/three_scale_psd.py'
+      - 'cosmology/kinetic_psd_class.py'
+      - '.github/workflows/daughter-bath-class.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production-transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - run: python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Verify finite-mass geometry and production on two meshes
+        run: |
+          mkdir -p outputs
+          python kinetics/two_mass_bath.py --test-only
+          python kinetics/yukawa_rate_bath.py --n 240 --fermion-ratio .9 --kappa .00224 --kappa2 .03 --kappa-sm1 4000 --parent-gev 86000 --xend 80 --rtol 5e-7 --keep-psd --output outputs/yukawa240.json
+          python kinetics/yukawa_rate_bath.py --n 320 --fermion-ratio .9 --kappa .00224 --kappa2 .03 --kappa-sm1 4000 --parent-gev 86000 --xend 80 --rtol 5e-7 --qmin 1e-8 --keep-psd --output outputs/yukawa320.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          a,b=[json.loads(Path('outputs/yukawa'+str(n)+'.json').read_text())[0]['final'] for n in [240,320]]
+          for r in [a,b]:
+              assert abs(r['omega_phi_h2_m86']/.12-1)<.02
+              assert abs(r['matter_fraction_chi2'])<1e-8
+          for k in ['omega_phi_h2_m86','hot_fraction_p_over_actual_T_gt_0p1','mean_p_over_actual_T']:
+              assert abs(a[k]/b[k]-1)<.02,(k,a[k],b[k])
+          PY
+      - name: Positive three-scale export and broad linear transfer
+        run: python cosmology/daughter_bath_class.py --input outputs/yukawa240.json outputs/yukawa320.json --kmax 20 --output outputs/daughter_transfer.json
+      - name: Full hierarchy control
+        run: python cosmology/daughter_bath_class.py --input outputs/yukawa320.json --full-hierarchy --kmax 1.5 --output outputs/daughter_hierarchy.json
+      - name: Record cross-mesh and hierarchy comparisons
+        run: |
+          python - <<'PY'
+          import json
+          import numpy as np
+          from pathlib import Path
+          d=json.loads(Path('outputs/daughter_transfer.json').read_text())
+          h=json.loads(Path('outputs/daughter_hierarchy.json').read_text())
+          a,b=d['results']; k=np.asarray(d['k_per_Mpc']); kh=np.asarray(h['k_per_Mpc'])
+          result={}
+          for z in ['0.0','5.0']:
+              r1=np.asarray(a['CLASS']['ratios'][z]['power_ratio'])
+              r2=np.asarray(b['CLASS']['ratios'][z]['power_ratio'])
+              rh=np.asarray(h['results'][0]['alternate_CLASS']['ratios'][z]['power_ratio'])
+              ri=np.interp(np.log(kh),np.log(k),r2)
+              result[z]=dict(mesh_drift=float(np.max(abs(r1/r2-1))),hierarchy_drift=float(np.max(abs(ri/rh-1))),
+                 partition_drift=max(row['comparisons'][z]['full_range_drift'] for row in [a,b]),
+                 full_hierarchy_precision_drift=h['results'][0]['comparisons'][z]['full_range_drift'],
+                 min_ratio=float(min(r2)),P1=b['CLASS']['ratios'][z]['P_ratio_k1'],P10=b['CLASS']['ratios'][z]['P_ratio_k10'],
+                 half=b['CLASS']['ratios'][z]['half_power_k_per_Mpc'])
+          print(json.dumps(result,indent=2))
+          Path('outputs/daughter_comparison.json').write_text(json.dumps(result,indent=2))
+          for v in result.values():
+              assert v['mesh_drift']<.03 and v['partition_drift']<.03 and v['full_hierarchy_precision_drift']<.03 and v['hierarchy_drift']<.03,v
+          PY
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: massive-daughter-class
+          path: outputs/*.json
+          retention-days: 21

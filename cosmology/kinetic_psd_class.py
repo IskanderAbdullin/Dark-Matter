@@ -89,16 +89,24 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
             try:c.struct_cleanup();c.empty()
             except Exception:pass
     comps=export['components'];tr=(3.909/106.75)**(1/3)
-    p=dict(base,N_ncdm=2,m_ncdm='86,86',T_ncdm=','.join(str(c['scale']*tr) for c in comps),
-           deg_ncdm='1,1',use_ncdm_psd_files='1,1',ncdm_psd_filenames=','.join(c['file'] for c in comps),omega_cdm=1e-8)
-    p.update(ncdm_quadrature_strategy='2,2',ncdm_N_momentum_bins=f'{bins},{bins}')
+    nc=len(comps)
+    assert nc>=1
+    p=dict(base,N_ncdm=nc,m_ncdm=','.join(['86']*nc),T_ncdm=','.join(str(c['scale']*tr) for c in comps),
+           deg_ncdm=','.join(['1']*nc),use_ncdm_psd_files=','.join(['1']*nc),
+           ncdm_psd_filenames=','.join(c['file'] for c in comps),omega_cdm=1e-8)
+    p.update(ncdm_quadrature_strategy=','.join(['2']*nc),ncdm_N_momentum_bins=','.join([str(bins)]*nc))
     if precision: p.update(precision)
     quadrature_errors=transformed_quadrature_check(export,bins)
     warm=solve(p)
     target=row['final']['omega_phi_h2_m86_g106p75']
     assert abs(warm['omega_ncdm_h2']/target-1)<.025,(warm['omega_ncdm_h2'],target)
-    assert len(warm['rho_species_z0'])==2,warm['rho_species_z0']
-    ratio=warm['rho_species_z0'][1]/sum(warm['rho_species_z0'])
+    assert len(warm['rho_species_z0'])==nc,warm['rho_species_z0']
+    fractions=np.asarray(warm['rho_species_z0'])/sum(warm['rho_species_z0'])
+    expected=np.asarray([c['number'] for c in comps])/sum(c['number'] for c in comps)
+    assert np.max(np.abs(fractions-expected))<.015,(fractions,expected)
+    if nc>=3:
+        assert np.max(np.abs(fractions/expected-1))<.02,(fractions,expected)
+    ratio=float(fractions[1:].sum())
     assert abs(ratio-export['reconstructed_hot_number_fraction'])<.015,(ratio,export['reconstructed_hot_number_fraction'])
     delta_phi=export['raw_energy']/(7*np.pi**2/120)*tr**4/(4/11)**(4/3)
     assert abs(warm['Neff']-base['N_ur']-delta_phi)<.003,(warm['Neff'],base['N_ur'],delta_phi)
@@ -115,10 +123,11 @@ def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
         if len(crossings):
             i=crossings[0];half=float(np.exp(np.interp(.5,[r[i+1],r[i]],[np.log(ks[i+1]),np.log(ks[i])])))
         result[key]={'power_ratio':r.tolist(),'half_power_k_per_Mpc':half,
-                     'P_ratio_k1':float(np.interp(0.,np.log(ks),r)),'P_ratio_k10':float(np.interp(np.log(10),np.log(ks),r))}
+                     'P_ratio_k1':float(np.interp(0.,np.log(ks),r)) if ks[0]<=1.<=ks[-1] else None,
+                     'P_ratio_k10':float(np.interp(np.log(10),np.log(ks),r)) if ks[0]<=10.<=ks[-1] else None}
     return {'warm_background':{k:v for k,v in warm.items() if k!='power'},'expected_omega':target,
             'delta_phi_early':float(delta_phi),'chi2_Nur':row['final']['delta_Neff_chi2_if_stable_free_streaming'],
-            'hot_tracer_mass_fraction':ratio,'ratios':result,'quadrature_strategy':2,
+            'hot_tracer_mass_fraction':ratio,'tracer_mass_fractions':fractions.tolist(),'ratios':result,'quadrature_strategy':2,
             'momentum_bins':bins,'gauge':'synchronous','quadrature_moment_relative_errors':quadrature_errors}
 
 

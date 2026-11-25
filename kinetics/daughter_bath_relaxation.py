@@ -21,18 +21,24 @@ class DaughterBath(TwoMassBath):
         assert self.fermion_ratio>0 and kappa2>=0
         self.kappa2=kappa2
 
+    def bath_rates(self,x,th):
+        # Rate2 scales with Hfactor; rate1 in this baseline is constant per H.
+        b=x*self.fermion_ratio
+        dilution=self.trace_weights[self.n:]/(4*self.vol*b)
+        rate=self.kappa2*x*x*th['Hfactor']*dilution
+        return rate,np.zeros(self.n),self.relaxation,0.,False
+
     def evaluate(self,z,y):
         x=np.exp(z);n=self.n;N=y[-4]
         th=self.set_state(x,y[:-1])
         yd=y[:2*n];f=yd[n:]
-        # Exact shell average of m2/E2 from the pressure trace.
-        b=x*self.fermion_ratio
-        dilution=self.trace_weights[n:]/(4*self.vol*b)
-        rate=self.kappa2*x*x*th['Hfactor']*dilution
+        rate,rateT,lam,lamT,lamH=self.bath_rates(x,th)
+        th.update(bath_rate2_T=rateT,bath_rate1=lam,bath_rate1_T=lamT,bath_rate1_Hdependent=lamH)
         eq=expit(-self.energy_chi/th['theta'])
         bath=rate*(eq-f)
         dy=self.collision_rhs(yd);dy[n:]+=bath
-        dN=-self.vol@dy[:n]+self.relaxation*(th['Neq']-N)
+        th['parent_bath_source']=lam*(th['Neq']-N)
+        dN=-self.vol@dy[:n]+th['parent_bath_source']
         dtheta=(th['force']-th['rhoN']*dN-self.ew@dy)/th['heat']
         dS=4*self.vol@bath
         dW=th['trace']+self.trace_weights@yd
@@ -62,11 +68,14 @@ class DaughterBath(TwoMassBath):
             return np.r_[(dA@(1-f)+p*dA.sum(axis=1))/v,
                          (dA.T@(1+p)-f*dA.sum(axis=0))/(4*v)]-.5*dy*total_deriv/th['total']
         jN=col(FN,th['rhoN']);jT=col(FT,th['heat'])
-        temp=rate*eq*(1-eq)*self.energy_chi/th['theta']
+        temp=rate*eq*(1-eq)*self.energy_chi/th['theta']+th['bath_rate2_T']*(eq-f)
         jT[n:]+=temp
         JD=np.column_stack((J,jN,jT,np.zeros((2*n,2))))
         jParent=-v@JD[:n,:]
-        jParent[-4]-=self.relaxation;jParent[-3]+=self.relaxation*th['NeqT']
+        jParent[-4]-=th['bath_rate1']
+        jParent[-3]+=th['bath_rate1']*th['NeqT']+th['bath_rate1_T']*(th['Neq']-N)
+        if th['bath_rate1_Hdependent']:
+            jParent-=.5*th['parent_bath_source']/th['total']*np.r_[self.ew,th['rhoN'],th['heat'],0.,0.]
         jTemp=(-th['rhoN']*jParent-self.ew@JD)/th['heat']
         jTrace=np.r_[self.trace_weights,0.,0.,0.,0.]
         jS=np.r_[np.zeros(n),-4*v*rate,0.,4*v@temp,0.,0.]
