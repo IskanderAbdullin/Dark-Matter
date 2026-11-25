@@ -59,3 +59,5 @@
 Paper 21 solves causal spherical linearized Vlasov–Poisson with the signed initial C22 forcing. Broad core response ~1.7–2x frozen Born; local raw central field not converged; 1 Gyr already ~9–10% relative inner Gaussian change. Next: independent orbital-(E,L) projected static susceptibility and regular weak field basis; no long-time extrapolation.
 
 Paper 22: fixed-(E,L) static covariance obeys same analytic radial coercivity bound as energy shell; independent numerical max .552/.544. Weak r² Galerkin VP reproduces broad response and removes pathological absolute field, but inner slope unresolved. Next direct pointwise and orbit-averaged C22 rates, then evolving collision operator.
+
+Paper 23: direct C22 and independent analytic min(q_i)/4 energy kernel; orbital relative rates strongly L-dependent and nonuniform near cutoff. Nonlinear local energy lattice preserves N/E/positivity/entropy and shows reduced exterior production vs frozen source. Prioritize spatial/angular transport with evolving conservative collision operator and weak Poisson; resolve IR and zero mode; no physical halo or relic claim.
