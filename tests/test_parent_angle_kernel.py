@@ -1,4 +1,4 @@
-﻿"""Regression tests for independent momentum grids and parent-angle kernel."""
+"""Regression tests for independent momentum grids and parent-angle kernel."""
 import numpy as np
 from scipy.special import expit
 from pathlib import Path

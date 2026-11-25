@@ -3985,5 +3985,19 @@
       }
     ],
     "relative_grid_drift": 5.1371439990788303e-08
+  },
+  "BEST_source": {
+    "url": "https://github.com/best-hep/best",
+    "commit": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+    "version": "1.3.5",
+    "examples": [
+      "2to2m1.py",
+      "inflaton_bec.py"
+    ],
+    "runtime_tested": false,
+    "missing_dependencies": [
+      "mpi4py",
+      "vegas"
+    ]
   }
 }
