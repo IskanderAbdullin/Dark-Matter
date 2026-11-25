@@ -21,3 +21,5 @@ Canonical research goal is the physical chain from microphysics to production sp
 3. Only after conditional production/transfer checks, compare admissible scenarios to CMB/Lyman-alpha and dwarf-galaxy likelihoods and close the nonlinear halo/relaxation link.
 
 A new research program is not necessary. Continue this repository, branch main, preserve previous evidence. Computer use is optional and restricted to explicitly authorized project location; no personal machine resources required for this checkpoint.
+
+A [targeted full hierarchy convergence workflow](.github/workflows/class-hierarchy-precision.yml) is prepared to compare lmax=30/45 and 120/240 momentum nodes at k=.003–1.5 Mpc^-1, without the expensive and currently unnecessary high-k run. It saves raw comparison results even if the convergence threshold fails.
