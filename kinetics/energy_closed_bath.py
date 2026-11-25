@@ -20,6 +20,24 @@ class EnergyClosedBath(RadiationFixedBath):
         self.pair_E=self.mean[:,None]+self.mean[None,:]
         self.ew=np.r_[self.vol*self.mean,4*self.vol*self.mean]
         self.geom_x=None
+        self.energy_phi=self.mean
+        self.trace_weights=np.zeros(2*n)
+
+    def geometry(self,x):
+        if x!=self.geom_x:
+            super().update(x);self.R0=self.R*x;self.geom_x=x
+
+    def collision_rhs(self,y):
+        p,f=np.split(y,2)
+        return np.r_[(self.A@(1-f)+p*(self.A.sum(axis=1)-self.R@f))/self.vol,
+                     (self.A.T@(1+p)-f*(self.A.sum(axis=0)+self.R.T@p))/(4*self.vol)]
+
+    def collision_jac(self,y):
+        p,f=np.split(y,2);v=self.vol
+        return np.block([[np.diag((self.A.sum(axis=1)-self.R@f)/v),
+                          -(self.A+p[:,None]*self.R)/v[:,None]],
+                         [(self.A.T-f[:,None]*self.R.T)/(4*v[:,None]),
+                          -np.diag((self.A.sum(axis=0)+self.R.T@p)/(4*v))]])
 
     def thermo(self,x,N,ztheta):
         theta=np.exp(ztheta);E=np.hypot(self.parent_p,x);w=self.parent_w
@@ -43,8 +61,7 @@ class EnergyClosedBath(RadiationFixedBath):
 
     def set_state(self,x,y):
         n=self.n;yd=y[:2*n];N,zt=y[-3:-1]
-        if x!=self.geom_x:
-            super().update(x);self.R0=self.R*x;self.geom_x=x
+        self.geometry(x)
         th=self.thermo(x,N,zt);total=th['rb']+th['rho']+self.ew@yd
         Hfactor=np.sqrt(self.rad0/total)
         self.R=self.R0*Hfactor
@@ -55,15 +72,15 @@ class EnergyClosedBath(RadiationFixedBath):
 
     def rhs_log(self,z,y):
         x=np.exp(z);n=self.n;N=y[-3];th=self.set_state(x,y)
-        dy=DaughterEnergyFV.rhs(self,x,y[:2*n])
+        dy=self.collision_rhs(y[:2*n])
         dN=-self.vol@dy[:n]+self.relaxation*(th['Neq']-N)
         dtheta=(th['force']-th['rhoN']*dN-self.ew@dy)/th['heat']
-        return np.r_[dy,dN,dtheta,th['trace']]
+        return np.r_[dy,dN,dtheta,th['trace']+self.trace_weights@y[:2*n]]
 
     def jac_log(self,z,y):
         x=np.exp(z);n=self.n;N=y[-3];th=self.set_state(x,y);p,f=np.split(y[:2*n],2)
-        dy=DaughterEnergyFV.rhs(self,x,y[:2*n])
-        J=DaughterEnergyFV.jac(self,x,y[:2*n])-.5/th['total']*np.outer(dy,self.ew)
+        dy=self.collision_rhs(y[:2*n])
+        J=self.collision_jac(y[:2*n])-.5/th['total']*np.outer(dy,self.ew)
         F=th['F'];S=F*(1-F)
         if N>0 and th['A']>1e-250:
             FN=S/th['A']
@@ -74,13 +91,13 @@ class EnergyClosedBath(RadiationFixedBath):
         FT=S*(self.pair_E-th['rhoN'])/th['theta']
         def col(DF,total_deriv):
             dA=self.R*DF;dS=dA.sum(axis=1)
-            return np.r_[(dA@(1-f)+p*dS)/self.vol,(dA@(1+p)-f*dS)/(4*self.vol)]-.5*dy*total_deriv/th['total']
+            return np.r_[(dA@(1-f)+p*dS)/self.vol,(dA.T@(1+p)-f*dA.sum(axis=0))/(4*self.vol)]-.5*dy*total_deriv/th['total']
         jN=col(FN,th['rhoN']);jT=col(FT,th['heat'])
         JD=np.column_stack((J,jN,jT,np.zeros(2*n)))
         jParent=-self.vol@JD[:n,:]
         jParent[-3]-=self.relaxation;jParent[-2]+=self.relaxation*th['NeqT']
         jTemp=(-th['rhoN']*jParent-self.ew@JD)/th['heat']
-        jTrace=np.zeros(2*n+3)
+        jTrace=np.r_[self.trace_weights,0.,0.,0.]
         # Only two thermodynamic columns require finite differences of higher moments.
         for k in [-3,-2]:
             step=max(1e-10,abs(y[k])*1e-5) if k==-3 else 1e-6
@@ -101,10 +118,11 @@ class EnergyClosedBath(RadiationFixedBath):
         if not sol.success:raise RuntimeError(sol.message)
         history=[];l,h=self.edges[:-1],self.edges[1:]
         for x,y in zip(samples[1:],sol.y.T[1:]):
+            self.geometry(x)
             yd=y[:2*self.n];N,zt,W=y[-3:];th=self.thermo(x,N,zt);theta=th['theta'];s=self.snapshot(yd)
             p,f=np.split(yd,2);total=th['rb']+th['rho']+self.ew@yd
             cold=np.maximum(np.minimum(h,.1*theta)**3-l**3,0)/(h**3-l**3)
-            rphi=float((p*self.vol)@self.mean);rchi=float((4*f*self.vol)@self.mean)
+            rphi=float((p*self.vol)@self.energy_phi);rchi=float((4*f*self.vol)@self.mean)
             s.update(x=x,theta=theta,mother_number=float(N),mother_eq_number=th['Neq'],mother_rho_Tref4=th['rho'],
                      total_rho_Tref4=float(total),continuity_residual=float((total-initial_rho-W)/initial_rho),
                      mother_plus_phi_number=float(N+s['number']),rho_phi_Tref4=rphi,rho_chi2_Tref4=rchi,
