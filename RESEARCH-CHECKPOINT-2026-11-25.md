@@ -102,3 +102,7 @@ See kinetics/PARENT-GRID-AND-ANGLE-2026-11-25.md and raw results. Found spurious
 ## Matched-width independent kinetic kernels
 
 See kinetics/CONVERGED-INDEPENDENT-KERNELS-2026-11-25.md. At fixed kappa=.00685, full angle n240/320 yields .1203498/.1202148, same-grid independent rectangle hybrid .1197704/.1198517. Strict exact dense n240 .1203496. CLASS conditional P/P_CDM at z=5,k=10/Mpc=.983907/.983511. This supersedes earlier shared-grid positivity failures as a numerical solution, not a physical viability result. The highest-priority next issue is early scalar self-interaction and thermal dispersion, including possible condensate and number-changing reactions. Full CLASS hierarchy remains unverified.
+
+## Contact self-interaction: physical bottleneck
+
+See kinetics/CONTACT-ELASTIC-AND-CONDENSATE-LIMITS-2026-11-25.md. Fixed-PSD quantum net elastic rate of relative q2 change is +5.1875/H even for sigma/m=1e-7 cm2/g; independent conservative scheme +5.2334/H. At .001 bare diagnostic +3.56e4/H, uncontrolled lambda*f~11. Collisionless assumption therefore requires new physical justification; this is not a solved interacting relic or exclusion. Ideal number-conserving condensation/free-streaming limit yields P/P_CDM(z5,k10)=.968895; ideal tight fluid sound horizon to equality .12828 Mpc. BEST (2026 exact kinematics and stiff integration) and CosmoLattice identified for next-stage implementation.
