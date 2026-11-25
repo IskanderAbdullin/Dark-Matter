@@ -8,3 +8,10 @@
 - Next: positivity-preserving resolved collision integration; inspect projection, scaling and stiff-step failure; then late guarded width fit, fine convergence, full CLASS hierarchy and microphysical constraints. Soft-corner repair screen is rate-weight diagnostic only.
 
 Raw data: [final-autonomous-run-2026-11-25.json](results/final-autonomous-run-2026-11-25.json).
+
+## Final verification and budget
+
+- Full suite: 31 passed in 49.32 s. Two additional long exploratory jobs (160-cell fully resolved parent and full CLASS hierarchy) exceeded the run budget and were stopped without claiming results.
+- Actual cross-mesh relative power drift: 0.11325% at z=0, 0.11324% at z=5.
+- Equilibrium-weighted soft-corner repair sensitivity: 1.393% at x=0.05, 0.402% at x=0.1; negligible for tested x>=0.2. This is not a bound on nonequilibrium dynamics.
+- Next positivity investigation: the rejected state is the solver's wall-budget endpoint, not merely a scheduled dense-output sample. Instrument accepted steps, identify the first negative parent cell and incoming/outgoing flux, compare BDF/Radau and conservative positivity-preserving discretizations. Do not silently clip occupations or accept small conservation residuals as sufficient.
