@@ -83,3 +83,5 @@ Paper 32: [evolving C22 + linearized VP](continuation-04/papers/32-nonlinear-c22
 Paper 33: [canonical action/phase gravity control](continuation-04/papers/33-canonical-action-phase-gravity-control-2026-11-25.md) exact phase-volume flux and L conservation; harmonic H error converges but not exact; common-L actual halo grid constructed. Next nonlinear self-consistent gravity transport and energy gate.
 
 Paper 34: [nonlinear Poisson negative energy test](continuation-04/papers/34-nonlinear-halo-poisson-energy-failure-2026-11-25.md) full-f artificial equilibrium diffusion dominates field energy; delta-f reduces residual 215x but still fails energy/positivity convergence. Next conservative limiter and work ledger.
+
+Paper 35: [positivity-limited nonlinear gravity](continuation-04/papers/35-positive-equilibrium-subtracted-halo-flux-2026-11-25.md) eliminates all 107 delta-f step rejections with negligible flux limiting; energy defect persists. Next exact work ledger and energy consistency.
