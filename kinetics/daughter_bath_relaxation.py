@@ -24,7 +24,7 @@ class DaughterBath(TwoMassBath):
     def bath_rates(self,x,th):
         # Rate2 scales with Hfactor; rate1 in this baseline is constant per H.
         b=x*self.fermion_ratio
-        dilution=self.trace_weights[self.n:]/(4*self.vol*b)
+        dilution=self.trace_weights[self.n:]/(self.g_fermion*self.vol*b)
         rate=self.kappa2*x*x*th['Hfactor']*dilution
         return rate,np.zeros(self.n),self.relaxation,0.,False
 
@@ -40,7 +40,7 @@ class DaughterBath(TwoMassBath):
         th['parent_bath_source']=lam*(th['Neq']-N)
         dN=-self.vol@dy[:n]+th['parent_bath_source']
         dtheta=(th['force']-th['rhoN']*dN-self.ew@dy)/th['heat']
-        dS=4*self.vol@bath
+        dS=self.g_fermion*self.vol@bath
         dW=th['trace']+self.trace_weights@yd
         out=np.r_[dy,dN,dtheta,dW,dS]
         return out,th,rate,eq,bath
@@ -66,7 +66,7 @@ class DaughterBath(TwoMassBath):
         def col(DF,total_deriv):
             dA=self.R*DF
             return np.r_[(dA@(1-f)+p*dA.sum(axis=1))/v,
-                         (dA.T@(1+p)-f*dA.sum(axis=0))/(4*v)]-.5*dy*total_deriv/th['total']
+                         (dA.T@(1+p)-f*dA.sum(axis=0))/(self.g_fermion*v)]-.5*dy*total_deriv/th['total']
         jN=col(FN,th['rhoN']);jT=col(FT,th['heat'])
         temp=rate*eq*(1-eq)*self.energy_chi/th['theta']+th['bath_rate2_T']*(eq-f)
         jT[n:]+=temp
@@ -78,7 +78,7 @@ class DaughterBath(TwoMassBath):
             jParent-=.5*th['parent_bath_source']/th['total']*np.r_[self.ew,th['rhoN'],th['heat'],0.,0.]
         jTemp=(-th['rhoN']*jParent-self.ew@JD)/th['heat']
         jTrace=np.r_[self.trace_weights,0.,0.,0.,0.]
-        jS=np.r_[np.zeros(n),-4*v*rate,0.,4*v@temp,0.,0.]
+        jS=np.r_[np.zeros(n),-self.g_fermion*v*rate,0.,self.g_fermion*v@temp,0.,0.]
         jS-=.5*dS/th['total']*np.r_[self.ew,th['rhoN'],th['heat'],0.,0.]
         for k in [-4,-3]:
             step=max(1e-10,abs(y[k])*1e-5) if k==-4 else 1e-6
@@ -94,7 +94,7 @@ class DaughterBath(TwoMassBath):
         x=.2;z=np.log(x);self.geometry(x);N=self.thermo(x,0.,0.)['Neq']
         y=np.r_[1/np.expm1(self.energy_phi),expit(-self.energy_chi),N,0.,0.,0.]
         dy,th,rate,eq,bath=self.evaluate(z,y)
-        bal=(np.abs(dy[:self.n])@self.vol+np.abs(dy[self.n:2*self.n])@(4*self.vol))/max(self.A.sum(),1e-30)
+        bal=(np.abs(dy[:self.n])@self.vol+np.abs(dy[self.n:2*self.n])@(self.g_fermion*self.vol))/max(self.A.sum(),1e-30)
         assert bal<1e-8,bal
         y=np.r_[np.full(self.n,.1),np.full(self.n,.05),N*.8,.01,0.,0.]
         rng=np.random.default_rng(17);d=rng.normal(size=len(y));d/=np.linalg.norm(d)
@@ -120,8 +120,8 @@ class DaughterBath(TwoMassBath):
             self.geometry(x)
             yd=y[:2*n];p,f=np.split(yd,2);N,zt,W,S=y[-4:]
             th=self.thermo(x,N,zt);theta=th['theta'];s=self.snapshot(yd)
-            N2=float(4*self.vol@f);Nphi=s['number']
-            rho1=th['rho'];rphi=float((p*self.vol)@self.energy_phi);rchi=float((4*f*self.vol)@self.energy_chi)
+            N2=float(self.g_fermion*self.vol@f);Nphi=s['number']
+            rho1=th['rho'];rphi=float((p*self.vol)@self.energy_phi);rchi=float((self.g_fermion*f*self.vol)@self.energy_chi)
             total=th['rb']+rho1+rphi+rchi
             source_err=(N2-Nphi-S)/max(Nphi,1e-12)
             cold=np.maximum(np.minimum(h,.1*theta)**3-l**3,0)/(h**3-l**3)
@@ -143,11 +143,11 @@ class DaughterBath(TwoMassBath):
             history.append(s)
         out=dict(n=n,x0=x0,xend=xend,kappa=self.kappa,kappa2=self.kappa2,scalar_ratio=self.scalar_ratio,
                  fermion_ratio=self.fermion_ratio,parent_GeV=parent_gev,relaxation_per_H=self.relaxation,
-                 g_bath=self.g_bath,rtol=rtol,fermion_atol=fermion_atol,checks=checks,nfev=sol.nfev,
+                 g_bath=self.g_bath,g_fermion=self.g_fermion,rtol=rtol,fermion_atol=fermion_atol,checks=checks,nfev=sol.nfev,
                  initial_parent=initial_parent,initial_mother_number=init,initial_total_rho_Tref4=rho0,history=history,final=history[-1])
         if keep_psd:
             out['frozen_cell_spectrum']=dict(edges=self.edges.tolist(),f_phi=sol.y[:n,-1].tolist(),
-                f_chi2=sol.y[n:2*n,-1].tolist(),g_phi=1,g_chi2=4,theta_freezeout=history[-1]['theta'])
+                f_chi2=sol.y[n:2*n,-1].tolist(),g_phi=1,g_chi2=self.g_fermion,theta_freezeout=history[-1]['theta'])
         return out
 
 

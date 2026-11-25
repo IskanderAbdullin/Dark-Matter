@@ -32,7 +32,7 @@ class YukawaRateBath(DaughterBath):
             dil1=1.;dil1T=0.
         lam1=self.kappa_sm1*x*x*Hf*dil1
         lam1T=self.kappa_sm1*x*x*Hf*dil1T
-        dil2=self.trace_weights[self.n:]/(4*self.vol*b)
+        dil2=self.trace_weights[self.n:]/(self.g_fermion*self.vol*b)
         rate2=self.kappa2*x*x*Hf*dil2;rate2T=np.zeros(self.n)
         if self.scatter:
             # Relativistic gamma*y^2*T estimate is only valid at T>>M_i.

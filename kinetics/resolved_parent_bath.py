@@ -12,7 +12,8 @@ import argparse,json,time
 from pathlib import Path
 import numpy as np
 from scipy.special import roots_legendre,expit
-from scipy.integrate import BDF
+from scipy.integrate import BDF,Radau
+from scipy.optimize import brentq
 from types import SimpleNamespace
 from two_mass_bath import TwoMassBath
 from radiation_fixed_bath import omega_from_number
@@ -35,12 +36,12 @@ class ResolvedParent(TwoMassBath):
             np.linspace(.2,24.,nm+1)[1:],np.geomspace(24.,qmax,nh+1)[1:]]
         assert len(self.parent_edges)==nparent+1
         l,h=self.parent_edges[:-1],self.parent_edges[1:]
-        self.v1=4*(h-l)*(h*h+h*l+l*l)/(6*np.pi**2)
+        self.v1=self.g_fermion*(h-l)*(h*h+h*l+l*l)/(6*np.pi**2)
         u,w=roots_legendre(8)
         self.p1=(h[:,None]+l[:,None])/2+(h-l)[:,None]*u/2
         self.w1=(h-l)[:,None]/2*w*self.p1**2
         self.w1/=self.w1.sum(axis=1)[:,None]
-        self.v2=4*self.vol
+        self.v2=self.g_fermion*self.vol
         self.vols=np.r_[self.vol,self.v2,self.v1]
         self.source1=np.r_[np.zeros(2*n),self.v1]
         self.source2=np.r_[np.zeros(n),self.v2,np.zeros(nparent)]
@@ -206,25 +207,25 @@ class ResolvedParent(TwoMassBath):
         assert max(abs(r['ratio']-1) for r in gain)<.15,gain
         return checks
 
-    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.):
+    def evolve(self,x0=.1,xend=80.,rtol=2e-6,initial_parent='empty',keep_psd=False,parent_gev=86000.,wall_limit=0.,fermion_atol=1e-15,method="BDF"):
         check=self.validate();print('checks',json.dumps(check),flush=True)
         self.geometry(x0);ini=expit(-self.e1) if initial_parent=='thermal' else np.zeros(self.n1)
         y0=np.r_[np.zeros(2*self.n),ini,0.,0.,0.,0.]
         init=float(self.v1@ini);rho0=float(self.rad0+(self.v1*self.e1)@ini)
         ts=sorted(set([x0]+[x for x in [.02,.03,.05,.075,.1,.125,.15,.175,.2,.3,.5,1,2,3,5,10,15,20,30,40,60,80,100,120] if x0<x<xend]+[xend]))
-        atol=np.r_[np.full(self.n,1e-12),np.full(self.n+self.n1,1e-15),1e-13,1e-12,1e-13,1e-13]
+        atol=np.r_[np.full(self.n,1e-12),np.full(self.n+self.n1,fermion_atol),1e-13,1e-12,1e-13,1e-13]
         start=time.monotonic();last_print=start
         zlist=np.log(ts);ys=[y0];actual_z=[zlist[0]];k=1;steps=0;message='Integration complete.'
-        solver=BDF(self.rhs,zlist[0],y0,zlist[-1],jac=self.jac,rtol=rtol,atol=atol,max_step=.035)
+        solver={"BDF":BDF,"Radau":Radau}[method](self.rhs,zlist[0],y0,zlist[-1],jac=self.jac,rtol=rtol,atol=atol,max_step=.035)
         while solver.status=='running':
             err=solver.step();steps+=1
             if solver.status=='failed':
                 message=str(err);break
             now=time.monotonic()
-            if now-last_print>=15. or solver.t>=zlist[k]:
+            if now-last_print>=15. or (k<len(zlist) and solver.t>=zlist[k]):
                 print('progress',json.dumps(dict(x=float(np.exp(solver.t)),steps=steps,nfev=solver.nfev,
                     elapsed=now-start)),flush=True);last_print=now
-            if solver.t>=zlist[k]:
+            if k<len(zlist) and solver.t>=zlist[k]:
                 interp=solver.dense_output()
                 while k<len(zlist) and solver.t>=zlist[k]:
                     ys.append(interp(zlist[k]));actual_z.append(zlist[k]);k+=1
@@ -255,17 +256,25 @@ class ResolvedParent(TwoMassBath):
                 omega_phi_h2_m86=float(omega_from_number(Np/theta**3,gs=self.g_bath)))
             assert abs(cont)<5e-5 and max(abs(err1),abs(err2))<1e-5,s
             assert s['min_occupation']>-1e-7 and s['max_fermion']<1.00001 and g.min()>-1e-7 and g.max()<1.00001,s
+            if N1>1e-14:
+                xi=brentq(lambda u:self.v1@expit(u-self.e1/theta)-N1,-750.,100.)
+                fit=expit(xi-self.e1/theta)
+                s['parent_shape_TV']=float(.5*self.v1@np.abs(g-fit)/N1)
+                s['parent_energy_rel_difference']=float(r1/((self.v1*self.e1)@fit)-1)
+                d=self.dark(y[:self.dim]);dc=self.dark(np.r_[p,f,fit])
+                scale=max(abs(self.vol@d[:self.n]),abs(self.vol@dc[:self.n]),1e-30)
+                s['closure_dark_source_difference']=float((self.vol@(dc[:self.n]-d[:self.n]))/scale)
             history.append(s)
             print('state',json.dumps({k:s[k] for k in ('x','omega_phi_h2_m86','hot_fraction_p_over_actual_T_gt_0p1','mother_number','mother_min_occupation','continuity_residual')}),flush=True)
         out=dict(n=self.n,nparent=self.n1,x0=x0,xend=float(np.exp(sol.t[-1])),requested_xend=xend,kappa=self.kappa,kappa2=self.kappa2,
             kappa_sm1=self.kappa_sm1,gamma=self.gamma,scatter=self.scatter,scalar_ratio=self.scalar_ratio,fermion_ratio=self.fermion_ratio,
-            parent_GeV=parent_gev,g_bath=self.g_bath,rtol=rtol,initial_parent=initial_parent,initial_mother_number=init,
-            initial_total_rho_Tref4=rho0,checks=check,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,success=bool(sol.success),message=sol.message,
+            parent_GeV=parent_gev,g_bath=self.g_bath,g_fermion=self.g_fermion,rtol=rtol,initial_parent=initial_parent,initial_mother_number=init,
+            initial_total_rho_Tref4=rho0,checks=check,method=method,fermion_atol=fermion_atol,nfev=sol.nfev,njev=sol.njev,steps=steps,wall_seconds=time.monotonic()-start,parent_floor=self.parent_floor,success=bool(sol.success),message=sol.message,
             max_dropped_equilibrium_fraction=self.max_dropped_equilibrium_fraction,max_projection_energy_error=self.max_projection_energy_error,
             history=history,final=history[-1] if history else None)
         if keep_psd:
             out['frozen_cell_spectrum']=dict(edges=self.edges.tolist(),f_phi=sol.y[:self.n,-1].tolist(),f_chi2=sol.y[self.n:2*self.n,-1].tolist(),
-                parent_edges=self.parent_edges.tolist(),f_parent=sol.y[2*self.n:self.dim,-1].tolist(),g_phi=1,g_chi2=4,g_parent=4,
+                parent_edges=self.parent_edges.tolist(),f_parent=sol.y[2*self.n:self.dim,-1].tolist(),g_phi=1,g_chi2=self.g_fermion,g_parent=self.g_fermion,
                 theta_freezeout=history[-1]['theta'] if history else 1.)
         if sol.success:out['xend']=xend
         if self.kappa_sm1>0 and self.kappa2>0:
@@ -274,7 +283,7 @@ class ResolvedParent(TwoMassBath):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--n',type=int,default=120);p.add_argument('--nparent',type=int,default=120)
+    p=argparse.ArgumentParser();p.add_argument('--n',type=int,default=120);p.add_argument('--nparent',type=int,default=120);p.add_argument('--g-fermion',type=int,choices=[2,4],default=4)
     p.add_argument('--kappa',type=float,default=.005278180162600994);p.add_argument('--kappa-sm1',type=float,default=47.)
     p.add_argument('--kappa2',type=float,default=.03);p.add_argument('--gamma',type=float,default=.01)
     p.add_argument('--fermion-ratio',type=float,default=.9);p.add_argument('--parent-gev',type=float,default=86000.)
@@ -282,13 +291,14 @@ def main():
     p.add_argument('--qmin',type=float,default=1e-8);p.add_argument('--rtol',type=float,default=2e-6)
     p.add_argument('--initial-parent',choices=['empty','thermal'],default='empty');p.add_argument('--no-scatter',action='store_true')
     p.add_argument('--parent-floor',type=float,default=0.);p.add_argument('--wall-limit',type=float,default=0.)
+    p.add_argument('--fermion-atol',type=float,default=1e-15);p.add_argument('--method',choices=['BDF','Radau'],default='BDF')
     p.add_argument('--test-only',action='store_true');p.add_argument('--keep-psd',action='store_true');p.add_argument('--output')
     a=p.parse_args()
-    m=ResolvedParent(n=a.n,nparent=a.nparent,kappa=a.kappa,kappa2=a.kappa2,kappa_sm1=a.kappa_sm1,
+    m=ResolvedParent(n=a.n,nparent=a.nparent,g_fermion=a.g_fermion,kappa=a.kappa,kappa2=a.kappa2,kappa_sm1=a.kappa_sm1,
         gamma=a.gamma,scatter=not a.no_scatter,parent_floor=a.parent_floor,scalar_ratio=86./(a.parent_gev*1e9),fermion_ratio=a.fermion_ratio,qmin=a.qmin)
     if a.test_only:print(json.dumps(m.validate(),indent=2));return
     assert a.output
-    r=m.evolve(a.x0,a.xend,a.rtol,a.initial_parent,a.keep_psd,a.parent_gev,a.wall_limit)
+    r=m.evolve(a.x0,a.xend,a.rtol,a.initial_parent,a.keep_psd,a.parent_gev,a.wall_limit,a.fermion_atol,a.method)
     Path(a.output).write_text(json.dumps([r],indent=2,allow_nan=False)+'\n')
     print('final',json.dumps({k:r[k] for k in ('n','nparent','success','message','nfev','max_dropped_equilibrium_fraction','final')}),flush=True)
     if not r['success']:raise RuntimeError(r['message'])

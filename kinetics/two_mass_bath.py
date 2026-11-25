@@ -109,13 +109,13 @@ class TwoMassBath(EnergyClosedBath):
         self.energy_chi=np.sum(self.ws*ef,axis=1)
         trp=np.sum(self.ws*m*m/ep,axis=1)
         trf=np.sum(self.ws*b*b/ef,axis=1)
-        self.ew=np.r_[self.vol*self.energy_phi,4*self.vol*self.energy_chi]
-        self.trace_weights=np.r_[self.vol*trp,4*self.vol*trf]
+        self.ew=np.r_[self.vol*self.energy_phi,self.g_fermion*self.vol*self.energy_chi]
+        self.trace_weights=np.r_[self.vol*trp,self.g_fermion*self.vol*trf]
         self.pair_E=self.energy_phi[:,None]+self.energy_chi[None,:]
         area=rectangle_areas(self.edges,self.edges,x,m,b,self.order)
         K,D=invariants(x,m,b)
         eta=2*D/(x*x)
-        self.R0=4*x/(2*np.pi**2)*area/eta*(self.kappa*x*x)
+        self.R0=self.g_fermion*x/(2*np.pi**2)*area/eta*(self.kappa*x*x)
         self.geom_x=x
 
     def test_balance_jac(self):
@@ -124,7 +124,7 @@ class TwoMassBath(EnergyClosedBath):
         y=np.r_[1/np.expm1(self.energy_phi),expit(-self.energy_chi),N,0.,0.]
         self.set_state(x,y)
         dy=self.collision_rhs(y[:2*self.n])
-        bal=(np.abs(dy[:self.n])@self.vol+np.abs(dy[self.n:])@(4*self.vol))/max(self.A.sum(),1e-30)
+        bal=(np.abs(dy[:self.n])@self.vol+np.abs(dy[self.n:])@(self.g_fermion*self.vol))/max(self.A.sum(),1e-30)
         assert bal<1e-9,bal
         y=np.r_[np.full(self.n,.1),np.full(self.n,.05),N*.8,.01,0.]
         rng=np.random.default_rng(17);d=rng.normal(size=len(y));d/=np.linalg.norm(d)

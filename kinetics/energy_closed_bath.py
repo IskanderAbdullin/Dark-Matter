@@ -12,33 +12,42 @@ from radiation_fixed_bath import RadiationFixedBath,omega_from_number
 
 
 class EnergyClosedBath(RadiationFixedBath):
-    def __init__(self,n=200,qmin=1e-7,qmax=40.,kappa=.1347,relaxation=10.,g_bath=106.75):
+    def __init__(self,n=200,qmin=1e-7,qmax=40.,kappa=.1347,relaxation=10.,g_bath=106.75,g_fermion=4):
         super().__init__(n,qmin,qmax,kappa)
+        assert g_fermion in (2,4)
+        self.g_fermion=g_fermion
         self.relaxation=relaxation;self.g_bath=g_bath;self.rad0=np.pi**2/30*g_bath
         p,w=roots_legendre(160);p=40*(p+1);w=40*w
-        self.parent_p=p;self.parent_w=4/(2*np.pi**2)*p*p*w
+        self.parent_p=p;self.parent_w=self.g_fermion/(2*np.pi**2)*p*p*w
         self.pair_E=self.mean[:,None]+self.mean[None,:]
-        self.ew=np.r_[self.vol*self.mean,4*self.vol*self.mean]
+        self.ew=np.r_[self.vol*self.mean,self.g_fermion*self.vol*self.mean]
         self.geom_x=None
         self.energy_phi=self.mean
         self.energy_chi=self.mean
         self.trace_weights=np.zeros(2*n)
 
+    def snapshot(self,y):
+        s=super().snapshot(y)
+        p,f=np.split(y,2)
+        n=self.vol@p
+        s['number_mismatch']=float(abs(self.g_fermion*self.vol@f-n)/max(abs(n),1e-300))
+        return s
+
     def geometry(self,x):
         if x!=self.geom_x:
-            super().update(x);self.R0=self.R*x;self.geom_x=x
+            super().update(x);self.R0=self.R*x*self.g_fermion/4;self.geom_x=x
 
     def collision_rhs(self,y):
         p,f=np.split(y,2)
         return np.r_[(self.A@(1-f)+p*(self.A.sum(axis=1)-self.R@f))/self.vol,
-                     (self.A.T@(1+p)-f*(self.A.sum(axis=0)+self.R.T@p))/(4*self.vol)]
+                     (self.A.T@(1+p)-f*(self.A.sum(axis=0)+self.R.T@p))/(self.g_fermion*self.vol)]
 
     def collision_jac(self,y):
         p,f=np.split(y,2);v=self.vol
         return np.block([[np.diag((self.A.sum(axis=1)-self.R@f)/v),
                           -(self.A+p[:,None]*self.R)/v[:,None]],
-                         [(self.A.T-f[:,None]*self.R.T)/(4*v[:,None]),
-                          -np.diag((self.A.sum(axis=0)+self.R.T@p)/(4*v))]])
+                         [(self.A.T-f[:,None]*self.R.T)/(self.g_fermion*v[:,None]),
+                          -np.diag((self.A.sum(axis=0)+self.R.T@p)/(self.g_fermion*v))]])
 
     def thermo(self,x,N,ztheta):
         theta=np.exp(ztheta);E=np.hypot(self.parent_p,x);w=self.parent_w
@@ -92,7 +101,7 @@ class EnergyClosedBath(RadiationFixedBath):
         FT=S*(self.pair_E-th['rhoN'])/th['theta']
         def col(DF,total_deriv):
             dA=self.R*DF;dS=dA.sum(axis=1)
-            return np.r_[(dA@(1-f)+p*dS)/self.vol,(dA.T@(1+p)-f*dA.sum(axis=0))/(4*self.vol)]-.5*dy*total_deriv/th['total']
+            return np.r_[(dA@(1-f)+p*dS)/self.vol,(dA.T@(1+p)-f*dA.sum(axis=0))/(self.g_fermion*self.vol)]-.5*dy*total_deriv/th['total']
         jN=col(FN,th['rhoN']);jT=col(FT,th['heat'])
         JD=np.column_stack((J,jN,jT,np.zeros(2*n)))
         jParent=-self.vol@JD[:n,:]
@@ -123,7 +132,7 @@ class EnergyClosedBath(RadiationFixedBath):
             yd=y[:2*self.n];N,zt,W=y[-3:];th=self.thermo(x,N,zt);theta=th['theta'];s=self.snapshot(yd)
             p,f=np.split(yd,2);total=th['rb']+th['rho']+self.ew@yd
             cold=np.maximum(np.minimum(h,.1*theta)**3-l**3,0)/(h**3-l**3)
-            rphi=float((p*self.vol)@self.energy_phi);rchi=float((4*f*self.vol)@self.energy_chi);rchi_rel=float((4*f*self.vol)@self.mean)
+            rphi=float((p*self.vol)@self.energy_phi);rchi=float((self.g_fermion*f*self.vol)@self.energy_chi);rchi_rel=float((self.g_fermion*f*self.vol)@self.mean)
             s.update(x=x,theta=theta,mother_number=float(N),mother_eq_number=th['Neq'],mother_rho_Tref4=th['rho'],
                      total_rho_Tref4=float(total),continuity_residual=float((total-initial_rho-W)/initial_rho),
                      mother_plus_phi_number=float(N+s['number']),rho_phi_Tref4=rphi,rho_chi2_Tref4=rchi,
@@ -137,7 +146,7 @@ class EnergyClosedBath(RadiationFixedBath):
         out=dict(n=self.n,x0=x0,xend=xend,kappa=self.kappa,relaxation_per_H=self.relaxation,g_bath=self.g_bath,
                  initial_mother_number=init,initial_total_rho_Tref4=initial_rho,nfev=sol.nfev,rtol=rtol,history=history,final=history[-1])
         if keep_psd:out['frozen_cell_spectrum']={'edges':self.edges.tolist(),'f_phi':sol.y[:self.n,-1].tolist(),
-            'f_chi2':sol.y[self.n:2*self.n,-1].tolist(),'g_phi':1,'g_chi2':4,'theta_freezeout':history[-1]['theta']}
+            'f_chi2':sol.y[self.n:2*self.n,-1].tolist(),'g_phi':1,'g_chi2':self.g_fermion,'theta_freezeout':history[-1]['theta']}
         return out
 
 
