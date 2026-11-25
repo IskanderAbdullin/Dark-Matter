@@ -46,3 +46,5 @@ Priority: a symmetry-protected or explicitly low-energy completion of near-degen
 
 ## Final kinetic and quadrature checks
 Six LL-only evolving-spectrum runs completed on independent 240/320 production meshes. Relative N(p>2p_peak) changes: sigma/m=0.1, z_nom=5: -0.1090/-0.1065%; 0.3, z_nom=8: -0.5222/-0.5104%; 1.25, z_nom=8: -0.4676/-0.4570%. Number and kinetic energy conserved to floating-point precision. These use the original integrated activation history and exclude heavy-state conversion. Refined eta bath quadrature changes integrated exposure by +0.04448%, +0.0003504%, +0.03127%, respectively. Seven targeted tests pass after refinement; the original full suite had one quadrature precision failure, subsequently fixed. The earlier independent energy check used the pre-refinement integration rule. Raw data: results/soft-mixing-derivative-2026-11-25.json; partial actual fermion history (x=12.4519, stopped by wall limit, not final relic result): results/derivative-fermion-history-240-2026-11-25.json.
+
+Final regression after bath quadrature correction: 61 tests passed (100%).
