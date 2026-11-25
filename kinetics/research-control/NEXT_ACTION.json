@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready",
   "priority": 1,
-  "title": "Independent orbit-projected radial static susceptibility after causal VP response",
+  "title": "Direct pointwise and orbit-averaged C22 source after weak VP",
   "objective": "Obtain an actual late PSD and total dark abundance including stable chi2; separately advance actual halo evolution, not merely static equilibria. Conditional homogeneous resonance is now nonlinearly disproved as a persistent fixed background; projected critical halo stability sign is established but initial C22 is nonzero.",
   "prerequisites": [
     "Halo paper 20: continuation-04/papers/20-signed-c22-source-and-frozen-response-2026-11-25.md, complete signed source and Born response, gravity omitted at same formal order. Paper 19: continuation-04/papers/19-finite-age-weak-binding-exterior-transport-2026-11-25.md, first-excursion and finite-age exterior transport.",
@@ -40,5 +40,5 @@
   "constraints": "Public draft PR #1 existing branch only; no main merge/force/Computer Use, minimal meaningful CI and publish all negative numerical evidence, no premature BEC/Ω/CLASS.",
   "class_ready": false,
   "fallback_if_blocked": "A single blocked input, GitHub CI queue or unknown hadronic energy interpolation is not stopping rule. Switch to an independent useful dark-charge, entropy or halo task. Stop early only when ALL productive authorized paths objectively blocked, save exact UTC/checkpoint per AGENTS.",
-  "next_action": "Compute fixed-(E,L) covariance operator in a radial potential basis; compare energy-shell bound and test center resolution. Then pursue evolving C22/nonlinear positivity; retain independent FRW gate."
+  "next_action": "Compute direct C22(q1) with full gain/loss, compare moments against signed event quadrature; orbit-average occupation-relative rates and use them for a positivity-aware evolving collision calculation."
 }
