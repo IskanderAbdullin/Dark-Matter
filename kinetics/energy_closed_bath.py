@@ -21,6 +21,7 @@ class EnergyClosedBath(RadiationFixedBath):
         self.ew=np.r_[self.vol*self.mean,4*self.vol*self.mean]
         self.geom_x=None
         self.energy_phi=self.mean
+        self.energy_chi=self.mean
         self.trace_weights=np.zeros(2*n)
 
     def geometry(self,x):
@@ -122,13 +123,13 @@ class EnergyClosedBath(RadiationFixedBath):
             yd=y[:2*self.n];N,zt,W=y[-3:];th=self.thermo(x,N,zt);theta=th['theta'];s=self.snapshot(yd)
             p,f=np.split(yd,2);total=th['rb']+th['rho']+self.ew@yd
             cold=np.maximum(np.minimum(h,.1*theta)**3-l**3,0)/(h**3-l**3)
-            rphi=float((p*self.vol)@self.energy_phi);rchi=float((4*f*self.vol)@self.mean)
+            rphi=float((p*self.vol)@self.energy_phi);rchi=float((4*f*self.vol)@self.energy_chi);rchi_rel=float((4*f*self.vol)@self.mean)
             s.update(x=x,theta=theta,mother_number=float(N),mother_eq_number=th['Neq'],mother_rho_Tref4=th['rho'],
                      total_rho_Tref4=float(total),continuity_residual=float((total-initial_rho-W)/initial_rho),
                      mother_plus_phi_number=float(N+s['number']),rho_phi_Tref4=rphi,rho_chi2_Tref4=rchi,
                      mean_p_over_actual_T=s['mean_q']/theta,hot_fraction_p_over_actual_T_gt_0p1=float((p*self.vol)@(1-cold)/s['number']),
                      omega_phi_h2_m86=float(omega_from_number(s['number']/theta**3,gs=self.g_bath)),
-                     delta_Neff_chi2_if_stable=float(rchi/theta**4/(7*np.pi**2/120)*(3.909/self.g_bath)**(4/3)/(4/11)**(4/3)))
+                     delta_Neff_chi2_if_stable=float(rchi_rel/theta**4/(7*np.pi**2/120)*(3.909/self.g_bath)**(4/3)/(4/11)**(4/3)))
             assert abs(s['number_mismatch'])<1e-7 and N>-1e-9 and s['min_occupation']>-1e-7 and s['max_fermion']<1.00001,s
             assert abs(s['continuity_residual'])<3e-5,s
             if self.relaxation==0:assert abs(s['mother_plus_phi_number']/init-1)<1e-7,s

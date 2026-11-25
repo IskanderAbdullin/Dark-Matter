@@ -28,3 +28,7 @@ A [targeted full hierarchy convergence workflow](.github/workflows/class-hierarc
 ## Follow-up: completed workflows
 
 [Verified follow-up](cosmology/KINETIC-CLASS-FOLLOWUP-2026-11-25.md): early x0=.005 has no half-power crossing up to 20 Mpc^-1 on two meshes (full-grid drift .251%); P/P_CDM=.597708 at k=10,z=5, conditional default fluid closure. Late x0=.1 full hierarchy yields k_half,P=.717581 Mpc^-1 (z=5), stable to .054% between two precision settings up to k=1.5. The default-fluid half power .68988 is superseded by this more accurate local calculation. Next: finite fermion mass/degeneracy and its physical cosmological fate; early full-hierarchy validation remains open.
+
+## Two-mass local continuation
+
+[Two-mass kinetic solver and scan](kinetics/TWO-MASS-BATH-2026-11-25.md): mass degeneracy sharply suppresses the hot component but makes stable daughter matter density untenable; .99 ratio integration failed. Next implement energy-closed chi2 bath relaxation with independent number-source accounting.
