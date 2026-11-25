@@ -136,3 +136,7 @@ See kinetics/TWO-STATE-KINETICS-CROSSING-GAP-2026-11-25.md. Under specified assu
 
 ## Independent early-bootstrap branch continuation
 See kinetics/EARLY-BOSE-BOOTSTRAP-HARTREE-2026-11-25.md and kinetics/DIRECT-SUBTHRESHOLD-ACTIVATION-2026-11-25.md. Two-state subthreshold pole fails cross-halo test (58,114 local-screen points, zero pass generous cluster cross-section screen). Direct cubic activation removes heavy conversion; two independent LL kinetic screens <1% tail change; self-consistent homogeneous Friedmann pilot preserves conditional window, extra energy ~1.85%. UV cutoff sensitivity, primordial S/chi/eta, full QKE, perturbations and halo data remain unresolved. Parallel branch research/early-bootstrap-20261125 preserved without overwriting concurrent research/two-mass work.
+
+## Direct-pole velocity-dependent elastic result
+
+[Calculation, independent normalization and raw data](kinetics/DIRECT-POLE-KINETICS-2026-11-25.md). At z≤100 the 220-bin velocity-dependent elastic calculations give N(q>2 q_peak) shifts −0.81022%/−0.81060%, under the fixed illustrative 1% cap. A localized homogeneous diagnostic remains promising. Next action: test whether a stable, technically acceptable microscopic trigger can avoid a primordial constant quartic and new population, or test the earliest production with the smallest viable constant quartic. Independent background, perturbation and halo evidence remains necessary.

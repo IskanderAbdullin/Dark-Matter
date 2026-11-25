@@ -32,7 +32,7 @@ def eta_table(order=48):
         return [np.exp(p(t)) for p in ips]
     return get
 
-def solve_friedmann(row,p,rtol=1e-9,n=24000,order=48):
+def solve_friedmann(row,p,rtol=1e-9,n=24000,order=48,return_history=False):
     et=eta_table(order);X=p['X'];v=p['vev_eV'];mu=p['mu_eV'];cw=p['eta_CW_over_X']
     td0=p['Td_on_eV']/(p['z_on']+1);m0=p['m_eta_at_vev_eV'];N=p['Neta']
     rho0=3*MPL_REDUCED**2*(H0*HBAR)**2
@@ -62,11 +62,14 @@ def solve_friedmann(row,p,rtol=1e-9,n=24000,order=48):
     _,Tr=variance_table(row);v0=row['final']['peak_bin_q']*Tr/M*C
     R=rho[l]/r[l]**4
     target=R[0]+cumulative_trapezoid((rho[l]-3*pr[l])/r[l]**4,ts[l],initial=0.)
-    return dict(active_time_Gyr=float(A4/SEC_GYR),A4=float(A4),cosmic=float(cosmic),v0=float(v0),
+    summary=dict(active_time_Gyr=float(A4/SEC_GYR),A4=float(A4),cosmic=float(cosmic),v0=float(v0),
       max_extra_fraction_zle100=float(max(rho[l]/(3*MPL_REDUCED**2*(hh[l]*HBAR)**2))),
       max_relative_H_change_zle100=float(max(abs(hh[l]/H(r[l]-1)-1))),H0_ratio=float(hh[-1]/H0),
       continuity_residual=float(max(abs(R-target))/max(abs(R))),max_field=float(max(abs(x))),today_field=float(x[-1]),
       z_half=float(r[np.flatnonzero(abs(x)**4>=.5)[0]]-1),rtol=rtol,n=n,order=order)
+    if return_history:
+        return summary, dict(log_a=ts, r=r, x=x, dx=dx, H=hh, rho_extra=rho, pressure_extra=pr)
+    return summary
 
 def evaluate(row,s,b,mesh):
     p=s['params'];rr=solve_friedmann(row,p,n=12000 if mesh==240 else 20000,rtol=1e-8 if mesh==240 else 2e-9,order=32 if mesh==240 else 48)
