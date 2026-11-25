@@ -1,0 +1,1007 @@
+{
+  "early_coarse": {
+    "production_mesh": 240,
+    "background_samples": 22000,
+    "modes": [
+      {
+        "k_per_Mpc": 0.01,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 12,
+        "rtol": 2e-07,
+        "nfev": 60842,
+        "trigger_at_initial": 1.3282507573576444e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "primordial_eta_join_number_contrast": -0.006999506664784181,
+        "pre_coupling_max_eta_mass_over_temperature": 1.7238691513718188e-09,
+        "max_abs_delta_x_after_roll": [
+          73.42621584873484,
+          831.7929324530227,
+          70.41792421183038
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          74.27920903301275,
+          841.4558804057625,
+          71.2359700379619
+        ],
+        "today_delta_x": [
+          67.35225272488566,
+          -762.9853610066232,
+          64.60404237092831
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          799.1791287624575,
+          9053.325860057528
+        ],
+        "today_eta_number_fraction": [
+          -799.1791287624575,
+          9053.325860057528
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.02,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 12,
+        "rtol": 2e-07,
+        "nfev": 64748,
+        "trigger_at_initial": 1.3282507573576444e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "primordial_eta_join_number_contrast": -0.00695142995755246,
+        "pre_coupling_max_eta_mass_over_temperature": 1.7238691513718188e-09,
+        "max_abs_delta_x_after_roll": [
+          4.161794258793583,
+          7662222.175476088,
+          3.6084064971151317
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          4.259647705406225,
+          7842378.810321248,
+          3.693248512497344
+        ],
+        "today_delta_x": [
+          4.161794258793583,
+          -7662222.175476088,
+          3.6084064971151317
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          116.82607218930562,
+          215086874.87671486
+        ],
+        "today_eta_number_fraction": [
+          -116.82607218930562,
+          215086874.87671486
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 12,
+        "rtol": 2e-07,
+        "nfev": 71714,
+        "trigger_at_initial": 1.3282507573576444e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "primordial_eta_join_number_contrast": -0.006871742404105556,
+        "pre_coupling_max_eta_mass_over_temperature": 1.7238691513718188e-09,
+        "max_abs_delta_x_after_roll": [
+          41.76141200372668,
+          495735183.37185377,
+          35.3484555731515
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          43.181113408610486,
+          512587964.50436306,
+          36.5501451145204
+        ],
+        "today_delta_x": [
+          38.37255917666786,
+          455507291.23324,
+          32.31188785907496
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          3573.731763921475,
+          42422525635.65939
+        ],
+        "today_eta_number_fraction": [
+          -3573.731763921475,
+          -42422525635.65939
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "early_intermediate": {
+    "production_mesh": 320,
+    "background_samples": 42000,
+    "modes": [
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 10,
+        "angle_order": 20,
+        "rtol": 7e-08,
+        "nfev": 71960,
+        "trigger_at_initial": 1.3282507579255408e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "primordial_eta_join_number_contrast": -0.006871742431406179,
+        "pre_coupling_max_eta_mass_over_temperature": 1.723869152108863e-09,
+        "max_abs_delta_x_after_roll": [
+          41.67194364365894,
+          494669019.40147704,
+          35.271796415610794
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          43.09036817200607,
+          511506503.06992227,
+          36.47237351425979
+        ],
+        "today_delta_x": [
+          38.27655815483986,
+          454363915.6941337,
+          32.22979950876201
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          3569.9174508274536,
+          42376894628.33074
+        ],
+        "today_eta_number_fraction": [
+          -3569.9174508274536,
+          -42376894628.33074
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "early_refined": {
+    "production_mesh": 320,
+    "background_samples": 42000,
+    "seed_factor": 1.0,
+    "modes": [
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 10,
+        "angle_order": 24,
+        "rtol": 7e-08,
+        "nfev": 69236,
+        "trigger_at_initial": 1.3282507579255408e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.006871742431406179,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 2.0346709610671496,
+        "pre_coupling_max_eta_mass_over_temperature": 1.723869152108863e-09,
+        "max_abs_delta_x_after_roll": [
+          41.63461217381864,
+          494220857.143747,
+          35.23930637078701
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          43.05176601815464,
+          511043086.31999767,
+          36.438777577258314
+        ],
+        "today_delta_x": [
+          38.246867023266674,
+          454006856.7082318,
+          32.20401775964027
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          3567.2198831132428,
+          42344443149.6611
+        ],
+        "today_eta_number_fraction": [
+          -3567.2198831132428,
+          -42344443149.6611
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "early_join_z12": {
+    "production_mesh": 240,
+    "background_samples": 30000,
+    "seed_factor": 1.0,
+    "modes": [
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 12.0,
+        "radial_order": 8,
+        "angle_order": 24,
+        "rtol": 1e-07,
+        "nfev": 71690,
+        "trigger_at_initial": 8.631792292514784e-12,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.023849678950029773,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 2.0356582285806315,
+        "pre_coupling_max_eta_mass_over_temperature": 7.498233852838787e-10,
+        "max_abs_delta_x_after_roll": [
+          41.338989591411924,
+          490731055.1334532,
+          35.033459979517374
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          42.831126149428755,
+          508444060.573502,
+          36.29799757237904
+        ],
+        "today_delta_x": [
+          38.28543481803943,
+          454482608.5541976,
+          32.2372806035954
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          3569.2481636833513,
+          42370191790.108925
+        ],
+        "today_eta_number_fraction": [
+          -3569.2481636833513,
+          -42370191790.108925
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "early_half_background_seed": {
+    "production_mesh": 240,
+    "background_samples": 22000,
+    "seed_factor": 0.5,
+    "modes": [
+      {
+        "k_per_Mpc": 0.02,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 60296,
+        "trigger_at_initial": 6.641253790428721e-11,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.006951429957552459,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 1.6756831565478445,
+        "pre_coupling_max_eta_mass_over_temperature": 8.619345761583913e-10,
+        "max_abs_delta_x_after_roll": [
+          2.4115785593069456,
+          25024846.76754893,
+          2.045222308316265
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          2.470300890207084,
+          25634205.864285793,
+          2.095023804804858
+        ],
+        "today_delta_x": [
+          -2.2444236533043718,
+          -23290287.512568407,
+          -1.903969243660399
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          65.83556509224324,
+          683172821.3576578
+        ],
+        "today_eta_number_fraction": [
+          -65.83556509224324,
+          -683172821.3576578
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 66365,
+        "trigger_at_initial": 6.641253790428721e-11,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.006871742404105556,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 2.0225662836428437,
+        "pre_coupling_max_eta_mass_over_temperature": 8.619345761583913e-10,
+        "max_abs_delta_x_after_roll": [
+          1.366759093457545,
+          707389074.5672,
+          0.5144000955899907
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          1.4161414560880057,
+          732947743.9540142,
+          0.5329858816141446
+        ],
+        "today_delta_x": [
+          -1.2124481191548817,
+          627522843.6929826,
+          0.4545044051308778
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          110.02067042508197,
+          56943041833.636894
+        ],
+        "today_eta_number_fraction": [
+          -110.02067042508197,
+          56943041833.636894
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.04,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 70442,
+        "trigger_at_initial": 6.641253790428721e-11,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.006761099906083206,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 1.5376730126390852,
+        "pre_coupling_max_eta_mass_over_temperature": 8.619345761583913e-10,
+        "max_abs_delta_x_after_roll": [
+          0.005289201675633001,
+          146039.05270355396,
+          0.002811505399935032
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          0.005711550888514988,
+          157700.4494023456,
+          0.003040508227791582
+        ],
+        "today_delta_x": [
+          0.0011843926215429248,
+          32702.01952721807,
+          0.0007143126557769527
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          1.4104556393123753,
+          38943798.71979109
+        ],
+        "today_eta_number_fraction": [
+          -1.3741738591962647,
+          -37942029.99958183
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "early_double_background_seed": {
+    "production_mesh": 240,
+    "background_samples": 22000,
+    "seed_factor": 2.0,
+    "modes": [
+      {
+        "k_per_Mpc": 0.02,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 59252,
+        "trigger_at_initial": 2.6565015162363674e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.00695142995755246,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 1.7543495574389403,
+        "pre_coupling_max_eta_mass_over_temperature": 3.4477383047177686e-09,
+        "max_abs_delta_x_after_roll": [
+          6.491927836636994,
+          25171773.508656375,
+          5.751665071314923
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          6.594131998375824,
+          25568059.4926769,
+          5.842215077724232
+        ],
+        "today_delta_x": [
+          -6.040394912301631,
+          23421001.659510445,
+          -5.35180816846147
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          193.66178844809113,
+          750903398.6154516
+        ],
+        "today_eta_number_fraction": [
+          -193.66178844809113,
+          750903398.6154516
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 66644,
+        "trigger_at_initial": 2.6565015162363674e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.006871742404105558,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 2.1021184266150605,
+        "pre_coupling_max_eta_mass_over_temperature": 3.4477383047177686e-09,
+        "max_abs_delta_x_after_roll": [
+          63.49423838873439,
+          529244889.14003044,
+          55.53805259128944
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          65.69334916275932,
+          547575184.4131205,
+          57.46160239551133
+        ],
+        "today_delta_x": [
+          -40.760732641624884,
+          -339753810.3553436,
+          -35.273539807046106
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          5802.805150942809,
+          48368246422.76256
+        ],
+        "today_eta_number_fraction": [
+          -5802.805150942809,
+          -48368246422.76256
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.04,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 69386,
+        "trigger_at_initial": 2.6565015162363674e-10,
+        "primordial_chi": true,
+        "primordial_eta": true,
+        "ballistic_eta_number_contrast_at_coupling": -0.006761099906083208,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 1.3757206220286222,
+        "pre_coupling_max_eta_mass_over_temperature": 3.4477383047177686e-09,
+        "max_abs_delta_x_after_roll": [
+          0.0011920004950707974,
+          18979.24322542363,
+          0.00044963683912748283
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          0.0012935622721624402,
+          20596.327847283672,
+          0.0004904878242602379
+        ],
+        "today_delta_x": [
+          -2.826515808926524e-06,
+          -45.004285735600206,
+          2.3471812015239885e-05
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          0.29929420816986496,
+          4765415.447090652
+        ],
+        "today_eta_number_fraction": [
+          0.2620692428890675,
+          4172712.951498063
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "late_analytic_coarse": {
+    "production_mesh": 240,
+    "background_samples": 22000,
+    "modes": [
+      {
+        "k_per_Mpc": 0.01,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 55439,
+        "trigger_at_initial": 1.3282507573576444e-10,
+        "primordial_chi": false,
+        "primordial_eta": false,
+        "ballistic_eta_number_contrast_at_coupling": 2.999999999228593,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": null,
+        "pre_coupling_max_eta_mass_over_temperature": null,
+        "max_abs_delta_x_after_roll": [
+          818.4093545879625,
+          4464.467856933473,
+          784.8787047984542
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          827.9168253644897,
+          4516.331630782819,
+          793.9966496351756
+        ],
+        "today_delta_x": [
+          750.7181588443119,
+          -4095.208676730869,
+          720.085937162898
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          8907.770738215153,
+          48592.371987656836
+        ],
+        "today_eta_number_fraction": [
+          -8907.770738215153,
+          48592.371987656836
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      },
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 7,
+        "angle_order": 20,
+        "rtol": 2e-07,
+        "nfev": 66989,
+        "trigger_at_initial": 1.3282507573576444e-10,
+        "primordial_chi": false,
+        "primordial_eta": false,
+        "ballistic_eta_number_contrast_at_coupling": 2.999999999228593,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 2.123891779986486,
+        "pre_coupling_max_eta_mass_over_temperature": null,
+        "max_abs_delta_x_after_roll": [
+          307.8741687588322,
+          1040133356.1392002,
+          233.29766662534027
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          318.3405148171346,
+          1075493242.6019845,
+          241.22874484258426
+        ],
+        "today_delta_x": [
+          282.8730642721709,
+          955668710.0088236,
+          213.24285503839076
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          26347.026442825525,
+          89011758111.25467
+        ],
+        "today_eta_number_fraction": [
+          -26347.026442825525,
+          -89011758111.25467
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "late_analytic_fine": {
+    "production_mesh": 320,
+    "background_samples": 42000,
+    "modes": [
+      {
+        "k_per_Mpc": 0.03,
+        "z_initial": 8.0,
+        "radial_order": 10,
+        "angle_order": 36,
+        "rtol": 7e-08,
+        "nfev": 65669,
+        "trigger_at_initial": 1.3282507579255408e-10,
+        "primordial_chi": false,
+        "primordial_eta": false,
+        "ballistic_eta_number_contrast_at_coupling": 3.000000000000056,
+        "z_where_eta_number_reaches_one_for_1e_minus_5_input": 2.123891779986486,
+        "pre_coupling_max_eta_mass_over_temperature": null,
+        "max_abs_delta_x_after_roll": [
+          306.9527306952331,
+          1036966528.5151994,
+          232.58432383258676
+        ],
+        "max_abs_delta_x_relative_trigger_after_roll": [
+          317.4007502544912,
+          1072262668.5680465,
+          240.5010006416699
+        ],
+        "today_delta_x": [
+          282.0212384237704,
+          952741433.2280976,
+          212.5847634418048
+        ],
+        "max_abs_eta_number_fraction_after_roll": [
+          26306.351684971163,
+          88869729625.40366
+        ],
+        "today_eta_number_fraction": [
+          -26306.351684971163,
+          -88869729625.40366
+        ],
+        "modes": [
+          "coupled initial fractional chi shift",
+          "coupled initial eta temperature shift",
+          "unforced chi control with identical chi shift"
+        ]
+      }
+    ],
+    "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+  },
+  "rejected_finite_angle_transport_of_free_late_seed": {
+    "240": {
+      "production_mesh": 240,
+      "modes": [
+        {
+          "k_per_Mpc": 0.003,
+          "z_initial": 8.0,
+          "radial_order": 7,
+          "angle_order": 12,
+          "rtol": 2e-07,
+          "nfev": 57920,
+          "trigger_at_initial": 1.3282507573576444e-10,
+          "max_abs_delta_x_after_roll": [
+            5.580455789149097,
+            14.411455696187508,
+            5.5232256614297555
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            5.628896226176094,
+            14.536531046465827,
+            5.571987979774517
+          ],
+          "today_delta_x": [
+            3.0846645813192373,
+            -7.966292913305322,
+            3.0494638220269383
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            11.377007314829156,
+            29.339270623356587
+          ],
+          "today_eta_number_fraction": [
+            -11.377007314829156,
+            29.339270623356587
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        },
+        {
+          "k_per_Mpc": 0.01,
+          "z_initial": 8.0,
+          "radial_order": 7,
+          "angle_order": 12,
+          "rtol": 2e-07,
+          "nfev": 59729,
+          "trigger_at_initial": 1.3282507573576444e-10,
+          "max_abs_delta_x_after_roll": [
+            819.1362079573247,
+            4468.771010286851,
+            785.5789629212418
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            828.652122597707,
+            4520.6847739176255,
+            794.7050426645366
+          ],
+          "today_delta_x": [
+            751.3156911930374,
+            -4098.778381435936,
+            720.6621166352766
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            8917.258114461734,
+            48647.807068559356
+          ],
+          "today_eta_number_fraction": [
+            -8917.258114461734,
+            48647.807068559356
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        },
+        {
+          "k_per_Mpc": 0.03,
+          "z_initial": 8.0,
+          "radial_order": 7,
+          "angle_order": 12,
+          "rtol": 2e-07,
+          "nfev": 71699,
+          "trigger_at_initial": 1.3282507573576444e-10,
+          "max_abs_delta_x_after_roll": [
+            307.9080421015658,
+            36092867154.70453,
+            233.32345963341209
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            318.3755397021643,
+            37319863363.579025,
+            241.25541469767919
+          ],
+          "today_delta_x": [
+            282.902707184358,
+            -33161751016.373993,
+            213.26522201742978
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            26353.74963583924,
+            3089176814423.4673
+          ],
+          "today_eta_number_fraction": [
+            -26353.74963583924,
+            3089176814423.4673
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        },
+        {
+          "k_per_Mpc": 0.1,
+          "z_initial": 8.0,
+          "radial_order": 7,
+          "angle_order": 12,
+          "rtol": 2e-07,
+          "nfev": 59534,
+          "trigger_at_initial": 1.3282507573576444e-10,
+          "max_abs_delta_x_after_roll": [
+            7.720724042167083e-11,
+            0.0001891379604295196,
+            7.741047322529484e-11
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            1.2513855160071778e-10,
+            0.0002927370936975217,
+            1.2546795410939914e-10
+          ],
+          "today_delta_x": [
+            2.5532737933348996e-12,
+            -6.599156247684725e-07,
+            2.958483505389522e-12
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            5.256111042680414e-10,
+            0.4762883328529719
+          ],
+          "today_eta_number_fraction": [
+            3.54145024966932e-11,
+            0.01714906598846001
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        }
+      ],
+      "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+    },
+    "320": {
+      "production_mesh": 320,
+      "background_samples": 42000,
+      "modes": [
+        {
+          "k_per_Mpc": 0.003,
+          "z_initial": 8.0,
+          "radial_order": 10,
+          "angle_order": 20,
+          "rtol": 7e-08,
+          "nfev": 49325,
+          "trigger_at_initial": 1.3282507579255408e-10,
+          "primordial_chi": false,
+          "pre_coupling_max_eta_mass_over_temperature": null,
+          "max_abs_delta_x_after_roll": [
+            5.588717160011604,
+            14.43269220344265,
+            5.531453837929002
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            5.6397339860190545,
+            14.564420050326955,
+            5.582770438967409
+          ],
+          "today_delta_x": [
+            3.055704078970371,
+            -7.8914484628392385,
+            3.020834366095762
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            11.373894029311318,
+            29.331032772055742
+          ],
+          "today_eta_number_fraction": [
+            -11.373894029311318,
+            29.331032772055742
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        },
+        {
+          "k_per_Mpc": 0.01,
+          "z_initial": 8.0,
+          "radial_order": 10,
+          "angle_order": 20,
+          "rtol": 7e-08,
+          "nfev": 52973,
+          "trigger_at_initial": 1.3282507579255408e-10,
+          "primordial_chi": false,
+          "pre_coupling_max_eta_mass_over_temperature": null,
+          "max_abs_delta_x_after_roll": [
+            814.458993523341,
+            4443.112740787691,
+            781.0859325819924
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            823.9329859177043,
+            4494.796148605958,
+            790.1717211158186
+          ],
+          "today_delta_x": [
+            746.6957518441139,
+            -4073.4443785897965,
+            716.2241972180223
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            8883.819800883779,
+            48463.837882020765
+          ],
+          "today_eta_number_fraction": [
+            -8883.819800883779,
+            48463.837882020765
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        },
+        {
+          "k_per_Mpc": 0.03,
+          "z_initial": 8.0,
+          "radial_order": 10,
+          "angle_order": 20,
+          "rtol": 7e-08,
+          "nfev": 72281,
+          "trigger_at_initial": 1.3282507579255408e-10,
+          "primordial_chi": false,
+          "pre_coupling_max_eta_mass_over_temperature": null,
+          "max_abs_delta_x_after_roll": [
+            307.05968205259865,
+            1037312576.2288864,
+            232.66903859619026
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            317.5113420090968,
+            1072620495.011549,
+            240.5885989160507
+          ],
+          "today_delta_x": [
+            282.0626946997496,
+            952867463.8793463,
+            212.619216374645
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            26311.5595257786,
+            88886015297.86679
+          ],
+          "today_eta_number_fraction": [
+            -26311.5595257786,
+            -88886015297.86679
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        },
+        {
+          "k_per_Mpc": 0.1,
+          "z_initial": 8.0,
+          "radial_order": 10,
+          "angle_order": 20,
+          "rtol": 7e-08,
+          "nfev": 60470,
+          "trigger_at_initial": 1.3282507579255408e-10,
+          "primordial_chi": false,
+          "pre_coupling_max_eta_mass_over_temperature": null,
+          "max_abs_delta_x_after_roll": [
+            7.720723917166387e-11,
+            0.00017700245191845093,
+            7.741043095621086e-11
+          ],
+          "max_abs_delta_x_relative_trigger_after_roll": [
+            1.251385490646014e-10,
+            0.0002907678015279192,
+            1.2546788508765906e-10
+          ],
+          "today_delta_x": [
+            2.554436679177708e-12,
+            -2.843304851349211e-06,
+            2.960383137755741e-12
+          ],
+          "max_abs_eta_number_fraction_after_roll": [
+            5.252233018722259e-10,
+            0.39641058032590715
+          ],
+          "today_eta_number_fraction": [
+            9.295294267954805e-11,
+            -0.14252680577741444
+          ],
+          "modes": [
+            "coupled initial fractional chi shift",
+            "coupled initial eta temperature shift",
+            "unforced chi control with identical chi shift"
+          ]
+        }
+      ],
+      "scope": "Local pilot on the prescribed expansion, no metric perturbations, no primordial adiabatic transfer, no nonlinear evolution. Values are per unit input amplitude in the three labeled modes."
+    }
+  }
+}
