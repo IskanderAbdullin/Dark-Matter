@@ -5,8 +5,8 @@ from lowered_bose_signed_source import nodes,occupation
 from lowered_bose_pointwise_c22 import c22
 from lowered_bose_exterior_source import R,V,GYR
 
-def exact_c22(H,psi,q,n=32):
-    a=q*q;gap=max(H.eta-psi,1e-15);f1=float(occupation(H,psi,a));total=0.
+def exact_c22(H,psi,q,n=32,split=False):
+    a=q*q;gap=max(H.eta-psi,1e-15);f1=float(occupation(H,psi,a));total=0.;gross=np.zeros(2)
     if a>=2*psi:return 0.
     x,w=nodes(n);pmax=2*psi-a;cuts=np.unique(np.r_[0,min(psi,pmax),pmax])
     for lo,hi in zip(cuts[:-1],cuts[1:]):
@@ -18,7 +18,9 @@ def exact_c22(H,psi,q,n=32):
                 f3=occupation(H,psi,c);f4=occupation(H,psi,d);net=f3*f4*(1+f1+fi)-f1*fi*(1+f3+f4)
                 ratio=np.minimum(1,np.sqrt(np.minimum(bi,d)/a)) if a>0 else np.ones_like(d)
                 total+=wi*np.sum(wd*ratio*net)
-    return float(total)
+                if split:
+                    gross+=wi*np.array([np.sum(wd*ratio*f3*f4*(1+f1)*(1+fi)),np.sum(wd*ratio*f1*fi*(1+f3)*(1+f4))])
+    return (float(total),gross) if split else float(total)
 
 def lattice(H,psi,N=160,Emax=12,T=1.,dtmax=.02):
     de=Emax/N;E=(np.arange(N)+.5)*de;q=np.sqrt(E);D=q*de/2;f=occupation(H,psi,E);f0=f.copy();ids=[];weights=[]
