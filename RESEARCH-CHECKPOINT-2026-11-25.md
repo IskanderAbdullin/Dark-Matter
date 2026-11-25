@@ -137,3 +137,7 @@ See kinetics/TWO-STATE-KINETICS-CROSSING-GAP-2026-11-25.md. Under specified assu
 ## Late decay: stimulated line and inverse kinetics
 
 See kinetics/LATE-DECAY-STIMULATED-LINE-2026-11-25.md. Exact invariant frozen eta-line gain = 2*pi^2 Gamma(nA-nB)/(H*pstar^3); at r=1e5,pstar=.001,tau=3.25e4. Explicit local inverse-decay Bose bursts at 1e-5 reach 49% conversion in ~.00213 s on two grids, with conservation and positive analytic seed; no C22/medium. At .001 elastic feedback is important. Toy density-cap branch may postpone conversion and suppress coherent 4->2 for small recoil, but no self-consistent medium or expanding solution. Six targeted regression checks passed.
+
+## Observational profile and local decay follow-up
+
+See kinetics/SPARC-TWO-STATE-2026-11-25.md: 153 quality SPARC galaxies, fixed nuisance, independent library checks; two-state 86 improves aggregate holdout 5110.6 ->4917.9, but PIS3990.4 and best scanned one/two 200 eV ~4826/4833. Paired comparisons and 20-galaxy nuisance sensitivity limit interpretation; no mass measurement. See kinetics/LATE-DECAY-COUPLED-COHERENT-2026-11-25.md: local inverse+C22 .001 eV bursts on two meshes reach 49% at ~1303 s; coherent Doppler toy matches kinetic rate at weak coupling, flags strong collective regime at recoil <=1e-6. Next: medium self-energy/coherence and expanding coupled reaction/transport, then realistic multi-state halo + nuisance/finite profiles.
