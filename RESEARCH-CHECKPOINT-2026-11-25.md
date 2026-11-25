@@ -78,3 +78,7 @@ Final regression: 24 passed (16.74 s). Strong-candidate CLASS cross-mesh max rel
 ## Actual late weak-parent CLASS
 
 See cosmology/LATE-WEAK-CLASS-VERIFIED-2026-11-25.md. Old 480-node run failed due to nonfinite state; nonzero subnormal tail causes q/f0 overflow. Slow negligible positive floor and q^5 f hot-scale selection resolve it; actual two-mesh CLASS at 120/240 nodes gives P/P_CDM(z=5,k=10)=.98518/.98453, minimum fine .97567 up to k=20/Mpc. Conditional only; full hierarchy in progress.
+
+## First fully momentum-resolved parent
+
+A fractional-stoichiometry finite-volume collision operator interpolates the parent energy between adjacent shells and uses geometric products of parent availability/blocking. At positive occupation, forward/backward log ratios enforce exact discrete detailed balance and particle/energy conservation. A tiny C1 continuation below parent occupancy 1e-15 is optional; the exact and regularized n=64 solutions through x=.3 differ in Omega proxy by less than 9e-7 relative. Both show a stimulated burst, but the Omega proxy at x=.3 is only .074999; this is an intermediate state, not a relic prediction. Pauli checks and FRW residuals pass; spontaneous vacuum normalization is discretization limited (up to 12% on this coarse mesh at x=20). Fine and long integrations are running, not yet validated. Data: kinetics/results/resolved-parent-early-2026-11-25.json. Code: kinetics/resolved_parent_bath.py.
