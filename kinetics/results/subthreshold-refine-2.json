@@ -1,0 +1,384 @@
+[
+  {
+    "index": 2,
+    "runs": [
+      {
+        "params": {
+          "z_on": 12,
+          "dneff": 0.1,
+          "Xfrac": 0.7,
+          "loop_margin": 1.1,
+          "mu_over_H_on": 20,
+          "u": 2.6563018760916787e-05,
+          "Neta": 1,
+          "X": 3.0301638306926266e-12,
+          "Xcap": 4.328805472418038e-12,
+          "delta": 2.0856747163596545e-05,
+          "Delta": 0.0040466026083598875,
+          "mu_eV": 7.582498184663666e-31,
+          "vev_eV": 2.2957296324508276e+24,
+          "Td_on_eV": 0.0014095409856433225,
+          "m_eta_at_vev_eV": 0.004278051117008787,
+          "lambda_chi": 1.0908954994775485e-109,
+          "eta_CW_over_X": 0.1749999999999999,
+          "eta_mass_over_T": 3.0350668484153798,
+          "vev_over_Mpl": 0.0009428047771871982,
+          "seed": 1e-08
+        },
+        "scheme": "vev-curvature",
+        "candidate": {
+          "screen": "factor10_margin",
+          "a": 3.9810717055349776,
+          "Q": 0.15550646337008844,
+          "u": 2.6563018760916787e-05,
+          "D": 0.0040466026083598875,
+          "gap_over_T": 12.643023898247142,
+          "sigma0_for_one_efold": 0.421445632300278,
+          "g_eV": 0.20029822781048343,
+          "lambda0": 4.068352669559734e-06,
+          "split_floor_ratio": 0.08632699660128544,
+          "pole_loop_ratio": 0.09968775567985878,
+          "lower_conversion_per_efold": 0.008996960347718555,
+          "cosmic_frozen_proxy": 0.007767265119744448,
+          "proxy_pass": true
+        },
+        "formation_z": 2.0,
+        "rtol": 1e-08,
+        "n": 14000,
+        "sigma0_for_one_efold": 0.42144620204456335,
+        "g_eV": 0.20029829550528438,
+        "lambda0": 4.068355419581995e-06,
+        "D": 0.0040466026083598875,
+        "delta": 2.0856747163596545e-05,
+        "u": 2.6563018760916787e-05,
+        "a": 3.9810717055349776,
+        "S_mass_eV": 171.99999629446643,
+        "pole_detuning_eV2": 0.0012742735577707463,
+        "gap_over_T": 12.643023898247145,
+        "min_a": 3.980120549720669,
+        "max_a": 3.982415053058993,
+        "halo_active_Gyr": 11.570402166909268,
+        "halo_Q_time_Gyr": 1.7991918877993718,
+        "LL_tau": 1.3495857404636278e-10,
+        "cosmic_proxy": 0.007768215522108642,
+        "cold_v2_over_detuning": 3.0144403943194094e-06,
+        "LH_initial_source": 0.022802056326702576,
+        "HH_initial_source": 0.0004221882527665468,
+        "initial_H_source": 0.023224244579469124,
+        "conversion_convergence": [
+          {
+            "order": 96,
+            "kernels": [
+              9.895445264408896e-08,
+              5.2448948141187573e-14
+            ],
+            "constant_kernel_source": 0.02228960932541998
+          },
+          {
+            "order": 144,
+            "kernels": [
+              1.0315838179985453e-07,
+              5.3452129116904324e-14
+            ],
+            "constant_kernel_source": 0.023226872544545984
+          },
+          {
+            "order": 192,
+            "kernels": [
+              1.046511899860566e-07,
+              5.371385295081118e-14
+            ],
+            "constant_kernel_source": 0.023558946626609064
+          }
+        ],
+        "kernel_x2": [
+          0.2571209713211004,
+          1.0,
+          1.5942741893687162
+        ],
+        "kernel_values": [
+          [
+            1.0324946772624396e-07,
+            5.353137862666195e-14
+          ],
+          [
+            1.0315838179985453e-07,
+            5.3452129116904324e-14
+          ],
+          [
+            1.0308543068813066e-07,
+            5.338883285166407e-14
+          ]
+        ],
+        "split_loop_ratio": 0.08632705495351527,
+        "pole_loop_ratio": 0.09968782306282065,
+        "quartic_cutoff_eV": 542.6011421101848,
+        "S_bubble_derivative_HH": 8.770616636020161e-06,
+        "S_bubble_derivative_LL": 2.2924770006818066e-14,
+        "roll": {
+          "nfev": 33941,
+          "v0": 17.834903110469433,
+          "max_early_abs_field": 1.000000000212647e-08,
+          "today_field": 0.9451376783280334,
+          "z_at_half_x8": 2.4450576937310418,
+          "maximum_abs_x": 1.3069357610352512
+        },
+        "cosmic_recombination": {
+          "initial_S_fraction": 1.777303077426415e-15,
+          "initial_HS_event_fraction": 0.0,
+          "maximum_zero_width_line_occupation": 5.267096088699397e-19,
+          "minimum_abs_line_sweep": 0.9716980272478395,
+          "maximum_final_L_occupation": 3.688490468597348e-06,
+          "max_recoil_over_peak_today": 402837.6282818314,
+          "scope": "Cold zero-incoming-momentum initial-source approximation. S occupation from swept monochromatic line; no inverse/stimulation, hot-tail or stationary-line regularization."
+        },
+        "halo_recombination_at_full": {
+          "params": {
+            "u": 2.6563018760916787e-05,
+            "D": 0.0040466026083598875,
+            "delta": 2.0856747163596545e-05,
+            "a": 3.9810717055349776,
+            "g_eV": 0.20029829550528438
+          },
+          "V0_kms": 44.1,
+          "masses_eV": [
+            85.99999999937502,
+            86.0000235273811,
+            171.99999629446643
+          ],
+          "u": 2.6563018760916783e-05,
+          "lambda0": 4.068355419581995e-06,
+          "alpha": 1e-06,
+          "radial_checks": {
+            "number_rel_error": 1.196600596387043e-10,
+            "mean_q2_rel_error": -1.4165628670070873e-09
+          },
+          "zero_L": {
+            "allowed": true,
+            "coefficient": 1.5479712185718177e-24,
+            "amplitude_eV_inv": 2.726648562329455e-06,
+            "recoil_momentum_eV": 0.020609654530619605,
+            "energy_release_eV": 3.704283642491646e-06
+          },
+          "zero_H": {
+            "allowed": false,
+            "coefficient": 0.0
+          },
+          "runs": [
+            {
+              "power": 16,
+              "rep": 0,
+              "L": {
+                "coefficient": 1.2097664528108482e-24,
+                "classical_coefficient": 1.0091261175680204e-24,
+                "allowed_fraction": 1.0,
+                "max_amplitude": 2.7256445017356788e-06,
+                "weighted_final_S_p_eV": 0.029874916381243264,
+                "weighted_Bose_factor": 1.1988258273667203
+              },
+              "H": {
+                "coefficient": 1.3630517866974348e-25,
+                "classical_coefficient": 1.3630517866974348e-25,
+                "allowed_fraction": 0.0001068115234375,
+                "max_amplitude": 0.0001217133292834321,
+                "weighted_final_S_p_eV": 0.02528449001741831,
+                "weighted_Bose_factor": 1.0
+              },
+              "initial_S_events_per_particle_10Gyr": 7.278400472692642e-05,
+              "initial_L_depletion_10Gyr": 0.00015293822403722598
+            },
+            {
+              "power": 16,
+              "rep": 1,
+              "L": {
+                "coefficient": 1.2096533356538347e-24,
+                "classical_coefficient": 1.009073052669605e-24,
+                "allowed_fraction": 1.0,
+                "max_amplitude": 2.726074384606082e-06,
+                "weighted_final_S_p_eV": 0.02986652530538106,
+                "weighted_Bose_factor": 1.1987767708726085
+              },
+              "H": {
+                "coefficient": 2.527362815329807e-25,
+                "classical_coefficient": 2.527362815329807e-25,
+                "allowed_fraction": 0.00018310546875,
+                "max_amplitude": 0.0001368495419173449,
+                "weighted_final_S_p_eV": 0.028865131030862478,
+                "weighted_Bose_factor": 1.0
+              },
+              "initial_S_events_per_particle_10Gyr": 7.907348340211118e-05,
+              "initial_L_depletion_10Gyr": 0.0001718127764681024
+            },
+            {
+              "power": 18,
+              "rep": 0,
+              "L": {
+                "coefficient": 1.2095391384064132e-24,
+                "classical_coefficient": 1.0091088469044252e-24,
+                "allowed_fraction": 1.0,
+                "max_amplitude": 2.7265057645615102e-06,
+                "weighted_final_S_p_eV": 0.029867256950003737,
+                "weighted_Bose_factor": 1.1986210824697796
+              },
+              "H": {
+                "coefficient": 2.156337553308218e-25,
+                "classical_coefficient": 2.156337553308218e-25,
+                "allowed_fraction": 0.000152587890625,
+                "max_amplitude": 0.00013627619355791455,
+                "weighted_final_S_p_eV": 0.02684250440566852,
+                "weighted_Bose_factor": 1.0
+              },
+              "initial_S_events_per_particle_10Gyr": 7.706112231216273e-05,
+              "initial_L_depletion_10Gyr": 0.00016578186800560147
+            },
+            {
+              "power": 18,
+              "rep": 1,
+              "L": {
+                "coefficient": 1.2095087963590757e-24,
+                "classical_coefficient": 1.0091045041687283e-24,
+                "allowed_fraction": 1.0,
+                "max_amplitude": 2.726362849819413e-06,
+                "weighted_final_S_p_eV": 0.029866727337646597,
+                "weighted_Bose_factor": 1.1985961725098382
+              },
+              "H": {
+                "coefficient": 2.189297192252811e-25,
+                "classical_coefficient": 2.189297192252811e-25,
+                "allowed_fraction": 0.000156402587890625,
+                "max_amplitude": 0.0001368495419173449,
+                "weighted_final_S_p_eV": 0.02774685632531496,
+                "weighted_Bose_factor": 1.0
+              },
+              "initial_S_events_per_particle_10Gyr": 7.723769912308312e-05,
+              "initial_L_depletion_10Gyr": 0.00016631323907595222
+            }
+          ],
+          "scope": "Initial dilute S,H source with initial BE L including final L stimulation. 3->2 tree diagrams; no inverse, finite density mediator dressing or nonlinear evolution."
+        }
+      },
+      {
+        "params": {
+          "z_on": 12,
+          "dneff": 0.1,
+          "Xfrac": 0.7,
+          "loop_margin": 1.1,
+          "mu_over_H_on": 20,
+          "u": 2.6563018760916787e-05,
+          "Neta": 1,
+          "X": 3.0301638306926266e-12,
+          "Xcap": 4.328805472418038e-12,
+          "delta": 2.0856747163596545e-05,
+          "Delta": 0.0040466026083598875,
+          "mu_eV": 7.582498184663666e-31,
+          "vev_eV": 2.2957296324508276e+24,
+          "Td_on_eV": 0.0014095409856433225,
+          "m_eta_at_vev_eV": 0.004278051117008787,
+          "lambda_chi": 1.0908954994775485e-109,
+          "eta_CW_over_X": 0.1749999999999999,
+          "eta_mass_over_T": 3.0350668484153798,
+          "vev_over_Mpl": 0.0009428047771871982,
+          "seed": 1e-08
+        },
+        "scheme": "vev-curvature",
+        "candidate": {
+          "screen": "factor10_margin",
+          "a": 3.9810717055349776,
+          "Q": 0.15550646337008844,
+          "u": 2.6563018760916787e-05,
+          "D": 0.0040466026083598875,
+          "gap_over_T": 12.643023898247142,
+          "sigma0_for_one_efold": 0.421445632300278,
+          "g_eV": 0.20029822781048343,
+          "lambda0": 4.068352669559734e-06,
+          "split_floor_ratio": 0.08632699660128544,
+          "pole_loop_ratio": 0.09968775567985878,
+          "lower_conversion_per_efold": 0.008996960347718555,
+          "cosmic_frozen_proxy": 0.007767265119744448,
+          "proxy_pass": true
+        },
+        "formation_z": 2.0,
+        "rtol": 3e-09,
+        "n": 22000,
+        "sigma0_for_one_efold": 0.4214487854873917,
+        "g_eV": 0.2002986024590563,
+        "lambda0": 4.068367888964176e-06,
+        "D": 0.0040466026083598875,
+        "delta": 2.0856747163596545e-05,
+        "u": 2.6563018760916787e-05,
+        "a": 3.9810717055349776,
+        "S_mass_eV": 171.99999629446643,
+        "pole_detuning_eV2": 0.0012742735577707463,
+        "gap_over_T": 12.643023898247145,
+        "min_a": 3.980120069319455,
+        "max_a": 3.982415053058993,
+        "halo_active_Gyr": 11.57033124837942,
+        "halo_Q_time_Gyr": 1.7991808589162916,
+        "LL_tau": 1.3327145168074996e-10,
+        "cosmic_proxy": 0.007671104758743968,
+        "cold_v2_over_detuning": 2.940212766541128e-06,
+        "LH_initial_source": 0.022802014817032132,
+        "HH_initial_source": 0.00042218666896983375,
+        "initial_H_source": 0.023224201486001964,
+        "conversion_convergence": [
+          {
+            "order": 96,
+            "kernels": [
+              9.895445264408896e-08,
+              5.2448948141187573e-14
+            ],
+            "constant_kernel_source": 0.022289568002448388
+          },
+          {
+            "order": 144,
+            "kernels": [
+              1.0315838179985453e-07,
+              5.3452129116904324e-14
+            ],
+            "constant_kernel_source": 0.02322682950229387
+          },
+          {
+            "order": 192,
+            "kernels": [
+              1.046511899860566e-07,
+              5.371385295081118e-14
+            ],
+            "constant_kernel_source": 0.0235589029766408
+          }
+        ],
+        "kernel_x2": [
+          0.2571065770793211,
+          1.0,
+          1.5942536658826787
+        ],
+        "kernel_values": [
+          [
+            1.0324946949005635e-07,
+            5.353138016356524e-14
+          ],
+          [
+            1.0315838179985453e-07,
+            5.3452129116904324e-14
+          ],
+          [
+            1.0308543320888798e-07,
+            5.338883503607725e-14
+          ]
+        ],
+        "split_loop_ratio": 0.08632731954324006,
+        "pole_loop_ratio": 0.09968812860288202,
+        "quartic_cutoff_eV": 542.6002548811042,
+        "S_bubble_derivative_HH": 8.770643517685973e-06,
+        "S_bubble_derivative_LL": 2.292484027052149e-14,
+        "roll": {
+          "nfev": 37757,
+          "v0": 17.61183942070332,
+          "max_early_abs_field": 1.0000000002121616e-08,
+          "today_field": 0.9451377007423913,
+          "z_at_half_x8": 2.445669789995928,
+          "maximum_abs_x": 1.3070725769520242
+        }
+      }
+    ]
+  }
+]

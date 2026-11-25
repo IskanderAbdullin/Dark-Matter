@@ -62,7 +62,7 @@ def mb_integral(d,a,order=48):
     return 2*np.sqrt(2/np.pi)*np.exp(-np.minimum(np.asarray(d),745))*np.sum(
         wt*np.sqrt(y*(y+dd))*(a/(a+2*(y+dd)))**2,axis=-1)
 
-def bose_source(d,u,a,n=96,na=96,alpha=1e-6):
+def bose_source(d,u,a,n=96,na=96,alpha=1e-6,return_kernels=False):
     q,w=roots_legendre(n);q=(q+1)*5;w=w*5
     w=w*q*q/np.expm1(q*q+alpha);w/=w.sum()
     p,b=np.meshgrid(q,q,indexing='ij');wt=w[:,None]*w[None,:]
@@ -84,8 +84,8 @@ def bose_source(d,u,a,n=96,na=96,alpha=1e-6):
                 fm[~small]=(np.log(-np.expm1(-high[~small]))-np.log(-np.expm1(-low[~small])))/span[~small]
                 enh+=np.maximum(fm,0.)
             rate+=vv*W/2*2*kf*enh*(a/(a+4*k2))**2
-        totals.append(float(ratio*np.sum(wt*rate)))
-    return .5*totals[0]+totals[1]
+        totals.append(float(np.sum(wt*rate)) if return_kernels else float(ratio*np.sum(wt*rate)))
+    return tuple(totals) if return_kernels else .5*totals[0]+totals[1]
 
 def mass_tradeoff(a,Q,V,z,dneff,alpha=1e-6,efold=1.,age=10.,threshold_factor=1.):
     # Optimistically assume full activation at fixed halo conditions for

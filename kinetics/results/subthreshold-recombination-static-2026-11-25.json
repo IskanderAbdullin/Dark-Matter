@@ -1,0 +1,328 @@
+[
+  {
+    "params": {
+      "u": 8.364175435308767e-06,
+      "D": 0.004332865398072127,
+      "delta": 1.2531187067953935e-05,
+      "a": 5.011872336272725,
+      "g_eV": 0.7004906988101337,
+      "z_on": 8.0
+    },
+    "V0_kms": 44.1,
+    "masses_eV": [
+      85.9999999997893,
+      86.00002519128492,
+      171.99999533616176
+    ],
+    "u": 8.364175435308768e-06,
+    "lambda0": 4.975871204669525e-05,
+    "alpha": 1e-06,
+    "radial_checks": {
+      "number_rel_error": 1.196600596387043e-10,
+      "mean_q2_rel_error": -1.4165628670070873e-09
+    },
+    "zero_L": {
+      "allowed": true,
+      "coefficient": 1.6187584158393215e-23,
+      "amplitude_eV_inv": 8.324127870410576e-06,
+      "recoil_momentum_eV": 0.02312441285189918,
+      "energy_release_eV": 4.663416859784775e-06
+    },
+    "zero_H": {
+      "allowed": false,
+      "coefficient": 0.0
+    },
+    "runs": [
+      {
+        "power": 16,
+        "rep": 0,
+        "L": {
+          "coefficient": 1.2654583020011098e-23,
+          "classical_coefficient": 1.1168560709147358e-23,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 8.321622686167215e-06,
+          "weighted_final_S_p_eV": 0.031792983270716724,
+          "weighted_Bose_factor": 1.1330540567905627
+        },
+        "H": {
+          "coefficient": 4.146194042353672e-24,
+          "classical_coefficient": 4.146194042353672e-24,
+          "allowed_fraction": 7.62939453125e-05,
+          "max_amplitude": 0.0007457028690240228,
+          "weighted_final_S_p_eV": 0.026324525671812874,
+          "weighted_Bose_factor": 1.0
+        },
+        "initial_S_events_per_particle_10Gyr": 0.0009084418752501029,
+        "initial_L_depletion_10Gyr": 0.0020410743505542973
+      },
+      {
+        "power": 16,
+        "rep": 1,
+        "L": {
+          "coefficient": 1.2654403251758311e-23,
+          "classical_coefficient": 1.1168030750230511e-23,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 8.322701002134332e-06,
+          "weighted_final_S_p_eV": 0.03178936932881194,
+          "weighted_Bose_factor": 1.1330917271603251
+        },
+        "H": {
+          "coefficient": 5.8025581851547796e-24,
+          "classical_coefficient": 5.8025581851547796e-24,
+          "allowed_fraction": 0.0001220703125,
+          "max_amplitude": 0.0007561269492579361,
+          "weighted_final_S_p_eV": 0.02966559292127612,
+          "weighted_Bose_factor": 1.0
+        },
+        "initial_S_events_per_particle_10Gyr": 0.0009979941163988123,
+        "initial_L_depletion_10Gyr": 0.0023097407943251497
+      },
+      {
+        "power": 16,
+        "rep": 2,
+        "L": {
+          "coefficient": 1.265266399422728e-23,
+          "classical_coefficient": 1.1168396926155573e-23,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 8.322516671556041e-06,
+          "weighted_final_S_p_eV": 0.03178579215156218,
+          "weighted_Bose_factor": 1.1328988464401424
+        },
+        "H": {
+          "coefficient": 6.71350321427435e-24,
+          "classical_coefficient": 6.71350321427435e-24,
+          "allowed_fraction": 0.0001068115234375,
+          "max_amplitude": 0.0006865330177856001,
+          "weighted_final_S_p_eV": 0.03163760911451665,
+          "weighted_Bose_factor": 1.0
+        },
+        "initial_S_events_per_particle_10Gyr": 0.0010471561636698483,
+        "initial_L_depletion_10Gyr": 0.002457320980262953
+      },
+      {
+        "power": 18,
+        "rep": 0,
+        "L": {
+          "coefficient": 1.265349745859005e-23,
+          "classical_coefficient": 1.1168381609501269e-23,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 8.323773234244015e-06,
+          "weighted_final_S_p_eV": 0.031789803147551234,
+          "weighted_Bose_factor": 1.1329750272703207
+        },
+        "H": {
+          "coefficient": 6.1567964508107844e-24,
+          "classical_coefficient": 6.1567964508107844e-24,
+          "allowed_fraction": 0.000110626220703125,
+          "max_amplitude": 0.0007965986825797888,
+          "weighted_final_S_p_eV": 0.027679326368677277,
+          "weighted_Bose_factor": 1.0
+        },
+        "initial_S_events_per_particle_10Gyr": 0.0010170993049684856,
+        "initial_L_depletion_10Gyr": 0.0023671053375571333
+      },
+      {
+        "power": 18,
+        "rep": 1,
+        "L": {
+          "coefficient": 1.2653467598496194e-23,
+          "classical_coefficient": 1.1168342626695277e-23,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 8.323418903790451e-06,
+          "weighted_final_S_p_eV": 0.03179018133799537,
+          "weighted_Bose_factor": 1.1329763082528537
+        },
+        "H": {
+          "coefficient": 5.774910389813776e-24,
+          "classical_coefficient": 5.774910389813776e-24,
+          "allowed_fraction": 9.918212890625e-05,
+          "max_amplitude": 0.0008180885689692963,
+          "weighted_final_S_p_eV": 0.028132009604125506,
+          "weighted_Bose_factor": 1.0
+        },
+        "initial_S_events_per_particle_10Gyr": 0.0009964485687402878,
+        "initial_L_depletion_10Gyr": 0.002305154743450219
+      },
+      {
+        "power": 18,
+        "rep": 2,
+        "L": {
+          "coefficient": 1.2655481839697194e-23,
+          "classical_coefficient": 1.1168453544593019e-23,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 8.323595865177302e-06,
+          "weighted_final_S_p_eV": 0.031796313262630174,
+          "weighted_Bose_factor": 1.1331454072103018
+        },
+        "H": {
+          "coefficient": 6.894366593695238e-24,
+          "classical_coefficient": 6.894366593695238e-24,
+          "allowed_fraction": 0.0001068115234375,
+          "max_amplitude": 0.0008250890752683858,
+          "weighted_final_S_p_eV": 0.028710883830515097,
+          "weighted_Bose_factor": 1.0
+        },
+        "initial_S_events_per_particle_10Gyr": 0.0010570880683531039,
+        "initial_L_depletion_10Gyr": 0.0024869643294064213
+      }
+    ],
+    "scope": "Initial dilute S,H source with initial BE L including final L stimulation. 3->2 tree diagrams; no inverse, finite density mediator dressing or nonlinear evolution."
+  },
+  {
+    "params": {
+      "u": 6.476196462626102e-06,
+      "D": 0.026809058193303762,
+      "delta": 6.822535181441588e-05,
+      "a": 25.11886431509582,
+      "g_eV": 1.5808008164418426,
+      "z_on": 20.0
+    },
+    "V0_kms": 44.1,
+    "masses_eV": [
+      85.99999999899056,
+      86.00015586748559,
+      171.99997662553014
+    ],
+    "u": 6.4761964626261005e-06,
+    "lambda0": 0.00025340710185876636,
+    "alpha": 1e-06,
+    "radial_checks": {
+      "number_rel_error": 1.196600596387043e-10,
+      "mean_q2_rel_error": -1.4165628670070873e-09
+    },
+    "zero_L": {
+      "allowed": true,
+      "coefficient": 1.9315427618248005e-24,
+      "amplitude_eV_inv": 1.921763233403701e-06,
+      "recoil_momentum_eV": 0.05176911344743272,
+      "energy_release_eV": 2.3372450954184387e-05
+    },
+    "zero_H": {
+      "allowed": false,
+      "coefficient": 0.0
+    },
+    "runs": [
+      {
+        "power": 16,
+        "rep": 0,
+        "L": {
+          "coefficient": 1.7744869473141483e-24,
+          "classical_coefficient": 1.773996717372297e-24,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 1.9216519700088445e-06,
+          "weighted_final_S_p_eV": 0.056571369512775305,
+          "weighted_Bose_factor": 1.0002763420794698
+        },
+        "H": {
+          "coefficient": 0.0,
+          "classical_coefficient": 0.0,
+          "allowed_fraction": 0.0,
+          "max_amplitude": 0.0
+        },
+        "initial_S_events_per_particle_10Gyr": 9.594902926460227e-05,
+        "initial_L_depletion_10Gyr": 0.00019189805852920454
+      },
+      {
+        "power": 16,
+        "rep": 1,
+        "L": {
+          "coefficient": 1.7744722720723695e-24,
+          "classical_coefficient": 1.7739802926684443e-24,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 1.921699545133574e-06,
+          "weighted_final_S_p_eV": 0.056564156011612195,
+          "weighted_Bose_factor": 1.0002773308170099
+        },
+        "H": {
+          "coefficient": 0.0,
+          "classical_coefficient": 0.0,
+          "allowed_fraction": 0.0,
+          "max_amplitude": 0.0
+        },
+        "initial_S_events_per_particle_10Gyr": 9.594823575343835e-05,
+        "initial_L_depletion_10Gyr": 0.0001918964715068767
+      },
+      {
+        "power": 16,
+        "rep": 2,
+        "L": {
+          "coefficient": 1.774483097254992e-24,
+          "classical_coefficient": 1.773993351393438e-24,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 1.921691388016846e-06,
+          "weighted_final_S_p_eV": 0.05656941279684183,
+          "weighted_Bose_factor": 1.0002760697277524
+        },
+        "H": {
+          "coefficient": 0.0,
+          "classical_coefficient": 0.0,
+          "allowed_fraction": 0.0,
+          "max_amplitude": 0.0
+        },
+        "initial_S_events_per_particle_10Gyr": 9.594882108643605e-05,
+        "initial_L_depletion_10Gyr": 0.0001918976421728721
+      },
+      {
+        "power": 18,
+        "rep": 0,
+        "L": {
+          "coefficient": 1.7744836880456288e-24,
+          "classical_coefficient": 1.773992647354175e-24,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 1.9217473948559e-06,
+          "weighted_final_S_p_eV": 0.056569935583602904,
+          "weighted_Bose_factor": 1.0002767997331816
+        },
+        "H": {
+          "coefficient": 0.0,
+          "classical_coefficient": 0.0,
+          "allowed_fraction": 0.0,
+          "max_amplitude": 0.0
+        },
+        "initial_S_events_per_particle_10Gyr": 9.594885303132479e-05,
+        "initial_L_depletion_10Gyr": 0.00019189770606264957
+      },
+      {
+        "power": 18,
+        "rep": 1,
+        "L": {
+          "coefficient": 1.7744828188491367e-24,
+          "classical_coefficient": 1.7739916607779353e-24,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 1.9217315270005526e-06,
+          "weighted_final_S_p_eV": 0.05656944817491742,
+          "weighted_Bose_factor": 1.0002768660541426
+        },
+        "H": {
+          "coefficient": 0.0,
+          "classical_coefficient": 0.0,
+          "allowed_fraction": 0.0,
+          "max_amplitude": 0.0
+        },
+        "initial_S_events_per_particle_10Gyr": 9.594880603263607e-05,
+        "initial_L_depletion_10Gyr": 0.00019189761206527215
+      },
+      {
+        "power": 18,
+        "rep": 2,
+        "L": {
+          "coefficient": 1.7744835326877006e-24,
+          "classical_coefficient": 1.773993519873522e-24,
+          "allowed_fraction": 1.0,
+          "max_amplitude": 1.9217395559082296e-06,
+          "weighted_final_S_p_eV": 0.05657072064583036,
+          "weighted_Bose_factor": 1.0002762201827058
+        },
+        "H": {
+          "coefficient": 0.0,
+          "classical_coefficient": 0.0,
+          "allowed_fraction": 0.0,
+          "max_amplitude": 0.0
+        },
+        "initial_S_events_per_particle_10Gyr": 9.594884463090097e-05,
+        "initial_L_depletion_10Gyr": 0.00019189768926180194
+      }
+    ],
+    "scope": "Initial dilute S,H source with initial BE L including final L stimulation. 3->2 tree diagrams; no inverse, finite density mediator dressing or nonlinear evolution."
+  }
+]
