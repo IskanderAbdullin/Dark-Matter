@@ -1,0 +1,9 @@
+# Eta and trigger perturbations in the direct cubic branch
+
+## Frozen collisionless response
+
+The post-roll background includes repeated intervals of negative effective trigger curvature. On two choices of redshift, momentum and wavenumber sampling, min(m_eff²/H²)≈−1.74e4 and peak local γ/H≈130. At low k the integrated positive local root is 13.3–13.9, almost entirely reproduced by the unforced scalar curvature. Restricting to k/(aH)≥10, γ/H≥5 and γ≥3|d ln m_eta/dt| gives an illustrative local integral ≈6.0 at k≈.003/Mpc. The maximum change in the integrated root from collisionless η feedback is 1.14–1.19 over the sampled k values. These integrals add positive instantaneous roots, even though the stable intervals can undo phase growth. They are diagnostics rather than true accumulated mode amplification.
+
+For η with E(p)=sqrt(p²+g²χ²), perturbations have δE=(gm/E)δχ in the positive-χ patch. At a frozen snapshot the monopole Vlasov response contains 1−atan(y)/y with y=k_phys v/γ. The scalar has a positive direct mass derivative D=Ng²/(2π²)·∫p⁴f/E³ dp and a negative collisionless feedback S=Ng²m²/(2π²)·∫(p/E)(−df/dp)[1−atan(y)/y]dp. The local dispersion is γ²+3Hγ+k_phys²+Vχχ+D−S=0. The finite γ floor is 1e−5 H. This diagnostic avoids treating the formal infrared-sensitive static susceptibility of the decoupled Bose distribution as a measured instantaneous rate. Direct angular integration and the pressureless limit independently check the kernel normalization and signs.
+
+The local framework is related to mass-varying-species calculations, with the actual η Bose spectrum and the oscillating χ potential substituted here. See [Afshordi, Zaldarriaga & Kohri](https://doi.org/10.1103/PhysRevD.72.065024), [code](direct_pole_eta_stability.py), and [two-resolution summaries and trajectories](results/direct-pole-eta-snapshots-2026-11-25.json). Metric feedback, time-dependent streaming and nonlinear evolution remain outside this check.

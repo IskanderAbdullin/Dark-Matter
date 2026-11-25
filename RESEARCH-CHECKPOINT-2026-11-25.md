@@ -148,3 +148,7 @@ See kinetics/EARLY-BOSE-BOOTSTRAP-HARTREE-2026-11-25.md and kinetics/DIRECT-SUBT
 ## Initial conditions and conditional observational geometry
 
 [Results with DESI DR2 covariance and spectator initial-condition tests](kinetics/DIRECT-POLE-INITIAL-AND-GEOMETRY-2026-11-25.md). Reference trigger's half-onset z=4.345 with dz/dln(seed)=0.085. Near the coherent 1% relic budget, both scalar spectators have a long potential self-resonance interval. The light A stationary stochastic estimate is near the trigger's single-mode inflationary seed scale, and primordial S/η abundances remain unestablished. Fixed-density, free-ruler BAO Δχ²≈+1.99 and fixed-redshift acoustic angle +0.134%; no joint cosmology inference. Next: determine whether the coupled η–χ perturbations or the oscillating χ potential invalidate the smooth-background approximation.
+
+## Direct trigger local perturbation gate
+
+[Collisionless η response and local negative curvature](kinetics/DIRECT-POLE-ETA-PERTURBATIONS-2026-11-25.md). The trigger undergoes intervals of negative effective curvature after half-activation, with local γ/H≈130 at the sampled long-wave end. Positive local roots are predominantly reproduced without directional η feedback. A positive-root integral cannot establish cumulative growth across oscillations. Next: evolve phases with expanding collisionless streaming, vary initial η and χ modes, and check analytic free streaming to avoid finite-angle aliasing in a small residual.
