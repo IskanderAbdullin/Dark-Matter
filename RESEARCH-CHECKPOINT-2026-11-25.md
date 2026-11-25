@@ -156,3 +156,7 @@ See kinetics/EARLY-BOSE-BOOTSTRAP-HARTREE-2026-11-25.md and kinetics/DIRECT-SUBT
 ## Time-dependent trigger and eta perturbations
 
 [Phase evolution, numerical failure, and corrected evidence](kinetics/DIRECT-POLE-ETA-PERTURBATIONS-2026-11-25.md). Analytic angular transport removes a large initial-mode quadrature artefact. The expanding metric-free pilot gives η number-contrast gain ~4.24e10 per unit early temperature seed at k=.03/Mpc, with the illustrative 1e−5 seed reaching order one near z=2.03. Changing the homogeneous trigger seed by a factor of two preserves the conditional instability. This is a new obstacle to treating η as smooth or proceeding directly to an observational fit. Next: implement metric-coupled perturbations with physical multimode initial conditions, verify which modes reach the nonlinear regime, and screen alternative triggers with milder post-roll curvature. The reference remains a numerical benchmark with an open physical gate.
+
+## Metric-coupling source audit
+
+[Moment and exchange audit](kinetics/DIRECT-POLE-ETA-PERTURBATIONS-2026-11-25.md#stress-energy-source-for-the-metric-calculation) derives the signed scalar-gradient dipole, the varying-mass stress terms and opposite energy exchange. Ten numerical checks pass with maximum discrepancy 1.6e−8. The next implementation can reuse the CLASS constant-mass hierarchy as a reference, keeping the actual metric integration and early-mode normalization as outstanding gates.
