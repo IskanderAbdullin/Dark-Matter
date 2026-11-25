@@ -1,0 +1,47 @@
+name: Energy-closed kinetic spectrum to CLASS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'kinetics/energy_closed_bath.py'
+      - 'cosmology/energy_closed_class.py'
+      - '.github/workflows/energy-closed-class.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  energy-closed-transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: 1
+      OMP_NUM_THREADS: 1
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Install CLASS
+        run: python -m pip install "classy==3.4.3.0" "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Compute self-consistent background spectra
+        run: |
+          mkdir -p outputs
+          python kinetics/energy_closed_bath.py --n 320 --kappa .1383 --relaxation 100 --keep-psd --output outputs/energy320.json
+          python kinetics/energy_closed_bath.py --n 480 --kappa .1383 --relaxation 100 --rtol 5e-7 --keep-psd --output outputs/energy480.json
+      - name: Match physical momenta and evaluate perturbations
+        run: python cosmology/energy_closed_class.py --input outputs/energy320.json outputs/energy480.json --output outputs/energy_transfer.json
+      - name: Independently vary the ncdm hierarchy approximation
+        run: python cosmology/energy_closed_class.py --input outputs/energy480.json --diagnostic --output outputs/energy_diagnostic.json
+      - name: Preserve outputs
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: energy-closed-freezeout-to-CLASS
+          path: outputs/*.json
+          retention-days: 21
+          if-no-files-found: warn

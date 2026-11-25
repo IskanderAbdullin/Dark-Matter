@@ -72,11 +72,11 @@ def transformed_quadrature_check(export,bins):
     return errors
 
 
-def transfer(row,export,ks,zs,bins=120):
+def transfer(row,export,ks,zs,bins=120,precision=None,kmax_h=45.):
     from classy import Class
     base={'h':.674,'omega_b':.02237,'T_cmb':2.7255,'N_ur':3.044+row['final']['delta_Neff_chi2_if_stable_free_streaming'],
           'A_s':2.1e-9,'n_s':.965,'tau_reio':.0544,'gauge':'newtonian','output':'mPk',
-          'P_k_max_h/Mpc':45.,'z_max_pk':5.1}
+          'P_k_max_h/Mpc':kmax_h,'z_max_pk':5.1}
     def solve(p):
         c=Class()
         try:
@@ -92,6 +92,7 @@ def transfer(row,export,ks,zs,bins=120):
     p=dict(base,N_ncdm=2,m_ncdm='86,86',T_ncdm=','.join(str(c['scale']*tr) for c in comps),
            deg_ncdm='1,1',use_ncdm_psd_files='1,1',ncdm_psd_filenames=','.join(c['file'] for c in comps),omega_cdm=1e-8)
     p.update(ncdm_quadrature_strategy='2,2',ncdm_N_momentum_bins=f'{bins},{bins}')
+    if precision: p.update(precision)
     quadrature_errors=transformed_quadrature_check(export,bins)
     warm=solve(p)
     target=row['final']['omega_phi_h2_m86_g106p75']
