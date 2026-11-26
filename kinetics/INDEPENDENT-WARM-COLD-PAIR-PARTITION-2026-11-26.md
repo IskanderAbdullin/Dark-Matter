@@ -78,3 +78,28 @@ done
 ~~~
 
 [Time-step diagnostics](results/warm-cold-pair-spike-time-2026-11-26.json).
+
+## Actual q64 replay
+
+The same-input test also completed on the wider q64 support.
+The unmodified replay reproduces the independent archived q64 native
+checkpoint hash. The first-cell slope changes from +1.435543e-4 to
+−4.717203e-5 per unit ln(a) when only the inverse partition is changed.
+The two tagged angular/radial levels agree within 1.6e-8 fractionally;
+the q32 and q64 corrected slopes agree within 0.03%. No normalized
+number, energy, or pressure shell-L1 change exceeds 3.4e-10 for the
+tested first-cell partition. The selected prompt term is
+present on q64, so the shared reversal is not the q32 recoil cutoff.
+
+The modified q64 nonlinear solve used the original convergence
+fallback after the direct history initialization; conservation still
+closes, with the audited block energy defect below 2.2e-14.
+Only this single q64 interval is established here.
+
+~~~sh
+python -W error warm_cold_pair_spike_replay_reference.py EOS.dat replay replay/64-low --q 64
+python -W error warm_cold_pair_spike_replay_reference.py EOS.dat replay replay/64-fine --q 64 --fine
+~~~
+
+[Both q64 replays](results/warm-cold-pair-spike-q64-replays-2026-11-26.json);
+[exact fine lifted checkpoint](results/warm-cold-pair-spike-q64-lifted-2026-11-26.json.gz).
