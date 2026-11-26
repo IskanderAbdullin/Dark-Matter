@@ -113,6 +113,9 @@ Its [time-resolved lower comparison](INDEPENDENT-WARM-SIGNED-FERMION-TIME-COMPAR
 uses the number decrease within the analytic comparison,
 giving a useful floor all the way to fermion cap one half,
 still without claiming that cap dynamically.
+A [small extension past one half](INDEPENDENT-WARM-SIGNED-QUADRATIC-OVERSHOOT-2026-11-26.md)
+checks the previously nonpositive quadratic term. It shows
+that the coarse positive allowance gives little extra range.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
