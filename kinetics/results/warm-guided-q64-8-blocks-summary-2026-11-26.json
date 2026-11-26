@@ -1,0 +1,447 @@
+{
+  "scope": "Same q64 initial moments/operators and final physical time. Interpolated q32 entropy coordinates are numerical seeds only, not physical data. Compares selected-operator finite-grid trajectories.",
+  "subdivisions_per_archived_block": 4,
+  "final_L1_over_original_q64": [
+    [
+      [
+        0.0007350767373102303,
+        0.000448426417446827
+      ],
+      [
+        0.0002230814046607911,
+        0.00033550058577632287
+      ]
+    ]
+  ],
+  "guide_result": {
+    "scope": "Archived q32 end profiles are solver seeds only; the accepted trajectory uses the full original q64 operators and physical moment targets. Old exterior cohorts remain collisionless. Not a full cosmology.",
+    "plan": {
+      "source_sha256": "c359d8500345462dbb30609526066da3389f65ded1687bb4cb170f54e0f37c7c",
+      "guides_sha256": "61bf8821ade7ebc405772c1a17878824a04ffe41c35a144c7f51ac5f6f5e033b",
+      "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+      "kernel_sha256": "ebbbee140933d87f9fa90a373b30e92fc0c6d988edf5bd465383c2192482e550",
+      "solver_wrapper_sha256": "ff7c18598ed8f8fabfa3d2eeab1394c6274eea3046c8b2c1a342e98b0f7ea566",
+      "guide_snapshots": [
+        "261e365e7f3058e20fdec2a21259facbb1991b8ba7a26608fead33e44cb023a6",
+        "9babe5ae9b5e9e9452e2fc4f26128162878a3a75d10dd917a14329dff56cb5b7",
+        "da25a84e994c8edfa233e977957529ff2671c5d199e51fc4a87fe18e3a447cef",
+        "0cb58ac4a2c2fb97ceea975f0c3ce287ad40b947ace7b849b1504d6ea54fe356",
+        "2e991a8c582213dc5e53d5d7467cd788ca3541dbbe9691cfeb1575fd53c91271",
+        "a7863dca96fbc5d65cadd2345f85326b1962186090694eb608ed0fdf00ef0306",
+        "4425874fedf1a4b76cbb96901ed603c3c336f0366f10749c4c067f5236b8ca21",
+        "7346aec3a34b38ebbd10a1a03157df408f6f7d2ac4abdf9f86c0e37539dc0776"
+      ]
+    },
+    "steps": [
+      {
+        "T_GeV": 0.010225107646318867,
+        "scale_factor": 5.379523817546427,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1304.2031900333377,
+              38
+            ],
+            [
+              1,
+              5.000239091976228,
+              48
+            ],
+            [
+              2,
+              0.00022472436408265127,
+              48
+            ],
+            [
+              3,
+              1.8450826690155647e-12,
+              108
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 1.8450826690155647e-12,
+          "entropy_gain_relative": 1.168275460816659e-07,
+          "maximum_exponent_departure_from_eq": 0.07557117630528407,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.0006474310946981072,
+          0.0004054636341991698
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.0002078631971857414,
+          0.0003041333069123964
+        ],
+        "final_added_region_count_fraction": [
+          1.1128271233130458e-11,
+          2.1900142247144453e-11
+        ],
+        "full_energy_and_count_defects": [
+          3.993591208261962e-16,
+          -3.885780586188048e-15
+        ]
+      },
+      {
+        "T_GeV": 0.010212436513965369,
+        "scale_factor": 5.386218985606516,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1312.6433103823074,
+              38
+            ],
+            [
+              1,
+              4.696821517340473,
+              38
+            ],
+            [
+              2,
+              9.540202083559728e-05,
+              40
+            ],
+            [
+              3,
+              8.802685929174927e-13,
+              104
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 8.802685929174927e-13,
+          "entropy_gain_relative": 7.573929505788612e-08,
+          "maximum_exponent_departure_from_eq": 0.0757248416990042,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.000687520135566353,
+          0.00042354983688169974
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.00021562618583337314,
+          0.0003169119973858786
+        ],
+        "final_added_region_count_fraction": [
+          1.110383055124858e-11,
+          2.1880248013370593e-11
+        ],
+        "full_energy_and_count_defects": [
+          1.6049744544610858e-15,
+          -2.55351295663786e-15
+        ]
+      },
+      {
+        "T_GeV": 0.010199781206441163,
+        "scale_factor": 5.392922486239687,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1320.324132655143,
+              38
+            ],
+            [
+              1,
+              4.699466215230823,
+              38
+            ],
+            [
+              2,
+              9.649496243483155e-05,
+              40
+            ],
+            [
+              3,
+              1.5587270513194626e-12,
+              112
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 1.5587270513194626e-12,
+          "entropy_gain_relative": 7.40640964114192e-08,
+          "maximum_exponent_departure_from_eq": 0.07587939217482279,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.0007066205747387475,
+          0.0004322359490128404
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.00021901110480638907,
+          0.0003234421951601835
+        ],
+        "final_added_region_count_fraction": [
+          1.1079296502068405e-11,
+          2.1861335062039435e-11
+        ],
+        "full_energy_and_count_defects": [
+          2.8219581111944365e-15,
+          -2.55351295663786e-15
+        ]
+      },
+      {
+        "T_GeV": 0.010187141866276925,
+        "scale_factor": 5.39963432981637,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1328.97638280605,
+              38
+            ],
+            [
+              1,
+              4.71244045259685,
+              38
+            ],
+            [
+              2,
+              9.759248500932588e-05,
+              40
+            ],
+            [
+              3,
+              2.217842288504336e-12,
+              114
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 2.217842288504336e-12,
+          "entropy_gain_relative": 7.36165381987064e-08,
+          "maximum_exponent_departure_from_eq": 0.07603472661171044,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.000717713939942282,
+          0.0004382812636083131
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.00022085197567750763,
+          0.000327982119447042
+        ],
+        "final_added_region_count_fraction": [
+          1.1054639378872976e-11,
+          2.1842607149437197e-11
+        ],
+        "full_energy_and_count_defects": [
+          4.6579477109269355e-15,
+          -4.440892098500626e-16
+        ]
+      },
+      {
+        "T_GeV": 0.010174518465906807,
+        "scale_factor": 5.406354526719902,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1332.8451235203972,
+              38
+            ],
+            [
+              1,
+              4.716981215145917,
+              38
+            ],
+            [
+              2,
+              9.804562622171626e-05,
+              40
+            ],
+            [
+              3,
+              1.0696562493854034e-12,
+              112
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 1.0696562493854034e-12,
+          "entropy_gain_relative": 7.359512688154268e-08,
+          "maximum_exponent_departure_from_eq": 0.07619077939584666,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.0007248251066823365,
+          0.0004410945066413819
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.00022198219161913727,
+          0.00033012893103975653
+        ],
+        "final_added_region_count_fraction": [
+          1.1029957182932187e-11,
+          2.182401179461803e-11
+        ],
+        "full_energy_and_count_defects": [
+          6.104247428729788e-16,
+          -3.774758283725532e-15
+        ]
+      },
+      {
+        "T_GeV": 0.010161910952659704,
+        "scale_factor": 5.413083087346541,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1337.685654826687,
+              38
+            ],
+            [
+              1,
+              4.72568010572,
+              38
+            ],
+            [
+              2,
+              9.859824737464795e-05,
+              40
+            ],
+            [
+              3,
+              1.0057141746611413e-12,
+              46
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 1.0057141746611413e-12,
+          "entropy_gain_relative": 7.377152977383616e-08,
+          "maximum_exponent_departure_from_eq": 0.07634749602944034,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.0007296115461843754,
+          0.00044354796012121254
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.0002226408646889773,
+          0.00033196191505756675
+        ],
+        "final_added_region_count_fraction": [
+          1.1005309957907438e-11,
+          2.1805557668457643e-11
+        ],
+        "full_energy_and_count_defects": [
+          3.2709568392352877e-15,
+          -1.4432899320127035e-15
+        ]
+      },
+      {
+        "T_GeV": 0.010149319274057154,
+        "scale_factor": 5.419820022105489,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1343.5011721209564,
+              38
+            ],
+            [
+              1,
+              4.736854986952615,
+              38
+            ],
+            [
+              2,
+              9.923176265974834e-05,
+              40
+            ],
+            [
+              3,
+              1.8551953617059827e-12,
+              108
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 1.8551953617059827e-12,
+          "entropy_gain_relative": 7.405113833236499e-08,
+          "maximum_exponent_departure_from_eq": 0.07650482774894536,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.0007329709716164357,
+          0.00044597334961168125
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.0002229905993705313,
+          0.00033374203669050533
+        ],
+        "final_added_region_count_fraction": [
+          1.098072943545162e-11,
+          2.178725430832193e-11
+        ],
+        "full_energy_and_count_defects": [
+          4.107983008787591e-16,
+          -3.552713678800501e-15
+        ]
+      },
+      {
+        "T_GeV": 0.010136743377811933,
+        "scale_factor": 5.426565341418897,
+        "trial": {
+          "used_q32_guess": true,
+          "observations": [
+            [
+              0,
+              1350.294625902016,
+              38
+            ],
+            [
+              1,
+              4.749601940053967,
+              38
+            ],
+            [
+              2,
+              9.993476533417847e-05,
+              40
+            ],
+            [
+              3,
+              6.825946637648653e-13,
+              114
+            ]
+          ],
+          "newton_iterations": 3,
+          "residual": 6.825946637648653e-13,
+          "entropy_gain_relative": 7.438879490173633e-08,
+          "maximum_exponent_departure_from_eq": 0.0766627294021913,
+          "structurally_inactive_cells": 0,
+          "structurally_inactive_vacuum_cells": 0
+        },
+        "common_grid_count_L1": [
+          0.0007353644565326527,
+          0.00044853233614617765
+        ],
+        "common_grid_full_energy_L1_over_total": [
+          0.0002231148478646499,
+          0.00033559815081566307
+        ],
+        "final_added_region_count_fraction": [
+          1.0956231640670573e-11,
+          2.176910679773196e-11
+        ],
+        "full_energy_and_count_defects": [
+          -8.254719144796671e-16,
+          -3.9968028886505635e-15
+        ]
+      }
+    ],
+    "final_snapshot_sha256": "8c2342e912b4fbeed439a584a8f74f5b206a74ba4fe21d6c53f0d138264494bf"
+  }
+}

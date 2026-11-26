@@ -102,7 +102,9 @@ reproducible controls below are not observational constraints.
    narrower shape only to initialize the nonlinear solve. A [three-interval q64 continuation](INDEPENDENT-WARM-EXTENDED-COUPLED-SUPPORT-2026-11-26.md)
    matches the already archived q32 time grid through 10.238 MeV. A [guided q64 continuation](INDEPENDENT-WARM-Q64-GUIDED-SERIAL-2026-11-26.md)
    advances two more accepted wide blocks through 10.137 MeV,
-   using q32 only as initial guesses.
+   using q32 only as initial guesses. A [q64 time refinement](INDEPENDENT-WARM-Q64-GUIDED-TIME-REFINEMENT-2026-11-26.md)
+   keeps wider physical equations fixed while comparing two,
+   four and eight blocks to the same temperature.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
