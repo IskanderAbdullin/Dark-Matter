@@ -1,0 +1,41 @@
+{
+  "events": 45000,
+  "seed": 241126,
+  "mu_bose_over_mass": 0.995,
+  "rows": [
+    {
+      "cells": 60,
+      "affinity": {
+        "weighted_abs_residual": 1.0958878301572603e-16,
+        "max_per_event_residual": 3.0592880869945725e-15
+      },
+      "occupation_linear": {
+        "weighted_abs_residual": 7.109322327652753e-05,
+        "max_per_event_residual": 0.9523444928237501
+      }
+    },
+    {
+      "cells": 120,
+      "affinity": {
+        "weighted_abs_residual": 1.0937888116770312e-16,
+        "max_per_event_residual": 2.9207923436833425e-15
+      },
+      "occupation_linear": {
+        "weighted_abs_residual": 1.7631886992274013e-05,
+        "max_per_event_residual": 0.5346011460047523
+      }
+    },
+    {
+      "cells": 240,
+      "affinity": {
+        "weighted_abs_residual": 1.0961475328501583e-16,
+        "max_per_event_residual": 2.9784279407186887e-15
+      },
+      "occupation_linear": {
+        "weighted_abs_residual": 4.434607055233103e-06,
+        "max_per_event_residual": 0.18334527130201217
+      }
+    }
+  ],
+  "invalid_BE_affinity_rejected": true
+}
