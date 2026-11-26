@@ -8,7 +8,7 @@ import numpy as np
 from scipy.interpolate import PchipInterpolator,interp1d
 from scipy.optimize import brentq
 
-from born_thermal_quark_hard_portal_reference import UEDGES,gauss,local
+from born_thermal_quark_hard_portal_reference import XEDGES,UEDGES,gauss,local
 from conditional_relic_normalization_reference import conversion
 from disjoint_hard_thermal_measured_source_reference import HardComplement,WINDOWS
 from hard_vector_nlo_strip_reference import spectra
@@ -17,9 +17,12 @@ from three_species_decay_onsager_reference import mp
 
 
 def table(path):
-    a=np.loadtxt(path)
+    a=np.atleast_2d(np.loadtxt(path))
     X=np.unique(a[:,0])
-    assert np.array_equal(X,[4.,4.5,5.])
+    if X.size<3 or X[0]!=4. or X[-1]>12. or np.max(np.diff(X))>1.:
+        raise ValueError("Use complete contiguous mass strips from x=4, with separation at most one and x<=12.")
+    if not np.all(np.isfinite(a)) or not np.all(np.diff(a[:,0])>=0.):
+        raise ValueError("Nonfinite or unordered native input.")
     assert len(a)==len(X)*len(UEDGES)
     pp=a[:,1].reshape(len(X),-1)
     V=3*X[:,None]**2/(4*np.pi)
@@ -40,11 +43,18 @@ class Correction(HardComplement):
         x,u,c=table_values
         un,_=gauss(UEDGES,n)
         self.cf=interp(x,u,c,mode)(un)
-        super().__init__(base,tmin=tmin,n=n)
+        self.mass_edges=x
+        self.base,self.n=base,n
+        self.a,self.b=np.log([tmin,.48])
+        cross=(WINDOWS[:,:,None]/np.union1d(XEDGES,x)).ravel()
+        self.edges=np.unique(np.clip(np.r_[self.a,self.b,base.edges,np.log(cross)],self.a,self.b))
+        self.u,self.du=gauss(UEDGES,n)
+        self.cum=np.cumsum(np.r_[np.zeros((1,2,2)),
+            [self.panel(a,b) for a,b in zip(self.edges[:-1],self.edges[1:])]],axis=0)
 
     def rates(self,T):
         q=WINDOWS/T
-        edges=np.unique(np.clip(np.r_[[4.,4.5,5.],q.ravel()],4.,5.))
+        edges=np.unique(np.clip(np.r_[self.mass_edges,q.ravel()],self.mass_edges[0],self.mass_edges[-1]))
         x,dx=gauss(edges,self.n)
         outside=~np.any((x[:,None]>q[:,0])&(x[:,None]<q[:,1]),axis=1)
         u=self.u
@@ -68,7 +78,7 @@ def mid_checks(table_values,path):
     rows=[]
     for x,k,lo,c in np.atleast_2d(np.loadtxt(path)):
         u,l=spectra(x,k)
-        assert abs(lo/l-1)<5e-11 and 4<x<5
+        assert abs(lo/l-1)<5e-11 and X[0]<x<X[-1]
         t=c/(3*x*x/(4*np.pi))
         d={}
         for mode in ("linear","pchip"):
@@ -109,16 +119,16 @@ def run(eos,kloe,bes,probe,check):
                     fraction_of_strict_increment_cut_for_overlap=float(1-c[1,0]/c[0,0])))
             rows.append(dict(interpolation=mode,nodes_per_panel=n,alpha_cases=vals))
         results.append(dict(Born_T_min_GeV=tmin,measured_plus_disjoint_Born_root_GeV=lo,results=rows))
-    return dict(controls=results,mass_over_T_interval=[4.,5.],
+    return dict(controls=results,mass_over_T_interval=K[0][[0,-1]].tolist(),
                 independent_native_point_interpolation_checks=mid_checks(K,check),
                 data_hashes={Path(p).name:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in (eos,kloe,bes,probe,check) if p is not None},
-                scope="Conditional addition to the previous disjoint hard Born comparator, using strict NLO only on 4<=M/T<=5 with resolved boost probes and finite-band interpolation. Same radiation clock, same optimistic conversion. Not a complete finite-T QCD spectrum, QCD error bars, a full NLO root, a physical dark-matter abundance, nor a production fit.")
+                scope="Conditional addition to the previous disjoint hard Born comparator, using strict NLO only in the supplied bounded mass interval with resolved boost probes and finite-band interpolation. Same radiation clock, same optimistic conversion. Not a complete finite-T QCD spectrum, QCD error bars, a full NLO root, a physical dark-matter abundance, nor a production fit.")
 
 
 if __name__=="__main__":
     p=argparse.ArgumentParser()
-    for k in ("eos","kloe","besiii","three_complete_strips"):
+    for k in ("eos","kloe","besiii","complete_strips"):
         p.add_argument(k)
     p.add_argument("--intermediate-check")
     a=p.parse_args()
-    print(json.dumps(run(a.eos,a.kloe,a.besiii,a.three_complete_strips,a.intermediate_check),indent=2,allow_nan=False))
+    print(json.dumps(run(a.eos,a.kloe,a.besiii,a.complete_strips,a.intermediate_check),indent=2,allow_nan=False))
