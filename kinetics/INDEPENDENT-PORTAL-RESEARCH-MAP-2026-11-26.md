@@ -99,6 +99,9 @@ A distinct [isolated fermion survival bound](INDEPENDENT-WARM-ISOLATED-FERMION-S
 asks whether the *total* can fall to .120. Redistribution,
 reverse gains and intermediate heavy fermions are allowed
 but the outgoing scalar occupation must be capped by hand.
+The [refined fermion floor with vacuum lepton loss](INDEPENDENT-WARM-FERMION-SURVIVAL-WITH-LEPTONS-2026-11-26.md)
+uses exact angular ceilings and a finite energy budget for
+high-invariant loss, retaining the explicit scalar cap.
 The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
