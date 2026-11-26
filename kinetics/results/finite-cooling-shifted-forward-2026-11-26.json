@@ -1,0 +1,180 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "angular_checks": {
+    "azimuth_bin_primitive_absolute_defect": 1.1102230246251565e-16,
+    "boosted_p2_rotated_angle_relative_defect": 6.661338147750939e-16
+  },
+  "reference_sha256": "98c0191e64062774bbbc9a73bbf27f1a7db905c9c261926f9427f60a235fa2fa",
+  "temperature_panel_quadrature_order": 3,
+  "recoil_p_over_TF_lower_edges": null,
+  "recoil_shape_probe_thresholds": null,
+  "episodes": [
+    {
+      "T_R_GeV": 0.009020180962883081,
+      "Tmax_GeV": 0.009020180962883081,
+      "modes": [
+        {
+          "steps": 32,
+          "incoming_momentum_bins": 42,
+          "new_scalar_p_over_TF_rms_by_epoch": [
+            0.0,
+            7.375058553318978
+          ],
+          "first_order_mixture_scalar_rms_p_over_TF": 7.370029282163382,
+          "first_order_pair_fraction_of_scalar_squared_momentum": 0.9935974692257812,
+          "new_scalar_recoil_shape": null,
+          "shape_count_omega": [
+            2.369879929148037e-12,
+            0.12007081949796147
+          ],
+          "maximum_forward_loss_over_H": [
+            0.0,
+            0.000796281775533013
+          ],
+          "epoch_order": [
+            "pre",
+            "post"
+          ],
+          "new_scalar_omega": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              3.031374146391565e-10,
+              9.472768068008874e-10
+            ]
+          ],
+          "fraction_of_final_stable_equivalent": [
+            0.0,
+            0.000587129108193467
+          ],
+          "new_scalar_vacuum_to_total_prompt_ratio": 127.91256253566115
+        },
+        {
+          "steps": 64,
+          "incoming_momentum_bins": 56,
+          "new_scalar_p_over_TF_rms_by_epoch": [
+            0.0,
+            7.3785152355041
+          ],
+          "first_order_mixture_scalar_rms_p_over_TF": 7.373451879856284,
+          "first_order_pair_fraction_of_scalar_squared_momentum": 0.9935912447487952,
+          "new_scalar_recoil_shape": null,
+          "shape_count_omega": [
+            2.369879726369906e-12,
+            0.12007083059822783
+          ],
+          "maximum_forward_loss_over_H": [
+            0.0,
+            0.0007940592465141094
+          ],
+          "epoch_order": [
+            "pre",
+            "post"
+          ],
+          "new_scalar_omega": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              3.0255738745873225e-10,
+              9.47139842640027e-10
+            ]
+          ],
+          "fraction_of_final_stable_equivalent": [
+            0.0,
+            0.0005860056333363637
+          ],
+          "new_scalar_vacuum_to_total_prompt_ratio": 127.66782385289167
+        }
+      ],
+      "max_relative_forward_change": 0.0019170815338407365
+    },
+    {
+      "T_R_GeV": 0.0062374894765339275,
+      "Tmax_GeV": 0.03118744738266964,
+      "modes": [
+        {
+          "steps": 32,
+          "incoming_momentum_bins": 42,
+          "new_scalar_p_over_TF_rms_by_epoch": [
+            2.8660197861011207,
+            7.110458344052759
+          ],
+          "first_order_mixture_scalar_rms_p_over_TF": 2.0477344919646465,
+          "first_order_pair_fraction_of_scalar_squared_momentum": 0.929167034791568,
+          "new_scalar_recoil_shape": null,
+          "shape_count_omega": [
+            2.2365051255989762e-09,
+            0.1201187857699174
+          ],
+          "maximum_forward_loss_over_H": [
+            0.0015627099216335154,
+            0.0005529986223416012
+          ],
+          "epoch_order": [
+            "pre",
+            "post"
+          ],
+          "new_scalar_omega": [
+            [
+              3.577757260387588e-10,
+              2.025790345774187e-09
+            ],
+            [
+              1.5363624203340632e-10,
+              3.055644765409092e-10
+            ]
+          ],
+          "fraction_of_final_stable_equivalent": [
+            0.0006926781409336688,
+            0.0002974502146638262
+          ],
+          "new_scalar_vacuum_to_total_prompt_ratio": 0.22866568120884578
+        },
+        {
+          "steps": 64,
+          "incoming_momentum_bins": 56,
+          "new_scalar_p_over_TF_rms_by_epoch": [
+            2.8692700920496224,
+            7.114811361245202
+          ],
+          "first_order_mixture_scalar_rms_p_over_TF": 2.0476362858795,
+          "first_order_pair_fraction_of_scalar_squared_momentum": 0.9291371281922458,
+          "new_scalar_recoil_shape": null,
+          "shape_count_omega": [
+            2.236505134894513e-09,
+            0.12011878344904131
+          ],
+          "maximum_forward_loss_over_H": [
+            0.0015634779049471961,
+            0.0005567508435517381
+          ],
+          "epoch_order": [
+            "pre",
+            "post"
+          ],
+          "new_scalar_omega": [
+            [
+              3.572019299341134e-10,
+              2.0256234168442346e-09
+            ],
+            [
+              1.5331380273779847e-10,
+              3.055597114703195e-10
+            ]
+          ],
+          "fraction_of_final_stable_equivalent": [
+            0.0006915672460085201,
+            0.0002968259559908583
+          ],
+          "new_scalar_vacuum_to_total_prompt_ratio": 0.22826494994655616
+        }
+      ],
+      "max_relative_forward_change": 0.002103132854641254
+    }
+  ],
+  "scope": "First-order spontaneous pair conversion only, evaluated on the evolving unmodified prompt frozen source. No inverse, stimulation, dark rescattering, depletion, external plasma, or heating branch. Not a coupled outcome or a lower or upper bound on the complete model."
+}

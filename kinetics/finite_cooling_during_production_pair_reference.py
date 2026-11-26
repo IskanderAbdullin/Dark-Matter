@@ -91,7 +91,7 @@ def run(eos,reference,collect_shape=False):
                         maximum_forward_loss_over_H=D,epoch_order=['pre','post'],new_scalar_omega=F*mp*Q,
                         fraction_of_final_stable_equivalent=Q[:,0]/yt[1,0].sum()))
         for mode in modes:
-            assert np.max(np.abs(mode["shape_count_omega"]/np.array([row["scalar_prompt_fixed_count_Omega_h2"],.120])-1.))<6e-5
+            assert np.max(np.abs(mode["shape_count_omega"]/np.array([row["scalar_prompt_fixed_count_Omega_h2"],row.get("expected_gross_stable_Omega_h2",.120)])-1.))<6e-5
             mode["new_scalar_vacuum_to_total_prompt_ratio"]=float(mode["new_scalar_omega"][:,0].sum()/mode["shape_count_omega"][0])
         a,b=[v["new_scalar_omega"][:,0] for v in modes]
         j=b>0.

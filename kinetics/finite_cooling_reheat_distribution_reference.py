@@ -208,7 +208,7 @@ def run(eos, reference):
         rr=np.sqrt(total[:,1].sum(axis=-1)/counts)
         assert np.max(abs(rr/row["combined_rms_momentum_over_1MeV"]-1.))<6e-5
         calc=counts*np.array([mp,m])*F
-        ref_omega=[row["scalar_prompt_fixed_count_Omega_h2"],ref["target_stable_Omega_h2"]]
+        ref_omega=[row["scalar_prompt_fixed_count_Omega_h2"],row.get("expected_gross_stable_Omega_h2",ref["target_stable_Omega_h2"])]
         assert np.max(abs(calc/ref_omega-1.))<6e-5
         pfs=high[1,:,0].sum(axis=-1)/counts
         assert np.max(abs(pfs-row["pre_fraction_of_scalar_and_stable_number"]))<2e-5

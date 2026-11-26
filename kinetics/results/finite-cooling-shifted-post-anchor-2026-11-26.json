@@ -1,0 +1,176 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "archive_sha256": "1e598a3ecf218ab22676d07a57a1a63cc1372158d7e062ce4e33a09c1bf54c57",
+  "p_wave_CoM_sigma_v_over_p_cm2_GeV_minus4": 1.3130827280462275e-08,
+  "columns_for_instantaneous_rows": [
+    "T_GeV",
+    "Nchi_sigma_v_over_2H",
+    "pwave_proxy",
+    "exact_over_pwave"
+  ],
+  "scope": "Forward reaction from unmodified frozen stable counts on prescribed post-1MeV radiation clock. Equal particle and antiparticle density, vacuum spontaneous amplitudes, no Bose enhancement, inverse, statistical blocking or depletion/repopulation. Scalar count proxy is first-order optical-depth multiplication, not a prediction or a general lower/upper bound. Excludes all earlier kinetics.",
+  "cases": [
+    {
+      "T_R_GeV": 0.009020180962883081,
+      "Tmax_GeV": 0.009020180962883081,
+      "controls": [
+        {
+          "quadrature": [
+            "center",
+            7,
+            3
+          ],
+          "instantaneous_rows": [
+            [
+              0.001,
+              1.3592743292604227e-05,
+              1.4861394612446212e-05,
+              0.9146344368798668
+            ],
+            [
+              0.0003,
+              3.322455311205351e-07,
+              3.3484742942150657e-07,
+              0.9922296004915834
+            ],
+            [
+              0.0001,
+              6.245659684747584e-09,
+              6.249249137378239e-09,
+              0.9994256185740482
+            ],
+            [
+              3e-05,
+              1.3672793525494638e-10,
+              1.3673412892482986e-10,
+              0.9999547028241436
+            ]
+          ],
+          "integrated_vacuum_forward_log_expansion_optical_depth": 4.674108678884523e-06,
+          "integrated_p_wave_optical_depth": 4.936465735100175e-06,
+          "perturbative_unblocked_scalar_Omega_h2_equivalent": 2.413263585703433e-12,
+          "equivalent_new_to_prompt_scalar_rest_count_ratio": 1.018304831821164
+        },
+        {
+          "quadrature": [
+            "endpoints",
+            9,
+            4
+          ],
+          "instantaneous_rows": [
+            [
+              0.001,
+              1.3551792553540565e-05,
+              1.4861394612446212e-05,
+              0.9118789256959186
+            ],
+            [
+              0.0003,
+              3.3213837591305037e-07,
+              3.3484742942150657e-07,
+              0.9919095884560427
+            ],
+            [
+              0.0001,
+              6.245508161840111e-09,
+              6.249249137378239e-09,
+              0.9994013719959167
+            ],
+            [
+              3e-05,
+              1.3672767331879042e-10,
+              1.3673412892482986e-10,
+              0.9999527871637446
+            ]
+          ],
+          "integrated_vacuum_forward_log_expansion_optical_depth": 4.665011503791239e-06,
+          "integrated_p_wave_optical_depth": 4.936465735113335e-06,
+          "perturbative_unblocked_scalar_Omega_h2_equivalent": 2.4085666727958304e-12,
+          "equivalent_new_to_prompt_scalar_rest_count_ratio": 1.016322914414052
+        }
+      ],
+      "optical_depth_relative_control_change": 0.0019500863150907488
+    },
+    {
+      "T_R_GeV": 0.0062374894765339275,
+      "Tmax_GeV": 0.03118744738266964,
+      "controls": [
+        {
+          "quadrature": [
+            "center",
+            7,
+            3
+          ],
+          "instantaneous_rows": [
+            [
+              0.001,
+              7.609271354342542e-06,
+              8.115031382307483e-06,
+              0.937676146383413
+            ],
+            [
+              0.0003,
+              1.818250336179136e-07,
+              1.828426920152444e-07,
+              0.9944342407885465
+            ],
+            [
+              0.0001,
+              3.4109872060061977e-09,
+              3.4123885535756565e-09,
+              0.999589335285986
+            ],
+            [
+              3e-05,
+              7.466094841121097e-11,
+              7.466336613713194e-11,
+              0.9999676183107452
+            ]
+          ],
+          "integrated_vacuum_forward_log_expansion_optical_depth": 2.5915408416287766e-06,
+          "integrated_p_wave_optical_depth": 2.695546104702323e-06,
+          "perturbative_unblocked_scalar_Omega_h2_equivalent": 1.3385587630784658e-12,
+          "equivalent_new_to_prompt_scalar_rest_count_ratio": 0.0005985046638076058
+        },
+        {
+          "quadrature": [
+            "endpoints",
+            9,
+            4
+          ],
+          "instantaneous_rows": [
+            [
+              0.001,
+              7.5909209330158955e-06,
+              8.115031382307483e-06,
+              0.9354148586000219
+            ],
+            [
+              0.0003,
+              1.8178012156362045e-07,
+              1.828426920152444e-07,
+              0.9941886085797984
+            ],
+            [
+              0.0001,
+              3.410924122571221e-09,
+              3.4123885535756565e-09,
+              0.9995708486939738
+            ],
+            [
+              3e-05,
+              7.466083941375383e-11,
+              7.466336613713194e-11,
+              0.9999661584588424
+            ]
+          ],
+          "integrated_vacuum_forward_log_expansion_optical_depth": 2.5875451871261223e-06,
+          "integrated_p_wave_optical_depth": 2.695546104709509e-06,
+          "perturbative_unblocked_scalar_Omega_h2_equivalent": 1.3364949644831095e-12,
+          "equivalent_new_to_prompt_scalar_rest_count_ratio": 0.0005975818854294347
+        }
+      ],
+      "optical_depth_relative_control_change": 0.0015441873334363088
+    }
+  ]
+}
