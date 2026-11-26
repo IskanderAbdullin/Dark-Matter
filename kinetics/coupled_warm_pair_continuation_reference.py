@@ -15,7 +15,7 @@ from scalar_pair_expanding_continuation_reference import MASS,e_total,moments,ra
 from joint_nonlinear_prompt_return_moments_reference import P
 
 
-def run(table,s,n,bmax,pair=True):
+def run(table,s,n,bmax,pair=True,checkpoint=None):
     q=np.array(s["lab_momentum_edges_GeV"])
     t0=s["T_visible_GeV"]
     ar=s["scale_factor"]
@@ -84,6 +84,11 @@ def run(table,s,n,bmax,pair=True):
     rel_n=(nf+exn).sum()/n0.sum()-1.
     exchange=(pair_count+exn).sum()/n0.sum()
     assert max(abs(rel_e),abs(rel_n),abs(exchange),max(r["count_defect"] for r in rows))<5e-9
+    if checkpoint is not None:
+        checkpoint.update(T_initial_GeV=s["T_initial_GeV"],T_visible_GeV=clock.state(c)[0],scale_factor=ar*c,
+                lab_momentum_edges_GeV=(q/c).tolist(),entropy_variable_scalar=np.asarray(th[0]).tolist(),
+                entropy_variable_fermion=np.asarray(th[1]).tolist(),represented_species_count_a3=(nf*ar**3).tolist(),
+                steps=n)
     return dict(steps=n,initial_temperature_GeV=t0,with_pair=pair,acceptances=accepted,rejections=rejected,
             maximum_stiff_residual=mx,energy_ledger=rel_e,count_ledger=rel_n,collision_number_ledger=exchange,
             max_atomic_pair_error=max(errors,default=0.),maximum_midpoint_inverse_over_forward=peak,
@@ -97,7 +102,12 @@ if __name__=="__main__":
     p.add_argument("--stop",type=float,default=1.2)
     p.add_argument("--steps",type=int,nargs="+",default=[4,8])
     p.add_argument("--no-pair",action="store_true")
+    p.add_argument("--save-snapshots")
     a=p.parse_args()
     assert a.stop>1 and min(a.steps)>0
     s=json.loads(Path(a.shape).read_text())["snapshots"][-1]
-    print(json.dumps(dict(rows=[run(a.table,s,n,a.stop,not a.no_pair) for n in a.steps]),indent=2,allow_nan=False))
+    ck=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
+    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k) for n,k in zip(a.steps,ck)]
+    if a.save_snapshots:
+        Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=ck),indent=2,allow_nan=False)+"\n")
+    print(json.dumps(dict(rows=rows),indent=2,allow_nan=False))
