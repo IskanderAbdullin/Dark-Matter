@@ -75,7 +75,9 @@ reproducible controls below are not observational constraints.
    resolves a second negative cold contribution, much less
    sensitive to the same scalar support crop. A [below-pole light elastic fold](INDEPENDENT-WARM-COLD-LIGHT-BELOW-POLE-ELASTIC-2026-11-26.md)
    finds a separate local sink of comparable size while omitting
-   the pole and the above-cut region. The [native prompt projection comparison](INDEPENDENT-WARM-COLD-PROMPT-SUPPORT-GRID-2026-11-26.md)
+   the pole and the above-cut region. A [whole-shell elastic projection audit](INDEPENDENT-WARM-COLD-ELASTIC-PROJECTION-AUDIT-2026-11-26.md)
+   resolves the remaining first-cell signed-rate sensitivity
+   and compares the native and independent quadratures. The [native prompt projection comparison](INDEPENDENT-WARM-COLD-PROMPT-SUPPORT-GRID-2026-11-26.md)
    quantifies the disconnected q16 cold shells, and independently
    reproduces the q32 first-cell decay rate. The [matched open prompt boundary check](INDEPENDENT-WARM-POST-CHECKPOINT-OPEN-PROMPT-FLUX-2026-11-26.md)
    finds opposite scales of frozen spill on the two supports;
@@ -91,7 +93,9 @@ reproducible controls below are not observational constraints.
    repeats the test on a slightly longer matched expansion with
    selected elastic and signed pair reactions and raw checkpoints. A [four-level q32 time ladder](INDEPENDENT-WARM-Q32-MATCHED-TIME-LADDER-2026-11-26.md)
    observes near-first-order temporal convergence through
-   sixteen blocks at the same physical endpoint.
+   sixteen blocks at the same physical endpoint. A [moment extrapolation diagnostic](INDEPENDENT-WARM-Q32-TIME-EXTRAPOLATION-2026-11-26.md)
+   cancels much of the leading difference while preserving
+   reconstruction admissibility on this ladder only.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)

@@ -41,3 +41,25 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_prompt_reentry_exp
 The [radiation table](https://member.ipmu.jp/satoshi.shirai/DM2020/eos2020.dat)
 digest is retained in the
 [diagnostics](results/warm-prompt-reentry-expanding-2026-11-26.json.gz).
+
+## Longer prompt-only control
+
+Run the same matched four/eight-block setup to (b=1.01)
+((T=10.287946) MeV). The eight-block q64 population
+beyond the q32 edge is (1.0984	imes10^{-11}) scalar and
+(2.1493	imes10^{-11}) light, in species number fractions.
+The common-shell support differences at fine time resolution
+are (4.50	imes10^{-7}) and (7.41	imes10^{-8}), smaller
+than the step refinement differences (1.02	imes10^{-4})
+and (9.39	imes10^{-5}). Each q32 block accepts on its
+first nonlinear initialization, whereas the fine q64 run
+records seven rejected initializations with all eight blocks
+ultimately accepted. This measures solver effort for these
+controls, not a verified resource-limit failure. Comoving
+counts and integrated expansion work still close.
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_prompt_reentry_expanding_reference.py EOS.dat --b 1.01
+~~~
+
+[Longer diagnostics](results/warm-prompt-reentry-expanding-b101-2026-11-26.json.gz).

@@ -1,0 +1,401 @@
+{
+  "scope": "Selected below-pole elastic operator on frozen warm states only. The continuum tagged integral uses the archived vacuum exterior assumption; the native quadrature projects conservative redistributions on retained support and imposes its existing energy and thermal panel conventions. Agreement in the first cold cell does not certify global grid convergence.",
+  "cases": [
+    {
+      "q": 16,
+      "j": 0,
+      "T_GeV": 0.010390509685374945,
+      "snapshot_sha256": "427c5d3bbdb9b4f9588f486d52125b93716fc3d8b42681a81ccea076533d704a",
+      "independent": [
+        {
+          "radial": 3,
+          "kernel": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008710391315744381,
+            0.0009085655290650117
+          ],
+          "net_per_Hubble": -3.7526397490573625e-05
+        },
+        {
+          "radial": 6,
+          "kernel": [
+            9,
+            8,
+            9,
+            8
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008710389555167578,
+            0.000908565719499664
+          ],
+          "net_per_Hubble": -3.75267639829062e-05
+        }
+      ],
+      "native": [
+        {
+          "orders": [
+            3,
+            2,
+            2,
+            8
+          ],
+          "panels": 5091,
+          "first_light_average_per_Hubble": -3.718089370214017e-05,
+          "conserved_number_and_energy_residuals": [
+            1.223301563975938e-16,
+            2.870934094067027e-17,
+            8.818442904348778e-17
+          ]
+        },
+        {
+          "orders": [
+            4,
+            3,
+            3,
+            10
+          ],
+          "panels": 10196,
+          "first_light_average_per_Hubble": -3.7502926030747256e-05,
+          "conserved_number_and_energy_residuals": [
+            2.2480888061815777e-16,
+            5.742897294487892e-16,
+            3.511947599048091e-16
+          ]
+        },
+        {
+          "orders": [
+            6,
+            4,
+            4,
+            12
+          ],
+          "panels": 20368,
+          "first_light_average_per_Hubble": -3.789974708708814e-05,
+          "conserved_number_and_energy_residuals": [
+            2.817781797102879e-16,
+            4.0034883202134055e-16,
+            7.880808030285329e-16
+          ]
+        },
+        {
+          "orders": [
+            9,
+            6,
+            6,
+            16
+          ],
+          "panels": 45718,
+          "first_light_average_per_Hubble": -3.7592218242841756e-05,
+          "conserved_number_and_energy_residuals": [
+            1.0256236268110052e-15,
+            5.417890684119319e-16,
+            9.628276969222853e-16
+          ]
+        }
+      ],
+      "native_fine_over_independent_fine": 1.0017442020837546
+    },
+    {
+      "q": 16,
+      "j": 3,
+      "T_GeV": 0.010237794575480207,
+      "snapshot_sha256": "17664e59f4bd01a285699c4cd4a2b77d7ae8486228d5f2b51ec47b3b6788e4dd",
+      "independent": [
+        {
+          "radial": 3,
+          "kernel": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008557173255659558,
+            0.0008894455934352615
+          ],
+          "net_per_Hubble": -3.372826786930574e-05
+        },
+        {
+          "radial": 6,
+          "kernel": [
+            9,
+            8,
+            9,
+            8
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008557171631422817,
+            0.000889445761245673
+          ],
+          "net_per_Hubble": -3.372859810339137e-05
+        }
+      ],
+      "native": [
+        {
+          "orders": [
+            3,
+            2,
+            2,
+            8
+          ],
+          "panels": 5089,
+          "first_light_average_per_Hubble": -3.408534513507417e-05,
+          "conserved_number_and_energy_residuals": [
+            2.0761082092626375e-16,
+            3.4354054890180735e-17,
+            1.6401569642378e-16
+          ]
+        },
+        {
+          "orders": [
+            4,
+            3,
+            3,
+            10
+          ],
+          "panels": 10196,
+          "first_light_average_per_Hubble": -3.366408925484179e-05,
+          "conserved_number_and_energy_residuals": [
+            1.1859303045054673e-16,
+            3.956498072792282e-17,
+            8.185371542296047e-17
+          ]
+        },
+        {
+          "orders": [
+            6,
+            4,
+            4,
+            12
+          ],
+          "panels": 20364,
+          "first_light_average_per_Hubble": -3.357816867778713e-05,
+          "conserved_number_and_energy_residuals": [
+            9.996356935999271e-17,
+            9.146031075522534e-17,
+            1.6329616385503637e-16
+          ]
+        },
+        {
+          "orders": [
+            9,
+            6,
+            6,
+            16
+          ],
+          "panels": 45700,
+          "first_light_average_per_Hubble": -3.3581084913945134e-05,
+          "conserved_number_and_energy_residuals": [
+            7.5158872617392845e-16,
+            5.743207114425488e-16,
+            5.71343673563062e-16
+          ]
+        }
+      ],
+      "native_fine_over_independent_fine": 0.9956264654405721
+    },
+    {
+      "q": 32,
+      "j": 0,
+      "T_GeV": 0.010390509685374834,
+      "snapshot_sha256": "b494c58f1d2433b5aeda0d4f0320792a5897898a02970715802a6cd18b0ccf53",
+      "independent": [
+        {
+          "radial": 3,
+          "kernel": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008695848171432873,
+            0.0008810094575392178
+          ],
+          "net_per_Hubble": -1.1424640395930408e-05
+        },
+        {
+          "radial": 6,
+          "kernel": [
+            9,
+            8,
+            9,
+            8
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008695848370508724,
+            0.0008810095934258711
+          ],
+          "net_per_Hubble": -1.1424756374998771e-05
+        }
+      ],
+      "native": [
+        {
+          "orders": [
+            3,
+            2,
+            2,
+            8
+          ],
+          "panels": 6293,
+          "first_light_average_per_Hubble": -1.0395387606597409e-05,
+          "conserved_number_and_energy_residuals": [
+            3.3247905576378765e-16,
+            3.692264974325842e-16,
+            1.44035413340598e-16
+          ]
+        },
+        {
+          "orders": [
+            4,
+            3,
+            3,
+            10
+          ],
+          "panels": 12585,
+          "first_light_average_per_Hubble": -1.2145393184199278e-05,
+          "conserved_number_and_energy_residuals": [
+            7.883032107221681e-16,
+            2.252666761670572e-16,
+            4.967384232290445e-16
+          ]
+        },
+        {
+          "orders": [
+            6,
+            4,
+            4,
+            12
+          ],
+          "panels": 25147,
+          "first_light_average_per_Hubble": -1.2105549346021506e-05,
+          "conserved_number_and_energy_residuals": [
+            3.5579253473811494e-16,
+            9.752572235410942e-16,
+            2.1223562128204373e-16
+          ]
+        },
+        {
+          "orders": [
+            9,
+            6,
+            6,
+            16
+          ],
+          "panels": 56485,
+          "first_light_average_per_Hubble": -1.1518413121952702e-05,
+          "conserved_number_and_energy_residuals": [
+            4.0666576379187844e-16,
+            3.000690258036957e-16,
+            2.828084841628141e-16
+          ]
+        }
+      ],
+      "native_fine_over_independent_fine": 1.0081977018922594
+    },
+    {
+      "q": 32,
+      "j": 3,
+      "T_GeV": 0.010237794575480099,
+      "snapshot_sha256": "313add9c043163a4f264156aa521e11810d0265766b61f078f5df22c1036fa66",
+      "independent": [
+        {
+          "radial": 3,
+          "kernel": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008545174657794178,
+            0.0008658329677837251
+          ],
+          "net_per_Hubble": -1.1315502004307287e-05
+        },
+        {
+          "radial": 6,
+          "kernel": [
+            9,
+            8,
+            9,
+            8
+          ],
+          "gain_loss_per_Hubble": [
+            0.0008545174716727239,
+            0.0008658330391182875
+          ],
+          "net_per_Hubble": -1.1315567445563542e-05
+        }
+      ],
+      "native": [
+        {
+          "orders": [
+            3,
+            2,
+            2,
+            8
+          ],
+          "panels": 6293,
+          "first_light_average_per_Hubble": -1.0155277697403999e-05,
+          "conserved_number_and_energy_residuals": [
+            3.678334154284294e-16,
+            2.223909548336196e-16,
+            4.406744282584089e-16
+          ]
+        },
+        {
+          "orders": [
+            4,
+            3,
+            3,
+            10
+          ],
+          "panels": 12582,
+          "first_light_average_per_Hubble": -1.1981285962512556e-05,
+          "conserved_number_and_energy_residuals": [
+            1.0088966728301746e-16,
+            1.5064481735995255e-16,
+            7.24081201309456e-17
+          ]
+        },
+        {
+          "orders": [
+            6,
+            4,
+            4,
+            12
+          ],
+          "panels": 25147,
+          "first_light_average_per_Hubble": -1.2033871755241976e-05,
+          "conserved_number_and_energy_residuals": [
+            1.235050200195358e-15,
+            7.534896593738888e-17,
+            5.776683069899773e-16
+          ]
+        },
+        {
+          "orders": [
+            9,
+            6,
+            6,
+            16
+          ],
+          "panels": 56479,
+          "first_light_average_per_Hubble": -1.1300367547536716e-05,
+          "conserved_number_and_energy_residuals": [
+            1.2604775265161303e-16,
+            3.011962482309516e-16,
+            2.1650457562751692e-16
+          ]
+        }
+      ],
+      "native_fine_over_independent_fine": 0.9986567268411461
+    }
+  ]
+}

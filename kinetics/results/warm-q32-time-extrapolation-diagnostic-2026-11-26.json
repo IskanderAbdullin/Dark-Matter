@@ -1,0 +1,72 @@
+{
+  "scope": "Same finite q32 mesh and short clock. Richardson combinations are diagnostics, not accepted steps or a rigorous error bound. Receipt counts are algebraic totals only, not extrapolated exterior phase distributions.",
+  "metric_order": [
+    "scalar_number",
+    "light_number",
+    "scalar_kinetic_energy",
+    "light_kinetic_energy"
+  ],
+  "raw_successive_L1": [
+    [
+      5.211340004972824e-05,
+      3.075819712904908e-05,
+      1.54528727956523e-05,
+      1.114291425028348e-05
+    ],
+    [
+      2.656571127942278e-05,
+      1.5490408821845056e-05,
+      7.800150914927412e-06,
+      5.657724830671599e-06
+    ],
+    [
+      1.3476734079381104e-05,
+      7.789009176285643e-06,
+      3.930394040730747e-06,
+      2.861314110423723e-06
+    ]
+  ],
+  "extrapolated_successive_L1": [
+    [
+      1.957804299407763e-06,
+      7.022928867991032e-07,
+      3.2734633243330766e-07,
+      2.3764697341826311e-07
+    ],
+    [
+      7.283042756556206e-07,
+      2.7706452193614765e-07,
+      1.251320730677745e-07,
+      8.571448000107268e-08
+    ]
+  ],
+  "latest_defect_reduction": [
+    18.504263300183606,
+    28.112618396088617,
+    31.409965042311352,
+    33.38192228883515
+  ],
+  "tests": [
+    {
+      "shell_reconstruction_error": [
+        3.4861002973229915e-14,
+        1.4432899320127035e-14
+      ],
+      "combined_number_residual": 1.7208456881689926e-14
+    },
+    {
+      "shell_reconstruction_error": [
+        3.419486915845482e-14,
+        1.532107773982716e-14
+      ],
+      "combined_number_residual": 4.218847493575595e-14
+    },
+    {
+      "shell_reconstruction_error": [
+        3.3861802251067274e-14,
+        1.354472090042691e-14
+      ],
+      "combined_number_residual": 8.404388296412435e-14
+    }
+  ]
+}
