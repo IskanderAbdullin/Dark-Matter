@@ -1,0 +1,119 @@
+{
+  "cases": [
+    {
+      "anchor_T": 0.0012061354624147524,
+      "finite_incoming_pmax_GeV": 0.017465633238872572,
+      "source_shape_sha256": "9973aef78dfae74650e23d2a8f5ecbffa7a6be003926dbb1ac0394a9f45c6baa",
+      "radial_lower_direct_upper_by_kinetic_panels_4_16_64": [
+        [
+          7.461788430561272e-11,
+          8.363955956321701e-11,
+          9.409212672384379e-11
+        ],
+        [
+          8.125200725101639e-11,
+          8.363955956321701e-11,
+          8.611700735214143e-11
+        ],
+        [
+          8.303427278633957e-11,
+          8.363955956321701e-11,
+          8.425046664911581e-11
+        ]
+      ],
+      "uniform_peak_based_dose": 0.0013985940808339482,
+      "radial_shape_dose_upper": 1.3021544069575941e-05,
+      "radial_to_uniform_dose": 0.00931045272393224,
+      "initial_resolved_Bose_peak": 0.0007056198823265353,
+      "global_Bose_ceiling": 0.0007186599793223003,
+      "uniform_comparison_closes": true
+    },
+    {
+      "anchor_T": 0.0010000000000000002,
+      "finite_incoming_pmax_GeV": 0.014454204069042964,
+      "source_shape_sha256": "eb4588e0662e998f430d914d9dc9ea8c2e229b668fef925845779b1d1e488992",
+      "radial_lower_direct_upper_by_kinetic_panels_4_16_64": [
+        [
+          4.8737179413640723e-11,
+          5.4629604255329575e-11,
+          6.145306488173006e-11
+        ],
+        [
+          5.307029681198348e-11,
+          5.4629604255329575e-11,
+          5.6247422496866486e-11
+        ],
+        [
+          5.423430720152859e-11,
+          5.4629604255329575e-11,
+          5.502855950677145e-11
+        ]
+      ],
+      "uniform_peak_based_dose": 0.0004209527354902859,
+      "radial_shape_dose_upper": 4.725646469083681e-06,
+      "radial_to_uniform_dose": 0.011226073786121607,
+      "initial_resolved_Bose_peak": 0.0007107480483239584,
+      "global_Bose_ceiling": 0.0007154804370477219,
+      "uniform_comparison_closes": true
+    },
+    {
+      "anchor_T": 0.00041376297480725746,
+      "finite_incoming_pmax_GeV": 0.005821877746290857,
+      "source_shape_sha256": "391e4adf701936e236c4f37c7586260ea9005a296d7c5926a2bf5da0bb0d58ee",
+      "radial_lower_direct_upper_by_kinetic_panels_4_16_64": [
+        [
+          8.242812211448849e-12,
+          9.244445629239634e-12,
+          1.0400999846313776e-11
+        ],
+        [
+          8.979572691413552e-12,
+          9.244445629239634e-12,
+          9.519062923881016e-12
+        ],
+        [
+          9.177314431415355e-12,
+          9.244445629239634e-12,
+          9.31218609477255e-12
+        ]
+      ],
+      "uniform_peak_based_dose": 8.733278848421203e-06,
+      "radial_shape_dose_upper": 8.098469137241403e-08,
+      "radial_to_uniform_dose": 0.009273114116475783,
+      "initial_resolved_Bose_peak": 0.000705619873381717,
+      "global_Bose_ceiling": 0.0007057009724087404,
+      "uniform_comparison_closes": true
+    },
+    {
+      "anchor_T": 0.00041376297480725746,
+      "finite_incoming_pmax_GeV": 0.03493126647774513,
+      "source_shape_sha256": "678d5f954059ebc40187dc25998d990fe934ab791480ceb13fc833dec08bc0b6",
+      "radial_lower_direct_upper_by_kinetic_panels_4_16_64": [
+        [
+          8.242812261730605e-12,
+          9.244445683287823e-12,
+          1.0400999901025324e-11
+        ],
+        [
+          8.979572744806307e-12,
+          9.244445683287823e-12,
+          9.519062978382882e-12
+        ],
+        [
+          9.177314485318572e-12,
+          9.244445683287823e-12,
+          9.31218614895307e-12
+        ]
+      ],
+      "uniform_peak_based_dose": 1.8301243237118698,
+      "radial_shape_dose_upper": 1.3094870199732529e-05,
+      "radial_to_uniform_dose": 7.155180678203014e-06,
+      "initial_resolved_Bose_peak": 0.000705619873381717,
+      "global_Bose_ceiling": 0.0007187334019438385,
+      "uniform_comparison_closes": false
+    }
+  ],
+  "photon_floor_ratio": 0.98,
+  "spin_and_label_multiplier": 32,
+  "scope": "Same loss-only isolated ballistic comparison as the uniform peak bound; no inverse/redistribution/new parents and no inherited exterior scalar occupation. All produced scalar modes are allowed. The radial integral uses per-mode stable occupation rather than a number-density measure."
+}
