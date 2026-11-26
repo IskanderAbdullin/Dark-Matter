@@ -1,0 +1,249 @@
+{
+  "rows": [
+    {
+      "pole_cut_fraction": 0.82,
+      "orders": [
+        4,
+        3,
+        2,
+        10
+      ],
+      "bins": 15,
+      "null_error": 5.598320003108148e-17,
+      "thermal_contrast": {
+        "resonant_over_H": 103399837.31806833,
+        "elastic_over_H": 3.3670208104560055,
+        "weight_below_H": 2.3564985641288324e-23
+      },
+      "scalar_local": {
+        "0.005": {
+          "resonant_over_H": -2.3389923670361783e-15,
+          "elastic_over_H": 104.92504924836878,
+          "weight_below_H": 4.852997669739788e-24
+        },
+        "0.05": {
+          "resonant_over_H": -8.981064823802836e-13,
+          "elastic_over_H": 59.78533075942491,
+          "weight_below_H": 6.97367017411878e-21
+        },
+        "0.2": {
+          "resonant_over_H": 199288299.82809427,
+          "elastic_over_H": 55.80944127061367,
+          "weight_below_H": 7.668211735329385e-26
+        },
+        "1.0": {
+          "resonant_over_H": 420549537.82357836,
+          "elastic_over_H": 16.072445750843293,
+          "weight_below_H": 2.9575552078938632e-24
+        },
+        "3.0": {
+          "resonant_over_H": 146945498.29682174,
+          "elastic_over_H": 4.333761576379709,
+          "weight_below_H": 6.2794354566707884e-24
+        }
+      },
+      "cold_linear_split_time_test": {
+        "resonant_only_initial_overlap": 1.0,
+        "exact_combined_overlap_at_point_02_H_time": 0.12336508355010123,
+        "splitting_absolute_errors": [
+          1.5769195970402718e-05,
+          8.417818840975517e-06,
+          5.558591607993444e-06,
+          4.265277455019276e-06
+        ],
+        "splitting_overlaps": [
+          0.12336600488809647,
+          0.12336550658817598,
+          0.12336528037804556,
+          0.12336517255434556
+        ]
+      },
+      "mesh_step": 5,
+      "closed_projected_eigenvalues_above_H": 57
+    },
+    {
+      "pole_cut_fraction": 0.82,
+      "orders": [
+        6,
+        5,
+        3,
+        16
+      ],
+      "bins": 15,
+      "null_error": 8.54691946983112e-17,
+      "thermal_contrast": {
+        "resonant_over_H": 103399837.31806833,
+        "elastic_over_H": 3.6762290359712604,
+        "weight_below_H": 3.7540488919198886e-23
+      },
+      "scalar_local": {
+        "0.005": {
+          "resonant_over_H": -2.3389923670361783e-15,
+          "elastic_over_H": 104.96195505560934,
+          "weight_below_H": 2.8151464058070097e-24
+        },
+        "0.05": {
+          "resonant_over_H": -8.981064823802836e-13,
+          "elastic_over_H": 59.76791972067465,
+          "weight_below_H": 4.790906997183147e-19
+        },
+        "0.2": {
+          "resonant_over_H": 199288299.82809427,
+          "elastic_over_H": 56.6467164490788,
+          "weight_below_H": 1.2247628293935015e-25
+        },
+        "1.0": {
+          "resonant_over_H": 420549537.82357836,
+          "elastic_over_H": 17.348765077992077,
+          "weight_below_H": 4.7204760324157234e-24
+        },
+        "3.0": {
+          "resonant_over_H": 146945498.29682174,
+          "elastic_over_H": 4.761095042150138,
+          "weight_below_H": 1.0033676170553906e-23
+        }
+      },
+      "cold_linear_split_time_test": {
+        "resonant_only_initial_overlap": 1.0,
+        "exact_combined_overlap_at_point_02_H_time": 0.12289100231450234,
+        "splitting_absolute_errors": [
+          1.5715040248768258e-05,
+          8.395304728865071e-06,
+          5.541955339960831e-06,
+          4.250531094698275e-06
+        ],
+        "splitting_overlaps": [
+          0.12289191885007125,
+          0.12289142373631416,
+          0.12289119858619148,
+          0.12289109117761178
+        ]
+      },
+      "mesh_step": 5,
+      "closed_projected_eigenvalues_above_H": 57
+    },
+    {
+      "pole_cut_fraction": 0.72,
+      "orders": [
+        6,
+        5,
+        3,
+        16
+      ],
+      "bins": 15,
+      "null_error": 1.1250120985648787e-16,
+      "thermal_contrast": {
+        "resonant_over_H": 103399837.31806833,
+        "elastic_over_H": 1.9455613127965121,
+        "weight_below_H": 2.6427451110732846e-23
+      },
+      "scalar_local": {
+        "0.005": {
+          "resonant_over_H": -2.3389923670361783e-15,
+          "elastic_over_H": 104.9833453040254,
+          "weight_below_H": 1.0431745192175277e-25
+        },
+        "0.05": {
+          "resonant_over_H": -8.981064823802836e-13,
+          "elastic_over_H": 59.80692375072464,
+          "weight_below_H": 1.6929529355320914e-19
+        },
+        "0.2": {
+          "resonant_over_H": 199288299.82809427,
+          "elastic_over_H": 46.96669192959027,
+          "weight_below_H": 8.624266359132481e-26
+        },
+        "1.0": {
+          "resonant_over_H": 420549537.82357836,
+          "elastic_over_H": 9.979507536034864,
+          "weight_below_H": 3.32814143176385e-24
+        },
+        "3.0": {
+          "resonant_over_H": 146945498.29682174,
+          "elastic_over_H": 2.4551143415975627,
+          "weight_below_H": 7.076523923862728e-24
+        }
+      },
+      "cold_linear_split_time_test": {
+        "resonant_only_initial_overlap": 1.0,
+        "exact_combined_overlap_at_point_02_H_time": 0.12283434216853444,
+        "splitting_absolute_errors": [
+          1.5914525711388698e-05,
+          8.4378026114269e-06,
+          5.550453665894681e-06,
+          4.252774332990496e-06
+        ],
+        "splitting_overlaps": [
+          0.12283526965564541,
+          0.12283476618925199,
+          0.12283453910777137,
+          0.12283443121048898
+        ]
+      },
+      "mesh_step": 5,
+      "closed_projected_eigenvalues_above_H": 57
+    },
+    {
+      "pole_cut_fraction": 0.82,
+      "orders": [
+        5,
+        4,
+        3,
+        14
+      ],
+      "bins": 19,
+      "null_error": 8.456459119036575e-17,
+      "thermal_contrast": {
+        "resonant_over_H": 107249087.70720059,
+        "elastic_over_H": 3.7429562135338137,
+        "weight_below_H": 9.364661470253956e-23
+      },
+      "scalar_local": {
+        "0.005": {
+          "resonant_over_H": 8.709575896733438e-16,
+          "elastic_over_H": 106.73465859295699,
+          "weight_below_H": 1.1747780414350605e-25
+        },
+        "0.05": {
+          "resonant_over_H": 1.5992668814647496e-14,
+          "elastic_over_H": 61.81739673431075,
+          "weight_below_H": 1.3886939260499066e-19
+        },
+        "0.2": {
+          "resonant_over_H": 206777013.9631062,
+          "elastic_over_H": 56.8760234716074,
+          "weight_below_H": 2.8932051805414332e-25
+        },
+        "1.0": {
+          "resonant_over_H": 381712426.6148552,
+          "elastic_over_H": 15.64300263060315,
+          "weight_below_H": 1.2388363399739732e-23
+        },
+        "3.0": {
+          "resonant_over_H": 160003488.4801954,
+          "elastic_over_H": 5.046519568836918,
+          "weight_below_H": 1.9876545290055732e-23
+        }
+      },
+      "cold_linear_split_time_test": {
+        "resonant_only_initial_overlap": 1.0,
+        "exact_combined_overlap_at_point_02_H_time": 0.11857772358653525,
+        "splitting_absolute_errors": [
+          1.115498461929845e-05,
+          5.414677769984504e-06,
+          2.666743767698784e-06,
+          1.322980471591256e-06
+        ],
+        "splitting_overlaps": [
+          0.1185781699461981,
+          0.1185779344791329,
+          0.11857782613061688,
+          0.11857777413520808
+        ]
+      },
+      "mesh_step": 4,
+      "closed_projected_eigenvalues_above_H": 73
+    }
+  ],
+  "scope": "Closed near-equilibrium two-species kinetic projection; no real-pole double counting, full transport gap, or physical abundance claim."
+}
