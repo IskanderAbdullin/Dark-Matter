@@ -30,6 +30,22 @@ to the prescribed stable density proxy through 1 MeV. This is not a
 late-loss bound, scalar dominance, complete coupled dark evolution,
 or a reheating/BBN viability result.
 
+Refining the vacuum runs to 96/192 intervals gives all-support stable
+proxies 0.1199465/0.1199810 at 1.127 MeV, the finest within 0.016% of the
+independent integral. The corresponding scalar proxies are
+2.3426e-12/2.3582e-12, the finest within 0.23%. Stability against mesh
+refinement does not validate other omitted processes.
+
+A matched **state-dependent** calculation now reaches 3.157 MeV on both
+12 and 24 intervals. It includes signed visible FD exchange, prompt
+return, below-pole elastic heat, and visible energy feedback. On the
+finer mesh the inclusive fixed-count stable proxy is 0.1197706215
+rather than 0.1197706226 in the matched vacuum control (relative
+change about -9.6e-9). The agreement compares only these implemented
+operators. The new stable-pair Yukawa annihilation to scalars, other
+number-changing reactions, and exterior re-entry are not included
+in this evolution. No quantum run to 1.127 MeV is claimed.
+
 The cold signed-shell portal now incorporates the visible Boltzmann
 factor on the **forward** term before subtracting the independently
 bounded inverse term. It does not form a standalone exp(q/T) and does
@@ -51,5 +67,7 @@ export OPENBLAS_NUM_THREADS=1
 cmd=(python -W error joint_resonant_frw_split_reference.py EOS.late.dat --eos-lower-knot-limit .001 --physical-amplitude --empty-pulse .00002 --empty-reheat .0090190699 --visible-source --visible-backreaction --support-low .8 --empty-cells 18 --source-only --matched-vacuum-order)
 "${cmd[@]}" --empty-stop .35 --steps 12 24 > matched.json
 "${cmd[@]}" --empty-stop .125 --steps 12 24 48 > deep.json
-python -W error low_reheat_frw_count_check_reference.py EOS.late.dat matched.json deep.json
+"${cmd[@]}" --empty-stop .125 --steps 96 192 > refined.json
+python -W error joint_resonant_frw_split_reference.py EOS.late.dat --eos-lower-knot-limit .001 --physical-amplitude --empty-pulse .00002 --empty-reheat .0090190699 --visible-source --visible-backreaction --support-low .8 --empty-cells 18 --empty-stop .35 --quantum-visible-source --with-elastic --vacuum-scaled-residual --allow-empty-shells --steps 12 24 > quantum.json
+python -W error low_reheat_frw_count_check_reference.py EOS.late.dat matched.json quantum.json deep.json refined.json
 ```
