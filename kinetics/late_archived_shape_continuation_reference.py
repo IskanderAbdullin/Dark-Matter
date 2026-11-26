@@ -86,7 +86,7 @@ def subdivide(q,th,stride):
                              v[1,idx]*np.diff(k(r))/b]))
     return r,out
 
-def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,radiation_table=None,dark_gravity=False,refinement=0):
+def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,radiation_table=None,dark_gravity=False,refinement=0,preroll_stop=None,preroll_steps=0):
     assert not off or prompt_until==0.
     assert not dark_gravity or radiation_table is not None
     assert row["nsteps"]==snap["steps"]
@@ -118,7 +118,12 @@ def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,
     steps=[]
     prompt_geometric_end=q[-1]/P
     cut=min(prompt_until,prompt_geometric_end)
-    grid=np.linspace(0.,np.log(stop),nx+1)
+    if preroll_stop is not None:
+        assert 1.<preroll_stop<stop and preroll_steps>0
+        cut0=np.log(preroll_stop)
+        grid=np.r_[np.linspace(0.,cut0,preroll_steps+1),np.linspace(cut0,np.log(stop),nx+1)[1:]]
+    else:
+        grid=np.linspace(0.,np.log(stop),nx+1)
     if 1.<cut<stop: grid=np.unique(np.r_[grid,np.log(cut)])
     n_prompt=0
     for x,y in zip(grid[:-1],grid[1:]):
@@ -158,6 +163,7 @@ def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,
     assert np.min(np.diff([init["dark_entropy_a3"]]+[x["dark_entropy_a3"] for x in steps]))>=-5e-11*init["dark_entropy_a3"]
     return dict(nsteps=nx,elastic_orders=orders,elastic=not off,prompt_until=prompt_until,
                 initial=init,steps=steps,
+                preroll_stop=preroll_stop,preroll_steps=preroll_steps,
                 upper_support_kinematic_prompt_end=float(prompt_geometric_end),
                 intervals_with_prompt=n_prompt,actual_intervals=len(steps),
                 background="tabulated radiation" if tab else "freely redshifted photons only",
@@ -180,7 +186,9 @@ if __name__=="__main__":
     p.add_argument("--radiation-table")
     p.add_argument("--dark-gravity",action="store_true")
     p.add_argument("--refinement-stride",type=int,default=0)
+    p.add_argument("--preroll-stop",type=float)
+    p.add_argument("--preroll-steps",type=int,default=0)
     a=p.parse_args()
     b=json.loads(Path(a.run).read_text())["rows"][-1]
     s=json.loads(Path(a.shape).read_text())["snapshots"][-1]
-    print(json.dumps(run(StandardModel(a.eos),b,s,a.steps,a.stop,a.prompt_until,a.orders,a.off,a.radiation_table,a.dark_gravity,a.refinement_stride),indent=2,allow_nan=False))
+    print(json.dumps(run(StandardModel(a.eos),b,s,a.steps,a.stop,a.prompt_until,a.orders,a.off,a.radiation_table,a.dark_gravity,a.refinement_stride,a.preroll_stop,a.preroll_steps),indent=2,allow_nan=False))
