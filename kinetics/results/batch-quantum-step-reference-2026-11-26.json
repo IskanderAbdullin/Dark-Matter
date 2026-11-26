@@ -1,0 +1,35 @@
+{
+  "cells_per_species": 24,
+  "allowed_node_pairs": 411,
+  "rows": [
+    {
+      "tol": 0.001,
+      "max_absolute_error_vs_dop853": 0.0005584846911568242,
+      "pair_number_diff_residual": 1.1102230246251565e-16,
+      "energy_including_bath_residual": 0.0,
+      "accepted": 55,
+      "rejected_bounds": 3,
+      "rejected_error": 3
+    },
+    {
+      "tol": 0.0001,
+      "max_absolute_error_vs_dop853": 6.801169114734051e-05,
+      "pair_number_diff_residual": 2.220446049250313e-16,
+      "energy_including_bath_residual": 0.0,
+      "accepted": 165,
+      "rejected_bounds": 3,
+      "rejected_error": 3
+    },
+    {
+      "tol": 1e-05,
+      "max_absolute_error_vs_dop853": 7.054205797274449e-06,
+      "pair_number_diff_residual": 6.661338147750939e-16,
+      "energy_including_bath_residual": 8.881784197001252e-16,
+      "accepted": 511,
+      "rejected_bounds": 3,
+      "rejected_error": 4
+    }
+  ],
+  "equilibrium_drift_unrestricted_step": 2.363020120344059e-14,
+  "equilibrium_drift_step_capped_at_p1": 1.5378471734021684e-15
+}
