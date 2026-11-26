@@ -73,7 +73,9 @@ reproducible controls below are not observational constraints.
    bounds the extra retained dark pair gains without picking
    their within-shell shapes; the baseline rate stays frozen. The [tagged light scalar-pair fold](INDEPENDENT-WARM-COLD-LIGHT-SCALAR-PAIR-2026-11-26.md)
    resolves a second negative cold contribution, much less
-   sensitive to the same scalar support crop.
+   sensitive to the same scalar support crop. A [below-pole light elastic fold](INDEPENDENT-WARM-COLD-LIGHT-BELOW-POLE-ELASTIC-2026-11-26.md)
+   finds a separate local sink of comparable size while omitting
+   the pole and the above-cut region.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
