@@ -97,6 +97,11 @@ The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
 It does not include late hadronic or new dark sources.
+The [from-empty 50 MeV benchmark](INDEPENDENT-WARM-FROM-EMPTY-RECYCLING-ENVELOPE-2026-11-26.md)
+is a separate numerical upper comparison from instantaneous
+reheating. An energy-weighted vacuum kernel envelope and two
+visible clocks give scalar ceilings below .060; no realistic
+hadronic or additional scalar number source is included.
 
 ## Evidence boundary
 
