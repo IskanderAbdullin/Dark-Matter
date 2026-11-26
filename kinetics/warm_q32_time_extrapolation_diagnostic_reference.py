@@ -13,7 +13,7 @@ from warm_light_occupation_stage_audit_reference import digest,read
 from warm_prompt_reentry_shape_audit_reference import get_mom
 
 
-def run(D):
+def run(D,include_32=False):
     src=read(D/"warm-light-occupation-next-q32-tape-2026-11-26.json.gz")[0]["snapshot"]
     T0=src["scale_factor"]
     P=np.asarray(src["lab_momentum_edges_GeV"])
@@ -22,7 +22,7 @@ def run(D):
     rho0=first[2].sum()*T0**3
     x0=len(src["positive_exterior_restart"]["cohorts"])
     state=[]; additions=[]
-    for n in (2,4,8,16):
+    for n in (2,4,8,16,32) if include_32 else (2,4,8,16):
         a=read(D/f"warm-matched-explicit-support-q32-{n}-blocks-2026-11-26.json.gz")
         S=a["snapshot"]
         assert a["snapshot_sha256"]==digest(S) and a["blocks_total"]==a["blocks_finished"]==n
@@ -65,4 +65,6 @@ def run(D):
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--tapes",type=Path,default=Path("results"))
-    print(json.dumps(run(p.parse_args().tapes),indent=2,allow_nan=False))
+    p.add_argument("--include-32",action="store_true")
+    a=p.parse_args()
+    print(json.dumps(run(a.tapes,a.include_32),indent=2,allow_nan=False))

@@ -42,3 +42,17 @@ python -W error warm_q32_matched_time_ladder_reference.py EOS.dat source32.json 
 [Diagnostics](results/warm-q32-matched-time-ladder-2026-11-26.json);
 exact [eight-block](results/warm-matched-explicit-support-q32-8-blocks-2026-11-26.json.gz) and
 [sixteen-block](results/warm-matched-explicit-support-q32-16-blocks-2026-11-26.json.gz) checkpoints.
+
+### Thirty-two block verification
+
+The next actual endpoint is available rather than extrapolated.
+Relative to sixteen blocks, the shared-shell (L^1) number
+differences are (6.794	imes10^{-6}) (scalar) and
+(3.906	imes10^{-6}) (light). Full energy and pressure also
+continue near first order: across all six monitored species
+and moment combinations the last difference ratio is 1.984–1.994.
+This remains a short-interval finite-grid verification.
+
+Append the 32-block checkpoint path to the command above.
+[Five-level diagnostics](results/warm-q32-matched-time-ladder-32-2026-11-26.json);
+[exact thirty-two-block checkpoint](results/warm-matched-explicit-support-q32-32-blocks-2026-11-26.json.gz).

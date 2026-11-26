@@ -40,7 +40,7 @@ def audit(eos,source,paths):
     a=import_restart(S["positive_exterior_restart"]).array()
     n0=a.shape[1]
     states=[]; rows=[]
-    for n,path in zip((2,4,8,16),paths,strict=True):
+    for n,path in zip((2,4,8,16,32)[:len(paths)],paths,strict=True):
         R=read(path); T=R["snapshot"]
         assert R["blocks_finished"]==R["blocks_total"]==n
         assert R["snapshot_sha256"]==digest(T) and R["plan_sha256"]==digest(R["plan"])
@@ -67,8 +67,8 @@ def audit(eos,source,paths):
                          total_represented_count_change_per_initial_species=(mm[0].sum(axis=1)/total-1).tolist(),
                          exact_new_collisionless_birth_energy_over_initial_dark_total=float(new_birth/s[1].sum()),
                          new_exterior_species_count_per_initial=(exterior_number/total).tolist()))
-    errors=[np.sum(abs(states[i+1][0]-states[i][0]),axis=2) for i in range(3)]
-    birth=[abs(states[i+1][1]-states[i][1])/max(states[i+1][1],1e-280) for i in range(3)]
+    errors=[np.sum(abs(states[i+1][0]-states[i][0]),axis=2) for i in range(len(paths)-1)]
+    birth=[abs(states[i+1][1]-states[i][1])/max(states[i+1][1],1e-280) for i in range(len(paths)-1)]
     assert np.all(np.asarray(errors)>0.)
     return dict(scope="Matched selected-operator q32 continuation to the same short expansion factor. "
                       "A test of time-grid sensitivity, not the continuum temporal or momentum limit.",
@@ -82,11 +82,12 @@ if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("eos",type=Path)
     p.add_argument("source",type=Path)
-    p.add_argument("paths",type=Path,nargs=4)
+    p.add_argument("paths",type=Path,nargs="+")
     p.add_argument("--execute",action="store_true")
     a=p.parse_args()
+    assert len(a.paths) in (4,5)
     if a.execute:
-        for n,f in zip((2,4,8,16),a.paths,strict=True):
+        for n,f in zip((2,4,8,16,32)[:len(a.paths)],a.paths,strict=True):
             assert f.name=="checkpoint.json"
             main(a.eos,a.source,f.parent,1.001,n,True,None)
     print(json.dumps(audit(a.eos,a.source,a.paths),indent=2,allow_nan=False))

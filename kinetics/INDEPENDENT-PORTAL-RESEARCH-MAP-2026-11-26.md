@@ -95,7 +95,7 @@ reproducible controls below are not observational constraints.
    allows stored moment packets to react without counting
    them twice in gravity, for one stated re-entry prescription. A [four-level q32 time ladder](INDEPENDENT-WARM-Q32-MATCHED-TIME-LADDER-2026-11-26.md)
    observes near-first-order temporal convergence through
-   sixteen blocks at the same physical endpoint. A [moment extrapolation diagnostic](INDEPENDENT-WARM-Q32-TIME-EXTRAPOLATION-2026-11-26.md)
+   thirty-two actual blocks at the same physical endpoint. A [moment extrapolation diagnostic](INDEPENDENT-WARM-Q32-TIME-EXTRAPOLATION-2026-11-26.md)
    cancels much of the leading difference while preserving
    reconstruction admissibility on this ladder only. A [borrowed-guess replay](INDEPENDENT-WARM-Q64-TRANSPLANTED-NEWTON-2026-11-26.md)
    reproduces a wider implicit block by using the archived

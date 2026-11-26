@@ -112,7 +112,7 @@ if __name__=="__main__":
     p.add_argument("eos",type=Path)
     p.add_argument("work",type=Path)
     p.add_argument("--tapes",type=Path,default=Path("results"))
-    p.add_argument("--steps",type=int,choices=(2,4),default=2)
+    p.add_argument("--steps",type=int,choices=(2,4,8),default=2)
     p.add_argument("--refined-work",type=Path)
     p.add_argument("--execute",action="store_true")
     a=p.parse_args()

@@ -34,3 +34,18 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_q32_time_extrapola
 ~~~
 
 [Diagnostics](results/warm-q32-time-extrapolation-diagnostic-2026-11-26.json).
+
+### Verification with a separately evolved 32-block endpoint
+
+With the fifth actual endpoint, the finest two extrapolated
+pairs differ by (2.11	imes10^{-7}) in scalar count
+and (8.47	imes10^{-8}) in light count. These are 32.2 and
+46.1 times smaller than the corresponding raw step changes.
+The reduction is roughly 54–57 for kinetic energy. Moment
+admissibility and the combined count check still pass.
+This supports leading-error cancellation on the tested
+finite grid only; it does not establish a generalized
+extrapolation solver.
+
+Add `--include-32` to the command for the
+[five-level extrapolation diagnostics](results/warm-q32-time-extrapolation-with-32-2026-11-26.json).

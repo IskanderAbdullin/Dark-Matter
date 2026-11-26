@@ -53,3 +53,19 @@ exact final checkpoints: [q32, two blocks](results/warm-matched-explicit-support
 [q64, two blocks](results/warm-matched-explicit-support-q64-2-blocks-2026-11-26.json.gz),
 [q32, four blocks](results/warm-matched-explicit-support-q32-4-blocks-2026-11-26.json.gz),
 [q64, four blocks](results/warm-matched-explicit-support-q64-4-blocks-2026-11-26.json.gz).
+
+### Eight-block, same-support control
+
+At eight matched blocks, widening q32 to q64 changes the
+common-shell scalar/light count (L^1) by
+(4.388	imes10^{-8}/6.611	imes10^{-9}), consistent
+with the two- and four-block comparison. The corresponding
+energy differences are (6.158	imes10^{-9}/5.879	imes10^{-9}).
+This is still much smaller than the time-step change at this
+same endpoint. The comparison remains conditional on the
+same inherited gravity and selected reaction network.
+
+Use the run command above with `--steps 8`.
+[Eight-block matched metrics](results/warm-matched-explicit-support-coupled-8-2026-11-26.json.gz)
+and [exact q64 checkpoint](results/warm-matched-explicit-support-q64-8-blocks-2026-11-26.json.gz);
+the exact q32 checkpoint is linked in the time ladder.
