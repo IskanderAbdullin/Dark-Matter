@@ -214,7 +214,9 @@ That subset still is not a measured gross reacting budget. A [high-parent prompt
 measures the bare inverse-decay contribution on a separate short
 explicitly reacting q64 control, not the full high-heavy budget. A [known-cohort shape-independent initial upper](INDEPENDENT-WARM-HIGH-INVERSE-KNOWN-COHORT-SHAPE-BOUND-2026-11-26.md)
 retains the finite admitted support but does not pick an unknown
-within-cohort distribution.
+within-cohort distribution. A [resolved-shell moment envelope](INDEPENDENT-WARM-HIGH-INVERSE-RESOLVED-SHELL-ENVELOPE-2026-11-26.md)
+independently bounds the later retained bare high inverse rates
+without choosing their within-shell profiles.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
