@@ -1,0 +1,117 @@
+{
+  "scope": "Pauli-free unpolarized forward folding on the unchanged passive redshifting shapes; final heavy Pauli blocking and all later redistribution are omitted.",
+  "max_spin_trace_relative_error": 7.205347429817266e-13,
+  "sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "fb375d7a5c7334aa6a0e0752725e7719a83696478a4231a0b76e5ef717a17005",
+    "19b05f819150e1164951161eb748ae7d202baf36f8c7aef54a7ba2e38702dbca",
+    "20cc58d87e980c8110f6bb228819c4c714ca29a13941eb396d4fa7a362540bac"
+  ],
+  "cases": [
+    {
+      "snapshot": "warm-q16-10p442-heavy-input-shape-2026-11-26.json",
+      "controls": [
+        {
+          "order": [
+            7,
+            21
+          ],
+          "time": 8,
+          "integrated_phi_opp_same": [
+            1.3525131589455364e-08,
+            2.776329704085022e-07,
+            1.6405119843257038e-07
+          ],
+          "total": 4.5520930043052796e-07,
+          "same_vs_opposite": 0.5908923503976835,
+          "exact_over_optimistic": 0.5378028947720263
+        },
+        {
+          "order": [
+            9,
+            27
+          ],
+          "time": 10,
+          "integrated_phi_opp_same": [
+            1.3512820160762991e-08,
+            2.7785337243449626e-07,
+            1.6416162975940717e-07
+          ],
+          "total": 4.555278223546664e-07,
+          "same_vs_opposite": 0.5908210806334847,
+          "exact_over_optimistic": 0.5377669409653292
+        }
+      ]
+    },
+    {
+      "snapshot": "warm-q32-10p442-heavy-input-shape-2026-11-26.json",
+      "controls": [
+        {
+          "order": [
+            7,
+            21
+          ],
+          "time": 8,
+          "integrated_phi_opp_same": [
+            1.891553156008629e-08,
+            3.5336714136590166e-07,
+            2.1099214056625862e-07
+          ],
+          "total": 5.832748134922465e-07,
+          "same_vs_opposite": 0.5970904361698481,
+          "exact_over_optimistic": 0.5405613048375778
+        },
+        {
+          "order": [
+            9,
+            27
+          ],
+          "time": 10,
+          "integrated_phi_opp_same": [
+            1.8903492287276017e-08,
+            3.5358769380268604e-07,
+            2.1110272642825702e-07
+          ],
+          "total": 5.83593912518219e-07,
+          "same_vs_opposite": 0.5970307511495565,
+          "exact_over_optimistic": 0.5405316110887585
+        }
+      ]
+    },
+    {
+      "snapshot": "warm-q32-10p442-heavy-input-shape-2026-11-26.json: same-state crop to q/T_R=16",
+      "controls": [
+        {
+          "order": [
+            7,
+            21
+          ],
+          "time": 8,
+          "integrated_phi_opp_same": [
+            1.3660511203787771e-08,
+            2.8104836035832323e-07,
+            1.6608015369061673e-07
+          ],
+          "total": 4.607890252527278e-07,
+          "same_vs_opposite": 0.590930875664503,
+          "exact_over_optimistic": 0.537798806876616
+        },
+        {
+          "order": [
+            9,
+            27
+          ],
+          "time": 10,
+          "integrated_phi_opp_same": [
+            1.3648105645039817e-08,
+            2.8127103895963e-07,
+            1.6619172337404394e-07
+          ],
+          "total": 4.611108679787138e-07,
+          "same_vs_opposite": 0.5908597059574873,
+          "exact_over_optimistic": 0.537762940021285
+        }
+      ]
+    }
+  ]
+}
