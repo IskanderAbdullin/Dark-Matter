@@ -75,3 +75,24 @@ OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_matched_history_los_refere
   results/finite-cooling-matched-history-recoil-2026-11-26.json \
   results/finite-cooling-pair-mixture-export-2026-11-26.json
 ~~~
+
+### Width stress test
+
+Rebuild all six `f(q)` tables with width 0.10 rather than 0.14
+(with the same number and second moment), and rerun z=20 at
+k=4,10,22 on identical files. The largest absolute shift in the
+joined instantaneous result is 0.00333 (up to 2.75% relative
+when the amplitude is small); the largest finite shift is 0.00187.
+The finite-minus-instantaneous differences are still
+0.51472, 0.62362, 0.56189. Thus this large contrast is not
+explained by the particular smoothing width at those probes.
+The test does not establish continuum shape or abundance convergence.
+
+The prompt and joined tables of both widths are produced by the
+earlier exporters. For recoil, add `--sigma 0.10` to the command
+above. Select k=4,10,22 from the common native directory for the
+same LOS runner. Run the [width audit](finite_cooling_matched_width_audit_reference.py)
+with the production catalogs (pair then prompt), the recoil
+catalogs (narrow then wide), and the wide and narrow records
+(instantaneous then finite in each group) to verify every input
+spectrum hash and reused metric.

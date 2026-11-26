@@ -16,7 +16,9 @@ from three_species_decay_onsager_reference import mp
 KEY = "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC"
 
 
-def recoil(eos, pairs, directory):
+def recoil(eos, pairs, directory, sigma=.14):
+    if sigma not in (.10,.14):
+        raise ValueError("Match one of the published widths: 0.10 or 0.14.")
     record = json.loads(pairs.read_text())
     assert sha(eos) == record["eos_sha256"]
     bg = Background(eos)
@@ -34,15 +36,18 @@ def recoil(eos, pairs, directory):
         omega = float(np.sum(np.asarray(v["new_scalar_omega"])[:, 0]))
         p, w = support(np.sum(M["count_fraction_by_epoch"], axis=0),
                        np.sum(M["q2_weighted_count_fraction_by_epoch"], axis=0), factor * omega)
-        q, f = smooth(qfac*p, w, .14, 5200)
+        q, f = smooth(qfac*p, w, sigma, 5200)
         f *= w.sum() / (4*np.pi*np.trapezoid(q*q*f, q))
         defect = float(4*np.pi*np.trapezoid(q**4*f,q)/(w @ (qfac*p)**2) - 1)
         assert np.all(f > 0.) and abs(defect) < 1e-7
-        fs = directory / f"{case}-scalar-recoil-sigma0.14.dat"
+        fs = directory / f"{case}-scalar-recoil-sigma{sigma:.2f}.dat"
         np.savetxt(fs, np.c_[q, f], fmt="%.16e")
         result[case] = dict(rest_omega_h2=omega, table_sha256=sha(fs), relative_q2_moment_defect=defect)
     assert len(result) == 2
-    return dict(components=result, source_sha256=sha(pairs), eos_sha256=sha(eos), q_factor=qfac)
+    out = dict(components=result, source_sha256=sha(pairs), eos_sha256=sha(eos), q_factor=qfac)
+    if sigma != .14:
+        out["sigma_ln_q"] = sigma
+    return out
 
 
 def compare(finite_paths, instant_paths, finite_high, reconstruction, exports):
@@ -108,6 +113,7 @@ if __name__ == "__main__":
     c.add_argument("--instant", nargs=3, type=Path, required=True)
     for key in ("finite_high","reconstruction","exports"):
         c.add_argument(key, type=Path)
+    r.add_argument("--sigma", type=float, default=.14)
     a = p.parse_args()
-    out = recoil(a.eos,a.pairs,a.directory) if a.mode=="recoil" else compare(a.finite,a.instant,a.finite_high,a.reconstruction,a.exports)
+    out = recoil(a.eos,a.pairs,a.directory,a.sigma) if a.mode=="recoil" else compare(a.finite,a.instant,a.finite_high,a.reconstruction,a.exports)
     print(json.dumps(out,indent=2,allow_nan=False))

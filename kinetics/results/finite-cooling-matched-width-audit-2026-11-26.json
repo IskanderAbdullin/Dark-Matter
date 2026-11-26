@@ -1,0 +1,74 @@
+{
+  "rows": {
+    "instant": [
+      {
+        "k_h_per_Mpc": 4.0,
+        "joined_wide": 0.36923951211903877,
+        "joined_narrow": 0.3659140475188659,
+        "change_narrow_minus_wide": -0.003325464600172856,
+        "fractional_change_narrow_minus_wide": -0.009006253369495232,
+        "shared_metric_sha256": "96f4355852dc833610dbe64ebdb5784f93944482578e21cf1e40cdd68741678e",
+        "max_numerical_refinement": 2.9324703776367755e-10
+      },
+      {
+        "k_h_per_Mpc": 10.0,
+        "joined_wide": 0.1373722855870773,
+        "joined_narrow": 0.13482528784438083,
+        "change_narrow_minus_wide": -0.002546997742696455,
+        "fractional_change_narrow_minus_wide": -0.018540841275309305,
+        "shared_metric_sha256": "447fd0f7cfe1c7dced71539a7d75c0f138f114e0e24f4c20bdf5517836045987",
+        "max_numerical_refinement": 7.848915961616854e-11
+      },
+      {
+        "k_h_per_Mpc": 22.0,
+        "joined_wide": 0.041915151091114176,
+        "joined_narrow": 0.04076363081686625,
+        "change_narrow_minus_wide": -0.001151520274247926,
+        "fractional_change_narrow_minus_wide": -0.02747264996718679,
+        "shared_metric_sha256": "2ba9b0a916466bb5a3c1865ff7ede19e5b43220bdea6f37b3afe4f5d58a79226",
+        "max_numerical_refinement": 2.407758193517795e-08
+      }
+    ],
+    "ratio5": [
+      {
+        "k_h_per_Mpc": 4.0,
+        "joined_wide": 0.8813055035502346,
+        "joined_narrow": 0.8806303262448021,
+        "change_narrow_minus_wide": -0.0006751773054325394,
+        "fractional_change_narrow_minus_wide": -0.000766110392721564,
+        "shared_metric_sha256": "96f4355852dc833610dbe64ebdb5784f93944482578e21cf1e40cdd68741678e",
+        "max_numerical_refinement": 3.137886506188181e-09
+      },
+      {
+        "k_h_per_Mpc": 10.0,
+        "joined_wide": 0.7596728517606406,
+        "joined_narrow": 0.7584412219264869,
+        "change_narrow_minus_wide": -0.0012316298341537024,
+        "fractional_change_narrow_minus_wide": -0.0016212634574201967,
+        "shared_metric_sha256": "447fd0f7cfe1c7dced71539a7d75c0f138f114e0e24f4c20bdf5517836045987",
+        "max_numerical_refinement": 2.1054745724669033e-09
+      },
+      {
+        "k_h_per_Mpc": 22.0,
+        "joined_wide": 0.6045253041335095,
+        "joined_narrow": 0.6026558396605655,
+        "change_narrow_minus_wide": -0.0018694644729440046,
+        "fractional_change_narrow_minus_wide": -0.0030924503245129964,
+        "shared_metric_sha256": "2ba9b0a916466bb5a3c1865ff7ede19e5b43220bdea6f37b3afe4f5d58a79226",
+        "max_numerical_refinement": 3.30558328209829e-08
+      }
+    ]
+  },
+  "narrow_finite_minus_instant": [
+    0.5147162787259362,
+    0.623615934082106,
+    0.5618922088436992
+  ],
+  "raw_record_sha256": [
+    "520b9156d6b68f6aed9359dafec0666caf8e247b08bd8e69c20579027094543b",
+    "a57dafa88f9ecf5ceebd25ea0b8dd288eb4601bcdbb8f98bbdbf249bfc6a7199",
+    "3384b6949c62d9a4273246a43a2c542f869085f9ec06d18648f0802716e393de",
+    "cd5d778c90431847b680c2ef7021f629a10ae3cdd70dcab6a7a48f84ee74a51c"
+  ],
+  "scope": "Width stress test for positive moment-controlled smoothing (0.14 vs 0.10) at three identical fixed-metric probes. Not continuum source accuracy or a total-matter effect."
+}
