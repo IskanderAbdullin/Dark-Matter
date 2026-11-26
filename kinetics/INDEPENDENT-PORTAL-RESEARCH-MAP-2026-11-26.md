@@ -86,8 +86,9 @@ The [separate isolated energy envelope](INDEPENDENT-WARM-ISOLATED-RECYCLING-ENVE
 does allow dark redistribution and repeated recycling in the
 listed network after 10.442 MeV. With no new energy or reentry
 and the nominal visible clock, it bounds the warm scalar density
-below half if the total equals .120. The envelope is sensitive
-to assumptions about the starting energy and subsequent clock.
+to at most 2.35% if the total equals .120, after bounding the
+virtual angular integral analytically. This still conditions the
+bound on the starting energy and subsequent clock.
 
 ## Evidence boundary
 

@@ -1,11 +1,14 @@
 {
   "scope": "Isolated homogeneous represented system, no future external source or reentry, stated vacuum channels only. Allows arbitrary elastic redistribution and Bose stimulation inside those channels; conditioned visible clock, positive pressures.",
   "target_total": 0.12,
-  "K_phi_GeVminus2": 3.0629383078988447e-10,
+  "K_phi_GeVminus2": 1.1780531953465474e-11,
+  "K_phi_uniform_GeVminus2": 3.0629383078988447e-10,
+  "combined_K_GeVminus2": 1.3197992729206486e-11,
   "twice_stable_KD_GeVminus2": 1.3197992729206486e-11,
   "independent_spin_checks": {
     "max_single_trace_defect_over_scale": 2.341273727338131e-15,
-    "max_sampled_forward_cross_section_over_ceiling": 0.006551948973934519
+    "max_sampled_forward_cross_section_over_ceiling": 0.006551948973934519,
+    "max_sampled_forward_cross_section_over_geometric_ceiling": 0.17956631201820908
   },
   "cases": [
     {
@@ -32,9 +35,10 @@
           },
           "H_multiplier": 1.0,
           "energy_multiplier": 1.0,
-          "upper_added_count_per_initial_represented": 102.00746263847292,
-          "upper_inventory_multiplier": 103.00746263847292,
-          "upper_scalar_Omega_at_fixed_total": 0.054078775327918244,
+          "upper_added_count_per_initial_represented": 4.395432146822821,
+          "uniform_angle_baseline_upper_inventory_multiplier": 103.00746263847292,
+          "upper_inventory_multiplier": 5.395432146822821,
+          "upper_scalar_Omega_at_fixed_total": 0.0028321054355510684,
           "half_at_reference_excluded": true
         },
         {
@@ -53,9 +57,10 @@
           },
           "H_multiplier": 1.0,
           "energy_multiplier": 1.0,
-          "upper_added_count_per_initial_represented": 100.88835693582269,
-          "upper_inventory_multiplier": 101.88835693582269,
-          "upper_scalar_Omega_at_fixed_total": 0.05349124077680277,
+          "upper_added_count_per_initial_represented": 4.347210643671087,
+          "uniform_angle_baseline_upper_inventory_multiplier": 101.8883569358227,
+          "upper_inventory_multiplier": 5.347210643671087,
+          "upper_scalar_Omega_at_fixed_total": 0.0028067889715733822,
           "half_at_reference_excluded": true
         },
         {
@@ -74,9 +79,10 @@
           },
           "H_multiplier": 0.98,
           "energy_multiplier": 1.03,
-          "upper_added_count_per_initial_represented": 109.21679374817785,
-          "upper_inventory_multiplier": 110.21679374817785,
-          "upper_scalar_Omega_at_fixed_total": 0.05786370029734018,
+          "upper_added_count_per_initial_represented": 4.706077318235363,
+          "uniform_angle_baseline_upper_inventory_multiplier": 110.21679374817785,
+          "upper_inventory_multiplier": 5.706077318235363,
+          "upper_scalar_Omega_at_fixed_total": 0.002995195276760735,
           "half_at_reference_excluded": true
         },
         {
@@ -95,10 +101,11 @@
           },
           "H_multiplier": 0.98,
           "energy_multiplier": 1.05,
-          "upper_added_count_per_initial_represented": 113.49940155280052,
-          "upper_inventory_multiplier": 114.49940155280052,
-          "upper_scalar_Omega_at_fixed_total": 0.06011208492100342,
-          "half_at_reference_excluded": false
+          "upper_added_count_per_initial_represented": 4.890611974129971,
+          "uniform_angle_baseline_upper_inventory_multiplier": 114.49940155280049,
+          "upper_inventory_multiplier": 5.890611974129971,
+          "upper_scalar_Omega_at_fixed_total": 0.003092076640120362,
+          "half_at_reference_excluded": true
         }
       ]
     },
@@ -126,9 +133,10 @@
           },
           "H_multiplier": 1.0,
           "energy_multiplier": 1.0,
-          "upper_added_count_per_initial_represented": 102.11641538608879,
-          "upper_inventory_multiplier": 103.11641538608879,
-          "upper_scalar_Omega_at_fixed_total": 0.054135975953235,
+          "upper_added_count_per_initial_represented": 4.400126846572904,
+          "uniform_angle_baseline_upper_inventory_multiplier": 103.11641538608879,
+          "upper_inventory_multiplier": 5.400126846572904,
+          "upper_scalar_Omega_at_fixed_total": 0.0028345701719206737,
           "half_at_reference_excluded": true
         },
         {
@@ -147,9 +155,10 @@
           },
           "H_multiplier": 1.0,
           "energy_multiplier": 1.0,
-          "upper_added_count_per_initial_represented": 100.99611438225158,
-          "upper_inventory_multiplier": 101.99611438225158,
-          "upper_scalar_Omega_at_fixed_total": 0.05354781386425201,
+          "upper_added_count_per_initial_represented": 4.35185383870645,
+          "uniform_angle_baseline_upper_inventory_multiplier": 101.99611438225156,
+          "upper_inventory_multiplier": 5.35185383870645,
+          "upper_scalar_Omega_at_fixed_total": 0.0028092266677633287,
           "half_at_reference_excluded": true
         },
         {
@@ -168,9 +177,10 @@
           },
           "H_multiplier": 0.98,
           "energy_multiplier": 1.03,
-          "upper_added_count_per_initial_represented": 109.33344668176602,
-          "upper_inventory_multiplier": 110.33344668176602,
-          "upper_scalar_Omega_at_fixed_total": 0.05792494355085572,
+          "upper_added_count_per_initial_represented": 4.71110381375885,
+          "uniform_angle_baseline_upper_inventory_multiplier": 110.33344668176599,
+          "upper_inventory_multiplier": 5.71110381375885,
+          "upper_scalar_Omega_at_fixed_total": 0.0029978342072283304,
           "half_at_reference_excluded": true
         },
         {
@@ -189,10 +199,11 @@
           },
           "H_multiplier": 0.98,
           "energy_multiplier": 1.05,
-          "upper_added_count_per_initial_represented": 113.62062868003302,
-          "upper_inventory_multiplier": 114.62062868003302,
-          "upper_scalar_Omega_at_fixed_total": 0.06017572964433797,
-          "half_at_reference_excluded": false
+          "upper_added_count_per_initial_represented": 4.895835568544758,
+          "uniform_angle_baseline_upper_inventory_multiplier": 114.62062868003304,
+          "upper_inventory_multiplier": 5.895835568544758,
+          "upper_scalar_Omega_at_fixed_total": 0.003094819048288208,
+          "half_at_reference_excluded": true
         }
       ]
     }

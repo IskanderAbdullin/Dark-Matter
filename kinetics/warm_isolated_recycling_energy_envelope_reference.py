@@ -76,7 +76,7 @@ def direct_spin_and_envelope_checks():
 
     err = []
     x, w = roots_legendre(96)
-    max_ratio = 0.
+    max_ratio = max_geometric_ratio = 0.
     for s in np.geomspace(4*M*M*1.00001, 9., 30):
         E = np.sqrt(s)/2
         p = np.sqrt(s/4-M*M)
@@ -93,9 +93,12 @@ def direct_spin_and_envelope_checks():
         # Final scalar beta cancels in this diagnostic ratio.
         ratio = (w @ amplitude(s, x, light=M, heavy=m, scalar=mp))/(4*s*y**4/(m*m))
         max_ratio = max(max_ratio, float(ratio))
-    assert max(err)<2e-13 and max_ratio<1.
+        geom = np.sqrt(m**4 + m*m*(s-2*M*M-2*mp*mp) + (M*M-mp*mp)**2)
+        max_geometric_ratio = max(max_geometric_ratio, float(ratio*geom/(m*m)))
+    assert max(err)<2e-13 and max_ratio<1. and max_geometric_ratio<1.
     return dict(max_single_trace_defect_over_scale=float(max(err)),
-                max_sampled_forward_cross_section_over_ceiling=max_ratio)
+                max_sampled_forward_cross_section_over_ceiling=max_ratio,
+                max_sampled_forward_cross_section_over_geometric_ceiling=max_geometric_ratio)
 
 
 def run(eos, paths, budget, goal=.120):
@@ -105,7 +108,11 @@ def run(eos, paths, budget, goal=.120):
     # Retain beta_phi in the forward ceiling; it cancels in detailed
     # balance. The remaining energy-weighted factor (4M^2/s)*beta_M
     # has its exact maximum at s=6M^2. K_inv already includes 8.
-    K_phi = K_inv * 2/(3*np.sqrt(3))
+    K_phi_uniform = K_inv * 2/(3*np.sqrt(3))
+    # The angle integral of (A-D cos(theta))^-1 is at most
+    # 2/sqrt(A*A-D*D) by atanh(z) <= z/sqrt(1-z*z). The squared
+    # denominator is increasing in s, with minimum at s=4*M*M.
+    K_phi = K_phi_uniform * m*m/(m*m + M*M - mp*mp)
     K = max(K_phi, 2*KD)
     q = json.loads(Path(budget).read_bytes())["cases"]
     anchors = {int(r["case"].split("_")[1][1:]): r for r in q if r["case"].endswith("_12MeV")}
@@ -122,10 +129,12 @@ def run(eos, paths, budget, goal=.120):
                                                  (500.,.98,1.03),(500.,.98,1.05)):
             clk = radiation_bound(eos, T, cutoff, safety)
             gain = K*(rho*energy_multiplier)**2/(M*M*N)*clk["upper_integral_times_Hph"]/clk["photon_anchor_GeV"]
+            coarse_gain = gain * max(K_phi_uniform, 2*KD)/K
             Ye = Y*(1+gain)
             phi = (Ye - ratio*goal)/(1-ratio)
             out.append(dict(clock=clk, H_multiplier=safety, energy_multiplier=energy_multiplier,
                             upper_added_count_per_initial_represented=float(gain),
+                            uniform_angle_baseline_upper_inventory_multiplier=float(1+coarse_gain),
                             upper_inventory_multiplier=float(1+gain),
                             upper_scalar_Omega_at_fixed_total=float(phi),
                             half_at_reference_excluded=bool(1+gain < need)))
@@ -137,6 +146,8 @@ def run(eos, paths, budget, goal=.120):
                       "redistribution and Bose stimulation inside those channels; "
                       "conditioned visible clock, positive pressures.",
                 target_total=goal,K_phi_GeVminus2=float(K_phi),
+                K_phi_uniform_GeVminus2=float(K_phi_uniform),
+                combined_K_GeVminus2=float(K),
                 twice_stable_KD_GeVminus2=float(2*KD),
                 independent_spin_checks=direct_spin_and_envelope_checks(),cases=rows)
 
