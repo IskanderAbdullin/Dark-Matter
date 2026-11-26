@@ -72,7 +72,7 @@ def points(edges,mass,f,n):
     return p.ravel(),E.ravel(),d.ravel()
 
 
-def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel=3,split_final=True,project=False):
+def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel=3,split_final=True,project=False,exchange_mass=M):
     """Ordered unit-spin incoming measures times pair-counting factors.
 
     Opposite-charge fermions distinguishable: 2 spin states each.
@@ -130,7 +130,8 @@ def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel
         vperp=np.sqrt(np.maximum(1.-ci_cos*ci_cos,0.))*np.sqrt(np.maximum(1.-v*v,0.))
         def scale(c):return np.clip(vcm[:,:,None]+vperp[:,:,None]*c,-1.,1.)
         # Dimensionless averages over outgoing azimuth, then dc_f.
-        ma=amplitude(s[:,:,None],scale(az)).mean(axis=2)
+        ma=amplitude(s[:,:,None],scale(az),light=out if reverse else inc,
+                     heavy=exchange_mass,scalar=inc if reverse else out).mean(axis=2)
         ef0=center+cf_delta*v
         ef1=center-cf_delta*v
         f0=final(ef0)
