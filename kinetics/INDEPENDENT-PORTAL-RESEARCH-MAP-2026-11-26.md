@@ -135,6 +135,10 @@ reproducible controls below are not observational constraints.
    distinguish the local sign argument from two-reservoir number/heat relaxation.
    [Same-moment thermal and exterior scalar tests](INDEPENDENT-WARM-PAIR-PHASE-UNCERTAINTY-2026-11-26.md)
    quantify sampled shape sensitivity and give conditional nonvacuum exterior bounds.
+   The [complete corrected time/support ladder](INDEPENDENT-WARM-CORRECTED-TIME-AND-SUPPORT-2026-11-26.md)
+   compares 12, 24 and 48 q32 steps plus 24 wider q64 steps. It
+   isolates the time error from the tested outer-support change;
+   the cold decline survives both controls.
    A [common equilibrium at the archive densities](INDEPENDENT-WARM-PAIR-COMMON-MOMENT-EQUILIBRIUM-2026-11-26.md)
    preserves aggregate number and energy and shows sub-Hubble slow pair relaxation in the cold reservoir comparator.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
