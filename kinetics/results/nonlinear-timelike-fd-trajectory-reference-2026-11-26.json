@@ -1,0 +1,181 @@
+{
+  "runs": [
+    {
+      "T_initial": 0.6882487043,
+      "T_ratio_initial": 1.0,
+      "eta_initial": 0.0,
+      "n_initial": 0.11910014119542459,
+      "T_ratio_final": 0.5116243093691815,
+      "T_SM_final": 0.010000000000000002,
+      "eta_final": 2.1798745832093784,
+      "comoving_N_final_over_initial": 1.1044313295967654,
+      "final_n_over_sm_entropy": 0.014420461999188823,
+      "entropy_production": 0.005885494884785449,
+      "log_a_final": 4.8253317520464725,
+      "ledger_residuals": {
+        "SM_energy": 1.5860553820648549e-07,
+        "dark_energy": 2.7647443362477375e-11,
+        "total_entropy": 2.052158046012692e-08,
+        "SM_entropy": 2.0524111347952623e-08,
+        "number": 6.235151284172957e-13
+      },
+      "coordinate_form": "temperature",
+      "nfev": 5670,
+      "scale": 1.0
+    },
+    {
+      "T_initial": 0.6882487043,
+      "T_ratio_initial": 0.8,
+      "eta_initial": -0.4,
+      "n_initial": 0.04213033519608936,
+      "T_ratio_final": 0.5391287954171537,
+      "T_SM_final": 0.01000000000000001,
+      "eta_final": 1.7003342939226873,
+      "comoving_N_final_over_initial": 2.5563978915793992,
+      "final_n_over_sm_entropy": 0.012167951887387158,
+      "entropy_production": 0.048200624238463725,
+      "log_a_final": 4.815303273677663,
+      "ledger_residuals": {
+        "SM_energy": 1.5809943290090445e-06,
+        "dark_energy": 6.014494458028707e-13,
+        "total_entropy": 6.663474088853746e-07,
+        "SM_entropy": 6.663476745938368e-07,
+        "number": 5.968114891174991e-11
+      },
+      "coordinate_form": "temperature",
+      "nfev": 6474,
+      "scale": 1.0
+    },
+    {
+      "T_initial": 0.6882487043,
+      "T_ratio_initial": 1.2,
+      "eta_initial": 0.35,
+      "n_initial": 0.28207797436351645,
+      "T_ratio_final": 0.4810505986875773,
+      "T_SM_final": 0.010000000000000002,
+      "eta_final": 2.7481581130947252,
+      "comoving_N_final_over_initial": 0.6048445697368517,
+      "final_n_over_sm_entropy": 0.017390604584999823,
+      "entropy_production": 0.10377302888557727,
+      "log_a_final": 4.84960595859733,
+      "ledger_residuals": {
+        "SM_energy": 5.522756651304972e-07,
+        "dark_energy": 3.313350982470098e-11,
+        "total_entropy": 2.9759177573931983e-07,
+        "SM_entropy": 2.97588760141132e-07,
+        "number": 3.774713874804547e-11
+      },
+      "coordinate_form": "temperature",
+      "nfev": 6807,
+      "scale": 1.0
+    }
+  ],
+  "zero_coupling": {
+    "T_initial": 0.6882487043,
+    "T_ratio_initial": 1.0,
+    "eta_initial": 0.0,
+    "n_initial": 0.11910014119542459,
+    "T_ratio_final": 0.47549952740303947,
+    "T_SM_final": 0.01000000000000001,
+    "eta_final": 2.5074291203025,
+    "comoving_N_final_over_initial": 1.0,
+    "final_n_over_sm_entropy": 0.012943674764704408,
+    "entropy_production": 0.0,
+    "log_a_final": 4.828235207982074,
+    "ledger_residuals": {
+      "SM_energy": 1.6486897100875808e-06,
+      "dark_energy": 4.517514834434522e-12,
+      "total_entropy": 7.904757064469692e-07,
+      "SM_entropy": 7.904752663266819e-07,
+      "number": 0.0
+    },
+    "coordinate_form": "temperature",
+    "nfev": 4974,
+    "scale": 0.0
+  },
+  "scope": "Nonlinear conditional FD e/mu/tau vacuum-only trajectory; no full relic or complete hadronic input.",
+  "MB_control_at_same_initial_number": {
+    "form": "temperature",
+    "scale": 1.0,
+    "initial_dark_to_SM_ratio": 1.0,
+    "initial_over_equilibrium_number": 0.9015865649507232,
+    "final_T_ratio": 0.5058071392531139,
+    "final_comoving_number_fraction": 1.1787123392859096,
+    "final_eta": 2.266361336171278,
+    "final_log_a": 4.824206212250697,
+    "relative_ledger_errors": {
+      "energy": 1.5721075000661184e-07,
+      "entropy": 7.347381394724989e-08,
+      "number": 1.718699643096032e-15,
+      "sm_entropy": 7.851873723977106e-08
+    },
+    "entropy_produced": 0.007410869304324162,
+    "number_flux_positive_samples": 0,
+    "heat_flux_positive_samples": 0,
+    "nfev": 20363,
+    "min_max_sampled_T_ratio": [
+      0.5058071392531139,
+      1.0128485032782726
+    ]
+  },
+  "entropy_crosscheck": {
+    "T_initial": 0.6882487043,
+    "T_ratio_initial": 1.0,
+    "eta_initial": 0.0,
+    "n_initial": 0.11910014119542459,
+    "T_ratio_final": 0.5116243087343995,
+    "T_SM_final": 0.010000000000000004,
+    "eta_final": 2.1798745844239384,
+    "comoving_N_final_over_initial": 1.1044313464659878,
+    "final_n_over_sm_entropy": 0.014420461915444851,
+    "entropy_production": 0.00588549692117603,
+    "log_a_final": 4.825331759073614,
+    "ledger_residuals": {
+      "SM_energy": 1.0420204787572884e-08,
+      "dark_energy": 6.815837824691862e-12,
+      "total_entropy": 5.453536927602087e-15,
+      "SM_entropy": 8.604228440844963e-16,
+      "number": 4.138356324290271e-14
+    },
+    "coordinate_form": "entropy",
+    "nfev": 4723,
+    "scale": 1.0
+  },
+  "fine_quadrature": {
+    "T_initial": 0.6882487043,
+    "T_ratio_initial": 1.0,
+    "eta_initial": 0.0,
+    "n_initial": 0.11910014119542459,
+    "T_ratio_final": 0.5116243013277805,
+    "T_SM_final": 0.010000000000000002,
+    "eta_final": 2.179874638670203,
+    "comoving_N_final_over_initial": 1.1044313404316448,
+    "final_n_over_sm_entropy": 0.014420461489853743,
+    "entropy_production": 0.0058854967517992605,
+    "log_a_final": 4.82533176709003,
+    "ledger_residuals": {
+      "SM_energy": 8.094520769462432e-08,
+      "dark_energy": 8.562749467810882e-12,
+      "total_entropy": 2.1707544854200102e-08,
+      "SM_entropy": 2.1708287592861475e-08,
+      "number": 1.4017953464673383e-13
+    },
+    "coordinate_form": "temperature",
+    "nfev": 7258,
+    "scale": 1.0
+  },
+  "differences": {
+    "T_ratio_final": [
+      6.347820047380992e-10,
+      8.041400989533543e-09
+    ],
+    "comoving_N_final_over_initial": [
+      1.6869222463355982e-08,
+      1.0834879438093026e-08
+    ],
+    "final_n_over_sm_entropy": [
+      8.374397182653315e-11,
+      5.093350793211604e-10
+    ]
+  }
+}

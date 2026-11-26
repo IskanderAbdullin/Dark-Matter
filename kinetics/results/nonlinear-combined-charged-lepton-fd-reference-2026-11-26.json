@@ -1,0 +1,84 @@
+{
+  "combined": {
+    "T_initial": 0.6882487043,
+    "T_ratio_initial": 1.0,
+    "eta_initial": 0.0,
+    "n_initial": 0.11910014119542459,
+    "T_ratio_final": 0.5144292534492764,
+    "T_SM_final": 0.009999999999999993,
+    "eta_final": 2.1482014615584673,
+    "comoving_N_final_over_initial": 1.1045472723494258,
+    "final_n_over_sm_entropy": 0.014426476965530309,
+    "entropy_production": 0.0064171509138450725,
+    "log_a_final": 4.825227734633841,
+    "ledger_residuals": {
+      "SM_energy": 1.660355454066037e-06,
+      "dark_energy": 1.0848915515948576e-11,
+      "total_entropy": 8.333191253603574e-07,
+      "SM_entropy": 8.333199996556767e-07,
+      "number": 6.223355164536315e-13
+    },
+    "coordinate_form": "temperature",
+    "nfev": 5909,
+    "scale": 1.0
+  },
+  "timelike_only": {
+    "T_initial": 0.6882487043,
+    "T_ratio_initial": 1.0,
+    "eta_initial": 0.0,
+    "n_initial": 0.11910014119542459,
+    "T_ratio_final": 0.5116243093691815,
+    "T_SM_final": 0.010000000000000002,
+    "eta_final": 2.1798745832093784,
+    "comoving_N_final_over_initial": 1.1044313295967654,
+    "final_n_over_sm_entropy": 0.014420461999188823,
+    "entropy_production": 0.005885494884785449,
+    "log_a_final": 4.8253317520464725,
+    "ledger_residuals": {
+      "SM_energy": 1.5860553820648549e-07,
+      "dark_energy": 2.7647443362477375e-11,
+      "total_entropy": 2.052158046012692e-08,
+      "SM_entropy": 2.0524111347952623e-08,
+      "number": 6.235151284172957e-13
+    },
+    "coordinate_form": "temperature",
+    "nfev": 5670,
+    "scale": 1.0
+  },
+  "elastic_increment": {
+    "T_ratio_final": 0.0028049440800949066,
+    "comoving_N_final_over_initial": 0.0001159427526604695,
+    "final_n_over_sm_entropy": 6.0149663414863636e-06
+  },
+  "linear_temperature_control": {
+    "T_initial": 0.6882487043,
+    "T_ratio_initial": 1.0,
+    "eta_initial": 0.0,
+    "n_initial": 0.11910014119542459,
+    "T_ratio_final": 0.5144214384354058,
+    "T_SM_final": 0.010000000000000002,
+    "eta_final": 2.1482893389810482,
+    "comoving_N_final_over_initial": 1.1045468367050517,
+    "final_n_over_sm_entropy": 0.014426460624466984,
+    "entropy_production": 0.006414768219546249,
+    "log_a_final": 4.825227980735185,
+    "ledger_residuals": {
+      "SM_energy": 1.7636288516930526e-06,
+      "dark_energy": 4.998900599018086e-13,
+      "total_entropy": 7.907371768981625e-07,
+      "SM_entropy": 7.907370820625648e-07,
+      "number": 3.6819158832912535e-13
+    },
+    "coordinate_form": "temperature",
+    "nfev": 6249,
+    "scale": 1.0
+  },
+  "interpolation_path_differences": {
+    "T_ratio_final": 7.815013870593468e-06,
+    "comoving_N_final_over_initial": 4.3564437413046164e-07,
+    "final_n_over_sm_entropy": 1.6341063325403526e-08
+  },
+  "maximum_linear_T_interp_fraction": 0.1146986032534476,
+  "maximum_elastic_interp_fraction": 0.05184833904135777,
+  "scope": "Conditional charged-lepton-only FD effective vacuum portal; no medium corrections, real vector, continuous hadrons, or physical final relic."
+}

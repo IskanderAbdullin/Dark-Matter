@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "T_GeV": 0.01,
+      "log10_rest_mode_damping_over_H": -2423941.7395684575,
+      "first_crossing_p_over_T": 0.6783308270478982,
+      "first_crossing_p_GeV": 0.006783308270478981,
+      "parent_threshold_at_rest_over_T": 5581395.348841512,
+      "local_detailed_balance_slope_log_error": 2.1316282072803006e-14,
+      "example_log10_rates_over_H": {
+        "1e-06": -2158422.9769125488,
+        "0.0001": -104019.314093766,
+        "0.001": -10404.526607822567,
+        "0.01": -1024.9604367767524,
+        "0.1": -87.90554112004853,
+        "1.0": 4.708114433952477
+      }
+    },
+    {
+      "T_GeV": 0.02,
+      "log10_rest_mode_damping_over_H": -1211958.0683581433,
+      "first_crossing_p_over_T": 0.1720731011038078,
+      "first_crossing_p_GeV": 0.003441462022076156,
+      "parent_threshold_at_rest_over_T": 2790697.674420756,
+      "local_detailed_balance_slope_log_error": 1.4210854715202004e-14,
+      "example_log10_rates_over_H": {
+        "1e-06": -962449.8145494272,
+        "0.0001": -26027.215875395712,
+        "0.001": -2588.336053834286,
+        "0.01": -244.15999995180462,
+        "0.1": -10.661984481754507,
+        "1.0": 11.59525962009145
+      }
+    },
+    {
+      "T_GeV": 0.1,
+      "log10_rest_mode_damping_over_H": -242372.58418191838,
+      "first_crossing_p_over_T": 0.0072583367679319635,
+      "first_crossing_p_GeV": 0.0007258336767931964,
+      "parent_threshold_at_rest_over_T": 558139.5348841511,
+      "local_detailed_balance_slope_log_error": 1.4210854715202004e-14,
+      "example_log10_rates_over_H": {
+        "1e-06": -89876.92085120083,
+        "0.0001": -1026.0648327539775,
+        "0.001": -89.00821581062809,
+        "0.01": 3.7972576333494255,
+        "0.1": 12.121181258132411,
+        "1.0": 11.724056972030544
+      }
+    },
+    {
+      "T_GeV": 0.3,
+      "log10_rest_mode_damping_over_H": -80776.25631947102,
+      "first_crossing_p_over_T": 0.0008468389268473973,
+      "first_crossing_p_GeV": 0.00025405167805421915,
+      "parent_threshold_at_rest_over_T": 186046.5116280504,
+      "local_detailed_balance_slope_log_error": 7.105427357601002e-15,
+      "example_log10_rates_over_H": {
+        "1e-06": -11335.954697439116,
+        "0.0001": -101.20786388928161,
+        "0.001": 2.022362376722932,
+        "0.01": 11.414292354805974,
+        "0.1": 11.227537997474023,
+        "1.0": 10.165154355229896
+      }
+    },
+    {
+      "T_GeV": 0.6882487043,
+      "log10_rest_mode_damping_over_H": -35197.786913872456,
+      "first_crossing_p_over_T": 0.00016595828379744503,
+      "first_crossing_p_GeV": 0.00011422057379144322,
+      "parent_threshold_at_rest_over_T": 81095.61723793152,
+      "local_detailed_balance_slope_log_error": 7.105427357601002e-15,
+      "example_log10_rates_over_H": {
+        "1e-06": -2176.4141257519204,
+        "0.0001": -8.52528785706356,
+        "0.001": 10.275506233270113,
+        "0.01": 11.052575428140484,
+        "0.1": 10.154499172066197,
+        "1.0": 9.046084306183328
+      }
+    },
+    {
+      "T_GeV": 0.95,
+      "log10_rest_mode_damping_over_H": -25494.303521625916,
+      "first_crossing_p_over_T": 8.813893318550118e-05,
+      "first_crossing_p_GeV": 8.373198652622612e-05,
+      "parent_threshold_at_rest_over_T": 58751.529987805385,
+      "local_detailed_balance_slope_log_error": 7.105427357601002e-15,
+      "example_log10_rates_over_H": {
+        "1e-06": -1137.5055716194165,
+        "0.0001": 1.4993546072637018,
+        "0.001": 10.863967510388395,
+        "0.01": 10.684544680694318,
+        "0.1": 9.729564241174291,
+        "1.0": 8.616327444876918
+      }
+    }
+  ],
+  "scope": "Decay/inverse decay channel only, thermal fermion baths. An integrated equilibration clock cannot ensure the low-momentum scalar tail equilibrates. No condensate or total freeze-out claim."
+}
