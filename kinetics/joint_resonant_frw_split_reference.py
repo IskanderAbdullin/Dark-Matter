@@ -45,8 +45,8 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False):
-    assert not elastic or centered
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None):
+    assert nx>0 and (centered or not elastic)
     vis,H,k,N,t,Q,th=configuration(row,eos,8,6.5)
     q=k.c[0].p
     omitted=[0.,0.]
@@ -81,6 +81,9 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     N0=u0.reshape(2,cnt,2)[:,:,0].sum(axis=1)
     dE=np.zeros(2);Qadd=np.zeros(2)
     dSadv=dScol=0.;er=0.;en=0.;entropy_r=0.;nonlinear=0
+    source_energy=np.zeros(2);source_n=np.zeros(2)
+    tails=np.zeros((3,2,2)); source_total=np.zeros((3,2))
+    source_entropy=0.
     dx=extent/nx
     s0=eos.state(vis)[2]
     for i in range(nx):
@@ -97,6 +100,32 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         Et=e_species(kin,v0,b)
         h=np.sqrt((eos.state(v)[0]+Et.sum()/b**4)/3)/MPL
         m0.H=h
+        if source is not None:
+            # Midpoint visible rates, two positive half-increments around
+            # collisions. H and the bath are frozen at the pre-kick midpoint.
+            sr=source.rates(v,q,b)*(dx/h)
+            weights=np.array([b**3,b**4])[None,:]
+            sr_tot=sr.copy()
+            sr_tot[:,1]+=sr[:,0]*np.array([kin.c[1].mass,kin.c[1].mass,kin.c[0].mass])[:,None]
+            tails+=sr_tot[:,:,[0,-1]]*weights[:,:,None]
+            source_total+=sr_tot.sum(axis=2)*weights
+            kept=np.stack([sr[2,:,1:-1],sr[:2,:,1:-1].sum(axis=0)])
+            source_n+=b**3*kept[:,0,:].sum(axis=1)
+            source_energy+=b**4*np.array([(x[1]+C.mass*x[0]).sum() for x,C in zip(kept,kin.c)])
+            def kick(before):
+                U,S,_=m0.moment(pack(before))
+                u=U.reshape(2,cnt,2)
+                states=[]
+                for j,C in enumerate(kin.c):
+                    n=u[j,:,0]
+                    K=n*C.low+u[j,:,1]*C.dk
+                    reconstructed,_,_=C.reconstruct([n+kept[j,0]/2,K+kept[j,1]/2])
+                    states.append(reconstructed)
+                _,after,_=m0.moment(pack(states))
+                return states,(after-S)*b**3
+            th,ds=kick(th);source_entropy+=ds
+            v0,s1,_=m0.moment(pack(th))
+            Et=e_species(kin,v0,b)
         if elastic:
             from joint_below_pole_elastic_linear_modes_reference import setup
             from joint_combined_centered_implicit_reference import Combined
@@ -117,38 +146,58 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         v1,s2,_=m0.moment(pack(th))
         Qadd+=e_species(kin,v1,b)-Et
         dScol+=(s2-s1)*b**3
+        if source is not None:
+            th,ds=kick(th);source_entropy+=ds
         th,g,x,y,s=redshift(q,b,c,th);dE+=g;er=max(er,x);en=max(en,y);dSadv+=s
     af=np.exp(extent)
     kn=Collision(q/af,order=5)
     m1=Model(kn,H)
     U,S,_=m1.moment(pack(th))
     Ef=e_species(kn,U,af)
+    # Independently reconcile in-domain inputs with the full rate less tails.
+    kept_rates=source_total-tails.sum(axis=2)
+    sums=np.stack([source_n,source_energy],axis=1)
+    assert np.max(abs(sums-np.stack([kept_rates[2],kept_rates[:2].sum(axis=0)]))
+                  /np.maximum(sums,1e-100))<3e-13
     n1=U.reshape(2,cnt,2)[:,:,0].sum(axis=1)*af**3
-    errE=np.max(abs(Ef-E0-dE-Qadd))/E0.sum()
+    errE=np.max(abs(Ef-E0-dE-Qadd-source_energy))/E0.sum()
     errQ=abs(sum(Qadd))/E0.sum()
-    errS=abs((S*af**3-S0)-dScol-dSadv)/S0
-    assert max(errE,errQ,errS,er,np.max(abs(n1/N0-1)))<2e-9
+    errS=abs((S*af**3-S0)-dScol-dSadv-source_entropy)/S0
+    assert max(errE,errQ,errS,er,np.max(abs(n1/(N0+source_n)-1)))<2e-9
     Tin,eq=maxent(kn.c,n1*af**-3,Ef.sum()*af**-4,vis/af)
     rem=[float(.5*np.sum(abs(U[2*j*cnt:2*(j+1)*cnt:2]-eq[j][2]))/(n1[j]*af**-3)) for j in (0,1)]
     return dict(nsteps=nx,final_a=af,common_equilibrium_T=Tin,centered_residual=centered,
       final_number_shell_total_variation_from_closed_box_equilibrium=rem,
       omitted_source_number_fractions=omitted,comoving_support_over_initial_visible_T=(q[[0,-1]]/vis).tolist(),
       initialization="warm source-bin counts" if warm else "manufactured near equilibrium",below_pole_elastic=elastic,manufactured_collision_amplitude_relative_to_actual=scale,
-      total_number_defect=float(np.max(abs(n1/N0-1))),split_energy_ledger_defect=float(errE),
+      total_number_defect=float(np.max(abs(n1/(N0+source_n)-1))),split_energy_ledger_defect=float(errE),
       collision_opposite_heat_defect=float(errQ),integrated_entropy_ledger_defect=float(errS),
       comoving_q_scalar_from_collisions_over_initial_energy=Qadd[0]/E0.sum(),
       redshift_trace_contribution_over_initial_energy=(dE/E0.sum()).tolist(),
       projection_entropy_change_relative_to_initial=dSadv/S0,
       collision_entropy_change_relative_to_initial=dScol/S0,
-      maximum_moment_reconstruction_defect=en,nonlinear_iterations=nonlinear)
+      maximum_moment_reconstruction_defect=en,nonlinear_iterations=nonlinear,
+      visible_injection=source is not None,
+      comoving_energy_from_source_over_initial_total=(source_energy/E0.sum()).tolist(),
+      comoving_count_from_source_over_initial_species=(source_n/N0).tolist(),
+      comoving_source_channel_count_and_total_energy=source_total.tolist(),
+      comoving_source_channel_count_and_total_energy_tails=tails.tolist())
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument('eos');p.add_argument('spectra')
     p.add_argument("--physical-amplitude",action="store_true");p.add_argument("--warm-source-init",action="store_true");p.add_argument("--with-elastic",action="store_true")
+    p.add_argument("--visible-source",action="store_true");p.add_argument("--source-only",action="store_true")
+    p.add_argument("--steps",type=int,nargs="+",default=[3,6])
     a=p.parse_args();eos=StandardModel(a.eos)
+    source=None
+    if a.visible_source:
+        from joint_visible_fd_source_reference import Visible
+        source=Visible()
+    if a.source_only: assert a.visible_source and not a.with_elastic
+    if a.visible_source: assert a.physical_amplitude
     r=next(r for r in json.loads(Path(a.spectra).read_text())['rows'] if r['TR']==.05 and abs(r['TF']-.045)<1e-8)
-    rows=([run(r,eos,3,scale=1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic),run(r,eos,6,scale=1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic)]
+    rows=([run(r,eos,n,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source) for n in a.steps]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     print(json.dumps(dict(rows=rows,
-       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else "Manufactured near-equilibrium shape. ")+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+"injection disabled.")),
+       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else "Manufactured near-equilibrium shape. ")+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+("visible source enabled (vacuum final state)." if a.visible_source else "injection disabled."))),
        indent=2,allow_nan=False))
