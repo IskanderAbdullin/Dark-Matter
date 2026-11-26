@@ -1,0 +1,39 @@
+{
+  "scope": "Exact consecutive selected corrected q64 replay and discrete operator budget, not a continuum sign or an omitted-channel bound.",
+  "start_sha256": "47ed379f76b68beae52796d05fa45f4b97ce0464ff1fde3acccd0b03e87f7b91",
+  "end_sha256": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "narrow_guess_sha256": "27950d8171d19c25c85f7c3e96af08755883de82e7d342f6c9629772c2b86d9f",
+  "replay_sha256": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "checkpoint_temperature_GeV": 0.0073940494651976016,
+  "maximum_archived_endpoint_shell_L1": 0.0,
+  "accepted_energy_and_count_ledger": [
+    1.76534774611801e-14,
+    1.8207657603852567e-14
+  ],
+  "redshift_changes": [
+    -2.710505431213761e-20,
+    -3.8624702394796095e-19
+  ],
+  "pair_kick_changes": [
+    -1.0039132820579202e-08,
+    -9.9948205661337e-09
+  ],
+  "stiff": {
+    "dt_hubble": 0.0019856287459233553,
+    "H_GeV": 2.440800136718848e-23,
+    "volume": 2.5682018625563506e-15,
+    "stiff_actual_change": -8.1156877844233e-08,
+    "direct_prompt_change": -1.0470958505793291e-11,
+    "elastic_change": -8.114640688579612e-08,
+    "stiff_count_defect": 6.891407119301784e-20,
+    "residual": 7.268824455295807e-12
+  },
+  "observed_total_change": -1.0119083123164008e-07,
+  "unattributed_roundoff": -2.808311266842031e-19,
+  "per_lna": {
+    "total": -5.0961606714947314e-05,
+    "pair": -1.008947590421629e-05,
+    "prompt": -5.273371735421817e-09,
+    "below_pole_elastic": -4.086685743868071e-05
+  }
+}

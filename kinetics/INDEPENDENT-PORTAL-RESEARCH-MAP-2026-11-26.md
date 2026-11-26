@@ -139,6 +139,8 @@ reproducible controls below are not observational constraints.
    compares 12, 24 and 48 q32 steps plus 24 wider q64 steps. It
    isolates the time error from the tested outer-support change;
    the cold decline survives both controls.
+   The [completed four-run time/support cross](INDEPENDENT-WARM-CORRECTED-FOUR-RUN-TIME-SUPPORT-2026-11-26.md)
+   adds q64 at 48 steps and checks the signed mixed effect separately.
    A [realizable first-order cancellation diagnostic](INDEPENDENT-WARM-CORRECTED-RECONSTRUCTED-TIME-DIAGNOSTIC-2026-11-26.md)
    reconstructs admissible Fermi/Bose phases and recomputes pressure,
    rather than advancing or directly interpolating those phases.

@@ -53,7 +53,8 @@ def audit(eos, seed32, q32, wide, count):
     r0 = read(seed32)[-1]
     manifest = read(wide/"correction-manifest.json")
     assert manifest["eos_sha256"] == sha(eos) and manifest["guide_sha256"] == sha(guide_tape)
-    assert len(guide_rows)==24 and count<=24
+    planned = len(guide_rows)
+    assert planned in (24,48) and 0<=count<=planned
     initials = [x["snapshot"] for x in (r0,w0)]
     previous = [x["snapshot_sha256"] for x in (r0,w0)]
     D = measures(initials[0])*initials[0]["scale_factor"]**3
@@ -79,7 +80,7 @@ def audit(eos, seed32, q32, wide, count):
             previous[j]=v["snapshot_sha256"]
             assert digest(S)==previous[j]
             v0,p,u=state(eos,S,initials[j])
-            assert abs(v0["relative_a"]/(1.10**(i/24))-1.)<1.2e-13
+            assert abs(v0["relative_a"]/(1.10**(i/planned))-1.)<1.2e-13
             params=dict(snapshot_sha256=previous[j],**v0)
             if i:
                 before=out[-1]["branches"][j]
