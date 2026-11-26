@@ -19,9 +19,9 @@ def bose(T):
     return -1./np.expm1(-mpi/T)
 
 
-def low_strip_per_unit(T):
+def low_strip_per_unit(T,upper_s=.10):
     """Below KLOE, give |Fpi|^2<=1 and the exact p-wave spectral phase."""
-    nodes=np.linspace(4*mpi**2,.10,185)
+    nodes=np.linspace(4*mpi**2,upper_s,185)
     l,h=nodes[:-1],nodes[1:]
     E0,E1=np.sqrt(l),np.sqrt(h)
     r=.25*np.maximum(0.,1-4*mpi**2/h)**1.5

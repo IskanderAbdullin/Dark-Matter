@@ -125,6 +125,9 @@ slice without inventing bins or duplicating KLOE coverage.
 The [lower dispersive-theory threshold check](INDEPENDENT-WARM-DISPERSIVE-THEORY-PION-THRESHOLD-2026-11-26.md)
 uses a separate conditional positive moment below .30 GeV,
 not a substitute measured spectrum.
+The [joint pion comparison](INDEPENDENT-WARM-JOINT-BABAR-PION-BUDGET-2026-11-26.md)
+keeps the three charged bands disjoint and includes a separate
+conditional neutral and elastic allowance. It is not full hadrons.
 The [unmeasured-source budget by invariant band](INDEPENDENT-WARM-UNMEASURED-SPECTRAL-BUDGET-2026-11-26.md)
 translates missing positive rates into sufficient conditional
 caps and identifies where low-mass spectral coverage matters.

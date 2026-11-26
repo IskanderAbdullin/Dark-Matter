@@ -133,7 +133,9 @@ def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.,
                 pure_heat_energy_over_lepton_to_touch_half=float(pure_heat_headroom/El))
     if return_components:
         result["baseline_components"]=dict(direct_Omega=float(nrm*(Nl+Np)),
-                 recycle_Omega=float(nrm*c*w2_phased), heat_exponent=float(heat*heat_multiplier))
+                 recycle_Omega=float(nrm*c*w2_phased), heat_exponent=float(heat*heat_multiplier),
+                 additional_early_portal_linear_coefficient=float(nrm*(1/m+2*c*w1_phased)),
+                 additional_early_portal_quadratic_coefficient=float(nrm*c*w0))
     return result
 
 
