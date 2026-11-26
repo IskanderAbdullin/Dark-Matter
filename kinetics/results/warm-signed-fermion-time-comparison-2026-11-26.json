@@ -1,0 +1,420 @@
+{
+  "scope": "Homogeneous isotropic warm signed network, both dark fermions capped per spin, scalar occupancy unbounded. Time-dependent loss comparison with finite Euler lower cells; not an actual evolution.",
+  "target": 0.12,
+  "cases": [
+    {
+      "q": 16,
+      "old_additive_threshold": 0.00404924194793528,
+      "controls": [
+        {
+          "time_lower_cells": 320,
+          "fermion_Omega_lower_at_half_per_spin": 0.8171711337332901,
+          "entire_signed_cap_range_excludes_target": true,
+          "values": [
+            {
+              "cap": 0.0,
+              "lower_Omega": 24.363973563028416,
+              "eta": 1.008,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.0001,
+              "lower_Omega": 23.8066935794979,
+              "eta": 1.289966197366852,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.001,
+              "lower_Omega": 22.643587508478415,
+              "eta": 1.199701205865038,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.003,
+              "lower_Omega": 21.355817872308997,
+              "eta": 1.1653892334384048,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.005,
+              "lower_Omega": 20.456503018765325,
+              "eta": 1.1486030219384462,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.01,
+              "lower_Omega": 18.80246323461132,
+              "eta": 1.1320585982364493,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.05,
+              "lower_Omega": 12.351862589857049,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.4
+            },
+            {
+              "cap": 0.1,
+              "lower_Omega": 8.49802398932588,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.5
+            },
+            {
+              "cap": 0.3,
+              "lower_Omega": 2.659103760064467,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.6
+            },
+            {
+              "cap": 0.5,
+              "lower_Omega": 0.8171711337332901,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.7
+            }
+          ]
+        },
+        {
+          "time_lower_cells": 1000,
+          "fermion_Omega_lower_at_half_per_spin": 1.0498420470729735,
+          "entire_signed_cap_range_excludes_target": true,
+          "values": [
+            {
+              "cap": 0.0,
+              "lower_Omega": 24.534491460943073,
+              "eta": 1.008,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.0001,
+              "lower_Omega": 23.982415785402804,
+              "eta": 1.289966197366852,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.001,
+              "lower_Omega": 22.830214153846235,
+              "eta": 1.199701205865038,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.003,
+              "lower_Omega": 21.554821532564784,
+              "eta": 1.1653892334384048,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.005,
+              "lower_Omega": 20.66438572585865,
+              "eta": 1.1486030219384462,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.01,
+              "lower_Omega": 19.026959742956983,
+              "eta": 1.1320585982364493,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.05,
+              "lower_Omega": 12.638940832040017,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.4
+            },
+            {
+              "cap": 0.1,
+              "lower_Omega": 8.813127003180456,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.5
+            },
+            {
+              "cap": 0.3,
+              "lower_Omega": 2.951370061003891,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.6
+            },
+            {
+              "cap": 0.5,
+              "lower_Omega": 1.0498420470729735,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.7
+            }
+          ]
+        },
+        {
+          "time_lower_cells": 2800,
+          "fermion_Omega_lower_at_half_per_spin": 1.118187054621678,
+          "entire_signed_cap_range_excludes_target": true,
+          "values": [
+            {
+              "cap": 0.0,
+              "lower_Omega": 24.585280519709336,
+              "eta": 1.008,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.0001,
+              "lower_Omega": 24.034717443318577,
+              "eta": 1.289966197366852,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.001,
+              "lower_Omega": 22.885684318804547,
+              "eta": 1.199701205865038,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.003,
+              "lower_Omega": 21.613883321052835,
+              "eta": 1.1653892334384048,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.005,
+              "lower_Omega": 20.726020246689696,
+              "eta": 1.1486030219384462,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.01,
+              "lower_Omega": 19.09339945752197,
+              "eta": 1.1320585982364493,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.05,
+              "lower_Omega": 12.7233515043567,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.4
+            },
+            {
+              "cap": 0.1,
+              "lower_Omega": 8.905472532165287,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.5
+            },
+            {
+              "cap": 0.3,
+              "lower_Omega": 3.036903186252347,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.6
+            },
+            {
+              "cap": 0.5,
+              "lower_Omega": 1.118187054621678,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "old_additive_threshold": 0.004050366809332317,
+      "controls": [
+        {
+          "time_lower_cells": 320,
+          "fermion_Omega_lower_at_half_per_spin": 0.8181548654800046,
+          "entire_signed_cap_range_excludes_target": true,
+          "values": [
+            {
+              "cap": 0.0,
+              "lower_Omega": 24.365451175403496,
+              "eta": 1.008,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.0001,
+              "lower_Omega": 23.808248218738193,
+              "eta": 1.289966197366852,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.001,
+              "lower_Omega": 22.64527262222659,
+              "eta": 1.199701205865038,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.003,
+              "lower_Omega": 21.35763144924225,
+              "eta": 1.1653892334384048,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.005,
+              "lower_Omega": 20.458399581936217,
+              "eta": 1.1486030219384462,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.01,
+              "lower_Omega": 18.80449325186874,
+              "eta": 1.1320585982364493,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.05,
+              "lower_Omega": 12.35414546153859,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.4
+            },
+            {
+              "cap": 0.1,
+              "lower_Omega": 8.500244961488873,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.5
+            },
+            {
+              "cap": 0.3,
+              "lower_Omega": 2.6606066404380977,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.6
+            },
+            {
+              "cap": 0.5,
+              "lower_Omega": 0.8181548654800046,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.7
+            }
+          ]
+        },
+        {
+          "time_lower_cells": 1000,
+          "fermion_Omega_lower_at_half_per_spin": 1.0508698918158215,
+          "entire_signed_cap_range_excludes_target": true,
+          "values": [
+            {
+              "cap": 0.0,
+              "lower_Omega": 24.535981555183128,
+              "eta": 1.008,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.0001,
+              "lower_Omega": 23.983982184837416,
+              "eta": 1.289966197366852,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.001,
+              "lower_Omega": 22.8319096905798,
+              "eta": 1.199701205865038,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.003,
+              "lower_Omega": 21.556644084146583,
+              "eta": 1.1653892334384048,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.005,
+              "lower_Omega": 20.666290252115427,
+              "eta": 1.1486030219384462,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.01,
+              "lower_Omega": 19.028995996448252,
+              "eta": 1.1320585982364493,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.05,
+              "lower_Omega": 12.641227558334323,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.4
+            },
+            {
+              "cap": 0.1,
+              "lower_Omega": 8.815356445850048,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.5
+            },
+            {
+              "cap": 0.3,
+              "lower_Omega": 2.952906440574933,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.6
+            },
+            {
+              "cap": 0.5,
+              "lower_Omega": 1.0508698918158215,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.7
+            }
+          ]
+        },
+        {
+          "time_lower_cells": 2800,
+          "fermion_Omega_lower_at_half_per_spin": 1.1192274864996552,
+          "entire_signed_cap_range_excludes_target": true,
+          "values": [
+            {
+              "cap": 0.0,
+              "lower_Omega": 24.586774323673367,
+              "eta": 1.008,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.0001,
+              "lower_Omega": 24.036287342260785,
+              "eta": 1.289966197366852,
+              "cut_GeV": 9.1
+            },
+            {
+              "cap": 0.001,
+              "lower_Omega": 22.887382966111094,
+              "eta": 1.199701205865038,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.003,
+              "lower_Omega": 21.615708563425198,
+              "eta": 1.1653892334384048,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.005,
+              "lower_Omega": 20.727927171563575,
+              "eta": 1.1486030219384462,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.01,
+              "lower_Omega": 19.09543761317636,
+              "eta": 1.1320585982364493,
+              "cut_GeV": 9.2
+            },
+            {
+              "cap": 0.05,
+              "lower_Omega": 12.725639474769007,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.4
+            },
+            {
+              "cap": 0.1,
+              "lower_Omega": 8.907704557782292,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.5
+            },
+            {
+              "cap": 0.3,
+              "lower_Omega": 3.038449224102404,
+              "eta": 1.0996812335908794,
+              "cut_GeV": 9.6
+            },
+            {
+              "cap": 0.5,
+              "lower_Omega": 1.1192274864996552,
+              "eta": 1.115752479632387,
+              "cut_GeV": 9.7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

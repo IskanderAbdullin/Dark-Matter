@@ -109,6 +109,10 @@ The [signed fermion-cap comparison](INDEPENDENT-WARM-SIGNED-PAIR-FERMION-CAP-202
 does not assume a scalar cap. Instead a light and heavy
 per-spin fermion cap controls the sign of the quadratic
 Bose term. This alternative remains a conditional result.
+Its [time-resolved lower comparison](INDEPENDENT-WARM-SIGNED-FERMION-TIME-COMPARISON-2026-11-26.md)
+uses the number decrease within the analytic comparison,
+giving a useful floor all the way to fermion cap one half,
+still without claiming that cap dynamically.
 The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
