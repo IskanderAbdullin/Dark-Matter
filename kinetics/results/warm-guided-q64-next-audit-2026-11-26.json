@@ -1,0 +1,55 @@
+{
+  "scope": "Checks accepted atomic snapshots. Reconstructed extrema do not bound any unknown sub-shell distribution or actual heavy occupation.",
+  "steps": [
+    {
+      "step": 1,
+      "temperature_GeV": 0.010187141866276936,
+      "snapshot_sha256": "1484c0d5326c85deedd6450d9c80355a0192e4fd69ed8d1160e86484266cb3bb",
+      "cumulative_number_defect": 6.328271240363392e-15,
+      "local_energy_work_defect": -5.391348131153649e-15,
+      "inherited_exterior_count": 144,
+      "new_collisionless_receipts": 4,
+      "q64_archive_peak": {
+        "retained_scalar_peak": 0.0003824168124693885,
+        "retained_light_peak": 5.7861684264682026e-05,
+        "entropy_array_sha256": "d71d562ef4b2c0c3250d9897bfafb8f492509d218319ca82b42bbc0aa07ebbdd"
+      },
+      "q32_archive_peak": {
+        "retained_scalar_peak": 0.000382416789115345,
+        "retained_light_peak": 5.7861688054814086e-05,
+        "entropy_array_sha256": "95b099016e444814dd955df377ab283c3e3e6c929841791a6f4a525931970d14"
+      },
+      "common_count_L1": [
+        6.103287397072323e-07,
+        1.073767705893101e-07
+      ],
+      "solver_iterations": 4,
+      "used_guided_guess": true
+    },
+    {
+      "step": 2,
+      "temperature_GeV": 0.010136743377811933,
+      "snapshot_sha256": "dcf83e8bb46b68cceba4e475002b3857738bb3aa9d8557ebec491436a3b2f447",
+      "cumulative_number_defect": 9.325873406851315e-15,
+      "local_energy_work_defect": 6.104246516372336e-16,
+      "inherited_exterior_count": 144,
+      "new_collisionless_receipts": 8,
+      "q64_archive_peak": {
+        "retained_scalar_peak": 0.00038366561044558855,
+        "retained_light_peak": 5.784930459820721e-05,
+        "entropy_array_sha256": "a05ed473e14cebb51e5c7939c821732f2f9acdb0b5e4c367d88f0a53b97a0df6"
+      },
+      "q32_archive_peak": {
+        "retained_scalar_peak": 0.0003836655716299137,
+        "retained_light_peak": 5.784930950453573e-05,
+        "entropy_array_sha256": "fd4902df776f0468642ce9de6481fd5f2cea060f6f90ffbac1625ffa3ee7dd52"
+      },
+      "common_count_L1": [
+        7.210915837710005e-07,
+        1.2875339010766244e-07
+      ],
+      "solver_iterations": 4,
+      "used_guided_guess": true
+    }
+  ]
+}
