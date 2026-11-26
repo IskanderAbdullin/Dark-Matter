@@ -256,7 +256,8 @@ within-cohort distribution. A [resolved-shell moment envelope](INDEPENDENT-WARM-
 independently bounds the later retained bare high inverse rates
 without choosing their within-shell profiles. A [direct-occupation hard-tail stress](INDEPENDENT-WARM-DIRECT-PROMPT-STRESS-2026-11-26.md)
 evolves two moment-matched hard packets briefly and separates
-robust strong relaxation from unresolved terminal precision. A [completed selected coupled stress](INDEPENDENT-WARM-COUPLED-COHORT-STRESS-2026-11-26.md)
+robust strong relaxation from unresolved terminal precision. The [isolated exposure time ladder](INDEPENDENT-WARM-DIRECT-EXPOSURE-TIME-LADDER-2026-11-26.md)
+separates path error from integration samples and does not claim a comoving dose. A [completed selected coupled stress](INDEPENDENT-WARM-COUPLED-COHORT-STRESS-2026-11-26.md)
 checks a hard .58 GeV realization on the same two-step grid as a vacuum-padded control
 and resolves relaxation to the selected-network terminal rate in this case.
 The [matched .52/.58 GeV comparison](INDEPENDENT-WARM-COUPLED-COHORT-HARDNESS-2026-11-26.md)

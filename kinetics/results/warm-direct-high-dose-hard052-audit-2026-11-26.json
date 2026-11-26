@@ -1,0 +1,114 @@
+{
+  "scope": "Same isolated fixed clock and hard-packet seed. Numerical quadrature decomposition, not a comoving dose or rigorous stronger bound.",
+  "hard_GeV": 0.52,
+  "source_snapshot_sha256": "b494c58f1d2433b5aeda0d4f0320792a5897898a02970715802a6cd18b0ccf53",
+  "rate_order": [
+    "bare_inverse_energy",
+    "tagged_inverse_energy"
+  ],
+  "ladders": [
+    {
+      "samples_per_decade": 4,
+      "cumulative_energy_fraction": [
+        3.3537282363671986e-28,
+        3.157356978740392e-28
+      ],
+      "fraction_through_Hdt_1e_minus_7": [
+        0.9635339279375974,
+        0.9662254177759207
+      ],
+      "terminal_normalized_rate": [
+        3.796797965435525e-32,
+        2.2190368922877917e-32
+      ],
+      "log_simpson_same_path_fraction": [
+        3.17548434502485e-28,
+        2.9895270746187527e-28
+      ]
+    },
+    {
+      "samples_per_decade": 8,
+      "cumulative_energy_fraction": [
+        2.998361691935624e-28,
+        2.8227414109233157e-28
+      ],
+      "fraction_through_Hdt_1e_minus_7": [
+        0.9845745995584677,
+        0.9859071823422753
+      ],
+      "terminal_normalized_rate": [
+        3.7938448531142007e-32,
+        2.2173418499231858e-32
+      ],
+      "log_simpson_same_path_fraction": [
+        2.9573593303111555e-28,
+        2.7841406206959888e-28
+      ]
+    },
+    {
+      "samples_per_decade": 16,
+      "cumulative_energy_fraction": [
+        2.859078679523516e-28,
+        2.691593493243012e-28
+      ],
+      "fraction_through_Hdt_1e_minus_7": [
+        0.9909183515747496,
+        0.991768701796352
+      ],
+      "terminal_normalized_rate": [
+        3.7936604130563854e-32,
+        2.2172339505121677e-32
+      ],
+      "log_simpson_same_path_fraction": [
+        2.8492335954143392e-28,
+        2.682325133913692e-28
+      ]
+    }
+  ],
+  "decompositions": [
+    {
+      "coarse_and_fine_steps_per_decade": [
+        4,
+        8
+      ],
+      "total_shift_over_coarse": [
+        -0.10596164011682484,
+        -0.10597964375588882
+      ],
+      "sampling_shift_on_finer_path_over_coarse": [
+        -0.03728840016460958,
+        -0.03728764821486631
+      ],
+      "path_shift_on_coarse_sampling_over_coarse": [
+        -0.06867323995221525,
+        -0.06869199554102251
+      ],
+      "terminal_rate_relative_shift": [
+        -0.000777790219076202,
+        -0.00076386398554118
+      ]
+    },
+    {
+      "coarse_and_fine_steps_per_decade": [
+        8,
+        16
+      ],
+      "total_shift_over_coarse": [
+        -0.04645303893346918,
+        -0.04646118740200338
+      ],
+      "sampling_shift_on_finer_path_over_coarse": [
+        -0.009891289355753364,
+        -0.009891204846939627
+      ],
+      "path_shift_on_coarse_sampling_over_coarse": [
+        -0.03656174957771582,
+        -0.03656998255506375
+      ],
+      "terminal_rate_relative_shift": [
+        -4.861560368341067e-05,
+        -4.866160399297215e-05
+      ]
+    }
+  ]
+}
