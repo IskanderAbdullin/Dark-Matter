@@ -58,3 +58,23 @@ python -W error warm_cold_light_finite_pair_reference.py EOS.dat --snapshots \
 [reported uncorrected q64 intermediate-rate checks](results/warm-cold-pair-spike-q64-frozen-2026-11-26.json).
 
 Exact [refined lifted q32 output](results/warm-cold-pair-spike-q32-lifted-2026-11-26.json.gz).
+
+## Separate time-step control
+
+Same q32 predecessors, endpoint temperature, quadrature and partition; subdivide
+only the original expansion interval. Both schemes keep opposite signs across
+the tested time ladder. Rates are cell-mean occupation per unit ln(a).
+
+| matched cuts | original | lifted |
+|---:|---:|---:|
+| 1 | +1.43547e-4 | -4.71847e-5 |
+| 2 | +1.257074e-04 | -4.771821e-05 |
+| 4 | +1.209726e-04 | -4.799308e-05 |
+
+~~~sh
+for n in 2 4; do
+  python -W error warm_cold_pair_spike_replay_reference.py EOS.dat replay replay/32-time-$n --q 32 --subdivisions "$n"
+done
+~~~
+
+[Time-step diagnostics](results/warm-cold-pair-spike-time-2026-11-26.json).
