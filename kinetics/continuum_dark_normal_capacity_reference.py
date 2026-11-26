@@ -48,6 +48,9 @@ def fugacity(T, mass, density, bose, order):
     hi=0. if bose else 1.
     def fun(q):
         return moments(T,mass,q,bose,order)[0]/density-1.
+    if bose and fun(hi)<0.:
+        if fun(hi)>-1e-10: return hi
+        raise ValueError("normal Bose state is above the saturation count")
     if not bose:
         while fun(hi)<0.:
             hi=2*hi+2
