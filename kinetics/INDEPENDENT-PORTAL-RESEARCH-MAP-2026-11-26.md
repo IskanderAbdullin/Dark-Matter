@@ -65,7 +65,9 @@ reproducible controls below are not observational constraints.
    compares different profiles with the same shell moments; a change
    in the largest-number shell moves the net pair rate by about 1%. The [near-rest inverse-decay check](INDEPENDENT-WARM-NEAR-REST-LIGHT-INVERSE-DECAY-2026-11-26.md)
    localizes the innermost light response to a far-tail scalar window;
-   cropping only that support flips the frozen q32 rate sign.
+   cropping only that support flips the frozen q32 rate sign. A [selected visible injection bound](INDEPENDENT-WARM-COLD-LIGHT-VISIBLE-MARGIN-2026-11-26.md)
+   leaves the sampled full-support decay-only sign negative,
+   without certifying the sign of all coupled operators.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
