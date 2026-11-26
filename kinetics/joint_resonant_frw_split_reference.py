@@ -45,8 +45,9 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9):
     assert nx>0 and (centered or not elastic)
+    if visible_feedback: assert empty_start and source is not None
     if not empty_start:
         vis,H,k,_,_,_,th=configuration(row,eos,8,6.5)
         q=k.c[0].p
@@ -59,7 +60,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         vis=empty_reheat
         s0=eos.state(vis)[2]
         astart=np.exp(empty_start)
-        tmid=brentq(lambda t:eos.state(t)[2]/s0-np.exp(-1.5*empty_start),.9*vis,vis)
+        tmid=brentq(lambda t:eos.state(t)[2]/s0-np.exp(-1.5*empty_start),min(.9,empty_stop)*vis,vis)
         H=np.sqrt(eos.state(tmid)[0]/3)/MPL
         q=vis*np.geomspace(support_low,16.,empty_cells+1)
         if include_zero_cell:
@@ -123,40 +124,72 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         kept_first=(first_all-first_tails.sum(axis=2))
         check=np.stack([kept_first[2],kept_first[:2].sum(axis=0)])
         assert np.max(abs(np.stack([N0,E0],axis=1)/check-1))<4e-10
+    exterior_trace=None
+    if trace_exterior:
+        from frw_exterior_cohort_reference import Exterior
+        exterior_trace=Exterior()
+    def apply_exterior(rate,a):
+        if exterior_trace is None: return
+        for j,mass in enumerate(species_masses[:,0]):
+            for side,idx in enumerate([0,-1]):
+                n,k=rate[j,:,idx]
+                if min(n,k)<0.:
+                    raise ValueError("one-cohort exterior control does not absorb negative net tail rates")
+                exterior_trace.add(a,mass,j,side,q[idx]/a,a**3*n,a**4*k)
+    bath=None
+    if visible_feedback:
+        from visible_frw_energy_ledger_reference import VisibleBath
+        bath=VisibleBath(eos,vis)
+        bath.advance(astart)
+        bath.exchange(float(first_all[:,1].sum()))
+        if exterior_trace is not None:
+            exterior_trace.advance(astart)
+            apply_exterior(pulse_full,astart)
     source_entropy=0.
     signed_source=bool(source is not None and hasattr(source,"rates_at_state"))
     source_abs=np.zeros((3,2,2))
     dx=(extent-empty_start)/nx
     s0=eos.state(vis)[2]
+    Tmin=max(np.nextafter(np.exp(eos.lo),np.inf),vis*min(.7,.9*empty_stop))
     for i in range(nx):
         a,b,c=np.exp(empty_start+dx*np.array([i,i+.5,i+1.]))
         th,g,x,y,s=redshift(q,a,b,th)
         dE+=g;er=max(er,x);en=max(en,y);dSadv+=s
         kin=Collision(q/b,order=5)
-        v=brentq(lambda t:eos.state(t)[2]/s0-b**-3,vis*.7,vis)
+        if bath is not None:
+            bath.advance(b)
+            v=bath.T
+        else:
+            v=brentq(lambda t:eos.state(t)[2]/s0-b**-3,Tmin,vis)
         if centered:
             from joint_resonant_centered_stiff_reference import Centered
             m0=Centered(kin,H)
         else:m0=Model(kin,H)
         v0,s1,_=m0.moment(pack(th))
         Et=e_species(kin,v0,b)
-        h=np.sqrt((eos.state(v)[0]+Et.sum()/b**4)/3)/MPL
+        if exterior_trace is not None: exterior_trace.advance(b)
+        outside=exterior_trace.energy(b) if exterior_trace is not None else 0.
+        h=np.sqrt((eos.state(v)[0]+(Et.sum()+outside)/b**4)/3)/MPL
         m0.H=h
         if source is not None:
             # For the baseline the two midpoint increments share the
             # prescribed vacuum rate.  The signed source is re-evaluated
             # before each kick at its current represented occupations.
-            fixed=None if signed_source else source.rates(v,q,b)
+            fixed=None if signed_source or bath is not None else source.rates(v,q,b)
             def kick(before):
-                signed=source.rates_at_state(v,q,b,before)*(dx/(2*h)) if signed_source else None
+                temp=bath.T if bath is not None else v
+                signed=source.rates_at_state(temp,q,b,before)*(dx/(2*h)) if signed_source else None
                 if signed is not None:
                     for j in range(2):
                         source_abs[:,j]+=full_channels(signed[:,j],b).sum(axis=2)
                     sr=signed[:,0]-signed[:,1]
-                else: sr=fixed*(dx/(2*h))
+                else: sr=(source.rates(temp,q,b) if fixed is None else fixed)*(dx/(2*h))
                 sr_tot=full_channels(sr,b)
                 tails[:]+=sr_tot[:,:,[0,-1]]
                 source_total[:]+=sr_tot.sum(axis=2)
+                if bath is not None:
+                    bath.exchange(float(sr_tot[:,1].sum()))
+                apply_exterior(sr,b)
                 kept=np.stack([sr[2,:,1:-1],sr[:2,:,1:-1].sum(axis=0)])
                 source_n[:]+=b**3*kept[:,0,:].sum(axis=1)
                 source_energy[:]+=b**4*np.array([(x[1]+C.mass*x[0]).sum() for x,C in zip(kept,kin.c)])
@@ -171,6 +204,8 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
                 _,after,_=m0.moment(pack(states))
                 return states,(after-S)*b**3
             th,ds=kick(th);source_entropy+=ds
+            if bath is not None:
+                v=bath.T
             v0,s1,_=m0.moment(pack(th))
             Et=e_species(kin,v0,b)
         if elastic:
@@ -200,13 +235,16 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         if source is not None:
             th,ds=kick(th);source_entropy+=ds
         th,g,x,y,s=redshift(q,b,c,th);dE+=g;er=max(er,x);en=max(en,y);dSadv+=s
+        if bath is not None: bath.advance(c)
+        if exterior_trace is not None: exterior_trace.advance(c)
     af=np.exp(extent)
     kn=Collision(q/af,order=5)
     m1=Model(kn,H)
     U,S,_=m1.moment(pack(th))
     Ef=e_species(kn,U,af)
+    tf_base=brentq(lambda t:eos.state(t)[2]/s0-af**-3,Tmin,vis)
+    tf=tf_base if bath is None else bath.T
     if snapshot is not None:
-        tf=brentq(lambda t:eos.state(t)[2]/s0-af**-3,vis*.7,vis)
         snapshot.update(T_initial_GeV=vis, T_visible_GeV=tf, scale_factor=af,
                         lab_momentum_edges_GeV=(q/af).tolist(),
                         entropy_variable_scalar=np.asarray(th[0]).tolist(),
@@ -227,6 +265,28 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     S0*=astart**3
     errS=abs((S*af**3-S0)-dScol-dSadv-source_entropy)/(S*af**3 if empty_start else S0)
     assert max(errE,errQ,errS,er,np.max(abs(n1/(N0+source_n)-1)))<2e-9
+    visible_out=None
+    if bath is not None:
+        visible_out=bath.summary()
+        exterior=first_tails[:,1].sum()+tails[:,1].sum()
+        portal=first_all[:,1].sum()+source_total[:,1].sum()
+        cross=abs(portal-bath.portal)/abs(portal)
+        joint=((bath.energy-bath.E0-bath.trace)+Ef.sum()-dE.sum()+exterior)/bath.E0
+        assert abs(joint)<4e-11 and cross<3e-13
+        if exterior_trace is not None:
+            ex=exterior_trace.result()
+            assert abs(ex["exterior_a4_portal_injection"]-exterior)<3e-13*max(abs(exterior),1e-280)
+            full=((bath.energy-bath.E0-bath.trace)+Ef.sum()-dE.sum()
+                +ex["exterior_a4_energy_one_mean_per_cohort"]-ex["exterior_a4_pressure_trace"])/bath.E0
+            assert abs(full)<4e-11
+            ex["visible_dark_exterior_joint_ledger_defect_in_initial_visible_units"]=full
+            visible_out.update(ex)
+        visible_out.update(visible_baseline_T_same_a_GeV=tf_base,
+                           relative_visible_temperature_shift=tf/tf_base-1.,
+                           total_excluded_daughter_a4_energy=float(exterior),
+                           total_portal_withdrawal_over_initial_visible_energy=portal/bath.E0,
+                           combined_ledger_defect_in_initial_visible_units=joint,
+                           visible_dark_portal_cross_defect_relative=cross)
     Tin,eq=maxent(kn.c,n1*af**-3,Ef.sum()*af**-4,vis/af)
     rem=[float(.5*np.sum(abs(U[2*j*cnt:2*(j+1)*cnt:2]-eq[j][2]))/(n1[j]*af**-3)) for j in (0,1)]
     soft_frac={}
@@ -275,6 +335,8 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
       final_energy_over_scale=(Ef/unit).tolist(),
       final_counts_div_initial_visible_entropy=(n1/s0).tolist(),
       visible_injection=source is not None,
+      final_visible_temperature_GeV=tf,
+      visible_bath_feedback=visible_out,
       state_dependent_quantum_visible_source=signed_source,
       source_positive_negative_a3N_a4E=source_abs.tolist() if signed_source else None,
       comoving_energy_from_source_over_initial_total=(source_energy/E0.sum()).tolist() if not empty_start else None,
@@ -291,13 +353,22 @@ if __name__=="__main__":
     p.add_argument("--support-low",type=float,default=.15)
     p.add_argument("--empty-cells",type=int,default=18)
     p.add_argument("--empty-reheat",type=float,default=.05)
+    p.add_argument("--empty-stop",type=float,default=.9,help="reference visible final/initial temperature used to set final scale factor")
     p.add_argument("--vacuum-scaled-residual",action="store_true")
     p.add_argument("--allow-empty-shells",action="store_true")
     p.add_argument("--include-zero-cell",action="store_true")
     p.add_argument("--save-snapshots",help="write final finite-shell entropy variables for each run to this JSON file")
     p.add_argument("--quantum-visible-source",action="store_true")
     p.add_argument("--matched-vacuum-order",action="store_true")
+    p.add_argument("--visible-backreaction",action="store_true")
+    p.add_argument("--accurate-visible-eos",action="store_true")
+    p.add_argument("--trace-exterior",action="store_true")
     a=p.parse_args();eos=StandardModel(a.eos)
+    if a.empty_pulse: assert 0.<a.empty_stop<1.
+    if a.trace_exterior: assert a.visible_backreaction
+    if a.visible_backreaction or a.accurate_visible_eos:
+        from visible_frw_energy_ledger_reference import ConservativeEOS
+        eos=ConservativeEOS(eos)
     source=None
     if a.visible_source:
         from joint_visible_fd_source_reference import Visible
@@ -323,10 +394,10 @@ if __name__=="__main__":
     else:
         if not a.spectra: p.error('spectra required except with --empty-pulse')
         r=next(r for r in json.loads(Path(a.spectra).read_text())['rows'] if r['TR']==.05 and abs(r['TF']-.045)<1e-8)
-    extent=np.log(eos.state(a.empty_reheat)[2]/eos.state(.9*a.empty_reheat)[2])/3 if a.empty_pulse else .07
+    extent=np.log(eos.state(a.empty_reheat)[2]/eos.state(a.empty_stop*a.empty_reheat)[2])/3 if a.empty_pulse else .07
     final_shapes=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
     if a.save_snapshots: assert a.physical_amplitude and a.empty_pulse
-    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat) for n,snapshot in zip(a.steps,final_shapes)]
+    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop) for n,snapshot in zip(a.steps,final_shapes)]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     if a.save_snapshots:
         for n,x in zip(a.steps,final_shapes): x.update(steps=n, below_pole_elastic=a.with_elastic)

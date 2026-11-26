@@ -1,0 +1,415 @@
+{
+  "rows": [
+    {
+      "nsteps": 6,
+      "final_a": 1.1254881803283716,
+      "initial_visible_T_GeV": 0.1,
+      "common_equilibrium_T": 0.08252848907001978,
+      "centered_residual": true,
+      "final_number_shell_total_variation_from_closed_box_equilibrium": [
+        0.017545977215991583,
+        0.010666952398273248
+      ],
+      "omitted_source_number_fractions": [
+        0.0,
+        0.0
+      ],
+      "comoving_support_over_initial_visible_T": [
+        0.05000000000000001,
+        16.0
+      ],
+      "initialization": "physical first source pulse; empty at a=1",
+      "below_pole_elastic": true,
+      "manufactured_collision_amplitude_relative_to_actual": 1.0,
+      "total_number_defect": 3.11972669919669e-14,
+      "split_energy_ledger_defect": 1.7401811373061687e-14,
+      "collision_opposite_heat_defect": 1.1515904585114353e-16,
+      "integrated_entropy_ledger_defect": 5.1288554125717415e-16,
+      "comoving_q_scalar_from_collisions_over_initial_energy": null,
+      "redshift_trace_contribution_over_initial_energy": null,
+      "projection_entropy_change_relative_to_initial": null,
+      "collision_entropy_change_relative_to_initial": null,
+      "maximum_moment_reconstruction_defect": 4.718447854656915e-14,
+      "nonlinear_iterations": 13,
+      "vacuum_scaled_residual": true,
+      "maximum_accepted_centered_step_residual": 1.1383194855995007e-12,
+      "first_collision_solver": {
+        "newton_iterations": 3,
+        "residual": 8.501834316375015e-15,
+        "entropy_gain_relative": 0.012003802899845262,
+        "maximum_exponent_departure_from_eq": 0.001215640764101487,
+        "structurally_inactive_cells": 0,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "represented_momentum_cells": 18,
+      "innermost_positive_q_over_initial_T": 0.05000000000000001,
+      "final_resolved_scalar_count_fraction_below_q_over_initial_T": {
+        "0.1": 0.0004885268436212414
+      },
+      "first_pulse_delta_log_a": 1e-08,
+      "first_pulse_empty_shells": [
+        0,
+        0
+      ],
+      "first_pulse_count_a3": [
+        1.4720726103686506e-14,
+        2.9728664782038865e-14
+      ],
+      "first_pulse_energy_a4": [
+        2.948522000550388e-15,
+        9.403569990123019e-15
+      ],
+      "first_pulse_count_and_total_energy_by_channel": [
+        [
+          1.500892008101107e-14,
+          6.2122998388078005e-15
+        ],
+        [
+          1.4728290808430985e-14,
+          3.1943661494844977e-15
+        ],
+        [
+          1.472829080843097e-14,
+          2.948645676451597e-15
+        ]
+      ],
+      "first_pulse_count_and_total_energy_tails": [
+        [
+          [
+            6.5637249107279095e-21,
+            1.6220491720383535e-18
+          ],
+          [
+            1.339556708476399e-22,
+            2.787162489886363e-18
+          ]
+        ],
+        [
+          [
+            6.818375505256785e-18,
+            9.911900110162262e-20
+          ],
+          [
+            1.3887988562823344e-19,
+            1.69821838077672e-19
+          ]
+        ],
+        [
+          [
+            7.511004340312976e-18,
+            5.3700404138971873e-20
+          ],
+          [
+            3.203073609595732e-20,
+            9.164516511171723e-20
+          ]
+        ]
+      ],
+      "collision_q_scalar_over_scale": 0.08372010114539301,
+      "scale": "all kept source energy at injection",
+      "final_scalar_over_dark_energy": 0.3219875384496494,
+      "pressure_work_over_energy_scale": [
+        3.932372457192313e-15,
+        0.0003612359715147078
+      ],
+      "final_energy_over_scale": [
+        0.32210385193090985,
+        0.6782573840405831
+      ],
+      "final_counts_div_initial_visible_entropy": [
+        2.0074135918214158e-05,
+        4.0609547542687416e-05
+      ],
+      "visible_injection": true,
+      "final_visible_temperature_GeV": 0.09000000000030328,
+      "visible_bath_feedback": null,
+      "state_dependent_quantum_visible_source": true,
+      "source_positive_negative_a3N_a4E": [
+        [
+          [
+            1.5613123901123942e-07,
+            6.510257912074617e-08
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            1.526424992456564e-07,
+            3.340364184932599e-08
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            1.5264249924565642e-07,
+            3.0822584741460306e-08
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ],
+      "comoving_energy_from_source_over_initial_total": null,
+      "comoving_count_from_source_over_initial_species": null,
+      "comoving_source_channel_count_and_total_energy": [
+        [
+          1.5613123901123942e-07,
+          6.510257912074617e-08
+        ],
+        [
+          1.526424992456564e-07,
+          3.340364184932599e-08
+        ],
+        [
+          1.5264249924565642e-07,
+          3.0822584741460306e-08
+        ]
+      ],
+      "comoving_source_channel_count_and_total_energy_tails": [
+        [
+          [
+            7.114619623474444e-14,
+            1.8194789104749916e-11
+          ],
+          [
+            1.5326025902276964e-15,
+            3.130099093544402e-11
+          ]
+        ],
+        [
+          [
+            6.470645062052233e-11,
+            1.131089616108021e-12
+          ],
+          [
+            1.390345934741892e-12,
+            1.93732559174026e-12
+          ]
+        ],
+        [
+          [
+            5.024678480580211e-11,
+            6.069221656143356e-13
+          ],
+          [
+            2.1654630502571434e-13,
+            1.0363564634371264e-12
+          ]
+        ]
+      ]
+    },
+    {
+      "nsteps": 12,
+      "final_a": 1.1254881803283716,
+      "initial_visible_T_GeV": 0.1,
+      "common_equilibrium_T": 0.08252755528602937,
+      "centered_residual": true,
+      "final_number_shell_total_variation_from_closed_box_equilibrium": [
+        0.008667900733602994,
+        0.005265111914474666
+      ],
+      "omitted_source_number_fractions": [
+        0.0,
+        0.0
+      ],
+      "comoving_support_over_initial_visible_T": [
+        0.05000000000000001,
+        16.0
+      ],
+      "initialization": "physical first source pulse; empty at a=1",
+      "below_pole_elastic": true,
+      "manufactured_collision_amplitude_relative_to_actual": 1.0,
+      "total_number_defect": 8.915090887740007e-14,
+      "split_energy_ledger_defect": 6.653455137079197e-14,
+      "collision_opposite_heat_defect": 2.5590212065689216e-17,
+      "integrated_entropy_ledger_defect": 0.0,
+      "comoving_q_scalar_from_collisions_over_initial_energy": null,
+      "redshift_trace_contribution_over_initial_energy": null,
+      "projection_entropy_change_relative_to_initial": null,
+      "collision_entropy_change_relative_to_initial": null,
+      "maximum_moment_reconstruction_defect": 5.129230373768223e-14,
+      "nonlinear_iterations": 26,
+      "vacuum_scaled_residual": true,
+      "maximum_accepted_centered_step_residual": 2.0579516275213437e-12,
+      "first_collision_solver": {
+        "newton_iterations": 3,
+        "residual": 6.7434218286108884e-15,
+        "entropy_gain_relative": 0.011432907968113692,
+        "maximum_exponent_departure_from_eq": 0.004866315680693521,
+        "structurally_inactive_cells": 0,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "represented_momentum_cells": 18,
+      "innermost_positive_q_over_initial_T": 0.05000000000000001,
+      "final_resolved_scalar_count_fraction_below_q_over_initial_T": {
+        "0.1": 0.00032253446890920186
+      },
+      "first_pulse_delta_log_a": 1e-08,
+      "first_pulse_empty_shells": [
+        0,
+        0
+      ],
+      "first_pulse_count_a3": [
+        1.4720726103686506e-14,
+        2.9728664782038865e-14
+      ],
+      "first_pulse_energy_a4": [
+        2.948522000550388e-15,
+        9.403569990123019e-15
+      ],
+      "first_pulse_count_and_total_energy_by_channel": [
+        [
+          1.500892008101107e-14,
+          6.2122998388078005e-15
+        ],
+        [
+          1.4728290808430985e-14,
+          3.1943661494844977e-15
+        ],
+        [
+          1.472829080843097e-14,
+          2.948645676451597e-15
+        ]
+      ],
+      "first_pulse_count_and_total_energy_tails": [
+        [
+          [
+            6.5637249107279095e-21,
+            1.6220491720383535e-18
+          ],
+          [
+            1.339556708476399e-22,
+            2.787162489886363e-18
+          ]
+        ],
+        [
+          [
+            6.818375505256785e-18,
+            9.911900110162262e-20
+          ],
+          [
+            1.3887988562823344e-19,
+            1.69821838077672e-19
+          ]
+        ],
+        [
+          [
+            7.511004340312976e-18,
+            5.3700404138971873e-20
+          ],
+          [
+            3.203073609595732e-20,
+            9.164516511171723e-20
+          ]
+        ]
+      ],
+      "collision_q_scalar_over_scale": 0.08711400571735918,
+      "scale": "all kept source energy at injection",
+      "final_scalar_over_dark_energy": 0.3253869663442666,
+      "pressure_work_over_energy_scale": [
+        3.677188974991674e-15,
+        0.00035874424499313036
+      ],
+      "final_energy_over_scale": [
+        0.325503697045811,
+        0.674855047199098
+      ],
+      "final_counts_div_initial_visible_entropy": [
+        2.00748660021721e-05,
+        4.061097372829919e-05
+      ],
+      "visible_injection": true,
+      "final_visible_temperature_GeV": 0.09000000000030328,
+      "visible_bath_feedback": null,
+      "state_dependent_quantum_visible_source": true,
+      "source_positive_negative_a3N_a4E": [
+        [
+          [
+            1.5613647189233937e-07,
+            6.510425820806152e-08
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            1.5264811499421164e-07,
+            3.340383619280611e-08
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            1.5264811499421167e-07,
+            3.0824180484718856e-08
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ],
+      "comoving_energy_from_source_over_initial_total": null,
+      "comoving_count_from_source_over_initial_species": null,
+      "comoving_source_channel_count_and_total_energy": [
+        [
+          1.5613647189233937e-07,
+          6.510425820806152e-08
+        ],
+        [
+          1.5264811499421164e-07,
+          3.340383619280611e-08
+        ],
+        [
+          1.5264811499421167e-07,
+          3.0824180484718856e-08
+        ]
+      ],
+      "comoving_source_channel_count_and_total_energy_tails": [
+        [
+          [
+            7.111275162498355e-14,
+            1.819371981050307e-11
+          ],
+          [
+            1.531822810256499e-15,
+            3.1299156363987925e-11
+          ]
+        ],
+        [
+          [
+            6.471538163735214e-11,
+            1.1308748910516817e-12
+          ],
+          [
+            1.3904294927356367e-12,
+            1.936963078145568e-12
+          ]
+        ],
+        [
+          [
+            5.031291239780624e-11,
+            6.068784323691315e-13
+          ],
+          [
+            2.1682184534947429e-13,
+            1.0362826859266783e-12
+          ]
+        ]
+      ]
+    }
+  ],
+  "scope": "Actually empty initial state on a finite fixed support. Prompt return and below-pole elasticity; state-dependent visible FD source enabled."
+}
