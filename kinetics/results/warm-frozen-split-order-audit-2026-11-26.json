@@ -1,0 +1,438 @@
+{
+  "methods": [
+    "BE:pair-collision-pair",
+    "BE:collision-pair-collision",
+    "BE:pair-two-half-collisions-pair",
+    "SDIRK2:pair-collision-pair",
+    "SDIRK2:collision-pair-collision"
+  ],
+  "n_subintervals": [
+    1,
+    2,
+    4
+  ],
+  "raw_moment_data": [
+    {
+      "pair-collision-pair": [
+        {
+          "outer_subintervals": 1,
+          "count_relative_to_initial": [
+            1.0032960475018151,
+            0.9986803431564771
+          ],
+          "energy_ledger": -3.630429290524262e-14,
+          "count_ledger": -3.5860203695392556e-14,
+          "collision_accept_reject": [
+            1,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 2,
+          "count_relative_to_initial": [
+            1.0033362220107007,
+            0.9986642582652719
+          ],
+          "energy_ledger": 6.661338147750939e-15,
+          "count_ledger": -1.1879386363489175e-14,
+          "collision_accept_reject": [
+            2,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 4,
+          "count_relative_to_initial": [
+            1.0033570846298374,
+            0.9986559053825448
+          ],
+          "energy_ledger": -1.0325074129013956e-14,
+          "count_ledger": -3.9968028886505635e-14,
+          "collision_accept_reject": [
+            4,
+            0
+          ]
+        }
+      ],
+      "collision-pair-collision": [
+        {
+          "outer_subintervals": 1,
+          "count_relative_to_initial": [
+            1.0033652052529285,
+            0.9986526540836209
+          ],
+          "energy_ledger": -6.8833827526759706e-15,
+          "count_ledger": -9.658940314238862e-15,
+          "collision_accept_reject": [
+            2,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 2,
+          "count_relative_to_initial": [
+            1.0033723734356619,
+            0.9986497841184785
+          ],
+          "energy_ledger": -1.2545520178264269e-14,
+          "count_ledger": -1.8096635301390052e-14,
+          "collision_accept_reject": [
+            4,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 4,
+          "count_relative_to_initial": [
+            1.0033754936750008,
+            0.9986485348509165
+          ],
+          "energy_ledger": -1.1213252548714081e-14,
+          "count_ledger": -2.453592884421596e-14,
+          "collision_accept_reject": [
+            8,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "pair-two-half-collisions-pair": [
+        {
+          "outer_subintervals": 1,
+          "count_relative_to_initial": [
+            1.00329643366643,
+            0.9986801885456154
+          ],
+          "energy_ledger": -2.7977620220553945e-14,
+          "count_ledger": -2.886579864025407e-14,
+          "collision_accept_reject": [
+            2,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 2,
+          "count_relative_to_initial": [
+            1.0033365658458893,
+            0.998664120602043
+          ],
+          "energy_ledger": -1.8096635301390052e-14,
+          "count_ledger": -2.9753977059954195e-14,
+          "collision_accept_reject": [
+            4,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 4,
+          "count_relative_to_initial": [
+            1.0033573423926712,
+            0.9986558021806039
+          ],
+          "energy_ledger": -1.2989609388114332e-14,
+          "count_ledger": -4.2521541843143495e-14,
+          "collision_accept_reject": [
+            8,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "pair-collision-pair": [
+        {
+          "outer_subintervals": 1,
+          "count_relative_to_initial": [
+            1.0032972061039147,
+            0.9986798792805243
+          ],
+          "energy_ledger": -3.441691376337985e-14,
+          "count_ledger": -3.275157922644212e-14,
+          "collision_accept_reject": [
+            1,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 2,
+          "count_relative_to_initial": [
+            1.003337484287073,
+            0.9986637528806679
+          ],
+          "energy_ledger": 2.6645352591003757e-15,
+          "count_ledger": -1.3877787807814457e-14,
+          "collision_accept_reject": [
+            2,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 4,
+          "count_relative_to_initial": [
+            1.0033580975622431,
+            0.9986554998291818
+          ],
+          "energy_ledger": -1.1879386363489175e-14,
+          "count_ledger": -3.3084646133829665e-14,
+          "collision_accept_reject": [
+            4,
+            0
+          ]
+        }
+      ],
+      "collision-pair-collision": [
+        {
+          "outer_subintervals": 1,
+          "count_relative_to_initial": [
+            1.0033672595555512,
+            0.9986518315910718
+          ],
+          "energy_ledger": -6.8833827526759706e-15,
+          "count_ledger": -9.103828801926284e-15,
+          "collision_accept_reject": [
+            2,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 2,
+          "count_relative_to_initial": [
+            1.0033740927440618,
+            0.998649095749446
+          ],
+          "energy_ledger": -5.551115123125783e-15,
+          "count_ledger": -3.774758283725532e-15,
+          "collision_accept_reject": [
+            4,
+            0
+          ]
+        },
+        {
+          "outer_subintervals": 4,
+          "count_relative_to_initial": [
+            1.003376944776065,
+            0.9986479538655433
+          ],
+          "energy_ledger": -2.220446049250313e-16,
+          "count_ledger": -1.1102230246251565e-14,
+          "collision_accept_reject": [
+            8,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "frozen_pair_and_energy_relative_by_method": [
+    [
+      [
+        1.0032960475018151,
+        0.9986803431564771
+      ],
+      [
+        1.0033362220107007,
+        0.9986642582652719
+      ],
+      [
+        1.0033570846298374,
+        0.9986559053825448
+      ]
+    ],
+    [
+      [
+        1.0033652052529285,
+        0.9986526540836209
+      ],
+      [
+        1.0033723734356619,
+        0.9986497841184785
+      ],
+      [
+        1.0033754936750008,
+        0.9986485348509165
+      ]
+    ],
+    [
+      [
+        1.00329643366643,
+        0.9986801885456154
+      ],
+      [
+        1.0033365658458893,
+        0.998664120602043
+      ],
+      [
+        1.0033573423926712,
+        0.9986558021806039
+      ]
+    ],
+    [
+      [
+        1.0032972061039147,
+        0.9986798792805243
+      ],
+      [
+        1.003337484287073,
+        0.9986637528806679
+      ],
+      [
+        1.0033580975622431,
+        0.9986554998291818
+      ]
+    ],
+    [
+      [
+        1.0033672595555512,
+        0.9986518315910718
+      ],
+      [
+        1.0033740927440618,
+        0.998649095749446
+      ],
+      [
+        1.003376944776065,
+        0.9986479538655433
+      ]
+    ]
+  ],
+  "time_grid_relative_by_method": [
+    [
+      [
+        4.004252681522047e-05,
+        -1.6106145790728554e-05
+      ],
+      [
+        2.079324824433293e-05,
+        -8.364054944420829e-06
+      ]
+    ],
+    [
+      [
+        7.144141231707479e-06,
+        -2.873837195216389e-06
+      ],
+      [
+        3.1097520936107514e-06,
+        -1.2509566233998015e-06
+      ]
+    ],
+    [
+      [
+        4.000032105411222e-05,
+        -1.6089178254130587e-05
+      ],
+      [
+        2.0707454994717267e-05,
+        -8.329548711660806e-06
+      ]
+    ],
+    [
+      [
+        4.014581413480656e-05,
+        -1.6147716791925504e-05
+      ],
+      [
+        2.054470753143356e-05,
+        -8.26409435839004e-06
+      ]
+    ],
+    [
+      [
+        6.810256608869025e-06,
+        -2.739534980311653e-06
+      ],
+      [
+        2.842441342520985e-06,
+        -1.143428565275606e-06
+      ]
+    ]
+  ],
+  "schedule_change_labels": [
+    "BE reverse/standard",
+    "BE reverse/two-half-collisions",
+    "SDIRK2 reverse/standard",
+    "SDIRK2/BE standard",
+    "SDIRK2/BE reverse"
+  ],
+  "scheduling_relative_count_differences": [
+    [
+      [
+        6.893055273726745e-05,
+        -2.7725661214783592e-05
+      ],
+      [
+        3.603121682260735e-05,
+        -1.4493506374835263e-05
+      ],
+      [
+        1.8347451216982336e-05,
+        -7.3804516536046805e-06
+      ]
+    ],
+    [
+      [
+        6.854563037483885e-05,
+        -2.7570850318459073e-05
+      ],
+      [
+        3.568851269997175e-05,
+        -1.4355660996279163e-05
+      ],
+      [
+        1.8090546171967148e-05,
+        -7.277111564896188e-06
+      ]
+    ],
+    [
+      [
+        6.982323005622071e-05,
+        -2.808476473226129e-05
+      ],
+      [
+        3.648668325673121e-05,
+        -1.4676742977393076e-05
+      ],
+      [
+        1.8784134864446855e-05,
+        -7.556122846974489e-06
+      ]
+    ],
+    [
+      [
+        1.1547958376212364e-06,
+        -4.644889188831769e-07
+      ],
+      [
+        1.2580791410865544e-06,
+        -5.060605702267296e-07
+      ],
+      [
+        1.0095432834145157e-06,
+        -4.0609919871315014e-07
+      ]
+    ],
+    [
+      [
+        2.047412658745529e-06,
+        -8.236022261964848e-07
+      ],
+      [
+        1.713529737656927e-06,
+        -6.892997358454167e-07
+      ],
+      [
+        1.4462193598241413e-06,
+        -5.817716173250886e-07
+      ]
+    ]
+  ],
+  "sha256": {
+    "dm-eos-low-official-1314.dat": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "50MeV-from-empty-pair-quantum-shape-2026-11-26.json": "0c91426fadf25079f6ef30607a461e02a465b3ff3bfaf7d34ac06c2537412488",
+    "warm-frozen-split-be-2026-11-26.json": "14235e07a3f9e90fd90cf5fb6306f58103649b9ad81a21d4a591e08e6f20f8a4",
+    "warm-frozen-split-half-2026-11-26.json": "1e28c91464cb4629e211885d7e9a362635ffa0fd63e0a46e50857279d357512b",
+    "warm-frozen-split-sdirk-2026-11-26.json": "9aa39a119457753518b97ff1cf87ff18bca4d823fd35300d0f80c29213974c6d"
+  },
+  "scope": "One small normalized interval at fixed mid-grid scale, pressure, visible background and elastic panels. Pair kicks and stiff prompt/elastic maps differ in order and subdivision. Not an expanding-trajectory time test, cost comparison, or proof of general split order."
+}
