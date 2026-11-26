@@ -27,10 +27,32 @@ def run(left,right):
     return dict(matched=rows,inputs=[sha(left),sha(right)],
            scope="Empirical relative time refinement of the support contrast at four shared warm endpoints. No extrapolated continuum, late relic, or inherited exterior momentum distribution.")
 
+def extend(left,right,finest):
+    D=run(left,right)
+    F=read(finest)
+    assert F["complete"] and F["coarse_and_refined_steps"]==[16,32]
+    for row, f in zip(D["matched"],F["matched"][3::4],strict=True):
+        assert abs(row["b"]/f["b"]-1.)<1e-14 and abs(row["visible_T_GeV"]/f["T_GeV"]-1.)<1e-12
+        L=np.asarray(row["log_support_differences_4_8_16"])
+        s16,s32=np.asarray(f["log_support_shift_16_and_32"])
+        assert max(abs(L[-1]-s16))<2e-14
+        inc0,inc1=np.diff(L,axis=0)
+        inc2=s32-s16
+        row["log_support_differences_4_8_16_32"]=np.vstack([L,s32]).tolist()
+        row["same_support_sign_all_four"]=np.all(L[0]*np.vstack([L,s32])>0,axis=0).tolist()
+        row["absolute_last_two_increment_ratios"]=[abs(inc1/inc0).tolist(),abs(inc2/inc1).tolist()]
+        row["apparent_last_two_orders"]=[np.log2(abs(inc0/inc1)).tolist(),np.log2(abs(inc1/inc2)).tolist()]
+        row["remaining_increment_to_finest_shift"]=abs(inc2/s32).tolist()
+    D["inputs"].append(sha(finest))
+    D["scope"]="Four completed, exactly shared warm time grids. Signs and empirical differences are numerical diagnostics only, not an extrapolation, late abundance or full support result."
+    return D
+
 
 if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("left",type=Path)
     p.add_argument("right",type=Path)
+    p.add_argument("--finest",type=Path)
     a=p.parse_args()
-    print(json.dumps(run(a.left,a.right),indent=2,allow_nan=False))
+    result=extend(a.left,a.right,a.finest) if a.finest else run(a.left,a.right)
+    print(json.dumps(result,indent=2,allow_nan=False))

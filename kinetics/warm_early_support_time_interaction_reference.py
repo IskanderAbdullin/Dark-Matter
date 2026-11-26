@@ -14,7 +14,7 @@ def read(p):
 
 
 def run(archive, seed16, seed32, a16, a32, b16, b32, prefix=False,base_blocks=4):
-    assert base_blocks in (4,8)
+    assert base_blocks in (4,8,16)
     files=(archive,seed16,seed32,a16,a32,b16,b32)
     A=read(archive)["cases"]
     S=[read(p)["snapshots"][-1] for p in (seed16,seed32)]
@@ -51,10 +51,12 @@ def run(archive, seed16, seed32, a16, a32, b16, b32, prefix=False,base_blocks=4)
                         time_support_interaction=D.tolist(),interaction_to_four_block_support=abs(D/support[0]).tolist(),
                         support_sign_agrees=(support[0]*support[1]>0).tolist()))
     if base_blocks!=4:
+        a, b = base_blocks, 2*base_blocks
+        label = {8:"eight", 16:"sixteen"}[a]
         for x in out:
-            for source,dest in (("omegas_4q16_4q32_8q16_8q32","omegas_8q16_8q32_16q16_16q32"),
-                                ("log_support_shift_4_and_8","log_support_shift_8_and_16"),
-                                ("interaction_to_four_block_support","interaction_to_eight_block_support")):
+            for source,dest in (("omegas_4q16_4q32_8q16_8q32", f"omegas_{a}q16_{a}q32_{b}q16_{b}q32"),
+                                ("log_support_shift_4_and_8", f"log_support_shift_{a}_and_{b}"),
+                                ("interaction_to_four_block_support", f"interaction_to_{label}_block_support")):
                 x[dest]=x.pop(source)
     result=dict(complete=len(out)==base_blocks,matched=out,input_sha256=[sha(p) for p in files],
          scope="Difference-in-differences of terminal inclusive rest-count proxies on exactly matched q16 and q32 time grids. Same sign across tested resolutions is not continuum convergence or a general physical error bar.")

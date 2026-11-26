@@ -44,7 +44,9 @@ reproducible controls below are not observational constraints.
    shows why comparing mismatched time grids would mix numerical
    effects. The [sixteen-block follow-up](INDEPENDENT-WARM-EARLY-SUPPORT-16-BLOCKS-2026-11-26.md)
    verifies that the count support signs persist; higher moments
-   remain a separate check. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
+   remain a separate check. The [matched 32-block follow-up](INDEPENDENT-WARM-EARLY-SUPPORT-32-BLOCKS-2026-11-26.md)
+   closes all four time ladders on the same endpoint while
+   documenting the separate fourth-moment sensitivity. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
    carries actual newly recorded exterior cohorts. For older cohorts

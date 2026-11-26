@@ -60,9 +60,9 @@ def properties(S):
 
 
 def run(checkpoints,base=4):
-    assert base in (4,8)
+    assert base in (4,8,16)
     if len(checkpoints)!=5:
-        raise ValueError("Supply q16/4, q32/4, q16/8, q32/8, q16/32.")
+        raise ValueError(f"Supply q16/{base}, q32/{base}, q16/{2*base}, q32/{2*base}, q16/32.")
     B=[read(p) for p in checkpoints]
     expected=[base,base,2*base,2*base,32]
     for n,z in zip(expected,B,strict=True):
@@ -91,9 +91,21 @@ def run(checkpoints,base=4):
         for x in comparisons:
             for k in list(x):
                 if k.endswith("_4_and_8"):
-                    x[k[:-7]+"8_and_16"]=x.pop(k)
-                elif k.endswith("_32_vs_8"):
+                    x[k[:-7]+f"{base}_and_{2*base}"]=x.pop(k)
+                elif k.endswith("_32_vs_8") and base == 8:
                     x[k[:-7]+"32_vs_16"]=x.pop(k)
+                elif k.endswith("_32_vs_8") and base == 16:
+                    x.pop(k)
+            if base == 16:
+                j = ("scalar", "stable").index(x["species"])
+                z = [row[j] for row in data]
+                keys = ("rms_p_over_T", "fourth_moment_p_over_T", "mean_pressure_per_particle_GeV")
+                V = np.asarray([[row[key] for key in keys] for row in z])
+                C = np.asarray([row["count_CDF"] for row in z])
+                x["log_time_shift_q16_and_q32_32_vs_16"] = np.log(V[2:4]/V[:2]).tolist()
+                x["maximum_CDF_time_difference_q16_and_q32_32_vs_16"] = np.max(abs(C[2:4]-C[:2]), axis=1).tolist()
+        if base == 16:
+            assert B[2]["snapshot_sha256"] == B[4]["snapshot_sha256"]
     return dict(T_GeV=T,layout=[f"q16/{base}",f"q32/{base}",f"q16/{2*base}",f"q32/{2*base}","q16/32"],cdf_momentum_over_T_thresholds=PROBES.tolist(),
         retained= data,comparisons=comparisons,input_sha256=[sha(p) for p in checkpoints],
         scope="Positive entropy-shape moments on actual matched early FRW warm restarts. All shape statistics are for retained particles only, not a full momentum continuum or a prediction for unavailable old exterior distributions.")
