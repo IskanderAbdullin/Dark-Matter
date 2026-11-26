@@ -81,6 +81,27 @@ the reverse subtracts 0.158% of counts but only 0.00705% of the
 squared-momentum yield. The normalized RMS moves slightly upward,
 2.0448 → 2.0464. This is a net integrated moment on a forced
 source, not a reconstructed positive signed PSD or a coupled result.
+## Projected passive removal in the tracer
+
+The inverse number and squared momentum can also be deposited into
+the same positive q bins as the prompt distribution before subtraction.
+Their sums reproduce the integrated inverse rates and moments.
+Using the projected removal as a separate linear LOS component
+on the same fixed metric, the inferred correction to the forward-only
+tracer at z=20 is −0.0001241 to −0.0001280 at k=4 and −0.0001982
+to −0.0002044 at k=10 h/Mpc in the two original controls.
+This effect is much smaller than the fluid-closure artifact.
+
+The removed subpopulation's CDF can differ by up to 0.091 between
+these grids. A third control using 104 incoming bins and 84
+time panels changes the inverse CDF by 0.0345 relative to the
+second control and gives combined shifts of −0.0001264 and
+−0.0002016 at k=4 and 10. The change to the combined tracer is stable at about
+6×10⁻⁶ absolute at k=10, not proof of a converged absorption
+shape. The reconstructed joined-minus-removal spectrum was tested
+at its knot union; this is not a continuous positivity proof.
+There is still no evolving pair feedback in this subtraction.
+
 ## Reproduction
 
 ~~~sh
@@ -94,4 +115,15 @@ OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_signed_passive_fold_refere
     EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json
 OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_signed_passive_fold_reference.py \
     EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json --recoil-moments
+~~~
+
+For the projected removal add --absorption-grid followed by the
+published finite-cooling-reheat-distribution result to the signed
+fold with --recoil-moments. Add --refine-absorption for the third control. Then use the saved compact fixed metric:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_inverse_recoil_los_reference.py \
+  EOS.dat results/finite-cooling-passive-absorption-shape-2026-11-26.json \
+  MIXED.dat results/finite-cooling-los-off-portable-2026-11-26.json \
+  results/los-metric-off/*.npz
 ~~~

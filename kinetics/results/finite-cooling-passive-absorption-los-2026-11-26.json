@@ -1,0 +1,66 @@
+{
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "9237260cbd44684707fb531972f41a67195f642746fc6384f12928ae82dab0c7",
+    "bc8c0b74b1353d20b1e3a4c7dc333932335c80d3d309f1f2e68204504adf072c",
+    "2b707d386ada0d98c268493d8a4eb2c1461e2e2a3b94eb206d65c0cd5185658c",
+    "1c62d8c918ac762d67d3b5ba3c36ab7e0a70bf386044c98da74120a530f8e21c",
+    "ca63579f11f236428adea604d9705f0e64fee4b82ee9a77496c5adc9241f2156"
+  ],
+  "max_resolved_absorption_CDF_between_controls": 0.09082228157703931,
+  "scope": "Signed passive subtraction on the same fixed metric; inverse removes stocked prompt particles without recomputing the forward source or evolving feedback. Positivity checked on archive knot union, not rigorous positivity between knots. Not a coupled Boltzmann or total matter result.",
+  "cases": [
+    {
+      "control": [
+        48,
+        7,
+        0
+      ],
+      "absorption_rest_omega_h2": 4.449990198341017e-12,
+      "removed_mixed_energy_fraction_at_z20": 0.0016229002726361782,
+      "worst_tested_negative_number_fraction": 0.0,
+      "z20": [
+        {
+          "k_h_per_Mpc": 4.0,
+          "conditional_absorbed_population_delta_over_cdm": 0.9600492507842434,
+          "previous_forward_only_tracer_delta_over_cdm": 0.8813054703812164,
+          "after_passive_subtraction_delta_over_cdm": 0.8811774693456164,
+          "signed_absolute_change": -0.00012800103560006715
+        },
+        {
+          "k_h_per_Mpc": 10.0,
+          "conditional_absorbed_population_delta_over_cdm": 0.8853706602479581,
+          "previous_forward_only_tracer_delta_over_cdm": 0.7596729637004925,
+          "after_passive_subtraction_delta_over_cdm": 0.7594686372730813,
+          "signed_absolute_change": -0.00020432642741119444
+        }
+      ]
+    },
+    {
+      "control": [
+        62,
+        9,
+        1
+      ],
+      "absorption_rest_omega_h2": 4.320393197242645e-12,
+      "removed_mixed_energy_fraction_at_z20": 0.0015756365711412537,
+      "worst_tested_negative_number_fraction": 7.335663828164438e-48,
+      "z20": [
+        {
+          "k_h_per_Mpc": 4.0,
+          "conditional_absorbed_population_delta_over_cdm": 0.9599128927318418,
+          "previous_forward_only_tracer_delta_over_cdm": 0.8813054703812164,
+          "after_passive_subtraction_delta_over_cdm": 0.8811814181906296,
+          "signed_absolute_change": -0.00012405219058686523
+        },
+        {
+          "k_h_per_Mpc": 10.0,
+          "conditional_absorbed_population_delta_over_cdm": 0.885258832477937,
+          "previous_forward_only_tracer_delta_over_cdm": 0.7596729637004925,
+          "after_passive_subtraction_delta_over_cdm": 0.7594747737374745,
+          "signed_absolute_change": -0.00019818996301801395
+        }
+      ]
+    }
+  ]
+}

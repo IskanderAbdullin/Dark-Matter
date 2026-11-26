@@ -11,7 +11,7 @@ from finite_cooling_reheat_portal_reference import SourceFold,TF
 from conditional_relic_normalization_reference import conversion
 from three_species_decay_onsager_reference import m,mp
 
-def rate(p,w,rev,n,moment=False):
+def rate(p,w,rev,n,moment=False,nodes=False):
     I=m if not rev else mp
     O=mp if not rev else m
     i,j=np.tril_indices(len(p))
@@ -31,8 +31,15 @@ def rate(p,w,rev,n,moment=False):
         weight=weight*(p[i]**2+p[j]**2)/2
     scale=np.sqrt(np.maximum(0.,.25-O*O/s))
     C=0.
+    if nodes:
+        assert rev and not moment
+        pair=np.zeros_like(weight)
+        for c,y0 in zip(x,y):
+            pair+=y0*weight*(W*scale*amplitude(s,c)).sum(axis=1)
+        assert np.all(pair>=0.)
+        return (np.bincount(i,pair,minlength=len(p))+np.bincount(j,pair,minlength=len(p)))/2
     for c,y0 in zip(x,y):
-        C+=y0*(weight@((W*scale*amplitude(s,c)) .sum(axis=1)))
+        C+=y0*(weight@((W*scale*amplitude(s,c)).sum(axis=1)))
     return C
 
 
@@ -67,7 +74,7 @@ def check():
         finite_support_classical_equilibrium_inverse_over_forward=r[1]/f[1])
 
 
-def run(eos,reference,recoil_moments=False):
+def run(eos,reference,recoil_moments=False,absorption_grid=None,refine_absorption=False):
     T=json.loads(reference.read_text())
     hsh=hashlib.sha256(eos.read_bytes()).hexdigest()
     assert T["eos_sha256"]==hsh
@@ -80,11 +87,20 @@ def run(eos,reference,recoil_moments=False):
         if pre:return ar*np.exp(-8*(u-r)/3),(8/3)/(b.H(r)*np.exp(4*(u-r)))
         return (sf/b.s(u))**(1/3),(1+b.grad(u)/3)/b.H(u)
     out=[]
+    if absorption_grid is not None:
+        assert recoil_moments
+        g=json.loads(absorption_grid.read_text())
+        assert g["eos_sha256"]==hsh and abs(g["cases"][-1]["T_R_GeV"]/ref["T_R_GeV"]-1)<1e-13
+        target=np.r_[g["boundary_p_over_T"],np.inf]
     if recoil_moments:
         from finite_cooling_pair_emission_reference import kernel_and_lab_p2
-    for nt,nb,na,mode in ((28,48,7,0),(54,62,9,1)):
+    assert not refine_absorption or absorption_grid is not None
+    controls=((84,104,11,0),) if refine_absorption else ((28,48,7,0),(54,62,9,1))
+    for nt,nb,na,mode in controls:
         edge=np.r_[0.,np.geomspace(.00001,140,nb),np.inf]
         Y=np.zeros((2,2,len(edge)-1));Q=np.zeros((2,2));J=np.zeros((2,2))
+        if absorption_grid is not None:
+            lost=np.zeros((2,2,len(target)-1))
         xx,ww=roots_legendre(3)
         maxratio=0.;probes=[]
         for epoch,(hi,lo) in enumerate(((h,r),(r,L))):
@@ -108,6 +124,12 @@ def run(eos,reference,recoil_moments=False):
                         assert abs(F2[0]/forw-1.)<2e-11
                         I2=4*rate(q,mw,True,na,moment=True)
                         J[epoch]+=np.array([F2[1],I2])*clock*(a/TF)**2
+                        if absorption_grid is not None:
+                            forced=4*rate(q,mw,True,na,nodes=True)
+                            qm=q*(a/TF)
+                            ii=np.searchsorted(target,qm,side="right")-1
+                            lost[epoch,0]+=clock*np.bincount(ii,forced,minlength=len(target)-1)
+                            lost[epoch,1]+=clock*np.bincount(ii,forced*qm*qm,minlength=len(target)-1)
                     maxratio=max(maxratio,rev/forw)
                     probes.append([np.exp(c),rev/forw,forw,rev])
         result=dict(panels=nt,configuration=[nb,na,mode],omega_forward_inverse_by_epoch=(Q*conv).tolist(),
@@ -128,8 +150,18 @@ def run(eos,reference,recoil_moments=False):
                  signed_passive_mixed_rms=float(np.sqrt((mp2+jf-jr)/(yp+yf-yr))),
                  removed_fraction_of_forward_only_count=float(yr/(yp+yf)),
                  removed_fraction_of_forward_only_q2_yield=float(jr/(mp2+jf)))
+        if absorption_grid is not None:
+            defect=np.max(abs(lost.sum(axis=-1)/np.column_stack([Q[:,1],J[:,1]])-1))
+            assert defect<2e-12
+            result["removed_prompt_shape"]=dict(absorbed_omega_by_epoch_and_bin=(lost[:,0,:]*conv).tolist(),
+              absorbed_q2_times_omega_by_epoch_and_bin=(lost[:,1,:]*conv).tolist(),max_conservation_defect=float(defect))
         out.append(result)
-    return dict(eos_sha256=hsh,reference_sha256=hashlib.sha256(reference.read_bytes()).hexdigest(),
+    if absorption_grid is not None:
+        meta=dict(absorption_input_sha256=hashlib.sha256(absorption_grid.read_bytes()).hexdigest(),
+                  absorption_p_over_T_edges_lower=target[:-1].tolist())
+    else:
+        meta={}
+    return dict(**meta,eos_sha256=hsh,reference_sha256=hashlib.sha256(reference.read_bytes()).hexdigest(),
         independent_checks=check(),cases=out,scope="Signed spontaneous vacuum rate folded on the forced prompt-only spectra. No evolution due to the rates, no secondary recoil feedback, no Bose stimulation and no Pauli factors in this fold. Near-sampled local quantum rates are checked separately. Not a signed evolving relic calculation.")
 
 
@@ -138,5 +170,7 @@ if __name__=="__main__":
     p.add_argument("eos",type=Path)
     p.add_argument("reference",type=Path)
     p.add_argument("--recoil-moments",action="store_true")
+    p.add_argument("--absorption-grid",type=Path)
+    p.add_argument("--refine-absorption",action="store_true")
     a=p.parse_args()
-    print(json.dumps(run(a.eos,a.reference,a.recoil_moments),separators=(",",":"),allow_nan=False))
+    print(json.dumps(run(a.eos,a.reference,a.recoil_moments,a.absorption_grid,a.refine_absorption),separators=(",",":"),allow_nan=False))

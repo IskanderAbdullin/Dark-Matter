@@ -16,6 +16,7 @@ LABELS={
     "joined_off_l36":PREFIX+"_nfaoff_focus_sync",
     "joined_off_l50":PREFIX+"_nfaoff_l50_focus_sync",
     "split_off_l36":PREFIX+"_split_nfaoff_focus_sync",
+    "split_off_l36_rk":PREFIX+"_split_nfaoff_l36_rk_focus_sync",
     "duplicate_on_l36":PREFIX+"_duplicate_on_l36_focus_sync",
     "duplicate_on_l36_rk":PREFIX+"_duplicate_on_l36_rk_focus_sync",
     "joined_on_l36_rk":PREFIX+"_nfaon_l36_rk_focus_sync",
