@@ -48,8 +48,11 @@ class Centered(Model):
         return flux,derivative
 
 def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
-            initial_theta=None,observer=None,centered_diagnostic=None):
+            initial_theta=None,observer=None,centered_diagnostic=None,balanced_merit=False,target_moments=None):
     U0,S0,_=model.moment(q)
+    target=U0 if target_moments is None else np.asarray(target_moments)
+    if target_moments is not None:
+        assert vacuum_scaled and target.shape==U0.shape and np.all(np.isfinite(target))
     qref,R0,t=model.reference(q,guess)
     z=np.zeros_like(q) if reference_guess else q-qref
     if initial_theta is not None:
@@ -78,7 +81,7 @@ def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
             # by the larger of that bin's old and returned count.
             w=np.repeat(np.maximum(U0[::2],U[::2]),2)
             w[~active]=1.
-        r=((U-U0-h*F)/w)[active]
+        r=((U-target-h*F)/w)[active]
         err=np.max(abs(r))
         if observer is not None: observer(it,float(err),int(np.flatnonzero(active)[np.argmax(abs(r))]))
         if err<8e-12:
@@ -99,13 +102,23 @@ def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
             return ((dn-h*jv(d))/w)[active]
         M=np.stack([der(d) for d in basis],axis=1)
         da=np.zeros(model.d)
-        da[active]=np.linalg.solve(M,-r)
+        if balanced_merit:
+            rs=1./np.maximum(np.max(abs(M),axis=1),1e-300)
+            A=rs[:,None]*M
+            cs=1./np.maximum(np.max(abs(A),axis=0),1e-300)
+            da[active]=cs*np.linalg.solve(A*cs, -rs*r)
+        else:
+            da[active]=np.linalg.solve(M,-r)
         norm=np.linalg.norm(r)
         for j in range(28 if vacuum_scaled else 18):
             s=z+2.**-j*da
             try:UU,SS,_=model.moment(qref+s)
             except ValueError:continue
-            rr=((UU-U0-h*model.centered(s,qref,R0)[0])/w)[active]
+            trial_weights=w
+            if balanced_merit and vacuum_scaled:
+                trial_weights=np.repeat(np.maximum(U0[::2],UU[::2]),2)
+                trial_weights[~active]=1.
+            rr=((UU-target-h*model.centered(s,qref,R0)[0])/trial_weights)[active]
             if np.linalg.norm(rr)<norm*(1.-.001*2.**-j):break
         else:raise RuntimeError(f"centered residual not reduced: {err:.3g}, stepH={h:g}")
         z=s
