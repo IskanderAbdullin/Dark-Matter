@@ -32,3 +32,11 @@ python -W error kinetics/stimulated_prompt_parent_elimination_reference.py EOS_T
 python -W error kinetics/expanding_tagged_injection_transport_reference.py EOS_TABLE SNAPSHOTS.json --create
 python -W error kinetics/expanding_tagged_injection_transport_reference.py EOS_TABLE SNAPSHOTS.json --TR .05 --step 2 --bins 22 --support 64 --orders 5 4 3 12 --factorized --new-mesh --outer-diagnostic 24 --prompt-return --inject --reflect --return-only
 ```
+
+### Extended-support and bath-backreaction caution
+
+Retaining additional explicit support (q/T_R=96 and 128) keeps the ultimate far-boundary probability below 2e-13 in the sampled controls, while actual crossings of the interior diagnostic surface continue in both directions. The mean final-snapshot return probability of the entering resolved exterior flux rounds to one in both runs. This is a fixed-bath model check, not a mathematically rigorous error bound. The *number* of interior crossings changes from 8.56 to 3.29–4.47 across the selected meshes/time selections, and the soft fraction changes to 2.31–2.69e-8. Thus repeated physical reentry, but not the precise projected momentum distribution, is supported by these refinements.
+
+The final scalar energy inside these wider grids is about .39–.40 of the energy of the independently prescribed stable-fermion spectrum. This ratio is not itself a measured energy transfer integral (the scalar source already brings energy). It does show why fermion feedback cannot be declared small merely because the dark sector is dilute relative to the visible radiation. Both fermion and scalar equations must exchange energy consistently for an actual spectrum or thermalization conclusion. Reproduce these extended checks by selecting q/T_R=96 (23 base bins, snapshot step 2) and 128 (23 base bins, step 3) in the above command.
+
+At q/T_R=96, the MB within-cell trial gives a soft fraction 1.54e-8 and scalar-to-fermion energy ratio .367 rather than .401, with about .380 mean crossings in each direction. This is a projection sensitivity in the prescribed nonthermal bath, not a thermal-bath alternative. It gives another reason not to quote an exact crossing count or a converged soft fraction.
