@@ -127,6 +127,8 @@ reproducible controls below are not observational constraints.
    separates represented blocking from the suppressed positive vacuum-partner channel, without establishing a live fermion cap.
    The [completed native q32/q64 baseline](INDEPENDENT-WARM-BEYOND-RECOIL-NATIVE-2026-11-26.md)
    separates the recoil cutoff from the native common pair-projection spike.
+   [Entropy perturbation envelopes](INDEPENDENT-WARM-PAIR-ENTROPY-ROBUSTNESS-2026-11-26.md) test which
+   perturbations preserve the selected pair sign without treating observed numerical discrepancies as true errors.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)

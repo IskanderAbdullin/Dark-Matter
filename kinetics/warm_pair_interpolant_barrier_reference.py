@@ -61,6 +61,7 @@ def bounds(S,T,n=4):
     negative=float(np.sum(amp*flux*fm*P[:-1]*np.diff(F1))/(128*np.pi**3*et_hi)*(-np.expm1(-gap)))
     Bmax=np.hypot(mp,p[-1])
     emax=2*Bmax-m
+    bmin=None
     if emax<=et_lo:
         upper=0.
     else:
@@ -75,7 +76,8 @@ def bounds(S,T,n=4):
         amp=2*y**4*((smax/4)*(2*pp/A)**2+(pp*(4*m+2*M)/A)**2)
         upper=float(amp*bosons*(emax-et_lo)*np.sqrt((emax-m)*(emax+m))/(128*np.pi**3*m))
     return dict(subdivisions=n,represented_gap=float(gap),negative_lower_GeV=negative,
-                positive_upper_GeV=upper,relative_upper=upper/negative,successful=upper<negative)
+                positive_upper_GeV=upper,exterior_scalar_minimum_entropy=None if bmin is None else float(bmin),
+                relative_upper=upper/negative,successful=upper<negative)
 
 
 def run(seed,work,k):

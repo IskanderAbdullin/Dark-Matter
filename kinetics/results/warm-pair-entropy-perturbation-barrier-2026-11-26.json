@@ -1,0 +1,232 @@
+{
+  "scope": "Only declared sup entropy errors, fixed supports and vacuum incoming exterior. Actual errors and cap are not inferred.",
+  "cases": {
+    "q32": {
+      "frozen": {
+        "count": 25,
+        "tests": [
+          {
+            "scalar_entropy_sup_error": 1.0,
+            "light_entropy_sup_error": 1.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 7.570124282087292,
+            "maximum_exterior_rate_ratio": 2.0078213733145683e-07
+          },
+          {
+            "scalar_entropy_sup_error": 1.75,
+            "light_entropy_sup_error": 1.75,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 5.320124282087292,
+            "maximum_exterior_rate_ratio": 1.913690587403016e-06
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 2.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 4.570124282087292,
+            "maximum_exterior_rate_ratio": 4.074047974733887e-06
+          },
+          {
+            "scalar_entropy_sup_error": 3.0,
+            "light_entropy_sup_error": 3.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 1.570124282087292,
+            "maximum_exterior_rate_ratio": 0.00010232949524013195
+          },
+          {
+            "scalar_entropy_sup_error": 3.5,
+            "light_entropy_sup_error": 3.5,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 0.07012428208729204,
+            "maximum_exterior_rate_ratio": 0.005367386543049563
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 6.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 0.570124282087292,
+            "maximum_exterior_rate_ratio": 0.0005065801501768854
+          }
+        ]
+      },
+      "interpolant": {
+        "count": 24,
+        "tests": [
+          {
+            "scalar_entropy_sup_error": 1.0,
+            "light_entropy_sup_error": 1.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 3.9052476422218874,
+            "maximum_exterior_rate_ratio": 1.608320919793764e-06
+          },
+          {
+            "scalar_entropy_sup_error": 1.75,
+            "light_entropy_sup_error": 1.75,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 1.6552476422218874,
+            "maximum_exterior_rate_ratio": 1.8452399854301076e-05
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 2.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 0.9052476422218874,
+            "maximum_exterior_rate_ratio": 5.286311875512832e-05
+          },
+          {
+            "scalar_entropy_sup_error": 3.0,
+            "light_entropy_sup_error": 3.0,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -2.0947523577781126,
+            "maximum_exterior_rate_ratio": null
+          },
+          {
+            "scalar_entropy_sup_error": 3.5,
+            "light_entropy_sup_error": 3.5,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -3.5947523577781126,
+            "maximum_exterior_rate_ratio": null
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 6.0,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -3.0947523577781126,
+            "maximum_exterior_rate_ratio": null
+          }
+        ]
+      }
+    },
+    "q64": {
+      "frozen": {
+        "count": 14,
+        "tests": [
+          {
+            "scalar_entropy_sup_error": 1.0,
+            "light_entropy_sup_error": 1.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 7.570128195886134,
+            "maximum_exterior_rate_ratio": 8.681375748414605e-19
+          },
+          {
+            "scalar_entropy_sup_error": 1.75,
+            "light_entropy_sup_error": 1.75,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 5.320128195886134,
+            "maximum_exterior_rate_ratio": 8.274461928124415e-18
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 2.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 4.570128195886134,
+            "maximum_exterior_rate_ratio": 1.7615567136715203e-17
+          },
+          {
+            "scalar_entropy_sup_error": 3.0,
+            "light_entropy_sup_error": 3.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 1.5701281958861344,
+            "maximum_exterior_rate_ratio": 4.42476292419384e-16
+          },
+          {
+            "scalar_entropy_sup_error": 3.5,
+            "light_entropy_sup_error": 3.5,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 0.07012819588613439,
+            "maximum_exterior_rate_ratio": 2.320858832526821e-14
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 6.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 0.5701281958861344,
+            "maximum_exterior_rate_ratio": 2.1903648704073246e-15
+          }
+        ]
+      },
+      "interpolant": {
+        "count": 13,
+        "tests": [
+          {
+            "scalar_entropy_sup_error": 1.0,
+            "light_entropy_sup_error": 1.0,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 2.353228025584187,
+            "maximum_exterior_rate_ratio": 2.7419858710636736e-17
+          },
+          {
+            "scalar_entropy_sup_error": 1.75,
+            "light_entropy_sup_error": 1.75,
+            "all_boxes_certified": true,
+            "minimum_inside_slack": 0.10322802558418687,
+            "maximum_exterior_rate_ratio": 2.3438032028002666e-15
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 2.0,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -0.6467719744158131,
+            "maximum_exterior_rate_ratio": null
+          },
+          {
+            "scalar_entropy_sup_error": 3.0,
+            "light_entropy_sup_error": 3.0,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -3.646771974415813,
+            "maximum_exterior_rate_ratio": null
+          },
+          {
+            "scalar_entropy_sup_error": 3.5,
+            "light_entropy_sup_error": 3.5,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -5.146771974415813,
+            "maximum_exterior_rate_ratio": null
+          },
+          {
+            "scalar_entropy_sup_error": 2.0,
+            "light_entropy_sup_error": 6.0,
+            "all_boxes_certified": false,
+            "minimum_inside_slack": -4.646771974415813,
+            "maximum_exterior_rate_ratio": null
+          }
+        ]
+      }
+    }
+  },
+  "observed_accepted_numerical_discrepancies": [
+    {
+      "snapshot_sha256": [
+        "aa087c4699dac609c0148d100ebb825f8414e8c10ac711d418933020c6d7b639",
+        "f3d677c9a1f6864d9a1f8ce485018d24eb38a5de080f18643dd1cea09879eeb8"
+      ],
+      "T_GeV": 0.007394049465197431,
+      "maximum_scalar_light_difference": [
+        1.1077994305219718e-06,
+        0.007672952213393813
+      ]
+    },
+    {
+      "snapshot_sha256": [
+        "82337f88f81e65df77d35b04c20597a37bc6135e41fb6aa62372107c7b6a2ecd",
+        "445ab9f296f303b6c132b561e8a1d3093c3e8d7acfa9bf2e4036526a6e62d488"
+      ],
+      "T_GeV": 0.007754805139316106,
+      "maximum_scalar_light_difference": [
+        0.0015158603044262975,
+        0.0002549528924049582
+      ]
+    },
+    {
+      "snapshot_sha256": [
+        "791e11f3b22ad08b8613a4b17b5cc85048fe77f8ffed60bb4a1b9c797c29d26e",
+        "7e129e1f8906e31180c03ad5df694137b779b6f815f79ae09bc4abba64ae6e38"
+      ],
+      "T_GeV": 0.007754805139316106,
+      "maximum_scalar_light_difference": [
+        0.0002364162341637055,
+        3.7112103882464e-05
+      ]
+    }
+  ]
+}
