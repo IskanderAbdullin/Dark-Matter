@@ -112,3 +112,17 @@ python -W error warm_q64_common_chart_guided_replay_reference.py EOS.dat \
 
 [Exact q64 output](results/warm-pair-common-chart-q64-terminal-2026-11-26.json.gz)
 and [solve diagnostics](results/warm-pair-common-chart-q64-replay-2026-11-26.json).
+
+The actual wider block also completed with the finer (4,10,10,4)
+pair rule, changing only that quadrature. The first cold-shell
+slope is −4.7172395e-5, within 2.34e-6 fractionally of the coarse
+common-chart value. The largest whole-state normalized L1 change
+between orders is 8.14e-7, again in the scalar number distribution;
+this is not a continuum-precision claim for the whole spectrum.
+The guide stalled at scaled residual 8.12e-12 and the original
+fallback route accepted the finer result with energy and count
+defects 8.39e-15 and 5.33e-15. The guide was not substituted for
+a physical state. Reproduce with `--fine` and a separate output path.
+
+[Finer q64 solve diagnostics](results/warm-pair-common-chart-q64-replay-fine-2026-11-26.json)
+and [exact finer wider endpoint](results/warm-pair-common-chart-q64-terminal-fine-2026-11-26.json.gz).
