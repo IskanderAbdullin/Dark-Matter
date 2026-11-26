@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "steps": 1,
+      "initial_temperature_GeV": 0.04499968808062349,
+      "with_pair": true,
+      "acceptances": 1,
+      "rejections": 0,
+      "maximum_stiff_residual": 2.3554953203059472e-15,
+      "energy_ledger": -3.653989709051677e-16,
+      "count_ledger": 3.1086244689504383e-15,
+      "collision_number_ledger": -2.4641447359744927e-20,
+      "max_atomic_pair_error": 4.132439468710261e-16,
+      "maximum_midpoint_inverse_over_forward": 4.044505686885511,
+      "exterior": {
+        "exterior_cohorts": 36,
+        "exterior_a4_energy_one_mean_per_cohort": 1.637973248914446e-13,
+        "exterior_a4_energy_distribution_independent_upper_bound": 1.6379776689599112e-13,
+        "exterior_a4_pressure_trace": 6.096844139428586e-18,
+        "exterior_a4_portal_injection": 1.637912280473052e-13,
+        "exterior_relative_energy_ledger_defect": 2.1485028449557774e-16,
+        "predecessor_cohort_count": 30,
+        "initial_relative_a4_exterior_energy": 1.6379533020352113e-13,
+        "increment_in_a4_exterior_trace": 1.1072879217558388e-20
+      },
+      "endpoint": {
+        "b": 1.0001,
+        "equivalent_T_GeV": [
+          0.04511826358460827,
+          0.04511916340541045
+        ],
+        "scalar_count_over_own_saturation": 0.0001130518536125746,
+        "maximum_resolved_scalar_occupation": 0.00012146565617446346,
+        "scalar_first_cell_number_fraction": 4.367861739798428e-10,
+        "count_defect": 6.217248937900877e-15,
+        "dark_entropy_a3": 5.463761729610942e-08,
+        "retained_counts_relative_to_start": [
+          0.9995668812425001,
+          1.0001935363815997
+        ],
+        "inclusive_counts_relative_to_start": [
+          0.9995668825711826,
+          1.0001935367261854
+        ],
+        "cold_count_relative_to_initial_total_scalar": 4.365969936948756e-10,
+        "photon_temperature_GeV": 0.04499557071396391
+      },
+      "trajectory": [
+        {
+          "b": 1.0001,
+          "equivalent_T_GeV": [
+            0.04511826358460827,
+            0.04511916340541045
+          ],
+          "scalar_count_over_own_saturation": 0.0001130518536125746,
+          "maximum_resolved_scalar_occupation": 0.00012146565617446346,
+          "scalar_first_cell_number_fraction": 4.367861739798428e-10,
+          "count_defect": 6.217248937900877e-15,
+          "dark_entropy_a3": 5.463761729610942e-08,
+          "retained_counts_relative_to_start": [
+            0.9995668812425001,
+            1.0001935363815997
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.9995668825711826,
+            1.0001935367261854
+          ],
+          "cold_count_relative_to_initial_total_scalar": 4.365969936948756e-10,
+          "photon_temperature_GeV": 0.04499557071396391
+        }
+      ],
+      "scope": "The previous positive collisionless exterior contributes to expansion when available. It never enters tail collision occupations, and entry counts are not counted again. Visible slow source, heavy recycling and number-changing scalar self-interactions are not evolved."
+    }
+  ]
+}

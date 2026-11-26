@@ -7,6 +7,7 @@ from pathlib import Path
 import numpy as np
 
 from frw_exterior_cohort_reference import Exterior
+from frw_exterior_restart_reference import export_restart, import_restart
 from joint_below_pole_elastic_linear_modes_reference import setup
 from joint_prompt_two_moment_evolution_reference import Collision
 from joint_resonant_frw_split_reference import pack,redshift
@@ -16,7 +17,7 @@ from scalar_pair_expanding_continuation_reference import MASS,e_total,moments,ra
 from joint_nonlinear_prompt_return_moments_reference import P
 
 
-def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0):
+def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0,track_exterior=False):
     q=np.array(s["lab_momentum_edges_GeV"])
     t0=s["T_visible_GeV"]
     ar=s["scale_factor"]
@@ -26,7 +27,12 @@ def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0):
     n0=ei[:,0].sum(axis=1)
     e0=e_total(ei)
     assert max(abs(n0*ar**3/np.asarray(s["represented_species_count_a3"])-1.))<3e-12
-    ex=Exterior(); exn=np.zeros(2); pair_count=np.zeros(2)
+    prior=s.get("positive_exterior_restart") if track_exterior else None
+    ex=import_restart(prior) if prior is not None else Exterior()
+    e_ex0, trace_ex0=ex.energy(1.),ex.trace
+    if track_exterior and not np.all(np.isin(ex.array()[1],MASS)):
+        raise ValueError("Unexpected mass in predecessor exterior archive.")
+    exn=np.zeros(2); pair_count=np.zeros(2)
     work=0.; peak=0.; mx=0.; errors=[];accepted=0;rejected=0
     grid=np.unique(np.r_[np.linspace(0.,np.log(bmax),n+1),np.clip(np.log(q[-1]/P),0.,np.log(bmax))])
     rows=[]
@@ -53,7 +59,7 @@ def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0):
             exn[:]+=b**3*delta[:,0,[0,-1]].sum(axis=1)
             for j,mi in enumerate(MASS):
                 for side,k in enumerate((0,-1)):
-                    ex.add(b,mi,j,side,p[k],b**3*delta[j,0,k],b**4*delta[j,1,k])
+                    ex.add(b,mi,3+j if track_exterior else j,side,p[k],b**3*delta[j,0,k],b**4*delta[j,1,k])
             return reconstruct(p,u+delta[:,:,1:-1])
         if pair:
             th=kick(th)
@@ -88,7 +94,8 @@ def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0):
                           stiff_microsteps_accepted=accepted,stiff_microsteps_rejected=rejected)
             print(json.dumps(progress,allow_nan=False),file=sys.stderr,flush=True)
     exr=ex.result()
-    rel_e=(e_total(out)*c**4+exr["exterior_a4_energy_one_mean_per_cohort"]-work-ex.trace-e0)/e0
+    rel_e=(e_total(out)*c**4+(exr["exterior_a4_energy_one_mean_per_cohort"]-e_ex0)
+           -work-(ex.trace-trace_ex0)-e0)/e0
     rel_n=(nf+exn).sum()/n0.sum()-1.
     exchange=(pair_count+exn).sum()/n0.sum()
     assert max(abs(rel_e),abs(rel_n),abs(exchange),max(r["count_defect"] for r in rows))<5e-9
@@ -97,11 +104,22 @@ def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0):
                 lab_momentum_edges_GeV=(q/c).tolist(),entropy_variable_scalar=np.asarray(th[0]).tolist(),
                 entropy_variable_fermion=np.asarray(th[1]).tolist(),represented_species_count_a3=(nf*ar**3).tolist(),
                 steps=n)
+        if track_exterior:
+            checkpoint["positive_exterior_restart"]=export_restart(ex)
+    if track_exterior:
+        exr.update(predecessor_cohort_count=len(prior["cohorts"]) if prior else 0,
+                   initial_relative_a4_exterior_energy=e_ex0,
+                   increment_in_a4_exterior_trace=ex.trace-trace_ex0)
+    scope="Radiation plus retained and newly produced exterior gravity; prompt and below-pole elastic medium plus optionally pair conversion. Prior exterior cohorts, visible slow source, heavy recycling and number-changing scalar self-interactions are not evolved."
+    if track_exterior:
+        scope=("The previous positive collisionless exterior contributes to expansion when available. "
+               "It never enters tail collision occupations, and entry counts are not counted again. "
+               "Visible slow source, heavy recycling and number-changing scalar self-interactions are not evolved.")
     return dict(steps=n,initial_temperature_GeV=t0,with_pair=pair,acceptances=accepted,rejections=rejected,
             maximum_stiff_residual=mx,energy_ledger=rel_e,count_ledger=rel_n,collision_number_ledger=exchange,
             max_atomic_pair_error=max(errors,default=0.),maximum_midpoint_inverse_over_forward=peak,
             exterior=exr,endpoint=rows[-1],trajectory=rows,
-            scope="Radiation plus retained and newly produced exterior gravity; prompt and below-pole elastic medium plus optionally pair conversion. Prior exterior cohorts, visible slow source, heavy recycling and number-changing scalar self-interactions are not evolved.")
+            scope=scope)
 
 
 if __name__=="__main__":
@@ -113,11 +131,15 @@ if __name__=="__main__":
     p.add_argument("--save-snapshots")
     p.add_argument("--progress-every",type=int,default=0,
                    help="Write status after this many accepted outer blocks to stderr, without changing outputs.")
+    p.add_argument("--track-exterior",action="store_true",
+                   help="Export/reuse positive collisionless exterior cohort gravity; not tail interactions.")
     a=p.parse_args()
+    if a.track_exterior and not a.save_snapshots:
+        p.error("--track-exterior requires --save-snapshots")
     assert a.stop>1 and min(a.steps)>0 and a.progress_every>=0
     s=json.loads(Path(a.shape).read_text())["snapshots"][-1]
     ck=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
-    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k,progress_every=a.progress_every)
+    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k,progress_every=a.progress_every,track_exterior=a.track_exterior)
           for n,k in zip(a.steps,ck)]
     if a.save_snapshots:
         Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=ck),indent=2,allow_nan=False)+"\n")

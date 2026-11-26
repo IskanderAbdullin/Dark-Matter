@@ -1,0 +1,54 @@
+{
+  "producer_cross": {
+    "producer_visible_T_GeV": 0.04499968808062349,
+    "continuation_visible_T_GeV": 0.04499557071396391,
+    "producer_count_of_positive_cohorts": 30,
+    "ending_count_of_positive_cohorts": 36,
+    "previous_a4_energy_EOS_units": 2.5935590152793e-13,
+    "exterior_count_by_scalar_stable": [
+      6.971604298295777e-15,
+      2.9485001813397765e-13
+    ],
+    "comparison_to_producer_counts_energy_and_upper_bound_relative": [
+      0.0,
+      0.0,
+      2.220446049250313e-16,
+      0.0
+    ],
+    "joint_number_conservation_defect": 3.1086244689504383e-15,
+    "finished_energy_ledger": -3.653989709051677e-16
+  },
+  "synthetic_direct_split": {
+    "direct_and_split_energy_ledger_defects": [
+      -1.9157142582973722e-14,
+      -9.04655605041854e-15
+    ],
+    "direct_split_T_relative": 1.7763568394002505e-15,
+    "direct_split_shell_l1_relative": 3.102564408787249e-15,
+    "total_number_conservation_defect": 2.6978419498391304e-14,
+    "relative_differences_in_energy_upper_and_trace": [
+      4.440892098500626e-16,
+      4.440892098500626e-16,
+      4.440892098500626e-14
+    ],
+    "direct_exit": {
+      "T_visible_GeV": 0.0009950823026380084,
+      "scale_factor": 55.62395522849666,
+      "represented_species_count_a3": [
+        9.118281660770612e-09,
+        8.140244714017241e-09
+      ]
+    }
+  },
+  "input_sha256": {
+    "dm-eos-low-official-1314.dat": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "warm-coupled-1MeV-12-and-20-shape-2026-11-26.json": "eb4588e0662e998f430d914d9dc9ea8c2e229b668fef925845779b1d1e488992",
+    "producer.json": "b0f3c8a589d3d5fc1d4bdfe5c69e513a0670dab1b161e79ea0bcd21fb56b2504",
+    "producer-shape.json": "16319b1b177a371696523665f81e66c0f0e699fcd28305842884335accf46cac",
+    "legacy-producer.json": "b0f3c8a589d3d5fc1d4bdfe5c69e513a0670dab1b161e79ea0bcd21fb56b2504",
+    "legacy-producer-shape.json": "a74fd8c516c3904d96d18a1f19e3210e17aa939eba6a815b98cea0aad299e383",
+    "real-bridge.json": "739c743c4c14f78ef3ca865514c008533aa7b677de6c915a998949fa480541d8",
+    "real-bridge-shape.json": "2e8cef3319d5e8df850d732221c8c42cb42d01a0d055f9316e17d46284483d92"
+  },
+  "scope": "Controlled carryover of known positive exterior cohorts in expansion only; no old-tail collision occupations or re-entry, and no inference about unarchived histories or terminal abundance."
+}

@@ -45,7 +45,7 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9,empty_support_high=16.,empty_outer_bins=0,pair_operator=False):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9,empty_support_high=16.,empty_outer_bins=0,pair_operator=False,save_exterior=False):
     assert nx>0 and (centered or not elastic)
     if visible_feedback: assert empty_start and source is not None
     if pair_operator:
@@ -274,6 +274,10 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
                         entropy_variable_scalar=np.asarray(th[0]).tolist(),
                         entropy_variable_fermion=np.asarray(th[1]).tolist(),
                         represented_species_count_a3=(U.reshape(2,cnt,2)[:,:,0].sum(axis=1)*af**3).tolist())
+        if save_exterior:
+            from frw_exterior_restart_reference import export_restart
+            assert exterior_trace is not None and abs(exterior_trace.a/af-1.)<1e-14
+            snapshot["positive_exterior_restart"]=export_restart(exterior_trace)
     # Independently reconcile in-domain inputs with the full rate less tails.
     if signed_source:
         assert np.max(abs(source_abs[:,0]-source_abs[:,1]-source_total)
@@ -398,9 +402,13 @@ if __name__=="__main__":
     p.add_argument("--accurate-visible-eos",action="store_true")
     p.add_argument("--trace-exterior",action="store_true")
     p.add_argument("--pair-conversion",action="store_true")
+    p.add_argument("--save-exterior-cohorts",action="store_true",
+                   help="Include positive collisionless tails in a saved snapshot (requires --trace-exterior).")
     p.add_argument("--eos-lower-knot-limit",type=float,default=.009,
                    help="lower temperature in GeV for selecting tabulated EOS knots; no extrapolation")
     a=p.parse_args();eos=StandardModel(a.eos,lower_knot_limit=a.eos_lower_knot_limit)
+    if a.save_exterior_cohorts and not (a.save_snapshots and a.trace_exterior):
+        p.error("--save-exterior-cohorts requires --save-snapshots and --trace-exterior")
     if a.empty_pulse: assert 0.<a.empty_stop<1.
     if a.trace_exterior: assert a.visible_backreaction
     if a.pair_conversion: assert a.physical_amplitude and a.trace_exterior
@@ -435,7 +443,7 @@ if __name__=="__main__":
     extent=np.log(eos.state(a.empty_reheat)[2]/eos.state(a.empty_stop*a.empty_reheat)[2])/3 if a.empty_pulse else .07
     final_shapes=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
     if a.save_snapshots: assert a.physical_amplitude and a.empty_pulse
-    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop,empty_support_high=a.empty_support_high,empty_outer_bins=a.empty_outer_bins,pair_operator=a.pair_conversion) for n,snapshot in zip(a.steps,final_shapes)]
+    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop,empty_support_high=a.empty_support_high,empty_outer_bins=a.empty_outer_bins,pair_operator=a.pair_conversion,save_exterior=a.save_exterior_cohorts) for n,snapshot in zip(a.steps,final_shapes)]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     if a.save_snapshots:
         for n,x in zip(a.steps,final_shapes): x.update(steps=n, below_pole_elastic=a.with_elastic)
