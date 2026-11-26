@@ -1,0 +1,112 @@
+{
+  "scalar_density_omega_h2": 2.9898242112084535e-10,
+  "dark_density_omega_h2": 0.11816901374571635,
+  "scalar_fraction_of_dark_density": 2.5301253826507755e-09,
+  "smoothing_moment_ratios_upto4": [
+    1.0000000000000002,
+    0.998488643251669,
+    1.0000000000000624,
+    1.0045478100416434,
+    1.0121735011579194
+  ],
+  "psd_sha256": [
+    "003d6fddf8a05b6ab3fb64865ca4248e077d6e008fa90acea3b6600be4f6a77f",
+    "b4e2d327b4a0364a657e71e1bc6f12707ceed9a340880a5ff014cdc2f85bba19"
+  ],
+  "smooth_manual_quadratures": [
+    {
+      "momentum_bins": 128,
+      "physical_normalization_residual": 0.0003510620850861734,
+      "normalized_q_moment_errors": [
+        -8.092602716347486e-05,
+        -0.00018667183984499847,
+        -0.00027894468720723875,
+        -0.00033047675302844137
+      ],
+      "dilation_integral_by_parts_residual": [
+        0.0007601698921086975,
+        0.0005709968050393588,
+        0.00034244858802190414,
+        0.0001470958944751466,
+        3.832908268575075e-05
+      ]
+    },
+    {
+      "momentum_bins": 256,
+      "physical_normalization_residual": 0.0002860085376652499,
+      "normalized_q_moment_errors": [
+        -0.0001682656556438733,
+        -0.00024580669675777767,
+        -0.00027621032153180014,
+        -0.0002844849108031289
+      ],
+      "dilation_integral_by_parts_residual": [
+        0.00010804629034288915,
+        -6.006527677460127e-05,
+        -5.4008459101306805e-05,
+        -2.063378761352208e-05,
+        -4.153191786815391e-06
+      ]
+    }
+  ],
+  "raw_manual_quadratures": [
+    {
+      "momentum_bins": 128,
+      "physical_normalization_residual": 0.00065927570889035,
+      "normalized_q_moment_errors": [
+        1.2109612304911366e-05,
+        0.00012218539910002768,
+        0.00021066504613131976,
+        6.85037822860668e-05
+      ],
+      "dilation_integral_by_parts_residual": [
+        -0.01761057451359138,
+        -0.0034272913164529184,
+        0.005138557681513056,
+        0.013787510668306746,
+        0.02222639992486597
+      ]
+    },
+    {
+      "momentum_bins": 384,
+      "physical_normalization_residual": -0.0011921897104277823,
+      "normalized_q_moment_errors": [
+        0.0005955896006624162,
+        0.0009577517620502629,
+        0.0010916257975561727,
+        0.0010909178981268752
+      ],
+      "dilation_integral_by_parts_residual": [
+        -0.0008403730893631334,
+        0.0005114361223768071,
+        0.0016683209007699595,
+        0.0012435850201817367,
+        -0.0005837487341642245
+      ]
+    }
+  ],
+  "independent_shifted_raw160_moment_control": {
+    "file": "scalar.dat",
+    "qmax": 63.8376753507014,
+    "results": [
+      {
+        "momentum_bins": 160,
+        "physical_normalization_residual": -0.00014473492586375425,
+        "normalized_q_moment_errors": [
+          0.00026840672611294636,
+          0.0003936623525337968,
+          0.0004070964863405191,
+          0.00028501681323356287
+        ],
+        "dilation_integral_by_parts_residual": [
+          0.002306762523023087,
+          -0.0026972267846183673,
+          -0.004255184558380809,
+          -0.0032901836121862482,
+          0.002356454775106709
+        ]
+      }
+    ],
+    "convention": "Native scheme-3 trapezoidal nodes and weights, with analytic derivative of an independent cubic spline and matching external-tails convention. Dilation identity residual is a quadrature diagnostic, not a CLASS transfer error or proof."
+  }
+}

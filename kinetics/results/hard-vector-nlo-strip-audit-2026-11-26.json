@@ -1,0 +1,376 @@
+{
+  "focused_probe_columns": [
+    "mass_over_T",
+    "k_over_T",
+    "rhoV_Born_over_T2",
+    "rhoV_NLO_coefficient_over_T2"
+  ],
+  "focused_probe_values": [
+    [
+      5.5,
+      2.861817604250837,
+      6.404512211633089,
+      0.2118644242620667
+    ],
+    [
+      5.5,
+      5.099019513592784,
+      6.481411093442182,
+      0.1914446976863188
+    ],
+    [
+      5.5,
+      8.94427190999916,
+      6.611327948673354,
+      0.165834167742432
+    ],
+    [
+      7.5,
+      3.315116890850155,
+      12.77879483112495,
+      0.3974281858679092
+    ],
+    [
+      7.5,
+      5.830951894845301,
+      12.7484665588266,
+      0.3772320683355461
+    ],
+    [
+      7.5,
+      10.0,
+      12.75211733091212,
+      0.3444600445847233
+    ],
+    [
+      10.5,
+      3.897435053981015,
+      25.98123710640188,
+      0.7284557922436283
+    ],
+    [
+      10.5,
+      6.782329983125268,
+      25.88803797503427,
+      0.7254301249384837
+    ],
+    [
+      10.5,
+      11.40175425099138,
+      25.76070127605789,
+      0.709320666218788
+    ]
+  ],
+  "focused_Born_trace_check_relative_defect": 4.440892098500626e-16,
+  "focused_strict_NLO_over_LO_at_alpha0p3": [
+    0.12471052223645061,
+    0.11135376179337048,
+    0.0945619531455874,
+    0.11724649958486534,
+    0.11155313362085,
+    0.10183279693319851,
+    0.10569987977117304,
+    0.10563979951191103,
+    0.10380446883735003
+  ],
+  "direct_tolerance_rechecks": [
+    {
+      "x": 4.0,
+      "k_over_T": 2.371181140275875,
+      "abs_native_Lo_difference": 0.0,
+      "abs_relative_native_strict_NLO_change": 2.245069390838239e-06
+    },
+    {
+      "x": 4.0,
+      "k_over_T": 4.737087712930805,
+      "abs_native_Lo_difference": 0.0,
+      "abs_relative_native_strict_NLO_change": 3.786935670602176e-06
+    }
+  ],
+  "complete_mass_strip_controls": [
+    {
+      "x_invariant_mass_over_T": 4.0,
+      "u_boost_bounds": [
+        0.012500000000000002,
+        32.00000000000001
+      ],
+      "interpolation": "pchip",
+      "probes_used": 16,
+      "alpha_s_variations": [
+        {
+          "alpha_s": 0.2,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.0813961022548063,
+            0.07921633800115443
+          ]
+        },
+        {
+          "alpha_s": 0.3,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.12209415338220944,
+            0.11882450700173165
+          ]
+        },
+        {
+          "alpha_s": 0.4,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.1627922045096126,
+            0.15843267600230887
+          ]
+        }
+      ],
+      "additional_omega_minus_k_over_T_ge_1_cut": {
+        "u_max": 4.5,
+        "kept_Born_count_and_heat_fraction": [
+          0.962074180585446,
+          0.9349339794982124
+        ],
+        "strict_NLO_part_over_thermal_Born_rate_and_heat_at_alpha0p3": [
+          0.12337215747488775,
+          0.12088612793225596
+        ]
+      }
+    },
+    {
+      "x_invariant_mass_over_T": 4.0,
+      "u_boost_bounds": [
+        0.012500000000000002,
+        32.00000000000001
+      ],
+      "interpolation": "linear",
+      "probes_used": 16,
+      "alpha_s_variations": [
+        {
+          "alpha_s": 0.2,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.08145250952818298,
+            0.07927963371770769
+          ]
+        },
+        {
+          "alpha_s": 0.3,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.12217876429227448,
+            0.11891945057656152
+          ]
+        },
+        {
+          "alpha_s": 0.4,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.16290501905636595,
+            0.15855926743541537
+          ]
+        }
+      ],
+      "additional_omega_minus_k_over_T_ge_1_cut": {
+        "u_max": 4.5,
+        "kept_Born_count_and_heat_fraction": [
+          0.962074180585446,
+          0.9349339794982124
+        ],
+        "strict_NLO_part_over_thermal_Born_rate_and_heat_at_alpha0p3": [
+          0.1234523031973847,
+          0.12097400786480045
+        ]
+      }
+    },
+    {
+      "x_invariant_mass_over_T": 4.0,
+      "u_boost_bounds": [
+        0.012500000000000002,
+        32.00000000000001
+      ],
+      "interpolation": "pchip",
+      "probes_used": 9,
+      "alpha_s_variations": [
+        {
+          "alpha_s": 0.2,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.0814034195997797,
+            0.07922566126392114
+          ]
+        },
+        {
+          "alpha_s": 0.3,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.12210512939966955,
+            0.1188384918958817
+          ]
+        },
+        {
+          "alpha_s": 0.4,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.1628068391995594,
+            0.15845132252784228
+          ]
+        }
+      ],
+      "additional_omega_minus_k_over_T_ge_1_cut": {
+        "u_max": 4.5,
+        "kept_Born_count_and_heat_fraction": [
+          0.962074180585446,
+          0.9349339794982124
+        ],
+        "strict_NLO_part_over_thermal_Born_rate_and_heat_at_alpha0p3": [
+          0.12338260465861427,
+          0.12089953527984737
+        ]
+      }
+    },
+    {
+      "x_invariant_mass_over_T": 4.5,
+      "u_boost_bounds": [
+        0.012499999999999999,
+        32.00000000000001
+      ],
+      "interpolation": "pchip",
+      "probes_used": 16,
+      "alpha_s_variations": [
+        {
+          "alpha_s": 0.2,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.07916647614996926,
+            0.0773730786018008
+          ]
+        },
+        {
+          "alpha_s": 0.3,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.1187497142249539,
+            0.1160596179027012
+          ]
+        },
+        {
+          "alpha_s": 0.4,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.15833295229993852,
+            0.1547461572036016
+          ]
+        }
+      ],
+      "additional_omega_minus_k_over_T_ge_1_cut": {
+        "u_max": 6.125,
+        "kept_Born_count_and_heat_fraction": [
+          0.9912397965860037,
+          0.9831465110287257
+        ],
+        "strict_NLO_part_over_thermal_Born_rate_and_heat_at_alpha0p3": [
+          0.11906132480571427,
+          0.11662251051256975
+        ]
+      }
+    },
+    {
+      "x_invariant_mass_over_T": 4.5,
+      "u_boost_bounds": [
+        0.012499999999999999,
+        32.00000000000001
+      ],
+      "interpolation": "linear",
+      "probes_used": 16,
+      "alpha_s_variations": [
+        {
+          "alpha_s": 0.2,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.07922628849483057,
+            0.0774392761909427
+          ]
+        },
+        {
+          "alpha_s": 0.3,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.11883943274224586,
+            0.11615891428641403
+          ]
+        },
+        {
+          "alpha_s": 0.4,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.15845257698966114,
+            0.1548785523818854
+          ]
+        }
+      ],
+      "additional_omega_minus_k_over_T_ge_1_cut": {
+        "u_max": 6.125,
+        "kept_Born_count_and_heat_fraction": [
+          0.9912397965860037,
+          0.9831465110287257
+        ],
+        "strict_NLO_part_over_thermal_Born_rate_and_heat_at_alpha0p3": [
+          0.11915064714767219,
+          0.11672116119259877
+        ]
+      }
+    },
+    {
+      "x_invariant_mass_over_T": 4.5,
+      "u_boost_bounds": [
+        0.012499999999999999,
+        32.00000000000001
+      ],
+      "interpolation": "pchip",
+      "probes_used": 9,
+      "alpha_s_variations": [
+        {
+          "alpha_s": 0.2,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.07917365845440731,
+            0.07738194913499251
+          ]
+        },
+        {
+          "alpha_s": 0.3,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.11876048768161096,
+            0.11607292370248876
+          ]
+        },
+        {
+          "alpha_s": 0.4,
+          "strict_NLO_part_over_thermal_Born_rate_and_heat": [
+            0.15834731690881462,
+            0.15476389826998502
+          ]
+        }
+      ],
+      "additional_omega_minus_k_over_T_ge_1_cut": {
+        "u_max": 6.125,
+        "kept_Born_count_and_heat_fraction": [
+          0.9912397965860037,
+          0.9831465110287257
+        ],
+        "strict_NLO_part_over_thermal_Born_rate_and_heat_at_alpha0p3": [
+          0.11907203529084383,
+          0.11663572427536366
+        ]
+      }
+    }
+  ],
+  "scope": "Fixed selected invariant masses only. Integrate boost u, not invariant mass or cosmic temperature. Strict two-loop part for dimensionless fixed alpha_s, no LPM, lattice matching, running-coupling uncertainty, cosmological relic result or full spectral coverage.",
+  "coverage_not_correction": {
+    "fd_count_then_heat_fractions": [
+      {
+        "T_range_GeV": [
+          0.25,
+          0.3486245429
+        ],
+        "pure_Born_FD_fraction_for_x_4_to_4p5_only": [
+          0.07550186692535577,
+          0.05148503911142061
+        ]
+      },
+      {
+        "T_range_GeV": [
+          0.3,
+          0.42
+        ],
+        "pure_Born_FD_fraction_for_x_4_to_4p5_only": [
+          0.0729751424126178,
+          0.049434991258046956
+        ]
+      }
+    ],
+    "scope": "Only pure Born coverage over the narrow mass range. Does not interpolate or propagate NLO coefficients."
+  }
+}

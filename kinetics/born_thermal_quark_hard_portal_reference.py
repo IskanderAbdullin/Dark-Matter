@@ -56,8 +56,8 @@ def identities():
                 full_boost_MB_vs_closed_bessel_moments_relative_defect=d2)
 
 
-def kernel(n):
-    x,dx=gauss(XEDGES,n)
+def kernel(n,xedges=None):
+    x,dx=gauss(XEDGES if xedges is None else xedges,n)
     u,du=gauss(UEDGES,n)
     x,dx=x[:,None],dx[:,None]
     q=np.sqrt(u*(2*x+u))
