@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "history": "instant",
+      "scalar_fraction_of_fixed_dark_density": 2.5410626066461327e-09,
+      "rows": [
+        {
+          "k_h_Mpc": 34.0,
+          "probes": [
+            {
+              "start_k_tau": 0.07000039408130707,
+              "stable_density_contrast_correction": -2.5552680809582704e-08,
+              "scalar_density_contrast_correction": -2.4911981293621374e-09,
+              "baryon_dilution": 0.8528485171387405,
+              "direct_fixed_metric_power_ratio_minus_one": -4.7834360563763404e-08
+            },
+            {
+              "start_k_tau": 0.15,
+              "stable_density_contrast_correction": -2.4327308392892122e-08,
+              "scalar_density_contrast_correction": -2.4911981295357717e-09,
+              "baryon_dilution": 0.8528485175757395,
+              "direct_fixed_metric_power_ratio_minus_one": -4.574424653936183e-08
+            }
+          ]
+        },
+        {
+          "k_h_Mpc": 40.0,
+          "probes": [
+            {
+              "start_k_tau": 0.07000033516906073,
+              "stable_density_contrast_correction": -3.606935771622774e-08,
+              "scalar_density_contrast_correction": -2.504011047411589e-09,
+              "baryon_dilution": 0.8529628288915281,
+              "direct_fixed_metric_power_ratio_minus_one": -6.580329839850125e-08
+            },
+            {
+              "start_k_tau": 0.15,
+              "stable_density_contrast_correction": -3.4418387911479567e-08,
+              "scalar_density_contrast_correction": -2.504011047398103e-09,
+              "baryon_dilution": 0.8529628288458768,
+              "direct_fixed_metric_power_ratio_minus_one": -6.298686673564433e-08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "history": "ratio5",
+      "scalar_fraction_of_fixed_dark_density": 2.289188789915816e-08,
+      "rows": [
+        {
+          "k_h_Mpc": 34.0,
+          "probes": [
+            {
+              "start_k_tau": 0.07000039408130707,
+              "stable_density_contrast_correction": -1.3947437156995741e-08,
+              "scalar_density_contrast_correction": -1.1403754204306463e-08,
+              "baryon_dilution": 0.8528485171387405,
+              "direct_fixed_metric_power_ratio_minus_one": -4.324145145291828e-08
+            },
+            {
+              "start_k_tau": 0.15,
+              "stable_density_contrast_correction": -1.3278572746439963e-08,
+              "scalar_density_contrast_correction": -1.1403754244309534e-08,
+              "baryon_dilution": 0.8528485175757395,
+              "direct_fixed_metric_power_ratio_minus_one": -4.210057152564621e-08
+            }
+          ]
+        },
+        {
+          "k_h_Mpc": 40.0,
+          "probes": [
+            {
+              "start_k_tau": 0.07000033516906073,
+              "stable_density_contrast_correction": -1.9687773503345892e-08,
+              "scalar_density_contrast_correction": -1.2320375994028943e-08,
+              "baryon_dilution": 0.8529628288915281,
+              "direct_fixed_metric_power_ratio_minus_one": -5.4603522740341376e-08
+            },
+            {
+              "start_k_tau": 0.15,
+              "stable_density_contrast_correction": -1.8786588447785604e-08,
+              "scalar_density_contrast_correction": -1.2320375990180967e-08,
+              "baryon_dilution": 0.8529628288458768,
+              "direct_fixed_metric_power_ratio_minus_one": -5.306616806362755e-08
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "control_20_vs_40_MeV_max_abs_m_inverse2_defect": 1.8106239334831658e-14,
+  "sha256": {
+    "finite-cooling-direct-mix-high-stable-2026-11-26.json": "fe6973b7de55d41ccd16369d88ee53c003db22402963d2c785188f00f7d08109",
+    "finite-cooling-stable-paired-los-double-mass-2026-11-26.json": "8888fd5fe36e92577e8c39762428b39ad4d9b0bb82242ec0179dcf4bdb165aaa",
+    "finite-cooling-shifted-spectrum-prompt-2026-11-26.json": "7f6a36917295d27f3b07ea178f51d702234dff347a1e91e4046a38d2368453a3",
+    "finite-cooling-shifted-spectrum-mix-2026-11-26.json": "bf85b603a5fc70dfe020c3f0e96a04fc11d865dfb6a4e63a36c10009d1a3077e",
+    "finite-cooling-shifted-count-audit-2026-11-26.json": "0004618c619b56e06c0c009765b1cb3de843da44eae1028b22fa4a22d1337f42",
+    "finite-cooling-cdm-los-high-input-2026-11-26.json": "51380aa8ba3b47a488364fbc4ba21ba09729c6b3263fe1a0687d2bfa292f6a54",
+    "finite-cooling-direct-mix-high-instant-2026-11-26.json": "4599c51df2d150f9bf73e268803a1e0dbe65802fd985f14dc02fec6f734331c1",
+    "finite-cooling-direct-mix-high-ratio5-2026-11-26.json": "47092b4fd38d08750eba4b2e4f5d27bd079eb7ef0d4ecbba1ca79b53167e8827"
+  },
+  "scope": "Direct linear density contrast composition with the same external metric, native baryon perturbation and dark composition weights. The cold comparator is numerical on that metric; no Einstein backreaction, self-consistent matter transfer, CMB, or data constraints.",
+  "separate_mass_control_20_MeV_sha256": "0bd3ded1be891c51ab2fe43974ae7afa28e29fb0b0d62d4c4f2c1ec75b8a2fd0"
+}

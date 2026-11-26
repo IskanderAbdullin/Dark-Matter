@@ -12,7 +12,7 @@ def read(p):
     return json.loads(p.read_text())
 
 
-def run(stable,double,input_catalog,spectrum,retarget,driver,scalar):
+def run(stable,double,input_catalog,spectrum,retarget,driver,scalar,control_20=None):
     C,J,A,F,R,V=map(read,(stable,double,input_catalog,spectrum,retarget,driver))
     assert C["eos_sha256"]==J["eos_sha256"]==A["eos_sha256"]==F["eos_sha256"]
     histories=("instant","ratio5")
@@ -54,14 +54,19 @@ def run(stable,double,input_catalog,spectrum,retarget,driver,scalar):
             rows.append(dict(k_h_Mpc=k,probes=d))
         out.append(dict(history=case,scalar_fraction_of_fixed_dark_density=fs,rows=rows))
     d=J["results"][-1]
-    g=C["results"][-1]
+    control=C if control_20 is None else read(control_20)
+    assert control["eos_sha256"]==C["eos_sha256"] and control["spectrum_sha256"]==C["spectrum_sha256"]
+    g=next(z for z in control["results"] if z["k_h_Mpc"]==22.)
     assert d["metric_sha256"]==g["metric_sha256"] and d["k_h_Mpc"]==g["k_h_Mpc"]==22.
     X,Y=[np.array([r["kinetic_minus_cold_over_cold"] for r in z["data"][-2:]]) for z in (g,d)]
     mass_defect=float(np.max(abs((X-4*Y))))
     assert mass_defect<2e-12
-    return dict(data=out,control_20_vs_40_MeV_max_abs_m_inverse2_defect=mass_defect,
+    ans=dict(data=out,control_20_vs_40_MeV_max_abs_m_inverse2_defect=mass_defect,
          sha256={p.name:sha(p) for p in (stable,double,input_catalog,spectrum,retarget,driver,*scalar)},
          scope="Direct linear density contrast composition with the same external metric, native baryon perturbation and dark composition weights. The cold comparator is numerical on that metric; no Einstein backreaction, self-consistent matter transfer, CMB, or data constraints.")
+    if control_20 is not None:
+        ans["separate_mass_control_20_MeV_sha256"]=sha(control_20)
+    return ans
 
 
 if __name__=="__main__":
@@ -69,5 +74,6 @@ if __name__=="__main__":
     for k in ("stable","double","input_catalog","spectrum","retarget","driver"):
         p.add_argument(k,type=Path)
     p.add_argument("scalar",type=Path,nargs=2)
+    p.add_argument("--control-20",type=Path)
     a=p.parse_args()
-    print(json.dumps(run(a.stable,a.double,a.input_catalog,a.spectrum,a.retarget,a.driver,a.scalar),indent=2,allow_nan=False))
+    print(json.dumps(run(a.stable,a.double,a.input_catalog,a.spectrum,a.retarget,a.driver,a.scalar,a.control_20),indent=2,allow_nan=False))

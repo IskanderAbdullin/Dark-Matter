@@ -76,3 +76,27 @@ python -W error finite_cooling_direct_matter_mix_reference.py stable.json double
   "$D"/finite-cooling-shifted-count-audit-2026-11-26.json "$D"/finite-cooling-cdm-los-input-2026-11-26.json \
   "$D"/finite-cooling-shifted-spectrum-{instant,ratio5}-2026-11-26.json
 ~~~
+
+## Separate high-mode control
+
+Use k=34 and 40 h/Mpc from the separate CDM-only driver
+prepared with `--modes 26 30 34 40`. Repeat both projections
+on those exact files; do not interpolate between the survey
+and high-driver modes. At the earlier start, direct squared-
+contrast shifts at k=34,40 are respectively −4.78×10⁻⁸ and
+−6.58×10⁻⁸ (instantaneous) versus −4.32×10⁻⁸ and −5.46×10⁻⁸
+(finite). The alternate start preserves this ordering. Unlike
+the first three modes above, the instantaneous case now
+gives the larger direct suppression of the two, because its
+20 MeV tracer is faster. This is an ordering of sampled
+points, not a continuously located crossover or a prediction
+for total matter in a self-gravitating model.
+
+For the high comparison select the new high native files
+`cdm_los_00_perturbations_k2_s.dat` and `_k3_s.dat` in both
+projections. Use the matching high-driver configuration
+`finite-cooling-cdm-los-high-input-2026-11-26.json` and the
+two new scalar records in the composition command. Keep
+`double.json` as the k=22 mass control and add
+`--control-20 stable.json` pointing to the corresponding
+k=22 value from the first run.
