@@ -45,7 +45,7 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9,empty_support_high=16.):
     assert nx>0 and (centered or not elastic)
     if visible_feedback: assert empty_start and source is not None
     if not empty_start:
@@ -62,7 +62,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         astart=np.exp(empty_start)
         tmid=brentq(lambda t:eos.state(t)[2]/s0-np.exp(-1.5*empty_start),min(.9,empty_stop)*vis,vis)
         H=np.sqrt(eos.state(tmid)[0]/3)/MPL
-        q=vis*np.geomspace(support_low,16.,empty_cells+1)
+        q=vis*np.geomspace(support_low,empty_support_high,empty_cells+1)
         if include_zero_cell:
             q=np.r_[0.,q]
         k=Collision(q/astart)
@@ -353,6 +353,7 @@ if __name__=="__main__":
     p.add_argument("--support-low",type=float,default=.15)
     p.add_argument("--empty-cells",type=int,default=18)
     p.add_argument("--empty-reheat",type=float,default=.05)
+    p.add_argument("--empty-support-high",type=float,default=16.)
     p.add_argument("--empty-stop",type=float,default=.9,help="reference visible final/initial temperature used to set final scale factor")
     p.add_argument("--vacuum-scaled-residual",action="store_true")
     p.add_argument("--allow-empty-shells",action="store_true")
@@ -373,7 +374,7 @@ if __name__=="__main__":
     if a.visible_source:
         from joint_visible_fd_source_reference import Visible
         source=Visible()
-    assert a.empty_pulse>=0 and 0<a.support_low<16 and a.empty_cells>=4
+    assert a.empty_pulse>=0 and 0<a.support_low<a.empty_support_high and a.empty_cells>=4
     if a.include_zero_cell: assert a.allow_empty_shells
     if a.allow_empty_shells: assert a.vacuum_scaled_residual
     if a.vacuum_scaled_residual:
@@ -397,7 +398,7 @@ if __name__=="__main__":
     extent=np.log(eos.state(a.empty_reheat)[2]/eos.state(a.empty_stop*a.empty_reheat)[2])/3 if a.empty_pulse else .07
     final_shapes=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
     if a.save_snapshots: assert a.physical_amplitude and a.empty_pulse
-    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop) for n,snapshot in zip(a.steps,final_shapes)]
+    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop,empty_support_high=a.empty_support_high) for n,snapshot in zip(a.steps,final_shapes)]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     if a.save_snapshots:
         for n,x in zip(a.steps,final_shapes): x.update(steps=n, below_pole_elastic=a.with_elastic)
