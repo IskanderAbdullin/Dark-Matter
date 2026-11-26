@@ -130,6 +130,9 @@ reservoir needs a much tighter energy fraction or source bound.
 The [aggregate finite-band heavy energy envelope](INDEPENDENT-WARM-HEAVY-COMOVING-BAND-ENERGY-2026-11-26.md)
 bounds that reservoir below an explicit comoving cut,
 without treating the higher band as absent.
+The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
+covers that part only with a separate persistent daughter
+support hypothesis; visible thermal tails are still bounded.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
