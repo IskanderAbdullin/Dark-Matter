@@ -47,32 +47,57 @@ class Centered(Model):
             return self.proj(omega*(v*db+b*change-b*v*np.divide(dD,D,out=np.zeros_like(D),where=D>0)))
         return flux,derivative
 
-def advance(model,q,h,guess,reference_guess=False):
+def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False):
     U0,S0,_=model.moment(q)
     qref,R0,t=model.reference(q,guess)
     z=np.zeros_like(q) if reference_guess else q-qref
+    inactive=np.zeros(model.d//2,dtype=bool)
+    if vacuum_scaled:
+        touched=np.zeros(model.d//2,dtype=bool)
+        touched[model.k.I]=True
+        touched[model.n+model.k.J]=True
+        missing=np.flatnonzero(~touched)
+        if len(missing):
+            for panel in getattr(model,"panels",()):
+                touched[missing]|=np.any(panel[3][:,2*missing]>0.,axis=0)
+        inactive=~touched
+    active=np.repeat(~inactive,2)
+    z[~active]=q[~active]-qref[~active]
+    basis=np.eye(model.d)[active]
     w=np.repeat(U0[::2],2)
-    for it in range(22):
+    for it in range(100 if vacuum_scaled else 22):
         U,S,C=model.moment(qref+z)
         F,jv=model.centered(z,qref,R0)
-        r=(U-U0-h*F)/w
+        if vacuum_scaled:
+            # A newly populated bin need not solve to a tolerance relative
+            # to its nearly zero *old* count. Normalize both moment defects
+            # by the larger of that bin's old and returned count.
+            w=np.repeat(np.maximum(U0[::2],U[::2]),2)
+            w[~active]=1.
+        r=((U-U0-h*F)/w)[active]
         err=np.max(abs(r))
         if err<8e-12:
             assert S>=S0
+            if np.any(inactive):
+                assert np.all(F[~active]==0.)
+                assert np.all(abs(U[~active]-U0[~active])<=2e-12*np.abs(U0[~active]))
             return qref+z,dict(newton_iterations=it,residual=float(err),entropy_gain_relative=float(S/S0-1),
-                               maximum_exponent_departure_from_eq=float(np.max(abs(z))))
+                               maximum_exponent_departure_from_eq=float(np.max(abs(z[active]))),
+                               structurally_inactive_cells=int(inactive.sum()),
+                               structurally_inactive_vacuum_cells=int(np.sum(inactive & (U0[::2]==0.))))
         def der(d):
             a=d.reshape(-1,2)
             dn=-np.stack((C[:,0]*a[:,0]+C[:,1]*a[:,1],C[:,1]*a[:,0]+C[:,2]*a[:,1]),axis=1).ravel()
-            return (dn-h*jv(d))/w
-        M=np.stack([der(d) for d in np.eye(model.d)],axis=1)
-        da=np.linalg.solve(M,-r)
+            return ((dn-h*jv(d))/w)[active]
+        M=np.stack([der(d) for d in basis],axis=1)
+        da=np.zeros(model.d)
+        da[active]=np.linalg.solve(M,-r)
         norm=np.linalg.norm(r)
-        for j in range(18):
+        for j in range(28 if vacuum_scaled else 18):
             s=z+2.**-j*da
             try:UU,SS,_=model.moment(qref+s)
             except ValueError:continue
-            rr=(UU-U0-h*model.centered(s,qref,R0)[0])/w
+            rr=((UU-U0-h*model.centered(s,qref,R0)[0])/w)[active]
             if np.linalg.norm(rr)<norm*(1.-.001*2.**-j):break
         else:raise RuntimeError(f"centered residual not reduced: {err:.3g}, stepH={h:g}")
         z=s

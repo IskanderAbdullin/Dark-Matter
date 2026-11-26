@@ -45,7 +45,7 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False):
     assert nx>0 and (centered or not elastic)
     if not empty_start:
         vis,H,k,_,_,_,th=configuration(row,eos,8,6.5)
@@ -53,6 +53,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     omitted=[0.,0.]
     astart=1.
     pulse_full=None
+    first_pulse_empty_shells=None
     if empty_start:
         assert source is not None and not warm and 0<empty_start<extent
         vis=.05
@@ -60,14 +61,22 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         astart=np.exp(empty_start)
         tmid=brentq(lambda t:eos.state(t)[2]/s0-np.exp(-1.5*empty_start),.045,vis)
         H=np.sqrt(eos.state(tmid)[0]/3)/MPL
-        q=vis*np.geomspace(support_low,16.,19)
+        q=vis*np.geomspace(support_low,16.,empty_cells+1)
+        if include_zero_cell:
+            q=np.r_[0.,q]
         k=Collision(q/astart)
         # End-deposit one tiny physical first pulse. No positive occupation
         # floor: a numerically unresolved retained cell is rejected.
         pulse_full=(empty_start/H)*source.rates(tmid,q,astart)
         kept=np.stack([pulse_full[2,:,1:-1],pulse_full[:2,:,1:-1].sum(axis=0)])
-        if np.any(kept[:,0,:]<=0.):
-            raise ValueError("initial physical source misses a retained shell")
+        first_pulse_empty_shells=(kept[:,0,:]<=0.).sum(axis=1)
+        if np.any(first_pulse_empty_shells):
+            if not allow_empty_shells or min(kept[:,0,:].sum(axis=1))<=0.:
+                raise ValueError("initial physical source misses a retained shell")
+            # Zero is passed to Cells.reconstruct unchanged. Its finite
+            # exponent sentinel evaluates to exactly zero in float64.
+            # The collision solve must use a positive *trial* (not input)
+            # to permit subsequent gain to populate these bins.
         th=[C.reconstruct(x)[0] for C,x in zip(k.c,kept)]
     elif warm:
         p=np.array(row["scalar_differential_bins"])*vis
@@ -99,7 +108,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     E0=e_species(k,u0,astart)
     N0=u0.reshape(2,cnt,2)[:,:,0].sum(axis=1)*astart**3
     dE=np.zeros(2);Qadd=np.zeros(2)
-    dSadv=dScol=0.;er=0.;en=0.;entropy_r=0.;nonlinear=0
+    dSadv=dScol=0.;er=0.;en=0.;nonlinear=0;nonlinear_max=0.;nonlinear_first=None
     source_energy=np.zeros(2);source_n=np.zeros(2)
     tails=np.zeros((3,2,2)); source_total=np.zeros((3,2))
     species_masses=np.array([k.c[1].mass,k.c[1].mass,k.c[0].mass])[:,None]
@@ -167,7 +176,11 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         if scale:
             if centered:
                 from joint_resonant_centered_stiff_reference import advance
-                w,log=advance(m0,pack(th),dx*scale,v,reference_guess=warm or bool(empty_start and i>0 and support_low>=.04))
+                w,log=advance(m0,pack(th),dx*scale,v,
+                              reference_guess=vacuum_scaled or warm or bool(empty_start and i>0 and support_low>=.04),
+                              vacuum_scaled=vacuum_scaled)
+                nonlinear_max=max(nonlinear_max,log["residual"])
+                if i==0: nonlinear_first=log
             else:
                 w,log=step(m0,pack(th),dx*scale)
             nonlinear+=log["newton_iterations"]
@@ -197,6 +210,22 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     assert max(errE,errQ,errS,er,np.max(abs(n1/(N0+source_n)-1)))<2e-9
     Tin,eq=maxent(kn.c,n1*af**-3,Ef.sum()*af**-4,vis/af)
     rem=[float(.5*np.sum(abs(U[2*j*cnt:2*(j+1)*cnt:2]-eq[j][2]))/(n1[j]*af**-3)) for j in (0,1)]
+    soft_frac={}
+    gx,gw=roots_legendre(32)
+    ars=th[0]
+    C=kn.c[0]
+    for cut in (.005,.01,.025,.05,.1):
+        if cut*vis<=q[0] or cut*vis>=q[-1]:
+            continue
+        edges=np.minimum(C.p[1:],cut*vis/af)
+        valid=edges>C.p[:-1]
+        lo=C.p[:-1][valid]
+        hi=edges[valid]
+        pp=(lo[:,None]*(1-gx)+hi[:,None]*(1+gx))/2
+        kk=pp*pp/(np.hypot(pp,C.mass)+C.mass)
+        zz=ars[0][valid,None]+ars[1][valid,None]*((kk-C.low[valid,None])/C.dk[valid,None])
+        count=C.g*np.sum(gw*pp*pp*np.exp(-zz)/(-np.expm1(-zz))*(hi-lo)[:,None]/(4*np.pi**2))
+        soft_frac[str(cut)]=float(count/(n1[0]/af**3))
     return dict(nsteps=nx,final_a=af,common_equilibrium_T=Tin,centered_residual=centered,
       final_number_shell_total_variation_from_closed_box_equilibrium=rem,
       omitted_source_number_fractions=omitted,comoving_support_over_initial_visible_T=(q[[0,-1]]/vis).tolist(),
@@ -208,7 +237,14 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
       projection_entropy_change_relative_to_initial=dSadv/S0 if not empty_start else None,
       collision_entropy_change_relative_to_initial=dScol/S0 if not empty_start else None,
       maximum_moment_reconstruction_defect=en,nonlinear_iterations=nonlinear,
+      vacuum_scaled_residual=vacuum_scaled,
+      maximum_accepted_centered_step_residual=nonlinear_max if centered and scale else None,
+      first_collision_solver=nonlinear_first,
+      represented_momentum_cells=cnt,
+      innermost_positive_q_over_initial_T=q[1]/vis if include_zero_cell else q[0]/vis,
+      final_resolved_scalar_count_fraction_below_q_over_initial_T=soft_frac,
       first_pulse_delta_log_a=empty_start,
+      first_pulse_empty_shells=first_pulse_empty_shells.tolist() if empty_start else None,
       first_pulse_count_a3=N0.tolist() if empty_start else None,
       first_pulse_energy_a4=E0.tolist() if empty_start else None,
       first_pulse_count_and_total_energy_by_channel=first_all.tolist() if empty_start else None,
@@ -232,12 +268,20 @@ if __name__=="__main__":
     p.add_argument("--steps",type=int,nargs="+",default=[3,6])
     p.add_argument("--empty-pulse",type=float,default=0.)
     p.add_argument("--support-low",type=float,default=.15)
+    p.add_argument("--empty-cells",type=int,default=18)
+    p.add_argument("--vacuum-scaled-residual",action="store_true")
+    p.add_argument("--allow-empty-shells",action="store_true")
+    p.add_argument("--include-zero-cell",action="store_true")
     a=p.parse_args();eos=StandardModel(a.eos)
     source=None
     if a.visible_source:
         from joint_visible_fd_source_reference import Visible
         source=Visible()
-    assert a.empty_pulse>=0 and 0<a.support_low<16
+    assert a.empty_pulse>=0 and 0<a.support_low<16 and a.empty_cells>=4
+    if a.include_zero_cell: assert a.allow_empty_shells
+    if a.allow_empty_shells: assert a.vacuum_scaled_residual
+    if a.vacuum_scaled_residual:
+        assert a.physical_amplitude and a.empty_pulse and not a.source_only
     if a.source_only: assert a.visible_source and not a.with_elastic
     if a.visible_source: assert a.physical_amplitude
     r=None
@@ -247,7 +291,7 @@ if __name__=="__main__":
         if not a.spectra: p.error('spectra required except with --empty-pulse')
         r=next(r for r in json.loads(Path(a.spectra).read_text())['rows'] if r['TR']==.05 and abs(r['TF']-.045)<1e-8)
     extent=np.log(eos.state(.05)[2]/eos.state(.045)[2])/3 if a.empty_pulse else .07
-    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source) for n in a.steps]
+    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source) for n in a.steps]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     print(json.dumps(dict(rows=rows,
        scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+("visible source enabled (vacuum final state)." if a.visible_source else "injection disabled."))),
