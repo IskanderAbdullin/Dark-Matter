@@ -1,0 +1,170 @@
+[
+  {
+    "T_GeV": 0.007394049465197431,
+    "snapshot_sha256": "f3d677c9a1f6864d9a1f8ce485018d24eb38a5de080f18643dd1cea09879eeb8",
+    "reference_fits": [
+      {
+        "temperature_GeV": 0.006805285863632834,
+        "mu_GeV": -0.05171814987649333,
+        "cell_fit_quad_residual": 9.992007221626409e-16
+      },
+      {
+        "temperature_GeV": 0.0067100518441142185,
+        "mu_GeV": -0.04818465735497732,
+        "cell_fit_quad_residual": 2.220446049250313e-16
+      }
+    ],
+    "shell_L1_number_energy_pressure_relative_to_actual": [
+      [
+        0.014311335585680695,
+        0.004851261366613686
+      ],
+      [
+        0.013565708863629044,
+        0.004180041452336986
+      ],
+      [
+        0.013565708863505482,
+        0.0031529541102039414
+      ]
+    ],
+    "controls": [
+      {
+        "order": [
+          3,
+          7,
+          6,
+          2
+        ],
+        "actual": {
+          "gross_inverse_over_forward_number_energy": [
+            0.49573276771666264,
+            0.4963840552673461
+          ],
+          "net_fermion_number_over_its_NH": -0.3421776344536144,
+          "net_fermion_energy_over_total_rhoH": -0.25645170000171486,
+          "ledger": 4.502103944700132e-16
+        },
+        "same_thermal_moments": {
+          "gross_inverse_over_forward_number_energy": [
+            0.4994811487284131,
+            0.5024992931040859
+          ],
+          "net_fermion_number_over_its_NH": -0.3399015666871977,
+          "net_fermion_energy_over_total_rhoH": -0.2534639008088059,
+          "ledger": 9.016083963373367e-17
+        }
+      },
+      {
+        "order": [
+          4,
+          10,
+          10,
+          4
+        ],
+        "actual": {
+          "gross_inverse_over_forward_number_energy": [
+            0.4957308262198829,
+            0.49638213755446225
+          ],
+          "net_fermion_number_over_its_NH": -0.3421803170041422,
+          "net_fermion_energy_over_total_rhoH": -0.2564532749094336,
+          "ledger": 1.3621841862489648e-15
+        },
+        "same_thermal_moments": {
+          "gross_inverse_over_forward_number_energy": [
+            0.49948102556622204,
+            0.5024990744386599
+          ],
+          "net_fermion_number_over_its_NH": -0.33990303333333244,
+          "net_fermion_energy_over_total_rhoH": -0.2534646310176145,
+          "ledger": 5.710173400408528e-16
+        }
+      }
+    ]
+  },
+  {
+    "T_GeV": 0.007754805139316106,
+    "snapshot_sha256": "82337f88f81e65df77d35b04c20597a37bc6135e41fb6aa62372107c7b6a2ecd",
+    "reference_fits": [
+      {
+        "temperature_GeV": 0.007132038673460183,
+        "mu_GeV": -0.05437806345184342,
+        "cell_fit_quad_residual": 3.3306690738754696e-16
+      },
+      {
+        "temperature_GeV": 0.007052092414919514,
+        "mu_GeV": -0.05122819628440638,
+        "cell_fit_quad_residual": 4.440892098500626e-16
+      }
+    ],
+    "shell_L1_number_energy_pressure_relative_to_actual": [
+      [
+        0.014304538649557583,
+        0.0032034821945910673
+      ],
+      [
+        0.012522017612946553,
+        0.0027500358637796837
+      ],
+      [
+        0.012522017612782908,
+        0.002085962534712492
+      ]
+    ],
+    "controls": [
+      {
+        "order": [
+          3,
+          7,
+          6,
+          2
+        ],
+        "actual": {
+          "gross_inverse_over_forward_number_energy": [
+            0.5409467203032075,
+            0.5415071513835896
+          ],
+          "net_fermion_number_over_its_NH": -0.33730600544676403,
+          "net_fermion_energy_over_total_rhoH": -0.2536500867918876,
+          "ledger": 2.8756767306828926e-16
+        },
+        "same_thermal_moments": {
+          "gross_inverse_over_forward_number_energy": [
+            0.5439349349567713,
+            0.5466351448766275
+          ],
+          "net_fermion_number_over_its_NH": -0.33529442148285304,
+          "net_fermion_energy_over_total_rhoH": -0.2509012678176597,
+          "ledger": 8.595406709270154e-16
+        }
+      },
+      {
+        "order": [
+          4,
+          10,
+          10,
+          4
+        ],
+        "actual": {
+          "gross_inverse_over_forward_number_energy": [
+            0.5409492772259743,
+            0.54150973669374
+          ],
+          "net_fermion_number_over_its_NH": -0.3373055479583707,
+          "net_fermion_energy_over_total_rhoH": -0.2536493305739124,
+          "ledger": 2.6702596756208267e-16
+        },
+        "same_thermal_moments": {
+          "gross_inverse_over_forward_number_energy": [
+            0.5439348373683147,
+            0.5466349675591853
+          ],
+          "net_fermion_number_over_its_NH": -0.3352959245752743,
+          "net_fermion_energy_over_total_rhoH": -0.2509020514158844,
+          "ledger": 9.496691542466008e-16
+        }
+      }
+    ]
+  }
+]

@@ -133,6 +133,8 @@ reproducible controls below are not observational constraints.
    perturbations preserve the selected pair sign without treating observed numerical discrepancies as true errors.
    [Lower frozen sign thresholds and thermal exchange modes](INDEPENDENT-WARM-PAIR-THRESHOLD-AND-MODES-2026-11-26.md)
    distinguish the local sign argument from two-reservoir number/heat relaxation.
+   [Same-moment thermal and exterior scalar tests](INDEPENDENT-WARM-PAIR-PHASE-UNCERTAINTY-2026-11-26.md)
+   quantify sampled shape sensitivity and give conditional nonvacuum exterior bounds.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
