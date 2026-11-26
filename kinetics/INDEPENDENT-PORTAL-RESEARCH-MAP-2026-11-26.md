@@ -104,6 +104,10 @@ is a separate numerical upper comparison from instantaneous
 reheating. An energy-weighted vacuum kernel envelope and two
 visible clocks give scalar ceilings below .060; no realistic
 hadronic or additional scalar number source is included.
+The [50 MeV selected pion-band and source headroom test](INDEPENDENT-WARM-PION-BAND-AND-SOURCE-HEADROOM-2026-11-26.md)
+adds a prescribed vacuum KLOE exclusive window and a positive
+unknown-source allowance. It does not bound unknown channels
+or determine full thermal hadronic rates.
 
 ## Evidence boundary
 

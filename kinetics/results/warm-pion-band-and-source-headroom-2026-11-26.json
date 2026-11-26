@@ -1,0 +1,76 @@
+{
+  "scope": "Initially empty 50 MeV instantaneous vacuum observable and central EOS. KLOE (central plus per-bin quoted error) on the prescribed piecewise-constant exclusive 0.10\u20130.95 GeV^2 band only. Not an envelope of unknown hadronic rates, systematics, thermal spectral changes or scalar external injection.",
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "f1660dc40468638c1e2e1dde2a478227b792a8231ae86e6cbd519dcc7dfa2e54"
+  ],
+  "cases": [
+    {
+      "panels": 521,
+      "du": 0.02,
+      "pion_subcells": 4,
+      "TR_GeV": 0.05,
+      "model_lepton_energy_upper_GeV4": 2.614617776042487e-09,
+      "prescribed_pion_energy_upper_GeV4": 3.1694746184994796e-10,
+      "prescribed_pion_energy_over_lepton": 0.12122133673002215,
+      "prescribed_pion_count_over_lepton": 0.07844249045339696,
+      "pion_cell_upper_over_independent_anchor_fold": [
+        1.0401392156099576,
+        1.0415965935568468
+      ],
+      "lepton_only_scalar_Omega_ceiling": 0.024331282341007336,
+      "phased_measured_pion_and_lepton_scalar_Omega_ceiling": 0.030941849702532533,
+      "all_pion_energy_pushed_earliest_scalar_Omega_ceiling": 0.03171586171126953,
+      "extra_portal_energy_for_ceiling_to_touch_half_GeV4": 1.2787231211637308e-09,
+      "extra_portal_energy_over_lepton_to_touch_half": 0.4890669423579073,
+      "extra_energy_after_including_pions_to_touch_half_GeV4": 9.936432338096314e-10,
+      "extra_energy_after_including_pions_over_lepton": 0.3800338400948303,
+      "pure_heat_energy_over_lepton_to_touch_half": 0.5115051613787436
+    },
+    {
+      "panels": 971,
+      "du": 0.009,
+      "pion_subcells": 8,
+      "TR_GeV": 0.05,
+      "model_lepton_energy_upper_GeV4": 2.5001154534428655e-09,
+      "prescribed_pion_energy_upper_GeV4": 2.9536328171850663e-10,
+      "prescribed_pion_energy_over_lepton": 0.11813985682611856,
+      "prescribed_pion_count_over_lepton": 0.07639072486933264,
+      "pion_cell_upper_over_independent_anchor_fold": [
+        1.019849085467931,
+        1.0205622527907647
+      ],
+      "lepton_only_scalar_Omega_ceiling": 0.022185964357770777,
+      "phased_measured_pion_and_lepton_scalar_Omega_ceiling": 0.028047184689745968,
+      "all_pion_energy_pushed_earliest_scalar_Omega_ceiling": 0.028750798708390996,
+      "extra_portal_energy_for_ceiling_to_touch_half_GeV4": 1.3798794978861359e-09,
+      "extra_portal_energy_over_lepton_to_touch_half": 0.5519263104373551,
+      "extra_energy_after_including_pions_to_touch_half_GeV4": 1.1150054284727735e-09,
+      "extra_energy_after_including_pions_over_lepton": 0.4459815753457781,
+      "pure_heat_energy_over_lepton_to_touch_half": 0.5772406338079765
+    },
+    {
+      "panels": 1321,
+      "du": 0.006,
+      "pion_subcells": 12,
+      "TR_GeV": 0.05,
+      "model_lepton_energy_upper_GeV4": 2.4647792044883304e-09,
+      "prescribed_pion_energy_upper_GeV4": 2.884408676222391e-10,
+      "prescribed_pion_energy_over_lepton": 0.11702503295102137,
+      "prescribed_pion_count_over_lepton": 0.07564722310818449,
+      "pion_cell_upper_over_independent_anchor_fold": [
+        1.0131842455478324,
+        1.0136562862224923
+      ],
+      "lepton_only_scalar_Omega_ceiling": 0.02154169239946148,
+      "phased_measured_pion_and_lepton_scalar_Omega_ceiling": 0.027174657063671784,
+      "all_pion_energy_pushed_earliest_scalar_Omega_ceiling": 0.027856419988696236,
+      "extra_portal_energy_for_ceiling_to_touch_half_GeV4": 1.4112295304089704e-09,
+      "extra_portal_energy_over_lepton_to_touch_half": 0.5725581941940844,
+      "extra_energy_after_including_pions_to_touch_half_GeV4": 1.1528211108882362e-09,
+      "extra_energy_after_including_pions_over_lepton": 0.4677178015738546,
+      "pure_heat_energy_over_lepton_to_touch_half": 0.5988167250420318
+    }
+  ]
+}
