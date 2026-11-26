@@ -113,6 +113,9 @@ Its [time-resolved lower comparison](INDEPENDENT-WARM-SIGNED-FERMION-TIME-COMPAR
 uses the number decrease within the analytic comparison,
 giving a useful floor all the way to fermion cap one half,
 still without claiming that cap dynamically.
+The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
+measure the boost on five actual retained shapes without
+turning it into an evolving constraint.
 The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
