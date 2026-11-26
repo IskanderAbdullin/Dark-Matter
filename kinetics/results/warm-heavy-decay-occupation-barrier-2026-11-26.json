@@ -1,0 +1,173 @@
+{
+  "scope": "Unpolarized homogeneous heavy fermion mode. If light occupancy remains below a prescribed cap, decay/inverse decay preserves that heavy cap even for arbitrary scalar occupancy. Adds the specified visible vacuum sources conservatively. Additional internal heavy production/scattering requires a separate mode-resolved upper (not supplied by archived counts).",
+  "parent_proper_decay_width_GeV": 2.7501974166242444e-09,
+  "anchor_T_GeV": 0.010441916509387224,
+  "visible_source_barrier_checks": [
+    {
+      "cap": 0.001,
+      "lepton_all_s_sigma_v_upper_GeVminus2": 7.778375136198457e-10,
+      "pion_sigma_v_upper_GeVminus2": 6.2693681750587344e-18,
+      "MB_single_charge_density_GeV3": 3.5773414164365885e-10,
+      "max_visible_source_over_decay_margin": 7.0206059819179106e-12,
+      "remaining_extra_source_budget_in_units_Gamma_M_over_E": 0.0009989999999929866
+    },
+    {
+      "cap": 0.1,
+      "lepton_all_s_sigma_v_upper_GeVminus2": 7.778375136198457e-10,
+      "pion_sigma_v_upper_GeVminus2": 6.2693681750587344e-18,
+      "MB_single_charge_density_GeV3": 3.5773414164365885e-10,
+      "max_visible_source_over_decay_margin": 7.79287263992888e-14,
+      "remaining_extra_source_budget_in_units_Gamma_M_over_E": 0.089999999999993
+    },
+    {
+      "cap": 0.5,
+      "lepton_all_s_sigma_v_upper_GeVminus2": 7.778375136198457e-10,
+      "pion_sigma_v_upper_GeVminus2": 6.2693681750587344e-18,
+      "MB_single_charge_density_GeV3": 3.5773414164365885e-10,
+      "max_visible_source_over_decay_margin": 2.805434150374397e-14,
+      "remaining_extra_source_budget_in_units_Gamma_M_over_E": 0.24999999999999298
+    }
+  ],
+  "frozen_cases": [
+    {
+      "name": "warm-early-q16-time32-checkpoint-2026-11-26.json.gz",
+      "T_GeV": 0.010441916509387224,
+      "grid_size": 101,
+      "positive_probe_p_GeV": [
+        0.001,
+        5.0
+      ],
+      "checks": [
+        {
+          "angle_nodes": 9,
+          "light_retained_peak": 6.076296432528183e-05,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 5.918494090220175e-12,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 1131125177359.6008,
+          "stationary_at_rest": 5.918494090220175e-12
+        },
+        {
+          "angle_nodes": 17,
+          "light_retained_peak": 6.076296432528183e-05,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 5.918494090220175e-12,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 1131125177359.6008,
+          "stationary_at_rest": 5.918494090220175e-12
+        }
+      ],
+      "input_sha256": "c5e019ec72707bb30ac0ef26191447975e7ff50c36371a43b6f3930e33a09837"
+    },
+    {
+      "name": "warm-early-q32-time32-checkpoint-2026-11-26.json.gz",
+      "T_GeV": 0.010441916509387113,
+      "grid_size": 101,
+      "positive_probe_p_GeV": [
+        0.001,
+        5.0
+      ],
+      "checks": [
+        {
+          "angle_nodes": 9,
+          "light_retained_peak": 5.8664408454998536e-05,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 5.924890205873495e-12,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 1131125179646.9238,
+          "stationary_at_rest": 5.924890205873495e-12
+        },
+        {
+          "angle_nodes": 17,
+          "light_retained_peak": 5.8664408454998536e-05,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 5.924890205873495e-12,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 1131125179646.924,
+          "stationary_at_rest": 5.924890205873495e-12
+        }
+      ],
+      "input_sha256": "1a58ca0035126a2c849549960daaace3898496bdddd9f8638a674fe0407db100"
+    },
+    {
+      "name": "warm-coupled-pair-b35-48-shape-2026-11-26.json",
+      "T_GeV": 0.0034338651304354024,
+      "grid_size": 101,
+      "positive_probe_p_GeV": [
+        0.001,
+        5.0
+      ],
+      "checks": [
+        {
+          "angle_nodes": 9,
+          "light_retained_peak": 1.5844716858456584e-05,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 2.899976194173372e-19,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 10474320169582.781,
+          "stationary_at_rest": 2.899976194173372e-19
+        },
+        {
+          "angle_nodes": 17,
+          "light_retained_peak": 1.5844716858456584e-05,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 2.899976194173372e-19,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 10474320169582.781,
+          "stationary_at_rest": 2.899976194173372e-19
+        }
+      ],
+      "input_sha256": "a6ee6f8d707d01d6ea75dbd9cc00719a01928537e0a3c095c44f1f0e31d6d981"
+    },
+    {
+      "name": "warm-coupled-pair-b10-42-shape-2026-11-26.json",
+      "T_GeV": 0.0012061354624147524,
+      "grid_size": 101,
+      "positive_probe_p_GeV": [
+        0.001,
+        5.0
+      ],
+      "checks": [
+        {
+          "angle_nodes": 9,
+          "light_retained_peak": 5.670742186690765e-06,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 0.0,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 85357433181112.77,
+          "stationary_at_rest": 0.0
+        },
+        {
+          "angle_nodes": 17,
+          "light_retained_peak": 5.670742186690765e-06,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 0.0,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 85357433181112.8,
+          "stationary_at_rest": 0.0
+        }
+      ],
+      "input_sha256": "49c2e41c0084f29f2837e57e11859e4055e5bd1e498ccd0445fbaba726a4c79b"
+    },
+    {
+      "name": "warm-coupled-pair-b30-32-shape-2026-11-26.json",
+      "T_GeV": 0.00041376297480725746,
+      "grid_size": 101,
+      "positive_probe_p_GeV": [
+        0.001,
+        5.0
+      ],
+      "checks": [
+        {
+          "angle_nodes": 9,
+          "light_retained_peak": 3.0601801475603775e-06,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 0.0,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 758988134909230.6,
+          "stationary_at_rest": 0.0
+        },
+        {
+          "angle_nodes": 17,
+          "light_retained_peak": 3.0601801475603775e-06,
+          "max_decay_only_stationary_parent_occupation_on_probed_grid": 0.0,
+          "parent_momentum_GeV_at_max": 0.0,
+          "smallest_decay_response_over_nominal_visible_H": 758988134909230.6,
+          "stationary_at_rest": 0.0
+        }
+      ],
+      "input_sha256": "f642132058b04f3a89ddd419c0eadf15346d190060643a490b14b94af4bcdd6f"
+    }
+  ]
+}

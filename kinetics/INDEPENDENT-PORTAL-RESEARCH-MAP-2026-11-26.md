@@ -120,6 +120,10 @@ The [selected late charged-pion control](INDEPENDENT-WARM-SIGNED-FERMION-WITH-CH
 adds that effective visible source, heat and reverse loss
 to the signed floor. The momentum support matters for
 the reverse bound; this is not a full hadronic sink.
+The [heavy occupation barrier](INDEPENDENT-WARM-HEAVY-OCCUPATION-BARRIER-2026-11-26.md)
+checks pointwise heavy creation under a prescribed light cap,
+rather than inferring an occupation from its total rate.
+It leaves the light cap and heavy elastic gains open.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
