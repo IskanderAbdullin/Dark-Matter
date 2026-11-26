@@ -112,6 +112,9 @@ A [separate two-pion control](INDEPENDENT-WARM-PION-STATISTICS-AND-THRESHOLD-202
 allows finite Bose enhancements, a capped missing threshold
 strip and conditional pion elastic heating. The form-factor
 caps there are model conditions, not data.
+The [BABAR dispersive moment transfer](INDEPENDENT-WARM-BABAR-DISPERSIVE-GAP-2026-11-26.md)
+adds a data-conditioned bound on just the 0.30–√.10 GeV
+slice without inventing bins or duplicating KLOE coverage.
 The [unmeasured-source budget by invariant band](INDEPENDENT-WARM-UNMEASURED-SPECTRAL-BUDGET-2026-11-26.md)
 translates missing positive rates into sufficient conditional
 caps and identifies where low-mass spectral coverage matters.
