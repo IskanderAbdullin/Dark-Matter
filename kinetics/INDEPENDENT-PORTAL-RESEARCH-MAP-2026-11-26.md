@@ -114,7 +114,8 @@ reproducible controls below are not observational constraints.
    accepted blocks to 9.027 MeV. The matched 32-block test
    separates time sensitivity from the much smaller support change. A [matched cold recoil crossing](INDEPENDENT-WARM-RECOIL-CROSSING-MATCHED-2026-11-26.md)
    then checks which local prompt channel vanishes on q32 and
-   which remains on q64 around 8.24 MeV.
+   which remains on q64 around 8.24 MeV. A [finite-momentum tagged pair audit](INDEPENDENT-WARM-COLD-LIGHT-FINITE-PAIR-2026-11-26.md)
+   finds that the native reverse quadrature materially undercounts gain into the first cold cell.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
