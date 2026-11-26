@@ -249,6 +249,9 @@ evolves two moment-matched hard packets briefly and separates
 robust strong relaxation from unresolved terminal precision. A [completed selected coupled stress](INDEPENDENT-WARM-COUPLED-COHORT-STRESS-2026-11-26.md)
 checks a hard .58 GeV realization on the same two-step grid as a vacuum-padded control
 and resolves relaxation to the selected-network terminal rate in this case.
+The [matched .52/.58 GeV comparison](INDEPENDENT-WARM-COUPLED-COHORT-HARDNESS-2026-11-26.md)
+separates terminal agreement of the retained spectra from the orders-of-magnitude
+sensitivity of the tiny new exterior receipt counts.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
