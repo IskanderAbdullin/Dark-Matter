@@ -55,7 +55,11 @@ reproducible controls below are not observational constraints.
    saved endpoint light maxima.
    The [matched q32 half-block check](INDEPENDENT-WARM-OBSERVED-SUBOPERATOR-REFINEMENT-2026-11-26.md)
    reduces the observed internal increase by nearly half
-   without claiming a continuous occupation bound. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
+   without claiming a continuous occupation bound. An independent
+   [two-moment feasibility audit](INDEPENDENT-WARM-SHELL-OCCUPATION-FEASIBILITY-2026-11-26.md)
+   proves that the saved light shell moments fit both very dilute
+   profiles and profiles reaching Pauli saturation; it is not
+   legitimate to deduce a dynamical cap from those moments. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
    carries actual newly recorded exterior cohorts. For older cohorts
@@ -141,7 +145,10 @@ bounds that reservoir below an explicit comoving cut,
 without treating the higher band as absent.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
-support hypothesis; visible thermal tails are still bounded.
+support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)
+excludes that band from one internally made exterior input
+interacting with one retained input; two exterior inputs
+or repeated re-entry are not bounded by that q32 test.
 The [observed one-way exterior creation ledger](INDEPENDENT-WARM-POSITIVE-EXTERIOR-RECEIPT-2026-11-26.md)
 measures new outer cohort energy on the saved 2% stage.
 It is not gross reacting use if re-entry is switched on.
