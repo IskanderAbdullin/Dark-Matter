@@ -67,6 +67,20 @@ An independent lab-angle normalization agrees to 3.85×10⁻¹¹
 relative on the shared test grid. The fold still does not include
 recoil feedback, depletion or evolving inverse occupations.
 
+## Signed momentum correction on the same passive source
+
+In each inverse event subtract the squared physical momenta of
+the two incoming scalars. Although the inverse threshold requires
+a large instantaneous physical momentum, the early events redshift
+substantially before the 1 MeV anchor. Using the same signed
+vacuum quadrature for both directions, the refined early absorbed
+population has RMS \(p/T=0.432\) at the anchor; pre-radiation
+emission has RMS 2.872 and later emission 7.140.
+Relative to the sum of prompt and spontaneous forward populations,
+the reverse subtracts 0.158% of counts but only 0.00705% of the
+squared-momentum yield. The normalized RMS moves slightly upward,
+2.0448 → 2.0464. This is a net integrated moment on a forced
+source, not a reconstructed positive signed PSD or a coupled result.
 ## Reproduction
 
 ~~~sh
@@ -78,4 +92,6 @@ OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_source_signed_probe_refere
     EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json
 OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_signed_passive_fold_reference.py \
     EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_signed_passive_fold_reference.py \
+    EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json --recoil-moments
 ~~~

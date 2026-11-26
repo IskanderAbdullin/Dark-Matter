@@ -10,7 +10,9 @@ from disjoint_hard_thermal_measured_source_reference import WINDOWS
 
 def run(older,later):
     A,B=[json.loads(p.read_text()) for p in (older,later)]
-    assert A["mass_over_T_interval"]==[4.,8.] and B["mass_over_T_interval"]==[4.,9.]
+    start,end=A["mass_over_T_interval"],B["mass_over_T_interval"]
+    x0,x1=start[1],end[1]
+    assert start[0]==end[0]==4. and x1>x0
     rows=[]
     for a,b in zip(A["controls"],B["controls"]):
         T0=a["Born_T_min_GeV"]
@@ -18,7 +20,7 @@ def run(older,later):
         assert T0==b["Born_T_min_GeV"] and T1==b["measured_plus_disjoint_Born_root_GeV"]
         # All new-strip masses are inside the first window exactly iff
         # both opposite rectangle corners lie inside that window.
-        mn,mx=8*T0,9*T1
+        mn,mx=x0*T0,x1*T1
         fully=bool(WINDOWS[0,0]<=mn<=mx<=WINDOWS[0,1])
         checks=[]
         for x,y in zip(a["results"],b["results"]):
@@ -34,10 +36,13 @@ def run(older,later):
                 assert np.max([abs(c["root_difference_GeV"]) for c in changes])<1e-11
             checks.append(dict(interpolation=mode,changes=changes))
         rows.append(dict(lower_T_GeV=T0,Born_root_upper_T_GeV=T1,new_mass_range_GeV=[mn,mx],
-                    completely_inside_lower_measured_window=fully,conditional_root_checks=checks))
-    return dict(first_measured_window_GeV=WINDOWS[0].tolist(),mass_over_T_new_strip=[8.,9.],cases=rows,
+                    completely_inside_lower_measured_window=fully,
+                    strict_new_strip_part_in_gap_at_Born_root_GeV=[
+                        max(x0*T1,WINDOWS[0,1]),min(x1*T1,WINDOWS[1,0])] if min(x1*T1,WINDOWS[1,0])>max(x0*T1,WINDOWS[0,1]) else None,
+                    conditional_root_checks=checks))
+    return dict(first_measured_window_GeV=WINDOWS[0].tolist(),mass_over_T_new_strip=[x0,x1],cases=rows,
         result_sha256=[hashlib.sha256(k.read_bytes()).hexdigest() for k in (older,later)],
-        scope="Geometric masking of the new strict strip in a bounded optimistic clock integral, not convergence of full thermal QCD. Piecewise linear interpolation is unchanged below x=8; PCHIP can re-slope adjacent intervals even when the extension itself is masked.")
+        scope="Geometric masking of the new strict strip in a bounded optimistic clock integral, not convergence of full thermal QCD. Piecewise linear interpolation is unchanged below the old upper edge; PCHIP can re-slope adjacent intervals even when the extension itself is masked.")
 
 
 if __name__=="__main__":
