@@ -1,0 +1,95 @@
+{
+  "scope": "Instrumented explicit suboperator interfaces with fixed matched warm grids. Two explicit pair midpoint evaluations marked trials. No sampling of all internal nonlinear iterations, intervening times, heavy occupations, or older exterior occupation shapes.",
+  "cases": [
+    {
+      "q": 16,
+      "parent_source_sha256": "17241c0b2826771ad03a9fb675a4a7a2c5aea517e117f1a4f1221a4d54a5bf9b",
+      "hash_observer_free_first": "e6b850afd65f43877aa614994270340eb2845ad34185efa114fcbc48541fa669",
+      "rows": [
+        {
+          "b_relative": 1.004987562112089,
+          "T_GeV": 0.010187141866277043,
+          "light_peak_start_and_end": [
+            5.9546299884159926e-05,
+            5.9360026293974547e-05
+          ],
+          "scalar_peak_start_and_end": [
+            0.00038033315970098253,
+            0.0003815914120514534
+          ],
+          "peak_all_samples": 5.9563874393159914e-05,
+          "peak_excluding_explicit_trials": 5.9563874393159914e-05,
+          "midpoint_trials_count": 2,
+          "retained_light_pair_quadratic_sign_margin_on_observed_nontrial_states": 0.9998808722512137,
+          "largest_mid_block_excess_over_both_endpoints": 1.7574508999987522e-08,
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "b_relative": 1.01,
+          "T_GeV": 0.010136743377812032,
+          "light_peak_start_and_end": [
+            5.9360026293974547e-05,
+            5.915778620528918e-05
+          ],
+          "scalar_peak_start_and_end": [
+            0.0003815914120514534,
+            0.00038284327238019593
+          ],
+          "peak_all_samples": 5.937363204760537e-05,
+          "peak_excluding_explicit_trials": 5.937363204760537e-05,
+          "midpoint_trials_count": 2,
+          "retained_light_pair_quadratic_sign_margin_on_observed_nontrial_states": 0.9998812527359048,
+          "largest_mid_block_excess_over_both_endpoints": 1.3605753630823738e-08,
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "parent_source_sha256": "606ae282997f5149c95cf6fb4e13ece71d16410bcaf81940149bdc44c2791051",
+      "hash_observer_free_first": null,
+      "rows": [
+        {
+          "b_relative": 1.004987562112089,
+          "T_GeV": 0.010187141866276936,
+          "light_peak_start_and_end": [
+            5.795670076057429e-05,
+            5.7861688054814086e-05
+          ],
+          "scalar_peak_start_and_end": [
+            0.0003811673041596131,
+            0.000382416789115345
+          ],
+          "peak_all_samples": 5.8031893808343745e-05,
+          "peak_excluding_explicit_trials": 5.8031893808343745e-05,
+          "midpoint_trials_count": 2,
+          "retained_light_pair_quadratic_sign_margin_on_observed_nontrial_states": 0.9998839362123834,
+          "largest_mid_block_excess_over_both_endpoints": 7.519304776945618e-08,
+          "accepted": 1,
+          "rejected": 0
+        },
+        {
+          "b_relative": 1.01,
+          "T_GeV": 0.010136743377811933,
+          "light_peak_start_and_end": [
+            5.7861688054814086e-05,
+            5.784930950453573e-05
+          ],
+          "scalar_peak_start_and_end": [
+            0.000382416789115345,
+            0.0003836655716299137
+          ],
+          "peak_all_samples": 5.794212782446006e-05,
+          "peak_excluding_explicit_trials": 5.794212782446006e-05,
+          "midpoint_trials_count": 2,
+          "retained_light_pair_quadratic_sign_margin_on_observed_nontrial_states": 0.9998841157443511,
+          "largest_mid_block_excess_over_both_endpoints": 8.043976964597089e-08,
+          "accepted": 1,
+          "rejected": 0
+        }
+      ]
+    }
+  ]
+}
