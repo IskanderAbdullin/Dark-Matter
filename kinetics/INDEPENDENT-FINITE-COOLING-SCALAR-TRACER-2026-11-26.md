@@ -42,6 +42,18 @@ not included in these spectra. No power suppression of total
 matter, early entropy or isocurvature perturbations, or observational
 constraint follows from the tracer comparison.
 
+## Native hierarchy extension
+
+With identical input, clock and momentum nodes at σ=0.10, also run
+lmax=22 and fluid trigger 42. The maximum absolute difference
+in the scalar/CDM contrast on the common k interval is
+1.70×10⁻³ (instantaneous) or 1.20×10⁻³ (finite), with the
+largest difference at z=20. At k=10 and z=20, the finite case
+changes by −1.06×10⁻⁴; the instantaneous case changes by
+4.1×10⁻⁷. These are comparisons of two closure choices, not a
+no-fluid convergence envelope. The primary table remains the
+original hierarchy for reproducibility.
+
 ## Reproduction
 
 Regenerate the PSD tables with the documented exporter, then use:
@@ -54,4 +66,13 @@ for ini in native/finite_cooling_tracer_*_sync.ini; do
 done
 
 OPENBLAS_NUM_THREADS=1 python -W error prepare_finite_cooling_scalar_tracer_reference.py     native --eos EOS.dat --compare finite_cooling_tracer_instant_s10_sync     finite_cooling_tracer_instant_s14_sync finite_cooling_tracer_ratio5_s10_sync     finite_cooling_tracer_ratio5_s14_sync
+~~~
+
+For the hierarchy-only check, copy the two s10 INI files under
+the matching names ending in s10_hierarchy_sync.ini. Change only the
+root output prefix, l_max_ncdm to 22 and ncdm_fluid_trigger_tau_over_tau_k
+to 42. Run both and compare with:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_scalar_hierarchy_audit_reference.py native
 ~~~

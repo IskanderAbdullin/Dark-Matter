@@ -1,0 +1,81 @@
+# Positive forward depletion, and a local early inverse-reaction check
+
+This augments the [first-order recoil tally](INDEPENDENT-FINITE-COOLING-PAIR-RECOIL-2026-11-26.md).
+It separates a mathematically bounded **forward-only** model from a
+probe of whether dropping the inverse channel is justified.
+The cooling clock, matching condition and external source are prescribed.
+
+## Bounds for the forward-only split operator
+
+Project every stable source bin onto its two fixed comoving momentum
+endpoints, preserving number and its squared-momentum integral.
+Within each reaction substep the nonnegative kernel \(K\) includes the
+full angular threshold and the visible expansion clock. If \(Y^0\)
+is the passive upper number vector, \(Y\) the depleting vector, and
+\(L\) the lower vector at substep entry, then
+\[
+L_i e^{-s (K Y^0)_i}\le Y_i(s)\le Y^0_i,\qquad 0\le s\le1.
+\]
+Propagate the linear absorbing lower vector across source injections.
+For positive quadratic emission, integrate the lower product exactly
+using \((1-e^{-B})/B\), \(B=(K Y^0)_i+(K Y^0)_j\). The same bound
+works with the nonnegative outgoing squared-momentum kernel. These
+bounds apply to the exact **split finite-node** dynamics, not to the
+unprojected continuum or to the midpoint approximation itself.
+
+The positive midpoint trajectory stays between the bounds for both
+scalar number and its momentum moment. From the refined projection,
+stable \(\Omega h^2\) decreases from 0.120 to approximately 0.119930
+(instantaneous) and 0.119882 (finite). Relative to the passive
+rate with the **same** projection, feedback lowers new scalar counts
+by about 0.063% and 0.16%, respectively. Differences from the
+alternative within-bin source representation can exceed those small
+feedback corrections. Conservation of the outgoing scalar number
+against stable loss and positivity are checked independently. This
+does not bound stimulated or inverse conversion.
+
+## A necessary early signed-rate check
+
+At labeled epochs, reconstruct the positive prompt spectra independently
+with two log widths and evaluate lab-angle forward and inverse rates
+including the occupation factors. At 25 MeV in the finite cooling
+history the inverse/forward ratio is about 0.89–0.90, even though
+the scalar occupation remains small. By 15 MeV the ratio is about
+0.019, by 9 MeV roughly \(4\times10^{-6}\), and by radiation matching
+roughly \(2\)–\(3\times10^{-10}\). The reverse channel is kinematically
+open at the earlier hot epochs on these shapes; its absence in the
+late-anchor probe cannot establish its early absence. The small
+effect of forward stable depletion does **not** justify dropping
+this inverse process during the whole production history.
+
+These are local ratios on passive prompt-only shapes. The newly
+produced recoil distribution is not fed back into either rate.
+No signed evolving relic count or physical transfer follows from
+this test alone.
+
+As a separate diagnostic, integrate the spontaneous **signed** vacuum
+kernels on the same evolving but forced prompt spectra. The sampled
+local inverse/forward ratio can exceed one near the hot start.
+Nevertheless the refined pre-radiation integrated forward count
+contributes Ωh²=3.535×10⁻¹⁰ and the reverse removes 4.320×10⁻¹²,
+about 1.22% of that pre-radiation term. The post-matching forward
+term is another 1.513×10⁻¹⁰ with negligible prompt inverse in this
+controlled fold. Total absorption is about 0.86% of the passive
+forward total. Timing and redshift weights are essential: a large
+ratio in one short early interval is not a large integrated effect.
+An independent lab-angle normalization agrees to 3.85×10⁻¹¹
+relative on the shared test grid. The fold still does not include
+recoil feedback, depletion or evolving inverse occupations.
+
+## Reproduction
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_forward_depletion_reference.py \
+    EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_forward_depletion_reference.py \
+    EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json --high
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_source_signed_probe_reference.py \
+    EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_signed_passive_fold_reference.py \
+    EOS.dat results/finite-cooling-reheat-portal-2026-11-26.json
+~~~
