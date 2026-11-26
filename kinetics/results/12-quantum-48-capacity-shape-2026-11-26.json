@@ -1,0 +1,70 @@
+{
+  "controls": {
+    "massless_exact_relative_defect": 2.220446049250313e-16,
+    "nonrelativistic_asymptotic_relative_defect": 1.312369316264217e-05,
+    "manufactured_normal": {
+      "saturation_T_GeV": 0.008358708503978369,
+      "common_T_GeV": 0.010000000000000075,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 1.2279015608939758,
+      "total_energy_over_saturation": 1.1212865605180848,
+      "scalar_kinetic_fugacity": 0.6376281516217386,
+      "fermion_kinetic_fugacity": 0.22313016014842615,
+      "entropy_density_GeV3": 1.8113336319208013e-06,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 2.220446049250313e-16
+    },
+    "manufactured_condensed": {
+      "saturation_T_GeV": 0.010772176479359692,
+      "common_T_GeV": 0.009999999999997322,
+      "normal_common_phase": false,
+      "kinetic_energy_over_saturation": 0.8545990645984702,
+      "total_energy_over_saturation": 0.9053672603788655,
+      "scalar_kinetic_fugacity": 1.0,
+      "fermion_kinetic_fugacity": 0.2231301601485627,
+      "entropy_density_GeV3": 1.94759632858832e-06,
+      "continuum_common_state_condensate_fraction": 0.20000000000064294,
+      "closure_kinetic_relative_defect": 5.465627950229646e-13
+    }
+  },
+  "rows": [
+    {
+      "run": "12-quantum-48-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 0.0,
+      "nsteps": 48,
+      "actual_visible_T_GeV": 0.01199970971941998,
+      "species_counts_GeV3": [
+        5.0149826620298566e-11,
+        1.3042750151765793e-10
+      ],
+      "retained_dark_kinetic_energy_GeV4": 4.773889485296816e-12,
+      "saturation_T_GeV": 0.0007439181369593974,
+      "common_T_GeV": 0.011106140678862985,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 18.865404589479656,
+      "total_energy_over_saturation": 2.579826943128383,
+      "scalar_kinetic_fugacity": 0.00036129062502754486,
+      "fermion_kinetic_fugacity": 6.868807295770009e-05,
+      "entropy_density_GeV3": 2.2581680845279126e-09,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 0.0,
+      "kinetic_shape_comparison": {
+        "actual_entropy_over_continuum_maximum": 0.9999969971137525,
+        "species": [
+          {
+            "species": "scalar",
+            "closed_count_defect": 2.220446049250313e-16,
+            "continuum_common_count_outside_original_mesh_fraction": 2.0774428007075407e-05,
+            "number_normalized_total_variation": 0.0017298809897205497
+          },
+          {
+            "species": "fermion",
+            "closed_count_defect": 4.440892098500626e-16,
+            "continuum_common_count_outside_original_mesh_fraction": 3.3401641094221723e-05,
+            "number_normalized_total_variation": 0.0011492243545090375
+          }
+        ]
+      }
+    }
+  ]
+}
