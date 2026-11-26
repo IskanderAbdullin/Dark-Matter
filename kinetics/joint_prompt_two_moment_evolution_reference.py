@@ -157,7 +157,7 @@ def maxent(c,N,Et,guess):
         def occupation(eta):
             z=E/T-eta
             return expit(-z) if cs.g==4 else np.exp(-z)/(-np.expm1(-z))
-        hi=50. if cs.g==4 else cs.mass/T-1e-10
+        hi=max(50.,cs.mass/T+50.) if cs.g==4 else cs.mass/T-1e-10
         eta=brentq(lambda z:np.sum(weight*occupation(z))/n-1.,-150.,hi,xtol=2e-13)
         f=occupation(eta);z=E/T-eta
         S=z*f+np.logaddexp(0.,-z) if cs.g==4 else z*f-np.log(-np.expm1(-z))

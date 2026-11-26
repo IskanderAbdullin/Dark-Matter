@@ -12,7 +12,8 @@ from sm_dark_entropy_exchange_reference import C
 from three_species_decay_onsager_reference import M,m,mp,P,Es
 
 class Source(PositivePortal):
-    def event_moments(self,T,visible_fd=True):
+    def event_moments(self,T,visible_fd=True,*,include_boltzmann=True):
+        """Return angular coefficients; optionally factor out exp(-q/T)."""
         E,q,p,W,v=self.geometry(T)
         x,w=rule(self.orders[2])
         b0=np.zeros_like(q)
@@ -28,7 +29,7 @@ class Source(PositivePortal):
             c2=(2/3)*vv*vl/(3-vv-vl+vv*vl/3)
             b0[sel]+=massw[:,None]*(bb@(w/2))
             b2[sel]+=(massw*c2)[:,None]*(bb@(w*(3*x*x-1)/4))
-        phase=W*np.exp(-q/T)
+        phase=W*np.exp(-q/T) if include_boltzmann else W
         return (q,p,v,phase*b0,phase*b2)
 
     def particles(self,T,n=24):

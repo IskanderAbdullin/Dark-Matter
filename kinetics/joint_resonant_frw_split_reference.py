@@ -370,7 +370,9 @@ if __name__=="__main__":
     p.add_argument("--visible-backreaction",action="store_true")
     p.add_argument("--accurate-visible-eos",action="store_true")
     p.add_argument("--trace-exterior",action="store_true")
-    a=p.parse_args();eos=StandardModel(a.eos)
+    p.add_argument("--eos-lower-knot-limit",type=float,default=.009,
+                   help="lower temperature in GeV for selecting tabulated EOS knots; no extrapolation")
+    a=p.parse_args();eos=StandardModel(a.eos,lower_knot_limit=a.eos_lower_knot_limit)
     if a.empty_pulse: assert 0.<a.empty_stop<1.
     if a.trace_exterior: assert a.visible_backreaction
     if a.visible_backreaction or a.accurate_visible_eos:
@@ -410,5 +412,5 @@ if __name__=="__main__":
         for n,x in zip(a.steps,final_shapes): x.update(steps=n, below_pole_elastic=a.with_elastic)
         Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=final_shapes),indent=2,allow_nan=False)+"\n")
     print(json.dumps(dict(rows=rows,
-       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+(("state-dependent visible FD source enabled." if a.quantum_visible_source else "visible source enabled (vacuum final state).") if a.visible_source else "injection disabled."))),
+       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+("No dark collisions; " if a.source_only else ("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; "))+(("state-dependent visible FD source enabled." if a.quantum_visible_source else "visible source enabled (vacuum final state).") if a.visible_source else "injection disabled."))),
        indent=2,allow_nan=False))

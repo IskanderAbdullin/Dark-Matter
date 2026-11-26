@@ -147,6 +147,16 @@ def from_bins(row,eos):
     return fp,fc,ep,ec,fcap,ccap
 
 
+def visible_pair_difference(log_forward,log_reverse):
+    """Boltzmann-weighted forward minus inverse, before angular measure."""
+    largest=np.maximum(log_forward,log_reverse)
+    bothzero=np.isneginf(largest)
+    forward=np.where(bothzero,0.,log_forward)
+    reverse=np.where(bothzero,0.,log_reverse)
+    delta=forward-reverse
+    return np.sign(delta)*np.exp(largest)*(-np.expm1(-abs(delta)))
+
+
 def shell_projection(T,phi,chi,p_mom,sg=(),cg=(),order=(6,12,14),polar=16,decay=1):
     """Resolved signed daughter rates and tails, seeded by the net portal.
 
@@ -155,19 +165,17 @@ def shell_projection(T,phi,chi,p_mom,sg=(),cg=(),order=(6,12,14),polar=16,decay=
     Negative values are stored as positive magnitudes in their own channel.
     """
     src=Source(order,dark_mass=M)
-    q,p,v,N,A=src.event_moments(T)
+    q,p,v,N,A=src.event_moments(T,include_boltzmann=False)
     x,w=roots_legendre(polar)
     E=(q[:,:,None]+p[:,:,None]*np.sqrt(v)[:,None,None]*x)/2
     measure=(N[:,:,None]+A[:,:,None]*(3*x*x-1)/2)*w
     parents=parent_branch(E,phi,chi,sg,cg,angle=decay)
     f=parents[...,0]
     g=f[:,:,::-1]
-    log_rev=q[:,:,None]/T+np.log(np.where(f>0.,f,1.))+np.log(np.where(g>0.,g,1.))
+    log_rev=np.log(np.where(f>0.,f,1.))+np.log(np.where(g>0.,g,1.))
     log_rev=np.where((f>0)&(g>0.),log_rev,-np.inf)
-    log_forward=np.log1p(-f)+np.log1p(-g)
-    aff=log_rev-log_forward
-    net=-np.sign(aff)*np.exp(np.maximum(log_rev,log_forward))*(-np.expm1(-abs(aff)))
-    source=(measure*net).ravel()
+    log_forward=-q[:,:,None]/T+np.log1p(-f)+np.log1p(-g)
+    source=(measure*visible_pair_difference(log_forward,log_rev)).ravel()
     E=E.ravel()
     edges=[np.hypot(k,p_mom) for k in (mp,m)]
     sg=np.unique(np.r_[sg,edges[0]]); cg=np.unique(np.r_[cg,edges[1]])

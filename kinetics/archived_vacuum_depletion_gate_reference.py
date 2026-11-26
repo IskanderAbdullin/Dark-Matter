@@ -12,6 +12,21 @@ from sm_dark_entropy_exchange_reference import C, MPL
 from three_species_decay_onsager_reference import M, m, mp, y
 
 
+def archived_cap(snapshot,minimum_energy):
+    p=np.asarray(snapshot["lab_momentum_edges_GeV"])
+    kinetic=p*p/(np.hypot(p,mp)+mp)
+    a,b=np.asarray(snapshot["entropy_variable_scalar"])
+    low=np.maximum(minimum_energy-mp,kinetic[:-1])
+    use=low<kinetic[1:]
+    if not np.any(use):
+        return 0.
+    # Entropy exponent is affine in kinetic energy on each cell.
+    z=a+b*np.clip((low-kinetic[:-1])/np.diff(kinetic),0.,1.)
+    zmin=float(np.minimum(z,a+b)[use].min())
+    assert zmin>0.
+    return float(np.exp(-zmin)/(-np.expm1(-zmin)))
+
+
 def comparison(radiation, normalization, shapes, target=.120):
     fac=conversion(radiation)["Omega_h2_per_GeV_times_yield"]
     table=TabulatedRadiation(radiation,.05)
@@ -54,6 +69,9 @@ def comparison(radiation, normalization, shapes, target=.120):
         # incoming support; one of the two necessarily has E >= m.
         max_Etot=2*np.hypot(m,pmax)
         Emin=m*m/max_Etot
+        F=archived_cap(snap,Emin)
+        Fhard=archived_cap(snap,m)
+        assert 0.<=Fhard<=F
         out.append(dict(final_visible_temperature_GeV=end, stable_fixed_count_Omega_h2=initial,
             upper_optical_depth_photon_only=optical_upper, radiation_table_optical_depth=optical_rad,
             lower_Omega_h2_photon_bound=initial/(1+optical_upper),
@@ -61,6 +79,9 @@ def comparison(radiation, normalization, shapes, target=.120):
             necessary_final_F_if_stimulation_is_uniformly_bounded_photon_only=max(0.,np.sqrt((initial/target-1.)/optical_upper)-1.),
             necessary_final_F_if_stimulation_is_uniformly_bounded_radiation_table=max(0.,np.sqrt((initial/target-1.)/optical_rad)-1.),
             retained_fermion_max_lab_momentum_GeV=pmax,
+            archived_scalar_occupation_cap_on_retained_initial_final_support=F,
+            archived_hard_scalar_occupation_cap_on_retained_initial_final_support=Fhard,
+            archived_max_Bose_multiplier_retained_initial_with_vacuum_exterior=(1+F)*(1+Fhard),
             conservative_scalar_min_lab_energy_GeV=Emin,
             corresponding_scalar_min_lab_momentum_GeV=np.sqrt((Emin-mp)*(Emin+mp))))
     assert min(r["lower_Omega_h2_photon_bound"] for r in out)>target

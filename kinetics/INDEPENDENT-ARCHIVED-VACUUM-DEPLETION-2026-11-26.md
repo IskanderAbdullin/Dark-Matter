@@ -10,22 +10,22 @@ the most optimistic opportunity to remove the surplus.
 
 Use the [upstream arbitrary-momentum envelope](https://github.com/IskanderAbdullin/Dark-Matter/blob/90c141722376dab64e4cd10422d545474817787c/kinetics/PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md)
 for the unpolarized scalar Yukawa benchmark. Both exchanged momentum
-squares obey (t,u\leq0), so each spin-averaged diagram is bounded by
-(y^4 s/[2(M^2-t)]) or its u-channel counterpart. Bounding their sum
+squares obey $t,u\leq0$, so each spin-averaged diagram is bounded by
+$y^4 s/[2(M^2-t)]$ or its u-channel counterpart. Bounding their sum
 by Cauchy and integrating the identical-particle angular measure gives
-(K=y^4/(8\pi M^2)=3.97887\times10^{-12}\,\mathrm{GeV}^{-2}).
+$K=y^4/(8\pi M^2)=3.97887\times10^{-12}\,\mathrm{GeV}^{-2}$.
 The bath-frame Møller factor relative to the center-of-mass rate is
-(s/(4EE')\leq1), so this upper bound needs no thermal assumption.
+$s/(4EE')\leq1$, so this upper bound needs no thermal assumption.
 
-The total stable yield (Y=(n_++n_-)/s_{\rm vis}) obeys
-(dY/dt\geq -K s_{\rm vis}Y^2/2) because each event removes two
-particles and (n_+n_-=(n_++n_-)^2/4). Thus its surviving fraction is
-at least (1/(1+K Y_{\rm start}\int s_{\rm vis}dt/2)). Use the
+The total stable yield $Y=(n_++n_-)/s_{\rm vis}$ obeys
+$dY/dt\geq -K s_{\rm vis}Y^2/2$ because each event removes two
+particles and $n_+n_-=(n_++n_-)^2/4$. Thus its surviving fraction is
+at least $1/(1+K Y_{\rm start}\int s_{\rm vis}dt/2)$. Use the
 tabulated radiation for one integration and independently bound
-the integral with (H\geq H_\gamma=A_\gamma T^2). In the latter case,
+the integral with $H\geq H_\gamma=A_\gamma T^2$. In the latter case,
 entropy conservation yields an integral proportional to
 (int_0^{T_f}(3g_s+Tg_s')dT=2\int_0^{T_f}g_s\,dT+T_fg_s(T_f)).
-Bound this by (3T_fg_{s,\max}); no late-time matter is needed for
+Bound this by $3T_fg_{s,\max}$; no late-time matter is needed for
 this conservative photon-only bound.
 
 | Archive endpoint | Fixed-count Ωh² | Lower Ωh², photon bound | Lower Ωh², tabulated radiation |
@@ -44,13 +44,19 @@ least F≈7.85/9.07 (optimum using the photon bound), or F≈12.50/14.35
 uniform cap, not measured occupations or sufficient conditions.
 
 At the two archived endpoints, **within the retained incoming χ₂
-support only**, each final scalar has (E_\phi\geq
-s/[2(E_{\rm tot}+|\mathbf P|)]\geq m^2/E_{\rm tot,max}).
+support only**, each final scalar has $E_\phi\geq
+s/[2(E_{\rm tot}+|\mathbf P|)]\geq m^2/E_{\rm tot,max}$.
 This gives approximately 1.14/1.46 MeV, independent of angle and
 well above the very cold scalar bins. At least one of the two scalar
 daughters has lab energy ≥20 MeV by energy conservation. This does not
 limit stimulation from exterior incoming momenta or from a later
-state with changed supports. The next relevant calculation is the
+state with changed supports. For the represented scalar distribution at
+each endpoint, with vacuum exterior, its maximal occupation on the
+allowed initial final-state support is about 0.00032/0.00033, and the
+maximum above 20 MeV is below 0.000060 in both. The corresponding
+fixed-snapshot Bose multiplication is at most about 1.0004. These
+bounds use the affine within-cell occupations, not bin averages. They
+do **not** bound stimulation over future states. The next calculation is the
 signed stimulated rate on actual distributions, with exterior control.
 
 ## Reproduce

@@ -16,9 +16,11 @@ W=W*28*Y*Y*4/(2*np.pi**2)
 
 
 class StandardModel:
-    def __init__(self,file):
+    def __init__(self,file,*,lower_knot_limit=.009):
+        """Use positive tabulated knots, anchored to the first retained knot."""
+        assert 0.<lower_knot_limit<=.009
         t,gs,gr=np.loadtxt(file).T
-        ok=(t>=.009)&(t<=1.1)
+        ok=(t>=lower_knot_limit)&(t<=1.1)
         u=np.log(t[ok])
         assert u[0]<np.log(.01) and u[-1]>0.
         self.gs=PchipInterpolator(u,gs[ok],extrapolate=False)
@@ -27,7 +29,7 @@ class StandardModel:
         t0=np.exp(u[0])
         p0=C*t0**4*(4*gs[ok][0]/3-gr[ok][0])
         self.press=solve_ivp(lambda x,y:[4*C/3*self.gs(x)*np.exp(4*x)],
-                        (u[0],u[-1]),[p0],rtol=3e-11,atol=1e-19,
+                        (u[0],u[-1]),[p0],rtol=3e-11,atol=min(1e-19,1e-10*abs(p0)),
                         max_step=.006,dense_output=True)
         assert self.press.success
         self.lo,self.hi=u[[0,-1]]

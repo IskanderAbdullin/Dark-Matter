@@ -4,11 +4,11 @@ from scipy.special import roots_legendre
 from empty_lepton_pair_spectrum_reference import Source
 from three_species_decay_onsager_reference import m
 from joint_visible_fd_source_reference import Visible
-from joint_visible_heavy_adiabatic_reference import shell_projection,snapshot_functions
+from joint_visible_heavy_adiabatic_reference import shell_projection,snapshot_functions,visible_pair_difference
 
 def signed_shells(T,theta,edges,order=(6,12,14),npolar=6):
     src=Source(order,dark_mass=m)
-    q,p,v,N,A=src.event_moments(T)
+    q,p,v,N,A=src.event_moments(T,include_boltzmann=False)
     hs=(p*np.sqrt(v)[:,None]/2).ravel()
     q=q.ravel(); N=N.ravel(); A=A.ravel()
     es=np.hypot(edges,m)
@@ -30,19 +30,21 @@ def signed_shells(T,theta,edges,order=(6,12,14),npolar=6):
         E2=q[s,None]-E1
         W=(N[s,None]+A[s,None]*(3*z*z-1)*.5)*aw
         assert np.all(W>=0.)
-        vac+=np.array([W.sum(),np.sum(W*q[s,None]*.5)])
+        uv=q[s,None]/T
+        vw=W*np.exp(-uv)
+        vac+=np.array([vw.sum(),np.sum(vw*q[s,None]*.5)])
         b,c=theta(E1),theta(E2)
-        lf=-np.logaddexp(0.,-b)-np.logaddexp(0.,-c)
-        aff=q[s,None]/T-b-c
-        signed=-np.sign(aff)*np.exp(lf+np.maximum(0.,aff))*(-np.expm1(-abs(aff)))
+        lf=-uv-np.logaddexp(0.,-b)-np.logaddexp(0.,-c)
+        lr=-np.logaddexp(0.,b)-np.logaddexp(0.,c)
+        signed=visible_pair_difference(lf,lr)
         idx=np.searchsorted(es,E1,'right').ravel()
         for j in range(2):
             pos=W*np.maximum(signed*(-1)**j,0.)
             out[j,0]+=np.bincount(idx,pos.ravel(),minlength=len(es)+1)
             out[j,1]+=np.bincount(idx,(pos*(E1-m)).ravel(),minlength=len(es)+1)
             sums[j]+=(np.sum(pos),np.sum(pos*q[s,None]/2))
-    assert np.max(abs(out[:,0].sum(axis=1)-sums[:,0]))/vac[0]<1e-12
-    assert np.max(abs(out[:,1].sum(axis=1)+m*out[:,0].sum(axis=1)-sums[:,1]))/vac[1]<1e-12
+    assert np.max(abs(out[:,0].sum(axis=1)-sums[:,0]))/max(vac[0],sums[:,0].max(),1e-280)<1e-12
+    assert np.max(abs(out[:,1].sum(axis=1)+m*out[:,0].sum(axis=1)-sums[:,1]))/max(vac[1],sums[:,1].max(),1e-280)<1e-12
     return out
 
 class QuantumVisible(Visible):
@@ -58,7 +60,7 @@ class QuantumVisible(Visible):
         fp,sg,fc,cg=snapshot_functions(x)
         def tc(E):
             f=fc(E)
-            return np.where(f>0.,np.log1p(-f)-np.log(np.where(f>0.,f,1.)),1000.)
+            return np.where(f>0.,np.log1p(-f)-np.log(np.where(f>0.,f,1.)),np.inf)
         sd=signed_shells(T,tc,np.asarray(q)/a,self.direct.orders,self.direct_angle)
         sh=shell_projection(T,fp,fc,np.asarray(q)/a,sg,cg,order=self.heavy.orders,polar=self.polar,decay=self.decay_angle)
         res=np.stack([sd,sh[1],sh[0]])
