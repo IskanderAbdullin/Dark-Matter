@@ -1,0 +1,99 @@
+{
+  "order": [
+    "original q/T_R up to 16",
+    "same inner bins plus five to 32"
+  ],
+  "cases": [
+    {
+      "steps": 48,
+      "enabled": true,
+      "signed_visible_portal": true,
+      "final_visible_temperature_GeV": 0.01199970971956467,
+      "retained_fixed_Omega_h2": [
+        0.00015008050748835044,
+        87.17426246863337
+      ],
+      "inclusive_fixed_Omega_h2": [
+        0.0001500961556217562,
+        87.18725866953491
+      ],
+      "exterior_fixed_Omega_h2": [
+        1.5648133405773623e-08,
+        0.012996200901553368
+      ],
+      "pair_production_and_loss_yield": [
+        1.8143708184624228e-07,
+        -1.8143708184624114e-07
+      ],
+      "integrated_pair_contribution_relative_to_final_retained": [
+        0.028589240289787154,
+        -0.011509365314130203
+      ],
+      "pair_peak_inverse_over_forward": 2.939802115816424,
+      "reported_number_defect": 4.837241718291807e-13,
+      "visible_dark_exterior_energy_defect": -5.958282586812806e-14
+    },
+    {
+      "steps": 48,
+      "enabled": true,
+      "signed_visible_portal": true,
+      "final_visible_temperature_GeV": 0.011999709719564542,
+      "retained_fixed_Omega_h2": [
+        0.00015011450799180926,
+        87.18299073996376
+      ],
+      "inclusive_fixed_Omega_h2": [
+        0.00015011450800201065,
+        87.18299075942042
+      ],
+      "exterior_fixed_Omega_h2": [
+        1.020137436445063e-14,
+        1.9456665928109392e-08
+      ],
+      "pair_production_and_loss_yield": [
+        1.8221047015290758e-07,
+        -1.8221047015290848e-07
+      ],
+      "integrated_pair_contribution_relative_to_final_retained": [
+        0.028803510082927097,
+        -0.011533679142476366
+      ],
+      "pair_peak_inverse_over_forward": 2.9394943155038034,
+      "reported_number_defect": 6.66799948589869e-13,
+      "visible_dark_exterior_energy_defect": -5.1978265702875786e-14
+    }
+  ],
+  "relative_wide_vs_original_inclusive_Omega": [
+    0.0001222708215171675,
+    -4.895107587532532e-05
+  ],
+  "number_of_original_and_extended_bins": [
+    19,
+    24
+  ],
+  "matched_inner_edges_max_absolute_difference": 0.0,
+  "outside_a4_energy": [
+    2.03721988626391e-12,
+    5.14859545517094e-18
+  ],
+  "outside_energy_wide_over_original": 2.527265461075501e-06,
+  "joint_energy_ledger_defects": [
+    -5.958282586812806e-14,
+    -5.1978265702875786e-14
+  ],
+  "new_resolved_outer_population": {
+    "number_fraction_by_species": [
+      2.4177956805601494e-05,
+      3.7754647128625796e-05
+    ],
+    "total_energy_fraction_by_species": [
+      0.00013383168232175538,
+      0.00016172074245015595
+    ],
+    "exact_outer_cell_max_occupations": [
+      6.345303676719566e-11,
+      6.133788386807665e-11
+    ]
+  },
+  "scope": "Matched full signed visible-source, prompt, elastic and pair evolution from the initially empty 50 MeV benchmark to 12 MeV. Extra outer support at fixed inner and time resolution. Fixed-count proxies, not final abundances or all-support convergence."
+}

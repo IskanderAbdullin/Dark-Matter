@@ -44,6 +44,19 @@ def prepare(out,fine):
             p=out/(name+".ini")
             p.write_text(s)
             paths.append(str(p))
+    for a in ("050","all"):
+        old=case_name(a)
+        n=f"scalar_fraction_{a}_raw_short"
+        s=(out/(old+".ini")).read_text().replace(old+"_",n+"_")
+        s=re.sub(r"ncdm_psd_filenames = [^\n]+",f"ncdm_psd_filenames = {fine/'scalar.dat'}",s)
+        s=s.replace("ncdm_N_momentum_bins = 128","ncdm_N_momentum_bins = 160")
+        s=s.replace("ncdm_maximum_q = 96","ncdm_maximum_q = 63.8376753507014")
+        s=s.replace("l_max_ncdm = 10","l_max_ncdm = 14")
+        s=s.replace("ncdm_fluid_trigger_tau_over_tau_k = 12","ncdm_fluid_trigger_tau_over_tau_k = 20")
+        s=s.replace("P_k_max_h/Mpc = 12","P_k_max_h/Mpc = 1").replace("k_per_decade_for_pk = 14","k_per_decade_for_pk = 25")
+        f=out/(n+".ini")
+        f.write_text(s)
+        paths.append(str(f))
     return dict(generated_inputs=paths,dark_density_omega_h2=om)
 
 
@@ -106,16 +119,48 @@ def analyze(out,codes,raw_codes,fine):
     return dict(omega_dark=om,omega_b=OMEGA_B,rows=rows,
        scope="Counterfactual frozen scalar shape, fixed total dark density and adiabatic CLASS histories. Each fraction changes the gravitational background and growth. None of these fractions is the actual low-reheat production result (fraction about 2.53e-9). Growth/weight decomposition uses the synchronous late matter contrasts, not a fit or a Ly-alpha comparison.")
 
+def check_large_fraction(out,names):
+    result=[]
+    k=np.geomspace(.04,.85,150)
+    probes=np.array([.08,.10,.15,.2,.3,.5])
+    for i,z in enumerate((0,5,20),1):
+        cold=read(out,case_name("000"),i)
+        lines=[]
+        for a in names:
+            files=[read(out,case_name(a),i),read(out,f"scalar_fraction_{a}_raw_short",i)]
+            R=[at(v,k)/at(cold,k) for v in files]
+            half=[]
+            for r,file in zip(R,files):
+                jj=np.flatnonzero((r[:-1]>.5)&(r[1:]<=.5))
+                assert len(jj)==1,(z,a,jj)
+                j=jj[0]
+                v=brentq(lambda p: float((at(file,[p])/at(cold,[p]))[0]-.5),k[j],k[j+1])
+                half.append(v)
+            positive=R[0]>.05
+            lines.append(dict(model=a,first_matter_power_half_smooth_then_raw_h_per_Mpc=half,
+                half_scale_fractional_shift=half[1]/half[0]-1.,
+                k_probe_h_per_Mpc=probes.tolist(),
+                native_ratio_smooth_then_raw=[(at(v,probes)/at(cold,probes)).tolist() for v in files],
+                max_absolute_power_ratio_difference_above_0p05=float(np.max(abs(R[0]-R[1])[positive]))))
+        result.append(dict(z=z,controls=lines))
+    return dict(rows=result,scope="Use matched dark total with original scalar momentum shape; short raw and wide smoothed native tests compare around first P/P_CDM=.5. No claim about extremely small, numerically unresolved large-k power.")
+
 
 if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("out",type=Path)
     p.add_argument("fine",type=Path)
     p.add_argument("--prepare",action="store_true")
+    p.add_argument("--large-fraction-controls",nargs="+",choices=["050","all"])
     p.add_argument("--codes",nargs="+",default=["001","010","050","all"])
     p.add_argument("--raw-codes",nargs="*",default=[])
     a=p.parse_args()
     out=a.out.resolve()
     out.mkdir(exist_ok=True,parents=True)
-    result=prepare(out,a.fine.resolve()) if a.prepare else analyze(out,a.codes,a.raw_codes,a.fine)
+    if a.prepare:
+        result=prepare(out,a.fine.resolve())
+    elif a.large_fraction_controls:
+        result=check_large_fraction(out,a.large_fraction_controls)
+    else:
+        result=analyze(out,a.codes,a.raw_codes,a.fine)
     print(json.dumps(result,indent=2,allow_nan=False))

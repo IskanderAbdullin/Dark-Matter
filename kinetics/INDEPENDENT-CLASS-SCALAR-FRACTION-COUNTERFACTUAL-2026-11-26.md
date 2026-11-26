@@ -48,6 +48,27 @@ letting the cold+baryon component respond. This decomposition
 uses late synchronous density contrasts and is compared with
 the native total linear power only where $P/P_{\rm CDM}>0.05$.
 
+## Independent raw momentum checks
+
+Using the original unsmoothed file, 160 nodes with qmax 63.8377,
+and the later fluid switch, the 1% and 10% tests give z=0
+power ratios 0.914686 and 0.400350 at 10 h/Mpc. Across seven
+probes from 0.1 to 10 h/Mpc and redshifts 0, 5, 20, the
+maximum relative difference from the smooth test is 0.0392%
+and 0.434%, respectively. The 10% half-power scale at z=0
+moves from 3.12014 to 3.12082 h/Mpc. These comparisons vary
+the numerical settings and the smoothing together.
+
+Near the first half-power crossing, the nearly-all-scalar
+case shifts from 0.157634 to 0.156522 h/Mpc at z=0 using
+the independent raw, short-k run. The relative shift is
+about 0.7% at all three redshifts. The 50% case shifts from
+0.225237 to 0.225555 h/Mpc at z=0 (0.14%). Shape- and
+grid-dependent differences elsewhere around the cutoff are
+larger than the change in its half-power location.
+The short raw tests are not
+used to validate the much smaller, uncontrolled high-k power.
+
 These are illustrations of a fixed shape, not a statement about
 why this many scalars would be produced, observed Lyman-alpha
 limits, a galactic fit, or the true nonlinear matter spectrum.
@@ -63,4 +84,9 @@ for c in 000 0002 001 010 050 all; do
 done
 python -W error class_archived_scalar_fraction_counterfactual_reference.py native fine \
     --codes 0002 001 010 050 all
+# After corresponding raw native configs have also run:
+python -W error class_archived_scalar_fraction_counterfactual_reference.py native fine \
+    --codes 001 010 --raw-codes 001 010
+python -W error class_archived_scalar_fraction_counterfactual_reference.py native fine \
+    --large-fraction-controls 050 all
 ~~~
