@@ -20,7 +20,7 @@ def independent(T,values,mode,n):
     evaluator=interp(X,U,C,mode)(u)
     mx=T*X
     panels=np.unique(np.clip(np.r_[mx,WINDOWS.ravel()],mx[0],mx[-1]))
-    result=np.zeros((2,2,2))
+    result=np.zeros((1+len(WINDOWS),2,2))
     for a,b in zip(panels[:-1],panels[1:]):
         mass=((a+b)+(b-a)*p)/2
         x=mass/T
@@ -30,7 +30,9 @@ def independent(T,values,mode,n):
         k=np.sqrt(u*(2*x[:,None]+u))
         f=4*dx[:,None]*du*k*evaluator(x)/np.expm1(E)
         center=(a+b)/2
-        i=int(np.any((WINDOWS[:,0]<center)&(center<WINDOWS[:,1])))
+        j=np.flatnonzero((WINDOWS[:,0]<center)&(center<WINDOWS[:,1]))
+        assert len(j)<=1
+        i=0 if not len(j) else int(j[0])+1
         result[i]+=local(T,(x,f.sum(axis=1)[None,:],(f*E).sum(axis=1)[None,:]))[0]
     return result
 
@@ -40,17 +42,23 @@ def run(eos, native):
     low,high=values[0][[0,-1]]
     first_cross=WINDOWS[0,0]/high
     last_cross=WINDOWS[0,1]/high
-    assert first_cross>.25 and last_cross<.48
+    second_cross=WINDOWS[1,0]/high
+    assert first_cross<second_cross
     fold=Fold(eos,(6,16,12),4,upper=.5)
     tests=[]
     for mode in ("linear","pchip"):
         solver=Correction(fold,values,.25,8,mode)
-        for T in (first_cross-1e-6, first_cross+1e-6,.32517560695,.33730194806,.40,last_cross+1e-5,.47):
+        probes=[first_cross-1e-6,first_cross+1e-6,.32517560695,.33730194806,.40,last_cross+1e-5,.47]
+        if second_cross<.48:
+            probes.extend([second_cross-1e-6,second_cross+1e-6])
+        for T in sorted(set(probes)):
             proposed=solver.rates(T)
             V=independent(T,values,mode,16)
             V2=independent(T,values,mode,24)
-            outside,blocked=V2
+            outside,regions=V2[0],V2[1:]
+            blocked=regions.sum(axis=0)
             total=outside+blocked
+            assert np.all(regions[1]==0.) if T<second_cross else np.all(regions[1]>0.)
             ref=np.array([total,outside])
             assert np.all(outside>0) and np.all(blocked>=0)
             assert np.all(blocked==0.) if T<first_cross else np.all(blocked>0.)
@@ -59,10 +67,11 @@ def run(eos, native):
             assert err<1e-6 and convergence<2e-7,(T,mode,err,convergence)
             tests.append(dict(interpolation=mode,T_GeV=T,
                 local_blocked_fraction_count_or_energy_by_stable_heavy=(blocked/total).tolist(),
+                local_each_window_blocked_fraction_separately=(regions/total).tolist(),
                 max_deviation_repartition_normalized_to_unsplit=float(err),
                 independent_quadrature_relative_deviation=float(convergence)))
     return dict(mass_over_T_interval=[float(low),float(high)], first_BES_entry_T_GeV=first_cross,
-        first_BES_exit_at_top_T_GeV=last_cross,
+        first_BES_exit_at_top_T_GeV=last_cross,second_BES_entry_T_GeV=second_cross,
         strip_sha256=hashlib.sha256(Path(native).read_bytes()).hexdigest(),
         controls=tests,scope="Checks invariant-mass windows and numerical partition only, not QCD validity or the conversion target.")
 

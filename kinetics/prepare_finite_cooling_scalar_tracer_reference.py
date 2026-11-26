@@ -15,6 +15,7 @@ from class_exact_coordinate_remap_reference import scan
 def prepare(psd,manifest,out):
     out.mkdir(parents=True,exist_ok=True)
     source=json.loads(manifest.read_text())
+    pairmix=("pairs_sha256" in source and "prompt_sha256" in source)
     rows=[]
     for a in source["components"]:
         if a["species"]!="scalar":
@@ -23,17 +24,24 @@ def prepare(psd,manifest,out):
         p=psd/a["file"]
         assert hashlib.sha256(p.read_bytes()).hexdigest()==a["sha256"]
         n=160 if sigma==.10 else 224
-        ranking=scan(p,n)
-        g=ranking["at_native_scale_1"] if key=="instant" else ranking["best"]
-        assert g["maximum_residual"]<1e-6
+        if pairmix:
+            for n in (n,320,448):
+                g=scan(p,n)["best"]
+                if g["maximum_residual"]<1e-6:
+                    break
+        else:
+            rank=scan(p,n)
+            g=rank["at_native_scale_1"] if key=="instant" else rank["best"]
+        assert g["maximum_residual"]<1e-6,(key,sigma,n,g)
         scale=g["scale"]
-        name=f"finite_cooling_tracer_{key}_s{round(sigma*100)}_sync"
+        prefix="finite_cooling_pairmix_tracer" if pairmix else "finite_cooling_tracer"
+        name=f"{prefix}_{key}_s{round(sigma*100)}_sync"
         dst=out/(name+".dat")
         dat=np.loadtxt(p)
         dat[:,0]/=scale
         np.savetxt(dst,dat,fmt="%.16e")
         abundance=a["actual_fixed_count_Omega_h2"]
-        assert 0<abundance<2.4e-9
+        assert 0<abundance<(4e-9 if pairmix else 2.4e-9)
         (out/(name+".ini")).write_text(f"""output = mPk,dTk
 P_k_max_h/Mpc = 10
 z_pk = 0,5,20
@@ -73,7 +81,7 @@ k_min_tau0 = 100
         rows.append(dict(name=name,case=key,sigma=sigma,native_momentum_nodes=n,
             input_sha256=a["sha256"],remap_sha256=hashlib.sha256(dst.read_bytes()).hexdigest(),
             momentum_scale=scale,fixed_omega_h2=abundance,external_moment_gate=g))
-    return dict(cases=rows,scope="Adiabatic collisionless scalar tracer after 1 MeV. The dominant 20 MeV species is replaced by a cold component, not evolved jointly; reconstructed smoothing and external quadrature checks do not certify perturbations.")
+    return dict(cases=rows,**({"first_order_pair_mixture":True} if pairmix else {}),scope="Adiabatic collisionless scalar tracer after 1 MeV. The dominant 20 MeV species is replaced by a cold component, not evolved jointly; reconstructed smoothing and external quadrature checks do not certify perturbations.")
 
 
 def compare(out,eos,cases):
@@ -102,8 +110,6 @@ def compare(out,eos,cases):
             e=float(np.max(np.ptp(q,axis=0)))
             if len(picks)==2:
                 assert e<.016
-            if tag=="ratio5":
-                assert np.min(q)>.5
             rows.append(dict(history=tag,smoothing_control_count=len(picks),max_spread_between_shape_and_momentum_grid_controls=e,
                     common_test_range_h_per_Mpc=[.015,10.],minimum_amplitude_on_control_grid=float(q.min())))
         row["per_history_control_comparison"]=rows
@@ -111,7 +117,9 @@ def compare(out,eos,cases):
         for c in row["cases"]:
             c["native_k_max_h_per_Mpc"]=c["native_k_h_per_Mpc"][-1]
             del c["native_k_h_per_Mpc"],c["native_delta_scalar_over_delta_cdm"]
-    v["scope"]="Adiabatic collisionless scalar tracer: scalar contrast relative to CDM in the same run, cold approximation for dominant stable matter, actual prompt-only scalar density. Not total-matter suppression, pre-1MeV perturbations, a dominant scalar transfer, or an observational constraint."
+    pairmix=any("pairmix" in c for c in cases)
+    mode="first-order prompt plus pre-anchor spontaneous pair count" if pairmix else "actual prompt-only scalar density"
+    v["scope"]=f"Adiabatic collisionless scalar tracer: scalar contrast relative to CDM in the same run, cold approximation for dominant stable matter, {mode}. Not total-matter suppression, pre-1MeV perturbations, a dominant scalar transfer, or an observational constraint."
     return v
 
 

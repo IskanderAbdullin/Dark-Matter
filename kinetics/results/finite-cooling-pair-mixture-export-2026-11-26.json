@@ -1,0 +1,57 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "prompt_sha256": "dfb6096217eef7970a0f045ed11492027d462004ac7c75f494e9a475f04276de",
+  "pairs_sha256": "2b01128e50b215cde0dfee1fc0ca9cf5d872cae85a66b5d4bffaffe427a9eff0",
+  "q_from_p_over_T": 0.7196406812585268,
+  "components": [
+    {
+      "case": "instant",
+      "species": "scalar",
+      "file": "instant-scalar-pair-mix-sigma0.10.dat",
+      "sha256": "8806a6dbded5ff621c0e6ef3019822439624193e4a6c300d869ac26f501f8fc6",
+      "actual_fixed_count_Omega_h2": 3.0450996693998174e-10,
+      "prompt_omega_h2": 2.3635376480246177e-12,
+      "first_order_pair_omega_h2": 3.0214642929195713e-10,
+      "sigma_ln_q": 0.1,
+      "reconstruction_anchor_p_over_T_rms": 7.373796946149964,
+      "relative_second_moment_defect": 0.0
+    },
+    {
+      "case": "instant",
+      "species": "scalar",
+      "file": "instant-scalar-pair-mix-sigma0.14.dat",
+      "sha256": "c71faab7e14e6c4082902ebde060cd137c248c10132d0c5c7910409c1561f113",
+      "actual_fixed_count_Omega_h2": 3.0450996693998174e-10,
+      "prompt_omega_h2": 2.3635376480246177e-12,
+      "first_order_pair_omega_h2": 3.0214642929195713e-10,
+      "sigma_ln_q": 0.14,
+      "reconstruction_anchor_p_over_T_rms": 7.373796946149964,
+      "relative_second_moment_defect": 0.0
+    },
+    {
+      "case": "ratio5",
+      "species": "scalar",
+      "file": "ratio5-scalar-pair-mix-sigma0.10.dat",
+      "sha256": "1c86a0b5321ccf78ae15aed1aec23639e65fb86615693fd9f0234e2c15b86cf0",
+      "actual_fixed_count_Omega_h2": 2.7419985430891527e-09,
+      "prompt_omega_h2": 2.2325586277116858e-09,
+      "first_order_pair_omega_h2": 5.094399153774671e-10,
+      "sigma_ln_q": 0.1,
+      "reconstruction_anchor_p_over_T_rms": 2.047294902075843,
+      "relative_second_moment_defect": 2.220446049250313e-16
+    },
+    {
+      "case": "ratio5",
+      "species": "scalar",
+      "file": "ratio5-scalar-pair-mix-sigma0.14.dat",
+      "sha256": "bc8c0b74b1353d20b1e3a4c7dc333932335c80d3d309f1f2e68204504adf072c",
+      "actual_fixed_count_Omega_h2": 2.7419985430891527e-09,
+      "prompt_omega_h2": 2.2325586277116858e-09,
+      "first_order_pair_omega_h2": 5.094399153774671e-10,
+      "sigma_ln_q": 0.14,
+      "reconstruction_anchor_p_over_T_rms": 2.047294902075843,
+      "relative_second_moment_defect": 2.220446049250313e-16
+    }
+  ],
+  "scope": "Positive provisional first-order shape at 1 MeV: prompt sample plus spontaneous pairs before the anchor, no depleted stable source or feedback, no pair reactions after anchor. Normalizes its own counts, not a coupled physical outcome."
+}
