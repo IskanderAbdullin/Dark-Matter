@@ -144,6 +144,9 @@ reproducible controls below are not observational constraints.
    rather than advancing or directly interpolating those phases.
    The [completed frozen q64 pair test](INDEPENDENT-WARM-Q64-COMPLETE-FROZEN-PAIR-CONTROL-2026-11-26.md)
    checks all 25 stored states and the 24 prescribed interpolation brackets.
+   The [actual four-interval split budget](INDEPENDENT-WARM-Q64-ACTUAL-COLD-OPERATOR-BUDGET-2026-11-26.md)
+   compares the accepted pair, prompt and elastic contributions with the
+   unchanged comoving cold average across collisionless redshift.
    A [common equilibrium at the archive densities](INDEPENDENT-WARM-PAIR-COMMON-MOMENT-EQUILIBRIUM-2026-11-26.md)
    preserves aggregate number and energy and shows sub-Hubble slow pair relaxation in the cold reservoir comparator.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
