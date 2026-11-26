@@ -77,7 +77,9 @@ reproducible controls below are not observational constraints.
    finds a separate local sink of comparable size while omitting
    the pole and the above-cut region. The [native prompt projection comparison](INDEPENDENT-WARM-COLD-PROMPT-SUPPORT-GRID-2026-11-26.md)
    quantifies the disconnected q16 cold shells, and independently
-   reproduces the q32 first-cell decay rate.
+   reproduces the q32 first-cell decay rate. The [matched open prompt boundary check](INDEPENDENT-WARM-POST-CHECKPOINT-OPEN-PROMPT-FLUX-2026-11-26.md)
+   finds opposite scales of frozen spill on the two supports;
+   cropping the same q32 core reproduces the q16 large rate.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
