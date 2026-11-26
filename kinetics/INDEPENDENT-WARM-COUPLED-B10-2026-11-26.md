@@ -21,12 +21,12 @@ continuation below that temperature is not included here.
 
 In the 32+28 case the total stable proxy has declined 34.1%
 relative to its 12 MeV value and remains about 479 times .120.
-The endpoint peak resolved scalar occupation is (7.06	imes10^{-4});
-its scalar count-to-equivalent-saturation ratio is (6.54	imes10^{-4}).
+The endpoint peak resolved scalar occupation is 7.06e-4;
+its scalar count-to-equivalent-saturation ratio is 6.54e-4.
 The gross reverse/forward ratio peaks at 0.021 in the second stage.
 The relative energy defect in the refined restarted run is
-(7.34	imes10^{-13}), total particle count defect
-(1.99	imes10^{-13}).
+7.34e-13, total particle count defect
+1.99e-13.
 
 This comparison does not remove the fixed momentum and collision
 quadrature limitations. The prescribed *vacuum forward* direct

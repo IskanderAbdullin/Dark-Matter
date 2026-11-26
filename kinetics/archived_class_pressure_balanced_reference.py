@@ -57,7 +57,7 @@ def smoothing(path, output, sigma=.055):
                 smoothed_manual=audit(output,spec,20.)["results"])
 
 
-def config(out,name,dark_density,psd=None,n=None,high_sampling=False,trigger=8):
+def config(out,name,dark_density,psd=None,n=None,high_sampling=False,trigger=8,qmax=20.):
     anchor=1e-8
     conf=f"""output = mPk
 P_k_max_h/Mpc = 3
@@ -95,7 +95,7 @@ tol_ncdm = 1e-5
 tol_ncdm_bg = 1e-7
 omega_ncdm = {dark_density:.17g}
 ncdm_quadrature_strategy = 3
-ncdm_maximum_q = 20
+ncdm_maximum_q = {qmax:.17g}
 ncdm_N_momentum_bins = {n}
 ncdm_fluid_trigger_tau_over_tau_k = {trigger}
 l_max_ncdm = 8
@@ -171,6 +171,9 @@ if __name__=="__main__":
               ("psd_true_sync_base",om,ref,64,True,4),
               ("psd_true_sync_fine",om,raw,128,True,8),
               ("psd_raw64_matched_sync",om,raw,64,False,8),
-              ("psd_raw256_matched_sync",om,raw,256,False,8))
+              ("psd_raw256_matched_sync",om,raw,256,False,8),
+              ("psd_raw128_matched_sync",om,raw,128,False,8),
+              ("psd_raw128_q2137_matched_sync",om,raw,128,False,8,21.370224719101124))
+        result["qmax_phase_controls"]=[audit(raw,[128],q) for q in (20.,21.370224719101124)]
         for args in conf: config(a.out,*args)
         a.audit.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n")

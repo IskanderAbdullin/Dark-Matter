@@ -1,0 +1,50 @@
+[
+  {
+    "file": "stable.dat",
+    "qmax": 20.0,
+    "results": [
+      {
+        "momentum_bins": 128,
+        "physical_normalization_residual": 0.0020927882549117705,
+        "normalized_q_moment_errors": [
+          -0.0015119129871690173,
+          -0.0019295852311771444,
+          -0.0020564752770062533,
+          -0.0020970888051736747
+        ],
+        "dilation_integral_by_parts_residual": [
+          0.005412396293174471,
+          -0.0019180433640091366,
+          -0.002608463230159175,
+          -0.0023727663182625536,
+          -0.00201121242163782
+        ]
+      }
+    ],
+    "convention": "Native scheme-3 trapezoidal nodes and weights, with analytic derivative of an independent cubic spline and matching external-tails convention. Dilation identity residual is a quadrature diagnostic, not a CLASS transfer error or proof."
+  },
+  {
+    "file": "stable.dat",
+    "qmax": 21.370224719101124,
+    "results": [
+      {
+        "momentum_bins": 128,
+        "physical_normalization_residual": -0.0007982868344964533,
+        "normalized_q_moment_errors": [
+          0.0006086135583742713,
+          0.0007447699107840933,
+          0.0007709977438730142,
+          0.0007682237528818803
+        ],
+        "dilation_integral_by_parts_residual": [
+          0.0001425935979804116,
+          -0.0013358340293254667,
+          0.0009903592642122039,
+          0.0017322288730350355,
+          0.0012124160424538122
+        ]
+      }
+    ],
+    "convention": "Native scheme-3 trapezoidal nodes and weights, with analytic derivative of an independent cubic spline and matching external-tails convention. Dilation identity residual is a quadrature diagnostic, not a CLASS transfer error or proof."
+  }
+]

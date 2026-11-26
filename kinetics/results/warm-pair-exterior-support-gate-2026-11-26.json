@@ -1,0 +1,79 @@
+{
+  "both_final_scalars_outside_for_b_greater_than": 1.5125682078325207,
+  "equal_scalar_and_stable_support_pcrit_GeV": 0.011547005383579011,
+  "T_at_anchor_GeV": 0.0012061354624147524,
+  "inverse_closed_for_entire_retained_incident_support": true,
+  "included_fraction_of_geometric_integral_where_one_stimulated_final_scalar_possible": 0.7110284440353194,
+  "conditional_cases": [
+    {
+      "cap": 0.0,
+      "loss_integral": 0.27972695785906593,
+      "lower_Omega_stable": 44.89023332497304
+    },
+    {
+      "cap": 0.001,
+      "loss_integral": 0.27992585168266715,
+      "lower_Omega_stable": 44.883257616078176
+    },
+    {
+      "cap": 1.0,
+      "loss_integral": 0.47862078146033094,
+      "lower_Omega_stable": 38.85191013872723
+    },
+    {
+      "cap": 2.0,
+      "loss_integral": 0.6775146050615959,
+      "lower_Omega_stable": 34.245449522296134
+    },
+    {
+      "cap": 10.0,
+      "loss_integral": 2.268665193871716,
+      "lower_Omega_stable": 17.575137960980786
+    },
+    {
+      "cap": 100.0,
+      "loss_integral": 20.16910931798557,
+      "lower_Omega_stable": 2.7137297496850015
+    }
+  ],
+  "sampled_kinematics": [
+    {
+      "b": 1.0,
+      "minimum_sampled_e_minus_over_edge": 0.5320564062269035,
+      "exact_lower_e_minus_over_edge": 0.5202853566319479
+    },
+    {
+      "b": 1.5125682229582027,
+      "minimum_sampled_e_minus_over_edge": 1.0079184860941954,
+      "exact_lower_e_minus_over_edge": 1.0000000150000001
+    },
+    {
+      "b": 2.0,
+      "minimum_sampled_e_minus_over_edge": 1.5211116656798236,
+      "exact_lower_e_minus_over_edge": 1.4990138579190646
+    },
+    {
+      "b": 3.0,
+      "minimum_sampled_e_minus_over_edge": 2.5925433277066166,
+      "exact_lower_e_minus_over_edge": 2.5779055449334756
+    }
+  ],
+  "necessary_retained_occupation_supremum_to_allow_target": 2400.5133936213697,
+  "late_concrete_comparator": {
+    "steps": 32,
+    "loss_fraction": 0.007048894146207685,
+    "endpoint_temperature_GeV": 0.00041376297480725746,
+    "no_inverse": true
+  },
+  "terminal_pair_only_interval_from_end_anchor": {
+    "anchor_temperature_GeV": 0.00041376297480725746,
+    "loss_integral_upper": 0.008649382310794556,
+    "conditional_stable_Omega_h2_lower_and_upper": [
+      56.55324938291441,
+      57.042400057744935
+    ],
+    "inverse_closed": true,
+    "all_forward_scalar_final_states_outside": true
+  },
+  "scope": "Equal finite comoving scalar and stable support; no incident or stimulating particles outside the imposed support. Physical exterior occupancy or growing support invalidates the strengthening."
+}

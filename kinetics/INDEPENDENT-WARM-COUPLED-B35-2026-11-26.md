@@ -3,8 +3,8 @@
 Use the signed visible-source [50 MeV history](INDEPENDENT-50MEV-PAIR-FROM-EMPTY-2026-11-26.md)
 as the common initial condition at 12.00 MeV. Continue the [coupled
 warm benchmark](INDEPENDENT-WARM-COUPLED-LATE-PAIRS-2026-11-26.md)
-to relative expansion (b=3.5). The radiation clock gives
-(T_gamma=3.43387) MeV. Pair conversion is two signed midpoint
+to relative expansion b = 3.5. The radiation clock gives
+Tγ = 3.43387 MeV. Pair conversion is two signed midpoint
 kicks around the conservative implicit prompt-plus-elastic collision
 step. The newly escaping energy is tracked in the expansion ledger.
 
@@ -26,13 +26,13 @@ Refining the time grid from 20 to 32 intervals changes the fixed-count
 stable and scalar proxies by about 0.27% and 0.28%, respectively.
 This is a two-grid time test at fixed momentum support and collision
 quadrature, not an error bound for removing those restrictions.
-The relative energy ledger is below (6	imes10^{-13}) in both
+The relative energy ledger is below 6e-13 in both
 runs. The reverse/forward gross midpoint ratio reaches about 0.85.
-The maximum resolved scalar occupation is about (6.1	imes10^{-4})
+The maximum resolved scalar occupation is about 6.1e-4
 and the scalar count-to-equivalent-saturation ratio is about
-(4.85	imes10^{-4}) in the 32-step state. Its first cell contains
-(3.16	imes10^{-8}) of the original retained scalar number, or
-about (1.83	imes10^{-8}) of its own resolved population.
+4.85e-4 in the 32-step state. Its first cell contains
+3.16e-8 of the original retained scalar number, or
+about 1.83e-8 of its own resolved population.
 
 Neglect residual visible injection and feedback, heavy recycling,
 number-changing scalar reactions and re-entry from exterior cohorts.

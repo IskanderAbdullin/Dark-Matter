@@ -1,0 +1,249 @@
+{
+  "case_order": [
+    "free three-flavour FD/KMS Born",
+    "matched free vacuum ratio with MB"
+  ],
+  "x_M_over_T_bounds": [
+    4.0,
+    12.0
+  ],
+  "u_omega_minus_M_over_T_bounds": [
+    0.0125,
+    32.0
+  ],
+  "primary_trace_equation": "https://arxiv.org/html/1910.09567#S2.E4",
+  "radiation_table_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "identities": {
+    "KMS_vs_angular_FD_relative_defect": 3.1086244689504383e-15,
+    "full_boost_MB_vs_closed_bessel_moments_relative_defect": 8.881784197001252e-16
+  },
+  "max_last_refinement_defect": 6.412647857167997e-08,
+  "controls": [
+    {
+      "nodes_per_panel": 2,
+      "rows": [
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.34
+          ],
+          "count_omega_if_all_convert": [
+            0.024075857428676857,
+            0.026057501062362102
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.002316337974991423,
+            0.0024784432679525433
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.34862
+          ],
+          "count_omega_if_all_convert": [
+            0.026911487660368504,
+            0.02912384653677617
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.0025841923422753035,
+            0.0027647932276882448
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.42
+          ],
+          "count_omega_if_all_convert": [
+            0.05526477940977469,
+            0.05975370646055662
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.005239538978417395,
+            0.005600720021658058
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.3,
+            0.34862
+          ],
+          "count_omega_if_all_convert": [
+            0.014662801571061389,
+            0.0158618917925351
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.001393567871895639,
+            0.0014903631021006836
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.3,
+            0.42
+          ],
+          "count_omega_if_all_convert": [
+            0.043016093320467595,
+            0.04649175171631553
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.004048914508037731,
+            0.004326289896070496
+          ]
+        }
+      ]
+    },
+    {
+      "nodes_per_panel": 4,
+      "rows": [
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.34
+          ],
+          "count_omega_if_all_convert": [
+            0.02407705985121651,
+            0.026058806641481844
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.0023164541288451515,
+            0.002478569877584054
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.34862
+          ],
+          "count_omega_if_all_convert": [
+            0.026912831188542184,
+            0.0291253052739237
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.0025843219742647423,
+            0.0027649345056626803
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.42
+          ],
+          "count_omega_if_all_convert": [
+            0.0552675305707973,
+            0.05975669212764606
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.005239803000740094,
+            0.005601007275742868
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.3,
+            0.34862
+          ],
+          "count_omega_if_all_convert": [
+            0.014663532261590347,
+            0.01586268503164203
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.0013936378750133344,
+            0.0014904393406726204
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.3,
+            0.42
+          ],
+          "count_omega_if_all_convert": [
+            0.04301823164384545,
+            0.04649407188536439
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.004049118901488685,
+            0.004326512110752807
+          ]
+        }
+      ]
+    },
+    {
+      "nodes_per_panel": 8,
+      "rows": [
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.34
+          ],
+          "count_omega_if_all_convert": [
+            0.024077058317614638,
+            0.026058804971074417
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.002316454008664738,
+            0.002478569748833667
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.34862
+          ],
+          "count_omega_if_all_convert": [
+            0.026912829474231806,
+            0.02912530340690447
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.002584321840163057,
+            0.0027649343620149503
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.25,
+            0.42
+          ],
+          "count_omega_if_all_convert": [
+            0.055267527048577555,
+            0.05975668829606284
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.005239802728358035,
+            0.005601006984303293
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.3,
+            0.34862
+          ],
+          "count_omega_if_all_convert": [
+            0.01466353132736212,
+            0.015862684014705104
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.001393637802641073,
+            0.0014904392631883189
+          ]
+        },
+        {
+          "temperature_range_GeV": [
+            0.3,
+            0.42
+          ],
+          "count_omega_if_all_convert": [
+            0.04301822890170787,
+            0.04649406890386348
+          ],
+          "energy_floor_over_radiation_at_1MeV": [
+            0.0040491186908360515,
+            0.0043265118854766615
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Restricted massless free-quark hard timelike Born test on the prescribed radiation history. Do not add to overlapping measured spectral bands. No interacting QCD, light-cone resummation, nonzero quark masses, positive inverse source or self-consistent dark kinetic history."
+}
