@@ -67,7 +67,9 @@ reproducible controls below are not observational constraints.
    localizes the innermost light response to a far-tail scalar window;
    cropping only that support flips the frozen q32 rate sign. A [selected visible injection bound](INDEPENDENT-WARM-COLD-LIGHT-VISIBLE-MARGIN-2026-11-26.md)
    leaves the sampled full-support decay-only sign negative,
-   without certifying the sign of all coupled operators.
+   without certifying the sign of all coupled operators. The [tagged dark-pair follow-up](INDEPENDENT-WARM-COLD-LIGHT-PARENT-DARK-PAIR-2026-11-26.md)
+   resolves tiny represented positive gains into the relevant heavy
+   modes, on those fixed shapes only.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
