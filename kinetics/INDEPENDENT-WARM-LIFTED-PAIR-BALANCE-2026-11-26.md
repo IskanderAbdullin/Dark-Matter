@@ -16,7 +16,9 @@ order on this grid does not reliably remove the failed cancellation.
 The corresponding nine-cell defects are 6.86e-7, 7.42e-10 and
 3.91e-12, keeping the forward rule unchanged in each comparison.
 The larger residuals follow the order of the still-discrete forward
-integral. This is a local detailed-balance test, not a guarantee of
+integral. An independent 23 MeV bath, with chemical potential −28 MeV and
+a 0.90 GeV outer edge, gives 0.414 native versus 1.35e-12 lifted at the
+finer order. This is a local detailed-balance test, not a guarantee of
 cancellation in the unmodified inverse sector.
 
 Independently freeze the actual corrected q32 7.394049 MeV
@@ -32,7 +34,7 @@ interactions or a whole-spectrum elastic convergence ladder.
 
 ~~~sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
-python -W error warm_multishell_pair_balance_reference.py --single 0
+python -W error warm_multishell_pair_balance_reference.py
 python -W error warm_multishell_trajectory_local_budget_reference.py EOS.dat \
  results/warm-multishell-trajectory-lifted24-q32-2026-11-26.json.gz
 ~~~
