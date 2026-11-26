@@ -62,3 +62,44 @@ python -W error warm_frozen_light_cap_components_reference.py EOS.dat \
 
 [Uniform pair bounds](results/warm-pair-frozen-continuum-cap-2026-11-26.json)
 and [sampled prompt/pair directional rates](results/warm-frozen-light-cap-components-2026-11-26.json.gz).
+
+## Track and explicit between-frame surrogate
+
+The endpoint argument remains downward on all 25 accepted q32
+nine-cell trajectory states and on the first 14 accepted q64
+nine-cell states (start plus 13 accepted steps). At each frozen
+state the bound covers the entire represented tagged momentum
+interval, not just the sampled tag nodes. The smallest interior
+entropy gaps are 10.5701 on q32 and 10.5701 on q64. The worst
+upper exterior to lower interior rate ratios are 1.00e-8 and
+4.32e-20. This check stops at the achieved q64 state at 7.724085 MeV.
+
+For a separate continuous control, prescribe bilinear interpolation
+of the reconstructed entropy in endpoint time and fractional
+within-shell kinetic energy. This is a declared surrogate, not the
+physical solver's dense output. Comoving edges are fixed and the lab
+energies decrease with expansion. Split each shell into four
+kinetic-coordinate panels. On every endpoint time bracket, the
+four entropy corners bound each panel, and the two expansion-edge
+energies bound its allowed lab energy. Combine the resulting energy
+boxes for the inside loss and the outside gain, without assuming
+a particular angular distribution. The 24 q32 and 13 q64 brackets
+all have a downward scalar-pair bound on this surrogate; their
+minimum entropy margins are 6.905 and 5.353. The maximum exterior
+debits are 7.86e-8 and 1.25e-18 of the corresponding conservative
+loss floors. The actual bath between saved times might leave these
+interpolation envelopes, and neither this comparison nor the
+frozen-state checks bound the other interactions.
+
+~~~sh
+# Generate the same corrected q32 track as in the earlier trajectory check.
+python -W error warm_q64_multishell_guided_continuation_reference.py EOS.dat \
+ results/warm-recoil-crossing-q64-terminal-2026-11-26.json.gz trajectory/lifted wide --blocks 24
+python -W error warm_pair_frozen_barrier_track_reference.py trajectory/seed.json trajectory/lifted 24
+python -W error warm_pair_frozen_barrier_track_reference.py wide/guide-start.json wide/q64 13 --style guided
+python -W error warm_pair_interpolant_barrier_reference.py trajectory/seed.json trajectory/lifted 24
+python -W error warm_pair_interpolant_barrier_reference.py wide/guide-start.json wide/q64 13
+~~~
+
+[Track and interpolation diagnostics](results/warm-pair-frozen-barrier-tracks-2026-11-26.json.gz);
+[exact q64 bracket endpoint](results/warm-pair-frozen-barrier-q64-step13-2026-11-26.json.gz).

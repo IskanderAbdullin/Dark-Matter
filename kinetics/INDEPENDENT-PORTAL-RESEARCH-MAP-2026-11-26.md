@@ -125,6 +125,8 @@ reproducible controls below are not observational constraints.
    and solves one wider q64 replay. A [number/heat Onsager control](INDEPENDENT-WARM-COMMON-PAIR-NUMBER-HEAT-2026-11-26.md)
    tests full quantum pair transfer between two near-equilibrium baths. A [frozen scalar-pair sign bound](INDEPENDENT-WARM-FROZEN-PAIR-BARRIER-2026-11-26.md)
    separates represented blocking from the suppressed positive vacuum-partner channel, without establishing a live fermion cap.
+   The [completed native q32/q64 baseline](INDEPENDENT-WARM-BEYOND-RECOIL-NATIVE-2026-11-26.md)
+   separates the recoil cutoff from the native common pair-projection spike.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
