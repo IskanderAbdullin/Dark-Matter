@@ -85,7 +85,9 @@ reproducible controls below are not observational constraints.
    finds that the newly populated tail is close in total moments
    and normalized shell shape to the actual q32 checkpoint. The [discrete gross-crossing ledger](INDEPENDENT-WARM-PROMPT-GROSS-CROSSING-2026-11-26.md)
    explicitly measures the inward and outward components; their
-   difference recovers the tiny resident number.
+   difference recovers the tiny resident number. A [short expanding prompt-only control](INDEPENDENT-WARM-PROMPT-REENTRY-EXPANDING-2026-11-26.md)
+   extends the matched support to q64 and tracks expansion work
+   as well as the represented tail.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
