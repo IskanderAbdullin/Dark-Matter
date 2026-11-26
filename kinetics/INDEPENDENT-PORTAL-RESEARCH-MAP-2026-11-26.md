@@ -104,7 +104,9 @@ reproducible controls below are not observational constraints.
    advances two more accepted wide blocks through 10.137 MeV,
    using q32 only as initial guesses. A [q64 time refinement](INDEPENDENT-WARM-Q64-GUIDED-TIME-REFINEMENT-2026-11-26.md)
    keeps wider physical equations fixed while comparing two,
-   four and eight blocks to the same temperature.
+   four and eight blocks to the same temperature. A [history-only q64 guess](INDEPENDENT-WARM-Q64-HISTORY-PREDICTOR-2026-11-26.md)
+   reproduces a wider continuation block without using the next
+   narrower shape in that solve.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
