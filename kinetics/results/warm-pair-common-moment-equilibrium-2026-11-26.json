@@ -1,0 +1,283 @@
+{
+  "scope": "Hypothetical internally thermal reservoirs matching only the archived aggregate conserved moments.",
+  "cases": [
+    {
+      "snapshot_sha256": "f3d677c9a1f6864d9a1f8ce485018d24eb38a5de080f18643dd1cea09879eeb8",
+      "T_GeV": 0.007394049465197431,
+      "archived_species_number_energy": [
+        [
+          1.598665388287636e-11,
+          2.6117624953863e-11
+        ],
+        [
+          3.263710359655367e-13,
+          8.659616755049615e-13
+        ]
+      ],
+      "controls": [
+        {
+          "cap_GeV": 0.21499194424690202,
+          "common_temperature_GeV": 0.007083306692919867,
+          "common_mu_GeV": -0.05353724651912774,
+          "max_total_relative_defect": 8.881784197001252e-16,
+          "equilibrium_number_and_energy_by_species": [
+            [
+              1.879057364201148e-11,
+              2.331370519472785e-11
+            ],
+            [
+              3.9928516408930496e-13,
+              7.930475473811922e-13
+            ]
+          ],
+          "equilibrium_to_archived_light_number_energy": [
+            0.892642621061896,
+            0.9157998209548345
+          ]
+        },
+        {
+          "cap_GeV": 1.07,
+          "common_temperature_GeV": 0.00708330668919912,
+          "common_mu_GeV": -0.05353724647659347,
+          "max_total_relative_defect": 8.881784197001252e-16,
+          "equilibrium_number_and_energy_by_species": [
+            [
+              1.879057365124336e-11,
+              2.3313705185495984e-11
+            ],
+            [
+              3.992851641981743e-13,
+              7.930475472723239e-13
+            ]
+          ],
+          "equilibrium_to_archived_light_number_energy": [
+            0.8926426207084234,
+            0.9157998208291149
+          ],
+          "synthetic_pair_tangent_rates_over_actual_anchor_H": [
+            0.8116685665350644,
+            5.033159416236446
+          ],
+          "equilibrium_FD_BE_response": {
+            "T_GeV": 0.00708330668919912,
+            "mu_GeV": -0.05353724647659347,
+            "mesh_cells": 17,
+            "quadrature": [
+              3,
+              7,
+              6,
+              2
+            ],
+            "event_check": 8.477459277595599e-17,
+            "initial_particle_heat_residual_per_forward_event": 7.449595034545572e-14,
+            "first_row_from_analytic_event_moments": [
+              4.0,
+              50.032018266948654
+            ],
+            "equilibrium_forward_event_number_energy": [
+              1.7504286833070826e-34,
+              1.227428107356125e-35
+            ],
+            "controls": [
+              {
+                "finite_difference": 4e-05,
+                "particle_heat_response_over_eq_forward_events": [
+                  [
+                    4.000000001095259,
+                    50.032020398924764
+                  ],
+                  [
+                    50.03201828063202,
+                    630.1470146780368
+                  ]
+                ],
+                "theoretical_first_row_error": 4.261223480821285e-08,
+                "reciprocity_defect": 4.233874251191594e-08,
+                "eigenvalues_of_symmetric_part": [
+                  0.027416121857636977,
+                  634.1195985572745
+                ]
+              },
+              {
+                "finite_difference": 1.2e-05,
+                "particle_heat_response_over_eq_forward_events": [
+                  [
+                    4.000000000053899,
+                    50.032018458487244
+                  ],
+                  [
+                    50.03201826771336,
+                    630.1469898673845
+                  ]
+                ],
+                "theoretical_first_row_error": 3.828320265066736e-09,
+                "reciprocity_defect": 3.813035887034744e-09,
+                "eigenvalues_of_symmetric_part": [
+                  0.02741611951061973,
+                  634.1195737479278
+                ]
+              }
+            ],
+            "extrapolated": {
+              "richardson_response": [
+                [
+                  3.9999999999509073,
+                  50.03201826657583
+                ],
+                [
+                  50.032018266435685,
+                  630.1469874135837
+                ]
+              ],
+              "reciprocity_defect": 2.80109269112927e-12,
+              "exact_particle_row_relative_defect": 1.2273182470323718e-11,
+              "symmetric_eigenvalues": [
+                0.027416119278497852,
+                634.119571294256
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_sha256": "82337f88f81e65df77d35b04c20597a37bc6135e41fb6aa62372107c7b6a2ecd",
+      "T_GeV": 0.007754805139316106,
+      "archived_species_number_energy": [
+        [
+          1.7951454075998103e-11,
+          3.062382013317678e-11
+        ],
+        [
+          3.8407966940165477e-13,
+          1.0394978441336387e-12
+        ]
+      ],
+      "controls": [
+        {
+          "cap_GeV": 0.45097090682290913,
+          "common_temperature_GeV": 0.007375876103308031,
+          "common_mu_GeV": -0.05588395814501268,
+          "max_total_relative_defect": 1.7763568394002505e-15,
+          "equilibrium_number_and_energy_by_species": [
+            [
+              2.083049086139999e-11,
+              2.7744783347774958e-11
+            ],
+            [
+              4.609145986684416e-13,
+              9.62662914866854e-13
+            ]
+          ],
+          "equilibrium_to_archived_light_number_energy": [
+            0.9059870136096191,
+            0.9260845708335046
+          ]
+        },
+        {
+          "cap_GeV": 1.07,
+          "common_temperature_GeV": 0.007375876103308031,
+          "common_mu_GeV": -0.055883958145012694,
+          "max_total_relative_defect": 1.887379141862766e-15,
+          "equilibrium_number_and_energy_by_species": [
+            [
+              2.083049086139996e-11,
+              2.7744783347774906e-11
+            ],
+            [
+              4.609145986684408e-13,
+              9.626629148668524e-13
+            ]
+          ],
+          "equilibrium_to_archived_light_number_energy": [
+            0.9059870136096174,
+            0.926084570833503
+          ],
+          "synthetic_pair_tangent_rates_over_actual_anchor_H": [
+            0.9228755537330863,
+            5.539333606616096
+          ],
+          "equilibrium_FD_BE_response": {
+            "T_GeV": 0.007375876103308031,
+            "mu_GeV": -0.055883958145012694,
+            "mesh_cells": 17,
+            "quadrature": [
+              3,
+              7,
+              6,
+              2
+            ],
+            "event_check": 1.1694608937233572e-16,
+            "initial_particle_heat_residual_per_forward_event": 6.043878851090718e-14,
+            "first_row_from_analytic_event_moments": [
+              4.0,
+              49.66484466328359
+            ],
+            "equilibrium_forward_event_number_energy": [
+              2.5076103007923517e-34,
+              1.790257072886726e-35
+            ],
+            "controls": [
+              {
+                "finite_difference": 4e-05,
+                "particle_heat_response_over_eq_forward_events": [
+                  [
+                    4.0000000010047225,
+                    49.6648467493453
+                  ],
+                  [
+                    49.6648446758049,
+                    620.9940054880663
+                  ]
+                ],
+                "theoretical_first_row_error": 4.200278339428593e-08,
+                "reciprocity_defect": 4.175066714573461e-08,
+                "eigenvalues_of_symmetric_part": [
+                  0.027808100653963663,
+                  624.966197388417
+                ]
+              },
+              {
+                "finite_difference": 1.2e-05,
+                "particle_heat_response_over_eq_forward_events": [
+                  [
+                    3.999999999866383,
+                    49.66484485130645
+                  ],
+                  [
+                    49.66484466150829,
+                    620.9939813899229
+                  ]
+                ],
+                "theoretical_first_row_error": 3.785834039729649e-09,
+                "reciprocity_defect": 3.821579719343049e-09,
+                "eigenvalues_of_symmetric_part": [
+                  0.027808098328173436,
+                  624.966173291461
+                ]
+              }
+            ],
+            "extrapolated": {
+              "richardson_response": [
+                [
+                  3.9999999997538,
+                  49.66484466358832
+                ],
+                [
+                  49.66484466009434,
+                  620.9939790065899
+                ]
+              ],
+              "reciprocity_defect": 7.035128035681737e-11,
+              "exact_particle_row_relative_defect": 6.154998732910144e-11,
+              "symmetric_eigenvalues": [
+                0.027808098098150325,
+                624.9661709082457
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

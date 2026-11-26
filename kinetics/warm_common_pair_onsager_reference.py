@@ -23,7 +23,7 @@ def extrapolate(output,first):
                 symmetric_eigenvalues=e.tolist())
 
 
-def response(T,mu,p,order):
+def response(T,mu,p,order,steps=(2e-4,6e-5)):
     """Two common-temperature derivatives, in energy units of the anchor T."""
     am=mu/T
     pe=[np.hypot(p,mass) for mass in (mp,m)]
@@ -47,7 +47,7 @@ def response(T,mu,p,order):
     assert tiny<1e-12
     predicted_first=np.array([4*reference,2*(w[1,1]/T-2*am*reference)])/reference
     output=[]
-    for h in (2e-4,6e-5):
+    for h in steps:
         col=[]
         for dx in np.eye(2)*h:
             yp,_,_=result(dx)
