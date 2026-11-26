@@ -1,0 +1,71 @@
+{
+  "states": [
+    {
+      "steps": 36,
+      "hold_background_fixed": false,
+      "scale_factor": 8.571428571428571,
+      "duration_in_fixed_Hubble_units": null,
+      "initial_and_final_visible_temperatures_GeV": [
+        0.0034338651304354024,
+        0.00041376297480725746
+      ],
+      "quadrature_order": [
+        3,
+        7,
+        6,
+        2
+      ],
+      "reverse_enabled": true,
+      "included_pair_operator": true,
+      "support_q_over_TR_at_original_origin": [
+        0.0,
+        16.000000000000004
+      ],
+      "initial_fixed_count_Omega_h2": [
+        0.0002593698509580845,
+        61.74197764397318
+      ],
+      "retained_fixed_count_Omega_h2": [
+        0.0002743067080711084,
+        57.77095564133634
+      ],
+      "inclusive_fixed_count_Omega_h2": [
+        0.00027644510257709347,
+        57.77098889537271
+      ],
+      "inclusive_species_counts_over_initial": [
+        1.0658336023093464,
+        0.9356841341963706
+      ],
+      "retained_species_counts_over_initial": [
+        1.0575890260870673,
+        0.9356835955994931
+      ],
+      "exterior_counts_over_initial_species": [
+        [
+          0.0,
+          0.008244576222279134
+        ],
+        [
+          0.0,
+          5.385968776393304e-07
+        ]
+      ],
+      "scalar_kinetic_energy_per_retained_particle_GeV": 0.001286080737620157,
+      "scalar_cold_fraction_q_over_original_TR_lt_005": 1.731463057366857e-08,
+      "total_count_ledger_defect": 5.1514348342607263e-14,
+      "energy_ledger_defect": -1.965124395699716e-14,
+      "max_instantaneous_pair_ledger_defect": 1.608107273236336e-15,
+      "max_inverse_over_forward": 0.021398877248188192,
+      "exterior": {
+        "exterior_cohorts": 45,
+        "exterior_a4_energy_one_mean_per_cohort": 1.160269990657913e-15,
+        "exterior_a4_energy_distribution_independent_upper_bound": 1.1602721832743668e-15,
+        "exterior_a4_pressure_trace": 1.392976412297259e-19,
+        "exterior_a4_portal_injection": 1.1601306930166832e-15,
+        "exterior_relative_energy_ledger_defect": 7.760955333918443e-18
+      }
+    }
+  ],
+  "scope": "Prescribed radiation after input archive; only represented pair reactions and conservative momentum redshift. Exterior moment cohorts tracked collisionlessly, do not feed reactions. No earlier production, other dark or visible collisions, or general cosmological relic claim."
+}

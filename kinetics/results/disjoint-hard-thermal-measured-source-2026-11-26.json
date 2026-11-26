@@ -1,0 +1,112 @@
+{
+  "measured_only_99_percent_optimistic_root_GeV": 0.3486245429139097,
+  "excluded_BESIII_M_GeV": [
+    [
+      2.2324,
+      3.08
+    ],
+    [
+      3.4,
+      3.671
+    ]
+  ],
+  "rows": [
+    {
+      "Born_lower_visible_T_GeV": 0.25,
+      "refinements": [
+        {
+          "nodes_per_panel": 4,
+          "hybrid_T_R_for_99_percent_optimistic_count_GeV": 0.32517560576935195,
+          "at_measured_only_root": {
+            "full_Born": [
+              0.026914355201761896,
+              0.0025844657714582404
+            ],
+            "nonoverlapping_Born": [
+              0.018084928810071097,
+              0.0015808344155831518
+            ],
+            "fractional_Born_overlap": [
+              0.32805639687451243,
+              0.3883322298011348
+            ]
+          },
+          "hybrid_energy_floor_at_its_root": 0.012272079123480517
+        },
+        {
+          "nodes_per_panel": 8,
+          "hybrid_T_R_for_99_percent_optimistic_count_GeV": 0.3251756069503274,
+          "at_measured_only_root": {
+            "full_Born": [
+              0.026914353484516537,
+              0.002584465636908585
+            ],
+            "nonoverlapping_Born": [
+              0.018084927669147977,
+              0.0015808343362401518
+            ],
+            "fractional_Born_overlap": [
+              0.32805639639265377,
+              0.38833222865711203
+            ]
+          },
+          "hybrid_energy_floor_at_its_root": 0.012272079144258222
+        }
+      ]
+    },
+    {
+      "Born_lower_visible_T_GeV": 0.3,
+      "refinements": [
+        {
+          "nodes_per_panel": 4,
+          "hybrid_T_R_for_99_percent_optimistic_count_GeV": 0.3373019475060887,
+          "at_measured_only_root": {
+            "full_Born": [
+              0.014665056273676294,
+              0.0013937816720248403
+            ],
+            "nonoverlapping_Born": [
+              0.008986194582686857,
+              0.0007774100506568136
+            ],
+            "fractional_Born_overlap": [
+              0.38723763380185366,
+              0.4422296789658471
+            ]
+          },
+          "hybrid_energy_floor_at_its_root": 0.012322022002159682
+        },
+        {
+          "nodes_per_panel": 8,
+          "hybrid_T_R_for_99_percent_optimistic_count_GeV": 0.33730194806361713,
+          "at_measured_only_root": {
+            "full_Born": [
+              0.014665055337646846,
+              0.0013937815993866013
+            ],
+            "nonoverlapping_Born": [
+              0.008986194016775239,
+              0.0007774100116395363
+            ],
+            "fractional_Born_overlap": [
+              0.387237633280069,
+              0.4422296778909465
+            ]
+          },
+          "hybrid_energy_floor_at_its_root": 0.012322022013192139
+        }
+      ]
+    }
+  ],
+  "max_full_Born_kernel_repartition_relative_defect": 4.440892098500626e-16,
+  "input_sha256": {
+    "dm-eos-low-official-1314.dat": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "KLOExSec.data": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "BESIII-2112.11728.txt": "f39acd7455ce32dbdb69a6bb3369b64f903bca369b7611a4327af3ba60032e5a"
+  },
+  "columns_in_hard_arrays": [
+    "optimistic all-converted scalar Omega h^2",
+    "dark energy floor/visible at 1 MeV"
+  ],
+  "scope": "Conditional patchwork: lepton FD source plus specified KLOE/BESIII vacuum bands, and massless thermal Born only away from the measured invariant-mass windows over bounded x,u and T. No overlap counting, interacting thermal QCD, near-pole proxy, charmonium resonance input, inverse or evolution. Optimistic count, not a physical relic threshold or bound on exact QCD."
+}
