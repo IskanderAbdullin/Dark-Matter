@@ -35,7 +35,7 @@ def low_strip_per_unit(T):
     return np.array([q,n])
 
 
-def run(eos,measurement,kernel):
+def run(eos,measurement,kernel,only=None,return_components=False):
     a=json.loads(Path(kernel).read_bytes())
     K=a["simultaneous_energy_density_coefficient_GeVminus2"]
     TR=.05
@@ -53,6 +53,8 @@ def run(eos,measurement,kernel):
         ("Bose_and_threshold_plus_conditional_elastic",1.,1.),
         ("Bose_and_widened_threshold_and_elastic_caps",4.,4.),
     ):
+        if only is not None and label != only:
+            continue
         is_mb=label.startswith("vacuum")
         def rates(T,data,splits):
             q = pion_positive_Q(T,data,splits)
@@ -66,7 +68,8 @@ def run(eos,measurement,kernel):
         tail=1. if is_mb else upper_bose*(1.+gap_cap*strip_R_max/Rmax)
         assert strip_R_max<1.
         z=run_case(eos,K,measurement,980,.008,10,TR=TR,pion_rate_override=rates,
-                   pion_tail_multiplier=tail,heat_multiplier=1.+elastic_cap*elastic_per_unit_form_factor)
+                   pion_tail_multiplier=tail,heat_multiplier=1.+elastic_cap*elastic_per_unit_form_factor,
+                   return_components=return_components)
         cases.append(dict(policy=label,threshold_form_factor_squared_cap=gap_cap,
                           spacelike_form_factor_squared_cap=elastic_cap,comparison=z))
     return dict(benchmark_max_initial_two_pion_BE_over_MB=float(upper_bose),

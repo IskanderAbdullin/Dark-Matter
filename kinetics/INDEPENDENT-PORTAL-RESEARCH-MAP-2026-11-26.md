@@ -115,6 +115,9 @@ caps there are model conditions, not data.
 The [unmeasured-source budget by invariant band](INDEPENDENT-WARM-UNMEASURED-SPECTRAL-BUDGET-2026-11-26.md)
 translates missing positive rates into sufficient conditional
 caps and identifies where low-mass spectral coverage matters.
+The [fixed-width coupling sensitivity](INDEPENDENT-WARM-VACUUM-COUPLING-SENSITIVITY-2026-11-26.md)
+shows how changing the specified vector mixing and Yukawa
+moves the 50 MeV sufficient upper boundary. It is not a fit.
 
 ## Evidence boundary
 

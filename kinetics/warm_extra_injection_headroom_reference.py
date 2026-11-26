@@ -51,7 +51,8 @@ def verify_pion_anchor(T,data,splits):
 
 
 def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.,
-             pion_rate_override=None,pion_tail_multiplier=None,heat_multiplier=1.):
+             pion_rate_override=None,pion_tail_multiplier=None,heat_multiplier=1.,
+             return_components=False):
     rad = TabulatedRadiation(eos,TR)
     lo = np.log(rad.state(stop)[0])
     hi = rad.initial
@@ -116,7 +117,7 @@ def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.,
     assert abs(upper(headroom,True)-.060)<2e-14
     # Unlike observational statistics, the quoted per-bin +1 error is
     # a model input; this comparison makes no joint confidence claim.
-    return dict(panels=len(t)-1,du=du,pion_subcells=splits,TR_GeV=TR,
+    result=dict(panels=len(t)-1,du=du,pion_subcells=splits,TR_GeV=TR,
                 model_lepton_energy_upper_GeV4=float(El),
                 prescribed_pion_energy_upper_GeV4=float(Ep),
                 prescribed_pion_energy_over_lepton=float(Ep/El),
@@ -130,6 +131,10 @@ def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.,
                 extra_energy_after_including_pions_to_touch_half_GeV4=float(leftover),
                 extra_energy_after_including_pions_over_lepton=float(leftover/El),
                 pure_heat_energy_over_lepton_to_touch_half=float(pure_heat_headroom/El))
+    if return_components:
+        result["baseline_components"]=dict(direct_Omega=float(nrm*(Nl+Np)),
+                 recycle_Omega=float(nrm*c*w2_phased), heat_exponent=float(heat*heat_multiplier))
+    return result
 
 
 def run(eos,measurement,kernel):
