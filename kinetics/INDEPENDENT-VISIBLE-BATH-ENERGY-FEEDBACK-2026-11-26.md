@@ -58,6 +58,8 @@ the treatment of out-of-domain states in a broader model.
 
 ## Reproduce
 
+Prepare the external `EOS.dat` with the [shared benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md).
+
 From `kinetics` with the same external central EOS:
 
 ```sh

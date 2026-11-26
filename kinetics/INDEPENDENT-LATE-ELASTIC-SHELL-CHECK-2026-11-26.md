@@ -37,6 +37,8 @@ the full late cosmology or other possible number/energy-transfer processes.
 
 ## Reproduce
 
+Prepare the external `EOS.dat` with the [shared benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md).
+
 ```sh
 cd kinetics
 export OPENBLAS_NUM_THREADS=1

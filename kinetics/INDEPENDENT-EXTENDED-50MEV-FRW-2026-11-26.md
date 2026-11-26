@@ -37,6 +37,8 @@ not final cosmological abundances.
 
 ## Reproduce
 
+Prepare the external `EOS.dat` with the [shared benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md).
+
 In `kinetics`, use the external central EOS:
 
 ```sh

@@ -63,6 +63,8 @@ equation is solved here.
 
 ## Reproduce
 
+Prepare the external `EOS.dat` with the [shared benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md).
+
 From `kinetics`, using the external central EOS:
 
 ```sh

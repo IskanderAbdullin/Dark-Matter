@@ -32,6 +32,8 @@ common continuum state without imposing it on the kinetic solution.
 
 From `kinetics`, with the external central EOS:
 
+Prepare the external `EOS.dat` with the [shared benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md).
+
 ```sh
 export OPENBLAS_NUM_THREADS=1
 for SRC in matched-vacuum-order quantum-visible-source; do

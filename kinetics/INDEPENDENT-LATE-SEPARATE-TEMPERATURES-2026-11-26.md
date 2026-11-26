@@ -49,6 +49,8 @@ distributions or additional channels.
 
 ## Reproduce
 
+Prepare the external `EOS.dat` with the [shared benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md).
+
 ```sh
 cd kinetics
 export OPENBLAS_NUM_THREADS=1
