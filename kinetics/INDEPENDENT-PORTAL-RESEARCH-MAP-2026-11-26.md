@@ -95,7 +95,9 @@ reproducible controls below are not observational constraints.
    observes near-first-order temporal convergence through
    sixteen blocks at the same physical endpoint. A [moment extrapolation diagnostic](INDEPENDENT-WARM-Q32-TIME-EXTRAPOLATION-2026-11-26.md)
    cancels much of the leading difference while preserving
-   reconstruction admissibility on this ladder only.
+   reconstruction admissibility on this ladder only. A [borrowed-guess replay](INDEPENDENT-WARM-Q64-TRANSPLANTED-NEWTON-2026-11-26.md)
+   reproduces a wider implicit block by using the archived
+   narrower shape only to initialize the nonlinear solve.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
