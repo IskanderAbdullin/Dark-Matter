@@ -75,7 +75,9 @@ reproducible controls below are not observational constraints.
    resolves a second negative cold contribution, much less
    sensitive to the same scalar support crop. A [below-pole light elastic fold](INDEPENDENT-WARM-COLD-LIGHT-BELOW-POLE-ELASTIC-2026-11-26.md)
    finds a separate local sink of comparable size while omitting
-   the pole and the above-cut region.
+   the pole and the above-cut region. The [native prompt projection comparison](INDEPENDENT-WARM-COLD-PROMPT-SUPPORT-GRID-2026-11-26.md)
+   quantifies the disconnected q16 cold shells, and independently
+   reproduces the q32 first-cell decay rate.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
