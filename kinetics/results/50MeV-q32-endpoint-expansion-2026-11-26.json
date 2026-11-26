@@ -1,0 +1,121 @@
+{
+  "epochs": [
+    {
+      "T_visible_GeV": 0.011999709719564542,
+      "absolute_scale_factor": 4.58042367579019,
+      "retained_species_order": [
+        "scalar",
+        "stable"
+      ],
+      "retained_number_energy_pressure_columns": [
+        "number [GeV^3]",
+        "energy [GeV^4]",
+        "pressure [GeV^4]"
+      ],
+      "retained_number_energy_pressure": [
+        [
+          5.163746326308783e-11,
+          1.747229686016899e-12,
+          5.824098953333416e-13
+        ],
+        [
+          1.289562663157819e-10,
+          5.6734594248233234e-12,
+          1.4424619318803108e-12
+        ]
+      ],
+      "exterior_energy_ratio_to_visible_interval": [
+        1.5910391997028902e-13,
+        1.5910992228250073e-13
+      ],
+      "exterior_pressure_ratio_to_visible_interval": [
+        5.042486663780311e-14,
+        5.303664076083358e-14
+      ],
+      "instantaneous_dark_to_visible_energy_ratio_interval": [
+        0.00010093898935974753,
+        0.00010093898935975353
+      ],
+      "instantaneous_dark_w_envelope": [
+        0.27286843546254486,
+        0.27286843548843587
+      ],
+      "deltaH_over_dark_free_radiation_at_same_T_interval": [
+        5.046822115920027e-05,
+        5.0468221159203274e-05
+      ],
+      "retained_quadrature_relative_change": 6.661338147750939e-16
+    }
+  ],
+  "independent_branches_from_last_epoch": [],
+  "extra_collisionless_future_from_last_branch": [],
+  "independent_two_mass_redshift_test": [
+    {
+      "expansion": 1.0,
+      "energy_interval_over_exact": [
+        1.0,
+        1.0
+      ],
+      "pressure_interval_over_exact": [
+        0.9680214435023998,
+        1.192281547292839
+      ]
+    },
+    {
+      "expansion": 1.1,
+      "energy_interval_over_exact": [
+        0.9299660885842846,
+        1.0026015916649573
+      ],
+      "pressure_interval_over_exact": [
+        0.8808542669325898,
+        1.2158598104161518
+      ]
+    },
+    {
+      "expansion": 3.0,
+      "energy_interval_over_exact": [
+        0.6264270660515419,
+        1.0325364098293035
+      ],
+      "pressure_interval_over_exact": [
+        0.328873544087712,
+        1.672327483733016
+      ]
+    },
+    {
+      "expansion": 10.0,
+      "energy_interval_over_exact": [
+        0.7663058541940964,
+        1.0516865249101843
+      ],
+      "pressure_interval_over_exact": [
+        0.10514291538656638,
+        2.1028583077313274
+      ]
+    },
+    {
+      "expansion": 100.0,
+      "energy_interval_over_exact": [
+        0.9753978083482165,
+        1.0170619563978311
+      ],
+      "pressure_interval_over_exact": [
+        0.015320883202334492,
+        3.0641766404668984
+      ]
+    },
+    {
+      "expansion": 1000.0,
+      "energy_interval_over_exact": [
+        0.9976825523938346,
+        1.0019847360881597
+      ],
+      "pressure_interval_over_exact": [
+        0.0018320900251031708,
+        3.6641800502063413
+      ]
+    }
+  ],
+  "scope": "Instantaneous homogeneous expansion source from represented stable and scalar archives, with collisionless earlier exterior cohorts bounded by their endpoint number/energy. Not a self-consistent re-evolution with all tails, a radiation-equivalent Delta Neff, a BBN prediction, or a statement about observational expansion constraints."
+}

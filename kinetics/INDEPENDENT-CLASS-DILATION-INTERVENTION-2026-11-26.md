@@ -35,6 +35,15 @@ and output wavenumbers, reduces the maximum power departure to
 1.912e-6 at z=0 and 1.485e-6 at z=5. Thus the causal check works
 for both the positive and negative native deviations in these cases.
 
+The 256-node run independently completes the same causal check.
+Its native weighted residual is +0.01248634, giving a diagnostic
+multiplier of 0.98766765. The raw power discrepancy of 0.01043985
+falls to 1.9123e-6 at z=0 and 1.4674e-6 at z=5 after rescaling.
+The native backgrounds and the k arrays are exactly unchanged
+again. The sign and size of the original power discrepancy are
+therefore not a monotonic measure of grid accuracy; all three
+tests follow the discrete derivative-normalization intervention.
+
 The raw native residual at 64 nodes, before multiplying by 1.0073723
 is −0.007318335. An independent cubic-spline derivative gives
 −0.007318266. The two native background arrays and the power
@@ -64,5 +73,8 @@ diagnostic-class/class native/psd_dilation64_sync.ini >native/psd_dilation64_syn
 sed 's/psd_raw128_matched_sync_/psd_dilation128_sync_/' \
     native/psd_raw128_matched_sync.ini >native/psd_dilation128_sync.ini
 diagnostic-class/class native/psd_dilation128_sync.ini >native/psd_dilation128_sync.log 2>&1
-python -W error class_native_dilation_audit_reference.py native fine/stable.dat --nodes 64 128
+sed 's/psd_raw256_matched_sync_/psd_dilation256_sync_/' \
+    native/psd_raw256_matched_sync.ini >native/psd_dilation256_sync.ini
+diagnostic-class/class native/psd_dilation256_sync.ini >native/psd_dilation256_sync.log 2>&1
+python -W error class_native_dilation_audit_reference.py native fine/stable.dat --nodes 64 128 256
 ~~~

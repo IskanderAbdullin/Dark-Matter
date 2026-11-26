@@ -149,12 +149,18 @@ if __name__=="__main__":
     p.add_argument("out",type=Path)
     p.add_argument("--fine",type=Path)
     p.add_argument("--compare",nargs="+")
+    p.add_argument("--probe-only",action="store_true")
     a=p.parse_args()
     a.out=a.out.resolve()
     a.out.mkdir(parents=True,exist_ok=True)
     if a.compare:
         anchor=None if a.fine is None else json.loads((a.fine/"manifest.json").read_text())["snapshot_a"]
         r=extract(a.out,a.compare,anchor)
+        if a.probe_only:
+            for row in r["rows"]:
+                for case in row["cases"]:
+                    del case["native_k_h_per_Mpc"],case["native_delta_scalar_over_delta_cdm"]
     else:
+        assert not a.probe_only
         r=generate(a.fine.resolve(),a.out)
     print(json.dumps(r,indent=2,allow_nan=False))

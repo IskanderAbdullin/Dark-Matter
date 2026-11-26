@@ -11,7 +11,8 @@ from warm_coupled_count_ledger_reference import endpoint,identities,read,row
 
 
 def run(budget,start_shape,stages):
-    b = read(budget)[-1]
+    B=read(budget)
+    b=(B["cases"] if isinstance(B,dict) else B)[-1]
     assert b["enabled"] and b["signed_visible_portal"]
     s = read(start_shape)["snapshots"][-1]
     a0=s["scale_factor"]

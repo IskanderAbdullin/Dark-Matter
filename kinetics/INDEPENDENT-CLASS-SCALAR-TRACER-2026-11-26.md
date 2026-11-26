@@ -39,6 +39,13 @@ late-switch run. Its tracer amplitude-half scales are
 11.9890, 5.40664 and 2.85501 h/Mpc. This is evidence of
 numerical robustness for the shown probes, not a general
 proof of momentum or early-history convergence.
+A higher-node narrow test compares raw 384, shifted raw 160,
+balanced 256 and balanced 128 with a common k window. Across
+the six probes the largest absolute ratio spreads are
+8.0e-5, 3.8e-4 and 1.31e-3 at z=0, 5 and 20, respectively.
+At k=1 h/Mpc the raw 384 values are 0.969771, 0.908875 and
+0.801930. These extra controls do not extend the 384-node
+result beyond k=1 h/Mpc.
 At the archived scale factor,
 the largest wide mode has kτ ≈ 0.00206 in this background; standard
 adiabatic perturbations are initialized later with kτ ≤ 0.0701.
@@ -64,3 +71,12 @@ done
 python -W error archived_class_scalar_tracer_reference.py native --fine fine \
   --compare scalar_tracer_smooth128_sync scalar_tracer_smooth128_wide_sync scalar_tracer_smooth128_wide_delayed_sync scalar_tracer_raw160_q638_wide_sync
 ~~~
+
+To reproduce the higher-node narrow probe audit, run the generated
+scalar_tracer_raw384_sync and scalar_tracer_smooth256_sync configs,
+plus the existing 128 and shifted 160 narrow configs. Then use
+\`\`\`sh
+python -W error archived_class_scalar_tracer_reference.py native --fine fine --probe-only \
+  --compare scalar_tracer_smooth128_sync scalar_tracer_smooth256_sync \
+            scalar_tracer_raw160_q638_sync scalar_tracer_raw384_sync
+\`\`\`

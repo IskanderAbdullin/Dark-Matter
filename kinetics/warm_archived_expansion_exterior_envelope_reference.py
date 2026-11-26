@@ -108,7 +108,8 @@ def read(p):
 
 
 def run(EOS,prod,budget,shape,stages,branches,free_T):
-    b=read(budget)[-1]
+    B=read(budget)
+    b=(B["cases"] if isinstance(B,dict) else B)[-1]
     assert b["enabled"] and b["signed_visible_portal"]
     s=read(shape)["snapshots"][-1]
     a=s["scale_factor"]
@@ -160,7 +161,7 @@ if __name__=="__main__":
     p=argparse.ArgumentParser()
     for k in ("eos","production","budget","starting_shape"):
         p.add_argument(k)
-    p.add_argument("--stage",action="append",nargs=2,metavar=("ROWS","SHAPE"),required=True)
+    p.add_argument("--stage",action="append",nargs=2,metavar=("ROWS","SHAPE"),default=[])
     p.add_argument("--branch",action="append",nargs=2,metavar=("ROWS","SHAPE"),default=[])
     p.add_argument("--free-future",nargs="*",type=float,default=[],metavar="T_GEV")
     a=p.parse_args()

@@ -1,0 +1,97 @@
+{
+  "momentum_mass_ratios_for_selection": [
+    0.01,
+    0.3,
+    2.0,
+    8.0,
+    40.0,
+    10000000.0
+  ],
+  "controls": [
+    {
+      "nodes": 128,
+      "at_native_scale_1": {
+        "scale": 1.0,
+        "maximum_residual": 0.011410919499409977,
+        "energy_pressure_residual": [
+          0.00010446351340642757,
+          0.00025628513467368386
+        ],
+        "dilation_residual": [
+          0.011410919499409977,
+          0.0054980658172706365
+        ]
+      },
+      "best": {
+        "scale": 3.814188462738606,
+        "maximum_residual": 0.0009454044657346561,
+        "energy_pressure_residual": [
+          0.0009454044657346561,
+          0.0002510588299373673
+        ],
+        "dilation_residual": [
+          0.0008877123624853045,
+          0.0009329301420872849
+        ]
+      },
+      "max_exact_continuum_coordinate_defect": 2.886579864025407e-15
+    },
+    {
+      "nodes": 224,
+      "at_native_scale_1": {
+        "scale": 1.0,
+        "maximum_residual": 0.006283153785368922,
+        "energy_pressure_residual": [
+          9.392913735351005e-05,
+          0.0002210994610203354
+        ],
+        "dilation_residual": [
+          0.006283153785368922,
+          0.0039312749798723345
+        ]
+      },
+      "best": {
+        "scale": 3.8995256669637164,
+        "maximum_residual": 0.00026644852426471743,
+        "energy_pressure_residual": [
+          0.00026644852426471743,
+          2.9271598120383935e-05
+        ],
+        "dilation_residual": [
+          0.00020391662343410832,
+          0.00014276016737269082
+        ]
+      },
+      "max_exact_continuum_coordinate_defect": 3.1086244689504383e-15
+    },
+    {
+      "nodes": 320,
+      "at_native_scale_1": {
+        "scale": 1.0,
+        "maximum_residual": 0.00426470650075772,
+        "energy_pressure_residual": [
+          3.557765646644562e-05,
+          0.00013061323112495415
+        ],
+        "dilation_residual": [
+          0.00426470650075772,
+          0.004060953806713563
+        ]
+      },
+      "best": {
+        "scale": 2.976968471154316,
+        "maximum_residual": 9.228640640601693e-05,
+        "energy_pressure_residual": [
+          6.54823264840676e-05,
+          1.9406340982297543e-05
+        ],
+        "dilation_residual": [
+          9.228640640601693e-05,
+          5.5082329889710735e-05
+        ]
+      },
+      "max_exact_continuum_coordinate_defect": 2.886579864025407e-15
+    }
+  ],
+  "scope": "Background and derivative variants are mathematically the same continuum physical shape under q'=q/S and T_ncdm'=S, chosen only by external moment residuals. No perturbation or physical transfer result here."
+}
