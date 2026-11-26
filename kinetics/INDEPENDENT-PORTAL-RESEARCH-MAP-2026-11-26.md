@@ -121,7 +121,9 @@ reproducible controls below are not observational constraints.
    tests the same change over the whole matched 8.133 to 7.394 MeV interval. A [thermal balance and endpoint budget check](INDEPENDENT-WARM-LIFTED-PAIR-BALANCE-2026-11-26.md)
    independently tests gain/loss cancellation in narrow cells and resolves the remaining elastic contribution.
    A [common-coordinate pair kernel](INDEPENDENT-WARM-PAIR-COMMON-CHART-2026-11-26.md)
-   tests both directions on one phase-space measure and replays the matched q32 spike at two angular orders.
+   tests both directions on one phase-space measure, replays the q32 spike at two orders,
+   and solves one wider q64 replay. A [frozen scalar-pair sign bound](INDEPENDENT-WARM-FROZEN-PAIR-BARRIER-2026-11-26.md)
+   separates represented blocking from the suppressed positive vacuum-partner channel, without establishing a live fermion cap.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)

@@ -13,7 +13,7 @@ angles. On that one quadrature, the direct weights are
 The two spin states on each fermion and the identical-scalar factor
 appear for both directions on this chart. There is no subtraction
 of tiny boson occupations from unity. A kinematic total-energy bound,
-(E_{L,max}=2E_{phi,max}-m_L), limits additional virtual fermion
+E_L,max = 2 E_phi,max − m_L, limits additional virtual fermion
 points for inverse events. These points have zero occupation
 and do not add any source phase population. Contributions outside
 the material grid go into the original exterior moment ledger.
@@ -90,3 +90,25 @@ python -W error warm_pair_common_fermion_chart_reference.py \
 ~~~
 
 [Three-rule q64 frozen comparison](results/warm-pair-common-chart-q64-frozen-2026-11-26.json).
+
+## Actual q64 common-chart block
+
+Replay the same q64 late step with the complete common chart active
+in all four pair-kick evaluations, not just as a frozen diagnostic.
+Use the accepted nine-cell q64 state only as a solver guess. The
+independently solved residual falls from 3881.28 to 5.69e-12.
+The first-shell occupation slope is −4.71723e-5 per ln(a),
+compared with native +1.43554e-4 and nine-cell −4.71724e-5.
+The maximum normalized state L1 change from the native trajectory
+is 2.17e-6, and the step energy and count defects are about
+1.96e-15 and 8.9e-16. This is one accepted wider block at the
+original pair quadrature, not the full evolved wider convergence test.
+
+~~~sh
+python -W error warm_q64_common_chart_guided_replay_reference.py EOS.dat \
+ results/warm-cold-pair-spike-q64-step{11,12}-2026-11-26.json.gz \
+ results/warm-cold-pair-multishell-q64-guided-2026-11-26.json.gz common-q64.json
+~~~
+
+[Exact q64 output](results/warm-pair-common-chart-q64-terminal-2026-11-26.json.gz)
+and [solve diagnostics](results/warm-pair-common-chart-q64-replay-2026-11-26.json).
