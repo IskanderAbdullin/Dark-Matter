@@ -52,19 +52,35 @@ class Late(Combined):
         return a+b,lambda v:da(v)+db(v)
 
 
-def collide(model,u,h,T,depth=0):
+def collide(model,u,h,T,depth=0,continuation=False,verbose=False):
+    def obs(i,r,j):
+        if i in (0,1,2,5,10,20,40,80):
+            import sys
+            print(f"collision h={h:.6g}, iter={i}, resid={r:.6g}, coordinate={j}",file=sys.stderr,flush=True)
+    observe=obs if verbose else None
     errors=[]
     empty=np.any(model.moment(u)[0][::2]==0.)
     guesses=(True,) if empty else ((True,False) if model.prompt else (False,True))
     for ref in guesses:
         try:
-            v,l=advance(model,u,h,T,reference_guess=ref,vacuum_scaled=True)
+            v,l=advance(model,u,h,T,reference_guess=ref,vacuum_scaled=True,observer=observe)
             return v,l["residual"],1,len(errors)
         except (RuntimeError,FloatingPointError,RuntimeWarning) as e:
             errors.append(e)
+    if continuation and depth==0:
+        # These trial roots all solve backward Euler for the same unchanged
+        # start moments. Only the final full-h solution is applied.
+        theta=None
+        try:
+            for factor in (1/64,1/16,1/4,1.):
+                theta,l=advance(model,u,h*factor,T,reference_guess=theta is None,
+                                vacuum_scaled=True,initial_theta=theta)
+            return theta,l["residual"],1,len(errors)
+        except (RuntimeError,FloatingPointError,RuntimeWarning) as e:
+            errors.append(e)
     if depth==5: raise errors[-1]
-    v,r1,n1,f1=collide(model,u,h/2,T,depth+1)
-    w,r2,n2,f2=collide(model,v,h/2,T,depth+1)
+    v,r1,n1,f1=collide(model,u,h/2,T,depth+1,False,verbose)
+    w,r2,n2,f2=collide(model,v,h/2,T,depth+1,False,verbose)
     return w,max(r1,r2),n1+n2,f1+f2+len(errors)
 
 
@@ -99,7 +115,7 @@ def subdivide(q,th,stride):
                              v[1,idx]*np.diff(k(r))/b]))
     return r,out
 
-def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,radiation_table=None,dark_gravity=False,refinement=0,preroll_stop=None,preroll_steps=0,compact=False,use_pivot=False,prompt_only=False,progress=False):
+def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,radiation_table=None,dark_gravity=False,refinement=0,preroll_stop=None,preroll_steps=0,compact=False,use_pivot=False,prompt_only=False,progress=False,continuation=False,verbose=False,crop_edge=None):
     assert not off or prompt_until==0.
     assert not dark_gravity or radiation_table is not None
     assert row["nsteps"]==snap["steps"]
@@ -114,11 +130,27 @@ def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,
     q=np.asarray(snap["lab_momentum_edges_GeV"])
     th=[np.asarray(snap["entropy_variable_"+j]) for j in ("scalar","fermion")]
     initial_first_boundary=q[1]
+    dropped=None
+    if crop_edge is not None:
+        target=crop_edge*row["initial_visible_T_GeV"]/row["final_a"]
+        edge_index=int(np.argmin(abs(q-target)))
+        assert edge_index>0 and abs(q[edge_index]-target)<2e-13
+        old=Late(Collision(q),H(1.),[],False)
+        counts_full,E_full=totals(old.k,old.moment(pack(th))[0],1.)
+        assert max(abs(counts_full/np.asarray(base["species_counts_GeV3"])-1.))<4e-12
+        q=q[:edge_index+1]
+        th=[t[:,:edge_index].copy() for t in th]
+        now=Late(Collision(q),H(1.),[],False)
+        counts_keep,E_keep=totals(now.k,now.moment(pack(th))[0],1.)
+        dropped=dict(q_over_TR=crop_edge,count_fraction=(1.-counts_keep/counts_full).tolist(),
+                     a4_energy_fraction=(1.-E_keep/E_full).tolist())
     original_q=q.copy()
     q,th=subdivide(q,th,refinement)
     ks=Collision(q); model=Late(ks,H(1.),[],False)
     N0,E0=totals(ks,model.moment(pack(th))[0],1.)
-    assert max(abs(N0/np.asarray(base["species_counts_GeV3"])-1.))<4e-12
+    expected=np.asarray(base["species_counts_GeV3"])
+    if dropped is not None: expected*=1.-np.asarray(dropped["count_fraction"])
+    assert max(abs(N0/expected-1.))<4e-12
     init,_=report(model,th,1.,N0)
     # Use identical cold cutoff after subdivision; sum whole exact bins.
     def cold_fraction(mod,t):
@@ -132,7 +164,9 @@ def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,
         return (N[:,idx].sum(axis=1)/N.sum(axis=1)).tolist()
     init["exterior_count_fractions_beyond_q16"]=exterior(model,th)
     e0=E0.sum()-np.array([mp,m])@N0
-    assert abs(e0/base["retained_dark_kinetic_energy_GeV4"]-1.)<4e-11
+    reference_energy=(base["retained_dark_kinetic_energy_GeV4"] if dropped is None else
+                      E_keep.sum()-np.array([mp,m])@counts_keep)
+    assert abs(e0/reference_energy-1.)<4e-11
     pressure=np.zeros(2); Q4=np.zeros(2); Q3=np.zeros(2); maxres=0.; accepted=0; rejected=0
     steps=[]
     prompt_geometric_end=q[-1]/P
@@ -164,7 +198,7 @@ def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,
             if not prompt_only:
                 setup(max(T,base["common_T_GeV"]/b),kk,T,first.eta,*orders,32.,.82,cache=panels,cache_only=compact)
             co=Late(kk,hb,panels,use_prompt,compact,use_pivot)
-            uu,r,acc,rej=collide(co,u,y-x,T)
+            uu,r,acc,rej=collide(co,u,y-x,T,continuation=continuation,verbose=verbose)
             maxres=max(maxres,r);accepted+=acc;rejected+=rej
             dE=totals(kk,co.moment(uu)[0],b)[1]-totals(kk,co.moment(u)[0],b)[1]
             Q4+=dE;Q3+=dE/b
@@ -187,7 +221,8 @@ def run(eos,row,snap,nx=12,stop=410.,prompt_until=8.,orders=(3,2,2,8),off=False,
     assert np.min(np.diff([init["dark_entropy_a3"]]+[x["dark_entropy_a3"] for x in steps]))>=-5e-11*init["dark_entropy_a3"]
     return dict(nsteps=nx,elastic_orders=orders,elastic=not off,prompt_until=prompt_until,
                 initial=init,steps=steps,
-                compact_elastic=compact,pivoted_prompt=use_pivot,prompt_only=prompt_only,
+                explicitly_discarded_archive_exterior=dropped,
+                compact_elastic=compact,pivoted_prompt=use_pivot,prompt_only=prompt_only,residual_continuation=continuation,
                 preroll_stop=preroll_stop,preroll_steps=preroll_steps,
                 upper_support_kinematic_prompt_end=float(prompt_geometric_end),
                 intervals_with_prompt=n_prompt,actual_intervals=len(steps),
@@ -217,7 +252,10 @@ if __name__=="__main__":
     p.add_argument("--pivot-prompt",action="store_true")
     p.add_argument("--prompt-only",action="store_true")
     p.add_argument("--progress",action="store_true")
+    p.add_argument("--continuation",action="store_true")
+    p.add_argument("--newton-log",action="store_true")
+    p.add_argument("--crop-edge",type=float,help="diagnostic: retain only through this existing q/TR edge")
     a=p.parse_args()
     b=json.loads(Path(a.run).read_text())["rows"][-1]
     s=json.loads(Path(a.shape).read_text())["snapshots"][-1]
-    print(json.dumps(run(StandardModel(a.eos),b,s,a.steps,a.stop,a.prompt_until,a.orders,a.off,a.radiation_table,a.dark_gravity,a.refinement_stride,a.preroll_stop,a.preroll_steps,a.compact_elastic,a.pivot_prompt,a.prompt_only,a.progress),indent=2,allow_nan=False))
+    print(json.dumps(run(StandardModel(a.eos),b,s,a.steps,a.stop,a.prompt_until,a.orders,a.off,a.radiation_table,a.dark_gravity,a.refinement_stride,a.preroll_stop,a.preroll_steps,a.compact_elastic,a.pivot_prompt,a.prompt_only,a.progress,a.continuation,a.newton_log,a.crop_edge),indent=2,allow_nan=False))

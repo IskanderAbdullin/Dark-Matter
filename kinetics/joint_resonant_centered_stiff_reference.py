@@ -47,10 +47,14 @@ class Centered(Model):
             return self.proj(omega*(v*db+b*change-b*v*np.divide(dD,D,out=np.zeros_like(D),where=D>0)))
         return flux,derivative
 
-def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False):
+def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
+            initial_theta=None,observer=None,centered_diagnostic=None):
     U0,S0,_=model.moment(q)
     qref,R0,t=model.reference(q,guess)
     z=np.zeros_like(q) if reference_guess else q-qref
+    if initial_theta is not None:
+        assert not reference_guess and np.shape(initial_theta)==np.shape(q)
+        z=np.asarray(initial_theta)-qref
     inactive=np.zeros(model.d//2,dtype=bool)
     if vacuum_scaled:
         touched=np.zeros(model.d//2,dtype=bool)
@@ -76,11 +80,15 @@ def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False):
             w[~active]=1.
         r=((U-U0-h*F)/w)[active]
         err=np.max(abs(r))
+        if observer is not None: observer(it,float(err),int(np.flatnonzero(active)[np.argmax(abs(r))]))
         if err<8e-12:
             assert S>=S0
             if np.any(inactive):
                 assert np.all(F[~active]==0.)
                 assert np.all(abs(U[~active]-U0[~active])<=2e-12*np.abs(U0[~active]))
+            if centered_diagnostic is not None:
+                centered_diagnostic.update(reference=qref.copy(),centered=z.copy(),
+                    parent_ratio=None if R0 is None else R0.copy())
             return qref+z,dict(newton_iterations=it,residual=float(err),entropy_gain_relative=float(S/S0-1),
                                maximum_exponent_departure_from_eq=float(np.max(abs(z[active]))),
                                structurally_inactive_cells=int(inactive.sum()),
