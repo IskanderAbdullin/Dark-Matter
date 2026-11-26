@@ -1,0 +1,65 @@
+{
+  "scope": "Receipt-only moment bounds for stored exterior cohorts, without resolving them as point masses. The resulting energy is a one-use allowance for tracked cohorts only if momentum is not re-increased after injection. No bound on actually reacting, repeatedly used, untracked or newly accelerated inputs.",
+  "controls": {
+    "two_point_number": 1.0,
+    "two_point_energy": 6.0
+  },
+  "cases": [
+    {
+      "q": 16,
+      "b_final": 1.0302,
+      "high_H_cut_GeV": 1.0,
+      "gross_ledger_input_tag_q_min_GeV": 0.5,
+      "summary": [
+        {
+          "stage": "inherited_tracked",
+          "cohorts": 128,
+          "outer_cohorts": 128,
+          "outer_birth_energy_GeV4": 1.353615357161027e-16,
+          "eligible_number_a3_GeV3": 2.0653762412298994e-17,
+          "eligible_birth_energy_a3_GeV4": 1.108508890163425e-17,
+          "upper_share_of_tracked_outer_birth_energy": 0.08189245817130279,
+          "largest_mean_birth_energy_to_threshold_ratio": 0.32387604268940745
+        },
+        {
+          "stage": "new_tracked",
+          "cohorts": 24,
+          "outer_cohorts": 24,
+          "outer_birth_energy_GeV4": 2.6462669151580996e-17,
+          "eligible_number_a3_GeV3": 4.399283230586724e-18,
+          "eligible_birth_energy_a3_GeV4": 2.1676241380224256e-18,
+          "upper_share_of_tracked_outer_birth_energy": 0.08191252838502583,
+          "largest_mean_birth_energy_to_threshold_ratio": 0.3239312157558584
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "b_final": 1.0302,
+      "high_H_cut_GeV": 1.0,
+      "gross_ledger_input_tag_q_min_GeV": 0.5,
+      "summary": [
+        {
+          "stage": "inherited_tracked",
+          "cohorts": 128,
+          "outer_cohorts": 128,
+          "outer_birth_energy_GeV4": 1.3940144506851651e-22,
+          "eligible_number_a3_GeV3": 1.97298273755104e-23,
+          "eligible_birth_energy_a3_GeV4": 1.0599423322163134e-23,
+          "upper_share_of_tracked_outer_birth_energy": 0.07603524710201866,
+          "largest_mean_birth_energy_to_threshold_ratio": 0.6266953118928065
+        },
+        {
+          "stage": "new_tracked",
+          "cohorts": 24,
+          "outer_cohorts": 24,
+          "outer_birth_energy_GeV4": 2.606620595832243e-23,
+          "eligible_number_a3_GeV3": 4.025240690790519e-24,
+          "eligible_birth_energy_a3_GeV4": 1.9833666930843132e-24,
+          "upper_share_of_tracked_outer_birth_energy": 0.07608958113257994,
+          "largest_mean_birth_energy_to_threshold_ratio": 0.626723666588287
+        }
+      ]
+    }
+  ]
+}

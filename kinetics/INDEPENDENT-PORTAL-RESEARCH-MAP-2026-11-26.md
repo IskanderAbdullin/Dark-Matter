@@ -59,7 +59,12 @@ reproducible controls below are not observational constraints.
    [two-moment feasibility audit](INDEPENDENT-WARM-SHELL-OCCUPATION-FEASIBILITY-2026-11-26.md)
    proves that the saved light shell moments fit both very dilute
    profiles and profiles reaching Pauli saturation; it is not
-   legitimate to deduce a dynamical cap from those moments. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
+   legitimate to deduce a dynamical cap from those moments. A [conditional shell regularity test](INDEPENDENT-WARM-SHELL-LIPSCHITZ-CAP-2026-11-26.md)
+   quantifies the additional physical-momentum slope bound
+   that would suffice at the saved times. A [frozen pair-fold counterexample](INDEPENDENT-WARM-SHELL-SATURATED-PAIR-FOLD-2026-11-26.md)
+   compares different profiles with the same shell moments; a change
+   in the largest-number shell moves the net pair rate by about 1%.
+   The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
    carries actual newly recorded exterior cohorts. For older cohorts
@@ -151,7 +156,10 @@ interacting with one retained input; two exterior inputs
 or repeated re-entry are not bounded by that q32 test.
 The [observed one-way exterior creation ledger](INDEPENDENT-WARM-POSITIVE-EXTERIOR-RECEIPT-2026-11-26.md)
 measures new outer cohort energy on the saved 2% stage.
-It is not gross reacting use if re-entry is switched on.
+It is not gross reacting use if re-entry is switched on. The [eligible receipt tail](INDEPENDENT-WARM-HEAVY-ELIGIBLE-EXTERIOR-RECEIPT-2026-11-26.md)
+uses the stored support and birth-energy mean to bound the
+one-use high-momentum subset, even for two-exterior events.
+That subset still is not a measured gross reacting budget.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.

@@ -1,0 +1,293 @@
+{
+  "T_visible_GeV": 0.010390509685374834,
+  "snapshot_sha256": "b494c58f1d2433b5aeda0d4f0320792a5897898a02970715802a6cd18b0ccf53",
+  "scope": "Frozen retained q32 light-antilight to scalars and inverse only. Two separate per-shell replacements with identical radial number and kinetic energy; neither is a predicted physical state.",
+  "cap_audit_shell": {
+    "shell_index": 6,
+    "shell_number_fraction": 1.2203508524397692e-05,
+    "interval_GeV": [
+      0.0005925961025513439,
+      0.0005926099318537978
+    ],
+    "saturated_witness": {
+      "inner_volume_fraction": 0.4826238025052355,
+      "interval_volume_fraction": 5.845233716512221e-05,
+      "f_essential_supremum": 1.0,
+      "relative_kinetic_error": 0.0
+    },
+    "controls": [
+      {
+        "order": [
+          2,
+          5,
+          5,
+          2
+        ],
+        "archive": {
+          "light_number": 8.062737047442872e-11,
+          "forward_event_rate": 2.22508436464192e-33,
+          "inverse_event_rate": 1.7119726939227084e-33,
+          "net_event_rate": 5.131116707192117e-34,
+          "forward_energy_rate": 1.803317510188401e-34,
+          "inverse_energy_rate": 1.3882634360340785e-34
+        },
+        "saturated": {
+          "light_number": 8.062737047440659e-11,
+          "forward_event_rate": 2.225084364641858e-33,
+          "inverse_event_rate": 1.7119726940239084e-33,
+          "net_event_rate": 5.1311167061794974e-34,
+          "forward_energy_rate": 1.8033175101882248e-34,
+          "inverse_energy_rate": 1.3882634360824307e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 0.9999999999997256,
+          "forward_event_rate": 0.9999999999999721,
+          "inverse_event_rate": 1.0000000000591132,
+          "net_event_rate": 0.9999999998026512,
+          "forward_energy_rate": 0.9999999999999023,
+          "inverse_energy_rate": 1.0000000000348293
+        }
+      },
+      {
+        "order": [
+          3,
+          8,
+          8,
+          3
+        ],
+        "archive": {
+          "light_number": 8.064412375565075e-11,
+          "forward_event_rate": 2.2260146393845608e-33,
+          "inverse_event_rate": 1.713025151671259e-33,
+          "net_event_rate": 5.129894877133017e-34,
+          "forward_energy_rate": 1.8040428794683038e-34,
+          "inverse_energy_rate": 1.3890290351221672e-34
+        },
+        "saturated": {
+          "light_number": 8.064412375565074e-11,
+          "forward_event_rate": 2.2260146393851448e-33,
+          "inverse_event_rate": 1.713025151566667e-33,
+          "net_event_rate": 5.1298948781847774e-34,
+          "forward_energy_rate": 1.8040428794685288e-34,
+          "inverse_energy_rate": 1.3890290350378804e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 0.9999999999999999,
+          "forward_event_rate": 1.0000000000002625,
+          "inverse_event_rate": 0.9999999999389431,
+          "net_event_rate": 1.0000000002050258,
+          "forward_energy_rate": 1.0000000000001248,
+          "inverse_energy_rate": 0.9999999999393197
+        }
+      },
+      {
+        "order": [
+          4,
+          10,
+          10,
+          4
+        ],
+        "archive": {
+          "light_number": 8.064427492059184e-11,
+          "forward_event_rate": 2.226023574115385e-33,
+          "inverse_event_rate": 1.7130959815467542e-33,
+          "net_event_rate": 5.129275925686307e-34,
+          "forward_energy_rate": 1.8040475926482605e-34,
+          "inverse_energy_rate": 1.3890643958945976e-34
+        },
+        "saturated": {
+          "light_number": 8.064427492059182e-11,
+          "forward_event_rate": 2.226023574115968e-33,
+          "inverse_event_rate": 1.7130959815093078e-33,
+          "net_event_rate": 5.129275926066604e-34,
+          "forward_energy_rate": 1.8040475926484861e-34,
+          "inverse_energy_rate": 1.3890643958746874e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 0.9999999999999999,
+          "forward_event_rate": 1.000000000000262,
+          "inverse_event_rate": 0.999999999978141,
+          "net_event_rate": 1.0000000000741425,
+          "forward_energy_rate": 1.000000000000125,
+          "inverse_energy_rate": 0.9999999999856665
+        }
+      },
+      {
+        "order": [
+          6,
+          14,
+          12,
+          5
+        ],
+        "archive": {
+          "light_number": 8.064427336313212e-11,
+          "forward_event_rate": 2.226023507793531e-33,
+          "inverse_event_rate": 1.7131339200654535e-33,
+          "net_event_rate": 5.128895877280775e-34,
+          "forward_energy_rate": 1.8040474034883412e-34,
+          "inverse_energy_rate": 1.3890834736886426e-34
+        },
+        "saturated": {
+          "light_number": 8.064427336313212e-11,
+          "forward_event_rate": 2.2260235077941136e-33,
+          "inverse_event_rate": 1.7131339199916144e-33,
+          "net_event_rate": 5.128895878024992e-34,
+          "forward_energy_rate": 1.8040474034885665e-34,
+          "inverse_energy_rate": 1.3890834736317752e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 1.0,
+          "forward_event_rate": 1.0000000000002618,
+          "inverse_event_rate": 0.9999999999568983,
+          "net_event_rate": 1.0000000001451028,
+          "forward_energy_rate": 1.000000000000125,
+          "inverse_energy_rate": 0.9999999999590612
+        }
+      }
+    ]
+  },
+  "largest_number_shell": {
+    "shell_index": 15,
+    "shell_number_fraction": 0.3254499816453537,
+    "interval_GeV": [
+      0.03190507218874021,
+      0.03190519942366549
+    ],
+    "saturated_witness": {
+      "inner_volume_fraction": 0.3675260328329185,
+      "interval_volume_fraction": 8.611453399859731e-06,
+      "f_essential_supremum": 1.0,
+      "relative_kinetic_error": 0.0
+    },
+    "controls": [
+      {
+        "order": [
+          2,
+          5,
+          5,
+          2
+        ],
+        "archive": {
+          "light_number": 8.062238454435775e-11,
+          "forward_event_rate": 2.2248985734840792e-33,
+          "inverse_event_rate": 1.7124057364106934e-33,
+          "net_event_rate": 5.124928370733858e-34,
+          "forward_energy_rate": 1.8033261506067507e-34,
+          "inverse_energy_rate": 1.388567403224494e-34
+        },
+        "saturated": {
+          "light_number": 8.062208385214254e-11,
+          "forward_event_rate": 2.2303866049242376e-33,
+          "inverse_event_rate": 1.7124061543362865e-33,
+          "net_event_rate": 5.179804505879512e-34,
+          "forward_energy_rate": 1.8064480619835044e-34,
+          "inverse_energy_rate": 1.3885676429523761e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 0.999996270363164,
+          "forward_event_rate": 1.0024666434261604,
+          "inverse_event_rate": 1.000000244057576,
+          "net_event_rate": 1.010707688220391,
+          "forward_energy_rate": 1.001731196198593,
+          "inverse_energy_rate": 1.000000172644037
+        }
+      },
+      {
+        "order": [
+          3,
+          8,
+          8,
+          3
+        ],
+        "archive": {
+          "light_number": 8.064421232427187e-11,
+          "forward_event_rate": 2.226021717552175e-33,
+          "inverse_event_rate": 1.7130798419840705e-33,
+          "net_event_rate": 5.129418755681045e-34,
+          "forward_energy_rate": 1.8040465156676182e-34,
+          "inverse_energy_rate": 1.3890522622003907e-34
+        },
+        "saturated": {
+          "light_number": 8.064421364498934e-11,
+          "forward_event_rate": 2.2315229626973405e-33,
+          "inverse_event_rate": 1.713080389815426e-33,
+          "net_event_rate": 5.184425728819145e-34,
+          "forward_energy_rate": 1.8071683952568542e-34,
+          "inverse_energy_rate": 1.389052576117949e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 1.0000000163770895,
+          "forward_event_rate": 1.0024713348938998,
+          "inverse_event_rate": 1.0000003197932414,
+          "net_event_rate": 1.0107238218905752,
+          "forward_energy_rate": 1.0017304873029178,
+          "inverse_energy_rate": 1.0000002259940586
+        }
+      },
+      {
+        "order": [
+          4,
+          10,
+          10,
+          4
+        ],
+        "archive": {
+          "light_number": 8.064427513010849e-11,
+          "forward_event_rate": 2.2260235598094977e-33,
+          "inverse_event_rate": 1.7131148149488123e-33,
+          "net_event_rate": 5.129087448606854e-34,
+          "forward_energy_rate": 1.804047576496972e-34,
+          "inverse_energy_rate": 1.3890726714763624e-34
+        },
+        "saturated": {
+          "light_number": 8.064427513175779e-11,
+          "forward_event_rate": 2.2315246998360095e-33,
+          "inverse_event_rate": 1.7131154047681707e-33,
+          "net_event_rate": 5.1840929506783874e-34,
+          "forward_energy_rate": 1.8071693913871388e-34,
+          "inverse_energy_rate": 1.3890730154551623e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 1.0000000000204514,
+          "forward_event_rate": 1.0024712856260076,
+          "inverse_event_rate": 1.0000003442964553,
+          "net_event_rate": 1.0107242277739823,
+          "forward_energy_rate": 1.0017304504220608,
+          "inverse_energy_rate": 1.0000002476319685
+        }
+      },
+      {
+        "order": [
+          6,
+          14,
+          12,
+          5
+        ],
+        "archive": {
+          "light_number": 8.064427336311267e-11,
+          "forward_event_rate": 2.2260235077935454e-33,
+          "inverse_event_rate": 1.7131365521277484e-33,
+          "net_event_rate": 5.12886955665797e-34,
+          "forward_energy_rate": 1.8040474034883065e-34,
+          "inverse_energy_rate": 1.3890846818158745e-34
+        },
+        "saturated": {
+          "light_number": 8.064427336414782e-11,
+          "forward_event_rate": 2.2315246478637536e-33,
+          "inverse_event_rate": 1.7131371328446527e-33,
+          "net_event_rate": 5.183875150191009e-34,
+          "forward_energy_rate": 1.8071692183751489e-34,
+          "inverse_energy_rate": 1.3890850294015493e-34
+        },
+        "saturated_over_archive": {
+          "light_number": 1.000000000012836,
+          "forward_event_rate": 1.0024712857033846,
+          "inverse_event_rate": 1.0000003389787602,
+          "net_event_rate": 1.0107247012085996,
+          "forward_energy_rate": 1.0017304505861686,
+          "inverse_energy_rate": 1.0000002502264111
+        }
+      }
+    ]
+  }
+}
