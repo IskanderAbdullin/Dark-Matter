@@ -116,6 +116,10 @@ still without claiming that cap dynamically.
 A [small extension past one half](INDEPENDENT-WARM-SIGNED-QUADRATIC-OVERSHOOT-2026-11-26.md)
 checks the previously nonpositive quadratic term. It shows
 that the coarse positive allowance gives little extra range.
+The [selected late charged-pion control](INDEPENDENT-WARM-SIGNED-FERMION-WITH-CHARGED-PIONS-2026-11-26.md)
+adds that effective visible source, heat and reverse loss
+to the signed floor. The momentum support matters for
+the reverse bound; this is not a full hadronic sink.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
