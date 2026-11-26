@@ -35,7 +35,7 @@ certified quadrature tolerance; untested epochs or the
 compiled solver's finite derivative may behave differently.
 The same exact coordinate maps were tested in the **unmodified**
 solver on a common short k range, about 0.09–0.60 h/Mpc.
-All three runs have the same present stable density,
+All four runs have the same present stable density,
 $\omega_{\rm stable}=0.11816900374571584$, and do not include
 the extra scalar population. At their largest absolute
 departure from matched CDM, z=0:
@@ -45,12 +45,13 @@ departure from matched CDM, z=0:
 | 128, S=1 | −0.00951085 | −0.01141092 |
 | 128, S=3.81419 | +0.00038124 | +0.00045486 |
 | 224, S=3.89953 | −0.00016891 | −0.00020392 |
+| 320, S=2.97697 | −0.00007594 | −0.00009229 |
 
 Results at z=5 are almost identical. At fixed 128 nodes,
 relabeling the same unsmoothed input reduces the largest native
 departure from 0.95% to 0.038%, without changing the physical
 spectrum or density normalization. The ratio of the two signed
-columns is about 0.83 empirically in these three cases, consistent
+columns is about 0.83 empirically in these four cases, consistent
 with the earlier causal derivative diagnostic. It is not a
 universal correction formula. Numerical pressure differences
 persist (present pressure-to-energy ratios differ by about
@@ -80,14 +81,15 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 /path/to/class class-configs/stable-short-cdm-reference-2026-11-26.ini
 /path/to/class native/psd_coordinate_remap128_sync.ini
 /path/to/class native/psd_coordinate_remap224_sync.ini
+/path/to/class native/psd_coordinate_remap320_sync.ini
 ~~~
 
-After those four runs:
+After those five runs:
 
 ~~~sh
 OPENBLAS_NUM_THREADS=1 python -W error class_exact_coordinate_remap_audit_reference.py \
     native --stable-table fine/stable.dat \
-    --cases psd_coordinate_native128_sync psd_coordinate_remap128_sync psd_coordinate_remap224_sync
+    --cases psd_coordinate_native128_sync psd_coordinate_remap128_sync psd_coordinate_remap224_sync psd_coordinate_remap320_sync
 ~~~
 
 The output also records the density and pressure checks. It uses

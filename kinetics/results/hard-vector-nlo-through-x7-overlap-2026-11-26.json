@@ -1,0 +1,236 @@
+{
+  "mass_over_T_interval": [
+    4.0,
+    7.0
+  ],
+  "first_BES_entry_T_GeV": 0.31891428571428576,
+  "first_BES_exit_at_top_T_GeV": 0.44,
+  "strip_sha256": "880b5f90dc3bff6ee53234af54cfb5b216b147eb56eee6ea9f105d079bb6c3a5",
+  "controls": [
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.3189132857142858,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.161434497533412e-12,
+      "independent_quadrature_relative_deviation": 1.2881863784733254e-16
+    },
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.31891528571428573,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          6.983249780446402e-06,
+          8.45406411009996e-06
+        ],
+        [
+          6.9836312291795244e-06,
+          8.454476775807982e-06
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.161662281521091e-12,
+      "independent_quadrature_relative_deviation": 1.2880191714043953e-16
+    },
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.32517560695,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.043443885708404135,
+          0.052163110646023365
+        ],
+        [
+          0.04344604026344373,
+          0.05216541750538539
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.161124888844806e-12,
+      "independent_quadrature_relative_deviation": 1.9300844538536044e-16
+    },
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.33730194806,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.12572651081362057,
+          0.14865381422472407
+        ],
+        [
+          0.12573168926914544,
+          0.14865925084029197
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.160902741386302e-12,
+      "independent_quadrature_relative_deviation": 1.6322458381107847e-16
+    },
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.4,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.49631685962577515,
+          0.5482415717263325
+        ],
+        [
+          0.4963247108068628,
+          0.5482490856343387
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.160098248500607e-12,
+      "independent_quadrature_relative_deviation": 1.1534883168233907e-16
+    },
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.44001,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.6766347188107842,
+          0.7226564393129099
+        ],
+        [
+          0.6766403240279767,
+          0.7226615362532589
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.159788863137669e-12,
+      "independent_quadrature_relative_deviation": 1.911062673396491e-16
+    },
+    {
+      "interpolation": "linear",
+      "T_GeV": 0.47,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.6319459851477868,
+          0.6412102237897521
+        ],
+        [
+          0.6319481497706158,
+          0.6412118633340709
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 8.158640233557586e-12,
+      "independent_quadrature_relative_deviation": 1.7105782756336967e-16
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.3189132857142858,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.5452447885402028e-07,
+      "independent_quadrature_relative_deviation": 7.745230227670892e-09
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.31891528571428573,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          6.98039699211687e-06,
+          8.45061644226687e-06
+        ],
+        [
+          6.980777954558586e-06,
+          8.451028566726957e-06
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.5452454380226675e-07,
+      "independent_quadrature_relative_deviation": 7.745233169769635e-09
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.32517560695,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.04344693756092977,
+          0.05216609774681382
+        ],
+        [
+          0.04344909036000801,
+          0.05216840260328007
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.5473057957884307e-07,
+      "independent_quadrature_relative_deviation": 7.186338430499449e-09
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.33730194806,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.1258077291752789,
+          0.1487449089387702
+        ],
+        [
+          0.125812906145083,
+          0.14875034355851224
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.5514334073101155e-07,
+      "independent_quadrature_relative_deviation": 3.973419861210416e-09
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.4,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.4966966144485154,
+          0.5486215509270815
+        ],
+        [
+          0.4967044619253112,
+          0.5486290601697622
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.5757647817120232e-07,
+      "independent_quadrature_relative_deviation": 8.717726649781044e-09
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.44001,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.6771018284051997,
+          0.7230881574758985
+        ],
+        [
+          0.6771074291592676,
+          0.7230932493823177
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.5940800083357994e-07,
+      "independent_quadrature_relative_deviation": 6.367462104382683e-09
+    },
+    {
+      "interpolation": "pchip",
+      "T_GeV": 0.47,
+      "local_blocked_fraction_count_or_energy_by_stable_heavy": [
+        [
+          0.6321879598756789,
+          0.6414027655198208
+        ],
+        [
+          0.6321901209769288,
+          0.6414044015813491
+        ]
+      ],
+      "max_deviation_repartition_normalized_to_unsplit": 1.6093520939307498e-07,
+      "independent_quadrature_relative_deviation": 7.042734941935186e-09
+    }
+  ],
+  "scope": "Checks invariant-mass windows and numerical partition only, not QCD validity or the conversion target."
+}

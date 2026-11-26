@@ -1,0 +1,75 @@
+"""Independent invariant-mass panels for the measured-windows exclusion."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+from numpy.polynomial.legendre import leggauss
+
+from born_thermal_quark_hard_portal_reference import local
+from partial_hard_vector_nlo_reheat_reference import Correction, Fold, WINDOWS, interp, table
+
+
+def independent(T,values,mode,n):
+    X,U,C=values
+    p,w=leggauss(n)
+    ua,ub=U[:-1,None],U[1:,None]
+    u=((ua+ub+(ub-ua)*p)/2).ravel()
+    du=((ub-ua)*w/2).ravel()
+    evaluator=interp(X,U,C,mode)(u)
+    mx=T*X
+    panels=np.unique(np.clip(np.r_[mx,WINDOWS.ravel()],mx[0],mx[-1]))
+    result=np.zeros((2,2,2))
+    for a,b in zip(panels[:-1],panels[1:]):
+        mass=((a+b)+(b-a)*p)/2
+        x=mass/T
+        # Jacobian converts independent dM back to the factor dx in local.
+        dx=(b-a)*w/(2*T)
+        E=x[:,None]+u
+        k=np.sqrt(u*(2*x[:,None]+u))
+        f=4*dx[:,None]*du*k*evaluator(x)/np.expm1(E)
+        center=(a+b)/2
+        i=int(np.any((WINDOWS[:,0]<center)&(center<WINDOWS[:,1])))
+        result[i]+=local(T,(x,f.sum(axis=1)[None,:],(f*E).sum(axis=1)[None,:]))[0]
+    return result
+
+
+def run(eos, native):
+    values=table(native)
+    low,high=values[0][[0,-1]]
+    first_cross=WINDOWS[0,0]/high
+    last_cross=WINDOWS[0,1]/high
+    assert first_cross>.25 and last_cross<.48
+    fold=Fold(eos,(6,16,12),4,upper=.5)
+    tests=[]
+    for mode in ("linear","pchip"):
+        solver=Correction(fold,values,.25,8,mode)
+        for T in (first_cross-1e-6, first_cross+1e-6,.32517560695,.33730194806,.40,last_cross+1e-5,.47):
+            proposed=solver.rates(T)
+            V=independent(T,values,mode,16)
+            V2=independent(T,values,mode,24)
+            outside,blocked=V2
+            total=outside+blocked
+            ref=np.array([total,outside])
+            assert np.all(outside>0) and np.all(blocked>=0)
+            assert np.all(blocked==0.) if T<first_cross else np.all(blocked>0.)
+            err=np.max(abs((proposed-ref)/total))
+            convergence=np.max(abs(V-V2)/total)
+            assert err<1e-6 and convergence<2e-7,(T,mode,err,convergence)
+            tests.append(dict(interpolation=mode,T_GeV=T,
+                local_blocked_fraction_count_or_energy_by_stable_heavy=(blocked/total).tolist(),
+                max_deviation_repartition_normalized_to_unsplit=float(err),
+                independent_quadrature_relative_deviation=float(convergence)))
+    return dict(mass_over_T_interval=[float(low),float(high)], first_BES_entry_T_GeV=first_cross,
+        first_BES_exit_at_top_T_GeV=last_cross,
+        strip_sha256=hashlib.sha256(Path(native).read_bytes()).hexdigest(),
+        controls=tests,scope="Checks invariant-mass windows and numerical partition only, not QCD validity or the conversion target.")
+
+
+if __name__=="__main__":
+    p=argparse.ArgumentParser()
+    p.add_argument("eos")
+    p.add_argument("native")
+    a=p.parse_args()
+    print(json.dumps(run(a.eos,a.native),indent=2,allow_nan=False))
