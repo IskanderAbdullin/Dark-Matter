@@ -18,7 +18,7 @@ from warm_light_occupation_stage_audit_reference import digest, read
 from warm_prompt_reentry_shape_audit_reference import get_mom
 
 
-def tagged(pt, F, B, fe, be, order, batch=24):
+def tagged(pt, F, B, fe, be, order, batch=24, emit=None):
     """Return gain and loss; bath occupations outside represented support are zero.
 
     Tag a single spin and charge; partner has two spin states. Initial direction
@@ -64,13 +64,17 @@ def tagged(pt, F, B, fe, be, order, batch=24):
         a = np.clip(a0[..., None] + a1[..., None] * az, -1., 1.)
         amp = amplitude(s[i, k, None, None], a).mean(axis=-1)
         f1 = F(E[:, 0])[i, None]
-        b0 = B(mid[i, k, None] + D[i, k, None] * co)
-        b1 = B(mid[i, k, None] - D[i, k, None] * co)
+        e0 = mid[i, k, None] + D[i, k, None] * co
+        e1 = mid[i, k, None] - D[i, k, None] * co
+        b0 = B(e0)
+        b1 = B(e1)
         G = (1 - f0) * (1 - f1) * b0 * b1
         L = f0 * f1 * (1 + b0) * (1 + b1)
         prior = p * ew[j:j + batch, None] / np.pi**2 * (wi / 2) * cf / (64 * np.pi * Et * np.sqrt(s))
         Q = prior[i, k, None] * aw * amp
         totals += [np.sum(Q * G), np.sum(Q * L)]
+        if emit is not None:
+            emit(Et, E[i, 0, None], e0, e1, Q * G)
         worst = max(worst, np.max(abs(G - L) / np.maximum(np.maximum(G, L), 1e-280)))
     return totals, float(worst)
 
@@ -90,7 +94,7 @@ def controls():
     return thermal
 
 
-def one(eos, S, orders):
+def one(eos, S, orders, endpoint_checks=False):
     p = np.asarray(S["lab_momentum_edges_GeV"])
     B, be, F, fe = snapshot_functions(S)
     rho = TabulatedRadiation(eos, S["T_visible_GeV"]).state(1.)[1]
@@ -119,8 +123,9 @@ def one(eos, S, orders):
                                                                      float(loss[0, 0, 1] / norm)]))
     v = np.array([z["first_cell_gain_loss_per_H"] for z in native])
     direct = np.array(result[-1]["first_cell_gain_loss_per_H"])
-    assert np.max(abs(v[:, 1] / direct[1] - 1.)) < 2e-6
-    assert v[0, 0] < 2e-5 * direct[0] and .5 < v[1, 0] / direct[0] < .55
+    if endpoint_checks:
+        assert np.max(abs(v[:, 1] / direct[1] - 1.)) < 2e-6
+        assert v[0, 0] < 2e-5 * direct[0] and .5 < v[1, 0] / direct[0] < .55
     return dict(T_GeV=S["T_visible_GeV"], first_edge_GeV=float(p[1]), rest_gain_loss_per_H=(ref / H).tolist(),
                 native_gross=native, rows=result)
 
@@ -132,7 +137,7 @@ def run(eos, D):
         entry = read(D / f"warm-recoil-crossing-q{q}-terminal-2026-11-26.json.gz")[-1]
         S = entry["snapshot"]
         assert digest(S) == entry["snapshot_sha256"]
-        a = one(eos, S, ((4, 8, 6, 8, 8), (6, 12, 9, 12, 12), (8, 18, 12, 18, 16)))
+        a = one(eos, S, ((4, 8, 6, 8, 8), (6, 12, 9, 12, 12), (8, 18, 12, 18, 16)), endpoint_checks=True)
         point = a["rows"][-1]["first_cell_net_per_H"]
         b = [float(z["first_cold_shell_rates_per_log_a"][2] / point) for z in native["controls"]]
         for frozen, z in zip(a["native_gross"], native["controls"], strict=True):
@@ -147,5 +152,15 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("eos", type=Path)
     p.add_argument("--tapes", type=Path, default=Path("results"))
+    p.add_argument("--snapshots", nargs="+", type=Path)
     a = p.parse_args()
-    print(json.dumps(run(a.eos, a.tapes), indent=2, allow_nan=False))
+    if a.snapshots:
+        result = []
+        for f in a.snapshots:
+            entry = read(f)
+            assert digest(entry["snapshot"]) == entry["snapshot_sha256"]
+            z = one(a.eos, entry["snapshot"], ((4,8,6,8,8),(6,12,9,12,12)))
+            result.append(dict(**z, snapshot_sha256=entry["snapshot_sha256"]))
+    else:
+        result = run(a.eos, a.tapes)
+    print(json.dumps(result, indent=2, allow_nan=False))

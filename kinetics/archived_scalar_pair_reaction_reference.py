@@ -72,7 +72,7 @@ def points(edges,mass,f,n):
     return p.ravel(),E.ravel(),d.ravel()
 
 
-def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel=3,split_final=True,project=False,exchange_mass=M):
+def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel=3,split_final=True,project=False,exchange_mass=M,min_final_energy=None):
     """Ordered unit-spin incoming measures times pair-counting factors.
 
     Opposite-charge fermions distinguishable: 2 spin states each.
@@ -94,6 +94,8 @@ def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel
         dst[1]+=np.bincount(idx,pure*np.maximum(E.ravel()-mass,0.),minlength=len(edges)+1)
     in_e=np.hypot(edges,inc)
     out_e=np.hypot(edges,out) if split_final else np.array([])
+    if min_final_energy is not None:
+        assert reverse and split_final and np.any(out_e == min_final_energy)
     for start in range(0,len(i),72):
         I,J=i[start:start+72],j[start:start+72]
         E,F=e[I,None],e[J,None]
@@ -137,6 +139,10 @@ def gross(edges,inc,out,occupancy,final,reverse,radial=4,polar=9,azimuth=8,panel
         f0=final(ef0)
         f1=final(ef1)
         ff=(1-f0)*(1-f1) if reverse else (1+f0)*(1+f1)
+        if min_final_energy is not None:
+            keep=(ef0>=min_final_energy)&(ef1>=min_final_energy)
+            wa *= keep
+            # Keep the filter on both bare and quantum-weighted event counts.
         assert np.min(ff)>=0.
         av=np.sum(wa*ma,axis=1)
         a=wa*ma*ff
