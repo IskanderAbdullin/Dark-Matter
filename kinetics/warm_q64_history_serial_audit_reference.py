@@ -35,7 +35,7 @@ def run(eos,initial,tapes,q32=None):
     for path in tapes:
         frames.extend(read(path))
     assert len(frames)==7
-    archive=read(q32) if q32 else None
+    archive=[x for p in q32 for x in read(p)] if q32 else None
     if archive:
         assert len(archive)==8
     rr=[]
@@ -84,6 +84,6 @@ if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("eos",type=Path);p.add_argument("seed",type=Path)
     p.add_argument("tapes",nargs="+",type=Path)
-    p.add_argument("--narrow",type=Path)
+    p.add_argument("--narrow",type=Path,nargs="+")
     x=p.parse_args()
     print(json.dumps(run(x.eos,x.seed,x.tapes,x.narrow),indent=2,allow_nan=False))

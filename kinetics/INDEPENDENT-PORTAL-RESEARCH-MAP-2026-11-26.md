@@ -108,7 +108,8 @@ reproducible controls below are not observational constraints.
    reproduces a wider continuation block without using the next
    narrower shape in that solve. A [history-only q64 series](INDEPENDENT-WARM-Q64-HISTORY-SERIAL-2026-11-26.md)
    advances seven further blocks and verifies the atomic
-   restart and number ledger through 9.748 MeV.
+   restart and number ledger through 9.748 MeV. An independent q32
+   continuation to the same endpoint checks the shared shells.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
