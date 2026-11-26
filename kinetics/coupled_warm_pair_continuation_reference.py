@@ -17,7 +17,7 @@ from scalar_pair_expanding_continuation_reference import MASS,e_total,moments,ra
 from joint_nonlinear_prompt_return_moments_reference import P
 
 
-def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0,track_exterior=False):
+def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0,track_exterior=False,local_prompt_jacobian=False,scheduled_single_block=False):
     q=np.array(s["lab_momentum_edges_GeV"])
     t0=s["T_visible_GeV"]
     ar=s["scale_factor"]
@@ -35,6 +35,13 @@ def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0,track_exterior
     exn=np.zeros(2); pair_count=np.zeros(2)
     work=0.; peak=0.; mx=0.; errors=[];accepted=0;rejected=0
     grid=np.unique(np.r_[np.linspace(0.,np.log(bmax),n+1),np.clip(np.log(q[-1]/P),0.,np.log(bmax))])
+    if scheduled_single_block:
+        # The controlling outer grid already split any interior prompt crossing.
+        # At an endpoint only, suppress a duplicate from a few ulps of rebasing.
+        assert n==1
+        cut=np.log(q[-1]/P)
+        assert cut<=2e-14 or cut>=np.log(bmax)-2e-14
+        grid=np.array([0.,np.log(bmax)])
     rows=[]
     for x,y in zip(grid[:-1],grid[1:]):
         a,b,c=np.exp([x,(x+y)/2,y])
@@ -70,7 +77,7 @@ def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0,track_exterior
         _,_,T=seed.reference(u,t)
         panels=[]
         setup(max(T,t),cell,T,seed.eta,3,2,2,8,32.,.82,cache=panels,cache_only=True)
-        model=Late(cell,H,panels,prompt,compact=True)
+        model=Late(cell,H,panels,prompt,compact=True,local_jac=local_prompt_jacobian)
         next_state,res,ok,no=collide(model,u,y-x,T)
         mx=max(mx,res);accepted+=ok;rejected+=no
         th=model.arrays(next_state)
@@ -131,6 +138,8 @@ if __name__=="__main__":
     p.add_argument("--save-snapshots")
     p.add_argument("--progress-every",type=int,default=0,
                    help="Write status after this many accepted outer blocks to stderr, without changing outputs.")
+    p.add_argument("--local-prompt-jacobian",action="store_true",
+                   help="Assemble the same prompt derivative in parent-local blocks; useful as a numerical control.")
     p.add_argument("--track-exterior",action="store_true",
                    help="Export/reuse positive collisionless exterior cohort gravity; not tail interactions.")
     a=p.parse_args()
@@ -139,7 +148,8 @@ if __name__=="__main__":
     assert a.stop>1 and min(a.steps)>0 and a.progress_every>=0
     s=json.loads(Path(a.shape).read_text())["snapshots"][-1]
     ck=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
-    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k,progress_every=a.progress_every,track_exterior=a.track_exterior)
+    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k,progress_every=a.progress_every,track_exterior=a.track_exterior,
+              local_prompt_jacobian=a.local_prompt_jacobian)
           for n,k in zip(a.steps,ck)]
     if a.save_snapshots:
         Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=ck),indent=2,allow_nan=False)+"\n")
