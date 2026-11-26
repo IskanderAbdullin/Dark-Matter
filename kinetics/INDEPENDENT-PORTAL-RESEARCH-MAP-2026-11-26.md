@@ -76,6 +76,12 @@ further change of total stable-plus-scalar number per visible entropy.
 Even arbitrary equal-number conversion then cannot obtain a
 dominant 86 eV rest component at the reference total .120.
 This complements, rather than assumes, the narrower kinetic loss bound.
+The [passive heavy-recycling exposure](INDEPENDENT-WARM-BALLISTIC-HEAVY-EXPOSURE-2026-11-26.md)
+integrates positive formation from the warm 10.442 MeV anchor to
+kinematic closure on those unchanged represented supports. It
+credits only about 10⁻⁶ of the initial count, despite appreciable
+relative sensitivity to the outer momentum cells. It does not
+bound an evolving population with repopulation or older tails.
 
 ## Evidence boundary
 
