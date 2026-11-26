@@ -46,7 +46,10 @@ reproducible controls below are not observational constraints.
    verifies that the count support signs persist; higher moments
    remain a separate check. The [matched 32-block follow-up](INDEPENDENT-WARM-EARLY-SUPPORT-32-BLOCKS-2026-11-26.md)
    closes all four time ladders on the same endpoint while
-   documenting the separate fourth-moment sensitivity. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
+   documenting the separate fourth-moment sensitivity.
+   The [next short matched occupation stage](INDEPENDENT-WARM-LIGHT-OCCUPATION-NEXT-MATCHED-STAGE-2026-11-26.md)
+   continues both by a further 2% in expansion, auditing
+   the exact saved occupation extrema at every new block. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
    carries actual newly recorded exterior cohorts. For older cohorts
