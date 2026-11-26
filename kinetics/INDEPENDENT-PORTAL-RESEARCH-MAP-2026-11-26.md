@@ -82,6 +82,12 @@ kinematic closure on those unchanged represented supports. It
 credits only about 10⁻⁶ of the initial count, despite appreciable
 relative sensitivity to the outer momentum cells. It does not
 bound an evolving population with repopulation or older tails.
+The [separate isolated energy envelope](INDEPENDENT-WARM-ISOLATED-RECYCLING-ENVELOPE-2026-11-26.md)
+does allow dark redistribution and repeated recycling in the
+listed network after 10.442 MeV. With no new energy or reentry
+and the nominal visible clock, it bounds the warm scalar density
+below half if the total equals .120. The envelope is sensitive
+to assumptions about the starting energy and subsequent clock.
 
 ## Evidence boundary
 
