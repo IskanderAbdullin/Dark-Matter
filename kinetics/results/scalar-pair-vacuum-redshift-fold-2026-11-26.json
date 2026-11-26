@@ -1,0 +1,171 @@
+{
+  "rows": [
+    {
+      "final_scale_factor": 10.0,
+      "order": [
+        3,
+        8,
+        8,
+        14
+      ],
+      "time_order": 5,
+      "scale_factor_panels": [
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        5.0,
+        10.0
+      ],
+      "optical_depths": [
+        6.880952163267599e-05,
+        2.06340937254787e-05,
+        1.1871172898106289e-05,
+        4.257009303790228e-06,
+        1.0679970552152688e-06
+      ],
+      "optical_depth": 0.00010663979461526646,
+      "counts_after_over_before": [
+        24.78834858701169,
+        0.9998933715762179
+      ],
+      "initial_fixed_count_Omega_h2": [
+        2.278947685859468e-12,
+        0.11823803534743127
+      ],
+      "final_fixed_count_Omega_h2": [
+        5.649134964864811e-11,
+        0.11822542781209108
+      ]
+    },
+    {
+      "final_scale_factor": 10.0,
+      "order": [
+        5,
+        12,
+        12,
+        20
+      ],
+      "time_order": 8,
+      "scale_factor_panels": [
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        5.0,
+        10.0
+      ],
+      "optical_depths": [
+        6.880950902134813e-05,
+        2.063409575304695e-05,
+        1.1871180459600717e-05,
+        4.257009479513723e-06,
+        1.0679960626690765e-06
+      ],
+      "optical_depth": 0.00010663979077617861,
+      "counts_after_over_before": [
+        24.788347730710136,
+        0.9998933715800562
+      ],
+      "initial_fixed_count_Omega_h2": [
+        2.278947685859468e-12,
+        0.11823803534743127
+      ],
+      "final_fixed_count_Omega_h2": [
+        5.649134769718166e-11,
+        0.11822542781254491
+      ]
+    },
+    {
+      "final_scale_factor": 60.0,
+      "order": [
+        3,
+        8,
+        8,
+        14
+      ],
+      "time_order": 5,
+      "scale_factor_panels": [
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        5.0,
+        10.0,
+        30.0,
+        60.0
+      ],
+      "optical_depths": [
+        6.880952163267599e-05,
+        2.06340937254787e-05,
+        1.1871172898106289e-05,
+        4.257009303790228e-06,
+        1.0679970552152688e-06,
+        1.4668581652723837e-07,
+        4.737971530850425e-09
+      ],
+      "optical_depth": 0.00010679121840332453,
+      "counts_after_over_before": [
+        24.8221233821881,
+        0.9998932201847432
+      ],
+      "initial_fixed_count_Omega_h2": [
+        2.278947685859468e-12,
+        0.11823803534743127
+      ],
+      "final_fixed_count_Omega_h2": [
+        5.656832063995576e-11,
+        0.11822540991186055
+      ]
+    },
+    {
+      "final_scale_factor": 60.0,
+      "order": [
+        5,
+        12,
+        12,
+        20
+      ],
+      "time_order": 8,
+      "scale_factor_panels": [
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        5.0,
+        10.0,
+        30.0,
+        60.0
+      ],
+      "optical_depths": [
+        6.880950902134813e-05,
+        2.063409575304695e-05,
+        1.1871180459600717e-05,
+        4.257009479513723e-06,
+        1.0679960626690765e-06,
+        1.466858107057424e-07,
+        4.737971610596229e-09
+      ],
+      "optical_depth": 0.00010679121455849495,
+      "counts_after_over_before": [
+        24.822122524606122,
+        0.9998932201885872
+      ],
+      "initial_fixed_count_Omega_h2": [
+        2.278947685859468e-12,
+        0.11823803534743127
+      ],
+      "final_fixed_count_Omega_h2": [
+        5.6568318685571295e-11,
+        0.11822540991231505
+      ]
+    }
+  ],
+  "scope": "Prescribed radiation, no further source/collisions/inverse or stimulation; fixed redshifted fermion shape with uniformly evolving count. Not a relic prediction.",
+  "optimistic_vacuum_bound": {
+    "T_R_GeV": 0.0090190699,
+    "assumed_cumulative_stable_vacuum_Omega_h2": 0.12,
+    "max_vacuum_optical_depth": 0.009554821939543262,
+    "upper_increment_in_scalar_fixed_count_Omega_h2": 4.883625944485431e-09
+  }
+}
