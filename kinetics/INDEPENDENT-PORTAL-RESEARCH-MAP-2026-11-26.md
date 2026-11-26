@@ -115,6 +115,9 @@ caps there are model conditions, not data.
 The [BABAR dispersive moment transfer](INDEPENDENT-WARM-BABAR-DISPERSIVE-GAP-2026-11-26.md)
 adds a data-conditioned bound on just the 0.30–√.10 GeV
 slice without inventing bins or duplicating KLOE coverage.
+The [lower dispersive-theory threshold check](INDEPENDENT-WARM-DISPERSIVE-THEORY-PION-THRESHOLD-2026-11-26.md)
+uses a separate conditional positive moment below .30 GeV,
+not a substitute measured spectrum.
 The [unmeasured-source budget by invariant band](INDEPENDENT-WARM-UNMEASURED-SPECTRAL-BUDGET-2026-11-26.md)
 translates missing positive rates into sufficient conditional
 caps and identifies where low-mass spectral coverage matters.

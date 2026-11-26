@@ -25,8 +25,10 @@ def mu_kernel_lower(s, n=1000):
         1/(hi[None,:]**2+(1-lo[None,:])*np.asarray(s)[:,None]/MU**2)).T
 
 
-def thermal_window_upper(eos,n_s,n_t):
-    l,h=np.linspace(.30**2,.10,n_s+1)[:-1],np.linspace(.30**2,.10,n_s+1)[1:]
+def thermal_window_upper(eos,n_s,n_t,s_min=.30**2,s_max=.10):
+    assert 4*M*M<s_min<s_max<V*V
+    edges=np.linspace(s_min,s_max,n_s+1)
+    l,h=edges[:-1],edges[1:]
     El,Eh=np.sqrt(l),np.sqrt(h)
     H_kernel=mu_kernel_lower(h)/(4*np.pi**3)
     assert min(H_kernel)>0
