@@ -12,9 +12,10 @@ def rule(n):
     return roots_legendre(n)
 
 class PositivePortal:
-    def __init__(self,orders=(9,24,16), tail=55.):
+    def __init__(self,orders=(9,24,16), tail=55.,dark_mass=mchi):
         self.orders=orders
         self.tail=tail
+        self.dark_mass=dark_mass
 
     def geometry(self,T):
         N,M,_=self.orders
@@ -22,7 +23,7 @@ class PositivePortal:
         y,v=rule(M)
         yy=(y+1)*np.sqrt(self.tail)/2
         hi=max(60*T,V+30*T)
-        lo=2*mchi
+        lo=2*self.dark_mass
         ends=sorted(set((lo,hi,V,*[2*m for m in leptons],*[V+i*width for i in
              (-300,-100,-30,-10,-3,-1,1,3,10,30,100,300)],*[T*j for j in
              (.2,.5,1,2,3.5,5.5,8,12,18,27,39,52,60)])))
@@ -36,7 +37,7 @@ class PositivePortal:
         p=np.sqrt(T*yy*yy*(q+E[:,None]))
         dq=v*T*np.sqrt(self.tail)*yy
         vi2=1-(lo/E)**2
-        b0=(factor*(E**2+2*mchi**2)*E**3*np.sqrt(vi2)*
+        b0=(factor*(E**2+2*self.dark_mass**2)*E**3*np.sqrt(vi2)*
             (2*E*dE/((E**2-V**2)**2+(V*width)**2)))
         W=b0[:,None]*(dq*p/E[:,None])
         return E,q,p,W,vi2
