@@ -40,7 +40,7 @@ def nodes(a,b,n,*,log=False):
         q=q*r
     return r,q
 
-def graph(T,edges,*,n=(5,4,2,12),pole=.82,tail=28.,reverse_order=False,eta=0.,eta_F=0.,tagged_bath=None):
+def graph(T,edges,*,n=(5,4,2,12),pole=.82,tail=28.,reverse_order=False,eta=0.,eta_F=0.,tagged_bath=None,tagged_trial_T=None):
     assert eta<mp/T
     nU,nL,na,nf=n
     edges=np.asarray(edges)
@@ -105,6 +105,7 @@ def graph(T,edges,*,n=(5,4,2,12),pole=.82,tail=28.,reverse_order=False,eta=0.,et
                 # Tagged test scalar: no stimulated factor. A nonthermal
                 # bath need not generate reciprocal scalar bin rates.
                 Fi=tagged_bath(L-ei)
+                if tagged_trial_T is not None:Fi=Fi*np.exp(-ei/tagged_trial_T)
                 Ff=1-tagged_bath(L-ef)
             mat=(v*(wi*Fi)[:,None]*(wf*Ff)).reshape(len(labels),li,len(labels),lf).sum(axis=(1,3))
             result[np.ix_(labels,labels)]+=dU*dL*q*pc2/u*mat
