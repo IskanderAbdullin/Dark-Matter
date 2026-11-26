@@ -1,0 +1,1548 @@
+{
+  "runs": {
+    "02-matrix": {
+      "TR": 0.02,
+      "final_visible_temperature": 0.011000000000000001,
+      "n_comoving_bins": 17,
+      "a_end": 1.8448810932924753,
+      "support_q_over_TR": 0.45,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": 0.9945020566139741,
+        "inverse_decay_removed": 0.0002245642948904671,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9157283360715686,
+        "outer_mesh_exit": 0.005273379091135816,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 991,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "independent_exponential_control": {
+        "surviving_in_mesh": 0.9945019300879159,
+        "inverse_decay_removed": 0.0002247285625934034,
+        "outer_mesh_exit": 0.005273341349491365
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 0.9968542933708768,
+        "inverse_decay_removed": 5.00458011534807e-05,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.938731949542994,
+        "outer_mesh_exit": 0.0030956608279697003,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 700,
+        "start_log_a": 0.15310370683391614,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 0.9993204155433753,
+        "inverse_decay_removed": 2.0500189821454466e-07,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9755577850256947,
+        "outer_mesh_exit": 0.0006793794547261879,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 7.771561172376096e-16,
+        "nfev": 408,
+        "start_log_a": 0.3062074136678323,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 0.9999635922031413,
+        "inverse_decay_removed": 4.762692582457052e-11,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9960249723163366,
+        "outer_mesh_exit": 3.6407749231877974e-05,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 2.220446049250313e-16,
+        "nfev": 202,
+        "start_log_a": 0.4593111205017484,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.9946570825608325,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9157283367217262,
+        "outer_mesh_exit": 0.0053429174391678965,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 752,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 0.8089819885060219,
+        "inverse_decay_removed": 0.0463712816375466,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.007142874075503741,
+        "outer_mesh_exit": 0.14464672985643146,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 1504,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": 0.9945020564993166,
+        "inverse_decay_removed": 0.00022456430975633163,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9157283356800829,
+        "outer_mesh_exit": 0.005273379190927397,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1323,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    },
+    "02fine": {
+      "TR": 0.02,
+      "final_visible_temperature": 0.011000000000000001,
+      "n_comoving_bins": 21,
+      "a_end": 1.8448810932924753,
+      "support_q_over_TR": 1.3,
+      "orders": [
+        6,
+        5,
+        4,
+        16
+      ],
+      "snapshot_count": 13,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": 0.9954850346365319,
+        "inverse_decay_removed": 0.003269491872498546,
+        "outer_mesh_exit": 0.0012454734909685026,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 2179,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 0.9976115832425287,
+        "inverse_decay_removed": 0.001707038601407662,
+        "outer_mesh_exit": 0.0006813781560639767,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1692,
+        "start_log_a": 0.15310370683391614,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 0.9995739743910067,
+        "inverse_decay_removed": 0.0002933054197445936,
+        "outer_mesh_exit": 0.00013272018924845994,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 948,
+        "start_log_a": 0.3062074136678323,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 0.9999815158767708,
+        "inverse_decay_removed": 1.2809144649230603e-05,
+        "outer_mesh_exit": 5.674978580387914e-06,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 368,
+        "start_log_a": 0.4593111205017484,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.9984232209372396,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0015767790627598266,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 1078,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 0.8580261650364981,
+        "inverse_decay_removed": 0.10587575958966094,
+        "outer_mesh_exit": 0.036098075373841236,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 3344,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": 0.9954850345472135,
+        "inverse_decay_removed": 0.0032694919604675738,
+        "outer_mesh_exit": 0.0012454734923192218,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 2919,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    },
+    "02fd": {
+      "TR": 0.02,
+      "final_visible_temperature": 0.011000000000000001,
+      "n_comoving_bins": 17,
+      "a_end": 1.8448810932924753,
+      "support_q_over_TR": 0.45,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "FD",
+      "rest": {
+        "surviving_in_mesh": 0.9943345887903814,
+        "inverse_decay_removed": 0.000499446205830401,
+        "outer_mesh_exit": 0.00516596500378828,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1174,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 0.9967767033361153,
+        "inverse_decay_removed": 0.00015927136408012656,
+        "outer_mesh_exit": 0.0030640252998041383,
+        "number_residual": 7.771561172376096e-16,
+        "nfev": 828,
+        "start_log_a": 0.15310370683391614,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 0.9993089318596426,
+        "inverse_decay_removed": 2.16675033850806e-06,
+        "outer_mesh_exit": 0.0006889013900195338,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 431,
+        "start_log_a": 0.3062074136678323,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 0.9999618604033808,
+        "inverse_decay_removed": 9.805435973600993e-10,
+        "outer_mesh_exit": 3.813861607530029e-05,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 195,
+        "start_log_a": 0.4593111205017484,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.9946894889951416,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.005310511004857516,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 738,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 0.799216337971669,
+        "inverse_decay_removed": 0.061131745313925845,
+        "outer_mesh_exit": 0.13965191671440524,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1820,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": 0.994334588730455,
+        "inverse_decay_removed": 0.0004994462386207085,
+        "outer_mesh_exit": 0.005165965030924315,
+        "number_residual": 5.551115123125783e-16,
+        "nfev": 1590,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    },
+    "05": {
+      "TR": 0.05,
+      "final_visible_temperature": 0.027500000000000004,
+      "n_comoving_bins": 17,
+      "a_end": 1.9248346665246152,
+      "support_q_over_TR": 0.45,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": -2.829894826548368e-18,
+        "inverse_decay_removed": 0.6864232599386133,
+        "outer_mesh_exit": 0.31357674006138686,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1350,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 3.51959372210685e-20,
+        "inverse_decay_removed": 0.6960469514152625,
+        "outer_mesh_exit": 0.3039530485847388,
+        "number_residual": 1.7763568394002505e-15,
+        "nfev": 1177,
+        "start_log_a": 0.16371001913288072,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 1.984069221565031e-14,
+        "inverse_decay_removed": 0.7007718481031808,
+        "outer_mesh_exit": 0.2992281518968015,
+        "number_residual": 2.4424906541753444e-15,
+        "nfev": 1240,
+        "start_log_a": 0.32742003826576144,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 3.9709613221738054e-08,
+        "inverse_decay_removed": 0.5741891475733953,
+        "outer_mesh_exit": 0.42581081271699117,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1032,
+        "start_log_a": 0.49113005739864213,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 2.8427152117212017e-13,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.9999999999997154,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 1692,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": -1.7506189933502817e-19,
+        "inverse_decay_removed": 0.6413445621195171,
+        "outer_mesh_exit": 0.358655437880483,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 1526,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": -1.1202880669264148e-17,
+        "inverse_decay_removed": 0.6864232599335204,
+        "outer_mesh_exit": 0.3135767400664801,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1889,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    },
+    "1": {
+      "TR": 0.1,
+      "final_visible_temperature": 0.05500000000000001,
+      "n_comoving_bins": 17,
+      "a_end": 1.9222491202697278,
+      "support_q_over_TR": 0.45,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": -5.183878003809447e-24,
+        "inverse_decay_removed": 0.8475184052066279,
+        "outer_mesh_exit": 0.1524815947933722,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1245,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 5.526205620253e-20,
+        "inverse_decay_removed": 0.8276852074880034,
+        "outer_mesh_exit": 0.1723147925119959,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 953,
+        "start_log_a": 0.16337397931837863,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": -1.7325417700909042e-16,
+        "inverse_decay_removed": 0.7941178383429832,
+        "outer_mesh_exit": 0.20588216165701764,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 988,
+        "start_log_a": 0.32674795863675726,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 1.6051393888183534e-17,
+        "inverse_decay_removed": 0.8060943210505871,
+        "outer_mesh_exit": 0.19390567894941246,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1048,
+        "start_log_a": 0.4901219379551359,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 2.0259194351551815e-24,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.9999999999999992,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 2065,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 2.2899532709621134e-23,
+        "inverse_decay_removed": 0.5896142475918295,
+        "outer_mesh_exit": 0.41038575240817105,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1393,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": 6.954123634522056e-27,
+        "inverse_decay_removed": 0.8475184052220494,
+        "outer_mesh_exit": 0.15248159477795112,
+        "number_residual": 1.3322676295501878e-15,
+        "nfev": 1826,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    },
+    "return-02-core": {
+      "TR": 0.02,
+      "final_visible_temperature": 0.011000000000000001,
+      "n_comoving_bins": 17,
+      "a_end": 1.8448810932924753,
+      "support_q_over_TR": 1.3,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": 0.9947543156925649,
+        "inverse_decay_removed": 0.003963319915312257,
+        "first_comoving_cell_retention": 0.30823919499622743,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9072229763916182,
+        "outer_mesh_exit": 0.0012823643921232343,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1734,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "independent_exponential_control": {
+        "surviving_in_mesh": 0.9947537266586138,
+        "inverse_decay_removed": 0.0039639573590834355,
+        "outer_mesh_exit": 0.001282315980172537
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 0.997101298011844,
+        "inverse_decay_removed": 0.002160305257707408,
+        "first_comoving_cell_retention": 0.3554393405836053,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9319872978097479,
+        "outer_mesh_exit": 0.000738396730448224,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1336,
+        "start_log_a": 0.15310370683391614,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 0.9994396856553491,
+        "inverse_decay_removed": 0.00040886378374956154,
+        "first_comoving_cell_retention": 0.4871271651632571,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.972243548315079,
+        "outer_mesh_exit": 0.00015145056090185463,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 778,
+        "start_log_a": 0.3062074136678323,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 0.9999718834673509,
+        "inverse_decay_removed": 2.1358494324368566e-05,
+        "first_comoving_cell_retention": 0.7015993251899948,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9952468724361954,
+        "outer_mesh_exit": 6.758038324806957e-06,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 335,
+        "start_log_a": 0.4593111205017484,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.9983261169874045,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.3082391976853533,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9072229760739497,
+        "outer_mesh_exit": 0.00167388301259499,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 708,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 0.820882523736989,
+        "inverse_decay_removed": 0.1432520951197496,
+        "first_comoving_cell_retention": 4.954239029925121e-13,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.006304748693130318,
+        "outer_mesh_exit": 0.035865381143260086,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.5543122344752192e-15,
+        "nfev": 2752,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": 0.994754315636317,
+        "inverse_decay_removed": 0.003963319967732509,
+        "first_comoving_cell_retention": 0.3082391957331545,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9072229760624723,
+        "outer_mesh_exit": 0.0012823643959502982,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 2294,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_prompt_return": {
+        "surviving_in_mesh": 0.9947554923022256,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.30823919353775275,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9072229768098643,
+        "outer_mesh_exit": 0.0052445076977735055,
+        "explicit_inverse_return_events": 0.004055688539864528,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 1694,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "warm_prompt_return": {
+        "surviving_in_mesh": 0.8209117010689545,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 4.95423902820428e-13,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.0063047486965806315,
+        "outer_mesh_exit": 0.17908829893104455,
+        "explicit_inverse_return_events": 0.1485034335692466,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 2760,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      }
+    },
+    "return-05": {
+      "TR": 0.05,
+      "final_visible_temperature": 0.027500000000000004,
+      "n_comoving_bins": 17,
+      "a_end": 1.9248346665246152,
+      "support_q_over_TR": 3.0,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": -3.4562663540364623e-17,
+        "inverse_decay_removed": 0.9869553117290785,
+        "outer_mesh_exit": 0.013044688270921508,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1404,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 4.984641479605443e-16,
+        "inverse_decay_removed": 0.9883669716875115,
+        "outer_mesh_exit": 0.011633028312488327,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1237,
+        "start_log_a": 0.16371001913288072,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 3.330900495901315e-14,
+        "inverse_decay_removed": 0.9750927448182919,
+        "outer_mesh_exit": 0.024907255181674214,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1073,
+        "start_log_a": 0.32742003826576144,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 1.2131268860812849e-08,
+        "inverse_decay_removed": 0.9779875937789646,
+        "outer_mesh_exit": 0.02201239408976544,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.5543122344752192e-15,
+        "nfev": 1048,
+        "start_log_a": 0.49113005739864213,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.07130350191737682,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.9286964980826222,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.6653345369377348e-15,
+        "nfev": 2038,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": -1.65754866780702e-19,
+        "inverse_decay_removed": 0.9856434276569982,
+        "outer_mesh_exit": 0.01435657234300154,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1495,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": -9.392797615893598e-17,
+        "inverse_decay_removed": 0.9869553117281505,
+        "outer_mesh_exit": 0.013044688271850432,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.3322676295501878e-15,
+        "nfev": 2039,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_prompt_return": {
+        "surviving_in_mesh": -1.896433331052359e-15,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 1.0000000000000027,
+        "explicit_inverse_return_events": 5.190200088660445,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1451,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "warm_prompt_return": {
+        "surviving_in_mesh": 5.952582104669832e-21,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 1.0000000000000007,
+        "explicit_inverse_return_events": 6.097493825735498,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1736,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      }
+    },
+    "return-1": {
+      "TR": 0.1,
+      "final_visible_temperature": 0.05500000000000001,
+      "n_comoving_bins": 17,
+      "a_end": 1.9222491202697278,
+      "support_q_over_TR": 3.0,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "rest": {
+        "surviving_in_mesh": 4.04726022134933e-26,
+        "inverse_decay_removed": 0.9916875848942124,
+        "outer_mesh_exit": 0.008312415105787336,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 1279,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": -9.945143540920359e-26,
+        "inverse_decay_removed": 0.9925419307107008,
+        "outer_mesh_exit": 0.0074580692892990035,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 1015,
+        "start_log_a": 0.16337397931837863,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": -2.4535655470883884e-20,
+        "inverse_decay_removed": 0.9938116197194862,
+        "outer_mesh_exit": 0.006188380280513641,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1032,
+        "start_log_a": 0.32674795863675726,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": -4.1530621456328456e-19,
+        "inverse_decay_removed": 0.9838128984734488,
+        "outer_mesh_exit": 0.016187101526552068,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 966,
+        "start_log_a": 0.4901219379551359,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.011863099306253393,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.9881369006937455,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.3322676295501878e-15,
+        "nfev": 3107,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": -4.527611948454096e-22,
+        "inverse_decay_removed": 0.9621043652904471,
+        "outer_mesh_exit": 0.03789563470955371,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1471,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": -3.2185375987964326e-25,
+        "inverse_decay_removed": 0.9916875848941062,
+        "outer_mesh_exit": 0.008312415105895416,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.7763568394002505e-15,
+        "nfev": 1838,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_prompt_return": {
+        "surviving_in_mesh": -3.477677615271894e-29,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 0.9999999999999998,
+        "explicit_inverse_return_events": 20.499899356757773,
+        "number_residual": 5.551115123125783e-16,
+        "nfev": 1361,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "warm_prompt_return": {
+        "surviving_in_mesh": 1.2427365791713807e-34,
+        "inverse_decay_removed": 0.0,
+        "outer_mesh_exit": 1.0000000000000002,
+        "explicit_inverse_return_events": 24.776734635905235,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 1646,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      }
+    },
+    "inject-02-fixed": {
+      "TR": 0.02,
+      "final_visible_temperature": 0.011000000000000001,
+      "n_comoving_bins": 18,
+      "a_end": 1.8448810932924753,
+      "support_q_over_TR": 5.0,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "source_yield_total": 1.5803784637042466e-08,
+      "source_launch_outside_mesh_fraction": 0.18008736714235168,
+      "source_count_relative_to_integrated_spectrum": 1.0011582441859375,
+      "rest": {
+        "surviving_in_mesh": 0.9939936368731075,
+        "inverse_decay_removed": 0.0059797037633270685,
+        "first_comoving_cell_retention": 0.30822013726242287,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9165675253436829,
+        "outer_mesh_exit": 2.6659363564731658e-05,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 1613,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 0.9965922584049495,
+        "inverse_decay_removed": 0.0033929337802079277,
+        "first_comoving_cell_retention": 0.35542283392060453,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9394136110581047,
+        "outer_mesh_exit": 1.4807814843195176e-05,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1326,
+        "start_log_a": 0.15310370683391614,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 0.9993322492871922,
+        "inverse_decay_removed": 0.0006648162865201704,
+        "first_comoving_cell_retention": 0.4871237362079546,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9758923467410102,
+        "outer_mesh_exit": 2.93442628745418e-06,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 7.771561172376096e-16,
+        "nfev": 871,
+        "start_log_a": 0.3062074136678323,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 0.9999751942253664,
+        "inverse_decay_removed": 2.4671461436685108e-05,
+        "first_comoving_cell_retention": 0.7015951525373381,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9960990472182499,
+        "outer_mesh_exit": 1.3431319664609293e-07,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 7.771561172376096e-16,
+        "nfev": 304,
+        "start_log_a": 0.4593111205017484,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.9998990975585835,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.30822014034613776,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9165675255696017,
+        "outer_mesh_exit": 0.00010090244141650763,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 4.440892098500626e-16,
+        "nfev": 746,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 41,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 0.85112279707122,
+        "inverse_decay_removed": 0.14801124041945982,
+        "first_comoving_cell_retention": 1.992950030738895e-12,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.30763571069203105,
+        "outer_mesh_exit": 0.0008659625093209132,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.3322676295501878e-15,
+        "nfev": 2401,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": 0.9939936368136676,
+        "inverse_decay_removed": 0.005979703823176639,
+        "first_comoving_cell_retention": 0.30822013716992,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.916567525239912,
+        "outer_mesh_exit": 2.6659363155196334e-05,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 2216,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_prompt_return": {
+        "surviving_in_mesh": 0.9939956182056859,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.3082201372028561,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9165675254859574,
+        "outer_mesh_exit": 0.006004381794314129,
+        "explicit_inverse_return_events": 0.013347685723171354,
+        "number_residual": 7.771561172376096e-16,
+        "nfev": 1670,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "warm_prompt_return": {
+        "surviving_in_mesh": 0.8511513522126818,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.9929500343160965e-12,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.30763571068870177,
+        "outer_mesh_exit": 0.14884864778731835,
+        "explicit_inverse_return_events": 0.3971937135530998,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 2474,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "rest_prompt_reflect": {
+        "surviving_in_mesh": 0.9999999999999994,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.3082201384684832,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.9165675256016609,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.2212453270876722e-15,
+        "nfev": 1816,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_no_reaction": {
+        "surviving_in_mesh": 0.8199130609618042,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 0.0,
+        "outer_mesh_exit": 0.18008747733679228,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 5.382985963642284e-07,
+        "nfev": 1490,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_elastic_only": {
+        "surviving_in_mesh": 0.7692565716304276,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.6438023553626349e-21,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 4.989244791884753e-10,
+        "outer_mesh_exit": 0.23074366572539715,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 2.3735582477257822e-07,
+        "nfev": 1720,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_prompt_return": {
+        "surviving_in_mesh": 6.371540150019282e-09,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 4.297478278828233e-26,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 6.50673408884944e-15,
+        "outer_mesh_exit": 1.0000001811940427,
+        "explicit_inverse_return_events": 4.984624631877843,
+        "number_residual": 1.8756558284316327e-07,
+        "nfev": 3954,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_prompt_reflect": {
+        "surviving_in_mesh": 0.8199127510196681,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 5.639980263818348e-21,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.5309528705143977e-09,
+        "outer_mesh_exit": 0.18008739431687007,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.4533653813764147e-07,
+        "nfev": 4022,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    },
+    "inject-05-final": {
+      "TR": 0.05,
+      "final_visible_temperature": 0.027500000000000004,
+      "n_comoving_bins": 18,
+      "a_end": 1.9248346665246152,
+      "support_q_over_TR": 4.0,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "source_yield_total": 5.917053846955163e-06,
+      "source_launch_outside_mesh_fraction": 0.13866604169737218,
+      "source_count_relative_to_integrated_spectrum": 1.000203420622902,
+      "rest": {
+        "surviving_in_mesh": 1.9328166939483953e-16,
+        "inverse_decay_removed": 0.9934189198917807,
+        "first_comoving_cell_retention": -2.3299263309043436e-24,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 3.028970699205829e-19,
+        "outer_mesh_exit": 0.006581080108219623,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1281,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 7.319623189280566e-19,
+        "inverse_decay_removed": 0.9942678529946679,
+        "first_comoving_cell_retention": -2.2284106631505256e-29,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.2333358661085695e-22,
+        "outer_mesh_exit": 0.005732147005333373,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.5543122344752192e-15,
+        "nfev": 1155,
+        "start_log_a": 0.16371001913288072,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": -2.162122483635814e-16,
+        "inverse_decay_removed": 0.9947899725120994,
+        "first_comoving_cell_retention": -4.5409175205869855e-24,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": -6.837215312619593e-20,
+        "outer_mesh_exit": 0.005210027487900455,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1229,
+        "start_log_a": 0.32742003826576144,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 3.823728879871638e-08,
+        "inverse_decay_removed": 0.9885505800768968,
+        "first_comoving_cell_retention": 4.994803843697426e-16,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.694079556374433e-11,
+        "outer_mesh_exit": 0.01144938168581398,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1011,
+        "start_log_a": 0.49113005739864213,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.37484884381655187,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 3.144854314521765e-20,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 7.050659682801356e-09,
+        "outer_mesh_exit": 0.6251511561834491,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.3322676295501878e-15,
+        "nfev": 1900,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": 4.068198173918804e-17,
+        "inverse_decay_removed": 0.9964769061028301,
+        "first_comoving_cell_retention": 3.930987054940095e-32,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 4.296713377313649e-21,
+        "outer_mesh_exit": 0.0035230938971714124,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.5543122344752192e-15,
+        "nfev": 1597,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": -1.0901906448442664e-17,
+        "inverse_decay_removed": 0.9934189198912721,
+        "first_comoving_cell_retention": 4.761558078308934e-25,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": -6.1346721323111995e-21,
+        "outer_mesh_exit": 0.006581080108728322,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1832,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_prompt_return": {
+        "surviving_in_mesh": -2.4188523914656566e-17,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": -6.889429313367877e-24,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 4.751042833696191e-20,
+        "outer_mesh_exit": 1.0000000000000004,
+        "explicit_inverse_return_events": 12.675455785301034,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1393,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "warm_prompt_return": {
+        "surviving_in_mesh": -3.7956755375796304e-17,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": -3.3826514960587624e-30,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": -5.1816713059927474e-20,
+        "outer_mesh_exit": 0.9999999999999999,
+        "explicit_inverse_return_events": 13.92676242447755,
+        "number_residual": 8.881784197001252e-16,
+        "nfev": 1813,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "rest_prompt_reflect": {
+        "surviving_in_mesh": 0.9999999989932731,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 8.698141188371754e-20,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 2.0523390262030922e-08,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.0172651609963168e-09,
+        "nfev": 2970,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_no_reaction": {
+        "surviving_in_mesh": 0.8613342465300018,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 2.2047416998572852e-94,
+        "outer_mesh_exit": 0.13866607316901558,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 3.1969901748141183e-07,
+        "nfev": 1454,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0,
+        "max_time_and_cell_average_occupation": 0.000599165128543533,
+        "max_terminal_cell_average_occupation": 0.000599165128543533,
+        "maximum_occupation_q_over_TR_bin": [
+          0.22484964310302732,
+          0.5869685048736786
+        ]
+      },
+      "injected_elastic_only": {
+        "surviving_in_mesh": 0.3898743371892024,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 3.225102188321427e-20,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 7.272751375968163e-09,
+        "outer_mesh_exit": 0.6101256929841519,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 3.0173354259588336e-08,
+        "nfev": 2857,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0,
+        "max_time_and_cell_average_occupation": 0.00019512314526209243,
+        "max_terminal_cell_average_occupation": 0.00011150140104254705,
+        "maximum_occupation_q_over_TR_bin": [
+          0.0018547236990991381,
+          0.004841743938704703
+        ]
+      },
+      "injected_prompt_return": {
+        "surviving_in_mesh": 1.7964209127987507e-09,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 1.2801212132788448e-28,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 2.713532603821846e-17,
+        "outer_mesh_exit": 1.0000000449200719,
+        "explicit_inverse_return_events": 13.331316858940133,
+        "number_residual": 4.671649289633706e-08,
+        "nfev": 3127,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0,
+        "max_time_and_cell_average_occupation": 7.596933266076612e-08,
+        "max_terminal_cell_average_occupation": 4.425760811602873e-13,
+        "maximum_occupation_q_over_TR_bin": [
+          0.22484964310302732,
+          0.5869685048736786
+        ]
+      },
+      "injected_prompt_reflect": {
+        "surviving_in_mesh": 0.8613340329072687,
+        "inverse_decay_removed": 0.0,
+        "first_comoving_cell_retention": 7.451526431427048e-20,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.7634801231136377e-08,
+        "outer_mesh_exit": 0.1386660494154833,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 8.232275194863803e-08,
+        "nfev": 4171,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0,
+        "max_time_and_cell_average_occupation": 0.0002784398997291265,
+        "max_terminal_cell_average_occupation": 0.0002784398997291265,
+        "maximum_occupation_q_over_TR_bin": [
+          0.08613300642841021,
+          0.22484964310302732
+        ]
+      }
+    },
+    "inject-05-wide": {
+      "TR": 0.05,
+      "final_visible_temperature": 0.027500000000000004,
+      "n_comoving_bins": 22,
+      "a_end": 1.9248346665246152,
+      "support_q_over_TR": 8.0,
+      "orders": [
+        5,
+        4,
+        3,
+        12
+      ],
+      "snapshot_count": 8,
+      "bath_shape": "spline",
+      "source_yield_total": 5.995645176203398e-06,
+      "source_launch_outside_mesh_fraction": 0.006031624182084029,
+      "source_count_relative_to_integrated_spectrum": 1.0134882948827224,
+      "rest": {
+        "surviving_in_mesh": -1.5618661000515828e-15,
+        "inverse_decay_removed": 0.9998484943141803,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": -1.4965851738815857e-20,
+        "outer_mesh_exit": 0.00015150568582293476,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.7763568394002505e-15,
+        "nfev": 1343,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.25": {
+        "surviving_in_mesh": 3.058142981105689e-17,
+        "inverse_decay_removed": 0.9998770390100135,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.844743405668311e-20,
+        "outer_mesh_exit": 0.00012296098998595037,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.2212453270876722e-15,
+        "nfev": 1160,
+        "start_log_a": 0.16371001913288072,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.5": {
+        "surviving_in_mesh": 8.465144635812306e-14,
+        "inverse_decay_removed": 0.9996779083538432,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 5.2361430917174484e-17,
+        "outer_mesh_exit": 0.00032209164607259,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 9.992007221626409e-16,
+        "nfev": 1140,
+        "start_log_a": 0.32742003826576144,
+        "initial_q_over_TR": 0.0
+      },
+      "delayed_rest_0.75": {
+        "surviving_in_mesh": 1.0574338570294817e-08,
+        "inverse_decay_removed": 0.999763754064663,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.2161520865807467e-11,
+        "outer_mesh_exit": 0.00023623536099707653,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.5543122344752192e-15,
+        "nfev": 1116,
+        "start_log_a": 0.49113005739864213,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_decay_only": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_scatter_only": {
+        "surviving_in_mesh": 0.967613845867815,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.288737379318925e-08,
+        "outer_mesh_exit": 0.03238615413218479,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.661338147750939e-16,
+        "nfev": 1991,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_no_reaction": {
+        "surviving_in_mesh": 1.0,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.0,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 0.0,
+        "nfev": 43,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "soft_warm_start": {
+        "surviving_in_mesh": -1.5125754752627277e-17,
+        "inverse_decay_removed": 0.9999278807417807,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": -2.602592058519055e-22,
+        "outer_mesh_exit": 7.211925821891934e-05,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1506,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "tighter_solver": {
+        "surviving_in_mesh": -1.2594793562100445e-14,
+        "inverse_decay_removed": 0.9998484943141684,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": -1.6467650914793665e-19,
+        "outer_mesh_exit": 0.0001515056858449126,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1974,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "rest_prompt_return": {
+        "surviving_in_mesh": 3.106378870255933e-15,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 3.787142077131791e-19,
+        "outer_mesh_exit": 0.9999999999999977,
+        "explicit_inverse_return_events": 280.5237285662077,
+        "number_residual": 1.3322676295501878e-15,
+        "nfev": 1540,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "warm_prompt_return": {
+        "surviving_in_mesh": 1.1804180384672435e-20,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.943477423927642e-25,
+        "outer_mesh_exit": 1.0000000000000002,
+        "explicit_inverse_return_events": 300.6306252636301,
+        "number_residual": 1.1102230246251565e-15,
+        "nfev": 1912,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.005
+      },
+      "rest_prompt_reflect": {
+        "surviving_in_mesh": 0.999999999328546,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.9910284401946494e-08,
+        "outer_mesh_exit": 0.0,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 6.974242294788269e-10,
+        "nfev": 3350,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_no_reaction": {
+        "surviving_in_mesh": 0.9939684461722096,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.5854735567835124e-93,
+        "outer_mesh_exit": 0.006031624421225741,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 7.059343531956586e-08,
+        "nfev": 358,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_elastic_only": {
+        "surviving_in_mesh": 0.9667365016801073,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.2919162897409995e-08,
+        "outer_mesh_exit": 0.03326350001814787,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.6982550921085249e-09,
+        "nfev": 1149,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_prompt_return": {
+        "surviving_in_mesh": 4.133630626538354e-08,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 6.382012214565279e-16,
+        "outer_mesh_exit": 0.9999999702517753,
+        "explicit_inverse_return_events": 275.11967314054857,
+        "number_residual": 1.1588081827440533e-08,
+        "nfev": 2523,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      },
+      "injected_prompt_reflect": {
+        "surviving_in_mesh": 0.9939683606889174,
+        "inverse_decay_removed": 0.0,
+        "fraction_of_initial_or_injected_below_final_p_over_T_005": 1.973121301198296e-08,
+        "outer_mesh_exit": 0.006031624109319364,
+        "explicit_inverse_return_events": 0.0,
+        "number_residual": 1.520176318159372e-08,
+        "nfev": 3682,
+        "start_log_a": 0.0,
+        "initial_q_over_TR": 0.0
+      }
+    }
+  },
+  "scope": "Tagged linear tests, prescribed bath; outer-grid events are unresolved rather than physical destruction."
+}
