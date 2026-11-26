@@ -1,0 +1,160 @@
+[
+  {
+    "T_GeV": 0.017,
+    "mu_GeV": -0.03,
+    "mesh_cells": 17,
+    "quadrature": [
+      3,
+      7,
+      6,
+      2
+    ],
+    "event_check": 1.6616203662020685e-16,
+    "initial_particle_heat_residual_per_forward_event": 3.886756091196071e-15,
+    "first_row_from_analytic_event_moments": [
+      4.0,
+      20.288708054864188
+    ],
+    "equilibrium_forward_event_number_energy": [
+      2.1499560799053224e-26,
+      2.4177120071150513e-27
+    ],
+    "controls": [
+      {
+        "finite_difference": 0.0002,
+        "particle_heat_response_over_eq_forward_events": [
+          [
+            4.00000002691246,
+            20.288711994339675
+          ],
+          [
+            20.28870819124893,
+            107.08212218765185
+          ]
+        ],
+        "theoretical_first_row_error": 1.9417084008035312e-07,
+        "reciprocity_defect": 1.8744863949926582e-07,
+        "eigenvalues_of_symmetric_part": [
+          0.15051376822931894,
+          110.93160844633499
+        ]
+      },
+      {
+        "finite_difference": 6e-05,
+        "particle_heat_response_over_eq_forward_events": [
+          [
+            4.0000000024405145,
+            20.288708409383535
+          ],
+          [
+            20.28870806723547,
+            107.08210156797404
+          ]
+        ],
+        "theoretical_first_row_error": 1.747372707288252e-08,
+        "reciprocity_defect": 1.6863965113245172e-08,
+        "eigenvalues_of_symmetric_part": [
+          0.15051370737249004,
+          110.93158786304207
+        ]
+      }
+    ],
+    "extrapolated": {
+      "richardson_response": [
+        [
+          4.000000000020212,
+          20.28870805482743
+        ],
+        [
+          20.2887080549704,
+          107.08209952866524
+        ]
+      ],
+      "reciprocity_defect": 7.046696559598331e-12,
+      "exact_particle_row_relative_defect": 5.0530690742789375e-12,
+      "symmetric_eigenvalues": [
+        0.15051370135368014,
+        110.93158582733177
+      ]
+    }
+  },
+  {
+    "T_GeV": 0.017,
+    "mu_GeV": -0.03,
+    "mesh_cells": 17,
+    "quadrature": [
+      4,
+      10,
+      10,
+      4
+    ],
+    "event_check": 6.659465251023516e-17,
+    "initial_particle_heat_residual_per_forward_event": 7.773271667826542e-15,
+    "first_row_from_analytic_event_moments": [
+      4.0,
+      20.28866548904529
+    ],
+    "equilibrium_forward_event_number_energy": [
+      2.1500226021850926e-26,
+      2.4177790351066477e-27
+    ],
+    "controls": [
+      {
+        "finite_difference": 0.0002,
+        "particle_heat_response_over_eq_forward_events": [
+          [
+            4.000000026910026,
+            20.2886694285233
+          ],
+          [
+            20.288665625402928,
+            107.08188557116377
+          ]
+        ],
+        "theoretical_first_row_error": 1.941713717795687e-07,
+        "reciprocity_defect": 1.8745049290558313e-07,
+        "eigenvalues_of_symmetric_part": [
+          0.1505211373515194,
+          110.93136446072228
+        ]
+      },
+      {
+        "finite_difference": 6e-05,
+        "particle_heat_response_over_eq_forward_events": [
+          [
+            4.00000000244618,
+            20.28866584355839
+          ],
+          [
+            20.288665501378446,
+            107.081864951431
+          ]
+        ],
+        "theoretical_first_row_error": 1.7473455892545486e-08,
+        "reciprocity_defect": 1.686557182800641e-08,
+        "eigenvalues_of_symmetric_part": [
+          0.15052107650408608,
+          110.93134387737311
+        ]
+      }
+    ],
+    "extrapolated": {
+      "richardson_response": [
+        [
+          4.000000000026679,
+          20.288665489001424
+        ],
+        [
+          20.288665489112287,
+          107.08186291211678
+        ]
+      ],
+      "reciprocity_defect": 5.4642956826000955e-12,
+      "exact_particle_row_relative_defect": 6.6697758427380904e-12,
+      "symmetric_eigenvalues": [
+        0.15052107048620433,
+        110.93134184165726
+      ]
+    }
+  }
+]
