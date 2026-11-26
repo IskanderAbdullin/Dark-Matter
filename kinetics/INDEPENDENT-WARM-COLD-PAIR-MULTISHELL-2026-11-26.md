@@ -51,3 +51,31 @@ python -W error warm_cold_pair_multishell_audit_reference.py EOS.dat \
 [Frozen rate comparisons](results/warm-cold-pair-multishell-audit-2026-11-26.json.gz);
 [actual replay results](results/warm-cold-pair-multishell-spike-q32-2026-11-26.json);
 [exact nine-cell replay output](results/warm-cold-pair-multishell-q32-9-lifted-2026-11-26.json.gz).
+
+## Independent wider replay and third tagged rule
+
+The q64 nine-cell update to 7.754805 MeV also completed. Only the
+previously accepted q64 one-cell endpoint was used as the Newton guess;
+time, incoming data, collision targets and all nine corrected cells were
+independently solved on q64. The initial scaled residual was 3881.4
+and the final residual 5.22e-12 after six Newton steps. Energy and count
+defects were 1.41e-14 and 8.0e-15. The first-cell slope is −4.71724e-5
+per ln(a), compared with +1.43554e-4 native and −4.71720e-5 in the
+one-cell correction. The largest whole-grid normalized shell L1 change
+from the native replay is 6.70e-8. A third tagged rule on the frozen q64
+native endpoint moves the nine-cell signed rates by at most 4.35e-8
+fractionally, and the global signed-rate L1 by 2.43e-8 against the
+previous tagged rule. These checks leave the native complement unchanged.
+
+~~~sh
+python -W error warm_q64_multishell_guided_replay_reference.py EOS.dat \
+ results/warm-cold-pair-spike-q64-step11-2026-11-26.json.gz \
+ results/warm-cold-pair-spike-q64-step12-2026-11-26.json.gz \
+ results/warm-cold-pair-spike-q64-lifted-2026-11-26.json.gz nine-q64.json
+python -W error warm_cold_pair_multishell_audit_reference.py EOS.dat \
+ results/warm-cold-pair-spike-q64-step12-2026-11-26.json.gz --finer
+~~~
+
+[Exact nine-cell q64 replay](results/warm-cold-pair-multishell-q64-guided-2026-11-26.json.gz),
+[solver observations](results/warm-cold-pair-multishell-q64-guided-audit-2026-11-26.json)
+and [third tagged rule diagnostics](results/warm-cold-pair-multishell-finer-q64-2026-11-26.json.gz).
