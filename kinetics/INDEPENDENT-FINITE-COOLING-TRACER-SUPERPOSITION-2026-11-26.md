@@ -124,6 +124,32 @@ data at \(a=0.001\), yields 0.80525 joined and a sum defect less
 than \(9\times10^{-9}\). Neither controlled zero-initial solution
 is the native growing mode.
 
+## Duplicate control and wider retained-fluid test
+
+As a negative control, split a single mixed table into two
+identical scalar species with exactly half the density each,
+the same temperature and quadrature, and no change to its summed
+background. Use the explicit RK evolver for both the single and
+duplicated configs, with the default fluid approximation enabled.
+At k=4 and k=10 h/Mpc at z=20 the two energy-weighted results agree
+within 3.92×10⁻¹¹ absolute. The one-species RK run agrees with the
+previous one-species NDF result within 5.5×10⁻¹⁰. Thus the large
+difference above is not a generic two-species count or integrator
+effect from this check; it needs the different grouped spectra.
+
+The separate lmax=22, later-trigger=42, wider-k≤22 fluid run still
+gives 0.522375 at z=20,k=10, within 9.5×10⁻⁵ of the original
+0.522470 there. It produces a numerical half crossing near
+10.677 h/Mpc at z=20 and 20.219 at z=5; do **not** interpret those
+crossings physically. Changing the usual hierarchy and switch
+time without removing the grouping closure did not eliminate
+the tested issue.
+
+The unmodified solver can generate the duplicate pair with its
+explicit Runge–Kutta evolver (evolver=0), avoiding the stiff
+evolver's dense Jacobian storage. This is a verified focused control,
+not a general promise of lower wall time or convergence.
+
 ## Reproduction
 
 Regenerate the original prompt and mixed PSDs and their native INI
@@ -155,6 +181,8 @@ native solver, retain its logs, and compute matched comparisons:
 OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --prepare native
 OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --cases joined_on_l36 joined_off_l36
 OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --time-probe
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --cases joined_on_l36 joined_on_l36_rk duplicate_on_l36_rk
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --wide
 ~~~
 
 The mean-fluid control takes the same four arguments as the EdS

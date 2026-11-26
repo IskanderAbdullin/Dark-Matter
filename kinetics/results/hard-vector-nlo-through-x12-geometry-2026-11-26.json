@@ -1,0 +1,139 @@
+{
+  "first_measured_window_GeV": [
+    2.2324,
+    3.08
+  ],
+  "mass_over_T_new_strip": [
+    10.0,
+    12.0
+  ],
+  "cases": [
+    {
+      "lower_T_GeV": 0.25,
+      "Born_root_upper_T_GeV": 0.3251756069503274,
+      "new_mass_range_GeV": [
+        2.5,
+        3.9021072834039288
+      ],
+      "completely_inside_lower_measured_window": false,
+      "strict_new_strip_part_in_gap_at_Born_root_GeV": [
+        3.2517560695032737,
+        3.4
+      ],
+      "conditional_root_checks": [
+        {
+          "interpolation": "linear",
+          "changes": [
+            {
+              "alpha_s": 0.2,
+              "root_difference_GeV": -6.847515537800053e-05,
+              "masked_increment_through_8": 0.25743960767474716,
+              "masked_increment_through_9": 0.2855217682671888
+            },
+            {
+              "alpha_s": 0.3,
+              "root_difference_GeV": -0.00010046710959699112,
+              "masked_increment_through_8": 0.25743960767474716,
+              "masked_increment_through_9": 0.2855217682671888
+            },
+            {
+              "alpha_s": 0.4,
+              "root_difference_GeV": -0.00013102457137448287,
+              "masked_increment_through_8": 0.25743960767474716,
+              "masked_increment_through_9": 0.2855217682671888
+            }
+          ]
+        },
+        {
+          "interpolation": "pchip",
+          "changes": [
+            {
+              "alpha_s": 0.2,
+              "root_difference_GeV": -6.847131192694311e-05,
+              "masked_increment_through_8": 0.2574976216766498,
+              "masked_increment_through_9": 0.2855585389606392
+            },
+            {
+              "alpha_s": 0.3,
+              "root_difference_GeV": -0.00010046121367418559,
+              "masked_increment_through_8": 0.2574976216766498,
+              "masked_increment_through_9": 0.2855585389606393
+            },
+            {
+              "alpha_s": 0.4,
+              "root_difference_GeV": -0.00013101652547775622,
+              "masked_increment_through_8": 0.2574976216766498,
+              "masked_increment_through_9": 0.2855585389606392
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lower_T_GeV": 0.3,
+      "Born_root_upper_T_GeV": 0.33730194806361713,
+      "new_mass_range_GeV": [
+        3.0,
+        4.047623376763406
+      ],
+      "completely_inside_lower_measured_window": false,
+      "strict_new_strip_part_in_gap_at_Born_root_GeV": [
+        3.373019480636171,
+        3.4
+      ],
+      "conditional_root_checks": [
+        {
+          "interpolation": "linear",
+          "changes": [
+            {
+              "alpha_s": 0.2,
+              "root_difference_GeV": -5.377785063587215e-05,
+              "masked_increment_through_8": 0.3629925791465496,
+              "masked_increment_through_9": 0.3675322516109215
+            },
+            {
+              "alpha_s": 0.3,
+              "root_difference_GeV": -7.942171379510254e-05,
+              "masked_increment_through_8": 0.3629925791465496,
+              "masked_increment_through_9": 0.3675322516109214
+            },
+            {
+              "alpha_s": 0.4,
+              "root_difference_GeV": -0.00010427005730967442,
+              "masked_increment_through_8": 0.3629925791465496,
+              "masked_increment_through_9": 0.3675322516109215
+            }
+          ]
+        },
+        {
+          "interpolation": "pchip",
+          "changes": [
+            {
+              "alpha_s": 0.2,
+              "root_difference_GeV": -5.377160849945328e-05,
+              "masked_increment_through_8": 0.3631118519613308,
+              "masked_increment_through_9": 0.3676368161096927
+            },
+            {
+              "alpha_s": 0.3,
+              "root_difference_GeV": -7.941250272874845e-05,
+              "masked_increment_through_8": 0.36311185196133067,
+              "masked_increment_through_9": 0.3676368161096928
+            },
+            {
+              "alpha_s": 0.4,
+              "root_difference_GeV": -0.00010425796862895131,
+              "masked_increment_through_8": 0.3631118519613308,
+              "masked_increment_through_9": 0.3676368161096927
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "result_sha256": [
+    "029ecc8103c9e7bc7ee9461764808d30a466df0932331f4606891a80487c9501",
+    "95dbe1e2383976da61d7a5a3c58a71aea3a93779199374eaddc8f9124417b543"
+  ],
+  "scope": "Geometric masking of the new strict strip in a bounded optimistic clock integral, not convergence of full thermal QCD. Piecewise linear interpolation is unchanged below the old upper edge; PCHIP can re-slope adjacent intervals even when the extension itself is masked."
+}

@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "metric_driver": "off",
+      "k_h_per_Mpc": 4.0,
+      "fixture_bytes": 18340,
+      "max_abs_density_compaction_change": 1.2896477219470626e-08,
+      "max_relative_pressure_compaction_change": 3.8593310991430485e-08
+    },
+    {
+      "metric_driver": "off",
+      "k_h_per_Mpc": 10.0,
+      "fixture_bytes": 18365,
+      "max_abs_density_compaction_change": 9.530548572556086e-09,
+      "max_relative_pressure_compaction_change": 4.6586197344211655e-08
+    },
+    {
+      "metric_driver": "on",
+      "k_h_per_Mpc": 4.0,
+      "fixture_bytes": 18332,
+      "max_abs_density_compaction_change": 9.314674587201921e-09,
+      "max_relative_pressure_compaction_change": 4.323413671514231e-08
+    },
+    {
+      "metric_driver": "on",
+      "k_h_per_Mpc": 10.0,
+      "fixture_bytes": 18360,
+      "max_abs_density_compaction_change": 8.967642850521429e-09,
+      "max_relative_pressure_compaction_change": 1.3822663680329583e-08
+    }
+  ],
+  "scope": "Comparison of archived raw-driver results and compressed-driver outputs; the source metric is prescribed, not reconstructed or evolved."
+}

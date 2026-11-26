@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "file": "finite-cooling-native-metric-k2.6944.npz",
+      "k_Mpc_minus1": 2.6944,
+      "bytes": 18340,
+      "number_of_geometric_time_samples": 1600,
+      "raw_metric_sha256": "b8cab5fe01002b08c266c94b91ef3ae4f7a7eafaf86de5abe61c114fc252b32a",
+      "fixture_sha256": "1c62d8c918ac762d67d3b5ba3c36ab7e0a70bf386044c98da74120a530f8e21c"
+    },
+    {
+      "file": "finite-cooling-native-metric-k6.736.npz",
+      "k_Mpc_minus1": 6.736,
+      "bytes": 18365,
+      "number_of_geometric_time_samples": 1600,
+      "raw_metric_sha256": "934ac2a9b8b35a42d300dfe6215c4bc12970e25e08308542fa7b8f4f31080844",
+      "fixture_sha256": "ca63579f11f236428adea604d9705f0e64fee4b82ee9a77496c5adc9241f2156"
+    }
+  ],
+  "scope": "Portable float32 background/metric-only fixture, not a native spectrum. Native initial data and endpoint reference values are preserved in float64."
+}
