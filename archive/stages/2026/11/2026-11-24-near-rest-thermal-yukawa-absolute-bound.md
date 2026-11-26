@@ -1,0 +1,7 @@
+# 2026-11-24 — rigorous thermal 86-eV scalar IR source upper bound
+
+For physical on-shell Yukawa χ1(.1 GeV)→χ2(.02 GeV)+φ(86 eV), exact inverse daughter rapidity constrains all parents capable of producing φ in [86,86.1] eV to p∈[53186.4833,58571.2236] GeV. With prescribed FD T1=.9,T2=1 GeV, zero chemical potentials, and subcritical BE φ T=1 GeV, the exact physical rate measure and |F−R|≤f1(1+b)+f2 b prove |Rφ(IR)|<10^(-23093.3062) GeV⁴, |Qφ(IR)|<10^(-23100.3712) GeV⁵ even allowing bmax≈1.16279e7. Larger windows [86,87], [86,96], [86,186] eV have conservative log10 R upper bounds −20808.5047, −15027.4858, −5933.1283. An explicitly near-critical μφ=mφ−1e−16 GeV still gives log bound below −23000; exactly critical μφ=mφ is **not** covered. This is a bound, not an actual collision rate nor a general nonthermal/SM/FRW/BEC theorem.
+
+[Proof](../../../../kinetics/PHI-BOSE-NEAR-REST-THERMAL-ABSOLUTE-BOUND-2026-11-24.md), [source](../../../../kinetics/phi_bose_near_rest_thermal_bound.py), [tests](../../../../tests/test_phi_bose_near_rest_thermal_bound.py), [machine values](../../../../kinetics/results/phi-bose-near-rest-thermal-absolute-bound-2026-11-24.json). 4 focused tests passed locally (0.47s); public CI separately verify.
+
+**NEXT_ACTION:** prioritize physical coupled strong collision-time solver, not brute force near-55TeV thermal FD tail at T≈1 GeV. No real relic/condensate evidence.

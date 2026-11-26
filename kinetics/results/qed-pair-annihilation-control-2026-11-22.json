@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "process": "vacuum QED e-e+ -> gamma gamma; exact spin-averaged two-photon cross section; FD incoming LOSS only; local full Bose/Pauli equilibrium factor separately",
+  "alpha": 0.0072973525692838015,
+  "m_over_me": 1,
+  "cross_section_checks": {
+    "beta": [
+      0.01,
+      0.1,
+      0.5,
+      0.8,
+      0.95
+    ],
+    "independent": "angular on-shell amplitude Gauss n160 + Geant4/Heitler lab total σ",
+    "max_relative_discrepancy": 8e-13,
+    "threshold": "σ v_M,CM -> π α²/me² with identical final photon 1/2"
+  },
+  "fd_loss_only": {
+    "spins_e_minus": 2,
+    "spins_e_plus": 2,
+    "gauss_radial_angular_order": 32,
+    "cut_p_over_T": 32,
+    "dimensionless_R_over_nminus_nplus_sigmaV_NR": [
+      {
+        "T_me": 0.025,
+        "value": 0.9948519750204873
+      },
+      {
+        "T_me": 0.05,
+        "value": 0.9820171658963867
+      },
+      {
+        "T_me": 0.1,
+        "value": 0.9413277801764411
+      },
+      {
+        "T_me": 0.2,
+        "value": 0.8361441474441652
+      },
+      {
+        "T_me": 1,
+        "value": 0.2953435437431714
+      }
+    ]
+  },
+  "quantum_on_shell_event": {
+    "energies": [
+      2,
+      3,
+      2.5,
+      2.5
+    ],
+    "T": 1,
+    "mu_minus": 0.2,
+    "mu_plus": -0.2,
+    "mu_gamma": 0,
+    "forward_reverse": 0.0065937702566995155,
+    "balanced": true,
+    "shift_mu_minus": 0.21,
+    "shift_affinity": 0.01,
+    "ratio_forward_reverse": 1.010050167084168,
+    "positive_entropy_event_factor": 6.617415314142375e-7
+  },
+  "negative": "LOSS-ONLY FD rate must never be treated as net e+e-↔γγ collision/chemical relaxation: inverse and photon Bose enhancement missing; at common-T equilibrium exact F=R even with opposite electric μ.",
+  "physical_missing": [
+    "full 5D finite-T photon Bose/Pauli 2↔2 operator",
+    "chemical freezeout/nonlinear time",
+    "ν/EM energy+entropy coupling",
+    "gauge-consistent dark portal",
+    "full χ1 χ2 φ physical cosmology"
+  ],
+  "class_ready": false
+}

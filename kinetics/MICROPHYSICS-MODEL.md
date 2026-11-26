@@ -1,0 +1,224 @@
+# Microscopic portal pilot: explicit Yukawa decay and electron-scattering EFT
+
+**Status:** conditional tree-level, finite-temperature collision operator **not yet derived**, not a validated cosmological 86-eV model. Code: [microphysics_portal.py](microphysics_portal.py); [unit and independent t-integral tests](../tests/test_microphysics_portal.py). Uses natural units with masses, T and rates in GeV. This is phase A2/A3 partial work in [research specification](CONTINUOUS-RESEARCH-SPEC.md).
+
+## Falsifiable target and competing possibilities
+
+We need replace the old arbitrary elastic contact rate `gamma_el=10^5` in [BEST+SM](BEST-SM-COUPLED-FRW.md) with a microscopic scattering operator, **without** assuming any particular 86-eV relic has been produced. First prove a concrete theory has the 1↔2 and SM contact vertices, their dimensions and thresholds; then test the full Fermi/Bose collision integrals, thermal rates, SM heat and freezeout. A high rest-frame scattering frequency alone is **not** evidence of thermalisation. If the portal's additional 2→2/number-changing processes invalidate the intended system, report the failure and change the model explicitly.
+
+## Minimal low-energy benchmark (not a UV-complete SM model)
+
+Fields: Dirac fermions chi1 and chi2, real scalar phi; exact Z2 with chi1 and phi odd, chi2 and SM even. For `m_phi < m_chi1`, phi is lightest Z2-odd particle and stable *within this symmetry*. A conserved Dirac charge can be assigned to chi1 and chi2. The interaction is
+
+```text
+L_int = -y phi (bar(chi2) chi1 + bar(chi1) chi2)
+        + G (bar(chi1) gamma_mu chi1)(bar(e) gamma^mu e).
+```
+
+`y` dimensionless, `G=C/Lambda^2` with energy dimension -2. The electron vector contact describes the **broken-electroweak** low-energy component; at temperatures above EWSB it must be embedded in gauge-invariant operators such as `(bar chi1 gamma chi1)(bar L_e gamma L_e + bar e_R gamma e_R)`, necessarily carrying neutrino channels. A heavy mediator UV completion must also be supplied if the typical momentum transfer approaches Lambda. Additional SM processes, dark thermal masses and potential loops are **not included**. Thus we do not claim this EFT at arbitrary early-universe temperatures.
+
+Check: an exact Z2 keeps phi stable, but permits phi-phi interactions and number-changing reactions; therefore the original closed-graph `N1+Nphi` can fail once new channels are added. The electron portal is elastic in chi1 number at tree level; other portals may violate that number. In chemical equilibrium a real self-conjugate phi has zero chemical potential when its number is not otherwise conserved.
+
+## 1→2 decay: derived, not assigned
+
+For chi1(P)→chi2(k)+phi(q), the parent-spin-averaged scalar Yukawa trace is
+
+```text
+|M|^2_avg = y^2 [ (m1 + m2)^2 - mphi^2 ].
+lambda = [m1^2-(m2+mphi)^2] [m1^2-(m2-mphi)^2].
+Gamma_rest = |M|^2_avg sqrt(lambda) / (16 pi m1^3).
+```
+
+The width vanishes at/below the physical threshold `m1 <= m2+mphi`, even at fixed nonzero y. For m2=mphi=0, it reduces to `Gamma=y^2*m1/(16*pi)`. The old BEST reference used a **prescribed** constant rest width: its convention is `sum |M|^2_BEST = g1 *16*pi*m1^3*Gamma/sqrt(lambda)`; using the trace above yields `g1 * y^2 [(m1+m2)^2-mphi^2]`, with `g1=4` for Dirac particles+antiparticles. The code tests this inverse mapping independently. **Beware:** this is a convention-matching exercise; channel multiplicity and degree-of-freedom mapping must still be checked in actual BEST source/rates before declaring new physical production.
+
+Finite-T decay/inverse-decay is **not** obtained by multiplying the vacuum width by a guessed `gamma(T)`. The collision operator contains the complete gain–loss quantum factors
+
+```text
+f1 (1-f2) (1+fphi)  -  (1-f1) f2 fphi
+```
+
+and modified in-medium dispersion, phase space, and possible thermal masses. All terms must be inserted consistently. Momentum-dependent time-dilation alone is not a full thermal collision rate.
+
+## Electron elastic scattering (tree level, massless e benchmark)
+
+Take `s=(pchi+pe)^2`, `t=(pchi-pchi')^2`, `u=2*m1^2-s-t`, `D=s-m1^2`. Averaging the two spins of each incoming fermion and summing outgoing spins:
+
+```text
+|M|^2_avg = 2 G^2 [ D^2 + (u-m1^2)^2 + 2*m1^2*t ].
+d sigma/dt = |M|^2_avg/(16*pi*D^2).
+t_min = -D^2/s,   t_max=0.
+sigma_total = G^2*D^2*(D^2+3*s^2)/(24*pi*s^3).
+sigma_transport = int (1-cos theta_cm) d sigma
+                = G^2*D^2*(3*D^2+4*s^2)/(48*pi*s^3).
+```
+
+The final two expressions are separately checked against numerical integration of the matrix element over t for several masses/energies. Near the non-relativistic chi rest limit `E_e << m1`, `sigma_transport -> G^2*E_e^2/(3*pi)`; at high energy `sigma_transport/sigma_total -> 7/8`. This is a perturbative tree-level cross section, with no electron mass, thermal screening, blocking, or mediator-propagator corrections.
+
+## Rest-frame bath *transport collision frequency*, NOT kinetic relaxation
+
+As a first analytic reference, consider one chi1 **at rest** in a massless, charge-symmetric e-/e+ bath, with `g_e=4`, zero chemical potential and initial-state FD occupations:
+
+```text
+nu_T(rest,T) = g_e/(2*pi^2) int_0^infinity dk k^2 fFD(k/T)
+                                     sigma_transport(m1^2+2*m1*k)
+nu_T(rest,T << m1) = 15*g_e*zeta(5)/(4*pi^3) * G^2 * T^5.
+```
+
+The integrator uses dimensionless `x=k/T`, and the asymptote has an independent analytic FD moment. This frequency **does not equal** `gamma_el(p,T)` entering the earlier number-conserving BGK operator: momentum/heat relaxation needs recoil, final-state Pauli blocking, a proper linearized Boltzmann/Fokker–Planck collision operator, distribution dependence, and physical multi-channel SM charge counting. Using `nu_T` as `gamma_el` now would be an unjustified model substitution. Electron mass, plasma effects and neutrino partners are absent. All exploratory ratios `nu_T/H` are labelled frequency ratios, **not** equilibration criteria.
+
+## Independent control and accept/reject gates
+
+1. Threshold test: width goes to zero with Källén phase space, unlike the previous fixed-`Gamma` mass-scan. Verify `Gamma=y^2*m1/(16*pi)` for massless daughters.
+2. Convention test: independently invert BEST's existing `g1*16*pi*m1^3*Gamma/sqrt(lambda)` to the Yukawa width for massive daughters; do not rewrite historical BEST results.
+3. Scattering test: compare analytical `sigma_total` and `sigma_transport` with independent quadrature over `d sigma/dt` for multiple `s,m,G`. Check positivity and angular limits.
+4. Bath test: coupling-square scaling and heavy-rest FD asymptote; zero coupling must give zero.
+5. Failure controls: unphysical thresholds, NaN and negative rates rejected; report all GeV dimensions.
+6. **Next missing gates:** derive fully thermalized, Pauli-blocked `C_chi1[f]` from the same operator (including neutrinos where gauge invariance requires), compute number/energy moment and kinetic drag, compare to BGK with a calibrated `gamma`; add thermal masses and `g*_rho/g*_S`; independently validate BEST gamma/daughter distributions, long-time relic and observational claims. None of these are achieved by the current pilot.
+
+Background motivation: [Yin, JHEP05(2023)180](https://arxiv.org/abs/2301.08735) and [Sakurai & Yin, JHEP03(2025)202](https://arxiv.org/abs/2410.18968). Existing BEST conventions: [best_massive_daughter_reference.py](best_massive_daughter_reference.py), [best_external_vacuum_reference.py](best_external_vacuum_reference.py). The vector-contact formula here is an explicit local tree-level trace/calculation, **not a published independent full plasma rate**.
+
+## Reproducibility
+
+```bash
+python -m pytest -q tests/test_microphysics_portal.py
+python kinetics/microphysics_portal.py
+```
+
+The command prints an **illustrative** benchmark (`m1=0.1 GeV, mphi=86e-9 GeV=86 eV`) with an arbitrary coupling, no assumption of observed ΩDM or freezeout. Its output is not an external BEST result; use independent CI or recomputation of this code before claiming numeric precision.
+
+
+## Follow-up stage: thermal gain/loss and dimensional BEST bridge
+
+[Microphysics thermal gain/loss](microphysics_thermal_gain_loss.py) checks the exact **on-shell occupation factors** from this Yukawa vertex, with explicit thermal Fermi and Bose functions. On an energy shell E1=E2+Ephi,
+
+```text
+D = f1(1-f2)(1+bphi), I=(1-f1)f2*bphi,
+D / I = exp[(mu1-mu2-muphi)/T].
+```
+
+The test verifies `mu1=mu2` and `muphi=0` for equilibrium of a real self-conjugate scalar (if number changing is allowed), both signs of chemical affinity, strong low-energy Bose occupation and off-shell rejection. This is *not* a momentum-resolved thermal decay rate: matrix-element phase space, quantum statistical collision integrals and thermal masses remain necessary.
+
+The same module exports `yukawa_best_bridge`: dimensionful GeV masses and the explicit Yukawa y become dimensionless `BEST masses=m/T`, `BEST Gamma=Gamma_rest/T`, and `BEST amplitude=|M|^2/T^2`, exactly inverted against the earlier independent analytic width. It deliberately does **not** execute BEST, relabel a fixed-width run as fixed-coupling, or insert the unblocked electron transport frequency into the BGK. A true pinned external BEST experiment is the next numerical gate after the microscopic collision channels and normalization are audited.
+
+
+## Second scattering benchmark: Pauli-blocked recoil heat into chi at rest
+
+[Microphysics recoil heat](microphysics_recoil_heat.py) advances beyond the unblocked transport collision frequency by integrating **actual recoil energy** at each elastic electron collision, including the outgoing electron's Fermi blocking. For chi1 initially at rest and e initially massless with energy k, exact two-body kinematics yield `s=m1^2+2m1*k`, `t_min=-(s-m1^2)^2/s`, `k_final=k+t/(2m1)`. The kinetic energy gained by the rest chi is `Delta E_chi=-t/(2m1)` (positive).
+
+```text
+Q_rest (GeV^2 per chi) =
+  g_e/(2pi^2) integral_0^inf dk k^2 fFD(k/T)
+  integral_tmin^0 dt (d sigma/dt) [1-fFD(k_final/T)] (-t/2m1).
+```
+
+An entirely independent angular-moment identity for the **unblocked** case is
+
+```text
+int dt (d sigma/dt) (-t/(2m1)) = [p_cm^2/m1] sigma_transport(s).
+```
+
+For `m1/T -> infinity` and massless FD e± bath, the asymptotic *blocked* energy-gain rate is
+
+```text
+Q_rest ~ 31*g_e*pi^3/(252) * G^2*T^7/m1.
+```
+
+This follows from `int dx x^6 fFD(x)(1-fFD(x))=31*pi^6/42`; the tests separately verify finite-angle recoil identity, final-state blocking suppressing the positive heating, quadratic coupling scaling and heavy-`m1/T` asymptote. Electron/SM bath backreaction, moving chi distribution, inverse thermal energy flow and full Fokker–Planck coefficients remain **uncomputed**. The rest particle is out of equilibrium by construction, so positive heating here is physically expected, **not** evidence of violating detailed balance. This power is not an elastic BGK rate and must not be substituted for `gamma_el`.
+
+
+## Next building block: exact Pauli gain/loss and entropy per elastic collision event
+
+[Microphysics elastic event](microphysics_elastic_event.py) and [independent tests](../tests/test_microphysics_elastic_event.py) implement the detailed-balance **local integrand** for `chi+e ↔ chi'+e'`, with **both** incoming/outgoing fermionic occupations:
+
+```text
+F = f_chi f_e (1-f_chi') (1-f_e')
+R = f_chi' f_e' (1-f_chi) (1-f_e)
+A = F-R.
+```
+
+When `E_chi+E_e=E_chi'+E_e'`, for FD temperatures T_chi and T_e (each species' chemical potential unchanged in elastic scattering),
+
+```text
+ln(F/R) = (E_chi' - E_chi) * (1/T_chi - 1/T_e).
+entropy_per_event = (F-R) * ln(F/R) >= 0.
+Q_chi,event = (E_chi'-E_chi) * (F-R) = -Q_e,event.
+```
+
+At common T, `F=R` independently of both chemical potentials. An electron bath hotter than χ drives positive Q_chi for a χ-rest initial recoil event; reversing the temperature hierarchy flips it, without violating the entropy sign. Separate exact rest-frame kinematics verify mass shell and 4-momentum identities rather than inferring conservation from a code ledger. These are **local phase-space identities only**: there is still no invariant phase-space measure, angular/thermal integration over moving χ, linearized drag eigenvalue, collision coupling to BEST or resolved SM temperature dynamics. An event-level entropy sign is not yet a global H theorem for the discretized solver. This is the next critical construction requirement.
+
+
+## Momentum-dependent incoming transport frequency — still not gamma_el
+
+[Moving χ transport reference](microphysics_moving_transport.py) integrates the chosen contact scattering **with the correct Lorentz-invariant incoming flux** for a χ particle with physical momentum p in an isotropic, massless, unblocked electron/positron bath:
+
+```text
+Echi = sqrt(M^2+p^2), beta=p/Echi,
+s = M^2+2*k*Echi*(1-beta*cos(theta)),
+v_Moller = 1-beta*cos(theta),
+nu_T(p,T) = g_e/(2*pi^2) int dk k^2 fFD(k/T)
+                   * (1/2) int_-1^1 dcos(theta) v_Moller sigma_T(s).
+```
+
+Tests require exact p=0 reduction to the earlier rest expression, continuous p→0, positive rates and coupling-square scaling. This is a **true momentum-dependent incoming test-particle collision frequency**, not the linearized kinetic relaxation `gamma_el(p,T)`: the electron's final-state Pauli, full 2→2 gain/loss, angular momentum exchange, moving χ blocking, thermal masses, neutrino channels and SM backreaction must all be integrated before it can replace phenomenological BGK. A CM transfer-weighted cross section is not itself a lab drag coefficient.
+
+
+## Signed lab-energy moment of a *moving* χ: exact outgoing angular integral, still unblocked
+
+[Moving χ heat reference](microphysics_moving_heat.py) goes beyond a frequency estimate. For χ with lab momentum p and initial isotropic e± bath, 2-body COM kinematics imply that the outgoing azimuth-averaged **lab energy kick** has the exact form
+
+```text
+Echi=sqrt(M^2+p^2), s=M^2+2k(Echi-p mu), v_M=1-p mu/Echi,
+D_E = -[Echi-gamma_cm Echi_cm*]
+    = k [ k(Echi-p mu)+Echi*p*mu-p^2 ]/s,    mu=cos(theta_in).
+int d sigma (Echi_final-Echi_initial) = D_E * sigma_transport(s).
+```
+
+The final equality follows from the boost identity `Echi_final-Echi_initial = (gamma_cm beta_cm dot pchi_cm_initial)(cos(theta*)-1)` averaged over outgoing azimuth. This **exactly** integrates the outgoing two-body differential cross section, *before final-state Pauli factors*. The remaining initial bath integral
+
+```text
+Q_chi(p) = g_e/(2*pi^2) int dk k^2 fFD(k/T)
+               (1/2) int_-1^1 dmu v_M * sigma_T(s) * D_E
+```
+
+is a physically derived *signed unblocked collision energy moment*, GeV² per χ. Independent tests integrate `d sigma/dt` against the COM recoil, verify the correct boost coefficient and recover the fully independent χ-at-rest no-blocked recoil integral. In a hot bath a very slow test χ gains energy, whereas a very energetic test χ loses energy, as expected for collisional drag. This is **still not** the equilibrating thermal χ Boltzmann kernel: omitting final electron/χ Pauli destroys detailed balance for a thermal ensemble; angular averaging cannot be applied unchanged once final-state e blocking is present. Proper finite-T full collision integrals (or controlled Fokker–Planck approximation), gauge-required neutrinos and simultaneous SM heat feedback remain mandatory.
+
+
+## Physically derived *controlled heavy χ* momentum drag: Einstein/Fokker–Planck matching
+
+[Heavy NR drag pilot](microphysics_nr_drag.py) provides the **first coupling-dependent kinetic relaxation coefficient**, but **only** in the explicitly controlled limit of *dilute, nonrelativistic χ*, small momentum transfer, and a near-equilibrium e bath. With a Langevin process `dp_i=-eta*p_i dt+sqrt(kappa)dW_i`, `<dp_i^2>/dt=kappa`, the Maxwell stationary variance `<p_i^2>=M*T` demands the fluctuation–dissipation relation `eta=kappa/(2*M*T)`. At rest the 3 momentum components diffuse and heat a χ by `Q_rest=3*kappa/(2*M)`; hence
+
+```text
+kappa = 2*M*Q_rest/3,
+eta_NR = Q_rest/(3*T)
+       -> [31*g_e*pi^3/(756)] * G^2*T^6/M    (M/T -> infinity).
+```
+
+The input `Q_rest` is computed by the **fully recoil-sensitive, Pauli-blocked** microphysical electron scattering integral in [microphysics_recoil_heat.py](microphysics_recoil_heat.py). This construction is a controlled *asymptotic Fokker–Planck matching*, not an exact 2→2 collision operator. The module refuses `M/T < 100` by default and explicitly marks any chosen threshold as an approximation requiring validation. In particular the historical early BEST benchmark `M/T=0.1` is **out of scope**: inserting `eta_NR` as its BGK `gamma_el` would be unphysical. A second independent high-mass asymptote plus numerical rest collision result gives a finite error estimate; an actual full momentum/thermal operator and moving-particle Pauli still need development before realistic relativistic plasma calculations.
+
+## Gauge-completion obligation: electron vector coupling forces a neutrino bath channel
+
+For a gauge-singlet Dirac χ1 and the benchmark low-energy vector electron portal `G (bar χ gamma χ)(bar e gamma e)`, a **minimal SM SU(2)_L×U(1)_Y-invariant contact EFT** using lepton flavour e above electroweak breaking instead has separate chiral coefficients:
+
+```text
+L_eff = (bar chi1 gamma_mu chi1) [
+       G_L (bar L_e gamma^mu L_e) + G_R (bar e_R gamma^mu e_R) ],
+L_e=(nu_eL, eL).
+G_V,e = (G_L+G_R)/2; G_A,e=(G_R-G_L)/2.
+```
+
+The original **pure electron vector** amplitude (no axial contribution) demands `G_L=G_R=G` in this minimal dimension-6 completion. The doublet coefficient **necessarily also couples χ1 to νe_L (and antineutrino right-helicity)** with `G_L`. Choosing `G_L=0` suppresses the neutrino interaction but yields a *right-chiral*, not pure-vector, electron interaction; one cannot simply omit ν while keeping the old same vector operator at high temperature.
+
+For a **massless common-temperature** ideal lepton plasma, unpolarized vector χ with zero e/ν chemical potentials, and no neutrino mixing/mediator/SM threshold effects, the parity-odd piece of the chiral lepton spin trace drops out when contracted with the symmetric χ vector tensor. Each massless active lepton helicity contributes the same angular form as the existing vector electron kernel. The conditional spin/charge counts are
+
+```text
+eL and positron partners: 2 G_L^2
+eR and positron partners: 2 G_R^2
+nu_eL and anti-nu_eR:      2 G_L^2
+electron-only total:      2 (G_L^2 + G_R^2)
+electron + nu_e total:    4 G_L^2 + 2 G_R^2.
+For G_L=G_R=G: ratio completed / electron-only = 6/4 = 1.5.
+```
+
+Thus, **conditional on exactly the same temperature/massless/statistics and contact scattering approximation**, the electron-only χ heat and transport collision frequency previously computed undercount that deliberately specified lepton completion by **50%**. This is a *conditional coupling-and-degeneracy identity*, not a physical thermalization rate, measured relic density, universal 1.5 boost at arbitrary temperatures, or a complete electroweak calculation. If left/right couplings differ, the electron current also has axial structure; if electron and neutrino baths have unequal temperatures, each needs its own collision operator, Q and entropy ledger; EW unbroken/symmetric plasma requires actual in-medium rates and finite g*. Electroweak completion does not establish the UV origin, mediator mass or collider/precision/neutrino bounds.
+
+Check [lepton_portal_chirality.py](lepton_portal_chirality.py) and [unit tests](../tests/test_lepton_portal_chirality.py) comparing the 6/4 conditional rate directly in the 5D weak-form kernel. Background primary references: [Neutrino portals to dark matter, Eur. Phys. J. C (2019)](https://link.springer.com/article/10.1140/epjc/s10052-019-7060-5) and [SM-gauge-invariant leptophilic effective operators, Chinese Physics C (2021)](https://doi.org/10.1088/1674-1137/abce50). The exact spin/count ratio above is a calculation in the displayed model and requires extension for any distinct underlying Lorentz structures.

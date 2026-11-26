@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "synthetic Pauli χℓ 5D incoming radial p segmentation, not physical Gamma/H",
+  "fixed": {
+    "Mchi": 0.1,
+    "mlepton": 0,
+    "mV": 0.1,
+    "G": 0.001,
+    "T": 1,
+    "nmu": 8,
+    "nc": 32,
+    "nphi": 16,
+    "max_segment_energy_width": 1
+  },
+  "oscillatory_radial_local_at_cut12": [
+    {
+      "segments": 12,
+      "local": 3,
+      "Q": 4.645350308288424e-15,
+      "H": 7.532886595213222e-13
+    },
+    {
+      "segments": 12,
+      "local": 4,
+      "Q": 4.499933298558999e-15,
+      "H": 7.541675007937446e-13
+    },
+    {
+      "segments": 12,
+      "local": 5,
+      "Q": 4.568755689044902e-15,
+      "H": 7.540452035333736e-13
+    },
+    {
+      "segments": 12,
+      "local": 6,
+      "Q": 4.556593552315086e-15,
+      "H": 7.540669156347587e-13
+    }
+  ],
+  "unsegmented": {
+    "nr24_Q": -1.3988679356816634e-14,
+    "nr64_Q": 4.55619107e-15
+  },
+  "oscillatory_tail_fixed_dE1_local5": [
+    {
+      "cut": 8,
+      "segments": 8,
+      "Q": 5.365357750519817e-15,
+      "H": 7.308681283570731e-13
+    },
+    {
+      "cut": 12,
+      "segments": 12,
+      "Q": 4.568755689044902e-15,
+      "H": 7.540452035333736e-13
+    },
+    {
+      "cut": 16,
+      "segments": 16,
+      "Q": 4.594669672406656e-15,
+      "H": 7.548936844515494e-13
+    },
+    {
+      "cut": 20,
+      "segments": 20,
+      "Q": 4.594452896399473e-15,
+      "H": 7.549190132470882e-13
+    }
+  ],
+  "smooth_tail_fixed_dE1_local5": [
+    {
+      "cut": 8,
+      "Q": 8.759008311081611e-14,
+      "H": 1.0798588265100247e-14
+    },
+    {
+      "cut": 12,
+      "Q": 9.069869394061755e-14,
+      "H": 1.1169920927535043e-14
+    },
+    {
+      "cut": 16,
+      "Q": 9.082503394392094e-14,
+      "H": 1.1185035464971809e-14
+    },
+    {
+      "cut": 20,
+      "Q": 9.082914679078186e-14,
+      "H": 1.1185527936559047e-14
+    }
+  ],
+  "oscillatory_polar_fixed_cut12_seg12x5": [
+    {
+      "nc": 16,
+      "Q": 4.874801275e-15,
+      "H": 6.856004688e-13
+    },
+    {
+      "nc": 24,
+      "Q": 4.606341685e-15,
+      "H": 7.399849074e-13
+    },
+    {
+      "nc": 32,
+      "Q": 4.568755689e-15,
+      "H": 7.540452035e-13
+    },
+    {
+      "nc": 48,
+      "Q": 4.621635249e-15,
+      "H": 7.54289717e-13
+    },
+    {
+      "nc": 64,
+      "Q": 4.651101962e-15,
+      "H": 7.498427996e-13
+    }
+  ],
+  "radial_volume": {
+    "segmented_p_m0p5_cut12_local5_relative_abs_below": 3e-14,
+    "segmented_energy_m0p5_cut12_local5_relative_error": 4.5219704403187677e-7
+  },
+  "positive": "Segmented momentum Gauss preserves ∫p²dp exactly to floating; oscillatory radial/cutoff heat sign stabilized at tested grids. All eventwise Pauli/H/energy controls remain valid.",
+  "negative": "At same radial+cutoff, angular Q and S still nonmonotone at nc 16-64; segment nlocal3 can alias; no physical Gamma_el or relic model.",
+  "class_ready": false
+}

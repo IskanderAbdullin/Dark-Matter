@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "mphi_eV": 86,
+  "model": "conditional equilibrated two-Dirac y=.001 thermal fermion determinant and a real scalar contact quartic V=lambda phi^4/4!",
+  "min_lambda_for_nonnegative_static_curvature": 0.0000010851571368922225,
+  "contact_sigma_NR_GeVminus2": 0.39593921458119913,
+  "contact_sigma_over_mass_cm2_g": 1005.620270173485,
+  "viscosity_sigma_over_mass_cm2_g": 670.41351344899,
+  "reference_scenarios": [
+    {
+      "sigma_m_upper": 0.2,
+      "lambda_max": 1.5303494770947895e-8
+    },
+    {
+      "sigma_m_upper": 1,
+      "lambda_max": 3.421965460115207e-8
+    },
+    {
+      "sigma_m_upper": 2,
+      "lambda_max": 4.839389963667214e-8
+    },
+    {
+      "sigma_m_upper": 5,
+      "lambda_max": 7.651747385473947e-8
+    }
+  ],
+  "fixed_lambda_reference_mass_for_sigma_m_1_eV": 861.6081351505869,
+  "limitations": "Model dependent cluster reference, requires dominant dilute NR scalar, actual thermal bath unproven, static curvature not real-time pole, no cosmological relic/likelihood",
+  "class_ready": false
+}

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "Physical p²dp Bose IR hat shape and synthetic finite moving tree Yukawa Pauli+Bose weak; no cosmological φ f(q)/Ω/BEC/CLASS",
+  "masses_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "y_assumed": 0.001,
+  "mother_T1": 0.9,
+  "daughter_T2": 1,
+  "phi_T": 1,
+  "parent_pmax": 2,
+  "parent_nr": 24,
+  "parent_nangle": 48,
+  "physical_inverse_fugacity_shapes": {
+    "thermal": "E",
+    "broader": "E+.30exp(-((E-.10)/.06)^2)",
+    "infrared_curved": "E+.40exp(-((E-.04)/.02)^2)"
+  },
+  "mode_energy_bins": [
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "scalar_grid_methods": [
+    "uniform",
+    "power2",
+    "power3",
+    "two_zone"
+  ],
+  "synthetic_errors": {
+    "broader": {
+      "Q_errors_percent": [
+        [
+          0.31623,
+          -4.97346,
+          -3.96385,
+          -4.19506
+        ],
+        [
+          -11.71932,
+          -1.43099,
+          -1.32271,
+          -1.2175
+        ],
+        [
+          -4.79708,
+          -0.38082,
+          -0.33985,
+          -0.31701
+        ],
+        [
+          -1.39589,
+          -0.09625,
+          -0.08411,
+          -0.08698
+        ],
+        [
+          -0.35404,
+          -0.02597,
+          -0.02283,
+          -0.02041
+        ]
+      ],
+      "H_errors_percent": [
+        [
+          -16.83194,
+          -6.6414,
+          -5.29037,
+          -3.58753
+        ],
+        [
+          -11.17761,
+          -1.91292,
+          -1.69632,
+          -0.98318
+        ],
+        [
+          -4.16774,
+          -0.48073,
+          -0.45567,
+          -0.26308
+        ],
+        [
+          -1.1915,
+          -0.12681,
+          -0.10739,
+          -0.07115
+        ],
+        [
+          -0.30925,
+          -0.03251,
+          -0.02865,
+          -0.01746
+        ]
+      ]
+    },
+    "infrared_curved": {
+      "Q_errors_percent": [
+        [
+          68.14638,
+          -5.14351,
+          -6.8269,
+          -11.70394
+        ],
+        [
+          29.56711,
+          -3.35658,
+          -2.50725,
+          -5.2433
+        ],
+        [
+          -11.35098,
+          -1.00418,
+          -0.62693,
+          -1.59365
+        ],
+        [
+          -6.20191,
+          -0.27386,
+          -0.16268,
+          -0.45401
+        ],
+        [
+          -1.98752,
+          -0.07648,
+          -0.04302,
+          -0.10367
+        ]
+      ],
+      "H_errors_percent": [
+        [
+          35.97215,
+          -5.86659,
+          -8.87827,
+          -11.92666
+        ],
+        [
+          4.12962,
+          -3.54682,
+          -2.65996,
+          -5.02314
+        ],
+        [
+          -10.31243,
+          -1.09157,
+          -0.70161,
+          -1.4732
+        ],
+        [
+          -5.94626,
+          -0.27529,
+          -0.165,
+          -0.43412
+        ],
+        [
+          -1.90487,
+          -0.07798,
+          -0.04,
+          -0.09664
+        ]
+      ]
+    }
+  },
+  "thermal_affine": {
+    "all_four_meshes_N32_rate_H_relative_abs_below": 1e-12
+  },
+  "implicit_critical": {
+    "initial_eta_phi_rest": 8.6e-8,
+    "scalar_first_hat_source_16_power2": 0,
+    "all_phi_hat_sources_nonpositive": true,
+    "mother_net_phi_destruction": true,
+    "cases": [
+      {
+        "bins": 16,
+        "scheme": "uniform",
+        "dt": 1000,
+        "accepted": true,
+        "delta_Nphi": -1.164838503431298e-8,
+        "entropy_gain": 1.6483485687501798e-9,
+        "min_eta_phi": 0.0000022848385066561717
+      },
+      {
+        "bins": 16,
+        "scheme": "power2",
+        "dt": 1,
+        "accepted": true,
+        "min_eta_phi": 8.30017985549678e-8
+      },
+      {
+        "bins": 16,
+        "scheme": "power2",
+        "dt": 20,
+        "accepted": true,
+        "min_eta_phi": 2.6036496626867586e-8
+      },
+      {
+        "bins": 16,
+        "scheme": "power2",
+        "dt": 30,
+        "accepted": false,
+        "reason": "Newton cannot decrease residual within physical Bose domain"
+      },
+      {
+        "bins": 16,
+        "scheme": "power2",
+        "dt": 1000,
+        "accepted": false,
+        "reason": "Newton cannot decrease residual within physical Bose domain"
+      },
+      {
+        "bins": 32,
+        "scheme": "power3",
+        "dt": 1000,
+        "accepted": true,
+        "min_eta_phi": 4.7188009924160106e-8
+      },
+      {
+        "bins": 64,
+        "scheme": "power3",
+        "dt": 1000,
+        "accepted": true,
+        "min_eta_phi": 8.608147973771822e-8
+      }
+    ],
+    "failure_not_real_condensate": true
+  },
+  "tests": "Six scoped focused local tests passed, full unrounded matrix reproducible via python -m kinetics.phi_bose_nonuniform_ir_grid",
+  "class_ready": false
+}

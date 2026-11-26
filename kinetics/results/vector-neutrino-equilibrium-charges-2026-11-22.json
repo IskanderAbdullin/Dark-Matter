@@ -1,0 +1,62 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "closed fixed-volume two-active-flavor ν/antiν (g=4 FD) and massive Proca Zprime (g=3 BE), only ννbar ↔ Zprime, no other number-changing channels, no FRW",
+  "invariants": [
+    "Nν+Nνbar+2NZprime",
+    "ρν+ρZprime",
+    "flavor lepton asymmetry initially zero"
+  ],
+  "thermodynamic_conditions": [
+    "muν=mu_antinu equal y*T as effective particle-number potential, not lepton asymmetry",
+    "muZprime=2muν",
+    "single final T, initial T0=1, muν0=0, Zprime empty"
+  ],
+  "quadrature": "Gauss p/T 0..60, n256; independent massless Proca-3-polarization fugacity series n128 and exact initial zeta values",
+  "results": [
+    {
+      "mV_T0": 0.03,
+      "T_final_T0": 1.246000083762047,
+      "muν_over_T": -1.1358997797528676,
+      "muZprime_over_T": -2.271799559505735,
+      "nV_over_mu0_BE_at_T0": 0.16828876574899873,
+      "nν_final_over_initial": 0.6637185588524867,
+      "nV_over_initial_nν": 0.16814072057375662,
+      "entropy_final_over_initial": 1.0728986296994165,
+      "relative_N_residual": 0,
+      "relative_E_residual": -2.220446049250313e-16
+    },
+    {
+      "mV_T0": 0.1,
+      "T_final_T0": 1.2456583963577124,
+      "muν_over_T": -1.134891241410539,
+      "muZprime_over_T": -2.269782482821078,
+      "nV_over_mu0_BE_at_T0": 0.1693222220526739,
+      "nν_final_over_initial": 0.6638183633379314,
+      "nV_over_initial_nν": 0.16809081833103454,
+      "entropy_final_over_initial": 1.0728395093073262,
+      "relative_N_residual": 4.440892098500626e-16,
+      "relative_E_residual": 4.440892098500626e-16
+    },
+    {
+      "mV_T0": 0.3,
+      "T_final_T0": 1.2427628248471279,
+      "muν_over_T": -1.126290096692119,
+      "muZprime_over_T": -2.252580193384238,
+      "nV_over_mu0_BE_at_T0": 0.1755555926517495,
+      "nν_final_over_initial": 0.664692790687507,
+      "nV_over_initial_nν": 0.16765360465624637,
+      "entropy_final_over_initial": 1.0723324928007885,
+      "relative_N_residual": -3.3306690738754696e-16,
+      "relative_E_residual": -2.220446049250313e-16
+    }
+  ],
+  "independent_massless_Proca_three_spin_formal_limit": {
+    "T_final_T0": 1.2460341177395688,
+    "muν_over_T": -1.1360001253809453,
+    "nV_over_initial_nν": 0.1681456600121647,
+    "description": "x->0 at fixed massive vector g=3 is NOT physical restored U1 symmetry g=2 massless phase"
+  },
+  "negative": "Fast 1↔2 alone does NOT yield independent muν=muZprime=0 thermal resets; reduced conserved Nν+2NZprime forces negative chemical potentials and ~17% of initial mu0 boson number; weak ν-number-changing reactions can invalidate this reduced invariant.",
+  "scope_warning": "Equilibrium only, no time evolution or real cosmological ν chemical freezeout, gauge breaking, BBN/Neff or χ1/χ2/φ DM physics",
+  "class_ready": false
+}

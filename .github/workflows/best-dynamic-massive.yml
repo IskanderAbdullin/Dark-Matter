@@ -1,0 +1,88 @@
+name: Closed massive Bose three-species time evolution (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-dynamic-massive.yml'
+      - 'kinetics/best_closed_massive_dynamic.py'
+      - 'kinetics/best_massive_daughter_reference.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-dynamic-massive-research
+  cancel-in-progress: true
+
+jobs:
+  finite-time-quantum-kinetics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Strict independent environment
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install numpy scipy mpi4py vegas
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+      - name: Actual all-species nonzero-mass Bose-Pauli kinetic time steps
+        run: |
+          mkdir -p outputs
+          for case in "4 .00001 exprb 3000" "8 .000005 exprb 3000" "4 .00001 exprb_full 6000"; do
+            read -r steps dt method neval <<< "$case"
+            label=$(echo "$dt" | sed 's/\./p/')
+            file="outputs/best_dynamic_"$method"_"$steps"_"$label".json"
+            logfile=$(echo "$file" | sed 's/\.json$/.log/')
+            echo "Run actual BEST: steps=$steps dtGamma=$dt method=$method neval=$neval"
+            mpirun -np 2 python kinetics/best_closed_massive_dynamic.py \
+              --execute --best-root /tmp/best --mphi .001 --grid-n 56 \
+              --neval "$neval" --steps "$steps" --dt "$dt" --method "$method" \
+              --output "$file" > "$logfile" 2>&1
+          done
+      - name: Report actual charge and physical energy errors without tuning
+        run: |
+          python - <<'PY'
+          import glob,json,math
+          files=sorted(glob.glob("outputs/best_dynamic_*.json"))
+          assert len(files)==3,files
+          for fn in files:
+              d=json.load(open(fn))
+              assert d["external_BEST_executed"]
+              assert d["verified_external_best_git_sha"]=="c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+              assert d["not_relic_or_class"]
+              assert d["no_Hubble_expansion"]
+              last=d["time_evolution"][-1]
+              assert len(d["time_evolution"])==d["model"]["steps"]
+              print("DYNAMIC",fn,"tGamma",last["time_after_tGamma"],
+                    "phi number",last["number_moments"]["phi"],
+                    "phi N0",last["phi_massive_zero_mode_N0"],
+                    "phi f(qmin)",last["phi_smallest_q_occupation"])
+              print("     charge1 relative",d["relative_chi1_phi_charge_error"],
+                    "charge2 relative",d["relative_chi1_chi2_charge_error"],
+                    "total energy relative",d["relative_total_physical_energy_error"])
+              assert all(math.isfinite(x) for x in (
+                  d["relative_chi1_phi_charge_error"],
+                  d["relative_chi1_chi2_charge_error"],
+                  d["relative_total_physical_energy_error"]))
+          print("This is finite-time fixed-a kinetics only, no FRW or primordial BEC claim.")
+          PY
+      - name: Save real independent data and negative error logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-massive-bose-dynamic-pilot
+          path: outputs/best_dynamic_*
+          if-no-files-found: warn
+          retention-days: 7

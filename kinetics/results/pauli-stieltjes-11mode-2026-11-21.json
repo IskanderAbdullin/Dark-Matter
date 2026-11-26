@@ -1,0 +1,39 @@
+{
+  "status": "Independent numerically convergent (n20->n24) but BASIS-NONCONVERGENT 2..11 Galerkin Pauli collision Ritz estimates",
+  "source_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+  "model": "full-Pauli 5D chi-e vector-contact weak collision, FD equilibrium susceptibility, Stieltjes FD orthogonal polynomials, electron-only fixed bath",
+  "parameters": {
+    "M_GeV": 0.1,
+    "T_GeV": 1,
+    "mu_GeV": 0,
+    "G_GeVminus2": 0.001,
+    "gchi": 4,
+    "ge": 4,
+    "n": 24,
+    "cutoff": 32
+  },
+  "n24_cut32_low_Ritz_GeV": {
+    "2": 2.125371382675302e-7,
+    "3": 1.725865685791093e-7,
+    "5": 1.3293418514027366e-7,
+    "7": 1.1115314068549653e-7,
+    "9": 9.645584196262738e-8,
+    "11": 8.564757722572995e-8
+  },
+  "n20_cut32_low_Ritz_GeV": {
+    "2": 2.125357553619306e-7,
+    "3": 1.7258769764657513e-7,
+    "5": 1.329598340928552e-7,
+    "7": 1.1113070830783065e-7,
+    "9": 9.602499895290208e-8,
+    "11": 8.561217213373075e-8
+  },
+  "numerical_11mode_n20_to_n24_fraction": -0.00041338112700939345,
+  "comparison_two_mode_fraction": 0.40297699462727044,
+  "comparison_thermal_moment_fraction": 0.2824954779574927,
+  "verified_basis_orthogonal_to_number_and_other_modes_approx": 1.5e-15,
+  "important_negative": "low kinetic Ritz eigenvalue declines strongly with 2..11 modes despite small n20→24 5D integration change; NO continuum spectral gap proved",
+  "scope_warning": "Not full continuum operator, physical γ_el, UV complete SM thermal rate, QSM time evolution, frozen 86-eV Bose relic, or observational CLASS.",
+  "class_ready": false,
+  "source_parent_commit": "9284516493f09fc127257c33797e526b22f64fba"
+}

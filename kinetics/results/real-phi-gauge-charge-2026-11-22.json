@@ -1,0 +1,46 @@
+{
+  "date_utc": "2026-11-22",
+  "model_scope": "Original real one-component scalar phi, two vectorlike Dirac U1' charge eigenstates, renormalizable y phi bar(chi2) chi1+h.c.; Z2 chi1 and phi odd, chi2 even",
+  "exact_charge_selection": "qphi-q2+q1=0",
+  "real_scalar_trivial_U1_rep": true,
+  "real_phi_requires": "qphi=0 and q1=q2",
+  "no_go": "q1 != 0 and q2=0 is incompatible with original real-phi renormalizable Yukawa under this diagonal vectorlike gauge completion",
+  "consequence": "If q1=q2!=0, chi2 has an equally allowed nonzero diagonal Z' vector current; chi2-SM elastic collisions cannot simply be omitted.",
+  "examples": [
+    {
+      "q1": 1,
+      "q2": 1,
+      "qphi": 0,
+      "real_phi": true,
+      "invariant": true,
+      "chi2_Zprime_nonzero": true
+    },
+    {
+      "q1": 1,
+      "q2": 0,
+      "qphi": 0,
+      "real_phi": true,
+      "invariant": false,
+      "chi2_Zprime_nonzero": false
+    },
+    {
+      "q1": 1,
+      "q2": 0,
+      "qphi": -1,
+      "real_phi": false,
+      "invariant": true,
+      "change": "Complex charged scalar: NOT the original real phi field"
+    },
+    {
+      "q1": 0,
+      "q2": 0,
+      "qphi": 0,
+      "real_phi": true,
+      "invariant": true,
+      "chi1_Zprime_nonzero": false
+    }
+  ],
+  "test": "tests/test_gauge_charge_yukawa_audit.py",
+  "scope_warning": "Algebraic scoped field-content obstruction only, not exclusion of complex scalar/mixing/higher-dimensional or all boson dark matter; no physical gamma_el or 86eV ΩDM",
+  "class_ready": false
+}

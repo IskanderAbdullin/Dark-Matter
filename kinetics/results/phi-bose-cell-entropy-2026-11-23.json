@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-23",
+  "physical_scope": "on-shell vacuum tree Yukawa χ1↔χ2+real φ, conditional synthetic thermal initial state only; no full cosmology",
+  "units": "GeV masses and GeV inverse time illustrative; no physical viability of couplings",
+  "masses_GeV": {
+    "chi1": 0.1,
+    "chi2": 0.02,
+    "phi": 8.6e-8
+  },
+  "yukawa_y": 0.001,
+  "initial_T_GeV": {
+    "chi1": 0.9,
+    "chi2": 1,
+    "phi": 1
+  },
+  "parent": {
+    "pmax_GeV": 2,
+    "gauss_order_p": 12,
+    "gauss_order_cm_cos": 12,
+    "gchi1": 4
+  },
+  "scalar_mesh": "quadratic IR edges, two independent local P1 endpoint η per E cell, no overlapping cross-cell hats",
+  "fermion_mesh": "uniform energy, two local P1 endpoints per cell",
+  "physical_integrated_moments": "g/(2π²) ∫cell p²dp h_local(E) occupancy(E)",
+  "microscopic_flux": "F=f1(1-f2)(1+bphi); R=(1-f1)f2 bphi; same local hats for interpolation and deposition",
+  "initial_source": {
+    "Rphi": -1.1649301286296804e-11,
+    "entropy": 1.648469110736367e-12,
+    "first_phi_eta": 8.6e-8
+  },
+  "results": [
+    {
+      "n": 8,
+      "first_cell_source": [
+        -2.4709403814776843e-12,
+        -1.9186683921934606e-12
+      ],
+      "first_cell_eta_rate": [
+        3.468055190056034e-9,
+        1.5676469566625733e-9
+      ],
+      "steps": [
+        {
+          "dt": 30,
+          "iterations": 1,
+          "dNphi": -3.4947437305143936e-10,
+          "dS": 4.9453885431205435e-11,
+          "min_phi_eta": 1.9004081689637682e-7
+        },
+        {
+          "dt": 1000,
+          "iterations": 2,
+          "dNphi": -1.1648162406840967e-8,
+          "dS": 1.6483177045500952e-9,
+          "min_phi_eta": 0.0000035610700540447306
+        },
+        {
+          "dt": 10000000,
+          "iterations": 6,
+          "dNphi": -0.00007592978188910443,
+          "dS": 0.000010977599412043126,
+          "min_phi_eta": 0.03462929273059735
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "first_cell_source": [
+        0,
+        0
+      ],
+      "first_cell_eta_rate": [
+        0,
+        0
+      ],
+      "steps": [
+        {
+          "dt": 20,
+          "iterations": 1,
+          "dNphi": -2.329842291315387e-10,
+          "dS": 3.296929396157111e-11,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 30,
+          "iterations": 1,
+          "dNphi": -3.494749836741029e-10,
+          "dS": 4.945377440890297e-11,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 1000,
+          "iterations": 2,
+          "dNphi": -1.1646809759680021e-8,
+          "dS": 1.6481425113568093e-9,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 10000000,
+          "iterations": 6,
+          "dNphi": -0.00007280798810695155,
+          "dS": 0.000010493767792274511,
+          "min_phi_eta": 8.6e-8
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "first_cell_source": [
+        0,
+        0
+      ],
+      "first_cell_eta_rate": [
+        0,
+        0
+      ],
+      "steps": [
+        {
+          "dt": 30,
+          "iterations": 1,
+          "dNphi": -3.4947431754028813e-10,
+          "dS": 4.945377440890297e-11,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 1000,
+          "iterations": 2,
+          "dNphi": -1.1646419918742712e-8,
+          "dS": 1.6480780073990786e-9,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 10000000,
+          "iterations": 7,
+          "dNphi": -0.000068500762503379,
+          "dS": 0.000009790591197766929,
+          "min_phi_eta": 8.6e-8
+        }
+      ]
+    },
+    {
+      "n": 64,
+      "first_cell_source": [
+        0,
+        0
+      ],
+      "first_cell_eta_rate": [
+        0,
+        0
+      ],
+      "steps": [
+        {
+          "dt": 30,
+          "iterations": 1,
+          "dNphi": -3.4947398447338074e-10,
+          "dS": 4.945377440890297e-11,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 1000,
+          "iterations": 2,
+          "dNphi": -1.1646158482037094e-8,
+          "dS": 1.6480319331435567e-9,
+          "min_phi_eta": 8.6e-8
+        },
+        {
+          "dt": 10000000,
+          "iterations": 7,
+          "dNphi": -0.00006423206273503679,
+          "dS": 0.000009048210458550976,
+          "min_phi_eta": 8.6e-8
+        }
+      ]
+    }
+  ],
+  "local_validation": {
+    "seven_focused_tests": "passed on clean local sandbox, NumPy/SciPy pytest, 0.92s measured",
+    "integrated_BE_N_3grid_relative_error_below": 5e-12,
+    "quantum_entropy": "nonnegative instant and increasing finite step",
+    "charges_energy_max_abs_error_on_tested_implicit_steps_about": 8e-15
+  },
+  "old_overlapping_comparison": {
+    "N16_quadratic_Cphi_rest_hat": 0,
+    "eta_rest_dot": -2.998203e-9,
+    "dt20": "passed",
+    "dt30": "failed closed"
+  },
+  "negative": [
+    "At dt1e7 numerical ΔNphi remains far from mode-grid convergence N8→64 by ~18.2%, N32→64 by ~6.2%; original physical parent pmax2 weak rate has known UV tail issue.",
+    "No general η-positive implicit existence theorem, IR Bose critical boundary/zero-mode or full χ1χ2-SM/FRW; scalar 86 eV is historical illustrative mass only.",
+    "Energy interface discontinuity is an additional source of spectral/threshold error; larger degrees of freedom not an efficiency comparison."
+  ],
+  "ready_for_CLASS": false
+}

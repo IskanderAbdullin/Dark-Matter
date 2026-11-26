@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "label": "finite quantum Zprime nu antinu Strang temporal self-convergence, independent sandbox execution",
+  "notes": "synthetic T=Gamma0=1, mV=.4, Emax=4, exact elementary Riccati, positive energy-lattice events; no cosmological physical meaning",
+  "tau": 1,
+  "steps": [
+    0.125,
+    0.0625,
+    0.03125,
+    0.015625,
+    0.0078125,
+    0.00390625,
+    0.001953125,
+    0.0009765625
+  ],
+  "h_series": [
+    {
+      "h": 0.4,
+      "n_edges": 54,
+      "difference_dt_vs_dt_half": [
+        0.0016169197199589758,
+        0.00042919533072993676,
+        0.0001089504870196989,
+        0.000027342350934100867,
+        0.0000068421570572629875,
+        0.000001710950219113716,
+        4.277632447147184e-7
+      ],
+      "ratios": [
+        null,
+        3.767328309954035,
+        3.9393612866763568,
+        3.9846788332973184,
+        3.9961595013486004,
+        3.9990392361077998,
+        3.9997597742526336
+      ]
+    },
+    {
+      "h": 0.2,
+      "n_edges": 207,
+      "difference_dt_vs_dt_half": [
+        0.010337987525567194,
+        0.0049452057722932374,
+        0.0015322541523885014,
+        0.00040623802609396353,
+        0.0001030994861523915,
+        0.000025872641350122016,
+        0.000006474295093206184
+      ],
+      "ratios": [
+        null,
+        2.0905070489661677,
+        3.2274056915326836,
+        3.7718137002617484,
+        3.940252674911517,
+        3.9848844482940775,
+        3.996209776917881
+      ]
+    },
+    {
+      "h": 0.1,
+      "n_edges": 808,
+      "difference_dt_vs_dt_half": [
+        0.008465634274467726,
+        0.010666841525223403,
+        0.0071435944108025895,
+        0.00265737050201581,
+        0.0007485948093515216,
+        0.00019314024217648162,
+        0.00004867246063905428
+      ],
+      "ratios": [
+        null,
+        0.7936402030956792,
+        1.493203688761072,
+        2.6882192021713385,
+        3.549811552016753,
+        3.8759131753987037,
+        3.968162686673537
+      ]
+    }
+  ],
+  "controls": "Discrete C,L,E residual <= order 1e-15, entropy monotonically rises every time step, Bose nonnegative and Fermi [0,1] for these samples.",
+  "positive": "With fixed finite graph h=.1 step-halving ratio approaches ~3.97 as dt→1/512, confirming asymptotic temporal order ~2 only after stiffness resolved.",
+  "negative": "At h=.1, ratio .794 for first halving, so spectral self-error initially worsens on refinement; h/shape/UV cutoff and physical couplings not certified.",
+  "reproducibility": "python -m kinetics.vector_neutrino_strang_dt_convergence --h 0.1 --tau 1",
+  "code": "kinetics/vector_neutrino_strang_dt_convergence.py",
+  "test": "tests/test_vector_neutrino_strang_dt_convergence.py",
+  "class_ready": false
+}

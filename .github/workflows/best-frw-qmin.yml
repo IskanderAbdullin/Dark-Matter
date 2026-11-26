@@ -1,0 +1,89 @@
+name: Independent BEST radiation-FRW Bose qmin volume test (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-frw-qmin.yml'
+      - 'kinetics/best_frw_qmin_scan.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-frw-qmin-research
+  cancel-in-progress: true
+
+jobs:
+  full-Bose-FRW-ir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install independent BEST from exact verified revision
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install numpy scipy mpi4py vegas
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+      - name: Run 128-step exact-frw three-species Bose dynamics at three fixed-q-grid IR cutoffs
+        run: |
+          mkdir -p outputs
+          for qmin in .0001 .00005 .00002; do
+            name=$(echo "$qmin" | sed 's/\./p/')
+            out="outputs/best_frw_ir_"$name".json"
+            log=$(echo "$out" | sed 's/\.json$/.log/')
+            echo "REAL BEST FRW massive Bose chi1<->phi+chi2, qmin=$qmin, nq=96 nt=128, vegas=6000"
+            mpirun -np 2 python kinetics/best_frw_qmin_scan.py \
+              --execute --best-root /tmp/best --qmin "$qmin" \
+              --grid-n 96 --neval 6000 --steps 128 --dt .0000003125 \
+              --output "$out" > "$log" 2>&1
+          done
+      - name: Report physical N0/qmin-cubed versus independent real IR-cell integral
+        run: |
+          python - <<'PY'
+          import glob,json,math
+          records=[]
+          files=sorted(glob.glob("outputs/best_frw_ir_*.json"))
+          assert len(files)==3, files
+          for file in files:
+              x=json.load(open(file))
+              assert x["real_independent_BEST_FRW_executed"]
+              assert x["verified_best_git_sha"]=="c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+              assert x["not_automatically_a_condensate"]
+              assert not x["frozen_dark_matter_PSD_or_CLASS_ready"]
+              p=x["model"]
+              q=p["kinetic_source"]["qmin"]
+              last=x["time_series"][-1]
+              N0=last["phi_massive_zero_mode_N0"]
+              analytic=x["independent_regular_phase_volume_reference"]
+              ratio=x["zero_mode_measured_to_analytic_regular_cell_ratio"]
+              records.append((q,N0))
+              print("ACTUAL BEST qmin",q,"N0",N0,"N0/qmin³",N0/q**3,
+                    "regular cell from independent redshift",analytic["below_qmin_comoving_number"],
+                    "BEST/analytic",ratio,
+                    "soft occupation",last["phi_occupation_at_smallest_positive_q"],
+                    "all phi",last["species_comoving_numbers"]["phi"],
+                    "FRW work error",x["relative_closed_FRW_energy_error"])
+              assert math.isfinite(ratio)
+              assert math.isclose(last["a"],math.sqrt(1.4),rel_tol=1e-12)
+          print("No physical BEC inference from a finite-qmin BEST zero mode.")
+          PY
+      - name: Preserve genuine BEST output and logs, 7 day retention
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-rd-frw-three-qmin
+          path: outputs/best_frw_ir_*
+          if-no-files-found: warn
+          retention-days: 7

@@ -1,0 +1,2786 @@
+{
+  "schema_version": 1,
+  "captured_date_utc": "2026-11-22",
+  "repository": "IskanderAbdullin/Dark-Matter",
+  "ref_snapshot": "2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235",
+  "tree_sha": "2eaf8ce7af7e93106c6afb6fb563ed3cc1ad2235",
+  "semantics": "Inventory of all versioned blobs reachable in this tree; contents remain in Git at the given SHA, not duplicated in archive",
+  "file_count": 555,
+  "files": [
+    {
+      "path": ".github/workflows/best-dynamic-massive.yml",
+      "size_bytes": 3868,
+      "blob_sha": "18ac89cb5332ae71e91c19497a1065ea7490e2b3"
+    },
+    {
+      "path": ".github/workflows/best-frw-massive.yml",
+      "size_bytes": 4031,
+      "blob_sha": "8d890684ec067b1a82618e5530eb44c7af60f1fd"
+    },
+    {
+      "path": ".github/workflows/best-frw-qmin.yml",
+      "size_bytes": 3784,
+      "blob_sha": "ef4b0ed1eb48e12320116527325f3ca0cb3f578a"
+    },
+    {
+      "path": ".github/workflows/best-independent.yml",
+      "size_bytes": 6701,
+      "blob_sha": "e59b252c90ed86fc5c09f845bc89daad125e7376"
+    },
+    {
+      "path": ".github/workflows/best-massive-phi.yml",
+      "size_bytes": 4198,
+      "blob_sha": "0429cd98bd8c2490385ba07941447806c62b3dce"
+    },
+    {
+      "path": ".github/workflows/best-qmin-zero-mode.yml",
+      "size_bytes": 3387,
+      "blob_sha": "653a089471d1b601fbff883f9dd9226424e99344"
+    },
+    {
+      "path": ".github/workflows/best-sm-coupled.yml",
+      "size_bytes": 5038,
+      "blob_sha": "3506a7af7c913b4689ae36f0546e69521ac2eefe"
+    },
+    {
+      "path": ".github/workflows/bose-smallscale-precision.yml",
+      "size_bytes": 1371,
+      "blob_sha": "35b1de1364db95e2bd682f5621e187991703629f"
+    },
+    {
+      "path": ".github/workflows/deep-numerics.yml",
+      "size_bytes": 2606,
+      "blob_sha": "d4b38ea26fc102b7dbc7f16626f477dc9a90b0fc"
+    },
+    {
+      "path": ".github/workflows/one-to-two-kinetic.yml",
+      "size_bytes": 1887,
+      "blob_sha": "376a78e627a28ea31b0eb8b83605d515cda45cdb"
+    },
+    {
+      "path": ".github/workflows/primordial-two-scale-bose.yml",
+      "size_bytes": 2835,
+      "blob_sha": "9ef3eef9ea25457734337d6928843d7e913e43e6"
+    },
+    {
+      "path": ".github/workflows/scientific-ci.yml",
+      "size_bytes": 1113,
+      "blob_sha": "a7c25f1eb73dd2aaaac1e71b21c59aa377174f7e"
+    },
+    {
+      "path": ".github/workflows/thermal-bose-class.yml",
+      "size_bytes": 2920,
+      "blob_sha": "9d1bdb824a61134d9ba858c8c86d96203cf901d4"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 63,
+      "blob_sha": "8cdd3d8a0513768d5c36b1b87c28305bad10274f"
+    },
+    {
+      "path": "00-critique-and-roadmap.md",
+      "size_bytes": 6008,
+      "blob_sha": "f7b4ab8b6064108469f17193efa62b675b6a9133"
+    },
+    {
+      "path": "01-new-numerical-predictions.md",
+      "size_bytes": 1936,
+      "blob_sha": "83119534dee56aa15d93a2998cf6490301813bde"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 15399,
+      "blob_sha": "75a2abe00f86b1fc32ddcf02bbff169e3a6e32c4"
+    },
+    {
+      "path": "code/README.md",
+      "size_bytes": 772,
+      "blob_sha": "ba562eab861a6694df870a03008f2cbb83dc9e18"
+    },
+    {
+      "path": "code/reproduce_profiles.py",
+      "size_bytes": 3523,
+      "blob_sha": "4c865f6fa725c214bc4a9a3d6a7a55145fdba577"
+    },
+    {
+      "path": "code/requirements.txt",
+      "size_bytes": 52,
+      "blob_sha": "0a38f8660d3ce4411ab7348c502b152c053fb64c"
+    },
+    {
+      "path": "code/sparc_likelihood.py",
+      "size_bytes": 3547,
+      "blob_sha": "1ae5c09b4c7c419d62ab2de7f08af4c9bee5b92e"
+    },
+    {
+      "path": "code/test_sparc.py",
+      "size_bytes": 1293,
+      "blob_sha": "6973f85de2235380e9aef842190bde4f81c93f88"
+    },
+    {
+      "path": "code/two_component_demo.py",
+      "size_bytes": 1672,
+      "blob_sha": "9d08e053d791b4e6b5d7169ea05ce2cc517cf1a7"
+    },
+    {
+      "path": "continuation-02/06-critical-mean-field-regularization.md",
+      "size_bytes": 6507,
+      "blob_sha": "94f9680d780367dabaad22271c328bde0fd7b9f8"
+    },
+    {
+      "path": "continuation-02/07-jcap-table-reanalysis.md",
+      "size_bytes": 3919,
+      "blob_sha": "8a2680cc91835826defe82d8cfbb416d14067bf4"
+    },
+    {
+      "path": "continuation-02/08-related-primary-publications.md",
+      "size_bytes": 3791,
+      "blob_sha": "e3a6dfe10dc5507c756202d5dc9f6a532fa7b5a2"
+    },
+    {
+      "path": "continuation-02/09-thermal-streaming-benchmark.md",
+      "size_bytes": 4579,
+      "blob_sha": "3102a3f8d628fe5a5ae0837167df3cf9025a0662"
+    },
+    {
+      "path": "continuation-02/10-collisionality-and-asymptotic-tail.md",
+      "size_bytes": 5615,
+      "blob_sha": "a235fd1ad60e7502baeb0609d9daa8e66fd80e56"
+    },
+    {
+      "path": "continuation-02/11-lowered-bose-finite-halo.md",
+      "size_bytes": 5001,
+      "blob_sha": "75d58c1e15c3d0a435cd4100e06d43d141b48344"
+    },
+    {
+      "path": "continuation-02/12-sparc-data-audit.md",
+      "size_bytes": 3272,
+      "blob_sha": "c69ed94982ffbe0d5da2adac2950e2e404e69d02"
+    },
+    {
+      "path": "continuation-02/13-sparc-20-galaxy-pilot.md",
+      "size_bytes": 4677,
+      "blob_sha": "ac103eeab761da1aa9753a07e95f158f6b00c6dc"
+    },
+    {
+      "path": "continuation-02/14-lowered-bose-normalization.md",
+      "size_bytes": 2406,
+      "blob_sha": "77d414c42f584275540a66866cb9361cb7f02803"
+    },
+    {
+      "path": "continuation-02/15-sparc-quality-and-sensitivity.md",
+      "size_bytes": 2293,
+      "blob_sha": "978e237463feab62dec4dfc6b23db9e4f91280ff"
+    },
+    {
+      "path": "continuation-02/code/collision_and_tail.py",
+      "size_bytes": 1306,
+      "blob_sha": "35f066e72adc48dd6d8079dd648b3c076ed90bec"
+    },
+    {
+      "path": "continuation-02/code/lowered_bose_halo.py",
+      "size_bytes": 2729,
+      "blob_sha": "158224d3fc056faadb7c63190affa8f44f49fa58"
+    },
+    {
+      "path": "continuation-02/code/mean_field_regularization.py",
+      "size_bytes": 1674,
+      "blob_sha": "fa158e3c5afbc7b9edece91513d77b295dc75b4d"
+    },
+    {
+      "path": "continuation-02/code/parse_jcap_table.py",
+      "size_bytes": 1374,
+      "blob_sha": "649d24d46d4bac7b89485239b2d2587f2b469c33"
+    },
+    {
+      "path": "continuation-02/code/sparc_audit.py",
+      "size_bytes": 1861,
+      "blob_sha": "06165db72e14f9ad8af14ee4e94762dc7176a5e3"
+    },
+    {
+      "path": "continuation-02/code/sparc_pilot_compare.js",
+      "size_bytes": 6764,
+      "blob_sha": "1b42b89e6c0456259bf30d1739db79da205eff75"
+    },
+    {
+      "path": "continuation-02/code/sparc_quality.py",
+      "size_bytes": 1195,
+      "blob_sha": "22c86735951d248e220ffd6ed67fedb83ed3f776"
+    },
+    {
+      "path": "continuation-02/code/thermal_ballistic.py",
+      "size_bytes": 1632,
+      "blob_sha": "7f3080e3b09b09ef1e6dc4d3e3a409686b204c29"
+    },
+    {
+      "path": "continuation-02/collision-tail-results.json",
+      "size_bytes": 1557,
+      "blob_sha": "930cf9b405dbb1f994e9a7d61c7739ac8cacd98b"
+    },
+    {
+      "path": "continuation-02/CONSOLIDATED-REPORT-RU.md",
+      "size_bytes": 15060,
+      "blob_sha": "00c3d22f6dc050383af912a280ed3830bb5b44e1"
+    },
+    {
+      "path": "continuation-02/lowered-bose-results.json",
+      "size_bytes": 928,
+      "blob_sha": "b51aff3ef63709ea6857f58d568c474c7e9a321f"
+    },
+    {
+      "path": "continuation-02/numerical-summary.json",
+      "size_bytes": 1315,
+      "blob_sha": "99469df07c4d55aacff529ac5ef3ecd8a1b4b724"
+    },
+    {
+      "path": "continuation-02/README.md",
+      "size_bytes": 3403,
+      "blob_sha": "7caa1a864474aacb73abe2e247688108688a61c8"
+    },
+    {
+      "path": "continuation-02/research-log.md",
+      "size_bytes": 5573,
+      "blob_sha": "3eb899ffedfced0bcfd9e35cfba81928d5a3161e"
+    },
+    {
+      "path": "continuation-02/sparc-pilot-aggregate.json",
+      "size_bytes": 1410,
+      "blob_sha": "8ebd7918b3a62d3a7318d0840b022af4e6776f62"
+    },
+    {
+      "path": "continuation-02/sparc-qc-results.json",
+      "size_bytes": 41121,
+      "blob_sha": "0bf2df4317b812b4b7be4baf9b730fd0eb9d5bd0"
+    },
+    {
+      "path": "continuation-02/sparc-quality-metadata.json",
+      "size_bytes": 36874,
+      "blob_sha": "3261bca52ee7bd69d4d6b4e7a61b0114d592b3a4"
+    },
+    {
+      "path": "continuation-02/thermal-streaming-results.json",
+      "size_bytes": 1491,
+      "blob_sha": "a2046ecbb2a3d08e2764eebbc816d4caca7ed41b"
+    },
+    {
+      "path": "continuation-03/01-bosestar-radius-pi-audit.md",
+      "size_bytes": 6683,
+      "blob_sha": "d54aec05f0a73c4a1afc67f60e6d7f5bdefc7e04"
+    },
+    {
+      "path": "continuation-03/02-phase-space-and-relaxation.md",
+      "size_bytes": 9552,
+      "blob_sha": "fc7a167080f1ecd0d1bfdce455d3ddc25e90bb58"
+    },
+    {
+      "path": "continuation-03/03-mixed-primordial-growth.md",
+      "size_bytes": 8343,
+      "blob_sha": "4ba71d8202760d6ed8a000585619e2b980d0989c"
+    },
+    {
+      "path": "continuation-03/04-model-bridges-and-falsifiers.md",
+      "size_bytes": 10354,
+      "blob_sha": "e757d79ff2889d2aa31a83f3be0d7123969ecc1b"
+    },
+    {
+      "path": "continuation-03/05-stability-and-thermodynamics.md",
+      "size_bytes": 7751,
+      "blob_sha": "c72d440d3db02892e0c4f987df5892b7230a1f69"
+    },
+    {
+      "path": "continuation-03/06-publication-branches.md",
+      "size_bytes": 7836,
+      "blob_sha": "7bef0c1b4ad07cc2fc92e25a8c4ec279c2d72387"
+    },
+    {
+      "path": "continuation-03/07-velocity-moments-and-predictions.md",
+      "size_bytes": 6577,
+      "blob_sha": "47069c5642758882d65d687414754b89006bdffb"
+    },
+    {
+      "path": "continuation-03/08-quantum-kinetic-spec.md",
+      "size_bytes": 6997,
+      "blob_sha": "1abc4ce18edcd992261fcd8c001a54fa3eb78d6d"
+    },
+    {
+      "path": "continuation-03/09-direct-2023-2025-hybrid-theory.md",
+      "size_bytes": 8943,
+      "blob_sha": "e543f4837eeddef803979d6d23d49779fb71a86f"
+    },
+    {
+      "path": "continuation-03/10-liouville-casimirs-be.md",
+      "size_bytes": 5236,
+      "blob_sha": "54f113b5f0ce89a3db48b1000e44e9ccb78bc5ff"
+    },
+    {
+      "path": "continuation-03/11-degeneracy-radius-bound.md",
+      "size_bytes": 1983,
+      "blob_sha": "e72ffca46d452d3d99989dc4508ae2d969c3a252"
+    },
+    {
+      "path": "continuation-03/12-critical-bose-stimulation.md",
+      "size_bytes": 5288,
+      "blob_sha": "c3c18c7a79d4b64c572add38a6d094b5e834b4b1"
+    },
+    {
+      "path": "continuation-03/13-chemical-kinetic-equilibrium.md",
+      "size_bytes": 4525,
+      "blob_sha": "ec4053c2912cf76317bcab964a523ecceecd6d30"
+    },
+    {
+      "path": "continuation-03/14-extended-star-lensing.md",
+      "size_bytes": 4460,
+      "blob_sha": "32be2cd03fd38a0871a88904e3a48e9b17610040"
+    },
+    {
+      "path": "continuation-03/code/critical_bose_occupancy.py",
+      "size_bytes": 867,
+      "blob_sha": "90b2c60e706d864d0362827240d5df12ed18d17b"
+    },
+    {
+      "path": "continuation-03/code/theory_consistency.py",
+      "size_bytes": 3513,
+      "blob_sha": "062c412d59480eb9b31723610ef94ca7c11b7159"
+    },
+    {
+      "path": "continuation-03/data/theory_consistency_results.json",
+      "size_bytes": 1904,
+      "blob_sha": "e84c29290437944f503cf8a3e2f2407185fd43c9"
+    },
+    {
+      "path": "continuation-03/literature/2025-2026-observables-and-equilibrium.md",
+      "size_bytes": 2589,
+      "blob_sha": "b73abec30f3e487610361f7637c1e395b486eaa7"
+    },
+    {
+      "path": "continuation-03/literature/critical-theory-crosswalk.md",
+      "size_bytes": 22015,
+      "blob_sha": "2df4d60fccb3eff35a5ace251921b23953a00382"
+    },
+    {
+      "path": "continuation-03/README.md",
+      "size_bytes": 8011,
+      "blob_sha": "8a6e0eca26d6a5934dc1b96ca37fd5c4790e4ebd"
+    },
+    {
+      "path": "continuation-03/RESEARCH-LOG.md",
+      "size_bytes": 3977,
+      "blob_sha": "05b1bb67e8f25e8af1ae7643666fa06f4e0fbd20"
+    },
+    {
+      "path": "continuation-04/code/asymptotic_wkb.py",
+      "size_bytes": 1072,
+      "blob_sha": "b631ca50cb3d72a82457b1fcb875be36c3658494"
+    },
+    {
+      "path": "continuation-04/code/bosestar_tides.py",
+      "size_bytes": 2012,
+      "blob_sha": "6e5cd0c90c0a4a34e5fdd7e52a0858914d1567a2"
+    },
+    {
+      "path": "continuation-04/code/casimir_ir_tail.py",
+      "size_bytes": 2027,
+      "blob_sha": "3d5825195e9f6609c2f75b0565cdffffbe1f3289"
+    },
+    {
+      "path": "continuation-04/code/casimir_mass_anchor.py",
+      "size_bytes": 2159,
+      "blob_sha": "76b35ed72ecc4ab790bc582594d96ce3d51c43f8"
+    },
+    {
+      "path": "continuation-04/code/critical_cutoff_family.py",
+      "size_bytes": 1922,
+      "blob_sha": "b346cc6c42b52d7d4601e5e4d0a3feb2ec646bfe"
+    },
+    {
+      "path": "continuation-04/code/critical_lowered.py",
+      "size_bytes": 3217,
+      "blob_sha": "224261791c31043dd7e3c0c59d5bf4f3eef3f15e"
+    },
+    {
+      "path": "continuation-04/code/frozen_relic.py",
+      "size_bytes": 2548,
+      "blob_sha": "03cb00158fe51516a8b312273a0ae404e46430f5"
+    },
+    {
+      "path": "continuation-04/code/ir_phase_volume_exponents.py",
+      "size_bytes": 1681,
+      "blob_sha": "63d7e189c37c482a63d61ab8e8e7b9fd84083f1e"
+    },
+    {
+      "path": "continuation-04/code/kinetic_growth.py",
+      "size_bytes": 2182,
+      "blob_sha": "7cc99818ad5139e58fe58f99bdc155e2a28f3625"
+    },
+    {
+      "path": "continuation-04/code/kinetic_jeans.py",
+      "size_bytes": 2951,
+      "blob_sha": "ad991d0cc20f2ab09775a3a3339c2e6d08f398ea"
+    },
+    {
+      "path": "continuation-04/code/lowered_casimir_tail.py",
+      "size_bytes": 1930,
+      "blob_sha": "f9592d0586acfba7c3c0e5479b1d4306798229ac"
+    },
+    {
+      "path": "continuation-04/code/lowered_excess_mass.py",
+      "size_bytes": 2709,
+      "blob_sha": "5ff26560d1f9e8a0ac7b6fce98b2963142d06ea7"
+    },
+    {
+      "path": "continuation-04/code/lowered_virial.py",
+      "size_bytes": 2018,
+      "blob_sha": "3f0cff26b79b32798d4b3557f1ea5d91aad69bc0"
+    },
+    {
+      "path": "continuation-04/code/small_eta_universal.py",
+      "size_bytes": 1599,
+      "blob_sha": "1ca09049adf90de005dadd64323ffa4e753609b9"
+    },
+    {
+      "path": "continuation-04/code/smooth_lowered_bose.py",
+      "size_bytes": 2669,
+      "blob_sha": "d64508e7e60b770cae95d0ffb4107e4b23d7f3c2"
+    },
+    {
+      "path": "continuation-04/code/wkb_consistency.py",
+      "size_bytes": 2276,
+      "blob_sha": "cbfc81ea7e31027303730908ee0c1bef1b4e6ada"
+    },
+    {
+      "path": "continuation-04/CONSOLIDATED-RESULTS-RU.md",
+      "size_bytes": 8949,
+      "blob_sha": "8e5575b5b96bbb687c161ae317a9896343e35005"
+    },
+    {
+      "path": "continuation-04/literature/new-mixing-and-stability-sources.md",
+      "size_bytes": 2234,
+      "blob_sha": "a248dc4352638768aa91dd0cfcb0452adb3ff411"
+    },
+    {
+      "path": "continuation-04/literature/prior-art-and-next-tests.md",
+      "size_bytes": 11448,
+      "blob_sha": "bf42fde59508bf88913bd43da7160a6c2729753f"
+    },
+    {
+      "path": "continuation-04/NEXT-DECISIVE-QUESTIONS.md",
+      "size_bytes": 3282,
+      "blob_sha": "3c2b6ff15fefd44a8f8a5abc2dab211dbf2d3a71"
+    },
+    {
+      "path": "continuation-04/papers/01-kinetic-jeans-of-near-critical-bose-gas.md",
+      "size_bytes": 6909,
+      "blob_sha": "ce48fe8a3804c4296e9a8ac10af262e12174f31e"
+    },
+    {
+      "path": "continuation-04/papers/02-adiabatic-relic-and-abundance.md",
+      "size_bytes": 6594,
+      "blob_sha": "be15fc1979335100857dc77913c9e681d74bc7e6"
+    },
+    {
+      "path": "continuation-04/papers/03-six-dimensional-casimir-tail.md",
+      "size_bytes": 7703,
+      "blob_sha": "555330c1ef056ab3bd8e1a386ad5b7be110f9e30"
+    },
+    {
+      "path": "continuation-04/papers/04-critical-lowered-bose-casimir.md",
+      "size_bytes": 6602,
+      "blob_sha": "43305d342c767d2b409433e5c008813aa69f570e"
+    },
+    {
+      "path": "continuation-04/papers/05-bosestar-tidal-survival.md",
+      "size_bytes": 4879,
+      "blob_sha": "22b2be08b061c980fafa9a99bb981260c13f7a5a"
+    },
+    {
+      "path": "continuation-04/papers/06-jeans-wkb-validity.md",
+      "size_bytes": 5965,
+      "blob_sha": "29d463e54c03bb035993187472fa3e38dfe99110"
+    },
+    {
+      "path": "continuation-04/papers/07-lowered-bose-virial.md",
+      "size_bytes": 5322,
+      "blob_sha": "52edb3a96296265a71a6c5a75e527826fd9ac769"
+    },
+    {
+      "path": "continuation-04/papers/08-universal-wkb-asymptotic.md",
+      "size_bytes": 5090,
+      "blob_sha": "d0f04bf516efb26a6b3a2df7cc5010f223ee58df"
+    },
+    {
+      "path": "continuation-04/papers/09-critical-cutoff-family.md",
+      "size_bytes": 6703,
+      "blob_sha": "42bf493f6b889376c9d08731f13230dcfc878fcc"
+    },
+    {
+      "path": "continuation-04/papers/10-casimir-mixing-constraints.md",
+      "size_bytes": 9955,
+      "blob_sha": "47a53c1a931635b4dd5053bfcd9a2e4954de8c93"
+    },
+    {
+      "path": "continuation-04/papers/11-shallow-cutoff-universal-scaling.md",
+      "size_bytes": 4319,
+      "blob_sha": "64fb3719ae13be9161ac9115800c8233c7e37d5e"
+    },
+    {
+      "path": "continuation-04/papers/12-smooth-quadratic-lowered-bose.md",
+      "size_bytes": 7141,
+      "blob_sha": "3802bf49a287360781b67d3aecaa01606eabd16b"
+    },
+    {
+      "path": "continuation-04/papers/13-critical-ir-lp-integrability.md",
+      "size_bytes": 3893,
+      "blob_sha": "d139c59a9efaed76701916449e1015b1968077a6"
+    },
+    {
+      "path": "continuation-04/papers/14-hartree-fock-ir-phase-volume.md",
+      "size_bytes": 5633,
+      "blob_sha": "6284b44931fe8b74853a8387cf2d296e66f018ad"
+    },
+    {
+      "path": "continuation-04/README.md",
+      "size_bytes": 11527,
+      "blob_sha": "15485ff65b7cf057516ec7262bcd40e4aa92fd7c"
+    },
+    {
+      "path": "continuation-04/requirements.txt",
+      "size_bytes": 36,
+      "blob_sha": "ee2c758eedda5b9a41b214bfb473e9997047c06e"
+    },
+    {
+      "path": "continuation-04/RESEARCH-LOG.md",
+      "size_bytes": 8858,
+      "blob_sha": "17df342f7f4a47d80e6ab57d1b7e9143cc2ec5be"
+    },
+    {
+      "path": "continuation-04/results/asymptotic_wkb.json",
+      "size_bytes": 984,
+      "blob_sha": "f73dc8449618d500be8152610ddda1185825d737"
+    },
+    {
+      "path": "continuation-04/results/bosestar_tides.json",
+      "size_bytes": 801,
+      "blob_sha": "db780e964db2165bec95c15d232051ac716b7e54"
+    },
+    {
+      "path": "continuation-04/results/casimir_ir_tail.json",
+      "size_bytes": 1478,
+      "blob_sha": "66ae98479065c32b475698adf9a038a3e3fcba9a"
+    },
+    {
+      "path": "continuation-04/results/casimir_mass_anchor.json",
+      "size_bytes": 719,
+      "blob_sha": "58835ea78f67a35bc973a58fc818923b9b8b60b2"
+    },
+    {
+      "path": "continuation-04/results/critical_cutoff_family.json",
+      "size_bytes": 1813,
+      "blob_sha": "97758cf9b12a8774dd5adef83fac61b89508cbec"
+    },
+    {
+      "path": "continuation-04/results/critical_lowered.json",
+      "size_bytes": 1267,
+      "blob_sha": "a9063a37b6cffaf23f5e4bded754e23810e1a6fa"
+    },
+    {
+      "path": "continuation-04/results/frozen_relic.json",
+      "size_bytes": 1052,
+      "blob_sha": "f96446e1e6683784683256442a7c84b8062c717e"
+    },
+    {
+      "path": "continuation-04/results/ir_phase_volume_exponents.json",
+      "size_bytes": 1146,
+      "blob_sha": "05f875c07011d0670e3d9ede3dfa2d52ee852519"
+    },
+    {
+      "path": "continuation-04/results/kinetic_growth.json",
+      "size_bytes": 1632,
+      "blob_sha": "279f56f12a6a7c9e2ace0f8352bdeccbbb9fadc6"
+    },
+    {
+      "path": "continuation-04/results/kinetic_jeans.json",
+      "size_bytes": 1435,
+      "blob_sha": "d045b09227e4f70860aa428fef97bd41f5c986dc"
+    },
+    {
+      "path": "continuation-04/results/lowered_casimir_tail.json",
+      "size_bytes": 1026,
+      "blob_sha": "95e63e8653e7990d6787f0bd0f45dda62a08f8a0"
+    },
+    {
+      "path": "continuation-04/results/lowered_excess_mass_summary.json",
+      "size_bytes": 1609,
+      "blob_sha": "f016d018e004a6690d27ca4fd71529cbfc6659eb"
+    },
+    {
+      "path": "continuation-04/results/lowered_virial.json",
+      "size_bytes": 847,
+      "blob_sha": "acbc9d1124d95aea7c3e57196ee9e32bd3cd868d"
+    },
+    {
+      "path": "continuation-04/results/small_eta_universal.json",
+      "size_bytes": 910,
+      "blob_sha": "abed5385d11aa2ece19745ccc38ab9905bc7f1bf"
+    },
+    {
+      "path": "continuation-04/results/smooth_lowered_bose.json",
+      "size_bytes": 773,
+      "blob_sha": "7d81606d3be88c6d378e2950c9454a0378c4d04d"
+    },
+    {
+      "path": "continuation-04/results/wkb_consistency.json",
+      "size_bytes": 2145,
+      "blob_sha": "77a68510f71b188e4f29441ffdcacb2d14c3f81f"
+    },
+    {
+      "path": "continuation-05/15-general-higher-order-lowering.md",
+      "size_bytes": 3157,
+      "blob_sha": "196e104b6895d819b37153178af455549a7e3e97"
+    },
+    {
+      "path": "continuation-05/16-phase-plane-and-outer-tail.md",
+      "size_bytes": 2617,
+      "blob_sha": "3fc1cd3873c6e14a03b43e159fb6e16622e6802f"
+    },
+    {
+      "path": "continuation-05/17-classical-linear-stability.md",
+      "size_bytes": 3343,
+      "blob_sha": "0477c50760f3fbbd10bb97b4465a6f051d5142af"
+    },
+    {
+      "path": "continuation-05/18-singular-critical-limit.md",
+      "size_bytes": 3837,
+      "blob_sha": "eddb2d6e5401e13b22d150b84dad91d95b0692da"
+    },
+    {
+      "path": "continuation-05/19-closed-collision-equilibrium-no-go.md",
+      "size_bytes": 3650,
+      "blob_sha": "e0e5aa14f490217d84257133898f3e656ddfbb97"
+    },
+    {
+      "path": "continuation-05/20-open-flux-energy-edge.md",
+      "size_bytes": 5681,
+      "blob_sha": "41614048230e9571ed484bb83b2b3bc24584033d"
+    },
+    {
+      "path": "continuation-05/21-mathematical-compactness-prior-art.md",
+      "size_bytes": 3877,
+      "blob_sha": "0379e3dab85ca777076c09435dda5c670dccf298"
+    },
+    {
+      "path": "continuation-05/critical_limit.py",
+      "size_bytes": 1406,
+      "blob_sha": "b62385eaa5f1079594439ff1f92ac78338154e02"
+    },
+    {
+      "path": "continuation-05/README.md",
+      "size_bytes": 6294,
+      "blob_sha": "e624f411424432301496e1ae06433ba3ebdcc982"
+    },
+    {
+      "path": "continuation-05/reproduce_cutoff_ladder.py",
+      "size_bytes": 3356,
+      "blob_sha": "fb85d25b27b0f59b329634a23b9447f0aee9d9d8"
+    },
+    {
+      "path": "continuation-05/reproduce_detailed_balance.py",
+      "size_bytes": 1002,
+      "blob_sha": "1fa78d6ddf259420afab9ec27555e92b72565db1"
+    },
+    {
+      "path": "continuation-05/reproduce_open_flux.py",
+      "size_bytes": 1941,
+      "blob_sha": "0e599abda65486d19e8739fa00e728ac3dcccd81"
+    },
+    {
+      "path": "continuation-05/requirements.txt",
+      "size_bytes": 24,
+      "blob_sha": "a50cb0f745831926ca0694fda14d65202920e651"
+    },
+    {
+      "path": "continuation-05/RESEARCH-LOG.md",
+      "size_bytes": 2929,
+      "blob_sha": "dd3b4123f2192259d072fdaebf0bb2b7e0452317"
+    },
+    {
+      "path": "continuation-05/results/critical_limit.json",
+      "size_bytes": 2043,
+      "blob_sha": "4aa58017c8985bf8c86d01947678e3fcc4cb33dc"
+    },
+    {
+      "path": "continuation-05/results/detailed_balance.json",
+      "size_bytes": 397,
+      "blob_sha": "6943599f50130fa28c31c438d1dcdaccb1e64f27"
+    },
+    {
+      "path": "continuation-05/results/open_flux.json",
+      "size_bytes": 672,
+      "blob_sha": "8a06f28758ee58f80bac9ca0b34063d14c9cbbb1"
+    },
+    {
+      "path": "continuation-05/results/reproduced_profiles.json",
+      "size_bytes": 2179,
+      "blob_sha": "4cda7ff2517fb7f7c355b8e17f03f69fc0e374bd"
+    },
+    {
+      "path": "continuation-06/01-energy-state-measure-and-universal-scaling.md",
+      "size_bytes": 7174,
+      "blob_sha": "096f0589ee047c5ea35913c6060846f4cbbe3bc8"
+    },
+    {
+      "path": "continuation-06/02-generalized-open-diffusion-boundary.md",
+      "size_bytes": 6148,
+      "blob_sha": "0e0fc0b8c5d479eecf985f58f12980436a0c5960"
+    },
+    {
+      "path": "continuation-06/code/dos_scaling.py",
+      "size_bytes": 1675,
+      "blob_sha": "14927a826b021b474fd9c795fdbf9e785e7ced60"
+    },
+    {
+      "path": "continuation-06/code/generalized_escape_flux.py",
+      "size_bytes": 1688,
+      "blob_sha": "3c20c5ca69f95794e71569bb7ae73d7eb452f36f"
+    },
+    {
+      "path": "continuation-06/code/phase_density_edge.py",
+      "size_bytes": 2686,
+      "blob_sha": "c45a5c6fde8dcc7016aecf65363599bf40333f79"
+    },
+    {
+      "path": "continuation-06/README.md",
+      "size_bytes": 1859,
+      "blob_sha": "06927562679992d98f556d049c8ca92f73e8202d"
+    },
+    {
+      "path": "continuation-06/results/dos_scaling.json",
+      "size_bytes": 1166,
+      "blob_sha": "eaacfc889ab459d72aadf61ea99cdeeffa9df16b"
+    },
+    {
+      "path": "continuation-06/results/generalized_flux.json",
+      "size_bytes": 843,
+      "blob_sha": "67dd89d047557943e795bcc8c2bfc9ba142223ad"
+    },
+    {
+      "path": "continuation-06/results/phase_density_edge.json",
+      "size_bytes": 556,
+      "blob_sha": "90df976d0de80c7a1f8a986ccb5a18f6be326d6c"
+    },
+    {
+      "path": "cosmology/burst_residual_hot.py",
+      "size_bytes": 8473,
+      "blob_sha": "136a04ace97d46962110d125265415093ed17fa7"
+    },
+    {
+      "path": "cosmology/cold_psd_scan.py",
+      "size_bytes": 4544,
+      "blob_sha": "738ef591b48509f3f24bfedf6e866b844343c0b2"
+    },
+    {
+      "path": "cosmology/COLDER-CLASS-RESULTS.md",
+      "size_bytes": 5741,
+      "blob_sha": "87bb6d9e219721e5634e4c54b3036a5c79118294"
+    },
+    {
+      "path": "cosmology/frw_abundance_bridge.py",
+      "size_bytes": 4563,
+      "blob_sha": "f06c0baead5a4d51a8580eccaeb9c4f9f2e33db0"
+    },
+    {
+      "path": "cosmology/FRW-RELIC-ABUNDANCE-BRIDGE.md",
+      "size_bytes": 7123,
+      "blob_sha": "48336479dddab1b11ff2c17c0a3afd9d36900d2c"
+    },
+    {
+      "path": "cosmology/POWER-HALF-AND-MASS-SCALE.md",
+      "size_bytes": 9327,
+      "blob_sha": "73c744450912abe2721998b7c3537c868029a3b8"
+    },
+    {
+      "path": "cosmology/precision_cutoff_scan.py",
+      "size_bytes": 7886,
+      "blob_sha": "e065e1079bf6707dd776b95e250267f4581329eb"
+    },
+    {
+      "path": "cosmology/README.md",
+      "size_bytes": 5818,
+      "blob_sha": "5d3679c720d0e5e9ed138dc017855c4570821d16"
+    },
+    {
+      "path": "cosmology/RESIDUAL-HOT-COMPONENT.md",
+      "size_bytes": 4407,
+      "blob_sha": "b288f9f282f097acdfec4a01578137da5efc1758"
+    },
+    {
+      "path": "cosmology/results/CLASS-cold-family-summary.json",
+      "size_bytes": 1269,
+      "blob_sha": "433bdc91825d4ad31ec8fcdd0764fc74b6c89c5f"
+    },
+    {
+      "path": "cosmology/results/CLASS-eight-powerhalf-summary.json",
+      "size_bytes": 2695,
+      "blob_sha": "bfb4433c309ec6b4d74b31c9156564b4abfd4e34"
+    },
+    {
+      "path": "cosmology/results/CLASS-hot-tail-summary.json",
+      "size_bytes": 4075,
+      "blob_sha": "d55f6577b0a31dfd64e0b5ddbcc2de152a58579a"
+    },
+    {
+      "path": "cosmology/results/CLASS-thermal-summary.json",
+      "size_bytes": 1625,
+      "blob_sha": "c51c2a1d9ee98822f1eb1471e3b2426f30fa5dbf"
+    },
+    {
+      "path": "cosmology/thermal_analytic_benchmark.json",
+      "size_bytes": 607,
+      "blob_sha": "1fbd51be4df7b6f5b537f93d00e5e942d4df5f84"
+    },
+    {
+      "path": "cosmology/thermal_bose_class.py",
+      "size_bytes": 6940,
+      "blob_sha": "aedef6e3ea6cfb695ebce23ffbbd21d241795c2a"
+    },
+    {
+      "path": "cosmology/THERMAL-CLASS-VERIFIED.md",
+      "size_bytes": 5108,
+      "blob_sha": "dbaaeee4f4c993f4ed63c3992cab5a19472ff485"
+    },
+    {
+      "path": "cosmology/TOY-COLDER-PSD.md",
+      "size_bytes": 2664,
+      "blob_sha": "47578263ca7bff20c5847e340ebe6d62985ead4f"
+    },
+    {
+      "path": "cosmology/VERIFIED-HOT-TAIL-CLASS.md",
+      "size_bytes": 7494,
+      "blob_sha": "a9b70da1970cb3275c8a88779297e4cdd53b4eb7"
+    },
+    {
+      "path": "data/SPARC-DATA.md",
+      "size_bytes": 1687,
+      "blob_sha": "05c0dfd8e8fdb215f7f229c9aab00ed7f4d0fa0d"
+    },
+    {
+      "path": "figures/.gitkeep",
+      "size_bytes": 48,
+      "blob_sha": "b64c58a45b024963e483ac41831df6d7f2d82392"
+    },
+    {
+      "path": "GOAL.md",
+      "size_bytes": 9351,
+      "blob_sha": "08b2f6ee3370c220d2c70660f790286b51eefd1e"
+    },
+    {
+      "path": "kinetics/adaptive_resonant_lattice.py",
+      "size_bytes": 10032,
+      "blob_sha": "edbf57fb91122f01722c6a3285ad7359c77c34b9"
+    },
+    {
+      "path": "kinetics/ADAPTIVE-INVARIANT-AUDIT.md",
+      "size_bytes": 16252,
+      "blob_sha": "45ac7533afc55f1d02220bfbaf6182a8cd2b6d8f"
+    },
+    {
+      "path": "kinetics/angular_endpoint_audit.py",
+      "size_bytes": 3781,
+      "blob_sha": "274852f5365366ec12df1593dad65cc8df894a25"
+    },
+    {
+      "path": "kinetics/ANGULAR-ENDPOINT-IR-AUDIT.md",
+      "size_bytes": 5484,
+      "blob_sha": "e428f6a1b70824ba4c1c7836f3cf8228613b50c9"
+    },
+    {
+      "path": "kinetics/best_chemical_affinity_reference.py",
+      "size_bytes": 8389,
+      "blob_sha": "96e65ebb31ace84f0b2ae7e49875c362b9222059"
+    },
+    {
+      "path": "kinetics/best_closed_massive_dynamic.py",
+      "size_bytes": 9681,
+      "blob_sha": "49051daf1a48cf98e29b264d240300f2dfcbc989"
+    },
+    {
+      "path": "kinetics/best_early_bose_exponential.py",
+      "size_bytes": 4254,
+      "blob_sha": "f665c87b23a7547716bd4b984789d18cc1e0e154"
+    },
+    {
+      "path": "kinetics/best_external_vacuum_reference.py",
+      "size_bytes": 9411,
+      "blob_sha": "39a5225d190f2446a2a93ff94d374cc034cf0428"
+    },
+    {
+      "path": "kinetics/best_frw_qmin_scan.py",
+      "size_bytes": 3720,
+      "blob_sha": "e1e7d15bc4b6da632d0b8e30c2bfcc56822c1a8d"
+    },
+    {
+      "path": "kinetics/best_massive_daughter_reference.py",
+      "size_bytes": 8788,
+      "blob_sha": "9134bf8af2d4889dadaba93501aae634800bf3b1"
+    },
+    {
+      "path": "kinetics/best_radiation_frw_pilot.py",
+      "size_bytes": 9839,
+      "blob_sha": "2c71732aa63b8263d3f835b1f2431040701ac3cd"
+    },
+    {
+      "path": "kinetics/best_sm_coupled_frw.py",
+      "size_bytes": 13172,
+      "blob_sha": "fd9f2121bde956da29c656f90aca2f87f6c22212"
+    },
+    {
+      "path": "kinetics/best_source_comparison.py",
+      "size_bytes": 8318,
+      "blob_sha": "dc1da6968c9ec7eb2388ad3457d8864c749d55e7"
+    },
+    {
+      "path": "kinetics/best_thermal_balance_reference.py",
+      "size_bytes": 7544,
+      "blob_sha": "d134b3a36e2f2cda2f486d16bb11ea11a50d02af"
+    },
+    {
+      "path": "kinetics/best_vacuum_spectrum.py",
+      "size_bytes": 5150,
+      "blob_sha": "1eddd70e6dd74ae4d73930893c2a9e51d5cc110c"
+    },
+    {
+      "path": "kinetics/BEST-CHEMICAL-AFFINITY.md",
+      "size_bytes": 9701,
+      "blob_sha": "4d82212be5a73dec4fdcdb2c5c613ffdfa5d403f"
+    },
+    {
+      "path": "kinetics/BEST-CLOSED-MASSIVE-DYNAMIC.md",
+      "size_bytes": 13641,
+      "blob_sha": "cf76201d54951733037efa36622b9c7bd73b731f"
+    },
+    {
+      "path": "kinetics/BEST-EARLY-BOSE-EXPONENTIAL.md",
+      "size_bytes": 6879,
+      "blob_sha": "66b843d737781d5951325f107f9d6dedbdf06ea1"
+    },
+    {
+      "path": "kinetics/BEST-FIRST-REAL-RESULTS.md",
+      "size_bytes": 6960,
+      "blob_sha": "2dfc747ea332e02ba32a8966ad882acd6f4d0334"
+    },
+    {
+      "path": "kinetics/BEST-FRW-QMIN-SCAN.md",
+      "size_bytes": 9658,
+      "blob_sha": "9808e75cf8f8f3b4593164a2dfa1d69207beb643"
+    },
+    {
+      "path": "kinetics/BEST-GITHUB-ACTIONS.md",
+      "size_bytes": 6675,
+      "blob_sha": "987162f170bbb291fcb8861305f4239c5253256c"
+    },
+    {
+      "path": "kinetics/BEST-INDEPENDENT-VALIDATION.md",
+      "size_bytes": 9870,
+      "blob_sha": "bd006356439d616d253201054b2266c0fff8b33d"
+    },
+    {
+      "path": "kinetics/BEST-MASSIVE-DAUGHTER-REFERENCE.md",
+      "size_bytes": 8444,
+      "blob_sha": "36363b02d3b4f0668ae4720c8d6de758c678976f"
+    },
+    {
+      "path": "kinetics/BEST-QMIN-ZERO-MODE-SCAN.md",
+      "size_bytes": 8465,
+      "blob_sha": "6e230d6c0aa1463403f744093a7f0c71bf87fc50"
+    },
+    {
+      "path": "kinetics/BEST-RADIATION-FRW-PILOT.md",
+      "size_bytes": 17995,
+      "blob_sha": "897908b927db6b0087c335d3bc4a12ed0a307da3"
+    },
+    {
+      "path": "kinetics/BEST-SECOND-ORDER-FRW-PILOT.md",
+      "size_bytes": 8427,
+      "blob_sha": "4fc58ff5a9f6404af30736945eb5bd0891c3f8e2"
+    },
+    {
+      "path": "kinetics/BEST-SM-COUPLED-FRW.md",
+      "size_bytes": 16310,
+      "blob_sha": "4bcb88e1e5b5836c4420875d7cffd95a004a0ffa"
+    },
+    {
+      "path": "kinetics/BEST-SOURCE-COMPARISON.md",
+      "size_bytes": 8140,
+      "blob_sha": "548a73effa5c4a5516bd14955abedda7b254164a"
+    },
+    {
+      "path": "kinetics/BEST-THERMAL-BALANCE.md",
+      "size_bytes": 5317,
+      "blob_sha": "f525ae107440e4ac6b875c83c9f53c926e6b50d8"
+    },
+    {
+      "path": "kinetics/BEST-VACUUM-SPECTRUM.md",
+      "size_bytes": 4518,
+      "blob_sha": "fe0169894518878394fe47391568e82a217fca37"
+    },
+    {
+      "path": "kinetics/BIN-LOCAL-DETAILED-BALANCE.md",
+      "size_bytes": 4700,
+      "blob_sha": "333fe24bdc16941007bbaec63d3eaa4ff6e0c80f"
+    },
+    {
+      "path": "kinetics/calibrated_on_shell_rates.py",
+      "size_bytes": 6453,
+      "blob_sha": "d63aefe5fe33901e849cfc203d05bba2c21f8c71"
+    },
+    {
+      "path": "kinetics/CALIBRATED-CUT-CELL-RATES.md",
+      "size_bytes": 8284,
+      "blob_sha": "be7a347bb42a6e09d0e5dd71a347370f6b99b759"
+    },
+    {
+      "path": "kinetics/chi2_lepton_heat_gate.py",
+      "size_bytes": 2198,
+      "blob_sha": "cfa09a3c3f96cfb6ec9d0095cb4af375fd91ead4"
+    },
+    {
+      "path": "kinetics/CHI2-LEPTON-HEAT-GATE.md",
+      "size_bytes": 4579,
+      "blob_sha": "d6037408f810fadd667b606338cb6821666044d2"
+    },
+    {
+      "path": "kinetics/closed_three_species_lattice.py",
+      "size_bytes": 9119,
+      "blob_sha": "68236ff3b074eecedd4448f96f6d0b493b25347a"
+    },
+    {
+      "path": "kinetics/CLOSED-FRW-NEXT-SPEC.md",
+      "size_bytes": 49961,
+      "blob_sha": "eccc08f24e23b683fc708e9017f4529ef5d3ee55"
+    },
+    {
+      "path": "kinetics/CLOSED-THREE-SPECIES.md",
+      "size_bytes": 7257,
+      "blob_sha": "804cacc2f92100832cd32d43af2f45857ac6e742"
+    },
+    {
+      "path": "kinetics/collision_invariant_rank.py",
+      "size_bytes": 8761,
+      "blob_sha": "c236ddcabf2fc8e5a12811bd4eb8c99fa0cca3a7"
+    },
+    {
+      "path": "kinetics/conservative_energy_projection.py",
+      "size_bytes": 4208,
+      "blob_sha": "6952675f1059e0890e46060efd0d7b0727ea5cc2"
+    },
+    {
+      "path": "kinetics/CONTINUOUS-RESEARCH-SPEC.md",
+      "size_bytes": 25009,
+      "blob_sha": "35c32dc3dfa3fae7cbe8448c25cc1d65d45fa04e"
+    },
+    {
+      "path": "kinetics/cosmology_readiness_gate.py",
+      "size_bytes": 3855,
+      "blob_sha": "b55074b6b564f786686bfbec1e58edd471336b68"
+    },
+    {
+      "path": "kinetics/cut_cell_gain_diagnostic.py",
+      "size_bytes": 6784,
+      "blob_sha": "f5a33d3afcb1d6492c763988c861d0d518ca0e39"
+    },
+    {
+      "path": "kinetics/CUT-CELL-SOURCE-DIAGNOSTIC.md",
+      "size_bytes": 8468,
+      "blob_sha": "bf546daa4a6bf97a1e3b6c71345fe08eb15179d5"
+    },
+    {
+      "path": "kinetics/cutoff_and_time_convergence.py",
+      "size_bytes": 4337,
+      "blob_sha": "7ab94d79b289edebd96aea7986bfd790ff296efa"
+    },
+    {
+      "path": "kinetics/CUTOFF-AND-TIME-ERROR.md",
+      "size_bytes": 5984,
+      "blob_sha": "256f01f6e765c1e75d16b50ff07c280f235c7c7a"
+    },
+    {
+      "path": "kinetics/daughter_uv_regrid.py",
+      "size_bytes": 9482,
+      "blob_sha": "f49340802cfd27cf3bceb8b073fde506a3355eac"
+    },
+    {
+      "path": "kinetics/DAUGHTER-UV-REGRID.md",
+      "size_bytes": 6215,
+      "blob_sha": "ace8724666ac5e068424ec787608661806dde9d6"
+    },
+    {
+      "path": "kinetics/dynamic_rank_uv_repair.py",
+      "size_bytes": 4630,
+      "blob_sha": "1b289ced59c0efc53e0efa10451a52bd63d960a5"
+    },
+    {
+      "path": "kinetics/DYNAMIC-RANK-UV-REPAIR.md",
+      "size_bytes": 4211,
+      "blob_sha": "4b6ecf12060188d3272c6ea583aee0abb91c8e32"
+    },
+    {
+      "path": "kinetics/em_pair_thermodynamics.py",
+      "size_bytes": 4316,
+      "blob_sha": "5ade9c2651dade39fde7bae4d3246164a0fb8b3d"
+    },
+    {
+      "path": "kinetics/EM-PAIR-THERMODYNAMICS-AUDIT.md",
+      "size_bytes": 6054,
+      "blob_sha": "7b2505e5bccf440c21d175b03f4f12fddb84cf90"
+    },
+    {
+      "path": "kinetics/energy_projection_audit.py",
+      "size_bytes": 2602,
+      "blob_sha": "7d40952637adc4cbb40cbfc5ba0238f4ea7649f6"
+    },
+    {
+      "path": "kinetics/ENERGY-PROJECTION-DEFECT.md",
+      "size_bytes": 4381,
+      "blob_sha": "a2aea3d6d1ae073cf059b771c24b93ada4467dd6"
+    },
+    {
+      "path": "kinetics/ENTROPY-BALANCED-LATTICE.md",
+      "size_bytes": 8693,
+      "blob_sha": "dff2da26909c0d2795227828eaaaa87f5c01c227"
+    },
+    {
+      "path": "kinetics/equilibrium_audit.py",
+      "size_bytes": 5913,
+      "blob_sha": "5833b80d5e5896c2d6b052c031a9b0d81c241e30"
+    },
+    {
+      "path": "kinetics/EQUILIBRIUM-AND-IR-AUDIT.md",
+      "size_bytes": 7577,
+      "blob_sha": "b3b8b265444940ef2f8d62b274842921b7158bed"
+    },
+    {
+      "path": "kinetics/fermion_finite_bath_pairs.py",
+      "size_bytes": 4593,
+      "blob_sha": "343720b828bcda5e3a2833f22b03d71971451fa2"
+    },
+    {
+      "path": "kinetics/finite_bin_recoil_projection_control.py",
+      "size_bytes": 1291,
+      "blob_sha": "fdddc91640f8686eca2497de308702900b32b7f2"
+    },
+    {
+      "path": "kinetics/finite_mass_chie_kernel.py",
+      "size_bytes": 1616,
+      "blob_sha": "3e35899739d30bd3bcba3573e17c3c9a4769330c"
+    },
+    {
+      "path": "kinetics/finite_mediator_5d_adaptive_reference.py",
+      "size_bytes": 3629,
+      "blob_sha": "6b52a2320eda0a67fe9a59a4cd12ff682a0dd2f9"
+    },
+    {
+      "path": "kinetics/finite_mediator_angular_control.py",
+      "size_bytes": 1641,
+      "blob_sha": "a697e0967a909d620fc9407fc6b90f11d7465122"
+    },
+    {
+      "path": "kinetics/finite_mediator_forward_event_reference.py",
+      "size_bytes": 3645,
+      "blob_sha": "77ac8a9c7de3a0ededa61daac18fad5558470dc8"
+    },
+    {
+      "path": "kinetics/finite_mediator_split_lepton_reference.py",
+      "size_bytes": 1743,
+      "blob_sha": "4486bd463a4c11dc72a0349c339ce98ee79418dd"
+    },
+    {
+      "path": "kinetics/finite_mediator_trace_angular.py",
+      "size_bytes": 1708,
+      "blob_sha": "6b94dd9ab0a8275c2c83f92efea44a15efd41bca"
+    },
+    {
+      "path": "kinetics/FINITE-BATH-QUANTUM-PAIR-REFERENCE.md",
+      "size_bytes": 5382,
+      "blob_sha": "241ce968de2eaf830474c9dfd10d98293d7154ac"
+    },
+    {
+      "path": "kinetics/FINITE-BIN-RECOIL-PROJECTION-CONTROL.md",
+      "size_bytes": 2756,
+      "blob_sha": "eb30018ee5d926a648630ae054f032a24d112fcc"
+    },
+    {
+      "path": "kinetics/FINITE-MASS-CHI-E-5D-INDEPENDENT-AUDIT.md",
+      "size_bytes": 6956,
+      "blob_sha": "90f05612557b4b2b205477d371008471906c5679"
+    },
+    {
+      "path": "kinetics/FINITE-MASS-CHI-E-KERNEL.md",
+      "size_bytes": 3105,
+      "blob_sha": "1dc7429a4049bf19a288fca322fbae7d9f52a732"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-5D-ADAPTIVE-AUDIT.md",
+      "size_bytes": 5857,
+      "blob_sha": "0bed50d45c661d62f2c62c1459376cc89206ec82"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-5D-FIRST-GATE.md",
+      "size_bytes": 2576,
+      "blob_sha": "b41daffdd316f2dbcc711bbcad0b50468b16e32a"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-ANGULAR-CONTROL.md",
+      "size_bytes": 1905,
+      "blob_sha": "e56a45f695e0641ae26fbaaa93854bc89f9461dd"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md",
+      "size_bytes": 2706,
+      "blob_sha": "169ec6f0c361b75d91656f9424f2b369d0dc9d06"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md",
+      "size_bytes": 3613,
+      "blob_sha": "7266fa14157f09242875ae86de2b567718991a78"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-FORWARD-EVENT-CONVERGENCE.md",
+      "size_bytes": 3990,
+      "blob_sha": "0fd0e659eb766a8e37b84da2f39ef063beef1553"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-SPLIT-LEPTON-AUDIT.md",
+      "size_bytes": 4345,
+      "blob_sha": "ab577cd5eb2454550989c6efaee734f5d857662f"
+    },
+    {
+      "path": "kinetics/FINITE-MEDIATOR-TRANSFER-ANGLE-AUDIT.md",
+      "size_bytes": 2998,
+      "blob_sha": "8fa0bef2a360eebdd1a906610b7e0d3397210bda"
+    },
+    {
+      "path": "kinetics/fixed_charge_pair_capacity.py",
+      "size_bytes": 4150,
+      "blob_sha": "1603c84688ae247b13f1944c8cec71243d3bacc2"
+    },
+    {
+      "path": "kinetics/FIXED-CHARGE-PAIR-CAPACITY-AUDIT.md",
+      "size_bytes": 5288,
+      "blob_sha": "5aa7d5b9981cccb8f62c1cb59dfdf85508889bc9"
+    },
+    {
+      "path": "kinetics/frw_collisionless_mother.py",
+      "size_bytes": 4185,
+      "blob_sha": "dbb83801e3ed9bac0e8c55ef51dd5a0ec64faf44"
+    },
+    {
+      "path": "kinetics/frw_energy_work_audit.py",
+      "size_bytes": 5393,
+      "blob_sha": "8bb05c5ea89276c8fddce25ab5e9905e138f3061"
+    },
+    {
+      "path": "kinetics/frw_entropy_release.py",
+      "size_bytes": 5431,
+      "blob_sha": "f885d8b53720c93a2f04e67008875cc74fae1349"
+    },
+    {
+      "path": "kinetics/frw_fixed_bath_pilot.py",
+      "size_bytes": 6130,
+      "blob_sha": "488491d52f35560d2d699911c2c394f3d3ac436b"
+    },
+    {
+      "path": "kinetics/frw_mother_finite_volume.py",
+      "size_bytes": 5303,
+      "blob_sha": "e5ae949873f7c3ea4cdeddc007331c628b94280e"
+    },
+    {
+      "path": "kinetics/frw_reservoir_budget.py",
+      "size_bytes": 3831,
+      "blob_sha": "17035db0cf8aedbb07b85b14ebe9832ebe098c64"
+    },
+    {
+      "path": "kinetics/frw_resonance_drift.py",
+      "size_bytes": 4839,
+      "blob_sha": "f24ddff7d284a9a4e66c4b50d69b216d67ce46fb"
+    },
+    {
+      "path": "kinetics/FRW-COLLISIONLESS-MOTHER.md",
+      "size_bytes": 8225,
+      "blob_sha": "f8dbb3a3ea1b79386d2693a297bd1a12b6785d38"
+    },
+    {
+      "path": "kinetics/FRW-ENERGY-WORK-AUDIT.md",
+      "size_bytes": 5126,
+      "blob_sha": "89036ea46561cddd82eb4935e240ebcb5628c8cb"
+    },
+    {
+      "path": "kinetics/FRW-ENTROPY-RELEASE.md",
+      "size_bytes": 7575,
+      "blob_sha": "5c9b9080718aa3436e68184d4608e06b82c062b9"
+    },
+    {
+      "path": "kinetics/FRW-FIXED-BATH-PILOT.md",
+      "size_bytes": 6844,
+      "blob_sha": "6e3e9d7273984c6f6067ca9afa3dddfd6c5610b4"
+    },
+    {
+      "path": "kinetics/FRW-MODE-CHANGES.md",
+      "size_bytes": 5524,
+      "blob_sha": "5716b86dea0b2c5f5a320221d94083f183bcdfb7"
+    },
+    {
+      "path": "kinetics/FRW-MOTHER-FINITE-VOLUME.md",
+      "size_bytes": 7300,
+      "blob_sha": "c9b62f2704e14135dcfe59851c2f7ff663713df5"
+    },
+    {
+      "path": "kinetics/FRW-RESERVOIR-BUDGET.md",
+      "size_bytes": 6615,
+      "blob_sha": "ba8bfd202a67dbce054bbaa002ed3d883e078038"
+    },
+    {
+      "path": "kinetics/FRW-RESONANCE-DRIFT.md",
+      "size_bytes": 8091,
+      "blob_sha": "6a7cd17cd1aa64dfbd04f7f2b0a19206e50407b0"
+    },
+    {
+      "path": "kinetics/gauge_charge_yukawa_audit.py",
+      "size_bytes": 2154,
+      "blob_sha": "d698e8c26f0befaaf3ca01d543b3c5f0ba952df4"
+    },
+    {
+      "path": "kinetics/higher_order_pauli_modes.py",
+      "size_bytes": 4397,
+      "blob_sha": "a8328b06fc4daef0894b502583c8054289a35555"
+    },
+    {
+      "path": "kinetics/independent_massive_chie_5d.py",
+      "size_bytes": 7445,
+      "blob_sha": "b34aa2d1083e102ca08d47ec0f26885a4556bfec"
+    },
+    {
+      "path": "kinetics/INVARIANT-CHI-E-ENERGY-KERNEL.md",
+      "size_bytes": 8880,
+      "blob_sha": "7de9f6ca0c986999a1e11326a08731871e87a13e"
+    },
+    {
+      "path": "kinetics/lattice_detailed_balance.py",
+      "size_bytes": 9404,
+      "blob_sha": "756bd7ec0e2a710b1b9932262c0f69f84dd029d8"
+    },
+    {
+      "path": "kinetics/lepton_portal_chirality.py",
+      "size_bytes": 1615,
+      "blob_sha": "b39a4dcc2f5f6f008d8ff4625cabcb09fefe9014"
+    },
+    {
+      "path": "kinetics/lepton_portal_neutrino_heat.py",
+      "size_bytes": 4296,
+      "blob_sha": "f2378d0af73f693d2d674b36851ad57b9cb6a48a"
+    },
+    {
+      "path": "kinetics/lepton_portal_split_bath.py",
+      "size_bytes": 2483,
+      "blob_sha": "b53f71db677965c3d26de3c9153ba13da5cc628d"
+    },
+    {
+      "path": "kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md",
+      "size_bytes": 9851,
+      "blob_sha": "5abe60f501b197033fac14b756b62feb3d337766"
+    },
+    {
+      "path": "kinetics/linearized_pauli_modes.py",
+      "size_bytes": 4501,
+      "blob_sha": "4c1376c28c7f905997b5169f4d40e03bdabb0d1d"
+    },
+    {
+      "path": "kinetics/LINEARIZED-PAULI-EIGENMODES.md",
+      "size_bytes": 5454,
+      "blob_sha": "adf4672100266ecff319724777f226d4c947e414"
+    },
+    {
+      "path": "kinetics/LITERATURE-PHYSICAL-SCOPE-2026-11-21.md",
+      "size_bytes": 10849,
+      "blob_sha": "b4396c7137e56c3017ac2d4d243e12d1e7c08503"
+    },
+    {
+      "path": "kinetics/localized_pauli_packets.py",
+      "size_bytes": 3186,
+      "blob_sha": "de863c86d3dd1ee7a172dc3bf520a52e7d15e39c"
+    },
+    {
+      "path": "kinetics/logq_angular_quadrature.py",
+      "size_bytes": 2192,
+      "blob_sha": "b645a244c08059f6e16d5c030b0941f0be4d941a"
+    },
+    {
+      "path": "kinetics/logq_convergence.py",
+      "size_bytes": 2439,
+      "blob_sha": "1b591ee526717345235854b00ad45589789f0ad4"
+    },
+    {
+      "path": "kinetics/LOGQ-ANGULAR-QUADRATURE.md",
+      "size_bytes": 6962,
+      "blob_sha": "85050067998843cba92e720af42dac7d3e40157a"
+    },
+    {
+      "path": "kinetics/massive_bose_ir_cell.py",
+      "size_bytes": 3541,
+      "blob_sha": "1a3d31f831539fbd4676b53ed5db2604b0f1dc9d"
+    },
+    {
+      "path": "kinetics/massive_daughter_decay_source.py",
+      "size_bytes": 7277,
+      "blob_sha": "4db626abc9bec92104f3c3a0daccc408d7464c48"
+    },
+    {
+      "path": "kinetics/MASSIVE-BOSE-IR-CELL.md",
+      "size_bytes": 4723,
+      "blob_sha": "6d9bbda042822202200166341f3ce91fc9fd3b6c"
+    },
+    {
+      "path": "kinetics/MASSIVE-DAUGHTER-SOURCE.md",
+      "size_bytes": 9351,
+      "blob_sha": "e019c005a07d297ea675446fa0693a004694667b"
+    },
+    {
+      "path": "kinetics/MASSIVE-ELECTRON-PAULI-BATH.md",
+      "size_bytes": 4330,
+      "blob_sha": "bdb2b6475f5c66fdbc5d6387bbf0b3404fbdac1a"
+    },
+    {
+      "path": "kinetics/microphysical_equilibrium_graph.py",
+      "size_bytes": 8007,
+      "blob_sha": "e488b2b8860be9e7222996851562668bdd758795"
+    },
+    {
+      "path": "kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md",
+      "size_bytes": 6948,
+      "blob_sha": "f20539f927eb01e302072b7bdb12df579927bdcc"
+    },
+    {
+      "path": "kinetics/microphysics_elastic_event.py",
+      "size_bytes": 3500,
+      "blob_sha": "8ac17751b14deec0762e4f96e215b22ccba424c8"
+    },
+    {
+      "path": "kinetics/microphysics_moving_heat.py",
+      "size_bytes": 2913,
+      "blob_sha": "4ef569723df93b87b6513b3e7f85a346d3fa0789"
+    },
+    {
+      "path": "kinetics/microphysics_moving_transport.py",
+      "size_bytes": 1591,
+      "blob_sha": "5fc089605eef5633b7c93d2c39da3b0338ccec1a"
+    },
+    {
+      "path": "kinetics/microphysics_nr_drag.py",
+      "size_bytes": 2235,
+      "blob_sha": "09394854fbeb76a9b331eb7c10b3c9a11e205399"
+    },
+    {
+      "path": "kinetics/microphysics_portal.py",
+      "size_bytes": 7462,
+      "blob_sha": "70929330f546821291525fbd3308edd9db02e4a1"
+    },
+    {
+      "path": "kinetics/microphysics_recoil_heat.py",
+      "size_bytes": 2659,
+      "blob_sha": "e3c3f6eeb4e920bd181eec37c6bfe7275760e719"
+    },
+    {
+      "path": "kinetics/microphysics_thermal_gain_loss.py",
+      "size_bytes": 3677,
+      "blob_sha": "4263bc5fc8c9398d587cddbebd1f92287736d300"
+    },
+    {
+      "path": "kinetics/MICROPHYSICS-MODEL.md",
+      "size_bytes": 20121,
+      "blob_sha": "3336bb86d8054469bb536f12565e07e43930fbaf"
+    },
+    {
+      "path": "kinetics/microreversible_chie_lattice.py",
+      "size_bytes": 8682,
+      "blob_sha": "ed82df04c5e526222025dc325eb62ce3649bd23f"
+    },
+    {
+      "path": "kinetics/microreversible_massive_lepton.py",
+      "size_bytes": 4506,
+      "blob_sha": "1361d9bdd67b2aa1a7ea396e354ef12b948562e7"
+    },
+    {
+      "path": "kinetics/modular_invariant_witness.py",
+      "size_bytes": 4476,
+      "blob_sha": "4c32853d34f03e56e86c97716348fddd7fbb1eb4"
+    },
+    {
+      "path": "kinetics/narrow_closed_frw_split.py",
+      "size_bytes": 10366,
+      "blob_sha": "9e83205f0c0608dd2df27ecfc0e677163b515634"
+    },
+    {
+      "path": "kinetics/NARROW-CLOSED-FRW-SPLIT.md",
+      "size_bytes": 7892,
+      "blob_sha": "d8cff3b05a94b8e5eacf105ced10bfa7080ae081"
+    },
+    {
+      "path": "kinetics/number_conserving_sm_bath.py",
+      "size_bytes": 7534,
+      "blob_sha": "8c8903f6f984236220095c9fdefeb8949ebd04ba"
+    },
+    {
+      "path": "kinetics/one_to_two_fixed_bath.py",
+      "size_bytes": 9792,
+      "blob_sha": "fae1daf3ab2f705be348d3cc94d66e2d44ed45fe"
+    },
+    {
+      "path": "kinetics/onshell_collision_2d.py",
+      "size_bytes": 10944,
+      "blob_sha": "1a265e3fa69f29fd29f6764fa7a4fc908e1cc362"
+    },
+    {
+      "path": "kinetics/ONSHELL-COLLISION-2D.md",
+      "size_bytes": 10106,
+      "blob_sha": "f74ff3c92bf7223427060c3857c1de0f9e31852d"
+    },
+    {
+      "path": "kinetics/paired_energy_quartets.py",
+      "size_bytes": 8127,
+      "blob_sha": "7fb3d8d8eab32589581881349d78f05aeeff394f"
+    },
+    {
+      "path": "kinetics/paired_quartet_network.py",
+      "size_bytes": 3396,
+      "blob_sha": "f0e99dd067539e04a5c4ce5f5285dc86387dc87c"
+    },
+    {
+      "path": "kinetics/parent_q_remap.py",
+      "size_bytes": 5578,
+      "blob_sha": "d1f56bd9db5fa29061c95312e71dd20b714784d7"
+    },
+    {
+      "path": "kinetics/PARENT-Q-REMAP.md",
+      "size_bytes": 4641,
+      "blob_sha": "bd40e9556642c379e56cfde272848708b2cfa237"
+    },
+    {
+      "path": "kinetics/pauli_energy_bounds.py",
+      "size_bytes": 6096,
+      "blob_sha": "738fa6c9c56fa9519317873c168e01551c691738"
+    },
+    {
+      "path": "kinetics/PAULI-CHI-E-QUARTET-AUDIT.md",
+      "size_bytes": 6891,
+      "blob_sha": "f1f54504f1908b44cc83ff1fcea11a8e4ec71df6"
+    },
+    {
+      "path": "kinetics/PAULI-ENERGY-BOUNDS.md",
+      "size_bytes": 5291,
+      "blob_sha": "26d56516cf4da7a128af301e689f14d0355621dd"
+    },
+    {
+      "path": "kinetics/PAULI-LOCALIZED-PACKET-AUDIT.md",
+      "size_bytes": 4181,
+      "blob_sha": "1e7f9a15de8353a159c7ee9fc1d03cf43769cf18"
+    },
+    {
+      "path": "kinetics/PAULI-QUARTET-NETWORK-TIME-AUDIT.md",
+      "size_bytes": 5227,
+      "blob_sha": "5d097d8096e81158870ecd989b162243d9fa954b"
+    },
+    {
+      "path": "kinetics/PAULI-RITZ-BASIS-AUDIT.md",
+      "size_bytes": 4021,
+      "blob_sha": "cf1d4ebf27d4a7109a33bfd559491a83b932b5ce"
+    },
+    {
+      "path": "kinetics/PAULI-STIELTJES-11MODE-AUDIT.md",
+      "size_bytes": 4369,
+      "blob_sha": "40c4f256a11f5c18a8b3d74ed9bb3f8572d0f40a"
+    },
+    {
+      "path": "kinetics/qed_pair_annihilation_control.py",
+      "size_bytes": 4987,
+      "blob_sha": "d599f9e79587a8eeb950cb81e00643b3ed34de12"
+    },
+    {
+      "path": "kinetics/qed_pair_full5d.py",
+      "size_bytes": 5579,
+      "blob_sha": "dce5081c3a278308955be21fbed92fc56d144ff1"
+    },
+    {
+      "path": "kinetics/qed_pair_nonthermal_weak.py",
+      "size_bytes": 4869,
+      "blob_sha": "4ad79c8cce09279ae164c86fa5a43e1eda087e89"
+    },
+    {
+      "path": "kinetics/QED-PAIR-ANNIHILATION-CONTROL.md",
+      "size_bytes": 6679,
+      "blob_sha": "9bb8ae00b2a4825c62c6983178c712a132275b75"
+    },
+    {
+      "path": "kinetics/QED-PAIR-FULL5D-AUDIT.md",
+      "size_bytes": 8058,
+      "blob_sha": "45d80f9158636eb15515719aae0e7135153138e3"
+    },
+    {
+      "path": "kinetics/QED-PAIR-NONTHERMAL-WEAK-AUDIT.md",
+      "size_bytes": 7067,
+      "blob_sha": "9c4ac4fbb0f5e4adf4ff889cc5864765467709c3"
+    },
+    {
+      "path": "kinetics/quantum_regrid_entropy.py",
+      "size_bytes": 4335,
+      "blob_sha": "1813135ebc24da92c2bff314ae04d12fb3db53a1"
+    },
+    {
+      "path": "kinetics/QUANTUM-REGRID-ENTROPY.md",
+      "size_bytes": 3521,
+      "blob_sha": "206d09f7046758afc1e4d5174677b7d6ff5903bb"
+    },
+    {
+      "path": "kinetics/radiation_collisionless_parent_bose.py",
+      "size_bytes": 5954,
+      "blob_sha": "c5a7a377a7406f01b69d646b968e667d32121f63"
+    },
+    {
+      "path": "kinetics/RD-COLLISIONLESS-BOSE-REFERENCE.md",
+      "size_bytes": 10070,
+      "blob_sha": "989026a9d5231e1e14922eb764cff9df047dfee0"
+    },
+    {
+      "path": "kinetics/README.md",
+      "size_bytes": 36275,
+      "blob_sha": "cc77cb86f588738396e1997265c66e303c9bfdb1"
+    },
+    {
+      "path": "kinetics/REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md",
+      "size_bytes": 5482,
+      "blob_sha": "b9d463cda1c0ed0f43cc535c8eacc3c8cb247ced"
+    },
+    {
+      "path": "kinetics/relativistic_elastic_audit.py",
+      "size_bytes": 2685,
+      "blob_sha": "cab3fdf42f7e43e5b8870797bc9f476bc44c3bb2"
+    },
+    {
+      "path": "kinetics/relativistic_nonlinear_fermion.py",
+      "size_bytes": 5658,
+      "blob_sha": "c95a45f5fd1dea069dd97e995b7d37b7cdc6c599"
+    },
+    {
+      "path": "kinetics/relativistic_weak_form_2to2.py",
+      "size_bytes": 8336,
+      "blob_sha": "bf41845b3cba98da1a95eed5114d3e99bca07609"
+    },
+    {
+      "path": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md",
+      "size_bytes": 17841,
+      "blob_sha": "79cccead78d36180840bb7d2743bed1fd420c1a7"
+    },
+    {
+      "path": "kinetics/research-control/BACKLOG.md",
+      "size_bytes": 44547,
+      "blob_sha": "d67d690599be059cbd5f235d8e9f1b12b3ba3f6f"
+    },
+    {
+      "path": "kinetics/research-control/EVIDENCE.md",
+      "size_bytes": 54216,
+      "blob_sha": "ad43e3845e965c5b05963d3b332762a4dc7f55b4"
+    },
+    {
+      "path": "kinetics/research-control/GOAL.md",
+      "size_bytes": 2369,
+      "blob_sha": "d8efaa14471174cd93a293dea44d8debdc3d3ee7"
+    },
+    {
+      "path": "kinetics/research-control/NEXT_ACTION.json",
+      "size_bytes": 30480,
+      "blob_sha": "1a155441663a3a88494da30c89c304579a60178d"
+    },
+    {
+      "path": "kinetics/research-control/STATE.json",
+      "size_bytes": 34908,
+      "blob_sha": "ff18d0d5f4e852c3e6436de5b96c4f0f838beb19"
+    },
+    {
+      "path": "kinetics/RESEARCH-STATUS-2026-11-21.md",
+      "size_bytes": 6060,
+      "blob_sha": "27c8bd3f79aa8bb96fcfd895ae233853059d8e8c"
+    },
+    {
+      "path": "kinetics/resonant_graph_repair.py",
+      "size_bytes": 6947,
+      "blob_sha": "e5fd89d839e262ebf5c8b5e709b8cd9a4201275b"
+    },
+    {
+      "path": "kinetics/RESONANT-GRAPH-REPAIR.md",
+      "size_bytes": 8724,
+      "blob_sha": "c2f7ba3217580e8673abc60bec8ee6d674fa8fd4"
+    },
+    {
+      "path": "kinetics/results/best-affinity-real-2026-11-21.json",
+      "size_bytes": 4245,
+      "blob_sha": "58e20775c60e87a0c7484d3b14aff928b807c664"
+    },
+    {
+      "path": "kinetics/results/best-closed-massive-dynamic-real-2026-11-21.json",
+      "size_bytes": 4020,
+      "blob_sha": "d3df7451630f8b1d9cd92f681aadf3118e0745c5"
+    },
+    {
+      "path": "kinetics/results/best-frw-exprb2-real-2026-11-21.json",
+      "size_bytes": 3760,
+      "blob_sha": "eb59d0322eac0e40de1b1944aa55d74f057b1918"
+    },
+    {
+      "path": "kinetics/results/best-independent-2026-11-21.json",
+      "size_bytes": 4054,
+      "blob_sha": "3872a79262ae68e8cc83a5ada753102fd4f02b42"
+    },
+    {
+      "path": "kinetics/results/best-massive-phi-real-2026-11-21.json",
+      "size_bytes": 3681,
+      "blob_sha": "41b1e28548186fb7b019a754cea876de341b5e6d"
+    },
+    {
+      "path": "kinetics/results/best-qmin-real-2026-11-21.json",
+      "size_bytes": 2591,
+      "blob_sha": "d78cc94bfba28e4216a358c7fe634a70f1c14e53"
+    },
+    {
+      "path": "kinetics/results/best-rd-frw-qmin-real-2026-11-21.json",
+      "size_bytes": 3432,
+      "blob_sha": "6ff6b4f85a28e29e02a24a84352be6b76bc8c610"
+    },
+    {
+      "path": "kinetics/results/best-rd-frw-real-2026-11-21.json",
+      "size_bytes": 3466,
+      "blob_sha": "c2726df1b383d6c17f11b77cc6b4f16ebd763f38"
+    },
+    {
+      "path": "kinetics/results/best-rd-time-64-128-real-2026-11-21.json",
+      "size_bytes": 2944,
+      "blob_sha": "27b3933cd4302c0ef250e6c797fa1de636521061"
+    },
+    {
+      "path": "kinetics/results/best-rd-time-refinement-2026-11-21.json",
+      "size_bytes": 4468,
+      "blob_sha": "79181257319d3915c8f13a74017e035b665717ae"
+    },
+    {
+      "path": "kinetics/results/best-sm-coupled-corrected-2026-11-21.json",
+      "size_bytes": 4698,
+      "blob_sha": "3f50e48169e105e227270f0efbea0b875ac68131"
+    },
+    {
+      "path": "kinetics/results/best-sm-coupled-original-2026-11-21.json",
+      "size_bytes": 4364,
+      "blob_sha": "cab63cfe93cfeaa745f129234a9784f104fb63fb"
+    },
+    {
+      "path": "kinetics/results/chi2-lepton-heat-2026-11-22.json",
+      "size_bytes": 1682,
+      "blob_sha": "028df99c7fe6fea22e2319c0d3fb57d42467bc83"
+    },
+    {
+      "path": "kinetics/results/em-pair-thermodynamics-2026-11-22.json",
+      "size_bytes": 2624,
+      "blob_sha": "326e67ace5fa73006076ccf8f267d9fb121f98a2"
+    },
+    {
+      "path": "kinetics/results/finite-bath-fermion-pair-reference-2026-11-21.json",
+      "size_bytes": 1988,
+      "blob_sha": "7f9320ddc39604557096ec9ad3bbdf215659d9c7"
+    },
+    {
+      "path": "kinetics/results/finite-mass-5d-independent-2026-11-22.json",
+      "size_bytes": 2543,
+      "blob_sha": "18df8ba61fc6c7da3c6510468c0440b98c6b6ad8"
+    },
+    {
+      "path": "kinetics/results/finite-mediator-5d-adaptive-2026-11-22.json",
+      "size_bytes": 2411,
+      "blob_sha": "9154f01d7f38513e4c36dc0446395fbac63be825"
+    },
+    {
+      "path": "kinetics/results/finite-mediator-forward-event-2026-11-22.json",
+      "size_bytes": 1934,
+      "blob_sha": "1f9c9fc4ac02040a1fa081374701503a29cfdc4e"
+    },
+    {
+      "path": "kinetics/results/finite-mediator-split-lepton-2026-11-22.json",
+      "size_bytes": 2177,
+      "blob_sha": "fd07b76918d0557da01c7f9d2a4e9c49c078e09b"
+    },
+    {
+      "path": "kinetics/results/fixed-charge-pair-capacity-2026-11-22.json",
+      "size_bytes": 2390,
+      "blob_sha": "1cb439026fae67a6f8ce76daf6c2b6d141df39cb"
+    },
+    {
+      "path": "kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json",
+      "size_bytes": 2399,
+      "blob_sha": "d447153f0d10d9318eade29fe7327cf026394eff"
+    },
+    {
+      "path": "kinetics/results/linearized-pauli-two-modes-2026-11-21.json",
+      "size_bytes": 2588,
+      "blob_sha": "ec363f4e49fa65e953f773dc3d4a90c0d2819892"
+    },
+    {
+      "path": "kinetics/results/massive-e-pair-threshold-2026-11-21.json",
+      "size_bytes": 2098,
+      "blob_sha": "cb2cd3917932f7fa280ddd38af070405f496ec30"
+    },
+    {
+      "path": "kinetics/results/microphysical-bin-graph-2026-11-21.json",
+      "size_bytes": 2983,
+      "blob_sha": "309e3e9392ce7ed9d3fdcac306fa4914fb766863"
+    },
+    {
+      "path": "kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json",
+      "size_bytes": 2725,
+      "blob_sha": "3cf00889cae4086fd33a99b480041f28e2e59a3d"
+    },
+    {
+      "path": "kinetics/results/paired-energy-quartets-2026-11-21.json",
+      "size_bytes": 2946,
+      "blob_sha": "db5686bdbc2d0d72b0fc7f6442490098dab3b6ac"
+    },
+    {
+      "path": "kinetics/results/paired-quartet-network-2026-11-21.json",
+      "size_bytes": 2512,
+      "blob_sha": "c1e02caebb0df99e959005b11f092b2d4b98433c"
+    },
+    {
+      "path": "kinetics/results/pauli-localized-packet-2026-11-21.json",
+      "size_bytes": 1900,
+      "blob_sha": "c7235713247a8d7dfecfcfdff577409260c55bf6"
+    },
+    {
+      "path": "kinetics/results/pauli-ritz-basis-scan-2026-11-21.json",
+      "size_bytes": 2659,
+      "blob_sha": "248cdf620aa50f2f788628e59fa36e5e4c3d1242"
+    },
+    {
+      "path": "kinetics/results/pauli-stieltjes-11mode-2026-11-21.json",
+      "size_bytes": 1642,
+      "blob_sha": "ffc5e99eff4aa586cfc2a3d51fc0f67e2d7fba1d"
+    },
+    {
+      "path": "kinetics/results/qed-pair-annihilation-control-2026-11-22.json",
+      "size_bytes": 2039,
+      "blob_sha": "ed357435c35d105c36e5dc5599c99a5b2a477642"
+    },
+    {
+      "path": "kinetics/results/qed-pair-full5d-2026-11-22.json",
+      "size_bytes": 2930,
+      "blob_sha": "75e50535b65643c23f1c5a69df979f71dfae73ec"
+    },
+    {
+      "path": "kinetics/results/qed-pair-nonthermal-weak-2026-11-22.json",
+      "size_bytes": 2499,
+      "blob_sha": "87d020bdebd87d2209301e3067c2399576fcf456"
+    },
+    {
+      "path": "kinetics/results/real-phi-gauge-charge-2026-11-22.json",
+      "size_bytes": 1527,
+      "blob_sha": "e49657ef7b71bb46a33d68ea6e1175223dd9fa22"
+    },
+    {
+      "path": "kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json",
+      "size_bytes": 2403,
+      "blob_sha": "1b152e394bb7c9e34a544feee3b037f7754864b8"
+    },
+    {
+      "path": "kinetics/results/relativistic-pauli-weakform-2026-11-21.json",
+      "size_bytes": 2817,
+      "blob_sha": "49333e0382607261dee29dd75a5cb2cf954192a1"
+    },
+    {
+      "path": "kinetics/results/research-status-2026-11-21.json",
+      "size_bytes": 7502,
+      "blob_sha": "cae5a07034c7919472e4851c8d7ca564f9c0baff"
+    },
+    {
+      "path": "kinetics/results/spurious-invariants-2026-11-21.json",
+      "size_bytes": 5440,
+      "blob_sha": "bd2913e0494d0eb8deebd279a50fc269a1f58532"
+    },
+    {
+      "path": "kinetics/results/vector-mediator-inverse-decay-2026-11-22.json",
+      "size_bytes": 2379,
+      "blob_sha": "f676ad9b5d7d5ea57d32e6adc3aa9d46151681d2"
+    },
+    {
+      "path": "kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json",
+      "size_bytes": 3201,
+      "blob_sha": "d699c659dfbe2a2df27033956d4c94bec172cd7d"
+    },
+    {
+      "path": "kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json",
+      "size_bytes": 2824,
+      "blob_sha": "80393e4a6f9ada31213fbef209d5e06be839047a"
+    },
+    {
+      "path": "kinetics/results/vector-neutrino-finite-bath-time-2026-11-22.json",
+      "size_bytes": 3070,
+      "blob_sha": "872449b1a6af90bb63b3b973ac426201f3c31074"
+    },
+    {
+      "path": "kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json",
+      "size_bytes": 2657,
+      "blob_sha": "56ca3e8851c33b1fa9ad1c55be60de2ea8fb8d8e"
+    },
+    {
+      "path": "kinetics/results/verified-fixed-bath-summary.json",
+      "size_bytes": 1947,
+      "blob_sha": "120c58b88d7e6f2a204bf70e5b5e6f2f27f5274a"
+    },
+    {
+      "path": "kinetics/schur_closed_bdf.py",
+      "size_bytes": 7316,
+      "blob_sha": "532c67b2f97fd4bf0bf159846840c69045e7653f"
+    },
+    {
+      "path": "kinetics/SCHUR-BDF-RESULTS.md",
+      "size_bytes": 7263,
+      "blob_sha": "acffc216d6f8ae46a3e385ef3655a1230ca17f20"
+    },
+    {
+      "path": "kinetics/shape_diagnostics.py",
+      "size_bytes": 5847,
+      "blob_sha": "e108b17bd5ae36c8d98cd5d240f6401f2b498a94"
+    },
+    {
+      "path": "kinetics/SHAPE-DIAGNOSTICS.md",
+      "size_bytes": 5257,
+      "blob_sha": "d715f2e525a091f48415502d02f46f10a2ee9d96"
+    },
+    {
+      "path": "kinetics/sm_radiation_heat_feedback.py",
+      "size_bytes": 6654,
+      "blob_sha": "805fb8fbded97e81d61340370e4be6266c1d9389"
+    },
+    {
+      "path": "kinetics/SM-NUMBER-CONSERVING-BATH.md",
+      "size_bytes": 8260,
+      "blob_sha": "dca77cd1aebf024fb657fa26c193a5bfb4df6708"
+    },
+    {
+      "path": "kinetics/SM-RADIATION-HEAT-FEEDBACK.md",
+      "size_bytes": 8601,
+      "blob_sha": "79fe2f4c0a204e916b82a173081189f07a9b68f8"
+    },
+    {
+      "path": "kinetics/sparse_kinetic_jacobian.py",
+      "size_bytes": 8137,
+      "blob_sha": "23639a6029ed919cc6b57c58dd8a17a96b67cf8b"
+    },
+    {
+      "path": "kinetics/SPARSE-CLOSED-KINETICS.md",
+      "size_bytes": 6407,
+      "blob_sha": "0e666efcfcf31a46744559c4ea6f04796673fd27"
+    },
+    {
+      "path": "kinetics/stieltjes_pauli_modes.py",
+      "size_bytes": 4185,
+      "blob_sha": "336c7c0f9aaabdc1e6305dbe5f5afec720538088"
+    },
+    {
+      "path": "kinetics/strang_frw_split.py",
+      "size_bytes": 8163,
+      "blob_sha": "b47f1f4f3016b0db9c0ff0af72823664347d88ea"
+    },
+    {
+      "path": "kinetics/STRANG-FRW-COMPARISON.md",
+      "size_bytes": 4282,
+      "blob_sha": "f4a54d5f398f30d5bdcd6ab213445b51cbe69c07"
+    },
+    {
+      "path": "kinetics/test_bin_detailed_balance_identity.py",
+      "size_bytes": 867,
+      "blob_sha": "6f98ee8af7865f5925ad0dd7f3804333180710a3"
+    },
+    {
+      "path": "kinetics/thermal_chemical_affinity.py",
+      "size_bytes": 7316,
+      "blob_sha": "d98ab430f71d387626b746959194de5a20397451"
+    },
+    {
+      "path": "kinetics/thermal_energy_relaxation.py",
+      "size_bytes": 3796,
+      "blob_sha": "470957b1bda5a2e9476678afbfad004e3b3ba076"
+    },
+    {
+      "path": "kinetics/THERMAL-CHEMICAL-AFFINITY.md",
+      "size_bytes": 7207,
+      "blob_sha": "1ef280e3cc0738ab0ad61b894684c65e9e049ce6"
+    },
+    {
+      "path": "kinetics/THERMAL-ENERGY-RELAXATION.md",
+      "size_bytes": 3844,
+      "blob_sha": "3525d64c925eb9c084e1186351be8aab01093f4b"
+    },
+    {
+      "path": "kinetics/uv_source_decomposition.py",
+      "size_bytes": 4395,
+      "blob_sha": "392f59793ee97c9561b1863beccc389b747561f8"
+    },
+    {
+      "path": "kinetics/UV-SOURCE-DECOMPOSITION.md",
+      "size_bytes": 7269,
+      "blob_sha": "d2ffff057737e37cfa5f14838c22ab8738db1a84"
+    },
+    {
+      "path": "kinetics/vacuum_ir_tail_bound.py",
+      "size_bytes": 3773,
+      "blob_sha": "7325e5b517c1df7da9fd19dc6e5c4bb37632cafd"
+    },
+    {
+      "path": "kinetics/vacuum_source_convergence.py",
+      "size_bytes": 5112,
+      "blob_sha": "531dba90db001c1a3dc3de1622ada2927b9910b2"
+    },
+    {
+      "path": "kinetics/VACUUM-IR-TAIL-BOUND.md",
+      "size_bytes": 5769,
+      "blob_sha": "c4ff3446457a54143469aa44f6d2f741247f4e1c"
+    },
+    {
+      "path": "kinetics/VACUUM-SOURCE-CONVERGENCE.md",
+      "size_bytes": 6433,
+      "blob_sha": "9871ff0d1046f162f80d00cab0a86fd81d0da2b1"
+    },
+    {
+      "path": "kinetics/vector_mediator_inverse_decay_gate.py",
+      "size_bytes": 2485,
+      "blob_sha": "86cfa39e33519d80218c2572bce697af34864f25"
+    },
+    {
+      "path": "kinetics/vector_mediator_threshold_thermal_gate.py",
+      "size_bytes": 4123,
+      "blob_sha": "0dc39e59a0082eb727f55176d88c96cc3b95b339"
+    },
+    {
+      "path": "kinetics/vector_neutrino_equilibrium_charges.py",
+      "size_bytes": 4264,
+      "blob_sha": "b54294bf486efe65e40c7cb2d87c5b93a5ebc957"
+    },
+    {
+      "path": "kinetics/vector_neutrino_finite_bath_time.py",
+      "size_bytes": 4498,
+      "blob_sha": "314d5ed9b31dc61f0f6f4d3b9ef4da171bd8feb1"
+    },
+    {
+      "path": "kinetics/vector_neutrino_quantum_1to2.py",
+      "size_bytes": 4406,
+      "blob_sha": "08aa3043056fc9281b08fcf4fbd414ea27187126"
+    },
+    {
+      "path": "kinetics/VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md",
+      "size_bytes": 6090,
+      "blob_sha": "ab637c1d12b2c50bfc035ff80c1dbd7fb230224d"
+    },
+    {
+      "path": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
+      "size_bytes": 8209,
+      "blob_sha": "6b9fb75e5f50354d52939c4c420e23b987ab0c13"
+    },
+    {
+      "path": "kinetics/VECTOR-NEUTRINO-CLOSED-CHARGES-AUDIT.md",
+      "size_bytes": 7526,
+      "blob_sha": "404d08243fc286a550e01915fd7dabd335dc29eb"
+    },
+    {
+      "path": "kinetics/VECTOR-NEUTRINO-FINITE-BATH-TIME-AUDIT.md",
+      "size_bytes": 7602,
+      "blob_sha": "b04ab3d11eb645675c84f1fc2e294c8d5c42216b"
+    },
+    {
+      "path": "kinetics/VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md",
+      "size_bytes": 8545,
+      "blob_sha": "f0b0f67960edf39bf6265b944239fe0b67617a74"
+    },
+    {
+      "path": "kinetics/VERIFIED-QUANTUM-BURST.md",
+      "size_bytes": 8623,
+      "blob_sha": "8f9900abc1f532a243146492896dc42812f2bd65"
+    },
+    {
+      "path": "kinetics/verify_massive_lepton_threshold.py",
+      "size_bytes": 1783,
+      "blob_sha": "5505f29562eb8f214338c05f5cf8c3d3bdbd4d68"
+    },
+    {
+      "path": "kinetics/verify_microphysical_bin_graph.py",
+      "size_bytes": 3976,
+      "blob_sha": "40a2a8b8a04017d97bbbfbf907f01707fc6049dd"
+    },
+    {
+      "path": "kinetics/verify_microreversible_lattice.py",
+      "size_bytes": 3659,
+      "blob_sha": "885d28410da7a224ec892330867fccf5864b225c"
+    },
+    {
+      "path": "kinetics/verify_paired_energy_quartets.py",
+      "size_bytes": 4553,
+      "blob_sha": "c67436ad31ef9fbd8aff24eee9a842287e13aa7e"
+    },
+    {
+      "path": "kinetics/verify_paired_quartet_network.py",
+      "size_bytes": 3436,
+      "blob_sha": "cec4b6bb7decf7722cc57dcfe33d722aac822e8f"
+    },
+    {
+      "path": "kinetics/verify_relativistic_nonlinear.py",
+      "size_bytes": 3304,
+      "blob_sha": "f9bcdbaf4f54413595c641ce259a206dc53684ca"
+    },
+    {
+      "path": "kinetics/verify_relativistic_weak_form.py",
+      "size_bytes": 2788,
+      "blob_sha": "99b5c172f0b197e38b8976725d5e7b47ecbf9b0e"
+    },
+    {
+      "path": "literature/100-screened.csv",
+      "size_bytes": 19923,
+      "blob_sha": "2ebccbc634b174afad900642aba69b16cdd93f70"
+    },
+    {
+      "path": "literature/100-screened.md",
+      "size_bytes": 27213,
+      "blob_sha": "514455474f209ed1a74d892ec4d801eddc226328"
+    },
+    {
+      "path": "literature/critical-cross-paper-synthesis.md",
+      "size_bytes": 10833,
+      "blob_sha": "7c914a875cf5dd62690908f79d3114a2e4db2a96"
+    },
+    {
+      "path": "MIGRATION-PROVENANCE.md",
+      "size_bytes": 1405,
+      "blob_sha": "fbc92b9c8e543a5eb55b5ec95988d1d7d39d9bfe"
+    },
+    {
+      "path": "papers/01-critical-core-asymptotics.md",
+      "size_bytes": 9949,
+      "blob_sha": "f5759cd0331599b30e08e99c280699c28b09386a"
+    },
+    {
+      "path": "papers/02-finite-halo-truncation.md",
+      "size_bytes": 7925,
+      "blob_sha": "26fb9786d026d3f945f09246b3b9a75544524cdf"
+    },
+    {
+      "path": "papers/03-cosmological-transfer.md",
+      "size_bytes": 11323,
+      "blob_sha": "2053d018ae1260487562cb2454f03343e5cf5fa5"
+    },
+    {
+      "path": "papers/04-hierarchical-galaxy-test.md",
+      "size_bytes": 9565,
+      "blob_sha": "bfa97948a5336610d657080b447aea60b95b6fca"
+    },
+    {
+      "path": "papers/05-condensate-population.md",
+      "size_bytes": 9592,
+      "blob_sha": "e90e7a9162bd3ff5ca4242ca7bab28e1c6dc7de0"
+    },
+    {
+      "path": "PLAN.md",
+      "size_bytes": 16349,
+      "blob_sha": "42ce3f7d142e9a97d9b3d0bf4d14fd825f471b9f"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 41733,
+      "blob_sha": "9f4d4f00eeb844af25abfdeb256941e7faafc8b1"
+    },
+    {
+      "path": "research-log.md",
+      "size_bytes": 4981,
+      "blob_sha": "d6a23596abb933e47bdba6c3c53594be95a40001"
+    },
+    {
+      "path": "TESTING.md",
+      "size_bytes": 3842,
+      "blob_sha": "e0dcf01123f100a25e4e5558b10910bc45b42fb8"
+    },
+    {
+      "path": "tests/test_adaptive_resonant.py",
+      "size_bytes": 3844,
+      "blob_sha": "608545b4adacdda70158ab93932438d085e9ecbd"
+    },
+    {
+      "path": "tests/test_angular_endpoint.py",
+      "size_bytes": 1588,
+      "blob_sha": "1bb4507b54f519b8a6d309b2ed011f647c552611"
+    },
+    {
+      "path": "tests/test_best_affinity_real_evidence.py",
+      "size_bytes": 2674,
+      "blob_sha": "e8d9846a08b37f63baafdf8a03bac7625fc7f722"
+    },
+    {
+      "path": "tests/test_best_chemical_affinity_reference.py",
+      "size_bytes": 2054,
+      "blob_sha": "c4bc039fd42868ef88a448211acbd6386b7006d7"
+    },
+    {
+      "path": "tests/test_best_closed_massive_dynamic.py",
+      "size_bytes": 2014,
+      "blob_sha": "5bdd9de3cb783345a50959e5ccd6e60f6edf202e"
+    },
+    {
+      "path": "tests/test_best_closed_massive_real_evidence.py",
+      "size_bytes": 2617,
+      "blob_sha": "558970b0b6d4dbfd4cc2e67c49a32476d43d2f75"
+    },
+    {
+      "path": "tests/test_best_early_bose_exponential.py",
+      "size_bytes": 2180,
+      "blob_sha": "6e9e948a615fc305cc4104566738cb605f8a805e"
+    },
+    {
+      "path": "tests/test_best_external_vacuum_reference.py",
+      "size_bytes": 3242,
+      "blob_sha": "191998a382a46c249e77834fc35d5f7798c02b1e"
+    },
+    {
+      "path": "tests/test_best_frw_exprb2_real_evidence.py",
+      "size_bytes": 2320,
+      "blob_sha": "f9ba85dee0498dba496c07e8358e84cd55e7ba90"
+    },
+    {
+      "path": "tests/test_best_frw_qmin_scan.py",
+      "size_bytes": 1839,
+      "blob_sha": "6ec0a6ae925a2dc0130ece1bf34921277c1c858a"
+    },
+    {
+      "path": "tests/test_best_massive_daughter_reference.py",
+      "size_bytes": 2426,
+      "blob_sha": "c9ed532d1143964ded8ef6aeddbb153e42168a85"
+    },
+    {
+      "path": "tests/test_best_massive_real_evidence.py",
+      "size_bytes": 2524,
+      "blob_sha": "8ff99563d37a95a150643d09422b8e7cb28e0380"
+    },
+    {
+      "path": "tests/test_best_qmin_real_evidence.py",
+      "size_bytes": 1627,
+      "blob_sha": "3008b792889aabb080e8815967c9c079fe4f65a6"
+    },
+    {
+      "path": "tests/test_best_radiation_frw_pilot.py",
+      "size_bytes": 2415,
+      "blob_sha": "a2b20e819274b8c5ced73eab464628cf75055826"
+    },
+    {
+      "path": "tests/test_best_rd_frw_qmin_real_evidence.py",
+      "size_bytes": 2196,
+      "blob_sha": "72fbe945a880d927e3dad88880116bc104ed2ce0"
+    },
+    {
+      "path": "tests/test_best_rd_frw_real_evidence.py",
+      "size_bytes": 2233,
+      "blob_sha": "d140c46787086e7f5fa10888ca9ac3c395548092"
+    },
+    {
+      "path": "tests/test_best_rd_time_64_128_real_evidence.py",
+      "size_bytes": 2373,
+      "blob_sha": "1010171d7e3e6b52c851b9bc7b71ead241618171"
+    },
+    {
+      "path": "tests/test_best_rd_time_refinement_evidence.py",
+      "size_bytes": 1962,
+      "blob_sha": "639f9f6ad120366aff4aa8329110bbc36b998e49"
+    },
+    {
+      "path": "tests/test_best_real_result_evidence.py",
+      "size_bytes": 2070,
+      "blob_sha": "5d8f5467c977e12369f0f48c108e2de66d36a66a"
+    },
+    {
+      "path": "tests/test_best_sm_corrected_real_evidence.py",
+      "size_bytes": 3104,
+      "blob_sha": "fe57e8ed4134c3f1c131fb7c8884ed8211c345e8"
+    },
+    {
+      "path": "tests/test_best_sm_coupled_frw.py",
+      "size_bytes": 2125,
+      "blob_sha": "54363dd66e3cec8bab49bb8c1d60760b8b9ca095"
+    },
+    {
+      "path": "tests/test_best_source_comparison.py",
+      "size_bytes": 6592,
+      "blob_sha": "5e752d12d3029490a8a60438dc74b3b0349fff4d"
+    },
+    {
+      "path": "tests/test_best_thermal_balance_reference.py",
+      "size_bytes": 2293,
+      "blob_sha": "b5a185ae2bcf4fccf202880a7ee9ab0ac2b9836e"
+    },
+    {
+      "path": "tests/test_best_vacuum_spectrum.py",
+      "size_bytes": 2865,
+      "blob_sha": "d47c0fbb3bbda70e7de4a1ae45fdba62fabb1ed7"
+    },
+    {
+      "path": "tests/test_calibrated_on_shell_rates.py",
+      "size_bytes": 2933,
+      "blob_sha": "0449af68cedf7843c92906983400c26d27016355"
+    },
+    {
+      "path": "tests/test_chi2_lepton_heat_gate.py",
+      "size_bytes": 538,
+      "blob_sha": "2b158bf9d77436336ded5933befc4e907487a51d"
+    },
+    {
+      "path": "tests/test_closed_three_species.py",
+      "size_bytes": 2167,
+      "blob_sha": "b18f910c897e805adc7bc3bbcf795db667fbae34"
+    },
+    {
+      "path": "tests/test_collision_invariant_rank.py",
+      "size_bytes": 2776,
+      "blob_sha": "fd33df83e501fc8e78ee5b03f09251367085d2d4"
+    },
+    {
+      "path": "tests/test_conservative_energy_projection.py",
+      "size_bytes": 2394,
+      "blob_sha": "0861132e37b56da9c9af2e84cbf3ca41f30a7776"
+    },
+    {
+      "path": "tests/test_cosmology_readiness_gate.py",
+      "size_bytes": 4116,
+      "blob_sha": "b6748ea8622ff430c75cbb90a83484cb5a5e600c"
+    },
+    {
+      "path": "tests/test_cut_cell_gain_diagnostic.py",
+      "size_bytes": 2516,
+      "blob_sha": "3322ed203bd1db5466379fb23b11233c58acbbee"
+    },
+    {
+      "path": "tests/test_cutoff_and_time_convergence.py",
+      "size_bytes": 1505,
+      "blob_sha": "cd559659273259708ca01758ac833cca72606a4c"
+    },
+    {
+      "path": "tests/test_daughter_uv_regrid.py",
+      "size_bytes": 3133,
+      "blob_sha": "28f3a03399343d1c8dfad69e9dd960ef6d57dac8"
+    },
+    {
+      "path": "tests/test_dynamic_rank_uv_repair.py",
+      "size_bytes": 2012,
+      "blob_sha": "5c9f56a6e1872f843b599ad6c5139dec8cc1288c"
+    },
+    {
+      "path": "tests/test_em_pair_thermodynamics.py",
+      "size_bytes": 1648,
+      "blob_sha": "29837342e9630932610afe8162e244eba4f72c80"
+    },
+    {
+      "path": "tests/test_energy_projection.py",
+      "size_bytes": 802,
+      "blob_sha": "685448bd30b6749f7abd2d3397169c7ab7a99348"
+    },
+    {
+      "path": "tests/test_fermion_finite_bath_pairs.py",
+      "size_bytes": 3123,
+      "blob_sha": "943c8a454da9cf6b31caf7504d7849e040b8e0f0"
+    },
+    {
+      "path": "tests/test_finite_mass_chie_kernel.py",
+      "size_bytes": 1798,
+      "blob_sha": "3af07d084e79fa309886c7b708eee29e5de2c284"
+    },
+    {
+      "path": "tests/test_finite_mass_dirac_trace.py",
+      "size_bytes": 1558,
+      "blob_sha": "fc22b6c3211b2dc0574ce27a4a440ec2a09a2a98"
+    },
+    {
+      "path": "tests/test_finite_mediator_5d_adaptive_reference.py",
+      "size_bytes": 1939,
+      "blob_sha": "a839a1b72d16540833eb48a2d4bb145ff1b88548"
+    },
+    {
+      "path": "tests/test_finite_mediator_5d.py",
+      "size_bytes": 1068,
+      "blob_sha": "d7d8d1a5bca98e66ca27cd72bf181128fbf000ed"
+    },
+    {
+      "path": "tests/test_finite_mediator_forward_event_reference.py",
+      "size_bytes": 1206,
+      "blob_sha": "04e48dc642c517143bdb521e7ced141df8094129"
+    },
+    {
+      "path": "tests/test_finite_mediator_split_lepton_reference.py",
+      "size_bytes": 1026,
+      "blob_sha": "69dc6d9e6a6e05e796034e0fd104ea336da3767e"
+    },
+    {
+      "path": "tests/test_finite_mediator_trace_angular.py",
+      "size_bytes": 1029,
+      "blob_sha": "2a68dcf64bfee27dcce56850b51220cdde0340fd"
+    },
+    {
+      "path": "tests/test_finite_mediator_transfer_quadrature.py",
+      "size_bytes": 1362,
+      "blob_sha": "522f543a42084158b634c19adc28a5b4e3014541"
+    },
+    {
+      "path": "tests/test_fixed_charge_pair_capacity.py",
+      "size_bytes": 1408,
+      "blob_sha": "a61f73d064f93d58cd37dd4003dd1b53b29ca4fb"
+    },
+    {
+      "path": "tests/test_frw_abundance_bridge.py",
+      "size_bytes": 2088,
+      "blob_sha": "44d3ff085eb4dc4ea1b80b249e20b10c13af180a"
+    },
+    {
+      "path": "tests/test_frw_collisionless_mother.py",
+      "size_bytes": 2878,
+      "blob_sha": "359e3953383b1d360fb07889f6e100eb9075245f"
+    },
+    {
+      "path": "tests/test_frw_energy_work_audit.py",
+      "size_bytes": 2820,
+      "blob_sha": "0ffbe58c73ca36773bd5f19a104366b413082431"
+    },
+    {
+      "path": "tests/test_frw_entropy_release.py",
+      "size_bytes": 3439,
+      "blob_sha": "070c6cf1da9526989d6f6d05c30a2443f9b52d26"
+    },
+    {
+      "path": "tests/test_frw_fixed_bath.py",
+      "size_bytes": 2152,
+      "blob_sha": "a0bf8037ec97c310d447635437b14b42ec864e52"
+    },
+    {
+      "path": "tests/test_frw_mode_changes.py",
+      "size_bytes": 2430,
+      "blob_sha": "a0bcce1954b752fe585237907b6f01d62b47376a"
+    },
+    {
+      "path": "tests/test_frw_mother_finite_volume.py",
+      "size_bytes": 2817,
+      "blob_sha": "411698c4aaecec0e43bc855ce93567f01ba5d0f5"
+    },
+    {
+      "path": "tests/test_frw_reservoir_budget.py",
+      "size_bytes": 1853,
+      "blob_sha": "3d1380afb5e84ae26d492c92b3f10b7fb0ff04ab"
+    },
+    {
+      "path": "tests/test_frw_resonance_drift.py",
+      "size_bytes": 2742,
+      "blob_sha": "13ce5a2845505b1ec89ec35551169e17dfcaa470"
+    },
+    {
+      "path": "tests/test_gauge_charge_yukawa_audit.py",
+      "size_bytes": 1191,
+      "blob_sha": "c09f00f401daaa5df95563083ad643247d73efca"
+    },
+    {
+      "path": "tests/test_higher_order_pauli_modes.py",
+      "size_bytes": 2044,
+      "blob_sha": "e3a07d213384a34cfed16433178e2be3be125dd7"
+    },
+    {
+      "path": "tests/test_independent_massive_chie_5d.py",
+      "size_bytes": 1274,
+      "blob_sha": "40fbcf8d85907262b40e7ccd889cc8caa4269628"
+    },
+    {
+      "path": "tests/test_kinetic_equilibrium.py",
+      "size_bytes": 1628,
+      "blob_sha": "2bd50fd9a9ef4bd8667e48b45b8a11e5edcbd035"
+    },
+    {
+      "path": "tests/test_lattice_detailed_balance.py",
+      "size_bytes": 2254,
+      "blob_sha": "706112d84d4084f509c375da71986c68b3ef4f6a"
+    },
+    {
+      "path": "tests/test_lepton_portal_chirality.py",
+      "size_bytes": 1693,
+      "blob_sha": "c7bfd684a9863ed0a1c3ebf3d5b26acdb99bc75b"
+    },
+    {
+      "path": "tests/test_lepton_portal_neutrino_heat.py",
+      "size_bytes": 1104,
+      "blob_sha": "b9860cbab98b03865221a09ee5faeb13e8ce4f2e"
+    },
+    {
+      "path": "tests/test_lepton_portal_split_bath.py",
+      "size_bytes": 711,
+      "blob_sha": "bd10fbc63141ad5e7ac1587dfc668451a4b94ecf"
+    },
+    {
+      "path": "tests/test_linearized_pauli_modes.py",
+      "size_bytes": 2954,
+      "blob_sha": "5ddc78582ae3b2e5ee46f6b44840b063295f35c5"
+    },
+    {
+      "path": "tests/test_localized_pauli_packets.py",
+      "size_bytes": 1692,
+      "blob_sha": "8c8197dbebd2f6d40f3d926352a0d15588f70cad"
+    },
+    {
+      "path": "tests/test_logq_angular.py",
+      "size_bytes": 2198,
+      "blob_sha": "8ff0d191be229b905f6e0efc32601dbf9f5ffe76"
+    },
+    {
+      "path": "tests/test_massive_bose_ir_cell.py",
+      "size_bytes": 2414,
+      "blob_sha": "1d8648fe323c2a293fb39201cae538f97fd92e71"
+    },
+    {
+      "path": "tests/test_massive_daughter_decay_source.py",
+      "size_bytes": 4381,
+      "blob_sha": "517740cf6b7f66366cb2b12bb4ccd19d8a564954"
+    },
+    {
+      "path": "tests/test_microphysical_equilibrium_graph.py",
+      "size_bytes": 4791,
+      "blob_sha": "f990db97e20a93d321c76be2d7a9ab7bdee4192f"
+    },
+    {
+      "path": "tests/test_microphysics_elastic_event.py",
+      "size_bytes": 3192,
+      "blob_sha": "4ccae706712c468cbc7c70c64750f4114d0b6943"
+    },
+    {
+      "path": "tests/test_microphysics_moving_heat.py",
+      "size_bytes": 2331,
+      "blob_sha": "8b43ac7bd3a63a077bf8198bd5756e01c119c6d5"
+    },
+    {
+      "path": "tests/test_microphysics_moving_transport.py",
+      "size_bytes": 1289,
+      "blob_sha": "2b90412b54eb77047475cd7d343439a4bca90ed7"
+    },
+    {
+      "path": "tests/test_microphysics_nr_drag.py",
+      "size_bytes": 1311,
+      "blob_sha": "a921e19a6d503cc834c8cfa7fb6a98c030910e10"
+    },
+    {
+      "path": "tests/test_microphysics_portal.py",
+      "size_bytes": 3918,
+      "blob_sha": "6ba4c14f9866345fb9dd268a66ebf8b29ec763d8"
+    },
+    {
+      "path": "tests/test_microphysics_recoil_heat.py",
+      "size_bytes": 2123,
+      "blob_sha": "26453287c0d98fee9f8ab41f5560dacab9b7bddc"
+    },
+    {
+      "path": "tests/test_microphysics_thermal_gain_loss.py",
+      "size_bytes": 2718,
+      "blob_sha": "b78756cee13c6f9e1a18309137b57f261ec34e68"
+    },
+    {
+      "path": "tests/test_microreversible_chie_lattice.py",
+      "size_bytes": 4357,
+      "blob_sha": "ac5d36ee9767a60bf8e6bd958aa6280e22930106"
+    },
+    {
+      "path": "tests/test_microreversible_massive_lepton.py",
+      "size_bytes": 2425,
+      "blob_sha": "95889d2500667e96ca0e677c3311c679f2515e66"
+    },
+    {
+      "path": "tests/test_modular_invariant_witness.py",
+      "size_bytes": 1844,
+      "blob_sha": "e20940eb083e85d4bf29303997eceeeca7b0680a"
+    },
+    {
+      "path": "tests/test_narrow_closed_frw_split.py",
+      "size_bytes": 2546,
+      "blob_sha": "c92f6d182e5c2af2b639e29c02d4129fc635a044"
+    },
+    {
+      "path": "tests/test_number_conserving_sm_bath.py",
+      "size_bytes": 4059,
+      "blob_sha": "02920cf81a754739c6890770c1e6655722a3bee9"
+    },
+    {
+      "path": "tests/test_onshell_collision_2d.py",
+      "size_bytes": 3584,
+      "blob_sha": "7ff3ff59a493d0d90feddbd1c13432a5415f14f5"
+    },
+    {
+      "path": "tests/test_paired_energy_quartets.py",
+      "size_bytes": 3647,
+      "blob_sha": "121b8d5c9c936e04b74c1f05e2e905ac127ea3c7"
+    },
+    {
+      "path": "tests/test_paired_quartet_network.py",
+      "size_bytes": 2524,
+      "blob_sha": "6edccfa2ae6edd44926d2921fbb126d5535557c7"
+    },
+    {
+      "path": "tests/test_parent_q_remap.py",
+      "size_bytes": 3014,
+      "blob_sha": "96fe20b08729100c6d75edeb2134c42200748c09"
+    },
+    {
+      "path": "tests/test_pauli_energy_bounds.py",
+      "size_bytes": 3307,
+      "blob_sha": "6952819e15779fc7095b519ae858dfd722953239"
+    },
+    {
+      "path": "tests/test_qed_pair_annihilation_control.py",
+      "size_bytes": 1720,
+      "blob_sha": "cdc5122f02a5bf5c93dcf434d5e4c932335de27d"
+    },
+    {
+      "path": "tests/test_qed_pair_full5d.py",
+      "size_bytes": 2376,
+      "blob_sha": "2dafca603215778472444dff432ec5f1168d2230"
+    },
+    {
+      "path": "tests/test_qed_pair_nonthermal_weak.py",
+      "size_bytes": 2067,
+      "blob_sha": "14436d8fc1d03ae65b3481ffc332c55faa31e314"
+    },
+    {
+      "path": "tests/test_quantum_regrid_entropy.py",
+      "size_bytes": 1890,
+      "blob_sha": "acd4ed93a70969344f7741c2baf77a57c0995748"
+    },
+    {
+      "path": "tests/test_radiation_collisionless_parent_bose.py",
+      "size_bytes": 3659,
+      "blob_sha": "2dabf9c12c0749462e7630bc2ff0a1ccd8b44b03"
+    },
+    {
+      "path": "tests/test_relativistic_nonlinear_fermion.py",
+      "size_bytes": 4017,
+      "blob_sha": "c1c589b6c1bde4ff58b7c51c00e2e3a5b7170b82"
+    },
+    {
+      "path": "tests/test_relativistic_weak_form_2to2.py",
+      "size_bytes": 3385,
+      "blob_sha": "669d9b2322613d374094ab22bc3d1e2ea07cee89"
+    },
+    {
+      "path": "tests/test_research_status_manifest.py",
+      "size_bytes": 1935,
+      "blob_sha": "a0cd9ed4630831eed414411ca6bafd4adb7033d2"
+    },
+    {
+      "path": "tests/test_resonant_graph_repair.py",
+      "size_bytes": 2637,
+      "blob_sha": "5c7629301a140d56f7f2d055e9b7a0e743f496bc"
+    },
+    {
+      "path": "tests/test_schur_closed_bdf.py",
+      "size_bytes": 2584,
+      "blob_sha": "988143c2d2ebd820947e2c2cc7254e975e5ae350"
+    },
+    {
+      "path": "tests/test_science.py",
+      "size_bytes": 7381,
+      "blob_sha": "9ce44404ffceafd26535a0b41f895eb1058c578f"
+    },
+    {
+      "path": "tests/test_shape_diagnostics.py",
+      "size_bytes": 2458,
+      "blob_sha": "8abaf241ae66436a581f156f709ee0b14b27022d"
+    },
+    {
+      "path": "tests/test_sm_best_quadrature_regression.py",
+      "size_bytes": 4214,
+      "blob_sha": "c819cb6c4319ab7bd4e529f4c587d385a4107628"
+    },
+    {
+      "path": "tests/test_sm_radiation_heat_feedback.py",
+      "size_bytes": 3583,
+      "blob_sha": "e169ab6fa87af898a4fbd784f8a4495f52372046"
+    },
+    {
+      "path": "tests/test_sparse_kinetic_jacobian.py",
+      "size_bytes": 2620,
+      "blob_sha": "c142c990160615c91a887b8caf3a32f73376c73e"
+    },
+    {
+      "path": "tests/test_stieltjes_pauli_modes.py",
+      "size_bytes": 1788,
+      "blob_sha": "2346ae574fac1844f35f27e0d9fa50e43f5d0587"
+    },
+    {
+      "path": "tests/test_strang_frw_split.py",
+      "size_bytes": 2177,
+      "blob_sha": "ddeb622c0eec19c25a317a3a0dc6c2d877fa0505"
+    },
+    {
+      "path": "tests/test_thermal_chemical_affinity.py",
+      "size_bytes": 4801,
+      "blob_sha": "2a6a567fb97cbf518e4eb1b3dfc3eb95756abdc0"
+    },
+    {
+      "path": "tests/test_thermal_energy_relaxation.py",
+      "size_bytes": 1925,
+      "blob_sha": "82714c4d20c6083d3855cfd013c8459e96ed9525"
+    },
+    {
+      "path": "tests/test_uv_source_decomposition.py",
+      "size_bytes": 2786,
+      "blob_sha": "57863636c40e2993a07fe00a4da8d47c7eab0b47"
+    },
+    {
+      "path": "tests/test_vacuum_ir_tail_bound.py",
+      "size_bytes": 2009,
+      "blob_sha": "d44fd3494598be8630a2b68de9a9dc05701a8810"
+    },
+    {
+      "path": "tests/test_vacuum_source_convergence.py",
+      "size_bytes": 2049,
+      "blob_sha": "1ac03fbbf29be5953e66d2e15300d6ada2fd6ee0"
+    },
+    {
+      "path": "tests/test_vector_mediator_inverse_decay_gate.py",
+      "size_bytes": 1213,
+      "blob_sha": "f3255b6ed126487bbfd1054df5ca7508a9cd9fe4"
+    },
+    {
+      "path": "tests/test_vector_mediator_threshold_thermal_gate.py",
+      "size_bytes": 2039,
+      "blob_sha": "b9a710c02a7e965a799b842e9823cd4395328811"
+    },
+    {
+      "path": "tests/test_vector_neutrino_equilibrium_charges.py",
+      "size_bytes": 1341,
+      "blob_sha": "4ffb22bfd48fa0c491e021279c547ae63cb31f83"
+    },
+    {
+      "path": "tests/test_vector_neutrino_finite_bath_time.py",
+      "size_bytes": 1716,
+      "blob_sha": "e36fd2e4b8a7e6a2e91e198109e83b956a27ff91"
+    },
+    {
+      "path": "tests/test_vector_neutrino_quantum_1to2.py",
+      "size_bytes": 2093,
+      "blob_sha": "10f435028f530a1e3068fd192f820d03ac02dc35"
+    },
+    {
+      "path": "THEORETICAL-STATUS-2026-11-21.md",
+      "size_bytes": 17363,
+      "blob_sha": "e385b63181cfb0d2b4b8f36da8c2f4bbe4b41cf3"
+    },
+    {
+      "path": "ОТЧЁТ-И-НАПРАВЛЕНИЯ.md",
+      "size_bytes": 11404,
+      "blob_sha": "e2ead742ac8de3ba9ade360fe6bf9b0a88bd2f24"
+    }
+  ]
+}

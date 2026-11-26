@@ -1,0 +1,81 @@
+{
+  "status": "sandbox independent nonlinear finite-difference checked; GitHub CI pending until actual run",
+  "scope": "Electron-only vector contact full-Pauli 5D collision, two logit-moment Galerkin Ritz eigenvalues, NOT the full eigenvalue spectrum or kinetic time integration",
+  "units": "M,T,μ and generalized rates GeV, G GeV^-2, D GeV4, S GeV3",
+  "parameters": {
+    "M": 0.1,
+    "T": 1,
+    "mu": 0,
+    "G": 0.001,
+    "gchi": 4,
+    "ge": 4
+  },
+  "cases": {
+    "n10_cut20": {
+      "rates": [
+        2.1187968143606783e-7,
+        7.308354750235804e-7
+      ],
+      "gamma_E": 3.0261530480782957e-7
+    },
+    "n12_cut24": {
+      "rates": [
+        2.1204976234727425e-7,
+        7.319981803833784e-7
+      ],
+      "gamma_E": 3.030212158926729e-7
+    },
+    "n16_cut28": {
+      "rates": [
+        2.1256377146442108e-7,
+        7.32301225466898e-7
+      ],
+      "gamma_E": 3.031936207323427e-7
+    },
+    "n20_cut32": {
+      "rates": [
+        2.1253575536205092e-7,
+        7.323041921127625e-7
+      ],
+      "gamma_E": 3.0318110257962096e-7
+    },
+    "n24_cut32": {
+      "rates": [
+        2.1253713826764962e-7,
+        7.323034821208818e-7
+      ],
+      "gamma_E": 3.031821176217816e-7,
+      "D_matrix_GeV4": [
+        [
+          3.027899802221842e-7,
+          5.601815021138075e-7
+        ],
+        [
+          5.601815021138075e-7,
+          0.000005183220350258826
+        ]
+      ],
+      "susceptibility_diagonal_GeV3": [
+        0.9987065945621286,
+        8.077848774557559
+      ],
+      "coupling_offdiag_fraction": 0.4471550892049445,
+      "measured_matrix_note": "Full precision 5D n24 numerical source (corrects approximate display matrix in initial JSON commit)"
+    }
+  },
+  "independent_controls": {
+    "FD_susceptibility_orthogonal_number_basis": true,
+    "strong_nonlinear_centered_logit_derivative_vs_weak_D11_rel_error_below": 0.00001,
+    "fixedN_FD_thermal_heat_gamma_matches_D11_over_S11_rel_error_below": 0.00002,
+    "symmetric_D_positive_and_number_null": true
+  },
+  "measured_negative_result": {
+    "claim": "One fixed-number thermal energy moment relaxation rate is universal kinetic relaxation",
+    "finding": "refuted within two-mode number-orthogonal logit Galerkin space",
+    "thermal_energy_rayleigh_GeV": 3.031821176217816e-7,
+    "slowest_two_mode_ritz_GeV": 2.1253713826764962e-7,
+    "relative_slow_vs_thermal_reduction": 0.2989786471087691,
+    "caveat": "two-mode Ritz rate is NOT the full operator slowest kinetic spectral eigenvalue; basis enlargement may yield slower modes"
+  },
+  "class_ready": false
+}

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "source": "kinetics/phi_bose_thermal_exact_weak_reference.py",
+  "test": "tests/test_phi_bose_thermal_exact_weak_reference.py",
+  "parent_sha": "bbf5fb8649fc7de0a3690dbbaa9e3969e07307b6",
+  "parameters": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "yukawa": 0.001,
+    "g1": 4,
+    "T1_GeV": 0.9,
+    "T2_GeV": 1,
+    "Tphi_GeV": 1
+  },
+  "analytic_1D": [
+    {
+      "pmax_GeV": 2,
+      "Rphi": -1.2954539554950007e-11,
+      "quad_abs_error": 1.3628073132911672e-18
+    },
+    {
+      "pmax_GeV": 8,
+      "Rphi": -3.21201533941131e-11,
+      "quad_abs_error": 6.3473236814681854e-18
+    },
+    {
+      "pmax_GeV": 16,
+      "Rphi": -3.232104327008506e-11,
+      "quad_abs_error": 6.347323683512913e-18
+    }
+  ],
+  "positive_quadrature": [
+    {
+      "pmax": 2,
+      "nrad": 24,
+      "nangle": 12,
+      "Rphi": -1.2954539614673814e-11,
+      "Qphi": -2.670878738141833e-12,
+      "mean_Ephi": 0.20617318851813815,
+      "relative_rate_error": 4.610260839754687e-9,
+      "energy_residual": 2.0194839173657902e-27,
+      "relative_energy_error_vs_exact_1D": 1.8826744607736146e-8
+    },
+    {
+      "pmax": 2,
+      "nrad": 48,
+      "nangle": 24,
+      "Rphi": -1.2954539554916666e-11,
+      "Qphi": -2.6708786878578894e-12,
+      "mean_Ephi": 0.2061731855876116,
+      "relative_rate_error": -2.573719015686038e-12,
+      "energy_residual": 1.2116903504194741e-27,
+      "relative_energy_error_vs_exact_1D": 2.6645352591003757e-15
+    },
+    {
+      "pmax": 2,
+      "nrad": 96,
+      "nangle": 48,
+      "Rphi": -1.2954539554916688e-11,
+      "Qphi": -2.6708786878579063e-12,
+      "mean_Ephi": 0.20617318558761258,
+      "relative_rate_error": -2.5719426588466376e-12,
+      "energy_residual": 6.866245319043687e-27,
+      "relative_energy_error_vs_exact_1D": 9.103828801926284e-15
+    },
+    {
+      "pmax": 8,
+      "nrad": 24,
+      "nangle": 12,
+      "Rphi": -3.211996063377634e-11,
+      "Qphi": -1.394036896659627e-11,
+      "mean_Ephi": 0.4340095283907981,
+      "relative_rate_error": -0.000006001227154550648,
+      "energy_residual": 3.715850407953054e-26,
+      "relative_energy_error_vs_exact_1D": -0.00010697753299182544
+    },
+    {
+      "pmax": 8,
+      "nrad": 48,
+      "nangle": 24,
+      "Rphi": -3.212015329939685e-11,
+      "Qphi": -1.3941860264094298e-11,
+      "mean_Ephi": 0.43405335379753923,
+      "relative_rate_error": -2.948810529090906e-9,
+      "energy_residual": 1.1309109937248425e-26,
+      "relative_energy_error_vs_exact_1D": -1.2074166777509276e-8
+    },
+    {
+      "pmax": 8,
+      "nrad": 96,
+      "nangle": 48,
+      "Rphi": -3.212015333089354e-11,
+      "Qphi": -1.3941860432431637e-11,
+      "mean_Ephi": 0.43405335861277455,
+      "relative_rate_error": -1.9682209195792666e-9,
+      "energy_residual": -2.4233807008389483e-26,
+      "relative_energy_error_vs_exact_1D": 7.105427357601002e-14
+    },
+    {
+      "pmax": 16,
+      "nrad": 24,
+      "nangle": 12,
+      "Rphi": -3.232088788401062e-11,
+      "Qphi": -1.4380689689941736e-11,
+      "mean_Ephi": 0.44493485889216455,
+      "relative_rate_error": -0.000004807582265842214,
+      "energy_residual": 6.462348535570529e-27,
+      "relative_energy_error_vs_exact_1D": -0.00011669079258713744
+    },
+    {
+      "pmax": 16,
+      "nrad": 48,
+      "nangle": 24,
+      "Rphi": -3.2321043188183336e-11,
+      "Qphi": -1.4382368772806336e-11,
+      "mean_Ephi": 0.4449846711032078,
+      "relative_rate_error": -2.5340062270728936e-9,
+      "energy_residual": -3.715850407953054e-26,
+      "relative_energy_error_vs_exact_1D": 5.513318468430839e-8
+    },
+    {
+      "pmax": 16,
+      "nrad": 96,
+      "nangle": 48,
+      "Rphi": -3.2321043206864655e-11,
+      "Qphi": -1.4382367979863367e-11,
+      "mean_Ephi": 0.44498464631267537,
+      "relative_rate_error": -1.956013795378908e-9,
+      "energy_residual": -1.6155871338926322e-26,
+      "relative_energy_error_vs_exact_1D": 1.9340085088970227e-13
+    }
+  ],
+  "local_test": "5 focused Python tests passed locally in 0.58s; independent direct adaptive Bose-FD number and k-weighted energy daughter integrals checked, positive on-shell 2D quadrature matches independent 1D parent number+energy.",
+  "limitations": "Exact angle integral for FD at common T2=Tphi and zero µ only; arbitrary thermal T1=.9; no physical capacity strong evolution, SM coupling, FRW, BEC/Ω/CLASS.",
+  "class_ready": false,
+  "analytic_1D_energy": [
+    {
+      "pmax_GeV": 2,
+      "Qphi": -2.670878687857882e-12,
+      "quad_abs_error": 2.9652710152404474e-26
+    },
+    {
+      "pmax_GeV": 8,
+      "Qphi": -1.3941860432430647e-11,
+      "quad_abs_error": 5.502690841869101e-18
+    },
+    {
+      "pmax_GeV": 16,
+      "Qphi": -1.4382367979860587e-11,
+      "quad_abs_error": 5.5026908467586606e-18
+    }
+  ],
+  "additional_mathematical_result": "Exact real Li2 dilog primitive for energy-weighted quantum daughter occupation; no claim of physical finite-mode strong source or late DM."
+}

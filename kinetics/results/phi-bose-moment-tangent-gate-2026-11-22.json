@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "Exact Bose physical p²dp continuous-overlap inverse-fugacity moment tangent necessary positivity near 86eV; NOT physical BEC",
+  "analytic": "J=-G, G=[[a,b],[b,c]] with a,c,b>0, ac>b²; for C=(0,-q), q>0, ηdot=(-bq/(ac-b²),+aq/(ac-b²)); ηrest_dot<0 despite C_rest=0.",
+  "tiny": {
+    "a": 3,
+    "b": 1,
+    "c": 2,
+    "q": 1,
+    "eta_dot": [
+      -0.2,
+      0.6
+    ]
+  },
+  "benchmark": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8,
+    "y": 0.001,
+    "Tmother": 0.9,
+    "Tdaughter": 1,
+    "Tphi": 1,
+    "pmax": 2,
+    "nrad": 12,
+    "nangle": 12,
+    "initial_eta_rest": 8.6e-8,
+    "total_microscopic_entropy": 1.6484691107363662e-12,
+    "all_scalar_hat_source_nonpositive": true,
+    "grid_rows": [
+      {
+        "n": 8,
+        "scheme": "uniform",
+        "deta0": 1.4436e-9,
+        "t_limit": 3195460000,
+        "limit_idx": 1
+      },
+      {
+        "n": 8,
+        "scheme": "power2",
+        "deta0": 3.7742e-9,
+        "t_limit": 1114460000000,
+        "limit_idx": 8
+      },
+      {
+        "n": 8,
+        "scheme": "power3",
+        "deta0": -2.3272e-9,
+        "t_limit": 36.955,
+        "limit_idx": 0
+      },
+      {
+        "n": 8,
+        "scheme": "two_zone",
+        "deta0": 3.0775e-9,
+        "t_limit": 1313660000000,
+        "limit_idx": 8
+      },
+      {
+        "n": 16,
+        "scheme": "uniform",
+        "deta0": 2.1985e-9,
+        "t_limit": 63603600000,
+        "limit_idx": 1
+      },
+      {
+        "n": 16,
+        "scheme": "power2",
+        "deta0": -2.9982028280117546e-9,
+        "t_limit": 28.683849937207395,
+        "limit_idx": 0
+      },
+      {
+        "n": 16,
+        "scheme": "power3",
+        "deta0": 9.255e-11,
+        "t_limit": 2904200,
+        "limit_idx": 1
+      },
+      {
+        "n": 16,
+        "scheme": "two_zone",
+        "deta0": 3.735e-9,
+        "t_limit": 5823190000000,
+        "limit_idx": 15
+      },
+      {
+        "n": 32,
+        "scheme": "uniform",
+        "deta0": 2.9571e-9,
+        "t_limit": 113420000000,
+        "limit_idx": 16
+      },
+      {
+        "n": 32,
+        "scheme": "power2",
+        "deta0": 1.3251e-9,
+        "t_limit": 811553,
+        "limit_idx": 1
+      },
+      {
+        "n": 32,
+        "scheme": "power3",
+        "deta0": -3.915e-11,
+        "t_limit": 2196.81,
+        "limit_idx": 0
+      },
+      {
+        "n": 32,
+        "scheme": "two_zone",
+        "deta0": -1.188e-9,
+        "t_limit": 72.3929,
+        "limit_idx": 0
+      },
+      {
+        "n": 64,
+        "scheme": "uniform",
+        "deta0": 3.7858e-9,
+        "t_limit": 8647080000,
+        "limit_idx": 13
+      },
+      {
+        "n": 64,
+        "scheme": "power2",
+        "deta0": 7.652e-11,
+        "t_limit": 3512970,
+        "limit_idx": 1
+      },
+      {
+        "n": 64,
+        "scheme": "power3",
+        "deta0": 8.151e-14,
+        "t_limit": 7304450,
+        "limit_idx": 9
+      },
+      {
+        "n": 64,
+        "scheme": "two_zone",
+        "deta0": -1.2627e-9,
+        "t_limit": 68.1101,
+        "limit_idx": 0
+      }
+    ],
+    "implicit_n16_power2": {
+      "dt20": "success",
+      "eta_min_dt20": 2.6036496626867586e-8,
+      "dt30": "fail closed Newton cannot decrease residual with eta>0",
+      "dt1000": "fail closed",
+      "source_Cphi_0": 0,
+      "all_phi_source_nonpositive": true,
+      "linearized_eta0_dt": -2.9982028280117546e-9,
+      "linearized_bound_dt": 28.683849937207395
+    },
+    "rest_mass_scaling_n16_power2": [
+      {
+        "mphi": 8.6e-8,
+        "t_limit": 28.683849937207395,
+        "eta0dot": -2.9982028280117546e-9
+      },
+      {
+        "mphi": 8.6e-7,
+        "t_limit": 286.8962360976872,
+        "eta0dot": -2.9975994516260327e-9
+      },
+      {
+        "mphi": 0.0000086,
+        "t_limit": 2866.4369551946315,
+        "eta0dot": -3.000240414991461e-9
+      },
+      {
+        "mphi": 0.000086,
+        "t_limit": 28064.95669871659,
+        "eta0dot": -3.0643197109914936e-9
+      }
+    ]
+  },
+  "proof_limits": "At eta_rest=0 with projected tangent ηdot_rest<0 the time-continuous Galerkin field violates η>=0; for finite eta_rest the bound is local linearized predictor, not a global no-solution theorem. True physical δ³p condensate not included.",
+  "reproduce": "python -m kinetics.phi_bose_moment_tangent_gate; tests/test_phi_bose_moment_tangent_gate.py",
+  "class_ready": false
+}

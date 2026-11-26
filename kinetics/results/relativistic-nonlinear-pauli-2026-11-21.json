@@ -1,0 +1,57 @@
+{
+  "status": "sandbox numerical experiment; CI of scientific tests must be checked separately",
+  "source_commit": "27f02d6ab961bdf38fd448cd2bf1463b2f1f72d6",
+  "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935768129",
+  "reproduction": "python kinetics/verify_relativistic_nonlinear.py --output outputs/nonthermal-pauli.json",
+  "input": "M=.1GeV, Te=1GeV, G=.001GeV^-2, mu_e=0, massless electron bath; FD or PCHIP fchi(p), strong nonlinear Pauli collision, weak heat",
+  "quadrature": "n20: np=nk=20,nmu=16,ncm=20,nphi=16, cutoff pmax=kmax=30GeV; n24 analogous np=nk=24",
+  "cases": {
+    "analytic_FD_equilibrium": {
+      "Q_chi_GeV5": 1.3877965189791852e-24,
+      "entropy_GeV4": 3.695239884104928e-38
+    },
+    "analytic_eps06_n20": {
+      "Q_chi_GeV5": 5.092846851024328e-9,
+      "entropy_GeV4": 1.7814003349844953e-10,
+      "number_strong_GeV4": 2.5641176537748647e-15,
+      "strong_weak_rel": 0.0000027342084399637
+    },
+    "analytic_eps06_n24": {
+      "Q_chi_GeV5": 5.092845447211218e-9,
+      "entropy_GeV4": 1.7815095175729542e-10,
+      "number_strong_GeV4": -1.0719202052654006e-16,
+      "strong_weak_rel": -3.188968856803015e-8
+    },
+    "PCHIP81_exactFD_false_signal": {
+      "Q_chi_GeV5": -2.5734441249791985e-12,
+      "entropy_GeV4": 6.546470149655856e-14,
+      "number_strong_GeV4": 4.412536743128138e-11
+    },
+    "PCHIP641_exactFD_false_signal": {
+      "Q_chi_GeV5": 6.620492517038575e-15,
+      "entropy_GeV4": 4.704991559192503e-16,
+      "number_strong_GeV4": 6.804207932988689e-14
+    },
+    "PCHIP321_eps03": {
+      "Q_chi_GeV5": 2.5463017148005726e-9,
+      "entropy_GeV4": 4.458334137130497e-11
+    },
+    "PCHIP321_eps06": {
+      "Q_chi_GeV5": 5.09255754922211e-9,
+      "entropy_GeV4": 1.7811569558373922e-10,
+      "number_strong_GeV4": 6.32533545372707e-13,
+      "strong_weak_rel": 0.0003144296023353444
+    },
+    "PCHIP321_eps12": {
+      "Q_chi_GeV5": 1.0184119695355036e-8,
+      "entropy_GeV4": 7.114805358837886e-10
+    },
+    "PCHIP641_eps06": {
+      "Q_chi_GeV5": 5.092855227674364e-9,
+      "entropy_GeV4": 1.781415469768352e-10
+    }
+  },
+  "negative_result": "Even a precisely thermal FD tabulated with PCHIP plus hard finite q cutoff can induce completely spurious Q and entropy; must be below physical signal before interpreting.",
+  "no_full_integrated_dynamics_or_cosmology": true,
+  "class_ready": false
+}

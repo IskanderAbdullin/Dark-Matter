@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "nonthermal simultaneous CONTINUUM quantum mode sources/weak N,Q,H, no finite-time fully coupled strong solver",
+  "model": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "yukawa": 0.001,
+    "g1": 4,
+    "g2": 4,
+    "gphi": 1
+  },
+  "nonthermal_trial": {
+    "f1": "expit(-E/.9+0.1*sin(3E))",
+    "f2": "expit(-E+0.07*cos(2E))",
+    "bphi": "(1+0.03*sin(3*k))/expm1(k+0.005)"
+  },
+  "parent_gauss_reference_order": 96,
+  "fields": {
+    "Rphi": "GeV4",
+    "Qphi": "GeV5",
+    "Q1": "GeV5",
+    "Q2": "GeV5",
+    "entropy": "GeV4/Gev? physical mode entropy density rate"
+  },
+  "rows": [
+    {
+      "P": 2,
+      "Rphi": -9.667552981841565e-12,
+      "Qphi": -3.3328861369172934e-12,
+      "Q1": 1.372375649268114e-11,
+      "Q2": -1.0390870355763847e-11,
+      "H": 1.794977527897187e-12,
+      "energy_defect": 0,
+      "scalar_first_relative_error_at_grid": [
+        {
+          "n": 16,
+          "max": 1.0141353867787473e-7
+        },
+        {
+          "n": 32,
+          "max": 5.905276267981208e-13
+        },
+        {
+          "n": 48,
+          "max": 6.217248937900877e-15
+        },
+        {
+          "n": 64,
+          "max": 1.2434497875801753e-14
+        },
+        {
+          "n": 96,
+          "max": 1.4876988529977098e-14
+        }
+      ]
+    },
+    {
+      "P": 8,
+      "Rphi": -2.372668092370616e-11,
+      "Qphi": -1.369125131038746e-11,
+      "Q1": 6.386183437836145e-11,
+      "Q2": -5.0170583067973955e-11,
+      "H": 7.414064029620446e-12,
+      "energy_defect": 3.2311742677852644e-26,
+      "scalar_first_relative_error_at_grid": [
+        {
+          "n": 16,
+          "max": 0.0005080428691339733
+        },
+        {
+          "n": 32,
+          "max": 9.363635640191603e-7
+        },
+        {
+          "n": 48,
+          "max": 2.414155542140861e-10
+        },
+        {
+          "n": 64,
+          "max": 1.368682944757893e-12
+        },
+        {
+          "n": 96,
+          "max": 1.4432899320127035e-14
+        }
+      ]
+    },
+    {
+      "P": 16,
+      "Rphi": -2.3888382051541185e-11,
+      "Qphi": -1.4124168870398396e-11,
+      "Q1": 6.534061449282427e-11,
+      "Q2": -5.121644562242588e-11,
+      "H": 7.576898137925836e-12,
+      "energy_defect": -1.2924697071141057e-26,
+      "scalar_first_relative_error_at_grid": [
+        {
+          "n": 16,
+          "max": 0.0036649916059691146
+        },
+        {
+          "n": 32,
+          "max": 0.000059282066067423145
+        },
+        {
+          "n": 48,
+          "max": 5.412068994070651e-7
+        },
+        {
+          "n": 64,
+          "max": 6.718943335037864e-8
+        },
+        {
+          "n": 96,
+          "max": 2.7281954473323822e-11
+        }
+      ]
+    }
+  ],
+  "tests": "4/4 local 2.13s",
+  "limits": "Nonthermal prescribed spectra, no finite-time simultaneous coupled evolution, no physical DM relic/CLASS/galactic observations",
+  "class_ready": false
+}

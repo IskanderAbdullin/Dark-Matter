@@ -1,0 +1,77 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "5D thermal full-Pauli χ+massless lepton vector-mediator weak heat; full incoming p,k,mu and outgoing polar/azimuth; no nonthermal strong operator",
+  "parameters": {
+    "Mchi": 0.1,
+    "mlepton": 0,
+    "Te": 1,
+    "Tchi": 0.9,
+    "G": 0.001,
+    "gchi": 4,
+    "glepton": 4,
+    "incoming_kinetic_cut_T": 14,
+    "CM_phi_nodes": 16,
+    "polar_gl_nodes": 32,
+    "adaptive_quad_epsabs": 1e-25,
+    "adaptive_quad_epsrel": 2e-10
+  },
+  "results": [
+    {
+      "mV": 0.03,
+      "n": 8,
+      "adaptive": 1.00323914709101e-15,
+      "cosine": 9.246761301607608e-16,
+      "transfer": 9.076155700976432e-16,
+      "cos_relative": -0.07830936139010358,
+      "transfer_relative": -0.09531483821244091
+    },
+    {
+      "mV": 0.03,
+      "n": 10,
+      "adaptive": 1.003230235813897e-15,
+      "cosine": 9.242160343108351e-16,
+      "transfer": 9.073355010648785e-16,
+      "cos_relative": -0.07875978881254475,
+      "transfer_relative": -0.09558596952694653
+    },
+    {
+      "mV": 0.1,
+      "n": 8,
+      "adaptive": 8.192004067500326e-14,
+      "cosine": 8.257804578144249e-14,
+      "transfer": 8.113209195607213e-14,
+      "cos_relative": 0.008032284908764842,
+      "transfer_relative": -0.009618509859597335
+    },
+    {
+      "mV": 0.1,
+      "n": 10,
+      "adaptive": 8.192694205403457e-14,
+      "cosine": 8.259250250370163e-14,
+      "transfer": 8.118126234300348e-14,
+      "cos_relative": 0.008123828779403208,
+      "transfer_relative": -0.009101764234521026
+    },
+    {
+      "mV": 0.3,
+      "n": 8,
+      "adaptive": 3.741427137832366e-12,
+      "cosine": 3.748096331795397e-12,
+      "transfer": 3.739877796164345e-12,
+      "cos_relative": 0.001782526751782365,
+      "transfer_relative": -0.0004141044609299316
+    },
+    {
+      "mV": 0.3,
+      "n": 10,
+      "adaptive": 3.744478593287878e-12,
+      "cosine": 3.751125253036107e-12,
+      "transfer": 3.742800276362939e-12,
+      "cos_relative": 0.0017750561480425198,
+      "transfer_relative": -0.0004482111148791379
+    }
+  ],
+  "negative": "For mV=.03 transfer polar Gauss32 underestimates full incoming integrated Q by ~9.6%; even on equal incoming quadrature transfer need not beat cosine. Physics strongly cutoff and mediator dependent.",
+  "acceptance": "Numeric weak-moment benchmark only, still lacking convergence in radial/cutoff for all parameters",
+  "class_ready": false
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "utc_date": "2026-11-24",
+  "scope": "Exact scalar mode semigroup at fixed fermion thermal baths only; no self-consistent closed dark-sector energy conservation, relic or BEC",
+  "masses_GeV": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 8.6e-8
+  },
+  "yukawa_y": 0.001,
+  "g1": 4,
+  "gphi": 1,
+  "time_units": "GeV^-1",
+  "source_units": {
+    "Rphi": "GeV^4",
+    "Q": "GeV^5"
+  },
+  "mesh_convergence_max_rel_error_all_N_Q": {
+    "pmax2": {
+      "n8": 3.3670796040219386e-7,
+      "n16": 4.580291701472561e-11,
+      "n32": 3.8036240823657863e-13,
+      "n48": 3.8058445284150366e-13
+    },
+    "pmax8": {
+      "n8": 0.00002784793411469977,
+      "n16": 9.26384535748781e-8,
+      "n32": 6.513012351661018e-12,
+      "n48": 8.404388296412435e-14
+    },
+    "pmax16": {
+      "n8": 0.0012156652481982722,
+      "n16": 8.086101699333881e-7,
+      "n32": 1.8415284852579816e-9,
+      "n48": 2.279487709699879e-11
+    }
+  },
+  "scalar_firstcell_pmax2_n16": {
+    "Rphi": -2.762149360447387e-12,
+    "Qphi": -1.2277997619515968e-14
+  },
+  "chemical_fixed_point": {
+    "pmax": 2,
+    "temperature": 1,
+    "mu1": -0.15,
+    "mu2": 0.05,
+    "muphi": -0.2,
+    "mode_k_GeV": [
+      0.01,
+      0.05,
+      0.1,
+      0.4
+    ],
+    "relative_ratio_S_D_to_BE_max": 7e-16
+  },
+  "strong_n32_pmax2": {
+    "frozen_boundary_t": 26.384661164015654,
+    "exact_mode_evolution_t_1p1": 29.02312728041722,
+    "actual_deltaML": -1.9099001200978585e-12,
+    "actual_deltaMR": -8.980238081630323e-12,
+    "actual_gap_to_affine_eta_max_ML_at_same_MR": 2.3443111834456304e-13,
+    "gap_at_0p8_frozen_t": -4.6937205010404e-13,
+    "gap_at_2_frozen_t": 2.3456607138193486e-12
+  },
+  "other_strong_positive_gaps_1p1": {
+    "n24": 4.2013286437404774e-13,
+    "n40": 1.4992496346250837e-13
+  },
+  "local_test_result": "5 passed 3.71s; initial 6e-4 frozen-vs-finite-time bound failed at N24 2t (observed 7.88e-4), corrected to 1e-3",
+  "class_ready": false
+}

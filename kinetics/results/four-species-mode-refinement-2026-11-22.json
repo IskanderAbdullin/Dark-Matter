@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "stage": "five-resolution nonlinear Fermi-logit mode convergence at fixed 5D Pauli quadrature",
+  "parameters": {
+    "mchi1": 0.1,
+    "mchi2": 0.02,
+    "mlepton": 0,
+    "mphi": 0.001,
+    "G": 0.01,
+    "mV": 0.1,
+    "physical_incoming_cut": 12,
+    "shared_mesh_cut": 20,
+    "nlocal": 3,
+    "segments": 12,
+    "nmu": 6,
+    "ncm": 12,
+    "nphi": 12
+  },
+  "continuous_analytic_f_same_quadrature_reference": {
+    "Qchi1": -1.2672292278252052e-11,
+    "Qchi2": 8.75060244836362e-12,
+    "entropy": 1.1236203110330876e-10
+  },
+  "interpolation_proof": "For C² L(E)=logit f(E), |L−linear_interpolation(L)|<=h² sup|L''|/8, |expit(L)-expit(Linterp)|<=h² sup|L''|/32.",
+  "curvature_sup": {
+    "chi1": 4.8,
+    "chi2": 1.8,
+    "lepton": 4
+  },
+  "rows": [
+    {
+      "bins": 256,
+      "h": 0.15625,
+      "Qchi1_relative_error": -0.005029907927951771,
+      "Qchi2_relative_error": -0.0022973756408090074,
+      "H_relative_error": -0.05732139211310938,
+      "chi1_logit_error_bound": 0.0146484375
+    },
+    {
+      "bins": 512,
+      "h": 0.078125,
+      "Qchi1_relative_error": -0.00019184950196016182,
+      "Qchi2_relative_error": -0.0007452453905241185,
+      "H_relative_error": -0.0148300498455608,
+      "chi1_logit_error_bound": 0.003662109375
+    },
+    {
+      "bins": 1024,
+      "h": 0.0390625,
+      "Qchi1_relative_error": -0.0001777494842212235,
+      "Qchi2_relative_error": 0.000048833958147032064,
+      "H_relative_error": -0.004003060278651049,
+      "chi1_logit_error_bound": 0.00091552734375
+    },
+    {
+      "bins": 2048,
+      "h": 0.01953125,
+      "Qchi1_relative_error": 0.000020675668968905825,
+      "Qchi2_relative_error": -0.000056278089596406566,
+      "H_relative_error": -0.0009655467894094105,
+      "chi1_logit_error_bound": 0.0002288818359375
+    },
+    {
+      "bins": 4096,
+      "h": 0.009765625,
+      "Qchi1_relative_error": -0.000005406939704966085,
+      "Qchi2_relative_error": -0.0000151285303806592,
+      "H_relative_error": -0.0002446755541496426,
+      "chi1_logit_error_bound": 0.000057220458984375
+    }
+  ],
+  "abs_H_error_ratios_on_halving": [
+    3.8652191132228637,
+    3.7046781245468097,
+    4.14589983888774,
+    3.9462331770949457
+  ],
+  "fixed_mesh_1024_bins_incoming_cut_scan": [
+    {
+      "cut": 8,
+      "Qchi1": -1.1867669060939583e-11,
+      "Qchi2": 8.484575879270902e-12,
+      "H": 1.075224477516413e-10
+    },
+    {
+      "cut": 12,
+      "Qchi1": -1.2670039784835692e-11,
+      "Qchi2": 8.751029774917345e-12,
+      "H": 1.1191223911977055e-10
+    },
+    {
+      "cut": 16,
+      "Qchi1": -1.2721067719999019e-11,
+      "Qchi2": 8.768388704355222e-12,
+      "H": 1.1211789202119417e-10
+    },
+    {
+      "cut": 20,
+      "Qchi1": -1.2722684631737163e-11,
+      "Qchi2": 8.768695980803942e-12,
+      "H": 1.1212587246897292e-10
+    }
+  ],
+  "local_tests": "3 focused pytest passed in 13.84s; new GH CI pending",
+  "limitation": "Only interpolation rate precision at same fixed coarse 5D quadrature, no actual full 5D gamma, actual cosmological fchi1/fchi2/phi, e±γν/Zprime, H/FRW, Ω/BEC or CLASS",
+  "class_ready": false
+}

@@ -1,0 +1,54 @@
+{
+  "date_utc": "2026-11-22",
+  "model": "conditional two active ν left-handed Z′ decay, MB existing-vector clock, radiation H at gstarR=10.75, fixed arbitrary contact G me²=.001",
+  "params": {
+    "me_GeV": 0.00051099895,
+    "T_me": 1,
+    "G_me_minus2": 0.001,
+    "gchi_eff_max_assumed": 3.5449077018110318,
+    "gstar_rho_assumed": 10.75,
+    "Mpl_nonreduced_GeV": 12209000000000000000
+  },
+  "analytic_vacuum_Gamma_nunu_rest_over_gprime2_mV": 0.026525823848649224,
+  "time_dilation": "K1(x)/K2(x), x=mV/T, independent direct MB p/T Gauss n256 agrees within 1e-9 relative on .03,.1,.3,1,3",
+  "conditional_FD_Pauli_existing_vector_loss_lower": "<Gamma_loss>_MB >= Gamma_vacuum_MB/4 if both outgoing ν fFD(E) <=1/2 at zero chemical potential, no other plasma effects; not net thermalization",
+  "H_reference_GeV": 1.1640516262946154e-25,
+  "cases": [
+    {
+      "mV_me": 0.03,
+      "gprime_min_conventional": 2.5388531259649034e-7,
+      "Gamma_rest_GeV": 2.6211103092333346e-20,
+      "K1_K2": 0.014975535676562023,
+      "Gamma_MB_GeV": 3.925253094812832e-22,
+      "Gamma_MB_H": 3372.0610032629006,
+      "Pauli_MB_loss_lower_H": 843.0152508157252
+    },
+    {
+      "mV_me": 0.1,
+      "gprime_min_conventional": 0.0000028209479177387817,
+      "Gamma_rest_GeV": 1.0786462177914956e-17,
+      "K1_K2": 0.04939172411208573,
+      "Gamma_MB_GeV": 5.327619640370228e-19,
+      "Gamma_MB_H": 4576789.826177208,
+      "Pauli_MB_loss_lower_H": 1144197.456544302
+    },
+    {
+      "mV_me": 0.3,
+      "gprime_min_conventional": 0.000025388531259649033,
+      "Gamma_rest_GeV": 2.6211103092333337e-15,
+      "K1_K2": 0.1405329040815883,
+      "Gamma_MB_GeV": 3.6835224367475036e-16,
+      "Gamma_MB_H": 3164397826.9871197,
+      "Pauli_MB_loss_lower_H": 791099456.7467799
+    }
+  ],
+  "negative": "A virtual-only mediator is not demonstrated under this exploratory G and perturbative chi assumption; open νν decay clock is fast versus H, but its MB average is NOT a full FD/BE forward/inverse quantum relaxation or actual production.",
+  "missing": [
+    "full moving Z′ quantum 1↔2 collision with FD/BE and thermal masses",
+    "Z′ actual cosmological distribution and ν decoupling",
+    "χ1χ2 equal-charge physical vector and Bose Yukawa dynamics",
+    "experimental mediator couplings and scalar S",
+    "86eV ΩDM/BEC/CLASS"
+  ],
+  "class_ready": false
+}

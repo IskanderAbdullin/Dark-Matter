@@ -1,0 +1,141 @@
+name: Independent BEST on-shell reference (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-independent.yml'
+      - 'kinetics/best_external_vacuum_reference.py'
+      - 'kinetics/best_thermal_balance_reference.py'
+      - 'kinetics/best_vacuum_spectrum.py'
+      - 'kinetics/best_source_comparison.py'
+      - 'kinetics/best_chemical_affinity_reference.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-research-branch
+  cancel-in-progress: true
+
+jobs:
+  independent-kinetic-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - name: Check out local research branch
+        uses: actions/checkout@v4
+      - name: Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: MPI and solver dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy mpi4py vegas
+      - name: Pin independent open-source BEST v1.3.5
+        run: |
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          mpirun --version | head -n 1
+          mpirun -np 2 python -c 'from mpi4py import MPI; print("MPI rank",MPI.COMM_WORLD.Get_rank(),flush=True)'
+      - name: Execute two independent q grids at two Vegas sample settings
+        run: |
+          mkdir -p outputs
+          for n in 28 56; do
+            for samples in 3000 12000; do
+              echo "BEST actual vacuum rate: grid=$n samples=$samples"
+              mpirun -np 2 python kinetics/best_external_vacuum_reference.py \
+                --execute --best-root /tmp/best --grid-n "$n" --neval "$samples" \
+                --output "outputs/best_vacuum_${n}_${samples}.json" \
+                > "outputs/best_stdout_${n}_${samples}.log" 2>&1
+            done
+          done
+      - name: Compare independent vacuum number, energy, and spectral shapes
+        run: |
+          python kinetics/best_source_comparison.py \
+            outputs/best_vacuum_*.json \
+            --output outputs/best_source_comparison_2x2.json
+          python - <<'PY'
+          import json
+          d=json.load(open("outputs/best_source_comparison_2x2.json"))
+          assert d["records_checked"]==4
+          assert d["multiple_independent_momentum_grids"]
+          assert d["multiple_monte_carlo_sample_counts"]
+          assert d["same_physical_decay_scenario_across_all_runs"]
+          print("Preliminary 2x2 acceptance:",d["source_agreement_verified"])
+          for r in d["checks"]:
+              print("Grid",r["grid_n"],"Vegas samples",r["vegas_neval"],
+                    "number error",r["relative_phi_rate_error"],
+                    "parent-energy error",r["relative_parent_energy_loss_error"],
+                    "total-energy imbalance",r["relative_total_energy_rate_residual"])
+          print("This is still NOT time evolution, BEC, FRW or CLASS.")
+          PY
+      - name: Run nonzero-Bose inverse-decay thermal equilibrium reference
+        run: |
+          mpirun -np 2 python kinetics/best_thermal_balance_reference.py \
+            --execute --best-root /tmp/best --grid-n 56 --neval 12000 \
+            --output outputs/best_equilibrium_56.json \
+            > outputs/best_equilibrium_stdout.log 2>&1
+          python - <<'PY'
+          import json
+          x=json.load(open("outputs/best_equilibrium_56.json"))
+          assert x["external_solver_executed"]
+          print("Actual equilibrium BEST commit:",x["best_actual_verified_git_SHA"])
+          for name,rate in x["all_three_species_equilibrium"].items():
+              print(name,"net/gross",rate["number_relative_to_gross_gain_loss"],
+                    "local max net/gross",rate["maximum_local_net_rate_relative_to_gross_on_support"])
+          print("Equilibrium all-species energy residual:",x["total_net_energy_rate"])
+          PY
+      - name: Run independent non-equilibrium Bose enhancement and inverse decay
+        run: |
+          for scenario in "56 12000 -.15" "96 24000 -.15" "56 12000 -.25"; do
+            read -r n samples mu1 <<< "$scenario"
+            label=$(echo "$mu1" | sed 's/-/minus/;s/\./p/')
+            echo "BEST genuine nonlinear quantum snapshot: grid=$n neval=$samples mu1=$mu1"
+            mpirun -np 2 python kinetics/best_chemical_affinity_reference.py \
+              --execute --best-root /tmp/best --grid-n "$n" --neval "$samples" \
+              --mu1 "$mu1" \
+              --output "outputs/best_affinity_${n}_${samples}_${label}.json" \
+              > "outputs/best_affinity_stdout_${n}_${samples}_${label}.log" 2>&1
+          done
+          python - <<'PY'
+          import glob,json,math
+          files=sorted(glob.glob("outputs/best_affinity_*.json"))
+          assert len(files)==3,files
+          for file in files:
+              z=json.load(open(file))
+              assert z["independent_best_actually_executed"]
+              assert not z["nonlinear_time_evolution_or_cosmological_DM_validated"]
+              p=z["protocol"]
+              numbers=z["all_three_species_rates"]
+              print("AFFINITY",file,"mu1",p["mu_chi1"],
+                    "analytic phi n",p["exact_analytic_number_rate"],
+                    "BEST phi n",numbers["phi"]["number_rate"],
+                    "phi relative error",z["relative_phi_number_source_error"],
+                    "energy 3-species residual",z["net_total_physical_energy_rate"],
+                    "shape RMS/peak",z["phi_differential_source"]["source_shape_peak_normalized_rms"],
+                    "entropy measured/reference",z["observed_collisional_entropy_rate"],
+                    z["analytic_collisional_entropy_rate"])
+              assert math.isfinite(z["relative_phi_number_source_error"])
+              assert math.isfinite(z["net_total_physical_energy_rate"])
+          print("AWAY-FROM-EQUILIBRIUM instantaneous source only; no dynamical freezeout.")
+          PY
+      - name: Upload real BEST data, if produced
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-independent-quantum-reference
+          path: |
+            outputs/best_*.json
+            outputs/best_*.log
+          if-no-files-found: warn
+          retention-days: 7

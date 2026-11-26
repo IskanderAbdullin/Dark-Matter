@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "massive e−e+ ideal FD equilibrium, fast chemical pair equilibrium with charge y, finite-volume fixed net Q derivative; NOT kinetic annihilation model",
+  "me_GeV": 0.00051099895,
+  "eta_initial": 6e-10,
+  "charge_target_over_T3_at_initial": 1.4615259388028767e-10,
+  "quadrature": "p/T Gauss n256 0..48",
+  "h_deltaT_over_T": 0.0001,
+  "derivation": "B=1/pi² Int q² eps²(a+b), D=1/pi² Int q² eps(a-b), S=1/pi² Int q²(a+b), C_pair_fixed_charge/T³=B-D²/S; a=fminus(1-fminus), b=fplus(1-fplus)",
+  "cases": [
+    {
+      "T_me": 1,
+      "y": 5.081900820632805e-10,
+      "Cfixed_y": 4.428887901992905,
+      "Cfixed_charge": 4.428887901992905,
+      "ratio": 1,
+      "independent_finite_difference_relative": 1.0398811811640485e-8
+    },
+    {
+      "T_me": 0.1,
+      "y": 3.353145053597565e-7,
+      "Cfixed_y": 0.06015415758105935,
+      "Cfixed_charge": 0.06015415758105268,
+      "ratio": 0.999999999999889,
+      "independent_finite_difference_relative": 1.3437579049480064e-7
+    },
+    {
+      "T_me": 0.05,
+      "y": 0.002848677612527281,
+      "Cfixed_y": 0.000023999077049272492,
+      "Cfixed_charge": 0.00002399888299562978,
+      "ratio": 0.9999919141206008,
+      "independent_finite_difference_relative": 5.843584875986352e-7
+    },
+    {
+      "T_me": 0.025,
+      "y": 13.837684683407725,
+      "Cfixed_y": 2.5249865170871077e-7,
+      "Cfixed_charge": 2.32426743527753e-10,
+      "ratio": 0.0009205068698580092,
+      "independent_finite_difference_relative": 7.55477354896783e-7
+    },
+    {
+      "T_me": 0.02,
+      "y": 23.51213620116554,
+      "Cfixed_y": 3.884166249463019e-7,
+      "Cfixed_charge": 2.2986496603057353e-10,
+      "ratio": 0.000591800019019145,
+      "independent_finite_difference_relative": 0.000011158415908818498
+    }
+  ],
+  "negative": "At T/me=.025 fixed-y electron heat is ~1086 times larger than fixed-Q equilibrium electron heat, but photon capacity dominates EM total; fast pair chemistry not microscopically validated and η(T) history not computed.",
+  "class_ready": false,
+  "requires": [
+    "explicit e+e−↔γγ kinetics and chemical freezeout",
+    "finite charged proton background and expansion",
+    "weak ν channels",
+    "gauge UV-valid chi portal",
+    "fully nonthermal chi+SM Bose 1↔2",
+    "frozen 86 eV phase-space and observations"
+  ]
+}

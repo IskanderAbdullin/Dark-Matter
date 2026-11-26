@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "process": "full on-shell 5D thermal e−e+↔γγ tree QED quantum Pauli/Bose weak moments",
+  "model_scope": "restricted isotropic FD e−/e+ at common Te, BE photons at Tgamma and zero photon chemical potential; NOT nonthermal strong operator/time evolution",
+  "m_unit": 1,
+  "alpha": 0.0072973525692838015,
+  "quadrature": {
+    "p_over_T_cut": 32,
+    "nrad": 32,
+    "incoming_mu_and_CM_cos_theta": 24,
+    "CM_phi": 12,
+    "independent_vacuum_loss": "matches integrated QED σv model to <1e−14 at Te/me=.025,.05,.1"
+  },
+  "thermal_cases": [
+    {
+      "Te_me": 0.1,
+      "Tgamma_Te": 1,
+      "mu_sum_over_Te": 0,
+      "R_net": 0,
+      "Qphoton": 0,
+      "Sdot": 0
+    },
+    {
+      "Te_me": 0.1,
+      "Tgamma_Te": 1,
+      "mu_sum_over_Te": 0.02,
+      "R_net": 1.5112437058464787e-19,
+      "Qphoton": 3.5120564750995546e-19,
+      "Sdot": 3.0224874116926112e-21
+    },
+    {
+      "Te_me": 0.2,
+      "Tgamma_Te": 1,
+      "mu_sum_over_Te": 0.02,
+      "R_net": 3.2905913243593627e-14,
+      "Qphoton": 8.7918386657102e-14,
+      "Sdot": 6.581182648718028e-16
+    },
+    {
+      "Te_me": 1,
+      "Tgamma_Te": 1,
+      "mu_sum_over_Te": 0.04,
+      "R_net": 6.358301641938036e-8,
+      "Qphoton": 3.5901759000232965e-7,
+      "Sdot": 2.5433206567751718e-9
+    },
+    {
+      "Te_me": 0.1,
+      "Tgamma_Te": 1.1,
+      "mu_sum_over_Te": 0,
+      "R_net": -5.533235407971476e-17,
+      "Qphoton": -1.3072874264636307e-16,
+      "Sdot": 1.188443114966935e-16
+    },
+    {
+      "Te_me": 0.1,
+      "Tgamma_Te": 0.9,
+      "mu_sum_over_Te": 0,
+      "R_net": 6.903489705866236e-18,
+      "Qphoton": 1.6062872986651278e-17,
+      "Sdot": 1.7847636651834738e-17
+    }
+  ],
+  "thermal_forward_Bose_multiplier_vs_empty_photon": {
+    "Te_me0p1": 1.000165544996893,
+    "Te_me0p2": 1.010251327185892,
+    "Te_me1": 1.3432602574411965
+  },
+  "radial_scan_Tme0p1_muSumTe0p02": {
+    "n12": 1.5111796850480307e-19,
+    "n16": 1.5112435475354066e-19,
+    "n24": 1.5112437040279974e-19,
+    "n32": 1.5112437058464787e-19,
+    "n40": 1.5112437065040054e-19
+  },
+  "angular_scan_at_n32": {
+    "n10": 1.5112437068597333e-19,
+    "n16": 1.5112437059680682e-19,
+    "n24": 1.5112437058464787e-19,
+    "n36": 1.5112437058005031e-19
+  },
+  "cutoff_p_T_scan_at_n32": {
+    "q24": 1.5112405305062236e-19,
+    "q28": 1.5112436164310193e-19,
+    "q32": 1.5112437058464787e-19,
+    "q36": 1.5112437078898425e-19
+  },
+  "exact_local_detailed_balance": "F/R=exp[(mu_e_minus+mu_e_plus)/Te+(Eminus+Eplus)(1/Tgamma−1/Te)] at m_gamma=0",
+  "moment_identity": "N_e−=-R,N_e+=-R,N_gamma=2R,Qe−+Qe++Qgamma=0, entropy>=0",
+  "warnings": [
+    "No nonthermal strong mode source",
+    "No time evolution or chemical freezeout",
+    "No thermal QED corrections/weak ν/protons",
+    "No physical gamma_el or dark portal",
+    "No 86eV ΩDM, BEC or CLASS"
+  ],
+  "class_ready": false
+}

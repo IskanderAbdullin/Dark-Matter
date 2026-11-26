@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "benchmark": "massive unequal Dirac fermions, tree vector-contact EFT, full Fermi gain-loss; independent CM 5D vs invariant ell kernel",
+  "energy_mass_units": "me=1 for numerical integration; M/me=0.1; G*me^2=0.001; degeneracies gchi=ge=4; normalized Q/(G^2 me^9)",
+  "incoming_cut_kinetic_over_Te": 30,
+  "phi_harmonics": "Gauss on full CM phi; not cone-averaged in independent reference",
+  "physical_electron_mass_rescaling_check": {
+    "me_GeV": 0.00051099895,
+    "G_GeVminus2": 1,
+    "T_over_me": 1,
+    "Tchi_over_Te": 0.9,
+    "cm5d_n32_Q_GeV5": 3.9789766294515056e-32
+  },
+  "cases": [
+    {
+      "Te_me": 0.1,
+      "Tchi_Te": 0.9,
+      "cm5d_n40": 1.508044920856316e-14,
+      "ell_n160": 1.50804577898341e-14,
+      "relative": 5.690328466201322e-7
+    },
+    {
+      "Te_me": 0.1,
+      "Tchi_Te": 1.1,
+      "cm5d_n40": -4.131463042020067e-14,
+      "ell_n160": -4.131466392924564e-14,
+      "relative": 8.11069701622813e-7
+    },
+    {
+      "Te_me": 1,
+      "Tchi_Te": 0.9,
+      "cm5d_n40": 0.016749095035960962,
+      "ell_n160": 0.01674908323249796,
+      "relative": -7.047224328537993e-7
+    },
+    {
+      "Te_me": 1,
+      "Tchi_Te": 1.1,
+      "cm5d_n40": -0.03781164549829789,
+      "ell_n160": -0.03781162540125629,
+      "relative": -5.3150402035e-7
+    },
+    {
+      "Te_me": 10,
+      "Tchi_Te": 0.9,
+      "cm5d_n40": 19856555.74828768,
+      "ell_n160": 19856555.76238435,
+      "relative": 7.099254517584086e-10
+    },
+    {
+      "Te_me": 10,
+      "Tchi_Te": 1.1,
+      "cm5d_n40": -44319233.7435731,
+      "ell_n160": -44319204.427943684,
+      "relative": -6.6146516853e-7
+    }
+  ],
+  "full5d_nodes": [
+    24,
+    32,
+    40
+  ],
+  "transfer_energy_nodes": [
+    64,
+    96,
+    160
+  ],
+  "transfer_ell_nodes": 24,
+  "massless_prior_reference_Q_GeV5": 1.9851492233308662e-8,
+  "four_dirac_trace_points": "M,m,s,c : (0.1,1,2,-0.6),(0.1,1,5,0.8),(1.1,0.4,10,0.15),(0.8,0.2,3,-0.9); all relative trace vs polynomial <=1.5e-15",
+  "nonmonotone_transfer_at_Te_me1_Tchi_Te0p9": {
+    "n64_relative": 0.000011715043895632604,
+    "n96_relative": -0.0000024603797734723543,
+    "n160_relative": -7.047224328537993e-7
+  },
+  "cutoff_n96_nq24_Q_GeV5_scaled": {
+    "x25": 1.6749088168169185e-8,
+    "x30": 1.674905382682631e-8,
+    "x35": 1.6748936589197223e-8
+  },
+  "warning": "Nonmonotonic collocation/cutoff error, benchmark-only <1e-6 mutual agreement; no physical gamma_el, e+e- plasma, 86eV relic, BEC, Omega or CLASS",
+  "class_ready": false
+}

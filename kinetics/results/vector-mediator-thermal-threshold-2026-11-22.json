@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "conditional vectorlike χ1χ2 equal U1_(Le-Lmu) charges, original real odd phi, additional even gauge-breaking S if Higgs; Z′ physical at finite T",
+  "parameters": {
+    "me_GeV": 0.00051099895,
+    "M1_me": 0.1,
+    "M2_me": 0.02,
+    "mphi_eV": 86,
+    "G_times_me2": 0.001,
+    "T_over_me": 1,
+    "spins_massive_vector": 3,
+    "muV": 0
+  },
+  "independent_calculations": {
+    "methodA": "direct radial BE quadrature over p/T Gauss 512 0..60",
+    "methodB": "independent fugacity/Bessel K1 K2 1024 terms",
+    "relative_eos_tolerance": 2e-8
+  },
+  "thermal_IF_equilibrated": [
+    {
+      "mV_me": 0.03,
+      "mV_keV": 15.3299685,
+      "delta_gstar_rho": 2.99965816286133,
+      "delta_gstar_s": 2.999491942169337
+    },
+    {
+      "mV_me": 0.1,
+      "mV_keV": 51.099895,
+      "delta_gstar_rho": 2.996212023743432,
+      "delta_gstar_s": 2.994479933040389
+    },
+    {
+      "mV_me": 0.3,
+      "mV_keV": 153.299685,
+      "delta_gstar_rho": 2.9664844689557515,
+      "delta_gstar_s": 2.9534291086293454
+    },
+    {
+      "mV_me": 1,
+      "delta_gstar_rho": 2.6696734233059782,
+      "delta_gstar_s": 2.5900446654597435
+    },
+    {
+      "mV_me": 3,
+      "delta_gstar_rho": 1.2820852771081126,
+      "delta_gstar_s": 1.1547128241265865
+    }
+  ],
+  "on_shell_thresholds": [
+    {
+      "mV_me": 0.03,
+      "chi1pair_to_2Zprime_rest": true,
+      "chi2pair_to_2Zprime_rest": false,
+      "Zprime_to_chi1pair": false,
+      "Zprime_to_chi2pair": false,
+      "Zprime_to_epair": false,
+      "coupling_product": 9e-7
+    },
+    {
+      "mV_me": 0.1,
+      "chi1pair_to_2Zprime_rest": false,
+      "chi2pair_to_2Zprime_rest": false,
+      "Zprime_to_chi1pair": false,
+      "Zprime_to_chi2pair": true,
+      "Zprime_to_epair": false,
+      "coupling_product": 0.00001
+    },
+    {
+      "mV_me": 0.3,
+      "chi1pair_to_2Zprime_rest": false,
+      "chi2pair_to_2Zprime_rest": false,
+      "Zprime_to_chi1pair": true,
+      "Zprime_to_chi2pair": true,
+      "Zprime_to_epair": false,
+      "coupling_product": 0.00009
+    }
+  ],
+  "partial_width_coefficients": {
+    "two_active_nu_total_width_over_gprime_sq_mV": 0.026525823848649224,
+    "mV0p1_chi2_width_over_gchiqchi_sq_mV": 0.026256224662019986,
+    "mV0p3_chi1_width_over_gchiqchi_sq_mV": 0.024164777708607862,
+    "mV0p3_chi2_width_over_gchiqchi_sq_mV": 0.026522661228833955
+  },
+  "negative_controls": [
+    "One real Z2-odd φ cannot itself be the charged even U1 Higgs S with vev without changing original model/symmetry",
+    "Elastic contact coupling product G mV² does not determine mediator ν versus dark branching widths",
+    "Thermal Z′ gstar must not be assumed without calculating actual production; if thermal near T=me could add ~3 relativistic DOF to Friedmann and plasma entropy",
+    "χi annihilation to 2Z′ and Z′ to χi χbar_i open in different rest mass windows; thermal processes require independent rates"
+  ],
+  "scope": "Thresholds at rest only, high energy can open endothermic reactions; ν and dark widths tree level, no kinetic mixing, no ν mass, no physical coupling bounds, H, Γ/H, Ω/BEC/CLASS",
+  "class_ready": false
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "name": "one exact-energy boosted on-shell scalar Yukawa χ1↔χ2+real φ quantum bounded implicit reaction; not physical multi-mode strong time",
+  "kinematics": {
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 0.001,
+    "p1": 0.3,
+    "cstar": 0.2,
+    "E1": 0.31622776601683794,
+    "E2": 0.1932193769133251,
+    "Ephi": 0.12300838910351285
+  },
+  "weights": {
+    "w1": 0.1,
+    "w2": 0.15,
+    "wphi": 0.2,
+    "W": 0.05,
+    "dt": 10,
+    "provenance": "arbitrary positive TEST capacities, not physical phase-space bins"
+  },
+  "equations": {
+    "extent": "f1=a−x/w1, f2=d+x/w2, b=b0+x/wphi",
+    "J": "f1(1−f2)(1+b)−(1−f1)f2 b",
+    "implicit": "x=dt W J(x), bracketed physical root",
+    "bounds": "max[(a−1)w1,−d w2,−b0 wphi] <= x <= min[a w1,(1−d)w2]",
+    "charges": "Nχ1+Nχ2; Nχ1+Nφ; total E",
+    "time_order": 1
+  },
+  "cases": [
+    {
+      "initial": [
+        0.6,
+        0.3,
+        0.1
+      ],
+      "extent": 0.03281421201264457,
+      "final": [
+        0.2718578798735543,
+        0.5187614134176305,
+        0.26407106006322284
+      ],
+      "entropy_gain": 0.06599343363333227
+    },
+    {
+      "initial": [
+        0.05,
+        0.8,
+        2
+      ],
+      "extent": -0.03651233422559417,
+      "final": [
+        0.41512334225594166,
+        0.5565844384960389,
+        1.8174383288720293
+      ],
+      "entropy_gain": 0.06057463302709554
+    },
+    {
+      "initial": [
+        0.4,
+        0.1,
+        0
+      ],
+      "extent": 0.028478080710984458,
+      "final": [
+        0.11521919289015548,
+        0.28985387140656305,
+        0.14239040355492227
+      ],
+      "entropy_gain": 0.09589316267324483
+    }
+  ],
+  "stress": {
+    "seed": 20261122,
+    "samples": 250,
+    "fermions": [
+      0.001,
+      0.999
+    ],
+    "boson": [
+      0.00001,
+      10000
+    ],
+    "weights": [
+      0.001,
+      100
+    ],
+    "W": [
+      0.001,
+      100
+    ],
+    "dt": [
+      0.0001,
+      1000
+    ],
+    "failures": 0,
+    "tolerance_relative": 5e-14,
+    "tolerance_absolute": 5e-13,
+    "negative": "initial 3e-12 absolute-only check incorrectly failed for total 18858 at 3.64e-12 rounding (~2e-16 relative), replaced by appropriate relative+absolute floating tolerance"
+  },
+  "positive": "Forward and inverse events bounded with exact on-shell collocated charges/energy and entropy increase; thermal chemical fixed point and initially empty Bose creation; 5 local tests passed.",
+  "negative": "Arbitrary modal capacities, single artificial event not continuum physical density-of-states or exact time, no coupled χ1χ2φ+shared lepton SM/FRW or 86eV DM.",
+  "class_ready": false
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "Integer finite on-shell reaction incidence S (vector −1, neutrino+1, antineutrino+1); two daughter grid origins; mV=.4 Emax=4",
+  "method": "Independent exact Gaussian elimination in finite fields primes 1000003,1000033; float SVD; local optional SymPy exact ranks at h=.4,.2",
+  "expected_left_null_vectors": [
+    "C=(2V,1nu,1antinu)",
+    "L=(0V,+1nu,-1antinu)",
+    "E=(E_V,k_nu,k_antinu)"
+  ],
+  "mass": 0.4,
+  "Emax": 4,
+  "comparisons": [
+    {
+      "h": 0.4,
+      "states": 29,
+      "integer": {
+        "events": 45,
+        "rank": 24,
+        "nullity": 5,
+        "isolated_nu_last": true,
+        "isolated_antinu_last": true,
+        "extra_invariants": 2
+      },
+      "shifted": {
+        "events": 54,
+        "rank": 26,
+        "nullity": 3,
+        "isolated_nu_last": false,
+        "isolated_antinu_last": false,
+        "extra_invariants": 0
+      }
+    },
+    {
+      "h": 0.2,
+      "states": 58,
+      "integer": {
+        "events": 189,
+        "rank": 53,
+        "nullity": 5,
+        "isolated_nu_last": true,
+        "isolated_antinu_last": true,
+        "extra_invariants": 2
+      },
+      "shifted": {
+        "events": 207,
+        "rank": 55,
+        "nullity": 3,
+        "isolated_nu_last": false,
+        "isolated_antinu_last": false,
+        "extra_invariants": 0
+      }
+    },
+    {
+      "h": 0.1,
+      "states": 116,
+      "integer": {
+        "events": 774,
+        "rank": 111,
+        "nullity": 5,
+        "isolated_nu_last": true,
+        "isolated_antinu_last": true,
+        "extra_invariants": 2
+      },
+      "shifted": {
+        "events": 808,
+        "rank": 113,
+        "nullity": 3,
+        "isolated_nu_last": false,
+        "isolated_antinu_last": false,
+        "extra_invariants": 0
+      }
+    }
+  ],
+  "analytic_origin": "Integer grid top neutrino k=Emax impossible for vector E<=Emax with positive other daughter; same for antineutrino, two identically zero stoichiometric rows, hence 2 additional exact conserved endpoint populations.",
+  "positive": "Shifted half-offset angular-overlap removes those isolated states for tested masses/resolutions; nullspace contains exactly physical C,L,E.",
+  "negative": "Physical event entropy and exact C/L/E alone do not ensure unique physical equilibrium; integer graph has two extra conserved occupations and can never erase their initial memory regardless of dt.",
+  "limitations": "Mass and cutoff scoped; not complete ν/eγ SM, not continuum dynamics, no chi Gammael, 86eV ΩDM/BEC/CLASS, further approximate eigenmodes possible.",
+  "class_ready": false
+}

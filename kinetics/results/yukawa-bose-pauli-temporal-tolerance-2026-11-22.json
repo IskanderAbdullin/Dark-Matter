@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "same χ1χ2φ toy closed system, fixed bins32,nr12,nangle12,end_time5e7,T1=1.1, local time truncation scan",
+  "order": 1,
+  "rows": [
+    {
+      "atol": 0.00001,
+      "accepted": 40,
+      "rejected": 15,
+      "dNphi": 0.0012691534674972027,
+      "entropy_gain": 0.0003246107181524849,
+      "first_f1": 0.48151220618307233,
+      "max_local_error": 0.00000998199927404464
+    },
+    {
+      "atol": 0.000001,
+      "accepted": 127,
+      "rejected": 48,
+      "dNphi": 0.0012685176274795373,
+      "entropy_gain": 0.0003245412344243803,
+      "first_f1": 0.4815027870137749,
+      "max_local_error": 9.59098609698561e-7
+    },
+    {
+      "atol": 1e-7,
+      "accepted": 396,
+      "rejected": 140,
+      "dNphi": 0.0012683177470609597,
+      "entropy_gain": 0.00032451935124555575,
+      "first_f1": 0.4814998412128955,
+      "max_local_error": 9.73639385781766e-8
+    }
+  ],
+  "negative": "Step-doubling local tolerance does not certify global first-order error or finite-grid physical Γ/Ω."
+}

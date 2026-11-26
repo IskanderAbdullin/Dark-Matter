@@ -1,0 +1,128 @@
+{
+  "g_dark_dec": 7.991670795139369,
+  "s_dark_over_s_sm": 0.12941976996177115,
+  "bbn": [
+    {
+      "Tref_MeV": 3,
+      "Tmin_over_Tref": 1.0519208210598698,
+      "rho_over_one_nu": 0.8617828458061474,
+      "trial_bound": 0.8534731245361922,
+      "w_eq": 0.293882926254829
+    },
+    {
+      "Tref_MeV": 2,
+      "Tmin_over_Tref": 1.106595786430513,
+      "rho_over_one_nu": 0.88477488242713,
+      "trial_bound": 0.8846286458589364,
+      "w_eq": 0.32576333117114903
+    },
+    {
+      "Tref_MeV": 1,
+      "Tmin_over_Tref": 1.1163506690615186,
+      "rho_over_one_nu": 0.8875107092015438,
+      "trial_bound": 0.8875107091476795,
+      "w_eq": 0.3333274200393684
+    },
+    {
+      "Tref_MeV": 0.5,
+      "Tmin_over_Tref": 1.1163568200580658,
+      "rho_over_one_nu": 0.8875116645385522,
+      "trial_bound": 0.8875116645385394,
+      "w_eq": 0.3333333313284578
+    },
+    {
+      "Tref_MeV": 0.2,
+      "Tmin_over_Tref": 1.116356828868865,
+      "rho_over_one_nu": 0.8875116785469672,
+      "trial_bound": 0.887511678546929,
+      "w_eq": 0.3333333208064996
+    },
+    {
+      "Tref_MeV": 0.1,
+      "Tmin_over_Tref": 1.1163568603333824,
+      "rho_over_one_nu": 0.8875117285743718,
+      "trial_bound": 0.8875117285777135,
+      "w_eq": 0.33333328322894895
+    },
+    {
+      "Tref_MeV": 0.05,
+      "Tmin_over_Tref": 1.116356986179143,
+      "rho_over_one_nu": 0.8875119286451147,
+      "trial_bound": 0.8875119287185702,
+      "w_eq": 0.3333331329624915
+    }
+  ],
+  "entropy_targets": [
+    {
+      "cap": 0.3,
+      "r_max": 0.05737345627380628,
+      "fraction_retained_max": 0.4433129211306249,
+      "xi_initial_max_if_gdark_constant": 0.7624946425527008,
+      "gSM_dec_min_if_gdark_constant": 139.29212765220748
+    },
+    {
+      "cap": 0.2976,
+      "r_max": 0.05702887014276605,
+      "fraction_retained_max": 0.4406503748199491,
+      "xi_initial_max_if_gdark_constant": 0.760965056831757,
+      "gSM_dec_min_if_gdark_constant": 140.13377391368658
+    },
+    {
+      "cap": 0.4,
+      "r_max": 0.07118935625584795,
+      "fraction_retained_max": 0.5500655446758739,
+      "xi_initial_max_if_gdark_constant": 0.8193538160636717,
+      "gSM_dec_min_if_gdark_constant": 112.25934908609153
+    },
+    {
+      "cap": 0.107,
+      "r_max": 0.02647938569498554,
+      "fraction_retained_max": 0.20460077855807648,
+      "xi_initial_max_if_gdark_constant": 0.5892538480694302,
+      "gSM_dec_min_if_gdark_constant": 301.8072581892551
+    }
+  ],
+  "today_bound": {
+    "T_eV": 2.4213344056390698,
+    "omega_h2_min": 0.08372117703669389,
+    "w_eq": 0.02697676703806236
+  },
+  "relativistic_scalar_only_freezeout": {
+    "n_cm3": 103.89312580105424,
+    "omega_h2": 0.8479059377357688
+  },
+  "scalar_relic_entropy_cap": {
+    "r_max": 0.01831615006363151,
+    "fraction_retained_max": 0.14152513228111788,
+    "xi_initial_max_if_gdark_constant": 0.5211281378711226
+  },
+  "count_constrained_gate": {
+    "s_over_Tref3": 0.6102760337968306,
+    "n_max_over_Tref3": 0.023981035873565558,
+    "s_per_particle_min": 25.448276588816647,
+    "trial_fugacity": 4.843193615884396e-10,
+    "trial_T_over_Tref": 378.67309375744895,
+    "rho_lower_over_one_nu": 47.319168212802595,
+    "number_destruction": [
+      {
+        "rho_cap_in_one_nu": 1,
+        "n_min_over_Tref3": 0.059615344426316094,
+        "n_min_over_n_today_max": 2.4859370020804836,
+        "minimum_fraction_destroyed": 0.5977371915848637
+      },
+      {
+        "rho_cap_in_one_nu": 2,
+        "n_min_over_Tref3": 0.04558430158477666,
+        "n_min_over_n_today_max": 1.9008478960253972,
+        "minimum_fraction_destroyed": 0.4739189800031012
+      },
+      {
+        "rho_cap_in_one_nu": 5,
+        "n_min_over_Tref3": 0.03564630346050511,
+        "n_min_over_n_today_max": 1.4864371851342022,
+        "minimum_fraction_destroyed": 0.3272504146149199
+      }
+    ]
+  },
+  "high_gsm_106.75_massless_dark_limit": 0.42835388293739807
+}

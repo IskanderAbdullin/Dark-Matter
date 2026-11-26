@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "independent conditional strictly thermal relativistic 86eV real boson free relic without zero mode/extra entropy transfer, not actual Yukawa+SM+FRW late f(q) or observational exclusion",
+  "input": {
+    "mphi_eV": 86,
+    "TCMB_K": 2.7255,
+    "gstar_entropy_dec_example": 61.75,
+    "gstar_entropy_today": 3.909,
+    "n_gamma_cm3": 410.7,
+    "rho_crit_per_h2_eV_cm3": 10536.72,
+    "Omega_c_h2_Planck": 0.12,
+    "Omega_m": 0.315,
+    "z_eq": 3402,
+    "H0_km_s_Mpc": 67.4
+  },
+  "early_thermal_example": {
+    "Tphi_Tgamma": 0.3985439640892993,
+    "Tphi0_eV": 0.000093604194739453,
+    "nphi_cm3": 12.999403238866398,
+    "Omega_phi_h2": 0.10610025496952659,
+    "deltaNeff": 0.05554485291636691,
+    "required_gstar_entropy_dec_for_OmegaDM": 54.597422869735546,
+    "mean_comoving_path_to_equality_Mpc": 6.428442647590668,
+    "mean_velocity_at_eq_over_c": 0.010003593498889653
+  },
+  "abundance_normalized_real_boson_allDM": {
+    "Tphi_Tgamma": 0.4152387187558684,
+    "mean_comoving_path_to_equality_Mpc": 6.6400167562020656,
+    "mean_velocity_at_eq_over_c": 0.01042252283419318
+  },
+  "pure_thermal_FD_two_fermion_allDM_comparator": {
+    "mass_eV": 5700,
+    "T_Tgamma": 0.08963451807903544,
+    "mean_comoving_path_to_equality_Mpc": 0.05547491887238949,
+    "mean_velocity_at_eq_over_c": 0.000039607866970637874
+  },
+  "ratio_Bose86eV_to_FD5p7keV_mean_paths": 119.69403274795737,
+  "reference_urls": [
+    "https://doi.org/10.1051/0004-6361/201833910",
+    "https://pdg.lbl.gov/2024/download/db2024.pdf",
+    "https://doi.org/10.1103/PhysRevD.109.043511"
+  ],
+  "interpretation": "Order-Mpc free-streaming of fully thermal all-DM Bose 86eV is a substantial small-structure warning. Fermion 5.7keV Ly-alpha mass limit CANNOT be transplanted to Bose without correct transfer function/likelihood.",
+  "class_ready": false,
+  "existing_verified_CLASS_gstar55_independent_analytic_crosscheck": {
+    "condition": "g*S,dec=55, one real BE scalar 86eV no condensate",
+    "omega_h2_analytic": 0.11912164989760488,
+    "mean_comoving_freestream_path_to_eq_Mpc": 6.627211308933845,
+    "existing_verified_CLASS_run_id": 44890003670,
+    "existing_verified_CLASS_half_amplitude_k_z5_Mpc_inv": 0.43275181165,
+    "k_times_mean_path": 2.867937700128489,
+    "scope": "new independent background free-streaming consistency, not new CLASS call or observational likelihood",
+    "older_CLASS_analytic_photon_normalization_omega_h2": 0.11912939486124709,
+    "relative_photon_normalization_delta": 0.00006501303604565787,
+    "CI_erratum": "First exact-equality test failed, since n_gamma rounded to 410.7 instead of previous more precise 410.7267 /cm3; do not compare absolute Omega as identical input."
+  }
+}

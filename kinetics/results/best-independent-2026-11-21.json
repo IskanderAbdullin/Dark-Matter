@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "run_id": 44916394684,
+  "workflow_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44916394684",
+  "workflow_head_commit": "5dda3dbc8a4abfbc2abb1dcd02b4bad696fb0f3f",
+  "artifact_id": 14711796884,
+  "artifact_expiration_days": 7,
+  "source_solver": "best-hep/best",
+  "verified_best_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "python": "3.11",
+  "mpi_ranks": 2,
+  "initial_physics": {
+    "M1_over_T": 0.1,
+    "temperature": 1,
+    "rest_width": 1,
+    "g_chi1": 4,
+    "g_phi": 1,
+    "g_chi2": 4,
+    "initial_phi": 0,
+    "initial_chi2": 0,
+    "initial_chi1": "thermal FD"
+  },
+  "exact_vacuum_phi_number_rate": 0.016495908459583906,
+  "exact_thermal_mother_energy_loss": 0.03646818570688686,
+  "confirmed_external_run": true,
+  "convergence_label": "Preliminary 2x2 source cross-check; no independent seed repetitions, no qmin/qmax scan and no nonlinear time evolution",
+  "cases": [
+    {
+      "grid_n": 28,
+      "vegas_neval": 3000,
+      "phi_number_rate": 0.01649170356979472,
+      "relative_phi_error": -0.00025490501474889626,
+      "relative_parent_energy_error": 0.003992923849569507,
+      "normalized_total_energy_residual": 0.003999890037594731,
+      "normalized_particle_stoichiometry_residual": 0.00021559897773886609,
+      "relative_source_shape_rms_to_analytic_peak": 0.00023935911611425409
+    },
+    {
+      "grid_n": 28,
+      "vegas_neval": 12000,
+      "phi_number_rate": 0.016491433449103112,
+      "relative_phi_error": -0.0002712800263021675,
+      "relative_parent_energy_error": 0.003998184600029875,
+      "normalized_total_energy_residual": 0.0040217297741557785,
+      "normalized_particle_stoichiometry_residual": 0.00024618607655108054,
+      "relative_source_shape_rms_to_analytic_peak": 0.00017852120292341262
+    },
+    {
+      "grid_n": 56,
+      "vegas_neval": 3000,
+      "phi_number_rate": 0.016496308908695877,
+      "relative_phi_error": 0.000024275662837913714,
+      "relative_parent_energy_error": -0.000022672219916697323,
+      "normalized_total_energy_residual": 0.000049065791722942745,
+      "normalized_particle_stoichiometry_residual": 0.00003857759187734215,
+      "relative_source_shape_rms_to_analytic_peak": 0.00013333996874284013
+    },
+    {
+      "grid_n": 56,
+      "vegas_neval": 12000,
+      "phi_number_rate": 0.01649580448066241,
+      "relative_phi_error": -0.000006303315864819581,
+      "relative_parent_energy_error": 0.0000062577283681530815,
+      "normalized_total_energy_residual": 0.000021595859025511886,
+      "normalized_particle_stoichiometry_residual": 0.00002895239102761382,
+      "relative_source_shape_rms_to_analytic_peak": 0.000030455591010998688
+    }
+  ],
+  "detailed_balance": {
+    "source_json": "best_equilibrium_56.json",
+    "grid_n": 56,
+    "vegas_neval": 12000,
+    "mu_phi": -0.3,
+    "mu_chi2": 0.1,
+    "mu_chi1": -0.2,
+    "chi1_net_over_gross": 0.000023623386606748314,
+    "phi_net_over_gross": 0.0000023447743871981434,
+    "chi2_net_over_gross": 0.000003402147982213165,
+    "chi1_number_rate": -7.949696299753794e-7,
+    "phi_number_rate": -7.890521390333288e-8,
+    "chi2_number_rate": 1.1449028816268467e-7,
+    "chi1_energy_rate": -0.000002456330354246397,
+    "phi_energy_rate": -8.505504681240432e-8,
+    "chi2_energy_rate": 5.34847798411773e-7,
+    "total_energy_rate": -0.000002006537602647028
+  },
+  "claims": {
+    "independent_code_actually_executed": true,
+    "preliminary_source_crosscheck_passed": true,
+    "thermal_gain_loss_cancelled_to_small_net_over_gross": true,
+    "all_source_systematics_eliminated": false,
+    "independent_seed_variance_measured": false,
+    "closed_FRW_or_nonlinear_primordial_spectrum_validated": false,
+    "CLASS_ready": false
+  },
+  "caveat": "Raw BEST JSON/MPI stdout artifact expires; the permanently committed values are a derived summary from it. 28-node grid has ~0.40% energy bias, indicating q-grid systematics. 56-node agreement is promising but not a proof of convergence, independent seeds, or physical 86-eV dark matter."
+}

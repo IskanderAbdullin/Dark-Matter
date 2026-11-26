@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "title": "χ1/χ2 candidate masses and finite SM-lepton-mass conditional Pauli on-shell 5D weak moments",
+  "scope": "ONLY synthetic isotropic nonthermal Fermi fixed initial shapes and finite-vector weak Q/S; not actual produced χ2 number, Yukawa φ, SM plasma or FRW",
+  "parameters": {
+    "Mchi": [
+      0.1,
+      0.02
+    ],
+    "mlepton": [
+      0,
+      0.5
+    ],
+    "mV": 0.1,
+    "G": 0.001,
+    "Treference": 1,
+    "numeric_spin_deg_chi": 4,
+    "numeric_spin_deg_lepton": 4,
+    "coarse": {
+      "cut": 12,
+      "segments": 12,
+      "nlocal": 4,
+      "nmu": 6,
+      "ncos": 12,
+      "nphi": 12
+    },
+    "mid": {
+      "cut": 12,
+      "segments": 12,
+      "nlocal": 5,
+      "nmu": 8,
+      "ncos": 16,
+      "nphi": 16
+    },
+    "fine_selected": {
+      "cut": 16,
+      "segments": 16,
+      "nlocal": 5,
+      "nmu": 12,
+      "ncos": 32,
+      "nphi": 24
+    },
+    "angle": "exact log transfer",
+    "radial": "energy-guided p segmentation"
+  },
+  "rows": [
+    {
+      "M": 0.1,
+      "m": 0,
+      "shape": "smooth",
+      "coarse_Q": 9.01300645617584e-14,
+      "mid_Q": 8.995854126228659e-14,
+      "fine_Q": 8.997892033342204e-14
+    },
+    {
+      "M": 0.1,
+      "m": 0,
+      "shape": "oscillatory",
+      "coarse_Q": 4.701720498684246e-15,
+      "mid_Q": 4.662544974059412e-15,
+      "fine_Q": 4.66853092779128e-15
+    },
+    {
+      "M": 0.1,
+      "m": 0.5,
+      "shape": "smooth",
+      "coarse_Q": 8.156783682876808e-14,
+      "mid_Q": 8.144078344287058e-14
+    },
+    {
+      "M": 0.1,
+      "m": 0.5,
+      "shape": "oscillatory",
+      "coarse_Q": 1.6434898898287324e-15,
+      "mid_Q": 1.744275129598401e-15
+    },
+    {
+      "M": 0.02,
+      "m": 0,
+      "shape": "smooth",
+      "coarse_Q": 9.084849049264e-14,
+      "mid_Q": 9.06697250454e-14
+    },
+    {
+      "M": 0.02,
+      "m": 0,
+      "shape": "oscillatory",
+      "coarse_Q": 5.096562023359e-15,
+      "mid_Q": 5.009926044664e-15
+    },
+    {
+      "M": 0.02,
+      "m": 0.5,
+      "shape": "smooth",
+      "coarse_Q": 8.199323819312e-14,
+      "mid_Q": 8.185587226161e-14
+    },
+    {
+      "M": 0.02,
+      "m": 0.5,
+      "shape": "oscillatory",
+      "coarse_Q": 1.883469590939175e-15,
+      "mid_Q": 1.93651618457609e-15,
+      "fine_Q": 1.9702609317123323e-15
+    }
+  ],
+  "independently_constrained": {
+    "paired_energy_residual": "~floating",
+    "micro_entropy": "nonnegative for all probes",
+    "chemical_equilibrium": "FD at same T, independent μχ=.2 and μℓ=−.1 has Q≈0,H≈0 for each checked M,m"
+  },
+  "positive": "Both χ candidate masses and massless/finite lepton mass have valid on-shell fully Fermi-blocked weak Q and quantum entropy, with analytic chemical fixed point.",
+  "negative": "Mχ=.02,mℓ=.5 oscillatory mid→fine Q+1.74%, changing multiple quadrature dimensions and cutoff; historical g4×g4 not physically valid for all SM ν flavors; actual daughter abundances, couplings and 86eV physics unvalidated.",
+  "class_ready": false
+}

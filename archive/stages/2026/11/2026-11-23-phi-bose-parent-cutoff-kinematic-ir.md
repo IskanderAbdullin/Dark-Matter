@@ -1,0 +1,9 @@
+# Stage 2026-11-23 — exact kinematic infrared floor for finite parent momentum
+
+- **ID:** DM-KINETICS-20261123-BOOSE-PARENT-CUTOFF-IR-SUPPORT-CORRECTION.
+- **Parent HEAD:** [e8582a95](https://github.com/IskanderAbdullin/Dark-Matter/commit/e8582a95edbd5849aed819d123f39f4f45b42933), draft PR #1.
+- **Question:** old DG-P1 report interpreted N48/N64 first Bose cell zero source as numerical event under-sampling; is that first cell physically unreachable for pmax2?
+- **Exact answer:** Yes. Rationalized boosted two-body lower daughter energy with mχ1=.1,mχ2=.02,mφ=86e−9 GeV is Eφ,min(pmax2)=.00119925093758 GeV. At the actual N quadratic grid the first-cell upper edge crosses it between N42 and N43. Therefore at N48 and N64 **every** physical 1→2 on-shell event with p≤2 misses first cell, independently of angle quadrature. The earlier N32 first cell is physically reachable and its negative ηdot remains a true numerical failure of that closure.
+- **Cutoff controls:** pmax8/16 Eφ,min=.0002999882883/.0001499985475 GeV, N64 first cell reachable. The enormous pturn≈55,813.95 GeV is outside thermally important parent momenta at T~1 GeV; not a physical zero-mode/BEC claim.
+- **Verification:** [original analytic code](../../../../kinetics/phi_bose_parent_cutoff_kinematic_ir.py), [two local tests](../../../../tests/test_phi_bose_parent_cutoff_kinematic_ir.py), [report](../../../../kinetics/PHI-BOSE-PARENT-CUTOFF-KINEMATIC-IR-AUDIT.md), [results](../../../../kinetics/results/phi-bose-parent-cutoff-kinematic-ir-2026-11-23.json). Focused pytest: 2 passed (~0.06 s). New public CI to check after commit.
+- **Decision:** correct physical reading of earlier negative without erasing original results; future rate/IR grid comparisons must use exact-support cells and vary cutoff with angular convergence. Need physical weights/resonant lattice/true Bose mode solution before relic/CLASS.

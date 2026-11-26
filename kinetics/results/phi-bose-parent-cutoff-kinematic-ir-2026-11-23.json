@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "baseline_sha": "e8582a95edbd5849aed819d123f39f4f45b42933",
+  "source": "kinetics/phi_bose_parent_cutoff_kinematic_ir.py",
+  "masses_GeV": {
+    "chi1": 0.1,
+    "chi2": 0.02,
+    "phi": 8.6e-8
+  },
+  "rest_frame_daughter_energy_GeV": 0.04800000000003699,
+  "rest_frame_daughter_momentum_GeV": 0.04799999999995995,
+  "parent_momentum_for_exact_boson_rest_GeV": 55813.95348832552,
+  "cutoff_sweep": [
+    {
+      "pmax_GeV": 2,
+      "min_Ephi_GeV": 0.0011992509375794726,
+      "critical_quadratic_mesh_n": 42.856661356057124,
+      "first_cell_at_N32_upper_GeV": 0.0021509632982910924,
+      "first_cell_at_N42_upper_GeV": 0.0012486678330215868,
+      "first_cell_at_N43_upper_GeV": 0.0011912695335046398,
+      "first_cell_at_N48_upper_GeV": 0.0009560314659071524,
+      "first_cell_at_N64_upper_GeV": 0.0005378053245727732
+    },
+    {
+      "pmax_GeV": 8,
+      "min_Ephi_GeV": 0.0002999882883290025,
+      "critical_quadratic_mesh_n": 165.36118799999895,
+      "first_cell_at_N64_upper_GeV": 0.0020021916859345322
+    },
+    {
+      "pmax_GeV": 16,
+      "min_Ephi_GeV": 0.0001499985475116418,
+      "critical_quadratic_mesh_n": 328.7325455104339,
+      "first_cell_at_N64_upper_GeV": 0.003955240397204174
+    }
+  ],
+  "observed_local_test": "2 passed in 0.06s with 501 angle samples at 6 parent momenta; independent exact rationalized endpoint formula and turning-point check",
+  "conclusion": "With hard physical parent pmax=2 GeV, N>=43 first quadratic scalar cell lies BELOW kinematically allowed daughter energies. N48/N64 empty first source is exact support, not quadrature sparsity alone. No conclusion about full untruncated parent thermal distribution, real BEC or 86eV freezeout.",
+  "class_ready": false
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "scope": "instantaneous physical fixed-FD thermal scalar first supported energy bin Bernstein-P2 moment projection, not finite-time physical occupation negative or BEC",
+  "model": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "yukawa_y": 0.001,
+    "T1_GeV": 0.9,
+    "T2_GeV": 1,
+    "Tphi_GeV": 1,
+    "all_chemical_mu_GeV": 0
+  },
+  "values": [
+    {
+      "P": 2,
+      "N": 8,
+      "c": [
+        9.36137938e-9,
+        -1.411118616828e-9,
+        1.96315296e-9
+      ],
+      "projected_min": 1.1583254948054926e-9
+    },
+    {
+      "P": 2,
+      "N": 12,
+      "c": [
+        1.02079265e-8,
+        3.88422219e-9,
+        2.34395549e-9
+      ],
+      "projected_min": 2.3439554883441865e-9
+    },
+    {
+      "P": 8,
+      "N": 8,
+      "c": [
+        1.29650241e-8,
+        -7.62967216593103e-9,
+        3.23779803e-9
+      ],
+      "projected_min": -5.159774281937157e-10,
+      "x": 0.6545860821802498,
+      "energy_GeV": 0.08397890951664282,
+      "physical_true_eta_dot": 9.68624932417159e-10,
+      "susceptibility_condition_number": 10.000651107876187
+    },
+    {
+      "P": 8,
+      "N": 12,
+      "c": [
+        2.00760739e-8,
+        -8.7464896896187e-9,
+        4.51949766e-9
+      ],
+      "projected_min": 3.3816053556937944e-10
+    },
+    {
+      "P": 8,
+      "N": 16,
+      "c": [
+        2.52223095e-8,
+        -6.430416904184327e-9,
+        5.136461e-9
+      ],
+      "projected_min": 2.040813402635726e-9
+    },
+    {
+      "P": 16,
+      "N": 8,
+      "c": [
+        8.39458629e-9,
+        -5.588241933782184e-9,
+        2.22194588e-9
+      ],
+      "projected_min": -5.770716380165875e-10
+    },
+    {
+      "P": 16,
+      "N": 12,
+      "c": [
+        null,
+        -7.872308343022031e-9,
+        null
+      ],
+      "projected_min": -4.317736733668367e-10
+    },
+    {
+      "P": 16,
+      "N": 16,
+      "c": [
+        1.89263642e-8,
+        -8.498353852597581e-9,
+        4.26106014e-9
+      ],
+      "projected_min": 2.0964389293167396e-10
+    },
+    {
+      "P": 16,
+      "N": 32,
+      "c": [
+        2.69934485e-8,
+        6.447270946512958e-9,
+        4.46155531e-9
+      ],
+      "projected_min": 4.46155530717001e-9
+    }
+  ],
+  "independent_checks": "Physical k-first exact inverse parent weak modal source integrated with positive massive scalar DOS and local quantum susceptibility; compare common parent-first 3-field event solver. Scalar/parent 16,24,32,48,64,80 refinement.",
+  "class_ready": false
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "m1_GeV": 0.1,
+  "m2_GeV": 0.02,
+  "mphi_GeV": 8.6e-8,
+  "rest_daughter_momentum_KSTAR_GeV": 0.04799999999995995,
+  "kinematic_formula": "xi=asinh(qstar/m);zeta=asinh(pdaughter/m);parent y in [abs(xi-zeta), min(xi+zeta, asinh(P/M))]",
+  "scalar_rest_parent_p_GeV": 55813.95348832552,
+  "chi2_rest_parent_p_GeV": 0.23999999999979973,
+  "scalar_support_floor_P16_GeV": 0.00014999854751164177,
+  "scalar_E86p1eV_P60TeV_interval_GeV": [
+    53186.48326493459,
+    58571.22360354974
+  ],
+  "at_P100TeV": {
+    "endpoint_scalar_min_GeV": 1.0104166666668163e-7,
+    "globally_reachable_scalar_min_GeV": 8.6e-8,
+    "negative_prior_lower_only_assumption": true
+  },
+  "pmax2_daughter2_E2star_parent_interval_GeV": [
+    0,
+    1.247999999998071
+  ],
+  "code_fix": "conditional scalar-only modal generator updated to use both parent endpoints and global scalar energy floor",
+  "tests": "3/3 independent kinematic focused tests and 5/5 conditional scalar source regressions passed locally after roundoff boundary fix (3.05 seconds for 8 tests)",
+  "scope": "strict Lorentz geometry and finite-P scalar conditional modal correction; no P>55TeV weak rate integration or physical BEC/FRW/relic",
+  "class_ready": false
+}

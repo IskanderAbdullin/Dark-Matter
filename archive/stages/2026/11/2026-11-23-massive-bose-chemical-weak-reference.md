@@ -1,0 +1,11 @@
+# 2026-11-23 — massive Bose thermal chemical-potential weak reference
+
+**Question.** Can the physical massive \(\chi_1\leftrightarrow\chi_2+\phi\) Yukawa net number and *all three energy* weak sources be independently benchmarked when Bose and Fermi chemical potentials are nonzero (including inverse domination), before assigning a finite-volume nonlinear strong solver?
+
+**Result.** Exact positive daughter inverse-occupation primitives \(I_0\) (log) and \(I_1\) (real dilogarithm) were derived at common daughter temperature \(T_0\), independently compared to adaptive daughter quadrature, then integrated over parent momentum independently of the positive 2D parent/log-daughter-angle quadrature. Illustrative benchmark: \(m_1=.1\) GeV, \(m_2=.02\) GeV, \(m_\phi=86\,\mathrm{eV}\), \(y=.001\), \(g_1=4\), \(T_0=1\) GeV, \(\mu_2=.05\) GeV, \(\mu_\phi=-.2\) GeV. At \(T_1=1\) GeV, the sign changes under \(\mu_1=-.09\) (forward) versus \(-.21\) GeV (inverse), with zero net source for \(\mu_1=-.15\) GeV. The \(\chi_1,\chi_2,\phi\) physical energy ledger closes to \(\sim10^{-27}\) GeV⁵ in the tested high-order weak quadrature.
+
+**Independent numerical controls.** Parent cutoffs 2/8/16 GeV, radial×log-angle 24×12/48×24/72×48. Positive 2D weak Qφ agrees with separately derived analytic 1D Qφ at relative error ~\(10^{-11}\) or below on the finest grid; source Rφ at pmax16 agrees to ~\(1.4\times 10^{-9}\). Three dedicated Python tests passed locally (0.36 s). Verify public GitHub Scientific CI separately; do not infer its outcome from local tests.
+
+**Provenance and detailed numbers:** [science report](../../../../kinetics/PHI-BOSE-CHEMICAL-WEAK-REFERENCE-AUDIT.md), [source](../../../../kinetics/phi_bose_chemical_weak_reference.py), [focused tests](../../../../tests/test_phi_bose_chemical_weak_reference.py).
+
+**Limitations / next.** Prescribed thermal trial populations, deliberately noncritical \(\mu_\phi<m_\phi\), physical *weak* source only. No finite positive strong phase-space capacity, no actual evolving nonthermal \(f\), no Bose zero-mode, SM/FRW, physical \(\Omega_\phi\), BEC or CLASS. Compare proposed positive on-shell strong operator against both zero-μ and nonzero-μ analytic number/energy benchmarks; require exact equilibrium and reverse-dominated negative controls before physical interpretation.

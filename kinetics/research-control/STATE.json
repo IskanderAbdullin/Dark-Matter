@@ -1,0 +1,1643 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-11-25T11:49:02Z",
+  "research_status": "in_progress",
+  "claim_status": "No validated physical 86-eV relic, BEC, CLASS prediction or finite-mediator thermal gamma",
+  "repository": "IskanderAbdullin/Dark-Matter",
+  "branch": "research/kinetic-equilibrium-audit-20261121",
+  "pull_request": "https://github.com/IskanderAbdullin/Dark-Matter/pull/1",
+  "pull_request_draft": true,
+  "baseline_code_commit": "952ac05e5b679ab041e5cef099d45dd4b114a714",
+  "external_reference": {
+    "name": "BEST v1.3.5",
+    "commit": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+  },
+  "last_proven_scientific_milestone": {
+    "title": "Corrected BEST quadrature and finite SM BGK heat transfer in short coupled FRW",
+    "commit": "25fff84b2342acb67e38b3d6ea6a1862ae406781",
+    "action_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44929647245",
+    "result_json": "kinetics/results/best-sm-coupled-corrected-2026-11-21.json",
+    "report": "kinetics/BEST-SM-COUPLED-FRW.md",
+    "evidence_scope": "Numerical closure and short-time convergence of an explicitly phenomenological gamma_el model; not physical microscopic freeze-out"
+  },
+  "last_documentation_ci": {
+    "commit": "952ac05e5b679ab041e5cef099d45dd4b114a714",
+    "run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44930002607",
+    "conclusion": "success"
+  },
+  "known_negative_results": [
+    {
+      "claim": "The old pmax2,N16,12x12 Yukawa event graph's zero first scalar cell and Rphi=-1.16493e-11 are physically converged",
+      "finding": "Refuted by exact cut-cell weak Rfirst=-2.76214936e-12, Qfirst=-1.22779976e-14, Rtotal=-1.29545396e-11. Sparse 12x12 underestimates total by 10.08% and misses a cell contributing 21.32% of true net number.",
+      "evidence": "kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md"
+    },
+    {
+      "claim": "Original BGK trapezoid measures match external BEST moments",
+      "finding": "refuted",
+      "evidence": "kinetics/results/best-sm-coupled-original-2026-11-21.json"
+    },
+    {
+      "claim": "Early IR number N0 at tGamma=4e-5 independently confirms macroscopic BEC",
+      "finding": "refuted for tested early RD/qmin configuration; N0 scales approximately as qmin cubed",
+      "evidence": "kinetics/results/best-rd-frw-qmin-real-2026-11-21.json"
+    },
+    {
+      "claim": "A truncated 5D strong Cchi(p) can be declared number/energy conserving simply because the paired weak Q is conservative",
+      "finding": "Refuted: cutoff=15 strong/weak Q discrepancy -1.54131%, number residual -3.865e-11 GeV4; cutoff=32 reduces mismatch to ~1.34e-7 and number to 3.78e-15",
+      "evidence": "kinetics/results/relativistic-pauli-weakform-2026-11-21.json"
+    },
+    {
+      "claim": "Tabulated exact FD χ at common T is automatically stationary under nonlinear Pauli collisions on finite q grid",
+      "finding": "Refuted on finite PCHIP/hard-cutoff samples: qgrid=81 yields false Q≈−2.57e−12 GeV5 and entropy≈6.55e−14; qgrid=641 reduces to 6.62e−15,4.70e−16; analytic FD Q≈1.39e−24",
+      "evidence": "kinetics/results/relativistic-nonlinear-pauli-2026-11-21.json"
+    },
+    {
+      "claim": "Finite-PCHIP thermal FD state is a true equilibrium of arbitrary nonthermal collision operator",
+      "finding": "Refuted by artificial Q and entropy; exact-logit-in-energy interpolator removes this spurious thermal equilibrium source on tested coarse q nodes",
+      "evidence": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md and tests/test_conservative_energy_projection.py"
+    },
+    {
+      "claim": "2-mode lowest Galerkin Ritz collision rate has converged to actual physical slowest kinetic relaxation",
+      "finding": "Refuted: adding FD-number-orthogonal logit polynomials 3→5 reduces smallest Ritz eigenvalue from 2.12537e-7 to 1.32934e-7 GeV (−37.45%), while 5D n20→24 shift is only 1.93e-4 relative. The full spectral gap is unknown.",
+      "evidence": "kinetics/results/pauli-ritz-basis-scan-2026-11-21.json; kinetics/PAULI-RITZ-BASIS-AUDIT.md"
+    },
+    {
+      "claim": "Exact conservation, Pauli and entropy of each split pairwise kinetic substep implies global time convergence",
+      "finding": "Refuted in 3-bin reduced network: dt=1, 10 vs 100 split substeps yield max occupation difference above 0.001 despite machine-precision N and total energy and positive entropy.",
+      "evidence": "kinetics/FINITE-BATH-QUANTUM-PAIR-REFERENCE.md and tests/test_fermion_finite_bath_pairs.py"
+    },
+    {
+      "claim": "Increasing from 5 to 11 FD susceptibility orthogonal basis modes leaves slowest χe full-Pauli Ritz eigenvalue unchanged",
+      "finding": "Refuted. Two→five→eleven mode rates (2.12537,1.32934,0.85648)×10^-7 GeV, even with n20→24 collision-grid variation ≈0.041%. True continuum spectral gap may or may not exist; no conclusion yet.",
+      "evidence": "kinetics/results/pauli-stieltjes-11mode-2026-11-21.json and kinetics/PAULI-STIELTJES-11MODE-AUDIT.md"
+    },
+    {
+      "claim": "Uniform 20-point Gauss p/k quadrature on [0,32T] is accurate for narrow IR χ logit packets",
+      "finding": "Refuted. For center E/T=.25,width=.08 uniform rate≈2.604e-8 GeV, wildly grid dependent (16..48); adapted two-segment p/k n20 yields≈4.857e-8 and n24≈4.854e-8. Naive result artificially too small.",
+      "evidence": "kinetics/results/pauli-localized-packet-2026-11-21.json and kinetics/PAULI-LOCALIZED-PACKET-AUDIT.md"
+    },
+    {
+      "claim": "5D microphysical χe event bin interpolation preserves exact FD fixed point and linearised collision Dirichlet without correction",
+      "finding": "Refuted: directed L asymmetry 1.536% (nχ64/angle16), false common-T heat +1.696e-10 GeV5; Jensen excess +7.18% at 16 χ bins, +0.4119% at 64, +0.1013% at 128; closure by (L+L^T)/2 changes dynamics",
+      "evidence": "kinetics/MICROPHYSICAL-BIN-GRAPH-AUDIT.md and kinetics/results/microphysical-bin-graph-2026-11-21.json"
+    },
+    {
+      "claim": "A shared energy lattice directly yields paired 5D χe transition coefficients equal in both directions without numerical correction and automatically agrees with continuous Q to all orders",
+      "finding": "Refuted: raw Pauli-weighted W asymmetry ≈3.69% on χ36/e54/dE.5/nangular10; raw FD false Q +5.795e-12 GeV5. Explicit pair average restores stationary common-T FD but changes dynamics. Paired Q at Tchi=.9/1.1 differs from independent continuum by ~1.52% /1.12% at this grid.",
+      "evidence": "kinetics/PAULI-CHI-E-QUARTET-AUDIT.md; kinetics/results/paired-energy-quartets-2026-11-21.json"
+    },
+    {
+      "claim": "Global Pauli/χ,e charge/total energy/entropy exact conservation of finite-quartet Lie splitting demonstrates reliable time-dependent physical collision evolution",
+      "finding": "Refuted: 1092-quad network, dt=2e6 GeV^-1, one-step forward/reverse order shifts dark energy 1.44282e-4 GeV4; with 16 substeps still 5.43e-6, while conserved N/E errors ~1e-15 and entropy remains positive. Underlying Wpair also changes raw 5D projection.",
+      "evidence": "kinetics/results/paired-quartet-network-2026-11-21.json; kinetics/PAULI-QUARTET-NETWORK-TIME-AUDIT.md"
+    },
+    {
+      "claim": "Direct microreversible q-transfer kernel energy-collocation heat converges monotonically when dE is halved",
+      "finding": "Refuted at benchmark M=.1,Tchi=.9/1.1,Te=1,G=.001, Ecut22. Cold relative Q error h1 +1.083%, h.5 +.0172%, h.25 -.0886%, h.125 -.00202%. Hot h.25 -.0776%, h.125 -.00682%. Independent 5D Gauss n28 and direct q formula with Gauss n12; finite-grid sampling/tail effects cannot be ignored.",
+      "evidence": "kinetics/INVARIANT-CHI-E-ENERGY-KERNEL.md and kinetics/results/microreversible-chi-e-qkernel-2026-11-21.json"
+    }
+  ],
+  "physical_unknowns": [
+    "gauge-complete UV mediator and coupling bounds, EW-temperature mass and chirality, realistic SM species and neutrino coupling",
+    "true 2-to-2 arbitrary nonthermal chi spectral eigenvalues and forward/backward kinetic relaxation; eigenmodes not captured by single thermal FD energy-moment rate",
+    "full Pauli-preserving time integrator with discrete number/energy/entropy and evolving SM heat; proper conservative radial q-bin measure",
+    "temperature-dependent 1->2 matrix collision, stimulated Bose and thermal masses, 2->2 IR Bose emission and actual BEST coupling",
+    "gstarS(T),gstarRho(T),Friedmann H and realistic cosmo thermodynamics",
+    "late physical quantum freezeout, cutoff-independent zero-mode, absolute Omega, linear perturbations and observational test"
+  ],
+  "class_ready": false,
+  "stop_reason": "Target ~30-minute active session reached; final checkpoint and report delivery following. No goal completion claim.",
+  "next_action_file": "kinetics/research-control/NEXT_ACTION.json",
+  "instruction": "Evaluate on-shell decay source in physically cold q window, sign of Bose-stimulated gain with actual fermion occupancy; prioritize viable low-entropy initial conditions and number multiplier before full cosmological inference.",
+  "last_checkpoint_git_sha": "ee0deab99a81544a1007116dd3c8335b1b256b57",
+  "current_phase": "New primary CLEO III 2007 Table VII R_had(9.996GeV)=3.497±.004stat±.064sys(common)±.043sys(uncorr) is 4MeV off mV10, not exact at10; data-driven charged visible A' χ2pair forward T1 NWA2.237435933e-15GeV4 (~6.49× electron-only) with 2.21% R-only error, 4MeV/mixing unbounded. Exact full seven-channel dark Noether U1 gives nonthermal stable charged χ2+anti lower abundance floor |QD/S_SM,today|<=2.1868082457e-8 for Ω=.120, <=2.1868082457e-10 for 1% stable component. Independent full GG χ2pair at x8 gives forward Γ/H4.969 vs 10GeV A' electron transport ν_T/H1.55656e-7 (not drag); at x10 pair/H.610 vs vector e ν/H7.96e-8. Thus original shared SM-dark T symmetric fixed-g* toy overclosure Ωchi2pair≈880 is NOT actual declared A' cosmology and cannot exclude full DM; need dark/SM entropic heating, real FD/BE+FRW, all Ω components, CLASS/halo. Separate conditional SM/dark comoving entropy split after decoupling: entropy identity with g*S dark initial 8 relativistic, more accurately 7.991670795 at T0.688GeV using independent finite-mass FD integral; illustrative SM g*S61.75->10.75 yields xi=Tdark/TSM 0.558372 if no dark entropy transfer vs1.116745 if full transfer into φ only (the latter incompatible with surviving stable chi2). Both conditional extremes, NOT physical bounds. Electron vector transport νe/H crosses unity at T=.6882487043GeV using external fixed g*rho61.75, not actual kinetic eigenvalue; actual x8 T2.5MeV νe/H1.55656e−7, requires hypothetical epsilon~.0253465 to get frequency proxy/H~1, no experimental viability proof. Focused CI #45455721437 for entropy tests GREEN, FD mass refined current focused CI pending. True dark+SM FRW still unresolved, class_ready=false.",
+  "completed_research_steps": [
+    {
+      "stage": "Quantitative cut-cell correction to sparse 12x12 Yukawa scalar first-cell and full weak source",
+      "sha": "c4191a7a8d4f79d2c2e5dd06312982b6f06d3cd0",
+      "report": "kinetics/PHI-BOSE-CUTCELL-WEAK-IR-AUDIT.md",
+      "tests": "Independent local SciPy adaptive cut-cell and NumPy direct Gauss n48/96/192 cross-check; public CI pending",
+      "finding": "At pmax2,N16,T1=.9,T2=Tphi=1, old sampled first-cell Rphi=0 but continuous first-cell Rphi=-2.76214936045e-12 GeV4, Qphi=-1.22779976195e-14 GeV5; true total Rphi=-1.29545395549e-11, old 12x12 -1.16493012863e-11 underestimates destruction magnitude 10.08%. First cell is 21.32% of true total. Earlier physical interpretation corrected in two audits."
+    },
+    {
+      "stage": "Exact inverse Lorentz threshold for 86-eV daughter infrared in physical Yukawa 1-to-2 on-shell decay",
+      "sha": "b7923f38031fefbf5122983bda9f24535444890e",
+      "report": "kinetics/PHI-BOSE-IR-ACCESSIBILITY-AUDIT.md",
+      "tests": "Independent local seven-energy inverse boost cross-check ~2e-15; GitHub CI pending",
+      "finding": "At illustrative m1=.1GeV,m2=.02GeV,mphi=86eV, scalar rest requires parent p=55.814TeV, scalar <=1keV requires parent p>=2.404TeV. Finite P=16GeV forbids scalar E<150keV in 1-to-2-only operator; strict conditional collision nullspace. Not full physical freezeout/BEC."
+    },
+    {
+      "stage": "Analytic strict parent-UV tail certificates for forward massive Bose Yukawa thermal weak number and three separate physical energy sources",
+      "source": "kinetics/phi_bose_chemical_uv_bound.py",
+      "report": "kinetics/PHI-BOSE-CHEMICAL-UV-BOUND-AUDIT.md",
+      "commit": "1011208f07e8169da7517b09a6bc062122ffa12a",
+      "result": "pmax2 directly misses 42.7366% of forward R; at pmax16 observed number tail ~1.7607 ppm and rigorous bound ~9.01 ppm relative to partial; individual physical energy tails bounded by 5.3402e-16 GeV5 each at pmax16",
+      "validation": "Local independent direct SciPy positive tail quadrature for six cutoffs; new focused GitHub regression submitted, CI not yet verified",
+      "limitations": "common-T fixed positive chemical affinity, noncritical mu_phi and prescribed thermal parent only; no strong finite volume, nonthermal UV, daughter IR, BEC or relic"
+    },
+    {
+      "stage": "Positive massive Yukawa forward weak source at fixed chemical affinity admits rigorous finite-parent-cutoff near-critical mu_phi bound",
+      "sha": "dbe867d1f2572a3742d3fe52880585a98478d0d8",
+      "evidence": "archive/stages/2026/11/2026-11-23-finite-parent-chemical-ir-bound.md",
+      "scope": "Analytical bound and deterministic local 1D scan only: pmax2/8/16 scalar IR support strictly above m_phi; μphi↑m_phi changes fixed-Δμ source 5.95/8.06/8.08 ppm, no zero-mode/BEC inference"
+    },
+    {
+      "stage": "Independent massive Yukawa on-shell FD/BE chemical-potential weak number and three energy moments at T1 unequal/equal T0",
+      "sha": "bebf5e23069a9fba6767a7f987ac22856aee08b7",
+      "documentation_commit": "ed39b172cda2289041c58e6d57d4c47bf99c2812",
+      "report": "kinetics/PHI-BOSE-CHEMICAL-WEAK-REFERENCE-AUDIT.md",
+      "tests": "3/3 targeted local pytest passed; public Scientific CI pending",
+      "scope": "physical normalized prescribed-thermal weak source only, noncritical mu_phi; NOT strong finite-volume time/zero mode/relic"
+    },
+    {
+      "stage": "Yukawa decay plus electron vector-contact transport sigma; independent numerical t quadrature",
+      "sha": "8873c40fdd13437807a9cb018c5613d0221a4e43",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44931903023",
+      "ci_conclusion": "success",
+      "scope": "tree vacuum and massless electron unblocked at-rest frequency; not gamma_el"
+    },
+    {
+      "stage": "Exact BE/FD on-shell chemical affinity and dimensionless BEST Yukawa bridge",
+      "sha": "59ce61ece86857d3b7f3d9bae05e5565ae9d830b",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932046451",
+      "ci_conclusion": "success",
+      "scope": "algebraic quantum factors and units only, no BEST run"
+    },
+    {
+      "stage": "Electron Pauli-blocked finite-recoil heating for chi at rest, checked vs angular identity and heavy limit",
+      "sha": "5d37d1c0335552647889b9c1d1831661bcfdbf6c",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932154301",
+      "ci_conclusion": "success",
+      "scope": "thermal test-particle heating Q per chi, not full moving-particle collision operator"
+    },
+    {
+      "stage": "Full local Pauli 2->2 elastic event ledger, energy and entropy sign",
+      "sha": "98cea96448c97417ae3cb2dc3ed5824025242675",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932341208",
+      "ci_conclusion": "success",
+      "scope": "event-only Pauli balance, not physical integrated collision source"
+    },
+    {
+      "stage": "Moving chi incoming transport collision frequency with exact Moller flux",
+      "sha": "541435665fac71a230da1dda4e6722bcba985391",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932437443",
+      "ci_conclusion": "success",
+      "scope": "unblocked momentum-dependent collision frequency, not kinetic relaxation"
+    },
+    {
+      "stage": "Moving chi exact unblocked signed energy transfer moment via COM angular integration",
+      "sha": "7373e33f40332bb75c825abaf531077037c0370f",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932561256",
+      "ci_conclusion": "success",
+      "scope": "true tree-level moving energy moment but no final-state Pauli/detailed balance"
+    },
+    {
+      "stage": "Heavy nonrelativistic chi kinetic drag asymptote from Pauli-blocked rest recoil and Einstein relation",
+      "sha": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44932655044",
+      "ci_conclusion": "success",
+      "scope": "controlled heavy nondegenerate chi M/T >=100 leading Fokker-Planck matching; specifically INVALID for original relativistic BEST M/T=.1"
+    },
+    {
+      "stage": "Exact-FD logit-energy interpolator removes false PCHIP equilibrium heat, conservative weak-event deposition matches number and energy moments; not a time integrator",
+      "sha": "cee52792b6eb26ea460146132a8aa96daad30f28",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936130211",
+      "ci_conclusion": "success",
+      "scope": "numerical FD/weak projection only, no proven Pauli-stable kinetics"
+    },
+    {
+      "stage": "Gauge-completed electron vector EFT requires left lepton-doublet neutrino channel (G_L=G_R): common massless lepton heat 6/4 electron-only conditional ratio",
+      "sha": "9db26c25f46475258658da6fbbfd47358d945036",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936289831",
+      "ci_conclusion": "success",
+      "scope": "SU2 operator/chiral state counting, not UV-completed model nor true plasma"
+    },
+    {
+      "stage": "Thermal FD fixed-number linear heat-moment relaxation gamma_T from physical 5D e-chi Pauli source; analytic thermodynamic heat capacity and root-matched chemical potential",
+      "sha": "e10b683b746d8e891992e8f659a519399bf322b2",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936484677",
+      "ci_conclusion": "in_progress at checkpoint",
+      "scope": "one conditional FD thermal-energy response only, NOT full nonthermal eigenmode or kinetic gamma_el(p,T)"
+    },
+    {
+      "stage": "Independent 2-mode Dirichlet energy/shape Galerkin for full Pauli χe scattering, susceptibility, nonlinear heat finite-difference check and slow mode differs from thermal-energy Rayleigh",
+      "sha": "2bcc2402ec1cfd1b04eb9ea7905c6f13339e07a1",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936880435",
+      "ci_conclusion": "success",
+      "scope": "Two finite-basis Ritz rates, not full kinetic eigenvalue spectrum"
+    },
+    {
+      "stage": "Enlarge orthonormal FD susceptibility polynomial basis from 2 to 5; independent matrix construction reproduces 2-mode and shows 37.45% additional slow Ritz drop",
+      "sha": "bd776da0460024891ebc7b488b0a8f32a19b9840",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44936997870",
+      "ci_conclusion": "not checked at checkpoint",
+      "scope": "Finite 5-mode Galerkin only; source does not prove nonzero full spectral gap"
+    },
+    {
+      "stage": "Implicit fully Pauli-bounded reduced two-level and 3-bin quantum Fermi transition network with exactly finite SM radiation E=A T4, physical total entropy and discrete N/energy conservation; random tests and time-splitting negative control",
+      "sha": "c373bca160116460c55832798094e042b0ee7842",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937357618",
+      "ci_conclusion": "success",
+      "scope": "Independent numerical DESIGN REFERENCE: pairwise Γ arbitrary positive and not derived from actual 5D χe scattering matrix element or UV portal"
+    },
+    {
+      "stage": "Independent Stieltjes orthogonal FD thermal collision Ritz hierarchy n=2..11 refutes stabilization of slow Pauli eigenvalue; tests vs previous 2/5 implementations, coupling scaling and collision 5D n20/24",
+      "sha": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+      "ci_run": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44937649234",
+      "ci_conclusion": "success",
+      "scope": "Finite basis eigenvalue upper bounds from electron-only vector EFT in fixed common-temperature bath; NOT proof of actual full kinetic spectral gap"
+    },
+    {
+      "stage": "Full 5D electron-contact Pauli Dirichlet with IR-localized number-orthogonal logit packet and composite split χ/e momentum quadrature; exposes artificial false-small rate on uniform 20-node grid",
+      "sha": "e14123a85b0ab23c03c87def759fdcb4da3bcd68",
+      "ci_run": null,
+      "ci_conclusion": "in_progress at checkpoint",
+      "scope": "Variational finite trial-function upper bounds only; no physical full kinetic eigenvalue/true spectral gap proof"
+    },
+    {
+      "stage": "Exact daughter energy cut-cell weak geometric moments and 3-species kinematic ledger",
+      "sha": "57cc4216fe245247a5a6e8d7ab5cd677bae14065",
+      "evidence": "kinetics/PHI-BOSE-EXACT-CUTCELL-MOMENTS-2026-11-23.md",
+      "tests": "Four local independent scipy.integrate.quad spot checks; GitHub CI for new commits not yet verified",
+      "limitations": "Angular-independent geometric identities only; no Bose/Pauli weighted physical strong measure, no nonlinear time, relic or BEC"
+    },
+    {
+      "stage": "Independent boosted physical Yukawa cut-cell positive weak Nphi and three Q: on-shell shell-edge parent partitions, explicit FD/BE event weights versus separate exact log/dilog daughter and adaptive parent reference across 3 P/3 grids/chemical reverse controls; new W/V 45.16% false Q strong-bin negative",
+      "sha": "20634587a56f49525335652b1deff48a95353522",
+      "tests_commit": "c100bcf37f4560aac8d14fe94f17c0c835bc6bea",
+      "report": "kinetics/PHI-BOSE-PHYSICAL-CUTCELL-NQ-AUDIT-2026-11-24.md",
+      "machine_data": "kinetics/results/phi-bose-physical-cutcell-nq-2026-11-24.json",
+      "tests": "5/5 local focused pytest passed 4.79 seconds; new CI still running at checkpoint",
+      "scope": "Physical and independent prescribed-thermal WEAK N+Q only, not self-consistent strong time, SM/FRW, condensate or relic"
+    },
+    {
+      "stage": "Independent exact physical scalar cutcell Yukawa weak first-bin Rphi/Qphi feeding separately integrated positive p²dp Bose two-hat DG-P1 susceptibility; negative N32 eta_left tangent converged across four parent×angle grids; nonmonotone N and true hard cutoff null cells",
+      "sha": "ebb216ae8e2bf1820294c1b286997a5308f5a3b1",
+      "test_sha": "6cec238131c6c1aa164c01bfe6affb152732372c",
+      "report": "kinetics/PHI-BOSE-EXACT-CUTCELL-TANGENT-GATE-2026-11-24.md",
+      "machine_data": "kinetics/results/phi-bose-exact-cutcell-tangent-2026-11-24.json",
+      "tests": "4/4 focused local pytest passed 6.82 seconds; public Scientific CI pending",
+      "scope": "Negative exact finite-cell inverse-fugacity tangent (numerical manifold) only, not finite-time impossibility proof or physical Bose condensate"
+    },
+    {
+      "stage": "Exact physical Bose first-bin 2-moment affine inverse-fugacity critical face, positivity inequality, independent high-precision crossing and explicit strictly positive nonaffine excluded-moment counterexample",
+      "sha": "383e3c3a5cd97dd0682ad6dcddbc54236336fdcd",
+      "test_sha": "14913729818542c008472578103def4cae454f1e",
+      "report": "kinetics/PHI-BOSE-MOMENT-REALISABILITY-BOUNDARY-AUDIT-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-moment-realisability-boundary-2026-11-24.json",
+      "tests": "5/5 local focused pytest passed in 7.85s; public CI status check needed",
+      "limitations": "Frozen prescribed thermal weak source ray; physical moment-family obstruction not true nonnegative phase-space failure/BEC"
+    },
+    {
+      "stage": "Actual scalar-only strong on-shell positive fixed-fermion-bath modal Boltzmann semigroup and independent reversed scalar-first physical Rphi/Qphi/Q1/Q2, explicit positive finite-time spectra still outside affine DG first-bin moment family",
+      "sha": "2dfdca014a922ab9a65097b4dd3b82605f28d0d4",
+      "test_sha": "3dabca3126fef919114504349fd5853808f585e4",
+      "report": "kinetics/PHI-BOSE-SCALAR-FIXED-BATH-STRONG-AUDIT-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-scalar-fixed-bath-strong-2026-11-24.json",
+      "tests": "5/5 focused local pytest passed in 3.71s, after recognizing 0.0788% finite nonlinear temporal deviation; CI check needed",
+      "limitations": "Fermion baths frozen, NOT self-consistent conserving three-species dark-sector evolution or SM/FRW relic"
+    },
+    {
+      "stage": "Exact χ2 massive daughter inverse parent rapidity finite two-sided support, independent daughter-rapidity + scalar-log-k adaptive physical N/Q1/Q2/Qphi, and positive conditional Pauli semigroup",
+      "sha": "de048f239efb7b3e79a61a7117532dc42ddcdfbf",
+      "test_sha": "927ebe72d6210f5c40a06145a6622ca1bf20c310",
+      "report": "kinetics/PHI-BOSE-CHI2-INVERSE-RAPIDITY-AUDIT-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-chi2-inverse-rapidity-2026-11-24.json",
+      "tests": "4/4 local focused pytest passed 4.28s, public CI verify",
+      "limitations": "Fixed other bath, 3 independent WEAK integration checks, not coupled physical strong evolution"
+    },
+    {
+      "stage": "Globally two-sided inverse parent support for all massive Yukawa daughters, true scalar 86-eV rest parent threshold≈55.81395 TeV; corrected conditional scalar strong source p upper bound/global energy support floor",
+      "sha": "7c06e4c239eaa13e715c602995bc8a7f42d12598",
+      "fix_sha": "008e2a53a3408d1e9d3a1965423b7eede79ac100",
+      "boundary_fix_sha": "eb26cda981a266bf954cd2986f1601fca82f9299",
+      "report": "kinetics/PHI-BOSE-GLOBAL-INVERSE-PARENT-SUPPORT-AUDIT-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-global-inverse-parent-support-2026-11-24.json",
+      "tests": "3+5 local focused pytest passed 3.05s, after correcting one-ulp finite-P rapidity endpoint regression",
+      "limitations": "Analytic geometry beyond P55.8TeV only; high-P physical UV thermal rates/zero mode not computed"
+    },
+    {
+      "stage": "Rigorous physically normalized near-rest 86eV fixed-subcritical-thermal Bose-enhanced Yukawa absolute forward+inverse rate upper bound using finite two-sided parent support and log-space Boltzmann",
+      "sha": "5948faa5398d057d05382907af1e287117d57bae",
+      "evidence": "kinetics/PHI-BOSE-NEAR-REST-THERMAL-ABSOLUTE-BOUND-2026-11-24.md",
+      "tests": "4/4 local 0.47s, public source/test CI success",
+      "limitations": "Fixed FD/BE GeV thermal subcritical only; not a critical/nonthermal/SM/FRW BEC no-go"
+    },
+    {
+      "stage": "Support-edge aligned Bose first-bin entropy-dual physical tangent and exact positive fixed-FD finite-time two-moment representability for N24/32/40",
+      "sha": "44eb995e4dfb7de6f0b95c2cc332a852e017afda",
+      "evidence": "kinetics/PHI-BOSE-SUPPORT-ALIGNED-ENERGY-CELL-AUDIT-2026-11-24.md",
+      "tests": "3/3 local 4.61s, public CI pending",
+      "limitations": "First cell fixed P2/frozen FD only; not full spectrum or finite-step physical 3-field"
+    },
+    {
+      "stage": "Physical hard upper support Bose DG-P1 false negative ηRight tangent persists due weighted L2 affine projection of positive ηdot and scales as −B*h²/6",
+      "sha": "be24354a53cd9f9af904060c3ea641af99260035",
+      "evidence": "kinetics/PHI-BOSE-UPPER-SUPPORT-CURVATURE-TANGENT-AUDIT-2026-11-24.md",
+      "tests": "3/3 local 1.20s, public CI pending",
+      "limitations": "Scoped P2 hard support/source curvature, no physical Bose creation/condensate or all-time no-go"
+    },
+    {
+      "stage": "First joint physical-capacity 3-species Yukawa finite-time Bernstein-P2 energy/moment entropy-dual discrete solver and positive on-shell shared events, exact weak N/Q and H, graph rank, adaptive physical bounded moment inverse, joint time entropy/charge/energy and explicit first-order dt convergence",
+      "sha": "7ecf4b737ff05eb162a0a0ad3014f3b45047cfce",
+      "test_sha": "7cbe524b88e5fdd5dc4f18e101f04f6cd275ec51",
+      "report": "kinetics/PHI-BOSE-COUPLED-BERNSTEIN-P2-FINITE-TIME-AUDIT-2026-11-24.md",
+      "numerical_data": "kinetics/results/phi-bose-coupled-bernstein-p2-finite-2026-11-24.json",
+      "archive": "archive/stages/2026/11/2026-11-24-coupled-bernstein-P2-physical-finite-time.md",
+      "tests": "5/5 focused local pytest passed 10.56s, public Scientific CI of source/test pending",
+      "scope": "Physically normalized illustrative finite parent-cutoff simultaneous dark 3-species quantum moment time prototype, conditional numerical rejection rather than unconditional entropy or positive solution; no finite SM/FRW/relic/BEC"
+    },
+    {
+      "stage": "Fully coupled physical finite-capacity Yukawa backward Euler: analytic sparse Jacobian finite-difference check, P2/8/16 thermal/nonthermal invariant+entropy, dt300000 implicit solves explicit failure, nonzero chemical fixed point and dt convergence",
+      "sha": "6dfdea2a87b7406d692a914d8aad4cebfca57b14",
+      "test_sha": "4207375aec06ec887763700c7eb00097af3f908a",
+      "report": "kinetics/PHI-BOSE-IMPLICIT-QUANTUM-KL-ENTROPY-GATE-2026-11-24.md",
+      "tests": "5/5 new focused CI success Python3.11/3.13",
+      "scope": "Illustrative closed dark Yukawa; no unconditional positive root or SM/FRW physical DM"
+    },
+    {
+      "stage": "Independent integrated physical FD/BE Bregman/KL exact finite-dimensional entropy certificate with root residual work for fully coupled implicit strong moments",
+      "sha": "8055d41ae3d508daabbdf810d6ac176393c143fb",
+      "test_sha": "d9f6cfa957d07a0289d2cd247c1b420bd5218685",
+      "report": "kinetics/PHI-BOSE-IMPLICIT-QUANTUM-KL-ENTROPY-GATE-2026-11-24.md",
+      "tests": "4/4 focused CI success Python3.11/3.13",
+      "scope": "Conditional positive root entropy theorem, no global existence"
+    },
+    {
+      "stage": "Quadratic positive Bernstein Bose inverse fugacity moment projected tangent physically negative despite positive true on-shell scalar eta_dot at P8 Nphi8 and P16 Nphi8/12",
+      "sha": "2233ca66784f4db2e55fb570d253b0e4ccb02796",
+      "test_sha": "c5915d9cc4a0278da6da1aa69b785aa65ec3548b",
+      "report": "kinetics/PHI-BOSE-BERNSTEIN-P2-PROJECTION-POSITIVITY-COUNTEREXAMPLE-2026-11-24.md",
+      "tests": "5/5 physical k-first vs parent-first focused CI success",
+      "scope": "Specific signed polynomial projection, not negative physical Bose occupation/BEC"
+    },
+    {
+      "stage": "Independent conditional thermal Bose 86eV RD+MD full momentum free-streaming and abundance cross-check of already published verified 2026-11-21 thermal CLASS baseline",
+      "sha": "4e1d45baa8444c199fca6c1ed63a540f7c51068c",
+      "test_sha": "9cbb2a200ff894d4b895b15bc5ca1e005484c372",
+      "correction_sha": "2bfdb019c00243d5ad2cafef486d3c0ea0f820c7",
+      "report": "cosmology/THERMAL-86EV-HOT-RELIC-CONDITIONAL-GATE-2026-11-24.md",
+      "tests": "5 original conditional analytical tests plus 1 new CLASS baseline crosscheck; latest CI status separately verify",
+      "scope": "Not actual Yukawa-generated freezeout, no new CLASS or observational likelihood"
+    },
+    {
+      "stage": "Bose inverse 2to2 MB microreversibility",
+      "sha": "2558d442f6fe64638f77dd2437bb264b2ac35665",
+      "source": "kinetics/phi_bose_pair_mb_detailed_balance.py",
+      "test": "tests/test_phi_bose_pair_mb_detailed_balance.py",
+      "report": "kinetics/PHI-BOSE-YUKAWA-PAIR-ANNIHILATION-MB-HUBBLE-AUDIT-2026-11-24.md",
+      "summary": "Reverse φφ→χ2antiχ2 vacuum σ ratio 8*pχ²/pφ², physical identical-boson incoming 1/2! and Dirac spin counting give pointwise same MB invariant s-kernel, so γF=γR at equal T and chemical equilibrium. Original CI failure on n48 independent quadrature 2.6e−9 mismatch against unjustified 5e−11 tolerance, fixed to 2e−5 while exact identity remains machine-precision.",
+      "tests": "Scientific CI #45399229190 passed Python3.11/3.13 for corrected tests",
+      "limitations": "MB common-T weak diagnostic with vacuum amplitude and separate reverse rate; not FD/BE full time, in-medium or cosmological solution"
+    },
+    {
+      "stage": "Conditional two-Dirac thermal φ static curvature",
+      "sha": "210a63baa830d7d507572eace02e4255b9e4e34d",
+      "source": "kinetics/phi_bose_fermion_thermal_mass.py",
+      "test": "tests/test_phi_bose_fermion_thermal_mass.py",
+      "report": "kinetics/PHI-BOSE-YUKAWA-FERMION-THERMAL-MASS-AND-Z2-GATE-2026-11-24.md",
+      "summary": "Exactly derived one-loop static fermion loop δmφ²=8y²[m1 I_F(m1,T)-m2 I_F(m2,T)]/(m1-m2), high-T y²T²/3, independent direct determinant finite-field check. Negative local static curvature for T3.245–35.482MeV if equilibrium two Dirac zero-μ bath and no φ quartic/portal; positive light-scalar λφ4/4! thermal tadpole needs λ≈1.08515714e−6 in this conditional loop approximation. At T1GeV static curvature mass~574keV vs vacuum86eV.",
+      "tests": "Scientific CI #45399392958 passed after unrelated weak test tolerance fix",
+      "limitations": "STATIC potential not real-time quasiparticle pole; no phase-history/thermal SM, λ or FRW physical relic"
+    },
+    {
+      "stage": "Conditional φ quartic halo contact scattering tension",
+      "sha": "7db6f3cf5cc72d643f5a4817ed9997b00de94303",
+      "source": "kinetics/phi_bose_quartic_halo_tension.py",
+      "test": "tests/test_phi_bose_quartic_halo_tension.py",
+      "report": "kinetics/PHI-BOSE-QUARTIC-CURVATURE-HALO-SCATTERING-TENSION-2026-11-24.md",
+      "summary": "If φ is a dilute dominant NR86eV scalar, λ=1.08515714e−6 needed to restore the specified thermal STATIC curvature predicts Born identical-real-scalar σ/m≈1005.62027cm²/g (viscosity≈670), versus illustrative model-dependent cluster reference upper 2–5cm²/g (λmax4.83939e−8–7.65175e−8). This is a conditional parameter tension, not exclusion of bosonic DM.",
+      "tests": "Scientific CI #45399392958 success",
+      "limitations": "Requires thermal χ bath, quartic-only stabilization, dominant dilute NR cluster scalar and applicable cluster likelihood; none established"
+    },
+    {
+      "stage": "Independent Yukawa pair CM-angle trace and forward MB rate",
+      "sha": "586400b2acfebd9d12bd74ac326ceb7f8ef70338",
+      "source": "kinetics/phi_bose_pair_independent_vectorized.py",
+      "test": "tests/test_phi_bose_pair_independent_vectorized.py",
+      "report": "kinetics/PHI-BOSE-YUKAWA-PAIR-INDEPENDENT-TRACE-ENERGY-ANGLE-GATE-2026-11-24.md",
+      "summary": "Independent vectorized Dirac t/u trace and exact MB collision-energy derivative; physical forward γ(T=1GeV)=2.088634910108e−16GeV4 and mean pair energy4.4090619GeV; forward-only per χ/H≈964.78 with g*=61.75. Negative: angular n48 at T.1 overestimates γ by ~0.0818% vs n128, even though detailed balance exact.",
+      "tests": "Scientific verification run #45399769131 pending at checkpoint",
+      "limitations": "No FD/BE full net collision, thermal pole, SM/FRW"
+    },
+    {
+      "stage": "First positive fully on-shell 5D lab-frame χ2antiχ2↔2φ quantum weak event source",
+      "sha": "d93f2745fdcc47d4f1c0c355bc10fa880e5e1a8d",
+      "source": "kinetics/phi_bose_pair_physical_onshell_quantum.py",
+      "test": "tests/test_phi_bose_pair_physical_onshell_quantum.py",
+      "report": "kinetics/PHI-BOSE-PAIR-PHYSICAL-LAB-ONSHELL-QUANTUM-WEAK-AUDIT-2026-11-24.md",
+      "summary": "Positive physical 5D pχ,panti,relative-angle,CM-angle+azimuth event weight, exact four-leg E1+E2=E3+E4, shared microscopic FD/BE F-R, net Dirac U1=0, energy=0 and H≥0, equilibrium μχ=-μanti and μφ=0. Independent LAB MB at P20,nrad24/nrel32/nCM96 gives 2.088656513604e−16 vs GG reference 2.088634910108e−16 (+1.034e−5). Negative nrad12/nCM32 gives +0.896% rate bias; nonthermal quantum R≈6.10894e−19,H≈1.20570e−17GeV4. Source/test CI pending.",
+      "tests": "Scientific verification #45400744131 in progress at checkpoint",
+      "limitations": "Instantaneous physical weak source ONLY, no five-field finite-time or χ+SM/FRW/actual 86eV relic/zero-mode"
+    },
+    {
+      "stage": "FIVE-CHANNEL-QUANTUM-WEAK",
+      "sha": "f774d659b8bbbf718cf34ba89f313465bbfc37f0",
+      "report_or_source": "kinetics/phi_bose_five_dirac_full_yukawa_weak.py",
+      "evidence": "All five separate Dirac/anti/real Bose species χ1,antiχ1,χ2,antiχ2,φ now share physical on-shell POSITIVE event W for χ1 and anti decays and both χi antiχi→2φ via virtual opposite Dirac mass. Eventwise exact net U1, total energy, and quantum H≥0; common T µ1=µ2=µU, µanti=−µU, µφ=0 is true stationary for all FOUR channels. Earlier g1=4 χ1 decay splits correctly into g=2 each charge sector. Independent weak comparator, 6 focused tests; new CI needs current check.",
+      "limitations": "instantaneous physical weak source, not 5-field finite-time or FRW",
+      "status": "scoped_research_established_CI_check_latest"
+    },
+    {
+      "stage": "FIVE-DIRAC-IMPLICIT-NEGATIVE",
+      "sha": "e9e4fe2f47c4510bd4c0c2d9e4a8b477e77acd63",
+      "report_or_source": "kinetics/phi_bose_five_dirac_full_yukawa_implicit.py",
+      "evidence": "First fully simultaneous 5-field real-physical-DOS quantum P2 backward Euler with 4 reaction channels + analytic full sparse Jacobian implemented. IMPORTANT negative: initial nonthermal finite-time sparse Newton failed for ALL 13 halved dt from 10000 down to 2.44140625 GeV^-1 in first public CI #45402246480, although source invariants and Jacobian FD passed. Early thermal exact µU stationary gave false Newton drift at machine affinity; first source comparison around 1e−33 gave false relative mismatch. Remediation: common-T affinity zero short circuit, new residual scale floor, exact pair χ2/χ1 IR support split, analytically collision-disconnected first φ cell FROZEN and reduced Newton. Latest focused strong tests/CI pending; do NOT call strong finite-time validated until numerical root, KL and convergence tests pass.",
+      "limitations": "numerical strong prototype pending; failure cannot establish physical condensate or no-go",
+      "status": "in_progress_negative_CI_root_unresolved"
+    },
+    {
+      "stage": "QUANTUM-KL-FIVE",
+      "sha": "4284a765938a1805f7cc3ca93515e459d02ca2e3",
+      "report_or_source": "kinetics/phi_bose_five_dirac_kl_certificate.py",
+      "evidence": "Independent five-population FD/BE physical DOS relative entropy identity ΔS−dt Hnew=Σfive ∫DOS D(old||new)+ηnew·moment residual implemented separately, including off-root and root tests. A strictly positive EXACT root certifies entropy, but not existence; root-dependent tests gated on unresolved full-5-field Newton CI.",
+      "limitations": "conditional mathematical entropy identity, no positive existence theorem",
+      "status": "scoped_research_established_CI_check_latest"
+    },
+    {
+      "stage": "DIRAC-CHEM-RELAX",
+      "sha": "76355501b50e32c51a624d36d7de1ddd6033f122",
+      "report_or_source": "kinetics/PHI-BOSE-FULL-DIRAC-MB-CHEMICAL-RELAXATION-2026-11-24.md",
+      "evidence": "For actual 4-channel physical on-shell events at common T, equilibrium event weight γr=∫W_rF_eq and true FD/BE χi imply symmetric positive semidefinite five-field linear chemical relaxation χ^−1/2 S^T diag(γr/T) S χ^−1/2 with EXACT one net vector U1 zero mode and four positive finite modes on connected thermal-µ manifold. Nonzero µU FD susceptibilities corrected. Independent classical MB rate oracle T1GeV y=.001: γ decay each=2.74580595e−11, heavy pair=3.49120144e−16, light pair=2.08863494e−16 GeV4; eigen/H ≈(0,462.9526,8979.282,2.5397e8,7.6127e8) for g*=61.75. NO unrestricted momentum thermalization/FRW implication. CI focal test ongoing/previous whole-run red due strong Newton.",
+      "limitations": "fixed T MB/FD/BE chemical-manifold relaxation only, independent SM bath not derived",
+      "status": "scoped_research_established_CI_check_latest"
+    },
+    {
+      "stage": "PAIR-IR-EXACT",
+      "sha": "7758c97d9acb5c9386cf75d8df8f0ff7e876dbc4",
+      "report_or_source": "kinetics/PHI-BOSE-PAIR-MASSIVE-SCALAR-GLOBAL-IR-SUPPORT-2026-11-24.md",
+      "evidence": "Exact global scalar minimum from equal Dirac/anti incoming pair each hard |p|≤P is kmin(P)=mφ cosh(max[0,acosh(mχ/mφ)−asinh(P/mχ)]). For mφ86eV, χ2=.02GeV pair rest requires each pstar=4651.16279065GeV vs older one-decay χ1 pstar≈55813.95GeV; χ1=.1GeV pair rest requires 116279.0698GeV. χ2pair P2/8/16 lower φ energies ≈100/25/12.5keV, ~12× lower than restricted one decay. Original 5field φ grid based only on decay falsely merged true active pair IR modes with collision-inaccessible subcell; now split exact Ppair support, physically inactive φ first DOFs frozen. Negative: sampling angular zero below support does NOT prove global continuum zero elsewhere.",
+      "limitations": "rigorous vacuum pair 2to2 kinematic accessibility and hard cutoffs, not actual rate/BEC",
+      "status": "scoped_research_established_CI_check_latest"
+    },
+    {
+      "stage": "PAIR-NEARREST-THERMAL-BOUND",
+      "sha": "a9f556d3ba06ff6e5db68bcac461ace9f8ce5124",
+      "report_or_source": "kinetics/PHI-BOSE-PAIR-NEARREST-THERMAL-SUPPRESSION-GATE-2026-11-24.md",
+      "evidence": "Exact inverse χ+anti total energy requirement to emit one scalar ≤K: Epair,min(K)=2mχcosh(acosh(mχ/mφ)−acosh(K/mφ)); K86.1eV χ2 pair needs Etotal≥8864.4138775GeV, χ1 pair >221TeV. With prescribed equilibrium FDχ and strictly subcritical BEφ at T1GeV µ=0, upper bound on dimensionless per-event FORWARD F at χ2pair low φ≤86.1eV log10 F ≤−3842.70053 even including Bose stimulation; at T1000GeV bound exceeds unity and no net-production inference. The bound is on occupation factor, not integrated rate with W, NOT a general BEC no-go.",
+      "limitations": "fixed thermal bath, subcritical μ, pointwise quantum factor only",
+      "status": "scoped_research_established_CI_check_latest"
+    },
+    {
+      "stage": "Identify unresolvable floating five-field Newton far-tail root as physical moment <ULP, repair with explicit physical moment machine floor and preserve raw flux residual; improve microreversible FD/BE affinity exmp1 event sign; full real U1/E and KL finite-time P2/8/16",
+      "sha": "14885656ec623e68a43774ec9d83cb97b8e47acb",
+      "stable_flux_sha": "ad642eb7bafeb3ac25c5cb208fc648ac71bea3a2",
+      "final_test_sha": "a57372dafbc3cb48e10548a7999c902d920fabfc",
+      "report": "kinetics/PHI-BOSE-FIVEFIELD-FLOAT64-ROUNDING-AND-QUANTUM-AFFINITY-GATE-2026-11-24.md",
+      "tests": "focused GitHub CI 45421790808/45422074906/45422175702 success; full Scientific verification status separately inspect",
+      "limitations": "conditional float64 resolved roots only, raw far-tail relative flux errors documented, no SM/FRW/BEC/Ω"
+    },
+    {
+      "stage": "Prove massive φ physical P2 hard-pair frozen-cell ideal Bose G00 divergence ∼δ−1/2, show n18 physical Gauss underresolves 99.626% at δ1e−16 despite N converged, independently verify 50-digit mpmath and stable u-quadrature; construct fixed 168 positive-node geometric physical p-Gauss exact DOS capacity and <2e−7 G00 across six δ",
+      "sha": "cff009e48f167aa1b15e6c7b9e43cd0125307d34",
+      "composite_sha": "4041aca13cb02083075321adc390be46344cb9a5",
+      "test_sha": "9dfa1ff1ed3bdf11511570156f14e6a88f8996ef",
+      "report": "kinetics/PHI-BOSE-CRITICAL-IR-SUSCEPTIBILITY-AND-FIXED-GAUSS-GATE-2026-11-24.md",
+      "data": "kinetics/results/phi-bose-critical-ir-physical-susceptibility-2026-11-24.json",
+      "tests": "7 targeted tests and focused GitHub CI #45423112252 success",
+      "limitations": "first P2 collision-inactive φ cell and subcritical BE ideal reference only, fixed grid not yet in live strong solver, no BEC proof"
+    },
+    {
+      "stage": "Full physical 4channel 5field nonlinear backward Euler true first order time across 3 scalar meshes, and material P2/8/16 physical UV+quadrature cutoff bias, measured each pair channel nrad4/6/8/12/16, explicit negative crude graded radial n8 vs refined pair source",
+      "sha": "303a329ca2458edab18649e8b46e0ae80d435d3f",
+      "radial_src_sha": "6cf86a17140fadb5225c715a7d1b2aaec6027d9a",
+      "test_sha": "aa4953d6f98a1a8ffa257c2f84af601e4fbe3d3b",
+      "report": "kinetics/PHI-BOSE-FIVEFIELD-STRONG-TIME-GRID-UV-RADIAL-AUDIT-2026-11-24.md",
+      "tests": "Focused CI #45425641136/#45425995741/#45426294898/#45427815208 success; #45427342217 missing numpy test-only fail corrected; full Scientific latest check",
+      "limits": "No full pair radial/CM/angle convergence; P2 not UV; no FRW/relic"
+    },
+    {
+      "stage": "Rigorous on-shell hard-P full four-reaction five-population real φ global two-parameter BE Tphi,mu_phi closure non-invariance from frozen IR physical 3 moments rank2 and nonzero active scalar collision source",
+      "sha": "3e5e17de3b3f2e0ff68f53a559076da3632ffb8a",
+      "test_sha": "727631b752a03ba042bc74e78601466af4709772",
+      "report": "kinetics/PHI-BOSE-FROZEN-IR-GLOBAL-BE-THERMAL-CLOSURE-NOGO-2026-11-24.md",
+      "tests": "Focused CI #45426807185 success (4 targeted)",
+      "limits": "Strict hard parent P finite vacuum network only, no universal physical BEC/thermal no-go"
+    },
+    {
+      "stage": "Physically consistent two-Dark-Dirac same-U1 10GeV finite vector partial electron five-dimensional FD/Pauli heat and BW resonant χχbar↔ee, mandatory charged mu/tau and unknown measured hadronic R",
+      "source_sha": "9b2328e1e64ded6ac1c78e7232297433b1290c6d",
+      "report": "kinetics/PHI-BOSE-VECTOR-PORTAL-PARTIAL-SM-GATE-2026-11-24.md",
+      "tests": "focused CI #45430331573 #45430926445 #45431671479 #45432164795 #45452679130 success; final current sha check",
+      "limitations": "electron only Pauli heat, no physical SM/hadrons, no thermal mass/width, no physical Γel or FRW"
+    },
+    {
+      "stage": "Analytically exact Dirac Yukawa χ2χbar2→real φφ p-wave; independent 4x4 gamma, full relativistic GG thermal freezeout of stable 20MeV partner, conditional symmetric fixed-g* overclosure factor>7000",
+      "source_sha": "b41f573a5579161062c4c5fc85079b8f94eac49a",
+      "report": "kinetics/PHI-BOSE-STABLE-CHI2-THERMAL-RELIC-GATE-2026-11-24.md",
+      "tests": "focused CI #45452412200 and #45452882647 success; full Scientific latest check",
+      "limitations": "thermal symmetric shared bath constant gstar, no coupled χ1/phi+SM FRW, no observed full model exclusion"
+    },
+    {
+      "stage": "Replace R_had hypothetical 3.5 with PRIMARY CLEO III Table VII true 9.996GeV 3.497±.004±.064±.043; propagate mV10 visible A' widths, vector NWA and R-only uncertainty, explicitly 4MeV off data",
+      "report": "kinetics/PHI-BOSE-CLEO-HADRONIC-U1-ASYMMETRY-AND-THERMAL-GATES-2026-11-24.md",
+      "source": "kinetics/cleo2007_hadronic_R_reference.py",
+      "tests": "focused GitHub CI #45453980686 success"
+    },
+    {
+      "stage": "Exact U1 stoichiometry χ1−antiχ1+χ2−antiχ2 => stable 20MeV charged Ω floor and strict ηD(today) threshold 2.186808e−8 (100% Ω) and 2.186808e−10 (1% Ω)",
+      "source": "kinetics/phi_bose_dark_U1_asymmetry_floor.py",
+      "tests": "tests/test_phi_bose_dark_U1_asymmetry_floor.py, attached fivefield focused CI"
+    },
+    {
+      "stage": "Independent full GG Yukawa forward and finite 10GeV vector electron MB transport/H at x3..15 show electron transport <<H near χ2 toy chemical freezeout, invalidating shared-T ASSUMPTION, not physically excluding DM",
+      "source": "kinetics/phi_bose_chi2_thermal_branch_consistency.py",
+      "tests": "focused CI #45454556730 passed for x3..15; crossing root new test pending",
+      "limits": "massless e MB transport is not physical kinetic drag; dark entropy, e mass, full SM FRW absent"
+    },
+    {
+      "stage": "Conditional two-temperature entropy after dark-SM decoupling: gstar dark relativistic8, finite-mass FD7.991670795 at electron transport proxy crossing T.688GeV, SM illustrative gstar61.75→10.75 gives xi.558 no dark mass reheating vs1.1167 full to phi, not true bounds",
+      "source": "kinetics/phi_bose_dark_sm_entropy_split_gate.py",
+      "tests": "focused CI #45455721437 success for 4 baseline entropy tests; newer finite-mass FD test current CI pending",
+      "report": "kinetics/PHI-BOSE-DARK-SM-SEPARATE-ENTROPY-GATE-2026-11-24.md",
+      "limits": "not true SM QCD gstar, no actual dark internal equilibrium or χ2 abundance / FRW"
+    }
+  ],
+  "derived_physical_relaxation_scope": {
+    "rate": "eta_NR ~ [31*g_e*pi^3/756] G^2 T^6/M",
+    "source": "kinetics/microphysics_nr_drag.py",
+    "limitations": "FDT heavy nondegenerate chi and small energy transfer, not a general gamma_el. Requires electron final blocking and full integration outside M/T>>1.",
+    "previous_best_benchmark_applicable": false,
+    "associated_commit": "08060dd4ab4dfe48b55f70b6c8fa03de30893406",
+    "last_ci_at_checkpoint": "success"
+  },
+  "physics_scope_warning": "Equilibrium e±γ thermo/Bessel agrees; the e± number/heat response assumes μ=0 pair chemistry and separately a neutrality μQ; these are different closures and cannot be naively combined. No pair-annihilation or weak collision rates, no finite SM dynamic bath, no physical χe Γel or 86eV cosmic relic/CLASS.",
+  "automation": {
+    "title": "Dark Matter — автономное исследование",
+    "id": "6b01db5ad8ec8191a71d1a703058d03a",
+    "schedule": "HOURLY",
+    "enabled": true,
+    "notes": "Scheduler exists; only actual recorded runs prove further work. The current chat itself does not run asynchronously."
+  },
+  "last_verified_commit": "a436f7f06cd1c22a489f4b03c222182c692a0952",
+  "last_verified_ci": {
+    "head_sha": "6a0d40a851c5b1e1d2a961b2d2a56c965933e12d",
+    "run_id": 45128900651,
+    "conclusion": "success",
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45128900651",
+    "scope": "preceding boosted daughter log-Ephi angular quadrature, not new DG tangent negative"
+  },
+  "last_event_audit": {
+    "date": "2026-11-21",
+    "script": "kinetics/relativistic_elastic_audit.py",
+    "seed": 21112026,
+    "n": 4000,
+    "scope": "local on-shell event audit only; not full 2->2 operator",
+    "max_relative_shell": 3.6938160863364544e-13,
+    "max_relative_equilibrium_gain_loss": 1.3319660326089454e-14,
+    "ci": "not checked",
+    "report": "kinetics/RELATIVISTIC-ELASTIC-COLLISION.md"
+  },
+  "last_new_scientific_milestone": {
+    "title": "Independent transfer-angle coordinate for full finite-mediator boosted 5D Pauli heat",
+    "report": "kinetics/FINITE-MEDIATOR-TRANSFER-ANGLE-AUDIT.md",
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "tests": "tests/test_finite_mediator_transfer_quadrature.py",
+    "scope": "Numerical implementation and tests, not yet measured CI or independently converged heat",
+    "ci": "pending"
+  },
+  "last_projection_control": {
+    "commit": "4e3cca061febbd0700e1ec7c33baa0ca855aec31",
+    "scope": "synthetic positive paired micro-event measure only; not physical chi-e kernel",
+    "relative_defect_width_0p8": 0.02277004610530553,
+    "relative_defect_width_0p05": 0.0000892844613802346,
+    "ci": "pending"
+  },
+  "latest_stage": {
+    "name": "Gauge-covariant lepton family-difference vector candidate, independent ν_L gamma5 trace and finite e± vs ν split-bath 5D heat counterexample",
+    "status": "independent chiral trace and conditional full 5D relative Pauli thermal heat locally verified; repo CI pending",
+    "source": [
+      "kinetics/lepton_portal_neutrino_heat.py",
+      "kinetics/lepton_portal_split_bath.py"
+    ],
+    "tests": [
+      "tests/test_lepton_portal_neutrino_heat.py",
+      "tests/test_lepton_portal_split_bath.py"
+    ],
+    "report": "kinetics/LEPTON-PORTAL-NEUTRINO-HEAT-AUDIT.md",
+    "data": "kinetics/results/lepton-portal-neutrino-heat-2026-11-22.json",
+    "positive": "Candidate anomaly-free U1_(Le−Lmu) SU2L doublet vector electron portal necessarily includes νe,νμ with opposite charges; for Dirac-vector χ, chiral ν one-helicity spin trace = massless Dirac lepton spin average. With gν,2flavor=4 and ge±=4, full 5D Pauli heat Qν/Qe=1086.37 at T/me=.1, 1.18525 at 1, and 1.00179 at10 for equal baths and contact G.",
+    "negative": "Equal Tν=Te at Tγ=.1 me and Tχ=.09me would heat χ from both species; illustrative instantaneous e±-annihilation ratio Tν/Tγ=(4/11)^(1/3) yields Qν/Qe≈−512.2, dominating net cooling. Single SM thermal bath is not consistent; actual Tν must be evolved and portal checked against original χ1/χ2/φ and mediator constraints.",
+    "scope": "Mχ=.1 me (~51keV), NOT 86eV, arbitrary G=.001 me^-2, Tν model assumed; no finite mV t propagator, ν decoupling, cosmological plasma rate/eigenvalue, BEC/ΩDM/CLASS",
+    "parent_commit": "b571c1ac19389e3a926f054800b25f52e0fcbb03"
+  },
+  "last_checkpoint_parent_sha": "e890029f76051cb56712950fc63beca3dd3ff8b6",
+  "latest_analytic_gate": {
+    "commit": "f9587255171602bba91d836a5f381457ed70b294",
+    "checkpoint_commit": "fcf2bdcf21ba67c038bdbd1cb4bff94396c29f75",
+    "report": "kinetics/FINITE-MEDIATOR-CONTACT-VALIDITY-NOTE.md",
+    "scope": "exact conditional spacelike vector t propagator angular contact error bound; no new 5D numerical integration or physical rate",
+    "contact_relative_10pct_mV_over_pstar_min": 8.599263452297555,
+    "CI": "not yet checked on new head",
+    "class_ready": false
+  },
+  "latest_angular_control": {
+    "commit": "9355bf0dcbfa6da63ee397390114579d35dc77ec",
+    "report": "kinetics/FINITE-MEDIATOR-ANGULAR-CONTROL.md",
+    "script": "kinetics/finite_mediator_angular_control.py",
+    "local_result": "analytic vs composite Simpson 32768 subintervals, eight mV/p* cases, max absolute discrepancy approximately 7.4e-12",
+    "scope": "isolated t-propagator only, constant CM angular numerator; no physical 5D χe/χν rate or gamma_el",
+    "ci": "pending verification for new branch HEAD"
+  },
+  "latest_finite_mediator_5d": {
+    "status": "implementation_committed_pending_real_CI",
+    "source": "kinetics/independent_massive_chie_5d.py",
+    "test": "tests/test_finite_mediator_5d.py",
+    "report": "kinetics/FINITE-MEDIATOR-5D-FIRST-GATE.md",
+    "scope": "conditional tree-level full-angle 5D Pauli heat; no independent finite mediator crosscheck, no measured CI yet",
+    "class_ready": false
+  },
+  "last_finite_mediator_angular_trace": {
+    "source": "kinetics/finite_mediator_trace_angular.py",
+    "tests": "tests/test_finite_mediator_trace_angular.py",
+    "report": "kinetics/FINITE-MEDIATOR-ANGULAR-TRACE-AUDIT.md",
+    "scope": "nonconstant vacuum vector spin-trace angular primitive only; cannot factor final-state Pauli/heat",
+    "verification": "local scipy quadrature of J0,J1,J2 at b=.1,1,10 relative discrepancy <=3.5e-14; new repository CI pending",
+    "previous_finite_5d_ci": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44968592762"
+  },
+  "last_finite_mediator_ci_failure": {
+    "run_id": 44979564709,
+    "head": "bfb39746b0d30eef70278d4d0c12621f577c09a8",
+    "conclusion": "failure",
+    "reason": "literal escaped newlines causing SyntaxError in 5D source",
+    "repair_commit": "99a15ea9c0c4d6f817d82bc130afe2e60f8285d5",
+    "repair_ci": "not yet confirmed",
+    "physics_validated": false
+  },
+  "latest_forward_event_angular": {
+    "source": "kinetics/finite_mediator_forward_event_reference.py",
+    "test": "tests/test_finite_mediator_forward_event_reference.py",
+    "report": "kinetics/FINITE-MEDIATOR-FORWARD-EVENT-CONVERGENCE.md",
+    "data": "kinetics/results/finite-mediator-forward-event-2026-11-22.json",
+    "status": "independent scipy adaptive polar integration; three standalone local tests passed AND full Scientific CI #45006486258 success at 3093d7e",
+    "negative": "mV=.03, fixed incoming p=.9 k=1.2 mu=-.35: 48-point transfer +1.0507% and cosine +1.9318% heat error; transfer n96 still +0.05096%",
+    "positive": "exact factor-two Jacobian analytic squared propagator integral and mV=.3 angular n48 to adaptive agreement <5e-13 in specific event",
+    "scope": "Fixed single on-shell event angular weak moment only; full incoming momentum integration, physical SM, UV/gamma, and 86eV cosmology remain unverified"
+  },
+  "latest_adaptive_full_5d": {
+    "status": "two local incoming Gauss resolutions compared to independent scipy adaptive polar; new GH CI pending",
+    "code": "kinetics/finite_mediator_5d_adaptive_reference.py",
+    "tests": "tests/test_finite_mediator_5d_adaptive_reference.py",
+    "report": "kinetics/FINITE-MEDIATOR-5D-ADAPTIVE-AUDIT.md",
+    "data": "kinetics/results/finite-mediator-5d-adaptive-2026-11-22.json",
+    "benchmark": "Mχ=.1,mlep=0,Te=1,Tχ=.9,G=.001, incoming kinetic cutoff 14 T, nrad=nmu=8 and 10, nphi=16; polar Gauss 32",
+    "negative": "mV=.03, nrad/nmu=10: transfer angular n32 Qχ/QUAD−1=−9.5586%, direct cosine −7.876%; mV=.1 transfer −0.910%, cosine +0.812%; transform not uniformly better",
+    "positive": "Tχ/Te=.9 vs1.1 χ heat sign reverses; common T Pauli heat vanishes; adaptive 5D Qχ changes little for nrad8→10 in light mediator case but no full convergence"
+  },
+  "last_adaptive_full_5d_ci_failure": {
+    "run_id": 45006858598,
+    "head": "a111350d7d906ca7d60e519d9dcba8ac9e6615a1",
+    "outcome": "failure, 1/812 tests; both Python versions",
+    "issue": "coarse 12-node Gaussian azimuth Q=6.426256971206314e−14 differs by 1.56898e−5 relative from uniform 12-node azimuth Q=6.426357798018684e−14; Gaussian azimuth itself shifts at 24 nodes",
+    "independent_24": "Gauss φ24 6.426358531743393e−14 vs periodic φ24 6.426358442329552e−14; relative ≈1.39e−8",
+    "repair": "Test now retains explicit low-phi alias negative and compares nphi24 with same 2e−6 acceptance; corrected test commit CI pending",
+    "physical_scope": "Engineering and quadrature precision failure, not full physical γel result"
+  },
+  "latest_split_electron_neutrino_5d": {
+    "status": "local full on-shell adaptive 5D conditional benchmark; new GH Scientific CI pending",
+    "source": "kinetics/finite_mediator_split_lepton_reference.py",
+    "tests": "tests/test_finite_mediator_split_lepton_reference.py",
+    "report": "kinetics/FINITE-MEDIATOR-SPLIT-LEPTON-AUDIT.md",
+    "data": "kinetics/results/finite-mediator-split-lepton-2026-11-22.json",
+    "benchmark": "Tγ=Te=1,Tχ=.9,Tν/Te=(4/11)^(1/3),Mχ=.1me, mV=.03/.1/.3, G=.001 me^-2, gχ=ge±=g_twoν=4, nrad/nmu8, polar adaptive",
+    "results": "mV=.03 electron heat +6.983e−16, two ν −9.047e−16, total −2.063e−16 me5; transfer n32 separate heat −10.71% e and −7.59% ν vs adaptive, total happens +2.962% relative. nrad/nmu10 total −2.053e−16, 0.52% shift.",
+    "negative": "Split ν/e heat signs opposite only under ASSUMED ideal Tν/Tγ and equally coupled candidate Le−Lmu; numerical absolute channel errors must be bounded prior to cosmological inference. NOT real evolving neutrino decoupling.",
+    "physical_unknowns": "no viable mZ' g couplings and original χ1χ2φ charge assignment, no full finite SM ν/eγ dynamics, no nonthermal Γel, 86eV relic, BEC, Ω, CLASS"
+  },
+  "latest_real_phi_gauge_gate": {
+    "status": "scoped charge-selection proof and rational tests passed local and full Scientific CI #45007616038",
+    "source": "kinetics/gauge_charge_yukawa_audit.py",
+    "test": "tests/test_gauge_charge_yukawa_audit.py",
+    "report": "kinetics/REAL-PHI-YUKAWA-GAUGE-CHARGE-AUDIT.md",
+    "data": "kinetics/results/real-phi-gauge-charge-2026-11-22.json",
+    "scoped_result": "One real scalar under continuous U1' is neutral, qφ=0. Gauge Yukawa phase qφ-q2+q1 forces q1=q2; nonzero qchi1 implies nonzero qchi2 diagonal vector mediator coupling. χ1-only charged portal + qchi2=0 cannot coexist with original real-φ renormalizable decay.",
+    "alternatives": "Complex charged φ (adds scalar degree), symmetry breaking/mixing, higher-dimensional operators or other charges require explicitly different UV theory; not general no-go.",
+    "consequence": "Model cannot call χ1-only χe/χν heat physical for original three-species Yukawa before adding χ2-SM channels and validating full charge/energy ledger."
+  },
+  "latest_chi2_thermal_mass_gate": {
+    "status": "local 2 tests and conditional full-5D adaptive Pauli scan reproduced; new GH CI pending",
+    "code": "kinetics/chi2_lepton_heat_gate.py",
+    "tests": "tests/test_chi2_lepton_heat_gate.py",
+    "report": "kinetics/CHI2-LEPTON-HEAT-GATE.md",
+    "data": "kinetics/results/chi2-lepton-heat-2026-11-22.json",
+    "benchmark": "m1=.1 me, m2=.02 me, mphi=86 eV, Te=Tnu=.1me, Tχ1=Tχ2=.09me, mV=.3me, G=.001me^-2, equal gauge charge",
+    "positive": "Full 5D Pauli Q2ν/Q1ν=1.27426,1.27725,1.27969 for nrad=nmu=6,8,10. Q2e/Q1e≈1.08/1.07 at n6/8. If same thermal FD occupations, daughter channel is not mass-suppressed away.",
+    "limits": "No actual χ2 number density or spectrum from decay; radial/cutoff not fully converged; 86eV φ only threshold input; no physical gamma/Ω/BEC/CLASS"
+  },
+  "latest_vector_thermal_gate": {
+    "status": "8 local tests and full Scientific CI #45008415213 success",
+    "code": "kinetics/vector_mediator_threshold_thermal_gate.py",
+    "test": "tests/test_vector_mediator_threshold_thermal_gate.py",
+    "report": "kinetics/VECTOR-MEDIATOR-THERMAL-THRESHOLD-AUDIT.md",
+    "data": "kinetics/results/vector-mediator-thermal-threshold-2026-11-22.json",
+    "positive": "If massive Z′ equilibrated at T=me, direct BE EOS and independent Bessel series give delta gstar_rho≈2.999658,2.996212,2.966484 at mV/me=.03,.1,.3",
+    "negative": "Actual mediator abundance NOT measured. At rest χ1 pair annihilation to two Z′ opens at mV=.03me; Z′ dark pair decay to χ2 opens at .1me, to both χ species at .3me. Tree neutrino decay always open; e+e− closed under 2me. G*mV² determines only product of gauge couplings, not dark/ν widths.",
+    "physical_scope": "Not a Z′ Boltzmann rate, gauge constraints, SM entropy or 86eV relic/BEC/CLASS, mV(T) or actual extra Neff."
+  },
+  "latest_Zprime_MB_decay_gate": {
+    "code": "kinetics/vector_mediator_inverse_decay_gate.py",
+    "test": "tests/test_vector_mediator_inverse_decay_gate.py",
+    "report": "kinetics/VECTOR-MEDIATOR-INVERSE-DECAY-CLOCK-AUDIT.md",
+    "data": "kinetics/results/vector-mediator-inverse-decay-2026-11-22.json",
+    "status": "8 local numerical tests passed; new GitHub CI pending",
+    "assumptions": "Rest Γνν=g′²mV/(12π) two active left ν; MB time dilation K1/K2 independently checked; fixed Gme²=.001, |gχqχ|=sqrt4π maximum, gstar=10.75, T=me, no quantum Pauli/inverse or Z′ occupancy",
+    "result": "Conditional Γνnu,MB/H=3372 at mV/me=.03, 4.5768e6 at .1, 3.1644e9 at .3. At zero ν chemical potential final Pauli factors (1−f)(1−fbar)≥1/4 pointwise; for MB-distributed existing Z′ decay-loss lower/H at least Γ_MB/H/4, NOT net equilibration.",
+    "negative": "Virtual-only Z′ and freely chosen χ BGK cannot be promoted under this exploratory fixed contact coefficient without modeling real vector ν production/decay and gauge constraints."
+  },
+  "latest_vector_quantum_neutrino": {
+    "status": "10 local tests passed for exact moving Z′ FD/BE quantum source; new GH Scientific CI pending",
+    "code": "kinetics/vector_neutrino_quantum_1to2.py",
+    "test": "tests/test_vector_neutrino_quantum_1to2.py",
+    "report": "kinetics/VECTOR-NEUTRINO-QUANTUM-1TO2-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-quantum-1to2-2026-11-22.json",
+    "derivation": "C_V(p)=Γν0(mV/E)A(p,Tnu)[bBE(E/Tnu)-b(p)], Γν0=gprime²mV/(12π), A=1-(2Tnu/p)log[(1+exp(-(E-p)/2Tnu))/(1+exp(-(E+p)/2Tnu))], A(p=0)=tanh(mV/4Tnu). This is exact under unpolarized vector massless ν zero μ with prescribed Tnu, not χ kinetic gamma.",
+    "independent": "96-node FD decay angular Gauss agrees analytic A at 6 momentum/mass benchmarks rel≤2e−12; Bose equilibrium, sign of gain/loss and number/energy/entropy checked; radial n128→256 fill rate relative <1e−6",
+    "results": "With same arbitrary Gme²=.001, gχeff=sqrt4π, Tnu=me and reference H at gstar10.75, initial empty Z′ inverse source normalized by its BE density has Rfill/H=1349.73,1.84904e6,1.33809e9 at mV/me=.03,.1,.3.",
+    "physical_scope": "Fixed externally thermal FD ν reservoir, no ν density/temperature evolution, other Z′ channels, plasma masses, gstar dynamics, or physical 86eV ΩDM/BEC/CLASS; not χ elastic Γel."
+  },
+  "latest_closed_vector_nu_charge_gate": {
+    "code": "kinetics/vector_neutrino_equilibrium_charges.py",
+    "test": "tests/test_vector_neutrino_equilibrium_charges.py",
+    "report": "kinetics/VECTOR-NEUTRINO-CLOSED-CHARGES-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-equilibrium-charges-2026-11-22.json",
+    "status": "4 local mass/number/energy/entropy and independent massless-fugacity tests pass; new GH CI pending",
+    "model": "Only νe,νμ and antineutrinos (g=4) + massive vector (g=3), ννbar↔Z′, fixed volume, initial ν FD(T0,µ0=0) and bV=0, exact conserved Nν+Nνbar+2 NV and energy, chemical µV=2µν, no other SM or H",
+    "results": "mV/T0=.03,.1,.3: Tfinal/T0≈1.24600,1.24566,1.24276; µν/T≈−1.1359,−1.1349,−1.1263; nVfinal/hypothetical mu0 BE at T0≈.16829,.16932,.17556; Stotal/Sinitial≈1.07290,1.07284,1.07233",
+    "independent": "Finite Gauss p/T n128/256 matches formal mV/T→0 fixed-Proca-g3 independent fugacity series, T∞=1.2460341, mu/T=−1.1360001; NOT physical restored-gauge massless phase",
+    "negative": "Fast exact Z′↔νν collision does NOT imply µV=µν=0 equilibrium in a closed number/energy conserving sector. Other weak ννbar↔e+e− violates reduced particle-number charge; full SM needed.",
+    "scope": "Thermodynamic equilibrium only, no vector/ν time evolution, no χ elastic Γel or real 86eV dark relic/BEC/Ω/CLASS."
+  },
+  "latest_finite_nu_bath_vector_time": {
+    "source": "kinetics/vector_neutrino_finite_bath_time.py",
+    "test": "tests/test_vector_neutrino_finite_bath_time.py",
+    "report": "kinetics/VECTOR-NEUTRINO-FINITE-BATH-TIME-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-finite-bath-time-2026-11-22.json",
+    "status": "4 local tests passed, analytic independent stationary equilibrium, time and q/cutoff scan; new GitHub CI pending",
+    "construction": "Z′ b(p) exact per-step exponential from actual ννbar FD Pauli/Bose 1↔2; after each substep update ν FD T,y from conserving Nν+2NV and total energy. Assumes instantaneous number/energy-conserving ν self-thermalization (not modeled physical weak scattering).",
+    "positive": "At τ=5000 (Γ0 t), 500 substeps, n96 vector modes: Tnu/T0=1.246000156, y=−1.135899879, vector Nv=.061435497, entropy +7.28986%. Independent exact closed equilibrium T=1.24600008376,y=−1.13589977975, so ΔT=7.22e−8,Δy=−9.88e−8. Max N/E relative drift≈1e−14 for τ3000, and positive entropy each accepted substep.",
+    "negative": "τ100 with 20→40→80 steps shows ~first-order T bias (T=1.24573957,1.24469364,1.24416424). τ3000 with 20 substeps overdraws finite ν particle budget and aborts with ArithmeticError, no hidden clamp. No actual ν kinetic redistribution or full SM.",
+    "limits": "No H/FRW, e±γ weak channels, ν nonthermal strong, Z′→dark, original χ1/χ2/φ Bose, physical gamma_el or 86eV ΩDM/BEC/CLASS."
+  },
+  "latest_neutrino_strong": {
+    "stage": "Independent nonthermal active-neutrino strong Cν(k) from physical massive-vector 1↔2 and quantum Pauli/Bose",
+    "source": "kinetics/vector_neutrino_nonthermal_strong.py",
+    "test": "tests/test_vector_neutrino_nonthermal_strong.py",
+    "report": "kinetics/VECTOR-NEUTRINO-NONTHERMAL-STRONG-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-nonthermal-strong-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-nonthermal-strong.md",
+    "status": "prior syntax repair 64c394 passes real Scientific CI #45010866936; physics remains conditional and nonthermal time absent in that original source",
+    "formula": "Cν(k)=(2gV/gν) Γ0/k²∫_pmin^pmax dp p*mV/E J(p,k), pmin=abs(k-mV²/(4k)), J=bV(1-fν(k))(1-fν(E-k))-(1+bV)fν(k)fν(E-k), gV=3,gν=4",
+    "positive": "At mV=.3, fν=expit(-k+.15exp(-k)), bV=.75BE(E), n64 per k support side, weak dNν=-.01691497049725492, strong relative N error7.15e−14, E error -2.44e−15 and entropy error7.35e−14; physical Qν=-QV, Nν=-2NV and entropy≥0 for four nonthermal test shapes.",
+    "negative": "At mV=.3 naive unsplit k Gauss32 gives N mismatch -3.10827e−4, while split at k=mV/2 reduces <1e−6; mV=.03 has n32 relative mismatch +7.55e−4 and n96 -5.46e−8. Even weak-strong consistency at same pmax is no continuum cutoff certificate.",
+    "limits": "Equal fν=fνbar, strictly interior fermions and bV>0, no neutrino strong time integration, ν e/γ weak chemistry, dark χ1/χ2/φ, H/gstar, actual 86eV relic/Ω/BEC/CLASS.",
+    "engineering_negative": {
+      "run_id": 45010701908,
+      "commit": "f6f3eb396cd1c647ef6dd66c9653e0d55077207b",
+      "cause": "SyntaxError: '(' was never closed at vector_neutrino_nonthermal_strong.py:48, entropy vector dSV",
+      "fix": "Refactor to bb=np.asarray(b(p),float) and dSV=float(np.dot(w,rate*np.log(bb/(1+bb))))",
+      "new_ci": "pending"
+    }
+  },
+  "latest_reversible_event_graph": {
+    "status": "full Scientific verification #45011435812 success; mathematically conservative DISCRETE numerical pilot only",
+    "source": "kinetics/vector_neutrino_reversible_event_graph.py",
+    "test": "tests/test_vector_neutrino_reversible_event_graph.py",
+    "report": "kinetics/VECTOR-NEUTRINO-REVERSIBLE-EVENT-GRAPH-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-reversible-graph-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-reversible-event-graph.md",
+    "positive": "Equal-energy event lattice implicit physical reaction extent preserves C=Nν+Nantiν+2NV, L=Nν−Nantiν and E to ~1e−16 at tested h=.2, monotone entropy, Pauli/Bose bounds, nonthermal ν/antiν distinct and empty vector inverse production. All conditional Γ0=1 synthetic.",
+    "negative": "Compared with independent continuum 144x144 vector weak, h=.4 number ~−21%, h=.05 +0.378%, energy +0.409%, entropy +0.330%; Emax4 vs8 weak energy −29.5%, timestep dt1 vs .125 low-energy vector b shifts ~3.6%; NOT continuum converged.",
+    "next": "Verify new GH CI and build angular-conservative higher-order time/energy quadrature with q/dt/cutoff error bounds; no Γelastic/86eV Omega/BEC/CLASS."
+  },
+  "latest_vector_shell_overlap": {
+    "status": "full Scientific verification #45011770137 success; angular normalization scoped, continuum E source not validated",
+    "source": "kinetics/vector_neutrino_shell_cell_overlap.py",
+    "test": "tests/test_vector_neutrino_shell_cell_overlap.py",
+    "report": "kinetics/VECTOR-NEUTRINO-SHELL-CELL-OVERLAP-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-shell-overlap-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-shell-overlap.md",
+    "formula": "k_i=(i+1/2)h, E_j=jh, j=i+l+1, Delta k_i=|[ih,(i+1)h] ∩ [(E_j-p_j)/2,(E_j+p_j)/2]|, W=wV Γ0 mV/E_j Delta k_i/p_j; sum_i Delta k=p_j",
+    "positive": "Flat angular probability per vector residual <4e−15; at h=.2 continuum rate error +5.2037% center-hit falls to +0.0824% overlap at identical daughter grid; eventwise conservation and entropy still hold.",
+    "negative": "At h=.2 energy moment error +2.2292% and at h=.05 +0.5922%; radial/energy discretization and cutoff/time errors unresolved; graph is NOT cosmological 86eV strong solver.",
+    "prerequisite_ci": "new CI for both reversible_event_graph and shell_overlap"
+  },
+  "latest_vector_radial_endpoints": {
+    "status": "full Scientific CI #45012189092 success on b37b7dd; numerical scenario scoped only",
+    "source": "kinetics/vector_neutrino_shell_radial_endpoints.py",
+    "test": "tests/test_vector_neutrino_shell_radial_endpoints.py",
+    "report": "kinetics/VECTOR-NEUTRINO-SHELL-RADIAL-ENDPOINTS-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-shell-radial-endpoints-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-radial-endpoints.md",
+    "positive": "Exact positive vector 0th E-bin weight truncated at mV,Emax with E_j=integer*h; h=.05 weak vector energy relative error to independent continuum goes +0.592169% →−0.031990%; positive event W/Pauli/Bose conservation and shell norm retained.",
+    "negative": "h=.05 number error −0.1417%, coarse h=.4 number error worsens −0.712%→−2.694%, missing vector p=0 threshold bin and collocated energy; finite cutoff/dt/physical model not proven.",
+    "prev_ci": "reversible-event source 974d647 run #45011435812 success; shell-overlap CI #45011770137 pending at last check"
+  },
+  "latest_event_graph_invariants": {
+    "status": "Full Scientific verification #45012556392 passed; exact finite stoichiometric graph proof in scoped domain, not continuum/SM physics",
+    "source": "kinetics/vector_neutrino_event_invariants.py",
+    "test": "tests/test_vector_neutrino_event_invariants.py",
+    "report": "kinetics/VECTOR-NEUTRINO-EVENT-INVARIANTS-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-event-invariants-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-invariants.md",
+    "positive": "At mV=.4,Emax4,h=.4/.2/.1, shifted half-offset graph left nullity3 exactly C,L,E, no isolated neutrino rows; modular ranks and float SVD agree.",
+    "negative": "Original integer ν & antiν endpoint k=Emax never participates in Evector≤Emax decays, rows zero and left nullity5, 2 extra spurious conserved modes independent of dt. H theorem and C/L/E alone do NOT establish physical equilibrium.",
+    "scope": "Finite synthetic on-shell 1↔2 network only, no physical neutrino self-thermalization, SM weak, χ or 86eV DM."
+  },
+  "latest_constrained_quantum_equilibrium": {
+    "source": "kinetics/vector_neutrino_constrained_equilibrium.py",
+    "test": "tests/test_vector_neutrino_constrained_equilibrium.py",
+    "report": "kinetics/VECTOR-NEUTRINO-CONSTRAINED-EQUILIBRIUM-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-constrained-equilibrium-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-constrained-equilibrium.md",
+    "status": "independent local nonlinear entropy constraints and long-time microreversible pilot, new GH CI pending",
+    "positive": "At h=.2, max-entropy root T/T0=1.0284211265, mu_nu/T=-.10581032, mu_antinu/T=-.16095289, Smax−S0=.0011307271; root satisfies C,L,E <5e−16; event sweep leaves fixed point. Nonthermal τ500 dt1 reaches max occupancy abs diff .0010372 and entropy gap 1.86e−6; τ1000 dt1 .00033923, entropy gap 3.99e−7.",
+    "negative": "At h=.2 τ100 vector lowest b is .753052 dt2,.743975 dt1,.746678 dt.5,.748743 dt.25, nonmonotone timestep bias; h=.4→.1 equilibrium T and μ drift, no continuum Emax/threshold/Γel/86eV guarantee."
+  },
+  "latest_exact_event_strang": {
+    "status": "Full Scientific CI #45015296472 passed; local exact Riccati/Strang still scoped to finite synthetic vector-neutrino event graph",
+    "code": "kinetics/vector_neutrino_exact_event_strang.py",
+    "tests": "tests/test_vector_neutrino_exact_event_strang.py",
+    "report": "kinetics/VECTOR-NEUTRINO-EXACT-EVENT-STRANG-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-exact-strang-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-exact-strang.md",
+    "positive": "Exact quantum Riccati microextent vs 6 independent solve_ivp ODE x3 time step absolute ≤3.2e-16; for fixed h=.2 Strang max spectral errors at dt=.0625,.03125,.015625 are .007275,.002098,.0005215 vs .00390625 reference, halving ratios3.47,4.02; discrete C,L,E to 1e-15, Bose/Pauli bounds, monotone entropy.",
+    "negative": "At finer h=.1, dt=.125,.0625,.03125 errors .023212,.014168,.007222 vs dtref=.00390625, ratios1.64,1.96: stiff not asymptotic 2nd order. Time method does not fix finite UV/cutoff, actual χ Γelastic, φ Bose or 86eV DM.",
+    "guardrails": "No physical χ Γel, ΩDM, BEC or CLASS-ready. All input thermal/particles synthetic, Γ0=1 numerical unit."
+  },
+  "latest_stiff_strang_time": {
+    "source": "kinetics/vector_neutrino_strang_dt_convergence.py",
+    "test": "tests/test_vector_neutrino_strang_dt_convergence.py",
+    "report": "kinetics/VECTOR-NEUTRINO-STRANG-DT-CONVERGENCE-AUDIT.md",
+    "data": "kinetics/results/vector-neutrino-strang-dt-convergence-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-vector-neutrino-strang-dt.md",
+    "status": "Full Scientific CI #45015624238 success, synthetic temporal self-convergence only",
+    "positive": "At mV=.4 Emax4 tau1, Strang on finite h=.1 with 808 edges enters temporal second order: step-halving spectral self-difference ratios 0.794,1.493,2.688,3.550,3.876,3.968 for dt=.125/2→.001953125/2. h=.2/.4 ratios tend to 4. C/L/E residual ~1e-15, entropy positive and Pauli/Bose retained.",
+    "negative": "For h=.1 coarse dt refinement initially increases error; stronger stiffness and 3+ dt needed. Entire finite graph Γ0=1 synthetic, no continuum h/UV/physical Γelastic/86eV Ω/BEC/CLASS.",
+    "upstream": "Exact Riccati+Strang parent a77ebe56f6ccf6755b8d884750a6b3a34a392025 CI #45015296472 in_progress at last check, must confirm before declaring success."
+  },
+  "latest_nonthermal_chi_lepton_5d": {
+    "status": "Full Scientific CI #45016136831 success on b4d6549. Full nonthermal finite-vector 5D WEAK heat/entropy only, no physical strong operator.",
+    "source": "kinetics/nonthermal_chi_lepton_5d_weak.py",
+    "tests": "tests/test_nonthermal_chi_lepton_5d_weak.py",
+    "report": "kinetics/NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md",
+    "data": "kinetics/results/nonthermal-chi-lepton-5d-weak-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-nonthermal-weak.md",
+    "positive": "Arbitrary isotropic fchi(E), flepton(omega) passed full on-shell finite-vector/lepton-mass Pauli forward/reverse, exact event Qchi+Qlepton=0, Sdot>=0. FD thermal subset Mchi1=.1,mlepton0/.5 at nrad4 Qchi=6.9359e-14 /6.0882e-14, common T yields Q~1e-29. Nonthermal Mchi1=.1 Mchi2=.02 Q>0 under same prescribed arbitrary f and explicit finite mV.",
+    "negative": "ONLY 5D incoming-integrated weak moments with nrad4/not radially converged, no strong mode Cchi/Clepton, actual daughter abundance, SM weak bath, Zprime species dynamics, actual couplings, FRW/gamma_el/86eV Omega/BEC/CLASS.",
+    "model": "Real Z2-odd neutral phi Yukawa in simple U1' vectorlike branch requires qchi1=qchi2; selected rates from same G,mV but no UV-valid parameter demonstration"
+  },
+  "latest_chi_lepton_entropy_projection": {
+    "status": "verified real Scientific CI #45016584670 on 05cac6; preserved negative binned entropy",
+    "source": "kinetics/paired_chi_lepton_barycentric_5d.py",
+    "tests": "tests/test_paired_chi_lepton_barycentric_5d.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-BARYCENTRIC-5D-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-barycentric-5d-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-conservative-entropy-negative.md",
+    "positive": "Same 5D events barycentric signed deposition conserve each species N to ~1e−28, Qχ+Qℓ to ~1e−26 at fixed test quadrature and arbitrarily nonthermal f. For FD affine log-odds, projected entropy equals event entropy.",
+    "rigorous_negative": "Legal oscillatory fχ=expit(-E+.3sin(4E)),fℓ=expit(-ω+.3cos(4ω)): microscopic Sdot_event=+6.4303664378e−13 while N=10 bin-projected Sdot=−3.6049435416e−14 and N=20 −2.7628702273e−15 despite exact N/E. At 40,80,160,320 bins entropy positive but relative bias -53.10%,-9.34%,-3.10%,-0.70%. DO NOT use as nonlinear strong collision.",
+    "scope": "Synthetic nrad4/nmu4 5D, not full physical χ1χ2 daughter bath or actual collision operator, no gamma/H/Ω/BEC/CLASS."
+  },
+  "latest_logit_galerkin_5d": {
+    "status": "verified real Scientific CI #45016928429 on 8bc98b; exact instantaneous H only, no physical full strong χ1χ2 time",
+    "code": "kinetics/paired_chi_lepton_logit_galerkin_5d.py",
+    "test": "tests/test_paired_chi_lepton_logit_galerkin_5d.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-LOGIT-GALERKIN-5D-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-logit-galerkin-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-logit-entropy-repair.md",
+    "positive": "Same barycentric alpha in f_event=expit(sum alpha_i logit f_i) and signed species event deposition: Sdot_bin=event Jln(F/R)>=0 to relative ~4e-14 at 6 bins, species N and exchanged E exact.",
+    "negative": "Physical oscillatory analytic-occupation 5D entropy +6.430366e-13; reconstituted logit-bin event entropy N10=+4.269218e-14 (-93.4%), N320=+6.341566e-13 (-1.38%), still no radial/CM/cutoff convergence, bounded time, actual χ2/φ/SM/FRW or physical Γelastic."
+  },
+  "latest_chi_lepton_bounded_time": {
+    "status": "Scientific verification #45017550678 success at 12e3874; only 10-bin synthetic first-order nonlinear time, numeric rate unverified.",
+    "code": "kinetics/paired_chi_lepton_bounded_time.py",
+    "test": "tests/test_paired_chi_lepton_bounded_time.py",
+    "report": "kinetics/PAIRED-CHI-LEPTON-BOUNDED-TIME-AUDIT.md",
+    "data": "kinetics/results/paired-chi-lepton-bounded-time-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-bounded-time.md",
+    "equations": "Physical finite energy cell radial 0th w_i=g/(6π²)[(U_i²−m²)^(3/2)−(L_i²−m²)^(3/2)]; nonlinear nodal ODE df_i=(dN_i)/w_i from the same logit-interpolated fully Pauli finite-mV χℓ weak 5D source. Adaptive two-half-Euler (FIRST order) accepts only strictly Fermi bounded, positive actual quantum entropy, full-spectrum step-doubling <=atol. No clipping/thermal FD reset.",
+    "positive": "Synthetic Mχ=.1,mℓ0,G=.001,mV=.1,nrad4,nmu4,ncos12,nphi12,cut12,bins10,tau1e10: oscillatory mode atol1e−6/−7/−8 accepted/rejected 4/2,11/7,33/15; smooth 2/1,7/4,24/12; weighted Nχ,Nℓ and E residual <=4.5e−16, all accepted step entropy positive, Pauli strict.",
+    "negative": "Same previous oscillatory 10-bin H-consistent source STILL physically underestimates analytic continuous f event entropy by 93.4%; angular/radial/UV/cutoff not converged, only first-order temporal scheme; no actual χ2 daughter number, realistic SM/eγν/gauge/φ Bose/FRW, physical gamma/86eV Ω/BEC/CLASS."
+  },
+  "latest_independent_chi_lepton_quadrature": {
+    "status": "Real Scientific CI #45035908197 success on c6d87db; negative 5D heat sign/cutoff instability verified.",
+    "code": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "scan": "kinetics/chi_lepton_5d_quadrature_gate.py",
+    "tests": "tests/test_chi_lepton_quadrature_gate.py",
+    "report": "kinetics/CHI-LEPTON-5D-QUADRATURE-NEGATIVE-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-5d-quadrature-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-5d-quadrature-negative.md",
+    "positive": "Independent thermal FD subset exactly matches published Qchi=6.935904667e-14 and entropy7.70656074e-15; common T finite chemical μ heat ≈2.87e−28, event energy ~3.6e−15 and Pauli entropy nonnegative.",
+    "negative": "Oscillatory full 5D heat source sign flips radial4/6/8/10 and cutoff8/12/16; coarse nrad4/nmu4/ncos12/nphi12 Qχ=+2.55856732856e−13 vs nrad64/nmu16/ncos64/nphi32 +4.61478107e−15, 55.44×; even refined has angular residual and unknown physical cutoff/mass/coupling. Prior time pilot cannot infer Γelastic.",
+    "class_ready": false
+  },
+  "latest_segmented_chi_lepton_5d": {
+    "status": "Full Scientific CI #45036745455 passed on 78d401c. Scoped radial/UV conditional scheme.",
+    "source": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "runner": "kinetics/chi_lepton_segmented_5d_gate.py",
+    "tests": "tests/test_chi_lepton_segmented_5d_gate.py",
+    "report": "kinetics/CHI-LEPTON-SEGMENTED-5D-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-segmented-5d-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-segmented-radial.md",
+    "positive": "Momentum Gauss p slices at E-guided boundaries preserve ∫p²dp exactly (<3e−14) even for mℓ=.5; oscillatory f cutoff12 nseg12×local6 Qχ=4.556593552e−15 agrees independent unsegmented nr64 Qχ=4.55619107e−15 at same angular setting (~0.009%). Fixed ΔE≤1 tails cutoff16→20 Qχ shift ~0.0047% with nlocal5, not total uncertainty.",
+    "negative": "At nseg8 local3 vs4, oscillatory Q changes 2.27825e−14→1.29928e−15 (not universally converged); outgoing CM polar ncos16/24/32/48/64 yields Q4.8748/4.6063/4.5688/4.6216/4.6511 e−15 and nonmonotone entropy. Full coupled angular+radial+UV and actual χ1χ2φ/SM FRW unknown; no Γel/Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_log_transfer_angle_5d": {
+    "status": "Full Scientific CI #45037526409 successful on 1e5b497; mathematical mapping and finite synthetic 5D Q/S validated at tested grids.",
+    "source": "kinetics/chi_lepton_outgoing_log_angle.py",
+    "full_kernel": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "tests": "tests/test_chi_lepton_outgoing_log_angle.py",
+    "report": "kinetics/CHI-LEPTON-LOG-TRANSFER-ANGLE-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-outgoing-log-angle-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-log-transfer-angle.md",
+    "positive": "A=1000 uniform CM ncos8 angular I0 misses by −93.1%, log-transfer ncos8 I0 ~−4.37e−10 and I1 ~6.62e−11. Full on-shell mV=.01 smooth Pauli Qχ mapped ncos8=1.799941528e−17 vs mapped ncos32=1.799939448e−17; uniform ncos32 only 1.387397025e−17 (−22.92%). mV=.1 oscillatory mapped ncos32 and64 Qχ agree ~0.00081% at fixed incoming.",
+    "negative": "Uniform u compensation makes I0 exact but I1 misses −33.9% at A1000/−50.3% at A10000. Mapped angular accuracy does NOT remove correlated incoming radial/cutoff, nonzero electron mass, actual χ2, physical model/SM/real φ/FRW constraints; no Γelastic/86eV relic.",
+    "class_ready": false
+  },
+  "latest_joint_mass_chi_lepton_5d": {
+    "status": "Full Scientific CI #45038184612 passed on b08c4ca; synthetic weak masses only",
+    "code": "kinetics/chi_lepton_joint_mass_gate.py",
+    "test": "tests/test_chi_lepton_joint_mass_gate.py",
+    "report": "kinetics/CHI-LEPTON-JOINT-MASS-5D-AUDIT.md",
+    "data": "kinetics/results/chi-lepton-joint-mass-5d-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi-lepton-joint-mass.md",
+    "positive": "Smooth synthetic χ1 M=.1 weak mid mℓ0 Q8.995854e−14 vs mℓ=.5 Q8.144078e−14 (−9.47%); χ2 M=.02 massless Q9.066973e−14 vs mℓ=.5 Q8.185587e−14 (−9.72%). Both synthetic Pauli pair energy/entropy and common T independent chemical μ fixed point verified.",
+    "negative": "Oscillatory χ2 M=.02,mℓ=.5 Q coarse1.88347e−15,mid1.93652e−15,fine1.97026e−15 (+1.74% mid→fine); joint levels change cutoff+angle+radial simultaneously, not an isolated error bound. Historical gspin4×4 convention not correct for all ν/e, actual χ2 abundance/φ Bose/SM FRW absent; no Γelastic/86eV relic.",
+    "class_ready": false
+  },
+  "latest_shared_lepton_two_chi_strong": {
+    "status": "Full Scientific CI #45038900605 not yet confirmed success",
+    "source": "kinetics/chi1_chi2_shared_lepton_pauli.py",
+    "test": "tests/test_chi1_chi2_shared_lepton_pauli.py",
+    "independent_weak": "kinetics/independent_chi_lepton_5d_quadrature.py",
+    "report": "kinetics/CHI1-CHI2-SHARED-LEPTON-PAULI-AUDIT.md",
+    "data": "kinetics/results/chi1-chi2-shared-lepton-pauli-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-chi1-chi2-shared-lepton.md",
+    "positive": "Same shared nonthermal lepton fℓ for two distinct Mχ=.1/.02 Pauli vector scattering channels: Qχ1=+8.4690e−14,Qχ2=+1.03844e−13,Qℓ=−1.88534e−13; Sdot microscopic and nodal logit match to 3e−28. Independent 5D weak Q and H agree <2e−11 relative; separate χ1/χ2/lepton number and E drifts ≤4.5e−16 in adaptive first-order time τ1e10, 11 accepted and 7 rejected, S gain+0.000340048, all Pauli bounds.",
+    "negative": "χ2 abundance supplied as synthetic separate initial condition (NO actual φ decay); nrad4/nmu4/CM8 finite vector 5D rate known gross underresolution for nonthermal oscillatory shapes, gχgℓ4×4 historical numeric not SM; adaptive Euler local error not global. No φ Bose, e±γν, mediator plasma, FRW/H/86eV relic.",
+    "class_ready": false
+  },
+  "latest_moving_yukawa_bose_pauli": {
+    "status": "Scientific run #45039365150 in_progress at last check; must read actual completion",
+    "code": "kinetics/moving_yukawa_bose_pauli_weak.py",
+    "tests": "tests/test_moving_yukawa_bose_pauli_weak.py",
+    "report": "kinetics/MOVING-YUKAWA-BOSE-PAULI-WEAK-AUDIT.md",
+    "data": "kinetics/results/moving-yukawa-bose-pauli-weak-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-moving-yukawa-bose-pauli.md",
+    "positive": "Mother-spin-averaged real φ Yukawa Γ_rest=y²[(m1+m2)²−mφ²]sqrtλ/(16πm1³), moving daughter E2+Eφ=E1, exact F=f1(1−f2)(1+bφ),R=(1−f1)f2 bφ, T=.8 nonzero μ1=.03,μ2=.05,μφ=−.02 fixed point Rφ≈4.88e−27, S≈1.21e−41; Pauli/Bose N stoichiometry and Qtotal~1e−26, entropy positive. T1=.9 vs T2=Tφ=1 gives net φ destruction −2.65824e−11; T1=1.1 gives φ production +2.73811e−11.",
+    "negative": "Initial φ or χ2 are prescribed, not evolved. mφ=.001 toy ≠86eV; zero bφ has exactly zero inverse but formal +infinite entropy derivative, no finite zero-mode solver. Full strong 1↔2, physical coupled SM/Zprime/FRW and angular/q/IR convergence missing, no Γelastic/ΩDM/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_single_on_shell_bounded_bose_event": {
+    "status": "elementary implicit physical quantum event and 250 deterministic stress controls, 5 local tests passed; new GH CI pending",
+    "source": "kinetics/yukawa_on_shell_bounded_event.py",
+    "tests": "tests/test_yukawa_on_shell_bounded_event.py",
+    "report": "kinetics/YUKAWA-ON-SHELL-BOUNDED-EVENT-AUDIT.md",
+    "data": "kinetics/results/yukawa-on-shell-bounded-event-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-yukawa-bounded-on-shell-event.md",
+    "positive": "E1=.3162277660,E2=.1932193769,Eφ=.1230083891 exact moving on shell. Bounded one-event implicit reaction f1=a−x/w1,f2=d+x/w2,b=b0+x/wφ with full J=f1(1−f2)(1+b)−(1−f1)f2 b; forward, inverse and b0=0 grow/consume boson as allowed, energy and Nχ1+Nχ2, Nχ1+Nφ exactly conserved, H increases. 250 deterministic Fermi/Bose/capacity/stiffness samples pass.",
+    "negative": "w1,w2,wφ and W arbitrary positive test mode capacities, NOT physical phase-space weights nor global multimode collision/time, implicit Euler first order. Initially too-tight absolute-only 3e−12 numeric tolerance on total18858 corrected to 5e−14 REL+5e−13 ABS after demonstrating 2e−16 relative rounding; physics unchanged. No φ q-grid/SM/FRW/86eV relic.",
+    "class_ready": false
+  },
+  "latest_pending_ci": {
+    "head_sha": "960980e5f59ee7878000a4b107e0cfad6f918c11",
+    "run_id": 45039365150,
+    "observed_status": "in_progress",
+    "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/45039365150",
+    "scope": "moving Yukawa weak; NOT the bounded-event stage"
+  },
+  "latest_bounded_yukawa_three_species_time": {
+    "status": "Real Scientific CI #45040188999 passed on 4a5bb336; physical three-species toy finite-grid time only.",
+    "source": "kinetics/yukawa_bose_pauli_bounded_time.py",
+    "tests": "tests/test_yukawa_bose_pauli_bounded_time.py",
+    "report": "kinetics/YUKAWA-THREE-SPECIES-BOUNDED-TIME-AUDIT.md",
+    "data": "kinetics/results/yukawa-three-species-pauli-bose-time-2026-11-22.json",
+    "temporal_data": "kinetics/results/yukawa-bose-pauli-temporal-tolerance-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-yukawa-three-species-bounded-time.md",
+    "positive": "Full F/R on-shell moving parent, χ1,χ2 Fermi logits and φ Bose ηφ=ln[(1+b)/b] interpolated with same positive energy deposition; 3-species H theorem identity event vs node to ~1e−27, N1+N2,N1+Nφ and E to ≤2e−15; thermal weak/strong matches at bins16/32/64 to <1e−10, nonzero μ chemical fixed point; hot T1=1.1 produces real φ and χ2 in dynamic time, cold T1=.9 absorbs both; entropy increases.",
+    "negative": "At same illustrative toy time bins16 vs64 shifts |ΔNφ| by ~8.9% cold and ~2.6% hot; first-order adaptive local atol1e−5/1e−6/1e−7 changes ΔNφ .00126915/.00126852/.00126832. φ b=0 input fail closed; physical gspin, IR, parent radial convergence, SM/Zprime/FRW/physical 86eV benchmark/Ω/BEC/CLASS unresolved.",
+    "class_ready": false
+  },
+  "latest_four_species_yukawa_shared_lepton": {
+    "status": "verified real Scientific #45040794111 success at 3e8b1069, structural synthetic four-population model only",
+    "code": "kinetics/four_species_yukawa_shared_lepton.py",
+    "tests": "tests/test_four_species_yukawa_shared_lepton.py",
+    "report": "kinetics/FOUR-SPECIES-YUKAWA-SHARED-LEPTON-AUDIT.md",
+    "data": "kinetics/results/four-species-yukawa-shared-lepton-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-shared-lepton-yukawa.md",
+    "positive": "Identical χ1/χ2 energy grids/cell weights in vector Pauli χℓ elastic and real-φ Yukawa channels; ONE evolving common lepton. Combined Sdot nodes vs F/R ~1.11e−25, global Nχ1+Nχ2,Nχ1+Nφ,Nlepton,E machine residual ~1e−16. mlep0 and .5 chemical μ fixed points; no vector coupling G=0 lepton heat 0 but φ still produced. Six bins12/16/24 T1=.9 and1.1 toy histories show φ absorption/production AND lepton cooling/heating, entropy rises.",
+    "negative": "Elastic full 5D radial nrad4/nmu4 is under-resolved for some nonthermal distributions (prior sign flips / 55× error); φ IR not validated, finite Pauli/Bose time first order with local tolerance changes, physical coupling/spin/flavors/Zprime/SM/FRW/86eV Ω/BEC/CLASS absent.",
+    "class_ready": false
+  },
+  "latest_four_species_segmented_elastic": {
+    "status": "3 dedicated local tests passed in ~21s, parent 10 tests passed; current new GH CI pending",
+    "source": "kinetics/chi1_chi2_shared_lepton_pauli.py",
+    "coupled_source": "kinetics/four_species_yukawa_shared_lepton.py",
+    "tests": "tests/test_four_species_segmented_elastic_gate.py",
+    "report": "kinetics/FOUR-SPECIES-SEGMENTED-ELASTIC-GATE-AUDIT.md",
+    "data": "kinetics/results/four-species-segmented-elastic-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-segmented-elastic.md",
+    "positive": "Two χ species on shared physical capacity and ONE lepton, configurable energy-guided p/k radial segments. At fixed cut6, angular nmu8,ncos16,nphi16, 6×nlocal3/4/5/6 Qχ1=−9.9134855/−9.9139190/−9.9142792/−9.9144322 e−12, independently matches separate full on-shell 5D weak Q/S at ~1e−14 relative, preserves N/E/H; original uniform default unchanged.",
+    "negative": "cut6,8,10 Qχ1=−9.9139/−11.9702/−12.5864e−12 (26.96% increase magnitude 6→10); oscillatory legal f uniform4 Q+1.9511e−12 vs segmented local5 +.82364e−12 (factor2.37). No full χSM radial/UV/CM/φ IR/dt convergence, no physical Zprime/plasma FRW/86eV ΩDM/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_four_species_cutoff_mesh_separation": {
+    "status": "Scientific #45044674246 success. Only synthetic source and mesh alias.",
+    "source": "kinetics/four_species_cutoff_mesh_separation.py",
+    "scanner": "kinetics/four_species_rate_error_budget.py",
+    "strong_sources": [
+      "kinetics/chi1_chi2_shared_lepton_pauli.py",
+      "kinetics/four_species_yukawa_shared_lepton.py"
+    ],
+    "tests": [
+      "tests/test_four_species_cutoff_mesh_separation.py",
+      "tests/test_four_species_rate_error_budget.py"
+    ],
+    "report": "kinetics/FOUR-SPECIES-CUTOFF-MESH-SEPARATION-AUDIT.md",
+    "data": "kinetics/results/four-species-cutoff-mesh-separation-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-cutoff-mesh-separation.md",
+    "positive": "For FD occupations affine Fermi logits make weak Qχ1, Qχ2, event entropy and Yukawa source essentially invariant to moving the energy mesh when incoming cutoff held (2e-11 relative). With new separate elastic_integration_cut and fixed mesh, positive Pauli/H and N/E remain preserved; independent analytic-occupation 5D reference matches Fermi-grid convergence.",
+    "critical_negative": "Legal nonthermal oscillatory f at physical incoming cut12/bin64: meshcut12→20 changes Qχ1 -1.14412365e−11→-1.24194609e−11 (~7.9%), H+8.31156e−11→+5.70714e−11 (~45.6%), despite same microscopic incoming phase-space. With meshcut20 fixed and bins32/64/128/256, reconstructed entropy is −86.25/−49.21/−18.41/−5.73% relative to the separately computed same-quadrature analytic-f 5D weak reference. Matched conservation and H theorem are NOT numerical convergence proofs.",
+    "limitations": "Synthetic arbitrary G,mV,T,masses; independent analytic weak reference itself nlocal3/nμ6/CM12/nφ12 is not fully physical continuum or SM complete, neither γelastic nor φ IR freezeout, Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "session_active_launch": {
+    "start_utc": "2026-11-22T21:20:21Z",
+    "last_clock_check_utc": "2026-11-22T21:55:00Z",
+    "elapsed_minutes_observed": 34.65,
+    "between_launch_execution": false
+  },
+  "latest_four_species_mode_refinement": {
+    "status": "Parent Scientific #45045253260 in_progress last check; three local tests passed, fixed-quadrature only.",
+    "source": "kinetics/four_species_mode_refinement_gate.py",
+    "tests": "tests/test_four_species_mode_refinement_gate.py",
+    "report": "kinetics/FOUR-SPECIES-MODE-REFINEMENT-AUDIT.md",
+    "data": "kinetics/results/four-species-mode-refinement-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-four-species-mode-refinement.md",
+    "positive": "On fixed χ1χ2+one lepton synthetic finite-vector Pauli 5D quadrature, Fermi logit interpolation proven bounded |L−Ih L|≤h² sup|L''|/8, direct 10k-point tests ×3 species ×3 grids. H error at N256/512/1024/2048/4096 = -5.7321/-1.4830/-0.4003/-0.09655/-0.02447%, halving ratios 3.865,3.705,4.146,3.946. Fixed mesh N1024 incoming cut16→20 χ1 Q shifts ~0.0127% on same low-order angles.",
+    "negative": "Signed χ1 and χ2 Q errors can change sign with N; N4096 0.024% H concerns ONLY Fermi-logit mode interpolation at fixed quadrature and cannot establish full 5D physical Γelastic, actual φ time/IR, finite SM or Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_phi_ir_first_cell_artifact": {
+    "status": "analytical proof of first Bose energy-bin artifact, independent p²dp + zeta(3) test, 15 mass/bin cases, 5 focused local tests passed in 0.60s; new GH CI pending",
+    "source": "kinetics/phi_ir_first_cell_artifact.py",
+    "tests": "tests/test_phi_ir_first_cell_artifact.py",
+    "report": "kinetics/PHI-IR-FIRST-CELL-ARTIFACT-AUDIT.md",
+    "data": "kinetics/results/phi-ir-first-cell-artifact-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-ir-first-cell-artifact.md",
+    "proof": "mφ<<h<<T: w0≈gφ h³/(48π²), BE(mφ)≈T/mφ, n0,true≈gφTh²/(16π²). Thus n0,node/n0,true≈h/(3mφ) diverges as mφ→0; physical massless n=gφ ζ(3)T³/π² finite, no condensate δ(p).",
+    "positive": "Independent massless p integral 0.12179382823357311 and ζ3/π² 0.12179382823357308. Exact first cell thermal number diagnostic makes 86eV N16/64/256 total ratios 1.02708/1.003399/1.000320; not substituted into dynamic Yukawa.",
+    "negative": "For mφ=86eV=8.6e−8GeV,T=1GeV synthetic,Eupper12.1GeV,N64 first cell npoint165.873845 vs true0.0002193076 =×756352, full thermal total ×1363.47; N16 total ×87199, N256 ×22.29. This is numerical fake BEC/Ω, not physical dark matter. Simple replacement of first nodal Bose by averaged b may violate existing event log-fugacity detailed balance/H.",
+    "class_ready": false
+  },
+  "latest_phi_bose_false_equilibrium": {
+    "status": "2 focused local tests passed 0.62s, six deterministic full four-population states independently checked vs exact Bose p²dp, new GH CI pending",
+    "source": "kinetics/phi_bose_false_equilibrium_gate.py",
+    "tests": "tests/test_phi_bose_false_equilibrium_gate.py",
+    "report": "kinetics/PHI-BOSE-FALSE-EQUILIBRIUM-AUDIT.md",
+    "data": "kinetics/results/phi-bose-false-equilibrium-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-false-equilibrium.md",
+    "positive": "All equal-T μ=0 moving Yukawa microscopic χ1↔χ2+φ F/R rates |Rφ|<5e−26, event H<4e−41, N/E/charge residuals <3e−41 at N16/64/256 for both mφ=.001 and86e−9 GeV.",
+    "critical_negative": "For mφ=86eV=8.6e−8 GeV,T=1GeV, upper E12.1, thermal scalar ledger Nφ=10616.026/165.9958/2.71357 vs physical excited thermal Nφ=0.1217452 (factors87199/1363.47/22.289) at N16/64/256, despite exact detailed balance. This is a numeric false scalar Ω/BEC positive; no physical condensate.",
+    "class_ready": false
+  },
+  "latest_phi_bose_moment_galerkin": {
+    "status": "completed:success (actual run on a032279). No finite-time claim from that prior CI.",
+    "code": "kinetics/phi_bose_moment_galerkin.py",
+    "tests": "tests/test_phi_bose_moment_galerkin.py",
+    "report": "kinetics/PHI-BOSE-MOMENT-GALERKIN-AUDIT.md",
+    "data": "kinetics/results/phi-bose-moment-galerkin-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-moment-galerkin.md",
+    "positive": "Bose moment M_i=∫dΠ h_i(E)b(E) has physical N=ΣM_i, U=ΣE_i M_i, entropy differential dS=Ση_i dM_i and symmetric negative dM/dη. At mφ=86e−9 GeV T=1 Emax12.1 physical thermal N at N16/64/256 0.1217452128079166/0.1217452128079163/0.1217452128079161 vs independent pquad0.1217452128079171. Massless N cutoff50 0.12179382823357307 vs ζ3/π²0.12179382823357308. Same-hat Yukawa source conserves 2 charges and energy with eventwise H>=0, chemical fixed point correct.",
+    "negative": "Replacing only first thermal node b(E=mphi) with true first half-cell average bbar3.49054 makes inverse fugacity incorrectly shift and spoils common-T chemical fixed point, resulting artificial Rphi +0.7393057 and H+0.1686855 under unit event weights, whereas consistent source Rphi≈4.66e−15. The new representation is NOT nonlinear finite-step time solver nor physical coupling/relic/true BEC.",
+    "provenance": "Independently written and tested in isolated sandbox, no user PC/Computer Use, no unrelated projects. Synthetic rates and illustrative GeV units."
+  },
+  "latest_phi_bose_implicit_moment_time": {
+    "status": "independently derived finite-step entropy concavity proof and local 9 focused tests passed, new GitHub Scientific CI pending",
+    "code": "kinetics/phi_bose_implicit_moment_step.py",
+    "tests": "tests/test_phi_bose_implicit_moment_step.py",
+    "report": "kinetics/PHI-BOSE-IMPLICIT-MOMENT-TIME-AUDIT.md",
+    "data": "kinetics/results/phi-bose-implicit-moment-step-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-implicit-moment-step.md",
+    "mathematical_proof": "Fully implicit moment equation M(ηnew)−Mold=dt C(ηnew), physical concave entropy S(M) with gradient η and microscopic H=C·η=ΣW(F−R)log(F/R)>=0 implies ΔS>=dtH. Newton assembled from analytic dM/dη and full Pauli/Bose event-Jacobian, ηphi>0 backtracking no clipping.",
+    "positive": "At synthetic 16-event graph N16 mphi86e−9, dt=.25/.5/1/2, Newton 4/4/4/5 iters, ΔS positive 1.2816/1.9999/2.7933/3.4810e−6, always above dt·H; dark charges/E at ~1e−16, Fermi/Bose admissible. Time self-convergence 2/4/8/16/32/64 steps at t2 gives final halving ratio 1.964 (first order). Physical tree m1=.1,m2=.02,mphi86e−9,y=.001 Γrest2.7501974166e−9 GeV, Rphi−1.16493012863e−11 for cold mother Tchi1=.9 vs Tchi2=Tphi1 at parent pmax2, nrad12/nangle12; independent previously existing moving Yukawa weak code matches <2e−12 relative.",
+    "negative": "The synthetic 16-event graph t2 N8/16/32/64 ΔNphi−5.993/−6.262/−2.830/−1.645×10−5 is not continuum-q converged despite exact H/charges. Even physically normalized vacuum Yukawa rate t1e7 at bins8/16/32 ΔNphi−8.526/−8.068/−7.773×10−5 (~9.7% mesh spread). Full SM/Zprime/FRW, φ zero-mode/b0, actual cosmological Ω/BEC/CLASS absent.",
+    "class_ready": false
+  },
+  "latest_phi_bose_ir_shape_gate": {
+    "status": "Four focused local tests pass and independently computed physical mother p/c+Bose-mode sensitivity; new GitHub CI pending.",
+    "code": "kinetics/phi_bose_ir_shape_gate.py",
+    "tests": "tests/test_phi_bose_ir_shape_gate.py",
+    "report": "kinetics/PHI-BOSE-IR-SHAPE-GATE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-ir-shape-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-ir-shape-gate.md",
+    "positive": "The real vacuum width, moving p/c on-shell Pauli+Bose source, independent continuous Bose occupancy and physical-hat source agree to <8e−15 relative for affine thermal η(E)=E at mode N16–512; exact H and event charges. Incoming parent p/c n24×48→n72×144 changes curved case at pmax2 only ~0.016% at compared grids.",
+    "critical_negative": "Legal IR ηφ(E)=E+.4exp(-((E−.04)/.02)²) source relative alias N16/32/64/128/256/512 +68.15/+29.57/−11.35/−6.20/−1.99/−0.573%; broad η N16 rate error only +0.316% but microscopic H −16.83%. Separately parent physical pmax2/4/6/8/12/16 with analytic occupations and high orders Rφ−5.952e−12/−1.3934e−11/−1.656e−11/−1.716e−11/−1.7295e−11/−1.7299e−11. pmax2 omits ~65.6% rate magnitude relative pmax16. No joint physical mode/time+parent cutoff convergence, no actual SM/FRW Ω/BEC/CLASS."
+  },
+  "latest_phi_nonuniform_ir_hats": {
+    "status": "6 local tests passed (about 1.81s), new GH CI pending",
+    "code": "kinetics/phi_bose_nonuniform_ir_grid.py",
+    "tests": "tests/test_phi_bose_nonuniform_ir_grid.py",
+    "report": "kinetics/PHI-BOSE-NONUNIFORM-IR-GRID-AUDIT.md",
+    "data": "kinetics/results/phi-bose-nonuniform-ir-grid-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-nonuniform-ir-grid.md",
+    "positive": "For two legal synthetic nonlinear ηφ, 4 predeclared nonuniform mesh families and N16/32/64/128/256, physical p²dp and same-hat on-shell Pauli/Bose N/E/H unchanged. Affine thermal η exact. Narrow ηφ=E+.4exp(-((E−.04)/.02)^2): at N64 cubic E grid Q relative -0.62693% vs uniform -11.35098%; at N256 cubic -0.04302% vs uniform -1.98752%. Broad η N64 two-zone H error -0.26308% vs uniform -4.16774%.",
+    "critical_negative": "For mphi86e−9 GeV,Tphi1,ηphi(rest)=8.6e−8, N16 quadratic grid at physical Γrest tree Yukawa and cold parent Tχ1=.9 has Cφ,first=0 and Cφ,all<=0; still implicit Newton cannot decrease residual under ηphi>0 for dt30 or dt1000, although dt20 converges with ηmin2.60e−8 and positive entropy. N16 uniform dt1000 succeeds; N32/64 cubic dt1000 succeeds. This is a discrete nonlinear moment-feasibility/boundary obstruction, not evidence of an actual Bose δ-condensate. Parent pmax2 UV omission and full SM/Zprime/FRW remain unresolved; Ω/BEC/CLASS false."
+  },
+  "latest_phi_bose_moment_tangent": {
+    "status": "Exact two-overlapping-positive-hat algebraic tangent sign proof; independent real tree Yukawa p/c source+physical Bose susceptibility 16-grid/4-rest-mass audit and 4 local tests pass. New GH CI pending.",
+    "code": "kinetics/phi_bose_moment_tangent_gate.py",
+    "tests": "tests/test_phi_bose_moment_tangent_gate.py",
+    "report": "kinetics/PHI-BOSE-MOMENT-TANGENT-AUDIT.md",
+    "data": "kinetics/results/phi-bose-moment-tangent-gate-2026-11-22.json",
+    "archive": "archive/stages/2026/11/2026-11-22-phi-bose-moment-tangent.md",
+    "positive": "Micro source preserves all dark charges and energy, entropy >0. A physical p²dp symmetric negative Bose susceptibility J gives a unique tangent ηdot=J^-1 C, independently reproduced by finite difference. Tiny overlap matrix [[3,1],[1,2]], C=(0,-1) yields ηdot=(-.2,.6) exactly. Benchmarks 4 mesh families at N8/16/32/64 and four scalar masses.",
+    "negative": "N16 power2 mφ86e-9GeV eta_rest8.6e-8 has C_phi_rest=0, all other C_phi<=0, H1.6484691e-12>0, but inverse moment η_rest_dot=-2.9982e-9, linear positivity boundary dt28.68385 (actual dt20 passed/dt30 implicit Newton failed). Mass mphi×100 yields ~×100 positivity time (N16). This is **only continuous overlapping-hat Galerkin tangent-cone defect** with no physical microproduction at rest; no real BEC/δ(p) or cosmological relic."
+  },
+  "latest_nonoverlap_cell_entropy_20261123": {
+    "status": "Real Scientific #45128030398 success on 54de58d, scoped DG physical Bose tangent and 7 tests; not cosmological or q-cutoff convergence.",
+    "source": "kinetics/phi_bose_cell_entropy.py",
+    "tests": "tests/test_phi_bose_cell_entropy.py",
+    "report": "kinetics/PHI-BOSE-CELL-ENTROPY-AUDIT.md",
+    "data": "kinetics/results/phi-bose-cell-entropy-2026-11-23.json",
+    "archive": "archive/stages/2026/11/2026-11-23-phi-bose-cell-entropy.md",
+    "positive": "Two local inverse fugacity endpoints per physical p²dp E cell, block negative susceptibility, exact N1+N2,N1+Nφ,E total and quantum event entropy. Under isolated moving χ1↔χ2+φ Γrest, n16 quadratic φ Cfirst=[0,0], ηdot first=[0,0], dt30 and 1000 implicit accepted without η clipping whereas old overlapping P1 rejected dt30. ΔNφ(dt30)=−3.49474984e−10, ΔS=+4.94537744e−11; Rφ initial −1.16493012863e−11 and H+1.64846911e−12 matches independent reference. Integrated Bose thermal N 3 meshes match exact physical p integral to rel<5e−12.",
+    "negative": "At synthetic dt1e7, ΔNφ for N8,16,32,64 = −7.592978/−7.280799/−6.850076/−6.423206 e−5; N8→64 ~18.2%, N32→64 ~6.2% residual mode dependence. Discontinuous intercell jumps, doubled DOFs, parent UV cutoff2 and no dynamical SM/Zprime/H/FRW, zero-mode, physical Γelastic, Ω/BEC/CLASS.",
+    "class_ready": false
+  },
+  "latest_phi_daughter_log_angle_20261123": {
+    "status": "Full Scientific CI #45128900651 success for exact boosted daughter-angle stage; existing low-cosine rate error retained.",
+    "source": "kinetics/phi_bose_daughter_log_angle.py",
+    "test": "tests/test_phi_bose_daughter_log_angle.py",
+    "report": "kinetics/PHI-BOSE-DAUGHTER-LOG-ANGLE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-daughter-log-angle-2026-11-23.json",
+    "archive": "archive/stages/2026/11/2026-11-23-phi-bose-daughter-log-angle.md",
+    "positive": "For Ephi=a−b cosθ, map y=ln(Ephi/Emin), dc=Ephi dy/b: analytic I0=2 and I_RJ=ln(Emax/Emin)/b. At mother p16 n8 uniform 1/Ephi rel−52.9%, mapped <3.1e−13. Full on-shell thermal Pauli/Bose pmax2/nrad48 mapped nangle12 Rphi−1.2954539615e−11 matches mapped n64 −1.2954539555e−11 while uniform n12 −1.1649299721e−11 (10.08% magnitude undercount). Parent pmax8/16 uniform n12 ~17.4% undercount. Explicit inverse reactions and H retained.",
+    "negative": "For sharp nonthermal ηphi(E)=E+.4 exp−((E−.04)/.02)^2, mapped pmax16 nangle8 Rphi−1.8712e−11 vs nangle96 −1.729855e−11 (~8.17% error); log mapping does not solve arbitrary IR curvature. Parent pmax2→16 misses ~65.6% net reverse rate. Full nonlinear φ/χ+SM/FRW/H and actual 86eV relic/zero mode unvalidated.",
+    "class_ready": false
+  },
+  "latest_phi_bose_dg_withincell_tangent_20261123": {
+    "status": "rigorous 2×2 SPD inverse moment proof and 6 focused local tests passed; new GitHub Scientific CI pending",
+    "code": "kinetics/phi_bose_dg_tangent_counterexample.py",
+    "tests": "tests/test_phi_bose_dg_tangent_counterexample.py",
+    "report": "kinetics/PHI-BOSE-DG-TANGENT-COUNTEREXAMPLE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-dg-tangent-counterexample-2026-11-23.json",
+    "archive": "archive/stages/2026/11/2026-11-23-phi-bose-dg-tangent-negative.md",
+    "analytic": "Within each nonoverlapping DG cell J=-G, G=[[a,b],[b,c]], C=(-u,-v) with u,v>0; eta_dot_left=(c*u-b*v)/(ac-b²) may be negative. SPD example a3 b1 c2 u.05 v1 yields ηdot_left=-.18.",
+    "numeric": "Mapped physical Yukawa (parent pmax2,nrad24,nangle48), N32 φ first cell C=(-6.575e−14,-3.234e−13), eta_rest_dot=-3.522727e−9, local dtlimit24.4129, real dt20 implicit succeeds, dt30/1000 fail positive η; all φ C≤0, H+1.869337e−12 and conserved charges/E. N16 eta_rest_dot=+5.837e−9, dt30 passes. N32 mapped nangle12/24/48/96 eta_rest_dot all negative, however uniform-c n12 misses events in first φ cell so eta_dot0=0 and dt30 falsely passes while Qphi is underestimated 10%.",
+    "negative": "Nonoverlap only prevents cross-cell mixing, not the within-cell 2 local hat inverse susceptibility cone problem. Tangent N8..64 nonmonotone; weak integrated angle convergence does not certify near-zero scalar mode source. Not physical BEC or a true scalar condensate, q/time/UV/SM/FRW unresolved.",
+    "class_ready": false
+  },
+  "latest_phi_one_dof_energy_equilibrium_gate_20261123": {
+    "status": "Local 3/3 focused Python tests passed; public CI not yet checked on new commit",
+    "report": "kinetics/PHI-BOSE-ONE-DOF-NO-GO-AUDIT.md",
+    "source": "kinetics/phi_bose_one_dof_no_go.py",
+    "tests": "tests/test_phi_bose_one_dof_no_go.py",
+    "data": "kinetics/results/phi-bose-one-dof-no-go-2026-11-23.json",
+    "negative": "For physical p²dp one constant eta per cell, monotonic dN/deta<0 but U=Ebar*N implies exact on-shell E mismatch; matching exact equilibrium Bose cell N creates false Rphi/H. N32 parent pmax2 false Rphi 5.558e-14 and H 1.481e-14 vs exact thermal Rphi ~5e-27; relative U bias +0.0998%. One-DOF is rejected as exact physical energy+thermal closure.",
+    "scope": "Analytical and on-shell thermal negative control, not an actual coupled physical time evolution or a Bose condensate",
+    "class_ready": false
+  },
+  "latest_phi_exact_shell_graph_20261123": {
+    "status": "Four focused local tests passed (~0.11 s); CI pending for this commit",
+    "source": "kinetics/phi_bose_exact_shell_graph.py",
+    "tests": "tests/test_phi_bose_exact_shell_graph.py",
+    "report": "kinetics/PHI-BOSE-EXACT-SHELL-GRAPH-AUDIT.md",
+    "data": "kinetics/results/phi-bose-exact-shell-graph-2026-11-23.json",
+    "positive": "Exact E1=E2+Ephi physically permitted angles for N2/4/8/16 on-shell graph; left nullity exactly three; common-T FD/BE detailed balance <7e-16; bounded positive implicit event and increasing weighted entropy; N8 connected network charge/energy ~3e-14",
+    "negative": "Rates and capacities arbitrary, scalar lowest Eφ=0.048 GeV omits actual 86-eV IR; N8 1 vs8 time subdivisions ΔNφ differs ~6.35%; no continuum closure or physical freezeout.",
+    "class_ready": false
+  },
+  "latest_phi_cutoff_kinematic_ir_20261123": {
+    "status": "Analytic on-shell proof and 2/2 local focused tests passed, new CI pending",
+    "source": "kinetics/phi_bose_parent_cutoff_kinematic_ir.py",
+    "tests": "tests/test_phi_bose_parent_cutoff_kinematic_ir.py",
+    "report": "kinetics/PHI-BOSE-PARENT-CUTOFF-KINEMATIC-IR-AUDIT.md",
+    "data": "kinetics/results/phi-bose-parent-cutoff-kinematic-ir-2026-11-23.json",
+    "positive": "At pmax2 GeV exact minimum daughter energy Ephi=0.00119925093758 GeV, quadratic first-cell exclusion N>=43; N48/N64 exact no 1->2 source independent of any daughter quadrature. At pmax8/16 N64 reachable.",
+    "negative": "Previous explanation as mere sparse angle sampling was incomplete; no physical real-BEC/no-BEC, infinite-parent thermal tail or SM/FRW/CLASS inference.",
+    "class_ready": false
+  },
+  "latest_phi_thermal_exact_weak_20261123": {
+    "status": "Local 3/3 focused tests passed in 1.32 seconds; public CI new commit pending",
+    "source": "kinetics/phi_bose_thermal_exact_weak_reference.py",
+    "tests": "tests/test_phi_bose_thermal_exact_weak_reference.py",
+    "report": "kinetics/PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-thermal-exact-weak-reference-2026-11-23.json",
+    "positive": "Exact analytic daughter FD*BE energy integral at T2=Tphi plus 1D parent quadrature independently matches on-shell positive mapped-angle 2D weak source at pmax2/8/16 to ≤~2e-9 relative; exact per-event physical shell Q1+Q2+Qphi<4e-26, H>0; 3 parent/cosine grids.",
+    "negative": "At pmax2 only ~40.1% of rate at pmax16; scalar mean emitted/absorbed E shifts .206→.445 GeV. Fixed distributions, no physical phase-capacity strong time solver, Γ(T), SM, FRW, Ω or BEC.",
+    "class_ready": false
+  },
+  "latest_phi_exact_thermal_energy_20261123": {
+    "status": "Five local tests passed 0.58 s, public Scientific CI unverified",
+    "source": "kinetics/phi_bose_thermal_exact_weak_reference.py",
+    "tests": "tests/test_phi_bose_thermal_exact_weak_reference.py",
+    "report": "kinetics/PHI-BOSE-THERMAL-EXACT-WEAK-REFERENCE-AUDIT.md",
+    "data": "kinetics/results/phi-bose-thermal-exact-weak-reference-2026-11-23.json",
+    "positive": "Real Li2 exact daughter energy moment Qphi parent2/8/16=-2.670878687857882e-12/-1.394186043243065e-11/-1.438236797986059e-11, independent positive event 2D 96×48 agreement ≤2e-13 relative.",
+    "negative": "Only prescribed thermal source weak moments; no physical discrete strong time/SM/FRW/relic.",
+    "class_ready": false
+  },
+  "latest_yukawa_strong_grid_gate": {
+    "status": "analytic positive/negative gate, not numerical solver",
+    "file": "kinetics/YUKAWA-STRONG-DISCRETIZATION-GATE.md",
+    "positive": "Exact on-shell positive reversible events with consistent capacities imply stoichiometry, E and interior H theorem.",
+    "negative": "Nearest-bin/split deposition or event-unique daughter nodes do not automatically preserve both quantum inverse H and physical DOS; no strong solver, no CLASS.",
+    "class_ready": false
+  },
+  "latest_phi_exact_shell_capacity_20261124": {
+    "status": "Analytic physical shell DOS and 3 independent Python stdlib midpoint negative checks; no public CI claimed",
+    "report": "kinetics/PHI-BOSE-EXACT-SHELL-CAPACITY-AUDIT-2026-11-24.md",
+    "evidence": "kinetics/research-control/EVIDENCE.md",
+    "positive": "Exact one-real-scalar shell capacity [(U²−m²)^(3/2)−(L²−m²)^(3/2)]/(6π²) with physical threshold",
+    "negative": "Coarse first-cell midpoint DOS errors -19.28%, -24.94%, -25.00% for U=1e-6,1e-4,0.0086036 GeV at m=86eV; exact capacity alone not reversible Yukawa event measure",
+    "class_ready": false
+  },
+  "latest_phi_invariant_event_measure_20261124": {
+    "status": "Analytic conditional weak event normalization and physical species energy capacity; scalar stdlib checks only, no full 3-species numerical validation or new CI",
+    "report": "kinetics/PHI-BOSE-INVARIANT-EVENT-MEASURE-GATE-2026-11-24.md",
+    "positive": "dW=g1 Γrest M/E1 p²dp/(2π²) dc/2 with actual boosted on-shell E2/Ephi; exact species V and W capacities and pointwise weak charges/energy/thermal detailed balance",
+    "negative": "Finite-cell constant occupations and bin-average energies do not automatically preserve exact microevent energy, inverse Pauli/Bose or H theorem; spin/isotropy assumptions explicit",
+    "class_ready": false
+  },
+  "active_run": {
+    "start_utc": "2026-11-25T08:09:38Z",
+    "target_minutes": 30,
+    "status": "completed_session",
+    "science_end_utc": "2026-11-25T08:39:18Z",
+    "science_duration_seconds": 1780,
+    "stage": "Coherent fragmentation, critical projected halo stability, C22 redistribution and exterior capacity gate; checkpoint and email finalization",
+    "class_ready": false
+  },
+  "latest_entropy_energy_variational_20261124": {
+    "status": "analytic conditional bound and local numerical reproduction; remote CI not checked",
+    "report": "kinetics/PHI-BOSE-ENTROPY-ENERGY-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_entropy_energy_gate.py",
+    "data": "kinetics/results/phi-bose-entropy-energy-gate-2026-11-24.json",
+    "positive": "isolated initial thermal r=.12941977 implies rho_dark/rho_nu,1>=.8875117 near BBN independent of dark thermal closure; if number nondecreases after BBN and today Omega<=.120, rho_BBN>=47.319 neutrino units",
+    "negative": "today entropy-only Omega lower bound .0837212 does not exclude .120; thermal scalar branch .847906 overproduces; full BBN likelihood, entropy export and initial thermalization unknown",
+    "class_ready": false
+  },
+  "latest_low_reheat_injection_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-LOW-REHEAT-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_low_reheat_gate.py",
+    "data": "kinetics/results/phi-bose-portal-low-reheat-gate-2026-11-24.json",
+    "status": "local SciPy contact normalization and 12 assertions; no remote CI claim",
+    "positive": "instantaneous empty-dark reheat T_R=20MeV lepton-only MB injection gives OmegaH=3.018 if no annihilation; even one-pass complete H->phi conversion gives Omega_phi=1.3354e-5; for 99% phi fraction one-pass heavy survival <=8.69e-8",
+    "negative": "not full quantum freeze-in or actual relic, no hadron/number multiplication; effective phi phi->chi1 antichi1->4phi can change count",
+    "class_ready": false
+  },
+  "latest_thermal_stream_entropy_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-THERMAL-STREAM-ENTROPY-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_thermal_stream_entropy_gate.py",
+    "data": "kinetics/results/phi-bose-thermal-stream-entropy-gate-2026-11-24.json",
+    "status": "local independent horizon integration, RD upper reference and pressure/entropy checks passed; new remote CI not verified",
+    "positive": "all-DM BE 86eV equality free stream 6.6504Mpc vs FD 5.7keV .0555964Mpc, rms q/m ratio 274.627; chosen matching moment requires q_rms<=1.14255e-6eV and occupation average >=7.929e5; arbitrary cold PSD ideal entropy <=.07934cm^-3, with <=1% heavy energy total <=.07939cm^-3, <=.0212182% retained of initial thermal benchmark",
+    "negative": "moment matching NOT observational bound; not actual relic/condensate/transfer function; strong conditional entropy constraint only",
+    "class_ready": false
+  },
+  "latest_portal_initial_gain_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-INITIAL-GAIN-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_initial_gain_gate.py",
+    "data": "kinetics/results/phi-bose-portal-initial-gain-gate-2026-11-24.json",
+    "positive": "42 sampled T/alpha points; analytic duration bound under fixed MB electron injection, spontaneous chi1 loss, no chi2 depletion; largest exponent upper 3.46364e-5",
+    "negative": "FD source, other SM, feedback and full nonlinear/FRW not included; no physical burst or exclusion",
+    "status": "locally evaluated, remote CI pending",
+    "class_ready": false
+  },
+  "latest_portal_fd_pole_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-FD-POLE-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_fd_pole_gate.py",
+    "data": "kinetics/results/phi-bose-portal-fd-pole-gate-2026-11-24.json",
+    "positive": "8 sampled positive MB pole inversion points retain sign in FD, 32/64 Gauss ratio stable; FD integrated rate at T5 suppressed 34%; independent MB NWA normalization agrees",
+    "negative": "NWA only, not full finite-width FD, all other SM/feedback unresolved",
+    "status": "local calculation executed; remote CI pending",
+    "class_ready": false
+  },
+  "latest_portal_fd_bw_gate_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-FD-BW-GATE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_fd_bw_gate.py",
+    "data": "kinetics/results/phi-bose-portal-fd-bw-gate-2026-11-24.json",
+    "positive": "independent swapped s/Eprime MB reproduces direct BW ratios within 8e-9; FD n12/16/24 ratios stable; reduced FD positive-gain upper 2.77347e-5 at T5 alpha.0001, max of 8 sampled points",
+    "negative": "no chi2 depletion/inverse, full SM, actual nonlinear kinetics, BEC/relic",
+    "status": "local numerical calculation, remote CI pending",
+    "class_ready": false
+  },
+  "latest_vacuum_depletion_envelope_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-VACUUM-DEPLETION-ENVELOPE-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_vacuum_depletion_envelope.py",
+    "data": "kinetics/results/phi-bose-portal-vacuum-depletion-envelope-2026-11-24.json",
+    "positive": "exact vacuum bound sigma vM<=y^4/(8pi M1^2)=3.97887e-12 arbitrary momenta; conditional MB fixed injection at TR20 survival>=.861265 with deliberately maximal vacuum loss; pointwise F must exceed7051 for 99% scalar by mass within one-pass history",
+    "negative": "Bose stimulation, non-MB injection, visible and other dark removal, nonconstant gstar excluded; not full relic",
+    "status": "analytic proof + locally solved comparison ODE; new CI pending",
+    "class_ready": false
+  },
+  "latest_cold_tail_bound_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-COLD-TAIL-BOUND-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_cold_tail_bound.py",
+    "data": "kinetics/results/phi-bose-portal-cold-tail-bound-2026-11-24.json",
+    "positive": "arbitrary stimulation but one-pass/only redshift history, exact hard progenitor thresholds + finite vector upper injection tail; TR20MeV Omega_cold<=2.26674e-14 for chosen rms diagnostic needing .060; generous bound crosses .060 at TR30.095MeV",
+    "negative": "redistribution/SM scattering, recycling/multiplication, hadron source, actual LSS criterion excluded; high TR uninformative",
+    "status": "analytic proof plus local closed form checks; new CI pending",
+    "class_ready": false
+  },
+  "latest_recycling_energy_bound_20261124": {
+    "report": "kinetics/PHI-BOSE-PORTAL-RECYCLING-ENERGY-BOUND-2026-11-24.md",
+    "source": "kinetics/phi_bose_portal_recycling_energy_bound.py",
+    "data": "kinetics/results/phi-bose-portal-recycling-energy-bound-2026-11-24.json",
+    "positive": "number ledger + energy-weighted inverse pair/fermion conversion rate upper, charged lepton elastic heat Gronwall; TR20 even arbitrary repeated listed cycles and stimulation Ωphi<=4.38678e-4, TR30<=.03844",
+    "negative": "selected tree network only, scalar self number-changing, complete SM/hadrons/thermal history/other A' processes omitted; numerical interpolation not certified",
+    "status": "analytic derivation + local computation; remote CI pending",
+    "class_ready": false
+  },
+  "latest_scalar_quantum_completion_20261124": {
+    "report": "kinetics/PHI-BOSE-SCALAR-QUANTUM-COMPLETION-2026-11-24.md",
+    "source": "kinetics/phi_bose_scalar_quantum_completion.py",
+    "data": "kinetics/results/phi-bose-scalar-quantum-completion-2026-11-24.json",
+    "positive": "mandatory independent scalar mass/quartic matching; at Q=.1 δm²/mφ²=82731.8, δλ=-4.69888e-13, c6=2.12258e-16; positive illustrative loop-size quartic gives TF .468AU and all-DM harmonic cold ratio>1 above 6.97MeV",
+    "negative": "scheme-dependent correction not physical pole mass or λ; no naturalness exclusion, full scalar number change/fragmentation not solved",
+    "status": "analytic + local 70-digit derivative and primary formula crosscheck; remote CI pending",
+    "class_ready": false
+  },
+  "latest_ci_snapshot_20261124": {
+    "checked_utc": "2026-11-24T21:54:00Z",
+    "success": [
+      45492700366,
+      45493063988,
+      45493448348
+    ],
+    "in_progress": [
+      45494321351,
+      45494480306,
+      45494755901,
+      45495101710,
+      45495302729,
+      45495756543
+    ]
+  },
+  "latest_coherent_resonance_20261124": {
+    "report": "kinetics/PHI-BOSE-COHERENT-RESONANCE-2026-11-24.md",
+    "source": "kinetics/phi_bose_coherent_resonance.py",
+    "data": "kinetics/results/phi-bose-coherent-resonance-2026-11-24.json",
+    "positive": "exact action and Lamé n=2 physical gap; independent direct oscillator verification; at TR20 both illustrative positive λ branches μ/H>5.86e13 and small conditional energy ratio ρ/ρν,1; resonant q today 3.73e−9 or 1.56e−7 eV",
+    "negative": "normalized conditional homogeneous background not actual production; linear instability cannot predict nonlinear fragmentation, number change or final PSD; no BBN likelihood",
+    "status": "local analytic and independent numerical crosscheck; CI pending",
+    "class_ready": false
+  },
+  "latest_narrow_sweep_20261125": {
+    "report": "kinetics/PHI-BOSE-NARROW-SWEEP-2026-11-25.md",
+    "source": "kinetics/phi_bose_narrow_sweep.py",
+    "source_commit": "33a7065db1022677a31908d0ca834dec781b6311",
+    "report_commit": "636242192b3d8d94cce4e2c0c529a242c702f5ee",
+    "positive": "Small-A I=3pi m A^8/(1024 H); independent elliptic monodromy and chirp checks; weak vacuum hard yield matches incoherent net 4->2 loss divided by 4!. For two lambda benchmarks I=1 at 324 keV / 4.712 keV, q=8.12e-8 / 7.425e-6 eV.",
+    "negative": "Unfragmented normalized branch, no backreaction or physical initial condition, scattering only vacuum diagnostic, no final PSD/relic; remote CI unverified.",
+    "class_ready": false
+  },
+  "latest_sweep_consistency_20261125": {
+    "report": "kinetics/PHI-BOSE-SWEEP-CONSISTENCY-2026-11-25.md",
+    "source": "kinetics/phi_bose_sweep_consistency.py",
+    "positive": "Formal integrated cold depletion D=1 at T413.35/5.692 keV; q6.244e-8/6.146e-6 eV; vacuum band optical depth tiny but post-sweep optical depth .721/4.585e7.",
+    "negative": "Fixed background extrapolation fails; no physical final spectrum, scattering or abundance; no remote CI.",
+    "class_ready": false
+  },
+  "latest_coherent_fermion_crossing_20261125": {
+    "report": "kinetics/PHI-BOSE-COHERENT-FERMION-CROSSING-2026-11-25.md",
+    "source": "kinetics/phi_bose_coherent_fermion_crossing.py",
+    "positive": "Exact phi_crit44.721 GeV; both T20 examples subthreshold; conditional high-T crossing; exact 4x4 Dirac finite-lobe light occupancy .9881 at high lambda 1.1phi_crit p=.5pstar; local refinement and zero coupling control.",
+    "negative": "Instantaneous prescribed vacuum and no expansion/backreaction; slow weak-lambda grid timed out, one point not converged; no physical stable relic.",
+    "class_ready": false
+  },
+  "latest_coherent_endpoints_20261125": {
+    "report": "kinetics/PHI-BOSE-COHERENT-ENDPOINTS-2026-11-25.md",
+    "positive": "Conditional chemical freeze Omega h²=.00015184/.004711 vs .12; count-preserved ideal cold endpoint rms q=3.08e-9/1.48e-8 eV. Repeated Dirac cycle first-cycle convergence at stronger coupling.",
+    "negative": "No physical thermalization, BEC or relic; high-cycle oscillatory phase and instantaneous vacuum UV sensitive.",
+    "class_ready": false
+  },
+  "latest_classical_fragmentation_20261125": {
+    "report": "kinetics/PHI-BOSE-CLASSICAL-FRAGMENTATION-2026-11-25.md",
+    "positive": "3D dealiased field 48³/64³, time refinement and independent Lamé growth check; nonlinear inhomogeneity at 64 periods.",
+    "negative": "Fixed Minkowski, UV spectrum not converged, classical seed not physical quantum vacuum.",
+    "class_ready": false
+  },
+  "latest_quantum_seed_20261125": {
+    "report": "kinetics/PHI-BOSE-QUANTUM-SEED-2026-11-25.md",
+    "positive": "Conditional finite-band Wigner vacuum seeds yield >10% fluctuation at period 77/42; linear 76/42; Hdt <3e-13. Stronger benchmark D=.452/.459 at period70 on 64³/48³.",
+    "negative": "No renormalized full vacuum, FRW transport or late PSD.",
+    "class_ready": false
+  },
+  "latest_fragmented_eos_20261125": {
+    "report": "kinetics/PHI-BOSE-FRAGMENTED-EOS-2026-11-25.md",
+    "positive": "Exact virial identity; local mixed w=.3023 and corrected quartic w=.33294.",
+    "negative": "Finite-time local field averages, no cosmological evolution.",
+    "class_ready": false
+  },
+  "latest_global_antonov_20261125": {
+    "report": "continuation-04/papers/15-global-projected-antonov-critical-halo-2026-11-25.md",
+    "positive": "Radial energy-shell projected form A-B>=A/4 including critical unbounded distribution; nonradial ground-state bound, l=1 translation, 3-grid Rayleigh results. Existing nonlinear theorem applies only bounded case.",
+    "negative": "Critical nonlinear orbital theorem and well-posedness not established; not collisional stability.",
+    "class_ready": false
+  },
+  "latest_halo_collision_escape_20261125": {
+    "source": "continuation-04/code/lowered_bose_collision_escape.py",
+    "positive": "Initial NR C22 birth above cutoff per Gyr .00266347/.000625507; above true isolated escape .000516493/.000350195 for linear/quadratic example; convergence checked.",
+    "negative": "Initial source only, not actual evaporation or time evolution; independent signed CM calculation agrees at <1.2e-6 for linear local tests.",
+    "class_ready": false,
+    "report": "continuation-04/papers/16-initial-bose-collision-escape-2026-11-25.md"
+  },
+  "latest_halo_deep_flux_20261125": {
+    "report": "continuation-04/papers/17-initial-bose-deep-state-flux-2026-11-25.md",
+    "source": "continuation-04/code/lowered_bose_weak_flux.py",
+    "positive": "Deep population positive initial flux; mapped n24/32 and independent log mapping; pointwise central coefficient .18491053/.36747410 per Gyr, tiny total transfer. Linear L''>0 and initial 4th moment increases.",
+    "negative": "Unmapped angular grid severely underestimates deepest flux. No condensate or nonlinear evolution.",
+    "class_ready": false
+  },
+  "latest_halo_exterior_capacity_20261125": {
+    "report": "continuation-04/papers/18-orbit-averaged-exterior-capacity-gate-2026-11-25.md",
+    "positive": "Exterior DOS diverges as πQt³/(32 ε^5/2), finite mass power p>3/2, Kepler period ∝ε^-3/2.",
+    "negative": "Phase-mixed exterior assumption fails at finite time near E=0; no actual orbit transport.",
+    "class_ready": false
+  },
+  "latest_halo_finite_age_transport_20261125": {
+    "report": "continuation-04/papers/19-finite-age-weak-binding-exterior-transport-2026-11-25.md",
+    "positive": "Exact exterior crossing/dwell/delay/front; first excursion outside .00602530/.00139538 at 13.8 Gyr; independent ODE delay error <5.36e-10.",
+    "negative": "Frozen potential, prescribed initial source, no rescattering.",
+    "class_ready": false
+  },
+  "latest_halo_signed_born_response_20261125": {
+    "report": "continuation-04/papers/20-signed-c22-source-and-frozen-response-2026-11-25.md",
+    "positive": "All four C22 legs with local count/energy conservation; full signed fixed-potential streaming, subpercent smooth probe convergence at 1 Gyr.",
+    "negative": "Hard-bin quadrature not fully converged; no gravitational response at same formal order; no evolving C22.",
+    "class_ready": false
+  },
+  "current_session_20261125_DM2": {
+    "start_utc": "2026-11-25T08:46:41Z",
+    "checkpoint_utc": "2026-11-25T09:16:15Z",
+    "status": "scientific_work_completed_final_reporting",
+    "target_minutes": 30,
+    "local_clone": "DNS github.com unavailable; connector read/write; local numerical code reconstructed from fetched files",
+    "head_before_checkpoint": "376440d0b61602f55a8e41753baf2bcab8fe2277",
+    "next": "Conservative spatial and angular transport + nonlinear C22 + weak Poisson, initially bounded IR; independent physical FRW/relic work",
+    "latest_stage": "nonlinear local C22, Jacobian and conditional criticality",
+    "latest_report": "continuation-04/papers/23-nonlinear-local-c22-orbits-and-criticality-2026-11-25.md",
+    "elapsed_seconds_to_checkpoint": 1774,
+    "verification": "Actual local runs, py_compile on new modules, weak stiffness quadrature agrees to 2.1e-16; remote CI unverified; no main merge or force push."
+  },
+  "latest_halo_linear_vp_20261125": {
+    "report": "continuation-04/papers/21-causal-linear-vlasov-poisson-c22-response-2026-11-25.md",
+    "positive": "Broad core amplification ~1.7–2x, 1 Gyr central Gaussian relative changes ~9–10%, mass ledger <4.2e-18.",
+    "negative": "Unresolved central raw force, finite energy error, first order only.",
+    "class_ready": false
+  },
+  "latest_halo_weak_vp_20261125": {
+    "report": "continuation-04/papers/22-orbit-projected-and-weak-poisson-response-2026-11-25.md",
+    "positive": "Analytic radial B_EL<=B_E<=3A/4; independent orbit eigenvalues .552/.544; weak Poisson broad response within 1–4% and bounded absolute field.",
+    "negative": "Central slope not converged, first order only.",
+    "class_ready": false
+  },
+  "latest_halo_nonlinear_local_20261125": {
+    "report": "continuation-04/papers/23-nonlinear-local-c22-orbits-and-criticality-2026-11-25.md",
+    "positive": "Exact angular reduction, independent 2D/3D, L-dependent orbit rates, nonlinear conservative local evolution, BE equilibrium residual <4.7e-16; conditional central excess only.",
+    "negative": "No spatial/angular nonlinear transport, near-critical IR resolution, evolving Poisson or C12; no cosmological validation.",
+    "class_ready": false
+  },
+  "last_halo_angular_stage": {
+    "report": "continuation-04/papers/25-rotation-covariant-harmonic-c22-2026-11-25.md",
+    "base": "259765c47cf3ecaf276ea8ad9e28df2e4943e266",
+    "finding": "SO(3)-covariant l0–2 weak C22: pressure rate ~0.5% continuous error at N240; momentum residual <4.5e−15; evolving f0+linear angular perturbation converges in time but slow modes and exterior PSD unresolved.",
+    "next": "Conservative spherical fixed-binding phase-space streaming; analytic oscillator and finite-age exterior controls."
+  },
+  "last_halo_streaming_stage": {
+    "report": "continuation-04/papers/26-well-balanced-spherical-streaming-2026-11-25.md",
+    "base": "d17ddb2b16e576a8f5e37b04437d715f37c5c134",
+    "finding": "Exact discrete well balancing and N ledger; transient weak-binding exterior CDF .890185846 vs FV .76676044/.83831571 at 100x40/200x80. L2 drift; fine timeout. No quantitative spatial halo claim.",
+    "next": "Axisymmetric nonlinear C22 kernel on energy/radial-momentum lattice and orbit-phase translation."
+  },
+  "last_halo_axisymmetric_stage": {
+    "paper": "continuation-04/papers/27-axisymmetric-nonlinear-c22-2026-11-25.md",
+    "conservation": "N,E,p residual <=7e-17; BE <=9.3e-17",
+    "continuum_shear": 1.089020505,
+    "refined_projected_shear": 1.1607420203,
+    "limitation": "Angular rounding bias, unsupported groups, no coupled spatial Poisson."
+  },
+  "last_orbit_stage": {
+    "report": "continuation-04/papers/28-orbit-invariant-phase-remap-2026-11-25.md",
+    "base": "11321f1445c9df73ce7b5915d7a8fc5314c32043",
+    "run_started_utc": "2026-11-25T11:20:02Z",
+    "outside_fine": 0.8901790330850505,
+    "reference": 0.8901858457653883,
+    "outside_100_remaps": 0.890003864244497,
+    "limitation": "Frozen bound orbits only; repeated remap diffusion; no coupled collision field."
+  },
+  "last_orbit_collision_stage": {
+    "report": "continuation-04/papers/29-orbit-local-uu-coupling-2026-11-25.md",
+    "base": "426024f157edb891bffa9b790ce49c3322779a6c",
+    "states": 24576,
+    "local_p_ledger": "<=6.6e-18",
+    "physical_p_defect": -0.00015054699367585535,
+    "limitation": "Harmonic external trap only; independent overlap violates physical radial momentum; numerical remap difference and convergence remain open."
+  },
+  "last_orbit_momentum_stage": {
+    "report": "continuation-04/papers/30-entropy-momentum-corrected-orbit-c22-2026-11-25.md",
+    "base": "27fd9f53af0935d6d1b143960ba1af7426cfc48c",
+    "moving_BE_max": 4.23e-15,
+    "physical_p_step_increment": "<1.3e-18",
+    "correction_relative_L1_fine": 0.08803,
+    "limitation": "Entropy-compatible modified collision rates, not eventwise physical kinematics or converged halo evolution; root may fail with empty support."
+  },
+  "last_frozen_halo_stage": {
+    "report": "continuation-04/papers/31-frozen-halo-open-bound-orbit-c22-2026-11-25.md",
+    "base": "563aa5f6c5672c87d52c4f700901b194348b357f",
+    "M2_gain_error_relative": [
+      -0.005071,
+      -0.003413
+    ],
+    "M2_missing_event_weight": 7.64902869648954e-13,
+    "t_evolved_Gyr": 0.1,
+    "limitation": "Finite gap, frozen potential, finite outer/energy cutoff, angular and dynamic convergence unresolved."
+  },
+  "last_vp_stage": {
+    "report": "continuation-04/papers/32-nonlinear-c22-linear-vp-orbit-feedback-2026-11-25.md",
+    "base": "6afe564c051869d25f53d85a466fdf4f6ef99f3d",
+    "feedback_M2": [
+      0.00005816862062874623,
+      0.000214447549347704,
+      0.00039036759818195175,
+      0.00016981426151133972,
+      0.000014415894601867645
+    ],
+    "frozen_M2": [
+      0.000032507281959795687,
+      0.00012602626309171693,
+      0.000244643073736051,
+      0.00009280836497708516,
+      -0.000010034583121269603
+    ],
+    "limitation": "Linear force on initial f0 only, inner probe energy-resolution sensitive, outside tiny fraction unresolved."
+  },
+  "last_action_control": {
+    "report": "continuation-04/papers/33-canonical-action-phase-gravity-control-2026-11-25.md",
+    "base": "9f7dbf6db22f93f3803e040c72c4303de6e1db61",
+    "full_L1_128": 0.0012795511666518038,
+    "full_H_drift_128": 0.00014874939688902522,
+    "common_states": 47360,
+    "limitation": "Canonical FV conserves N,L but energy approximate; open/closed boundary topology and nonlinear halo convergence unresolved."
+  },
+  "last_nonlinear_force_failure": {
+    "report": "continuation-04/papers/34-nonlinear-halo-poisson-energy-failure-2026-11-25.md",
+    "base": "a6b540ee140c3ab74015d692ee7f7f5952bb1196",
+    "energy_full": 0.0001740453178557261,
+    "energy_deltaf": 8.084449143453508e-7,
+    "deltaf_rejections": 107,
+    "limitation": "Even equilibrium diffusion; neither full-f nor delta-f validates total energy."
+  },
+  "last_force_limiter": {
+    "report": "continuation-04/papers/35-positive-equilibrium-subtracted-halo-flux-2026-11-25.md",
+    "base": "393745b53d736e72b38cefc5037eefb18075a55e",
+    "steps": 20,
+    "rejections": 0,
+    "limited_fraction": 6.151274857076925e-10,
+    "energy_error": 7.886964136393616e-7,
+    "limitation": "Positive conservative flux but energy work residual remains ~69% of perturbation energy."
+  },
+  "last_energy_ledger": {
+    "report": "continuation-04/papers/36-discrete-halo-energy-work-ledger-2026-11-25.md",
+    "base": "61ddded8bcb369b621fd0161be5b388941cb47fe",
+    "stream_field_work": -0.0000011587558260551741,
+    "collision_field_work": 1.968662603672631e-8,
+    "residual_gravity_work": 0.0000019263672212416677,
+    "refined_energy_residual": 7.961346095852296e-7
+  },
+  "energy_sensitivity_control": {
+    "report": "continuation-04/papers/37-energy-closure-sensitivity-control-2026-11-25.md",
+    "base": "288a043beaf489058f554e41485950e9fc0024cd",
+    "energy_residual": 8.283770465910244e-18,
+    "distribution_L1": 0.0000014234812907660993,
+    "max_alpha_over_dt": 1.58939927717968,
+    "limitation": "Imposed global energy repair is diagnostic only; M2 timeout."
+  },
+  "last_work_flux": {
+    "report": "continuation-04/papers/38-reversal-and-local-orbit-work-flux-2026-11-25.md",
+    "base": "4d70e897e27c88885dcfb9746b264b8f19ce5cf7",
+    "parity_error": -2.451460815620529e-7,
+    "local_work_error": 1.3271418951688696e-7,
+    "limitation": "Residual still 12% of perturbation energy; no binding convergence."
+  },
+  "last_adjoint_work": {
+    "report": "continuation-04/papers/39-discrete-adjoint-current-work-2026-11-25.md",
+    "base": "77f1d5f654d423bc2c7bab851ad51691dcdc9758",
+    "coarse_error": -1.1938175133265954e-8,
+    "coarse_field": -0.0000011398406810003978,
+    "center_fine_error": 7.84747067497111e-8,
+    "limitation": "Finite-grid instantaneous work consistency; time splitting, collision locality, exterior and binding convergence unresolved."
+  },
+  "last_run": {
+    "start_utc": "2026-11-25T11:20:02Z",
+    "numerical_work_end_utc": "2026-11-25T11:49:02Z",
+    "numerical_work_minutes": 29,
+    "report": "continuation-04/papers/40-adjoint-time-and-collision-locality-checkpoint-2026-11-25.md",
+    "adjoint_fine_dt_error": 9.772802026542532e-9,
+    "coarse_dt_error": -1.1938175133265954e-8,
+    "collision_field_work": 1.9701674285988593e-8,
+    "limitations": "M2 nonlinear binding timeout; no convergence, no physical halo or cosmology validation; remote CI unverified."
+  }
+}

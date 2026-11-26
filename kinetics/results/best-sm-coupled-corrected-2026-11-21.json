@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "research_date": "2026-11-21",
+  "run_id": 44929647245,
+  "url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44929647245",
+  "artifact_id": 14717765211,
+  "artifact_retention_days": 7,
+  "external_best_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "first_corrected_commit": "25fff84b2342acb67e38b3d6ea6a1862ae406781",
+  "model": "Actual pinned BEST MPI x2 3-dynamic-species chi1<->chi2+massive phi, Bose/Pauli, time-dependent prescribed RD a=sqrt(t/.0001), finite idealized SM radiation bath T from a^4 rho_SM with constant gstar55, phenom number-conserving elastic BGK gamma_el=0 or 1e5; M1=.1,mphi=.001,chi2 massless, T_initial1, Gamma_rest1, final tGamma4e-5, Nq56, Vegas6000, exprb2",
+  "key_fix": "Same exact BEST grid_weights(q): log-Simpson/3-8 q quadrature used for FD chemical-mu mother-number projection, mother energy, SM heat, and entropy; previous trapz-vs-BEST mismatch produced time-step-independent conservation defect.",
+  "scenarios": [
+    {
+      "gamma_el": 0,
+      "steps": 8,
+      "dtGamma": 0.000005,
+      "final_TSM": 0.8451542547285165,
+      "SM_comoving_energy_delta": 0,
+      "phi_number": 7.217128222887689e-7,
+      "phi_f_qmin": 1.018281076476304,
+      "phi_zero_N0": 1.6879852525724695e-14,
+      "relative_FRW_pressure_energy_error": -2.501851098849392e-9,
+      "relative_charge_phi_error": -2.903988540108298e-11,
+      "relative_charge_chi2_error": -4.5064573315366054e-11,
+      "largest_substep_number_error": 0,
+      "largest_substep_dark_plus_SM_energy_Q_error": 0
+    },
+    {
+      "gamma_el": 100000,
+      "steps": 4,
+      "dtGamma": 0.00001,
+      "final_TSM": 0.8451520329123232,
+      "SM_comoving_energy_delta": -0.00019027056356080152,
+      "phi_number": 7.215287394886949e-7,
+      "phi_f_qmin": 1.0128042297207906,
+      "phi_zero_N0": 1.679003150221613e-14,
+      "relative_FRW_pressure_energy_error": -9.69720498045008e-9,
+      "relative_charge_phi_error": -4.7610409509774837e-11,
+      "relative_charge_chi2_error": -3.3240477067504785e-11,
+      "largest_substep_number_error": 1.1102230246251565e-16,
+      "largest_substep_dark_plus_SM_energy_Q_error": 1.5543122344752192e-15
+    },
+    {
+      "gamma_el": 100000,
+      "steps": 8,
+      "dtGamma": 0.000005,
+      "final_TSM": 0.8451520560152495,
+      "SM_comoving_energy_delta": -0.00018829209671267222,
+      "phi_number": 7.216072508337392e-7,
+      "phi_f_qmin": 1.0186346743229406,
+      "phi_zero_N0": 1.6882581961191923e-14,
+      "relative_FRW_pressure_energy_error": -2.425642569851406e-9,
+      "relative_charge_phi_error": -3.878895390591402e-11,
+      "relative_charge_chi2_error": -3.3374732823765987e-11,
+      "largest_substep_number_error": 1.1102230246251565e-16,
+      "largest_substep_dark_plus_SM_energy_Q_error": 1.7763568394002505e-15
+    },
+    {
+      "gamma_el": 100000,
+      "steps": 16,
+      "dtGamma": 0.0000025,
+      "final_TSM": 0.8451520622025055,
+      "SM_comoving_energy_delta": -0.00018776223820538007,
+      "phi_number": 7.216316562154088e-7,
+      "phi_f_qmin": 1.0195694374256443,
+      "phi_zero_N0": 1.6897972108710477e-14,
+      "relative_FRW_pressure_energy_error": -6.075038484412384e-10,
+      "relative_charge_phi_error": -3.515643761632532e-11,
+      "relative_charge_chi2_error": -4.345213428353513e-11,
+      "largest_substep_number_error": 1.6653345369377348e-16,
+      "largest_substep_dark_plus_SM_energy_Q_error": 1.7763568394002505e-15
+    }
+  ],
+  "measured": {
+    "energy_pressure_residual_decrease_factor_4_to_16_gamma_high": 15.962376214293323,
+    "gamma1e5_vs_gamma0_8step_soft_phi_relative": 0.00034724974744726467,
+    "gamma1e5_vs_gamma0_8step_phi_number_relative": -0.00014627903477570925,
+    "gamma1e5_vs_gamma0_8step_temperature_relative": -0.0000026015526215505957,
+    "physical_sm_heat_loss_16steps": -0.00018776223820538007,
+    "maximum_micro_charge_deviation": 1.6653345369377348e-16,
+    "maximum_micro_energy_Q_deviation": 1.7763568394002505e-15
+  },
+  "claims": {
+    "external_BEST_AND_temperature_feedback_ACTUALLY_executed": true,
+    "exact_BEST_BGK_same_discrete_measure_proven": true,
+    "corrected_conservation_residual_decreases_with_temporal_refinement": true,
+    "microphysical_thermalization_rate_derived_from_lagrangian": false,
+    "full_dark_SM_bath_and_bose_spectrum_time_and_grid_convergence": false,
+    "real_86eV_relic_mass_BEC_or_CLASS_validated": false
+  },
+  "note": "Original run #44925693596 remains archived as negative diagnostic with mistaken local trapezoidal BGK q quadrature. This correction is numerical consistency of an idealized finite radiation bath, not proof of a cosmological dark-matter mechanism."
+}

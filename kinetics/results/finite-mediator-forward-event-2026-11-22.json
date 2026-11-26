@@ -1,0 +1,71 @@
+{
+  "date_utc": "2026-11-22",
+  "kind": "single incoming on-shell vector chi-lepton angular weak heat only",
+  "fixture": {
+    "Mchi": 0.1,
+    "mlepton": 0,
+    "p": 0.9,
+    "k": 1.2,
+    "mu": -0.35,
+    "Te": 1,
+    "Tchi": 0.9,
+    "G": 0.001,
+    "phi_nodes": 32
+  },
+  "adaptive": {
+    "epsabs": 1e-24,
+    "epsrel": 2e-12,
+    "limit": 400
+  },
+  "exact_jacobian": "mV²/[2pstar²(1-u)²]",
+  "results": [
+    {
+      "mV": 0.03,
+      "reference": 1.003345567221598e-13,
+      "quad_error_est": 2.4797686546363254e-27,
+      "cosine": {
+        "n24": -0.028746066923344027,
+        "n48": 0.01931804455308006,
+        "n96": 0.0027245169547331916,
+        "n160": 0.00006188931270245668
+      },
+      "transfer": {
+        "n24": -0.006178400220794078,
+        "n48": 0.010507335614929003,
+        "n96": 0.0005095840164708321,
+        "n160": 0.000029425556968609712
+      }
+    },
+    {
+      "mV": 0.1,
+      "reference": 7.285786680101058e-12,
+      "quad_error_est": 7.969417629284548e-26,
+      "cosine": {
+        "n24": 0.010022177878108218,
+        "n48": 0.00009871610530587382,
+        "n96": 2.962062151112832e-9
+      },
+      "transfer": {
+        "n24": 0.002237116402571626,
+        "n48": 0.000047826604090195346,
+        "n96": 1.1604094130035492e-8
+      }
+    },
+    {
+      "mV": 0.3,
+      "reference": 2.561425333154788e-10,
+      "quad_error_est": 2.8595520384570987e-24,
+      "cosine": {
+        "n24": 0.000001212841744591131,
+        "n48": 1.341149413747189e-13
+      },
+      "transfer": {
+        "n24": 0.0000021684653379594465,
+        "n48": 4.338751580235112e-13
+      }
+    }
+  ],
+  "negative": "Finite mediator .03 requires far more than 48 transformed angular nodes for 1e-3 single-event heat accuracy; correct mapping does not guarantee convergence.",
+  "limitations": "No full thermal 5D integrated error bound, no physical gamma_el or 86 eV dark matter",
+  "class_ready": false
+}

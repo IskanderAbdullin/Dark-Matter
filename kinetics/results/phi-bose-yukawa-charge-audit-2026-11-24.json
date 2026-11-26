@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "dated_utc": "2026-11-24",
+  "model": "L_int=-y phi bar(chi2) chi1+h.c., Dirac chi1 chi2 real phi, optional stable Z2 with chi1,phi odd and chi2 even",
+  "species": [
+    "chi1",
+    "anti_chi1",
+    "chi2",
+    "anti_chi2",
+    "phi"
+  ],
+  "channels": [
+    "chi1->chi2+phi",
+    "anti_chi1->anti_chi2+phi",
+    "chi1+anti_chi1->2phi via chi2 exchange",
+    "chi2+anti_chi2->2phi via chi1 exchange"
+  ],
+  "matrix": [
+    [
+      -1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      0,
+      1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      -1,
+      -1,
+      2
+    ]
+  ],
+  "decay_only_rank": 2,
+  "decay_only_nullity": 3,
+  "full_rank": 4,
+  "full_nullity": 1,
+  "exact_nonzero_four_by_four_minor": -2,
+  "true_continuous_U1_charge": [
+    1,
+    -1,
+    1,
+    -1,
+    0
+  ],
+  "candidate_Z2_odd_count_mod2": [
+    1,
+    1,
+    0,
+    0,
+    1
+  ],
+  "old_positive_fermion_count": [
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "its_full_channel_changes": [
+    0,
+    0,
+    0,
+    2
+  ],
+  "old_positive_N1_plus_phi_count": [
+    1,
+    1,
+    0,
+    0,
+    1
+  ],
+  "limits": "Only symmetry/stoichiometry for allowed vertices, no actual y4 channel amplitudes/cross-sections or thermal SM/FRW significance; restricted solver's two counts still exact within its restricted 1<->2 model",
+  "class_ready": false
+}

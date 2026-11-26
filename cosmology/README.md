@@ -1,5 +1,8 @@
 # First full Einstein–Boltzmann transfer benchmark for an 86-eV Bose relic
 
+**Conditional abundance bridge from new kinetic pilot:** [86-eV FRW relic number normalization](FRW-RELIC-ABUNDANCE-BRIDGE.md) shows required primordial nφ/T³≈0.122684 at assumed g*Sprod=55 for Ωh²≈0.12. This bridge uses the existing tested thermal real-boson constants; nonthermal PSD shape, ΔNeff and P(k) remain unconstrained by number alone.
+
+
 **Model being tested:** ONE real thermal relativistic Bose scalar, decoupled at effective entropy degrees of freedom gSdec=55 with zero chemical potential and **no** primordial condensate, thereafter collisionlessly redshifted. This is not the only production history allowed by the original Abdullin–Popov JCAP 2021 galaxy phenomenology.
 
 ## Independent conservation and abundance

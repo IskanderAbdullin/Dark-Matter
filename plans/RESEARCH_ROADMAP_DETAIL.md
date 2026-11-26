@@ -1,0 +1,138 @@
+# Подробный научный маршрут Dark-Matter — источник деталей для PLAN.md
+
+**Статус:** in progress. **Создан:** 2026-11-22. **Тип:** изменяемая исследовательская дорожная карта, не отчёт о доказательстве. Этот файл — компактная навигация и критерии переходов; подробные выводы и история исследований остаются по ссылкам.
+
+## 1. Цель неизменна, маршрут пересматривается
+
+**Единый источник глобальной научной цели: [GOAL.md](../GOAL.md).** Он охватывает две самостоятельные линии — космологическую кинетику и галактические гало/профили/конденсат. Описание ниже — изменяемый рабочий маршрут, а не новое определение цели. Продвижение в гало возможно без преждевременного объявления полного космологического происхождения решённым.
+
+Исследовать и **подтвердить либо обоснованно ограничить/опровергнуть** физически определённые модели бозонной тёмной материи с существенной неконденсатной компонентой и, где это следует из микрофизики, Bose-enhanced рождением частиц. Требуется согласовать, насколько применимо, последовательность **микрофизика → космологическая история и f(q) → структура и гало → наблюдательные предсказания**, с явными областями применимости и неопределённостями.
+
+Историческая опора — [Abdullin & Popov, JCAP 11 (2021) 055](https://doi.org/10.1088/1475-7516/2021/11/055); значение 86 эВ — **проверяемый benchmark, а не установленная универсальная масса DM**. Успехом считается также качественное отрицательное заключение в строго заданном классе моделей. Нельзя автоматически переносить наблюдательные ограничения, полученные для другого распределения или статистики.
+
+Для активного направления рождения частиц **специальные, неизменяемые без явного решения пользователя** цель, научные ворота и критерии завершения заданы в [kinetics/research-control/GOAL.md](../kinetics/research-control/GOAL.md) и [kinetics/CONTINUOUS-RESEARCH-SPEC.md](../kinetics/CONTINUOUS-RESEARCH-SPEC.md). Настоящий PLAN можно и нужно менять при новых данных; он **не подменяет** GOAL и научные доказательства.
+
+## 2. Источники истины и порядок восстановления
+
+| Что нужно знать | Главный файл / источник |
+|---|---|
+| Общая цель проекта и обе исследовательские линии | [GOAL.md](../GOAL.md) |
+| Правила агента, разрешения, безопасность | [AGENTS.md](../AGENTS.md) |
+| Конечная цель активной кинетической программы | [GOAL.md](../kinetics/research-control/GOAL.md) |
+| Подробное техническое ТЗ, научные ворота | [CONTINUOUS-RESEARCH-SPEC.md](../kinetics/CONTINUOUS-RESEARCH-SPEC.md) |
+| Меняемая последовательность этапов и решения | этот PLAN.md |
+| Последнее **фактическое** состояние, ветка/коммиты, незакрытые проверки | [STATE.json](../kinetics/research-control/STATE.json) |
+| Единственный следующий исполнимый шаг | [NEXT_ACTION.json](../kinetics/research-control/NEXT_ACTION.json) |
+| Подтверждения, включая отрицательные результаты | [EVIDENCE.md](../kinetics/research-control/EVIDENCE.md) |
+| Блокировки, запасные задачи и приоритеты | [BACKLOG.md](../kinetics/research-control/BACKLOG.md) |
+| Общий научный аудит и наблюдения | [00-critique-and-roadmap.md](../00-critique-and-roadmap.md), [THEORETICAL-STATUS-2026-11-21.md](../THEORETICAL-STATUS-2026-11-21.md) |
+| Проверки и честные ограничения CI | [TESTING.md](../TESTING.md) |
+| Единая хронология и постоянные первичные архивы | [archive/CHRONOLOGY.md](../archive/CHRONOLOGY.md), [archive/README.md](../archive/README.md), [archive/MILESTONES.md](../archive/MILESTONES.md) |
+
+**Важно о ветках.** На дату создания основной main содержит прежнюю публичную научную базу. Более свежие эксперименты, AGENTS.md и контрольные файлы находятся в исследовательской ветке [draft PR #1](https://github.com/IskanderAbdullin/Dark-Matter/pull/1). При каждом запуске сначала проверить **живой HEAD и открытые PR**, не считать неслитые результаты частью main и не затирать параллельную работу. Draft PR #1 не сливать автоматически: для научного merge существуют отдельные критерии.
+
+Порядок нового сеанса: корневой GOAL → PLAN → специальный GOAL направления → STATE → NEXT_ACTION → необходимые фрагменты EVIDENCE/BACKLOG → исходный код/тесты → актуальные источники и CI. Нельзя заменять STATE текстом из старого чата или этой датированной сводки.
+
+## 3. Этапы и выходные ворота
+
+| Этап | Приоритет и статус на 22.11.2026 | Конкретное ТЗ и критерий перехода |
+|---|---|---|
+| **A. Полная микрофизическая модель** | **P0, в работе** | Явные поля, лагранжиан, симметрии и устойчивость φ; физически допустимый χ1/χ2/φ–SM portal, масса и тепловая судьба переносчика, обязательные каналы e/ν/χ, ограничения BBN/ΔNeff/лаборатории. Вывести masses, amplitudes, Γ(T), collision/heat rates и H из согласованных параметров. Выход: проверяемый benchmark, независимые аналитические нормировки, области применимости и список исключённых приближений. |
+| **B. Самосогласованная квантовая кинетика и тепловая плазма** | **P0, частичные численные прототипы** | Pauli/Bose gain-loss и обратные реакции, χ1/χ2/φ/переносчик/SM по физически обязательным каналам; энергии/заряды/энтропия и detailed balance, реальные конечные массы. Сравнить независимый BEST и собственный расчёт с сеточной, угловой и статистической неопределённостью. Феноменологический BGK не превращать в физическую Γelastic без вывода/калибровки. |
+| **C. Расширяющаяся Вселенная и физическая сходимость** | **P0–P1, неполно** | FRW/Friedmann, g*ρ/g*S, обмен SM↔dark, корректные comoving q и remap, динамика нулевой моды. Совместно проверить qmin/qmax, форму спектра, dt/order, MC seed/neval и балансы. Без сходимости нельзя объявлять «холодный пик» или BEC. |
+| **D. Позднее freeze-out и абсолютная реликтовая плотность** | **P1, не доказано** | Интегрировать до физического прекращения источников, показать стабилизацию fφ(q), hot/cold fraction, возможного n0; вычислить Ωφ **без подгонки нормировки**. Перечислить допустимые параметры/неопределённости или задокументировать отрицательное заключение. |
+| **E. Космологические наблюдательные тесты** | **P1, условные CLASS benchmarks уже есть** | Только для физически выведенного f(q) и обоснованных уравнений возмущений рассчитать P(k), CMB/BBN/ΔNeff и соответствующие likelihood для Lyman-α/LSS/карликовых галактик. Прежние thermal/toy CLASS эксперименты — полезные условные тесты, **не подтверждение нового механизма**. |
+| **F. Галактические гало, конденсат и данные** | **P1–P2, отдельный существующий поток** | Ввести физически оправданное позднее f(E), релаксацию, finite escape, устойчивость/массу Bose stars; независимо проверить baryonic SPARC и исходные LSB галактики с систематиками/held-out sample. Связать с космологическими priors лишь когда физические мосты установлены. Использовать прежние continuation-02…06, не переписывать их выводы как готовое доказательство. |
+| **G. Независимая воспроизводимость и вердикт** | **Обязательное финальное условие** | Повторить важные результаты другой реализацией/контролем, опубликовать параметры, команды, SHA, компактные результаты и отрицательные проверки. Указать: подтверждено в заданной области / опровергнуто в заданной области / пока не установлено. Peer review и наблюдательные ограничения не заменяются зелёным CI. |
+
+**Сейчас первый открытый физический вопрос** уточняется по [NEXT_ACTION.json](../kinetics/research-control/NEXT_ACTION.json). На 22.11.2026 он касался проверок масс/термодинамики векторного посредника Z′ и согласованной кинетики χ1/χ2/φ+SM. Это **датированный указатель, не вторая копия очереди**; если NEXT_ACTION изменился, пользоваться его новым содержимым.
+
+## Обязательная архивная трассировка
+
+**Каждый существенный научный этап** должен оставлять: (а) точную датированную [запись исследования](../archive/templates/STAGE.md), (б) исходные или компактные воспроизводимые данные и код **непосредственно в Git**, (в) обновление [единой хронологии](../archive/CHRONOLOGY.md) и EVIDENCE со статусом и ошибками, (г) исполнимый NEXT_ACTION. Ссылки Actions могут дополнять доказательство, но не заменять постоянные файлы. Не дублировать версионированные данные: хранить Git SHA и постоянный путь; отсутствие исходных байтов обозначать `not_archived`. Не добавлять секреты и неподходящие публичному Git данные.
+
+## 4. Как агент должен менять этот план
+
+1. **До изменения:** сформулировать проблему или гипотезу, модель/допущения, измеримый критерий и альтернативы. При необходимости самостоятельно исследовать публикации, официальные данные, открытый код и документацию; проверять достоверность, лицензии и версии.
+2. **Когда меняется маршрут:** если найдены новые физические факты, фальсифицирующий тест, некорректная аппроксимация, лучшая схема расчёта или блокировка, разрешается переставлять этапы и перерабатывать ТЗ. Сначала записать основание, что отвергнуто, что сохраняется, какие риски/ресурсы/проверки появляются.
+3. **Не менять смысл доказательства:** значимое изменение конечной научной цели, допустимых рискованных действий или критериев признания результата требует явного решения пользователя. Нельзя скрывать неудачные данные, подгонять критерий после расчёта или объявлять симуляцию наблюдательным измерением.
+4. **После этапа:** выполнить необходимые (не бесконечные) тесты, внести реальные данные/ограничения в EVIDENCE, обновить STATE и ровно один актуальный NEXT_ACTION; при изменении научного маршрута — обновить PLAN и специальное ТЗ. Сохранить checkpoint, commit/push без force, не сливать невалидированный draft PR. Если среда позволяет — сразу начать следующий полезный этап.
+5. **Контекст и размер:** держать PLAN навигационным, не превращать в повторение всех логов. Исторические отрицательные результаты сохранять в EVIDENCE и научных отчётах; старые выполненные шаги переносить в журнал/архив по проверяемым ссылкам, а не накапливать в NEXT_ACTION бесконечным списком. Агент должен восстановить работу в новом чате без чтения всей истории.
+
+## 5. Журнал решений по плану (только существенные изменения)
+
+| Дата | Изменение маршрута | Основание / проверка |
+|---|---|---|
+| 2026-11-22 | Введён единый изменяемый PLAN вместо неявного плана, рассредоточенного по общей дорожной карте, частным ТЗ и backlog; существующие scientific/JSON evidence сохранены | Аудит main и draft PR #1: правила автономного цикла уже есть, но порядок пересмотра общего плана не выделен в отдельный файл |
+| 2026-11-22 | Зафиксирована корневая неизменяемая GOAL для общей программы космология + галактические гало; существующая цель kinetics оставлена специализированной | Решение пользователя; прежний AGENTS описывал только механизм производства, хотя PLAN содержал галактический поток |
+
+| 2026-11-22 | Для фаз A/B после bounded Z′↔ν+antiν временного пилота выявлена большая ошибка continuum energy и dt; точное пересечение дочерних угловых ячеек стало обязательным нормировочным контролем, но НЕ самостоятельным сертификатом точности | [архив начального консервативного этапа](../archive/stages/2026/11/2026-11-22-vector-neutrino-reversible-event-graph.md), [этап геометрической коррекции](../archive/stages/2026/11/2026-11-22-vector-neutrino-shell-overlap.md), независимые JSON/weak controls; цель и физические ворота не изменены |
+
+| 2026-11-22 | После точной angular-normalization выявлена систематическая ошибка включения полной ширины верхнего vector energy-bin: для scoped 1↔2 weak energy correction использовать физическую обрезанную wV(E) ячейку, не считать неизменённую midpoint сумму континуальной | [этап и отрицательные N/E/S результаты](../archive/stages/2026/11/2026-11-22-vector-neutrino-radial-endpoints.md); h=.05 E-ошибка +0.592%→−0.032%, N остаётся −0.142%; общая цель неизменна |
+
+| 2026-11-22 | Для фазы B добавлен обязательный stoichiometric-nullspace audit каждой conservative collision lattice до вывода о равновесии: правильные C/L/E и H-теорема могут сосуществовать с ложными frozen modes | [точный modular/SVD аудит](../archive/stages/2026/11/2026-11-22-vector-neutrino-invariants.md): integer ν endpoint имеет 2 искусственных инварианта (nullity 5), shifted network — 3 физических при проверенных mV,Emax,h |
+
+| 2026-11-22 | В фазе B независимое максимум-энтропийное FD/BE constrained решение теперь используется как отдельная контрольная точка для настоящей неравновесной эволюции ν/antiν/Z′, без скрытого FD reset; остаточный timestep bias сохраняется | [аудит](../archive/stages/2026/11/2026-11-22-vector-neutrino-constrained-equilibrium.md), [численный JSON](../kinetics/results/vector-neutrino-constrained-equilibrium-2026-11-22.json); h=.2, τ500 spectral abs error ≈0.00104; dt-bias nonmonotone |
+
+| 2026-11-22 | Для фазы B заменить first-order последовательные implicit microevents на аналитически точный отдельный Pauli/Bose 1↔2 Riccati flow + Strang с независимым IVP эталоном и отдельным timestep/order gate; жёсткий h=.1 ещё НЕ в асимптотике | [архивный этап](../archive/stages/2026/11/2026-11-22-vector-neutrino-exact-strang.md), [версионированные числа](../kinetics/results/vector-neutrino-exact-strang-2026-11-22.json): h=.2 отношения ошибок dt/2 ≈3.47,4.02, h=.1 ~1.64,1.96 |
+
+| 2026-11-22 | Вернуться из исправления toy 1↔2 Strang жесткости к приоритетному **физическому** 2→2 χ1/χ2–лептонному оператору: отказаться от hardcoded FD в on-shell 5D Pauli weak source, затем строить парные mode-resolved strong Cχ,Cℓ | [stage и границы применимости](../archive/stages/2026/11/2026-11-22-chi-lepton-nonthermal-weak.md), [скрипт](../kinetics/nonthermal_chi_lepton_5d_weak.py), [отрицательные ограничения](../kinetics/NONTHERMAL-CHI-LEPTON-5D-WEAK-AUDIT.md). Никакой физической Γelastic, фазы freeze-out или Ω пока нет |
+
+| 2026-11-22 | Добавить **entropy-production gate** для любой парной discrete χ–SM 2→2 реконструкции: exact energy/number conservation и положительные barycentric weights недостаточны для H-теоремы при nonlinear log-odds | [доказанный численный контрпример](../archive/stages/2026/11/2026-11-22-chi-lepton-conservative-entropy-negative.md): микроскопическая Sdot_event=+6.43e−13, но N=10 бин-Sdot=−3.60e−14 при точном N/E; требуется microreversible entropic strong projection |
+
+| 2026-11-22 | При парном физическом χℓ Pauli 2→2 биннинге использовать **одинаковые** barycentric коэффициенты для logit(f) реконструкции в F/R и для source deposition: это строго восстанавливает дискретную H-теорему, но не доказательство точности χ/SM спектра | [этап H-repair](../archive/stages/2026/11/2026-11-22-chi-lepton-logit-entropy-repair.md): N10 истинная исходная entropy 5D уменьшается на 93.4% от alias, N320 всё ещё 1.38%; нужен Pauli-bounded time и 3+ angular/cutoff контроль |
+
+| 2026-11-22 | Эволюция χ–лептонного энтропийно-согласованного 2→2 источника теперь должна иметь физическую конечную radial phase-space ёмкость и фактические Pauli bounds/entropy на каждом dt, с полным спектральным error rejection, а не просто N/E в weak моменте | [первый нелинейный time pilot](../archive/stages/2026/11/2026-11-22-chi-lepton-bounded-time.md), [скрипт/JSON](../kinetics/results/paired-chi-lepton-bounded-time-2026-11-22.json); **НЕ** закрыта 10-bin −93% osc shape error, time метод лишь первого порядка |
+
+| 2026-11-22 | Физический приоритет возвращён к **независимому 5D Pauli quadrature error budget**: старые χℓ nrad4 rates/entropy даже при точном N/E/H не дают количественной γelastic; oscillatory weak heat меняет знак при разрешении сетки, refined rate в ~55× меньше | [архив доказанного отрицательного этапа](../archive/stages/2026/11/2026-11-22-chi-lepton-5d-quadrature-negative.md), [отчёт](../kinetics/CHI-LEPTON-5D-QUADRATURE-NEGATIVE-AUDIT.md); впереди adaptive/split p,k and CM quadrature, cutoff and true strong χ1χ2–SM/Bose FRW |
+
+| 2026-11-22 | Продвинут физический weak-rate gate: независимые energy-guided p Gauss сегменты с точным p²dp-объёмом и постоянной ΔE при изменении cutoff сокращают осциллирующую radial alias, но outgoing CM polar и энтропия **ещё не** сходятся монотонно | [положительные/отрицательные численные результаты](../archive/stages/2026/11/2026-11-22-chi-lepton-segmented-radial.md): segmented12×6 vs uniform nr64 Q сдвиг ~0.009% на фиксированном angle, CM orders16→64 Q/S различаются на проценты |
+
+| 2026-11-22 | Для физического t-channel vector χℓ 2→2 устранена принципиальная forward CM angular alias аналитическим y=log[1+2p*²(1−c)/mV²] и точной Jacobian, независимо проверены I0 и transport I1 | [научный этап](../archive/stages/2026/11/2026-11-22-chi-lepton-log-transfer-angle.md), [аудит](../kinetics/CHI-LEPTON-LOG-TRANSFER-ANGLE-AUDIT.md). При A=1000 uniform ncos8 I0 ошибается −93%, mapped ~4e−10; в полном 5D mV=.01 uniform ncos32 Q ниже mapped на 22.9%; полные χ1/χ2/SM/φ/FRW ворота всё ещё открыты |
+
+| 2026-11-22 | После независимых χℓ finite-vector radial+log-CM интегралов проверены ОБА χ вида с различными массами и массовое подавление электроноподобного лептона; пока только conditional 5D Pauli weak, нельзя подменять физическую coupled χ1χ2+SM/φ bath | [этап двух χ mass channels](../archive/stages/2026/11/2026-11-22-chi-lepton-joint-mass.md): mℓ/T=.5 на гладком f уменьшает Q ~9.5–9.7%, но oscillatory massive-lepton χ2 mid→fine меняется +1.74%; следующий этап shared lepton strong bath |
+
+| 2026-11-22 | Начата реально **совместная нелинейная** Pauli 2→2 эволюция двух отдельных χ масс на **одном**, а не двух независимых fℓ(t), с точным изолированным elastic Nχ1,Nχ2,Nℓ, общим E и H; реальное χ2 из φ и физическая 5D сходимость ещё отсутствуют | [этап](../archive/stages/2026/11/2026-11-22-chi1-chi2-shared-lepton.md), [научный отчёт](../kinetics/CHI1-CHI2-SHARED-LEPTON-PAULI-AUDIT.md), [JSON](../kinetics/results/chi1-chi2-shared-lepton-pauli-2026-11-22.json). Следующее: on-shell χ1↔χ2+real φ Bose/Pauli, потом полная плазма FRW |
+
+| 2026-11-22 | От совместной χ1χ2–ℓ Pauli 2→2 временной системы перейти к строгому **движущемуся** релятивистскому χ1↔χ2+real φ Yukawa Pauli/Bose WEAK источнику: вывести boost daughters, threshold, полную инверсию и химическое равновесие, проверить ЗНАК чистой φ-скорости | [архив](../archive/stages/2026/11/2026-11-22-moving-yukawa-bose-pauli.md), [отчёт](../kinetics/MOVING-YUKAWA-BOSE-PAULI-WEAK-AUDIT.md): при фиксированной T2=Tφ=1 mother T1=.9 даёт **φ уничтожение**, T1=1.1 φ производство, entropy положительна в обоих; пока weak, без strong coupled φ/FRW |
+
+| 2026-11-22 | После физического движущегося χ1↔χ2+real φ WEAK источника проверен элементарный **строго on-shell energy-matched** Pauli/Bose 1↔2 implicit substep: явные физические bounds, две conserved charge, E и H, в том числе обратный процесс и bφ=0 | [научный bounded-event stage](../archive/stages/2026/11/2026-11-22-yukawa-bounded-on-shell-event.md), [отчёт](../kinetics/YUKAWA-ON-SHELL-BOUNDED-EVENT-AUDIT.md). Ключевое ограничение — modal weights ещё произвольны, НЕТ полного физического χ1χ2φ q-grid/time или SM/FRW |
+
+| 2026-11-22 | Полный on-shell χ1↔χ2+real φ 1↔2 source стал *нелинейно* эволюционировать все **три** Fermi/Bose energy populations при согласованной logit/η интерполяции и парной консервативной deposition; проверены физические radial cell capacities и отдельные химические μ | [постоянный stage](../archive/stages/2026/11/2026-11-22-yukawa-three-species-bounded-time.md), [аудит](../kinetics/YUKAWA-THREE-SPECIES-BOUNDED-TIME-AUDIT.md). **Отрицательное:** при bins16→64 итоговый ΔNφ изменяется на ~8.9% для обратного χ2φ→χ1 и ~2.6% для производства; first-order dt, нет IR/SM/FRW/86eV Ω |
+
+| 2026-11-22 | Интегрированы в один semi-discrete нелинейный Pauli/Bose источник **четыре** реально изменяющихся fχ1,fχ2,fℓ,bφ, при этом χ1/χ2 разделяют точные energy cells и обе χ-упругие реакции используют **ОДИН** lepton bath | [сохранённый этап](../archive/stages/2026/11/2026-11-22-four-species-shared-lepton-yukawa.md), [полный аудит](../kinetics/FOUR-SPECIES-YUKAWA-SHARED-LEPTON-AUDIT.md). Глобальные N1+N2,N1+φ,Nℓ,E и H сохраняются, но inherited elastic nrad4/IR/SM FRW ещё не physical Γelastic/86eV Ω |
+
+| 2026-11-22 | Полный χ1χ2φ + ONE lepton dynamic Pauli/Bose теперь имеет energy-guided segmented p/k Gauss в **обоих** χℓ каналах и independently matches full 5D weak Q/H, НО **|Qχ1| cut6→10 +26.96%**, oscillatory uniform4 overstates segmented5 2.37× даже с точными charges/E/H | [негативный stage](../archive/stages/2026/11/2026-11-22-four-species-segmented-elastic.md), [audit](../kinetics/FOUR-SPECIES-SEGMENTED-ELASTIC-GATE-AUDIT.md). P0 cutoff12/16/20 и 3+ angle/IR controls перед Γelastic/86eV DM |
+
+| 2026-11-22 | **Развести два независимых численных приближения** в χ1χ2–φ–shared-lepton системе: cutoff входных 5D p,k и энергосетку логитов χ/ℓ. Для FD logit сетка точна, но на nonthermal f cutoff-скан меняет и спектральную ошибку; данные о Γelastic без фиксированной сетки неинтерпретируемы | [этап](../archive/stages/2026/11/2026-11-22-four-species-cutoff-mesh-separation.md), [отрицательная H/Q спектральная проверка](../kinetics/FOUR-SPECIES-CUTOFF-MESH-SEPARATION-AUDIT.md): на cut12/bin64 смена сетки меняет Qχ1~7.9%, H~45.6%; при фиксированной сетке N256 H bias −5.7% относительно analytic-f 5D weak |
+
+| 2026-11-22 | При независимом 5D χ1χ2–shared-lepton Pauli weak контроле зафиксировать **второй порядок по шагу энергетической сетки для Fermi-logit интерполяции** только при неизменных p/k/μ/CM/φ/cutoff, не переносить его на физическую Γelastic; Qχ знакопеременные ошибки | [сетка и первичный численный результат](../archive/stages/2026/11/2026-11-22-four-species-mode-refinement.md), [код/тест](../kinetics/four_species_mode_refinement_gate.py): N256→4096 H bias −5.73%→−0.0245%, отношения при h/2 ~3.87,3.70,4.15,3.95; Qχ не монотонны |
+
+| 2026-11-22 | **Критическое IR-ограничение 86eV φ**: термальный BE в узле E=mφ умножается на всю положительную p²dp-ячейку, создавая ложную Nφ∝h³/mφ и видимость конденсата; нужна настоящая интегральная Bose cell + отдельная нулевая мода | [доказательный этап](../archive/stages/2026/11/2026-11-22-phi-ir-first-cell-artifact.md), [научный аудит](../kinetics/PHI-IR-FIRST-CELL-ARTIFACT-AUDIT.md): 86eV,T=1GeV illustrative N64 первая ячейка ×756352, full thermal N ×1363.5, хотя n_massless=g ζ3 T³/π² конечно. Не выдавать b(m) за BEC |
+
+| 2026-11-22 | Критический реальный Bose IR gate: физическая ∫p²dp hat-энтропийная dual M_i(η) без ложного 86eV rest-cell condensate и с сохранённой on-shell χ1↔χ2+φ quantum H-теоремой; простой rest-node cell-average **ломает** химическое равновесие | [новый научный архив](../archive/stages/2026/11/2026-11-22-phi-bose-moment-galerkin.md); следующий P0 — положительный implicit M(η) time и реальная φ/SM FRW, no Ω/BEC |
+
+| 2026-11-22 | Переход от мгновенной true-p²dp Bose dual M_i к **реальной конечновременной** implicit Yukawa χ1↔χ2+φ Pauli/Bose H-схеме: concave entropy ΔS≥dt H, аналитический Jacobian/Newton, подтверждено совпадение физической tree Γrest parent weak | [этап и честная numerical alias](../archive/stages/2026/11/2026-11-22-phi-bose-implicit-moment-step.md). **Negative:** φ time при N8→32 меняется ≈9.7% даже с tree Yukawa Γrest; требуется q/p/CM/dt/IR + SM coupled прежде физического Ω/BEC |
+
+| 2026-11-22 | Orthogonal physical tree Yukawa Bose-IR **shape vs parent UV tail** audit demonstrates thermodynamic entropy/chemical equilibrium pass not source convergence: affine η exact but curved φ η leads N16 +68% rate alias, N512 −0.57%, mother pmax2 omits 65.6% net source vs pmax16 | [stage](../archive/stages/2026/11/2026-11-22-phi-bose-ir-shape-gate.md), [scientific report](../kinetics/PHI-BOSE-IR-SHAPE-GATE-AUDIT.md); next IR-adaptive p/E hat + pmax12/16 fully nonlinear dt, then actual χ/SM/FRW |
+
+| 2026-11-22 | Физически упорядоченная Bose IR неравномерная eta-hat сетка снижает источник φ curved q alias: cubic N64 −0.627% против uniform −11.35%, N256 −0.043% против −1.99%, но выявлен **нефизический near-critical moment-inverse failure** dt30 с Cφ≤0 | [negative+positive stage](../archive/stages/2026/11/2026-11-22-phi-bose-nonuniform-ir-grid.md); next tangent cone ηphi→0 and physical pmax12/16 nonlinear q/dt then SM/FRW, no Ω/BEC |
+
+| 2026-11-22 | Strict near-critical Bose eta-dual tangent cone gate exposes structural **overlapping Galerkin hat moment** failure: source Cphi=(0,−q) can imply ηrest_dot<0 at ηrest=0 even though no φ microproduction and positive H | [analytic proof & physical N16 dt20/dt30](../archive/stages/2026/11/2026-11-22-phi-bose-moment-tangent.md), next nonoverlapping physical-cell moment alternative, not real BEC |
+
+| 2026-11-23 | Структурный следующий Gate после overlapping Bose ηrest false tangent: nonoverlap cellwise P1 with 2 independent η endpoints/cell, physical p²dp, identical on-shell Pauli/Bose source and implicit η>0; numerical error must be isolated before treating as physical scalar kinetics | [date archive](../archive/stages/2026/11/2026-11-23-phi-bose-cell-entropy.md): N16 quadratic φ first-cell source=0 implies ηdot=0, former dt30 failure now passes; synthetic dt1e7 mode N8→64 ΔNφ still varies ~18%, physical pmax and SM/FRW unresolved |
+
+| 2026-11-23 | Следующий численный обоснованный φ/Yukawa шаг: forward daughter Bose Eφ=a−bcosθ требует специальной положительной log Eφ angular quadrature; **radial convergence не доказывает angular convergence** и ранее опубликованное weak Rφ недооценено на ~10–17% при nangle12 | [арифметический/полный 1↔2 аудит](../archive/stages/2026/11/2026-11-23-phi-bose-daughter-log-angle.md): exact ∫dc/Eφ, mapped thermal nangle12~n64, но sharp IR и parent cutoff UV ещё не проверены |
+
+| 2026-11-23 | **Опровергнута универсальная ηφ-положительность даже двухлокальных неперекрывающихся Bose DG energy cells**: точный дочерний φ log-angle источник обнаруживает внутри-ячеечную inverse Gram tangent obstruction при отрицательном φ-production и положительной H | [точный 2×2 SPD контрпример и physical N32 failure](../archive/stages/2026/11/2026-11-23-phi-bose-dg-tangent-negative.md): N32 ηdotrest<0, implicit dt30 fails, N16 passes; требуется другой conserved energy+entropy/number-Bose-positive метод, не искусственный BEC |
+
+При дальнейшем изменении не повторять все коммиты здесь. Добавлять одну короткую строку о **существенном решении** со ссылкой на подробный отчёт/доказательства. Научный факт не становится подтверждённым только от появления в PLAN.
+
+
+---
+
+**Навигация после реорганизации 22.11.2026:** это подробный изменяемый план, сохранённый полностью вместе с журналом научных решений. Быстрые карты: [PLAN](../PLAN.md) и [PROJECT_MAP](../PROJECT_MAP.md). Обновлять сюда физические этапы и критерии на основании доказательств; корневой PLAN лишь маршрутизирует.
+
+## 2026-11-24 — изменение приоритета: стабильный χ2 и missing SM channels
+
+Новый физический отрицательный контроль [χ2 P-wave + exact-GG thermal gate](../kinetics/PHI-BOSE-STABLE-CHI2-THERMAL-RELIC-GATE-2026-11-24.md) требует поднять учёт **всех стабильных компонент** в этапах A–D выше косметического улучшения уже неполной P2 квадратуры: real φ Yukawa + qχ1=qχ2 даёт net Dirac U1 и тяжёлого стабильного χ2. Для специально заданного симметричного thermal MB начального состояния y=.001 фиксированная RD история даёт Ωχ2pair h²≈880 против ΛCDM 0.120; это только **conditional** результат, не запрещение всех сценариев. Недопустимо игнорировать χ2, даже если φ спектр будет получен. Микроскопический A' [SM portal audit](../kinetics/PHI-BOSE-VECTOR-PORTAL-PARTIAL-SM-GATE-2026-11-24.md) также требует μ/τ и измеренный Rhad для реального ΓV и независимые Qdark=-QSM. Смена порядка исследований обоснована новыми физическими доказательствами; GOAL остаётся прежним. Досрочная остановка при блокировке только по AGENTS при отсутствии **всех** других разрешённых полезных направлений; checkpoint обязателен.

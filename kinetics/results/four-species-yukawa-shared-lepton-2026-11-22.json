@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "four actual evolving finite-volume χ1/χ2/φ/one common ℓ from Yukawa full Pauli/Bose + finite-vector Pauli elastic, synthetic units, NOT physical 86eV relic",
+  "numerical_parameters": {
+    "mchi1": 0.1,
+    "mchi2": 0.02,
+    "mphi": 0.001,
+    "mlepton": 0,
+    "y": 0.001,
+    "G": 0.01,
+    "mv": 0.1,
+    "elastic_incoming_cut_T": 6,
+    "yukawa_mother_pmax": 12,
+    "elastic_nr": 4,
+    "elastic_nmu": 4,
+    "elastic_cm_polar": 8,
+    "elastic_phi": 8,
+    "yukawa_nr": 12,
+    "yukawa_angle": 12,
+    "spins": [
+      4,
+      4,
+      1,
+      4
+    ],
+    "end_time": 20000000,
+    "atol": 0.00002
+  },
+  "math": "One shared lepton fℓ; independent elastic χ1ℓ+χ2ℓ and moving boosted Yukawa χ1↔χ2+realφ on identical χ grids/capacities. logit fermion / ln[(1+b)/b] Bose interpolation+signed barycentric deposition; N1+N2,N1+Nφ,Nlepton,total E and entropy. Fermi+Bose guarded first-order two half Euler.",
+  "instant_bins16_T1_1p1": {
+    "H_total": 7.848047970094606e-12,
+    "H_elastic": 9.13962565558256e-13,
+    "H_yukawa": 6.93408540453635e-12,
+    "entropy_node_event_abs": 1.1147551223859162e-25,
+    "rate_energy_residual": -8.077935669463161e-26,
+    "max_charge_residual": 3.1705897502642906e-26,
+    "Yukawa_Rphi": 2.7378421233193695e-11,
+    "elastic_Qlep": 1.0053588221140698e-11
+  },
+  "rows": [
+    {
+      "bins": 12,
+      "T1": 0.9,
+      "accept": 6,
+      "reject": 2,
+      "dNphi": -0.0005171029883470624,
+      "dElepton": -0.00013935159424785932,
+      "dS": 0.00016036505975236537
+    },
+    {
+      "bins": 12,
+      "T1": 1.1,
+      "accept": 5,
+      "reject": 2,
+      "dNphi": 0.0005350599136244583,
+      "dElepton": 0.00019948458465810596,
+      "dS": 0.00015411450248059566
+    },
+    {
+      "bins": 16,
+      "T1": 0.9,
+      "accept": 7,
+      "reject": 2,
+      "dNphi": -0.000513798224731854,
+      "dElepton": -0.00013776075452010043,
+      "dS": 0.00015957692739743123
+    },
+    {
+      "bins": 16,
+      "T1": 1.1,
+      "accept": 7,
+      "reject": 2,
+      "dNphi": 0.000532534378581806,
+      "dElepton": 0.00019696456985360283,
+      "dS": 0.0001534749218707887
+    },
+    {
+      "bins": 24,
+      "T1": 0.9,
+      "accept": 11,
+      "reject": 3,
+      "dNphi": -0.0005119597828179834,
+      "dElepton": -0.0001369309627472389,
+      "dS": 0.00015889365047616621
+    },
+    {
+      "bins": 24,
+      "T1": 1.1,
+      "accept": 11,
+      "reject": 3,
+      "dNphi": 0.0005322058640158112,
+      "dElepton": 0.00019587211362237476,
+      "dS": 0.00015319446998685038
+    }
+  ],
+  "tol_bins16_T1_1p1": [
+    {
+      "atol": 0.0001,
+      "accept": 4,
+      "reject": 1,
+      "dNphi": 0.0005333420276456557,
+      "dElepton": 0.00019721716953472807,
+      "dS": 0.0001535582447145245
+    },
+    {
+      "atol": 0.00002,
+      "accept": 7,
+      "reject": 2,
+      "dNphi": 0.000532534378581806,
+      "dElepton": 0.00019696456985360283,
+      "dS": 0.0001534749218707887
+    },
+    {
+      "atol": 0.000005,
+      "accept": 15,
+      "reject": 5,
+      "dNphi": 0.0005320528920731427,
+      "dElepton": 0.00019681208406263588,
+      "dS": 0.00015342463565026776
+    }
+  ],
+  "positive": "18 focused tests across source components pass locally. Real four distributions and one shared lepton bath evolve with physical bounds, two global charges+Nlepton+E machine preserved, Hdot>=0 and actual entropy increases, true lepton heat positive/negative and Yukawa production/inverse.",
+  "negative": "Significant untested χℓ radial nrad4, Bose IR, high-T thermal masses and gauge SM/FRW. Local tolerance and bin changes matter; 86eV relic Ω/BEC/CLASS absent.",
+  "class_ready": false
+}

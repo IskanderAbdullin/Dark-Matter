@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "physics_scope": "Synthetic Yukawa chi1<->chi2+real phi with m1=.1,m2=.02,mphi=86e−9 GeV,y=.001, mother Tχ1=.9, daughter Tχ2=Tphi=1, no SM/Zprime/FRW, not physical DM prediction.",
+  "fixed_parent": {
+    "pmax_GeV": 2,
+    "gauss_nr": 24,
+    "gauss_nangle": 48
+  },
+  "mode_energy_bins": [
+    16,
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "shape_scan": [
+    {
+      "shape": "affine_thermal",
+      "eta": "eta_phi(E)=E",
+      "Rphi_reference": -1.2936842966751862e-11,
+      "H_reference": 1.8658911957741945e-12,
+      "Rphi_relative_error": [
+        4.88e-15,
+        4.88e-15,
+        4.88e-15,
+        5.33e-15,
+        5.11e-15,
+        5.33e-15
+      ],
+      "H_relative_error_abs_bound": 8e-15
+    },
+    {
+      "shape": "broader",
+      "eta": "eta_phi(E)=E+0.30exp(-((E-0.10)/0.06)^2)",
+      "Rphi_reference": -3.7748169699641104e-12,
+      "H_reference": 8.295360996172926e-13,
+      "Rphi_relative_error": [
+        0.0031623,
+        -0.117193,
+        -0.0479708,
+        -0.0139589,
+        -0.00354035,
+        -0.000941864
+      ],
+      "H_relative_error": [
+        -0.168319,
+        -0.111776,
+        -0.0416774,
+        -0.011915,
+        -0.00309252,
+        -0.00083515
+      ]
+    },
+    {
+      "shape": "infrared_curved",
+      "eta": "eta_phi(E)=E+0.40exp(-((E-0.04)/0.02)^2)",
+      "Rphi_reference": -5.95102464181048e-12,
+      "H_reference": 1.0395604380423965e-12,
+      "Rphi_relative_error": [
+        0.681464,
+        0.295671,
+        -0.11351,
+        -0.0620191,
+        -0.0198752,
+        -0.00573491
+      ],
+      "H_relative_error": [
+        0.359721,
+        0.0412962,
+        -0.103124,
+        -0.0594626,
+        -0.0190487,
+        -0.0055686
+      ]
+    }
+  ],
+  "IR_curved_parent_cutoff_control": {
+    "gauss_nr": 72,
+    "gauss_nangle": 144,
+    "cutoffs": [
+      {
+        "pmax": 2,
+        "Rphi": -5.951964666072433e-12,
+        "H": 1.0398303931977552e-12
+      },
+      {
+        "pmax": 4,
+        "Rphi": -1.3934337932388185e-11,
+        "H": 3.5559041023271403e-12
+      },
+      {
+        "pmax": 6,
+        "Rphi": -1.6562455069425208e-11,
+        "H": 4.937547462840146e-12
+      },
+      {
+        "pmax": 8,
+        "Rphi": -1.7158015385193684e-11,
+        "H": 5.381165732594927e-12
+      },
+      {
+        "pmax": 12,
+        "Rphi": -1.7294680321344694e-11,
+        "H": 5.5177691346439935e-12
+      },
+      {
+        "pmax": 16,
+        "Rphi": -1.7298752431826347e-11,
+        "H": 5.523641875523013e-12
+      }
+    ]
+  },
+  "independent_parent_quadrature_Rphi": {
+    "broader": [
+      {
+        "nr": 24,
+        "nangle": 48,
+        "Rphi": -3.7748169699641104e-12
+      },
+      {
+        "nr": 48,
+        "nangle": 96,
+        "Rphi": -3.774888360185255e-12
+      },
+      {
+        "nr": 72,
+        "nangle": 144,
+        "Rphi": -3.774888279040607e-12
+      }
+    ],
+    "infrared_curved": [
+      {
+        "nr": 24,
+        "nangle": 48,
+        "Rphi": -5.95102464181048e-12
+      },
+      {
+        "nr": 48,
+        "nangle": 96,
+        "Rphi": -5.951959774653845e-12
+      },
+      {
+        "nr": 72,
+        "nangle": 144,
+        "Rphi": -5.951964666072433e-12
+      }
+    ]
+  },
+  "primary_full_unrounded_data": "Reproduce with OPENBLAS_NUM_THREADS=1 python -m kinetics.phi_bose_ir_shape_gate; compact values above are rounded except cutoff and independent quadrature.",
+  "scope_limits": [
+    "Fixed synthetic shapes, no evolved physical phi f(q)",
+    "First-order implicit full time was tested elsewhere but not converged",
+    "Tree-level scalar width assumes y=.001, no full SM plasma or FRW",
+    "No physical OmegaDM, BEC, Gammaelastic or CLASS"
+  ],
+  "class_ready": false
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "science_date": "2026-11-21",
+  "actual_external_BEST_run": 44924098843,
+  "run_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44924098843",
+  "raw_artifact_id": 14714772886,
+  "artifact_retention_days": 7,
+  "verified_external_BEST_git_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "model": "actual independent BEST with 2 MPI ranks, χ1(M1=.1,FD g=4) ↔ χ2(massless,FD g=4)+φ(mphi=.001,BE g=1), prescribed RD a=sqrt(t/.0001), fixed Γrest=1, 96 q nodes, 6000 Vegas samples, 128 exprb steps dtΓ=3.125e−7, end tΓ=4e−5; initial mother thermal FD frozen in comoving momenta except actual reaction",
+  "analytic_comparison": "kinetics/radiation_collisionless_parent_bose.py, independently redshifted frozen mother and exact on-shell initial Bose growth",
+  "cases": [
+    {
+      "qmin": 0.0001,
+      "measured_N0": 1.698559369890688e-14,
+      "N0_divided_by_qmin_cubed": 0.016985593698906877,
+      "analytic_regular_below_qmin": 1.7092584190135785e-14,
+      "measured_to_analytic_N0_ratio": 0.9937405315639369,
+      "phi_number": 7.212764732258738e-7,
+      "phi_qmin_f": 1.0248290362443055,
+      "analytic_phi_qmin_f": 1.0196839876634718,
+      "relative_FRW_energy_work_residual": -1.8008475829684282e-10,
+      "relative_chi1_phi_charge_residual": 8.472454912208489e-13
+    },
+    {
+      "qmin": 0.00005,
+      "measured_N0": 2.1232806420351475e-15,
+      "N0_divided_by_qmin_cubed": 0.016986245136281178,
+      "analytic_regular_below_qmin": 2.118675568787706e-15,
+      "measured_to_analytic_N0_ratio": 1.002173562255252,
+      "phi_number": 7.212755105852383e-7,
+      "phi_qmin_f": 1.0106329211984226,
+      "analytic_phi_qmin_f": 1.005596425487842,
+      "relative_FRW_energy_work_residual": -1.7790756190248242e-10,
+      "relative_chi1_phi_charge_residual": -1.0443678080801715e-12
+    },
+    {
+      "qmin": 0.00002,
+      "measured_N0": 1.35889968233906e-16,
+      "N0_divided_by_qmin_cubed": 0.016986246029238244,
+      "analytic_regular_below_qmin": 1.352726066840513e-16,
+      "measured_to_analytic_N0_ratio": 1.0045638327299824,
+      "phi_number": 7.212758437695542e-7,
+      "phi_qmin_f": 1.0066441926123768,
+      "analytic_phi_qmin_f": 1.0016189883789222,
+      "relative_FRW_energy_work_residual": -1.8072739730009587e-10,
+      "relative_chi1_phi_charge_residual": -1.161575639464163e-12
+    }
+  ],
+  "scaling": {
+    "N0_qmin_1e4_to_5e5": 7.999693192995121,
+    "N0_qmin_5e5_to_2e5": 15.624999178602842,
+    "expected_1e4_to_5e5": 8,
+    "expected_5e5_to_2e5": 15.625,
+    "relative_N0_over_qmin_cubed_scatter": 0.00003840393529911336,
+    "phi_number_relative_range": 0.0000013346357180571515
+  },
+  "conclusion": "In the full non-equilibrium, expanding, closed 3-species quantum BEST solver the massive φ zero-mode number scales as qmin³ with scatter below 0.004% as qmin shrinks fivefold. It is the regular low-q physical phase-volume number, not a cutoff-independent delta-condensate at this early time. The full φ number is cutoff-stable, while the first-order time error still shifts f(qmin) ~0.5% against independent early analytic growth.",
+  "numerically_converged_qmin_at_fixed_grid_and_timestep": true,
+  "full_ir_time_Nq_Vegas_convergence_proven": false,
+  "macroscopic_BEC_at_tGamma_4e5_detected": false,
+  "late_time_BEC_absence_proven": false,
+  "SM_thermalization_or_86eV_cosmological_relic_CLASS_validated": false
+}

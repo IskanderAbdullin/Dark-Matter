@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-21",
+  "real_external_best_action_run": 44920000218,
+  "run_url": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44920000218",
+  "raw_artifact_id": 14713377744,
+  "verified_best_git_sha": "c70875be714e7a6bc6d38578c34bb0dc9f5aefa9",
+  "model": "closed χ1↔χ2+massive φ BEST quantum time evolution; M1=.1,mphi=.001,T=a=1,Gamma_rest=1, qmax30, ngrid96, Vegas neval12000, 2 MPI, 4 exprb steps dtGamma1e-5",
+  "initial_occupation_seed": "1e-12 exp(-q)",
+  "end_tGamma": 0.00004,
+  "independent_analytic_true_q0_source": 26758.110862799873,
+  "frozen_mother_analytic_q0_prediction_at_final_tGamma": 1.9163255031520936,
+  "cases": [
+    {
+      "qmin": 0.0001,
+      "N0": 3.2360014689088635e-14,
+      "phi_f_qmin": 1.9498357503753043,
+      "phi_number": 6.605510452008736e-7,
+      "N0_per_qmin_cubed": 0.032360014689088626,
+      "energy_rel": -1.0314709567070425e-12,
+      "charge_rel": 6.18064976973535e-10
+    },
+    {
+      "qmin": 0.00005,
+      "N0": 4.045766301309646e-15,
+      "phi_f_qmin": 1.9249636734876725,
+      "phi_number": 6.605457320505034e-7,
+      "N0_per_qmin_cubed": 0.03236613041047716,
+      "energy_rel": -1.724341391491968e-11,
+      "charge_rel": 5.98312091532274e-10
+    },
+    {
+      "qmin": 0.00002,
+      "N0": 2.58901491763354e-16,
+      "phi_f_qmin": 1.9177638512229214,
+      "phi_number": 6.605475162968817e-7,
+      "N0_per_qmin_cubed": 0.03236268647041924,
+      "energy_rel": -8.258712533729266e-12,
+      "charge_rel": 6.115819799457518e-10
+    }
+  ],
+  "volume_ratio_checks": {
+    "N0_qmin_1e_4_to_5e_5": 7.998488365137019,
+    "qcut_cubed_expected_first": 8,
+    "N0_qmin_5e_5_to_2e_5": 15.626662765650007,
+    "qcut_cubed_expected_second": 15.625,
+    "N0_divided_by_qmin_cubed_relative_scatter": 0.00018897296289300172
+  },
+  "conclusions": [
+    "Observed Bose massive BEST zero mode N0 decreases proportional to qmin^3 across fivefold cutoff shrink, with normalized density stable to ~0.02%.",
+    "The simulated early n0 at tGamma=4e-5 is consistent with ordinary finite smooth low-q Bose occupation, NOT demonstrated macroscopic condensate.",
+    "The qmin occupation converges toward finite true q0 Bose-source exponential, while total produced phi number stays stable near 6.6055e-7.",
+    "Low-q n0 and total source have unresolved time, Nq, Vegas and physical Γ(T)/FRW systematics."
+  ],
+  "macroscopic_zero_mode_BEC_detected_at_this_early_time": false,
+  "absence_of_future_late_time_condensate_proven": false,
+  "primordial_86eV_dark_matter_or_CLASS_validated": false
+}

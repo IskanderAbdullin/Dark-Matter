@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "code": "kinetics/phi_bose_exact_shell_graph.py",
+  "tests": "tests/test_phi_bose_exact_shell_graph.py",
+  "parameters": {
+    "m1_GeV": 0.1,
+    "m2_GeV": 0.02,
+    "mphi_GeV": 8.6e-8,
+    "energy_spacing_GeV": 0.01,
+    "E10_GeV": 0.1,
+    "E20_GeV": 0.052,
+    "Ephi0_GeV": 0.048,
+    "synthetic_rate": 0.02,
+    "unit_mode_capacities": true
+  },
+  "graph": [
+    {
+      "n": 2,
+      "modes": 9,
+      "events": 6,
+      "rank": 6,
+      "left_nullity": 3,
+      "charge_energy_max_error": 1.3877787807814457e-17
+    },
+    {
+      "n": 4,
+      "modes": 15,
+      "events": 15,
+      "rank": 12,
+      "left_nullity": 3,
+      "charge_energy_max_error": 2.7755575615628914e-17
+    },
+    {
+      "n": 8,
+      "modes": 27,
+      "events": 45,
+      "rank": 24,
+      "left_nullity": 3,
+      "charge_energy_max_error": 2.7755575615628914e-17
+    },
+    {
+      "n": 16,
+      "modes": 51,
+      "events": 153,
+      "rank": 48,
+      "left_nullity": 3,
+      "charge_energy_max_error": 5.551115123125783e-17
+    }
+  ],
+  "thermal_common_T_and_mu_max_relative_FB": [
+    2.9643315189280843e-16,
+    5.230927500809911e-16,
+    6.647391741532864e-16
+  ],
+  "single_event": {
+    "extent": 0.20742919374901264,
+    "entropy_gain": 0.25493859659310436,
+    "implicit_residual": -5.551115123125783e-17,
+    "discrete_entropy_lower_bound": 0.048656350286142305
+  },
+  "network_N8_time2": [
+    {
+      "steps": 1,
+      "delta_Nphi": 0.049102410269363794,
+      "entropy_gain": 0.0011676745055950732
+    },
+    {
+      "steps": 2,
+      "delta_Nphi": 0.04707303358702308,
+      "entropy_gain": 0.0011649552974191124
+    },
+    {
+      "steps": 4,
+      "delta_Nphi": 0.04638327945147491,
+      "entropy_gain": 0.0011587006303770409
+    },
+    {
+      "steps": 8,
+      "delta_Nphi": 0.04617268551113174,
+      "entropy_gain": 0.0011537672614991834
+    }
+  ],
+  "max_abs_global_charge_energy_residual": 2.842170943040401e-14,
+  "observed_local_tests": "4 passed in 0.11s",
+  "main_limitation": "Deliberately unit phase-space capacity, synthetic W, no direct continuous collision quadrature normalization, first phi node 0.048 GeV omits physical mphi=86e-9 GeV soft tail; neither numerical convergence nor real IR/thermal cosmology.",
+  "class_ready": false
+}

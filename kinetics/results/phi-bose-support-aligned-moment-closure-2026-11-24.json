@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "scope": "conditional positive scalar-only fixed-FD exact time two-moment closure in physical support-clipped first cell; NOT full coupled strong",
+  "P_GeV": 2,
+  "phi_mass_GeV": 8.6e-8,
+  "physical_support_floor_GeV": 0.0011992509375794726,
+  "rows": [
+    {
+      "N": 24,
+      "original_eta_left_dot_GeV": -4.934728038985654e-10,
+      "aligned_eta_left_dot_GeV": 7.45138036e-9,
+      "aligned_eta_right_dot_GeV": 1.11498398e-8,
+      "unsplit_frozen_boundary_t_GeV_inv": 174.2362815813703,
+      "positive_eta_fit_2tstar": [
+        0.0012018500235330845,
+        0.0038277549250515016
+      ],
+      "positive_eta_fit_100tstar": [
+        0.0013354534377861339,
+        0.004022306363601513
+      ]
+    },
+    {
+      "N": 32,
+      "original_eta_left_dot_GeV": -3.2640745039529283e-9,
+      "aligned_eta_left_dot_GeV": 2.94300213e-9,
+      "aligned_eta_right_dot_GeV": 1.26229221e-8,
+      "unsplit_frozen_boundary_t_GeV_inv": 26.384661164015654,
+      "positive_eta_fit_2tstar": [
+        0.0011994062360600238,
+        0.0021516295039263203
+      ],
+      "positive_eta_fit_100tstar": [
+        0.0012070113820465524,
+        0.0021845261847741517
+      ]
+    },
+    {
+      "N": 40,
+      "original_eta_left_dot_GeV": -5.764160436399143e-10,
+      "aligned_eta_left_dot_GeV": 2.07608769e-10,
+      "aligned_eta_right_dot_GeV": 4.95693292e-9,
+      "unsplit_frozen_boundary_t_GeV_inv": 149.5283248384145,
+      "positive_eta_fit_2tstar": [
+        0.0011993128969450624,
+        0.0013781305725565297
+      ],
+      "positive_eta_fit_100tstar": [
+        0.0012020354070670012,
+        0.0014525337116070966
+      ]
+    }
+  ],
+  "verified_fitted_times_multiples": [
+    1.1,
+    2,
+    10,
+    100
+  ],
+  "max_relative_moment_fit_residual": 5e-12,
+  "independent_N32_100t_parent_k_quadrature_convergence_rel": 2e-15,
+  "focused_local_tests": "3 passed in 4.61s",
+  "class_ready": false
+}

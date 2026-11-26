@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scope": "pointwise positive Bose eta-dot but negative right DG-P1 affine projected tangent at hard upper support",
+  "P_GeV": 2,
+  "N": 32,
+  "physical_upper_support_energy_GeV": 1.9211992509359777,
+  "last_active_original_lower_edge_GeV": 1.8088878938628088,
+  "modal_true_inverse_eta_dot_expansion": "g(K-δ)=Aδ+Bδ²+O(δ³)",
+  "A": 2.3823467442533175e-11,
+  "B": 7.889454956528547e-12,
+  "affine_right_asymptote": "etaRight_dot=-B*h²/6+O(h³)",
+  "rows": [
+    {
+      "subdivide": 2,
+      "width": 0.05615567853658443,
+      "eta_right": -4.26575444296443e-15,
+      "ratio_to_asymptotic": 1.0287568563679248
+    },
+    {
+      "subdivide": 4,
+      "width": 0.028077839268292215,
+      "eta_right": -1.0513277535361424e-15,
+      "ratio_to_asymptotic": 1.0141799292295754
+    },
+    {
+      "subdivide": 8,
+      "width": 0.014038919634146108,
+      "eta_right": -2.6098251944467603e-16,
+      "ratio_to_asymptotic": 1.007043644017365
+    },
+    {
+      "subdivide": 16,
+      "width": 0.007019459817073054,
+      "eta_right": -6.501685492533282e-17,
+      "ratio_to_asymptotic": 1.0035125823875761
+    },
+    {
+      "subdivide": 32,
+      "width": 0.003509729908536527,
+      "eta_right": -1.6225765066796667e-17,
+      "ratio_to_asymptotic": 1.0017562061731653
+    },
+    {
+      "subdivide": 64,
+      "width": 0.0017548649542682634,
+      "eta_right": -4.05289435e-18,
+      "ratio_to_asymptotic": 1.0008802751145787
+    }
+  ],
+  "focused_local_tests": "3 passed 1.20s",
+  "class_ready": false
+}

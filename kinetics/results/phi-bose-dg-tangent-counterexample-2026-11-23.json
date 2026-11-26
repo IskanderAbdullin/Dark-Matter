@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-23",
+  "scope": "full moving tree χ1↔χ2+real φ Bose/Pauli, physical p²dp *nonoverlap* 2-local-P1 inverse fugacity; synthetic thermal state, not cosmology",
+  "mass_GeV": {
+    "chi1": 0.1,
+    "chi2": 0.02,
+    "phi": 8.6e-8
+  },
+  "yukawa_y": 0.001,
+  "T_GeV": {
+    "chi1": 0.9,
+    "chi2": 1,
+    "phi": 1
+  },
+  "parent": {
+    "pmax": 2,
+    "nrad": 24,
+    "nangle": 48,
+    "scheme": "log_ephi"
+  },
+  "analytic_two_local": {
+    "G": [
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "C": [
+      -0.05,
+      -1
+    ],
+    "eta_dot": [
+      -0.18,
+      0.59
+    ],
+    "formula_eta_left": "(c*u-b*v)/(a*c-b*b)",
+    "status": "eta_left negative though both scalar source moments negative"
+  },
+  "physical_results": [
+    {
+      "bins": 16,
+      "first_C": [
+        -1.3351177205960254e-12,
+        -1.3981266427754067e-12
+      ],
+      "first_eta_rate": 5.837013298539674e-9,
+      "dt30": "accepted"
+    },
+    {
+      "bins": 32,
+      "first_C": [
+        -6.57456001900678e-14,
+        -3.2344685947588297e-13
+      ],
+      "first_eta_rate": -3.522726636695034e-9,
+      "initial_rest_eta": 8.6e-8,
+      "linear_bound_dt": 24.4129076336,
+      "dt20": {
+        "status": "accepted",
+        "min_phi_eta": 1.555229586e-8,
+        "entropy_gain": 3.73863163e-11,
+        "charge_energy_defect_order": 4e-15
+      },
+      "dt30": "fail closed",
+      "dt1000": "fail closed"
+    }
+  ],
+  "microscopic_weak_rate": -1.295453955424128e-11,
+  "microscopic_entropy": 1.869337324222073e-12,
+  "all_scalar_net_sources_nonpositive": true,
+  "angle_n32_mapped_scan": [
+    {
+      "nangle": 12,
+      "eta_dot": -3.4404e-9,
+      "linear_dt": 24.997
+    },
+    {
+      "nangle": 24,
+      "eta_dot": -2.9785e-9,
+      "linear_dt": 28.874
+    },
+    {
+      "nangle": 48,
+      "eta_dot": -3.522727e-9,
+      "linear_dt": 24.4129
+    },
+    {
+      "nangle": 96,
+      "eta_dot": -3.1878e-9,
+      "linear_dt": 26.978
+    }
+  ],
+  "old_uniform_n12_control": {
+    "first_phi_C": [
+      0,
+      0
+    ],
+    "first_eta_rate": 0,
+    "dt30": "accepted",
+    "weak_source": -1.164929972e-11,
+    "missing_magnitude_relative": 0.1008
+  },
+  "mode_grid_eta_rest_tangent": "positive N8/12/16/20, negative N24/32/40, zero N48/64/96/128 as finite sampled events no longer touch first physical cell",
+  "validation": {
+    "local_six_tests": "passed",
+    "physical_moment_tangent_finite_difference_max_absolute_error": 1e-16,
+    "full_energy_dark_charges": "roundoff",
+    "no_phi_clipping": true
+  },
+  "negative": [
+    "Even nonoverlap DG 2-local-hat source can exit the Bose positive eta tangent cone within a single cell if neighbor local source dominates.",
+    "Integrated weak rate and H can converge with angle while the first-cell mode-level tangent remains nonmonotone.",
+    "Previously apparent DG dt30 universal robustness was an underresolved angle artifact. Failure does not prove physical BEC or absence of a different admissible moment realization."
+  ],
+  "class_ready": false,
+  "files": {
+    "source": "kinetics/phi_bose_dg_tangent_counterexample.py",
+    "tests": "tests/test_phi_bose_dg_tangent_counterexample.py",
+    "report": "kinetics/PHI-BOSE-DG-TANGENT-COUNTEREXAMPLE-AUDIT.md",
+    "stage": "archive/stages/2026/11/2026-11-23-phi-bose-dg-tangent-negative.md"
+  }
+}

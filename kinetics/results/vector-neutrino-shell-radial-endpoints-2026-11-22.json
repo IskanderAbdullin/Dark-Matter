@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "description": "Three positive vector radial density weights on the SAME half-offset neutrino angular-overlap lattice: full endpoint, upper half trapezoid, exact clipped density cell; synthetic Γ0=1 weak moments",
+  "mV": 0.4,
+  "Emax": 4,
+  "reference": {
+    "dNV": 0.0058088005769423995,
+    "dEV": 0.011577987316857136,
+    "entropy": 0.0014499198890293437
+  },
+  "formula": "wV_j exact = gV/(6pi²) [(max(0,U²-m²))^(3/2) - (max(0,L²-m²))^(3/2)], L=max(m,E_j-h/2), U=min(Emax,E_j+h/2); no vector E_j==m site",
+  "scan": [
+    {
+      "h": 0.4,
+      "original": {
+        "relN": -0.007119422935057629,
+        "relE": 0.042202427102051354,
+        "relS": 0.008354634362367497
+      },
+      "upper_trapezoid": {
+        "relN": -0.032104157861932325,
+        "relE": -0.007938012228600244,
+        "relS": -0.020278830224315092
+      },
+      "shell_cell_integral": {
+        "relN": -0.026937738444841486,
+        "relE": -0.0063068504224628175,
+        "relS": -0.016003374294123685
+      }
+    },
+    {
+      "h": 0.2,
+      "original": {
+        "relN": 0.0008240113020201445,
+        "relE": 0.022292352873273025,
+        "relS": 0.008058821002491667
+      },
+      "upper_trapezoid": {
+        "relN": -0.011661722108030403,
+        "relE": -0.0027645532887338176,
+        "relS": -0.006258699879884366
+      },
+      "shell_cell_integral": {
+        "relN": -0.010100869490919706,
+        "relE": -0.002288246863968113,
+        "relS": -0.0050180713201603
+      }
+    },
+    {
+      "h": 0.1,
+      "original": {
+        "relN": 0.0020560836737295585,
+        "relE": 0.011546743987025598,
+        "relS": 0.005042116578822364
+      },
+      "upper_trapezoid": {
+        "relN": -0.0041861623128653935,
+        "relE": -0.0009804634095700315,
+        "relS": -0.0021167263407919634
+      },
+      "shell_cell_integral": {
+        "relN": -0.0038126283586346066,
+        "relE": -0.0008661805124520194,
+        "relS": -0.0018182082293181079
+      }
+    },
+    {
+      "h": 0.05,
+      "original": {
+        "relN": 0.0016403764949153299,
+        "relE": 0.005921691500704984,
+        "relS": 0.0028157540422319993
+      },
+      "upper_trapezoid": {
+        "relN": -0.0014807204854295763,
+        "relE": -0.0003418599936803046,
+        "relS": -0.0007636727280784239
+      },
+      "shell_cell_integral": {
+        "relN": -0.0014170646786486607,
+        "relE": -0.0003199047526860621,
+        "relS": -0.000706289291878881
+      }
+    }
+  ],
+  "positive": "Exact vector 0th density cell integration reduces h=.05 weak energy bias from +0.592% to -0.032%; all event weights positive, angular flat shell normalization exact and discrete C,L,E/entropy unchanged.",
+  "negative": "Finite cutoff, omitted p=0 threshold cell, collocated energy center, lepton k bin moments, time splitting still bias; exact cell E not a full continuum collision measure, h=.4 N error worsens.",
+  "class_ready": false
+}

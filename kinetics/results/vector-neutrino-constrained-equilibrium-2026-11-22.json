@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "discrete nonthermal Zprime<->ν+antinu quantum microreversible event graph with half-offset exact daughter angular overlap and clipped vector radial E-bin weights; gV=3 gnu=gantinu=2, mV=.4,Emax=4, Γ0=1 arbitrary",
+  "initial": "fν=expit(-k+.15exp(-k)), fantinu=expit(-k-.10exp(-k/2)), bV=.75BE(E); synthetic and nonthermal",
+  "constraints": [
+    "C=Nν+Nantiν+2NV",
+    "L=Nν−Nantiν",
+    "total energy E"
+  ],
+  "stationary_eq": "T>0, fnu=expit(mu_nu/T-k/T), fantinu=expit(mu_anti/T-k/T), bV=BE((E-mu_nu-mu_anti)/T)",
+  "independent_method": "nonlinear three-constraint root in log(T), mu_nu/T, mu_antinu/T without collision code; detailed balance checked separately with implicit event sweep",
+  "root_results": [
+    {
+      "h": 0.4,
+      "T": 1.030580183917422,
+      "mu_nu_over_T": -0.10959360425771997,
+      "mu_anti_over_T": -0.16466832866075098,
+      "muV_over_T": -0.27426193291847095,
+      "C": 0.6609525483582753,
+      "L": 0.006258191346435127,
+      "E": 1.0500273636387965,
+      "S0": 1.5680714241957288,
+      "S_equilibrium": 1.5691524823319294,
+      "entropy_gain": 0.00108105813620063
+    },
+    {
+      "h": 0.2,
+      "T": 1.0284211265319487,
+      "mu_nu_over_T": -0.10581031752021416,
+      "mu_anti_over_T": -0.1609528911702705,
+      "muV_over_T": -0.26676320869048464,
+      "C": 0.665731059941834,
+      "L": 0.006254892135164142,
+      "E": 1.0513292283041933,
+      "S0": 1.5710715970089235,
+      "S_equilibrium": 1.572202324121534,
+      "entropy_gain": 0.001130727112610419
+    },
+    {
+      "h": 0.1,
+      "T": 1.027623250043949,
+      "mu_nu_over_T": -0.10440678736159946,
+      "mu_anti_over_T": -0.15957577929681152,
+      "muV_over_T": -0.26398256665841097,
+      "C": 0.6674236352419153,
+      "L": 0.0062542314611421235,
+      "E": 1.05173318785853,
+      "S0": 1.5720629138899471,
+      "S_equilibrium": 1.5732133852741104,
+      "entropy_gain": 0.001150471384163243
+    }
+  ],
+  "stationary_test": "sweep dt=3 on independent FD/BE constrained state unchanged mode occupations to <3e-13; C,L,E absolute root residual <=4.5e-16",
+  "evolution": [
+    {
+      "h": 0.2,
+      "tau": 500,
+      "dt": 1,
+      "max_abs_mode_error": 0.0010372111920247673,
+      "entropy_gap": 0.0000018630351301673898,
+      "lowest_b": 0.7464599872879095
+    },
+    {
+      "h": 0.2,
+      "tau": 1000,
+      "dt": 1,
+      "max_abs_mode_error": 0.00033922729871194157,
+      "entropy_gap": 3.992906982830391e-7,
+      "lowest_b": 0.7464294230956426
+    },
+    {
+      "h": 0.4,
+      "tau": 100,
+      "dt": 1,
+      "max_abs_mode_error": 0.0026173869839111186,
+      "lowest_b": 0.5404981575196053
+    },
+    {
+      "h": 0.4,
+      "tau": 1000,
+      "dt": 1,
+      "max_abs_mode_error": 0.00004708370304040699,
+      "lowest_b": null
+    }
+  ],
+  "time_negative_h0p2_tau100": [
+    {
+      "dt": 2,
+      "lowest_b": 0.7530522297390333
+    },
+    {
+      "dt": 1,
+      "lowest_b": 0.7439750071109322
+    },
+    {
+      "dt": 0.5,
+      "lowest_b": 0.7466779338541947
+    },
+    {
+      "dt": 0.25,
+      "lowest_b": 0.7487426072430035
+    }
+  ],
+  "positive": "Nonthermal ν/antinu/V finite lattice independently approaches same constrained discrete entropy max, no external FD thermal reset; exact C/L/E, Pauli/Bose and monotone entropy",
+  "negative": "Nonmonotonic dt splitting, finite h equilibrium drift and previously reported physical rate/cutoff error; convergence to discrete equilibrium cannot establish continuum physical γelastic/86eV relic",
+  "class_ready": false
+}

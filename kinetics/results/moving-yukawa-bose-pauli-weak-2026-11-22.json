@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "stage": "relativistic moving mother scalar Yukawa χ1↔χ2+real φ weak on-shell Pauli/Bose number/energy/entropy",
+  "model": {
+    "Lagrangian": "-y phi(bar chi2 chi1+bar chi1 chi2)",
+    "m1": 0.1,
+    "m2": 0.02,
+    "mphi": 0.001,
+    "y": 0.001,
+    "pmax": 12,
+    "g1": 4,
+    "units": "illustrative arbitrary energy; mphi=.001 is NOT physical 86 eV benchmark",
+    "Gamma_rest": 2.74969609751892e-9
+  },
+  "analytic": {
+    "matrix_squared_avg": "y²[(m1+m2)²−mphi²]",
+    "lambda": "[m1²−(m2+mphi)²][m1²−(m2−mphi)²]",
+    "Gamma_rest": "|M|² sqrt(lambda)/(16 pi m1³)",
+    "daughter_E2": "(E1/m1)*E2star + (p/m1)*pstar*cos(theta*)",
+    "daughter_Ephi": "(E1/m1)*Ephistar − (p/m1)*pstar*cos(theta*)",
+    "quantum_F": "f1(1−f2)(1+bphi)",
+    "quantum_R": "(1−f1)f2 bphi",
+    "chemical_balance": "mu1=mu2+muphi, with bosonic mu_phi less than rest energy; pure closed reaction does NOT require mu_phi=0",
+    "charges": "dotNchi1=−dotNchi2=−dotNphi; Qchi1+Qchi2+Qphi=0; entropy≥0"
+  },
+  "thermal_synthetic_nangle12": [
+    {
+      "Tchi1": 0.9,
+      "nrad8_Rphi": -2.656291797504701e-11,
+      "nrad16_Rphi": -2.658201088947082e-11,
+      "nrad32_Rphi": -2.6582412650410917e-11,
+      "nrad48_Rphi": -2.6582413626829623e-11,
+      "nrad48_entropy": 7.419917204537856e-12
+    },
+    {
+      "Tchi1": 1,
+      "nrad8_Rphi": 5.26895051493666e-26,
+      "nrad16_Rphi": 1.0080272410919965e-26,
+      "nrad32_Rphi": 1.408572415074011e-26,
+      "nrad48_Rphi": 1.714098666001608e-26,
+      "nrad48_entropy": 1.434320230192957e-41
+    },
+    {
+      "Tchi1": 1.1,
+      "nrad8_Rphi": 2.7361139059682533e-11,
+      "nrad16_Rphi": 2.7380739201133974e-11,
+      "nrad32_Rphi": 2.7381065585906837e-11,
+      "nrad48_Rphi": 2.7381066385177872e-11,
+      "nrad48_entropy": 6.934143040279339e-12
+    }
+  ],
+  "chemical_fixed_point": {
+    "T": 0.8,
+    "mu1": 0.03,
+    "mu2": 0.05,
+    "muphi": -0.02,
+    "nrad": 24,
+    "nangle": 16,
+    "Rphi": 4.878773131634604e-27,
+    "Sdot": 1.2143186167787443e-41,
+    "Qtotal": 1.363183146095182e-41,
+    "max_event_energy_defect": 1.7763568394002505e-15
+  },
+  "negative": "Net φ can be destroyed when χ1 cooler than daughter bath, despite Bose factors; zero boson occupation has zero inverse and formally infinite positive entropy derivative (no clipping). Synthetic weak moment only; no full mode time, physical Γ/H, 86eV relic/CLASS.",
+  "tests": "Four local tests passed 2026-11-22T15:34:11Z; new GH Scientific CI pending.",
+  "class_ready": false
+}

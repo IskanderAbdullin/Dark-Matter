@@ -1,0 +1,70 @@
+{
+  "status": "sandbox-measured numerical reference; independent CI regression tests passed for same source commit",
+  "commit": "eb9de58db0ee8c362ff43998a70dfd814ead0459",
+  "CI": "https://github.com/IskanderAbdullin/Dark-Matter/actions/runs/44935320673",
+  "code": "kinetics/relativistic_weak_form_2to2.py",
+  "reproduction": "python kinetics/verify_relativistic_weak_form.py --output outputs/pauli-weakform.json",
+  "units": "M,T in GeV; G in GeV^-2; Qχ, Qe in GeV^5; entropy rate in GeV^4; particle source in GeV^4",
+  "scope": "5D electron-only contact tree EFT and FD trial χ,e; Pauli for both, exact outgoing CM azimuth, NOT arbitrary evolving fχ / real gamma / physical 86eV relic",
+  "benchmark": {
+    "M_GeV": 0.1,
+    "Tchi_GeV": 0.8,
+    "Te_GeV": 1,
+    "G_GeVminus2": 0.001,
+    "gchi": 4,
+    "ge": 4,
+    "mu": 0
+  },
+  "cases": {
+    "n12_cut24": {
+      "Q_chi_GeV5": 2.472650437768619e-8,
+      "number_strong_GeV4": -5.153397994271999e-12,
+      "weak_vs_strong_heat_relative_discrepancy": -0.0007651936893030683,
+      "quadrature_points": 248832
+    },
+    "n16_cut24": {
+      "Q_chi_GeV5": 2.474190128861593e-8,
+      "number_strong_GeV4": -6.525361780228802e-14,
+      "weak_vs_strong_heat_relative_discrepancy": -0.00005443277898391918,
+      "quadrature_points": 1048576
+    },
+    "n24_cut32": {
+      "Q_chi_GeV5": 2.4742564595135925e-8,
+      "Q_e_GeV5": -2.4742564595135925e-8,
+      "entropy_GeV4": 6.185641148783981e-9,
+      "number_strong_GeV4": 3.783694303000851e-15,
+      "energy_strong_GeV5": 2.4742567922084533e-8,
+      "weak_vs_strong_heat_relative_discrepancy": 1.3446256125123521e-7,
+      "max_mass_shell_defect": 1.1459652671241827e-12,
+      "quadrature_points": 7962624
+    },
+    "n28_cut32": {
+      "Q_chi_GeV5": 2.4742562992682186e-8,
+      "number_strong_GeV4": 2.304156291284552e-15,
+      "weak_vs_strong_heat_relative_discrepancy": -4.8745721765963456e-8,
+      "quadrature_points": 17210368
+    },
+    "n24_cut15_negative_control": {
+      "Q_chi_GeV5": 2.4507458081890897e-8,
+      "energy_strong_GeV5": 2.412972205404875e-8,
+      "number_strong_GeV4": -3.865287660309505e-11,
+      "weak_vs_strong_heat_relative_discrepancy": -0.01541310512824106,
+      "quadrature_points": 7962624
+    },
+    "equilibrium_Tchi_eq_Te": {
+      "Q_chi_GeV5": 0,
+      "entropy_GeV4": 0,
+      "number_strong_GeV4": 0
+    },
+    "hot_chi_cooling_Tchi_1p2": {
+      "Q_chi_GeV5": -1.2540599330653834e-7,
+      "entropy_GeV4": 2.0900998884423052e-8
+    }
+  },
+  "rest_Pauli_heat_M1_T0p1_G0p2": {
+    "CM_2D_GeV2": 1.4308155292632773e-8,
+    "independent_tk_quadrature_GeV2": 1.4308155152526807e-8
+  },
+  "negative_note": "At cutoff15 symmetric weak ledger hides strong-number leakage and energy discrepancy; preserve as genuine numerical failure",
+  "class_ready": false
+}

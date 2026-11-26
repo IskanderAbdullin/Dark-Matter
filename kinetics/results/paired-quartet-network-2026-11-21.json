@@ -1,0 +1,79 @@
+{
+  "status": "sandbox deterministic all-quartet χe Pauli-bounded time evolution; CI on ab3fab should be verified separately",
+  "physical_scope": "5D matrix element projected into SHARED χ/e energy bins with explicitly symmetrised Wpair, NOT true unmodified full collision or 86-eV relic",
+  "benchmark": {
+    "M_GeV": 0.1,
+    "Tchi_GeV": 1.2,
+    "Te_GeV": 1,
+    "G_GeVminus2": 0.001,
+    "nchi": 14,
+    "ne": 17,
+    "dE_GeV": 0.5,
+    "nmu": 8,
+    "ncm": 8,
+    "nphi": 8,
+    "dt_total_GeVminus1": 2000000
+  },
+  "positive_microphysical_rate_quartets": 1092,
+  "instantaneous_Qchi_GeV5": -4.9674741941066356e-8,
+  "time_scan": [
+    {
+      "nsteps": 1,
+      "delta_Echi_GeV4": -0.05791998857306879,
+      "entropy_gain_GeV3": 0.006193331357764453,
+      "forward_reverse_order_error_GeV4": 0.00014428194398363736
+    },
+    {
+      "nsteps": 4,
+      "delta_Echi_GeV4": -0.05571543344227581,
+      "entropy_gain_GeV3": 0.006048422715257296,
+      "forward_reverse_order_error_GeV4": 0.000022668118846436158
+    },
+    {
+      "nsteps": 16,
+      "delta_Echi_GeV4": -0.05565715218530509,
+      "entropy_gain_GeV3": 0.00603205901770254,
+      "forward_reverse_order_error_GeV4": 0.000005431561680424579
+    },
+    {
+      "nsteps": 64,
+      "delta_Echi_GeV4": -0.055670907456464525,
+      "entropy_gain_GeV3": 0.0060290607619370995,
+      "forward_reverse_order_error_GeV4": 0.0000013500384501430318
+    }
+  ],
+  "small_dt_slope_reference": [
+    {
+      "dt_GeVminus1": 1000,
+      "observed_Qchi_GeV5": -4.9657508627953814e-8,
+      "relative_error": -0.0003469230526247369
+    },
+    {
+      "dt_GeVminus1": 10000,
+      "observed_Qchi_GeV5": -4.950290160008475e-8,
+      "relative_error": -0.003459310189985021
+    },
+    {
+      "dt_GeVminus1": 100000,
+      "observed_Qchi_GeV5": -4.8004199862075046e-8,
+      "relative_error": -0.033629607597624234
+    }
+  ],
+  "Nchi_Ne_residual_abs_below_GeV3": 1e-12,
+  "total_energy_residual_abs_below_GeV4": 1e-12,
+  "fermion_entropy_gain_positive": true,
+  "Pauli_bounds_in_time": true,
+  "conditional_thermal_fixed_point": true,
+  "negative": "global invariants and entropy can be perfect while numerical time order differs by 1.44e-4 GeV4 (single split step); time convergence independently required",
+  "unsupported": [
+    "unmodified microscopic reverse rate",
+    "full energy/angle/cutoff/dt convergence",
+    "complete Standard Model plasma",
+    "bosonic 1->2",
+    "86 eV DM",
+    "BEC",
+    "Omega",
+    "CLASS"
+  ],
+  "class_ready": false
+}

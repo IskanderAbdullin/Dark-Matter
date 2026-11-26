@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "scope": "synthetic 86eV boson physical p²dp thermal and entropy-dual instant Yukawa on-shell moment Galerkin; NOT full time cosmology",
+  "mphi_GeV": 8.6e-8,
+  "T_GeV_illustrative": 1,
+  "Eupper_GeV_illustrative": 12.1,
+  "physical_direct_thermal_number": 0.12174521280791706,
+  "thermal_moments": [
+    {
+      "bins": 16,
+      "physical_N": 0.12174521280791657,
+      "relative_diff": -3.9968028886505635e-15,
+      "wrong_node_N": 10616.0262178156,
+      "wrong_node_overphysical": 87198.71585065925,
+      "physical_U": 0.3283420088705699,
+      "physical_S": 0.437955664627301,
+      "first_dual_M": 0.003984683713268904,
+      "first_cell_average_b": 3.49053664371531
+    },
+    {
+      "bins": 64,
+      "physical_N": 0.12174521280791631,
+      "relative_diff": -6.106226635438361e-15,
+      "wrong_node_N": 165.9957849736525,
+      "wrong_node_overphysical": 1363.468683040142,
+      "physical_U": 0.3283420088705699,
+      "physical_S": 0.4379556646303278,
+      "first_dual_M": 0.0002878122356297609,
+      "first_cell_average_b": 15.37366189392422
+    },
+    {
+      "bins": 256,
+      "physical_N": 0.12174521280791605,
+      "relative_diff": -8.326672684688674e-15,
+      "wrong_node_N": 2.7135701650119843,
+      "wrong_node_overphysical": 22.28892703397962,
+      "physical_U": 0.32834200887056997,
+      "physical_S": 0.43795566463037516,
+      "first_dual_M": 0.000018641221101255367,
+      "first_cell_average_b": 62.97232090127249
+    }
+  ],
+  "massless_p_integral_cut50T": 0.12179382823357307,
+  "massless_zeta3_over_pi2": 0.12179382823357308,
+  "common_T_micro_rate": 4.6629367034256575e-15,
+  "common_T_micro_entropy": 6.162975822039155e-32,
+  "wrong_cell_average_nodal_Rphi": 0.7393056550632298,
+  "wrong_cell_average_nodal_H": 0.1686854976861853,
+  "nonthermal_example": {
+    "mass1": 0.1,
+    "mass2": 0.02,
+    "mphi": 8.6e-8,
+    "T": 0.8,
+    "mus": [
+      0.005,
+      0.012,
+      -0.007
+    ],
+    "mother_inverse_fugacity_perturbation": "+0.3 sin(3 E)",
+    "unit_event_weight": 0.000002,
+    "events": 16,
+    "net_Rphi": -0.000011625090224536797,
+    "micro_H": 0.0000019120454775256167,
+    "entropy_dual_H": 0.0000019120454775256163,
+    "net_charge_defect": 1.6940658945086007e-21,
+    "total_energy_residual": 3.1763735522036263e-22
+  },
+  "analytic_laws": [
+    "sum h_i=1",
+    "sum E_i h_i(E)=E",
+    "M_i=∫g p²dp h_i n/(2π²)",
+    "dS=Σ eta_i dM_i",
+    "dM_i/deta_j=−∫dΠ h_i h_j n(1±n)",
+    "Qtotal=0, dark charges=0, dotS=W(F−R)log(F/R)>=0"
+  ],
+  "tests": "8 focused local tests passed; GH CI new commit pending",
+  "limitations": "No finite-step nonlinear moment inversion, no Bose b=0 or independently physical δ(p), no coupled SM/e±γν/Zprime/FRW, no true Yukawa rate and no physical Γelastic/86eV relic/BEC/CLASS",
+  "class_ready": false
+}

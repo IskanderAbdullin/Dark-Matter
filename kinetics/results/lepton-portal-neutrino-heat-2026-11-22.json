@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "candidate anomaly-free gauged U1 Le−Lmu vectorlike Dirac chi, same |G| for e± and two active ν flavors; conditional broken-EW tree contact, not established original χ1/χ2/φ UV",
+  "mass_unit": "me=1; Mchi=.1me (not 86 eV); G=.001 me^-2 only numerical arbitrary",
+  "thermal_assumptions": "FD μ=0 χ/e/ν, Pauli; chi T=.9 lepton T in equal-T cases, electron and two active ν each degeneracy 4, cut incoming kinetic 30T",
+  "chiral_dirac_trace": {
+    "com_angles": [
+      -0.8,
+      -0.2,
+      0.3,
+      0.9
+    ],
+    "Mchi_me": 0.1,
+    "pstar_me": 0.5,
+    "identity": "massless ν_L single helicity contracted against vector Dirac χ equals unpolarized Dirac massless vector lepton amplitude; gamma5 anti tensor drops",
+    "relative_deviation_lt": 1e-14
+  },
+  "same_T_bath_5d_n36": [
+    {
+      "T_me": 0.1,
+      "Q_nu_per_G2me9": 1.638297257652115e-11,
+      "Q_e_per_G2me9": 1.508044921202159e-14,
+      "ratio": 1086.3716555247727
+    },
+    {
+      "T_me": 1,
+      "Q_nu_per_G2me9": 0.019851855407847604,
+      "Q_e_per_G2me9": 0.01674909484496208,
+      "ratio": 1.1852494473048376
+    },
+    {
+      "T_me": 10,
+      "Q_nu_per_G2me9": 19892116.6989648,
+      "Q_e_per_G2me9": 19856555.285444338,
+      "ratio": 1.0017909155444769
+    }
+  ],
+  "finite_cut_n36_Tme0p1": [
+    {
+      "cut_T": 24,
+      "Qnu_over_Qe": 1086.3699918728298
+    },
+    {
+      "cut_T": 30,
+      "Qnu_over_Qe": 1086.3716555247727
+    },
+    {
+      "cut_T": 36,
+      "Qnu_over_Qe": 1086.3716305167213
+    }
+  ],
+  "split_temperature_illustrative": {
+    "Tgamma_me": 0.1,
+    "Tchi_Tgamma": 0.9,
+    "Tnu_Tgamma": 0.7137658555036082,
+    "instantaneous_e_pair_heating_limit_assumed": true,
+    "Q_e_me5": 1.508044921202159e-20,
+    "Q_nu_me5": -7.724344294682881e-18,
+    "ratio_nu_e": -512.2091647326602,
+    "grid_n": 44,
+    "negative_control": "Equal Tν=e gives Qν/Qe positive1086 while split ν colder than χ gives negative heat, not real cosmological prediction"
+  },
+  "uncertainty_and_missing": [
+    "Mediator t-dependent propagator/loop kinetic mixing, constraints",
+    "EW/QED plasma weak ν decoupling not evolved",
+    "Original χ1/χ2/φ gauge charge compatibility",
+    "Nonthermal full strong χ+lepton operators, γel eigenvalue",
+    "FRW and 86eV Bose relic/ΩDM/BEC/CLASS"
+  ],
+  "class_ready": false
+}

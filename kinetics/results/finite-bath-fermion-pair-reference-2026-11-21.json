@@ -1,0 +1,86 @@
+{
+  "status": "Independent reduced quantum algorithm benchmark; pair rates phenomenological not microscopic",
+  "model": "finite-capacity Fermi 2-bin and 3-bin coupled to ideal finite radiation bath E=A*T^4; Pauli-aware up/down rates with detailed balance, implicit scalar nonlinear transfer",
+  "illustrative_pair": {
+    "energies": [
+      0.1,
+      1
+    ],
+    "capacities": [
+      3,
+      5
+    ],
+    "initial_occupations": [
+      0.9,
+      0.1
+    ],
+    "initial_ESM": 50,
+    "A": 10,
+    "Gamma": 2,
+    "dt": 100000,
+    "final_occupations": [
+      0.491293192210078,
+      0.3452240846739532
+    ],
+    "final_ESM": 48.89649161896721,
+    "final_T": 1.4870289540185333,
+    "dN": 1.226120423369766,
+    "entropy_gain": 1.960507144270629,
+    "particle_residual": 0,
+    "energy_residual": 0,
+    "caveat": "arbitrary numerical units, NOT measured physical χe rate"
+  },
+  "network": {
+    "energies": [
+      0.1,
+      0.6,
+      1.3
+    ],
+    "capacities": [
+      1,
+      3,
+      5
+    ],
+    "initial_occupations": [
+      0.9,
+      0.1,
+      0.1
+    ],
+    "initial_ESM": 50,
+    "A": 10,
+    "edges": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "total_dt": 100,
+    "steps": 100,
+    "final_occupations": [
+      0.2839317046480427,
+      0.2209345930083867,
+      0.1506529032653595
+    ],
+    "final_ESM": 49.51468069089527,
+    "temperature": 1.4917068899964536,
+    "particle_residual": 0,
+    "total_energy_residual": 7.105427357601002e-15,
+    "entropy_gain": 1.0493983371689808
+  },
+  "tests": "6 unit tests incl 130 random cases, Pauli bounds, exact FD equilibrium, energy/number/entropy, time splitting discrepancy, invalid input",
+  "not_validated": [
+    "physical χe 5D microscopic transition Gamma",
+    "fermion zero-mode",
+    "finite SM neutrinos and gstar",
+    "cosmological FRW",
+    "Bose 1↔2 freezeout",
+    "physical 86-eV dark matter"
+  ],
+  "class_ready": false
+}

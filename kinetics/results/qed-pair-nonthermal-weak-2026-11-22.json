@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-22",
+  "model": "full 5D QED e−e+↔γγ arbitrary isotropic 0<f_e±<1, b_gamma>0, nonthermal WEAK moments only; no strong C[f] or time integration",
+  "quadrature": {
+    "Escale_over_me": 0.1,
+    "me": 1,
+    "nphi": 12,
+    "nangle": 20,
+    "nrad": 24,
+    "incoming_p_over_scale_cut": 32
+  },
+  "microscopic_formula": "J=fminus*fplus*(1+b1)*(1+b2) -(1-fminus)*(1-fplus)*b1*b2; entropy=∫positive_dν J log(F/B)>=0; Qtotal=0, charge=0",
+  "thermal_compatibility": {
+    "Te_me": 0.1,
+    "Tgamma_me": 0.1,
+    "mu_each_over_Te": 0.01,
+    "nrad": 24,
+    "nangle": 16,
+    "new_nonthermal_code_R": 1.5112437041918945e-19,
+    "independent_stabilized_thermal_code_R": 1.5112436151944792e-19,
+    "relative_difference": 5.889018450666583e-8,
+    "at_equilibrium_R": 1.6811247476115804e-34,
+    "at_equilibrium_entropy": 1.1484191732542252e-47
+  },
+  "nonthermal_electron_logit_packet": {
+    "formula": "fminus=expit(-E/T+eps exp(-E/T)), fplus=FD(T), bphoton=BE(T); T/me=.1",
+    "cases": [
+      {
+        "eps": 0.15,
+        "R_net": 1.6905373445621097e-23,
+        "Qphoton": 3.788888060856254e-23,
+        "entropy": 6.124909656889711e-29
+      },
+      {
+        "eps": -0.15,
+        "R_net": -1.6905312200926335e-23,
+        "Qphoton": -3.788874496546817e-23,
+        "entropy": 6.124882884515755e-29
+      }
+    ],
+    "radial_scan_eps_pos0p15": {
+      "n12": 1.6915995340544033e-23,
+      "n16": 1.6905468053415983e-23,
+      "n24": 1.6905373445621097e-23,
+      "n32": 1.690537346214814e-23,
+      "n40": 1.6905373462428257e-23
+    }
+  },
+  "nonthermal_photon_peak": {
+    "formula": "b=BE(T)[1+eps exp(-((E-1.1me)/(.2me))^2)], fminus/fplus=FD(T), T/me=.1",
+    "cases": [
+      {
+        "eps": 0.2,
+        "nrad24_R": -1.5758687111588927e-18,
+        "nrad32_R": -1.5758867314000384e-18,
+        "entropy_n24": 4.0148807214598887e-19
+      },
+      {
+        "eps": -0.2,
+        "nrad24_R": 1.395920947677904e-18,
+        "nrad32_R": 1.39591689881987e-18,
+        "entropy_n24": 4.11054392776475e-19
+      }
+    ]
+  },
+  "negative": "At Te/me=1 thermal 0.02 pair affinity, raw F-R and analytically stabilized thermal reference differ by ~3.02e-6 relative; photon bump n24->32 ~1.14e-5; uniform 1e-7 is false. No mode-resolved strong C or time.",
+  "no_claims": [
+    "finite eγν plasma",
+    "real physical χ gamma_el",
+    "χ1↔χ2 φ Bose production",
+    "86eV ΩDM",
+    "BEC",
+    "CLASS"
+  ],
+  "class_ready": false
+}

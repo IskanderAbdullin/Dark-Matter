@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-24",
+  "scope": "Nearcritical μφ=mφ−1e−16GeV physical 5field on-shell 4reaction implicit strong, hard Ppair2 first phi cell source frozen. Numerical entropy/E tests precision-limited not physically proved positive.",
+  "model": {
+    "mphi_GeV": 8.6e-8,
+    "mu_phi_gap_GeV": 1e-16,
+    "temperature_all_fields_GeV": 1,
+    "initial_mu_fermions_GeV": 0,
+    "hard_parent_P_GeV": 2,
+    "physically_frozen_phi_first_cell_max_GeV": 0.00009999751861499219
+  },
+  "optional_fixed_rule": {
+    "positive_gauss_nodes": 168,
+    "geometry_only": true,
+    "mu_independent": true,
+    "max_G00_error_subcritical_six_deltas": 2e-7,
+    "number_M0_error": 3e-10,
+    "phase_capacity_error": 5e-13,
+    "changes_reaction_events": false
+  },
+  "initial_failed_trial": {
+    "dt_GeV_inv": 5000,
+    "H_new_GeV4": 8.428381326601834e-25,
+    "dt_H_new_GeV3": 4.214190663300917e-21,
+    "raw_entropy_KL_certificate_GeV3": -4.214190663300917e-21,
+    "source_scale": 4.9018430903827645e-14,
+    "max_abs_moment_root_residual_GeV3": 9.738050170253925e-19
+  },
+  "another_failed_trial": {
+    "dt_GeV_inv": 1250,
+    "absolute_total_energy_defect_GeV4": 2.7755575615628914e-17,
+    "original_strict_source_tol_GeV4": 1.225460772595691e-22
+  },
+  "restored_policy": "Absolute global float64 physical sum floors for S, Q, net U1; keep all raw defects and strict source scale; emit entropy_gain_sign_resolved=false/entropy_certificate_sign_resolved=false when below precision.",
+  "recent_focused_ci_success": [
+    45425105944,
+    45425264177
+  ],
+  "first_failure_runs": [
+    45424310325,
+    45424582622
+  ],
+  "original_float64_local_failure_run": 45405888389,
+  "physical_model_readiness": false,
+  "class_ready": false
+}

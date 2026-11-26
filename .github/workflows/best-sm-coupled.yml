@@ -1,0 +1,104 @@
+name: Independent BEST + finite SM radiation heat Q coupled FRW (experimental)
+
+on:
+  push:
+    branches: [research/kinetic-equilibrium-audit-20261121]
+    paths:
+      - '.github/workflows/best-sm-coupled.yml'
+      - 'kinetics/best_sm_coupled_frw.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: best-sm-thermal-contact-experimental
+  cancel-in-progress: true
+
+jobs:
+  pinned-best-finite-bath:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Independent BEST MPI/Vegas and SHA proof
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq openmpi-bin libopenmpi-dev
+          python -m pip install numpy scipy mpi4py vegas
+          git clone -q --filter=blob:none https://github.com/best-hep/best.git /tmp/best
+          git -C /tmp/best checkout -q c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+          test "$(git -C /tmp/best rev-parse HEAD)" = c70875be714e7a6bc6d38578c34bb0dc9f5aefa9
+      - name: Real 3-species BEST plus number-conserving elastic SM with finite Tbath
+        run: |
+          mkdir -p outputs
+          for setting in "8 .000005 0" "4 .00001 100000" "8 .000005 100000" "16 .0000025 100000"; do
+            read -r steps dt gamma <<< "$setting"
+            name=$(echo "$dt" | sed 's/\./p/')
+            path="outputs/best_sm_gamma_"$gamma"_"$steps"_"$name".json"
+            logfile=$(echo "$path" | sed 's/\.json$/.log/')
+            echo "Actual BEST + SM heat: gamma_el=$gamma, steps=$steps, dtGamma=$dt"
+            mpirun -np 2 python kinetics/best_sm_coupled_frw.py \
+              --execute --best-root /tmp/best \
+              --gamma-el "$gamma" --gstar 55 --grid-n 56 --neval 6000 \
+              --steps "$steps" --dt "$dt" --method exprb2 \
+              --output "$path" > "$logfile" 2>&1
+          done
+      - name: Report physical dark plus SM energy ledger, temperature and Bose sources
+        run: |
+          python - <<'PY'
+          import glob,json,math
+          files=sorted(glob.glob("outputs/best_sm_gamma_*.json"))
+          assert len(files)==4,files
+          for f in files:
+              d=json.load(open(f))
+              assert d["independent_BEST_and_finite_SM_bath_ACTUALLY_coupled"]
+              assert d["verified_external_BEST_git_sha"]=="c70875be714e7a6bc6d38578c34bb0dc9f5aefa9"
+              assert not d["physical_86eV_DM_or_CLASS_ready"]
+              last=d["time_series"][-1]
+              p=d["protocol"]
+              print("ACTUAL SM/BEST gamma",p["elastic_gamma_el_over_Gamma_rest"],
+                    "steps",p["steps"],"a",last["a"],
+                    "T_SM",d["final_T_SM"],"delta E_SM",d["net_SM_comoving_energy_change"])
+              print("  full phi number",last["number_moments"]["phi"],
+                    "phi qmin f",last["phi_qmin_occupation"],
+                    "zero mode",last["massive_phi_zero_mode_N0"])
+              print("  physical total energy work residual",d["final_relative_total_energy_minus_pressure_work"],
+                    "charge1",d["final_relative_charge_chi1_phi_error"],
+                    "charge2",d["final_relative_charge_chi1_chi2_error"])
+              assert math.isclose(last["a"],math.sqrt(1.4),rel_tol=1e-12)
+              assert all(math.isfinite(d[k]) for k in (
+                  "net_SM_comoving_energy_change",
+                  "final_T_SM",
+                  "final_relative_total_energy_minus_pressure_work"))
+              assert all(entry["BEST_identical_quadrature_used"]
+                         for entry in d["elastic_heat_exchange_substeps"])
+              assert all(abs(entry["mother_number_residual"])<1e-11
+                         for entry in d["elastic_heat_exchange_substeps"])
+              assert all(abs(entry["comoving_elastic_dark_energy_delta"]+
+                             entry["comoving_elastic_SM_energy_delta"])<1e-11
+                         for entry in d["elastic_heat_exchange_substeps"])
+              assert abs(d["final_relative_charge_chi1_phi_error"])<1e-8
+              assert abs(d["final_relative_charge_chi1_chi2_error"])<1e-8
+              assert abs(d["final_relative_total_energy_minus_pressure_work"])<1e-7
+              if p["elastic_gamma_el_over_Gamma_rest"]==0:
+                  assert abs(d["net_SM_comoving_energy_change"])<1e-11
+              else:
+                  assert abs(d["net_SM_comoving_energy_change"])>1e-7
+          print("Gamma_el is phenomenological; no actual SM matrix element/variable gstar/86-eV relic/CLASS.")
+          PY
+      - name: Preserve real independent Q and negative error logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: best-three-species-quantum-plus-SM-heat
+          path: outputs/best_sm_gamma_*
+          retention-days: 7
+          if-no-files-found: warn
