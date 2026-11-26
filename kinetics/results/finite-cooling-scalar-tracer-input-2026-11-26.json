@@ -1,0 +1,93 @@
+{
+  "cases": [
+    {
+      "name": "finite_cooling_tracer_instant_s10_sync",
+      "case": "instant",
+      "sigma": 0.1,
+      "native_momentum_nodes": 160,
+      "input_sha256": "8a9ea98cd97775bab879303305d894647c87bb4407529d4bca9789ae73fdddf8",
+      "remap_sha256": "8a9ea98cd97775bab879303305d894647c87bb4407529d4bca9789ae73fdddf8",
+      "momentum_scale": 1.0,
+      "fixed_omega_h2": 2.3635376480246177e-12,
+      "external_moment_gate": {
+        "scale": 1.0,
+        "maximum_residual": 1.0306312470120815e-09,
+        "energy_pressure_residual": [
+          7.085976250209569e-11,
+          3.449233121344264e-10
+        ],
+        "dilation_residual": [
+          8.283329577807308e-10,
+          1.0306312470120815e-09
+        ]
+      }
+    },
+    {
+      "name": "finite_cooling_tracer_instant_s14_sync",
+      "case": "instant",
+      "sigma": 0.14,
+      "native_momentum_nodes": 224,
+      "input_sha256": "cb42542796b6fb1b6edff026344ebbad7a5deb87141301c59fefd30ef5a341e4",
+      "remap_sha256": "cb42542796b6fb1b6edff026344ebbad7a5deb87141301c59fefd30ef5a341e4",
+      "momentum_scale": 1.0,
+      "fixed_omega_h2": 2.3635376480246177e-12,
+      "external_moment_gate": {
+        "scale": 1.0,
+        "maximum_residual": 3.5564970968238185e-09,
+        "energy_pressure_residual": [
+          2.970956813896919e-13,
+          4.877209747178313e-13
+        ],
+        "dilation_residual": [
+          3.5564970968238185e-09,
+          2.726300740718557e-09
+        ]
+      }
+    },
+    {
+      "name": "finite_cooling_tracer_ratio5_s10_sync",
+      "case": "ratio5",
+      "sigma": 0.1,
+      "native_momentum_nodes": 160,
+      "input_sha256": "f663de0c4d89b423372f1d71a8913186cfc616233ec6256860f9b9b31cd768e9",
+      "remap_sha256": "befea21618b37ab2ecbde72016eb75325a9849f858d7661a9da3396e3072302e",
+      "momentum_scale": 0.4027756642415166,
+      "fixed_omega_h2": 2.2325586277116858e-09,
+      "external_moment_gate": {
+        "scale": 0.4027756642415166,
+        "maximum_residual": 3.4287126537968504e-07,
+        "energy_pressure_residual": [
+          3.4287126537968504e-07,
+          4.959972554896552e-08
+        ],
+        "dilation_residual": [
+          1.916233249854571e-08,
+          2.2364897633853076e-07
+        ]
+      }
+    },
+    {
+      "name": "finite_cooling_tracer_ratio5_s14_sync",
+      "case": "ratio5",
+      "sigma": 0.14,
+      "native_momentum_nodes": 224,
+      "input_sha256": "7a389d4ffe05683cf77af6aedff4e1ec5d6d29b867c65772904fdaaf7170461a",
+      "remap_sha256": "0791871edb695802fc7b3563d911c06b287e481358988b120ef9a5a8c88c4f64",
+      "momentum_scale": 0.3389284838056316,
+      "fixed_omega_h2": 2.2325586277116858e-09,
+      "external_moment_gate": {
+        "scale": 0.3389284838056316,
+        "maximum_residual": 4.411166987239312e-10,
+        "energy_pressure_residual": [
+          1.8562373860220305e-11,
+          2.784219521601017e-10
+        ],
+        "dilation_residual": [
+          2.3075541477624029e-10,
+          4.411166987239312e-10
+        ]
+      }
+    }
+  ],
+  "scope": "Adiabatic collisionless scalar tracer after 1 MeV. The dominant 20 MeV species is replaced by a cold component, not evolved jointly; reconstructed smoothing and external quadrature checks do not certify perturbations."
+}

@@ -35,7 +35,7 @@ certified quadrature tolerance; untested epochs or the
 compiled solver's finite derivative may behave differently.
 The same exact coordinate maps were tested in the **unmodified**
 solver on a common short k range, about 0.09–0.60 h/Mpc.
-All four runs have the same present stable density,
+All five runs have the same present stable density,
 $\omega_{\rm stable}=0.11816900374571584$, and do not include
 the extra scalar population. At their largest absolute
 departure from matched CDM, z=0:
@@ -46,18 +46,23 @@ departure from matched CDM, z=0:
 | 128, S=3.81419 | +0.00038124 | +0.00045486 |
 | 224, S=3.89953 | −0.00016891 | −0.00020392 |
 | 320, S=2.97697 | −0.00007594 | −0.00009229 |
+| 512, S=1 | −0.00019757 | −0.00023883 |
 
 Results at z=5 are almost identical. At fixed 128 nodes,
 relabeling the same unsmoothed input reduces the largest native
 departure from 0.95% to 0.038%, without changing the physical
 spectrum or density normalization. The ratio of the two signed
-columns is about 0.83 empirically in these four cases, consistent
+columns is about 0.83 empirically in these five cases, consistent
 with the earlier causal derivative diagnostic. It is not a
 universal correction formula. Numerical pressure differences
 persist (present pressure-to-energy ratios differ by about
 0.07% between the two 128-node variants); the residual spread
 and weak sign changes are reasons not to claim a measured small
-physical transfer. No production-era perturbations are evolved.
+physical transfer. In particular, the unremapped 512-node control
+departs roughly 2.6 times as much as the remapped 320-node control
+on this comparison grid. Merely increasing unremapped node count
+does not yield a monotonically smaller departure across numerical
+coordinate choices. No production-era perturbations are evolved.
 
 ~~~sh
 OPENBLAS_NUM_THREADS=1 python -W error class_exact_coordinate_remap_reference.py \
@@ -72,24 +77,25 @@ paths, the coordinate scale and the numerical quadrature.
 
 For the numerical comparison, run CLASS from the working directory
 containing fine/stable.dat and the generated native directory.
-The two checked-in short configs reproduce the S=1 control
+The checked-in short configs reproduce the S=1 controls
 and the matched CDM background:
 
 ~~~sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 /path/to/class class-configs/stable-short-native128-2026-11-26.ini
+/path/to/class class-configs/stable-short-native512-2026-11-26.ini
 /path/to/class class-configs/stable-short-cdm-reference-2026-11-26.ini
 /path/to/class native/psd_coordinate_remap128_sync.ini
 /path/to/class native/psd_coordinate_remap224_sync.ini
 /path/to/class native/psd_coordinate_remap320_sync.ini
 ~~~
 
-After those five runs:
+After those six runs:
 
 ~~~sh
 OPENBLAS_NUM_THREADS=1 python -W error class_exact_coordinate_remap_audit_reference.py \
     native --stable-table fine/stable.dat \
-    --cases psd_coordinate_native128_sync psd_coordinate_remap128_sync psd_coordinate_remap224_sync psd_coordinate_remap320_sync
+    --cases psd_coordinate_native128_sync psd_coordinate_remap128_sync psd_coordinate_remap224_sync psd_coordinate_remap320_sync psd_raw512_altq_sync
 ~~~
 
 The output also records the density and pressure checks. It uses

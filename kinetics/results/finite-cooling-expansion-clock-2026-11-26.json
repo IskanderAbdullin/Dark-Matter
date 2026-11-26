@@ -1,0 +1,415 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "distribution_sha256": "dfb6096217eef7970a0f045ed11492027d462004ac7c75f494e9a475f04276de",
+  "scope": "Post-1MeV collisionless stress and homogeneous clock on the specified visible-radiation background with and without the positive represented dark energy. No standard-matter double count in the radiation-only comparator; no nuclear abundances, coupled history, dark production before the anchor, or DeltaNeff inference.",
+  "cases": [
+    {
+      "T_R_GeV": 0.009019069895524137,
+      "Tmax_GeV": 0.009019069895524137,
+      "fixed_T": [
+        {
+          "T_GeV": 0.001,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              8.447492763548385e-13,
+              8.499846381890594e-13
+            ],
+            [
+              5.94033577965155e-07,
+              5.940484985840224e-07
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              2.8158309206101585e-13,
+              2.8332821267354813e-13
+            ],
+            [
+              9.13984057521778e-09,
+              9.157783240773156e-09
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.1423622467873902e-17,
+            5.799927477223444e-07
+          ],
+          "fractional_H_increase": [
+            2.9701716724761684e-07,
+            2.9702463017251484e-07
+          ]
+        },
+        {
+          "T_GeV": 0.0007,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              8.402008012650758e-13,
+              8.454079737707666e-13
+            ],
+            [
+              8.389075389036432e-07,
+              8.389131119834166e-07
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              2.800669336373843e-13,
+              2.8180265780825983e-13
+            ],
+            [
+              6.479934232264115e-09,
+              6.486956787586135e-09
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.632943641369351e-17,
+            8.290675502425008e-07
+          ],
+          "fractional_H_increase": [
+            4.1945410158135054e-07,
+            4.194568907236536e-07
+          ]
+        },
+        {
+          "T_GeV": 0.0001,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              7.217717257703265e-13,
+              7.262449298115191e-13
+            ],
+            [
+              6.4443769381428645e-06,
+              6.444376945417609e-06
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              2.405905669850514e-13,
+              2.42081635161337e-13
+            ],
+            [
+              6.306132654235493e-10,
+              6.306229573454413e-10
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.269107620871848e-16,
+            6.443430866652443e-06
+          ],
+          "fractional_H_increase": [
+            3.222183638723594e-06,
+            3.2221836445975498e-06
+          ]
+        },
+        {
+          "T_GeV": 3e-05,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              7.061994551445043e-13,
+              7.105761458570808e-13
+            ],
+            [
+              2.2458866421391024e-05,
+              2.24588664215487e-05
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              2.3539971567457103e-13,
+              2.3685861459714274e-13
+            ],
+            [
+              1.7325291852305082e-10,
+              1.7325312874632249e-10
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            4.4234801773035965e-16,
+            2.2458606538728938e-05
+          ],
+          "fractional_H_increase": [
+            1.1229370514414165e-05,
+            1.1229370516681323e-05
+          ]
+        },
+        {
+          "T_GeV": 1e-05,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              7.062031491234373e-13,
+              7.105798308703376e-13
+            ],
+            [
+              6.737649027565551e-05,
+              6.737649027566135e-05
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              2.354001253351135e-13,
+              2.3685903741617144e-13
+            ],
+            [
+              5.775217234738525e-11,
+              5.775218013464653e-11
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.327055556353301e-15,
+            6.737640364727534e-05
+          ],
+          "fractional_H_increase": [
+            3.3687678061102754e-05,
+            3.368767806329395e-05
+          ]
+        }
+      ],
+      "time_integrals": [
+        {
+          "T_end_GeV": 0.0007,
+          "visible_only_elapsed_seconds": 0.7929327357835554,
+          "fractional_elapsed_time_shortening": [
+            3.619034841139562e-07,
+            3.6190798587359573e-07
+          ],
+          "max_5_vs_8_relative_defect": 6.661338147750939e-16
+        },
+        {
+          "T_end_GeV": 0.0001,
+          "visible_only_elapsed_seconds": 118.20956178683227,
+          "fractional_elapsed_time_shortening": [
+            2.2099525324069254e-06,
+            2.2099526306814837e-06
+          ],
+          "max_5_vs_8_relative_defect": 1.9984014443252818e-15
+        },
+        {
+          "T_end_GeV": 3e-05,
+          "visible_only_elapsed_seconds": 1465.7997945683603,
+          "fractional_elapsed_time_shortening": [
+            7.487219515404112e-06,
+            7.487219525750431e-06
+          ],
+          "max_5_vs_8_relative_defect": 1.3322676295501878e-15
+        }
+      ],
+      "continuity_check_at_temperatures_GeV": [
+        {
+          "T_GeV": 0.00071,
+          "relative_energy_pressure_continuity_defect": 2.2014123857161394e-10
+        },
+        {
+          "T_GeV": 0.000123,
+          "relative_energy_pressure_continuity_defect": 3.5748159987747385e-10
+        },
+        {
+          "T_GeV": 3.1e-05,
+          "relative_energy_pressure_continuity_defect": 2.692763789724495e-10
+        }
+      ]
+    },
+    {
+      "T_R_GeV": 0.006236182402767521,
+      "Tmax_GeV": 0.031180912013837606,
+      "fixed_T": [
+        {
+          "T_GeV": 0.001,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              5.7124455180847116e-11,
+              5.7492563930684565e-11
+            ],
+            [
+              5.877034144960291e-07,
+              5.877098578869217e-07
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              1.904148385633643e-11,
+              1.9164186796668247e-11
+            ],
+            [
+              5.048094344486946e-09,
+              5.055975862017328e-09
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.0790565118219478e-14,
+            5.799927474759209e-07
+          ],
+          "fractional_H_increase": [
+            2.938802262928112e-07,
+            2.938836320416316e-07
+          ]
+        },
+        {
+          "T_GeV": 0.0007,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              5.681687569286565e-11,
+              5.7183002357117824e-11
+            ],
+            [
+              8.344549234289714e-07,
+              8.344572883517013e-07
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              1.8938956090934378e-11,
+              1.9060998361080094e-11
+            ],
+            [
+              3.558466563443383e-09,
+              3.5614750632151794e-09
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.5424515950287548e-14,
+            8.290675498902519e-07
+          ],
+          "fractional_H_increase": [
+            4.17255783101138e-07,
+            4.172571486252651e-07
+          ]
+        },
+        {
+          "T_GeV": 0.0001,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              4.880860641850738e-11,
+              4.9123121239847364e-11
+            ],
+            [
+              6.443947234152264e-06,
+              6.443947237178582e-06
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              1.626936157081547e-11,
+              1.637420327015346e-11
+            ],
+            [
+              3.442055568083606e-10,
+              3.4420958923542344e-10
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.198778098940011e-13,
+            6.4434308639148005e-06
+          ],
+          "fractional_H_increase": [
+            3.2219928307604406e-06,
+            3.221992989530498e-06
+          ]
+        },
+        {
+          "T_GeV": 3e-05,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              4.7758530955108285e-11,
+              4.8066201334030924e-11
+            ],
+            [
+              2.2458748369081237e-05,
+              2.2458748369146815e-05
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              1.591735217925366e-11,
+              1.6019951405161353e-11
+            ],
+            [
+              9.455903563462695e-11,
+              9.455912306698076e-11
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            4.1783463202308595e-13,
+            2.245860652918687e-05
+          ],
+          "fractional_H_increase": [
+            1.122933501482366e-05,
+            1.1229335168689912e-05
+          ]
+        },
+        {
+          "T_GeV": 1e-05,
+          "rho_dark_species_over_Rho_SM": [
+            [
+              4.778453760675448e-11,
+              4.809170484741192e-11
+            ],
+            [
+              6.737645089893074e-05,
+              6.737645089893318e-05
+            ]
+          ],
+          "P_dark_species_over_Rho_SM": [
+            [
+              1.5908841634249562e-11,
+              1.601160527958261e-11
+            ],
+            [
+              3.1520154800468886e-11,
+              3.152015803911532e-11
+            ]
+          ],
+          "rho_dark_rest_over_Rho_SM": [
+            1.2535147617663145e-12,
+            6.737640361864888e-05
+          ],
+          "fractional_H_increase": [
+            3.368768191177788e-05,
+            3.3687682065357554e-05
+          ]
+        }
+      ],
+      "time_integrals": [
+        {
+          "T_end_GeV": 0.0007,
+          "visible_only_elapsed_seconds": 0.7929327357835554,
+          "fractional_elapsed_time_shortening": [
+            3.593160080441563e-07,
+            3.59318116842637e-07
+          ],
+          "max_5_vs_8_relative_defect": 1.5543122344752192e-15
+        },
+        {
+          "T_end_GeV": 0.0001,
+          "visible_only_elapsed_seconds": 118.20956178683227,
+          "fractional_elapsed_time_shortening": [
+            2.2095468252535806e-06,
+            2.2095470298847268e-06
+          ],
+          "max_5_vs_8_relative_defect": 1.9984014443252818e-15
+        },
+        {
+          "T_end_GeV": 3e-05,
+          "visible_only_elapsed_seconds": 1465.7997945683603,
+          "fractional_elapsed_time_shortening": [
+            7.487123461511407e-06,
+            7.487123619820007e-06
+          ],
+          "max_5_vs_8_relative_defect": 1.5543122344752192e-15
+        }
+      ],
+      "continuity_check_at_temperatures_GeV": [
+        {
+          "T_GeV": 0.00071,
+          "relative_energy_pressure_continuity_defect": 2.1686186180147615e-10
+        },
+        {
+          "T_GeV": 0.000123,
+          "relative_energy_pressure_continuity_defect": 3.585076679968324e-10
+        },
+        {
+          "T_GeV": 3.1e-05,
+          "relative_energy_pressure_continuity_defect": 2.701769918900254e-10
+        }
+      ]
+    }
+  ]
+}
