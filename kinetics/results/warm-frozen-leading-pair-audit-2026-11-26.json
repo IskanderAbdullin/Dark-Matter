@@ -1,0 +1,200 @@
+{
+  "leading_count_delta": [
+    0.003473561292766682,
+    -0.0013907290258096598
+  ],
+  "quadrature_relative_spread": 5.1074570974751765e-06,
+  "initial_and_final_net_rate_per_species": [
+    [
+      0.5510876122881669,
+      -0.2206420078923808
+    ],
+    [
+      0.5802049493900386,
+      -0.23229987785603465
+    ]
+  ],
+  "initial_and_final_inverse_over_forward": [
+    0.8398877228500458,
+    0.8314718683550294
+  ],
+  "comparisons": [
+    {
+      "pair_strength_scale": 1.0,
+      "schedule": "pair-collision-pair",
+      "values": [
+        {
+          "substeps": 1,
+          "normalized_difference_of_counts": [
+            0.003297206103914707,
+            -0.001320120719475737
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.050770714545678386,
+            -0.05077071451271098
+          ]
+        },
+        {
+          "substeps": 4,
+          "normalized_difference_of_counts": [
+            0.0033580975622431453,
+            -0.0013445001708182192
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.033240735024304136,
+            -0.0332407349911511
+          ]
+        }
+      ]
+    },
+    {
+      "pair_strength_scale": 1.0,
+      "schedule": "collision-pair-collision",
+      "values": [
+        {
+          "substeps": 1,
+          "normalized_difference_of_counts": [
+            0.003367259555551172,
+            -0.001348168408928152
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.030603098162359177,
+            -0.030603098153308195
+          ]
+        },
+        {
+          "substeps": 4,
+          "normalized_difference_of_counts": [
+            0.003376944776064983,
+            -0.0013520461344567192
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.027814829956475107,
+            -0.02781482994533757
+          ]
+        }
+      ]
+    },
+    {
+      "pair_strength_scale": 0.1,
+      "schedule": "pair-collision-pair",
+      "values": [
+        {
+          "substeps": 1,
+          "normalized_difference_of_counts": [
+            0.0033844434402485746,
+            -0.0013550484163715737
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.025656047211167876,
+            -0.02565604713492875
+          ]
+        },
+        {
+          "substeps": 4,
+          "normalized_difference_of_counts": [
+            0.0034446275246891034,
+            -0.0013791446529731743
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.008329712833290204,
+            -0.00832971241809033
+          ]
+        }
+      ]
+    },
+    {
+      "pair_strength_scale": 0.1,
+      "schedule": "collision-pair-collision",
+      "values": [
+        {
+          "substeps": 1,
+          "normalized_difference_of_counts": [
+            0.0034644596752930745,
+            -0.0013870849605879254
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.0026202553248623195,
+            -0.0026202553869995038
+          ]
+        },
+        {
+          "substeps": 4,
+          "normalized_difference_of_counts": [
+            0.003464896122045147,
+            -0.001387259703392596
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.0024946071167880612,
+            -0.002494607038954988
+          ]
+        }
+      ]
+    },
+    {
+      "pair_strength_scale": 0.03,
+      "schedule": "pair-collision-pair",
+      "values": [
+        {
+          "substeps": 1,
+          "normalized_difference_of_counts": [
+            0.003391319103533223,
+            -0.0013578012638792991
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.02367661955605027,
+            -0.02367661947027433
+          ]
+        },
+        {
+          "substeps": 4,
+          "normalized_difference_of_counts": [
+            0.0034514766397967618,
+            -0.0013818868722722164
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.0063579281056329595,
+            -0.006357926938567848
+          ]
+        }
+      ]
+    },
+    {
+      "pair_strength_scale": 0.03,
+      "schedule": "collision-pair-collision",
+      "values": [
+        {
+          "substeps": 1,
+          "normalized_difference_of_counts": [
+            0.003472014439028411,
+            -0.001390109703388228
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.0004453221371081284,
+            -0.00044532213676296006
+          ]
+        },
+        {
+          "substeps": 4,
+          "normalized_difference_of_counts": [
+            0.003471852183774734,
+            -0.0013900447406789418
+          ],
+          "relative_to_collision_only_derivative_error": [
+            -0.000492033635769551,
+            -0.0004920333997628923
+          ]
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "dm-eos-low-official-1314.dat": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "50MeV-from-empty-pair-quantum-shape-2026-11-26.json": "0c91426fadf25079f6ef30607a461e02a465b3ff3bfaf7d34ac06c2537412488",
+    "warm-frozen-leading-pair-2026-11-26.json": "345e4afed3d6b0e7617b8fb8833bcaeb45a9aa24d8edd6fa4652b67c6addde42",
+    "warm-frozen-split-sdirk-2026-11-26.json": "9aa39a119457753518b97ff1cf87ff18bca4d823fd35300d0f80c29213974c6d",
+    "warm-frozen-pair-strength010-2026-11-26.json": "67c87520b5e7deb6a54afabf0d88cdcb20f6a768c5cfa0e01b03b42697f0fd36",
+    "warm-frozen-pair-strength003-2026-11-26.json": "4a547e55e54734a32ffd00fd5150ec91564dd6da554645c47ba98b1299f6f08b"
+  },
+  "scope": "Derivative at zero artificial pair strength on a fixed warm collision geometry. The collision trajectory alone carries no pair feedback; finite-strength comparisons use actual split kicks. This does not pick a production solver or a full expanding solution."
+}

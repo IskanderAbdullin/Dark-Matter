@@ -8,7 +8,8 @@ from joint_resonant_frw_split_reference import pack,redshift
 from late_radiation_background_reference import TabulatedRadiation,MPL
 from scalar_pair_expanding_continuation_reference import MASS,moments,rate,reconstruct,e_total
 
-def run(eos,seed,h,methods,schemes,steps):
+def run(eos,seed,h,methods,schemes,steps,pair_strength=1.):
+    assert 0.<pair_strength<=1.
     s=json.loads(Path(seed).read_text())["snapshots"][-1]
     q=np.asarray(s["lab_momentum_edges_GeV"])
     th=[np.asarray(s[x]) for x in ("entropy_variable_scalar","entropy_variable_fermion")]
@@ -34,6 +35,7 @@ def run(eos,seed,h,methods,schemes,steps):
         total_out=np.zeros((2,2))
         fail=0;accepted=0
         def pair(y,dt):
+            dt*=pair_strength
             mom=moments(p,model.arrays(y))
             F,_,_=rate(p,model.arrays(y),(3,7,6,2))
             mid=reconstruct(p,mom+(dt/(2*H))*F[:,:,1:-1])
@@ -78,4 +80,5 @@ if __name__=="__main__":
     scheme=("pair-collision-pair","collision-pair-collision","pair-two-half-collisions-pair")
     p.add_argument("--schemes",nargs="+",choices=scheme,default=scheme)
     p.add_argument("--substeps",nargs="+",type=int,default=[1,2,4])
-    a=p.parse_args();print(json.dumps(run(a.eos,a.seed,a.step,a.method,a.schemes,a.substeps),indent=2,allow_nan=False))
+    p.add_argument("--pair-strength",type=float,default=1.)
+    a=p.parse_args();print(json.dumps(run(a.eos,a.seed,a.step,a.method,a.schemes,a.substeps,a.pair_strength),indent=2,allow_nan=False))
