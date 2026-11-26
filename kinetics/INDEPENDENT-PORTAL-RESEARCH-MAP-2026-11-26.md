@@ -209,7 +209,9 @@ uses the stored support and birth-energy mean to bound the
 one-use high-momentum subset, even for two-exterior events.
 That subset still is not a measured gross reacting budget. A [high-parent prompt probe](INDEPENDENT-WARM-PROMPT-HIGH-PARENT-LEDGER-2026-11-26.md)
 measures the bare inverse-decay contribution on a separate short
-explicitly reacting q64 control, not the full high-heavy budget.
+explicitly reacting q64 control, not the full high-heavy budget. A [known-cohort shape-independent initial upper](INDEPENDENT-WARM-HIGH-INVERSE-KNOWN-COHORT-SHAPE-BOUND-2026-11-26.md)
+retains the finite admitted support but does not pick an unknown
+within-cohort distribution.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
