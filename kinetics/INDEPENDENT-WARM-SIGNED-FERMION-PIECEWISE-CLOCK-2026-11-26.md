@@ -69,3 +69,14 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_signed_fermion_pie
 ~~~
 
 [Later-anchor diagnostics](results/warm-signed-fermion-piecewise-clock-lower-2026-11-26.json).
+
+### Small conditional cap overshoot
+
+Apply the separate
+[positive quadratic debit](INDEPENDENT-WARM-SIGNED-QUADRATIC-OVERSHOOT-2026-11-26.md)
+at the two selected anchors. The fine numerical boundary of
+this sufficient exclusion moves from about 0.500138 to
+0.500506 per spin. This is only a tiny extension past 1/2;
+it does not justify using the full Pauli bound of one.
+[Diagnostics](results/warm-signed-cap-later-overshoot-2026-11-26.json)
+from `warm_signed_cap_later_overshoot_reference.py EOS.dat`.
