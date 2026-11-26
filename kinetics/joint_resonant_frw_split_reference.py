@@ -45,9 +45,11 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9,empty_support_high=16.,empty_outer_bins=0):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05,visible_feedback=False,trace_exterior=False,empty_stop=.9,empty_support_high=16.,empty_outer_bins=0,pair_operator=False):
     assert nx>0 and (centered or not elastic)
     if visible_feedback: assert empty_start and source is not None
+    if pair_operator:
+        assert empty_start and visible_feedback and trace_exterior
     if not empty_start:
         vis,H,k,_,_,_,th=configuration(row,eos,8,6.5)
         q=k.c[0].p
@@ -150,6 +152,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         if exterior_trace is not None:
             exterior_trace.advance(astart)
             apply_exterior(pulse_full,astart)
+    pair_n=np.zeros(2);pair_ext=0.;pair_exn=np.zeros(2);pair_max_inverse=0.
     source_entropy=0.
     signed_source=bool(source is not None and hasattr(source,"rates_at_state"))
     source_abs=np.zeros((3,2,2))
@@ -234,6 +237,22 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
                 w,log=step(m0,pack(th),dx*scale)
             nonlinear+=log["newton_iterations"]
             th=m0.arrays(w)
+        if pair_operator:
+            from scalar_pair_expanding_continuation_reference import moments,reconstruct,rate,e_total,MASS
+            u=moments(q/b,th)
+            rr,_,_=rate(q/b,th,(3,7,6,2))
+            trial=reconstruct(q/b,u+(.5*dx/h)*rr[:,:,1:-1])
+            rr,_,z=rate(q/b,trial,(3,7,6,2))
+            delta=(dx/h)*rr
+            th=reconstruct(q/b,u+delta[:,:,1:-1])
+            pair_n+=b**3*delta[:,0,1:-1].sum(axis=1)
+            pair_exn+=b**3*delta[:,0,[0,-1]].sum(axis=1)
+            pair_ext+=b**4*e_total(delta[:,:,[0,-1]])
+            pair_max_inverse=max(pair_max_inverse,z)
+            if exterior_trace is not None:
+                for j,mi in enumerate(MASS):
+                    for side,idx in enumerate([0,-1]):
+                        exterior_trace.add(b,mi,3+j,side,q[idx]/b,b**3*delta[j,0,idx],b**4*delta[j,1,idx])
         v1,s2,_=m0.moment(pack(th))
         Qadd+=e_species(kin,v1,b)-Et
         dScol+=(s2-s1)*b**3
@@ -266,14 +285,14 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     n1=U.reshape(2,cnt,2)[:,:,0].sum(axis=1)*af**3
     unit=E0.sum()+(source_energy.sum() if empty_start else 0.)
     errE=np.max(abs(Ef-E0-dE-Qadd-source_energy))/unit
-    errQ=abs(sum(Qadd))/unit
+    errQ=abs(sum(Qadd)+pair_ext)/unit
     S0*=astart**3
     errS=abs((S*af**3-S0)-dScol-dSadv-source_entropy)/(S*af**3 if empty_start else S0)
-    assert max(errE,errQ,errS,er,np.max(abs(n1/(N0+source_n)-1)))<2e-9
+    assert max(errE,errQ,errS,er,np.max(abs(n1/(N0+source_n+pair_n)-1)))<2e-9
     visible_out=None
     if bath is not None:
         visible_out=bath.summary()
-        exterior=first_tails[:,1].sum()+tails[:,1].sum()
+        exterior=first_tails[:,1].sum()+tails[:,1].sum()+pair_ext
         portal=first_all[:,1].sum()+source_total[:,1].sum()
         cross=abs(portal-bath.portal)/abs(portal)
         joint=((bath.energy-bath.E0-bath.trace)+Ef.sum()-dE.sum()+exterior)/bath.E0
@@ -285,6 +304,8 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
                 +ex["exterior_a4_energy_one_mean_per_cohort"]-ex["exterior_a4_pressure_trace"])/bath.E0
             assert abs(full)<4e-11
             ex["visible_dark_exterior_joint_ledger_defect_in_initial_visible_units"]=full
+            if pair_operator:
+                ex["exterior_a4_all_collision_injection"]=ex.pop("exterior_a4_portal_injection")
             visible_out.update(ex)
         visible_out.update(visible_baseline_T_same_a_GeV=tf_base,
                            relative_visible_temperature_shift=tf/tf_base-1.,
@@ -311,10 +332,16 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         count=C.g*np.sum(gw*pp*pp*np.exp(-zz)/(-np.expm1(-zz))*(hi-lo)[:,None]/(4*np.pi**2))
         soft_frac[str(cut)]=float(count/(n1[0]/af**3))
     return dict(nsteps=nx,final_a=af,initial_visible_T_GeV=vis,common_equilibrium_T=Tin,centered_residual=centered,
+      included_scalar_pair_conversion=pair_operator,
+      pair_delta_retained_counts_relative_to_final_retained=(pair_n/n1).tolist(),
+      pair_exterior_counts_relative_to_final_retained=(pair_exn/n1).tolist(),
+      pair_exterior_a4_energy=pair_ext,
+      pair_total_count_defect_relative_to_final_combined=float(abs(np.sum(pair_n+pair_exn))/sum(n1)),
+      pair_max_inverse_over_forward=pair_max_inverse,
       final_number_shell_total_variation_from_closed_box_equilibrium=rem,
       omitted_source_number_fractions=omitted,comoving_support_over_initial_visible_T=(q[[0,-1]]/vis).tolist(),
       initialization=("physical first source pulse; empty at a=1" if empty_start else ("warm source-bin counts" if warm else "manufactured near equilibrium")),below_pole_elastic=elastic,manufactured_collision_amplitude_relative_to_actual=scale,
-      total_number_defect=float(np.max(abs(n1/(N0+source_n)-1))),split_energy_ledger_defect=float(errE),
+      total_number_defect=float(np.max(abs(n1/(N0+source_n+pair_n)-1))),split_energy_ledger_defect=float(errE),
       collision_opposite_heat_defect=float(errQ),integrated_entropy_ledger_defect=float(errS),
       comoving_q_scalar_from_collisions_over_initial_energy=Qadd[0]/E0.sum() if not empty_start else None,
       redshift_trace_contribution_over_initial_energy=(dE/E0.sum()).tolist() if not empty_start else None,
@@ -370,11 +397,13 @@ if __name__=="__main__":
     p.add_argument("--visible-backreaction",action="store_true")
     p.add_argument("--accurate-visible-eos",action="store_true")
     p.add_argument("--trace-exterior",action="store_true")
+    p.add_argument("--pair-conversion",action="store_true")
     p.add_argument("--eos-lower-knot-limit",type=float,default=.009,
                    help="lower temperature in GeV for selecting tabulated EOS knots; no extrapolation")
     a=p.parse_args();eos=StandardModel(a.eos,lower_knot_limit=a.eos_lower_knot_limit)
     if a.empty_pulse: assert 0.<a.empty_stop<1.
     if a.trace_exterior: assert a.visible_backreaction
+    if a.pair_conversion: assert a.physical_amplitude and a.trace_exterior
     if a.visible_backreaction or a.accurate_visible_eos:
         from visible_frw_energy_ledger_reference import ConservativeEOS
         eos=ConservativeEOS(eos)
@@ -406,11 +435,11 @@ if __name__=="__main__":
     extent=np.log(eos.state(a.empty_reheat)[2]/eos.state(a.empty_stop*a.empty_reheat)[2])/3 if a.empty_pulse else .07
     final_shapes=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
     if a.save_snapshots: assert a.physical_amplitude and a.empty_pulse
-    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop,empty_support_high=a.empty_support_high,empty_outer_bins=a.empty_outer_bins) for n,snapshot in zip(a.steps,final_shapes)]
+    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat,visible_feedback=a.visible_backreaction,trace_exterior=a.trace_exterior,empty_stop=a.empty_stop,empty_support_high=a.empty_support_high,empty_outer_bins=a.empty_outer_bins,pair_operator=a.pair_conversion) for n,snapshot in zip(a.steps,final_shapes)]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     if a.save_snapshots:
         for n,x in zip(a.steps,final_shapes): x.update(steps=n, below_pole_elastic=a.with_elastic)
         Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=final_shapes),indent=2,allow_nan=False)+"\n")
     print(json.dumps(dict(rows=rows,
-       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+("No dark collisions; " if a.source_only else ("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; "))+(("state-dependent visible FD source enabled." if a.quantum_visible_source else "visible source enabled (vacuum final state).") if a.visible_source else "injection disabled."))),
+       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+(("No dark collisions; " if not a.pair_conversion else "Stable scalar-pair conversion only; ") if a.source_only else ("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return; ")+("Stable scalar-pair conversion; " if a.pair_conversion else ""))+(("state-dependent visible FD source enabled." if a.quantum_visible_source else "visible source enabled (vacuum final state).") if a.visible_source else "injection disabled."))),
        indent=2,allow_nan=False))
