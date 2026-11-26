@@ -30,3 +30,9 @@ python -W error kinetics/expanding_tagged_injection_transport_reference.py EOS_T
 python -W error kinetics/empty_lepton_pair_spectrum_reference.py EOS_TABLE > RAW_SPECTRA.json
 python -W error kinetics/prompt_resonant_scalar_redistribution_reference.py EOS_TABLE RAW_SPECTRA.json
 ```
+
+## Wider-support negative convergence check
+
+At 50 MeV, extend the comoving upper gate from q/T_R=4 to 24 (25 base bins), retaining exactly the same source and bath histories. The direct outside-launch fraction drops from .139 to 3.16e-9. Elastic-only later exit also drops below 2.1e-7 of the full source, but the absorbing prompt-return iteration still accumulates a first-exit probability .99988. Meanwhile, the censoring-control terminal soft fraction rises from 1.76e-8 to 1.59e-6, and its maximum bin-average occupation rises from 2.8e-4 to .096. A wide absorbing boundary does not supply a converged result for the hot examples: many sequential returns can make the probability of ever crossing an artificial surface large even if most particles would later reenter. The censoring control also changes, so it does not replace real return from an extended exterior. These negative results are a reason to build and audit an explicit exterior-return model before interpreting the distribution, not to extrapolate either outcome.
+
+Reproduce the wider check with `--TR .05 --step 2 --bins 25 --support 24 --prompt-return --inject --reflect` on the same prepared snapshots.
