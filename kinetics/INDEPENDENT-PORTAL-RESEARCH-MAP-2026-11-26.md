@@ -102,6 +102,9 @@ but the outgoing scalar occupation must be capped by hand.
 The [refined fermion floor with vacuum lepton loss](INDEPENDENT-WARM-FERMION-SURVIVAL-WITH-LEPTONS-2026-11-26.md)
 uses exact angular ceilings and a finite energy budget for
 high-invariant loss, retaining the explicit scalar cap.
+A [finite-duration Bose test](INDEPENDENT-WARM-BOSE-WEIGHTED-DEPLETION-BUDGET-2026-11-26.md)
+replaces that uniform cap by an expansion-weighted condition
+and evaluates separate hypothetical burst lengths.
 The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
