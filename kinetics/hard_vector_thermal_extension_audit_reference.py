@@ -16,13 +16,15 @@ def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def run(eos, old_native, new_native, parent12, mixed, parent14):
-    edges=np.r_[XEDGES,13.,14.]
-    lo=table(old_native)
+def run(eos, old_native, new_native, parent12, mixed, parent14, old_max=12., new_max=14.):
+    if (old_max,new_max) not in ((12.,14.),(14.,16.)):
+        raise ValueError("Use one tracked pair of successive parent controls.")
+    edges=np.r_[XEDGES,np.arange(13.,new_max+1.)]
+    lo=table(old_native,old_max)
     hi=table(new_native,edges[-1])
     nx=len(lo[0])
     assert np.array_equal(lo[0],hi[0][:nx]) and np.array_equal(lo[2],hi[2][:nx])
-    for invalid in (12.,13.):
+    for invalid in (old_max,new_max-1.):
         try:
             table(new_native,invalid)
         except ValueError:
@@ -30,13 +32,13 @@ def run(eos, old_native, new_native, parent12, mixed, parent14):
         else:
             raise AssertionError("strict extension escaped parent domain")
     folds=[json.loads(x.read_text()) for x in (parent12,mixed,parent14)]
-    assert [x["mass_over_T_interval"][-1] for x in folds]==[12.,12.,14.]
+    assert [x["mass_over_T_interval"][-1] for x in folds]==[old_max,old_max,new_max]
     assert all(x["parent_born_mass_panels"]==edges.tolist() for x in folds[1:])
     F=Fold(eos,(8,21,16),6,upper=.50)
     B=[HardComplement(F,tmin=.25,n=n,x_edges=edges) for n in (4,8,12)]
     Ca=Correction(F,lo,.25,8,"linear",edges)
     Cb=Correction(F,hi,.25,8,"linear",edges)
-    intervals=np.unique((WINDOWS.ravel()[:,None]/[12.,14.]).ravel())
+    intervals=np.unique((WINDOWS.ravel()[:,None]/[old_max,new_max]).ravel())
     zs=np.unique(np.r_[.25,.3,.323,.336,.4,intervals-1e-6,intervals+1e-6])
     checks=[]
     for T in zs:
@@ -48,7 +50,7 @@ def run(eos, old_native, new_native, parent12, mixed, parent14):
         low_repartition=float(np.max(abs((u12-u14)/u14)))
         A=Ca.rates(T)
         D=Cb.rates(T)
-        add=independent(T,hi,"linear",20,lower_x=12.)
+        add=independent(T,hi,"linear",20,lower_x=old_max)
         w=np.stack([add.sum(axis=0),add[0]])
         defect=float(np.max(abs((D-A-w)/D[0])))
         assert max(born,mask,low_repartition)<2e-9 and defect<2e-9
@@ -85,5 +87,7 @@ if __name__=="__main__":
     p=argparse.ArgumentParser()
     for name in ("eos","old_native","new_native","parent12","mixed","parent14"):
         p.add_argument(name,type=Path)
+    p.add_argument("--old-max",type=float,default=12.)
+    p.add_argument("--new-max",type=float,default=14.)
     a=p.parse_args()
-    print(json.dumps(run(a.eos,a.old_native,a.new_native,a.parent12,a.mixed,a.parent14),indent=2,allow_nan=False))
+    print(json.dumps(run(a.eos,a.old_native,a.new_native,a.parent12,a.mixed,a.parent14,a.old_max,a.new_max),indent=2,allow_nan=False))

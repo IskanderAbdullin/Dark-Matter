@@ -40,8 +40,8 @@ def independent(T,values,mode,n,lower_x=None):
 
 
 def run(eos, native, parent_x_max=12.):
-    if parent_x_max not in (12.,13.,14.):
-        raise ValueError("Supported Born upper edges are 12, 13, and 14.")
+    if parent_x_max not in (12.,13.,14.,15.,16.):
+        raise ValueError("Supported Born upper edges are integer x from 12 through 16.")
     parent=np.r_[XEDGES,np.arange(13.,parent_x_max+1.)]
     values=table(native,parent[-1])
     low,high=values[0][[0,-1]]

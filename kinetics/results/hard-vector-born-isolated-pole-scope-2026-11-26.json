@@ -1,0 +1,80 @@
+{
+  "mass_panels_GeV": [
+    8.5,
+    9.95,
+    10.05,
+    11.5
+  ],
+  "vector_width_GeV": 0.005305164626087453,
+  "scope_max_previous_M_GeV": 8.28,
+  "EOS_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "columns": [
+    "Omega h^2 if all convert",
+    "dark energy floor at 1 MeV / radiation"
+  ],
+  "controls": [
+    {
+      "T_limits_GeV": [
+        0.25,
+        0.32236
+      ],
+      "isolated_band_partition_count_and_heat": [
+        [
+          2.5233679095565094e-07,
+          8.979317506577222e-08
+        ],
+        [
+          6.575193367030271e-06,
+          2.454225152394796e-06
+        ],
+        [
+          7.554095831362992e-08,
+          2.8495797339509308e-08
+        ]
+      ],
+      "total_same_band": [
+        6.903071116299552e-06,
+        2.5725141248000776e-06
+      ],
+      "share_within_pole_window": [
+        0.9525026261869017,
+        0.9540181446372139
+      ],
+      "fraction_of_reference_optimistic_count_target": 5.810665922811071e-05,
+      "largest_coordinate_relative_difference": 1.816008454724738e-10,
+      "largest_order_relative_difference": 4.7118708856874747e-07
+    },
+    {
+      "T_limits_GeV": [
+        0.3,
+        0.33577
+      ],
+      "isolated_band_partition_count_and_heat": [
+        [
+          6.827636623357319e-07,
+          2.3196107862537005e-07
+        ],
+        [
+          1.9079276795796785e-05,
+          6.783914725904199e-06
+        ],
+        [
+          2.2276640874579538e-07,
+          8.007443713525565e-08
+        ]
+      ],
+      "total_same_band": [
+        1.998480686687831e-05,
+        7.095950241664825e-06
+      ],
+      "share_within_pole_window": [
+        0.9546890757006864,
+        0.9560262536892568
+      ],
+      "fraction_of_reference_optimistic_count_target": 0.00016822228002422821,
+      "largest_coordinate_relative_difference": 1.2878298427665413e-10,
+      "largest_order_relative_difference": 3.582106035127097e-07
+    }
+  ],
+  "scope": "Isolated high-mass massless three-flavor Born proxy with the same Breit-Wigner propagator and imposed radiation clock. No measured high-energy spectrum, heavy flavors, other disjoint intervals, coupled evolution, full QCD correction, or fitted reheating root."
+}

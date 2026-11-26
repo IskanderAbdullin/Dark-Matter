@@ -92,8 +92,8 @@ def mid_checks(table_values,path):
 
 
 def run(eos,kloe,bes,probe,check,born_x_max=12.):
-    if born_x_max not in (12.,13.,14.):
-        raise ValueError("Supported Born upper edges are 12, 13, and 14.")
+    if born_x_max not in (12.,13.,14.,15.,16.):
+        raise ValueError("Supported Born upper edges are integer x from 12 through 16.")
     born_edges=np.r_[XEDGES,np.arange(13.,born_x_max+1.)]
     K=table(probe,born_edges[-1])
     F=Fold(eos,(8,21,16),6,upper=.50)
