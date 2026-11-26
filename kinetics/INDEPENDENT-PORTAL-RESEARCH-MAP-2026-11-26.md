@@ -69,7 +69,9 @@ reproducible controls below are not observational constraints.
    leaves the sampled full-support decay-only sign negative,
    without certifying the sign of all coupled operators. The [tagged dark-pair follow-up](INDEPENDENT-WARM-COLD-LIGHT-PARENT-DARK-PAIR-2026-11-26.md)
    resolves tiny represented positive gains into the relevant heavy
-   modes, on those fixed shapes only.
+   modes, on those fixed shapes only. A [shell-number envelope](INDEPENDENT-WARM-COLD-PARENT-RETAINED-PAIR-ENVELOPE-2026-11-26.md)
+   bounds the extra retained dark pair gains without picking
+   their within-shell shapes; the baseline rate stays frozen.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
