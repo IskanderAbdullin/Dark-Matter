@@ -1,0 +1,13 @@
+# Combine the unscaled prompt-return and below-pole elastic channels
+
+This test uses both nonlinear collision operators in the same implicit residual, not an added linear elastic relaxation term. Prompt return is centered at each on-shell parent energy. For the independent off-pole elastic pairs, subtract the common reference total-energy affinity before evaluating the angular difference; the remaining microscopic ratio is evaluated using expm1. Factors are FD/BE, with exact projected joint energies and the elastic real pole excluded by the invariant cut. An analytic joint directional Jacobian agrees with a separate centered difference to 2.54e-12 under the sampled perturbation.
+
+In a strictly populated frozen near-equilibrium test with an initial excess in the lowest scalar shell (upper p/T=.0102), one backward Euler step lasting .02 Hubble times keeps the cold-shell excess unchanged with prompt return alone, but leaves .349 of that excess with the nonlinear below-pole elastic term added. Both counts and total energy close to 7e-16 relative and the combined collision entropy increases. This is a discrete implicit step, not the continuous exponential time solution or a result for omitted momenta or cold zero modes.
+
+Reproduce with `python -W error kinetics/joint_combined_centered_implicit_reference.py EOS_TABLE RAW_SPECTRA.json` and the same generated spectra and central EOS as earlier.
+
+A separate manufactured near-equilibrium FRW split now uses both unscaled channels throughout the same implicit collision substeps. At a=1.0725 the three- and six-step controls give scalar comoving heat -8.85e-4 and -9.13e-4 of initial energy (negative for this particular perturbed initial condition). Both particle counts and the independent energy ledger close within 3.2e-15 relative; the recorded collision contribution is opposite between species. The finite support is initialized artificially, and injection is disabled. Therefore this is a conservation and stiffness check, not a full physical cold-spectrum evolution.
+
+Reproduce with `python -W error kinetics/joint_resonant_frw_split_reference.py EOS_TABLE RAW_SPECTRA.json --physical-amplitude --with-elastic`.
+
+On the separate warm source-bin initialization (both momentum ends cut, `--warm-source-init`), the two-channel integrated comoving heat is .08093 and .08090 of initial total energy at three and six splits. It is indistinguishable at the shown precision from the warm prompt-only test. This is compatible with a dominant prompt rate on that selected warm support; it does not remove the elastic sensitivity of the separate cold-shell test. The warm run does not include the coldest scalar bins, continuing production, or other processes.

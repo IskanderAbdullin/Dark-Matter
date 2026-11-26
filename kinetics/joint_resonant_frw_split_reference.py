@@ -45,7 +45,8 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False):
+    assert not elastic or centered
     vis,H,k,N,t,Q,th=configuration(row,eos,8,6.5)
     q=k.c[0].p
     omitted=[0.,0.]
@@ -96,6 +97,15 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False):
         Et=e_species(kin,v0,b)
         h=np.sqrt((eos.state(v)[0]+Et.sum()/b**4)/3)/MPL
         m0.H=h
+        if elastic:
+            from joint_below_pole_elastic_linear_modes_reference import setup
+            from joint_combined_centered_implicit_reference import Combined
+            ref,_,temp=m0.reference(pack(th),v)
+            a0=m0.arrays(ref)
+            eta=[(c.mass+c.low[0])/temp-a0[j][0,0] for j,c in enumerate(kin.c)]
+            panels=[]
+            setup(v,kin,temp,eta,4,3,2,10,30.,.82,cache=panels)
+            m0=Combined(kin,h,panels)
         if scale:
             if centered:
                 from joint_resonant_centered_stiff_reference import advance
@@ -123,7 +133,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False):
     return dict(nsteps=nx,final_a=af,common_equilibrium_T=Tin,centered_residual=centered,
       final_number_shell_total_variation_from_closed_box_equilibrium=rem,
       omitted_source_number_fractions=omitted,comoving_support_over_initial_visible_T=(q[[0,-1]]/vis).tolist(),
-      initialization="warm source-bin counts" if warm else "manufactured near equilibrium",manufactured_collision_amplitude_relative_to_actual=scale,
+      initialization="warm source-bin counts" if warm else "manufactured near equilibrium",below_pole_elastic=elastic,manufactured_collision_amplitude_relative_to_actual=scale,
       total_number_defect=float(np.max(abs(n1/N0-1))),split_energy_ledger_defect=float(errE),
       collision_opposite_heat_defect=float(errQ),integrated_entropy_ledger_defect=float(errS),
       comoving_q_scalar_from_collisions_over_initial_energy=Qadd[0]/E0.sum(),
@@ -134,11 +144,11 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument('eos');p.add_argument('spectra')
-    p.add_argument("--physical-amplitude",action="store_true");p.add_argument("--warm-source-init",action="store_true")
+    p.add_argument("--physical-amplitude",action="store_true");p.add_argument("--warm-source-init",action="store_true");p.add_argument("--with-elastic",action="store_true")
     a=p.parse_args();eos=StandardModel(a.eos)
     r=next(r for r in json.loads(Path(a.spectra).read_text())['rows'] if r['TR']==.05 and abs(r['TF']-.045)<1e-8)
-    rows=([run(r,eos,3,scale=1.,centered=True,warm=a.warm_source_init),run(r,eos,6,scale=1.,centered=True,warm=a.warm_source_init)]
+    rows=([run(r,eos,3,scale=1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic),run(r,eos,6,scale=1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic)]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
     print(json.dumps(dict(rows=rows,
-       scope=("Warm source-bin initial projection with both ends cut; one closed channel, injection disabled." if a.warm_source_init else "Manufactured near-equilibrium shape; one closed channel, injection disabled.")),
+       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else "Manufactured near-equilibrium shape. ")+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+"injection disabled.")),
        indent=2,allow_nan=False))

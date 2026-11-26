@@ -9,7 +9,7 @@ from three_species_decay_onsager_reference import M,m,mp
 from joint_resonant_kinetic_linear_modes_reference import configuration,gram,metric
 from sm_dark_entropy_exchange_reference import StandardModel
 
-def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None):
+def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None,cache=None):
     n=len(k.c[0].vol);D=4*n
     el=[np.hypot(c.p,c.mass) for c in k.c]
     tau=temps
@@ -59,7 +59,7 @@ def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None):
             v=np.clip((p-a)/B-1.,-1.,1.);z=np.sqrt(np.maximum(0.,1-v*v))
             cos=v[:,None]*v+z[:,None]*z*az[:,None,None]
             amp=spin(s,-2*pcm*pcm*(1-cos)).mean(axis=0)
-            ang=w.copy() if perturb is not None else None
+            ang=w.copy() if perturb is not None or cache is not None else None
             w*=expit(f/tau-ef[1])/(-np.expm1(ef[0]-p/tau))
             WW=amp*w[:,None]*w*np.exp(ef[0]+ef[1]-L/tau)
             F=np.zeros((len(p),D));aa=np.arange(len(p))
@@ -67,6 +67,8 @@ def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None):
             F[aa,2*i+1]=(p-mp-k.c[0].low[i])/k.c[0].dk[i]
             F[aa,2*n+2*j+1]=(f-m-k.c[1].low[j])/k.c[1].dk[j]
             coef=d*dL*q*pcm**2/u
+            if cache is not None:
+                cache.append((p,f,L,F,amp*ang[:,None]*ang*(4*coef/(256*np.pi**5))))
             g+=coef*(F.T@(WW.sum(axis=1)[:,None]*F-WW@F))
             if perturb is not None:
                 for z,field in enumerate(perturb):

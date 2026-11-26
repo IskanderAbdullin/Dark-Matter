@@ -1,0 +1,26 @@
+{
+  "panels": 5635,
+  "scalar_first_bin_upper_p_over_visible_T": 0.010215280377713123,
+  "directional_analytic_derivative_error": 2.5367912595901596e-12,
+  "steps": [
+    {
+      "channels": "resonant",
+      "invariant_defect": 6.661338147750939e-16,
+      "remaining_cold_cell_excess_relative_to_common_reference": 1.0,
+      "newton_iterations": 1,
+      "residual": 1.1020126285396799e-15,
+      "entropy_gain_relative": 2.220446049250313e-16,
+      "maximum_exponent_departure_from_eq": 0.08999997109060409
+    },
+    {
+      "channels": "combined",
+      "invariant_defect": 3.3306690738754696e-16,
+      "remaining_cold_cell_excess_relative_to_common_reference": 0.3490666460241378,
+      "newton_iterations": 3,
+      "residual": 2.4432715323122112e-12,
+      "entropy_gain_relative": 1.127986593019159e-11,
+      "maximum_exponent_departure_from_eq": 0.027372552906262858
+    }
+  ],
+  "scope": "Single fully nonlinear backward-Euler test with actual projected prompt and below-pole elastic scattering, fixed support and manufactured populated initial shapes. Not a physical FRW result or exponential relaxation time."
+}
