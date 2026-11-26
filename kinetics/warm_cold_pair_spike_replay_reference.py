@@ -17,6 +17,7 @@ p.add_argument("work", type=Path)
 p.add_argument("out", type=Path)
 p.add_argument("--q", choices=(32,64), type=int, required=True)
 p.add_argument("--fine", action="store_true")
+p.add_argument("--cells", choices=(1,3,6,9), type=int, default=1)
 p.add_argument("--subdivisions", choices=(1,2,4), type=int, default=1)
 a=p.parse_args()
 a.out.mkdir(parents=True, exist_ok=True)
@@ -32,7 +33,7 @@ logs=[]
 original=kernel.rate
 
 def callback(p,th,o):
-    rr,ledger,ratio,meta=split_rate(p,th,o,mode)
+    rr,ledger,ratio,meta=split_rate(p,th,o,mode,cut_cells=a.cells)
     logs.append(meta)
     return rr,ledger,ratio
 
@@ -69,6 +70,10 @@ r = row(R)
 if a.subdivisions == 1:
     assert n["slope"] > 0
 assert r["slope"] < 0
-print(json.dumps(dict(q=a.q, subdivisions=a.subdivisions, starting_sha256=B["snapshot_sha256"], lifts=logs,
+print(json.dumps(dict(q=a.q, cut_cells=a.cells, subdivisions=a.subdivisions, starting_sha256=B["snapshot_sha256"], lifts=logs,
     order=mode, lift_sha256=sha(Path(method)), gross_sha256=sha(Path(gross_path)),
-    normalized_shell_L1_number_energy_pressure=shapes, native=n, corrected=r),indent=2,allow_nan=False))
+    normalized_shell_L1_number_energy_pressure=shapes, native=n, corrected=r,
+    cold_volume_normalized_delta=(
+        delta[0,1,:12] / (4*np.diff(np.asarray(R["snapshot"]["lab_momentum_edges_GeV"])[:13]**3)
+                          /(6*np.pi**2))
+    ).tolist()),indent=2,allow_nan=False))

@@ -116,7 +116,8 @@ reproducible controls below are not observational constraints.
    then checks which local prompt channel vanishes on q32 and
    which remains on q64 around 8.24 MeV. A [finite-momentum tagged pair audit](INDEPENDENT-WARM-COLD-LIGHT-FINITE-PAIR-2026-11-26.md)
    finds that the native reverse quadrature materially undercounts gain into the first cold cell. The [conservative cold-event partition](INDEPENDENT-WARM-COLD-PAIR-PARTITION-2026-11-26.md)
-   removes a one-step native cold spike without shifting the full spectrum materially in that block.
+   removes a one-step native cold spike without shifting the full spectrum materially in that block. A [six- and nine-shell lift](INDEPENDENT-WARM-COLD-PAIR-MULTISHELL-2026-11-26.md)
+   checks adjacent cold cells without changing the forward operator or the remaining inverse phase space.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)

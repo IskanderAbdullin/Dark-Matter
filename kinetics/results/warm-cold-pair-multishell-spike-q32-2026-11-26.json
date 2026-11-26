@@ -1,0 +1,196 @@
+[
+  {
+    "q": 32,
+    "cut_cells": 6,
+    "subdivisions": 1,
+    "starting_sha256": "cf5385f7299ca9b151e3c94f394c9d23af3c814b66fc42d46dbf734381d746b1",
+    "lifts": [
+      {
+        "total_number_ledger": 1.2126098175491806e-16,
+        "total_energy_ledger": 8.087499280655582e-17,
+        "tag_closure": 1.0256090483252665e-13,
+        "cold_reverse_event_fraction": 4.520311199164674e-06,
+        "both_cold_event_fraction": 3.6528176838205185e-15,
+        "cold_gain": 8.978149384877724e-43,
+        "cold_loss": 1.756403563427439e-42
+      },
+      {
+        "total_number_ledger": 5.30046922965549e-16,
+        "total_energy_ledger": 1.0103997529351385e-16,
+        "tag_closure": 1.0183256809518749e-13,
+        "cold_reverse_event_fraction": 4.517179493775507e-06,
+        "both_cold_event_fraction": 3.646011056456412e-15,
+        "cold_gain": 8.995431088853625e-43,
+        "cold_loss": 1.7553527181634635e-42
+      },
+      {
+        "total_number_ledger": 3.674398195845072e-16,
+        "total_energy_ledger": 2.4278463902474914e-16,
+        "tag_closure": 1.0424043241189553e-13,
+        "cold_reverse_event_fraction": 4.5269243773990826e-06,
+        "both_cold_event_fraction": 3.668285461875978e-15,
+        "cold_gain": 8.986321545986628e-43,
+        "cold_loss": 1.749789747072511e-42
+      },
+      {
+        "total_number_ledger": 4.59116029556058e-16,
+        "total_energy_ledger": 4.0442513993951384e-17,
+        "tag_closure": 1.0067850196414294e-13,
+        "cold_reverse_event_fraction": 4.523764322643592e-06,
+        "both_cold_event_fraction": 3.661415333439669e-15,
+        "cold_gain": 9.003603348779459e-43,
+        "cold_loss": 1.7487447274796358e-42
+      }
+    ],
+    "order": [
+      4,
+      8,
+      6,
+      8,
+      8
+    ],
+    "lift_sha256": "74807fa54155e3378a065f883e261055531993435666d33437752ff3f92b523b",
+    "gross_sha256": "0dfd56988f8872805a752f939b4241b1dfcb266bd0a9056986212d4bdaca548d",
+    "normalized_shell_L1_number_energy_pressure": [
+      [
+        1.646257356053859e-08,
+        9.61494559234338e-09
+      ],
+      [
+        2.1446892787593898e-08,
+        7.926625753566577e-09
+      ],
+      [
+        2.1446892898064825e-08,
+        5.4786930328809666e-09
+      ]
+    ],
+    "native": {
+      "T_GeV": 0.007754805139316106,
+      "sha256": "a30af2d3112aab05be0af640aec597ab2fedb277ce01170fc550444cd47ea0c3",
+      "occupation": 4.3953606752058106e-05,
+      "slope": 0.00014354664078390314,
+      "energy_defect": 1.0623018961890348e-14,
+      "total_count_defect": 5.773159728050814e-15
+    },
+    "corrected": {
+      "T_GeV": 0.007754805139316106,
+      "sha256": "0f0f4288c75d1eff71b60f6f7508d4c845df1657416a4904a5d1ab7482f355b7",
+      "occupation": 4.31961621870733e-05,
+      "slope": -4.7185027092045434e-05,
+      "energy_defect": 3.634190697488803e-15,
+      "total_count_defect": 2.4424906541753444e-15
+    },
+    "cold_volume_normalized_delta": [
+      -7.574445649848051e-07,
+      -3.7155799756666135e-07,
+      -2.3347119339350046e-07,
+      -1.429430601935908e-07,
+      -7.705339206919856e-08,
+      -4.223510393815486e-08,
+      -4.841902031869283e-13,
+      -3.0900448662800215e-13,
+      -1.9783893163294025e-13,
+      -1.2459652989391704e-13,
+      -7.832131717199872e-14,
+      -4.1697767782515447e-14
+    ]
+  },
+  {
+    "q": 32,
+    "cut_cells": 9,
+    "subdivisions": 1,
+    "starting_sha256": "cf5385f7299ca9b151e3c94f394c9d23af3c814b66fc42d46dbf734381d746b1",
+    "lifts": [
+      {
+        "total_number_ledger": 2.1018777359808745e-16,
+        "total_energy_ledger": 8.087471688115547e-17,
+        "tag_closure": 8.484643629940271e-11,
+        "cold_reverse_event_fraction": 0.00025533094308337193,
+        "both_cold_event_fraction": 1.705576952977532e-10,
+        "cold_gain": 8.978149385638567e-43,
+        "cold_loss": 1.756403563427439e-42
+      },
+      {
+        "total_number_ledger": 2.0739515281153506e-16,
+        "total_energy_ledger": 3.435347422984794e-16,
+        "tag_closure": 8.474683760457823e-11,
+        "cold_reverse_event_fraction": 0.00025515412946190187,
+        "both_cold_event_fraction": 1.7024048836318592e-10,
+        "cold_gain": 8.995430725052553e-43,
+        "cold_loss": 1.755352726280985e-42
+      },
+      {
+        "total_number_ledger": 3.373028807115553e-16,
+        "total_energy_ledger": 4.451036562376528e-16,
+        "tag_closure": 8.508093788088677e-11,
+        "cold_reverse_event_fraction": 0.00025570460938640716,
+        "both_cold_event_fraction": 1.7127870542189308e-10,
+        "cold_gain": 8.986321196713673e-43,
+        "cold_loss": 1.7497897467231877e-42
+      },
+      {
+        "total_number_ledger": 3.9405124057504887e-16,
+        "total_energy_ledger": 2.224330686868927e-16,
+        "tag_closure": 8.497938609198461e-11,
+        "cold_reverse_event_fraction": 0.0002555261926449094,
+        "both_cold_event_fraction": 1.709585366222867e-10,
+        "cold_gain": 9.003602635632763e-43,
+        "cold_loss": 1.7487447351572233e-42
+      }
+    ],
+    "order": [
+      4,
+      8,
+      6,
+      8,
+      8
+    ],
+    "lift_sha256": "74807fa54155e3378a065f883e261055531993435666d33437752ff3f92b523b",
+    "gross_sha256": "0dfd56988f8872805a752f939b4241b1dfcb266bd0a9056986212d4bdaca548d",
+    "normalized_shell_L1_number_energy_pressure": [
+      [
+        4.310593984828038e-08,
+        4.448677675003446e-08
+      ],
+      [
+        6.699047837089247e-08,
+        3.584498156965715e-08
+      ],
+      [
+        6.699047825587523e-08,
+        2.193883167256016e-08
+      ]
+    ],
+    "native": {
+      "T_GeV": 0.007754805139316106,
+      "sha256": "a30af2d3112aab05be0af640aec597ab2fedb277ce01170fc550444cd47ea0c3",
+      "occupation": 4.3953606752058106e-05,
+      "slope": 0.00014354664078390314,
+      "energy_defect": 1.0623018961890348e-14,
+      "total_count_defect": 5.773159728050814e-15
+    },
+    "corrected": {
+      "T_GeV": 0.007754805139316106,
+      "sha256": "f823d9ddb9aee986a5a6bc8a7c194d3b768d5c274fcca4f1e1226ec0b98564cb",
+      "occupation": 4.3196161984647976e-05,
+      "slope": -4.718507806464625e-05,
+      "energy_defect": 1.5375422181683398e-15,
+      "total_count_defect": 1.7763568394002505e-15
+    },
+    "cold_volume_normalized_delta": [
+      -7.574447674101271e-07,
+      -3.7155819978746303e-07,
+      -2.334713958708634e-07,
+      -1.429432631346028e-07,
+      -7.705359558300883e-08,
+      -4.223530798206491e-08,
+      -2.1462028642077033e-08,
+      -4.057779828873595e-09,
+      4.1187332268902865e-09,
+      1.595567163938584e-13,
+      2.5950942919455493e-13,
+      5.175064485602347e-13
+    ]
+  }
+]
