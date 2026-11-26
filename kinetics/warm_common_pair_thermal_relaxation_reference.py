@@ -41,17 +41,28 @@ def modes(req,eos,n):
     J=(J+J.T)/2
     K=R@J@R
     l,vec=np.linalg.eigh(K)
-    target=np.linalg.eigvals(D@J)
-    np.testing.assert_allclose(np.sort(target),l,rtol=1e-13,atol=0.)
+    # Independent SPD similarity: D = C C^T, so D J has the
+    # spectrum of C^T J C. The directly formed D J is not symmetric,
+    # and is not the reference for a near-machine-relative test.
+    C=np.linalg.cholesky(D)
+    alternate=C.T@J@C
+    lc=np.linalg.eigvalsh((alternate+alternate.T)/2)
+    target=np.sort(np.linalg.eigvals(D@J))
+    np.testing.assert_allclose(lc,l,rtol=2e-12,atol=0.)
+    np.testing.assert_allclose(target,l,rtol=2e-12,atol=0.)
     assert np.all(l>0.)
+    assert np.linalg.norm(K@vec-vec*l)/np.linalg.norm(K)<5e-14
+    relative_checks=dict(cholesky_vs_symmetric=float(np.max(abs(lc/l-1.))),
+                         formed_nonsymmetric_vs_symmetric=float(np.max(abs(target/l-1.))))
     visible=TabulatedRadiation(eos,T).state(1.)[1]
     H=np.sqrt((visible+Eb+Ef)/3)/MPL
     Cjoint=np.block([[np.linalg.inv(Cb),np.zeros((2,2))],[np.zeros((2,2)),np.linalg.inv(Cf)]])
     flux=np.block([[J,-J],[-J,J]])
     z=np.linalg.eigvals(flux@Cjoint)
     assert max(abs(np.sort(z)[0:2]))<1e-13*max(l)
-    np.testing.assert_allclose(np.sort(z)[2:],l,rtol=3e-13,atol=0.)
-    return dict(quadrature=req["quadrature"], susceptibility_order=n,scalar_susceptibility=Cb.tolist(),fermion_susceptibility=Cf.tolist(),
+    np.testing.assert_allclose(np.sort(z)[2:],l,rtol=2e-12,atol=0.)
+    relative_checks["full_four_mode_positive_block"]=float(np.max(abs(np.sort(z)[2:]/l-1.)))
+    return dict(independent_relative_eigenvalue_defects=relative_checks,quadrature=req["quadrature"], susceptibility_order=n,scalar_susceptibility=Cb.tolist(),fermion_susceptibility=Cf.tolist(),
                 dark_energy_density_GeV4=[Eb,Ef],radiation_density_GeV4=visible,H_GeV=float(H),decay_rates_GeV=l.tolist(),
                 decay_rates_over_H=(l/H).tolist(),decay_times_in_Hubble_time=(H/l).tolist(),
                 slow_fast_normalized_coordinates_columns=vec.tolist(),

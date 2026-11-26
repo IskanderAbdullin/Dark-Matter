@@ -1,0 +1,181 @@
+{
+  "scope": "Piecewise-linear interpolation of fitted thermal collision matrices, in fixed coordinates dN and dE divided by a constant pivot, with scalar+fermion summed invariants frozen for the perturbation. Retained pair only; no expansion pressure work, velocity-space distortion, external source, or changing equilibrium driving in this prescribed tangent.",
+  "energy_pivot_GeV": 0.0075,
+  "local_fits": [
+    {
+      "index": 0,
+      "snapshot_sha256": "8863902ab0f659ee625b7508a1853e23ef590922d52ff798c0cdc7fc625de262",
+      "T_visible_GeV": 0.008133099595474874,
+      "relative_lna": 0.0,
+      "fit_T_GeV": 0.007691344261983858,
+      "fit_mu_GeV": -0.05844996036013538,
+      "collision_decay_rates_over_H": [
+        1.049944198899209,
+        6.072435339097869
+      ],
+      "independent_relative_eigenvalue_defects": {
+        "cholesky_vs_symmetric": 8.659739592076221e-15,
+        "formed_nonsymmetric_vs_symmetric": 2.6423307986078726e-14,
+        "full_four_mode_positive_block": 4.196643033083092e-14
+      }
+    },
+    {
+      "index": 6,
+      "snapshot_sha256": "3973d73995d12019f19125bf032d821b3d55c436e56949f13593faaa73793430",
+      "T_visible_GeV": 0.007941700113466003,
+      "relative_lna": 0.023827544951080765,
+      "fit_T_GeV": 0.007530663932554359,
+      "fit_mu_GeV": -0.057138781680189175,
+      "collision_decay_rates_over_H": [
+        0.9843147829001114,
+        5.802689228846824
+      ],
+      "independent_relative_eigenvalue_defects": {
+        "cholesky_vs_symmetric": 1.7319479184152442e-14,
+        "formed_nonsymmetric_vs_symmetric": 4.951594689828198e-14,
+        "full_four_mode_positive_block": 3.552713678800501e-15
+      }
+    },
+    {
+      "index": 12,
+      "snapshot_sha256": "f43a532bbcb757b1dfc5bf352e3f626db8b5fae3c06d362fbd08f3b77aa8a1ab",
+      "T_visible_GeV": 0.007754805139316106,
+      "relative_lna": 0.04765508990216188,
+      "fit_T_GeV": 0.0073758760729815236,
+      "fit_mu_GeV": -0.05588395779474663,
+      "collision_decay_rates_over_H": [
+        0.9228755453243989,
+        5.539333580186079
+      ],
+      "independent_relative_eigenvalue_defects": {
+        "cholesky_vs_symmetric": 9.658940314238862e-15,
+        "formed_nonsymmetric_vs_symmetric": 6.439293542825908e-15,
+        "full_four_mode_positive_block": 3.2529534621517087e-14
+      }
+    },
+    {
+      "index": 18,
+      "snapshot_sha256": "d5d6d205a9aca8001fbfc4afbaa73847455a91b09cc01765f756665544562c75",
+      "T_visible_GeV": 0.007572289824735217,
+      "relative_lna": 0.07148263485324283,
+      "fit_T_GeV": 0.007226813581749646,
+      "fit_mu_GeV": -0.054683967383816416,
+      "collision_decay_rates_over_H": [
+        0.8654024707361498,
+        5.282724829279932
+      ],
+      "independent_relative_eigenvalue_defects": {
+        "cholesky_vs_symmetric": 2.2870594307278225e-14,
+        "formed_nonsymmetric_vs_symmetric": 4.1300296516055823e-14,
+        "full_four_mode_positive_block": 5.706546346573305e-14
+      }
+    },
+    {
+      "index": 24,
+      "snapshot_sha256": "4d24a8be25500bda3e6108edbe0ed6d83c999b41077346cb493eb31715e2db0e",
+      "T_visible_GeV": 0.007394049465197431,
+      "relative_lna": 0.09531017980432394,
+      "fit_T_GeV": 0.007083306459737074,
+      "fit_mu_GeV": -0.0535372438248509,
+      "collision_decay_rates_over_H": [
+        0.8116685136471413,
+        5.033159211003471
+      ],
+      "independent_relative_eigenvalue_defects": {
+        "cholesky_vs_symmetric": 2.220446049250313e-15,
+        "formed_nonsymmetric_vs_symmetric": 1.2601031329495527e-13,
+        "full_four_mode_positive_block": 3.441691376337985e-14
+      }
+    }
+  ],
+  "propagator_checks": [
+    {
+      "midpoint_exponentials_per_anchor_segment": 1,
+      "propagator": [
+        [
+          1.0176848821778335,
+          -0.08452144736241267
+        ],
+        [
+          0.5172778460034678,
+          0.48739316462386906
+        ]
+      ],
+      "eigen_amplitude_factors": [
+        0.5895014381824144,
+        0.9155766086192882
+      ],
+      "trace_logdet_defect": 3.3306690738754696e-16,
+      "singular_amplitude_factors": [
+        1.1526969719929685,
+        0.4682355733216415
+      ]
+    },
+    {
+      "midpoint_exponentials_per_anchor_segment": 4,
+      "propagator": [
+        [
+          1.0176905203644921,
+          -0.08451514787813032
+        ],
+        [
+          0.517351942503473,
+          0.48738751289918675
+        ]
+      ],
+      "eigen_amplitude_factors": [
+        0.589501462657401,
+        0.915576570606278
+      ],
+      "trace_logdet_defect": 5.551115123125783e-16,
+      "singular_amplitude_factors": [
+        1.1527393418250218,
+        0.4682183629585673
+      ]
+    },
+    {
+      "midpoint_exponentials_per_anchor_segment": 16,
+      "propagator": [
+        [
+          1.0176908729828131,
+          -0.08451475416742446
+        ],
+        [
+          0.5173565752374902,
+          0.4873871594429908
+        ]
+      ],
+      "eigen_amplitude_factors": [
+        0.5895014641721701,
+        0.9155765682536339
+      ],
+      "trace_logdet_defect": 5.551115123125783e-16,
+      "singular_amplitude_factors": [
+        1.1527419910875254,
+        0.4682172868865909
+      ]
+    },
+    {
+      "midpoint_exponentials_per_anchor_segment": 64,
+      "propagator": [
+        [
+          1.0176908950223609,
+          -0.0845147295605324
+        ],
+        [
+          0.5173568647900167,
+          0.48738713735110606
+        ]
+      ],
+      "eigen_amplitude_factors": [
+        0.5895014642667845,
+        0.9155765681066824
+      ],
+      "trace_logdet_defect": -1.9984014443252818e-15,
+      "singular_amplitude_factors": [
+        1.1527421566709142,
+        0.46821721963043494
+      ]
+    }
+  ]
+}

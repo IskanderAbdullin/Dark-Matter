@@ -147,6 +147,9 @@ reproducible controls below are not observational constraints.
    The [actual four-interval split budget](INDEPENDENT-WARM-Q64-ACTUAL-COLD-OPERATOR-BUDGET-2026-11-26.md)
    compares the accepted pair, prompt and elastic contributions with the
    unchanged comoving cold average across collisionless redshift.
+   An [ordered collision-only common thermal tangent](INDEPENDENT-WARM-Q64-COMMON-TANGENT-TRANSPORT-2026-11-26.md)
+   follows the two prescribed transfer modes across five q64 anchors
+   without turning the fitted reservoirs into an actual kinetic history.
    A [common equilibrium at the archive densities](INDEPENDENT-WARM-PAIR-COMMON-MOMENT-EQUILIBRIUM-2026-11-26.md)
    preserves aggregate number and energy and shows sub-Hubble slow pair relaxation in the cold reservoir comparator.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
