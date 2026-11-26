@@ -66,3 +66,27 @@ python -W error warm_pair_chart_exterior_controls_reference.py  results/warm-col
 
 [Exact higher-order terminal state](results/warm-pair-common-chart-q32-fine-terminal-2026-11-26.json.gz);
 [virtual radial control](results/warm-pair-common-chart-q32-virtual-2026-11-26.json).
+
+## Wider frozen q64 cross-check
+
+At the actual q64 7.754805 MeV native checkpoint, the common
+chart and the archived forward projection agree in aggregate across
+all four represented/exterior moment arrays to better than 1e-15
+in normalized L1 at each matched rule. At the finest tested rule
+the global inverse event number and energy match the original
+inverse chart to 5.12e-6 and 3.71e-6 relatively. This aggregate
+agreement does not test where gain was placed: the first-cell
+gain/loss ratio is 5.05, 0.831 and 0.845 on the three original
+rules, but about 0.502856 at every tested common rule. The independent
+finite tagged integral gives 0.502856094, within 2.9e-7 fractionally
+of the finest common value. At that rule the largest normalized
+distribution difference is 2.15e-4 for the full signed pair
+rate (not for a time-evolved spectrum), down from 3.07e-3 at
+the original rule. This comparison freezes the wider state.
+
+~~~sh
+python -W error warm_pair_common_fermion_chart_reference.py \
+ results/warm-cold-pair-spike-q64-step12-2026-11-26.json.gz
+~~~
+
+[Three-rule q64 frozen comparison](results/warm-pair-common-chart-q64-frozen-2026-11-26.json).
