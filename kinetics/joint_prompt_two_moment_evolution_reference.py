@@ -79,6 +79,10 @@ class Collision:
         parent,w,mid,x,ip,iq=geometry(p,p,2*p[-1]+M,order)
         a,v=rule(angle)
         active=(x>0)&(ip<len(p)-1)&(iq<len(p)-1)
+        if p[0]>0.:
+            # Geometry includes the full parent decay interval; clipped
+            # integer indices alone do not enforce a nonzero inner cut.
+            active&=(mid>=np.hypot(p[0],mp))&((parent[:,None]-mid)>=np.hypot(p[0],m))
         y,j=np.nonzero(active)
         self.E=parent
         self.w=w

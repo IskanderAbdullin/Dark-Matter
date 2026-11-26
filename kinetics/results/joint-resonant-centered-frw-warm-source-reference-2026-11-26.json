@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "nsteps": 3,
+      "final_a": 1.0725081812542165,
+      "common_equilibrium_T": 0.0473167744449724,
+      "centered_residual": true,
+      "final_number_shell_total_variation_from_closed_box_equilibrium": [
+        0.00012548542412261623,
+        0.00013404760058001938
+      ],
+      "omitted_source_number_fractions": [
+        0.00033419836655967927,
+        0.0015551231884242123
+      ],
+      "comoving_support_over_initial_visible_T": [
+        0.16071102952776578,
+        15.874668683279996
+      ],
+      "initialization": "warm source-bin counts",
+      "manufactured_collision_amplitude_relative_to_actual": 1.0,
+      "total_number_defect": 6.8833827526759706e-15,
+      "split_energy_ledger_defect": 1.4163111052329388e-14,
+      "collision_opposite_heat_defect": 4.072785349339867e-16,
+      "integrated_entropy_ledger_defect": 1.8409343729025206e-16,
+      "comoving_q_scalar_from_collisions_over_initial_energy": 0.08093055765859514,
+      "redshift_trace_contribution_over_initial_energy": [
+        1.1857887728791357e-14,
+        0.001197356202015572
+      ],
+      "projection_entropy_change_relative_to_initial": 5.920234550754747e-11,
+      "collision_entropy_change_relative_to_initial": 0.018732651533097805,
+      "maximum_moment_reconstruction_defect": 3.086420008457935e-14,
+      "nonlinear_iterations": 6
+    },
+    {
+      "nsteps": 6,
+      "final_a": 1.0725081812542165,
+      "common_equilibrium_T": 0.047316671871055614,
+      "centered_residual": true,
+      "final_number_shell_total_variation_from_closed_box_equilibrium": [
+        6.306418343662566e-05,
+        6.733871985010868e-05
+      ],
+      "omitted_source_number_fractions": [
+        0.00033419836655967927,
+        0.0015551231884242123
+      ],
+      "comoving_support_over_initial_visible_T": [
+        0.16071102952776578,
+        15.874668683279996
+      ],
+      "initialization": "warm source-bin counts",
+      "manufactured_collision_amplitude_relative_to_actual": 1.0,
+      "total_number_defect": 1.687538997430238e-14,
+      "split_energy_ledger_defect": 3.128917344630353e-14,
+      "collision_opposite_heat_defect": 1.099652044321764e-15,
+      "integrated_entropy_ledger_defect": 3.1183174071614125e-16,
+      "comoving_q_scalar_from_collisions_over_initial_energy": 0.08090177842294753,
+      "redshift_trace_contribution_over_initial_energy": [
+        1.1339650345372261e-14,
+        0.001195269676576109
+      ],
+      "projection_entropy_change_relative_to_initial": 3.226885948252e-11,
+      "collision_entropy_change_relative_to_initial": 0.01873218178152352,
+      "maximum_moment_reconstruction_defect": 3.141931159689193e-14,
+      "nonlinear_iterations": 12
+    }
+  ],
+  "scope": "Warm source-bin initial projection with both ends cut; one closed channel, injection disabled."
+}

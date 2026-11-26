@@ -9,11 +9,13 @@ from three_species_decay_onsager_reference import M,m,mp
 from joint_resonant_kinetic_linear_modes_reference import configuration,gram,metric
 from sm_dark_entropy_exchange_reference import StandardModel
 
-def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole):
+def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None):
     n=len(k.c[0].vol);D=4*n
     el=[np.hypot(c.p,c.mass) for c in k.c]
     tau=temps
     g=np.zeros((D,D))
+    nonlin=np.zeros((0 if perturb is None else len(perturb),D))
+    entropy=np.zeros(len(nonlin))
     rs,ws=roots_legendre(n_u);rl,wl=roots_legendre(n_l);ra,wa=roots_legendre(n_a)
     s0=m+mp;s1=np.sqrt(pole)*M
     br=np.log(np.r_[1e-13,np.geomspace(1e-11,s1-s0,16)])
@@ -57,14 +59,32 @@ def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole):
             v=np.clip((p-a)/B-1.,-1.,1.);z=np.sqrt(np.maximum(0.,1-v*v))
             cos=v[:,None]*v+z[:,None]*z*az[:,None,None]
             amp=spin(s,-2*pcm*pcm*(1-cos)).mean(axis=0)
+            ang=w.copy() if perturb is not None else None
             w*=expit(f/tau-ef[1])/(-np.expm1(ef[0]-p/tau))
             WW=amp*w[:,None]*w*np.exp(ef[0]+ef[1]-L/tau)
             F=np.zeros((len(p),D));aa=np.arange(len(p))
             F[aa,2*i]=1.;F[aa,2*n+2*j]=1.
             F[aa,2*i+1]=(p-mp-k.c[0].low[i])/k.c[0].dk[i]
             F[aa,2*n+2*j+1]=(f-m-k.c[1].low[j])/k.c[1].dk[j]
-            g+=d*dL*q*pcm**2/u*(F.T@(WW.sum(axis=1)[:,None]*F-WW@F))
-    return (g+g.T)*2/(256*np.pi**5)
+            coef=d*dL*q*pcm**2/u
+            g+=coef*(F.T@(WW.sum(axis=1)[:,None]*F-WW@F))
+            if perturb is not None:
+                for z,field in enumerate(perturb):
+                    a=F[:,:2*n]@field[:2*n]
+                    b=F[:,2*n:]@field[2*n:]
+                    aa=(p/tau-ef[0])+a
+                    bb=(f/tau-ef[1])+b
+                    if np.min(aa)<=0:raise ValueError("scalar normal BE domain")
+                    w=ang*expit(bb)/(-np.expm1(-aa))
+                    G=amp*w[:,None]*w*np.exp(ef[0]+ef[1]-L/tau)
+                    x=np.expm1(-a-b)
+                    rates=G@x-x*G.sum(axis=1)
+                    nonlin[z]+=coef*F.T@rates
+                    diff=x[:,None]-x
+                    entropy[z]+=coef*.5*np.sum(G*diff*((a+b)[None,:]-(a+b)[:,None]))
+    scale=4/(256*np.pi**5)
+    mat=(g+g.T)*scale/2
+    return mat if perturb is None else (mat,nonlin*scale,entropy*scale)
 
 def eval_c(r,eos,order,pole,mesh_step=5):
     T,H,k,N,t,Q,th=configuration(r,eos,mesh_step,8.0)

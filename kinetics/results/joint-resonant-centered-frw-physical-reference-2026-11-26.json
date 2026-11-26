@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "nsteps": 3,
+      "final_a": 1.0725081812542165,
+      "common_equilibrium_T": 0.04700012209650266,
+      "centered_residual": true,
+      "final_number_shell_total_variation_from_closed_box_equilibrium": [
+        0.00014513555804616268,
+        0.00010994519377088157
+      ],
+      "omitted_source_number_fractions": [
+        0.0,
+        0.0
+      ],
+      "comoving_support_over_initial_visible_T": [
+        0.0,
+        6.335382966987484
+      ],
+      "initialization": "manufactured near equilibrium",
+      "manufactured_collision_amplitude_relative_to_actual": 1.0,
+      "total_number_defect": 2.8199664825478976e-14,
+      "split_energy_ledger_defect": 9.015380239347207e-16,
+      "collision_opposite_heat_defect": 1.0956671175903505e-14,
+      "integrated_entropy_ledger_defect": 1.7520398108807589e-16,
+      "comoving_q_scalar_from_collisions_over_initial_energy": -0.0008786332099104872,
+      "redshift_trace_contribution_over_initial_energy": [
+        1.4550171849877964e-14,
+        0.00138517302476884
+      ],
+      "projection_entropy_change_relative_to_initial": 2.0593864074361798e-10,
+      "collision_entropy_change_relative_to_initial": 2.7255858331367857e-05,
+      "maximum_moment_reconstruction_defect": 2.6978419498391304e-14,
+      "nonlinear_iterations": 10
+    },
+    {
+      "nsteps": 6,
+      "final_a": 1.0725081812542165,
+      "common_equilibrium_T": 0.04700005257668689,
+      "centered_residual": true,
+      "final_number_shell_total_variation_from_closed_box_equilibrium": [
+        7.54638400834929e-05,
+        5.749846333615563e-05
+      ],
+      "omitted_source_number_fractions": [
+        0.0,
+        0.0
+      ],
+      "comoving_support_over_initial_visible_T": [
+        0.0,
+        6.335382966987484
+      ],
+      "initialization": "manufactured near equilibrium",
+      "manufactured_collision_amplitude_relative_to_actual": 1.0,
+      "total_number_defect": 2.7755575615628914e-15,
+      "split_energy_ledger_defect": 2.996357430594884e-15,
+      "collision_opposite_heat_defect": 2.6135178951696433e-15,
+      "integrated_entropy_ledger_defect": 3.971470008689714e-16,
+      "comoving_q_scalar_from_collisions_over_initial_energy": -0.0009058983916494129,
+      "redshift_trace_contribution_over_initial_energy": [
+        1.4554876389885747e-14,
+        0.0013843100821497893
+      ],
+      "projection_entropy_change_relative_to_initial": 1.0343288534570897e-10,
+      "collision_entropy_change_relative_to_initial": 2.7084422487332727e-05,
+      "maximum_moment_reconstruction_defect": 2.6867397195928788e-14,
+      "nonlinear_iterations": 19
+    }
+  ],
+  "scope": "Manufactured near-equilibrium shape; one closed channel, injection disabled."
+}
