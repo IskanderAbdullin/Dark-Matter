@@ -50,7 +50,8 @@ def verify_pion_anchor(T,data,splits):
     return q.tolist()
 
 
-def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.):
+def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.,
+             pion_rate_override=None,pion_tail_multiplier=None,heat_multiplier=1.):
     rad = TabulatedRadiation(eos,TR)
     lo = np.log(rad.state(stop)[0])
     hi = rad.initial
@@ -63,7 +64,8 @@ def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.):
     h = np.exp(.5*(np.minimum(lgr[:-1],lgr[1:])-np.log(2))+
                (2/3)*(lgs[0]-np.maximum(lgs[:-1],lgs[1:]))-1e-12)
     Ql = np.asarray([upper_pair_Q(T,du) for T in np.exp(u[:-1])])
-    Qpi = np.asarray([pion_positive_Q(T,data,splits) for T in np.exp(u[:-1])])
+    p_rate = pion_positive_Q if pion_rate_override is None else pion_rate_override
+    Qpi = np.asarray([p_rate(T,data,splits) for T in np.exp(u[:-1])])
     assert np.all(np.diff(Qpi,axis=0)<=1e-200)
     assert np.all(np.diff(t)>0) and abs(t[-1]-np.log(stop))<1e-12
     # A convex analytic upper with fixed positive degree-of-freedom floors
@@ -73,6 +75,8 @@ def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.):
     Rmax=float(max((data[1]+data[2])*(data[0]+.005)/POINT_MUON))
     qcoeff = energy_rate_coefficient(.01045)[0]
     pion_qcoeff = Rmax*qcoeff/3
+    if pion_tail_multiplier is not None:
+        pion_qcoeff *= pion_tail_multiplier
     inv=(np.exp((lgs[0]-np.log(2))/3+1e-12)*TR)**9/(4*Hph*stop**4)
     l_tail,p_tail = qcoeff*inv,pion_qcoeff*inv
     dt = np.diff(np.exp(5*t))/(5*Hph*h)
@@ -87,7 +91,7 @@ def run_case(eos,K,measurement,n,du,splits,TR=.05,stop=500.):
     w1 = W@E+El/stop
     w2 = W@(E**2)+El**2/stop
     heat = 288*COUP2*temperature_time_upper(eos,TR,stop)[1]/(np.pi**3*VECTOR_MASS**4)
-    c = K*np.exp(2*heat)/(M*M*Hph)
+    c = K*np.exp(2*heat*heat_multiplier)/(M*M*Hph)
     s_init = 2*np.pi**2/45*np.exp(lgs[0])*TR**3
     nrm = mp*S0/(RHOC_H2*s_init)
     # Permit unknown positive energy through this explicit budget only.

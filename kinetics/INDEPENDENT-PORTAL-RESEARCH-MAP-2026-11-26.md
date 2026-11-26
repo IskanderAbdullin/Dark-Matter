@@ -108,6 +108,10 @@ The [50 MeV selected pion-band and source headroom test](INDEPENDENT-WARM-PION-B
 adds a prescribed vacuum KLOE exclusive window and a positive
 unknown-source allowance. It does not bound unknown channels
 or determine full thermal hadronic rates.
+A [separate two-pion control](INDEPENDENT-WARM-PION-STATISTICS-AND-THRESHOLD-2026-11-26.md)
+allows finite Bose enhancements, a capped missing threshold
+strip and conditional pion elastic heating. The form-factor
+caps there are model conditions, not data.
 
 ## Evidence boundary
 
