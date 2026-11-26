@@ -42,7 +42,9 @@ reproducible controls below are not observational constraints.
    preserves the inner nodes while adding outer ones. The
    [matched count and shape test](INDEPENDENT-WARM-EARLY-SUPPORT-TIME-INTERACTION-2026-11-26.md)
    shows why comparing mismatched time grids would mix numerical
-   effects. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
+   effects. The [sixteen-block follow-up](INDEPENDENT-WARM-EARLY-SUPPORT-16-BLOCKS-2026-11-26.md)
+   verifies that the count support signs persist; higher moments
+   remain a separate check. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
    carries actual newly recorded exterior cohorts. For older cohorts

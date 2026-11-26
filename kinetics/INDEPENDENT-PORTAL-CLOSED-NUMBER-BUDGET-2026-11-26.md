@@ -1,6 +1,10 @@
 # Count budget for a dominant 86 eV component
 
-This comparison is independent of the late pair rate, stimulation
+The [earlier total-number ceiling](INDEPENDENT-SCALAR-NUMBER-BUDGET-2026-11-26.md)
+already derived the analytic identity. This follow-up checks it on
+the shifted finite/instantaneous histories, the actual q32 source,
+and the evolved q16 number ledger, and reports the 50% case.
+The comparison is independent of the late pair rate, stimulation
 cap, momentum grid and transfer solver. Use the already archived
 rest-density normalizations for the two physical masses: a
 20 MeV stable fermion and an 86 eV scalar. Suppose that after

@@ -13,7 +13,8 @@ def read(p):
     return json.loads(gzip.decompress(p.read_bytes()) if p.suffix==".gz" else p.read_bytes())
 
 
-def run(archive, seed16, seed32, a16, a32, b16, b32, prefix=False):
+def run(archive, seed16, seed32, a16, a32, b16, b32, prefix=False,base_blocks=4):
+    assert base_blocks in (4,8)
     files=(archive,seed16,seed32,a16,a32,b16,b32)
     A=read(archive)["cases"]
     S=[read(p)["snapshots"][-1] for p in (seed16,seed32)]
@@ -21,7 +22,7 @@ def run(archive, seed16, seed32, a16, a32, b16, b32, prefix=False):
     P=[read(p) for p in (a16,a32,b16,b32)]
     assert abs(S[0]["T_visible_GeV"]/S[1]["T_visible_GeV"]-1.)<1e-10
     for i,B in enumerate(P):
-        grid=(4,8)[i//2]
+        grid=(base_blocks,2*base_blocks)[i//2]
         assert B["blocks_total"]==grid
         if i!=3 or not prefix:
             assert B["blocks_finished"]==grid
@@ -49,8 +50,17 @@ def run(archive, seed16, seed32, a16, a32, b16, b32, prefix=False):
                         log_time_shift_q16_and_q32=time.tolist(),
                         time_support_interaction=D.tolist(),interaction_to_four_block_support=abs(D/support[0]).tolist(),
                         support_sign_agrees=(support[0]*support[1]>0).tolist()))
-    return dict(complete=len(out)==4,matched=out,input_sha256=[sha(p) for p in files],
+    if base_blocks!=4:
+        for x in out:
+            for source,dest in (("omegas_4q16_4q32_8q16_8q32","omegas_8q16_8q32_16q16_16q32"),
+                                ("log_support_shift_4_and_8","log_support_shift_8_and_16"),
+                                ("interaction_to_four_block_support","interaction_to_eight_block_support")):
+                x[dest]=x.pop(source)
+    result=dict(complete=len(out)==base_blocks,matched=out,input_sha256=[sha(p) for p in files],
          scope="Difference-in-differences of terminal inclusive rest-count proxies on exactly matched q16 and q32 time grids. Same sign across tested resolutions is not continuum convergence or a general physical error bar.")
+    if base_blocks!=4:
+        result["coarse_and_refined_steps"]=[base_blocks,2*base_blocks]
+    return result
 
 
 if __name__=="__main__":
@@ -58,5 +68,6 @@ if __name__=="__main__":
     for key in ("archive","seed16","seed32","a16","a32","b16","b32"):
         p.add_argument(key,type=Path)
     p.add_argument("--allow-prefix",action="store_true")
+    p.add_argument("--base-blocks",type=int,default=4)
     a=p.parse_args()
-    print(json.dumps(run(a.archive,a.seed16,a.seed32,a.a16,a.a32,a.b16,a.b32,a.allow_prefix),indent=2,allow_nan=False))
+    print(json.dumps(run(a.archive,a.seed16,a.seed32,a.a16,a.a32,a.b16,a.b32,a.allow_prefix,a.base_blocks),indent=2,allow_nan=False))

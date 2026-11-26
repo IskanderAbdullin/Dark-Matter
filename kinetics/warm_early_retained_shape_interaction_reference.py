@@ -59,11 +59,12 @@ def properties(S):
     return rows
 
 
-def run(checkpoints):
+def run(checkpoints,base=4):
+    assert base in (4,8)
     if len(checkpoints)!=5:
         raise ValueError("Supply q16/4, q32/4, q16/8, q32/8, q16/32.")
     B=[read(p) for p in checkpoints]
-    expected=[4,4,8,8,32]
+    expected=[base,base,2*base,2*base,32]
     for n,z in zip(expected,B,strict=True):
         assert z["blocks_finished"]==z["blocks_total"]==n
         for key in ("schema","eos_sha256","local_prompt_jacobian","reference_sha256"):
@@ -86,7 +87,14 @@ def run(checkpoints):
                                 log_support_time_interaction=(pair8-pair4).tolist(),log_time_shift_q16_32_vs_8=np.log(V[4]/V[2]).tolist(),
                                 maximum_CDF_support_difference_4_and_8=[float(max(abs(U[1]-U[0]))),float(max(abs(U[3]-U[2])))],
                                 maximum_CDF_time_difference_q16_32_vs_8=float(max(abs(U[4]-U[2])))))
-    return dict(T_GeV=T,layout=["q16/4","q32/4","q16/8","q32/8","q16/32"],cdf_momentum_over_T_thresholds=PROBES.tolist(),
+    if base!=4:
+        for x in comparisons:
+            for k in list(x):
+                if k.endswith("_4_and_8"):
+                    x[k[:-7]+"8_and_16"]=x.pop(k)
+                elif k.endswith("_32_vs_8"):
+                    x[k[:-7]+"32_vs_16"]=x.pop(k)
+    return dict(T_GeV=T,layout=[f"q16/{base}",f"q32/{base}",f"q16/{2*base}",f"q32/{2*base}","q16/32"],cdf_momentum_over_T_thresholds=PROBES.tolist(),
         retained= data,comparisons=comparisons,input_sha256=[sha(p) for p in checkpoints],
         scope="Positive entropy-shape moments on actual matched early FRW warm restarts. All shape statistics are for retained particles only, not a full momentum continuum or a prediction for unavailable old exterior distributions.")
 
@@ -94,5 +102,6 @@ def run(checkpoints):
 if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("checkpoints",type=Path,nargs=5)
+    p.add_argument("--base-blocks",type=int,default=4)
     a=p.parse_args()
-    print(json.dumps(run(a.checkpoints),indent=2,allow_nan=False))
+    print(json.dumps(run(a.checkpoints,a.base_blocks),indent=2,allow_nan=False))
