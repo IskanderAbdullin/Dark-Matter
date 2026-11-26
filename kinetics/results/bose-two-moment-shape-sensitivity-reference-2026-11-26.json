@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "qlo": 0.0,
+      "qhi": 0.008,
+      "fill": 250.0,
+      "mean_s": 0.35,
+      "order": 96,
+      "closures": [
+        {
+          "thermal_reference": false,
+          "cell_mean": 249.99999999999127,
+          "kinetic_fraction": 0.35000000000000103,
+          "slope": 7.362301458968357,
+          "number_rate": -4.696625697911422e-07
+        },
+        {
+          "thermal_reference": true,
+          "cell_mean": 249.9999999999916,
+          "kinetic_fraction": 0.3500000000000009,
+          "slope": 4.775225210889407,
+          "number_rate": -4.6816102813100603e-07
+        }
+      ],
+      "relative_rate_difference_over_larger": 0.0031970647795158623
+    },
+    {
+      "qlo": 0.0001,
+      "qhi": 0.04,
+      "fill": 80.0,
+      "mean_s": 0.55,
+      "order": 96,
+      "closures": [
+        {
+          "thermal_reference": false,
+          "cell_mean": 79.99999999999768,
+          "kinetic_fraction": 0.5500000000000042,
+          "slope": 4.017330812107541,
+          "number_rate": -2.373108537911485e-05
+        },
+        {
+          "thermal_reference": true,
+          "cell_mean": 79.99999999999801,
+          "kinetic_fraction": 0.5500000000000054,
+          "slope": 1.810948166771981,
+          "number_rate": -2.398361749941385e-05
+        }
+      ],
+      "relative_rate_difference_over_larger": 0.01052935906375138
+    },
+    {
+      "qlo": 0.005,
+      "qhi": 0.15,
+      "fill": 50.0,
+      "mean_s": 0.6,
+      "order": 96,
+      "closures": [
+        {
+          "thermal_reference": false,
+          "cell_mean": 49.99999999999892,
+          "kinetic_fraction": 0.6000000000000077,
+          "slope": 2.8699698947853762,
+          "number_rate": -0.00032122738884250143
+        },
+        {
+          "thermal_reference": true,
+          "cell_mean": 49.999999999999105,
+          "kinetic_fraction": 0.6000000000000079,
+          "slope": 0.8239469357981054,
+          "number_rate": -0.0003439593275797305
+        }
+      ],
+      "relative_rate_difference_over_larger": 0.06608903121535427
+    }
+  ],
+  "max_relative_quadrature_drift": 2.0896617769494696e-12,
+  "note": "Both priors are diagnostics only; no physical freeze-out claim."
+}
