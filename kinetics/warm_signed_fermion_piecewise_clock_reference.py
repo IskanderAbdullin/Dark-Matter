@@ -16,7 +16,7 @@ from warm_prompt_reentry_shape_audit_reference import get_mom
 from warm_signed_fermion_time_comparison_reference import comparison,setup
 
 
-def weights(eos,T,b_stop,steps,Hph):
+def weights(eos,T,b_stop,steps,Hph,powers=(3,4,5)):
     R=TabulatedRadiation(eos,T)
     u=R.rg.x
     lo=np.log(R.state(b_stop)[0])
@@ -32,8 +32,8 @@ def weights(eos,T,b_stop,steps,Hph):
     md=(q[1:]+q[:-1])/2
     j=np.searchsorted(bb,md,"right")-1
     i=np.searchsorted(begin,md,"right")-1
-    a=np.empty((steps+1,3))
-    for c,p in enumerate((3,4,5)):
+    a=np.empty((steps+1,len(powers)))
+    for c,p in enumerate(powers):
         x=p-2
         g=np.exp(-x*q[:-1])*(-np.expm1(-x*np.diff(q)))/(x*Hph*eta[j])
         a[:-1,c]=np.bincount(i,weights=g,minlength=steps)*(1+2e-14)

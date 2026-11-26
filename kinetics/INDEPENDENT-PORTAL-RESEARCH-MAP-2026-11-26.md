@@ -234,6 +234,9 @@ reservoir needs a much tighter energy fraction or source bound.
 The [aggregate finite-band heavy energy envelope](INDEPENDENT-WARM-HEAVY-COMOVING-BAND-ENERGY-2026-11-26.md)
 bounds that reservoir below an explicit comoving cut,
 without treating the higher band as absent.
+The [late partial direct-gain recalibration](INDEPENDENT-WARM-LATE-DIRECT-LIGHT-GAIN-HEADROOM-2026-11-26.md)
+updates the headroom and transports the old finite bands without
+resetting them to empty or asserting the global light cap.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)

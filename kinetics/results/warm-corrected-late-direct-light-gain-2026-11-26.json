@@ -1,0 +1,219 @@
+{
+  "scope": "Conditional partial direct pair gain only. Assumes heavy cap 1/2 and the stated transported gross-energy budget. No light decay/inverse or elastic gain is allowed in this subtotal; no cap for the omitted modes or future solution follows.",
+  "snapshot_sha256": "4d24a8be25500bda3e6108edbe0ed6d83c999b41077346cb493eb31715e2db0e",
+  "T_GeV": 0.007394049465197431,
+  "energy_upper_GeV4": 1.5779858602351315e-12,
+  "represented_light_maximum_at_anchor": 4.102011916428195e-05,
+  "represented_mode_slack_to_half": 0.4999589798808357,
+  "powers": [
+    3,
+    4,
+    6
+  ],
+  "local_weight_over_uniform_floor": [
+    0.9978344728629042,
+    0.9997760640295682,
+    0.9999597077733238
+  ],
+  "uniform_clock": {
+    "total_direct_gain_dose_upper": 7.729118839601165,
+    "scalar_pair_contribution": 0.050181366892628615,
+    "heavy_pair_contribution": 7.66864755711393,
+    "visible_pairs_contribution": 0.010289915594606297,
+    "chosen_visible_split_GeV": 1.0,
+    "diagnostic_heavy_energy_fraction_for_direct_dose_half": 0.11769888038448428,
+    "test_energy_fraction_caps": [
+      {
+        "heavy_energy_fraction_cap": 0.0,
+        "pair_dose": 0.06047128248723491
+      },
+      {
+        "heavy_energy_fraction_cap": 0.01,
+        "pair_dose": 0.07682956417679074
+      },
+      {
+        "heavy_energy_fraction_cap": 0.02,
+        "pair_dose": 0.10172087366753291
+      },
+      {
+        "heavy_energy_fraction_cap": 0.04,
+        "pair_dose": 0.16450681259987515
+      },
+      {
+        "heavy_energy_fraction_cap": 0.05,
+        "pair_dose": 0.2006043032748247
+      },
+      {
+        "heavy_energy_fraction_cap": 0.1,
+        "pair_dose": 0.41401328115127617
+      },
+      {
+        "heavy_energy_fraction_cap": 1.0,
+        "pair_dose": 7.729118839601165
+      }
+    ],
+    "residual_after_represented_initial_occupation_and_direct_dose": -7.22915985972033
+  },
+  "piecewise_clock": {
+    "total_direct_gain_dose_upper": 7.727377248558095,
+    "scalar_pair_contribution": 0.05017934497361885,
+    "heavy_pair_contribution": 7.666930271081329,
+    "visible_pairs_contribution": 0.010267632503147751,
+    "chosen_visible_split_GeV": 1.0,
+    "diagnostic_heavy_energy_fraction_for_direct_dose_half": 0.1177234964138008,
+    "test_energy_fraction_caps": [
+      {
+        "heavy_energy_fraction_cap": 0.0,
+        "pair_dose": 0.060446977476766604
+      },
+      {
+        "heavy_energy_fraction_cap": 0.01,
+        "pair_dose": 0.0768015959586377
+      },
+      {
+        "heavy_energy_fraction_cap": 0.02,
+        "pair_dose": 0.10168733138983374
+      },
+      {
+        "heavy_energy_fraction_cap": 0.04,
+        "pair_dose": 0.1644592102920117
+      },
+      {
+        "heavy_energy_fraction_cap": 0.05,
+        "pair_dose": 0.20054861744035676
+      },
+      {
+        "heavy_energy_fraction_cap": 0.1,
+        "pair_dose": 0.4139098053702487
+      },
+      {
+        "heavy_energy_fraction_cap": 1.0,
+        "pair_dose": 7.727377248558095
+      }
+    ],
+    "residual_after_represented_initial_occupation_and_direct_dose": -7.227418268677259
+  },
+  "transported_band_scope": "Initial below-cut cap is admitted only under all hypotheses of the original bound, including initially empty old heavy band and the earlier light cap. Uses original conservative extra source; no new unknown transfer into the band. Above-cut allowance is a target for the partial direct subtotal, not an upper bound.",
+  "transported_finite_bands": [
+    {
+      "cut_at_original_anchor_GeV": 0.001,
+      "cut_here_GeV": 0.0007077920751642081,
+      "older_inherited_cap_if_assumptions_hold": 6.433291213790502e-05,
+      "local_source_over_removal_cap_only": [
+        2.3750023558031226e-05,
+        2.2994347654067786e-05,
+        2.2805446182750576e-05
+      ],
+      "below_cut_cap_including_inherited_cap": 6.433291213790502e-05,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.11765916350166289
+    },
+    {
+      "cut_at_original_anchor_GeV": 0.003,
+      "cut_here_GeV": 0.0021233762254926243,
+      "older_inherited_cap_if_assumptions_hold": 6.447563408673818e-05,
+      "local_source_over_removal_cap_only": [
+        2.378810375887723e-05,
+        2.302775700236879e-05,
+        2.2837723435928243e-05
+      ],
+      "below_cut_cap_including_inherited_cap": 6.447563408673818e-05,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.11765902077971406
+    },
+    {
+      "cut_at_original_anchor_GeV": 0.01,
+      "cut_here_GeV": 0.007077920751642082,
+      "older_inherited_cap_if_assumptions_hold": 6.536336697620073e-05,
+      "local_source_over_removal_cap_only": [
+        2.3995068091229313e-05,
+        2.3215498389875004e-05,
+        2.302079091308781e-05
+      ],
+      "below_cut_cap_including_inherited_cap": 6.536336697620073e-05,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.1176581330468246
+    },
+    {
+      "cut_at_original_anchor_GeV": 0.03,
+      "cut_here_GeV": 0.021233762254926243,
+      "older_inherited_cap_if_assumptions_hold": 7.132973557140136e-05,
+      "local_source_over_removal_cap_only": [
+        2.526084744794862e-05,
+        2.4399430491735227e-05,
+        2.418472155276427e-05
+      ],
+      "below_cut_cap_including_inherited_cap": 7.132973557140136e-05,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.11765216667822939
+    },
+    {
+      "cut_at_original_anchor_GeV": 0.1,
+      "cut_here_GeV": 0.07077920751642082,
+      "older_inherited_cap_if_assumptions_hold": 0.00013586619984345117,
+      "local_source_over_removal_cap_only": [
+        3.952765390955079e-05,
+        3.7947067774851894e-05,
+        3.7556501384878274e-05
+      ],
+      "below_cut_cap_including_inherited_cap": 0.00013586619984345117,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.11758763021395735
+    },
+    {
+      "cut_at_original_anchor_GeV": 0.3,
+      "cut_here_GeV": 0.21233762254926242,
+      "older_inherited_cap_if_assumptions_hold": 0.0013710222717629094,
+      "local_source_over_removal_cap_only": [
+        0.0003649238393025414,
+        0.0003269990922548783,
+        0.0003193058280577569
+      ],
+      "below_cut_cap_including_inherited_cap": 0.0013710222717629094,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.11635247414203789
+    },
+    {
+      "cut_at_original_anchor_GeV": 0.6,
+      "cut_here_GeV": 0.42467524509852483,
+      "older_inherited_cap_if_assumptions_hold": 0.005253768888881097,
+      "local_source_over_removal_cap_only": [
+        0.0027631032623338324,
+        0.0026580769184517696,
+        0.0026235088620404643
+      ],
+      "below_cut_cap_including_inherited_cap": 0.005253768888881097,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.1124697275249197
+    },
+    {
+      "cut_at_original_anchor_GeV": 1.0,
+      "cut_here_GeV": 0.7077920751642082,
+      "older_inherited_cap_if_assumptions_hold": 0.02812209971269318,
+      "local_source_over_removal_cap_only": [
+        0.01633029965253006,
+        0.015131727557564244,
+        0.014888813624842371
+      ],
+      "below_cut_cap_including_inherited_cap": 0.02812209971269318,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.08960139670110762
+    },
+    {
+      "cut_at_original_anchor_GeV": 1.4,
+      "cut_here_GeV": 0.9909089052298913,
+      "older_inherited_cap_if_assumptions_hold": 0.09573298490967863,
+      "local_source_over_removal_cap_only": [
+        0.06118217315714213,
+        0.055665841910878096,
+        0.054666469403194876
+      ],
+      "below_cut_cap_including_inherited_cap": 0.09573298490967863,
+      "remaining_above_cut_fraction_for_direct_subtotal": 0.021990511504122165
+    },
+    {
+      "cut_at_original_anchor_GeV": 2.0,
+      "cut_here_GeV": 1.4155841503284163,
+      "older_inherited_cap_if_assumptions_hold": 0.37625824700088206,
+      "local_source_over_removal_cap_only": [
+        0.2591927029350799,
+        0.22728370513476004,
+        0.22236551657872297
+      ],
+      "below_cut_cap_including_inherited_cap": 0.37625824700088206,
+      "remaining_above_cut_fraction_for_direct_subtotal": -0.25853475058708125
+    }
+  ]
+}
