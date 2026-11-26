@@ -124,6 +124,9 @@ The [heavy occupation barrier](INDEPENDENT-WARM-HEAVY-OCCUPATION-BARRIER-2026-11
 checks pointwise heavy creation under a prescribed light cap,
 rather than inferring an occupation from its total rate.
 It leaves the light cap and heavy elastic gains open.
+A [direct light gain diagnostic](INDEPENDENT-WARM-LIGHT-DIRECT-PAIR-DOSE-2026-11-26.md)
+locates the inconclusive term: conversion from the heavy
+reservoir needs a much tighter energy fraction or source bound.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.

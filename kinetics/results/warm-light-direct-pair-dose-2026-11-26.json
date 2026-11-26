@@ -1,0 +1,85 @@
+{
+  "scope": "Partial pointwise light-occupation upper gain after 10.44 MeV. Inputs assume the per-spin heavy cap and use the stated total-energy/visible clock. Direct pair sources only. Does not include gains from the one-to-two decay/inverse network or elastic redistribution. Not a proof of the light cap.",
+  "cases": [
+    {
+      "q": 16,
+      "total_direct_gain_dose_upper": 15.626945571753177,
+      "scalar_pair_contribution": 0.20006003801862215,
+      "heavy_pair_contribution": 15.394857629403557,
+      "visible_pairs_contribution": 0.032027904330999585,
+      "chosen_visible_split_GeV": 1.0,
+      "diagnostic_heavy_energy_fraction_for_direct_dose_half": 0.04832358292786031,
+      "test_energy_fraction_caps": [
+        {
+          "heavy_energy_fraction_cap": 0.0,
+          "pair_dose": 0.23208794234962174
+        },
+        {
+          "heavy_energy_fraction_cap": 0.01,
+          "pair_dose": 0.26479357565087913
+        },
+        {
+          "heavy_energy_fraction_cap": 0.02,
+          "pair_dose": 0.3145837151947066
+        },
+        {
+          "heavy_energy_fraction_cap": 0.04,
+          "pair_dose": 0.4402271033282693
+        },
+        {
+          "heavy_energy_fraction_cap": 0.05,
+          "pair_dose": 0.5124843652817977
+        },
+        {
+          "heavy_energy_fraction_cap": 0.1,
+          "pair_dose": 0.939854257544568
+        },
+        {
+          "heavy_energy_fraction_cap": 1.0,
+          "pair_dose": 15.626945571753177
+        }
+      ],
+      "residual_margin_to_half_ignoring_initial_and_other_sources": -15.126945571753177
+    },
+    {
+      "q": 32,
+      "total_direct_gain_dose_upper": 15.624432963428612,
+      "scalar_pair_contribution": 0.20001220718221818,
+      "heavy_pair_contribution": 15.392392851915394,
+      "visible_pairs_contribution": 0.03202790433099859,
+      "chosen_visible_split_GeV": 1.0,
+      "diagnostic_heavy_energy_fraction_for_direct_dose_half": 0.048335821194627426,
+      "test_energy_fraction_caps": [
+        {
+          "heavy_energy_fraction_cap": 0.0,
+          "pair_dose": 0.23204011151321677
+        },
+        {
+          "heavy_energy_fraction_cap": 0.01,
+          "pair_dose": 0.2647405266799859
+        },
+        {
+          "heavy_energy_fraction_cap": 0.02,
+          "pair_dose": 0.31452271899067125
+        },
+        {
+          "heavy_energy_fraction_cap": 0.04,
+          "pair_dose": 0.4401460454467907
+        },
+        {
+          "heavy_energy_fraction_cap": 0.05,
+          "pair_dose": 0.5123917670864041
+        },
+        {
+          "heavy_energy_fraction_cap": 0.1,
+          "pair_dose": 0.939693378448776
+        },
+        {
+          "heavy_energy_fraction_cap": 1.0,
+          "pair_dose": 15.624432963428612
+        }
+      ],
+      "residual_margin_to_half_ignoring_initial_and_other_sources": -15.124432963428612
+    }
+  ]
+}
