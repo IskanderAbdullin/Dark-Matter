@@ -18,7 +18,7 @@ def ext(state):
     return import_restart(state["positive_exterior_restart"])
 
 
-def run_case(parent,tape,E,threshold,old_energy):
+def run_case(parent,tape,E,threshold,old_energy,require_sequential_labels=True):
     A=read(parent)
     assert A["blocks_finished"]==A["blocks_total"]==32
     S=A["snapshot"]
@@ -26,10 +26,12 @@ def run_case(parent,tape,E,threshold,old_energy):
     scale0=S["scale_factor"]
     initial_upper=ext0.upper_bound(1.)
     rows=[]
-    for i,r in enumerate(read(tape),start=1):
-        assert r["blocks_finished"]==i
+    for i,r in enumerate(tape if isinstance(tape,list) else read(tape),start=1):
+        if require_sequential_labels:
+            assert r["blocks_finished"]==i
         x=r["snapshot"]; current=ext(x)
         a=x["scale_factor"]/scale0
+        assert a>(rows[-1]["b_relative"] if rows else 1.)
         N0=ext0.array()
         C=current.array()
         k=N0.shape[1]
