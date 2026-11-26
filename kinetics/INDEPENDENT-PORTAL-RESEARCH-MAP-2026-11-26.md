@@ -111,7 +111,8 @@ reproducible controls below are not observational constraints.
    restart and number ledger through 9.748 MeV. An independent q32
    continuation to the same endpoint checks the shared shells. A [matched later continuation](INDEPENDENT-WARM-HISTORY-LOWER-MATCHED-2026-11-26.md)
    advances both supports independently through another sixteen
-   accepted blocks to 9.027 MeV.
+   accepted blocks to 9.027 MeV. The matched 32-block test
+   separates time sensitivity from the much smaller support change.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)

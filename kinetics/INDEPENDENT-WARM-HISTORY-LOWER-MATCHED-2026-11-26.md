@@ -49,3 +49,27 @@ python -W error warm_history_lower_matched_audit_reference.py EOS.dat matched
 [Matched audit](results/warm-history-lower-matched-16-2026-11-26.json.gz).
 Exact terminal pairs: [q32](results/warm-history-lower-q32-16-terminal-2026-11-26.json.gz)
 and [q64](results/warm-history-lower-q64-16-terminal-2026-11-26.json.gz).
+
+## Matched 32-block refinement
+
+Both supports also accept all 32 blocks, retaining the same
+initial states and physical endpoint. At 32 blocks, the
+support (L^1) number differences are (1.815	imes10^{-6})
+and (4.398	imes10^{-7}), close to the 16-block values.
+The 16-to-32 time change is far larger: the q64 number
+difference is (5.471	imes10^{-4}/3.381	imes10^{-4})
+for scalars/light, and the energy difference is
+(1.452	imes10^{-4}/2.455	imes10^{-4}). Both time grids
+give a q64-only count of order (10^{-11}), and the fine
+bare high inverse rate is (2.68	imes10^{-32}) in the
+same units. This tests the numerical priorities at this
+endpoint; it does not make the support comparison a time
+or continuum bound.
+
+Use the same seed files with `STEP=$(python -c 'print(1.08**(1./32))')`,
+write each branch to `matched/q$q-fine` with `--blocks 32`,
+then call the audit with `--refined`.
+
+[Refined matched audit](results/warm-history-lower-matched-refined-2026-11-26.json.gz);
+exact fine terminal pairs [q32](results/warm-history-lower-q32-32-terminal-2026-11-26.json.gz)
+and [q64](results/warm-history-lower-q64-32-terminal-2026-11-26.json.gz).
