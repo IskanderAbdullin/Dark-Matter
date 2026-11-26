@@ -71,9 +71,9 @@ def run(table,paths,crop_last):
             vac,forward,rev,pole=a[:,0]
             assert 0.<=pole<=rev and 0.<=forward<=vac*(1.+2e-12)
             rr.append(dict(order=order,polar_order=polar,boost_excess_cut_over_T=tail,
-                           direct_visible_vacuum_gross_number_rate_per_n_H=2*vac/(n*H),
-                           direct_visible_forward_gross_number_rate_per_n_H=2*forward/(n*H),
-                           direct_visible_reverse_gross_number_loss_per_n_H=2*rev/(n*H),
+                           direct_visible_vacuum_gross_number_rate_per_n_H=vac/(n*H),
+                           direct_visible_forward_gross_number_rate_per_n_H=forward/(n*H),
+                           direct_visible_reverse_gross_number_loss_per_n_H=rev/(n*H),
                            reverse_over_occupancy_corrected_forward=rev/forward,
                            fraction_of_reverse_events_within_five_mediator_widths=pole/rev if rev>0. else None))
         results.append(dict(snapshot=name,T_GeV=T,mediator_mass_GeV=V,

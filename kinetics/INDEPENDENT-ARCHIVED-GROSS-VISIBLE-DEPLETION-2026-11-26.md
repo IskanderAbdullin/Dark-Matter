@@ -12,17 +12,20 @@ positive and negative parts of a net shell rate.
 Split at both incoming dark shell boundaries and set occupation
 outside the represented support to vacuum. The boost excess caps
 are larger than necessary for all represented inverse pairs.
-Double event rates for the combined stable fermion and antifermion
-number. Results are normalized to its represented density and
-the visible radiation Hubble rate.
+The angle-integrated measure already counts both stable particle
+charges: the vacuum value is 2 sum(N), the total particle rate.
+No second factor of two is applied when dividing by the represented
+stable density and the visible radiation Hubble rate. This corrects
+the extra reporting factor in the preceding gross-rate table;
+the ratio of gross rates and all kinetic evolution are unchanged.
 
 | Archive | Gross direct visible production / (nχ H) | Gross direct depletion / (nχ H) |
 | --- | ---: | ---: |
-| 50 MeV reheat, 12 MeV quantum archive | 0.03797 | 3.331e-9 |
-| 50 MeV reheat, 9.3 MeV quantum archive | 0.01470 | 2.164e-9 |
-| 9.019 MeV reheat, paired quantum archive at 3.157 MeV | 0.007299 | 8.208e-13 |
-| 50 MeV reheat, 12 MeV q32 populated control | 0.03801 | 3.328e-9 |
-| Same q32 inner state, cropped at q16 | 0.03801 | 3.327e-9 |
+| 50 MeV reheat, 12 MeV quantum archive | 0.01898 | 1.666e-9 |
+| 50 MeV reheat, 9.3 MeV quantum archive | 0.007348 | 1.082e-9 |
+| 9.019 MeV reheat, paired quantum archive at 3.157 MeV | 0.003650 | 4.104e-13 |
+| 50 MeV reheat, 12 MeV q32 populated control | 0.01900 | 1.664e-9 |
+| Same q32 inner state, cropped at q16 | 0.01901 | 1.663e-9 |
 
 The q32 archive can reach only 0.700 GeV in invariant mass,
 far below this benchmark's 10 GeV mediator mass. Its added
