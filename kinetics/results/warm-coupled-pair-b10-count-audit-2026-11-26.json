@@ -1,0 +1,73 @@
+{
+  "endpoint_cases": [
+    {
+      "n_steps": 20,
+      "temperature_GeV": 0.0034338651304354024,
+      "retained_and_all_particle_tail_Omega_h2": [
+        0.000258724412247452,
+        61.92487340768998
+      ],
+      "all_tail_Omega_h2": [
+        7.997793353025627e-08,
+        0.013888333889398245
+      ],
+      "max_resolved_scalar_occupation": 0.0006048167440380947,
+      "scalar_fraction_of_own_saturation": 0.0004789916344026338,
+      "total_particle_count_identity_max_defect": 4.525269048372138e-13
+    },
+    {
+      "n_steps": 32,
+      "temperature_GeV": 0.0034338651304354024,
+      "retained_and_all_particle_tail_Omega_h2": [
+        0.000259451274734074,
+        61.75583562014207
+      ],
+      "all_tail_Omega_h2": [
+        8.142365022525132e-08,
+        0.013857946231204548
+      ],
+      "max_resolved_scalar_occupation": 0.0006084325782080484,
+      "scalar_fraction_of_own_saturation": 0.0004847738300695068,
+      "total_particle_count_identity_max_defect": 1.361133428190442e-13
+    }
+  ],
+  "conditional_on_unchanged_visible_entropy": true,
+  "chained_endpoint_cases": [
+    {
+      "initial_stage_steps": 20,
+      "total_relative_expansion": 10.0,
+      "fractional_extra_stable_loss": 0.06969046308180049,
+      "n_steps": 18,
+      "temperature_GeV": 0.0012061354624147524,
+      "retained_and_all_particle_tail_Omega_h2": [
+        0.00027728137659502935,
+        57.609300303626185
+      ],
+      "all_tail_Omega_h2": [
+        2.1525440858524886e-06,
+        0.013913115219456793
+      ],
+      "max_resolved_scalar_occupation": 0.0007023377708080209,
+      "scalar_fraction_of_own_saturation": 0.0006470724068991799,
+      "total_particle_count_identity_max_defect": 1.965094753586527e-13
+    },
+    {
+      "initial_stage_steps": 32,
+      "total_relative_expansion": 10.0,
+      "fractional_extra_stable_loss": 0.06976820645894355,
+      "n_steps": 28,
+      "temperature_GeV": 0.0012061354624147524,
+      "retained_and_all_particle_tail_Omega_h2": [
+        0.0002779782284594183,
+        57.44724173055141
+      ],
+      "all_tail_Omega_h2": [
+        2.1574052641725697e-06,
+        0.013882056070473933
+      ],
+      "max_resolved_scalar_occupation": 0.0007056198823265353,
+      "scalar_fraction_of_own_saturation": 0.0006535592111149405,
+      "total_particle_count_identity_max_defect": 1.9895196601282805e-13
+    }
+  ]
+}

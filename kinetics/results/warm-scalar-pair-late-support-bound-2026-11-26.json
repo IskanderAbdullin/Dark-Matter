@@ -1,0 +1,36 @@
+{
+  "temperature_GeV": 0.0012061354624147524,
+  "support_upper_GeV": 0.017465633238872572,
+  "initial_inclusive_stable_number_GeV3": 8.497278816470452e-14,
+  "spin_averaged_amplitude2_over_pCM2_bound_GeV_minus2": 1.4570138936378747e-09,
+  "sampled_max_amplitude_fraction_of_analytic_bound": 0.7310079622772324,
+  "assumed_minimum_comoving_photon_temperature_ratio": 1.0,
+  "quadratic_loss_integral_without_Bose_enhancement": 0.27972695785906593,
+  "stable_fixed_count_Omega_h2_at_anchor": 57.44724173055141,
+  "target_fixed_count_Omega_h2": 0.12,
+  "required_normalized_quadratic_loss_integral": 477.7270144212618,
+  "necessary_supremum_of_future_scalar_occupation_to_allow_target": 40.32593983386883,
+  "conditional_cases": [
+    {
+      "scalar_occupation_upper_cap": 0.0,
+      "quadratic_loss_integral_bound": 0.27972695785906593,
+      "final_stable_fixed_count_Omega_h2_lower": 44.89023332497304
+    },
+    {
+      "scalar_occupation_upper_cap": 0.001,
+      "quadratic_loss_integral_bound": 0.28028669150174185,
+      "final_stable_fixed_count_Omega_h2_lower": 44.87060758490533
+    },
+    {
+      "scalar_occupation_upper_cap": 1.0,
+      "quadratic_loss_integral_bound": 1.1189078314362637,
+      "final_stable_fixed_count_Omega_h2_lower": 27.111722783907886
+    },
+    {
+      "scalar_occupation_upper_cap": 2.0,
+      "quadratic_loss_integral_bound": 2.5175426207315934,
+      "final_stable_fixed_count_Omega_h2_lower": 16.33164055837461
+    }
+  ],
+  "scope": "Post-anchor stable pair removal only. No new incident populations or impacts from exterior re-entry; future comoving incident support stays inside the archived support. Photon floor and scalar occupation cap assumed, not established by the snapshot. Dark self-scattering, number-changing processes or portal depletion that invalidate these conditions are outside the bound."
+}

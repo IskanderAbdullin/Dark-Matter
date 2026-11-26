@@ -25,7 +25,7 @@ def endpoint(row, initial_retained, carry):
     return retained, old + new_tail
 
 
-def audit(budget, start_shape, results, bridges):
+def audit(budget, start_shape, results, bridges, follow_results=(), follow_bridges=()):
     b = read(budget)[-1]
     start = read(start_shape)["snapshots"][-1]
     assert b["enabled"] and b["signed_visible_portal"]
@@ -35,13 +35,26 @@ def audit(budget, start_shape, results, bridges):
     assert abs(norm[0] / norm[1] - 1.) < 3e-12
     ex0 = np.asarray(b["exterior_fixed_Omega_h2"]) / (mass * norm)
     out = []
-    for fname, shape in zip(results, bridges):
+    chained = []
+    for i, (fname, shape) in enumerate(zip(results, bridges)):
         r = read(fname)["rows"][-1]
         final = read(shape)["snapshots"][-1]
         n, ex = endpoint(r, n0, ex0)
         identities(r, final, start, n)
         out.append(row(r, n, ex, norm, mass))
-    return dict(endpoint_cases=out, conditional_on_unchanged_visible_entropy=True)
+        if follow_results:
+            rr = read(follow_results[i])["rows"][-1]
+            ff = read(follow_bridges[i])["snapshots"][-1]
+            nn, ee = endpoint(rr, n, ex)
+            identities(rr, ff, final, nn)
+            chained.append(dict(initial_stage_steps=r["steps"],
+                                total_relative_expansion=ff["scale_factor"]/start["scale_factor"],
+                                fractional_extra_stable_loss=1.-(nn[1]+ee[1])/(n[1]+ex[1]),
+                                **row(rr, nn, ee, norm, mass)))
+    ans = dict(endpoint_cases=out, conditional_on_unchanged_visible_entropy=True)
+    if chained:
+        ans["chained_endpoint_cases"] = chained
+    return ans
 
 
 def identities(r, final, start, n):
@@ -68,7 +81,12 @@ if __name__ == "__main__":
     p.add_argument("start_shape")
     p.add_argument("--results", nargs="+", required=True)
     p.add_argument("--bridges", nargs="+", required=True)
+    p.add_argument("--follow-results", nargs="+", default=[])
+    p.add_argument("--follow-bridges", nargs="+", default=[])
     a = p.parse_args()
     assert len(a.results) == len(a.bridges)
-    print(json.dumps(audit(a.budget, a.start_shape, a.results, a.bridges),
+    assert len(a.follow_results) == len(a.follow_bridges)
+    assert not a.follow_results or len(a.follow_results) == len(a.results)
+    print(json.dumps(audit(a.budget, a.start_shape, a.results, a.bridges,
+                           a.follow_results, a.follow_bridges),
                      indent=2, allow_nan=False))
