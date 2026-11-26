@@ -136,6 +136,9 @@ without treating the higher band as absent.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded.
+The [observed one-way exterior creation ledger](INDEPENDENT-WARM-POSITIVE-EXTERIOR-RECEIPT-2026-11-26.md)
+measures new outer cohort energy on the saved 2% stage.
+It is not gross reacting use if re-entry is switched on.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
