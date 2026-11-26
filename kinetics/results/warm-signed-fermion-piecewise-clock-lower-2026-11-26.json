@@ -1,0 +1,177 @@
+{
+  "scope": "Both fermion species remain below the prescribed cap and use the specified homogeneous isotropic selected visible budget. This is not proof of the cap or of the true post-checkpoint history. The prior full available energy bound is transported with b^3 rho; no new outside energy is assumed.",
+  "later_snapshot_sha256": "47f9983bc1ff18990d4393b49745be245e4e0ba364358af52485046cc9476aa1",
+  "later_over_old_expansion_from_radiation_entropy": 1.15712063999998,
+  "cases": [
+    {
+      "label": "old q32 anchor",
+      "T_GeV": 0.010441916509387049,
+      "energy_upper_GeV4": 4.450266511120871e-12,
+      "number_at_anchor_GeV3": 8.19690442518404e-11,
+      "unconverted_start_proxy": 84.2815870508982,
+      "controls": [
+        {
+          "time_steps": 350,
+          "lower_Omega_h2": [
+            {
+              "cap": 0.01,
+              "uniform_lower": 18.833190383887313,
+              "local_floor_lower": 18.85423908451626
+            },
+            {
+              "cap": 0.1,
+              "uniform_lower": 8.540839716199352,
+              "local_floor_lower": 8.54896182094264
+            },
+            {
+              "cap": 0.5,
+              "uniform_lower": 0.8481440626400728,
+              "local_floor_lower": 0.8499113284996074
+            }
+          ],
+          "integrated_weight_over_uniform": [
+            0.998242862521091,
+            0.9996410962148697,
+            0.9997531341850036
+          ]
+        },
+        {
+          "time_steps": 1000,
+          "lower_Omega_h2": [
+            {
+              "cap": 0.01,
+              "uniform_lower": 19.02896604256081,
+              "local_floor_lower": 19.050330747123503
+            },
+            {
+              "cap": 0.1,
+              "uniform_lower": 8.815344696060388,
+              "local_floor_lower": 8.823740949525318
+            },
+            {
+              "cap": 0.5,
+              "uniform_lower": 1.0508678250270944,
+              "local_floor_lower": 1.0527880287087867
+            }
+          ],
+          "integrated_weight_over_uniform": [
+            0.9982428625210885,
+            0.9996410962148693,
+            0.9997531341850047
+          ]
+        },
+        {
+          "time_steps": 2800,
+          "lower_Omega_h2": [
+            {
+              "cap": 0.01,
+              "uniform_lower": 19.095407673512206,
+              "local_floor_lower": 19.116880033024508
+            },
+            {
+              "cap": 0.1,
+              "uniform_lower": 8.907692783773909,
+              "local_floor_lower": 8.91618218030502
+            },
+            {
+              "cap": 0.5,
+              "uniform_lower": 1.1192253951715045,
+              "local_floor_lower": 1.1211970398280249
+            }
+          ],
+          "integrated_weight_over_uniform": [
+            0.9982428625210885,
+            0.9996410962148795,
+            0.9997531341850089
+          ]
+        }
+      ],
+      "energy_multiplier_first_losing_exclusion_at_cap_half": 1.146137315885786
+    },
+    {
+      "label": "later q64 checkpoint, conditional",
+      "T_GeV": 0.009026983244148572,
+      "energy_upper_GeV4": 2.8724342678045103e-12,
+      "number_at_anchor_GeV3": 5.074842501971482e-11,
+      "unconverted_start_proxy": 80.8427955166246,
+      "controls": [
+        {
+          "time_steps": 350,
+          "lower_Omega_h2": [
+            {
+              "cap": 0.01,
+              "uniform_lower": 22.07587011296141,
+              "local_floor_lower": 22.09948513260719
+            },
+            {
+              "cap": 0.1,
+              "uniform_lower": 12.536732169050444,
+              "local_floor_lower": 12.546593031071119
+            },
+            {
+              "cap": 0.5,
+              "uniform_lower": 3.119637696203697,
+              "local_floor_lower": 3.1217149113735365
+            }
+          ],
+          "integrated_weight_over_uniform": [
+            0.9981937381610638,
+            0.9997917714160531,
+            0.9999083528653543
+          ]
+        },
+        {
+          "time_steps": 1000,
+          "lower_Omega_h2": [
+            {
+              "cap": 0.01,
+              "uniform_lower": 22.244992315705243,
+              "local_floor_lower": 22.268917364414886
+            },
+            {
+              "cap": 0.1,
+              "uniform_lower": 12.782396248326696,
+              "local_floor_lower": 12.792557566482568
+            },
+            {
+              "cap": 0.5,
+              "uniform_lower": 3.3681715133509385,
+              "local_floor_lower": 3.3704107564461947
+            }
+          ],
+          "integrated_weight_over_uniform": [
+            0.9981937381610653,
+            0.9997917714160531,
+            0.9999083528653542
+          ]
+        },
+        {
+          "time_steps": 2800,
+          "lower_Omega_h2": [
+            {
+              "cap": 0.01,
+              "uniform_lower": 22.302564329504243,
+              "local_floor_lower": 22.32659522429166
+            },
+            {
+              "cap": 0.1,
+              "uniform_lower": 12.865390724895041,
+              "local_floor_lower": 12.875654441985922
+            },
+            {
+              "cap": 0.5,
+              "uniform_lower": 3.4517872274796266,
+              "local_floor_lower": 3.4540817505273447
+            }
+          ],
+          "integrated_weight_over_uniform": [
+            0.9981937381610664,
+            0.999791771416054,
+            0.9999083528653537
+          ]
+        }
+      ],
+      "energy_multiplier_first_losing_exclusion_at_cap_half": 1.4150146898369922
+    }
+  ]
+}

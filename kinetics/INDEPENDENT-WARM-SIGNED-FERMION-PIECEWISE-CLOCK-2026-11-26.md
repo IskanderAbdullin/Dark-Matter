@@ -47,3 +47,25 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_signed_fermion_pie
 ~~~
 
 [Diagnostics](results/warm-signed-fermion-piecewise-clock-2026-11-26.json).
+
+### Repeat at the verified 9.027 MeV selected-model endpoint
+
+In the same comparator, replace only the starting-state count
+and radiation clock by the later
+[9.027 MeV q64 endpoint](INDEPENDENT-WARM-HISTORY-LOWER-MATCHED-2026-11-26.md).
+The conserved visible-entropy reference gives relative expansion
+1.15712064 from 10.442 MeV. The represented number, not unknown
+heavy or exterior numbers, anchors the lower comparison. With
+the same cap assumption and transported original energy allowance,
+the fine piecewise-clock value is ( Omega h^2ge3.454082 ).
+The energy-only sensitivity multiplier before this sufficient
+exclusion fails is about 1.415 at this later anchor. Stronger
+conditional numbers at later checkpoints do not prove that
+those checkpoints are realized by an unknown full kinetic history.
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_signed_fermion_piecewise_clock_reference.py EOS.dat \
+ --later results/warm-history-lower-q64-16-terminal-2026-11-26.json.gz
+~~~
+
+[Later-anchor diagnostics](results/warm-signed-fermion-piecewise-clock-lower-2026-11-26.json).

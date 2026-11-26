@@ -68,7 +68,7 @@ def assess(eos,T,n,E,K,Kpi,z,label):
                 energy_multiplier_first_losing_exclusion_at_cap_half=critical)
 
 
-def run(eos,D):
+def run(eos,D,later=None):
     first=read(D/"warm-isolated-fermion-survival-bound-2026-11-26.json")["cases"][-1]
     L=read(D/"warm-fermion-survival-with-leptons-2026-11-26.json")
     W=read(D/"warm-signed-fermion-with-charged-pions-2026-11-26.json")["cases"][-1]["controls"][-1]
@@ -78,7 +78,7 @@ def run(eos,D):
                 first["conservative_initial_fermion_Omega"],"old q32 anchor")
     assert abs(base["controls"][-1]["lower_Omega_h2"][-1]["uniform_lower"]/
                W["with_charged_pions_lower_Omega_h2"]-1)<1e-12
-    A=read(D/"warm-q64-history-serial-b-2026-11-26.json.gz")[-1]
+    A=read(later or D/"warm-q64-history-serial-b-2026-11-26.json.gz")[-1]
     s=A["snapshot"]
     assert A["snapshot_sha256"]==digest(s)
     T=s["T_visible_GeV"]
@@ -104,5 +104,6 @@ def run(eos,D):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__);p.add_argument("eos",type=Path)
-    p.add_argument("--tapes",type=Path,default=Path("results"));a=p.parse_args()
-    print(json.dumps(run(a.eos,a.tapes),indent=2,allow_nan=False))
+    p.add_argument("--tapes",type=Path,default=Path("results"))
+    p.add_argument("--later",type=Path);a=p.parse_args()
+    print(json.dumps(run(a.eos,a.tapes,a.later),indent=2,allow_nan=False))
