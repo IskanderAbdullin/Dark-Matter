@@ -85,7 +85,7 @@ def transfer(p):
     return x[:,0],np.column_stack([x[:,i]/x[:,k["d_cdm"]] for key,i in k.items() if key.startswith("d_ncdm[")])
 
 
-def audit(joined,split,prompt,joined_psd,prompt_psd):
+def audit(joined,split,prompt,joined_psd,prompt_psd,eos=None):
     extra=split/"finite_pair_only_ratio5_s14.dat"
     A=[np.loadtxt(f).T for f in (joined_psd,prompt_psd,extra)]
     x=np.unique(np.concatenate([a[0] for a in A]))
@@ -111,7 +111,32 @@ def audit(joined,split,prompt,joined_psd,prompt_psd):
             hot_part_split_k10=float(ss[1][-1,1]),energy_weighted_split_k10=float(s[-1]),
             joined_minus_split_k10=float(e[-1]),max_abs_joined_minus_split=float(abs(e[j])),
             k_at_max_h_per_Mpc=float(kk[j]),max_prompt_split_vs_separate=float(np.max(abs(ss[1][:,0]-ss[2][:,0])))))
-    return dict(dense_input_moment_weighted_L1_errors=err,moment_orders=[0,1,2,4],rows=rows,
+    pressure=None
+    if eos is not None:
+        bg=Background(eos)
+        pressure=[]
+        for row in rows:
+            a=1./(1+row["z"])
+            m0=a*mp/bg.T0
+            rho=[]; P=[]; S=[]
+            for q,f in A:
+                E=np.hypot(q,m0)
+                rho.append(np.trapezoid(f*q*q*E,q))
+                P.append(np.trapezoid(f*q**4/(3*E),q))
+                S.append(np.trapezoid(f*q**6/(3*E**3),q))
+            rho,P,S=map(np.asarray,(rho,P,S))
+            adj=(5*P-S)/(3*(rho+P))
+            assert abs(np.average(adj[1:],weights=(rho+P)[1:])/adj[0]-1.)<3e-7
+            w=row["hot_energy_fraction"]
+            delta=np.array([row["cold_part_split_k10"],row["hot_part_split_k10"]])
+            splitp=np.average(adj[1:]*delta,weights=[1-w,w])
+            mixed_on_split=adj[0]*row["energy_weighted_split_k10"]
+            covariance=w*(1-w)*(adj[2]-adj[1])*(delta[0]-delta[1])
+            assert abs((mixed_on_split-splitp)/covariance-1.)<2e-6 and splitp>0.
+            pressure.append(dict(z=row["z"],k_h_per_Mpc=10.,cold_hot_adiabatic_speed_squared=adj[1:].tolist(),
+                assigned_single_to_separate_pressure_at_fixed_split_contrasts=float(mixed_on_split/splitp),
+                additive_covariance_term_per_total_density_and_cdm_delta=float(covariance)))
+    return dict(dense_input_moment_weighted_L1_errors=err,moment_orders=[0,1,2,4],rows=rows,adiabatic_pressure_covariance_precaution=pressure,
         scope="Metamorphic test of Boltzmann tracer numerical representation. Split density contrasts weighted by actual native scalar component energy. Independent collisionless hierarchies at fixed metric should add; fluid closure calibrated to a joined shape need not. Neither approximate closure certifies all-scale transfer.")
 
 
@@ -125,7 +150,7 @@ if __name__=="__main__":
     p.add_argument("--prompt-psd",type=Path)
     a=p.parse_args()
     if a.joined_psd is not None:
-        result=audit(a.joined,a.split,a.prompt,a.joined_psd,a.prompt_psd)
+        result=audit(a.joined,a.split,a.prompt,a.joined_psd,a.prompt_psd,a.eos)
     else:
         result=prepare(a.eos,a.pair,a.joined,a.prompt,a.split)
     print(json.dumps(result,indent=2,allow_nan=False))

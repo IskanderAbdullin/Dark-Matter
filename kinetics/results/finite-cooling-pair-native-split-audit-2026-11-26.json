@@ -1,0 +1,88 @@
+{
+  "dense_input_moment_weighted_L1_errors": [
+    7.684998828632938e-08,
+    1.243311073614246e-07,
+    1.534118961993475e-07,
+    1.6047033822607856e-07
+  ],
+  "moment_orders": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "rows": [
+    {
+      "z": 0,
+      "hot_energy_fraction": 0.1857914609989555,
+      "prompt_native_k10": 0.9786462507768335,
+      "joined_k10": 0.8860909801037834,
+      "cold_part_split_k10": 0.9786462512694132,
+      "hot_part_split_k10": 0.7206324333111447,
+      "energy_weighted_split_k10": 0.9307094870730279,
+      "joined_minus_split_k10": -0.04461850696924452,
+      "max_abs_joined_minus_split": 0.04461850696924452,
+      "k_at_max_h_per_Mpc": 10.0,
+      "max_prompt_split_vs_separate": 6.343098268857261e-10
+    },
+    {
+      "z": 5,
+      "hot_energy_fraction": 0.18579146120952236,
+      "prompt_native_k10": 0.9327797505038223,
+      "joined_k10": 0.7233422949456078,
+      "cold_part_split_k10": 0.93277975057289,
+      "hot_part_split_k10": 0.46491897231424434,
+      "energy_weighted_split_k10": 0.8458552129375918,
+      "joined_minus_split_k10": -0.12251291799198405,
+      "max_abs_joined_minus_split": 0.12251291799198405,
+      "k_at_max_h_per_Mpc": 10.0,
+      "max_prompt_split_vs_separate": 1.0006317996413827e-10
+    },
+    {
+      "z": 20,
+      "hot_energy_fraction": 0.18579146364647406,
+      "prompt_native_k10": 0.8470926276939755,
+      "joined_k10": 0.5224700491989052,
+      "cold_part_split_k10": 0.8470926279761338,
+      "hot_part_split_k10": 0.2560341939175593,
+      "energy_weighted_split_k10": 0.7372790164117983,
+      "joined_minus_split_k10": -0.2148089672128931,
+      "max_abs_joined_minus_split": 0.2148089672128931,
+      "k_at_max_h_per_Mpc": 10.0,
+      "max_prompt_split_vs_separate": 3.3603475557697493e-10
+    }
+  ],
+  "adiabatic_pressure_covariance_precaution": [
+    {
+      "z": 0,
+      "k_h_per_Mpc": 10.0,
+      "cold_hot_adiabatic_speed_squared": [
+        7.827480294275358e-13,
+        4.49790060070244e-11
+      ],
+      "assigned_single_to_separate_pressure_at_fixed_split_contrasts": 1.2595616792102378,
+      "additive_covariance_term_per_total_density_and_cdm_delta": 1.7250030520518154e-12
+    },
+    {
+      "z": 5,
+      "k_h_per_Mpc": 10.0,
+      "cold_hot_adiabatic_speed_squared": [
+        2.8178929050239537e-11,
+        1.6192441995060958e-09
+      ],
+      "assigned_single_to_separate_pressure_at_fixed_split_contrasts": 1.6982598269333062,
+      "additive_covariance_term_per_total_density_and_cdm_delta": 1.126071684269432e-10
+    },
+    {
+      "z": 20,
+      "k_h_per_Mpc": 10.0,
+      "cold_hot_adiabatic_speed_squared": [
+        3.45191879568172e-10,
+        1.9835739070093878e-08
+      ],
+      "assigned_single_to_separate_pressure_at_fixed_split_contrasts": 2.474781778658685,
+      "additive_covariance_term_per_total_density_and_cdm_delta": 1.7426728220492214e-09
+    }
+  ],
+  "scope": "Metamorphic test of Boltzmann tracer numerical representation. Split density contrasts weighted by actual native scalar component energy. Independent collisionless hierarchies at fixed metric should add; fluid closure calibrated to a joined shape need not. Neither approximate closure certifies all-scale transfer."
+}

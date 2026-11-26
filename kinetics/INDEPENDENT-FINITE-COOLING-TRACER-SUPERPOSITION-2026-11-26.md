@@ -60,21 +60,69 @@ of either number sample at the start. The other two starting times
 also preserve additivity. This is **not** native CLASS evolution
 or a calibrator for its physical perturbation amplitude.
 
-## A pending native numerical check, not a reported transfer
+## Native numerical grouping and matched closure-switch checks
 
-The one-component native runs at 320/224 momentum nodes and
-two smoothings give nearly the same default-closure ratio at k=10:
-0.88609, 0.72334 and 0.52247 at z=0, 5 and 20. Agreement at
-two momentum resolutions does **not** settle the grouping issue.
-Compared to the separately computed prompt-only run, simple
-superposition would require an inferred recoil-only contrast of
-roughly +0.48, −0.19 and −0.90 at those probes. These values are
-not results of a recoil-only calculation. Treat the native numbers
-as a diagnostic, not as physical suppression of either scalar or
-total matter, pending split and closure-disabled controls.
-The exact pressure integrals show why this test is necessary:
-at z=20, recoil carries about 92.9% of the background scalar
-pressure despite carrying only 18.6% of the scalar energy.
+The mixed scalar is an intentionally extremely subdominant tracer.
+The default-fluid joined runs at 320 and 224 nodes agree with
+each other to 1.78×10⁻⁵ across their common test range, but they do
+not agree with a split into two positive same-mass tracers
+having the same total \(f_0\). At k=10 h/Mpc:
+
+| z | One mixed species, default closure | Two species, energy-weighted, default closure | Split prompt | Split recoil |
+| --- | ---: | ---: | ---: | ---: |
+| 0 | 0.886091 | 0.930709 | 0.978646 | 0.720632 |
+| 5 | 0.723342 | 0.845855 | 0.932780 | 0.464919 |
+| 20 | 0.522470 | 0.737279 | 0.847093 | 0.256034 |
+
+These are amplitudes relative to CDM, not powers. The separated
+prompt component agrees with its standalone run to better than
+\(7\times10^{-10}\) in these probes. The 0.215 discrepancy at
+z=20 far exceeds the input spectrum sum error and the change
+under the two joined momentum quadratures. A negative recoil
+contrast *inferred* earlier by subtracting the standalone prompt
+from the joined-fluid result is therefore not a valid
+recoil-only native calculation.
+
+A separate matched six-mode test keeps the same joined input,
+\(\ell_{\max}=36\) and exact k, and changes **only** the native
+fluid approximation switch. At z=20:
+
+| k [h/Mpc] | Fluid enabled | Fluid disabled |
+| --- | ---: | ---: |
+| 4 | 0.786468 | 0.881297 |
+| 10 | 0.522605 | 0.759660 |
+
+The two time histories agree to within 3.70×10⁻⁶ in scalar/CDM
+amplitude on the sampled pre-switch intervals. At k=10 the raw
+trajectory changes after the switch at conformal time 2.969 Mpc.
+CDM contrasts at z=20 change by at most 1.3×10⁻⁷ relative.
+This isolates a strong numerical fluid-closure dependence in
+the reported tracer. It does **not** establish all-scale
+convergence of either the switch-disabled finite hierarchy or
+the separately closed split case. A converged grouped-vs-split
+kinetic run is still required.
+
+## Pressure mechanism check, not a calibration
+
+At the native z=20 split contrasts held fixed, assigning the
+joined adiabatic pressure coefficient gives 2.475 times the
+pressure assigned by the two individual coefficients. This uses
+the exact background integrals and is an algebraic evaluation
+of the closures at one common state, not a claim that the
+separately integrated pressure histories differ by that factor.
+
+An independent controlled fluid ODE on the same simple EdS
+constant-potential, zero-initial clock uses only
+\(c_i^2(a)=5\langle q^2\rangle_i T_{\gamma,0}^2/(9m^2a^2)\).
+It independently gives 0.56260 (one coefficient) versus 0.79332
+(energy-weighted separate coefficients) at z=20 and k=10 with
+initial \(a=0.001\). This is a mechanism demonstration, not a
+CLASS fit. The independent **kinetic** EdS response remains
+additive as above. Using the recorded same-sign native metric
+as a late source in the kinetic control, also with zero initial
+data at \(a=0.001\), yields 0.80525 joined and a sum defect less
+than \(9\times10^{-9}\). Neither controlled zero-initial solution
+is the native growing mode.
 
 ## Reproduction
 
@@ -98,3 +146,18 @@ prompt reference outputs:
 ~~~sh
 OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_pair_split_tracer_reference.py   mix_native split_native prompt_native   --joined-psd psd_mix/ratio5-scalar-pair-mix-sigma0.14.dat   --prompt-psd psd/ratio5-scalar-sigma0.14.dat
 ~~~
+
+Generate the focused INIs from existing joined and split ones in
+the native output directory, run the requested cases with the
+native solver, retain its logs, and compute matched comparisons:
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --prepare native
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --cases joined_on_l36 joined_off_l36
+OPENBLAS_NUM_THREADS=1 python -W error finite_cooling_focused_closure_reference.py native --time-probe
+~~~
+
+The mean-fluid control takes the same four arguments as the EdS
+potential control. For the recorded-metric drive, add the focused
+no-fluid native perturbation table for k1 after EOS.dat and before
+the three PSD files.
