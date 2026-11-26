@@ -15,9 +15,9 @@ def limits(p):
     de=2*M*p*P/(mp*mp)
     return e,lo,de
 
-def log_rate(p,T):
+def log_rate(p,T,fermion_eta=0.):
     e,L,ell=limits(p)
-    A=(L-e)/T
+    A=(L-e)/T-fermion_eta
     b=e/T
     span=ell/T
     # Divide by the interval before taking p->0: the exact kinematic
