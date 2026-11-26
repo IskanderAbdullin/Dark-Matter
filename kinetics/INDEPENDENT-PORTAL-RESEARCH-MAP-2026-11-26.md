@@ -118,7 +118,8 @@ reproducible controls below are not observational constraints.
    finds that the native reverse quadrature materially undercounts gain into the first cold cell. The [conservative cold-event partition](INDEPENDENT-WARM-COLD-PAIR-PARTITION-2026-11-26.md)
    removes a one-step native cold spike without shifting the full spectrum materially in that block. A [six- and nine-shell lift](INDEPENDENT-WARM-COLD-PAIR-MULTISHELL-2026-11-26.md)
    checks adjacent cold cells without changing the forward operator or the remaining inverse phase space. A [24-step corrected q32 continuation](INDEPENDENT-WARM-MULTISHELL-CORRECTED-TRAJECTORY-2026-11-26.md)
-   tests the same change over the whole matched 8.133 to 7.394 MeV interval.
+   tests the same change over the whole matched 8.133 to 7.394 MeV interval. A [thermal balance and endpoint budget check](INDEPENDENT-WARM-LIFTED-PAIR-BALANCE-2026-11-26.md)
+   independently tests gain/loss cancellation in narrow cells and resolves the remaining elastic contribution.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
