@@ -52,7 +52,10 @@ reproducible controls below are not observational constraints.
    the exact saved occupation extrema at every new block.
    A [further instrumented warm continuation](INDEPENDENT-WARM-OBSERVED-SUBOPERATOR-OCCUPATION-2026-11-26.md)
    shows small increases within blocks despite descending
-   saved endpoint light maxima. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
+   saved endpoint light maxima.
+   The [matched q32 half-block check](INDEPENDENT-WARM-OBSERVED-SUBOPERATOR-REFINEMENT-2026-11-26.md)
+   reduces the observed internal increase by nearly half
+   without claiming a continuous occupation bound. The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
    carries actual newly recorded exterior cohorts. For older cohorts
