@@ -71,7 +71,9 @@ reproducible controls below are not observational constraints.
    resolves tiny represented positive gains into the relevant heavy
    modes, on those fixed shapes only. A [shell-number envelope](INDEPENDENT-WARM-COLD-PARENT-RETAINED-PAIR-ENVELOPE-2026-11-26.md)
    bounds the extra retained dark pair gains without picking
-   their within-shell shapes; the baseline rate stays frozen.
+   their within-shell shapes; the baseline rate stays frozen. The [tagged light scalar-pair fold](INDEPENDENT-WARM-COLD-LIGHT-SCALAR-PAIR-2026-11-26.md)
+   resolves a second negative cold contribution, much less
+   sensitive to the same scalar support crop.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
