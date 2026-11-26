@@ -91,7 +91,9 @@ reproducible controls below are not observational constraints.
    extends the matched support to q64 and tracks expansion work
    as well as the represented tail. The [coupled support comparison](INDEPENDENT-WARM-MATCHED-EXPLICIT-SUPPORT-COUPLED-2026-11-26.md)
    repeats the test on a slightly longer matched expansion with
-   selected elastic and signed pair reactions and raw checkpoints. A [four-level q32 time ladder](INDEPENDENT-WARM-Q32-MATCHED-TIME-LADDER-2026-11-26.md)
+   selected elastic and signed pair reactions and raw checkpoints. A [known-cohort activation control](INDEPENDENT-WARM-REACTIVATE-KNOWN-COHORTS-2026-11-26.md)
+   allows stored moment packets to react without counting
+   them twice in gravity, for one stated re-entry prescription. A [four-level q32 time ladder](INDEPENDENT-WARM-Q32-MATCHED-TIME-LADDER-2026-11-26.md)
    observes near-first-order temporal convergence through
    sixteen blocks at the same physical endpoint. A [moment extrapolation diagnostic](INDEPENDENT-WARM-Q32-TIME-EXTRAPOLATION-2026-11-26.md)
    cancels much of the leading difference while preserving
