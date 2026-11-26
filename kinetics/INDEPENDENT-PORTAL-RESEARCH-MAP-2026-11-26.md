@@ -95,6 +95,10 @@ The [known-exterior extension](INDEPENDENT-WARM-KNOWN-EXTERIOR-RECYCLING-2026-11
 also allows all recorded old and new cohorts to participate
 after the anchor, without assigning momenta to the old ones.
 It leaves that fraction unchanged at the quoted precision.
+A distinct [isolated fermion survival bound](INDEPENDENT-WARM-ISOLATED-FERMION-SURVIVAL-2026-11-26.md)
+asks whether the *total* can fall to .120. Redistribution,
+reverse gains and intermediate heavy fermions are allowed
+but the outgoing scalar occupation must be capped by hand.
 The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
