@@ -1,0 +1,104 @@
+{
+  "scope": "Frozen native operator budget for the first retained shell at 8.133 MeV. Exact component support and observed finite-step mean listed separately; no assignment of the measured finite-step difference to untested channels.",
+  "labels": [
+    "prompt",
+    "selected_below_pole_elastic",
+    "signed_scalar_pair"
+  ],
+  "cases": [
+    {
+      "q": 32,
+      "T_GeV": 0.008133099595474874,
+      "controls": [
+        {
+          "elastic_order": [
+            3,
+            2,
+            2,
+            8
+          ],
+          "pair_order": [
+            3,
+            7,
+            6,
+            2
+          ],
+          "first_cold_shell_rates_per_log_a": [
+            0.0,
+            -3.751773076991625e-05,
+            -2.5313718849414523e-05
+          ],
+          "sum_per_log_a": -6.283144961933078e-05
+        },
+        {
+          "elastic_order": [
+            6,
+            4,
+            4,
+            12
+          ],
+          "pair_order": [
+            4,
+            10,
+            10,
+            4
+          ],
+          "first_cold_shell_rates_per_log_a": [
+            0.0,
+            -3.8739751507675835e-05,
+            -1.7913577728804574e-05
+          ],
+          "sum_per_log_a": -5.6653329236480406e-05
+        }
+      ],
+      "accepted_full_step_rate_per_log_a": -6.238535761449823e-05
+    },
+    {
+      "q": 64,
+      "T_GeV": 0.008133099595474874,
+      "controls": [
+        {
+          "elastic_order": [
+            3,
+            2,
+            2,
+            8
+          ],
+          "pair_order": [
+            3,
+            7,
+            6,
+            2
+          ],
+          "first_cold_shell_rates_per_log_a": [
+            -1.1107473267379706e-07,
+            -3.749257230997116e-05,
+            -2.5312752194057357e-05
+          ],
+          "sum_per_log_a": -6.291639923670231e-05
+        },
+        {
+          "elastic_order": [
+            6,
+            4,
+            4,
+            12
+          ],
+          "pair_order": [
+            4,
+            10,
+            10,
+            4
+          ],
+          "first_cold_shell_rates_per_log_a": [
+            -1.1107473267379706e-07,
+            -3.871353503184785e-05,
+            -1.7912638043924028e-05
+          ],
+          "sum_per_log_a": -5.6737247808445675e-05
+        }
+      ],
+      "accepted_full_step_rate_per_log_a": -6.246585676129051e-05
+    }
+  ]
+}

@@ -55,3 +55,30 @@ raw pre/post bracket [q32](results/warm-recoil-crossing-q32-bracket-2026-11-26.j
 [q64](results/warm-recoil-crossing-q64-bracket-2026-11-26.json.gz);
 exact final two [q32](results/warm-recoil-crossing-q32-terminal-2026-11-26.json.gz)
 and [q64](results/warm-recoil-crossing-q64-terminal-2026-11-26.json.gz) checkpoints.
+
+## First-cell channel budget after crossing
+
+At the 8.133100 MeV endpoint, freeze each accepted state and
+evaluate all three **native selected** first-cell rates.
+With the evolution quadrature on q64, the prompt, selected
+elastic and scalar-pair pieces are respectively
+(-1.11	imes10^{-7}), (-3.75	imes10^{-5}) and
+(-2.53	imes10^{-5}) per unit log expansion. Thus the
+missing q32 prompt component is small in the coupled cold
+cell. The instant total is close to, but different from,
+the full-step change measured between accepted states.
+
+Refining the endpoint pair and elastic angles/radial rules
+leaves the component hierarchy unchanged. It shifts the
+q64 signed pair estimate to (-1.79	imes10^{-5}) and the
+elastic estimate to (-3.87	imes10^{-5}). The first-cell
+pair rate therefore has appreciable numerical sensitivity;
+these two quadratures do not supply a converged value.
+This is a frozen-budget test, not a recomputation of the
+trajectory with every refined operator.
+
+~~~sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -W error warm_recoil_endpoint_channel_budget_reference.py EOS.dat
+~~~
+
+[Native component diagnostics](results/warm-recoil-endpoint-channel-budget-2026-11-26.json).
