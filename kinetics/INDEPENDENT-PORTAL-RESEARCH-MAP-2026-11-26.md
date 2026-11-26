@@ -93,6 +93,10 @@ The [known-exterior extension](INDEPENDENT-WARM-KNOWN-EXTERIOR-RECYCLING-2026-11
 also allows all recorded old and new cohorts to participate
 after the anchor, without assigning momenta to the old ones.
 It leaves that fraction unchanged at the quoted precision.
+The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
+allows both visible pair injection and elastic heating in that
+same period. At total .120 its upper scalar share is 2.44%.
+It does not include late hadronic or new dark sources.
 
 ## Evidence boundary
 
