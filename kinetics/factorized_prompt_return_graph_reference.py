@@ -23,7 +23,7 @@ def shell_weights(edges,T=None):
     V=(b-a)*w*q*q*np.exp(-np.hypot(q,mp)/T)/(4*np.pi**2)
     return V.sum(axis=1)
 
-def graph(edges, *, T, eta=0., bath=None, order=15, theta=16, max_parent=None, exact_FD=False,occupation=None,trial_T=None,components=False,scalar_BE=None):
+def graph(edges, *, T, eta=0., bath=None, order=15, theta=16, max_parent=None, exact_FD=False,occupation=None,trial_T=None,components=False,scalar_BE=None,energy=False,parents=False):
     """Return G with rows per initial cell; last column is the unresolved exterior."""
     edges=np.asarray(edges)
     assert edges[0]==0 and np.all(np.diff(edges)>0)
@@ -64,12 +64,21 @@ def graph(edges, *, T, eta=0., bath=None, order=15, theta=16, max_parent=None, e
     captured_flux=np.sum(weights*ap*trial,axis=-1)
     if components:
         if scalar_BE is None:
-            return C*dE,captured_flux,released
+            z=(C*dE,captured_flux,released)
+            return (*z,E) if parents else z
         t,mu=scalar_BE
         assert mu<mp/t
         f=1/np.expm1(ef/t-mu)
         return C*dE,np.sum(weights*ap*f,axis=-1),np.sum(weights*om*(1+f),axis=-1),E
     raw=(captured_flux[:,:-1].T*(C*dE/denom))@released
+    if energy:
+        # Separate event-weighted energies from any receiving-bin closure.
+        ea=np.sum(weights*ap*trial*ef,axis=-1)
+        eb=np.sum(weights*om*ef,axis=-1)
+        scale=C*dE/denom
+        incoming=(ea[:,:-1].T*scale)@released
+        outgoing=(captured_flux[:,:-1].T*scale)@eb
+        return raw,incoming,outgoing
     if exact_FD:
         assert bath is None
         # Analytic KMS reduction; comparison against direct two Fermi factors
