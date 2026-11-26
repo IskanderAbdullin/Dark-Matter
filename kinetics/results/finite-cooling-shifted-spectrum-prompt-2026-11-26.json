@@ -1,0 +1,192 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "distribution_sha256": "1e598a3ecf218ab22676d07a57a1a63cc1372158d7e062ce4e33a09c1bf54c57",
+  "q_from_p_over_T": 0.7196406812585268,
+  "components": [
+    {
+      "case": "instant",
+      "species": "scalar",
+      "mass_eV": 86.0,
+      "actual_fixed_count_Omega_h2": 2.369883270992132e-12,
+      "file": "instant-scalar-sigma0.10.dat",
+      "sha256": "ae1e466d07ba1318bdc6e977050f80e5418260892203abf9946a20d2949a7e67",
+      "sigma_ln_q": 0.1,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        1.7220503393968557e-13,
+        3.998182225470803e-12
+      ],
+      "relative_table_trapezoid_defects": [
+        0.0,
+        0.0
+      ],
+      "support_q_min_max": [
+        0.1864228488450169,
+        96.87516421508475
+      ],
+      "clipped_number_fraction": 9.463943452499056e-17,
+      "number_weighted_q4_smoothing_factor": 1.0408107741923882
+    },
+    {
+      "case": "instant",
+      "species": "scalar",
+      "mass_eV": 86.0,
+      "actual_fixed_count_Omega_h2": 2.369883270992132e-12,
+      "file": "instant-scalar-sigma0.14.dat",
+      "sha256": "4509fc20f09c97455c90069342ccc6ebf3c0cbb64572d1d6f8399eaf76f15649",
+      "sigma_ln_q": 0.14,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        1.7220503393968557e-13,
+        3.998182225470803e-12
+      ],
+      "relative_table_trapezoid_defects": [
+        2.220446049250313e-16,
+        0.0
+      ],
+      "support_q_min_max": [
+        0.11425324984240467,
+        155.06171249282772
+      ],
+      "clipped_number_fraction": 9.463943452499056e-17,
+      "number_weighted_q4_smoothing_factor": 1.081555194234897
+    },
+    {
+      "case": "instant",
+      "species": "stable",
+      "mass_eV": 20000000.0,
+      "actual_fixed_count_Omega_h2": 0.12007082595957291,
+      "file": "instant-stable-sigma0.10.dat",
+      "sha256": "e449cdf1c6e46acd02d52518ad9902299768ebc1f3ef353cf84db718d813db68",
+      "sigma_ln_q": 0.1,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        3.751671819632537e-08,
+        3.8588763027009636e-07
+      ],
+      "relative_table_trapezoid_defects": [
+        -2.220446049250313e-16,
+        -1.1102230246251565e-16
+      ],
+      "support_q_min_max": [
+        1.1315028985566837e-05,
+        97.0243221859606
+      ],
+      "clipped_number_fraction": 9.378098726721184e-16,
+      "number_weighted_q4_smoothing_factor": 1.0408107741923882
+    },
+    {
+      "case": "instant",
+      "species": "stable",
+      "mass_eV": 20000000.0,
+      "actual_fixed_count_Omega_h2": 0.12007082595957291,
+      "file": "instant-stable-sigma0.14.dat",
+      "sha256": "25b968f409c70a6b7c9c440f81a6ec682c608c94bb3d45be477038329932e885",
+      "sigma_ln_q": 0.14,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        3.751671819632537e-08,
+        3.8588763027009636e-07
+      ],
+      "relative_table_trapezoid_defects": [
+        -2.220446049250313e-16,
+        -1.1102230246251565e-16
+      ],
+      "support_q_min_max": [
+        6.934658716307743e-06,
+        155.30045985995076
+      ],
+      "clipped_number_fraction": 9.378098726721184e-16,
+      "number_weighted_q4_smoothing_factor": 1.081555194234897
+    },
+    {
+      "case": "ratio5",
+      "species": "scalar",
+      "mass_eV": 86.0,
+      "actual_fixed_count_Omega_h2": 2.236505150290285e-09,
+      "file": "ratio5-scalar-sigma0.10.dat",
+      "sha256": "19c850595bc39624b66a29c1e3c67f1a0ca5c05864e3f83ce87d5539eee4894e",
+      "sigma_ln_q": 0.1,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        1.6251325541058623e-10,
+        3.071401847842436e-11
+      ],
+      "relative_table_trapezoid_defects": [
+        -1.1102230246251565e-16,
+        -2.220446049250313e-16
+      ],
+      "support_q_min_max": [
+        0.0014984221980418966,
+        75.76429577187872
+      ],
+      "clipped_number_fraction": 9.57226954922533e-16,
+      "number_weighted_q4_smoothing_factor": 1.0408107741923882
+    },
+    {
+      "case": "ratio5",
+      "species": "scalar",
+      "mass_eV": 86.0,
+      "actual_fixed_count_Omega_h2": 2.236505150290285e-09,
+      "file": "ratio5-scalar-sigma0.14.dat",
+      "sha256": "ccc19a34c2b964c2d3c09af053ee05a99a647178b1e1517567c6e4776a53e25f",
+      "sigma_ln_q": 0.14,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        1.6251325541058623e-10,
+        3.071401847842436e-11
+      ],
+      "relative_table_trapezoid_defects": [
+        0.0,
+        -2.220446049250313e-16
+      ],
+      "support_q_min_max": [
+        0.0009183402507951874,
+        121.27093196061162
+      ],
+      "clipped_number_fraction": 9.57226954922533e-16,
+      "number_weighted_q4_smoothing_factor": 1.081555194234897
+    },
+    {
+      "case": "ratio5",
+      "species": "stable",
+      "mass_eV": 20000000.0,
+      "actual_fixed_count_Omega_h2": 0.1201187843923758,
+      "file": "ratio5-stable-sigma0.10.dat",
+      "sha256": "567642fe35cec7560d7bae2d360f9d23d3915e925aae8979a35045f19c19bf64",
+      "sigma_ln_q": 0.1,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        3.753170304376207e-08,
+        2.1071307985211018e-07
+      ],
+      "relative_table_trapezoid_defects": [
+        0.0,
+        -1.1102230246251565e-16
+      ],
+      "support_q_min_max": [
+        4.1218445058224114e-06,
+        96.98713640496601
+      ],
+      "clipped_number_fraction": 2.0393846668825278e-15,
+      "number_weighted_q4_smoothing_factor": 1.0408107741923882
+    },
+    {
+      "case": "ratio5",
+      "species": "stable",
+      "mass_eV": 20000000.0,
+      "actual_fixed_count_Omega_h2": 0.1201187843923758,
+      "file": "ratio5-stable-sigma0.14.dat",
+      "sha256": "ad1fb488e3b598f7550283735b7f93743b507916e2914c608204ab741c526691",
+      "sigma_ln_q": 0.14,
+      "expected_number_and_q2_moment_per_Tgamma3": [
+        3.753170304376207e-08,
+        2.1071307985211018e-07
+      ],
+      "relative_table_trapezoid_defects": [
+        0.0,
+        -1.1102230246251565e-16
+      ],
+      "support_q_min_max": [
+        2.5261609993246247e-06,
+        155.2409390227153
+      ],
+      "clipped_number_fraction": 2.0393846668825278e-15,
+      "number_weighted_q4_smoothing_factor": 1.081555194234897
+    }
+  ],
+  "scope": "Numerical positive moment reconstruction of the recorded bins. It preserves total number and squared momentum, and is not an exact within-bin shape, a transfer computation, or a coupled production history."
+}
