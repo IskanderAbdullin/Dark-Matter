@@ -1,0 +1,136 @@
+{
+  "scope": "Thinned surrogate: between each saved pair, linearly interpolate the stationary source in log expansion and freeze its relaxation coefficient at the smaller endpoint value. Starts at stationary heavy population and omits extra heavy sources. Exact for that interpolation, not an error bound on actual intermediate shapes, unrecorded exterior, or the complete heavy evolution.",
+  "elementary_update_absolute_test_error": 5.342948306008566e-16,
+  "cases": [
+    {
+      "q": 16,
+      "checks": [
+        [
+          {
+            "b_relative": 1.0049629315732038,
+            "min_integrated_relaxation": 27883468554.86803,
+            "peak_abs_lag": 9.265392212874246e-25,
+            "energy_abs_lag_over_core": 2.227959855461029e-19,
+            "stationary_E_fraction": 1.3752077520639143e-06
+          },
+          {
+            "b_relative": 1.0099504938362078,
+            "min_integrated_relaxation": 28299191139.159523,
+            "peak_abs_lag": 8.837261622392698e-25,
+            "energy_abs_lag_over_core": 2.1470103509793988e-19,
+            "stationary_E_fraction": 1.3265142435558576e-06
+          },
+          {
+            "b_relative": 1.0149628090294405,
+            "min_integrated_relaxation": 28721102881.092003,
+            "peak_abs_lag": 8.401053096241687e-25,
+            "energy_abs_lag_over_core": 2.061232915844255e-19,
+            "stationary_E_fraction": 1.2792536997891245e-06
+          },
+          {
+            "b_relative": 1.0200000000000002,
+            "min_integrated_relaxation": 29149296862.800137,
+            "peak_abs_lag": 7.989078377099066e-25,
+            "energy_abs_lag_over_core": 1.9782034431884985e-19,
+            "stationary_E_fraction": 1.233382490742432e-06
+          }
+        ],
+        [
+          {
+            "b_relative": 1.0049629315732038,
+            "min_integrated_relaxation": 27867900115.306282,
+            "peak_abs_lag": 9.265392212874246e-25,
+            "energy_abs_lag_over_core": 2.22785370454126e-19,
+            "stationary_E_fraction": 1.375208798720979e-06
+          },
+          {
+            "b_relative": 1.0099504938362078,
+            "min_integrated_relaxation": 28283392142.746906,
+            "peak_abs_lag": 8.837261622392698e-25,
+            "energy_abs_lag_over_core": 2.1469705618849922e-19,
+            "stationary_E_fraction": 1.3265164847588716e-06
+          },
+          {
+            "b_relative": 1.0149628090294405,
+            "min_integrated_relaxation": 28705069934.03011,
+            "peak_abs_lag": 8.401053096241687e-25,
+            "energy_abs_lag_over_core": 2.0610211148549117e-19,
+            "stationary_E_fraction": 1.2792565900734253e-06
+          },
+          {
+            "b_relative": 1.0200000000000002,
+            "min_integrated_relaxation": 29133026521.19759,
+            "peak_abs_lag": 7.989078377099066e-25,
+            "energy_abs_lag_over_core": 1.9782227428544229e-19,
+            "stationary_E_fraction": 1.2333854637919671e-06
+          }
+        ]
+      ]
+    },
+    {
+      "q": 32,
+      "checks": [
+        [
+          {
+            "b_relative": 1.0049629315732038,
+            "min_integrated_relaxation": 27883467966.521347,
+            "peak_abs_lag": 9.281548084213172e-25,
+            "energy_abs_lag_over_core": 2.2313444934308363e-19,
+            "stationary_E_fraction": 1.3789667620376887e-06
+          },
+          {
+            "b_relative": 1.0099504938362078,
+            "min_integrated_relaxation": 28299190562.535908,
+            "peak_abs_lag": 8.853417493731624e-25,
+            "energy_abs_lag_over_core": 2.1515688849519937e-19,
+            "stationary_E_fraction": 1.330184339286893e-06
+          },
+          {
+            "b_relative": 1.0149628090294405,
+            "min_integrated_relaxation": 28721102318.72475,
+            "peak_abs_lag": 8.425286903250077e-25,
+            "energy_abs_lag_over_core": 2.0651876759610413e-19,
+            "stationary_E_fraction": 1.2828322770131162e-06
+          },
+          {
+            "b_relative": 1.0200000000000002,
+            "min_integrated_relaxation": 29149296318.296036,
+            "peak_abs_lag": 8.005234248437992e-25,
+            "energy_abs_lag_over_core": 1.9820189534891808e-19,
+            "stationary_E_fraction": 1.2368807513442006e-06
+          }
+        ],
+        [
+          {
+            "b_relative": 1.0049629315732038,
+            "min_integrated_relaxation": 27867899527.171764,
+            "peak_abs_lag": 9.289626019882635e-25,
+            "energy_abs_lag_over_core": 2.2316560729956127e-19,
+            "stationary_E_fraction": 1.3789667625132399e-06
+          },
+          {
+            "b_relative": 1.0099504938362078,
+            "min_integrated_relaxation": 28283391566.31708,
+            "peak_abs_lag": 8.853417493731624e-25,
+            "energy_abs_lag_over_core": 2.151407617050989e-19,
+            "stationary_E_fraction": 1.330184337302739e-06
+          },
+          {
+            "b_relative": 1.0149628090294405,
+            "min_integrated_relaxation": 28705069371.835747,
+            "peak_abs_lag": 8.425286903250077e-25,
+            "energy_abs_lag_over_core": 2.0652470639830148e-19,
+            "stationary_E_fraction": 1.2828322778145682e-06
+          },
+          {
+            "b_relative": 1.0200000000000002,
+            "min_integrated_relaxation": 29133025976.841766,
+            "peak_abs_lag": 8.013312184107456e-25,
+            "energy_abs_lag_over_core": 1.9819532918140325e-19,
+            "stationary_E_fraction": 1.2368807517311075e-06
+          }
+        ]
+      ]
+    }
+  ]
+}
