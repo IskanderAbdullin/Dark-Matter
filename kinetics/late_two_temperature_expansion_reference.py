@@ -102,13 +102,15 @@ def kick(n,state,h,mode,orders):
             inverse(n[1],total-old-z*shift,1,"K",state[1]["T"])],called
 
 
-def run(row,snap,eos,nx,start=3.,stop=410.,mode="full",orders=(5,5,6,3),initial="common"):
+def run(row,snap,eos,nx,start=3.,stop=410.,mode="full",orders=(5,5,6,3),initial="common",restart_T=None):
     cap=from_row(row,eos,20)
     mass_p=initial_shells(snap)
     N=np.array([np.sum(w) for _,_,w in mass_p])
     K=np.array([np.sum(w*p*p/(np.hypot(p,mass)+mass)) for mass,p,w in mass_p])
     assert abs(K.sum()/cap['retained_dark_kinetic_energy_GeV4']-1.)<5e-12
-    if initial=="common":
+    if restart_T is not None:
+        a=[single(T,N[j]/start**3,j) for j,T in enumerate(restart_T)]
+    elif initial=="common":
         a=common_entropy(N/start**3,cap["entropy_density_GeV3"]/start**3,cap["common_T_GeV"]/start)
     else:
         a0=[inverse(N[j],K[j],j,"K",cap["common_T_GeV"]) for j in range(2)]
@@ -138,7 +140,7 @@ def run(row,snap,eos,nx,start=3.,stop=410.,mode="full",orders=(5,5,6,3),initial=
     Serror=abs(sum(v["S"] for v in a)*stop**3-S0-dS)/S0
     assert max(Eerror,Serror)<4e-8
     return dict(nsteps=nx,mode=mode,initial=initial,start=start,stop=stop,
-                quadrature=orders,heat_evaluations=ncall,
+                quadrature=orders,heat_evaluations=ncall,thermal_restart_T_GeV=restart_T,
                 kinetic_energy_ledger_defect=float(Eerror),entropy_ledger_defect=float(Serror),
                 accumulated_scalar_comoving_heat_over_initial_total_comoving_kinetic_energy=float(Q[0]/Kin.sum()),
                 fractional_entropy_production=float(dS/S0),steps=steps)
@@ -151,6 +153,7 @@ if __name__=="__main__":
     p.add_argument("--start",type=float,default=3.)
     p.add_argument("--stop",type=float,default=410.)
     p.add_argument("--mode",choices=("off","equilibrate","full"),default="full")
+    p.add_argument("--restart-temps",type=float,nargs=2)
     p.add_argument("--initial",choices=("common","isolated"),default="common")
     p.add_argument("--orders",type=int,nargs=4,default=(5,5,6,3))
     a=p.parse_args()
@@ -158,4 +161,4 @@ if __name__=="__main__":
     snap=json.loads(Path(a.snapshot).read_text())["snapshots"][-1]
     assert row["nsteps"]==snap["steps"]
     eos=StandardModel(a.eos)
-    print(json.dumps(dict(rows=[run(row,snap,eos,n,a.start,a.stop,a.mode,a.orders,a.initial) for n in a.steps]),indent=2,allow_nan=False))
+    print(json.dumps(dict(rows=[run(row,snap,eos,n,a.start,a.stop,a.mode,a.orders,a.initial,a.restart_temps) for n in a.steps]),indent=2,allow_nan=False))
