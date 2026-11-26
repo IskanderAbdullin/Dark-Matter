@@ -89,7 +89,9 @@ reproducible controls below are not observational constraints.
    extends the matched support to q64 and tracks expansion work
    as well as the represented tail. The [coupled support comparison](INDEPENDENT-WARM-MATCHED-EXPLICIT-SUPPORT-COUPLED-2026-11-26.md)
    repeats the test on a slightly longer matched expansion with
-   selected elastic and signed pair reactions and raw checkpoints.
+   selected elastic and signed pair reactions and raw checkpoints. A [four-level q32 time ladder](INDEPENDENT-WARM-Q32-MATCHED-TIME-LADDER-2026-11-26.md)
+   observes near-first-order temporal convergence through
+   sixteen blocks at the same physical endpoint.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
