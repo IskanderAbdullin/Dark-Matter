@@ -83,7 +83,9 @@ reproducible controls below are not observational constraints.
    evolves both species for a very short fixed-clock test; its actual
    outside counts are much smaller than a one-way linear extrapolation. A [matched tail-shape audit](INDEPENDENT-WARM-PROMPT-REENTRY-SHAPE-AUDIT-2026-11-26.md)
    finds that the newly populated tail is close in total moments
-   and normalized shell shape to the actual q32 checkpoint.
+   and normalized shell shape to the actual q32 checkpoint. The [discrete gross-crossing ledger](INDEPENDENT-WARM-PROMPT-GROSS-CROSSING-2026-11-26.md)
+   explicitly measures the inward and outward components; their
+   difference recovers the tiny resident number.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
@@ -179,7 +181,9 @@ measures new outer cohort energy on the saved 2% stage.
 It is not gross reacting use if re-entry is switched on. The [eligible receipt tail](INDEPENDENT-WARM-HEAVY-ELIGIBLE-EXTERIOR-RECEIPT-2026-11-26.md)
 uses the stored support and birth-energy mean to bound the
 one-use high-momentum subset, even for two-exterior events.
-That subset still is not a measured gross reacting budget.
+That subset still is not a measured gross reacting budget. A [high-parent prompt probe](INDEPENDENT-WARM-PROMPT-HIGH-PARENT-LEDGER-2026-11-26.md)
+measures the bare inverse-decay contribution on a separate short
+explicitly reacting q64 control, not the full high-heavy budget.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.
