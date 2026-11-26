@@ -139,6 +139,11 @@ reproducible controls below are not observational constraints.
    compares 12, 24 and 48 q32 steps plus 24 wider q64 steps. It
    isolates the time error from the tested outer-support change;
    the cold decline survives both controls.
+   A [realizable first-order cancellation diagnostic](INDEPENDENT-WARM-CORRECTED-RECONSTRUCTED-TIME-DIAGNOSTIC-2026-11-26.md)
+   reconstructs admissible Fermi/Bose phases and recomputes pressure,
+   rather than advancing or directly interpolating those phases.
+   The [completed frozen q64 pair test](INDEPENDENT-WARM-Q64-COMPLETE-FROZEN-PAIR-CONTROL-2026-11-26.md)
+   checks all 25 stored states and the 24 prescribed interpolation brackets.
    A [common equilibrium at the archive densities](INDEPENDENT-WARM-PAIR-COMMON-MOMENT-EQUILIBRIUM-2026-11-26.md)
    preserves aggregate number and energy and shows sub-Hubble slow pair relaxation in the cold reservoir comparator.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
@@ -217,7 +222,9 @@ to the signed floor. The momentum support matters for
 the reverse bound; this is not a full hadronic sink.
 A [piecewise radiation-clock comparison](INDEPENDENT-WARM-SIGNED-FERMION-PIECEWISE-CLOCK-2026-11-26.md)
 updates the conditional survival reference at 9.748 and 9.027 MeV; it does
-not establish the fermion cap. The [heavy occupation barrier](INDEPENDENT-WARM-HEAVY-OCCUPATION-BARRIER-2026-11-26.md)
+not establish the fermion cap. The [matched corrected-anchor sensitivity](INDEPENDENT-WARM-CORRECTED-SIGNED-FLOOR-SENSITIVITY-2026-11-26.md)
+shows that the tested time/support differences barely move the same
+conditional lower floor at 7.394 MeV. The [heavy occupation barrier](INDEPENDENT-WARM-HEAVY-OCCUPATION-BARRIER-2026-11-26.md)
 checks pointwise heavy creation under a prescribed light cap,
 rather than inferring an occupation from its total rate.
 It leaves the light cap and heavy elastic gains open.
