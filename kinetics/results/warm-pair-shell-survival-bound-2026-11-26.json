@@ -1,0 +1,60 @@
+{
+  "input_sha256": [
+    "9973aef78dfae74650e23d2a8f5ecbffa7a6be003926dbb1ac0394a9f45c6baa",
+    "128d5e4e68e9c2024071629ccf4afa913ab85ccf316917ef870ca4d227c59211",
+    "1146600299f0306408223713cfe286ec5930b9bfebb4654f377ec2a61d02a6f4"
+  ],
+  "photon_temperature_floor_ratio": 0.98,
+  "Bose_cap": 0.0007186599793223003,
+  "source_active_stable_n": 8.495225459382743e-14,
+  "input_inclusive_stable_Omega": 57.44724173055141,
+  "inert_old_tail_Omega": 0.013882056070473933,
+  "original_closed_Bose_moment_and_support_floor": 56.00217634643362,
+  "panels": [
+    {
+      "kinetic_subpanels_per_shell": 4,
+      "lower_and_upper_number_over_exact": [
+        0.8455486909830472,
+        1.192728297097864
+      ],
+      "maximum_exposure": 0.10036429831243465,
+      "direct_lower_surviving_fraction": 0.8203286655124296,
+      "loss_upper_completion_lower_surviving_fraction": 0.9607010919423321,
+      "inclusive_stable_Omega_floor": 55.190173409261014
+    },
+    {
+      "kinetic_subpanels_per_shell": 16,
+      "lower_and_upper_number_over_exact": [
+        0.958065429157371,
+        1.0443305314265432
+      ],
+      "maximum_exposure": 0.08533982153564315,
+      "direct_lower_surviving_fraction": 0.935210860131574,
+      "loss_upper_completion_lower_surviving_fraction": 0.9744363781320454,
+      "inclusive_stable_Omega_floor": 55.979037041226746
+    },
+    {
+      "kinetic_subpanels_per_shell": 64,
+      "lower_and_upper_number_over_exact": [
+        0.98929592759682,
+        1.0108538341531654
+      ],
+      "maximum_exposure": 0.08204863456682526,
+      "direct_lower_surviving_fraction": 0.9669539771220369,
+      "loss_upper_completion_lower_surviving_fraction": 0.9770222026481755,
+      "inclusive_stable_Omega_floor": 56.12754963071674
+    },
+    {
+      "kinetic_subpanels_per_shell": 256,
+      "lower_and_upper_number_over_exact": [
+        0.9973100071913369,
+        1.0026993529735475
+      ],
+      "maximum_exposure": 0.08125244211826894,
+      "direct_lower_surviving_fraction": 0.975091593945075,
+      "loss_upper_completion_lower_surviving_fraction": 0.9776250875825466,
+      "inclusive_stable_Omega_floor": 56.1621753379948
+    }
+  ],
+  "scope": "Equal unpolarized opposite charge occupations, ballistic loss-only parents on expanding finite support, no new parents, redistribution, inverse, inherited exterior scalars or re-entry. Newly produced scalar modes anywhere are allowed under the closed Bose cap. Not a bound on the fully coupled physical model."
+}
