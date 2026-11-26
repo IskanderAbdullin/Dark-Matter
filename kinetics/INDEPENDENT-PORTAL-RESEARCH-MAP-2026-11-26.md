@@ -89,6 +89,10 @@ and the nominal visible clock, it bounds the warm scalar density
 to at most 2.35% if the total equals .120, after bounding the
 virtual angular integral analytically. This still conditions the
 bound on the starting energy and subsequent clock.
+The [known-exterior extension](INDEPENDENT-WARM-KNOWN-EXTERIOR-RECYCLING-2026-11-26.md)
+also allows all recorded old and new cohorts to participate
+after the anchor, without assigning momenta to the old ones.
+It leaves that fraction unchanged at the quoted precision.
 
 ## Evidence boundary
 
