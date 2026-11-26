@@ -141,6 +141,8 @@ reproducible controls below are not observational constraints.
    the cold decline survives both controls.
    The [completed four-run time/support cross](INDEPENDENT-WARM-CORRECTED-FOUR-RUN-TIME-SUPPORT-2026-11-26.md)
    adds q64 at 48 steps and checks the signed mixed effect separately.
+   A [driven heavy-lag test inside two fine intervals](INDEPENDENT-WARM-Q64-HEAVY-LAG-ENTROPY-SURROGATE-2026-11-26.md)
+   recalculates the parent source on an explicit daughter entropy interpolation.
    A [realizable first-order cancellation diagnostic](INDEPENDENT-WARM-CORRECTED-RECONSTRUCTED-TIME-DIAGNOSTIC-2026-11-26.md)
    reconstructs admissible Fermi/Bose phases and recomputes pressure,
    rather than advancing or directly interpolating those phases.
