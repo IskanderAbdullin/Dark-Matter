@@ -127,6 +127,9 @@ It leaves the light cap and heavy elastic gains open.
 A [direct light gain diagnostic](INDEPENDENT-WARM-LIGHT-DIRECT-PAIR-DOSE-2026-11-26.md)
 locates the inconclusive term: conversion from the heavy
 reservoir needs a much tighter energy fraction or source bound.
+The [aggregate finite-band heavy energy envelope](INDEPENDENT-WARM-HEAVY-COMOVING-BAND-ENERGY-2026-11-26.md)
+bounds that reservoir below an explicit comoving cut,
+without treating the higher band as absent.
 The separate [archived outgoing-pair Bose weights](INDEPENDENT-WARM-ARCHIVED-BOSE-PAIR-WEIGHTING-2026-11-26.md)
 measure the boost on five actual retained shapes without
 turning it into an evolving constraint.

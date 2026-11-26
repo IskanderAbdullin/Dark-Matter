@@ -1,0 +1,472 @@
+{
+  "scope": "Heavy modes initially empty; no heavy elastic redistribution. Assumes a common uniform light cap, earlier E budget and all-mode number-changing input bounds. Finite scalar energy but no scalar occupancy cap. The complementary high-comoving-momentum band is not depleted or bounded by this low-band estimate.",
+  "input_sha256": [
+    "4bfe87cf7212bdc81840ac44b7ef9ae0b44732476101745fe01e600edc1b9f15",
+    "d62f25e5174fb88469f68039c885c38ef1d1ef0d9d9339f50330daf4009cb7fa",
+    "c14c4cf866711709852ec7da530ce1ab949cac1bc50ba1dfac5fad7671e42f5d"
+  ],
+  "cases": [
+    {
+      "q": 16,
+      "direct_light_diagnostic_heavy_fraction": 0.04832358292786031,
+      "cases": [
+        {
+          "light_cap": 0.001,
+          "checked_subbands": [
+            {
+              "comoving_cut_GeV": 0.001,
+              "below_cut_energy_fraction_upper": 1.9248258879992606e-06,
+              "below_cut_fraction_upper_clipped_by_total": 1.9248258879992606e-06,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.048321658101972316
+            },
+            {
+              "comoving_cut_GeV": 0.003,
+              "below_cut_energy_fraction_upper": 1.8037754930203064e-05,
+              "below_cut_fraction_upper_clipped_by_total": 1.8037754930203064e-05,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04830554517293011
+            },
+            {
+              "comoving_cut_GeV": 0.01,
+              "below_cut_energy_fraction_upper": 0.00023156272456450447,
+              "below_cut_fraction_upper_clipped_by_total": 0.00023156272456450447,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04809202020329581
+            },
+            {
+              "comoving_cut_GeV": 0.03,
+              "below_cut_energy_fraction_upper": 0.0032203760574263636,
+              "below_cut_fraction_upper_clipped_by_total": 0.0032203760574263636,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04510320687043395
+            },
+            {
+              "comoving_cut_GeV": 0.1,
+              "below_cut_energy_fraction_upper": 0.17828450650080835,
+              "below_cut_fraction_upper_clipped_by_total": 0.17828450650080835,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.3,
+              "below_cut_energy_fraction_upper": 44.68665928008906,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.6,
+              "below_cut_energy_fraction_upper": 2473.192622045114,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.0,
+              "below_cut_energy_fraction_upper": 51306.20070673087,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.4,
+              "below_cut_energy_fraction_upper": 382810.41849298216,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 2.0,
+              "below_cut_energy_fraction_upper": 3238070.643741742,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            }
+          ]
+        },
+        {
+          "light_cap": 0.1,
+          "checked_subbands": [
+            {
+              "comoving_cut_GeV": 0.001,
+              "below_cut_energy_fraction_upper": 0.00021365565512384145,
+              "below_cut_fraction_upper_clipped_by_total": 0.00021365565512384145,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04810992727273647
+            },
+            {
+              "comoving_cut_GeV": 0.003,
+              "below_cut_energy_fraction_upper": 0.0020021906665561775,
+              "below_cut_fraction_upper_clipped_by_total": 0.0020021906665561775,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.046321392261304134
+            },
+            {
+              "comoving_cut_GeV": 0.01,
+              "below_cut_energy_fraction_upper": 0.02570345757815739,
+              "below_cut_fraction_upper_clipped_by_total": 0.02570345757815739,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.022620125349702924
+            },
+            {
+              "comoving_cut_GeV": 0.03,
+              "below_cut_energy_fraction_upper": 0.3574616096191788,
+              "below_cut_fraction_upper_clipped_by_total": 0.3574616096191788,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.1,
+              "below_cut_energy_fraction_upper": 19.78957462691887,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.3,
+              "below_cut_energy_fraction_upper": 4960.218933764097,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.6,
+              "below_cut_energy_fraction_upper": 274524.37773529434,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.0,
+              "below_cut_energy_fraction_upper": 5694988.254559646,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.4,
+              "below_cut_energy_fraction_upper": 42491956.36348843,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 2.0,
+              "below_cut_energy_fraction_upper": 359425841.0912425,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            }
+          ]
+        },
+        {
+          "light_cap": 0.5,
+          "checked_subbands": [
+            {
+              "comoving_cut_GeV": 0.001,
+              "below_cut_energy_fraction_upper": 0.0019228987385430558,
+              "below_cut_fraction_upper_clipped_by_total": 0.0019228987385430558,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.046400684189317254
+            },
+            {
+              "comoving_cut_GeV": 0.003,
+              "below_cut_energy_fraction_upper": 0.01801971188253759,
+              "below_cut_fraction_upper_clipped_by_total": 0.01801971188253759,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.030303871045322724
+            },
+            {
+              "comoving_cut_GeV": 0.01,
+              "below_cut_energy_fraction_upper": 0.2313310460795396,
+              "below_cut_fraction_upper_clipped_by_total": 0.2313310460795396,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.03,
+              "below_cut_energy_fraction_upper": 3.217152538304899,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.1,
+              "below_cut_energy_fraction_upper": 178.1060991452083,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.3,
+              "below_cut_energy_fraction_upper": 44641.968398807774,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.6,
+              "below_cut_energy_fraction_upper": 2470719.3829063284,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.0,
+              "below_cut_energy_fraction_upper": 51254894.20939027,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.4,
+              "below_cut_energy_fraction_upper": 382427607.0355099,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 2.0,
+              "below_cut_energy_fraction_upper": 3234832569.081474,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "direct_light_diagnostic_heavy_fraction": 0.048335821194627426,
+      "cases": [
+        {
+          "light_cap": 0.001,
+          "checked_subbands": [
+            {
+              "comoving_cut_GeV": 0.001,
+              "below_cut_energy_fraction_upper": 1.92482588816849e-06,
+              "below_cut_fraction_upper_clipped_by_total": 1.92482588816849e-06,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.048333896368739256
+            },
+            {
+              "comoving_cut_GeV": 0.003,
+              "below_cut_energy_fraction_upper": 1.8037754930779813e-05,
+              "below_cut_fraction_upper_clipped_by_total": 1.8037754930779813e-05,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04831778343969664
+            },
+            {
+              "comoving_cut_GeV": 0.01,
+              "below_cut_energy_fraction_upper": 0.00023156272458586618,
+              "below_cut_fraction_upper_clipped_by_total": 0.00023156272458586618,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04810425847004156
+            },
+            {
+              "comoving_cut_GeV": 0.03,
+              "below_cut_energy_fraction_upper": 0.003220376058003281,
+              "below_cut_fraction_upper_clipped_by_total": 0.003220376058003281,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04511544513662415
+            },
+            {
+              "comoving_cut_GeV": 0.1,
+              "below_cut_energy_fraction_upper": 0.17828450652223116,
+              "below_cut_fraction_upper_clipped_by_total": 0.17828450652223116,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.3,
+              "below_cut_energy_fraction_upper": 44.68665928067526,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.6,
+              "below_cut_energy_fraction_upper": 2473.192622049914,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.0,
+              "below_cut_energy_fraction_upper": 51306.2007067538,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.4,
+              "below_cut_energy_fraction_upper": 382810.418493047,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 2.0,
+              "below_cut_energy_fraction_upper": 3238070.6437419397,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            }
+          ]
+        },
+        {
+          "light_cap": 0.1,
+          "checked_subbands": [
+            {
+              "comoving_cut_GeV": 0.001,
+              "below_cut_energy_fraction_upper": 0.00021365565514072722,
+              "below_cut_fraction_upper_clipped_by_total": 0.00021365565514072722,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0481221655394867
+            },
+            {
+              "comoving_cut_GeV": 0.003,
+              "below_cut_energy_fraction_upper": 0.0020021906666128513,
+              "below_cut_fraction_upper_clipped_by_total": 0.0020021906666128513,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04633363052801458
+            },
+            {
+              "comoving_cut_GeV": 0.01,
+              "below_cut_energy_fraction_upper": 0.02570345758025639,
+              "below_cut_fraction_upper_clipped_by_total": 0.02570345758025639,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.022632363614371036
+            },
+            {
+              "comoving_cut_GeV": 0.03,
+              "below_cut_energy_fraction_upper": 0.3574616096758432,
+              "below_cut_fraction_upper_clipped_by_total": 0.3574616096758432,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.1,
+              "below_cut_energy_fraction_upper": 19.789574629014425,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.3,
+              "below_cut_energy_fraction_upper": 4960.218933820238,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.6,
+              "below_cut_energy_fraction_upper": 274524.37773573725,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.0,
+              "below_cut_energy_fraction_upper": 5694988.254561658,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.4,
+              "below_cut_energy_fraction_upper": 42491956.36349383,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 2.0,
+              "below_cut_energy_fraction_upper": 359425841.09125787,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            }
+          ]
+        },
+        {
+          "light_cap": 0.5,
+          "checked_subbands": [
+            {
+              "comoving_cut_GeV": 0.001,
+              "below_cut_energy_fraction_upper": 0.0019228987392189518,
+              "below_cut_fraction_upper_clipped_by_total": 0.0019228987392189518,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.04641292245540848
+            },
+            {
+              "comoving_cut_GeV": 0.003,
+              "below_cut_energy_fraction_upper": 0.01801971188481702,
+              "below_cut_fraction_upper_clipped_by_total": 0.01801971188481702,
+              "can_bound_below_cut_to_under_light_gain_budget": true,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.030316109309810407
+            },
+            {
+              "comoving_cut_GeV": 0.01,
+              "below_cut_energy_fraction_upper": 0.23133104609002858,
+              "below_cut_fraction_upper_clipped_by_total": 0.23133104609002858,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.03,
+              "below_cut_energy_fraction_upper": 3.2171525385880546,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.1,
+              "below_cut_energy_fraction_upper": 178.10609915567846,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.3,
+              "below_cut_energy_fraction_upper": 44641.96839908808,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 0.6,
+              "below_cut_energy_fraction_upper": 2470719.3829085366,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.0,
+              "below_cut_energy_fraction_upper": 51254894.209400274,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 1.4,
+              "below_cut_energy_fraction_upper": 382427607.0355367,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            },
+            {
+              "comoving_cut_GeV": 2.0,
+              "below_cut_energy_fraction_upper": 3234832569.081549,
+              "below_cut_fraction_upper_clipped_by_total": 1.0,
+              "can_bound_below_cut_to_under_light_gain_budget": false,
+              "provision_for_above_cut_if_only_direct_light_gains": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
