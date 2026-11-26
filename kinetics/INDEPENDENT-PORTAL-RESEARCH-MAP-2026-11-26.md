@@ -105,6 +105,10 @@ high-invariant loss, retaining the explicit scalar cap.
 A [finite-duration Bose test](INDEPENDENT-WARM-BOSE-WEIGHTED-DEPLETION-BUDGET-2026-11-26.md)
 replaces that uniform cap by an expansion-weighted condition
 and evaluates separate hypothetical burst lengths.
+The [signed fermion-cap comparison](INDEPENDENT-WARM-SIGNED-PAIR-FERMION-CAP-2026-11-26.md)
+does not assume a scalar cap. Instead a light and heavy
+per-spin fermion cap controls the sign of the quadratic
+Bose term. This alternative remains a conditional result.
 The [late vacuum charged-lepton envelope](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
 allows both visible pair injection and elastic heating in that
 same period. At total .120 its upper scalar share is 2.44%.
