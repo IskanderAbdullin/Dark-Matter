@@ -112,7 +112,9 @@ reproducible controls below are not observational constraints.
    continuation to the same endpoint checks the shared shells. A [matched later continuation](INDEPENDENT-WARM-HISTORY-LOWER-MATCHED-2026-11-26.md)
    advances both supports independently through another sixteen
    accepted blocks to 9.027 MeV. The matched 32-block test
-   separates time sensitivity from the much smaller support change.
+   separates time sensitivity from the much smaller support change. A [matched cold recoil crossing](INDEPENDENT-WARM-RECOIL-CROSSING-MATCHED-2026-11-26.md)
+   then checks which local prompt channel vanishes on q32 and
+   which remains on q64 around 8.24 MeV.
    The [q16 time ladder](INDEPENDENT-WARM-EARLY-TIME-REFINEMENT-2026-11-26.md)
    is a fixed-support result.
 2. [The atomic restart](INDEPENDENT-WARM-SERIAL-RESTART-2026-11-26.md)
