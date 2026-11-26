@@ -16,11 +16,11 @@ from measured_partial_hadron_reheat_fold_reference import Fold,HadronFold,spectr
 from three_species_decay_onsager_reference import mp
 
 
-def table(path):
+def table(path,parent_x_max=12.):
     a=np.atleast_2d(np.loadtxt(path))
     X=np.unique(a[:,0])
-    if X.size<3 or X[0]!=4. or X[-1]>12. or np.max(np.diff(X))>1.:
-        raise ValueError("Use complete contiguous mass strips from x=4, with separation at most one and x<=12.")
+    if X.size<3 or X[0]!=4. or X[-1]>parent_x_max or np.max(np.diff(X))>1.:
+        raise ValueError("Use complete contiguous mass strips from x=4, with separation at most one and inside the parent Born support.")
     if not np.all(np.isfinite(a)) or not np.all(np.diff(a[:,0])>=0.):
         raise ValueError("Nonfinite or unordered native input.")
     assert len(a)==len(X)*len(UEDGES)
@@ -39,14 +39,17 @@ def interp(X,U,C,mode):
 
 
 class Correction(HardComplement):
-    def __init__(self,base,table_values,tmin,n,mode):
+    def __init__(self,base,table_values,tmin,n,mode,born_edges=None):
         x,u,c=table_values
         un,_=gauss(UEDGES,n)
         self.cf=interp(x,u,c,mode)(un)
         self.mass_edges=x
         self.base,self.n=base,n
         self.a,self.b=np.log([tmin,.48])
-        cross=(WINDOWS[:,:,None]/np.union1d(XEDGES,x)).ravel()
+        parent=np.asarray(XEDGES if born_edges is None else born_edges)
+        if x[0]<parent[0] or x[-1]>parent[-1]:
+            raise ValueError("Strict increment cannot exceed the parent Born interval.")
+        cross=(WINDOWS[:,:,None]/np.union1d(parent,x)).ravel()
         self.edges=np.unique(np.clip(np.r_[self.a,self.b,base.edges,np.log(cross)],self.a,self.b))
         self.u,self.du=gauss(UEDGES,n)
         self.cum=np.cumsum(np.r_[np.zeros((1,2,2)),
@@ -88,8 +91,11 @@ def mid_checks(table_values,path):
     return rows
 
 
-def run(eos,kloe,bes,probe,check):
-    K=table(probe)
+def run(eos,kloe,bes,probe,check,born_x_max=12.):
+    if born_x_max not in (12.,13.,14.):
+        raise ValueError("Supported Born upper edges are 12, 13, and 14.")
+    born_edges=np.r_[XEDGES,np.arange(13.,born_x_max+1.)]
+    K=table(probe,born_edges[-1])
     F=Fold(eos,(8,21,16),6,upper=.50)
     V=HadronFold(F,measured_spectra(kloe,bes,10,"linear"),6)
     f=conversion(eos)["Omega_h2_per_GeV_times_yield"]*mp
@@ -100,11 +106,11 @@ def run(eos,kloe,bes,probe,check):
         return np.array([f*(q[0]+2*q[1]),l[2:].sum()+h[:2,:,1].sum()])
     results=[]
     for tmin in (.25,.30):
-        B=HardComplement(F,tmin=tmin,n=8)
+        B=HardComplement(F,tmin=tmin,n=8,x_edges=born_edges)
         lo=brentq(lambda T:measured(T)[0]+f*B.sample(T)[1,0]-target,.27,.40,xtol=2e-9)
         rows=[]
         for mode,n in (("linear",4),("pchip",8)):
-            C=Correction(F,K,tmin,n,mode)
+            C=Correction(F,K,tmin,n,mode,born_edges)
             vals=[]
             for a in (.2,.3,.4):
                 g2=4*np.pi*a
@@ -119,10 +125,13 @@ def run(eos,kloe,bes,probe,check):
                     fraction_of_strict_increment_cut_for_overlap=float(1-c[1,0]/c[0,0])))
             rows.append(dict(interpolation=mode,nodes_per_panel=n,alpha_cases=vals))
         results.append(dict(Born_T_min_GeV=tmin,measured_plus_disjoint_Born_root_GeV=lo,results=rows))
-    return dict(controls=results,mass_over_T_interval=K[0][[0,-1]].tolist(),
+    ans=dict(controls=results,mass_over_T_interval=K[0][[0,-1]].tolist(),
                 independent_native_point_interpolation_checks=mid_checks(K,check),
                 data_hashes={Path(p).name:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in (eos,kloe,bes,probe,check) if p is not None},
                 scope="Conditional addition to the previous disjoint hard Born comparator, using strict NLO only in the supplied bounded mass interval with resolved boost probes and finite-band interpolation. Same radiation clock, same optimistic conversion. Not a complete finite-T QCD spectrum, QCD error bars, a full NLO root, a physical dark-matter abundance, nor a production fit.")
+    if born_x_max!=12.:
+        ans["parent_born_mass_panels"]=born_edges.tolist()
+    return ans
 
 
 if __name__=="__main__":
@@ -130,5 +139,6 @@ if __name__=="__main__":
     for k in ("eos","kloe","besiii","complete_strips"):
         p.add_argument(k)
     p.add_argument("--intermediate-check")
+    p.add_argument("--born-x-max",type=float,default=12.)
     a=p.parse_args()
-    print(json.dumps(run(a.eos,a.kloe,a.besiii,a.complete_strips,a.intermediate_check),indent=2,allow_nan=False))
+    print(json.dumps(run(a.eos,a.kloe,a.besiii,a.complete_strips,a.intermediate_check,a.born_x_max),indent=2,allow_nan=False))

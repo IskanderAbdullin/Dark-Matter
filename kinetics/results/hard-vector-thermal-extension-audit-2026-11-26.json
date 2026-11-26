@@ -1,0 +1,803 @@
+{
+  "root_decomposition": [
+    {
+      "lower_T_GeV": 0.25,
+      "bare_optimistic_roots_GeV": [
+        0.3251756069503274,
+        0.3244979259884976
+      ],
+      "cases": [
+        {
+          "interpolation": "linear",
+          "alpha_s": 0.2,
+          "conditional_roots_GeV": [
+            0.32375307244128265,
+            0.3231056412619859,
+            0.3230627307415928
+          ],
+          "parent_only_shift_GeV": -0.0006474311792967757,
+          "additional_strict_shift_GeV": -4.2910520393069085e-05
+        },
+        {
+          "interpolation": "linear",
+          "alpha_s": 0.3,
+          "conditional_roots_GeV": [
+            0.3230591083038642,
+            0.32242620563354546,
+            0.322363304394886
+          ],
+          "parent_only_shift_GeV": -0.0006329026703187357,
+          "additional_strict_shift_GeV": -6.290123865948516e-05
+        },
+        {
+          "interpolation": "linear",
+          "alpha_s": 0.4,
+          "conditional_roots_GeV": [
+            0.3223763457720367,
+            0.321757589835929,
+            0.32167562186484283
+          ],
+          "parent_only_shift_GeV": -0.0006187559361077177,
+          "additional_strict_shift_GeV": -8.196797108617204e-05
+        },
+        {
+          "interpolation": "pchip",
+          "alpha_s": 0.2,
+          "conditional_roots_GeV": [
+            0.32375274883307464,
+            0.3231053230874658,
+            0.32306242036402866
+          ],
+          "parent_only_shift_GeV": -0.0006474257456088317,
+          "additional_strict_shift_GeV": -4.2902723437154844e-05
+        },
+        {
+          "interpolation": "pchip",
+          "alpha_s": 0.3,
+          "conditional_roots_GeV": [
+            0.323058628524601,
+            0.32242573383934403,
+            0.32236284428357825
+          ],
+          "parent_only_shift_GeV": -0.0006328946852569572,
+          "additional_strict_shift_GeV": -6.288955576577715e-05
+        },
+        {
+          "interpolation": "pchip",
+          "alpha_s": 0.4,
+          "conditional_roots_GeV": [
+            0.3223757134608266,
+            0.32175696794582564,
+            0.32167501553093863
+          ],
+          "parent_only_shift_GeV": -0.0006187455150009624,
+          "additional_strict_shift_GeV": -8.195241488700988e-05
+        }
+      ]
+    },
+    {
+      "lower_T_GeV": 0.3,
+      "bare_optimistic_roots_GeV": [
+        0.33730194806361713,
+        0.33679145052283066
+      ],
+      "cases": [
+        {
+          "interpolation": "linear",
+          "alpha_s": 0.2,
+          "conditional_roots_GeV": [
+            0.3366302006383214,
+            0.3361376042100538,
+            0.33610496174480864
+          ],
+          "parent_only_shift_GeV": -0.0004925964282675999,
+          "additional_strict_shift_GeV": -3.2642465245147356e-05
+        },
+        {
+          "interpolation": "linear",
+          "alpha_s": 0.3,
+          "conditional_roots_GeV": [
+            0.336302733255908,
+            0.33581876233716385,
+            0.3357706726658881
+          ],
+          "parent_only_shift_GeV": -0.00048397091874413656,
+          "additional_strict_shift_GeV": -4.8089671275730606e-05
+        },
+        {
+          "interpolation": "linear",
+          "alpha_s": 0.4,
+          "conditional_roots_GeV": [
+            0.3359806985666587,
+            0.33550514500456874,
+            0.33544216205444877
+          ],
+          "parent_only_shift_GeV": -0.0004755535620899476,
+          "additional_strict_shift_GeV": -6.29829501199719e-05
+        },
+        {
+          "interpolation": "pchip",
+          "alpha_s": 0.2,
+          "conditional_roots_GeV": [
+            0.33663012238395973,
+            0.3361375273900617,
+            0.336104890559549
+          ],
+          "parent_only_shift_GeV": -0.0004925949938980323,
+          "additional_strict_shift_GeV": -3.263683051268895e-05
+        },
+        {
+          "interpolation": "pchip",
+          "alpha_s": 0.3,
+          "conditional_roots_GeV": [
+            0.33630261718534477,
+            0.33581864841042536,
+            0.3357705671015338
+          ],
+          "parent_only_shift_GeV": -0.0004839687749194077,
+          "additional_strict_shift_GeV": -4.8081308891556596e-05
+        },
+        {
+          "interpolation": "pchip",
+          "alpha_s": 0.4,
+          "conditional_roots_GeV": [
+            0.3359805455531353,
+            0.33550499483652607,
+            0.3354420229209642
+          ],
+          "parent_only_shift_GeV": -0.00047555071660920767,
+          "additional_strict_shift_GeV": -6.297191556187132e-05
+        }
+      ]
+    }
+  ],
+  "geometry_checks": [
+    {
+      "T_GeV": 0.15945614285714288,
+      "relative_full_Born_repartition_defect": 0.0,
+      "fractional_mask_order_refinement": 7.2455123503738736e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 2.9058843146544837e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.15945814285714288,
+      "relative_full_Born_repartition_defect": 4.440892098500626e-16,
+      "fractional_mask_order_refinement": 7.245801556845228e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 2.9061783170414224e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            2.3123990451711205e-05,
+            2.5038019142935284e-05
+          ],
+          [
+            2.312424367590509e-05,
+            2.50382876125956e-05
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.18603233333333336,
+      "relative_full_Born_repartition_defect": 4.440892098500626e-16,
+      "fractional_mask_order_refinement": 7.0213747744011284e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 2.9623120225346483e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.9999464002002094,
+            0.9999494436419057
+          ],
+          [
+            0.9999464004813391,
+            0.9999494439132982
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.18603433333333336,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 7.021269633316057e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 2.9659128069034535e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.219999,
+      "relative_full_Born_repartition_defect": 3.3306690738754696e-16,
+      "fractional_mask_order_refinement": 6.445760784578038e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.0558176101995124e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.220001,
+      "relative_full_Born_repartition_defect": 3.3306690738754696e-16,
+      "fractional_mask_order_refinement": 6.445946104724918e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.0550956656389587e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.9999829598148724,
+            0.9999815547556192
+          ],
+          [
+            0.9999829597636926,
+            0.9999815547013811
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.24285614285714285,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 6.020974249264068e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.1329839196275276e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.46968142424507503,
+            0.4533620287445707
+          ],
+          [
+            0.4696809552447627,
+            0.45336155986194315
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.24285814285714286,
+      "relative_full_Born_repartition_defect": 1.1102230246251565e-16,
+      "fractional_mask_order_refinement": 6.021190965039116e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.131326552266638e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.4696218589449074,
+            0.45330302762540226
+          ],
+          [
+            0.4696213899695795,
+            0.45330255877017095
+          ]
+        ],
+        [
+          [
+            1.556211979506548e-05,
+            1.68428840121806e-05
+          ],
+          [
+            1.556215119516971e-05,
+            1.684291728180009e-05
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.25,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 5.854518161278545e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.159321019015725e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.2413718417606771,
+            0.23019812186093996
+          ],
+          [
+            0.24137154080245105,
+            0.2301978264658462
+          ]
+        ],
+        [
+          [
+            0.12178891499800855,
+            0.1300444106092065
+          ],
+          [
+            0.12178910330699677,
+            0.1300446069060692
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.2566656666666667,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 5.695271408083925e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.183728336432163e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            3.82623405224358e-05,
+            3.6074593944441576e-05
+          ],
+          [
+            3.8262284875677464e-05,
+            3.6074540251818915e-05
+          ]
+        ],
+        [
+          [
+            0.25546380908739247,
+            0.26928565115661757
+          ],
+          [
+            0.2554641049650187,
+            0.26928595486680673
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.2566676666666666,
+      "relative_full_Born_repartition_defect": 5.551115123125783e-16,
+      "fractional_mask_order_refinement": 5.695205861466496e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.185302298389604e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.2555069268598384,
+            0.2693300511617685
+          ],
+          [
+            0.2555072227594251,
+            0.26933035489308826
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.2622132857142857,
+      "relative_full_Born_repartition_defect": 4.440892098500626e-16,
+      "fractional_mask_order_refinement": 5.560112479981232e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.206245218670903e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.3821875209410714,
+            0.39850832626983707
+          ],
+          [
+            0.38218785315628895,
+            0.39850866290260917
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.26221528571428565,
+      "relative_full_Born_repartition_defect": 4.440892098500626e-16,
+      "fractional_mask_order_refinement": 5.560358131619454e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.2071651016340695e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.3822212793250511,
+            0.39854138376288983
+          ],
+          [
+            0.38222161152287054,
+            0.39854172037547103
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.28333233333333335,
+      "relative_full_Born_repartition_defect": 3.3306690738754696e-16,
+      "fractional_mask_order_refinement": 5.135597081239875e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.2970579378101323e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.611053290646714,
+            0.5946577474704103
+          ],
+          [
+            0.6110530455997635,
+            0.5946574993425675
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.2833343333333333,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 5.135652328150692e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.294771322439762e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.6110427164872547,
+            0.5946447799829596
+          ],
+          [
+            0.611042471404272,
+            0.5946445318213242
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.3,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 4.8370928961906014e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.373753400462406e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.1800805155404912,
+            0.17117769291292317
+          ],
+          [
+            0.18008039858703154,
+            0.17117757868055686
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.3059156666666667,
+      "relative_full_Born_repartition_defect": 3.3306690738754696e-16,
+      "fractional_mask_order_refinement": 4.741586242822371e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.4074718076694725e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            3.162123013924489e-05,
+            2.9800747734615144e-05
+          ],
+          [
+            3.162120721815418e-05,
+            2.980072562943106e-05
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.30591766666666664,
+      "relative_full_Born_repartition_defect": 2.220446049250313e-16,
+      "fractional_mask_order_refinement": 4.741331046179772e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.4070813213500657e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.323,
+      "relative_full_Born_repartition_defect": 5.551115123125783e-16,
+      "fractional_mask_order_refinement": 4.5007819479340555e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.5016340207843264e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.336,
+      "relative_full_Born_repartition_defect": 4.440892098500626e-16,
+      "fractional_mask_order_refinement": 4.355222956362199e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 3.5813445003751525e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    },
+    {
+      "T_GeV": 0.4,
+      "relative_full_Born_repartition_defect": 4.440892098500626e-16,
+      "fractional_mask_order_refinement": 4.1024932553786326e-12,
+      "strict_new_linear_strip_defect_per_full_increment": 4.084522138215327e-13,
+      "independent_new_strip_measured_fraction": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      ]
+    }
+  ],
+  "extended_parent_refinement": [
+    {
+      "T_GeV": 0.3,
+      "cumulative_relative_order_differences": [
+        6.385234829509363e-08,
+        7.2508753783499955e-12
+      ],
+      "orders": [
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "T_GeV": 0.323,
+      "cumulative_relative_order_differences": [
+        6.386960281736677e-08,
+        7.251819049496646e-12
+      ],
+      "orders": [
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "T_GeV": 0.336,
+      "cumulative_relative_order_differences": [
+        6.387696174141273e-08,
+        7.252331264450129e-12
+      ],
+      "orders": [
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "T_GeV": 0.4,
+      "cumulative_relative_order_differences": [
+        6.38753450163406e-08,
+        7.2560933667302024e-12
+      ],
+      "orders": [
+        4,
+        8,
+        12
+      ]
+    }
+  ],
+  "sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "afcb538e864d895247b2683b83a3a4dec3bab40c26f8302934297f9d2aa169f6",
+    "301f4f9aff6a8aaecab8fb8b7c62bc2473c1f9b85052ec2c0a4c820b5f580c3d",
+    "95dbe1e2383976da61d7a5a3c58a71aea3a93779199374eaddc8f9124417b543",
+    "37ef86f3168d924f3e0304d6dd3ca7c4750999b0a948ce06c4ecbecd89316aef",
+    "885003ff92047eabfa5ca4dce6aed960772cb2dbeb63831f75fe5ff204caef5c"
+  ],
+  "scope": "Scope and numerical support checks for a finite mass-strip extension at prescribed coupling and clock. Pure added strip equivalence uses linear interpolation; PCHIP can also re-slope the old end interval. No missing-QCD bound."
+}

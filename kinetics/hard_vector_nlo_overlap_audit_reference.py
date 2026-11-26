@@ -8,17 +8,19 @@ import numpy as np
 from numpy.polynomial.legendre import leggauss
 
 from born_thermal_quark_hard_portal_reference import local
-from partial_hard_vector_nlo_reheat_reference import Correction, Fold, WINDOWS, interp, table
+from partial_hard_vector_nlo_reheat_reference import Correction, Fold, WINDOWS, XEDGES, interp, table
 
 
-def independent(T,values,mode,n):
+def independent(T,values,mode,n,lower_x=None):
     X,U,C=values
     p,w=leggauss(n)
     ua,ub=U[:-1,None],U[1:,None]
     u=((ua+ub+(ub-ua)*p)/2).ravel()
     du=((ub-ua)*w/2).ravel()
     evaluator=interp(X,U,C,mode)(u)
-    mx=T*X
+    assert lower_x is None or X[0] <= lower_x < X[-1]
+    xe=X if lower_x is None else np.unique(np.r_[lower_x,X[X>lower_x]])
+    mx=T*xe
     panels=np.unique(np.clip(np.r_[mx,WINDOWS.ravel()],mx[0],mx[-1]))
     result=np.zeros((1+len(WINDOWS),2,2))
     for a,b in zip(panels[:-1],panels[1:]):
@@ -37,8 +39,11 @@ def independent(T,values,mode,n):
     return result
 
 
-def run(eos, native):
-    values=table(native)
+def run(eos, native, parent_x_max=12.):
+    if parent_x_max not in (12.,13.,14.):
+        raise ValueError("Supported Born upper edges are 12, 13, and 14.")
+    parent=np.r_[XEDGES,np.arange(13.,parent_x_max+1.)]
+    values=table(native,parent[-1])
     low,high=values[0][[0,-1]]
     first_cross=WINDOWS[0,0]/high
     last_cross=WINDOWS[0,1]/high
@@ -47,7 +52,7 @@ def run(eos, native):
     fold=Fold(eos,(6,16,12),4,upper=.5)
     tests=[]
     for mode in ("linear","pchip"):
-        solver=Correction(fold,values,.25,8,mode)
+        solver=Correction(fold,values,.25,8,mode,parent)
         probes=[first_cross-1e-6,first_cross+1e-6,.32517560695,.33730194806,.40,last_cross+1e-5,.47]
         if second_cross<.48:
             probes.extend([second_cross-1e-6,second_cross+1e-6])
@@ -80,5 +85,6 @@ if __name__=="__main__":
     p=argparse.ArgumentParser()
     p.add_argument("eos")
     p.add_argument("native")
+    p.add_argument("--born-x-max",type=float,default=12.)
     a=p.parse_args()
-    print(json.dumps(run(a.eos,a.native),indent=2,allow_nan=False))
+    print(json.dumps(run(a.eos,a.native,a.born_x_max),indent=2,allow_nan=False))

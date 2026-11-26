@@ -19,10 +19,14 @@ WINDOWS=np.array([[2.2324,3.08],[3.4,3.6710]])
 
 
 class HardComplement:
-    def __init__(self,base,tmin=.25,tmax=.48,n=6):
+    def __init__(self,base,tmin=.25,tmax=.48,n=6,x_edges=None):
         self.base,self.n=base,n
         self.a,self.b=np.log([tmin,tmax])
-        cross=(WINDOWS[:,:,None]/np.asarray(XEDGES)).ravel()
+        self.mass_edges=np.array(XEDGES if x_edges is None else x_edges,dtype=float)
+        if (self.mass_edges.ndim!=1 or len(self.mass_edges)<2 or self.mass_edges[0]!=4 or
+                not np.all(np.isfinite(self.mass_edges)) or not np.all(np.diff(self.mass_edges)>0)):
+            raise ValueError("Born mass panels must increase from x=4.")
+        cross=(WINDOWS[:,:,None]/self.mass_edges).ravel()
         self.edges=np.unique(np.clip(np.r_[self.a,self.b,base.edges,np.log(cross)],self.a,self.b))
         u,du=gauss(UEDGES,n)
         self.u,self.du=u,du
@@ -30,7 +34,7 @@ class HardComplement:
 
     def rates(self,T):
         q=WINDOWS/T
-        edges=np.unique(np.clip(np.r_[XEDGES,q.ravel()],XEDGES[0],XEDGES[-1]))
+        edges=np.unique(np.clip(np.r_[self.mass_edges,q.ravel()],self.mass_edges[0],self.mass_edges[-1]))
         x,dx=gauss(edges,self.n)
         not_measured=~np.any((x[:,None]>q[:,0])&(x[:,None]<q[:,1]),axis=1)
         x,dx=x[:,None],dx[:,None]
