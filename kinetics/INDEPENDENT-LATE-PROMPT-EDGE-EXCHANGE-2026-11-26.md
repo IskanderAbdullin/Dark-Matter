@@ -46,3 +46,17 @@ export OPENBLAS_NUM_THREADS=1
 python -W error joint_resonant_frw_split_reference.py EOS.dat --physical-amplitude --visible-source --matched-vacuum-order --visible-backreaction --trace-exterior --with-elastic --empty-pulse 1e-8 --empty-stop .24 --support-low .005 --empty-support-high 32 --empty-cells 22 --steps 24 --vacuum-scaled-residual --allow-empty-shells --include-zero-cell --save-snapshots wide.json
 python -W error late_prompt_exterior_snapshot_reference.py EOS.dat EOS.late.dat results/wide32-early-vacuum-2026-11-26.json results/wide32-early-vacuum-shape-2026-11-26.json --boundary-q-over-TR 16
 ```
+
+## Exact preservation of the lower grid
+
+A second q32 early calculation keeps the original q16 inner edges and
+appends four outer shells instead of rescaling all inner intervals.
+The computed b=1 outward/inward scalar rates are 8002.4 and 8180.9
+in the same N_phi H normalization (signed net -178.5). This agrees
+with the rescaled-grid probe and tests one source of numerical
+boundary sensitivity. It is still a fixed-state response, not
+an evolution of the rapid exterior filling and return.
+
+Repeat the q32 source command with `--empty-cells 18 --empty-outer-bins 4`
+in place of `--empty-cells 22`. The snapshot then has the original
+lower edges plus the four new outer shells.
