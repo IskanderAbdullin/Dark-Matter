@@ -112,6 +112,9 @@ A [separate two-pion control](INDEPENDENT-WARM-PION-STATISTICS-AND-THRESHOLD-202
 allows finite Bose enhancements, a capped missing threshold
 strip and conditional pion elastic heating. The form-factor
 caps there are model conditions, not data.
+The [unmeasured-source budget by invariant band](INDEPENDENT-WARM-UNMEASURED-SPECTRAL-BUDGET-2026-11-26.md)
+translates missing positive rates into sufficient conditional
+caps and identifies where low-mass spectral coverage matters.
 
 ## Evidence boundary
 
