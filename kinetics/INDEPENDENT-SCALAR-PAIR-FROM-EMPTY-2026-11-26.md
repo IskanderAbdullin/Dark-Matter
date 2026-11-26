@@ -47,8 +47,9 @@ band. No low-reheat condensate claim follows.
 
 From `kinetics`, prepare the [EOS table](INDEPENDENT-BENCHMARK-SETUP.md).
 The same defaults without `--pair-conversion` keep the former
-operator selection. The quantum pilot used the same numerical
-operator, before adding more logging fields.
+operator selection. The quantum run and retained shell checkpoint have
+been reproduced with the final logging enabled; see also the
+[quantum bridge and streaming control](INDEPENDENT-LOW-REHEAT-QUANTUM-BRIDGE-2026-11-26.md).
 
 ```sh
 export OPENBLAS_NUM_THREADS=1

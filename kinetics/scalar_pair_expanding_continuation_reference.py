@@ -68,7 +68,7 @@ def cold(q,b,theta,cut):
     return float(b**3*np.sum((hi-lo)[:,None]*w*pu*pu*f(np.hypot(pu,mp)))/(4*np.pi**2))
 
 
-def run(s,table,n,extent,order=(3,7,6,2),pad=0.,fixed=False,reverse=True,scale=1.):
+def run(s,table,n,extent,order=(3,7,6,2),pad=0.,fixed=False,reverse=True,scale=1.,checkpoint=None):
     T=s["T_visible_GeV"]
     clock=TabulatedRadiation(table,T)
     q=np.asarray(s["lab_momentum_edges_GeV"])
@@ -123,6 +123,12 @@ def run(s,table,n,extent,order=(3,7,6,2),pad=0.,fixed=False,reverse=True,scale=1
     enerr=(ef+exr["exterior_a4_energy_one_mean_per_cohort"]-trace-ex.trace-e0)/e0
     nerr=nall.sum()/n0.sum()-1.
     assert max(abs(enerr),abs(nerr))<5e-10
+    if checkpoint is not None:
+        checkpoint.update(T_initial_GeV=tr,T_visible_GeV=clock.state(c)[0],scale_factor=ar*c,
+            lab_momentum_edges_GeV=(q/c).tolist(),
+            entropy_variable_scalar=np.asarray(th[0]).tolist(),
+            entropy_variable_fermion=np.asarray(th[1]).tolist(),
+            represented_species_count_a3=(nf*ar**3).tolist(),steps=n)
     cut=.005*tr/ar
     return dict(steps=n,hold_background_fixed=fixed,scale_factor=c,
                 duration_in_fixed_Hubble_units=extent if fixed else None,
@@ -152,10 +158,15 @@ if __name__=="__main__":
     p.add_argument("--pad",type=float,default=0.)
     p.add_argument("--no-inverse",action="store_true")
     p.add_argument("--no-pair",action="store_true")
+    p.add_argument("--save-snapshots",help="export retained states only, not exterior cohorts")
     a=p.parse_args()
     extent=a.stop if a.fixed else np.log(a.stop)
     assert extent>0. and min(a.steps)>0 and min(a.quadrature)>1
     s=json.loads(Path(a.snapshot).read_text())["snapshots"][-1]
+    shape=[{} for n in a.steps] if a.save_snapshots else [None for n in a.steps]
     states=[run(s,a.table,n,extent,tuple(a.quadrature),a.pad,a.fixed,
-                not a.no_inverse,0. if a.no_pair else 1.) for n in a.steps]
+                not a.no_inverse,0. if a.no_pair else 1.,checkpoint=ck)
+            for n,ck in zip(a.steps,shape)]
+    if a.save_snapshots:
+        Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=shape),indent=2,allow_nan=False)+"\n")
     print(json.dumps(dict(states=states,scope="Prescribed radiation after input archive; only represented pair reactions and conservative momentum redshift. Exterior moment cohorts tracked collisionlessly, do not feed reactions. No earlier production, other dark or visible collisions, or general cosmological relic claim."),indent=2,allow_nan=False))

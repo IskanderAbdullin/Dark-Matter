@@ -15,6 +15,8 @@
         0.0005209945497830604,
         3.776493573241999e-13
       ],
+      "pair_exterior_a4_energy": 2.80158809279875e-21,
+      "pair_total_count_defect_relative_to_final_combined": 1.672726128590283e-19,
       "pair_max_inverse_over_forward": 2.9723015803842354e-07,
       "final_number_shell_total_variation_from_closed_box_equilibrium": [
         0.6889646755235045,
@@ -145,9 +147,9 @@
         "exterior_a4_energy_one_mean_per_cohort": 5.5322048804164046e-17,
         "exterior_a4_energy_distribution_independent_upper_bound": 5.532802639063998e-17,
         "exterior_a4_pressure_trace": 3.094975729840129e-17,
-        "exterior_a4_portal_injection": 2.4372291505762747e-17,
         "exterior_relative_energy_ledger_defect": 2.5286813185300774e-16,
         "visible_dark_exterior_joint_ledger_defect_in_initial_visible_units": -3.6127069638803876e-14,
+        "exterior_a4_all_collision_injection": 2.4372291505762747e-17,
         "visible_baseline_T_same_a_GeV": 0.0031566744651264213,
         "relative_visible_temperature_shift": -3.575374762920802e-08,
         "total_excluded_daughter_a4_energy": 2.4372291505762753e-17,
@@ -252,6 +254,8 @@
         0.0005199797571345807,
         3.804243973457763e-13
       ],
+      "pair_exterior_a4_energy": 2.842633202401499e-21,
+      "pair_total_count_defect_relative_to_final_combined": 8.325190263749973e-20,
       "pair_max_inverse_over_forward": 2.853398478651488e-07,
       "final_number_shell_total_variation_from_closed_box_equilibrium": [
         0.6812884337262257,
@@ -382,9 +386,9 @@
         "exterior_a4_energy_one_mean_per_cohort": 5.588148815452691e-17,
         "exterior_a4_energy_distribution_independent_upper_bound": 5.588751398113711e-17,
         "exterior_a4_pressure_trace": 3.130199946039683e-17,
-        "exterior_a4_portal_injection": 2.4579488694130134e-17,
         "exterior_relative_energy_ledger_defect": 2.256628813096446e-15,
         "visible_dark_exterior_joint_ledger_defect_in_initial_visible_units": -3.651684033767598e-15,
+        "exterior_a4_all_collision_injection": 2.4579488694130134e-17,
         "visible_baseline_T_same_a_GeV": 0.0031566744651264213,
         "relative_visible_temperature_shift": -3.589858021957326e-08,
         "total_excluded_daughter_a4_energy": 2.4579488694130116e-17,
@@ -475,5 +479,5 @@
       ]
     }
   ],
-  "scope": "Initially empty finite support; signed visible source, prompt return, below-pole elasticity and stable scalar-pair conversion."
+  "scope": "Actually empty initial state on a finite fixed support. Prompt return and below-pole elasticity; Stable scalar-pair conversion; state-dependent visible FD source enabled."
 }

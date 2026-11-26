@@ -40,7 +40,7 @@ def counts(row,eos,factor):
         visible_dark_exterior_energy_defect=v.get("visible_dark_exterior_joint_ledger_defect_in_initial_visible_units"))
 
 
-def comparison(table,inputs,late):
+def comparison(table,inputs,late,bridge_input_index=1):
     eos=ConservativeEOS(StandardModel(table,lower_knot_limit=.001))
     fac=conversion(table)["Omega_h2_per_GeV_times_yield"]
     chains=[]
@@ -50,7 +50,7 @@ def comparison(table,inputs,late):
         chains.append(dict(input=Path(filename).name,rows=q))
     if not late:
         return chains,None
-    q=chains[1]["rows"][-1]
+    q=chains[bridge_input_index]["rows"][-1]
     assert q["enabled"]
     t0=q["final_visible_temperature_GeV"]
     r=json.loads(Path(late).read_text())["states"][-1]
@@ -70,6 +70,7 @@ if __name__=="__main__":
     p.add_argument("table")
     p.add_argument("inputs",nargs=3,help="matched/source, newly paired vacuum, and newly paired quantum")
     p.add_argument("--late")
+    p.add_argument("--bridge-input-index",type=int,choices=[1,2],default=1)
     a=p.parse_args()
-    x,z=comparison(a.table,a.inputs,a.late)
+    x,z=comparison(a.table,a.inputs,a.late,a.bridge_input_index)
     print(json.dumps(dict(controls=x,bridge=z),indent=2,allow_nan=False))
