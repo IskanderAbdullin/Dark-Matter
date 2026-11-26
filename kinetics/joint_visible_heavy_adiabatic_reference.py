@@ -62,11 +62,11 @@ def parent_branch(parent,phi,chi,scalar_gates=(),fermion_gates=(),soft=(),angle=
             o[sl,5+len(soft)+j]=(w*(E<cx)).sum(axis=(1,2))
         n=5+2*len(soft)
         if len(scalar_gates) and len(fermion_gates):
-            exterior=(E>scalar_gates[-1])|(X>fermion_gates[-1])
-            covered=C*exterior
-            o[sl,n]=(covered).sum(axis=(1,2))/C0
-            o[sl,n+1]=(covered*E*(E>scalar_gates[-1])).sum(axis=(1,2))/C0
-            o[sl,n+2]=(covered*X*(X>fermion_gates[-1])).sum(axis=(1,2))/C0
+            outside_phi=(E<scalar_gates[0])|(E>scalar_gates[-1])
+            outside_chi=(X<fermion_gates[0])|(X>fermion_gates[-1])
+            o[sl,n]=(C*(outside_phi|outside_chi)).sum(axis=(1,2))/C0
+            o[sl,n+1]=(C*E*outside_phi).sum(axis=(1,2))/C0
+            o[sl,n+2]=(C*X*outside_chi).sum(axis=(1,2))/C0
         o[sl,-1]=C0
         if len(soft):
             part=o[sl,5:n]
@@ -134,12 +134,13 @@ def from_bins(row,eos):
     # vacuum but included in A/B angular normalization and final moments.
     def shape(mass,g,name,n):
         f=n*np.array(row[name])/(g*np.diff(ed**3)/(6*np.pi**2))
-        gate=np.hypot(ed,mass)[1:]
+        edge=np.hypot(ed,mass)
+        gate=edge[1:]
         def fun(E):
             ix=np.searchsorted(gate,E,side='right')
             v=f[np.minimum(ix,len(f)-1)]
             return np.where(ix<len(f),v,0.)
-        return fun,gate,float(f.max())
+        return fun,edge,float(f.max())
     fp,ep,fcap=shape(mp,1,'scalar_normalized_counts',row['stable_yields'][1]*ss)
     fc,ec,ccap=shape(m,4,'stable_normalized_counts',sum(row['stable_yields'])*ss)
     assert ccap<1.

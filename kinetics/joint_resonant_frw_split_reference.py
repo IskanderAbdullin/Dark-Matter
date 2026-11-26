@@ -45,7 +45,7 @@ def redshift(q,a,b,theta):
 
 def pack(th):return np.concatenate([np.asarray(x).T.ravel() for x in th])
 
-def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False):
+def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=False,source=None,empty_start=0.,support_low=.15,empty_cells=18,vacuum_scaled=False,allow_empty_shells=False,include_zero_cell=False,snapshot=None,empty_reheat=.05):
     assert nx>0 and (centered or not elastic)
     if not empty_start:
         vis,H,k,_,_,_,th=configuration(row,eos,8,6.5)
@@ -56,10 +56,10 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     first_pulse_empty_shells=None
     if empty_start:
         assert source is not None and not warm and 0<empty_start<extent
-        vis=.05
+        vis=empty_reheat
         s0=eos.state(vis)[2]
         astart=np.exp(empty_start)
-        tmid=brentq(lambda t:eos.state(t)[2]/s0-np.exp(-1.5*empty_start),.045,vis)
+        tmid=brentq(lambda t:eos.state(t)[2]/s0-np.exp(-1.5*empty_start),.9*vis,vis)
         H=np.sqrt(eos.state(tmid)[0]/3)/MPL
         q=vis*np.geomspace(support_low,16.,empty_cells+1)
         if include_zero_cell:
@@ -124,6 +124,8 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         check=np.stack([kept_first[2],kept_first[:2].sum(axis=0)])
         assert np.max(abs(np.stack([N0,E0],axis=1)/check-1))<4e-10
     source_entropy=0.
+    signed_source=bool(source is not None and hasattr(source,"rates_at_state"))
+    source_abs=np.zeros((3,2,2))
     dx=(extent-empty_start)/nx
     s0=eos.state(vis)[2]
     for i in range(nx):
@@ -141,23 +143,30 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         h=np.sqrt((eos.state(v)[0]+Et.sum()/b**4)/3)/MPL
         m0.H=h
         if source is not None:
-            # Midpoint visible rates, two positive half-increments around
-            # collisions. H and the bath are frozen at the pre-kick midpoint.
-            sr=source.rates(v,q,b)*(dx/h)
-            sr_tot=full_channels(sr,b)
-            tails+=sr_tot[:,:,[0,-1]]
-            source_total+=sr_tot.sum(axis=2)
-            kept=np.stack([sr[2,:,1:-1],sr[:2,:,1:-1].sum(axis=0)])
-            source_n+=b**3*kept[:,0,:].sum(axis=1)
-            source_energy+=b**4*np.array([(x[1]+C.mass*x[0]).sum() for x,C in zip(kept,kin.c)])
+            # For the baseline the two midpoint increments share the
+            # prescribed vacuum rate.  The signed source is re-evaluated
+            # before each kick at its current represented occupations.
+            fixed=None if signed_source else source.rates(v,q,b)
             def kick(before):
+                signed=source.rates_at_state(v,q,b,before)*(dx/(2*h)) if signed_source else None
+                if signed is not None:
+                    for j in range(2):
+                        source_abs[:,j]+=full_channels(signed[:,j],b).sum(axis=2)
+                    sr=signed[:,0]-signed[:,1]
+                else: sr=fixed*(dx/(2*h))
+                sr_tot=full_channels(sr,b)
+                tails[:]+=sr_tot[:,:,[0,-1]]
+                source_total[:]+=sr_tot.sum(axis=2)
+                kept=np.stack([sr[2,:,1:-1],sr[:2,:,1:-1].sum(axis=0)])
+                source_n[:]+=b**3*kept[:,0,:].sum(axis=1)
+                source_energy[:]+=b**4*np.array([(x[1]+C.mass*x[0]).sum() for x,C in zip(kept,kin.c)])
                 U,S,_=m0.moment(pack(before))
                 u=U.reshape(2,cnt,2)
                 states=[]
                 for j,C in enumerate(kin.c):
                     n=u[j,:,0]
                     K=n*C.low+u[j,:,1]*C.dk
-                    reconstructed,_,_=C.reconstruct([n+kept[j,0]/2,K+kept[j,1]/2])
+                    reconstructed,_,_=C.reconstruct([n+kept[j,0],K+kept[j,1]])
                     states.append(reconstructed)
                 _,after,_=m0.moment(pack(states))
                 return states,(after-S)*b**3
@@ -196,11 +205,21 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
     m1=Model(kn,H)
     U,S,_=m1.moment(pack(th))
     Ef=e_species(kn,U,af)
+    if snapshot is not None:
+        tf=brentq(lambda t:eos.state(t)[2]/s0-af**-3,vis*.7,vis)
+        snapshot.update(T_initial_GeV=vis, T_visible_GeV=tf, scale_factor=af,
+                        lab_momentum_edges_GeV=(q/af).tolist(),
+                        entropy_variable_scalar=np.asarray(th[0]).tolist(),
+                        entropy_variable_fermion=np.asarray(th[1]).tolist(),
+                        represented_species_count_a3=(U.reshape(2,cnt,2)[:,:,0].sum(axis=1)*af**3).tolist())
     # Independently reconcile in-domain inputs with the full rate less tails.
+    if signed_source:
+        assert np.max(abs(source_abs[:,0]-source_abs[:,1]-source_total)
+                      /np.maximum(source_abs.sum(axis=1),1e-280))<3e-13
     kept_rates=source_total-tails.sum(axis=2)
     sums=np.stack([source_n,source_energy],axis=1)
     assert np.max(abs(sums-np.stack([kept_rates[2],kept_rates[:2].sum(axis=0)]))
-                  /np.maximum(sums,1e-100))<3e-13
+                  /np.maximum(abs(sums),1e-100))<3e-13
     n1=U.reshape(2,cnt,2)[:,:,0].sum(axis=1)*af**3
     unit=E0.sum()+(source_energy.sum() if empty_start else 0.)
     errE=np.max(abs(Ef-E0-dE-Qadd-source_energy))/unit
@@ -226,7 +245,7 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
         zz=ars[0][valid,None]+ars[1][valid,None]*((kk-C.low[valid,None])/C.dk[valid,None])
         count=C.g*np.sum(gw*pp*pp*np.exp(-zz)/(-np.expm1(-zz))*(hi-lo)[:,None]/(4*np.pi**2))
         soft_frac[str(cut)]=float(count/(n1[0]/af**3))
-    return dict(nsteps=nx,final_a=af,common_equilibrium_T=Tin,centered_residual=centered,
+    return dict(nsteps=nx,final_a=af,initial_visible_T_GeV=vis,common_equilibrium_T=Tin,centered_residual=centered,
       final_number_shell_total_variation_from_closed_box_equilibrium=rem,
       omitted_source_number_fractions=omitted,comoving_support_over_initial_visible_T=(q[[0,-1]]/vis).tolist(),
       initialization=("physical first source pulse; empty at a=1" if empty_start else ("warm source-bin counts" if warm else "manufactured near equilibrium")),below_pole_elastic=elastic,manufactured_collision_amplitude_relative_to_actual=scale,
@@ -256,6 +275,8 @@ def run(row,eos,nx,extent=.07,scale=2.3e-6,centered=False,warm=False,elastic=Fal
       final_energy_over_scale=(Ef/unit).tolist(),
       final_counts_div_initial_visible_entropy=(n1/s0).tolist(),
       visible_injection=source is not None,
+      state_dependent_quantum_visible_source=signed_source,
+      source_positive_negative_a3N_a4E=source_abs.tolist() if signed_source else None,
       comoving_energy_from_source_over_initial_total=(source_energy/E0.sum()).tolist() if not empty_start else None,
       comoving_count_from_source_over_initial_species=(source_n/N0).tolist() if not empty_start else None,
       comoving_source_channel_count_and_total_energy=source_total.tolist(),
@@ -269,9 +290,13 @@ if __name__=="__main__":
     p.add_argument("--empty-pulse",type=float,default=0.)
     p.add_argument("--support-low",type=float,default=.15)
     p.add_argument("--empty-cells",type=int,default=18)
+    p.add_argument("--empty-reheat",type=float,default=.05)
     p.add_argument("--vacuum-scaled-residual",action="store_true")
     p.add_argument("--allow-empty-shells",action="store_true")
     p.add_argument("--include-zero-cell",action="store_true")
+    p.add_argument("--save-snapshots",help="write final finite-shell entropy variables for each run to this JSON file")
+    p.add_argument("--quantum-visible-source",action="store_true")
+    p.add_argument("--matched-vacuum-order",action="store_true")
     a=p.parse_args();eos=StandardModel(a.eos)
     source=None
     if a.visible_source:
@@ -282,6 +307,14 @@ if __name__=="__main__":
     if a.allow_empty_shells: assert a.vacuum_scaled_residual
     if a.vacuum_scaled_residual:
         assert a.physical_amplitude and a.empty_pulse and not a.source_only
+    if a.matched_vacuum_order: assert a.visible_source and not a.quantum_visible_source
+    if a.quantum_visible_source:
+        assert a.visible_source and a.empty_pulse
+        from joint_visible_quantum_source_reference import QuantumVisible
+        source=QuantumVisible()
+    elif a.matched_vacuum_order:
+        from joint_visible_fd_source_reference import Visible
+        source=Visible(order=(6,12,14),polar=16)
     if a.source_only: assert a.visible_source and not a.with_elastic
     if a.visible_source: assert a.physical_amplitude
     r=None
@@ -290,9 +323,14 @@ if __name__=="__main__":
     else:
         if not a.spectra: p.error('spectra required except with --empty-pulse')
         r=next(r for r in json.loads(Path(a.spectra).read_text())['rows'] if r['TR']==.05 and abs(r['TF']-.045)<1e-8)
-    extent=np.log(eos.state(.05)[2]/eos.state(.045)[2])/3 if a.empty_pulse else .07
-    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source) for n in a.steps]
+    extent=np.log(eos.state(a.empty_reheat)[2]/eos.state(.9*a.empty_reheat)[2])/3 if a.empty_pulse else .07
+    final_shapes=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
+    if a.save_snapshots: assert a.physical_amplitude and a.empty_pulse
+    rows=([run(r,eos,n,extent=extent,empty_start=a.empty_pulse,support_low=a.support_low,empty_cells=a.empty_cells,vacuum_scaled=a.vacuum_scaled_residual,allow_empty_shells=a.allow_empty_shells,include_zero_cell=a.include_zero_cell,scale=0. if a.source_only else 1.,centered=True,warm=a.warm_source_init,elastic=a.with_elastic,source=source,snapshot=snapshot,empty_reheat=a.empty_reheat) for n,snapshot in zip(a.steps,final_shapes)]
           if a.physical_amplitude else [run(r,eos,3,scale=0.),run(r,eos,3),run(r,eos,6)])
+    if a.save_snapshots:
+        for n,x in zip(a.steps,final_shapes): x.update(steps=n, below_pole_elastic=a.with_elastic)
+        Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=final_shapes),indent=2,allow_nan=False)+"\n")
     print(json.dumps(dict(rows=rows,
-       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+("visible source enabled (vacuum final state)." if a.visible_source else "injection disabled."))),
+       scope=(("Warm source-bin initial projection with both ends cut. " if a.warm_source_init else ("Actually empty initial state on a finite fixed support. " if a.empty_pulse else "Manufactured near-equilibrium shape. "))+("Prompt return and below-pole elasticity; " if a.with_elastic else "Prompt return only; ")+(("state-dependent visible FD source enabled." if a.quantum_visible_source else "visible source enabled (vacuum final state).") if a.visible_source else "injection disabled."))),
        indent=2,allow_nan=False))
