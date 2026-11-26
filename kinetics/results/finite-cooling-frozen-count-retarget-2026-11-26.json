@@ -1,0 +1,138 @@
+{
+  "controls": [
+    {
+      "source_order": [
+        7,
+        18,
+        14
+      ],
+      "log_grid": 130,
+      "panel_order": 4,
+      "rows": [
+        {
+          "T_max_over_T_R": 1.0,
+          "archived_unconverted_root_GeV": 0.009019069895524137,
+          "recomputed_unconverted_root_GeV": 0.009019069957670866,
+          "stable_count_temperature_slope_per_GeV": 63.733947304697224,
+          "models": [
+            {
+              "case": "independent_forward",
+              "stable_omega_depletion": 7.082609126202747e-05,
+              "early_new_scalar_rest_omega": 3.0214642929195713e-10,
+              "late_new_scalar_rest_omega": 2.4057631347609883e-12,
+              "shifted_root_GeV": 0.009020181023210512,
+              "delta_T_keV": 1.111065539646447,
+              "tangent_delta_T_keV": 1.1112773373885716
+            },
+            {
+              "case": "fixed_node_depletion_check",
+              "stable_omega_depletion": 7.05044846082053e-05,
+              "early_new_scalar_rest_omega": 3.007635206805218e-10,
+              "late_new_scalar_rest_omega": 2.4057631347609883e-12,
+              "shifted_root_GeV": 0.009020175979048398,
+              "delta_T_keV": 1.1060213775324068,
+              "tangent_delta_T_keV": 1.1062312564941208
+            }
+          ]
+        },
+        {
+          "T_max_over_T_R": 5.0,
+          "archived_unconverted_root_GeV": 0.006236182402767521,
+          "recomputed_unconverted_root_GeV": 0.006236182405706855,
+          "stable_count_temperature_slope_per_GeV": 90.8482044836305,
+          "models": [
+            {
+              "case": "independent_forward",
+              "stable_omega_depletion": 0.00011878457583523231,
+              "early_new_scalar_rest_omega": 5.094399153774671e-10,
+              "late_new_scalar_rest_omega": 1.33376071403188e-12,
+              "shifted_root_GeV": 0.006237489479800849,
+              "delta_T_keV": 1.307074093993832,
+              "tangent_delta_T_keV": 1.307506037245189
+            },
+            {
+              "case": "fixed_node_depletion_check",
+              "stable_omega_depletion": 0.00011816490853511907,
+              "early_new_scalar_rest_omega": 5.067753459869801e-10,
+              "late_new_scalar_rest_omega": 1.33376071403188e-12,
+              "shifted_root_GeV": 0.006237482663385897,
+              "delta_T_keV": 1.300257679042252,
+              "tangent_delta_T_keV": 1.3006851286357635
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_order": [
+        10,
+        26,
+        20
+      ],
+      "log_grid": 230,
+      "panel_order": 6,
+      "rows": [
+        {
+          "T_max_over_T_R": 1.0,
+          "archived_unconverted_root_GeV": 0.009019069895524137,
+          "recomputed_unconverted_root_GeV": 0.009019069895524664,
+          "stable_count_temperature_slope_per_GeV": 63.733843077667316,
+          "models": [
+            {
+              "case": "independent_forward",
+              "stable_omega_depletion": 7.082609126202747e-05,
+              "early_new_scalar_rest_omega": 3.0214642929195713e-10,
+              "late_new_scalar_rest_omega": 2.4057631347609883e-12,
+              "shifted_root_GeV": 0.009020180962883081,
+              "delta_T_keV": 1.1110673584172752,
+              "tangent_delta_T_keV": 1.111279154714041
+            },
+            {
+              "case": "fixed_node_depletion_check",
+              "stable_omega_depletion": 7.05044846082053e-05,
+              "early_new_scalar_rest_omega": 3.007635206805218e-10,
+              "late_new_scalar_rest_omega": 2.4057631347609883e-12,
+              "shifted_root_GeV": 0.0090201759187127,
+              "delta_T_keV": 1.1060231880355431,
+              "tangent_delta_T_keV": 1.1062330655674906
+            }
+          ]
+        },
+        {
+          "T_max_over_T_R": 5.0,
+          "archived_unconverted_root_GeV": 0.006236182402767521,
+          "recomputed_unconverted_root_GeV": 0.006236182402767507,
+          "stable_count_temperature_slope_per_GeV": 90.84822584843822,
+          "models": [
+            {
+              "case": "independent_forward",
+              "stable_omega_depletion": 0.00011878457583523231,
+              "early_new_scalar_rest_omega": 5.094399153774671e-10,
+              "late_new_scalar_rest_omega": 1.33376071403188e-12,
+              "shifted_root_GeV": 0.0062374894765339275,
+              "delta_T_keV": 1.3070737664207939,
+              "tangent_delta_T_keV": 1.3075057297585557
+            },
+            {
+              "case": "fixed_node_depletion_check",
+              "stable_omega_depletion": 0.00011816490853511907,
+              "early_new_scalar_rest_omega": 5.067753459869801e-10,
+              "late_new_scalar_rest_omega": 1.33376071403188e-12,
+              "shifted_root_GeV": 0.006237482660120794,
+              "delta_T_keV": 1.3002573532872042,
+              "tangent_delta_T_keV": 1.3006848227532057
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "dm-eos-low-official-1314.dat": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "finite-cooling-reheat-portal-2026-11-26.json": "02d3220b70065ec64ff3d7239bbe208b9e95984ecdcb976c86713b1a54f9ceae",
+    "finite-cooling-during-production-pair-shape-2026-11-26.json": "2b01128e50b215cde0dfee1fc0ca9cf5d872cae85a66b5d4bffaffe427a9eff0",
+    "finite-cooling-post-anchor-forward-pair-2026-11-26.json": "2a287f4024f66ffc69b1db5de4da24b37d8f7fde590ec298e51a9e3ec912ae79",
+    "finite-cooling-forward-depletion-refined-2026-11-26.json": "6bb66b610ee8b596106c7a72654a851bf4ac44d1c957f56cb42c6f780f9b6593"
+  },
+  "scope": "A local scalar/stable count conversion and fixed-loss finite difference on the prescribed portal clock. The early and late forward yields do not overlap at 1 MeV. This keeps both losses fixed when shifting T_R, omits a jointly iterated inverse source and feedback, and does not generate a new spectrum or infer a physical reheating temperature."
+}
