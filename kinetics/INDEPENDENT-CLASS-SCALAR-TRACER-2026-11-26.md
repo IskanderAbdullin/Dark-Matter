@@ -31,7 +31,15 @@ in absolute ratio at their six overlapping probes. This is a
 sampling control. With the later fluid switch, the maximum change
 across their native wide grid is 7.87e-4 in absolute ratio, and the
 three wide half-amplitude locations change by less than 0.0002 h/Mpc.
-This is not full momentum convergence. At the archived scale factor,
+An independent raw-PSD control uses 160 nodes, qmax 63.8377
+selected by external moments, and the later fluid switch.
+It changes the wide ratios at k = 2, 4, 8 and 10 h/Mpc by
+at most 9.9e-5 in absolute value relative to the balanced
+late-switch run. Its tracer amplitude-half scales are
+11.9890, 5.40664 and 2.85501 h/Mpc. This is evidence of
+numerical robustness for the shown probes, not a general
+proof of momentum or early-history convergence.
+At the archived scale factor,
 the largest wide mode has kτ ≈ 0.00206 in this background; standard
 adiabatic perturbations are initialized later with kτ ≤ 0.0701.
 The scalar tracer increasingly follows CDM at late
@@ -50,9 +58,9 @@ as in the pressure-balanced CLASS control, then:
 ~~~sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 python -W error archived_class_scalar_tracer_reference.py native --fine fine >input-audit.json
-for c in scalar_tracer_smooth128_sync scalar_tracer_smooth128_wide_sync scalar_tracer_smooth128_wide_delayed_sync; do
+for c in scalar_tracer_smooth128_sync scalar_tracer_smooth128_wide_sync scalar_tracer_smooth128_wide_delayed_sync scalar_tracer_raw160_q638_wide_sync; do
   /path/to/class "native/$c.ini" >"native/$c.log" 2>&1
 done
 python -W error archived_class_scalar_tracer_reference.py native --fine fine \
-  --compare scalar_tracer_smooth128_sync scalar_tracer_smooth128_wide_sync scalar_tracer_smooth128_wide_delayed_sync
+  --compare scalar_tracer_smooth128_sync scalar_tracer_smooth128_wide_sync scalar_tracer_smooth128_wide_delayed_sync scalar_tracer_raw160_q638_wide_sync
 ~~~

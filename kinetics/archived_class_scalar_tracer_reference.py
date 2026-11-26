@@ -36,6 +36,7 @@ def generate(fine,out):
       ("scalar_tracer_smooth256_sync",256,14,20,psd,1,18,96.),
       ("scalar_tracer_raw384_sync",384,14,20,fine/"scalar.dat",1,18,96.),
       ("scalar_tracer_raw160_q638_sync",160,14,20,fine/"scalar.dat",1,18,63.8376753507014),
+      ("scalar_tracer_raw160_q638_wide_sync",160,14,20,fine/"scalar.dat",12,14,63.8376753507014),
       ("scalar_tracer_smooth128_wide_sync",128,10,12,psd,12,14,96.),
       ("scalar_tracer_smooth128_wide_delayed_sync",128,14,20,psd,12,14,96.)]
     for name,n,l,trigger,path,kmax,nk,qmax in cases:

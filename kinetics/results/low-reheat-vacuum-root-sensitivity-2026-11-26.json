@@ -1,0 +1,130 @@
+{
+  "reference_stable_Omega_h2": 0.12,
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "max_root_refinement_difference": 1.0396567828863112e-08,
+  "controls": [
+    {
+      "order": [
+        6,
+        15,
+        12
+      ],
+      "time_order": 4,
+      "rows": [
+        {
+          "stable_mass_GeV": 0.018000000000000002,
+          "root_visible_reheat_GeV": 0.008888100024047647,
+          "scalar_direct_prompt_omega_h2_at_root": 1.7150319712751679e-12,
+          "local_log_count_slope_to_log_TR": 4.5065511735048425,
+          "local_log_root_slope_to_log_portal_mixing": -0.4437983555492518,
+          "finite_difference_TR_slope": 4.506551181224783,
+          "finite_difference_mixing_slope": -0.4437983562239722,
+          "stable_omega_at_minus_plus1pct_TR": [
+            0.11466929590325652,
+            0.12548557169700567
+          ],
+          "roots_for_mixing_multipliers_0p9_1p1_GeV": [
+            0.00932014427547135,
+            0.008524867106018264
+          ]
+        },
+        {
+          "stable_mass_GeV": 0.02,
+          "root_visible_reheat_GeV": 0.009019069936873398,
+          "scalar_direct_prompt_omega_h2_at_root": 2.3635767382494063e-12,
+          "local_log_count_slope_to_log_TR": 4.790165390413319,
+          "local_log_root_slope_to_log_portal_mixing": -0.4175221181303367,
+          "finite_difference_TR_slope": 4.790165398897983,
+          "finite_difference_mixing_slope": -0.41752211886344825,
+          "stable_omega_at_minus_plus1pct_TR": [
+            0.11434038346642784,
+            0.12583749507634048
+          ],
+          "roots_for_mixing_multipliers_0p9_1p1_GeV": [
+            0.009431075766263555,
+            0.00867195177542624
+          ]
+        },
+        {
+          "stable_mass_GeV": 0.022000000000000002,
+          "root_visible_reheat_GeV": 0.009181871418068716,
+          "scalar_direct_prompt_omega_h2_at_root": 3.4768437718482057e-12,
+          "local_log_count_slope_to_log_TR": 5.064971424725681,
+          "local_log_root_slope_to_log_portal_mixing": -0.3948689602149769,
+          "finite_difference_TR_slope": 5.064971433885734,
+          "finite_difference_mixing_slope": -0.394868960532074,
+          "stable_omega_at_minus_plus1pct_TR": [
+            0.1140226851702171,
+            0.1261795348149871
+          ],
+          "roots_for_mixing_multipliers_0p9_1p1_GeV": [
+            0.009578101704181089,
+            0.008847310971590961
+          ]
+        }
+      ]
+    },
+    {
+      "order": [
+        10,
+        25,
+        18
+      ],
+      "time_order": 6,
+      "rows": [
+        {
+          "stable_mass_GeV": 0.018000000000000002,
+          "root_visible_reheat_GeV": 0.00888810002716957,
+          "scalar_direct_prompt_omega_h2_at_root": 1.7149960885995343e-12,
+          "local_log_count_slope_to_log_TR": 4.50655108350519,
+          "local_log_root_slope_to_log_portal_mixing": -0.4437983644122818,
+          "finite_difference_TR_slope": 4.5065510912456475,
+          "finite_difference_mixing_slope": -0.44379836508799275,
+          "stable_omega_at_minus_plus1pct_TR": [
+            0.11466929600294085,
+            0.12548557158062298
+          ],
+          "roots_for_mixing_multipliers_0p9_1p1_GeV": [
+            0.009320144289149493,
+            0.00852486710334554
+          ]
+        },
+        {
+          "stable_mass_GeV": 0.02,
+          "root_visible_reheat_GeV": 0.009019069882775566,
+          "scalar_direct_prompt_omega_h2_at_root": 2.3635373643982615e-12,
+          "local_log_count_slope_to_log_TR": 4.790165285511388,
+          "local_log_root_slope_to_log_portal_mixing": -0.4175221272738367,
+          "finite_difference_TR_slope": 4.79016529399523,
+          "finite_difference_mixing_slope": -0.41752212800280414,
+          "stable_omega_at_minus_plus1pct_TR": [
+            0.11434038358316458,
+            0.1258374949409564
+          ],
+          "roots_for_mixing_multipliers_0p9_1p1_GeV": [
+            0.009431075720439311,
+            0.008671951717047651
+          ]
+        },
+        {
+          "stable_mass_GeV": 0.022000000000000002,
+          "root_visible_reheat_GeV": 0.009181871322608767,
+          "scalar_direct_prompt_omega_h2_at_root": 3.4768003215412772e-12,
+          "local_log_count_slope_to_log_TR": 5.064971278975809,
+          "local_log_root_slope_to_log_portal_mixing": -0.3948689715777463,
+          "finite_difference_TR_slope": 5.064971288160081,
+          "finite_difference_mixing_slope": -0.3948689718963168,
+          "stable_omega_at_minus_plus1pct_TR": [
+            0.11402268534614994,
+            0.1261795346386905
+          ],
+          "roots_for_mixing_multipliers_0p9_1p1_GeV": [
+            0.009578101615603664,
+            0.008847310867430408
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Vacuum final states, exact FD incoming leptons, prompt heavy decay counts, prescribed thermal radiation from instant reheating to 1 MeV. Mixing variation multiplies the fixed spectral normalization by epsilon squared at fixed widths and masses. No feedback, inverse depletion, dark reactions, dominant scalar or fit."
+}
