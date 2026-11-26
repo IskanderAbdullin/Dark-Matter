@@ -55,3 +55,8 @@ python -W error warm_coupled_count_ledger_reference.py \
   results/50MeV-from-empty-pair-budget-2026-11-26.json "$start" \
   --results rows-20.json rows-32.json --bridges shape-20.json shape-32.json
 ```
+
+For longer restart calculations, optional --progress-every N
+reports completed outer blocks as JSON lines on stderr. It does
+not change the output JSON or the restart shape. A two-block
+restart at 0.414 MeV was byte-identical with and without logging.

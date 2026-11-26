@@ -1,6 +1,7 @@
 """Prompt and elastic dark evolution plus signed pair conversion after injection."""
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -15,7 +16,7 @@ from scalar_pair_expanding_continuation_reference import MASS,e_total,moments,ra
 from joint_nonlinear_prompt_return_moments_reference import P
 
 
-def run(table,s,n,bmax,pair=True,checkpoint=None):
+def run(table,s,n,bmax,pair=True,checkpoint=None,progress_every=0):
     q=np.array(s["lab_momentum_edges_GeV"])
     t0=s["T_visible_GeV"]
     ar=s["scale_factor"]
@@ -79,6 +80,13 @@ def run(table,s,n,bmax,pair=True,checkpoint=None):
         r["cold_count_relative_to_initial_total_scalar"]=out[0,0,0]*c**3/n0[0]
         r["photon_temperature_GeV"]=clock.state(c)[0]
         rows.append(r)
+        j=len(rows)
+        if progress_every and (j%progress_every==0 or j==len(grid)-1):
+            progress=dict(kind="warm_pair_checkpoint",steps_requested=n,
+                          blocks_finished=j,blocks_total=len(grid)-1,
+                          relative_expansion=float(c),photon_temperature_GeV=r["photon_temperature_GeV"],
+                          stiff_microsteps_accepted=accepted,stiff_microsteps_rejected=rejected)
+            print(json.dumps(progress,allow_nan=False),file=sys.stderr,flush=True)
     exr=ex.result()
     rel_e=(e_total(out)*c**4+exr["exterior_a4_energy_one_mean_per_cohort"]-work-ex.trace-e0)/e0
     rel_n=(nf+exn).sum()/n0.sum()-1.
@@ -103,11 +111,14 @@ if __name__=="__main__":
     p.add_argument("--steps",type=int,nargs="+",default=[4,8])
     p.add_argument("--no-pair",action="store_true")
     p.add_argument("--save-snapshots")
+    p.add_argument("--progress-every",type=int,default=0,
+                   help="Write status after this many accepted outer blocks to stderr, without changing outputs.")
     a=p.parse_args()
-    assert a.stop>1 and min(a.steps)>0
+    assert a.stop>1 and min(a.steps)>0 and a.progress_every>=0
     s=json.loads(Path(a.shape).read_text())["snapshots"][-1]
     ck=[{} for _ in a.steps] if a.save_snapshots else [None for _ in a.steps]
-    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k) for n,k in zip(a.steps,ck)]
+    rows=[run(a.table,s,n,a.stop,not a.no_pair,checkpoint=k,progress_every=a.progress_every)
+          for n,k in zip(a.steps,ck)]
     if a.save_snapshots:
         Path(a.save_snapshots).write_text(json.dumps(dict(snapshots=ck),indent=2,allow_nan=False)+"\n")
     print(json.dumps(dict(rows=rows),indent=2,allow_nan=False))
