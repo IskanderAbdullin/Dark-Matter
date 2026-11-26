@@ -1,0 +1,155 @@
+{
+  "checks": {
+    "max_independent_tu_product_and_angle_relative_defect": 2.4780177909633494e-13,
+    "sampled_pointwise_upper_over_closed_form_global_bound": 0.9513414536598488
+  },
+  "sampled_cross_sections": [
+    {
+      "s_over_mass_squared": 18.0,
+      "independent_scramble_estimates_mu_eq_lambda_eq_1": [
+        1.3762399823636263e-11,
+        1.3762294330963321e-11
+      ],
+      "pointwise_bound_mu_eq_lambda_eq_1": 7.273568406132466e-07
+    },
+    {
+      "s_over_mass_squared": 24.0,
+      "independent_scramble_estimates_mu_eq_lambda_eq_1": [
+        5.721713789432122e-10,
+        5.721647753222352e-10
+      ],
+      "pointwise_bound_mu_eq_lambda_eq_1": 7.525987458067177e-07
+    },
+    {
+      "s_over_mass_squared": 40.0,
+      "independent_scramble_estimates_mu_eq_lambda_eq_1": [
+        3.744103792467909e-09,
+        3.744532207398682e-09
+      ],
+      "pointwise_bound_mu_eq_lambda_eq_1": 7.120434738990135e-07
+    },
+    {
+      "s_over_mass_squared": 100.0,
+      "independent_scramble_estimates_mu_eq_lambda_eq_1": [
+        8.793110554704985e-09,
+        8.797660590754911e-09
+      ],
+      "pointwise_bound_mu_eq_lambda_eq_1": 5.226516787639298e-07
+    },
+    {
+      "s_over_mass_squared": 500.0,
+      "independent_scramble_estimates_mu_eq_lambda_eq_1": [
+        7.065878045892622e-09,
+        6.830990628430889e-09
+      ],
+      "pointwise_bound_mu_eq_lambda_eq_1": 2.1996495295996643e-07
+    },
+    {
+      "s_over_mass_squared": 2000.0,
+      "independent_scramble_estimates_mu_eq_lambda_eq_1": [
+        4.042148749897904e-09,
+        3.1569142453037566e-09
+      ],
+      "pointwise_bound_mu_eq_lambda_eq_1": 8.806665696207249e-08
+    }
+  ],
+  "rows": [
+    {
+      "archive": "12-quantum-48-2026-11-26.json",
+      "T_GeV": 0.01199970971941998,
+      "quartic_lambda_over_4_factorial": 7.65175e-08,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 3.667783703847781e-21,
+      "upper_growth_optical_depth": 2.3935342952891865e-08,
+      "resulting_number_multiplier_upper": 1.0000000239353435,
+      "scalar_Omega_h2_upper": 0.0005249537003707,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 79.3080827630848,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 79.39704497149546
+    },
+    {
+      "archive": "early-9p3-quantum-2026-11-26.json",
+      "T_GeV": 0.009299772934104809,
+      "quartic_lambda_over_4_factorial": 7.65175e-08,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 3.667783703847781e-21,
+      "upper_growth_optical_depth": 1.852287436614539e-08,
+      "resulting_number_multiplier_upper": 1.0000000185228748,
+      "scalar_Omega_h2_upper": 0.0005260732031624995,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 84.62311992940599,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 84.7181727689684
+    },
+    {
+      "archive": "all prescribed TR50 source counts at reheating",
+      "T_GeV": 0.05,
+      "quartic_lambda_over_4_factorial": 7.65175e-08,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 3.667783703847781e-21,
+      "upper_growth_optical_depth": 1.336545229957135e-07,
+      "resulting_number_multiplier_upper": 1.0000001336545408,
+      "scalar_Omega_h2_upper": 0.0005270659377207507,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 51.24218316515603,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 51.300288547188224
+    },
+    {
+      "archive": "all prescribed TR9.019 source counts at reheating",
+      "T_GeV": 0.009019069876770808,
+      "quartic_lambda_over_4_factorial": 7.65175e-08,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 3.667783703847781e-21,
+      "upper_growth_optical_depth": 1.7615629012167245e-11,
+      "resulting_number_multiplier_upper": 1.0000000000176157,
+      "scalar_Omega_h2_upper": 5.160023602417877e-07,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 487.11818704767643,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 487.118717078864
+    },
+    {
+      "archive": "12-quantum-48-2026-11-26.json",
+      "T_GeV": 0.01199970971941998,
+      "quartic_lambda_over_4_factorial": 1.08515714e-06,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 1.483648961378963e-16,
+      "upper_growth_optical_depth": 0.0009682044956754923,
+      "resulting_number_multiplier_upper": 1.0009691428241148,
+      "scalar_Omega_h2_upper": 0.0005254624429052827,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 4.6627501182219016,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 4.6690230952232445
+    },
+    {
+      "archive": "early-9p3-quantum-2026-11-26.json",
+      "T_GeV": 0.009299772934104809,
+      "quartic_lambda_over_4_factorial": 1.08515714e-06,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 1.483648961378963e-16,
+      "upper_growth_optical_depth": 0.000749265647433204,
+      "resulting_number_multiplier_upper": 1.000749827467396,
+      "scalar_Omega_h2_upper": 0.0005264676575483973,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 5.037528425789396,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 5.044230870424481
+    },
+    {
+      "archive": "all prescribed TR50 source counts at reheating",
+      "T_GeV": 0.05,
+      "quartic_lambda_over_4_factorial": 1.08515714e-06,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 1.483648961378963e-16,
+      "upper_growth_optical_depth": 0.005406436426939876,
+      "resulting_number_multiplier_upper": 1.0054358248685196,
+      "scalar_Omega_h2_upper": 0.0005299309050246909,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 2.6837441352870117,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 2.6878413101622085
+    },
+    {
+      "archive": "all prescribed TR9.019 source counts at reheating",
+      "T_GeV": 0.009019069876770808,
+      "quartic_lambda_over_4_factorial": 1.08515714e-06,
+      "final_mode_uniform_F_bound": 0.0,
+      "global_vacuum_sigma_v_upper_GeV_minus2": 1.483648961378963e-16,
+      "upper_growth_optical_depth": 7.125668195897444e-07,
+      "resulting_number_multiplier_upper": 1.0000007125673274,
+      "scalar_Omega_h2_upper": 5.160027279191207e-07,
+      "necessary_uniform_F_cap_for_99_percent_of_reference": 33.41859432212793,
+      "F_at_which_this_comparison_no_longer_gives_a_finite_bound": 33.418631696126496
+    }
+  ],
+  "scope": "Tree diagrams with two quartic vertices only; no sextic contact, Yukawa-loop amplitude, coherent background, or new production. Conserved visible comoving entropy, H at least photon floor. Optional F is a uniform upper bound on all accessible final scalar occupations throughout the interval, not a measured later property."
+}
