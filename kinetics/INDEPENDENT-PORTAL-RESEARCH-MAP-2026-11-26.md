@@ -184,7 +184,9 @@ The [selected late charged-pion control](INDEPENDENT-WARM-SIGNED-FERMION-WITH-CH
 adds that effective visible source, heat and reverse loss
 to the signed floor. The momentum support matters for
 the reverse bound; this is not a full hadronic sink.
-The [heavy occupation barrier](INDEPENDENT-WARM-HEAVY-OCCUPATION-BARRIER-2026-11-26.md)
+A [piecewise radiation-clock comparison](INDEPENDENT-WARM-SIGNED-FERMION-PIECEWISE-CLOCK-2026-11-26.md)
+updates the conditional survival reference at 9.748 MeV; it does
+not establish the fermion cap. The [heavy occupation barrier](INDEPENDENT-WARM-HEAVY-OCCUPATION-BARRIER-2026-11-26.md)
 checks pointwise heavy creation under a prescribed light cap,
 rather than inferring an occupation from its total rate.
 It leaves the light cap and heavy elastic gains open.
