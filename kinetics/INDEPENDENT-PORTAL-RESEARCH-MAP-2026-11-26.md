@@ -66,6 +66,15 @@ is a separate sensitivity test on specified mass bands and a
 fixed radiation clock. Its conditional temperatures should not
 be used as the low-reheat source temperatures above.
 
+## A rate-independent number check
+
+The [closed number budget](INDEPENDENT-PORTAL-CLOSED-NUMBER-BUDGET-2026-11-26.md)
+applies across both archived branches **only** after specifying no
+further change of total stable-plus-scalar number per visible entropy.
+Even arbitrary equal-number conversion then cannot obtain a
+dominant 86 eV rest component at the reference total .120.
+This complements, rather than assumes, the narrower kinetic loss bound.
+
 ## Evidence boundary
 
 Only the exact tested models, grids, and signed controls are
