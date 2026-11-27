@@ -1,0 +1,180 @@
+{
+  "scope": "Fixed archived masses and charged/scalar histograms, equal anti-daughter proxy; only assumed photon Bose temperature varies; one crossed contribution at fixed q.",
+  "q": 4.1e-06,
+  "rows": [
+    {
+      "grid": "fine",
+      "low": {
+        "T_zero": 0.49937297863436597,
+        "T_derivative": -2.2012412808815514,
+        "T_derivative_relative_check": 3.096070066987977e-10,
+        "pointwise_negative_margin": 0.39474717794678016,
+        "T0_net_per_fs": 0.22862099793418994,
+        "T1_net_per_fs": -3.575604351667214,
+        "equilibrium_temperature_is_not_being_inferred": true,
+        "tail_bound_on_net_per_fs_at_root": 8.207196004091766e-54,
+        "rows": [
+          {
+            "k_below": 2.0,
+            "fraction_of_T1_inverse_loss": 0.15267256932325193,
+            "fraction_of_T1_net_thermal_decrease": 0.15324764197211788
+          },
+          {
+            "k_below": 3.0,
+            "fraction_of_T1_inverse_loss": 0.5230068513029802,
+            "fraction_of_T1_net_thermal_decrease": 0.521736426883205
+          },
+          {
+            "k_below": 5.0,
+            "fraction_of_T1_inverse_loss": 0.8781938750603037,
+            "fraction_of_T1_net_thermal_decrease": 0.8777419944821423
+          },
+          {
+            "k_below": 8.0,
+            "fraction_of_T1_inverse_loss": 0.9886366736750868,
+            "fraction_of_T1_net_thermal_decrease": 0.988593759910272
+          },
+          {
+            "k_below": 16.0,
+            "fraction_of_T1_inverse_loss": 0.9999905053969596,
+            "fraction_of_T1_net_thermal_decrease": 0.9999904695163576
+          },
+          {
+            "k_below": 32.0,
+            "fraction_of_T1_inverse_loss": 0.9999999999974457,
+            "fraction_of_T1_net_thermal_decrease": 0.9999999999974362
+          }
+        ]
+      },
+      "high": {
+        "T_zero": 0.4993729786499492,
+        "T_derivative": -2.2012412810342634,
+        "T_derivative_relative_check": 3.0832025821325715e-10,
+        "pointwise_negative_margin": 0.39474717794678016,
+        "T0_net_per_fs": 0.22862099795763632,
+        "T1_net_per_fs": -3.5756043515721587,
+        "equilibrium_temperature_is_not_being_inferred": true,
+        "tail_bound_on_net_per_fs_at_root": 8.207196039226135e-54,
+        "rows": [
+          {
+            "k_below": 2.0,
+            "fraction_of_T1_inverse_loss": 0.1526725693191277,
+            "fraction_of_T1_net_thermal_decrease": 0.1532476419678886
+          },
+          {
+            "k_below": 3.0,
+            "fraction_of_T1_inverse_loss": 0.523006851299314,
+            "fraction_of_T1_net_thermal_decrease": 0.521736426879266
+          },
+          {
+            "k_below": 5.0,
+            "fraction_of_T1_inverse_loss": 0.8781938750589353,
+            "fraction_of_T1_net_thermal_decrease": 0.8777419944807002
+          },
+          {
+            "k_below": 8.0,
+            "fraction_of_T1_inverse_loss": 0.9886366736749381,
+            "fraction_of_T1_net_thermal_decrease": 0.9885937599101162
+          },
+          {
+            "k_below": 16.0,
+            "fraction_of_T1_inverse_loss": 0.9999905053969593,
+            "fraction_of_T1_net_thermal_decrease": 0.9999904695163574
+          },
+          {
+            "k_below": 32.0,
+            "fraction_of_T1_inverse_loss": 0.9999999999974458,
+            "fraction_of_T1_net_thermal_decrease": 0.9999999999974363
+          }
+        ]
+      }
+    },
+    {
+      "grid": "third",
+      "low": {
+        "T_zero": 0.5048109863561421,
+        "T_derivative": -2.2469647818649707,
+        "T_derivative_relative_check": 2.9493163467009254e-10,
+        "pointwise_negative_margin": 0.3969121917694365,
+        "T0_net_per_fs": 0.23670199321221208,
+        "T1_net_per_fs": -3.528597056869644,
+        "equilibrium_temperature_is_not_being_inferred": true,
+        "tail_bound_on_net_per_fs_at_root": 3.5989876674579995e-53,
+        "rows": [
+          {
+            "k_below": 2.0,
+            "fraction_of_T1_inverse_loss": 0.14890971179087661,
+            "fraction_of_T1_net_thermal_decrease": 0.1495021069312173
+          },
+          {
+            "k_below": 3.0,
+            "fraction_of_T1_inverse_loss": 0.5210103342049002,
+            "fraction_of_T1_net_thermal_decrease": 0.5196365985296875
+          },
+          {
+            "k_below": 5.0,
+            "fraction_of_T1_inverse_loss": 0.8775785199331866,
+            "fraction_of_T1_net_thermal_decrease": 0.8770991068874056
+          },
+          {
+            "k_below": 8.0,
+            "fraction_of_T1_inverse_loss": 0.9885649112160397,
+            "fraction_of_T1_net_thermal_decrease": 0.9885193564844084
+          },
+          {
+            "k_below": 16.0,
+            "fraction_of_T1_inverse_loss": 0.9999904289658819,
+            "fraction_of_T1_net_thermal_decrease": 0.9999903908130396
+          },
+          {
+            "k_below": 32.0,
+            "fraction_of_T1_inverse_loss": 0.9999999999974222,
+            "fraction_of_T1_net_thermal_decrease": 0.9999999999974117
+          }
+        ]
+      },
+      "high": {
+        "T_zero": 0.5048109863918778,
+        "T_derivative": -2.2469647824546573,
+        "T_derivative_relative_check": 2.949847033306696e-10,
+        "pointwise_negative_margin": 0.3969121917694365,
+        "T0_net_per_fs": 0.23670199329820713,
+        "T1_net_per_fs": -3.5285970568531746,
+        "equilibrium_temperature_is_not_being_inferred": true,
+        "tail_bound_on_net_per_fs_at_root": 3.5989877020354465e-53,
+        "rows": [
+          {
+            "k_below": 2.0,
+            "fraction_of_T1_inverse_loss": 0.148909714060745,
+            "fraction_of_T1_net_thermal_decrease": 0.14950210965400626
+          },
+          {
+            "k_below": 3.0,
+            "fraction_of_T1_inverse_loss": 0.5210103342329999,
+            "fraction_of_T1_net_thermal_decrease": 0.5196365985569594
+          },
+          {
+            "k_below": 5.0,
+            "fraction_of_T1_inverse_loss": 0.8775785199386913,
+            "fraction_of_T1_net_thermal_decrease": 0.8770991068926943
+          },
+          {
+            "k_below": 8.0,
+            "fraction_of_T1_inverse_loss": 0.9885649112164725,
+            "fraction_of_T1_net_thermal_decrease": 0.9885193564848206
+          },
+          {
+            "k_below": 16.0,
+            "fraction_of_T1_inverse_loss": 0.9999904289658821,
+            "fraction_of_T1_net_thermal_decrease": 0.99999039081304
+          },
+          {
+            "k_below": 32.0,
+            "fraction_of_T1_inverse_loss": 0.999999999997422,
+            "fraction_of_T1_net_thermal_decrease": 0.9999999999974117
+          }
+        ]
+      }
+    }
+  ]
+}

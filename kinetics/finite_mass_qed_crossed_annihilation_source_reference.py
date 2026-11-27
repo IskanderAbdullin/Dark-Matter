@@ -63,7 +63,9 @@ def angle_primitive(M,m,s2,S,J,r,K,sp,a,b):
     return one(M,a,b)+one(m,-b,-a)
 
 
-def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False):
+def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False,capture=None):
+    if capture is not None and (nphi>=0 or equilibrium):
+        raise ValueError('Photon clock capture requires the exact frozen-archive integrator')
     M=data['x_end']; m=M*data['mass_ratio']
     s=data['checkpoints'][-1]['scalar_pole_over_T']
     es=np.hypot(Q,s)
@@ -106,9 +108,14 @@ def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False):
             if wt.min()<-1e-8:
                 raise ArithmeticError('Negative crossed kernel in positive phase measure')
             n=1/np.expm1(k/T)
-            gain=np.sum(wt*f*g,axis=1)*(1+n)
-            loss=np.sum(wt*(1-f)*(1-g),axis=1)*n
-            loss_without_anti=np.sum(wt*(1-f),axis=1)*n
+            if capture is None:
+                gain=np.sum(wt*f*g,axis=1)*(1+n)
+                loss=np.sum(wt*(1-f)*(1-g),axis=1)*n
+                loss_without_anti=np.sum(wt*(1-f),axis=1)*n
+            else:
+                gain=np.sum(wt*f*g,axis=1)
+                loss=np.sum(wt*(1-f)*(1-g),axis=1)
+                loss_without_anti=np.sum(wt*(1-f),axis=1)
             phase=k*(r/t)[:,0]/(128*np.pi**3*es)
             return phase[:,None]*np.stack([gain,loss,loss_without_anti],axis=1)
         def inner(k):
@@ -157,6 +164,8 @@ def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False):
         # crosses a histogram edge. Internal parent/daughter edge-pair
         # order swaps are additionally considered in the support.
         edges=set(bounds)
+        if capture is not None:
+            edges.update(v-k0 for v in (2.,3.,5.,8.,16.,32.) if k0<v<kcap)
         for species, bar in (() if equilibrium else ((0,p_edges),(1,b_edges))):
             for sg in (-1.,1.):
                 def chart(delta):
@@ -190,7 +199,14 @@ def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False):
         vec=np.zeros(3)
         if nphi<0 and not equilibrium:
             for start in range(0,len(kn),128):
-                vec+=wr[start:start+128]@batched(kn[start:start+128])
+                k=kn[start:start+128]
+                if capture is None:
+                    vec+=wr[start:start+128]@batched(k)
+                else:
+                    part=wr[start:start+128,None]*batched(k)
+                    capture.append(np.column_stack([k,wm*part]))
+                    n=1/np.expm1(k/T)
+                    vec+=np.sum(part*np.column_stack([n+1,n,n]),axis=0)
         else:
             for k,v in zip(kn,wr,strict=True):
                 vec+=v*inner(k)
