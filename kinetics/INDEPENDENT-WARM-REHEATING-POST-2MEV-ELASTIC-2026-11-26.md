@@ -112,3 +112,8 @@ python -W error warm_prompt_reheating_late_vector_rate_projection_reference.py E
 ~~~
 
 [Five held cold rates and the threshold check](results/warm-prompt-reheating-late-vector-projection-2026-11-26.json).
+
+A [separate scalar ceiling](INDEPENDENT-WARM-REHEATING-POST-ANCHOR-SCALAR-CEILING-2026-11-26.md)
+allows heavy regeneration but no new external energy
+or count input in the cold future. It is distinct
+from the stable lower bound above.
