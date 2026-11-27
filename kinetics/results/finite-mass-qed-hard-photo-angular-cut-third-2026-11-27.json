@@ -1,0 +1,105 @@
+{
+  "scope": "Real photon absorption/reciprocal scattering, fixed q, only above a bath-frame k cut; no inclusive subtraction or virtual term.",
+  "data": [
+    {
+      "grid": "third",
+      "rows": [
+        {
+          "lab_photon_minimum_energy": 4e-05,
+          "fine": {
+            "gain": 143105.67841331684,
+            "loss": 60113.672317074954,
+            "net": 1.5538949956944288e+20,
+            "net_over_positive_turnover": 0.4083863362320561
+          },
+          "net_relative_to_Born_at_g_point005": 0.05964386531389228,
+          "refinement_relative_drift": 0.0014204698417370487
+        },
+        {
+          "lab_photon_minimum_energy": 0.00016,
+          "fine": {
+            "gain": 36097.28080220208,
+            "loss": 14079.416613111454,
+            "net": 4.122499333204669e+19,
+            "net_over_positive_turnover": 0.4388065640679443
+          },
+          "net_relative_to_Born_at_g_point005": 0.015823578534429,
+          "refinement_relative_drift": 0.0002636721937365749
+        },
+        {
+          "lab_photon_minimum_energy": 0.00064,
+          "fine": {
+            "gain": 9235.898872232516,
+            "loss": 2884.803472914646,
+            "net": 1.1891428852476965e+19,
+            "net_over_positive_turnover": 0.5239874075334173
+          },
+          "net_relative_to_Born_at_g_point005": 0.0045643417530275765,
+          "refinement_relative_drift": 7.086174234349762e-05
+        },
+        {
+          "lab_photon_minimum_energy": 0.00256,
+          "fine": {
+            "gain": 2425.1890465748806,
+            "loss": 368.5782213474374,
+            "net": 3.8506808302789376e+18,
+            "net_over_positive_turnover": 0.7361425015036825
+          },
+          "net_relative_to_Born_at_g_point005": 0.0014780245090197073,
+          "refinement_relative_drift": 7.812025480224971e-05
+        },
+        {
+          "lab_photon_minimum_energy": 0.01024,
+          "fine": {
+            "gain": 645.1958013594804,
+            "loss": 1.6784287759318548,
+            "net": 1.204885231645562e+18,
+            "net_over_positive_turnover": 0.9948106488162917
+          },
+          "net_relative_to_Born_at_g_point005": 0.00046247663242425275,
+          "refinement_relative_drift": 2.4478092885971137e-09
+        },
+        {
+          "lab_photon_minimum_energy": 0.04096,
+          "fine": {
+            "gain": 171.1091716422765,
+            "loss": 0.0006613596973718955,
+            "net": 3.203738171366704e+17,
+            "net_over_positive_turnover": 0.9999922697639784
+          },
+          "net_relative_to_Born_at_g_point005": 0.00012297055368826705,
+          "refinement_relative_drift": 3.19771142898162e-08
+        },
+        {
+          "lab_photon_minimum_energy": 0.5,
+          "fine": {
+            "gain": 14.831766898488464,
+            "loss": 4.641674621382473e-06,
+            "net": 2.777014586376671e+16,
+            "net_over_positive_turnover": 0.9999993740903291
+          },
+          "net_relative_to_Born_at_g_point005": 1.0659142633414835e-05,
+          "refinement_relative_drift": 2.2439643476701576e-09
+        }
+      ],
+      "unscaled_gain_absolute_tail_bound": 8.466234461610701e-06,
+      "old_window_legacy_prior": [
+        14.214283272634546,
+        4.618113069175169e-06
+      ],
+      "old_window_replay": {
+        "gain": 14.214323561646726,
+        "loss": 4.6181245467081125e-06,
+        "net": 2.661408021385787e+16,
+        "net_over_positive_turnover": 0.999999350215573
+      },
+      "old_window_relative_difference": 2.8344033538019175e-06,
+      "equilibrium": {
+        "gain": 38454.090776915844,
+        "loss": 38487.454596246636,
+        "net": -1.1641532182693481e-08,
+        "net_over_positive_turnover": -1.3121822884026042e-16
+      }
+    }
+  ]
+}
