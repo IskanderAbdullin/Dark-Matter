@@ -1,0 +1,49 @@
+{
+  "scope": "Regular negative-frequency bare single cut with charge-symmetric frozen occupation comparator. No thermal real-time matching or full rate.",
+  "rows": [
+    {
+      "grid": "fine",
+      "cut": "parent",
+      "absolute_charged_gap_floor": 0.0025789660754510627,
+      "positive_photon_mass_sq_floor": 0.010000000000000002,
+      "negative_cut_integral_no_prefactors": 264.1532271606587,
+      "cells_intersecting_one_to_two_fraction": 0.32869026610497615,
+      "independent_azimuth_relative_defect": 2.220446049250313e-16,
+      "ordinary_angle_relative_defect": 2.1538326677728037e-14,
+      "radial_mesh_relative_defect": 2.1316282072803006e-14
+    },
+    {
+      "grid": "fine",
+      "cut": "daughter",
+      "absolute_charged_gap_floor": 0.00249547185407285,
+      "positive_photon_mass_sq_floor": 3.6e-05,
+      "negative_cut_integral_no_prefactors": -34.040459733061155,
+      "cells_intersecting_one_to_two_fraction": 0.7256070386086255,
+      "independent_azimuth_relative_defect": 2.220446049250313e-16,
+      "ordinary_angle_relative_defect": 3.985700658404312e-14,
+      "radial_mesh_relative_defect": 4.081617266393778e-10
+    },
+    {
+      "grid": "third",
+      "cut": "parent",
+      "absolute_charged_gap_floor": 0.0025784762524455195,
+      "positive_photon_mass_sq_floor": 0.010000000000000002,
+      "negative_cut_integral_no_prefactors": 265.7336202701444,
+      "cells_intersecting_one_to_two_fraction": 0.3293186138095916,
+      "independent_azimuth_relative_defect": 2.220446049250313e-16,
+      "ordinary_angle_relative_defect": 2.1316282072803006e-14,
+      "radial_mesh_relative_defect": 2.1316282072803006e-14
+    },
+    {
+      "grid": "third",
+      "cut": "daughter",
+      "absolute_charged_gap_floor": 0.002495451340955366,
+      "positive_photon_mass_sq_floor": 3.6e-05,
+      "negative_cut_integral_no_prefactors": -33.596932018357236,
+      "cells_intersecting_one_to_two_fraction": 0.7049002636840521,
+      "independent_azimuth_relative_defect": 2.220446049250313e-16,
+      "ordinary_angle_relative_defect": 3.963496197911809e-14,
+      "radial_mesh_relative_defect": 4.90899765281938e-10
+    }
+  ]
+}
