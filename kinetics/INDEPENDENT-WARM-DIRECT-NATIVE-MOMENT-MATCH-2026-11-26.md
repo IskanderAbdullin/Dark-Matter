@@ -55,3 +55,6 @@ python -W error warm_direct_vacuum_native_moment_match_audit_reference.py native
 [Template moments and pressure](results/warm-direct-vacuum-native-two-moment-template-2026-11-26.json);
 [native comparison](results/warm-direct-vacuum-native-two-moment-power-2026-11-26.json);
 [exact-mode native tables](results/warm-direct-vacuum-native-two-moment-raw-2026-11-26.json.gz).
+
+[Unamplified equal-fraction shape check](INDEPENDENT-WARM-DIRECT-NATIVE-PHYSICAL-SHAPE-2026-11-26.md)
+uses one matched trace for each of the two spectrum tables.
