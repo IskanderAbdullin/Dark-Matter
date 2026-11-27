@@ -542,6 +542,11 @@ bounds narrow-band production without assigning a scalar momentum
 shape. It relies on a positive retained tadpole and no other means
 of refilling the selected band.
 
+The [Hartree energy and pressure check](INDEPENDENT-EARLY-POLE-HARTREE-ENERGY-PRESSURE-2026-11-26.md)
+shows an interaction-dominated soft scalar shell can have radiation-like
+homogeneous stress while its individual momenta are small. This is
+not a perturbation evolution or a prediction of the transition epoch.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
