@@ -446,6 +446,11 @@ connects a primordial collisionless cap to a conditional rounded
 isothermal Bose critical profile. It does not demonstrate halo formation
 or fit galactic data.
 
+The [halo high-occupation excess test](INDEPENDENT-HALO-BOSE-HIGH-OCCUPATION-MIXING-2026-11-26.md)
+shows the finite-cap clipped core has a plateau inaccessible from a
+nonplateau primordial spectrum at the same cap under collisionless
+mixing. A smooth subcritical core has a different high-density tail.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
