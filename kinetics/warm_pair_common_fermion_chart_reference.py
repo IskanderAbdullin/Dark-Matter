@@ -14,12 +14,17 @@ from warm_cold_light_finite_pair_reference import tagged
 from warm_light_occupation_stage_audit_reference import digest, read
 
 
-def rate(p,F,B,order,ext=4,verify_balance=None):
+def rate(p,F,B,order,ext=4,verify_balance=None,excess_cut=(),excess_result=None):
     """Use vacuum occupations above the represented bath, but allow empty final states."""
     n = len(p) - 1
     max_E = max(2*np.hypot(mp,p[-1])-m,m)
     high = np.sqrt((max_E-m)*(max_E+m))
     grid = np.r_[p,np.geomspace(p[-1],high,ext+1)[1:]] if high>p[-1] else p
+    excess_cut=np.asarray(excess_cut)
+    assert (excess_result is None) == (len(excess_cut)==0)
+    if len(excess_cut):
+        radius=np.sqrt(np.maximum((excess_cut-m)*(excess_cut+m),0.))
+        grid=np.unique(np.r_[grid,radius[(radius>grid[0])&(radius<grid[-1])]])
     nr,na,nz,nf = order
     pp,ee,rad = points(grid,m,np.ones_like,nr)
     ff = F(ee)
@@ -32,6 +37,8 @@ def rate(p,F,B,order,ext=4,verify_balance=None):
     eF=np.hypot(m,p); eB=np.hypot(mp,p)
     output=np.zeros((2,2,2,n+2))
     gross_rate=np.zeros((2,2))
+    tail=np.zeros((len(excess_cut),4))
+    Bose_boundaries=np.unique(np.r_[eB,excess_cut]) if len(excess_cut) else eB
 
     def scatter(array, edge, EE, W, mass):
         a=np.broadcast_to(EE,W.shape).ravel()
@@ -50,7 +57,7 @@ def rate(p,F,B,order,ext=4,verify_balance=None):
         boost=np.sqrt((U-V)**2+2*U*V*(1+u))/np.sqrt(s)
         d=boost*k
         mid=np.broadcast_to((E+F0)/2,s.shape)
-        cut=np.clip((eB-mid[...,None])/np.maximum(d[...,None],1e-280),-1.,1.)
+        cut=np.clip((Bose_boundaries-mid[...,None])/np.maximum(d[...,None],1e-280),-1.,1.)
         cut=np.sort(np.concatenate([-np.ones_like(cut[...,:1]),cut,-cut,
                                     np.ones_like(cut[...,:1])],axis=-1),axis=-1)
         h=np.diff(cut,axis=-1)/2
@@ -76,6 +83,18 @@ def rate(p,F,B,order,ext=4,verify_balance=None):
                 diff=np.max(abs(G[valid]-L[valid])/np.maximum(G[valid],L[valid]))
                 verify_balance[0]=max(verify_balance[0],float(diff))
                 verify_balance[1]+=int(np.sum(valid))
+        for row,C in zip(tail,excess_cut,strict=True):
+            # Difference of convex excess energies in the two sides.
+            # Use the stable merger defect when the total energy cancels.
+            def defect(x,y):
+                return np.minimum(np.minimum(x,y),np.minimum(C,np.maximum(x+y-C,0.)))
+            dw=defect(e0,e1)-defect(E[a],F0[a])
+            up=np.maximum(dw,0.)
+            down=np.maximum(-dw,0.)
+            outleg=lambda q,cut: np.where(q>cut,np.maximum(q-C,0.),0.)
+            outside=(outleg(E[a],eF[-1])+outleg(F0[a],eF[-1]))*G
+            outside+=(outleg(e0,eB[-1])+outleg(e1,eB[-1]))*L
+            row += [np.sum(G*up+L*down),np.sum(G*down+L*up),np.sum((G-L)*dw),np.sum(outside)]
         for n0,Q in enumerate((G,L)):
             output0=output[n0]
             energy=E[a]+F0[a]
@@ -98,6 +117,11 @@ def rate(p,F,B,order,ext=4,verify_balance=None):
     d=max(abs(delta[:,0].sum())/max(2*gross_rate[:,0].sum(),1e-280),
           abs(e_total(delta))/max(gross_rate[:,1].sum(),1e-280))
     assert d<2e-12
+    if excess_result is not None:
+        np.testing.assert_allclose(tail[:,0]-tail[:,1],tail[:,2],rtol=2e-11,
+                                   atol=5e-14*np.max(tail[:,0]))
+        excess_result.update(cuts_GeV=excess_cut.tolist(),columns=["positive_gross_excess","negative_gross_excess",
+                             "signed_excess","new_outside_excess"],rate_GeV5=tail.tolist())
     return delta,output,gross_rate,d,high
 
 

@@ -250,6 +250,9 @@ resetting them to empty or asserting the global light cap.
 A [frozen high-inverse shape stress](INDEPENDENT-WARM-HIGH-INVERSE-FROZEN-PRESSURE-TEST-2026-11-26.md)
 shows why total energy and a light cap do not force a uniformly tiny
 source-to-decay reservoir without information about momentum location.
+The [convex excess-energy ledger](INDEPENDENT-WARM-CONVEX-HIGH-ENERGY-TAIL-2026-11-26.md)
+separates high-parent circulation from actual new above-cut energy and
+bounds the latter for the known ballistic receipts without assuming a shape.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)

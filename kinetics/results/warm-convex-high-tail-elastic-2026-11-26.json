@@ -1,0 +1,113 @@
+{
+  "scope": "Frozen retained-only elastic channel with strict subpole and compact model lab support. No exterior elastic output or higher pole channels. Not an integral or upper bound.",
+  "snapshot_sha256": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "cuts_GeV": [
+    0.1,
+    0.3,
+    0.5,
+    0.7148213914435242
+  ],
+  "columns": [
+    "positive_gross_excess",
+    "negative_gross_excess",
+    "signed_excess"
+  ],
+  "controls": [
+    {
+      "order": [
+        3,
+        2,
+        2,
+        8
+      ],
+      "lab_panels": 11115,
+      "rate_over_retained_rhoH": [
+        [
+          0.0003259542812167792,
+          0.00032010741413800777,
+          5.846867078771383e-06
+        ],
+        [
+          2.2655874575399126e-17,
+          2.1924758330113542e-17,
+          7.311162452855851e-19
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "max_projected_panel_error_over_gross_against_compact": 2.9031836155709705e-15
+    },
+    {
+      "order": [
+        4,
+        3,
+        3,
+        12
+      ],
+      "lab_panels": 22248,
+      "rate_over_retained_rhoH": [
+        [
+          0.00034935912366481974,
+          0.0003432045555040082,
+          6.154568160811347e-06
+        ],
+        [
+          3.661739128596949e-17,
+          3.5627561823564624e-17,
+          9.898294624048625e-19
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "max_projected_panel_error_over_gross_against_compact": 2.639031151769377e-15
+    },
+    {
+      "order": [
+        5,
+        4,
+        4,
+        16
+      ],
+      "lab_panels": 37119,
+      "rate_over_retained_rhoH": [
+        [
+          0.00035940868829573754,
+          0.0003533020815936227,
+          6.10660670211546e-06
+        ],
+        [
+          4.092862353954523e-17,
+          3.993872686072292e-17,
+          9.89896678822314e-19
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "max_projected_panel_error_over_gross_against_compact": 3.1960756649513956e-15
+    }
+  ]
+}

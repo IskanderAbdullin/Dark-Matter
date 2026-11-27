@@ -9,10 +9,14 @@ from three_species_decay_onsager_reference import M,m,mp
 from joint_resonant_kinetic_linear_modes_reference import configuration,gram,metric
 from sm_dark_entropy_exchange_reference import StandardModel
 
-def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None,cache=None,cache_only=False):
+def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None,cache=None,cache_only=False,energy_observable_cuts=()):
     assert not cache_only or (cache is not None and perturb is None)
     n=len(k.c[0].vol);D=4*n
     el=[np.hypot(c.p,c.mass) for c in k.c]
+    cut=np.asarray(energy_observable_cuts)
+    ea=[np.unique(np.r_[e, cut[(cut>e[0])&(cut<e[-1])]]) for e in el] if len(cut) else el
+    pa=[np.sqrt(np.maximum((e-c.mass)*(e+c.mass),0.)) for e,c in zip(ea,k.c,strict=True)] if len(cut) else [c.p for c in k.c]
+    crossing=np.unique(np.r_[(cut[:,None]+el[1]).ravel(),(cut[:,None]+el[0]).ravel(),(cut[:,None]+cut).ravel()]) if len(cut) else []
     tau=temps
     g=np.zeros((D,D))
     nonlin=np.zeros((0 if perturb is None else len(perturb),D))
@@ -32,11 +36,11 @@ def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None,cache=None,cache_
         gates=[]
         for j,c in enumerate(k.c):
             e0=E if j==0 else u-E
-            cc=el[j]*e0+c.p*pcm
-            low=u*(e0*e0+c.p*c.p)/cc
+            cc=ea[j]*e0+pa[j]*pcm
+            low=u*(e0*e0+pa[j]*pa[j])/cc
             high=u*cc/c.mass**2
             gates.extend(np.r_[low,high])
-        l=np.unique(np.clip(np.r_[u,cap,gates,u+T*np.array([.03,.12,.4,.8,1.4,2.5,4.5,7.,11.,17.,25.])],u,cap))
+        l=np.unique(np.clip(np.r_[u,cap,gates,crossing,u+T*np.array([.03,.12,.4,.8,1.4,2.5,4.5,7.,11.,17.,25.])],u,cap))
         h=(l[1:]-l[:-1])[:,None]/2
         labs=(l[1:]+l[:-1])[:,None]/2+h*rl
         for L,dL in zip(labs.ravel(),(h*wl).ravel()):
@@ -49,7 +53,7 @@ def setup(T,k,temps,ef,n_u,n_l,n_a,n_az,tail,pole,perturb=None,cache=None,cache_
             lo=max(a,el[0][0],L-el[1][-1])
             hi=min(b,el[0][-1],L-el[1][0])
             if lo>=hi:continue
-            edge=np.unique(np.clip(np.r_[lo,hi,el[0],L-el[1]],lo,hi))
+            edge=np.unique(np.clip(np.r_[lo,hi,ea[0],L-ea[1]],lo,hi))
             lf=edge[:-1]
             delta=np.log1p((edge[1:]-lf)/lf)
             p=(lf[:,None]*np.exp(delta[:,None]*(1+ra)/2)).ravel()
