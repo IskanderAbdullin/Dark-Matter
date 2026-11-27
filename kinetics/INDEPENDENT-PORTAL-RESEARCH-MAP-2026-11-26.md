@@ -706,6 +706,11 @@ checks the selected aligned field state, while a
 matches the same energy without a homogeneous initial field and
 separates local band overlap from global power.
 
+The [shared fermion bath comparator](INDEPENDENT-EARLY-POLE-SHARED-FERMION-BATH-2026-11-26.md)
+distinguishes common gauge mass shifts, conserving joint momentum
+relaxation, and chemical inversion. No calibrated gauge rate is
+inserted into the evolution.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
