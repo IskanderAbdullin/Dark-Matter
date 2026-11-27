@@ -14,7 +14,7 @@ from early_pole_scalar_elastic_stencil_reference import Elastic
 from early_pole_scalar_hartree_discrete_gradient_reference import gradient
 
 
-def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97)):
+def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97),refresh=False):
     if bins<4 or steps<1 or order<2 or not duration>0.:
         raise ValueError("Invalid scalar mesh, time or order.")
     if not mixes or any(not 0<=m<1 for m in mixes):
@@ -47,9 +47,13 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97)):
     def self_half(z,dt):
         nonlocal calls,self_count_defect,max_local_self_work,max_secant_defect
         start=z[block].copy()
+        kernel=Q
+        if refresh:
+            _,_,_,f,m=C.scalar(start)
+            kernel=Elastic(C.q,m,edges,order,C.lam,Screen(edges,f,m,C.lam,order))
         def update(_,logn):
             N=start*np.exp(logn)
-            r,_=Q.flux(N/Q.vol)
+            r,_=kernel.flux(N/kernel.vol)
             return r/(H*N)
         q0=np.zeros(len(start))
         span=min(dt/100,.01/max(1.,np.max(abs(update(0.,q0)))))
@@ -64,7 +68,7 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97)):
             N=start[:,None]*np.exp(h.sol(t.ravel()))
             out=np.zeros(2)
             for n,weight in zip(N.T,(d*w).ravel(),strict=True):
-                r,entropy=Q.flux(n/Q.vol)
+                r,entropy=kernel.flux(n/kernel.vol)
                 E,*_=C.scalar(n)
                 # Exact Hartree-gradient work on the independently
                 # diagnosed fixed-mass scattering graph.
@@ -129,7 +133,8 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97)):
                               max_self_halfstep_dispersion_work=float(max_local_self_work),
                               max_hartree_finite_secant_defect=float(max_secant_defect)))
     return dict(grid=grid,bins=bins,order=order,steps=steps,duration=duration,subdivision=subdivision,
-                shape_closed_domain_fraction=1-Q.raw_escape,cases=cases)
+                shape_closed_domain_fraction=1-Q.raw_escape,cases=cases,
+                **(dict(refreshed_scalar_vertex_and_mass=True) if refresh else {}))
 
 
 if __name__=='__main__':
@@ -141,4 +146,5 @@ if __name__=='__main__':
     p.add_argument('--steps',type=int,default=8)
     p.add_argument('--subdivision',type=int,default=3)
     p.add_argument('--mixes',type=float,nargs='+',default=[0.,.97])
+    p.add_argument('--refresh',action='store_true')
     print(json.dumps(run(**vars(p.parse_args())),indent=2,allow_nan=False))
