@@ -68,3 +68,6 @@ python -W error warm_direct_vacuum_native_absolute_abundance_reference.py EOS.da
 
 [Absolute vacuum production envelope](results/warm-direct-vacuum-absolute-source-envelope-2026-11-26.json);
 [reference abundance scenarios](results/warm-direct-vacuum-two-normalizations-2026-11-26.json).
+
+[Native comparison of separate normalizations](INDEPENDENT-WARM-DIRECT-NATIVE-ABSOLUTE-POWER-2026-11-26.md)
+keeps their power effects distinct and tests an illustrative colder shape.
