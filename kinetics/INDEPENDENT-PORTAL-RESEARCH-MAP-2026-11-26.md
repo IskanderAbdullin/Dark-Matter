@@ -397,6 +397,11 @@ uses passage-time slabs and tests fixed-count energy sensitivity. It
 certifies a stable excess starting at the sampled 166 keV anchor;
 warmer inconclusive points do not demonstrate adequate depletion.
 
+The [80 keV viability ledger](INDEPENDENT-WARM-REHEATING-ANCHOR-VIABILITY-LEDGER-2026-11-26.md)
+makes the required earlier fermion loss explicit for three energy
+retention choices. A separate hypothetical dilution reduces the
+stable component but cannot repair the original scalar deficit.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
