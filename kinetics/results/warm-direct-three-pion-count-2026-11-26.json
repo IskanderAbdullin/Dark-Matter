@@ -1,0 +1,1532 @@
+{
+  "scope": "Exclusive charged+charged+neutral three-pion contribution to the restricted weighted count, not inclusive hadrons. Independent SND and BABAR alternatives use caps equal to the quoted central values plus twice the error sums, not confidence intervals. SND carries an additional factor-three safety multiplier for the normalization printed in its Eq. (14). The optional low and high R=1 comparisons use disjoint windows, omit energy above 4 GeV, do not assert R=1 in those regions, and do not include other species or finite-temperature spectral changes.",
+  "source_snd": "https://arxiv.org/html/2603.01635#S7.T7",
+  "source_babar": "https://doi.org/10.1103/PhysRevD.104.112003",
+  "threshold_GeV": 0.41411758,
+  "clock_min_slopes": [
+    3.0,
+    4.0
+  ],
+  "rows": [
+    {
+      "T_reheat_GeV": 0.025,
+      "baseline_weighted_omega_upper": 3.664385708125037e-05,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.0035806870772105955,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 3.73864130866003e-10
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 1.143585952865511e-09,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 8.656737530021227e-18
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.4979490896309047e-32,
+              "weighted_omega_summed_measured_bands_upper": 3.7386413952274054e-10,
+              "total_upper_including_only_measured_bands": 3.664423094538989e-05,
+              "sub_062_uniform_R_budget_before_reaching_half": 2187247.327501566,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 3.6671645931804594e-05
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.0011935623590701985,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 1.2595255984553906e-10
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3.813739824385615e-10,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 3.01363083091165e-18
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 9.759036837061659e-33,
+              "weighted_omega_summed_measured_bands_upper": 1.259525628591699e-10,
+              "total_upper_including_only_measured_bands": 3.664398303381323e-05,
+              "sub_062_uniform_R_budget_before_reaching_half": 2187247.3365444876,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 3.667139802022793e-05
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 2.7414986414704707e-08
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.0033303365664589693,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 3.4772471290074204e-10
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 1.027215548191357e-09,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 7.775834746105187e-18
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.0054855216977486e-32,
+              "weighted_omega_summed_measured_bands_upper": 3.4772472067657677e-10,
+              "total_upper_including_only_measured_bands": 3.664420480597104e-05,
+              "sub_062_uniform_R_budget_before_reaching_half": 2321331.783100524,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 3.6670036251622946e-05
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.0011101121888196564,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 1.1714634835375753e-10
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3.4248541265444016e-10,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 2.7063319634794246e-18
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 7.825407946851e-33,
+              "weighted_omega_summed_measured_bands_upper": 1.171463510600895e-10,
+              "total_upper_including_only_measured_bands": 3.6643974227601425e-05,
+              "sub_062_uniform_R_budget_before_reaching_half": 2321331.7920267903,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 3.666980567325333e-05
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 2.5831445651902034e-08
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.04,
+      "baseline_weighted_omega_upper": 0.00029452943938724813,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 11.413010350586948,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 1.191647050769617e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.004622379618674779,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 3.4990572438146256e-11
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 7.619326658642119e-20,
+              "weighted_omega_summed_measured_bands_upper": 1.1916820413420551e-06,
+              "total_upper_including_only_measured_bands": 0.0002957211214285902,
+              "sub_062_uniform_R_budget_before_reaching_half": 7755.085564788479,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.00030341984742971335
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3.8043367835289827,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 4.01458669300946e-07
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.0015415153702260955,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.2181109514427708e-11
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 4.324555371929172e-20,
+              "weighted_omega_summed_measured_bands_upper": 4.014708504104604e-07,
+              "total_upper_including_only_measured_bands": 0.00029493091023765857,
+              "sub_062_uniform_R_budget_before_reaching_half": 7755.188206601009,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0003026296362387817
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 7.69872600112309e-06
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 10.749769415812136,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 1.1223972139959701e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.004249698191066995,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 3.216944185934699e-11
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 6.502594475366662e-20,
+              "weighted_omega_summed_measured_bands_upper": 1.1224293834378294e-06,
+              "total_upper_including_only_measured_bands": 0.00029565186877068594,
+              "sub_062_uniform_R_budget_before_reaching_half": 8148.757339192914,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0003029786728030101
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3.5832564719373785,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 3.7812881898788474e-07
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.001416897983278262,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.1196378471758488e-11
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 3.687494149624886e-20,
+              "weighted_omega_summed_measured_bands_upper": 3.781400153663565e-07,
+              "total_upper_including_only_measured_bands": 0.0002949075794026145,
+              "sub_062_uniform_R_budget_before_reaching_half": 8148.858923644305,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.00030223438343493866
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 7.326804032324108e-06
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.045,
+      "baseline_weighted_omega_upper": 0.00048477849068956304,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 47.79257472273576,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 4.990084032834133e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.0725245905925157,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 5.489979512764175e-10
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 1.517167931370699e-17,
+              "weighted_omega_summed_measured_bands_upper": 4.9906330307854095e-06,
+              "total_upper_including_only_measured_bands": 0.0004897691237203485,
+              "sub_062_uniform_R_budget_before_reaching_half": 2770.1293745360676,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0005112519582129751
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 15.93085824091192,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 1.681129067728287e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.02418619419877285,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.9112017042636222e-10
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 9.226819853660557e-18,
+              "weighted_omega_summed_measured_bands_upper": 1.6813201878987134e-06,
+              "total_upper_including_only_measured_bands": 0.00048645981087746176,
+              "sub_062_uniform_R_budget_before_reaching_half": 2770.2834190521216,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0005079426453700824
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 2.1482834492611462e-05
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 45.12287723538717,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 4.711337493619578e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.06698160485908414,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 5.070385581002996e-10
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 1.3104206778480778e-17,
+              "weighted_omega_summed_measured_bands_upper": 4.711844532177678e-06,
+              "total_upper_including_only_measured_bands": 0.0004894903352217408,
+              "sub_062_uniform_R_budget_before_reaching_half": 2905.327052435161,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0005099735746611479
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 15.04095907846239,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 1.5872210480398683e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.02233243316927152,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.7647168455974258e-10
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 7.963119491439601e-18,
+              "weighted_omega_summed_measured_bands_upper": 1.587397519724428e-06,
+              "total_upper_including_only_measured_bands": 0.0004863658882092875,
+              "sub_062_uniform_R_budget_before_reaching_half": 2905.4795891968242,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0005068491276486894
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 2.0483239439394015e-05
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.05,
+      "baseline_weighted_omega_upper": 0.000748435164483935,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 148.06897054238755,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 1.5460071150137456e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.6461862167065671,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 4.891512054279337e-09
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 1.045945914730948e-15,
+              "weighted_omega_summed_measured_bands_upper": 1.5464962662191735e-05,
+              "total_upper_including_only_measured_bands": 0.0007639001271461267,
+              "sub_062_uniform_R_budget_before_reaching_half": 1215.3740132909093,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0008126391154956715
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 49.35632351412919,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 5.208404273080398e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.21549636058818636,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.7028599383347649e-09
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 6.722114861522118e-16,
+              "weighted_omega_summed_measured_bands_upper": 5.210107133018733e-06,
+              "total_upper_including_only_measured_bands": 0.0007536452716169538,
+              "sub_062_uniform_R_budget_before_reaching_half": 1215.5844168277213,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0008023842599661249
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 4.873898834849882e-05
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 140.06426368248094,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 1.4624289438838783e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.5990033839604514,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 4.534346597688556e-09
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 9.12258459010188e-16,
+              "weighted_omega_summed_measured_bands_upper": 1.4628823785436472e-05,
+              "total_upper_including_only_measured_bands": 0.0007630639882693715,
+              "sub_062_uniform_R_budget_before_reaching_half": 1272.7948623648997,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0008096048235323513
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 46.68808789416031,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 4.92683447988758e-06
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 0.19971457937753534,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.578151739524213e-09
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 5.858651552185032e-16,
+              "weighted_omega_summed_measured_bands_upper": 4.928412631627104e-06,
+              "total_upper_including_only_measured_bands": 0.0007533635771155621,
+              "sub_062_uniform_R_budget_before_reaching_half": 1273.0032903206763,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0007999044123782155
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 4.654083526206746e-05
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.0555,
+      "baseline_weighted_omega_upper": 0.00114137946643234,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 401.63338451129187,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 4.1935056872956124e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 4.4960133686825445,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 3.40340029244208e-08
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 4.5721359195245865e-14,
+              "weighted_omega_summed_measured_bands_upper": 4.196909087588054e-05,
+              "total_upper_including_only_measured_bands": 0.0011833485573082205,
+              "sub_062_uniform_R_budget_before_reaching_half": 581.1368772587323,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0012845581927158113
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 133.8777948370973,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 1.412766650863908e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 1.4993735444327583,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.1848103301812857e-08
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 3.086638955850343e-14,
+              "weighted_omega_summed_measured_bands_upper": 1.4139514611940893e-05,
+              "total_upper_including_only_measured_bands": 0.0011555189810442809,
+              "sub_062_uniform_R_budget_before_reaching_half": 581.4118468914598,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0012567286164370166
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.00010120963536186944
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 380.5592842151447,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 3.9734683028185595e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 4.18154138644479,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 3.165350725292676e-08
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 4.0229751294017374e-14,
+              "weighted_omega_summed_measured_bands_upper": 3.976633653543852e-05,
+              "total_upper_including_only_measured_bands": 0.0011811458029677784,
+              "sub_062_uniform_R_budget_before_reaching_half": 607.7962417790659,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0012779197712458916
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 126.85309473838156,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 1.3386373895934945e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 1.394173725066493,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.1016810571717963e-08
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.7140897117168186e-14,
+              "weighted_omega_summed_measured_bands_upper": 1.3397390706506664e-05,
+              "total_upper_including_only_measured_bands": 0.0011547768571388466,
+              "sub_062_uniform_R_budget_before_reaching_half": 608.0687215203544,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0012515508254038708
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 9.67739682378834e-05
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.06,
+      "baseline_weighted_omega_upper": 0.001561541772495932,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 788.7639469555985,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 8.235585549037051e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 16.782498299919915,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 1.2704045770796533e-07
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 6.026921799633776e-13,
+              "weighted_omega_summed_measured_bands_upper": 8.248289594807848e-05,
+              "total_upper_including_only_measured_bands": 0.0016440246684440107,
+              "sub_062_uniform_R_budget_before_reaching_half": 350.07834830057595,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0018107187122939927
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 262.92131565186617,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 2.7745188588308913e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 5.596788064658533,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 4.42260191895772e-08
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 4.2074716615498203e-13,
+              "weighted_omega_summed_measured_bands_upper": 2.778941460749849e-05,
+              "total_upper_including_only_measured_bands": 0.0015893311871034307,
+              "sub_062_uniform_R_budget_before_reaching_half": 350.4064552939341,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0017560252307714677
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.0001666940432472898
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 748.2180426689938,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 7.812240561345571e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 15.6439448185436,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 1.1842181507120519e-07
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 5.335175069010572e-13,
+              "weighted_omega_summed_measured_bands_upper": 7.824082742852692e-05,
+              "total_upper_including_only_measured_bands": 0.001639782599924459,
+              "sub_062_uniform_R_budget_before_reaching_half": 365.8206850681302,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0017993149062629546
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 249.40601422299792,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 2.6318964982048296e-05
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 5.215870131790591,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 4.121599207866148e-08
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 3.722233931154089e-13,
+              "weighted_omega_summed_measured_bands_upper": 2.636018097412696e-05,
+              "total_upper_including_only_measured_bands": 0.001587901953470059,
+              "sub_062_uniform_R_budget_before_reaching_half": 366.14588971049164,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.0017474342596472605
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.00015953230580497812
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.075,
+      "baseline_weighted_omega_upper": 0.003874539088759511,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 4100.103547560531,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 0.00042809707081789165
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 425.2824258770336,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 3.2193105622915515e-06
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 3.574692520774943e-10,
+              "weighted_omega_summed_measured_bands_upper": 0.0004313163813801832,
+              "total_upper_including_only_measured_bands": 0.004305855470139694,
+              "sub_062_uniform_R_budget_before_reaching_half": 96.96780843044706,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.004880212878998928
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 1366.7011825201773,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.3862410128616024
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 0.0001442233086308458
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 141.82725138538922,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.1207240061461758e-06
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.7102957432990503e-10,
+              "weighted_omega_summed_measured_bands_upper": 0.00014534403263699198,
+              "total_upper_including_only_measured_bands": 0.004019883121396502,
+              "sub_062_uniform_R_budget_before_reaching_half": 97.46570838318746,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.00459424044381606
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.0005743570513899829
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3899.6060801310387,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 0.00040716287305499866
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 398.6193189954642,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 3.017475695895817e-06
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 3.212218689541891e-10,
+              "weighted_omega_summed_measured_bands_upper": 0.0004101803487508945,
+              "total_upper_including_only_measured_bands": 0.004284719437510406,
+              "sub_062_uniform_R_budget_before_reaching_half": 101.14137479785383,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.004835585125886368
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 1299.868693377013,
+                  "controlling_s_interval_GeV2": [
+                    0.3844,
+                    0.38531940691327754
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 0.00013717070427845296
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 132.90424020408358,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 1.0502140530848549e-06
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.43423590526135e-10,
+              "weighted_omega_summed_measured_bands_upper": 0.0001382209183315378,
+              "total_upper_including_only_measured_bands": 0.004012760007091049,
+              "sub_062_uniform_R_budget_before_reaching_half": 101.63506971250125,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.004563625617668733
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.0005508653671540941
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.1,
+      "baseline_weighted_omega_upper": 0.012874629810488501,
+      "controls": [
+        {
+          "invariant_panels": 240,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 22139.80992236732,
+                  "controlling_s_interval_GeV2": [
+                    0.5047296896513255,
+                    0.5071469993554895
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 0.0023116459538856113
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 10562.742958465737,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.215915768026769
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 7.995804177149706e-05
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.2741567318057462e-07,
+              "weighted_omega_summed_measured_bands_upper": 0.0023916039956571084,
+              "total_upper_including_only_measured_bands": 0.01526623380614561,
+              "sub_062_uniform_R_budget_before_reaching_half": 22.25962879419062,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.01727609788770646
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 7379.9366407891075,
+                  "controlling_s_interval_GeV2": [
+                    0.5047296896513255,
+                    0.5071469993554895
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 0.0007787795118885844
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3522.564558834433,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.2160432308707485
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 2.78354309607114e-05
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 1.871928760087179e-07,
+              "weighted_omega_summed_measured_bands_upper": 0.0008066149428492958,
+              "total_upper_including_only_measured_bands": 0.013681244753337797,
+              "sub_062_uniform_R_budget_before_reaching_half": 23.048323128699945,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.015691068612101476
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.0020096366658876688
+        },
+        {
+          "invariant_panels": 480,
+          "control_cases": [
+            {
+              "experiment": "SND",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 21057.06615062653,
+                  "controlling_s_interval_GeV2": [
+                    0.5023239020230355,
+                    0.5035253590163354
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.3297506125113259,
+                  "conditional_dispersion_moment_cap": 4.4000000000000005e-09,
+                  "weighted_omega_upper": 0.002198595287786134
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    1.975
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 9950.837172454854,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.212954277502821
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.32889785938221766,
+                  "conditional_dispersion_moment_cap": 3.1900000000000004e-10,
+                  "weighted_omega_upper": 7.532602633852987e-05
+                }
+              ],
+              "normalization_padding": 3.0,
+              "high_R1_interval_GeV": [
+                1.975,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 2.0738326737274007e-07,
+              "weighted_omega_summed_measured_bands_upper": 0.002273921314124664,
+              "total_upper_including_only_measured_bands": 0.015148551124613165,
+              "sub_062_uniform_R_budget_before_reaching_half": 23.228058022495066,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.017079675368513084
+            },
+            {
+              "experiment": "BABAR",
+              "bands": [
+                {
+                  "energy_window_GeV": [
+                    0.62,
+                    1.1
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 7019.022050208844,
+                  "controlling_s_interval_GeV2": [
+                    0.5023239020230355,
+                    0.5035253590163354
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9892518375339777,
+                  "conditional_dispersion_moment_cap": 4.447e-09,
+                  "weighted_omega_upper": 0.0007406934276352226
+                },
+                {
+                  "energy_window_GeV": [
+                    1.1,
+                    2.0
+                  ],
+                  "gain_in_weighted_yield_per_dispersion_upper": 3317.7229270584157,
+                  "controlling_s_interval_GeV2": [
+                    1.2100000000000002,
+                    1.213017852034176
+                  ],
+                  "lower_muon_kernel_relative_accuracy": 0.9866382839097155,
+                  "conditional_dispersion_moment_cap": 3.3300000000000004e-10,
+                  "weighted_omega_upper": 2.6216765070009472e-05
+                }
+              ],
+              "normalization_padding": 1.0,
+              "high_R1_interval_GeV": [
+                2.0,
+                4.0
+              ],
+              "high_gap_weighted_omega_per_unit_R": 1.7063853958290967e-07,
+              "weighted_omega_summed_measured_bands_upper": 0.0007669101927052321,
+              "total_upper_including_only_measured_bands": 0.013641540003193734,
+              "sub_062_uniform_R_budget_before_reaching_half": 24.008522035288323,
+              "numerical_count_comparison_with_unresolved_low_and_high_R1_and_sqrt_s_cap_4GeV": 0.015572627502365865
+            }
+          ],
+          "low_unmeasured_omega_ceiling_per_R": 0.0019309168606325476
+        }
+      ]
+    }
+  ]
+}

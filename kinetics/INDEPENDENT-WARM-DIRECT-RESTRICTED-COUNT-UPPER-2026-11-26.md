@@ -67,3 +67,6 @@ python -W error warm_direct_restricted_count_upper_reference.py EOS.late.dat KLO
 ~~~
 
 [Both invariant grids and all source terms](results/warm-direct-restricted-count-upper-2026-11-26.json).
+
+A [separate data-moment extension](INDEPENDENT-WARM-DIRECT-THREE-PION-DISPERSION-2026-11-26.md)
+adds the covered vacuum three-pion channel without assigning its resonance shape.
