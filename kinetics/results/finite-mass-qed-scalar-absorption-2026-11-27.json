@@ -1,0 +1,151 @@
+{
+  "scope": "One fixed cold scalar mode, frozen charged and scalar archive, photon bath T=1, vacuum scalar absorption and its inverse. No thermal widths or virtual matching.",
+  "data": [
+    {
+      "grid": "fine",
+      "Q": 4.1e-06,
+      "geometry": {
+        "exact_azimuth_relative_defect": 5.302647210214673e-12,
+        "independent_amplitude_relative_defect": 1.327305820808533e-09,
+        "gauge_relative_defect": 3.9968028886505635e-15,
+        "boost_mass_shell_abs_error": 1.0247891944759058e-12,
+        "pointwise_equilibrium_relative_defect": 1.7319479184152442e-14,
+        "rigorous_lab_photon_lower_bound": 0.00043247355499793845,
+        "minimum_sampled_lab_k": 0.00044191066440443333
+      },
+      "meshes": [
+        {
+          "gain": 0.06612126048571203,
+          "loss": 0.8201510321183557,
+          "net": -8045298331236161.0,
+          "net_over_positive_turnover": -0.8507879326985777
+        },
+        {
+          "gain": 0.06612124767755996,
+          "loss": 0.820151031617878,
+          "net": -8045298462555791.0,
+          "net_over_positive_turnover": -0.8507879593613725
+        },
+        {
+          "gain": 0.06612124654345913,
+          "loss": 0.8201510316975898,
+          "net": -8045298475506852.0,
+          "net_over_positive_turnover": -0.850787961743117
+        }
+      ],
+      "shorter_cap42": {
+        "gain": 0.06612124792393964,
+        "loss": 0.8201510315250216,
+        "net": -8045298458936231.0,
+        "net_over_positive_turnover": -0.8507879588312285
+      },
+      "rigorous_tail_bound": {
+        "parent_energy_cap": 56.0,
+        "absolute_gain_tail_upper_bound": 5.73432916409173e-10,
+        "loss_tail_exactly_zero": true
+      },
+      "equilibrium": [
+        {
+          "gain": 0.037499086144578385,
+          "loss": 0.037580929483597765,
+          "net": 3.3029134982598407e-15,
+          "net_over_positive_turnover": 9.59096579596797e-17
+        },
+        {
+          "gain": 0.6091951726663793,
+          "loss": 0.6097266625194527,
+          "net": -7.605027718682322e-14,
+          "net_over_positive_turnover": -5.440942589364152e-17
+        }
+      ],
+      "relative_last_mesh_drift": 1.7151836506634766e-08,
+      "old_restricted_domain_current_one_charge": {
+        "gain": 0.046598573560857344,
+        "loss": 0.34475708953669326,
+        "net": -3181272545552622.0,
+        "net_over_positive_turnover": -0.7618607422617414
+      },
+      "old_restricted_domain_original_one_charge": [
+        0.046598638128844364,
+        0.34475145114849703
+      ],
+      "max_restricted_legacy_relative_difference": 1.6354936802853715e-05,
+      "restricted_net_fraction_of_full": 0.3954200773579382,
+      "one_charge_Born_net": 4.3250896130613306e+17,
+      "relative_to_Born_at_g_point005": -4.6503651919782593e-07
+    },
+    {
+      "grid": "third",
+      "Q": 4.1e-06,
+      "geometry": {
+        "exact_azimuth_relative_defect": 5.615286013949117e-12,
+        "independent_amplitude_relative_defect": 2.8021340803263683e-09,
+        "gauge_relative_defect": 2.9976021664879227e-15,
+        "boost_mass_shell_abs_error": 2.150083496660349e-12,
+        "pointwise_equilibrium_relative_defect": 4.0190073491430667e-14,
+        "rigorous_lab_photon_lower_bound": 0.000430074423194195,
+        "minimum_sampled_lab_k": 0.0004395034452928827
+      },
+      "meshes": [
+        {
+          "gain": 0.06520871537765856,
+          "loss": 0.8236975125298347,
+          "net": -1420151170726337.2,
+          "net_over_positive_turnover": -0.8532832523152382
+        },
+        {
+          "gain": 0.06520870931260056,
+          "loss": 0.8236975122937906,
+          "net": -1420151181640250.5,
+          "net_over_positive_turnover": -0.853283264921336
+        },
+        {
+          "gain": 0.0652087088357336,
+          "loss": 0.8236975123457012,
+          "net": -1420151182630303.5,
+          "net_over_positive_turnover": -0.8532832659241254
+        }
+      ],
+      "shorter_cap42": {
+        "gain": 0.0652087094081174,
+        "loss": 0.8236975122628226,
+        "net": -1420151181403427.5,
+        "net_over_positive_turnover": -0.8532832647170812
+      },
+      "rigorous_tail_bound": {
+        "parent_energy_cap": 56.0,
+        "absolute_gain_tail_upper_bound": 5.738951319187141e-10,
+        "loss_tail_exactly_zero": true
+      },
+      "equilibrium": [
+        {
+          "gain": 0.037459566797010554,
+          "loss": 0.037540872035142836,
+          "net": 1.0894063429134349e-15,
+          "net_over_positive_turnover": 3.1492803455468176e-17
+        },
+        {
+          "gain": 0.6096187885531485,
+          "loss": 0.6101477104626517,
+          "net": 1.1024514634527804e-13,
+          "net_over_positive_turnover": 7.838405200868795e-17
+        }
+      ],
+      "relative_last_mesh_drift": 7.312933592018567e-09,
+      "old_restricted_domain_current_one_charge": {
+        "gain": 0.04595348506254422,
+        "loss": 0.34755525272739984,
+        "net": -564701950840340.9,
+        "net_over_positive_turnover": -0.7664423650634447
+      },
+      "old_restricted_domain_original_one_charge": [
+        0.045953517769358125,
+        0.34755512545993855
+      ],
+      "max_restricted_legacy_relative_difference": 7.117368917564093e-07,
+      "restricted_net_fraction_of_full": 0.3976350952962908,
+      "one_charge_Born_net": 6.5132222212486904e+16,
+      "relative_to_Born_at_g_point005": -5.45103151093637e-07
+    }
+  ]
+}
