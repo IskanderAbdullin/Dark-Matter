@@ -4,6 +4,7 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+import sys
 from types import MethodType
 
 import numpy as np
@@ -16,6 +17,7 @@ from early_pole_archived_live_compton_reference import ComptonKernel
 from early_pole_archived_live_flavor_conversion_reference import ConversionKernel
 from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_joined_screened_frw_reference import exterior,finite_energy_stable,elastic_at_midpoint
+from early_pole_joined_screened_frw_reference import step as elastic_step
 from early_pole_live_joint_hard_packets_frw_reference import Expanding
 from early_pole_live_scalar_exterior_decay_reference import warm_shape
 from early_pole_native_aperture_witness_reference import GRID
@@ -23,7 +25,12 @@ from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
 def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=None,resume=False,
-        checkpoint_every=6,stop_after=None,clock_mode="radiation"):
+        checkpoint_every=6,stop_after=None,clock_mode="radiation",
+        elastic_energy_budget=None,progress_every=0):
+    if elastic_energy_budget is not None and (not np.isfinite(elastic_energy_budget) or elastic_energy_budget<=0.):
+        raise ValueError("Use a finite positive optional energy budget.")
+    if progress_every<0:
+        raise ValueError("Use a nonnegative progress interval.")
     if clock_mode not in ("radiation","initial-density","live-density"):
         raise ValueError("Unknown collision clock normalization.")
     if checkpoint_every<1 or (stop_after is not None and (not checkpoint or not 1<=stop_after<=2*panels)):
@@ -47,7 +54,7 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
             path=Path(fn.__code__.co_filename)
             code.append(hashlib.sha256(path.read_bytes()).hexdigest())
         physics=dict(format=1,projection=projection,duration=duration,panels=panels,expands=expands,
-                     warm_order=warm_order,clock_mode=clock_mode,bundle_sha=hashlib.sha256(Path(bundle).read_bytes()).hexdigest(),
+                     warm_order=warm_order,clock_mode=clock_mode,elastic_energy_budget=elastic_energy_budget,bundle_sha=hashlib.sha256(Path(bundle).read_bytes()).hexdigest(),
                      code=code,numpy=np.__version__,scipy=scipy_version)
     results=[] if old is None else old["finished_arms"]
     if old is not None and (not isinstance(results,list) or len(results)>1 or old.get('arm')!=len(results)):
@@ -193,6 +200,9 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
                 global_steps_done=arm*panels+k,initial_digest=state_digest(z0),state_digest=state_digest(z),
                 state=z.tolist(),implicit=implicit,maximum_decay_work=work_max))
 
+        def solver(model,y,dt):
+            return elastic_step(model,y,dt,energy_budget=elastic_energy_budget)
+
         for j in range(begin,panels):
             m=(j+.5)*dt
             z=advance(j*dt,m,z)
@@ -202,7 +212,8 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
                 f_mid=collision_clock(r_mid)
                 C.factor*=f_mid
                 elastic.soft.fac*=f_mid
-            y,d=elastic_at_midpoint(elastic,z[:C.j0].reshape(-1,2),dt)
+            y,d=elastic_at_midpoint(elastic,z[:C.j0].reshape(-1,2),dt,
+                                    solver=solver if elastic_energy_budget is not None else None)
             z[:C.j0]=y.ravel()
             z[-3]+=d['entropy_gain']
             implicit.append(d)
@@ -211,6 +222,8 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
             end_now=stop_after==arm*panels+k
             if checkpoint and (k%checkpoint_every==0 or k==panels or end_now):
                 save(k)
+            if progress_every and (k%progress_every==0 or k==panels or end_now):
+                print(f"warm arm {arm+1}/2: {k}/{panels} macro steps",file=sys.stderr,flush=True)
             if end_now:
                 return None
         r1,s1,p1,c1=totals(duration,z)
@@ -218,6 +231,18 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
         ledger=r1-r0-z[-1]
         assert abs(ledger)<3e-12 and abs(ledger-z[-2])<3e-12
         assert abs(s1-s0-z[-3])<3e-11 and abs(c1-c0)<3e-12
+        def drift(t):
+            if 'rho_drift' in t:
+                yield abs(t['rho_drift'])
+            else:
+                for x in t['elastic_substeps']:
+                    yield from drift(x)
+        exc={}
+        if elastic_energy_budget is not None:
+            values=[j for d in implicit for j in drift(d)]
+            assert max(values)<elastic_energy_budget
+            exc=dict(elastic_energy_budget=elastic_energy_budget,peak_abs_elastic_energy_defect=max(values),
+                     sum_absolute_elastic_energy_defects=float(sum(values)))
         return dict(warm_active=active,cold_gain=float(net[:cold_n].sum()),warm_gain=float(net[cold_n:].sum()),
                     initial_count_rates=[float(init_rate[:cold_n].sum()),float(init_rate[cold_n:].sum())],
                     initial_gap=p0,final_gap=p1,hard_count_defect=c1-c0,
@@ -226,7 +251,7 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
                     maximum_decay_work=work_max,elastic_splits=sum('elastic_substeps' in d for d in implicit),
                     **(dict(initial_collision_clock=collision_clock(r0),final_collision_clock=collision_clock(r1),
                             initial_model_density=r0,final_model_density=r1)
-                       if clock_mode!="radiation" else {}))
+                       if clock_mode!="radiation" else {}),**exc)
 
     for idx in range(len(results),2):
         out=branch(bool(idx))
@@ -254,6 +279,8 @@ if __name__=='__main__':
     p.add_argument('--checkpoint-every',type=int,default=6)
     p.add_argument('--stop-after',type=int)
     p.add_argument('--clock-mode',choices=('radiation','initial-density','live-density'),default='radiation')
+    p.add_argument('--elastic-energy-budget',type=float)
+    p.add_argument('--progress-every',type=int,default=0)
     a=p.parse_args()
     if a.duration<=0. or a.panels<1 or (a.warm_order is not None and a.warm_order<3):
         p.error('Positive duration, positive macro steps and at least three distributed nodes required.')

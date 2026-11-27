@@ -1,0 +1,111 @@
+{
+  "cases": {
+    "fixed": {
+      "base": [
+        {
+          "cold_gain": 2.845612936211269e-06,
+          "warm_gain": 0.0,
+          "hard_count_defect": 4.55580018154933e-13,
+          "redshift_trace_integral": 0.0,
+          "redshift_subtracted_defect": 1.8260948309034575e-12,
+          "entropy_defect": 3.9898639947466563e-17,
+          "elastic_splits": 0
+        },
+        {
+          "cold_gain": 2.8456129360493285e-06,
+          "warm_gain": 6.597579329793382e-12,
+          "hard_count_defect": 4.556910404573955e-13,
+          "redshift_trace_integral": 0.0,
+          "redshift_subtracted_defect": 1.8256507416936074e-12,
+          "entropy_defect": 1.8214596497756474e-15,
+          "elastic_splits": 0
+        }
+      ],
+      "strict": [
+        {
+          "cold_gain": 2.8457009675902256e-06,
+          "warm_gain": 0.0,
+          "hard_count_defect": -2.7755575615628914e-16,
+          "redshift_trace_integral": 0.0,
+          "redshift_subtracted_defect": 0.0,
+          "entropy_defect": 3.899658373995862e-15,
+          "elastic_splits": 0,
+          "peak_abs_elastic_energy_defect": 1.5543122344752192e-15,
+          "sum_absolute_elastic_energy_defects": 5.728750807065808e-14
+        },
+        {
+          "cold_gain": 2.8457009674391548e-06,
+          "warm_gain": 6.59762997838158e-12,
+          "hard_count_defect": 2.220446049250313e-16,
+          "redshift_trace_integral": 0.0,
+          "redshift_subtracted_defect": 1.7763568394002505e-15,
+          "entropy_defect": 4.9144716074422945e-15,
+          "elastic_splits": 0,
+          "peak_abs_elastic_energy_defect": 1.3322676295501878e-15,
+          "sum_absolute_elastic_energy_defects": 5.595524044110789e-14
+        }
+      ]
+    },
+    "expands": {
+      "base": [
+        {
+          "cold_gain": 2.8457151433933664e-06,
+          "warm_gain": 0.0,
+          "hard_count_defect": 4.553024623987767e-13,
+          "redshift_trace_integral": 9.364953502195162e-09,
+          "redshift_subtracted_defect": 1.824739730837415e-12,
+          "entropy_defect": 3.937822290467352e-16,
+          "elastic_splits": 0
+        },
+        {
+          "cold_gain": 2.845715143343798e-06,
+          "warm_gain": 6.597816977513646e-12,
+          "hard_count_defect": 4.552469512475454e-13,
+          "redshift_trace_integral": 9.364953502100536e-09,
+          "redshift_subtracted_defect": 1.8247398254635686e-12,
+          "entropy_defect": 6.6405214660392176e-15,
+          "elastic_splits": 0
+        }
+      ],
+      "strict": [
+        {
+          "cold_gain": 2.8458031255813714e-06,
+          "warm_gain": 0.0,
+          "hard_count_defect": 4.440892098500626e-16,
+          "redshift_trace_integral": 9.364992546417446e-09,
+          "redshift_subtracted_defect": 2.899375610256496e-15,
+          "entropy_defect": 6.689093723366568e-15,
+          "elastic_splits": 0,
+          "peak_abs_elastic_energy_defect": 1.3322676295501878e-15,
+          "sum_absolute_elastic_energy_defects": 5.617728504603292e-14
+        },
+        {
+          "cold_gain": 2.8458031255056297e-06,
+          "warm_gain": 6.5978676290193105e-12,
+          "hard_count_defect": 7.771561172376096e-16,
+          "redshift_trace_integral": 9.364992546322831e-09,
+          "redshift_subtracted_defect": 4.45378245930454e-15,
+          "entropy_defect": 4.926614671774132e-16,
+          "elastic_splits": 0,
+          "peak_abs_elastic_energy_defect": 1.3322676295501878e-15,
+          "sum_absolute_elastic_energy_defects": 6.350475700855895e-14
+        }
+      ]
+    }
+  },
+  "expanding_minus_fixed_ppm": {
+    "base": {
+      "cold_gain": 35.917497132054166,
+      "warm_gain": 36.020441495976385
+    },
+    "strict": {
+      "cold_gain": 35.899086954005455,
+      "warm_gain": 36.020607173892216
+    }
+  },
+  "profile_panels": [
+    72,
+    144
+  ],
+  "scope": "Simultaneous macro step and local energy budget change under a prescribed radiation clock."
+}
