@@ -75,3 +75,39 @@ python -W error warm_late_cut_turning_convergence_reference.py turn6.json turn12
 [Terminal three-step archive](results/warm-late-aligned-hard068-terminal-3-2026-11-26.json.gz);
 [terminal shared-prefix six-step archive](results/warm-late-aligned-hard068-terminal-6-2026-11-26.json.gz).
 [Exact shared turning seed](results/warm-late-aligned-turning-seed-2026-11-26.json.gz).
+
+## Twenty-four inner steps and a frozen outer mesh split
+
+Keep the exact Hdt=1e-8 input and add 24 equal implicit
+substeps to the local stopping-time comparison. The signed
+current is positive at 6.25e-8 (+6.832e-13) and negative at
+6.625e-8 (−7.984e-13), bracketing a reversal on this numerical
+trajectory. The peak sampled excess is 2.525e-18.
+The largest sampled difference between paired 12/24 times is
+2.24% of that peak, versus 3.82% between the earlier 6/12
+pair. Do not treat the last bracket as a rigorous error
+enclosure or universal clock. The signed discrete increment
+again agrees with the direct state moment to 3.5e-32.
+
+As a separate frozen check, double each retained shell beyond
+the original .430 GeV q64 boundary in the common starting
+state (41→53 total cells). Interpolate neither occupation nor
+moments: restrict the same affine kinetic entropy into each new
+cell. The total recovered moments agree to 2.3e-16 relative
+and the independently folded flux remains +9.02286578e-11.
+With the native (5,4) kernel the two fluxes differ by
+2.86e-8 relative; the (6,6) values agree much more closely.
+This is a test of the same frozen initial phase, not of the
+later evolution on finer momentum cells.
+
+~~~sh
+seed=results/warm-late-aligned-turning-seed-2026-11-26.json.gz
+python -W error warm_late_cut_turning_clock_reference.py EOS.dat "$a" "$seed" turn24 --substeps 24 >turn24.json
+python -W error warm_late_cut_turning_convergence_reference.py   results/warm-late-aligned-turning-six-2026-11-26.json.gz   results/warm-late-aligned-turning-twelve-2026-11-26.json.gz turn24.json
+python -W error warm_late_cut_aligned_mesh_split_reference.py EOS.dat "$a" "$seed" --split-two split.json
+~~~
+
+[Three locked turning clocks](results/warm-late-aligned-turning-six-twelve-twentyfour-2026-11-26.json);
+[24-step tape](results/warm-late-aligned-turning-twentyfour-2026-11-26.json.gz);
+[frozen outer mesh comparison](results/warm-late-aligned-turning-frozen-mesh-2026-11-26.json);
+[exact subdivided seed](results/warm-late-aligned-turning-split-seed-2026-11-26.json.gz).
