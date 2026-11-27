@@ -40,7 +40,7 @@ def atomic_write(path, value):
 
 
 def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.,snapshots=False,scalar_bins=8,aperture_subdivision=1,witness_mix=0.,response_radial_order=None,
-        checkpoint=None,resume=False,checkpoint_every=1,stop_after=None,progress_every=0,elastic_energy_budget=None):
+        checkpoint=None,resume=False,checkpoint_every=1,stop_after=None,progress_every=0,elastic_energy_budget=None,macro_step_weights=None):
     if elastic_energy_budget is not None and (not np.isfinite(elastic_energy_budget) or elastic_energy_budget<=0. or method!="backward"):
         raise ValueError("A finite positive explicit elastic energy budget requires backward steps.")
     if resume and not checkpoint:
@@ -59,6 +59,14 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
         raise ValueError("witness mix is for archived step inputs and must be in [0,1)")
     if scalar_bins<1 or aperture_subdivision<1:
         raise ValueError("positive scalar bins and aperture subdivisions required")
+    weights=None
+    if macro_step_weights is not None:
+        weights=tuple(macro_step_weights)
+        if len(weights)!=count or any(not isinstance(x,int) or isinstance(x,bool) or x<1 for x in weights):
+            raise ValueError('Expected one positive integer macro weight per interval.')
+        unit=duration/sum(weights)
+        boundaries=np.r_[0,np.cumsum(weights)]*unit
+        boundaries[-1]=duration
     M=Screened(grid,1,scalar_bins,duration,(1,1,2),.08,strength,aperture_grid,projection,
                subdivision=aperture_subdivision)
     init=M.M.init
@@ -110,7 +118,7 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
         pr=M.j0
         n=y[pr:pr+M.n]
         d=Cold.rhs(M,y,False)[pr:pr+M.n]
-        pictures.append(dict(step=k,exposure=duration*k/count,cold_bins=n.tolist(),
+        pictures.append(dict(step=k,exposure=duration*k/count if weights is None else float(boundaries[k]),cold_bins=n.tolist(),
                              instantaneous_source_by_q=d.tolist(),
                              charged_and_photon_counts=[float(Y[a,0].sum()) for a in M.M.r],
                              hard_logits=F.tolist(),hard_moments=Y.tolist()))
@@ -123,6 +131,8 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
                  response_radial_order=response_radial_order)
     if elastic_energy_budget is not None:
         physics["elastic_energy_budget"]=elastic_energy_budget
+    if weights is not None:
+        physics['macro_step_weights']=list(weights)
     if checkpoint:
         physics.update(format=1,numpy=np.__version__,scipy=scipy_version,state_initial=state_digest(z0),
                        graph_code=[hashlib.sha256(Path(__file__).with_name(n+'.py').read_bytes()).hexdigest()
@@ -168,6 +178,8 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
                                      compton_reject=None if photon_scattering is None else photon_scattering.reject,
                                      conversion_reject=None if conversion is None else conversion.reject))
     for j in range(start,limit):
+        if weights is not None:
+            h=weights[j]*unit
         z=advance(z,h/2)
         if strength or same_soft_strength:
             Y=z[:M.j0].reshape(-1,2)
@@ -189,7 +201,7 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
         return dict(checkpoint_only=True,steps_done=limit,total_steps=count,scalar_gain_so_far=states[-1]-states[0])
     et,st=total(z)
     assert abs(et-E0)<3e-12 and abs(st-S0-z[-2])<3e-11
-    return dict(grid=grid,pair=pair,method=method,strength=strength,projection=projection,
+    return dict(grid=grid,pair=pair,method=method,strength=strength,projection=projection,**(dict(macro_step_weights=list(weights),macro_exposure=boundaries.tolist()) if weights is not None else {}),
                 compton_strength=compton_strength,same_soft_strength=same_soft_strength,
                 conversion_strength=conversion_strength,slow_rhs_calls=slow_calls,
                 aperture_grid=aperture_grid or grid,duration=duration,steps=count,scalar_gain=states[-1]-states[0],
