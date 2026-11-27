@@ -673,6 +673,11 @@ tests dynamic count loss and conserving stress–energy with the
 threshold comparator. Stiff larger-interval attempts do not
 establish an actual chemical freeze-out endpoint.
 
+The [chemical gap-response control](INDEPENDENT-EARLY-POLE-CHEMICAL-GAP-RESPONSE-2026-11-26.md)
+imposes count loss without a rate and tracks how its pole shift moves
+the fermion window. Window geometry and sampled net gain are reported
+separately on two momentum grids.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
