@@ -1,4 +1,4 @@
-"""Refine only the first outer block, at the same inner elastic width."""
+"""Select original outer blocks to refine at the same inner elastic width."""
 import argparse
 import gzip
 import json
@@ -9,10 +9,19 @@ import early_pole_cold_screened_split_reference as split
 from early_pole_prepared_hard_swap_trajectory_reference import run as prepared
 
 
-def evolve(bundle,case,startup_outer_intervals):
+def schedule(startup_outer_intervals,refined_blocks=None):
     if not 1<=startup_outer_intervals<=16:
         raise ValueError('Refine a proper count of original intervals.')
-    weights=[1]*(4*startup_outer_intervals)+[4]*(16-startup_outer_intervals)
+    if refined_blocks is None:
+        return [1]*(4*startup_outer_intervals)+[4]*(16-startup_outer_intervals)
+    if (not refined_blocks or len(set(refined_blocks))!=len(refined_blocks)
+            or not all(type(i) is int and 1<=i<=16 for i in refined_blocks)):
+        raise ValueError('Use distinct one-based original block indices from 1 to 16.')
+    return [w for i in range(1,17) for w in ([1,1,1,1] if i in refined_blocks else [4])]
+
+
+def evolve(bundle,case,startup_outer_intervals,refined_blocks=None):
+    weights=schedule(startup_outer_intervals,refined_blocks)
     with gzip.open(bundle,'rt') as f:
         b=json.load(f)['branches']['steps']
     duration=b['duration']/b['steps']
@@ -47,5 +56,7 @@ if __name__=='__main__':
     p.add_argument('bundle')
     p.add_argument('--case',required=True,choices=('native','local-daughter'))
     p.add_argument('--startup-outer-intervals',type=int,default=1)
+    p.add_argument('--refined-blocks',type=int,nargs='+',
+                   help='Override startup prefix: one-based original block indices.')
     a=p.parse_args()
     print(json.dumps(evolve(**vars(a)),indent=2,allow_nan=False))

@@ -49,3 +49,22 @@ the fixed-orbit, dyadic-order, one-block hybrid, and two-block
 hybrid JSONs in that order. The higher momentum resolution,
 response refresh, and physical relic inference are outside
 this first-window method test.
+
+## Result of the placement control
+
+The second-only hybrid gives +2.257107313552442e-4 as the
+paired final mean. It recovers 7.5390% of the full coarse-to-fine
+difference, versus 89.9969% for the first-only hybrid. The
+difference from the predeclared second-only prediction is
+-1.50104e-10, and all three predeclared conditions pass. Both
+placements use 19 outer intervals and 64 fixed-width elastic
+solves; slow RHS calls are 616 and 568 per arm, respectively.
+The second-only first coarse sample matches the full original
+coarse path exactly.
+
+Reproduce with `early_pole_daughter_startup_hybrid.py` using
+`--refined-blocks 2` for native and local-daughter on the same
+archive. Gate the results using
+`early_pole_daughter_startup_placement_compare.py`. This confirms
+placement sensitivity for this window, not universal timing gains
+or a wall-clock comparison.
