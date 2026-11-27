@@ -273,6 +273,8 @@ initial retained phase ceiling need not persist after reactivation.
 The [aligned .68 time refinement](INDEPENDENT-WARM-LATE-TAIL-TIME-REFINEMENT-2026-11-26.md)
 tracks the transient decay and distinguishes full energy above the cut
 from the smaller convex excess.
+A [dynamical threshold-collar split](INDEPENDENT-WARM-LATE-TURNING-LOCAL-COLLAR-2026-11-26.md)
+checks local momentum sensitivity at the same six turning times.
 A [frozen pad-opening audit](INDEPENDENT-WARM-LATE-PROMPT-PAD-OPENING-2026-11-26.md)
 checks direct outgoing support without claiming dynamical re-entry.
 The [aligned .80 control](INDEPENDENT-WARM-LATE-ALIGNED-HARD080-RELAXATION-2026-11-26.md)
