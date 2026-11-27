@@ -54,3 +54,46 @@ python -W error warm_direct_vacuum_native_focus_audit_reference.py focus \
 [Exact-mode and starting-time audit](results/warm-direct-vacuum-native-exact-k-focus-2026-11-26.json);
 [base and trace tables](results/warm-direct-vacuum-native-focus-raw1-2026-11-26.json.gz);
 [physical and amplified tables](results/warm-direct-vacuum-native-focus-raw2-2026-11-26.json.gz).
+
+## Directly test the initialization cause
+
+Keep all exact modes, PSD and integration settings
+unchanged. Lower only CLASS's opacity threshold
+`start_small_k_at_tau_c_over_tau_h` used in choosing
+the perturbation start time. At 3e−6 the largest
+zero-vs-trace difference falls from 1.163e−5 to
+7.385e−7, although the start is still not matched.
+At 2e−7 the early opacity condition puts the two
+models at the common initial scale factor
+4.19612e−8, earlier than the separate NCDM requirement.
+The largest zero-vs-trace difference then falls to
+1.136e−8, about three orders of magnitude smaller.
+The control demonstrates the importance of the initial
+epoch; it does not attribute all residual differences
+to one solver step.
+
+The physically relevant physical-minus-trace comparison,
+already started equally in the default setting, changes
+by less than 6.15e−12 when both starts are moved earlier.
+Thus the large raw branch offset is neither an actual
+effect of the trace density nor a change in the verified
+k=1 signal. At the smallest modes the tiny physical
+quantity is still not certified across the independent
+hierarchy/tolerance choices.
+
+~~~sh
+for z in lock early; do
+ threshold=3e-6
+ if [ "$z" = early ]; then threshold=2e-7; fi
+ python -W error warm_direct_vacuum_native_early_start_reference.py focus "$z" --opacity "$threshold"
+ for case in base trace physical amp4; do
+  /path/to/class "$z/$case.ini" >"$z/$case.log"
+ done
+done
+python -W error warm_direct_vacuum_native_early_start_audit_reference.py focus lock early \
+ results/warm-direct-vacuum-native-class-pilot-2026-11-26.json
+~~~
+
+[Common-start intervention](results/warm-direct-vacuum-native-early-start-2026-11-26.json);
+[mid threshold](results/warm-direct-vacuum-native-start-lock-raw-2026-11-26.json.gz)
+and [earliest threshold tables](results/warm-direct-vacuum-native-start-early-raw-2026-11-26.json.gz).
