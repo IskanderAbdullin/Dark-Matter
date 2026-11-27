@@ -687,6 +687,10 @@ The [hard-product feedback control](INDEPENDENT-EARLY-POLE-CHEMICAL-HARD-FEEDBAC
 separates the stable initial event count from a strongly mesh-sensitive
 local Bose response and adds an interval-split angular stencil.
 
+The [coherent quartic lattice](INDEPENDENT-EARLY-POLE-COHERENT-QUARTIC-LATTICE-2026-11-26.md)
+reproduces the aligned resonance but exposes phase cancellation
+of the mean as an unreliable proxy for hard-spectrum production.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
