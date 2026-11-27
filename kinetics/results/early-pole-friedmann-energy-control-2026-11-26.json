@@ -1,0 +1,152 @@
+{
+  "friedmann-coarse-correct": {
+    "visible_gstar": 106.75,
+    "self_consistent_H": true,
+    "cells": [
+      37,
+      50,
+      74
+    ],
+    "xend": 0.05,
+    "dark_to_radiation_initial": 0.032241860067110696,
+    "dark_to_radiation_final": 0.03224746252748217,
+    "initial_H_over_H_radiation": 1.0159930413477793,
+    "final_H_over_H_radiation": 1.0159957984792467,
+    "scalar_yield_from_visible_entropy": 0.00036426936138565216,
+    "final_daughter_energy_over_T4": 0.020547455607977477,
+    "initial_parent_energy_over_T4": 1.1323129209628509,
+    "final_parent_energy_over_T4": 1.1119622200785337,
+    "final_scalar_pole_over_T": 0.0008673795471698021,
+    "integrated_trace_over_T4": 0.0001967547239124911,
+    "continuity_residual_over_daughter_energy": -1.2270783712897237e-11,
+    "largest_absolute_endpoint_number_invariant": 2.0816681711721685e-17
+  },
+  "friedmann-refined-correct": {
+    "visible_gstar": 106.75,
+    "self_consistent_H": true,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "dark_to_radiation_initial": 0.032616706155315374,
+    "dark_to_radiation_final": 0.03262235201980014,
+    "initial_H_over_H_radiation": 1.016177497367126,
+    "final_H_over_H_radiation": 1.0161802753546243,
+    "scalar_yield_from_visible_entropy": 0.0003468910159935645,
+    "final_daughter_energy_over_T4": 0.019480406312492118,
+    "initial_parent_energy_over_T4": 1.1454772690545263,
+    "final_parent_energy_over_T4": 1.126195141789608,
+    "final_scalar_pole_over_T": 0.0008533624482070709,
+    "integrated_trace_over_T4": 0.0001982790477465377,
+    "continuity_residual_over_daughter_energy": -8.871620653018157e-12,
+    "largest_absolute_endpoint_number_invariant": 2.42861286636753e-17
+  },
+  "friedmann-refined-held-H": {
+    "visible_gstar": 106.75,
+    "self_consistent_H": false,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "dark_to_radiation_initial": 0.032616706155315374,
+    "dark_to_radiation_final": 0.032622349025430354,
+    "initial_H_over_H_radiation": 1.016177497367126,
+    "final_H_over_H_radiation": 1.0161802738812786,
+    "scalar_yield_from_visible_entropy": 0.00035066304880179645,
+    "final_daughter_energy_over_T4": 0.019629228972319997,
+    "initial_parent_energy_over_T4": 1.1454772690545263,
+    "final_parent_energy_over_T4": 1.1260462139694825,
+    "final_scalar_pole_over_T": 0.000856444434473828,
+    "integrated_trace_over_T4": 0.00019817388745857833,
+    "continuity_residual_over_daughter_energy": -9.293114029706082e-12,
+    "largest_absolute_endpoint_number_invariant": 3.122502256758253e-16
+  },
+  "live-exact-mix3": {
+    "visible_gstar": 106.75,
+    "self_consistent_H": false,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "dark_to_radiation_initial": 0.032616706155315374,
+    "dark_to_radiation_final": 0.03262237830789912,
+    "initial_H_over_H_radiation": 1.016177497367126,
+    "final_H_over_H_radiation": 1.0161802882893858,
+    "scalar_yield_from_visible_entropy": 0.000352298234068908,
+    "final_daughter_energy_over_T4": 0.019652985293724997,
+    "initial_parent_energy_over_T4": 1.1454772690545263,
+    "final_parent_energy_over_T4": 1.126023486029122,
+    "final_scalar_pole_over_T": 0.0008577736101273067,
+    "integrated_trace_over_T4": 0.0001992022684857369,
+    "continuity_residual_over_daughter_energy": -8.394471806099728e-12,
+    "largest_absolute_endpoint_number_invariant": 1.8388068845354155e-16,
+    "elastic_rate_over_radiation_H": 3.0,
+    "isolated_target_checks": {
+      "number_relative_defect": 0.0,
+      "energy_relative_defect": 8.881784197001252e-16,
+      "directional_derivative_error": 1.687415611487657e-10
+    }
+  },
+  "live-exact-mix100": {
+    "visible_gstar": 106.75,
+    "self_consistent_H": false,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "dark_to_radiation_initial": 0.032616706155315374,
+    "dark_to_radiation_final": 0.032622382728737395,
+    "initial_H_over_H_radiation": 1.016177497367126,
+    "final_H_over_H_radiation": 1.0161802904646091,
+    "scalar_yield_from_visible_entropy": 0.00040658468749025416,
+    "final_daughter_energy_over_T4": 0.022043748339662696,
+    "initial_parent_energy_over_T4": 1.1454772690545263,
+    "final_parent_energy_over_T4": 1.123632878240117,
+    "final_scalar_pole_over_T": 0.0008997458269805907,
+    "integrated_trace_over_T4": 0.00019935752534366166,
+    "continuity_residual_over_daughter_energy": -4.0927488489481e-12,
+    "largest_absolute_endpoint_number_invariant": 4.048844592929868e-15,
+    "elastic_rate_over_radiation_H": 100.0,
+    "isolated_target_checks": {
+      "number_relative_defect": 0.0,
+      "energy_relative_defect": 8.881784197001252e-16,
+      "directional_derivative_error": 1.687415611487657e-10
+    }
+  },
+  "live-exact-mix100-fullH": {
+    "visible_gstar": 106.75,
+    "self_consistent_H": true,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "dark_to_radiation_initial": 0.032616706155315374,
+    "dark_to_radiation_final": 0.03262238484553484,
+    "initial_H_over_H_radiation": 1.016177497367126,
+    "final_H_over_H_radiation": 1.0161802915061553,
+    "scalar_yield_from_visible_entropy": 0.00040257167285679145,
+    "final_daughter_energy_over_T4": 0.02192128101736351,
+    "initial_parent_energy_over_T4": 1.1454772690545263,
+    "final_parent_energy_over_T4": 1.1237554199029505,
+    "final_scalar_pole_over_T": 0.0008967758329754588,
+    "integrated_trace_over_T4": 0.00019943186574950217,
+    "continuity_residual_over_daughter_energy": 1.7419519107997185e-12,
+    "largest_absolute_endpoint_number_invariant": 4.4200754167889045e-15,
+    "elastic_rate_over_radiation_H": 100.0,
+    "isolated_target_checks": {
+      "number_relative_defect": 0.0,
+      "energy_relative_defect": 8.881784197001252e-16,
+      "directional_derivative_error": 1.687415611487657e-10
+    }
+  }
+}

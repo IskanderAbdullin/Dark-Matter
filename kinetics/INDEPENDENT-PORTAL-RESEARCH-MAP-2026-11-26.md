@@ -591,6 +591,13 @@ separates heating at a held bath temperature from mixing at fixed
 parent number and projected energy. Fast energy-conserving mixing
 partly restores yield without supplying more parent particles.
 
+The [energy-conserving live parent stencil](INDEPENDENT-EARLY-POLE-EXACT-ENERGY-PARENT-STENCIL-2026-11-26.md)
+reconstructs parent energy with positive two-node weights, preserving
+count, projected energy and discrete detailed balance. The
+[Friedmann comparison](INDEPENDENT-EARLY-POLE-FRIEDMANN-ENERGY-CONTROL-2026-11-26.md)
+checks full comoving continuity for a separated visible bath and
+retains the fast isolated parent-mixing sensitivity.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
