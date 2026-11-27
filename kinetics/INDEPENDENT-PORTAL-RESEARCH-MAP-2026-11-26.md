@@ -715,6 +715,11 @@ A [finite shared photon count-and-heat control](INDEPENDENT-EARLY-POLE-FINITE-SH
 includes both Dirac pair sources and reverse factors, showing
 independent heat flow even at zero integrated particle source.
 
+A [coupled photon/decay comparator](INDEPENDENT-EARLY-POLE-PHOTON-DECAY-COMPARATOR-2026-11-26.md)
+demonstrates how pair-driven fermion population can cross the
+stimulated gate and separates fixed-zero photon chemical
+potential from a number-conserving reservoir.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

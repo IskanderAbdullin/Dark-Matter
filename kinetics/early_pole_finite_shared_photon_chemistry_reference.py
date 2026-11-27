@@ -54,19 +54,19 @@ class Pair:
         assert max(abs(self.f1+self.f2-self.E))<1e-13
         self.bare=self.w@((1/np.expm1(self.g1))*(1/np.expm1(self.g2)))
 
-    def rate(self,gamma_temperature,fermion_temperature,mu_over_fermion_T):
+    def rate(self,gamma_temperature,fermion_temperature,mu_over_fermion_T,photon_alpha=0.):
         # Factor the reverse term using the multiplier from detailed balance.
         th=gamma_temperature
         tf=fermion_temperature
         a=mu_over_fermion_T
-        b1=self.g1/th
-        b2=self.g2/th
+        b1=self.g1/th-photon_alpha
+        b2=self.g2/th-photon_alpha
         with np.errstate(divide='raise'):
             log_bose1=-(b1+np.log(-np.expm1(-b1)))
             log_bose2=-(b2+np.log(-np.expm1(-b2)))
         forward=(np.log(self.w)+log_bose1+log_bose2-
                  np.logaddexp(0.,a-self.f1/tf)-np.logaddexp(0.,a-self.f2/tf))
-        L=2*a+self.E*(1/th-1/tf)
+        L=2*(a-photon_alpha)+self.E*(1/th-1/tf)
         net=np.sign(-L)*np.exp(forward+np.maximum(L,0.))*(-np.expm1(-abs(L)))
         return np.array([net.sum(),.5*net@self.E])
 
