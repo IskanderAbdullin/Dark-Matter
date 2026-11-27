@@ -4,11 +4,11 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 
 | Question | Evidence available | What is still missing |
 | --- | --- | --- |
-| Does the massive-shell projection conserve the represented moments? | Exact and independent checks of number, energy, pressure/trace, positivity, and unresolved cells; see the PR's projection and restart references. | Accuracy of a specific complete physical production model does not follow from those geometry checks. |
-| Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | The stable rest count is set near Ωh²=.120. The shifted first-order scalar rest count is only about 3.05×10⁻¹⁰ or 2.75×10⁻⁹ for the two prescribed histories. | The result is limited to these sources and rate assumptions. It cannot decide a branch using strong stimulated production, different portal parameters or new channels. |
+| Does the massive-shell projection conserve the represented moments? | Exact and independent checks of number, energy, pressure/trace, positivity, and unresolved cells; see the PR's projection and restart references. | No complete production validation. |
+| Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | The stable rest count is set near Ωh²=.120. The shifted first-order scalar rest count is only about 3.05×10⁻¹⁰ or 2.75×10⁻⁹ for the two prescribed histories. | Only these sources and rates; stronger stimulation or other channels are open. |
 | Is the scalar contrast robust to integrating the hierarchy? | A matched native fluid-closure test, the corresponding no-closure positive split, and a memory-bounded independent relativistic calculation on recorded metrics trace the discrepancy to the approximate grouping. | No global hierarchy convergence or coupled matter transfer from the independent fixed-metric run. |
-| Can the *warm 50 MeV* reference be treated as numerically converged? | Restarted q16/q32 runs reach 10.442 MeV on matched grids. Their count difference is small, but absolute time refinement and higher spectral moments must be audited separately. | The short matched endpoint is not the 3.43 MeV long high-support run or a late relic. Earlier exterior phase distributions are not present in the restart archive. |
-| Can purely ballistic forward depletion rescue the initial warm excess? | An isolated loss-only bound controls Bose gain even with all new scalar momenta and gives a stable lower proxy around 56 at the late anchor. | It does not control inverse repopulation, elastic redistribution, unknown inherited scalar tails or another physical history. |
+| Can the *warm 50 MeV* reference be treated as numerically converged? | Restarted q16/q32 runs reach 10.442 MeV on matched grids. Their count difference is small, but absolute time refinement and higher spectral moments must be audited separately. | Not a late relic; earlier exterior shapes are unresolved. |
+| Can purely ballistic forward depletion rescue the initial warm excess? | An isolated loss-only bound controls Bose gain even with all new scalar momenta and gives a stable lower proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
 | How sensitive are the hard thermal folds to the perturbative range? | Separate Born and strict-NLO extensions, exact measured-window subtraction, and an isolated toy high-mass pole test. | Full physical thermal QCD, unsupported spectral domains and threshold effects are not bounded. |
 
 ## Low-reheat branch: follow the count, then the spectrum
@@ -279,10 +279,11 @@ A [species-resolved comparison](INDEPENDENT-WARM-LATE-TAIL-SPECIES-EXCHANGE-2026
 tracks daughter currents. A [near-cut width evolution](INDEPENDENT-WARM-LATE-NEAR-CUT-SHAPES-2026-11-26.md)
 finds opposite excess changes for matched moments. A [count comparison](INDEPENDENT-WARM-LATE-NEAR-CUT-COUNTS-2026-11-26.md)
 separates counts from excess. [Refining one interval](INDEPENDENT-WARM-LATE-NEAR-CUT-REFINEMENT-2026-11-26.md)
-checks .710 and diagnoses a false entropy rejection. [Matching W and the parent clock](INDEPENDENT-WARM-LATE-EQUAL-EXCESS-AND-PARENT-2026-11-26.md)
+checks .710. The [stabilized full clock](INDEPENDENT-WARM-LATE-STABLE-ENTROPY-CLOCK-2026-11-26.md) certifies all 36 roots. [Matching W and the parent clock](INDEPENDENT-WARM-LATE-EQUAL-EXCESS-AND-PARENT-2026-11-26.md)
 isolates lifetime from time-step error. A [species-matched excess check](INDEPENDENT-WARM-LATE-MATCHED-EXCESS-CLOSURE-2026-11-26.md)
 finds opposite signs at matched initial species excess. A [within-cell perturbation](INDEPENDENT-WARM-LATE-WITHIN-CELL-MOMENT-KERNEL-2026-11-26.md)
-leaves all original cell moments fixed. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+preserves cell moments. A [cold-scalar recoil gate](INDEPENDENT-WARM-LATE-COLD-SCALAR-PROMPT-GATE-2026-11-26.md)
+separates soft populations from high excess. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
