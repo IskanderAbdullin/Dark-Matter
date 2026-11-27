@@ -1,0 +1,50 @@
+{
+  "independent_low_energy_limit": {
+    "T": 1e-08,
+    "threshold_sigma_v_GeVminus2": 1.1676132591631331e-21,
+    "relative_numerical_defect": 2.5001661208001735e-07
+  },
+  "scope": "Thermal-shape diagnostic only, not the separate all-invariant bound. No final blocking, no inverse, and finite positive near-threshold integration. Does not model nonthermal high-s tails.",
+  "rows": [
+    {
+      "T_visible": 0.001999999841639969,
+      "T_light": 0.0008756151842843086,
+      "vector_to_scalar_forward_gross_rate_at_same_MB_shape": 3.6967351417970574e-09,
+      "vector_events_per_H_s_at_held_MB_occupation": 6.1938945599634135e-15,
+      "scalar_events_per_H_s_at_held_MB_occupation": 1.6755040116161626e-06,
+      "delta_relative_quadrature": 1.9984014443252818e-15
+    },
+    {
+      "T_visible": 0.0008348129076043455,
+      "T_light": 0.00035564300161274964,
+      "vector_to_scalar_forward_gross_rate_at_same_MB_shape": 8.627263387608578e-09,
+      "vector_events_per_H_s_at_held_MB_occupation": 2.363825381763732e-15,
+      "scalar_events_per_H_s_at_held_MB_occupation": 2.739948087314591e-07,
+      "delta_relative_quadrature": 5.551115123125783e-16
+    },
+    {
+      "T_visible": 0.0003581936131764489,
+      "T_light": 0.00013289284567548996,
+      "vector_to_scalar_forward_gross_rate_at_same_MB_shape": 2.2589314357237233e-08,
+      "vector_events_per_H_s_at_held_MB_occupation": 9.562711531577793e-16,
+      "scalar_events_per_H_s_at_held_MB_occupation": 4.233289855702974e-08,
+      "delta_relative_quadrature": 1.5543122344752192e-15
+    },
+    {
+      "T_visible": 0.00016599501642459018,
+      "T_light": 4.111614716006348e-05,
+      "vector_to_scalar_forward_gross_rate_at_same_MB_shape": 7.237185001862754e-08,
+      "vector_events_per_H_s_at_held_MB_occupation": 3.820184637500578e-16,
+      "scalar_events_per_H_s_at_held_MB_occupation": 5.278550481322937e-09,
+      "delta_relative_quadrature": 2.353672812205332e-14
+    },
+    {
+      "T_visible": 8.000008136535843e-05,
+      "T_light": 9.977098231428288e-06,
+      "vector_to_scalar_forward_gross_rate_at_same_MB_shape": 2.973665770146026e-07,
+      "vector_events_per_H_s_at_held_MB_occupation": 1.5254315610961287e-16,
+      "scalar_events_per_H_s_at_held_MB_occupation": 5.129801662347617e-10,
+      "delta_relative_quadrature": 8.959499808725013e-14
+    }
+  ]
+}

@@ -91,3 +91,24 @@ python -W error warm_prompt_reheating_late_shape_free_floor_reference.py EOS.lat
 
 [Late histories and kick clocks](results/warm-prompt-reheating-post-2mev-elastic-2026-11-26.json.gz);
 [shape-independent conditional floors](results/warm-prompt-reheating-late-shape-free-floor-2026-11-26.json).
+
+### Actual scale of the vacuum lepton rate on the held cold thermal shapes
+
+In contrast with the all-invariant ceiling, explicitly fold
+the finite-width vector cross section into the fitted light
+MB state at five samples after 2 MeV. Use the same held
+number normalization and compare with the dark scalar-pair
+channel on the same shape. The vector-to-scalar forward
+event ratio is about 3.70e−9 at 2 MeV and 2.97e−7 at
+80 keV. It grows as the scalar-pair channel slows, but
+remains small throughout these sampled moments.
+The explicitly factored cold rate also agrees with its
+independent zero-velocity limit. This finite near-threshold
+diagnostic does not justify deleting nonthermal high-energy
+tails from the shape-independent bound.
+
+~~~sh
+python -W error warm_prompt_reheating_late_vector_rate_projection_reference.py EOS.late.dat late.json
+~~~
+
+[Five held cold rates and the threshold check](results/warm-prompt-reheating-late-vector-projection-2026-11-26.json).
