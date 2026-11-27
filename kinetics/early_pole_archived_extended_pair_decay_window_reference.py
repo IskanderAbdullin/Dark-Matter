@@ -45,7 +45,7 @@ def fit_archive_cell(C,edges,f):
     return Y
 
 
-def mount(grid,wide,level,aperture_refined=False):
+def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.45):
     d=load(f'results/early-pole-spectrum-{grid}-m06-2026-11-26.json.gz')
     edges=([.5,.92,1.12,1.55,2.0,2.55,3.15,4.],
            [.45,.65,.85,1.05,1.25,1.7,2.2,2.85,3.7,5.],
@@ -67,6 +67,14 @@ def mount(grid,wide,level,aperture_refined=False):
             return a[np.r_[True,np.diff(a)>1e-10]].tolist()
         edges=(edges[0],join(edges[1]),join(edges[2]))
         assert len(edges[1])==len(edges[2])
+    if charge_floor<.45:
+        if edges is None:
+            edges=([.5,.92,1.12,1.55,2.0],
+                   [.45,.65,.85,1.05,1.25,1.7,2.2],
+                   [.45,.69,.8,1.03,1.3,1.7,2.2])
+        lower=[charge_floor,(charge_floor+.45)/2]
+        edges=(edges[0],lower+edges[1],lower+edges[2])
+    assert field_floor<=charge_floor<=.45
     quad=[(2,3,10,-3),(3,5,14,-3)][level]
     M=ArchivePackets(12,quad,0.,edges=edges)
     total=np.zeros(3)
@@ -83,8 +91,8 @@ def mount(grid,wide,level,aperture_refined=False):
     for k,name,m in ((1,'parent',.05),(2,'fermion',.003)):
         e=np.asarray(d[f'endpoint_{name}_momentum_edges'])
         f=np.asarray(d[f'endpoint_{name}_occupations'])
-        total[k]=cell_J(e,f,m,.45)
-        original[k]=total[k]-cell_J(e,f,m,M.edge_sets[k][-1])
+        total[k]=cell_J(e,f,m,field_floor)
+        original[k]=cell_J(e,f,m,M.edge_sets[k][0])-cell_J(e,f,m,M.edge_sets[k][-1])
         for i in range(M.r[k].start,M.r[k].stop):
             C=M.cells[i]
             M.init[i]=fit_archive_cell(C,e,f)

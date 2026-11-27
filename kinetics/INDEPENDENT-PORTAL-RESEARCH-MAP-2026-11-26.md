@@ -814,3 +814,6 @@ fit or exclusion.
   under matched conditional clocks, the wider hard domain roughly
   doubles the short scalar suppression; a single native scalar bin
   is not comparable between original archives.
+- [Matched cold window and hard-aperture convergence](INDEPENDENT-EARLY-POLE-ARCHIVED-SHARED-COLD-WINDOW-2026-11-26.md):
+  matched scalar bins resolve their own discretization, but original
+  fermion edges near the resonance materially reduce the inferred pair effect.
