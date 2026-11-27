@@ -49,7 +49,7 @@ def common_rule(comoving_daughter_edges, scales, order=4):
 
 class ComovingCollision:
     """Expose the established closed two-daughter moment chart interface."""
-    def __init__(self, q_daughter, scale, Q, dN, angle=4):
+    def __init__(self, q_daughter, scale, Q, dN, angle=4, retained_shells=None):
         p=np.asarray(q_daughter)/scale
         self.c=[Cells(p,mp,1),Cells(p,m,4)]
         self.E=np.hypot(M,Q/scale)
@@ -58,6 +58,11 @@ class ComovingCollision:
         self.comoving_measure=np.asarray(dN)
         self.scale=scale
         e0,e1=[np.hypot(p,c.mass) for c in self.c]
+        stop=len(p)-1 if retained_shells is None else retained_shells
+        assert 1<=stop<len(p)
+        # Redundant exterior angular breakpoints are harmless; the
+        # test branches share their nodes and projection dimensions.
+        E0,E1=e0[stop],e1[stop]
         pp=Q/scale
         span=2.*P*pp/M
         self.w=(dN/scale**3)*(width*M/self.E)/span
@@ -74,7 +79,7 @@ class ComovingCollision:
             l,r=ends[:,:-1],ends[:,1:]
             mid=l+(r-l)/2
             Em=E[:,None]-mid
-            ok=(r>l)&(mid>=e0[0])&(mid<e0[-1])&(Em>=e1[0])&(Em<e1[-1])
+            ok=(r>l)&(mid>=e0[0])&(mid<E0)&(Em>=e1[0])&(Em<E1)
             a,b=np.nonzero(ok)
             lab=(l[a,b,None]+(r[a,b,None]-l[a,b,None])*(z+1.)/2).ravel()
             iy=np.repeat(i+a,len(z))
@@ -93,7 +98,7 @@ class ComovingCollision:
         fullspan=np.bincount(self.y,weights=self.pre,minlength=self.n)
         assert np.all(fullspan<=span+16*np.finfo(float).eps*self.E)
         assert len(self.y)>0 and np.all(self.pre>0.)
-        assert np.all(self.E[self.y]<=(e0[-1]+e1[-1])*(1.+5e-15))
+        assert np.all(self.E[self.y]<=(E0+E1)*(1.+5e-15))
 
 
 def remapless_parent_work(Q,dN,phase,a,b,order=20):

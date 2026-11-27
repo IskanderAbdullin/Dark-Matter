@@ -289,7 +289,8 @@ An [implicit finite-parent replay](INDEPENDENT-WARM-LATE-FINITE-PARENT-TURN-2026
 checks startup and confirms the late turn on the same discrete clocks. A [comoving parent chart](INDEPENDENT-WARM-COMOVING-PARENT-CHART-2026-11-26.md)
 audit verifies redshift work and collision geometry. A [matched expanding test](INDEPENDENT-WARM-FINITE-PARENT-COMOVING-EXPANSION-2026-11-26.md)
 combines finite lifetime, expansion and selected competing dark reactions. The [coupled clock audit](INDEPENDENT-WARM-COUPLED-CLOCK-AND-SPECIES-BUDGET-2026-11-26.md)
-separates time resolution from the daughter species energy exchange.
+separates time resolution from the daughter species energy exchange. A [dynamic outgoing pad](INDEPENDENT-WARM-COMOVING-PROMPT-OUTGOING-2026-11-26.md)
+resolves new daughter occupation without an incoming floor.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)

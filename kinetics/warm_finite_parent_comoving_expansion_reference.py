@@ -15,11 +15,11 @@ from three_species_decay_onsager_reference import M
 from warm_compact_absolute_prompt_reference import LocalAbsolutePrompt
 from warm_comoving_parent_chart_reference import ComovingCollision,common_rule,remapless_parent_work
 from warm_comoving_parent_competing_reference import FiniteParentElastic,StationaryParentElastic,midpoint_pair_kick
-from warm_corrected_late_prompt_cut_aligned_reference import excess
+from warm_corrected_late_prompt_cut_aligned_reference import excess,predictor
 from warm_coupled_serial_restart_reference import atomic,sha
 from warm_late_finite_parent_prompt_reference import FiniteParent
 from warm_light_occupation_stage_audit_reference import digest,read
-from warm_prompt_reentry_shape_audit_reference import get_mom
+from warm_prompt_reentry_shape_audit_reference import get_mom,pad
 
 KEYS=("entropy_variable_scalar","entropy_variable_fermion")
 
@@ -32,7 +32,7 @@ def parent_equilibrium(k,th):
     return np.divide(a,a+b,out=np.zeros_like(a),where=a+b>0.)
 
 
-def run(eos,paths,out,mode,order,common_subdivisions):
+def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,root_tol=8e-12):
     R=[read(r) for r in paths]
     assert all(x["hash"]==digest(x["snapshot"]) and x["plan"]==R[0]["plan"] for x in R)
     assert R[0]["plan"]["eos_sha256"]==sha(eos)
@@ -41,6 +41,12 @@ def run(eos,paths,out,mode,order,common_subdivisions):
     q=np.asarray(S["lab_momentum_edges_GeV"])
     assert all(np.array_equal(r["snapshot"]["lab_momentum_edges_GeV"],q) for r in R)
     assert all(r["snapshot"]["T_visible_GeV"]==T for r in R)
+    old_shells=len(q)-1
+    if outer:
+        assert outer>q[-1] and mode in ("expand-finite","expand-stationary")
+        q=np.r_[q,np.geomspace(q[-1],outer,4)[1:]]
+    else:
+        assert not restrict
     C=R[0]["plan"]["normalized_cut_GeV"]
     times=np.array([r["time"]-R[0]["time"] for r in R])
     assert np.all(np.diff(times)>0.)
@@ -48,8 +54,8 @@ def run(eos,paths,out,mode,order,common_subdivisions):
     actual=np.exp(times) if not zero else np.ones(len(times))
     quad_scales=np.exp(np.linspace(0.,times[-1],2*common_subdivisions+1))
     Q,dN=common_rule(q,quad_scales,order)
-    th=[np.asarray(S[k]) for k in KEYS]
-    op0=ComovingCollision(q,1.,Q,dN)
+    th=pad(S,q) if outer else [np.asarray(S[k]) for k in KEYS]
+    op0=ComovingCollision(q,1.,Q,dN,retained_shells=old_shells if outer else None)
     h0=parent_equilibrium(op0,th)
     hv=h0.copy()
     del op0
@@ -94,7 +100,7 @@ def run(eos,paths,out,mode,order,common_subdivisions):
             outside+=new
             exchange+=change
             max_pair_defect=max(max_pair_defect,err)
-        k=ComovingCollision(q,b,Q,dN)
+        k=ComovingCollision(q,b,Q,dN,retained_shells=old_shells if restrict else None)
         if fin:
             op=FiniteParentElastic(k,H,for_stage[0]) if extra else FiniteParent(k,H)
             np.testing.assert_allclose(op.measure,dN/b**3,rtol=2e-14,atol=1e-300)
@@ -105,13 +111,22 @@ def run(eos,paths,out,mode,order,common_subdivisions):
             op=StationaryParentElastic(k,H,for_stage[0]) if extra else LocalAbsolutePrompt(k,H,[],True,stream_local=True)
             ent=None
         target=pack(th)
-        gs=[pack(drift(1.,b,[np.asarray(r["snapshot"][key]) for key in KEYS])[0]) for r in R[j-1:j+1]]
+        gs=[pack(drift(1.,b,pad(r["snapshot"],q) if outer else
+                       [np.asarray(r["snapshot"][key]) for key in KEYS])[0]) for r in R[j-1:j+1]]
         guess=target+(gs[1]-gs[0])
+        if outer and not restrict:
+            seeded=predictor(op,target,h)
+            ph=op.arrays(guess)
+            # Only guesses, and only in the additional cells. The
+            # predecessor itself retains exact zero occupations there.
+            for g,s in zip(ph,op.arrays(seeded),strict=True):
+                g[:,old_shells:]=s[:,old_shells:]
+            guess=pack(ph)
         def log(i,r,index):
             if i in (0,1,2,5,10,20,40,80):
                 print(mode, j, i, f"{r:.5g}", index, file=sys.stderr,flush=True)
         v,stat=advance(op,target,h,for_stage[0],initial_theta=guess,vacuum_scaled=True,
-                      balanced_merit=True,entropy_guard=ent,observer=log)
+                      balanced_merit=True,entropy_guard=ent,observer=log,residual_tolerance=root_tol)
         if fin:
             newparent=op.occupation(v)
             assert np.all((0.<=newparent)&(newparent<=1.))
@@ -146,6 +161,19 @@ def run(eos,paths,out,mode,order,common_subdivisions):
                pressure_trace_work_over_energy=float(work/initial_E),relative_N_defects=R_N.tolist(),
                relative_energy_defect=float(R_E),qsha256=d(Q),wsha256=d(dN),parent_nodes=len(Q),
                active_angular_nodes=len(k.y))
+        if outer:
+            from three_species_decay_onsager_reference import m,mp
+            # New cells are wholly above the physical cut in these tests.
+            assert min(np.hypot(q[old_shells]/c,x) for x in (mp,m))>=C
+            newN=n[:,old_shells:].sum(axis=1)
+            newE=e[:,old_shells:].sum(axis=1)
+            if restrict:
+                assert np.all(newN==0.) and np.all(newE==0.)
+            r.update(daughter_original_outer_edge=p[old_shells],
+                outer_prompt_is_open=not restrict,
+                newly_resolved_excess_by_species_over_rho=((newE-C*newN)/rho).tolist(),
+                newly_resolved_energy_by_species_over_rho=(newE/rho).tolist(),
+                newly_resolved_number_by_species_a3=(newN*c**3).tolist())
         if extra:
             r.update(pair_comoving_count_exchange_over_initial=(exchange/initial_N).tolist(),
                      pair_outside_energy_over_initial=float(ex.energy(c)/initial_E),
@@ -169,5 +197,8 @@ if __name__=="__main__":
     p.add_argument("paths",type=Path,nargs="+")
     p.add_argument("--order",type=int,default=3)
     p.add_argument("--common-subdivisions",type=int,default=1)
+    p.add_argument("--prompt-pad",type=float,default=0.)
+    p.add_argument("--restrict-prompt-pad",action="store_true")
+    p.add_argument("--root-tol",type=float,default=8e-12)
     a=p.parse_args()
-    run(a.eos,a.paths,a.out,a.mode,a.order,a.common_subdivisions)
+    run(a.eos,a.paths,a.out,a.mode,a.order,a.common_subdivisions,a.prompt_pad,a.restrict_prompt_pad,a.root_tol)

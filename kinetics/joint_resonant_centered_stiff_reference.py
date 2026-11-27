@@ -49,7 +49,8 @@ class Centered(Model):
 
 def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
             initial_theta=None,observer=None,centered_diagnostic=None,balanced_merit=False,target_moments=None,
-            entropy_guard=None):
+            entropy_guard=None,residual_tolerance=8e-12):
+    assert 0.<residual_tolerance<=8e-12
     U0,S0,_=model.moment(q)
     target=U0 if target_moments is None else np.asarray(target_moments)
     if target_moments is not None:
@@ -85,7 +86,7 @@ def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
         r=((U-target-h*F)/w)[active]
         err=np.max(abs(r))
         if observer is not None: observer(it,float(err),int(np.flatnonzero(active)[np.argmax(abs(r))]))
-        if err<8e-12:
+        if err<residual_tolerance:
             if entropy_guard is None:
                 assert S>=S0
             else:
