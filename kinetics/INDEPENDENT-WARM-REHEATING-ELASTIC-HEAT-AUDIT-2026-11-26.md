@@ -50,3 +50,6 @@ python -W error warm_prompt_reheating_elastic_frame_audit_reference.py twoT.json
 ~~~
 
 [Contact, invariant-amplitude and independent checks](results/warm-prompt-reheating-elastic-held-audit-2026-11-26.json).
+
+An [iterated feedback test](INDEPENDENT-WARM-REHEATING-ELASTIC-FEEDBACK-2026-11-26.md)
+then applies the below-cut heat to both temperature ledgers.

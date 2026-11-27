@@ -38,13 +38,13 @@ def kgeom(T,mass,n):
     return p.ravel(),(k+mass).ravel(),dn.ravel()
 
 
-def fold(T,U,pk,order,exact=False,smax=.003,azimuth=10):
+def fold(T,U,pk,order,exact=False,smax=.003,azimuth=10,transport=False):
     p,E,w=kgeom(T,m,order[0]);q,G,v=kgeom(U,mp,order[0])
     x,wx=roots_legendre(order[1]);z,wz=roots_legendre(order[2])
     f=lambda en:expit(np.log(pk[0])-(en-m)/T)
     g=lambda en:(lambda a:a/(1-a))(pk[1]*np.exp(-(en-mp)/U))
     S0=y**4*m*m/(np.pi*(M-m)**2*(m+mp)**2)
-    count,heat,countout=0.,0.,0.
+    count,heat,countout,kick=0.,0.,0.,0.
     for a in range(0,len(p),8):
         L=p[a:a+8,None,None]
         U0=E[a:a+8,None,None]
@@ -71,14 +71,25 @@ def fold(T,U,pk,order,exact=False,smax=.003,azimuth=10):
             perp=np.sqrt(np.maximum(1-ci*ci,0.))[:,:,:,None]*np.sqrt(1-z*z)
             Ss=np.where(inside,S,.002)[:,:,:,None]
             coeff=np.zeros_like(ci_z)
+            coeff_t=np.zeros_like(ci_z)
             for k in np.cos((np.arange(azimuth)+.5)*np.pi/azimuth):
-                coeff+=exact_elastic_sigma_at_angle(Ss,np.clip(ci_z+perp*k,-1.,1.))/azimuth
+                angle=np.clip(ci_z+perp*k,-1.,1.)
+                amplitude=exact_elastic_sigma_at_angle(Ss,angle)/azimuth
+                coeff+=amplitude
+                if transport:
+                    coeff_t+=amplitude*(1-angle)
             coef=coeff
         w0=(step*inside)[:,:,:,None]*wz/2*coef
         heat+=.5*np.sum(w0*(elast1-elast2)*dep)
         count+=np.sum(w0*elast1)
+        if transport:
+            assert exact
+            # |Δp|² = (ΔE)² - t, identical for both particles.
+            pref=(step*inside)[:,:,:,None]*wz/2
+            kick+=np.sum(pref*elast1*(coef*dep*dep+2*pcm[:,:,:,None]**2*coeff_t))
         countout+=np.sum((step*~inside)[:,:,:,None]*wz/2*S0*elast1)
-    return float(heat),float(count),float(countout)
+    a=float(heat),float(count),float(countout)
+    return (*a,float(kick)) if transport else a
 
 
 def run(eos,prior,exact=False):
