@@ -817,3 +817,6 @@ fit or exclusion.
 - [Matched cold window and hard-aperture convergence](INDEPENDENT-EARLY-POLE-ARCHIVED-SHARED-COLD-WINDOW-2026-11-26.md):
   matched scalar bins resolve their own discretization, but original
   fermion edges near the resonance materially reduce the inferred pair effect.
+- [Longer fixed-scale exposure and frozen aperture redshift](INDEPENDENT-EARLY-POLE-ARCHIVED-COLD-LONG-REFERENCE-2026-11-26.md):
+  conditional suppression grows with time but every sampled increment
+  is still positive; even modest redshift crosses part of the narrow shell.
