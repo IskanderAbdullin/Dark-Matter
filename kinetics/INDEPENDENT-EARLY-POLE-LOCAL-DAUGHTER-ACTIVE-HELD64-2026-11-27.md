@@ -31,3 +31,12 @@ For the local active control use
 four matched widths and simultaneous reference are checked by
 `early_pole_local_daughter_time_control_reference.py`, with its
 optional `--active64` native/local pair.
+
+The active runs actually refresh on all 64 steps, versus zero
+refresh events in the held runs. The native and local final mean
+soft-packet ratios are 0.999718598 and 0.999719345. The absolute
+mean cold rates change by -3.894e-8 and -3.810e-8, respectively,
+so most of the change cancels in the local-minus-native contrast.
+The maximum recorded response changes are 0.0849 and 0.0743 of
+the initial squared Debye mass; that pointwise diagnostic is not
+the same as the average packet-weight change.

@@ -61,9 +61,22 @@ def compare(profiles, chart):
             active=np.array(out[f'active{n}']['cumulative_effect'])
             held=np.array(out[f'held{n}']['cumulative_effect'])
             d=active-held
+            diagnostics=[]
+            for x,y in zip(profiles[f'active{n}'],profiles[f'held{n}'],strict=True):
+                h=x['response_history']
+                if len(h)!=n or y['response_history'] or any(z['mode']!='full' for z in h):
+                    raise ValueError('Unexpected response-refresh event ledger.')
+                diagnostics.append(dict(active_minus_held_absolute_mean_rate=float(
+                    (x['scalar_gain']-y['scalar_gain'])/t[-1]),
+                    max_response_change_over_initial_mD2=max(
+                        z['max_response_change_over_initial_mD2'] for z in h),
+                    final_fractional_mD2_change=h[-1]['fractional_mD2_change'],
+                    final_soft_packet_mean_ratio=h[-1]['soft_packet_mean_ratio'],
+                    refresh_events=len(h)))
             response[n]=dict(mean_effect_change=float(d[-1]/t[-1]),
                              cumulative_effect_change=d.tolist(),
-                             max_absolute_cumulative_change=float(np.max(abs(d))))
+                             max_absolute_cumulative_change=float(np.max(abs(d))),
+                             refresh_diagnostics_native_then_local=diagnostics)
     return dict(cases=out, width_comparison=convergence,
                 **(dict(active_minus_held=response) if response else {}),
                 scope='Matched local daughter inputs: changes in the first-window integrated source.')

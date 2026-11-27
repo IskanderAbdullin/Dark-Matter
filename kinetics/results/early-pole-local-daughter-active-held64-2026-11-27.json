@@ -419,7 +419,23 @@
         -2.8796409701215e-16,
         -1.1796119636642288e-16
       ],
-      "max_absolute_cumulative_change": 1.016547956922409e-15
+      "max_absolute_cumulative_change": 1.016547956922409e-15,
+      "refresh_diagnostics_native_then_local": [
+        {
+          "active_minus_held_absolute_mean_rate": -3.635633460952192e-08,
+          "max_response_change_over_initial_mD2": 0.08269314179815429,
+          "final_fractional_mD2_change": 0.00039188045225005885,
+          "final_soft_packet_mean_ratio": 0.9997280540292276,
+          "refresh_events": 16
+        },
+        {
+          "active_minus_held_absolute_mean_rate": -3.671021819862119e-08,
+          "max_response_change_over_initial_mD2": 0.07287131374388445,
+          "final_fractional_mD2_change": 0.0003908805959810068,
+          "final_soft_packet_mean_ratio": 0.9997287476471299,
+          "refresh_events": 16
+        }
+      ]
     },
     "64": {
       "mean_effect_change": 8.326672684688674e-10,
@@ -442,7 +458,23 @@
         1.0755285551056204e-16,
         2.7755575615628914e-16
       ],
-      "max_absolute_cumulative_change": 8.083811398051921e-16
+      "max_absolute_cumulative_change": 8.083811398051921e-16,
+      "refresh_diagnostics_native_then_local": [
+        {
+          "active_minus_held_absolute_mean_rate": -3.893760314177541e-08,
+          "max_response_change_over_initial_mD2": 0.08490668872991049,
+          "final_fractional_mD2_change": 0.00040551238830330885,
+          "final_soft_packet_mean_ratio": 0.9997185980502844,
+          "refresh_events": 64
+        },
+        {
+          "active_minus_held_absolute_mean_rate": -3.8104935873306545e-08,
+          "max_response_change_over_initial_mD2": 0.07430811440281898,
+          "final_fractional_mD2_change": 0.000404435753751663,
+          "final_soft_packet_mean_ratio": 0.999719344910693,
+          "refresh_events": 64
+        }
+      ]
     }
   },
   "scope": "Matched local daughter inputs: changes in the first-window integrated source."
