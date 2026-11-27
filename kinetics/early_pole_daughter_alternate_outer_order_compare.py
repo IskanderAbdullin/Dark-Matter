@@ -9,7 +9,9 @@ import numpy as np
 from early_pole_joined_temporal_refinement_reference import conservation
 
 
-def compare(profiles):
+def compare(profiles, coarse_macro_steps=16):
+    if coarse_macro_steps not in (16,32):
+        raise ValueError('Only the checked 16x4 and 32x2 held layouts are supported.')
     controls=('projection','duration','grid','aperture_grid','hard_edge_sets',
               'strength','same_soft_strength','compton_strength','conversion_strength',
               'screening_update','method','pair','response_smear')
@@ -17,10 +19,23 @@ def compare(profiles):
     duration=ref[0]['duration']
     t=np.linspace(0.,duration,17)
     out={}
-    for profile,n in (('elastic_centered',16),('slow_centered',16),('fine64',64)):
+    for profile,n in (('elastic_centered',coarse_macro_steps),('slow_centered',coarse_macro_steps),('fine64',64)):
         arms=profiles[profile]
         settings=[]
-        for a,b in zip(arms,ref,strict=True):
+        for a,b,label in zip(arms,ref,('native','local-daughter'),strict=True):
+            if a.get('prepared_charged_swap','native')!=label:
+                raise ValueError('Native and aperture-local arms must retain their labels.')
+            for k,v in (('scalar_bins',8),('aperture_subdivision',1),('witness_mix',0.),
+                        ('response_radial_order',None)):
+                if a.get(k,v)!=b.get(k,v):
+                    raise ValueError('A secondary time/geometry control differs.')
+            if any(k in a for k in ('macro_step_weights','macro_exposure')):
+                raise ValueError('The dyadic comparison was defined on uniform grids.')
+            hist=np.asarray(a['state_history'])
+            if hist.shape!=(n+1,) or not np.all(np.isfinite(hist)&(hist>0.)):
+                raise ValueError('Require full admissible cold history.')
+            if hist[0]!=b['state_history'][0] or hist[-1]-hist[0]!=a['scalar_gain']:
+                raise ValueError('Unexpected change in seed or stored gain.')
             if any(a[k]!=b[k] for k in controls) or a['steps']!=n or a['screening_update']!='frozen':
                 raise ValueError('Different original held control.')
             for k in ('hard_moments','cold_bins','instantaneous_source_by_q'):
@@ -29,12 +44,13 @@ def compare(profiles):
                     'elastic-slow-elastic' if profile=='slow_centered' else 'slow-elastic-slow'):
                 raise ValueError('Wrong outer order metadata.')
             conform=conservation(a)
-            if n==16:
-                if a['elastic_substep_energy_budget']!=5e-15 or len(a['elastic'])!=16:
+            if n<64:
+                if (a['elastic_substep_energy_budget']!=5e-15 or len(a['elastic'])!=n
+                        or a.get('elastic_substeps_per_macro_step')!=64//n):
                     raise ValueError('Unexpected subcycle count or energy gate.')
                 for v in a['elastic']:
                     steps=v['elastic_substeps']
-                    if len(steps)!=4 or any(abs(z['rho_drift'])>=5e-15 for z in steps):
+                    if len(steps)!=64//n or any(abs(z['rho_drift'])>=5e-15 for z in steps):
                         raise ValueError('Missing or invalid inner elastic ledger.')
                     np.testing.assert_allclose([z['h'] for z in steps],duration/64,rtol=1e-15,atol=0.)
                     for k in ('rho_drift','entropy_gain'):
@@ -67,6 +83,8 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('elastic_centered','slow_centered','fine64'):
         p.add_argument('--'+k,nargs=2,required=True,help='Native then local output.')
+    p.add_argument('--coarse-macro-steps',type=int,choices=(16,32),default=16)
     a=p.parse_args()
     print(json.dumps(compare({k:[json.loads(Path(f).read_text()) for f in fs]
-                              for k,fs in vars(a).items()}),indent=2,allow_nan=False))
+                              for k,fs in vars(a).items() if k!='coarse_macro_steps'},
+                             a.coarse_macro_steps),indent=2,allow_nan=False))
