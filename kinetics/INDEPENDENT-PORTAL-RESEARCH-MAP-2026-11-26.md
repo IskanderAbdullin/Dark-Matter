@@ -432,6 +432,10 @@ compares the stored underoccupied states to the critical entropy per
 particle at every mass-to-temperature ratio. Isolated, number-preserving
 elastic evolution alone cannot saturate such a thermal gas.
 
+The [late quartic clock comparison](INDEPENDENT-SCALAR-QUARTIC-LATE-KINETIC-CHEMICAL-CLOCK-2026-11-26.md)
+separates gross elastic encounters and a generous chemical ceiling at
+three held states. Neither clock substitutes for a coupled kinetics run.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
