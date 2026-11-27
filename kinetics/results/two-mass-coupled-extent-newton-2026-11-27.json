@@ -1,0 +1,337 @@
+{
+  "scope": "Manufactured nonlinear coupled implicit step, no physical source or convergence statement.",
+  "cases": [
+    {
+      "name": "ordinary",
+      "capacity_count": 21,
+      "event_count": 3,
+      "experiments": [
+        {
+          "start": "forward",
+          "steps": [
+            {
+              "step": 0.08,
+              "continuation_iterations": [
+                2,
+                2,
+                2,
+                2,
+                3
+              ],
+              "event_residual": 0.0,
+              "extensive_entropy_gain": 0.5764106310892452,
+              "implicit_entropy_lower_bound": 0.49708781159902726,
+              "event_energy_relative_defect": 9.56214440897209e-19,
+              "count_defect": 2.710505431213761e-20,
+              "independent_occupation_solve_absolute": 3.957337929572091e-17
+            },
+            {
+              "step": 1.0,
+              "continuation_iterations": [
+                2,
+                2,
+                3,
+                3,
+                3
+              ],
+              "event_residual": 2.60558241649278e-12,
+              "extensive_entropy_gain": 1.3767969381231209,
+              "implicit_entropy_lower_bound": 0.5858952509557541,
+              "event_energy_relative_defect": 1.9149353416657083e-18,
+              "count_defect": 2.710505431213761e-20,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 50.0,
+              "continuation_iterations": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "event_residual": 4.440892098500626e-16,
+              "extensive_entropy_gain": 1.4711418159722254,
+              "implicit_entropy_lower_bound": 0.028872662348396385,
+              "event_energy_relative_defect": 7.644702607435092e-18,
+              "count_defect": 0.0,
+              "independent_occupation_solve_absolute": null
+            }
+          ]
+        },
+        {
+          "start": "inverse",
+          "steps": [
+            {
+              "step": 0.08,
+              "continuation_iterations": [
+                1,
+                1,
+                2,
+                2,
+                2
+              ],
+              "event_residual": 5.69639821423884e-16,
+              "extensive_entropy_gain": 0.004128792741615512,
+              "implicit_entropy_lower_bound": 0.0030737475089291726,
+              "event_energy_relative_defect": 1.3707202421118248e-21,
+              "count_defect": 2.710505431213761e-20,
+              "independent_occupation_solve_absolute": 1.5360535922642055e-15
+            },
+            {
+              "step": 1.0,
+              "continuation_iterations": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "event_residual": 1.1467935975839616e-12,
+              "extensive_entropy_gain": 0.008105468310772648,
+              "implicit_entropy_lower_bound": 0.00197507519620656,
+              "event_energy_relative_defect": 1.1913517075726203e-19,
+              "count_defect": 2.541098841762901e-21,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 50.0,
+              "continuation_iterations": [
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "event_residual": 4.738450083696666e-12,
+              "extensive_entropy_gain": 0.008393298611603222,
+              "implicit_entropy_lower_bound": 6.894749529188104e-05,
+              "event_energy_relative_defect": 5.984172942705338e-20,
+              "count_defect": 1.6940658945086007e-21,
+              "independent_occupation_solve_absolute": null
+            }
+          ]
+        },
+        {
+          "start": "nearly_empty_daughters",
+          "steps": [
+            {
+              "step": 0.08,
+              "continuation_iterations": [
+                2,
+                2,
+                2,
+                2,
+                3
+              ],
+              "event_residual": 1.3877787807814457e-17,
+              "extensive_entropy_gain": 2.057471057883817,
+              "implicit_entropy_lower_bound": 1.4608360591019434,
+              "event_energy_relative_defect": 1.9074159620518375e-18,
+              "count_defect": 0.0,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 1.0,
+              "continuation_iterations": [
+                2,
+                2,
+                3,
+                3,
+                4
+              ],
+              "event_residual": 0.0,
+              "extensive_entropy_gain": 4.456419339632972,
+              "implicit_entropy_lower_bound": 1.8056683923600154,
+              "event_energy_relative_defect": 1.0025839485160775e-20,
+              "count_defect": 0.0,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 50.0,
+              "continuation_iterations": [
+                3,
+                4,
+                4,
+                3,
+                3
+              ],
+              "event_residual": 2.220446049250313e-15,
+              "extensive_entropy_gain": 4.757107540677906,
+              "implicit_entropy_lower_bound": 0.1331829239685301,
+              "event_energy_relative_defect": 2.005167897032155e-20,
+              "count_defect": 0.0,
+              "independent_occupation_solve_absolute": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "near-rest",
+      "capacity_count": 21,
+      "event_count": 3,
+      "experiments": [
+        {
+          "start": "forward",
+          "steps": [
+            {
+              "step": 0.08,
+              "continuation_iterations": [
+                1,
+                2,
+                2,
+                2,
+                3
+              ],
+              "event_residual": 6.938893903907228e-18,
+              "extensive_entropy_gain": 0.35203974508864444,
+              "implicit_entropy_lower_bound": 0.2940252451730796,
+              "event_energy_relative_defect": 2.8084611237497934e-21,
+              "count_defect": 6.776263578034403e-20,
+              "independent_occupation_solve_absolute": 1.1145598333150986e-16
+            },
+            {
+              "step": 1.0,
+              "continuation_iterations": [
+                2,
+                2,
+                3,
+                3,
+                3
+              ],
+              "event_residual": 4.5037584772700257e-13,
+              "extensive_entropy_gain": 0.7084524797324647,
+              "implicit_entropy_lower_bound": 0.22753846296254834,
+              "event_energy_relative_defect": 7.2645527734328e-19,
+              "count_defect": 5.421010862427522e-20,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 50.0,
+              "continuation_iterations": [
+                3,
+                3,
+                3,
+                3,
+                3
+              ],
+              "event_residual": 9.43689570931383e-16,
+              "extensive_entropy_gain": 0.7324960001017823,
+              "implicit_entropy_lower_bound": 0.00745928568631901,
+              "event_energy_relative_defect": 1.4510382472707268e-18,
+              "count_defect": 5.421010862427522e-20,
+              "independent_occupation_solve_absolute": null
+            }
+          ]
+        },
+        {
+          "start": "inverse",
+          "steps": [
+            {
+              "step": 0.08,
+              "continuation_iterations": [
+                1,
+                1,
+                2,
+                2,
+                2
+              ],
+              "event_residual": 8.07117393752943e-13,
+              "extensive_entropy_gain": 0.04852690094982291,
+              "implicit_entropy_lower_bound": 0.030290902391926146,
+              "event_energy_relative_defect": 1.3410401865905265e-19,
+              "count_defect": 5.421010862427522e-20,
+              "independent_occupation_solve_absolute": 1.135999583992491e-12
+            },
+            {
+              "step": 1.0,
+              "continuation_iterations": [
+                2,
+                2,
+                2,
+                3,
+                3
+              ],
+              "event_residual": 6.938893903907228e-18,
+              "extensive_entropy_gain": 0.07860358107095518,
+              "implicit_entropy_lower_bound": 0.014164923749420416,
+              "event_energy_relative_defect": 1.8184785776279914e-19,
+              "count_defect": 4.0657581468206416e-20,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 50.0,
+              "continuation_iterations": [
+                3,
+                3,
+                3,
+                3,
+                2
+              ],
+              "event_residual": 2.3219488831660584e-11,
+              "extensive_entropy_gain": 0.08004438597720516,
+              "implicit_entropy_lower_bound": 0.0003898204565350696,
+              "event_energy_relative_defect": 1.8067766562790338e-19,
+              "count_defect": 4.0657581468206416e-20,
+              "independent_occupation_solve_absolute": null
+            }
+          ]
+        },
+        {
+          "start": "nearly_empty_daughters",
+          "steps": [
+            {
+              "step": 0.08,
+              "continuation_iterations": [
+                2,
+                2,
+                2,
+                2,
+                3
+              ],
+              "event_residual": 1.3877787807814457e-17,
+              "extensive_entropy_gain": 2.015567172513426,
+              "implicit_entropy_lower_bound": 1.4189813222391312,
+              "event_energy_relative_defect": 7.21774508803697e-19,
+              "count_defect": 1.3552527156068805e-20,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 1.0,
+              "continuation_iterations": [
+                2,
+                2,
+                3,
+                3,
+                4
+              ],
+              "event_residual": 2.7755575615628914e-17,
+              "extensive_entropy_gain": 4.296196206507477,
+              "implicit_entropy_lower_bound": 1.6660810334720602,
+              "event_energy_relative_defect": 4.354987049228013e-18,
+              "count_defect": 5.421010862427522e-20,
+              "independent_occupation_solve_absolute": null
+            },
+            {
+              "step": 50.0,
+              "continuation_iterations": [
+                3,
+                4,
+                3,
+                4,
+                3
+              ],
+              "event_residual": 1.1731171589701717e-12,
+              "extensive_entropy_gain": 4.590116248242682,
+              "implicit_entropy_lower_bound": 0.11880124248982876,
+              "event_energy_relative_defect": 1.445421325023227e-18,
+              "count_defect": 0.0,
+              "independent_occupation_solve_absolute": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
