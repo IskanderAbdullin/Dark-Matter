@@ -628,6 +628,10 @@ tests the hierarchy that a maintained parent shape would require.
 It finds stronger instantaneous depletion in selected shells than
 a global number rate would suggest, with mesh-sensitive maxima.
 
+The [dilute scalar clock](INDEPENDENT-EARLY-POLE-SCALAR-DILUTE-CLOCK-2026-11-26.md)
+gauges a vacuum Born normalization on the stored spectra. It cannot
+replace finite-occupation scattering or establish a condensation rate.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
