@@ -691,6 +691,11 @@ The [coherent quartic lattice](INDEPENDENT-EARLY-POLE-COHERENT-QUARTIC-LATTICE-2
 reproduces the aligned resonance but exposes phase cancellation
 of the mean as an unreliable proxy for hard-spectrum production.
 
+The [matched 2D field control](INDEPENDENT-EARLY-POLE-COHERENT-LATTICE-2D-2026-11-26.md)
+uses identical Fourier seeds across resolutions and compares
+early growth with their seeded linear superposition, not with
+the fastest possible single-mode exponent.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
