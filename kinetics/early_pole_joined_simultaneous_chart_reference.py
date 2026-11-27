@@ -15,7 +15,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,retune_donor_support=None):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,retune_donor_support=None,elastic_channel='both'):
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
@@ -80,7 +80,16 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 float(np.sum((y0-native)[M.r[2],0])),
                 float(np.sum(M.shape[M.r[2]]*(y0-native)[M.r[2]]))]
 
-    elastic=None if without_elastic else ElasticChannels(C,saved['grid'],1.)
+    if elastic_channel not in ('both','unlike','same') or (without_elastic and elastic_channel!='both'):
+        raise ValueError('Use one unambiguous elastic channel control.')
+    if without_elastic:
+        elastic=None
+    elif elastic_channel=='unlike':
+        elastic=C
+    else:
+        if elastic_channel=='same':
+            C.strength=0.
+        elastic=ElasticChannels(C,saved['grid'],1.)
     add=(ComptonKernel(M),ConversionKernel(M))
     k=M.r[1].start
     charts=M.cells[k:]
@@ -154,6 +163,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 **(dict(prepared_charged_swap=swap) if swap is not None else {}),
                 **(dict(complement_retune=retune_check) if retune_check is not None else {}),
                 **(dict(elastic_channels=False) if without_elastic else {}),
+                **(dict(selected_elastic_channel=elastic_channel) if elastic_channel!='both' else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
@@ -171,7 +181,9 @@ if __name__=='__main__':
     group.add_argument('--compensation-only',action='store_true')
     group.add_argument('--number-only-local-retune',action='store_true')
     group.add_argument('--retune-donor-support',choices=('below','no_neighbors'))
-    p.add_argument('--without-elastic',action='store_true')
+    elast=p.add_mutually_exclusive_group()
+    elast.add_argument('--without-elastic',action='store_true')
+    elast.add_argument('--elastic-channel',choices=('both','unlike','same'),default='both')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
