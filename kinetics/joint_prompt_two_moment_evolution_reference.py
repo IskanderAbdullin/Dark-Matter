@@ -167,7 +167,7 @@ def maxent(c,N,Et,guess):
     return tc,state(tc)
 
 
-def run(row,eos,step,final,dt,method="heun",order=5,verify=False,angle=4,cap=0.):
+def run(row,eos,step,final,dt,method="heun",order=5,verify=False,angle=4,cap=0.,record_terminal=False):
     T=row["TF"];s=eos.state(T)[2];H=np.sqrt(eos.state(T)[0]/3)/MPL
     pp=np.array(row["scalar_differential_bins"])*T
     last=len(pp)-1 if cap<=0. else np.searchsorted(pp,T*cap,side="right")-1
@@ -221,7 +221,7 @@ def run(row,eos,step,final,dt,method="heun",order=5,verify=False,angle=4,cap=0.)
     assert Smax>S0 and S<=Smax*(1+2e-8)
     ideal_scalar_heat=(es[0][0]-(y[0,1,:].sum()+mp*y[0,0,:].sum()))/(E0*norm)
     L1=[float(np.sum(abs(U[i,0,:]*norm-es[i][2]))/(conserved[i]*norm)) for i in range(2)]
-    return dict(T=T,bins=len(ids)-1,method=method,log_time_H_units=final,entropy_controls=controls,
+    result=dict(T=T,bins=len(ids)-1,method=method,log_time_H_units=final,entropy_controls=controls,
        true_finite_box_common_temperature=qe,
        physical_cutoff_p_over_T=float(pp[last]/T),
        removed_by_initial_support_fraction=[float(sp[last:].sum()),float(fp[last:].sum())],
@@ -233,6 +233,13 @@ def run(row,eos,step,final,dt,method="heun",order=5,verify=False,angle=4,cap=0.)
        total_energy_relative_error=energy_error,separate_number_relative_error=inv,
        maximum_moment_shape_error=err,relative_entropy_gain=float(S/S0-1),
        fractional_scalar_heat_of_initial_dark_energy=float((U[0,1,:].sum()+mp*U[0,0,:].sum()-energy(np.r_[y[:1]/norm,0*y[1:]]))/E0))
+    if record_terminal:
+        result["terminal_state"]=dict(momentum_edges_GeV=pp[ids].tolist(),
+            species_number_and_kinetic_energy=(U*norm).tolist(),
+            species_entropy_variables=[np.asarray(q).tolist() for q in v],
+            initial_species_number_and_kinetic_energy=y.tolist())
+    return result
+
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument('eos');p.add_argument('spectra')
@@ -242,6 +249,11 @@ if __name__=="__main__":
     p.add_argument("--angle",type=int,default=4)
     p.add_argument("--order",type=int,default=5)
     p.add_argument("--cap",type=float,default=0.)
+    p.add_argument("--TR",type=float,default=.05)
+    p.add_argument("--TF",type=float,default=.045)
+    p.add_argument("--record-terminal",action="store_true")
     a=p.parse_args();eos=StandardModel(a.eos)
-    row=next(r for r in json.loads(Path(a.spectra).read_text())['rows'] if r['TR']==.05 and abs(r['TF']-.045)<1e-8)
-    print(json.dumps(run(row,eos,a.step,a.height,a.dt,a.method,order=a.order,verify=a.verify,angle=a.angle,cap=a.cap),indent=2,allow_nan=False))
+    d=json.loads(Path(a.spectra).read_text())
+    row=next(r for r in d.get("rows",[d]) if abs(r["TR"]-a.TR)<1e-8 and abs(r["TF"]-a.TF)<1e-8)
+    print(json.dumps(run(row,eos,a.step,a.height,a.dt,a.method,order=a.order,verify=a.verify,
+                         angle=a.angle,cap=a.cap,record_terminal=a.record_terminal),indent=2,allow_nan=False))
