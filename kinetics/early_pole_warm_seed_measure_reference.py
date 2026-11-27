@@ -52,7 +52,9 @@ def run(path, projection, outer_orders, radial_orders):
             return dict(label=label,outer_order=order,maximum_occupation=float(occ.max()),
                         spontaneous=float(spont.sum()),stimulated=float(stimulated.sum()),
                         inverse=float(inv.sum()),net=float(net.sum()),
-                        spontaneous_scalar_energy=float(en@spont),net_scalar_energy=float(en@net))
+                        spontaneous_scalar_energy=float(en@spont),net_scalar_energy=float(en@net),
+                        spontaneous_by_shell=spont.reshape(len(markers),-1).sum(axis=1).tolist(),
+                        net_by_shell=net.reshape(len(markers),-1).sum(axis=1).tolist())
         a=integrate(markers,vol,counts/vol,'native_marker',1)
         out=[a]
         decompositions=[]
@@ -85,7 +87,9 @@ def run(path, projection, outer_orders, radial_orders):
             assert abs(dn-ds-do)<1e-21
             decompositions.append(dict(outer_order=order,marker_minus_energy_matched_net=dn,
                 spontaneous_difference=ds,occupation_difference=do,spontaneous_fraction_of_net_gap=ds/dn,
-                uniform_to_energy_matched_on_identical_nodes=b['net']-u['net']))
+                uniform_to_energy_matched_on_identical_nodes=b['net']-u['net'],
+                spontaneous_difference_by_shell=(np.array(a['spontaneous_by_shell'])-
+                    b['spontaneous_by_shell']).tolist()))
         rows.append(dict(radial_order=radial,rows=out,marker_gap_decomposition=decompositions))
     return dict(grid=g,projection=projection,hard_snapshot_exposure=shot['exposure'],fixed_scalar_pole=pole,
                 native_marker_nodes=markers.tolist(),shell_bounds=np.c_[np.cbrt(lo),np.cbrt(hi)].tolist(),
