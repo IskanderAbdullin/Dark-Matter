@@ -632,6 +632,11 @@ The [dilute scalar clock](INDEPENDENT-EARLY-POLE-SCALAR-DILUTE-CLOCK-2026-11-26.
 gauges a vacuum Born normalization on the stored spectra. It cannot
 replace finite-occupation scattering or establish a condensation rate.
 
+An [elastic angular support test](INDEPENDENT-EARLY-POLE-SCALAR-ELASTIC-ANGULAR-SUPPORT-2026-11-26.md)
+shows that a single cold pair generally remains within the IR band,
+but need not remain in the same fine momentum cell. It does not
+give a net, quantum-statistical redistribution rate.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
