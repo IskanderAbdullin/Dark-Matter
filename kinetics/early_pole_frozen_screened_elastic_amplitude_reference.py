@@ -16,6 +16,7 @@ def vacuum_trace(s,t,ms):
 def current_contractions(s,t,ea,eb,omega,masses):
     """Timelike, interference and transverse tensors projected along plasma q."""
     m1,m2=masses
+    s,t,ea,eb,omega=np.broadcast_arrays(s,t,ea,eb,omega)
     Q2=omega*omega-t
     Q=np.sqrt(Q2)
     assert np.all(t<0.)

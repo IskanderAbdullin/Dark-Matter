@@ -32,8 +32,8 @@ def profile(grid, species, form):
     return e,lambda q:np.maximum(np.nan_to_num(h(q**3/3)),0.)
 
 
-def radial(e,Q,order,layer):
-    lo,hi=.45,8.
+def radial(e,Q,order,layer,bounds):
+    lo,hi=bounds
     extra=np.array([])
     if layer:
         extra=np.r_[e-Q,e+Q,e-.25*Q,e+.25*Q]
@@ -73,9 +73,10 @@ def traces(a,b,q,z,min_s,lower_tau,v):
     return vacuum,screened
 
 
-def one(grid, form, level, lower_tau, layer, window):
-    if not 0.<window[0]<window[1]<=16. or not 0.<=lower_tau<1.:
-        raise ValueError('The radial box admits Q in (0,16] and 0 <= min_tau < 1')
+def one(grid, form, level, lower_tau, layer, window, bounds=(.45,8.)):
+    pl,ph=bounds
+    if not (0.<pl<ph and 0.<window[0]<window[1]<=2*ph and 0.<=lower_tau<1.):
+        raise ValueError('Require positive radial bounds, Q <= 2 p_max and 0 <= min_tau < 1')
     er,fr=profile(grid,'parent',form)
     ew,fw=profile(grid,'fermion',form)
     v,mD2=tabulated_polarization(grid)
@@ -90,14 +91,14 @@ def one(grid, form, level, lower_tau, layer, window):
     for iq,(L,H) in enumerate(zip(qs[:-1],qs[1:],strict=True)):
         lq,dq=gauss_each(np.log([L,H]),nq)
         for q,wq in zip(np.exp(lq),dq,strict=True):
-            pa,dpa=radial(er,q,nr,layer)
-            pb,dpb=radial(ew,q,nr,layer)
+            pa,dpa=radial(er,q,nr,layer,bounds)
+            pb,dpb=radial(ew,q,nr,layer,bounds)
             ff,gg=fr(pa),fw(pb)
             for p,dp,f0 in zip(pa,dpa,ff,strict=True):
-                lo=np.maximum(np.maximum((abs(p-q)-p)/q,(.45-p)/q),
-                              np.maximum(-1.,(pb-8.)/q))
-                hi=np.minimum(np.minimum(1.,(8.-p)/q),
-                              np.minimum((pb-abs(pb-q))/q,(pb-.45)/q))
+                lo=np.maximum(np.maximum((abs(p-q)-p)/q,(pl-p)/q),
+                              np.maximum(-1.,(pb-ph)/q))
+                hi=np.minimum(np.minimum(1.,(ph-p)/q),
+                              np.minimum((pb-abs(pb-q))/q,(pb-pl)/q))
                 possible=hi>lo
                 # Outgoing FD breakpoints: only edges a distance at most Q from each leg.
                 ez=(er[(er>p-q)&(er<p+q)]-p)/q
@@ -132,9 +133,31 @@ def one(grid, form, level, lower_tau, layer, window):
                 o[iq,2:]+=np.r_[np.sum(dW*dE*eq*Sc),np.sum(dW*dE*hot*Sc)]
     assert np.max(abs(o[:,2]))<5e-9 and np.min(o[:,3])>-1e-12 and sum(o[:,3])>0.
     return dict(grid=grid,occupation_model=form,order=[nr,nq,nz],q_edges=qs.tolist(),
-                min_tau=lower_tau,radial_edge_layers=layer,mD2=mD2,normalized_heat=o.tolist(),
+                min_tau=lower_tau,radial_bounds=bounds,radial_edge_layers=layer,mD2=mD2,normalized_heat=o.tolist(),
                 columns=['archive_vacuum','archive_screened','common_T_screened','parent_hot_screened'])
 
+def azimuth_fixture():
+    from early_pole_frozen_screened_elastic_amplitude_reference import matrix_trace, htl_massless
+    rng=np.random.default_rng(41)
+    pol=htl_massless(.005**2/3)
+    u,w=roots_legendre(12)
+    worst=np.zeros(2); num=0
+    for p,b,q,z in np.c_[rng.uniform(.6,4.,(160,2)),rng.uniform(.025,.55,160),rng.uniform(-.7,.7,160)]:
+        for cut in (0.,.15):
+            t=-q*q*(1-z*z)
+            ap=p*z+t/(2*q); bp=b*z-t/(2*q)
+            en=2*np.sqrt((p*p-ap*ap)*(b*b-bp*bp))
+            s0=2*(p*b-ap*bp)
+            L=np.arccos(np.clip((s0-1)/en,-1,1))
+            R=np.arccos(np.clip((s0+t/cut)/en,-1,1)) if cut else np.pi
+            if R-L<1e-9: continue
+            psi=(R+L)/2+(R-L)*u/2
+            S=s0-en*np.cos(psi)
+            exact=np.array([w@matrix_trace(S,*np.broadcast_arrays(t+np.zeros_like(S),p,b,q*z),(0.,0.),a)*(R-L)/(2*np.pi) for a in (None,pol)])
+            test=np.asarray(traces(p,b,q,z,1.,cut,pol))
+            worst=np.maximum(worst,abs(test/exact-1)); num+=1
+    assert worst.max()<1e-9
+    return dict(cases=num,max_relative_error=worst.tolist())
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -144,5 +167,8 @@ if __name__=='__main__':
     p.add_argument('--lower-tau',type=float,default=0.)
     p.add_argument('--layer',action='store_true')
     p.add_argument('--window',type=float,nargs=2,default=[5e-5,.08])
+    p.add_argument("--bounds",type=float,nargs=2,default=[.45,8.])
+    p.add_argument("--check-azimuth",action="store_true")
     args=p.parse_args()
-    print(json.dumps(one(args.grid,args.form,args.level,args.lower_tau,args.layer,args.window),indent=2,allow_nan=False))
+    result=azimuth_fixture() if args.check_azimuth else one(args.grid,args.form,args.level,args.lower_tau,args.layer,args.window,args.bounds)
+    print(json.dumps(result,indent=2,allow_nan=False))

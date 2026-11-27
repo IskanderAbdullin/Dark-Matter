@@ -834,3 +834,7 @@ fit or exclusion.
   distinguishes matching-scale stability from true convergence,
   finds the missed incoming edge layers in the CM comparison, and
   recovers vacuum and detailed-balance controls in direct Q coordinates.
+- [Live screened elastic stiffness and archive dependence](INDEPENDENT-EARLY-POLE-LIVE-SCREENED-ELASTIC-2026-11-26.md):
+  conserving packets reproduce initial daughter heating but give
+  opposite short relative scalar-gain changes on the two archive
+  reconstructions; the full dynamical sign is unresolved.
