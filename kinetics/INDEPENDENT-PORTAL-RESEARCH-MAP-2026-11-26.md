@@ -804,3 +804,6 @@ fit or exclusion.
 - [Expansion check with simultaneous hard pair and decay moments](INDEPENDENT-EARLY-POLE-LIVE-JOINT-HARD-PACKETS-FRW-2026-11-26.md):
   independently integrates redshift trace and collisional work;
   the combined dressed events close the comoving energy ledger.
+- [Common dressed equilibrium and moving-remap Jacobian](INDEPENDENT-EARLY-POLE-DRESSED-JOINT-EQUILIBRIUM-2026-11-26.md):
+  all channels share a stationary thermal fixture; retaining the
+  energy curvature is necessary for the constrained linear response.
