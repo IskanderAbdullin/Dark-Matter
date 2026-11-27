@@ -74,6 +74,7 @@ def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge):
             components.append(density*u*u/(1+(B.de/B.ec)*u))
         A=np.asarray(components)
         return weight,A,storage,pp
+    sample.radial_bounds=(mid-dx,mid+dx)
     w,A,k,pp=sample(12)
     Aeq=np.einsum('jnm,nm->jn',A,w)
     objective=np.sum(w*k,axis=-1)

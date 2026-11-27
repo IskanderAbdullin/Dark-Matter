@@ -1,0 +1,277 @@
+{
+  "scope": "Finite step-profile sign witnesses and non-rigorous continuous dual quadratures in the same frozen geometry.",
+  "fixtures": [
+    {
+      "hard_depth": 1,
+      "cold_modes": 8,
+      "one_arm_numerical_duals": {
+        "native_only": {
+          "numerical_continuum_dual_range": [
+            -0.048190847612019846,
+            0.017544216209534523
+          ],
+          "max_per_cell_dual_order_delta": 1.8974414713567034e-07
+        },
+        "local_only": {
+          "numerical_continuum_dual_range": [
+            -0.05625921572078277,
+            0.02853506671470672
+          ],
+          "max_per_cell_dual_order_delta": 1.9384962439330383e-07
+        }
+      },
+      "finite_amplitude_witnesses": {
+        "12": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.01982744102663395,
+            "verified_pointwise_amplitude": 0.019827449996523257,
+            "positive_paired_rate": 1.0001452204668826e-05,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 576,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.03937457793336118,
+            "verified_pointwise_amplitude": 0.03937457810546056,
+            "positive_paired_rate": 9.999956341780192e-06,
+            "max_normalized_moment_residual": 9.920449878242366e-18,
+            "selected_step_subcells": 288,
+            "target_positive_rate": 1e-05
+          },
+          "local_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.04077079390252873,
+            "verified_pointwise_amplitude": 0.04077079558489722,
+            "positive_paired_rate": 9.999962539614105e-06,
+            "max_normalized_moment_residual": 6.938893903907228e-18,
+            "selected_step_subcells": 288,
+            "target_positive_rate": 1e-05
+          }
+        },
+        "24": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.019699555807521932,
+            "verified_pointwise_amplitude": 0.019699564787829277,
+            "positive_paired_rate": 1.000145159393102e-05,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 1152,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.039260363015524186,
+            "verified_pointwise_amplitude": 0.039260363205394784,
+            "positive_paired_rate": 9.999951802112939e-06,
+            "max_normalized_moment_residual": 5.4752209710517974e-18,
+            "selected_step_subcells": 576,
+            "target_positive_rate": 1e-05
+          },
+          "local_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.040608671010766345,
+            "verified_pointwise_amplitude": 0.04060867272741385,
+            "positive_paired_rate": 9.999968880541887e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 576,
+            "target_positive_rate": 1e-05
+          }
+        }
+      }
+    },
+    {
+      "hard_depth": 4,
+      "cold_modes": 8,
+      "one_arm_numerical_duals": {
+        "native_only": {
+          "numerical_continuum_dual_range": [
+            -0.02035688482091999,
+            -0.005798442190923125
+          ],
+          "max_per_cell_dual_order_delta": 4.481219523694334e-08
+        },
+        "local_only": {
+          "numerical_continuum_dual_range": [
+            -0.01911576418663926,
+            -0.0005620690852793583
+          ],
+          "max_per_cell_dual_order_delta": 4.481219523678071e-08
+        }
+      },
+      "finite_amplitude_witnesses": {
+        "12": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.13389481179437265,
+            "verified_pointwise_amplitude": 0.1338948104642395,
+            "positive_paired_rate": 9.994650734982698e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 1080,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          },
+          "local_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          }
+        },
+        "24": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.1332820057437849,
+            "verified_pointwise_amplitude": 0.13328200574378526,
+            "positive_paired_rate": 9.994670141169137e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 2160,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          },
+          "local_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          }
+        }
+      }
+    },
+    {
+      "hard_depth": 1,
+      "cold_modes": 32,
+      "one_arm_numerical_duals": {
+        "native_only": {
+          "numerical_continuum_dual_range": [
+            -0.048571570669973516,
+            0.017402768104630144
+          ],
+          "max_per_cell_dual_order_delta": 2.900399672261557e-07
+        },
+        "local_only": {
+          "numerical_continuum_dual_range": [
+            -0.057848176427074405,
+            0.025608662310556973
+          ],
+          "max_per_cell_dual_order_delta": 2.9647455816218804e-07
+        }
+      },
+      "finite_amplitude_witnesses": {
+        "12": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.01979538673348497,
+            "verified_pointwise_amplitude": 0.019795425617590984,
+            "positive_paired_rate": 1.0005511486015431e-05,
+            "max_normalized_moment_residual": 2.7755575615628914e-17,
+            "selected_step_subcells": 2232,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.039428932330782686,
+            "verified_pointwise_amplitude": 0.0394289454475506,
+            "positive_paired_rate": 9.995412661688297e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 1116,
+            "target_positive_rate": 1e-05
+          },
+          "local_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.04064475653299875,
+            "verified_pointwise_amplitude": 0.040644756533006324,
+            "positive_paired_rate": 9.990440090992814e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 1116,
+            "target_positive_rate": 1e-05
+          }
+        },
+        "24": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.01969560549319237,
+            "verified_pointwise_amplitude": 0.01969564440874294,
+            "positive_paired_rate": 1.0002860341414704e-05,
+            "max_normalized_moment_residual": 5.551115123125783e-17,
+            "selected_step_subcells": 4464,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.03930973611626609,
+            "verified_pointwise_amplitude": 0.03930974712099626,
+            "positive_paired_rate": 1.0000110633526238e-05,
+            "max_normalized_moment_residual": 2.7755575615628914e-17,
+            "selected_step_subcells": 2232,
+            "target_positive_rate": 1e-05
+          },
+          "local_only": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.04054781445033111,
+            "verified_pointwise_amplitude": 0.04054782274811048,
+            "positive_paired_rate": 9.989416667244289e-06,
+            "max_normalized_moment_residual": 3.469446951953614e-17,
+            "selected_step_subcells": 2232,
+            "target_positive_rate": 1e-05
+          }
+        }
+      }
+    },
+    {
+      "hard_depth": 4,
+      "cold_modes": 32,
+      "one_arm_numerical_duals": {
+        "native_only": {
+          "numerical_continuum_dual_range": [
+            -0.019208351769983742,
+            -0.0068823644867598635
+          ],
+          "max_per_cell_dual_order_delta": 5.850440713264446e-09
+        },
+        "local_only": {
+          "numerical_continuum_dual_range": [
+            -0.018951684916212783,
+            -0.0030372028350605165
+          ],
+          "max_per_cell_dual_order_delta": 5.031228784502587e-09
+        }
+      },
+      "finite_amplitude_witnesses": {
+        "12": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.17646847345838754,
+            "verified_pointwise_amplitude": 0.17646847170135835,
+            "positive_paired_rate": 9.987418630328434e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 3720,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          },
+          "local_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          }
+        },
+        "24": {
+          "both_arms": {
+            "status": "verified_positive_witness",
+            "solver_amplitude": 0.17614712557901802,
+            "verified_pointwise_amplitude": 0.17614712383035852,
+            "positive_paired_rate": 9.979569814567688e-06,
+            "max_normalized_moment_residual": 1.3877787807814457e-17,
+            "selected_step_subcells": 7440,
+            "target_positive_rate": 1e-05
+          },
+          "native_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          },
+          "local_only": {
+            "status": "infeasible_in_this_finite_approximation"
+          }
+        }
+      }
+    }
+  ]
+}
