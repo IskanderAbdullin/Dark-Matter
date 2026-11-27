@@ -138,3 +138,42 @@ python -W error warm_expanding_daughter_pressure_reference.py "$t/step-5.json" "
 
 [Four-step-count ladder and the pressure resolution comparison](results/warm-coupled-hard080-deeper-clock-audit-2026-11-26.json);
 [3/6-block accepted daughter phases](results/warm-coupled-hard080-deeper-clock-tapes-2026-11-26.json.gz).
+
+## .80 GeV: matched twelve-block refinement
+
+The same comoving parent chart, prescribed radiation clock, scale
+endpoint and initial phase can also be used with twelve outer
+blocks. Both branches decrease at every saved step. Their final W
+values are 1.6945469363e-14 (stationary parent) and 1.6945469548e-14
+(finite parent). Relative to six blocks this is another −6.596%
+in either branch, whereas the relative finite-parent change at
+twelve blocks is +1.09e-8. The cumulative energy ledger defect
+stays below 2.24e-13 relative. This reinforces the distinction
+between the robust direction of the decline and an unresolved
+continuum amplitude. It does not establish that twelve blocks
+are accurate enough.
+
+On the finite-parent branch the one-to-twelve-block pressure
+changes remain much smaller than the excess-energy shift:
+−5.10e-6 for scalar pressure and +3.86e-6 for light-fermion pressure
+in relative units. No matter-power transfer is computed here.
+
+Generate twelve new frozen prompt guide roots on the finer clock.
+The guide endpoint need not equal the six-step archive, and the
+guides affect only Newton initialization. The prior six-guide
+reproduction still requires the original terminal-moment match.
+
+~~~sh
+t=competing080/tapes
+python -W error warm_late_competing_locked_guides_reference.py EOS.dat "$t/step-5.json" "$t/step-6.json" guides080-12 --steps 12 --refine-clock
+for mode in expand-stationary-all expand-finite-all; do
+ run "$d/080-locked12-$mode" "$mode" guides080-12/step-{0..12}.json --order 2 --common-subdivisions 2
+done
+python -W error warm_expanding_clock_ladder_reference.py "$d" 080 1 2 3 6 12
+parts=(); for n in 1 2 3 6 12; do parts+=("$d/080-locked$n-expand-finite-all/step-$n.json"); done
+python -W error warm_expanding_daughter_pressure_reference.py "$t/step-5.json" "${parts[@]}"
+~~~
+
+[Five-clock comparison and pressure diagnostic](results/warm-coupled-hard080-twelve-clock-2026-11-26.json);
+[finite-parent accepted states](results/warm-coupled-hard080-twelve-finite-2026-11-26.json.gz);
+[stationary-parent accepted states](results/warm-coupled-hard080-twelve-stationary-2026-11-26.json.gz).

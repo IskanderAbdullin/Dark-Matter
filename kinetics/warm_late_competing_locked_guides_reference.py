@@ -16,9 +16,11 @@ from warm_light_occupation_stage_audit_reference import digest, read
 from warm_prompt_reentry_shape_audit_reference import get_mom
 
 
-def run(eos,start,target,out,n):
+def run(eos,start,target,out,n,refine=False):
     a,b=read(start),read(target)
     assert a["plan"]==b["plan"] and a["plan"]["eos_sha256"]==sha(eos)
+    if refine:
+        assert n>b["plan"]["substeps"]
     assert all(x["hash"]==digest(x["snapshot"]) for x in (a,b))
     s=a["snapshot"]
     p=np.asarray(s["lab_momentum_edges_GeV"])
@@ -46,8 +48,11 @@ def run(eos,start,target,out,n):
             N=op.moment(u)[0].reshape(2,op.n,2)
             N1=op.moment(v)[0].reshape(2,op.n,2)
             err=float(np.max((abs(N-N1).sum(axis=1)/N.sum(axis=1))))
-            assert err<2e-12
+            if not refine:
+                assert err<2e-12
             atom["archived_terminal_relative_moment_L1"]=err
+            if refine:
+                atom["clock_refined_not_matched_archive"]=True
         atomic(out/f"step-{j}.json",atom)
 
 
@@ -56,6 +61,7 @@ if __name__=="__main__":
     for k in ("eos","start","target","output"):
         p.add_argument(k,type=Path)
     p.add_argument("--steps",type=int,required=True)
+    p.add_argument("--refine-clock",action="store_true")
     a=p.parse_args()
     assert a.steps>0
-    run(a.eos,a.start,a.target,a.output,a.steps)
+    run(a.eos,a.start,a.target,a.output,a.steps,a.refine_clock)
