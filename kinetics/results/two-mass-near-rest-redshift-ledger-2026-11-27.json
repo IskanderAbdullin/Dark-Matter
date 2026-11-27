@@ -1,0 +1,273 @@
+{
+  "scope": "Prescribed injection and redshift; no solved rates, Hubble history or abundance.",
+  "cases": [
+    {
+      "name": "ordinary",
+      "inputs": [
+        0.093,
+        0.061,
+        0.122,
+        0.33
+      ],
+      "kinetic_error_norm": 0.24962450471366587,
+      "stored_parent_rest_mass_excess_is_separate": true,
+      "initial_parent_absolute_shell_edges_collapse": false,
+      "ledger": [
+        {
+          "a": 1.2,
+          "decayed_parent_count": 0.12,
+          "cumulative_pressure_work": 0.04098983553424973,
+          "per_species_comoving_kinetic_excess": [
+            0.1017585088778862,
+            0.015168832217250629,
+            0.009867328084279309
+          ],
+          "per_species_comoving_pressure": [
+            0.057562124522210226,
+            0.006697375754233914,
+            0.00525041736553717
+          ],
+          "per_species_comoving_trace_deficit": [
+            0.07092786468874447,
+            0.004923295045451115,
+            0.005883924012332202
+          ],
+          "comoving_rest_change": -0.01116,
+          "naive_recovered_kinetic_excess": 0.12679466917941612,
+          "fractional_split_ledger_residual": 1.293498648555005e-17,
+          "fractional_event_ledger_residual": 4.13973859191266e-18
+        },
+        {
+          "a": 1.9,
+          "decayed_parent_count": 0.39,
+          "cumulative_pressure_work": 0.11015094893104915,
+          "per_species_comoving_kinetic_excess": [
+            0.031259834103178716,
+            0.022283303578273538,
+            0.029200418101164496
+          ],
+          "per_species_comoving_pressure": [
+            0.01913886886094535,
+            0.011235966603497695,
+            0.015568100227793896
+          ],
+          "per_species_comoving_trace_deficit": [
+            0.02615677247965733,
+            0.011424596232219548,
+            0.017503882582217193
+          ],
+          "comoving_rest_change": -0.036270000000000004,
+          "naive_recovered_kinetic_excess": 0.08274355578261672,
+          "fractional_split_ledger_residual": 1.0607231834687686e-16,
+          "fractional_event_ledger_residual": 4.214389615701249e-18
+        },
+        {
+          "a": 3.6,
+          "decayed_parent_count": 0.5900000000000001,
+          "cumulative_pressure_work": 0.16596494629426453,
+          "per_species_comoving_kinetic_excess": [
+            0.006244416908380799,
+            0.021185878755903387,
+            0.0180992627551172
+          ],
+          "per_species_comoving_pressure": [
+            0.00404770527835992,
+            0.011132552904241566,
+            0.010736491667512005
+          ],
+          "per_species_comoving_trace_deficit": [
+            0.00589869892669896,
+            0.012211779956821309,
+            0.014110212247418813
+          ],
+          "comoving_rest_change": -0.05487,
+          "naive_recovered_kinetic_excess": 0.04552955841940137,
+          "fractional_split_ledger_residual": 1.3764291495274193e-16,
+          "fractional_event_ledger_residual": 6.243540171409258e-19
+        },
+        {
+          "a": 6.0,
+          "decayed_parent_count": 0.8200000000000001,
+          "cumulative_pressure_work": 0.1930795683248354,
+          "per_species_comoving_kinetic_excess": [
+            0.001005077583014363,
+            0.025583060335485453,
+            0.013216798470330686
+          ],
+          "per_species_comoving_pressure": [
+            0.0006629796640015576,
+            0.013287831303065867,
+            0.008197575237733384
+          ],
+          "per_species_comoving_trace_deficit": [
+            0.0009838614089903097,
+            0.014280433573712153,
+            0.011375927242869467
+          ],
+          "comoving_rest_change": -0.07626000000000001,
+          "naive_recovered_kinetic_excess": 0.03980493638883051,
+          "fractional_split_ledger_residual": 9.6204810293367e-17,
+          "fractional_event_ledger_residual": 1.2215622074496376e-19
+        },
+        {
+          "a": 8.0,
+          "decayed_parent_count": 0.8200000000000001,
+          "cumulative_pressure_work": 0.2085149856077652,
+          "per_species_comoving_kinetic_excess": [
+            0.0005679922236763063,
+            0.016124345268723632,
+            0.007677181613500753
+          ],
+          "per_species_comoving_pressure": [
+            0.0003763798485692999,
+            0.008873870852711345,
+            0.004894804990700838
+          ],
+          "per_species_comoving_trace_deficit": [
+            0.0005611473220315934,
+            0.010497267289410403,
+            0.007007233358601762
+          ],
+          "comoving_rest_change": -0.07626000000000001,
+          "naive_recovered_kinetic_excess": 0.024369519105900683,
+          "fractional_split_ledger_residual": 1.0451143330402455e-16,
+          "fractional_event_ledger_residual": 0.0
+        }
+      ]
+    },
+    {
+      "name": "near_rest",
+      "inputs": [
+        2e-23,
+        0.061,
+        0.122,
+        4e-12
+      ],
+      "kinetic_error_norm": 6.502382179706875e-23,
+      "stored_parent_rest_mass_excess_is_separate": true,
+      "initial_parent_absolute_shell_edges_collapse": true,
+      "ledger": [
+        {
+          "a": 1.2,
+          "decayed_parent_count": 0.12,
+          "cumulative_pressure_work": 1.375727888243767e-23,
+          "per_species_comoving_kinetic_excess": [
+            2.751455776487535e-23,
+            3.41649685109513e-24,
+            2.735488298660599e-24
+          ],
+          "per_species_comoving_pressure": [
+            1.8343038509916897e-23,
+            2.2776645673967534e-24,
+            1.8236588657737326e-24
+          ],
+          "per_species_comoving_trace_deficit": [
+            2.751455776487535e-23,
+            3.41649685109513e-24,
+            2.735488298660599e-24
+          ],
+          "comoving_rest_change": -2.4e-24,
+          "naive_recovered_kinetic_excess": 0.0,
+          "fractional_split_ledger_residual": 1.3008940293184669e-17,
+          "fractional_event_ledger_residual": 5.307294555574068e-18
+        },
+        {
+          "a": 1.9,
+          "decayed_parent_count": 0.39,
+          "cumulative_pressure_work": 3.3994508279875184e-23,
+          "per_species_comoving_kinetic_excess": [
+            7.607903406152892e-24,
+            4.477127686216546e-24,
+            6.744282424824124e-24
+          ],
+          "per_species_comoving_pressure": [
+            5.0719356041019274e-24,
+            2.984751790811031e-24,
+            4.496188283216082e-24
+          ],
+          "per_species_comoving_trace_deficit": [
+            7.607903406152892e-24,
+            4.477127686216546e-24,
+            6.744282424824124e-24
+          ],
+          "comoving_rest_change": -7.8e-24,
+          "naive_recovered_kinetic_excess": 0.0,
+          "fractional_split_ledger_residual": 1.735628760066114e-17,
+          "fractional_event_ledger_residual": 4.28666098719444e-18
+        },
+        {
+          "a": 3.6,
+          "decayed_parent_count": 0.5900000000000001,
+          "cumulative_pressure_work": 4.7578928139887516e-23,
+          "per_species_comoving_kinetic_excess": [
+            1.4243647327776378e-24,
+            4.3025482678458265e-24,
+            3.517980656557767e-24
+          ],
+          "per_species_comoving_pressure": [
+            9.495764885184254e-25,
+            2.8683655118972177e-24,
+            2.345320437705178e-24
+          ],
+          "per_species_comoving_trace_deficit": [
+            1.4243647327776378e-24,
+            4.3025482678458265e-24,
+            3.517980656557767e-24
+          ],
+          "comoving_rest_change": -1.18e-23,
+          "naive_recovered_kinetic_excess": 0.0,
+          "fractional_split_ledger_residual": 5.114201718313057e-17,
+          "fractional_event_ledger_residual": 3.972195509369365e-19
+        },
+        {
+          "a": 6.0,
+          "decayed_parent_count": 0.8200000000000001,
+          "cumulative_pressure_work": 5.34956600804835e-23,
+          "per_species_comoving_kinetic_excess": [
+            2.251191089853437e-25,
+            5.383868859538616e-24,
+            2.3191737480612838e-24
+          ],
+          "per_species_comoving_pressure": [
+            1.5007940599022914e-25,
+            3.589245906359077e-24,
+            1.5461158320408558e-24
+          ],
+          "per_species_comoving_trace_deficit": [
+            2.251191089853437e-25,
+            5.383868859538616e-24,
+            2.3191737480612838e-24
+          ],
+          "comoving_rest_change": -1.64e-23,
+          "naive_recovered_kinetic_excess": 0.0,
+          "fractional_split_ledger_residual": 2.3259411482640614e-17,
+          "fractional_event_ledger_residual": 3.1998241603253216e-19
+        },
+        {
+          "a": 8.0,
+          "decayed_parent_count": 0.8200000000000001,
+          "cumulative_pressure_work": 5.696423083148954e-23,
+          "per_species_comoving_kinetic_excess": [
+            1.2662949880425587e-25,
+            3.028426233490472e-24,
+            1.3045352332844725e-24
+          ],
+          "per_species_comoving_pressure": [
+            8.441966586950391e-26,
+            2.018950822326981e-24,
+            8.696901555229817e-25
+          ],
+          "per_species_comoving_trace_deficit": [
+            1.2662949880425587e-25,
+            3.028426233490472e-24,
+            1.3045352332844725e-24
+          ],
+          "comoving_rest_change": -1.64e-23,
+          "naive_recovered_kinetic_excess": 0.0,
+          "fractional_split_ledger_residual": 1.7654202263863843e-17,
+          "fractional_event_ledger_residual": 0.0
+        }
+      ]
+    }
+  ]
+}
