@@ -39,13 +39,15 @@ class Expanding(Packets):
                 Egrad.append((I@bare)@inv)
                 Ered.append(f@(a2*C.m*C.m/bare))
             S+=s
-        j=np.array([sum(J[sl]) for sl in self.r])
+        background,db,ext,dext=(self.spectators(self.eta) if hasattr(self,'spectators')
+                                 else (0.,np.zeros(3),0.,0.))
+        j=background+np.array([sum(J[sl]) for sl in self.r])
         vec=np.r_[sum(j[1:]),j[0]+j[1:]]
         C=np.empty(len(J))
         for i,sl in enumerate(self.r):C[sl]=vec[i]
         E=self.c*C[:,None]*np.asarray(Jgrad)+np.asarray(Egrad)
-        R=sum(Efree)+.5*self.c*(j@vec)
-        self.trace=sum(Ered)+self.c*C@Jred
+        R=sum(Efree)+ext+.5*self.c*(j@vec)
+        self.trace=sum(Ered)+dext+self.c*(C@Jred+vec@db)
         return E if closed else np.asarray(Egrad),np.array(fits),E,R,S
 
     def go_frw(self,closed,decay,pair,duration=.14,etaend=.028):

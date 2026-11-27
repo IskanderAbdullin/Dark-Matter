@@ -820,3 +820,6 @@ fit or exclusion.
 - [Longer fixed-scale exposure and frozen aperture redshift](INDEPENDENT-EARLY-POLE-ARCHIVED-COLD-LONG-REFERENCE-2026-11-26.md):
   conditional suppression grows with time but every sampled increment
   is still positive; even modest redshift crosses part of the narrow shell.
+- [Archived cold-window redshift and exterior energy ledger](INDEPENDENT-EARLY-POLE-ARCHIVED-COLD-FRW-SPECTATOR-2026-11-26.md):
+  frozen exterior momentum populations still redshift consistently;
+  the short dark-energy clock correction reduces both reference gains.

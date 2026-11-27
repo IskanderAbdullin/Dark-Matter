@@ -57,11 +57,13 @@ class Cold:
     def rhs(self,y,pair):
         Y=y[:self.j0].reshape(-1,2)
         N=y[self.j0:self.j0+self.n]
-        e,f,grad,_,_=self.M.weights(Y,True)
+        e,f,grad,charged_rho,_=self.M.weights(Y,True)
         E,rho,S,fs,m=self.scalar(N)
+        self.last_total_energy=charged_rho+rho
         out=np.zeros_like(Y)
         dN=np.zeros_like(N);S=0.
-        coeff=self.sw*G*KAPPA*.05*((.05+.003)**2-m*m)/(self.q*E)
+        x=.05*np.exp(getattr(self.M,"eta",0.))
+        coeff=self.sw*G*KAPPA*x*((1.06*x)**2-m*m)/(self.q*E)
         for j,es in enumerate(E):
             model=self.lambdas[j]
             for i,k,u,v,w in Tool.events(model,dict(coeff=e[self.M.start:],es=es)):
