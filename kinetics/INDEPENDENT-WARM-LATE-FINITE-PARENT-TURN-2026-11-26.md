@@ -91,3 +91,25 @@ drive drive080high.json competing080/tapes/step-{0,4,5,6}.json --order 8 --piece
 [Finite replays and independent audits](results/warm-late-finite-parent-turn-summary-2026-11-26.json.gz),
 [accepted daughter phases from the three shorter replays with heavy-state hashes](results/warm-late-finite-parent-turn-daughters-2026-11-26.json.gz),
 [driven parent diagnostics](results/warm-late-tail-driven-heavy-lag-2026-11-26.json.gz).
+
+## Matched finite-parent control on the .80 GeV declining path
+
+On the actual .80 GeV archived phase at Hdt = 1e-7, regenerate all
+six original stationary microsteps through Hdt = 1e-6. The regenerated
+terminal discrete moments are exactly equal at recorded precision.
+The decoded phases seed Newton but do not set the finite parent's
+accepted targets. Each of the six finite-parent currents remains
+negative. The relative difference in W increases only to 1.01e-8
+at the end of this selected fixed-background interval; terminal
+currents are about −2.88415e-8 in both runs. This is a feedback control
+for the same discrete prompt channel, not the earlier expanding
+pair/elastic comparison.
+
+~~~sh
+t=competing080/tapes
+python -W error warm_late_competing_locked_guides_reference.py EOS.dat "$t/step-5.json" "$t/step-6.json" guides080 --steps 6
+run finite080 guides080/step-{0,1,2,3,4,5,6}.json
+python -W error warm_late_finite_parent_audit_reference.py guides080/step-0.json finite080
+~~~
+
+[Matched .80 audits and regenerated guide phases](results/warm-late-hard080-finite-parent-2026-11-26.json.gz).
