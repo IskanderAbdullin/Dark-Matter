@@ -281,7 +281,8 @@ finds opposite excess changes for matched moments. A [count comparison](INDEPEND
 separates counts from excess. [Refining one interval](INDEPENDENT-WARM-LATE-NEAR-CUT-REFINEMENT-2026-11-26.md)
 checks .710 and diagnoses a false entropy rejection. [Matching W and the parent clock](INDEPENDENT-WARM-LATE-EQUAL-EXCESS-AND-PARENT-2026-11-26.md)
 isolates lifetime from time-step error. A [species-matched excess check](INDEPENDENT-WARM-LATE-MATCHED-EXCESS-CLOSURE-2026-11-26.md)
-finds opposite signs even at matched initial species excess. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+finds opposite signs at matched initial species excess. A [within-cell perturbation](INDEPENDENT-WARM-LATE-WITHIN-CELL-MOMENT-KERNEL-2026-11-26.md)
+leaves all original cell moments fixed. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)

@@ -19,8 +19,9 @@ def tail_change(l,s,cut):
     return np.minimum(np.minimum(l,s), np.minimum(cut,np.maximum(l+s-cut,0.)))
 
 
-def integrate(S,cut,n,closed,split_result=None):
-    f,ep,g,el=snapshot_functions(S)
+def integrate(S,cut,n,closed,split_result=None,*,evaluators=None):
+    # Optional exact phase functions are for frozen shape controls only.
+    f,ep,g,el=snapshot_functions(S) if evaluators is None else evaluators
     final=ep[-1]+el[-1]
     if final<=max(cut,M):
         if split_result is not None: split_result[:]=0.
