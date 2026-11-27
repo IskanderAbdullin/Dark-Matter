@@ -55,3 +55,8 @@ python -W error joint_prompt_two_moment_evolution_reference.py EOS.late.dat \
  --height 5e-9 --dt 2.5e-10 --verify --record-terminal > terminal.json
 python -W error warm_prompt_reheating_relaxed_regeneration_reference.py terminal.json EOS.late.dat
 ~~~
+
+The [signed slow comparison](INDEPENDENT-WARM-REHEATING-SIGNED-SLOW-CLOSURE-2026-11-26.md)
+adds the competing inverse channels on a separate
+common-temperature closure, without extrapolating the
+short shape relaxation over cosmological times.

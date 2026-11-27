@@ -1,0 +1,733 @@
+{
+  "independent_LS_forward_check": {
+    "T_dark_GeV": 0.05432665983722525,
+    "relative_defects_two_angle_grids": [
+      3.075498725357839e-06,
+      3.720334238455081e-07
+    ]
+  },
+  "scope": "Selected vacuum channels only, common dilute MB T and finite heavy population fixed by the fast decay affinity eta_H=eta_L+eta_scalar. Uses full inverse detailed balance in selected pair channels, but no visible sources, elastic evolution, expansion, Bose condensation or omitted dark processes during the very short fixed-volume test. Not a relic solver.",
+  "pair_order": [
+    "light pair to heavy (opposite plus both same-charge arms)",
+    "scalar pair to heavy",
+    "light-antilight to scalar pair"
+  ],
+  "rows": [
+    {
+      "TR_GeV": 0.05,
+      "T_visible_GeV": 0.035,
+      "T_dark_MB_GeV": 0.03535840922633892,
+      "initial_fugacity_light_scalar_heavy": [
+        0.00017307545705006863,
+        0.0002751272492353307,
+        4.761777440833301e-08
+      ],
+      "initial_heavy_number_fraction": 6.41209975298712e-05,
+      "raw_chemical_forward_and_reverse_rates_per_entropy_H": [
+        [
+          5.913597066033151e-06,
+          1.5283898308104644e-06,
+          1.1040854804011648e-05
+        ],
+        [
+          4.47629749261485e-13,
+          4.578309136326487e-14,
+          2.7899661646083413e-05
+        ]
+      ],
+      "net_fast_invariant_rates_per_entropy_H": [
+        3.677439325419828e-05,
+        -2.189042044733673e-05
+      ],
+      "signed_scalar_count_divided_by_gross_heavy_scalar_source": -1.8508549198483735,
+      "gross_heavy_MB_over_independent_quantum_shape": 0.9990415475000406,
+      "quantum_snapshot": {
+        "T_dark_GeV": 0.03535838133406146,
+        "eta_light_scalar_heavy": [
+          -8.661762441331812,
+          -8.198308865023131,
+          -16.860071306354943
+        ],
+        "heavy_count_fraction": 6.412001224481142e-05,
+        "absolute_moment_relative_defect": 4.440892098500626e-16,
+        "quantum_net_light_scalar_rate_lower_upper": [
+          [
+            3.676293020276417e-05,
+            3.678979806644418e-05
+          ],
+          [
+            -2.1906284894227387e-05,
+            -2.1878774338799535e-05
+          ]
+        ],
+        "quantum_net_channel_rate_lower_upper": [
+          [
+            5.912634697770221e-06,
+            5.913797313717965e-06
+          ],
+          [
+            1.5282806182643518e-06,
+            1.5291218883381736e-06
+          ],
+          [
+            -1.6865777144883916e-05,
+            -1.6853184483117733e-05
+          ]
+        ],
+        "relative_quantum_event_upper_to_MB": [
+          1.0,
+          1.0005504626927766,
+          1.0005504626927766
+        ],
+        "relative_quantum_event_lower_to_MB": [
+          0.9998034061896156,
+          0.9999999943697269,
+          0.9998034118187817
+        ]
+      }
+    },
+    {
+      "TR_GeV": 0.1,
+      "T_visible_GeV": 0.085,
+      "T_dark_MB_GeV": 0.07785654036773056,
+      "initial_fugacity_light_scalar_heavy": [
+        0.0013595672179568866,
+        0.0026373932780363787,
+        3.585713441678112e-06
+      ],
+      "initial_heavy_number_fraction": 0.0012986883251531012,
+      "raw_chemical_forward_and_reverse_rates_per_entropy_H": [
+        [
+          0.00083927262933022,
+          0.0004819244447268601,
+          0.00026474046036138016
+        ],
+        [
+          5.837848898144224e-09,
+          8.908002376027741e-10,
+          0.000996250932918853
+        ]
+      ],
+      "net_fast_invariant_rates_per_entropy_H": [
+        0.002426868052968191,
+        0.00021551263784769782
+      ],
+      "signed_scalar_count_divided_by_gross_heavy_scalar_source": 0.12839250936831295,
+      "gross_heavy_MB_over_independent_quantum_shape": 0.9946002037458621,
+      "quantum_snapshot": {
+        "T_dark_GeV": 0.07785660281041963,
+        "eta_light_scalar_heavy": [
+          -6.600428495265425,
+          -5.938295754827738,
+          -12.538724250093164
+        ],
+        "heavy_count_fraction": 0.0012984691974646904,
+        "absolute_moment_relative_defect": 8.881784197001252e-16,
+        "quantum_net_light_scalar_rate_lower_upper": [
+          [
+            0.002421677618375486,
+            0.002437585516323778
+          ],
+          [
+            0.00020627705869896533,
+            0.00022061349982589284
+          ]
+        ],
+        "quantum_net_channel_rate_lower_upper": [
+          [
+            0.000837775100227476,
+            0.0008395399334853842
+          ],
+          [
+            0.0004816056256153051,
+            0.0004841561872838957
+          ],
+          [
+            -0.0007346365708779933,
+            -0.0007292331835724378
+          ]
+        ],
+        "relative_quantum_event_upper_to_MB": [
+          1.0,
+          1.0052939595772263,
+          1.0052939595772263
+        ],
+        "relative_quantum_event_lower_to_MB": [
+          0.9978978566861241,
+          0.9999980151974844,
+          0.9978998373202317
+        ]
+      }
+    },
+    {
+      "TR_GeV": 0.1,
+      "T_visible_GeV": 0.075,
+      "T_dark_MB_GeV": 0.06843743205175157,
+      "initial_fugacity_light_scalar_heavy": [
+        0.002014188359029999,
+        0.003875942383462946,
+        7.806878029042056e-06
+      ],
+      "initial_heavy_number_fraction": 0.001771373703506367,
+      "raw_chemical_forward_and_reverse_rates_per_entropy_H": [
+        [
+          0.0016727168141866576,
+          0.0008863643914994467,
+          0.0006316416574442452
+        ],
+        [
+          2.5129106538683993e-08,
+          3.595940224470593e-09,
+          0.0023389730957044624
+        ]
+      ],
+      "net_fast_invariant_rates_per_entropy_H": [
+        0.005187384467638879,
+        -6.9279506360196e-05
+      ],
+      "signed_scalar_count_divided_by_gross_heavy_scalar_source": -0.0207086775754934,
+      "gross_heavy_MB_over_independent_quantum_shape": 0.9932018995908425,
+      "quantum_snapshot": {
+        "T_dark_GeV": 0.06843753529117519,
+        "eta_light_scalar_heavy": [
+          -6.207305132751569,
+          -5.553454330372931,
+          -11.7607594631245
+        ],
+        "heavy_count_fraction": 0.0017709320548577208,
+        "absolute_moment_relative_defect": 6.661338147750939e-16,
+        "quantum_net_light_scalar_rate_lower_upper": [
+          [
+            0.005170303939448664,
+            0.005220917806858277
+          ],
+          [
+            -9.918372035153198e-05,
+            -5.232039672855779e-05
+          ]
+        ],
+        "quantum_net_channel_rate_lower_upper": [
+          [
+            0.0016684607397945013,
+            0.0016734897286260486
+          ],
+          [
+            0.0008855020427340047,
+            0.0008924063034588711
+          ],
+          [
+            -0.0017180525999702673,
+            -0.0016996499269903275
+          ]
+        ],
+        "relative_quantum_event_upper_to_MB": [
+          1.0,
+          1.0077933523826172,
+          1.0077933523826172
+        ],
+        "relative_quantum_event_lower_to_MB": [
+          0.996994909054102,
+          0.9999963791489366,
+          0.9969985190372497
+        ]
+      }
+    },
+    {
+      "TR_GeV": 0.1,
+      "T_visible_GeV": 0.06,
+      "T_dark_MB_GeV": 0.05432665983722525,
+      "initial_fugacity_light_scalar_heavy": [
+        0.0026971347770459227,
+        0.005099798455695462,
+        1.3754843770781325e-05
+      ],
+      "initial_heavy_number_fraction": 0.001953798144903552,
+      "raw_chemical_forward_and_reverse_rates_per_entropy_H": [
+        [
+          0.002204613899398844,
+          0.0010050140807956536,
+          0.0012597808793565232
+        ],
+        [
+          5.733747547368931e-08,
+          7.311011116833284e-09,
+          0.004503972610939282
+        ]
+      ],
+      "net_fast_invariant_rates_per_entropy_H": [
+        0.00849839700273459,
+        -0.0020792703393187765
+      ],
+      "signed_scalar_count_divided_by_gross_heavy_scalar_source": -0.4715724462877045,
+      "gross_heavy_MB_over_independent_quantum_shape": 0.9934756680341342,
+      "quantum_snapshot": {
+        "T_dark_GeV": 0.054326861731476786,
+        "eta_light_scalar_heavy": [
+          -5.915266715131833,
+          -5.279201236492252,
+          -11.194467951624084
+        ],
+        "heavy_count_fraction": 0.0019531440160984724,
+        "absolute_moment_relative_defect": 6.661338147750939e-16,
+        "quantum_net_light_scalar_rate_lower_upper": [
+          [
+            0.008458695224400322,
+            0.008569946441690752
+          ],
+          [
+            -0.0021464447264772602,
+            -0.0020393746011314875
+          ]
+        ],
+        "quantum_net_channel_rate_lower_upper": [
+          [
+            0.0021977062787431677,
+            0.0022059299145875434
+          ],
+          [
+            0.0010037303970468739,
+            0.0010140445788635786
+          ],
+          [
+            -0.003270928641981798,
+            -0.003225617215153287
+          ]
+        ],
+        "relative_quantum_event_upper_to_MB": [
+          1.0,
+          1.0102714395914452,
+          1.0102714395914452
+        ],
+        "relative_quantum_event_lower_to_MB": [
+          0.9962720321303074,
+          0.9999956356185589,
+          0.9962763802604516
+        ]
+      },
+      "short_comparison": [
+        {
+          "quadrature": 24,
+          "tolerance": 2e-07,
+          "rows": [
+            {
+              "t_H": 0.0,
+              "light_scalar_fast_invariant_yields": [
+                0.00011987796492454516,
+                5.8700804012020586e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00011952973842137364,
+                5.8352577508849064e-05,
+                3.4822650317151936e-07
+              ],
+              "dark_T": 0.05432665983722525,
+              "fugacity": [
+                0.0026971347770459227,
+                0.005099798455695462,
+                1.3754843770781325e-05
+              ],
+              "net_rates_over_Hs": [
+                0.00849839699658743,
+                -0.0020792640688021865
+              ]
+            },
+            {
+              "t_H": 0.0003,
+              "light_scalar_fast_invariant_yields": [
+                0.00012238495361567426,
+                5.8130678464436366e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00012202471097417097,
+                5.777043582293309e-05,
+                3.602426415032763e-07
+              ],
+              "dark_T": 0.05372171075266409,
+              "fugacity": [
+                0.0028495044635832986,
+                0.005221413920583118,
+                1.4878442272917564e-05
+              ],
+              "net_rates_over_Hs": [
+                0.008220932764455794,
+                -0.0017274499497021052
+              ]
+            },
+            {
+              "t_H": 0.001,
+              "light_scalar_fast_invariant_yields": [
+                0.00012794790705792608,
+                5.7174460787011485e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00012755733338118172,
+                5.678388711026713e-05,
+                3.9057367674435363e-07
+              ],
+              "dark_T": 0.05233521386344385,
+              "fugacity": [
+                0.0032272532034434086,
+                0.005551049376043306,
+                1.791464188130829e-05
+              ],
+              "net_rates_over_Hs": [
+                0.0077003045338068276,
+                -0.0010318339705237955
+              ]
+            },
+            {
+              "t_H": 0.003,
+              "light_scalar_fast_invariant_yields": [
+                0.00014240074818821697,
+                5.653054907710984e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00014190360483476612,
+                5.6033405723658985e-05,
+                4.971433534508557e-07
+              ],
+              "dark_T": 0.04857022037010848,
+              "fugacity": [
+                0.004515564416660818,
+                0.006852811397867571,
+                3.094431130229848e-05
+              ],
+              "net_rates_over_Hs": [
+                0.006883097371358579,
+                0.00024049282411924732
+              ]
+            },
+            {
+              "t_H": 0.01,
+              "light_scalar_fast_invariant_yields": [
+                0.00018810289335920597,
+                6.324023429720014e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00018699685459316366,
+                6.213419553115782e-05,
+                1.1060387660423151e-06
+              ],
+              "dark_T": 0.03802484621747972,
+              "fugacity": [
+                0.012698838575872418,
+                0.01583653854632371,
+                0.00020110564660034605
+              ],
+              "net_rates_over_Hs": [
+                0.006289662104336326,
+                0.0012232134802766994
+              ]
+            },
+            {
+              "t_H": 0.02,
+              "light_scalar_fast_invariant_yields": [
+                0.00024319978234454254,
+                7.542012129225954e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00024092359684101922,
+                7.31439357887362e-05,
+                2.276185503523347e-06
+              ],
+              "dark_T": 0.02946667315373246,
+              "fugacity": [
+                0.036553953691452576,
+                0.04006055753383511,
+                0.0014643717649455805
+              ],
+              "net_rates_over_Hs": [
+                0.004572126005312203,
+                0.0011730546611677098
+              ]
+            }
+          ]
+        },
+        {
+          "quadrature": 52,
+          "tolerance": 2e-09,
+          "rows": [
+            {
+              "t_H": 0.0,
+              "light_scalar_fast_invariant_yields": [
+                0.00011987796492454516,
+                5.8700804012020586e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00011952973842137364,
+                5.8352577508849064e-05,
+                3.4822650317151936e-07
+              ],
+              "dark_T": 0.05432665983722525,
+              "fugacity": [
+                0.0026971347770459227,
+                0.005099798455695462,
+                1.3754843770781325e-05
+              ],
+              "net_rates_over_Hs": [
+                0.00849839700273459,
+                -0.0020792703393187765
+              ]
+            },
+            {
+              "t_H": 0.0003,
+              "light_scalar_fast_invariant_yields": [
+                0.00012238495353707944,
+                5.813067661861668e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00012202471091516807,
+                5.777043399670532e-05,
+                3.6024262191136545e-07
+              ],
+              "dark_T": 0.05372171133044396,
+              "fugacity": [
+                0.0028495043683210946,
+                0.005221413587055044,
+                1.4878440825124463e-05
+              ],
+              "net_rates_over_Hs": [
+                0.008220932039133313,
+                -0.001727455762526723
+              ]
+            },
+            {
+              "t_H": 0.001,
+              "light_scalar_fast_invariant_yields": [
+                0.00012794790707139393,
+                5.7174454010205304e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.0001275573334697756,
+                5.678388040858698e-05,
+                3.905736016183259e-07
+              ],
+              "dark_T": 0.05233521579156505,
+              "fugacity": [
+                0.0032272528410677063,
+                0.005551048107372874,
+                1.7914635775422622e-05
+              ],
+              "net_rates_over_Hs": [
+                0.0077003018734820945,
+                -0.0010318384152756984
+              ]
+            },
+            {
+              "t_H": 0.003,
+              "light_scalar_fast_invariant_yields": [
+                0.00014240074055077616,
+                5.653053437073348e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.00014190359746103252,
+                5.6033391280989865e-05,
+                4.971430897436272e-07
+              ],
+              "dark_T": 0.04857022593577996,
+              "fugacity": [
+                0.004515562590048853,
+                0.006852807275754216,
+                3.0944280171210336e-05
+              ],
+              "net_rates_over_Hs": [
+                0.006883091878065569,
+                0.00024048996796120293
+              ]
+            },
+            {
+              "t_H": 0.01,
+              "light_scalar_fast_invariant_yields": [
+                0.000188102836228229,
+                6.324020717668206e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.000186996798829714,
+                6.213416977816708e-05,
+                1.1060373985149833e-06
+              ],
+              "dark_T": 0.03802485960744127,
+              "fugacity": [
+                0.012698820835779431,
+                0.01583651525261212,
+                0.00020110506985600952
+              ],
+              "net_rates_over_Hs": [
+                0.006289655123709728,
+                0.0012232122470496652
+              ]
+            },
+            {
+              "t_H": 0.02,
+              "light_scalar_fast_invariant_yields": [
+                0.0002431996804664802,
+                7.542008486704596e-05
+              ],
+              "actual_light_scalar_heavy_yields": [
+                0.0002409234978859299,
+                7.314390228649568e-05,
+                2.2761825805502777e-06
+              ],
+              "dark_T": 0.029466687100803652,
+              "fugacity": [
+                0.03655388348270364,
+                0.040060482300906496,
+                0.0014643662022882473
+              ],
+              "net_rates_over_Hs": [
+                0.0045721238788109355,
+                0.0011730540752915482
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TR_GeV": 0.1,
+      "T_visible_GeV": 0.05,
+      "T_dark_MB_GeV": 0.04485338197843373,
+      "initial_fugacity_light_scalar_heavy": [
+        0.003003467424132919,
+        0.0055713958147659524,
+        1.673350583660002e-05
+      ],
+      "initial_heavy_number_fraction": 0.0017479671525822635,
+      "raw_chemical_forward_and_reverse_rates_per_entropy_H": [
+        [
+          0.0018122840797109663,
+          0.0007216622254963064,
+          0.001626995723621196
+        ],
+        [
+          5.625411576296294e-08,
+          6.509982560132442e-09,
+          0.00559846009338262
+        ]
+      ],
+      "net_fast_invariant_rates_per_entropy_H": [
+        0.009386240170550342,
+        -0.004318473088332442
+      ],
+      "signed_scalar_count_divided_by_gross_heavy_scalar_source": -1.1914448558807562,
+      "gross_heavy_MB_over_independent_quantum_shape": 0.9946450687534385,
+      "quantum_snapshot": {
+        "T_dark_GeV": 0.044853682227839725,
+        "eta_light_scalar_heavy": [
+          -5.807675528635547,
+          -5.190824573729929,
+          -10.998500102365476
+        ],
+        "heavy_count_fraction": 0.0017473118136451826,
+        "absolute_moment_relative_defect": 4.440892098500626e-16,
+        "quantum_net_light_scalar_rate_lower_upper": [
+          [
+            0.009336083851153643,
+            0.00947166212808852
+          ],
+          [
+            -0.004401170013559356,
+            -0.00426785476144852
+          ]
+        ],
+        "quantum_net_channel_rate_lower_upper": [
+          [
+            0.0018064901001008486,
+            0.0018134531498619356
+          ],
+          [
+            0.0007206613949906254,
+            0.0007287559571637327
+          ],
+          [
+            -0.004007075106880527,
+            -0.003947380530586196
+          ]
+        ],
+        "relative_quantum_event_upper_to_MB": [
+          1.0,
+          1.0112284900570743,
+          1.0112284900570743
+        ],
+        "relative_quantum_event_lower_to_MB": [
+          0.9961603365592228,
+          0.9999964009008612,
+          0.9961639218519361
+        ]
+      }
+    },
+    {
+      "TR_GeV": 0.1,
+      "T_visible_GeV": 0.035,
+      "T_dark_MB_GeV": 0.030472064515317896,
+      "initial_fugacity_light_scalar_heavy": [
+        0.0033996444703799362,
+        0.005946329662200667,
+        2.0215406755156696e-05
+      ],
+      "initial_heavy_number_fraction": 0.0010138304040915394,
+      "raw_chemical_forward_and_reverse_rates_per_entropy_H": [
+        [
+          0.0005756493899382742,
+          0.0001663150654676482,
+          0.0019123132999828865
+        ],
+        [
+          2.035429263227205e-08,
+          1.9222000942906078e-09,
+          0.0058504599099404395
+        ]
+      ],
+      "net_fast_invariant_rates_per_entropy_H": [
+        0.008208919506450214,
+        -0.0067250351486238215
+      ],
+      "signed_scalar_count_divided_by_gross_heavy_scalar_source": -5.8412596852964045,
+      "gross_heavy_MB_over_independent_quantum_shape": 0.9960870146692903,
+      "quantum_snapshot": {
+        "T_dark_GeV": 0.030472569225957258,
+        "eta_light_scalar_heavy": [
+          -5.6838017178060705,
+          -5.125773217447014,
+          -10.809574935253085
+        ],
+        "heavy_count_fraction": 0.0010134009021621018,
+        "absolute_moment_relative_defect": 2.220446049250313e-16,
+        "quantum_net_light_scalar_rate_lower_upper": [
+          [
+            0.00816083336734367,
+            0.00828665851469498
+          ],
+          [
+            -0.006802480885563688,
+            -0.006676583011503482
+          ]
+        ],
+        "quantum_net_channel_rate_lower_upper": [
+          [
+            0.0005740194437977983,
+            0.0005760473294825201
+          ],
+          [
+            0.00016607784843757393,
+            0.000168069370767848
+          ],
+          [
+            -0.003975259886579642,
+            -0.003914338835234261
+          ]
+        ],
+        "relative_quantum_event_upper_to_MB": [
+          1.0,
+          1.0119899625834659,
+          1.0119899625834659
+        ],
+        "relative_quantum_event_lower_to_MB": [
+          0.9964796543948157,
+          0.9999984819270527,
+          0.996481167125918
+        ]
+      }
+    }
+  ]
+}
