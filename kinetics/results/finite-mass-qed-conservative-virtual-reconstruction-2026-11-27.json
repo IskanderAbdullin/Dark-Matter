@@ -1,0 +1,411 @@
+{
+  "scope": "Continuous bounded occupations preserving the number and energy in each momentum cell; isolated bare positive virtual projection only, no physical rate.",
+  "grids": [
+    {
+      "grid": "fine",
+      "cases": [
+        {
+          "cut": "parent",
+          "E": 1.4286858845268333,
+          "tuned_step": false,
+          "bare_steps_and_linear": {
+            "step": {
+              "value": -575.4716954722346,
+              "analytic_odd_full_support": -0.6676756118228322,
+              "independent_guarded_replay_defect": 6.1870650824857876e-09,
+              "quadrature_resolution_defect": 1.9326762412674725e-12
+            },
+            "linear_energy": {
+              "value": -591.7355698115507,
+              "analytic_odd_full_support": -0.5609335796741143,
+              "independent_guarded_replay_defect": 4.7300545702455565e-09,
+              "quadrature_resolution_defect": 2.604565452202223e-10
+            }
+          },
+          "conservative": [
+            {
+              "requested_width": 0.015,
+              "used_nonzero_min": 0.015,
+              "reconstruction_shell_defects": [
+                2.4191724194725847e-20,
+                1.8683608501306888e-17
+              ],
+              "sampled_pauli_min_and_max": [
+                6.945211799713219e-14,
+                0.4986897339843561
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.14282550790779933,
+              "bare_virtual": -575.7198494890991,
+              "radial_mesh_defect": 8.794813766144216e-10
+            },
+            {
+              "requested_width": 0.05,
+              "used_nonzero_min": 0.05,
+              "reconstruction_shell_defects": [
+                3.3457801416544863e-20,
+                6.081836526152733e-17
+              ],
+              "sampled_pauli_min_and_max": [
+                3.221765452495518e-14,
+                0.4986933702569767
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.14519871107992208,
+              "bare_virtual": -576.6390264084245,
+              "radial_mesh_defect": 2.8725253287120722e-09
+            },
+            {
+              "requested_width": 0.12,
+              "used_nonzero_min": 0.06,
+              "reconstruction_shell_defects": [
+                2.2711070898255928e-20,
+                1.3891515163882326e-16
+              ],
+              "sampled_pauli_min_and_max": [
+                2.1718807836698577e-14,
+                0.4987004573931878
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.14962711159809927,
+              "bare_virtual": -580.2093507567492,
+              "radial_mesh_defect": 6.5995209297398105e-09
+            }
+          ]
+        },
+        {
+          "cut": "daughter",
+          "E": 1.4286858845268333,
+          "tuned_step": false,
+          "bare_steps_and_linear": {
+            "step": {
+              "value": -606.3050434433393,
+              "analytic_odd_full_support": 4.895494438442385,
+              "independent_guarded_replay_defect": 6.484469849965535e-09,
+              "quadrature_resolution_defect": 1.5278374121407978e-09
+            },
+            "linear_energy": {
+              "value": -533.9594285180337,
+              "analytic_odd_full_support": 4.6436232998478815,
+              "independent_guarded_replay_defect": 4.682192411564756e-09,
+              "quadrature_resolution_defect": 4.6281911636469886e-10
+            }
+          },
+          "conservative": [
+            {
+              "requested_width": 0.015,
+              "used_nonzero_min": 3.662109375e-06,
+              "reconstruction_shell_defects": [
+                5.492479267352104e-21,
+                1.0050693108883135e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                1.3039020006274645e-20,
+                0.10658253366953432
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.03975155526506438,
+              "bare_virtual": -610.2993214335582,
+              "radial_mesh_defect": 3.2820787509990623e-07
+            },
+            {
+              "requested_width": 0.05,
+              "used_nonzero_min": 6.103515625e-06,
+              "reconstruction_shell_defects": [
+                3.832824086325709e-20,
+                3.2438180416509114e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                1.1924963963520692e-20,
+                0.10662526587651301
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.03811879510576053,
+              "bare_virtual": -615.0330622913641,
+              "radial_mesh_defect": 2.1515256776183378e-07
+            },
+            {
+              "requested_width": 0.12,
+              "used_nonzero_min": 3.662109375e-06,
+              "reconstruction_shell_defects": [
+                3.3550445645150802e-21,
+                7.327147494045502e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                9.750783955048558e-21,
+                0.10671594192423028
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.03501376686909677,
+              "bare_virtual": -624.0543115624118,
+              "radial_mesh_defect": 2.3866289211582625e-07
+            }
+          ]
+        },
+        {
+          "cut": "daughter",
+          "E": 1.4230974518581974,
+          "tuned_step": true,
+          "bare_steps_and_linear": {
+            "step": {
+              "value": -604.2787871113715,
+              "analytic_odd_full_support": 7.171839378757056,
+              "independent_guarded_replay_defect": 7.507868531320128e-07,
+              "quadrature_resolution_defect": 1.5190835256362334e-09
+            },
+            "linear_energy": {
+              "value": -534.0022701848609,
+              "analytic_odd_full_support": 4.8097994653656775,
+              "independent_guarded_replay_defect": 7.534490578109398e-07,
+              "quadrature_resolution_defect": 4.5633896661456674e-10
+            }
+          },
+          "conservative": [
+            {
+              "requested_width": 0.015,
+              "used_nonzero_min": 3.662109375e-06,
+              "reconstruction_shell_defects": [
+                5.492479267352104e-21,
+                1.0050693108883135e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                1.3039020006274645e-20,
+                0.10658253366953432
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.06848522813825302,
+              "bare_virtual": -608.2481326864553,
+              "radial_mesh_defect": 1.3883202427678043e-06
+            },
+            {
+              "requested_width": 0.05,
+              "used_nonzero_min": 6.103515625e-06,
+              "reconstruction_shell_defects": [
+                3.832824086325709e-20,
+                3.2438180416509114e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                1.1924963963520692e-20,
+                0.10662526587651301
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.06848522813825302,
+              "bare_virtual": -613.8823681314166,
+              "radial_mesh_defect": 1.2747881328323274e-06
+            },
+            {
+              "requested_width": 0.12,
+              "used_nonzero_min": 3.662109375e-06,
+              "reconstruction_shell_defects": [
+                3.3550445645150802e-21,
+                7.327147494045502e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                9.750783955048558e-21,
+                0.10671594192423028
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.06848522813825302,
+              "bare_virtual": -623.6819573429156,
+              "radial_mesh_defect": 1.060455815604655e-06
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "cases": [
+        {
+          "cut": "parent",
+          "E": 1.4366125844535822,
+          "tuned_step": false,
+          "bare_steps_and_linear": {
+            "step": {
+              "value": -787.7328554355312,
+              "analytic_odd_full_support": 0.34950632248248725,
+              "independent_guarded_replay_defect": 1.945295480254572e-09,
+              "quadrature_resolution_defect": 1.7280399333685637e-09
+            },
+            "linear_energy": {
+              "value": -706.6880435028793,
+              "analytic_odd_full_support": 0.08964984376918769,
+              "independent_guarded_replay_defect": 3.5105358620057814e-09,
+              "quadrature_resolution_defect": 6.687059794785455e-10
+            }
+          },
+          "conservative": [
+            {
+              "requested_width": 0.015,
+              "used_nonzero_min": 0.015,
+              "reconstruction_shell_defects": [
+                2.3568030012860865e-20,
+                1.9825418488992294e-17
+              ],
+              "sampled_pauli_min_and_max": [
+                7.129565294175934e-14,
+                0.4986666147855725
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.1675881292163984,
+              "bare_virtual": -791.733905933401,
+              "radial_mesh_defect": 5.13527766088373e-07
+            },
+            {
+              "requested_width": 0.05,
+              "used_nonzero_min": 0.05,
+              "reconstruction_shell_defects": [
+                5.108667463127499e-20,
+                6.453421172689566e-17
+              ],
+              "sampled_pauli_min_and_max": [
+                3.830459117261074e-14,
+                0.49867047320676716
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.1692128426533267,
+              "bare_virtual": -799.7330365220859,
+              "radial_mesh_defect": 5.447969897431904e-07
+            },
+            {
+              "requested_width": 0.12,
+              "used_nonzero_min": 0.06,
+              "reconstruction_shell_defects": [
+                2.4921297494997618e-20,
+                1.474017252759158e-16
+              ],
+              "sampled_pauli_min_and_max": [
+                2.900223880070362e-14,
+                0.49867799331304624
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.1723915264713412,
+              "bare_virtual": -807.8720994385949,
+              "radial_mesh_defect": 1.3867706911696587e-06
+            }
+          ]
+        },
+        {
+          "cut": "daughter",
+          "E": 1.4366125844535822,
+          "tuned_step": false,
+          "bare_steps_and_linear": {
+            "step": {
+              "value": -772.429281707379,
+              "analytic_odd_full_support": 6.006640094697327,
+              "independent_guarded_replay_defect": 1.1475094652269036e-08,
+              "quadrature_resolution_defect": 2.440060598019045e-09
+            },
+            "linear_energy": {
+              "value": -667.9537462985638,
+              "analytic_odd_full_support": 5.617253216691267,
+              "independent_guarded_replay_defect": 7.065409590722993e-09,
+              "quadrature_resolution_defect": 1.0363692126702517e-09
+            }
+          },
+          "conservative": [
+            {
+              "requested_width": 0.015,
+              "used_nonzero_min": 0.000234375,
+              "reconstruction_shell_defects": [
+                5.282375391763635e-21,
+                1.5235513117386191e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                1.1108071557650682e-20,
+                0.10443089217819047
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.0912863366016472,
+              "bare_virtual": -776.6767373709323,
+              "radial_mesh_defect": 5.155100097908871e-07
+            },
+            {
+              "requested_width": 0.05,
+              "used_nonzero_min": 0.000390625,
+              "reconstruction_shell_defects": [
+                6.829203137237796e-20,
+                4.9183490776082685e-15
+              ],
+              "sampled_pauli_min_and_max": [
+                1.0559266072715926e-20,
+                0.1044496259620795
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.09376469247185176,
+              "bare_virtual": -785.8063961430782,
+              "radial_mesh_defect": 5.354551149139297e-07
+            },
+            {
+              "requested_width": 0.12,
+              "used_nonzero_min": 0.000234375,
+              "reconstruction_shell_defects": [
+                4.878711252837757e-21,
+                1.111287519857984e-14
+              ],
+              "sampled_pauli_min_and_max": [
+                9.487980529887595e-21,
+                0.10448735948945356
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.09867824580334258,
+              "bare_virtual": -801.9115328575273,
+              "radial_mesh_defect": 5.72585463487485e-07
+            }
+          ]
+        },
+        {
+          "cut": "parent",
+          "E": 1.432354436522056,
+          "tuned_step": true,
+          "bare_steps_and_linear": {
+            "step": {
+              "value": -786.1182540415241,
+              "analytic_odd_full_support": 1.973296978018409,
+              "independent_guarded_replay_defect": 9.224982022715267e-07,
+              "quadrature_resolution_defect": 1.7321326595265418e-09
+            },
+            "linear_energy": {
+              "value": -706.6896169366465,
+              "analytic_odd_full_support": 0.08836542486323036,
+              "independent_guarded_replay_defect": 9.198964789902675e-07,
+              "quadrature_resolution_defect": 6.737082003382966e-10
+            }
+          },
+          "conservative": [
+            {
+              "requested_width": 0.015,
+              "used_nonzero_min": 0.015,
+              "reconstruction_shell_defects": [
+                2.3568030012860865e-20,
+                1.9825418488992294e-17
+              ],
+              "sampled_pauli_min_and_max": [
+                7.129565294175934e-14,
+                0.4986666147855725
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.13520557956256352,
+              "bare_virtual": -789.9477984964486,
+              "radial_mesh_defect": 7.731611049166531e-07
+            },
+            {
+              "requested_width": 0.05,
+              "used_nonzero_min": 0.05,
+              "reconstruction_shell_defects": [
+                5.108667463127499e-20,
+                6.453421172689566e-17
+              ],
+              "sampled_pauli_min_and_max": [
+                3.830459117261074e-14,
+                0.49867047320676716
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.13520557956256352,
+              "bare_virtual": -798.7022187293078,
+              "radial_mesh_defect": 7.861559652155847e-07
+            },
+            {
+              "requested_width": 0.12,
+              "used_nonzero_min": 0.06,
+              "reconstruction_shell_defects": [
+                2.4921297494997618e-20,
+                1.474017252759158e-16
+              ],
+              "sampled_pauli_min_and_max": [
+                2.900223880070362e-14,
+                0.49867799331304624
+              ],
+              "internal_continuous_occupation_at_coincidence": 0.13520557956256352,
+              "bare_virtual": -807.5229644869052,
+              "radial_mesh_defect": 8.130566584441112e-07
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
