@@ -70,3 +70,6 @@ python -W error warm_direct_vacuum_background_response_bound_reference.py EOS.da
 
 [Background difference bounds](results/warm-direct-vacuum-background-response-bounds-2026-11-26.json);
 [response input/specification](results/warm-direct-vacuum-native-class-run-spec-2026-11-26.json).
+
+The [trace-centered native pilot](INDEPENDENT-WARM-DIRECT-NATIVE-PILOT-2026-11-26.md)
+records first-tier power differences and the zero-species baseline failure.

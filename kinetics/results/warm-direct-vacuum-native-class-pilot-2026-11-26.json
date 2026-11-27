@@ -1,0 +1,576 @@
+{
+  "scope": "Matched post-production native CLASS linear transfers for the specified scalar PSD and stable/CDM proxy, not evolution of the portal-production model or measured cosmology.",
+  "k_h_per_Mpc": [
+    0.002,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    2.0
+  ],
+  "binary_sha256": "bf7b18d3a1344fc45ef2789c22361ad8a33f2d027be6adad021da5a639e24b8f",
+  "cases": [
+    {
+      "tier": "std",
+      "cases": [
+        {
+          "case": "base",
+          "scalar_fraction": 0.0,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "comparison_grid_identical": true,
+              "interpolation_difference": 0.0,
+              "matched_native_log_ratio_interpolated": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "comparison_grid_identical": true,
+              "interpolation_difference": 0.0,
+              "matched_native_log_ratio_interpolated": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "case": "physical",
+          "scalar_fraction": 2.099185018297396e-06,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "10a72b5b1987718f9642761e00d274e94f1d50d7938caa85a86c54a96aefdc8c",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                -1.157434446241723e-05,
+                5.022193159121002e-07,
+                1.0210019532053138e-06,
+                1.1716724541699364e-06,
+                3.363737932637889e-07,
+                -4.562062450030879e-06,
+                -7.876396829198384e-06
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.441122290037129e-08,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "1791a29ab993e80bcb9b612bdf3924d0308cdaaa09a50fc7d9b9b80594fc0550",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                -1.1621318642518474e-05,
+                5.02067055485611e-07,
+                1.020955474828611e-06,
+                1.171905458008382e-06,
+                3.4052390107675024e-07,
+                -4.535988789688972e-06,
+                -7.79544837126167e-06
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.48186560986619e-08,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        },
+        {
+          "case": "amp4",
+          "scalar_fraction": 0.0001,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "1abaa0a6eaeaa6439eff96fd0bcb3e2d402bbb89a512a996e365841281f6ddc9",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                -1.1090809281633085e-05,
+                1.0793732085900842e-06,
+                1.7253688824325764e-06,
+                -9.079079150708935e-07,
+                -4.242548628541343e-05,
+                -0.00024013945792633606,
+                -0.0003743648637423158
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.441473653419962e-08,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "29880a05ca03edafeb019d8827ecf75bda5b3d1269fa15e348b546b691c76b45",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                -1.1133872453772398e-05,
+                1.07632335222263e-06,
+                1.7234811204858147e-06,
+                -8.973318172955658e-07,
+                -4.2308809758750954e-05,
+                -0.00023900110803554142,
+                -0.0003706088774513283
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.482451852032113e-08,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        },
+        {
+          "case": "amp3",
+          "scalar_fraction": 0.001,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "ca327f982fdd376158232ea7a7ca2fa62397462f0eeceb1605f4b8e86be49b9e",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                -6.646176206714927e-06,
+                6.384869188913456e-06,
+                8.188114946072744e-06,
+                -2.0046621930447373e-05,
+                -0.00043554386190569616,
+                -0.002406446571909804,
+                -0.0037445562405162836
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.444118204664619e-08,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "350dd6be377e637eddaefe6d89d71e22ae8c94fba52cd40ea62f4500433d8cca",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                -6.653267244249861e-06,
+                6.3555773355261636e-06,
+                8.169308957306498e-06,
+                -1.994094672674862e-05,
+                -0.000434392690406904,
+                -0.002395082369811119,
+                -0.0037070129400706975
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.486378932914818e-08,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        },
+        {
+          "case": "amp2",
+          "scalar_fraction": 0.01,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "f9777d2efc84394068bcf085e0fb7fbdd26eeaae6d5fc315cc54a8ad68a865c8",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                3.7798336522953946e-05,
+                5.945553341479837e-05,
+                7.279328818476927e-05,
+                -0.0002115157694984049,
+                -0.004370082976892231,
+                -0.024138835067502473,
+                -0.037558156160441336
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 3.290885001172583e-07,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "29f90f03b14d7419013c6e22acbc95f2f5078c680a4a985765a603a43bf12084",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                3.8151097059735406e-05,
+                5.916323062393758e-05,
+                7.260527957697605e-05,
+                -0.00021045903031424729,
+                -0.004358584525718356,
+                -0.024025171916230104,
+                -0.03718249358065018
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 2.787087209910055e-07,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        },
+        {
+          "case": "thermal3",
+          "scalar_fraction": 0.001,
+          "shape": "matched_FD",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "d66d814b983d322016f8bb154fbb74cd177fc29af0ffbc061ff8c066d6ab2413",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                -1.1555374335614488e-05,
+                4.3537221916523094e-07,
+                -4.2488200158175005e-07,
+                -3.3972033974372096e-05,
+                -0.000476586658797018,
+                -0.002637729995326188,
+                -0.003964336087539211
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.441014109905609e-08,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "096ad0731ee5f4c8d160c349e7b684cefb740984cd43be2fa5cc1fdf8e6b520f",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                -1.160210577610954e-05,
+                4.364512395937936e-07,
+                -4.127467150283337e-07,
+                -3.383444941906788e-05,
+                -0.00047538925468204596,
+                -0.0026260428981941253,
+                -0.0039251628846206366
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.481789182113175e-08,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        },
+        {
+          "case": "trace",
+          "scalar_fraction": 1e-10,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "3152a7042eec135f6f5b40937bf7447c1f6af12fb1b1d5ef7da077eede8c68c6",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                -1.1584725319480071e-05,
+                4.904500228164466e-07,
+                1.0093074260808521e-06,
+                1.2220817255936822e-06,
+                1.2522361392264258e-06,
+                4.901786041511258e-07,
+                -1.7283317221838956e-08
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.441135346259898e-08,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "de70bcb338c090ef13a0593d58547f4c17b53cb572421bec1d6823079ee59be9",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                -1.1631789101240742e-05,
+                4.903678858525495e-07,
+                1.009300653720402e-06,
+                1.2220942147145308e-06,
+                1.2539399358857395e-06,
+                4.924052872112838e-07,
+                -1.5126734531634156e-08
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.481819868677576e-08,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "fine",
+      "cases": [
+        {
+          "case": "base",
+          "scalar_fraction": 0.0,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "0743811ce722da560f782003925237cd625eadf88d73ff5811383335d99e5140",
+              "base_sha256": "0743811ce722da560f782003925237cd625eadf88d73ff5811383335d99e5140",
+              "log_power_ratio": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "comparison_grid_identical": true,
+              "interpolation_difference": 0.0,
+              "matched_native_log_ratio_interpolated": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "c02b4531714fb378388133eb3e048248c053040d38f6cae47ecd802561af3cf6",
+              "base_sha256": "c02b4531714fb378388133eb3e048248c053040d38f6cae47ecd802561af3cf6",
+              "log_power_ratio": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "comparison_grid_identical": true,
+              "interpolation_difference": 0.0,
+              "matched_native_log_ratio_interpolated": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tier": "shape",
+      "cases": [
+        {
+          "case": "base",
+          "scalar_fraction": 0.0,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "comparison_grid_identical": true,
+              "interpolation_difference": 0.0,
+              "matched_native_log_ratio_interpolated": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "comparison_grid_identical": true,
+              "interpolation_difference": 0.0,
+              "matched_native_log_ratio_interpolated": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ]
+        },
+        {
+          "case": "amp3",
+          "scalar_fraction": 0.001,
+          "shape": "direct",
+          "shifts": [
+            {
+              "z": 5.0,
+              "source_sha256": "e17656c84655236ce358b98485116ee5fecda6cc8b365dfdc03442e4dc4eb447",
+              "base_sha256": "e29958ee670cd2df3db6bf41f33d23511632b093d740bc9cfb9f196ec569bedf",
+              "log_power_ratio": [
+                -7.532582404934374e-06,
+                5.316136275190786e-06,
+                6.637358735517296e-06,
+                -2.2461635721171547e-05,
+                -0.00043629927338395547,
+                -0.0023958733332880566,
+                -0.003732365223764522
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.444003629648478e-08,
+              "matched_native_log_ratio_interpolated": null
+            },
+            {
+              "z": 20.0,
+              "source_sha256": "6320ff416683b4a94e74d25870164156bde30175e44de23ce655048aeb7d40e1",
+              "base_sha256": "983f4669e3885d6710362b33e607c5ae66d0d4805179b4aa4ffc9f591f9b6693",
+              "log_power_ratio": [
+                -7.546819978276886e-06,
+                5.292326890504739e-06,
+                6.6241195897376315e-06,
+                -2.2350416968297537e-05,
+                -0.00043514375846775977,
+                -0.002384535783174435,
+                -0.00369497204440572
+              ],
+              "comparison_grid_identical": false,
+              "interpolation_difference": 8.485940217184407e-08,
+              "matched_native_log_ratio_interpolated": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "trace_centered_audit": [
+    {
+      "tier": "std",
+      "trace_presence_log_grid_shift": [
+        [
+          -1.1584725319480071e-05,
+          4.904500228164466e-07,
+          1.0093074260808521e-06,
+          1.2220817255936822e-06,
+          1.2522361392264258e-06,
+          4.901786041511258e-07,
+          -1.7283317221838956e-08
+        ],
+        [
+          -1.1631789101240742e-05,
+          4.903678858525495e-07,
+          1.009300653720402e-06,
+          1.2220942147145308e-06,
+          1.2539399358857395e-06,
+          4.924052872112838e-07,
+          -1.5126734531634156e-08
+        ]
+      ],
+      "physical_minus_trace": [
+        [
+          1.0380857062841642e-08,
+          1.1769293095653666e-08,
+          1.1694527124461729e-08,
+          -5.040927142374585e-08,
+          -9.158623459626369e-07,
+          -5.052241054182005e-06,
+          -7.859113511976545e-06
+        ],
+        [
+          1.047045872226704e-08,
+          1.1699169633061501e-08,
+          1.1654821108209035e-08,
+          -5.018875670614875e-08,
+          -9.134160348089893e-07,
+          -5.0283940769002555e-06,
+          -7.780321636730037e-06
+        ]
+      ],
+      "amplified_prediction_centered_on_trace": [
+        [
+          1.0367727921142111e-08,
+          1.2362010723864894e-08,
+          1.5030753782834975e-08,
+          -4.47103381488148e-08,
+          -9.168334445825819e-07,
+          -5.051025701020636e-06,
+          -7.857881834943777e-06
+        ],
+        [
+          1.0451704202320869e-08,
+          1.2299715708184705e-08,
+          1.4991270172749367e-08,
+          -4.4488598800417706e-08,
+          -9.144200668185803e-07,
+          -5.027177485129466e-06,
+          -7.779085679128358e-06
+        ]
+      ],
+      "max_difference_from_centered_amp4_tangent": 5.700157905731045e-09,
+      "matched_FD_minus_direct_equal_abundance": [
+        [
+          -4.909198128899561e-06,
+          -5.949496969748225e-06,
+          -8.612996947654494e-06,
+          -1.3925412043924723e-05,
+          -4.104279689132184e-05,
+          -0.00023128342341638408,
+          -0.0002197798470229273
+        ],
+        [
+          -4.948838531859678e-06,
+          -5.91912609593237e-06,
+          -8.582055672334832e-06,
+          -1.389350269231926e-05,
+          -4.099656427514198e-05,
+          -0.0002309605283830063,
+          -0.00021814994454993908
+        ]
+      ]
+    }
+  ],
+  "amplification_audit": [],
+  "physical_tier_refinement_max_abs_log_ratio_change": null
+}
