@@ -1,0 +1,82 @@
+{
+  "scope": "Fixed cold scalar mode and frozen archived charged populations. Signed real photon heat in a finite band; no in-medium photon dressing.",
+  "manufactured": {
+    "thermal_absolute_defect": 4.067619721950799e-13,
+    "linear_polynomial_limit": 1.669,
+    "photon_heat_fixture": [
+      1.669000000000124,
+      1.6690000000348226,
+      1.6690003482586548
+    ]
+  },
+  "result": [
+    {
+      "grid": "third",
+      "panels": [
+        {
+          "edges": [
+            1e-05,
+            2e-05
+          ],
+          "photon_heat_in_unscaled_proxy_units": -9.534126215579779e-06,
+          "scalar_net_in_unscaled_proxy_units": 5.635302673276717e-05,
+          "charged_ledger_implied": 9.48525398897246e-06,
+          "photon_heat_over_Born_scalar_energy_g_point005": -6.28887041717492e-06,
+          "scalar_number_relative_to_Born_g_point005": 3.2236944758501283e-08,
+          "direct_cancellation_replay_abs_defect": 8.939246912142984e-17
+        },
+        {
+          "edges": [
+            2e-05,
+            4e-05
+          ],
+          "photon_heat_in_unscaled_proxy_units": -1.9058397065595775e-05,
+          "scalar_net_in_unscaled_proxy_units": 0.0001196219762699464,
+          "charged_ledger_implied": 1.8954654770453346e-05,
+          "photon_heat_over_Born_scalar_energy_g_point005": -1.257124006904182e-05,
+          "scalar_number_relative_to_Born_g_point005": 6.843016718877942e-08,
+          "direct_cancellation_replay_abs_defect": 1.6859343782149594e-17
+        },
+        {
+          "edges": [
+            4e-05,
+            8e-05
+          ],
+          "photon_heat_in_unscaled_proxy_units": -3.8075088413511996e-05,
+          "scalar_net_in_unscaled_proxy_units": 0.00024842921999656387,
+          "charged_ledger_implied": 3.78596378895654e-05,
+          "photon_heat_over_Born_scalar_energy_g_point005": -2.5114970343456275e-05,
+          "scalar_number_relative_to_Born_g_point005": 1.4211479854320036e-07,
+          "direct_cancellation_replay_abs_defect": 1.3823577699190182e-17
+        },
+        {
+          "edges": [
+            8e-05,
+            0.00016
+          ],
+          "photon_heat_in_unscaled_proxy_units": -7.59787634900347e-05,
+          "scalar_net_in_unscaled_proxy_units": 0.0005190890209339367,
+          "charged_ledger_implied": 7.5528582945505e-05,
+          "photon_heat_over_Born_scalar_energy_g_point005": -5.011687355944579e-05,
+          "scalar_number_relative_to_Born_g_point005": 2.969466781606201e-07,
+          "direct_cancellation_replay_abs_defect": 8.40256683676266e-18
+        },
+        {
+          "edges": [
+            0.00016,
+            0.0002
+          ],
+          "photon_heat_in_unscaled_proxy_units": -3.7902831941422515e-05,
+          "scalar_net_in_unscaled_proxy_units": 0.00027000716171650456,
+          "charged_ledger_implied": 3.766866792294692e-05,
+          "photon_heat_over_Born_scalar_energy_g_point005": -2.5001347069860397e-05,
+          "scalar_number_relative_to_Born_g_point005": 1.5445853508332517e-07,
+          "direct_cancellation_replay_abs_defect": 3.3068166260807885e-18
+        }
+      ],
+      "max_two_mesh_abs_change_in_photon_ratio": 5.612203139281763e-16,
+      "total_photon_ratio": -0.0001190933014589792,
+      "total_scalar_ratio": 6.941871237344263e-07
+    }
+  ]
+}
