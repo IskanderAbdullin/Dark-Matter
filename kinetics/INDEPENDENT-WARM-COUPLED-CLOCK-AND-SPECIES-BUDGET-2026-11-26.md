@@ -177,3 +177,22 @@ python -W error warm_expanding_daughter_pressure_reference.py "$t/step-5.json" "
 [Five-clock comparison and pressure diagnostic](results/warm-coupled-hard080-twelve-clock-2026-11-26.json);
 [finite-parent accepted states](results/warm-coupled-hard080-twelve-finite-2026-11-26.json.gz);
 [stationary-parent accepted states](results/warm-coupled-hard080-twelve-stationary-2026-11-26.json.gz).
+
+## Where the six-to-twelve-step difference is visible
+
+Compare the finite-parent six- and twelve-block W histories at
+their six common saved times, not only the endpoint. The coarser
+value is larger at each common sample. Their difference is already
+1.016% of the starting W at Hdt = 2.50e-7, peaks at about 1.870%
+of starting W at Hdt = 8.50e-7, and ends at 1.807% of starting W.
+Relative to the *current fine value*, the difference instead
+increases from 1.290% to 7.062% across those samples. This locates
+substantial step sensitivity before the final interval, but the
+recorded difference is cumulative, not a local truncation error.
+It does not by itself establish an optimal step schedule.
+
+~~~sh
+python -W error warm_clock_path_error_profile_reference.py comoving/080-locked6-expand-finite-all comoving/080-locked12-expand-finite-all
+~~~
+
+[Matched-time differences and state audit](results/warm-coupled-hard080-path-clock-audit-2026-11-26.json).
