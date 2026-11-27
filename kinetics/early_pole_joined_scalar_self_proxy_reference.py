@@ -23,8 +23,6 @@ from early_pole_scalar_hartree_discrete_gradient_reference import gradient
 def run(grid,bins,order,duration,steps,subdivision,hard_slow=False,screened=False,mixes=(0.,.97),refresh=False,reverse_branches=False,mode_diagnostics=False):
     if bins<4 or steps<1 or order<2 or not duration>0.:
         raise ValueError("Invalid scalar mesh, time or order.")
-    if screened and refresh:
-        raise ValueError("Use held scalar scattering for the screened comparison fixture.")
     if screened and not hard_slow:
         raise ValueError("Use the matched five-channel hard setting with screened elasticity.")
     if not mixes or any(not 0<=m<1 for m in mixes):
