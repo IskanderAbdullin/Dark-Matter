@@ -13,6 +13,27 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
+def warm_shape(lo,hi,q_marker,volume,counts,pole,order):
+    """Return positive q³ nodes, volume weights and counts at the marker energy."""
+    x,w=roots_legendre(order)
+    q=np.cbrt((lo+hi)[:,None]/2+(hi-lo)[:,None]*x/2)
+    energy=np.hypot(q,pole)
+    marker_energy=np.hypot(q_marker,pole)
+    offset=(q*q-q_marker[:,None]**2)/(energy+marker_energy[:,None])
+    z=offset/np.ptp(energy,axis=1)[:,None]
+    v=volume[:,None]*(w/2)
+    shape=np.empty_like(q)
+    for j,g in enumerate(z):
+        def probabilities(a):
+            u=a*g
+            u=(w/2)*np.exp(u-u.max())
+            return u/u.sum()
+        b=brentq(lambda a:probabilities(a)@g,-200.,200.)
+        shape[j]=probabilities(b)
+    populations=counts[:,None]*shape
+    return q,v,populations,energy,marker_energy,offset
+
+
 def run(path,projection,duration,panels,radial_order,outer,linear_probe=False,joined=False,warm_order=None,warm_compensate=False):
     if warm_compensate and warm_order is None:
         raise ValueError("Spectator compensation requires a distributed warm shape.")
@@ -65,22 +86,7 @@ def run(path,projection,duration,panels,radial_order,outer,linear_probe=False,jo
         old_pole=C.scalar(N0)[-1]
         old_rho=C.scalar(N0)[1]
         p0,p1=native_edges[idx]**3,native_edges[idx+1]**3
-        x,w=roots_legendre(warm_order)
-        qnew=np.cbrt((p0+p1)[:,None]/2+(p1-p0)[:,None]*x/2)
-        Enew=np.hypot(qnew,old_pole)
-        Eref=np.hypot(warm_q,old_pole)
-        de=(qnew*qnew-warm_q[:,None]**2)/(Enew+Eref[:,None])
-        z=de/np.ptp(Enew,axis=1)[:,None]
-        v=warm_w[:,None]*(w/2)
-        shape=np.empty_like(qnew)
-        for j,g in enumerate(z):
-            def probabilities(a):
-                v=a*g
-                v=(w/2)*np.exp(v-v.max())
-                return v/v.sum()
-            b=brentq(lambda a:probabilities(a)@g,-200.,200.)
-            shape[j]=probabilities(b)
-        populations=warm_N[:,None]*shape
+        qnew,v,populations,Enew,Eref,de=warm_shape(p0,p1,warm_q,warm_w,warm_N,old_pole,warm_order)
         left=spectator[~take]
         if warm_compensate:
             from early_pole_scalar_warm_marker_shape_reference import compensate_spectators

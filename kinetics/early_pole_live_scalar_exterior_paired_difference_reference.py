@@ -10,7 +10,14 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
-def run(path,projection,duration,steps,order,outer,joined=False):
+def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=1.,elastic_energy_budget=None,attribute_feedback=False,warm_order=None,stable_pole_tangent=False):
+    if stable_pole_tangent and not attribute_feedback:
+        raise ValueError("The anchored pole tangent requires the feedback attribution ledger.")
+    if not np.isfinite(warm_multiplier) or warm_multiplier<0.:
+        raise ValueError("Warm collision multiplier must be finite and nonnegative.")
+    if elastic_energy_budget is not None and (not joined or not np.isfinite(elastic_energy_budget)
+                                               or elastic_energy_budget<=0.):
+        raise ValueError("An explicit elastic energy budget needs a joined run and a positive finite value.")
     with gzip.open(path,'rt') as f:raw=json.load(f)['branches'][projection]
     g=raw['grid']
     with gzip.open(GRID/f'early-pole-spectrum-{g}-m06-2026-11-26.json.gz','rt') as f:d=json.load(f)
@@ -41,11 +48,32 @@ def run(path,projection,duration,steps,order,outer,joined=False):
     vol=((np.diff(edges**3)-overlap)/(6*np.pi**2))[warm]
     assert len(vol)>0 and min(vol)>0.
     w0=orig[warm]
+    shape_ledger={}
+    if warm_order is not None:
+        if warm_order<3 or np.any(overlap[warm]>0.):
+            raise ValueError("Distributed warm shells require at least three nodes and full archive shells.")
+        from early_pole_live_scalar_exterior_decay_reference import warm_shape
+        original=C.scalar(n0)
+        lo,hi=edges[:-1][warm]**3,edges[1:][warm]**3
+        q_new,w_new,n_new,*_=warm_shape(lo,hi,q,vol,w0,original[-1],warm_order)
+        q,vol,w0=q_new.ravel(),w_new.ravel(),n_new.ravel()
+        tails=orig[~warm]
+        C.spq=np.r_[C.spq[~warm],q]
+        orig=np.r_[tails,w0]
+        warm=np.r_[np.zeros(len(tails),dtype=bool),np.ones(len(w0),dtype=bool)]
+        C.spect=orig
+        new=C.scalar(n0)
+        assert abs(new[1]-original[1])<2e-21
+        shape_ledger=dict(warm_quadrature_order=warm_order,original_marker_pole=original[-1],
+                          common_initial_pole=new[-1],initial_energy_change=new[1]-original[1])
     specs=(orig,np.where(warm,0.,orig))
     banks=((c_q,c_w),(np.r_[c_q,q],np.r_[c_w,vol]))
     h0,nw=len(n0)+C.j0,len(q)
     initial=np.r_[y0.ravel(),n0]
-    U=np.zeros(2*h0+nw)
+    warm_slice=slice(2*h0,2*h0+nw)
+    extra_start=warm_slice.stop
+    n_attribution=6 if stable_pole_tangent else 3
+    U=np.zeros(extra_start+n_attribution*len(n0) if attribute_feedback else extra_start)
 
     def set_bank(arm):
         C.spect=specs[arm]
@@ -62,8 +90,10 @@ def run(path,projection,duration,steps,order,outer,joined=False):
         scalar=np.zeros(C.n)
         for i,w in enumerate(C.sw):
             v,H,_=band_kernel(C,E,F,C.q[i],m,f[i],radial_order=order,ledger=True)
-            rate[int(i>=len(n0)),:C.j0]+=w*H.ravel()
-            scalar[i]=w*v[2]
+            exterior=i>=len(n0)
+            effective_w=w*warm_multiplier if exterior else w
+            rate[int(exterior),:C.j0]+=effective_w*H.ravel()
+            scalar[i]=effective_w*v[2]
         rate[0,C.j0:]=scalar[:len(n0)]
         defect=En@scalar+np.sum(G*rate[:,:C.j0].sum(axis=0).reshape(y.shape))
         assert abs(defect)<3e-13
@@ -77,17 +107,58 @@ def run(path,projection,duration,steps,order,outer,joined=False):
             out.append(d.ravel())
         return np.asarray(out)
 
+    def cold_at(Y,N,pole):
+        E,F,*_=C.M.weights(Y.reshape(-1,2),True)
+        return np.array([w*band_kernel(C,E,F,q,pole,float(x/w),radial_order=order)[2]
+                         for q,w,x in zip(c_q,c_w,N,strict=True)])
+
+    def attribute(base,diff,full,first,second,warm_delta):
+        hard_base=base[:C.j0]
+        hard_add=hard_base+diff[:C.j0]
+        nb=base[C.j0:]
+        set_bank(0)
+        m0=C.scalar(nb)[-1]
+        set_bank(1)
+        m1=C.scalar(full[C.j0:])[-1]
+        # Order is hard state, then scalar pole, then cold occupation.
+        at_hard=cold_at(hard_add,nb,m0)
+        at_pole=cold_at(hard_add,nb,m1)
+        d0=at_hard-first[0,C.j0:]
+        d1=at_pole-at_hard
+        d2=second[0,C.j0:]-at_pole
+        if not stable_pole_tangent:
+            return np.r_[d0,d1,d2]
+        # At fixed q, d(m² - λJ/2)/dm is analytically positive.
+        # Use the evolution variables for δN, before floating subtraction
+        # of a short accumulated gain from its larger initial counts.
+        em=np.hypot(np.r_[c_q,C.spq],m0)
+        N=np.r_[nb,specs[0]]
+        dN=np.zeros_like(N)
+        dN[:len(nb)]=diff[C.j0:]
+        dN[len(nb)+np.flatnonzero(warm)]=warm_delta
+        dm=(.5*C.lam*(dN@np.reciprocal(em)))/(2*m0+.5*C.lam*m0*(N@em**-3))
+        t=[]
+        for epsilon in (m0*1e-4,m0*5e-5):
+            slope=(cold_at(hard_add,nb,m0+epsilon)-cold_at(hard_add,nb,m0-epsilon))/(2*epsilon)
+            t.append(dm*slope)
+        # Replacing only the pole piece in the telescoping sum is a
+        # perturbative sensitivity, not an alternative evolved trajectory.
+        return np.r_[d0,d1,d2,t[0],t[1],d0+t[1]+d2]
+
     def evaluate(U):
         base=initial+U[:h0]
         diff=U[h0:2*h0]
         first,_=split(base,0)
-        second,w=split(np.r_[base+diff,w0+U[2*h0:]],1)
+        full=np.r_[base+diff,w0+U[warm_slice]]
+        second,w=split(full,1)
         delta=(second[0]-first[0])+second[1]
         if joined:
             a0=other_slow(base[:C.j0].reshape(-1,2))
             a1=other_slow((base[:C.j0]+diff[:C.j0]).reshape(-1,2))
             first[0,:C.j0]+=a0.sum(axis=0)
             delta[:C.j0]+=(a1-a0).sum(axis=0)
+        if attribute_feedback:
+            return np.r_[first[0],delta,w,attribute(base,diff,full,first,second,U[warm_slice])]
         return np.r_[first[0],delta,w]
 
     def total(state,arm):
@@ -120,7 +191,10 @@ def run(path,projection,duration,steps,order,outer,joined=False):
             for arm,v in enumerate((hb,ha)):
                 yy=v.reshape(-1,2)
                 active.refresh(yy,'full')
-                end,diag=step(soft,yy,h)
+                if elastic_energy_budget is None:
+                    end,diag=step(soft,yy,h)
+                else:
+                    end,diag=step(soft,yy,h,energy_budget=elastic_energy_budget)
                 elastic_drifts[arm].append(diag['rho_drift'])
                 moved.append(end.ravel()-v)
             U[:C.j0]+=moved[0]
@@ -132,12 +206,23 @@ def run(path,projection,duration,steps,order,outer,joined=False):
         else:
             U+=rk(U,h)
         if (i+1)%max(1,steps//4)==0 or i+1==steps:
-            rows.append(dict(exposure=h*(i+1),cold_gain=float(U[C.j0:h0].sum()),
-                             outer_feedback_on_cold=float(U[h0+C.j0:2*h0].sum()),
-                             warm_gain=float(U[2*h0:].sum())))
+            line=dict(exposure=h*(i+1),cold_gain=float(U[C.j0:h0].sum()),
+                      outer_feedback_on_cold=float(U[h0+C.j0:2*h0].sum()),
+                      warm_gain=float(U[warm_slice].sum()))
+            if attribute_feedback:
+                contributions=U[extra_start:].reshape(n_attribution,len(n0))
+                total_delta=U[h0+C.j0:2*h0]
+                defect=float(np.max(abs(contributions[:3].sum(axis=0)-total_delta)))
+                assert defect < 1e-28
+                line.update(cold_feedback_hard_then_pole_then_population=contributions[:3].sum(axis=1).tolist(),
+                            maximum_attribution_sum_defect=defect)
+                if stable_pole_tangent:
+                    line.update(stable_linear_pole_pieces=contributions[3:5].sum(axis=1).tolist(),
+                                estimate_replacing_direct_pole_piece=float(contributions[5].sum()))
+            rows.append(line)
     base=initial+U[:h0]
     t0=total(base,0)-e0
-    t1=total(np.r_[base+U[h0:2*h0],w0+U[2*h0:]],1)-e1
+    t1=total(np.r_[base+U[h0:2*h0],w0+U[warm_slice]],1)-e1
     extra={}
     if joined:
         hard_count=np.sum(y0[:,0])
@@ -145,7 +230,11 @@ def run(path,projection,duration,steps,order,outer,joined=False):
                for x in (base[:C.j0],base[:C.j0]+U[h0:h0+C.j0])]
         assert max(abs(t0[0]),abs(t1[0]),*map(abs,count))<3e-12
         assert min(t0[1],t1[1])>=0. and max(difference_roundoff)<2e-16
-        extra=dict(joined_macro_steps=steps,slow_rk4_half_steps=2*steps,total_hard_count_defect=count,
+        if elastic_energy_budget is not None:
+            peaks=[max(map(abs,seq)) for seq in elastic_drifts]
+            assert max(peaks)<elastic_energy_budget
+            extra.update(elastic_energy_budget=elastic_energy_budget,peak_step_energy_defects=peaks)
+        extra.update(joined_macro_steps=steps,slow_rk4_half_steps=2*steps,total_hard_count_defect=count,
                    summed_elastic_energy_defects=[float(sum(x)) for x in elastic_drifts],
                    maximum_elastic_hard_pair_reconstruction_residual=max(difference_roundoff))
     else:
@@ -153,7 +242,9 @@ def run(path,projection,duration,steps,order,outer,joined=False):
     return dict(grid=g,projection=projection,duration=duration,common_rk4_steps=steps,radial_order=order,
                 energy_closure=[t0[0],t1[0]],entropy_change=[t0[1],t1[1]],rows=rows,
                 **(dict(warm_node_cuts=outer) if outer!=[.1,5.] else {}),
-                **extra,scope=('Short fixed-scale all-channel matched split on one grid; explicit difference variable.'
+                **(dict(warm_collision_multiplier=warm_multiplier,
+                        manufactured_rate_scaling=True) if warm_multiplier!=1. else {}),
+                **shape_ledger,**extra,scope=('Short fixed-scale all-channel matched split on one grid; explicit difference variable.'
                                if joined else 'Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid.'))
 
 
@@ -166,6 +257,14 @@ if __name__=='__main__':
     p.add_argument('--order',type=int,default=10)
     p.add_argument('--outer',type=float,nargs=2,default=[.1,5.])
     p.add_argument('--joined',action='store_true')
+    p.add_argument('--warm-multiplier',type=float,default=1.,
+                   help='Manufactured scaling of reciprocal promoted decay packets, not their occupation.')
+    p.add_argument('--elastic-energy-budget',type=float)
+    p.add_argument('--attribute-feedback',action='store_true',
+                   help='Integrate a telescoping cold response in hard, scalar pole, then cold populations.')
+    p.add_argument('--warm-order',type=int)
+    p.add_argument('--stable-pole-tangent',action='store_true',
+                   help='Independent first-order near-null pole diagnostic of the feedback ledger.')
     a=p.parse_args()
     if a.duration<=0 or a.steps<1 or a.order<2 or not 1e-5<a.outer[0]<a.outer[1]<=5.:
         p.error('Invalid positive exposure, steps or order.')
