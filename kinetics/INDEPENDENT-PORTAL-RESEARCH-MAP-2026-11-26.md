@@ -500,6 +500,10 @@ is nonzero for the initial lowered DF even after excluding all
 ejection events. The finite collisionless profile is not thereby
 a local elastic equilibrium.
 
+The [tidal crossing geometry](INDEPENDENT-HALO-BOSE-TIDAL-RADIUS-CROSSING-2026-11-26.md)
+applies the angular-momentum barrier after the elastic energy
+selection; the accessible sphere is not equivalent to infinity.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
