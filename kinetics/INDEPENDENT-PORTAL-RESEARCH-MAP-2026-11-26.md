@@ -481,6 +481,11 @@ test shear and a projected isotropic speed distortion, separating
 true linear collision dissipation from large gross encounter counts.
 These are local test perturbations, not a halo evolution calculation.
 
+The [quartic local dynamical gate](INDEPENDENT-HALO-BOSE-QUARTIC-DYNAMICAL-GATE-2026-11-26.md)
+converts the sampled kinetic responses to the contact cross section
+needed to match a circular frequency. It is not an observational
+cross-section constraint or a guarantee of fluid behavior.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
