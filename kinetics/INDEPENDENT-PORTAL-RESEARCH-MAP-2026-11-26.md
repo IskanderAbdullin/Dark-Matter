@@ -786,3 +786,6 @@ fit or exclusion.
 - [Reciprocal gauge-energy collision and expansion check](INDEPENDENT-EARLY-POLE-CONSERVING-GAUGE-EVENTS-2026-11-26.md):
   tests energy-conserving events, an independent expansion trace,
   and the hard daughter-angle aperture using the same energy gradient.
+- [Cold-event momentum and separate volume-moment deposits](INDEPENDENT-EARLY-POLE-GAUGE-VOLUME-MOMENTS-2026-11-26.md):
+  exact radial energy interpolation can distort a very soft recoil;
+  retaining distinct subcell transfers closes vector and energy ledgers.
