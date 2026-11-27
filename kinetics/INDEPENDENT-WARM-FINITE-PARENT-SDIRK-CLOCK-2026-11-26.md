@@ -101,3 +101,32 @@ python -W error warm_prompt_shell_activity_reference.py EOS.dat competing080/tap
 ~~~
 
 [Both accepted .80 short-prefix phases and frozen shell activity](results/warm-finite-parent-sdirk-hard080-short-2026-11-26.json).
+
+## Matched four-block extension for .68 GeV
+
+Start from the same .68 phase and use the identical parent Q grid,
+weight fingerprint, energy cut and final scale. The intermediate
+native frozen phases only guide the nonlinear roots. Four
+accepted blocks produce W = 2.436581812e-18 with backward Euler
+and 2.441392797e-18 with SDIRK2. In both clocks W decreases at each
+saved step. The absolute two-to-four-block changes are 3.936e-21
+and 2.693e-22 of the initial daughter energy, respectively.
+For SDIRK the ratio of successive endpoint differences is 4.29,
+versus 1.57 for backward Euler. This is consistent with reduced
+step sensitivity in this case, not a proof of asymptotic order for
+the full split dynamics. The maximum four-block invariant defects
+are below 1.66e-13 relative.
+
+~~~sh
+# With the existing run function, d=sdirk and the archived turn12 inputs.
+python -W error warm_late_competing_intermediate_guide_reference.py EOS.dat turn12/step-8.json turn12/step-9.json "$d/mid89.json"
+python -W error warm_late_competing_intermediate_guide_reference.py EOS.dat turn12/step-9.json turn12/step-10.json "$d/mid910.json"
+for mode in be sdirk2; do
+ dest="$d/068-be4"; [ "$mode" = sdirk2 ] && dest="$d/068-abs4"
+ run "$dest" expand-finite-all turn12/step-8.json "$d/mid89.json" turn12/step-9.json "$d/mid910.json" turn12/step-10.json --order 2 --common-subdivisions 2 --collision-clock "$mode"
+done
+python -W error warm_coupled_sdirk_ladder_reference.py "$d" comoving
+~~~
+
+[Matched one/two/four-block audit](results/warm-finite-parent-sdirk-hard068-four-clock-2026-11-26.json);
+[accepted four-block phases](results/warm-finite-parent-sdirk-hard068-four-states-2026-11-26.json.gz).
