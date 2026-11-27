@@ -93,3 +93,48 @@ python -W error warm_expanding_daughter_pressure_reference.py competing080/tapes
 ~~~
 
 [Species pressure, trace, speed and cold-fraction diagnostics](results/warm-coupled-clock-pressure-moments-2026-11-26.json).
+
+## .80 GeV: actual 3- and 6-block runs on the same comoving chart
+
+The 17.40% one-to-two-block drift persists as a substantial time
+resolution issue. Reuse the exact same starting phase, physical
+cut and parent quadrature nodes and number weights. Recut the lab
+angular geometry on each accepted block. The archived frozen
+prompt microstates are used only as solver initial guesses.
+
+| Outer blocks | Finite-parent fully coupled W / initial daughter energy |
+| ---: | ---: |
+| 1 | 2.691195724e-14 |
+| 2 | 2.222994659e-14 |
+| 3 | 2.031036969e-14 |
+| 6 | 1.814219661e-14 |
+
+Six blocks lower the result by 10.68% from three. The observable
+decreases at every saved step in this ladder, while its magnitude
+is still visibly sensitive to time resolution. No continuum value
+or numerical error bar is inferred. The 1- to 6-block change in
+instantaneous full daughter pressure is much smaller in relative
+units, −4.52e-6 for the scalar and +3.42e-6 for the light fermion.
+Those pressure differences are endpoint diagnostics, not a
+cosmological transfer calculation.
+
+The stationary-parent branch also decreases at each saved step.
+At six blocks the finite-parent correction to W is +1.01e-08
+relative to the matched stationary-parent branch, far smaller
+than the measured clock effect.
+
+~~~sh
+# Prepare competing080/tapes as above, then regenerate the six exact native guide roots.
+t=competing080/tapes
+python -W error warm_late_competing_locked_guides_reference.py EOS.dat "$t/step-5.json" "$t/step-6.json" guides080 --steps 6
+for mode in expand-stationary-all expand-finite-all; do
+ run "$d/080-locked3-$mode" "$mode" guides080/step-{0,2,4,6}.json --order 2 --common-subdivisions 2
+ run "$d/080-locked6-$mode" "$mode" guides080/step-{0,1,2,3,4,5,6}.json --order 2 --common-subdivisions 2
+done
+python -W error warm_expanding_clock_ladder_reference.py "$d" 080 1 2 3 6
+parts=(); for n in 1 2 3 6; do parts+=("$d/080-locked$n-expand-finite-all/step-$n.json"); done
+python -W error warm_expanding_daughter_pressure_reference.py "$t/step-5.json" "${parts[@]}"
+~~~
+
+[Four-step-count ladder and the pressure resolution comparison](results/warm-coupled-hard080-deeper-clock-audit-2026-11-26.json);
+[3/6-block accepted daughter phases](results/warm-coupled-hard080-deeper-clock-tapes-2026-11-26.json.gz).
