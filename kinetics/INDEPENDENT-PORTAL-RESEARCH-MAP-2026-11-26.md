@@ -147,6 +147,8 @@ reproducible controls below are not observational constraints.
    The [late complete common-chart replay](INDEPENDENT-WARM-Q64-LATE-WHOLE-PAIR-REPLAY-2026-11-26.md)
    preserves the cold decline at another interval, but its fallback
    prevents a separate attribution of all differences to quadrature.
+   A [locked two-substep follow-up](INDEPENDENT-WARM-Q64-LATE-COMMON-LOCKED-CLOCK-2026-11-26.md)
+   separates pair-order variation from the stiff inner clock.
    A [driven heavy-lag test inside two fine intervals](INDEPENDENT-WARM-Q64-HEAVY-LAG-ENTROPY-SURROGATE-2026-11-26.md)
    recalculates the parent source on an explicit daughter entropy interpolation.
    A [realizable first-order cancellation diagnostic](INDEPENDENT-WARM-CORRECTED-RECONSTRUCTED-TIME-DIAGNOSTIC-2026-11-26.md)
