@@ -1,0 +1,197 @@
+{
+  "scope": "Finite q crossed channel, anti-daughter equals stored daughter as an explicit shape comparator.",
+  "results": [
+    {
+      "grid": "fine",
+      "rows": [
+        {
+          "mesh": [
+            3,
+            -1,
+            4,
+            4
+          ],
+          "values": {
+            "gain": 0.24299736701825986,
+            "loss": 3.8186017186854784,
+            "net": -3.8150753200821816e+16,
+            "scalar_f": 1.0669735644278718e+16,
+            "loss_if_all_anti_empty": 3.910297469060895,
+            "net_if_all_anti_empty": -4.172184028537189e+16,
+            "net_change_per_equal_shape_scale": 3571087084550071.0
+          }
+        },
+        {
+          "mesh": [
+            5,
+            -1,
+            6,
+            4
+          ],
+          "values": {
+            "gain": 0.2429973670447536,
+            "loss": 3.818601718615953,
+            "net": -3.815075319979732e+16,
+            "scalar_f": 1.0669735644278718e+16,
+            "loss_if_all_anti_empty": 3.9102974689827654,
+            "net_if_all_anti_empty": -4.1721840284538264e+16,
+            "net_change_per_equal_shape_scale": 3571087084740948.0
+          }
+        },
+        {
+          "mesh": [
+            7,
+            -1,
+            8,
+            4
+          ],
+          "values": {
+            "gain": 0.24299736704358074,
+            "loss": 3.818601718615755,
+            "net": -3.815075319980772e+16,
+            "scalar_f": 1.0669735644278718e+16,
+            "loss_if_all_anti_empty": 3.9102974689827663,
+            "net_if_all_anti_empty": -4.172184028453828e+16,
+            "net_change_per_equal_shape_scale": 3571087084730556.0
+          }
+        }
+      ],
+      "short_cap_40": {
+        "gain": 0.24299736704475355,
+        "loss": 3.8186017186159518,
+        "net": -3.8150753199797304e+16,
+        "scalar_f": 1.0669735644278718e+16,
+        "loss_if_all_anti_empty": 3.9102974689827614,
+        "net_if_all_anti_empty": -4.172184028453822e+16,
+        "net_change_per_equal_shape_scale": 3571087084740918.5
+      },
+      "equilibrium": [
+        {
+          "T": 0.4,
+          "G": 0.06445814398750524,
+          "L": 0.06459882660869208,
+          "net_over_turnover": 1.1768794786599482e-16
+        },
+        {
+          "T": 1.0,
+          "G": 2.821509065205437,
+          "L": 2.8239706793248454,
+          "net_over_turnover": 8.094696570915021e-18
+        }
+      ],
+      "analytical_inverse_absolute_tail_bound_after_68": 6.73211811319586e-24,
+      "forward_exact_maximum_supported_k": 57.99916716997608,
+      "angular_controls": {
+        "independent_GL_angle_max_relative_defect": 3.112399227234164e-12,
+        "explicit_Lorentz_projection_defect": 5.17834664037764e-11,
+        "unit_amplitude_phase_flux_relative_defect": 4.440892098500626e-16
+      },
+      "final_mesh_max_relative_drift": 4.826694599557868e-12,
+      "antibath_shape_scale_pauli_max": 9.383973154915875,
+      "antibath_shape_scale_required_for_neutral_rate": 11.683232386836698,
+      "held_archive_Born": {
+        "gain": 56.79754449218672,
+        "loss": 16.261492266933022,
+        "stimulus": 40.5360522252537,
+        "net": 4.325089613061331e+17
+      },
+      "crossed_to_Born_net_g_point005": -2.2052001584311872e-06
+    },
+    {
+      "grid": "third",
+      "rows": [
+        {
+          "mesh": [
+            3,
+            -1,
+            4,
+            4
+          ],
+          "values": {
+            "gain": 0.25171153979532956,
+            "loss": 3.7803085966649657,
+            "net": -6606743909929540.0,
+            "scalar_f": 1872342974686561.2,
+            "loss_if_all_anti_empty": 3.8695974216928914,
+            "net_if_all_anti_empty": -7245213547371916.0,
+            "net_change_per_equal_shape_scale": 638469637442376.8
+          }
+        },
+        {
+          "mesh": [
+            5,
+            -1,
+            6,
+            4
+          ],
+          "values": {
+            "gain": 0.25171153988934364,
+            "loss": 3.7803085967421475,
+            "net": -6606743909898024.0,
+            "scalar_f": 1872342974686561.2,
+            "loss_if_all_anti_empty": 3.8695974217625357,
+            "net_if_all_anti_empty": -7245213547502314.0,
+            "net_change_per_equal_shape_scale": 638469637604290.5
+          }
+        },
+        {
+          "mesh": [
+            7,
+            -1,
+            8,
+            4
+          ],
+          "values": {
+            "gain": 0.25171153988890665,
+            "loss": 3.7803085967420915,
+            "net": -6606743909898737.0,
+            "scalar_f": 1872342974686561.2,
+            "loss_if_all_anti_empty": 3.8695974217625753,
+            "net_if_all_anti_empty": -7245213547502388.0,
+            "net_change_per_equal_shape_scale": 638469637603651.1
+          }
+        }
+      ],
+      "short_cap_40": {
+        "gain": 0.2517115398893436,
+        "loss": 3.780308596742143,
+        "net": -6606743909898015.0,
+        "scalar_f": 1872342974686561.2,
+        "loss_if_all_anti_empty": 3.8695974217625286,
+        "net_if_all_anti_empty": -7245213547502301.0,
+        "net_change_per_equal_shape_scale": 638469637604285.5
+      },
+      "equilibrium": [
+        {
+          "T": 0.4,
+          "G": 0.06359345322614944,
+          "L": 0.06373148154041759,
+          "net_over_turnover": 5.2462016854354284e-17
+        },
+        {
+          "T": 1.0,
+          "G": 2.8178787438997692,
+          "L": 2.820323612453622,
+          "net_over_turnover": 1.6346214524985355e-16
+        }
+      ],
+      "analytical_inverse_absolute_tail_bound_after_68": 6.734523271826897e-24,
+      "forward_exact_maximum_supported_k": 57.9991719844143,
+      "angular_controls": {
+        "independent_GL_angle_max_relative_defect": 3.0044855492405986e-12,
+        "explicit_Lorentz_projection_defect": 3.329403419627397e-11,
+        "unit_amplitude_phase_flux_relative_defect": 3.3306690738754696e-16
+      },
+      "final_mesh_max_relative_drift": 1.7360557436063573e-12,
+      "antibath_shape_scale_pauli_max": 9.576446073623293,
+      "antibath_shape_scale_required_for_neutral_rate": 11.347780882260322,
+      "held_archive_Born": {
+        "gain": 61.37488352098206,
+        "loss": 26.588403109512434,
+        "stimulus": 34.786480411469626,
+        "net": 6.51322222124869e+16
+      },
+      "crossed_to_Born_net_g_point005": -2.5358968592937547e-06
+    }
+  ]
+}
