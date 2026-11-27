@@ -78,3 +78,6 @@ or the higher native tier.
 
 [Smoothing comparison](results/warm-direct-vacuum-native-pilot-smoothing-2026-11-26.json)
 and [native tables and elided-path logs](results/warm-direct-vacuum-native-pilot-shape-raw-2026-11-26.json.gz).
+
+[Exact native modes and earlier initialization](INDEPENDENT-WARM-DIRECT-NATIVE-EXACT-K-2026-11-26.md)
+repeat the key pilot check with RK and no k interpolation.
