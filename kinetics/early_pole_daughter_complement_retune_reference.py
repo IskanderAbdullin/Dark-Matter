@@ -10,10 +10,17 @@ from scipy.special import expit
 from early_pole_archived_shared_cold_window_reference import Cold
 
 
-def prepare(M,native,continuous,fixed_ids,match=(True,True)):
+def prepare(M,native,continuous,fixed_ids,match=(True,True),donor_ids=None):
     full=np.arange(M.r[2].start,M.r[2].stop)
     fixed=np.asarray(fixed_ids)
     complement=np.setdiff1d(full,fixed,assume_unique=True)
+    untouched=fixed
+    if donor_ids is not None:
+        chosen=np.asarray(donor_ids,dtype=int)
+        if len(chosen)<2 or not np.array_equal(chosen,np.unique(chosen)) or not np.all(np.isin(chosen,complement)):
+            raise ValueError('Donors must be sorted distinct cells outside the aperture.')
+        complement=chosen
+        untouched=np.setdiff1d(full,complement,assume_unique=True)
     if not 0<len(complement)<len(full):
         raise ValueError('Require a nonempty proper daughter subset.')
     swapped=native.copy()
@@ -23,7 +30,9 @@ def prepare(M,native,continuous,fixed_ids,match=(True,True)):
     if match not in ((True,True),(True,False),(False,True)):
         raise ValueError('Choose both moments or one moment with the other held at the raw swap.')
     total_target=np.where(match,moments(native,full),moments(swapped,full))
-    target=total_target-moments(swapped,fixed)
+    target=total_target-moments(swapped,untouched)
+    if target[0]<=0. or target[1]<=0.:
+        raise ValueError('The donor subset has a nonpositive target moment.')
     pivot=target[1]/target[0]
     bases=[np.vstack([np.ones_like(M.cells[i].B[0]),weights[i]@M.cells[i].B-pivot])
            for i in complement]
@@ -45,6 +54,8 @@ def prepare(M,native,continuous,fixed_ids,match=(True,True)):
         raise ValueError('Retune failed the fixed-moment or local-amplitude gate: '
                          f'defect={defect.tolist()}, multipliers={fit.x.tolist()}')
     np.testing.assert_array_equal(trial[fixed],continuous[fixed])
+    if donor_ids is not None:
+        np.testing.assert_array_equal(trial[untouched],swapped[untouched])
     extra={}
     if match!=(True,True):
         extra=dict(match_axes=list(match),actual_moments_relative_to_native=(
