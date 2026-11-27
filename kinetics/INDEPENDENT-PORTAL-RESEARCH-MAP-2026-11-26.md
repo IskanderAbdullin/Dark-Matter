@@ -392,6 +392,11 @@ also removes the hard occupation cap for the same isotropic continuum
 closure. It pays the available scalar energy, fermion Pauli cap and
 modeled anchor; the 2 MeV comparison remains inconclusive.
 
+The [cap-free sampled-anchor ladder](INDEPENDENT-WARM-REHEATING-CAP-FREE-ANCHOR-THRESHOLDS-2026-11-26.md)
+uses passage-time slabs and tests fixed-count energy sensitivity. It
+certifies a stable excess starting at the sampled 166 keV anchor;
+warmer inconclusive points do not demonstrate adequate depletion.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
