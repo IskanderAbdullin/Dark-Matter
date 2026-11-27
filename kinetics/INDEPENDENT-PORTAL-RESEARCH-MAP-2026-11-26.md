@@ -776,3 +776,6 @@ fit or exclusion.
 - [Frozen dynamic Vlasov response and soft kicks](INDEPENDENT-EARLY-POLE-FROZEN-DYNAMIC-VLASOV-2026-11-26.md):
   recomputes both retarded and statistical inputs and normalizes the
   soft-cut comparison separately by fixed k/T and fixed k/m_D.
+- [Frozen flavor-dependent asymptotic mass aperture](INDEPENDENT-EARLY-POLE-FROZEN-FLAVOR-ASYMPTOTIC-MASS-2026-11-26.md):
+  a leading lightlike mass proxy shifts the center even at equal
+  gauge charge; the occupied-aperture response is not grid converged.
