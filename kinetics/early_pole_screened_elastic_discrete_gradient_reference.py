@@ -58,7 +58,7 @@ def approximate_jacobian(m,G,F,k,dt,cell_sizes,F_mid=None,F_end=None):
 
 
 
-def step(model,Y0,dt,method="backward"):
+def step(model,Y0,dt,method="backward",energy_budget=None):
     M=model.M
     k=M.r[1].start
     cells=M.cells[k:]
@@ -114,7 +114,9 @@ def step(model,Y0,dt,method="backward"):
         error=float(np.linalg.norm(r,np.inf))
         history.append(error)
         if error<stop_tol:
-            break
+            e_now=M.weights(Y,True)[3] if energy_budget is not None else rho0
+            if energy_budget is None or abs(e_now-rho0)<energy_budget:
+                break
         J=approximate_jacobian(model,G,F,k,dt,scales,Fm if symmetric else None,Fe)
         direction=np.linalg.solve(J,-r)
         c=1.
@@ -131,7 +133,7 @@ def step(model,Y0,dt,method="backward"):
                         break
             c*=.5
         else:
-            if error<5e-13:
+            if error<5e-13 and (energy_budget is None or abs(M.weights(Y,True)[3]-rho0)<energy_budget):
                 break
             raise RuntimeError((dt,history))
     r,Y,F,G,edot,heat,_,_=current
@@ -139,6 +141,8 @@ def step(model,Y0,dt,method="backward"):
     _,_,_,r1,s1=M.weights(Y,True)
     count=[np.sum(Y[z,0]-Y0[z,0]) for z in M.r[1:]]
     assert abs(r1-rho0)<2e-12 and max(abs(x) for x in count)<2e-12,(r1-rho0,count)
+    if energy_budget is not None and abs(r1-rho0)>=energy_budget:
+        raise RuntimeError((dt,history))
     if symmetric:
         assert abs(s1-S0-dt*edot)<2e-12
     else:

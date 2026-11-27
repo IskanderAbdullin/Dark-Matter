@@ -40,7 +40,9 @@ def atomic_write(path, value):
 
 
 def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.,snapshots=False,scalar_bins=8,aperture_subdivision=1,witness_mix=0.,response_radial_order=None,
-        checkpoint=None,resume=False,checkpoint_every=1,stop_after=None,progress_every=0):
+        checkpoint=None,resume=False,checkpoint_every=1,stop_after=None,progress_every=0,elastic_energy_budget=None):
+    if elastic_energy_budget is not None and (not np.isfinite(elastic_energy_budget) or elastic_energy_budget<=0. or method!="backward"):
+        raise ValueError("A finite positive explicit elastic energy budget requires backward steps.")
     if resume and not checkpoint:
         raise ValueError("resume requires a checkpoint path")
     if checkpoint_every<1 or progress_every<0:
@@ -119,6 +121,8 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
                  conversion_strength=conversion_strength,snapshots=snapshots,scalar_bins=scalar_bins,
                  aperture_subdivision=aperture_subdivision,witness_mix=witness_mix,
                  response_radial_order=response_radial_order)
+    if elastic_energy_budget is not None:
+        physics["elastic_energy_budget"]=elastic_energy_budget
     if checkpoint:
         physics.update(format=1,numpy=np.__version__,scipy=scipy_version,state_initial=state_digest(z0),
                        graph_code=[hashlib.sha256(Path(__file__).with_name(n+'.py').read_bytes()).hexdigest()
@@ -169,7 +173,7 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
             Y=z[:M.j0].reshape(-1,2)
             if active is not None:
                 updates.append(active.refresh(Y,screening_update))
-            f,r=step(elastic,Y,h,method)
+            f,r=step(elastic,Y,h,method,energy_budget=elastic_energy_budget)
             z[:M.j0]=f.ravel()
             z[-2]+=r['entropy_gain']
             controls.append(r)
@@ -196,7 +200,8 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
                 hard_edge_sets=M.M.edge_sets if snapshots else None, snapshots=pictures,
                 **(dict(scalar_bins=scalar_bins,aperture_subdivision=aperture_subdivision,witness_mix=witness_mix)
                    if scalar_bins!=8 or aperture_subdivision!=1 or witness_mix else {}),
-                **(dict(response_radial_order=response_radial_order) if response_radial_order is not None else {}))
+                **(dict(response_radial_order=response_radial_order) if response_radial_order is not None else {}),
+                **(dict(elastic_energy_budget=elastic_energy_budget) if elastic_energy_budget is not None else {}))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -218,6 +223,7 @@ if __name__=='__main__':
     p.add_argument("--aperture-subdivision",type=int,default=1)
     p.add_argument("--witness-mix",type=float,default=0.)
     p.add_argument("--response-radial-order",type=int)
+    p.add_argument("--elastic-energy-budget",type=float)
     p.add_argument("--checkpoint")
     p.add_argument("--resume",action="store_true")
     p.add_argument("--checkpoint-every",type=int,default=1)
