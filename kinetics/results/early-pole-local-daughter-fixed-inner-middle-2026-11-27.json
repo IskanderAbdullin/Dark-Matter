@@ -1,0 +1,247 @@
+{
+  "final_mean_shift": {
+    "base16": -1.0029560515434355e-05,
+    "subcycled16": 0.00021275780096030594,
+    "fine64": 0.0003845709167782374,
+    "subcycled32": 0.00034661135420166467,
+    "unsplit": 0.0005172453090840357
+  },
+  "exposure": [
+    0.0,
+    2.0833333333333335e-08,
+    4.166666666666667e-08,
+    6.250000000000001e-08,
+    8.333333333333334e-08,
+    1.0416666666666667e-07,
+    1.2500000000000002e-07,
+    1.4583333333333335e-07,
+    1.6666666666666668e-07,
+    1.875e-07,
+    2.0833333333333333e-07,
+    2.291666666666667e-07,
+    2.5000000000000004e-07,
+    2.7083333333333337e-07,
+    2.916666666666667e-07,
+    3.125e-07,
+    3.3333333333333335e-07
+  ],
+  "cumulative_effect": {
+    "base16": [
+      0.0,
+      -1.9755897959217172e-10,
+      -2.3825745196215387e-10,
+      -2.3791786249449665e-10,
+      -2.2432285889939507e-10,
+      -2.0596092539792998e-10,
+      -1.8596748793675566e-10,
+      -1.6562914928464068e-10,
+      -1.4550038257565845e-10,
+      -1.2582047556608522e-10,
+      -1.0668523009460529e-10,
+      -8.812255092305321e-11,
+      -7.012770225633957e-11,
+      -5.268043987149973e-11,
+      -3.57536326933694e-11,
+      -1.9317755728387453e-11,
+      -3.3431868384781183e-12
+    ],
+    "subcycled16": [
+      0.0,
+      -1.77275718410419e-10,
+      -1.8899272771766285e-10,
+      -1.7584043943141836e-10,
+      -1.5606056377737154e-10,
+      -1.3454549280256245e-10,
+      -1.1288973575385164e-10,
+      -9.166141456962151e-11,
+      -7.10634814882205e-11,
+      -5.1154674246545184e-11,
+      -3.193301179038599e-11,
+      -1.3370644869059589e-11,
+      4.570399614323151e-12,
+      2.1930918886470252e-11,
+      3.875106138750972e-11,
+      5.506879327543679e-11,
+      7.091926698676865e-11
+    ],
+    "fine64": [
+      0.0,
+      -1.2573436042329078e-10,
+      -1.3313361177380578e-10,
+      -1.1900088900396177e-10,
+      -9.892481972473277e-11,
+      -7.730830559049551e-11,
+      -5.561530055930852e-11,
+      -3.4373601187631664e-11,
+      -1.3772021717484151e-11,
+      6.13623735157276e-12,
+      2.535556833938024e-11,
+      4.3914906433517586e-11,
+      6.185275208681063e-11,
+      7.921013497891316e-11,
+      9.602732151114957e-11,
+      1.123423264137724e-10,
+      1.281903055927458e-10
+    ],
+    "subcycled32": [
+      0.0,
+      -1.3719491168129316e-10,
+      -1.4549859927992514e-10,
+      -1.3156637237998758e-10,
+      -1.1155053616929145e-10,
+      -8.995459238603232e-11,
+      -6.826912299362498e-11,
+      -4.703013326001759e-11,
+      -2.6429292782070846e-11,
+      -6.5209296296053765e-12,
+      1.2698866264093667e-11,
+      3.125880804200065e-11,
+      4.919729207353285e-11,
+      6.655530640498064e-11,
+      8.337308968209278e-11,
+      9.968863928788707e-11,
+      1.1553711806722156e-10
+    ],
+    "unsplit": [
+      0.0,
+      -9.652947885463448e-11,
+      -9.535713191288764e-11,
+      -7.770350682334559e-11,
+      -5.605842526290594e-11,
+      -3.3685169237296364e-11,
+      -1.1601265087479717e-11,
+      9.848202114914884e-12,
+      3.055719219324793e-11,
+      5.0514439853266424e-11,
+      6.97475133204506e-11,
+      8.829896536166615e-11,
+      1.0621561963297665e-10,
+      1.235437203928047e-10,
+      1.4032683348652597e-10,
+      1.5660511082371542e-10,
+      1.7241510302801188e-10
+    ]
+  },
+  "elastic_only_share_of_total_observed_refinement": 0.5645896908278097,
+  "common_inner_width": {
+    "inner_step": 5.208333333333334e-09,
+    "mean_difference_16x4_minus_64x1": -0.00017181311581793146,
+    "maximum_absolute_cumulative_difference": 5.729145977073635e-11,
+    "extrapolated_mean": 0.0003960251244994328,
+    "extrapolated_mean_error_vs_unsplit": -0.00012122018458460283,
+    "extrapolated_cumulative_effect": [
+      0.0,
+      -1.2229826989081557e-10,
+      -1.29409670710882e-10,
+      -1.1521158564213134e-10,
+      -9.511577012122352e-11,
+      -7.349249310969105e-11,
+      -5.179700487967231e-11,
+      -3.055441362883234e-11,
+      -9.952591066101728e-12,
+      9.955631458113956e-12,
+      2.917480701469799e-11,
+      4.773394318702273e-11,
+      6.567157558497646e-11,
+      8.302874938507603e-11,
+      9.984573885272556e-11,
+      1.161605619563281e-10,
+      1.3200837483314427e-10
+    ],
+    "assumption": "Optional smooth outer quadratic diagnostic at fixed inner width, not an order proof.",
+    "mean_difference_32x2_minus_64x1": -3.7959562576572736e-05,
+    "mean_difference_ratio": 4.526214322711091,
+    "effective_outer_power_if_single_term": 1.8181201640839648,
+    "quadratic_expectation_ratio": 5.0,
+    "cancellation_using_32x2_mean": 0.0003972241043037616,
+    "two_quadratic_cancellations_mean_difference": 1.1989798043288094e-06,
+    "maximum_cumulative_difference_between_cancellations": 3.996631729267592e-13
+  },
+  "conservation": {
+    "base16": [
+      {
+        "terminal_energy_drift": 2.220446049250313e-15,
+        "terminal_entropy_closure": -1.6602717464730965e-12,
+        "elastic_energy_budget": 5e-15,
+        "largest_step_energy_defect": 2.4424906541753444e-15,
+        "signed_elastic_energy_defect": -2.220446049250313e-16,
+        "nonelastic_energy_remainder": 2.4424906541753444e-15
+      },
+      {
+        "terminal_energy_drift": 1.9984014443252818e-15,
+        "terminal_entropy_closure": -1.6608754302427364e-12,
+        "elastic_energy_budget": 5e-15,
+        "largest_step_energy_defect": 1.7763568394002505e-15,
+        "signed_elastic_energy_defect": 4.440892098500626e-16,
+        "nonelastic_energy_remainder": 1.5543122344752192e-15
+      }
+    ],
+    "subcycled16": [
+      {
+        "terminal_energy_drift": 1.5765166949677223e-14,
+        "terminal_entropy_closure": -1.6592916277091696e-12,
+        "elastic_energy_budget": null,
+        "signed_elastic_energy_defect": 1.554312234475219e-14,
+        "nonelastic_energy_remainder": 2.220446049250313e-16,
+        "peak_abs_macro_signed_elastic_defect": 7.549516567451064e-15,
+        "elastic_substep_energy_budget": 5e-15,
+        "peak_substep_energy_defect": 4.884981308350689e-15,
+        "number_of_elastic_steps": 64
+      },
+      {
+        "terminal_energy_drift": 1.4876988529977098e-14,
+        "terminal_entropy_closure": -1.6581588532793567e-12,
+        "elastic_energy_budget": null,
+        "signed_elastic_energy_defect": 1.4654943925052066e-14,
+        "nonelastic_energy_remainder": 2.220446049250313e-16,
+        "peak_abs_macro_signed_elastic_defect": 6.661338147750939e-15,
+        "elastic_substep_energy_budget": 5e-15,
+        "peak_substep_energy_defect": 4.440892098500626e-15,
+        "number_of_elastic_steps": 64
+      }
+    ],
+    "fine64": [
+      {
+        "terminal_energy_drift": 1.1546319456101628e-14,
+        "terminal_entropy_closure": -1.7293952728203443e-12,
+        "elastic_energy_budget": 5e-15,
+        "largest_step_energy_defect": 2.6645352591003757e-15,
+        "signed_elastic_energy_defect": 1.4876988529977098e-14,
+        "nonelastic_energy_remainder": -3.3306690738754696e-15
+      },
+      {
+        "terminal_energy_drift": 1.509903313490213e-14,
+        "terminal_entropy_closure": -1.72613312532377e-12,
+        "elastic_energy_budget": 5e-15,
+        "largest_step_energy_defect": 4.6629367034256575e-15,
+        "signed_elastic_energy_defect": 1.3100631690576847e-14,
+        "nonelastic_energy_remainder": 1.9984014443252818e-15
+      }
+    ],
+    "subcycled32": [
+      {
+        "terminal_energy_drift": 1.687538997430238e-14,
+        "terminal_entropy_closure": -1.8741033031011156e-12,
+        "elastic_energy_budget": null,
+        "signed_elastic_energy_defect": 2.020605904817785e-14,
+        "nonelastic_energy_remainder": -3.3306690738754696e-15,
+        "peak_abs_macro_signed_elastic_defect": 5.551115123125783e-15,
+        "elastic_substep_energy_budget": 5e-15,
+        "peak_substep_energy_defect": 4.6629367034256575e-15,
+        "number_of_elastic_steps": 64
+      },
+      {
+        "terminal_energy_drift": 1.6431300764452317e-14,
+        "terminal_entropy_closure": -1.8737494195120163e-12,
+        "elastic_energy_budget": null,
+        "signed_elastic_energy_defect": 1.7541523789077473e-14,
+        "nonelastic_energy_remainder": -1.1102230246251565e-15,
+        "peak_abs_macro_signed_elastic_defect": 5.329070518200751e-15,
+        "elastic_substep_energy_budget": 5e-15,
+        "peak_substep_energy_defect": 4.218847493575595e-15,
+        "number_of_elastic_steps": 64
+      }
+    ]
+  },
+  "scope": "Finite held graph; inner subcycle changes elastic discretization at a fixed outer split width."
+}

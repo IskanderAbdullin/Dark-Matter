@@ -45,25 +45,23 @@ it is not a different species, interaction or microscopic model.
   not an alternate estimate of its error.
   See [elastic radial quadrature](INDEPENDENT-EARLY-POLE-FIRST-WINDOW-FINITE-ELASTIC-REFINEMENT-2026-11-27.md).
 
-## Checks that can change the interpretation
+## Results that narrow the numerical and preparation uncertainties
 
-1. Compare the local shift at matched held-screening split widths
-   against the simultaneous trajectory, including its *history* and
-   not just the terminal scalar total.
-2. Compare time widths 16 and 32 at both the original hard aperture
-   and the fourfold aperture. Only a crossed comparison identifies
-   interaction between support and time width in this finite model.
-3. Compare radial orders one, two and four with the hard support fixed.
-   Keep that narrower diagnostic distinct from transfer/angle
-   quadrature or an extrapolated cold spectrum.
-4. Test all four daughter preparations on one simultaneous graph to
-   check nonadditivity. Test the local perturbation while matching
-   total retained daughter number and bare energy. The [static
-   two-moment control](INDEPENDENT-EARLY-POLE-DAUGHTER-COMPLEMENT-RETUNE-2026-11-27.md)
-   already shows that the initial local suppression is unchanged to about
-   33 ppm when the complement repairs the number and bare energy.
-   Its finite-time result remains a separate check; the two matched
-   moments do not fix the dressed energy or the full phase-space shape.
+| Question | Matched control and result |
+|---|---|
+| Is the local sign different with a smaller time step? | [64 held split steps](INDEPENDENT-EARLY-POLE-LOCAL-DAUGHTER-HELD-TIME64-2026-11-27.md) yield +3.85e-4 rather than the 16-step -1.00e-5. The simultaneous result is +5.17e-4, and the [64-step mode audit](INDEPENDENT-EARLY-POLE-DAUGHTER-COLD-MODE-EFFECT-2026-11-27.md) finds all eight terminal differences positive. |
+| What changes when only the elastic substep is refined? | [16 macro × 4 elastic](INDEPENDENT-EARLY-POLE-LOCAL-DAUGHTER-ELASTIC-SUBCYCLE-2026-11-27.md) gives +2.13e-4; 64 × 1 gives +3.85e-4 at the exact same elastic width. Both the inner step and outer interleaving matter. |
+| What does the intermediate outer width show? | [32 macro × 2 elastic](INDEPENDENT-EARLY-POLE-LOCAL-DAUGHTER-FIXED-INNER-MIDDLE-2026-11-27.md) gives +3.47e-4 with the same inner width as 16 × 4 and 64 × 1. The observed difference ratio is 4.53 rather than the single outer-quadratic value 5. Separate quadratic diagnostics leave about 1.20e-4 relative to the simultaneous result. |
+| Can a time correction measured on one hard mesh be reused at another? | The [16/32 × depth 1/4 split test](INDEPENDENT-EARLY-POLE-FIRST-WINDOW-TIME-APERTURE-CROSS-2026-11-27.md) finds the continuous preparation's time-refinement gain is about 49% smaller at depth four. |
+| Does the latest radial refinement remain large? | Increasing both packet radial orders from 2 to 4 moves the two rates by -168 and -129 ppm at the same steps and support, much less than the 1-to-2 movement. [Radial depth four](INDEPENDENT-EARLY-POLE-FIRST-WINDOW-ELASTIC-RADIAL-DEPTH4-2026-11-27.md) is not a transfer, angle or support convergence test. |
+| Do local and outside daughter changes add? | [Full held-chart substitution](INDEPENDENT-EARLY-POLE-FIRST-WINDOW-UNSPLIT-DAUGHTER-ADDITIVITY-2026-11-27.md) finds the positive local effect offsets about 67% of the negative outside effect; the small residual is [unchanged by tolerance tightening](INDEPENDENT-EARLY-POLE-PREPARED-CHART-TOLERANCE-2026-11-27.md). This is not the elastic-channel interaction. |
+| Is the local rebound robust to matching retained bare moments? | [Two-moment compensation](INDEPENDENT-EARLY-POLE-LOCAL-DAUGHTER-RETUNED-TIME-2026-11-27.md) changes the initial suppression only 33 ppm but reduces the positive finite mean shift by about 83%. The [same outside compensation alone](INDEPENDENT-EARLY-POLE-DAUGHTER-COMPLEMENT-FACTORIAL-2026-11-27.md) explains almost all that reduction for this particular retuning. |
+
+The outstanding checks include reducing the inner step at 64 macro steps,
+the simultaneous chart on the fourfold aperture, and independent
+compensation controls. Neither a small integrator
+tolerance sensitivity nor exact matching of two bare moments
+bounds the uncertainty from the support or physical kernel.
 
 The [longer warm-marker redshift](INDEPENDENT-EARLY-POLE-LIVE-WARM-REDSHIFT-STRICT-2026-11-27.md)
 is a separate prescribed expansion experiment. Neither it nor the
