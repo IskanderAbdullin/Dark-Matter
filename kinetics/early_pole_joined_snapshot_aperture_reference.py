@@ -13,7 +13,8 @@ from early_pole_joined_history_memory_reference import load
 def replay(a):
     grid=a['grid']
     C=Cold(grid,1,0,len(a['snapshots'][0]['cold_bins']),True,exposure=a['duration'],
-           reference_aperture_grid=a['aperture_grid'],archive_projection=a['projection'])
+           reference_aperture_grid=a['aperture_grid'],archive_projection=a['projection'],
+           aperture_subdivision=a.get('aperture_subdivision',1))
     for model,replay in zip(C.M.edge_sets,a['hard_edge_sets'],strict=True):
         np.testing.assert_array_equal(model,replay)
     rows=[]

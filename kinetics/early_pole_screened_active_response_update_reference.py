@@ -12,9 +12,13 @@ from early_pole_screened_elastic_discrete_gradient_reference import step
 
 
 class ActiveResponse:
-    def __init__(self,M,smear=.12,mesh=1):
+    def __init__(self,M,smear=.12,mesh=1,radial_order=None):
         if not 0.<=smear<=.35 or mesh<1:
             raise ValueError("smear must stay within adjacent cell widths")
+        if radial_order is not None and radial_order<8:
+            raise ValueError("response radial quadrature must have at least eight nodes per cell")
+        if radial_order is not None:
+            rz,rw=roots_legendre(radial_order)
         self.model=M
         self.M=M.M
         self.base=M.polarization
@@ -29,16 +33,25 @@ class ActiveResponse:
             widths=np.array([c.hi-c.lo for c in cells])
             h=np.r_[widths[0],np.minimum(widths[:-1],widths[1:]),widths[-1]]
             for j,c in enumerate(cells,k.start):
-                q2=c.energy*c.energy-c.m*c.m
                 left,right=np.array([c.lo,c.hi])
-                v.extend(np.sqrt(q2)/c.energy)
+                if radial_order is None:
+                    energy,measure,u=c.energy,c.w,c.u
+                    q2=energy*energy-c.m*c.m
+                else:
+                    half=(right-left)/2
+                    p=(left+right)/2+half*rz
+                    q2=p*p
+                    energy=np.hypot(p,c.m)
+                    measure=C*half*rw*q2
+                    u=c.basis(p)
+                v.extend(np.sqrt(q2)/energy)
                 for b,radius in zip((left,right),smear*h[j-k.start:j-k.start+2],strict=True):
                     p=b+radius*zz
                     v.extend(p/np.hypot(p,c.m))
                 left_factor=-C*left*np.hypot(left,c.m)*ww/2
                 right_factor=C*right*np.hypot(right,c.m)*ww/2
-                interp_gain=c.w*(c.energy+q2/c.energy)/q2
-                self.cells.append((j,c,left_factor,right_factor,interp_gain))
+                interp_gain=measure*(energy+q2/energy)/q2
+                self.cells.append((j,u,measure,c.de,left_factor,right_factor,interp_gain))
         phase=self.sample[:,None]
         velocity=np.asarray(v)
         a,b,inside,z=real_kernels(phase,velocity)
@@ -60,11 +73,11 @@ class ActiveResponse:
     def occupation_weights(self,F):
         weights=[]
         stat=0.
-        for j,c,left,right,static in self.cells:
+        for j,u,measure,scale,left,right,static in self.cells:
             a,b=F[j]
-            f=expit(a+b*c.u)
+            f=expit(a+b*u)
             # -C*p*E*f'(p)*dp = -c.w*b*f(1-f)/Delta_E.
-            weights.extend(-c.w*b/c.de*f*(1-f))
+            weights.extend(-measure*b/scale*f*(1-f))
             weights.extend(left*expit(a-b))
             weights.extend(right*expit(a+b))
             stat+=static@f

@@ -13,18 +13,31 @@ from early_pole_archived_live_compton_reference import ComptonKernel
 from early_pole_archived_live_flavor_conversion_reference import ConversionKernel
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
-def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.,snapshots=False):
+def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.,snapshots=False,scalar_bins=8,aperture_subdivision=1,witness_mix=0.,response_radial_order=None):
     if duration<=0. or count<1:
         raise ValueError("positive duration and step count required")
     if strength<0. or same_soft_strength<0.:
         raise ValueError("elastic strength cannot be negative")
-    M=Screened(grid,1,8,duration,(1,1,2),.08,strength,aperture_grid,projection)
+    if not 0. <= witness_mix < 1. or (witness_mix and projection!="steps"):
+        raise ValueError("witness mix is for archived step inputs and must be in [0,1)")
+    if scalar_bins<1 or aperture_subdivision<1:
+        raise ValueError("positive scalar bins and aperture subdivisions required")
+    M=Screened(grid,1,scalar_bins,duration,(1,1,2),.08,strength,aperture_grid,projection,
+               subdivision=aperture_subdivision)
+    init=M.M.init
+    if witness_mix:
+        from early_pole_live_aperture_witness_reprojection_reference import initial_projection
+        from early_pole_native_aperture_witness_reference import PROFILES
+        profiles=json.loads(PROFILES.read_text())
+        chosen=next(p for p in profiles if p['grid']==grid)
+        _,_,Y0,Y1,*_=initial_projection(chosen,aperture_subdivision,scalar_bins,duration,model=M)
+        init=(1-witness_mix)*Y0+witness_mix*Y1
     photon_scattering=None if compton_strength==0. else ComptonKernel(M.M,strength=compton_strength)
     conversion=None if conversion_strength==0. else ConversionKernel(M.M,strength=conversion_strength)
     elastic=M if same_soft_strength==0. else ElasticChannels(M,grid,same_soft_strength)
-    active=None if screening_update=="frozen" or not strength else ActiveResponse(M,response_smear)
+    active=None if screening_update=="frozen" or not strength else ActiveResponse(M,response_smear,radial_order=response_radial_order)
     updates=[]
-    z0=np.r_[M.M.init.ravel(),M.ns,0.,0.]
+    z0=np.r_[init.ravel(),M.ns,0.,0.]
     def total(z):
         _,_,_,r,s=M.M.weights(z[:M.j0].reshape(-1,2),True)
         _,rho,ent,_,_=M.scalar(z[M.j0:M.j0+M.n])
@@ -89,7 +102,10 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
                 screening_update=screening_update,response_smear=response_smear,response_history=updates,
                 maximum_compton_remap_rejection=None if photon_scattering is None else photon_scattering.reject,
                 maximum_conversion_remap_rejection=None if conversion is None else conversion.reject,
-                hard_edge_sets=M.M.edge_sets if snapshots else None, snapshots=pictures)
+                hard_edge_sets=M.M.edge_sets if snapshots else None, snapshots=pictures,
+                **(dict(scalar_bins=scalar_bins,aperture_subdivision=aperture_subdivision,witness_mix=witness_mix)
+                   if scalar_bins!=8 or aperture_subdivision!=1 or witness_mix else {}),
+                **(dict(response_radial_order=response_radial_order) if response_radial_order is not None else {}))
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -107,5 +123,9 @@ if __name__=='__main__':
     p.add_argument("--same-soft-strength",type=float,default=0.)
     p.add_argument("--conversion-strength",type=float,default=0.)
     p.add_argument("--snapshots",action="store_true")
+    p.add_argument("--scalar-bins",type=int,default=8)
+    p.add_argument("--aperture-subdivision",type=int,default=1)
+    p.add_argument("--witness-mix",type=float,default=0.)
+    p.add_argument("--response-radial-order",type=int)
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
