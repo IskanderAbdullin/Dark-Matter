@@ -441,6 +441,11 @@ brackets a chosen .95 linear-power target within the near-packed scalar
 family at half abundance. This is a sampled numerical target, not
 an observed suppression limit or a bound on arbitrary spectra.
 
+The [finite-occupation halo core](INDEPENDENT-HALO-BOSE-PRIMORDIAL-CAP-CORE-2026-11-26.md)
+connects a primordial collisionless cap to a conditional rounded
+isothermal Bose critical profile. It does not demonstrate halo formation
+or fit galactic data.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
