@@ -28,6 +28,42 @@ Two quadrature controls and a separate cold-cut root
 bracket document the numerical result.
 
 
+## Independent lepton-only enclosure
+
+The numerical lepton-only fold is checked with independent
+necessary and sufficient fixed comoving cuts. The necessary
+cut discards all motion before the last EOS knot. For a
+sufficient cut extend motion to the earliest birth; bound
+the Hubble denominator below on each early EOS panel by
+using the lower radiation and upper entropy degrees of
+freedom, plus the left endpoint for positive matter and
+vacuum terms. The exact velocity integral with asinh then
+gives an upper on the reference path for every permitted
+birth. Insert those two cuts into the independent
+[kinematic boxes](INDEPENDENT-WARM-LATE-COLD-VISIBLE-RECOIL-ENCLOSURE-2026-11-26.md).
+
+| Maximum path | Lepton-only lower / upper of held count |
+| --- | ---: |
+| .5 Mpc | .000614 / .002595 |
+| 1 Mpc | .17437 / .42100 |
+| 2 Mpc | 1.0579 / 2.2380 |
+
+Both sides bound the **12–50 MeV** vacuum lepton window,
+with no pion component. In particular the lower for 2 Mpc
+alone exceeds the held subset at that path cutoff; this
+does not constrain the far more restrictive .3 Mpc subset,
+explain the held history, or give an abundance or a
+structure bound. The numerical comparison and one-sided
+analytical inequalities use ordinary binary64 and the same
+prescribed radiation background.
+
+~~~sh
+python -W error warm_late_cold_travel_box_lepton_reference.py EOS.dat \
+  results/warm-late-cold-exact-travel-bands-2026-11-26.json
+~~~
+
+[Geodesic and kinematic bounds](results/warm-late-cold-travel-lepton-box-2026-11-26.json).
+
 ## Within-bin KLOE shape check
 
 Holding the KLOE spectrum at the official edge-center

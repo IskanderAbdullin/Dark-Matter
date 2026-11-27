@@ -1,0 +1,81 @@
+{
+  "monotone_EOS_slopes": [
+    3.0,
+    4.0
+  ],
+  "scope": "12\u201350 MeV direct-only lepton and unpolarized vacuum decay. Independent geodesic lower and upper integrals bound the birth cut and kinematic boxes enclose the yield. Not a complete hadronic or perturbation result.",
+  "cases": [
+    {
+      "max_path_Mpc": 0.5,
+      "known_sufficient_q_over_T0": 0.0493683803247774,
+      "known_necessary_q_over_T0": 0.050616636905413966,
+      "numerical_lepton_FD_over_held": 0.0011115766456299882,
+      "controls": [
+        {
+          "time_panels": 48,
+          "Q_base": 36,
+          "R_panels": 42,
+          "angle_panels": 28,
+          "FD_lower_over_held": 0.0003197683137086228,
+          "MB_upper_over_held": 0.004515082381212717
+        },
+        {
+          "time_panels": 128,
+          "Q_base": 64,
+          "R_panels": 76,
+          "angle_panels": 48,
+          "FD_lower_over_held": 0.0006148506988638306,
+          "MB_upper_over_held": 0.0025944560121215886
+        }
+      ]
+    },
+    {
+      "max_path_Mpc": 1.0,
+      "known_sufficient_q_over_T0": 0.10968681819329365,
+      "known_necessary_q_over_T0": 0.11111953713674598,
+      "numerical_lepton_FD_over_held": 0.26591672402989014,
+      "controls": [
+        {
+          "time_panels": 48,
+          "Q_base": 36,
+          "R_panels": 42,
+          "angle_panels": 28,
+          "FD_lower_over_held": 0.11390599799830067,
+          "MB_upper_over_held": 0.6251680299603365
+        },
+        {
+          "time_panels": 128,
+          "Q_base": 64,
+          "R_panels": 76,
+          "angle_panels": 48,
+          "FD_lower_over_held": 0.17437912222712182,
+          "MB_upper_over_held": 0.42099649316710935
+        }
+      ]
+    },
+    {
+      "max_path_Mpc": 2.0,
+      "known_sufficient_q_over_T0": 0.24727054881779933,
+      "known_necessary_q_over_T0": 0.2489711152219348,
+      "numerical_lepton_FD_over_held": 1.5313628394320469,
+      "controls": [
+        {
+          "time_panels": 48,
+          "Q_base": 36,
+          "R_panels": 42,
+          "angle_panels": 28,
+          "FD_lower_over_held": 0.746852183259625,
+          "MB_upper_over_held": 3.106578406505854
+        },
+        {
+          "time_panels": 128,
+          "Q_base": 64,
+          "R_panels": 76,
+          "angle_panels": 48,
+          "FD_lower_over_held": 1.057905140691113,
+          "MB_upper_over_held": 2.237957856772376
+        }
+      ]
+    }
+  ]
+}
