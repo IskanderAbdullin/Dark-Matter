@@ -1,0 +1,76 @@
+{
+  "cases": {
+    "steps": {
+      "default": 0.06694243427293745,
+      "radial2": 0.067000519528293,
+      "change_ppm": 867.6896199910633,
+      "closure": [
+        {
+          "terminal_energy_drift": 2.6645352591003757e-15,
+          "terminal_entropy_closure": -1.6586176876387526e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 1.9984014443252818e-15,
+          "nonelastic_energy_remainder": 6.661338147750939e-16
+        },
+        {
+          "terminal_energy_drift": 4.884981308350689e-15,
+          "terminal_entropy_closure": -1.657542159083647e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": 8.881784197001252e-16
+        }
+      ],
+      "radial4": 0.0669892364912883,
+      "change_2_to_4_ppm": -168.4022315668887,
+      "radial4_closure": {
+        "terminal_energy_drift": 3.552713678800501e-15,
+        "terminal_entropy_closure": -1.6591381046815457e-12,
+        "elastic_energy_budget": 5e-15,
+        "largest_step_energy_defect": 1.9984014443252818e-15,
+        "signed_elastic_energy_defect": 2.4424906541753444e-15,
+        "nonelastic_energy_remainder": 1.1102230246251565e-15
+      }
+    },
+    "cell-conservative": {
+      "default": 0.06528878623152101,
+      "radial2": 0.06543588590771088,
+      "change_ppm": 2253.0618913365606,
+      "closure": [
+        {
+          "terminal_energy_drift": 2.220446049250313e-15,
+          "terminal_entropy_closure": -1.5778984022163378e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.220446049250313e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": -1.7763568394002505e-15
+        },
+        {
+          "terminal_energy_drift": 1.7763568394002505e-15,
+          "terminal_entropy_closure": -1.5719188103946458e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.7763568394002505e-15,
+          "signed_elastic_energy_defect": 8.881784197001252e-16,
+          "nonelastic_energy_remainder": 8.881784197001252e-16
+        }
+      ],
+      "radial4": 0.0654274227400442,
+      "change_2_to_4_ppm": -129.33526534064654,
+      "radial4_closure": {
+        "terminal_energy_drift": 4.440892098500626e-15,
+        "terminal_entropy_closure": -1.5765774102893815e-12,
+        "elastic_energy_budget": 5e-15,
+        "largest_step_energy_defect": 2.220446049250313e-15,
+        "signed_elastic_energy_defect": 1.7763568394002505e-15,
+        "nonelastic_energy_remainder": 2.6645352591003757e-15
+      }
+    }
+  },
+  "contrast_percent": {
+    "default": 2.4702538223724924,
+    "radial2": 2.3352559526369165,
+    "radial4": 2.3314398447386364
+  },
+  "scope": "Finite first-window sensitivity only; both elastic radial orders changed together."
+}
