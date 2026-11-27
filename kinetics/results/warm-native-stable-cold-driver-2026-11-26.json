@@ -1,0 +1,67 @@
+{
+  "scope": "Conditional stable-fermion stress on an identical fixed metric. Unit initial density and zero peculiar velocity for both tracers; no independent physical adiabatic production, native self-gravity, or correction to the full CLASS matter power.",
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "z": 20,
+  "rows": [
+    {
+      "k_per_Mpc": 2.6944,
+      "metric_sha256": "1c62d8c918ac762d67d3b5ba3c36ab7e0a70bf386044c98da74120a530f8e21c",
+      "convergence_difference": 6.216595062069809e-16,
+      "forcing_only_fractional_difference": -1.6814880230910538e-10,
+      "controls": [
+        {
+          "nodes_per_shell": 12,
+          "time_nodes": 6500,
+          "fermion_response_in_initial_amplitude_units": -4025.0588665481573,
+          "cold_limit_same_fixture_and_initial_data": -4025.058867071926,
+          "fermion_initial_derivative_coefficient_for_unit_energy_contrast": -0.33333329663838235,
+          "fractional_difference_from_cold_limit": -1.3012724887283848e-10,
+          "mean_unforced_path_to_equality_Mpc": 0.00021267576874410972,
+          "rms_unforced_path_Mpc": 0.0002368904651873407,
+          "upper_ballistic_monopole_departure_at_fixtures_k_and_equality": 6.789973054261327e-08
+        },
+        {
+          "nodes_per_shell": 24,
+          "time_nodes": 12000,
+          "fermion_response_in_initial_amplitude_units": -4025.0589134941565,
+          "cold_limit_same_fixture_and_initial_data": -4025.0589140179236,
+          "fermion_initial_derivative_coefficient_for_unit_energy_contrast": -0.33333329663838235,
+          "fractional_difference_from_cold_limit": -1.3012662721333228e-10,
+          "mean_unforced_path_to_equality_Mpc": 0.00021267576874410972,
+          "rms_unforced_path_Mpc": 0.00023689046518734073,
+          "upper_ballistic_monopole_departure_at_fixtures_k_and_equality": 6.78997305426133e-08
+        }
+      ]
+    },
+    {
+      "k_per_Mpc": 6.736,
+      "metric_sha256": "ca63579f11f236428adea604d9705f0e64fee4b82ee9a77496c5adc9241f2156",
+      "convergence_difference": 1.8920628651385292e-17,
+      "forcing_only_fractional_difference": -1.2188810452402178e-09,
+      "controls": [
+        {
+          "nodes_per_shell": 12,
+          "time_nodes": 6500,
+          "fermion_response_in_initial_amplitude_units": -4978.243015672146,
+          "cold_limit_same_fixture_and_initial_data": -4978.243020730821,
+          "fermion_initial_derivative_coefficient_for_unit_energy_contrast": -0.3333331039643917,
+          "fractional_difference_from_cold_limit": -1.0161568627012342e-09,
+          "mean_unforced_path_to_equality_Mpc": 0.00021267576874410972,
+          "rms_unforced_path_Mpc": 0.0002368904651873407,
+          "upper_ballistic_monopole_departure_at_fixtures_k_and_equality": 4.2437331589133297e-07
+        },
+        {
+          "nodes_per_shell": 24,
+          "time_nodes": 12000,
+          "fermion_response_in_initial_amplitude_units": -4978.243001884943,
+          "cold_limit_same_fixture_and_initial_data": -4978.243006943618,
+          "fermion_initial_derivative_coefficient_for_unit_energy_contrast": -0.3333331039643917,
+          "fractional_difference_from_cold_limit": -1.0161568816218628e-09,
+          "mean_unforced_path_to_equality_Mpc": 0.00021267576874410972,
+          "rms_unforced_path_Mpc": 0.00023689046518734073,
+          "upper_ballistic_monopole_departure_at_fixtures_k_and_equality": 4.243733158913331e-07
+        }
+      ]
+    }
+  ]
+}

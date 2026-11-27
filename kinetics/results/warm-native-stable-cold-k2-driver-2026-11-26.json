@@ -1,0 +1,37 @@
+{
+  "scope": "Conditional stable-fermion stress on an identical fixed metric. Unit initial density and zero peculiar velocity for both tracers; no independent physical adiabatic production, native self-gravity, or correction to the full CLASS matter power.",
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "z": 20,
+  "rows": [
+    {
+      "k_per_Mpc": 1.3472,
+      "metric_sha256": "b172cfe4ed654e3a065f3740dfa6649676f4befc3641bdc4b79c0ddf7acaf3e6",
+      "convergence_difference": 4.1794348561717954e-16,
+      "forcing_only_fractional_difference": -3.725377885959335e-11,
+      "controls": [
+        {
+          "nodes_per_shell": 12,
+          "time_nodes": 6500,
+          "fermion_response_in_initial_amplitude_units": -3317.9044289773124,
+          "cold_limit_same_fixture_and_initial_data": -3317.9044290641264,
+          "fermion_initial_derivative_coefficient_for_unit_energy_contrast": -0.3333333241613415,
+          "fractional_difference_from_cold_limit": -2.6165544624541943e-11,
+          "mean_unforced_path_to_equality_Mpc": 0.00021267576874410972,
+          "rms_unforced_path_Mpc": 0.0002368904651873407,
+          "upper_ballistic_monopole_departure_at_fixtures_k_and_equality": 1.6974932635653317e-08
+        },
+        {
+          "nodes_per_shell": 24,
+          "time_nodes": 12000,
+          "fermion_response_in_initial_amplitude_units": -3317.904465810976,
+          "cold_limit_same_fixture_and_initial_data": -3317.9044658977928,
+          "fermion_initial_derivative_coefficient_for_unit_energy_contrast": -0.3333333241613415,
+          "fractional_difference_from_cold_limit": -2.616596256802756e-11,
+          "mean_unforced_path_to_equality_Mpc": 0.00021267576874410972,
+          "rms_unforced_path_Mpc": 0.00023689046518734073,
+          "upper_ballistic_monopole_departure_at_fixtures_k_and_equality": 1.6974932635653324e-08
+        }
+      ]
+    }
+  ]
+}

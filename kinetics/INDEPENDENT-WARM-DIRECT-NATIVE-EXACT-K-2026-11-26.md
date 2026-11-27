@@ -100,3 +100,6 @@ and [earliest threshold tables](results/warm-direct-vacuum-native-start-early-ra
 
 [Moment-matched native templates](INDEPENDENT-WARM-DIRECT-NATIVE-MOMENT-MATCH-2026-11-26.md)
 separately test how much matching early and late energy moments removes spectral sensitivity.
+
+[Stable-fermion CDM proxy](INDEPENDENT-WARM-NATIVE-STABLE-CDM-PROXY-2026-11-26.md)
+independently checks the represented phase in the same reference.
