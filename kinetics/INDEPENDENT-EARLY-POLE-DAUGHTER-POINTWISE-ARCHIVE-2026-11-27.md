@@ -58,3 +58,26 @@ Use `--quadrature-order` with 12, 24 and 48 and save each
 output, then pass the default receipt and those three outputs to
 `early_pole_daughter_archive_pointwise_quadrature_compare.py`.
 The unchanged default output was reproduced byte-for-byte.
+
+## Independent support and integral check
+
+The second route treats each dressed shell energy as affine in the
+corresponding square-root bare energy. It intersects the parent
+and daughter energy supports, independently brackets both
+angular boundary roots in parent momentum, and uses adaptive
+one-dimensional quadrature rather than packet Gauss weights.
+It also splits at any native daughter archive edges inside an
+allowed interval. The 129- and 257-point boundary scans locate
+the same 14, 33, 59, and 133 aperture packets as the original
+four fixtures. At 257 points the largest absolute discrepancy
+is 4.44e-13 in the total direct shift and 3.70e-13 along an
+individual mode. Differences from doubling the independent
+scan are below 1.58e-13 per mode.
+
+Run `early_pole_daughter_archive_independent_aperture.py` on the
+four fixtures with `--root-scan 129` and `--root-scan 257`, then
+pass the original packet and the two adaptive outputs to
+`early_pole_daughter_archive_independent_aperture_compare.py`.
+The agreement is a numerical cross-check under the same frozen
+dressed energy approximation; it is not a rigorous bounds proof
+or a calculation of a plasma dispersion relation.
