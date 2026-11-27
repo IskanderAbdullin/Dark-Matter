@@ -33,7 +33,7 @@ def fixture(M,m,ms):
     return max(errors)
 
 
-def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
+def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False,fermi_shape=None):
     if not 0. <= lower < fraction or lower <= 1. <= fraction:
         raise ValueError("Use a separate invariant interval on one side of the real pole.")
     M,m=.05,.003
@@ -41,6 +41,10 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
     E0=np.hypot(ms,q)
     pe=np.asarray(a['endpoint_fermion_momentum_edges'])
     ferm=np.asarray(a['endpoint_fermion_occupations'])
+    if fermi_shape is not None and (probe_x is None or q<=0.):
+        raise ValueError("A reconstructed daughter profile requires positive q and a fixed invariant slice.")
+    def daughter(p):
+        return occup(p,pe,ferm) if fermi_shape is None else fermi_shape(p)
     qs=np.asarray(a['scalar_momentum_edges'])
     be=np.maximum(0.,np.asarray(a['endpoint_scalar_occupations']))
     ftag=float(occup(np.array(q),qs,be)) if q else float(be[0])
@@ -103,7 +107,7 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
         else:
             if fixed_s is None and not floor<S(E,0.)<cap:continue
             ml,mh=-1.,1.
-        fa=occup(np.array(p),pe,ferm)
+        fa=daughter(np.array(p))
         if fixed_s is not None:
             angles,angle_weights=([mu],[M*M/(4*p*q)]) if q else ([0.],[1.])
         else:
@@ -179,7 +183,7 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
             benergy=ET-ms-K
             qb=np.sqrt(np.maximum(0.,(benergy-m)*(benergy+m)))
             qs1=np.sqrt(K*(K+2*ms))
-            fb=occup(qb,pe,ferm)
+            fb=daughter(qb)
             b=occup(qs1,qs,be)
             em=fb*(1-fa)*b*(1+1/ftag)
             loss=fa*(1-fb)*(1+b)
@@ -206,7 +210,9 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
     fac=H*(16*np.pi*KAPPA*M)**2
     pn=np.asarray(a['endpoint_parent_momentum_edges'])
     pf=np.asarray(a['endpoint_parent_occupations'])
-    if q:
+    if fermi_shape is not None:
+        direct=None
+    elif q:
         e,v,_=mode(M,ms,m,q,pn,pf,pf,pe,ferm,0.)
         direct=G*KAPPA*M*((M+m)**2-ms**2)/(e*q)*(v[0]-v[1]+v[2]/ftag)
     else:
@@ -224,7 +230,7 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
                        term_gross_densities_per_reference_H=(fac*terms[:,:,:2]).tolist())
         return dict(q=q,x=probe_x,order=order,**extra,net_density_per_reference_H=(fac*F[:,2]).tolist(),
                     gross_density_per_reference_H=(fac*F[:,:2]).tolist(),
-                    direct_per_reference_H=float(direct),thermal_defect=max_thermal)
+                    direct_per_reference_H=None if direct is None else float(direct),thermal_defect=max_thermal)
     return dict(q=q,order=order,pole_guard=fraction,tagged_bose_occupation=ftag,
                 **(dict(lower_invariant_fraction=lower) if lower else {}),
                 cold_and_exterior_columns_emission_loss_net_vacuum_without_y4=F.tolist(),

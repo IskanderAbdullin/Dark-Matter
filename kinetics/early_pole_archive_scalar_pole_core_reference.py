@@ -43,6 +43,24 @@ def fixture():
         for n in (48,96):
             np.testing.assert_allclose(residual(a,r,n,function(0),function),want,rtol=3e-9)
 
+    # A sampled archive step can induce a change in slope when an angular
+    # endpoint crosses that step. Keep a hinge separate from the smooth test.
+    radius = .002
+    for frac in (.4,.01,1e-4):
+        edge = frac*radius
+        def hinge(x):
+            return np.array([max(0.,x-edge),0.,0.])
+        for r in (0.,.0001,.1):
+            width = radius*r
+            if width:
+                exact = .5*np.log((radius**2+width**2)/(edge**2+width**2))
+                exact -= edge/width*(np.arctan(radius/width)-np.arctan(edge/width))
+            else:
+                exact = np.log(radius/edge)+edge/radius-1
+            extra = [edge*k for k in (1,4,16,64,256,1024,4096)]
+            value = residual(radius,r,20,hinge(0),hinge,extra)[0]
+            np.testing.assert_allclose(value,exact,rtol=3e-12)
+
 
 def energy_integral(volume):
     p = np.cbrt(volume)
