@@ -1,0 +1,191 @@
+{
+  "angular_kernel_checks": [
+    {
+      "m": 0.003,
+      "p": 0.25,
+      "k": 7.9,
+      "absolute_error": 0.0
+    },
+    {
+      "m": 0.003,
+      "p": 0.6,
+      "k": 0.7,
+      "absolute_error": 1.7804189523299623e-65
+    },
+    {
+      "m": 0.003,
+      "p": 0.25,
+      "k": 0.250002,
+      "absolute_error": 9.174305258599419e-57
+    },
+    {
+      "m": 0.003,
+      "p": 1.0,
+      "k": 1.00000001,
+      "absolute_error": 1.302070293167965e-51
+    },
+    {
+      "m": 0.05,
+      "p": 0.25,
+      "k": 7.9,
+      "absolute_error": 0.0
+    },
+    {
+      "m": 0.05,
+      "p": 0.6,
+      "k": 0.7,
+      "absolute_error": 5.934729841099874e-66
+    },
+    {
+      "m": 0.05,
+      "p": 0.25,
+      "k": 0.250002,
+      "absolute_error": 4.779629609468322e-58
+    },
+    {
+      "m": 0.05,
+      "p": 1.0,
+      "k": 1.00000001,
+      "absolute_error": 5.0006793719190466e-51
+    },
+    {
+      "m": 0.5,
+      "p": 0.25,
+      "k": 7.9,
+      "absolute_error": 0.0
+    },
+    {
+      "m": 0.5,
+      "p": 0.6,
+      "k": 0.7,
+      "absolute_error": 3.7982270983039195e-65
+    },
+    {
+      "m": 0.5,
+      "p": 0.25,
+      "k": 0.250002,
+      "absolute_error": 1.479084171961919e-55
+    },
+    {
+      "m": 0.5,
+      "p": 1.0,
+      "k": 1.00000001,
+      "absolute_error": 2.9636028074910866e-51
+    }
+  ],
+  "scope": "Isotropic charge-even hard shapes; reciprocal on-shell exchange candidate, not dynamic screening or collision matching.",
+  "cases": [
+    {
+      "masses": [
+        0.0,
+        0.05,
+        0.003
+      ],
+      "continuous_log_reference": -3.501910325220511e-11,
+      "rows": [
+        {
+          "shells": 8,
+          "interaction_energy": 1.197252359688964e-07,
+          "log_interaction_energy": -2.783766859957127e-11,
+          "relative_log_error": 0.20507191748782527,
+          "fixed_comoving_trace": -3.5160700366068027e-10,
+          "fixed_comoving_log_trace": -5.5440998605862655e-11,
+          "energy_derivative_abs_error": 1.1203334216418207e-20,
+          "midpoint_identity_abs_error": 2.4346898107761967e-23,
+          "max_relative_fermion_shift": 0.0007589492467114402
+        },
+        {
+          "shells": 16,
+          "interaction_energy": 1.3114973863893e-07,
+          "log_interaction_energy": -3.278998416843848e-11,
+          "relative_log_error": 0.06365437366321669,
+          "fixed_comoving_trace": -4.306064790368991e-10,
+          "fixed_comoving_log_trace": -6.525060144738469e-11,
+          "energy_derivative_abs_error": 1.832701365172488e-20,
+          "midpoint_identity_abs_error": 1.5483383194443514e-23,
+          "max_relative_fermion_shift": 0.001054632653238944
+        },
+        {
+          "shells": 32,
+          "interaction_energy": 1.3488860294386692e-07,
+          "log_interaction_energy": -3.441536248517752e-11,
+          "relative_log_error": 0.017240326306458775,
+          "fixed_comoving_trace": -4.5926111911360013e-10,
+          "fixed_comoving_log_trace": -6.84634151723976e-11,
+          "energy_derivative_abs_error": 6.4735154738399946e-21,
+          "midpoint_identity_abs_error": 1.2679127826789377e-23,
+          "max_relative_fermion_shift": 0.0012357296239591674,
+          "scaled_matrix_quadrature_defect": 2.902326751560418e-11,
+          "trace_finite_difference_abs_error": 1.1678515667322383e-17
+        },
+        {
+          "shells": 64,
+          "interaction_energy": 1.359335291514564e-07,
+          "log_interaction_energy": -3.486459978516052e-11,
+          "relative_log_error": 0.004411976684036478,
+          "fixed_comoving_trace": -4.676801149006737e-10,
+          "fixed_comoving_log_trace": -6.93504665409882e-11,
+          "energy_derivative_abs_error": 2.7514095125045083e-21,
+          "midpoint_identity_abs_error": 3.250965210175449e-24,
+          "max_relative_fermion_shift": 0.0013098366719329088
+        }
+      ]
+    },
+    {
+      "masses": [
+        0.0,
+        0.5,
+        0.25
+      ],
+      "continuous_log_reference": -2.580009772427227e-09,
+      "rows": [
+        {
+          "shells": 8,
+          "interaction_energy": 1.073884284007655e-07,
+          "log_interaction_energy": -2.1547422316314274e-09,
+          "relative_log_error": 0.16483175580986875,
+          "fixed_comoving_trace": -1.886530868076322e-08,
+          "fixed_comoving_log_trace": -3.473870608998322e-09,
+          "energy_derivative_abs_error": 1.4756902127946014e-20,
+          "midpoint_identity_abs_error": 5.736949912452737e-24,
+          "max_relative_fermion_shift": 0.06468767434786164
+        },
+        {
+          "shells": 16,
+          "interaction_energy": 1.1644792177204e-07,
+          "log_interaction_energy": -2.452315214358849e-09,
+          "relative_log_error": 0.04949382728432283,
+          "fixed_comoving_trace": -2.1870720041710593e-08,
+          "fixed_comoving_log_trace": -3.8546298137130605e-09,
+          "energy_derivative_abs_error": 1.4350756447182477e-20,
+          "midpoint_identity_abs_error": 5.022052605705247e-24,
+          "max_relative_fermion_shift": 0.08438539333227522
+        },
+        {
+          "shells": 32,
+          "interaction_energy": 1.193757609187794e-07,
+          "log_interaction_energy": -2.5458573843078636e-09,
+          "relative_log_error": 0.01323730959640268,
+          "fixed_comoving_trace": -2.2854290790666098e-08,
+          "fixed_comoving_log_trace": -3.9721744450301e-09,
+          "energy_derivative_abs_error": 2.4608623223452573e-21,
+          "midpoint_identity_abs_error": 6.452655012767173e-24,
+          "max_relative_fermion_shift": 0.09410387225931895,
+          "scaled_matrix_quadrature_defect": 2.9021883779313905e-11,
+          "trace_finite_difference_abs_error": 9.074412525573334e-17
+        },
+        {
+          "shells": 64,
+          "interaction_energy": 1.201900755276953e-07,
+          "log_interaction_energy": -2.571298709955385e-09,
+          "relative_log_error": 0.0033763680141595254,
+          "fixed_comoving_trace": -2.31283611689032e-08,
+          "fixed_comoving_log_trace": -4.003772625566721e-09,
+          "energy_derivative_abs_error": 5.9453606527248864e-21,
+          "midpoint_identity_abs_error": 1.228048170150137e-23,
+          "max_relative_fermion_shift": 0.09686847870223252
+        }
+      ]
+    }
+  ]
+}
