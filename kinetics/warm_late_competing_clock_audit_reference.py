@@ -11,7 +11,7 @@ from warm_light_occupation_stage_audit_reference import digest, read
 from warm_prompt_reentry_shape_audit_reference import get_mom
 
 
-def audit(raw, D):
+def audit(raw, D, max_relative_delta=2e-7):
     a=read(raw)
     A=a["snapshot"]
     assert a["hash"]==digest(A)
@@ -38,7 +38,7 @@ def audit(raw, D):
                          exact_local_step_residuals=[r["solver"]["residual"] for r in (c,m,f)]))
     values=np.array(values)
     delta=values[1]/values[0]-1.
-    assert np.max(abs(delta))<2e-7
+    assert 0.<max_relative_delta and np.max(abs(delta))<max_relative_delta
     return dict(initial_W_over_rho=initial,rows=rows,coupled_relative_delta_coarse_and_fine=delta.tolist())
 
 
@@ -46,5 +46,6 @@ if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("raw",type=Path)
     p.add_argument("tapes",type=Path)
+    p.add_argument("--max-relative-delta",type=float,default=2e-7)
     a=p.parse_args()
-    print(json.dumps(audit(a.raw,a.tapes),indent=2,allow_nan=False))
+    print(json.dumps(audit(a.raw,a.tapes,a.max_relative_delta),indent=2,allow_nan=False))

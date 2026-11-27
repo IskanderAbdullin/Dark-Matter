@@ -1,0 +1,202 @@
+{
+  "frozen": [
+    {
+      "time": 0.0,
+      "input_sha256": "8f70642b7c355a553edd0f32ce5efd01f6fd222b7086539aa45fc3208f580a57",
+      "prompt": -9.489154902678282e-07,
+      "elastic_gross_and_signed": [
+        [
+          1.7580471700795327e-17,
+          2.2661828876542697e-14,
+          -2.26442484048419e-14
+        ],
+        [
+          2.4719762935488417e-17,
+          2.661869820615633e-14,
+          -2.659397844322088e-14
+        ]
+      ],
+      "pair_gross_signed_and_outgoing": [
+        [
+          1.2428886564148128e-16,
+          2.1012512972732286e-13,
+          -2.1000084086168136e-13,
+          1.5810949001757706e-28
+        ],
+        [
+          1.2376187357043176e-16,
+          1.9423072743765897e-13,
+          -1.9410696556408854e-13,
+          2.4141547632498695e-28
+        ]
+      ],
+      "largest_sampled_gross_sum_relative_to_prompt": 2.496458736227332e-07
+    },
+    {
+      "time": 1e-08,
+      "input_sha256": "934969b73a5ef1a6d5031d06b660342993e3a2bd4ab9e3d75213683712dfdcac",
+      "prompt": -6.95853769237634e-07,
+      "elastic_gross_and_signed": [
+        [
+          1.4143996163024506e-17,
+          1.5942986717151765e-14,
+          -1.5928842720988734e-14
+        ],
+        [
+          2.0583644851040677e-17,
+          1.8761835131196156e-14,
+          -1.8741251486345123e-14
+        ]
+      ],
+      "pair_gross_signed_and_outgoing": [
+        [
+          1.1527043945383242e-16,
+          2.0650301596585988e-13,
+          -2.0638774552640631e-13,
+          1.7139415723205474e-28
+        ],
+        [
+          1.1476193345778974e-16,
+          1.9081114022917588e-13,
+          -1.9069637829571812e-13,
+          2.5185583276341004e-28
+        ]
+      ],
+      "largest_sampled_gross_sum_relative_to_prompt": 3.2391964396241787e-07
+    },
+    {
+      "time": 1e-07,
+      "input_sha256": "f4d13b780378f8adde153dde9caab415ede71df990502df72f6e047322569956",
+      "prompt": -1.427960948420029e-07,
+      "elastic_gross_and_signed": [
+        [
+          5.607676903328673e-18,
+          1.5087650498256426e-15,
+          -1.503157372922315e-15
+        ],
+        [
+          9.98656117690327e-18,
+          1.8732101602925356e-15,
+          -1.863223599115632e-15
+        ]
+      ],
+      "pair_gross_signed_and_outgoing": [
+        [
+          8.565720653946798e-17,
+          1.7890583123651574e-13,
+          -1.7882017402997626e-13,
+          1.6351387321039218e-28
+        ],
+        [
+          8.522768746582591e-17,
+          1.651688926499343e-13,
+          -1.650836649624685e-13,
+          2.228009771235207e-28
+        ]
+      ],
+      "largest_sampled_gross_sum_relative_to_prompt": 1.266664087450388e-06
+    },
+    {
+      "time": 1e-06,
+      "input_sha256": "e53b6f1bcca06e3764fbd647b69853b88c88b390c452fd40ca58521f0eba4d50",
+      "prompt": -2.884150421925976e-08,
+      "elastic_gross_and_signed": [
+        [
+          1.4995867264373039e-18,
+          1.2089238017628087e-16,
+          -1.1939279344984365e-16
+        ],
+        [
+          2.7805006065464344e-18,
+          1.7245929926793136e-16,
+          -1.6967879866138516e-16
+        ]
+      ],
+      "pair_gross_signed_and_outgoing": [
+        [
+          2.4423904401125188e-17,
+          4.993653168729928e-14,
+          -4.991210778289815e-14,
+          1.5261675265841986e-29
+        ],
+        [
+          2.4299289457423864e-17,
+          4.6088321535977584e-14,
+          -4.606402224652018e-14,
+          1.9109040994489584e-29
+        ]
+      ],
+      "largest_sampled_gross_sum_relative_to_prompt": 1.738334970687658e-06
+    }
+  ],
+  "relative_log_expansion": 9e-07,
+  "exact_start_W_over_initial_rho": 6.621907064428999e-14,
+  "direct_first_redshift_W_over_initial_rho": 6.621869473080613e-14,
+  "first_reconstruction_relative_error": 1.9984014443252818e-15,
+  "exact_free_endpoint_W_over_initial_rho": 6.621831881841117e-14,
+  "matched_endpoints": [
+    {
+      "W_over_initial_rho": 2.6912173483654896e-14,
+      "signed_change_per_delta_log_a_over_initial_rho": -4.367433017848344e-08,
+      "relative_difference_to_expanding_prompt": 0.0,
+      "mode": "prompt",
+      "solver": {
+        "entropy_gain_relative": 1.2420695583159613e-09,
+        "maximum_exponent_departure_from_eq": 77.03916091410372,
+        "newton_iterations": 5,
+        "residual": 1.2633877618965643e-12,
+        "structurally_inactive_cells": 10,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "state_hash": "a1fc11834164681321eb056b0416cb9cca45ad3014411e7e88c77594809f2ade",
+      "pair_count_increment_over_start": [
+        0.0,
+        0.0
+      ],
+      "relative_total_count_residual": 9.103828801926284e-15,
+      "relative_energy_residual": 8.659739592076221e-15
+    },
+    {
+      "W_over_initial_rho": 2.6912105767450228e-14,
+      "signed_change_per_delta_log_a_over_initial_rho": -4.367440541871085e-08,
+      "relative_difference_to_expanding_prompt": -2.5161923361549654e-06,
+      "mode": "prompt-pair",
+      "solver": {
+        "entropy_gain_relative": 1.2429786089285244e-09,
+        "maximum_exponent_departure_from_eq": 77.03915123498058,
+        "newton_iterations": 5,
+        "residual": 1.2041239131627053e-12,
+        "structurally_inactive_cells": 10,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "state_hash": "0b660a1e70fb1536333d15ee9e4aeb73621f521f559bc06cd3e7b21a50022740",
+      "pair_count_increment_over_start": [
+        5.038239873669082e-07,
+        -3.084318885468336e-07
+      ],
+      "relative_total_count_residual": 1.84297022087776e-14,
+      "relative_energy_residual": 1.7985612998927536e-14
+    },
+    {
+      "W_over_initial_rho": 2.6912103871217778e-14,
+      "signed_change_per_delta_log_a_over_initial_rho": -4.367440752563579e-08,
+      "relative_difference_to_expanding_prompt": -2.5866523624129556e-06,
+      "mode": "all",
+      "solver": {
+        "entropy_gain_relative": 1.5324819191420147e-09,
+        "maximum_exponent_departure_from_eq": 77.03915116409999,
+        "newton_iterations": 5,
+        "residual": 1.1350842914840325e-12,
+        "structurally_inactive_cells": 0,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "state_hash": "fd7c7733986c014736e0d0cf6e704c514259377bb5c05c95284996ef29cd5cd0",
+      "pair_count_increment_over_start": [
+        5.038240743332785e-07,
+        -3.0843194178606496e-07
+      ],
+      "relative_total_count_residual": 1.887379141862766e-14,
+      "relative_energy_residual": 1.84297022087776e-14
+    }
+  ]
+}
