@@ -4,9 +4,9 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 
 | Question | Evidence available | What is still missing |
 | --- | --- | --- |
-| Does the massive-shell projection conserve the represented moments? | Independent number, energy, stress, positivity and restart tests. | No complete production validation. |
-| Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | Stable Ωh²≈.120; shifted first-order scalar rest count ≈3.05×10⁻¹⁰ or 2.75×10⁻⁹. | Only these sources and rates; stronger stimulation or other channels are open. |
-| Is the scalar contrast robust to integrating the hierarchy? | Native fluid/no-closure controls and an independent fixed-metric fold trace the discrepancy to grouping. | No global hierarchy convergence or coupled matter transfer from the independent fixed-metric run. |
+| Does the massive-shell projection conserve the represented moments? | Independent number, energy, stress, positivity and restart tests. | Production not validated. |
+| Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | Stable Ωh²≈.120; shifted first-order scalar rest count ≈3.05×10⁻¹⁰ or 2.75×10⁻⁹. | Stimulation or other sources remain open. |
+| Is the scalar contrast robust to integrating the hierarchy? | Native fluid/no-closure controls and an independent fixed-metric fold trace the discrepancy to grouping. | No coupled transfer convergence from the fixed metric. |
 | Can the *warm 50 MeV* reference be treated as numerically converged? | Matched q16/q32 reach 10.442 MeV; time and higher moments need separate audits. | Not a late relic; earlier exterior shapes are unresolved. |
 | Can purely ballistic forward depletion rescue the initial warm excess? | A loss-only bound gives a stable proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
 | How sensitive are the hard thermal folds to the perturbative range? | Born/NLO, measured-window subtraction, and a toy pole test. | Thermal QCD and missing spectral domains are open. |
@@ -291,7 +291,8 @@ separates photon heating from creation. A [direct visible upper](INDEPENDENT-WAR
 tests late injection. An [off-pole bound](INDEPENDENT-WARM-LATE-COLD-VISIBLE-OFFPOLE-2026-11-26.md)
 tightens 25 MeV. A [full recoil enclosure](INDEPENDENT-WARM-LATE-COLD-VISIBLE-RECOIL-ENCLOSURE-2026-11-26.md)
 bounds the 50 MeV lepton source. A [KLOE recoil fold](INDEPENDENT-WARM-LATE-COLD-VISIBLE-KLOE-RECOIL-2026-11-26.md)
-adds a measured pion window. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+adds a pion window. [Dispersive cold recoil bounds](INDEPENDENT-WARM-LATE-COLD-PION-DISPERSIVE-RECOIL-2026-11-26.md)
+cover the separate low gaps and give high-band sensitivity. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)

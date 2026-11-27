@@ -1,0 +1,26 @@
+{
+  "scope": "Conditional high-band vacuum pion form-factor cap. KLOE fixed bins are a separate chosen spectrum, not a continuous confidence upper. No full thermal hadronic bound.",
+  "high_s_min_GeV2": 0.95,
+  "lepton_box_upper": 0.24497366366471338,
+  "KLOE_fixed_bin_plus_two_marginal_choice": 0.12380965510742313,
+  "uncovered_low_independent_conditional_upper": 0.008873196868695686,
+  "alternative_joint_overlap_low_upper": 0.0011452992618322035,
+  "rows": [
+    {
+      "s_panels": 40,
+      "T_panels": 32,
+      "held_fraction_upper_per_unit_R": 0.0019575865293588787,
+      "tail_s_above_16_held_fraction_upper": 8.602463926131308e-17,
+      "finite_part_yield_upper": 8.183145896316936e-12
+    },
+    {
+      "s_panels": 100,
+      "T_panels": 72,
+      "held_fraction_upper_per_unit_R": 0.0007486117864259963,
+      "tail_s_above_16_held_fraction_upper": 4.0983565722278094e-17,
+      "finite_part_yield_upper": 3.1293633135249545e-12
+    }
+  ],
+  "example_total_with_uniform_high_R_1": 0.3784051274272582,
+  "uniform_high_R_cap_sufficient_for_conditional_total_below_held": 831.3300640514151
+}
