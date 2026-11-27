@@ -36,6 +36,7 @@ def upper_lower(m,obj,physical_measure,scale,sample,relax=0.):
             lam=lp.eqlin.marginals[1:]*scale[1]/scale[0]
             constant=float(lam@m)
         limits=[]
+        variation_penalties=[]
         for order in (32,64):
             w,AA,k,_=sample(order)
             t=s*k-np.einsum('i,iab->ab',lam,AA)
@@ -46,9 +47,16 @@ def upper_lower(m,obj,physical_measure,scale,sample,relax=0.):
             lower=np.maximum(k0[:-1]+np.sum(w*np.minimum(t,0.),axis=1),
                              k0[1:]-np.sum(w*np.maximum(t,0.),axis=1))
             limits.append(s*float(constant+min(lower)))
+            # Compare any occupation f to a decreasing future supremum or
+            # a decreasing past infimum: their one-sided distance is no
+            # greater than the upward variation of f on the cell.
+            variation_penalties.append(float(min(np.sum(w*np.maximum(t,0.)),
+                                                  np.sum(w*np.maximum(-t,0.)))))
         vals.append(dict(finite_lp_objective=float(s*lp.fun*scale[1]),
                          numerical_continuous_bound=limits[-1],
                          dual_order_32_to_64_delta=abs(limits[-1]-limits[0]),
+                         upward_variation_penalty_for_influence=variation_penalties[-1],
+                         variation_penalty_order_delta=abs(variation_penalties[-1]-variation_penalties[0]),
                          finite_normalized_moment_residual=float(max(abs(eq@lp.x-target)))))
     return vals
 
@@ -94,7 +102,12 @@ def run(archive,sub,gauge):
                          native_relaxed_min=rob[0],native_relaxed_max=rob[1]))
     lower=fsum(v['native_flat_influence']-v['local_cutoff_max']['numerical_continuous_bound'] for v in data)
     upper=fsum(v['native_flat_influence']-v['local_cutoff_min']['numerical_continuous_bound'] for v in data)
-    return dict(scope='Monotone nonincreasing within each fixed daughter cell; jumps between cells permitted; frozen packet geometry.',
+    penalty=max(v[j]['upward_variation_penalty_for_influence'] for v in data for j in ('native_relaxed_max','local_cutoff_min'))
+    robust=fsum(v['native_relaxed_max']['numerical_continuous_bound']-v['local_cutoff_min']['numerical_continuous_bound'] for v in data)
+    return dict(numerical_lower_total_upward_variation_for_nonnegative_pair=(-robust/penalty if robust<0.<penalty else None),
+                largest_cell_influence_penalty=penalty,
+                monotone_upper_endpoint_for_variation_check=robust,
+                scope='Monotone nonincreasing within each fixed daughter cell; jumps between cells permitted; frozen packet geometry.',
                 hard_depth=depth,cold_modes=len(n),subdivision=sub,fixed_gauge_moment=gauge,
                 independent_fitted_pair=fsum(v['native_flat_influence']-v['local_monotone_fitted_influence'] for v in data),
                 numerical_outer_paired_interval=[lower,upper],native_normalized_moment_relaxation=1e-6,
