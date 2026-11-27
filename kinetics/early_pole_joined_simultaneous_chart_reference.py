@@ -50,22 +50,31 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         y0=np.asarray(ss['hard_moments'])
         expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
+    local_archive_meta=None
     if local_from_paired_archive:
-        if projection!='steps' or depth!=1 or any((prepared_input is not None,
+        if projection!='steps' or depth not in (1,4) or any((prepared_input is not None,
                 retune_local_daughter, compensation_only, number_only_local_retune, retune_donor_support is not None)):
-            raise ValueError('Exact local archive swap requires original native hard supports.')
+            raise ValueError('Exact local archive swap requires validated native hard supports.')
         counterpart=branches['cell-conservative']
+        if counterpart.get('aperture_subdivision',1)!=depth:
+            raise ValueError('Different native and continuous archive depth.')
         other=counterpart['snapshots'][0]
         np.testing.assert_array_equal(n0,other['cold_bins'])
         for e,f in zip(M.edge_sets,counterpart['hard_edge_sets'],strict=True):
             np.testing.assert_array_equal(e,f)
         ed=np.asarray(M.edge_sets[2])
-        loc=np.flatnonzero((ed[:-1]>=1.4138888888888888-2e-14)&(ed[1:]<=1.4666666666666666+2e-14))
-        if len(loc)!=2:
-            raise ValueError('Expected the two original local daughter cells.')
+        lo,hi=1.4138888888888888,1.4666666666666666
+        loc=np.flatnonzero((ed[:-1]>=lo-2e-14)&(ed[1:]<=hi+2e-14))
+        if len(loc)!=2*depth or np.any(np.diff(loc)!=1):
+            raise ValueError('Expected nested cells over the original local physical support.')
+        np.testing.assert_allclose([ed[loc[0]],ed[loc[-1]+1]],[lo,hi],rtol=0.,atol=2e-14)
         y0=y0.copy()
         ix=M.r[2].start+loc
         y0[ix]=np.asarray(other['hard_moments'])[ix]
+        if depth!=1:
+            local_archive_meta=dict(indices=ix.tolist(),
+                momentum_interval=[float(ed[loc[0]]),float(ed[loc[-1]+1])],
+                initialized_cold_rate=float(Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2].sum()))
         swap='local-daughter'
     retune_check=None
     if retune_local_daughter or compensation_only or number_only_local_retune or retune_donor_support is not None:
@@ -193,6 +202,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 **(dict(elastic_channels=False) if without_elastic else {}),
                 **(dict(selected_elastic_channel=elastic_channel) if elastic_channel!='both' else {}),
                 **(dict(aperture_subdivision=depth) if depth!=1 else {}),
+                **(dict(local_archive_support=local_archive_meta) if local_archive_meta is not None else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
