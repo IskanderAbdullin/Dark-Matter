@@ -18,7 +18,7 @@ def initial(bundle):
     a,b=(z[k] for k in ('steps','cell-conservative'))
     n=np.asarray(a['snapshots'][0]['cold_bins'])
     dep=a.get('aperture_subdivision',1)
-    if dep!=b.get('aperture_subdivision',1) or dep not in (1,4):
+    if dep!=b.get('aperture_subdivision',1) or dep not in (1,2,4,8,16):
         raise ValueError('Use matched validated grids.')
     np.testing.assert_array_equal(n,b['snapshots'][0]['cold_bins'])
     c=Cold(a['grid'],1,0,len(n),True,exposure=a['duration'],
