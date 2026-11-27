@@ -1,0 +1,98 @@
+{
+  "scope": "Ideal one-species Bose equilibrium, including limiting excited state at mu=m, fixed comoving total scalar count at requested final rest abundance, no effective mass shift. A hypothetical condensate treated as zero momentum only for geometric counts; neither dynamics nor free-streaming from a physical freeze.",
+  "target_Y": 0.002528462375339247,
+  "anchors": [
+    {
+      "m_over_T": 0.0,
+      "scale_q_over_Tgamma0": 0.32957046552487557,
+      "rms_q_over_Tgamma0": 1.0603534278351656,
+      "mean_q_over_Tgamma0": 0.8902285017747038,
+      "cold_frac_point1": 0.017284517486786364,
+      "cold_frac_point01": 0.00018954849740508868
+    },
+    {
+      "m_over_T": 0.0031707357954801375,
+      "scale_q_over_Tgamma0": 0.3290931342849531,
+      "rms_q_over_Tgamma0": 1.0582673675955074,
+      "mean_q_over_Tgamma0": 0.888203598083954,
+      "cold_frac_point1": 0.01766688398856352,
+      "cold_frac_point01": 0.00023636431767921963
+    },
+    {
+      "m_over_T": 0.1,
+      "scale_q_over_Tgamma0": 0.314723417759157,
+      "rms_q_over_Tgamma0": 0.995009098447305,
+      "mean_q_over_Tgamma0": 0.8263021235820758,
+      "cold_frac_point1": 0.032186391140551766,
+      "cold_frac_point01": 0.002319056966741974
+    },
+    {
+      "m_over_T": 1.0,
+      "scale_q_over_Tgamma0": 0.22702144400434052,
+      "rms_q_over_Tgamma0": 0.6648077313315576,
+      "mean_q_over_Tgamma0": 0.5245877884791452,
+      "cold_frac_point1": 0.11973975572985678,
+      "cold_frac_point01": 0.011977436213674723
+    },
+    {
+      "m_over_T": 3.0,
+      "scale_q_over_Tgamma0": 0.15506476337108444,
+      "rms_q_over_Tgamma0": 0.49205697605193977,
+      "mean_q_over_Tgamma0": 0.38790707913601796,
+      "cold_frac_point1": 0.1663578035846744,
+      "cold_frac_point01": 0.016762707485945202
+    },
+    {
+      "m_over_T": 10.0,
+      "scale_q_over_Tgamma0": 0.09109103309140733,
+      "rms_q_over_Tgamma0": 0.4074150720778459,
+      "mean_q_over_Tgamma0": 0.3260928275869738,
+      "cold_frac_point1": 0.19110132629875584,
+      "cold_frac_point01": 0.019281557763721917
+    },
+    {
+      "m_over_T": 100.0,
+      "scale_q_over_Tgamma0": 0.029637567242580404,
+      "rms_q_over_Tgamma0": 0.37286243285003684,
+      "mean_q_over_Tgamma0": 0.30147466891247104,
+      "cold_frac_point1": 0.20222768613748693,
+      "cold_frac_point01": 0.020411477000027763
+    },
+    {
+      "m_over_T": 10000.0,
+      "scale_q_over_Tgamma0": 0.0029731775816681408,
+      "rms_q_over_Tgamma0": 0.3690760365186123,
+      "mean_q_over_Tgamma0": 0.29878391788181474,
+      "cold_frac_point1": 0.20350826791200596,
+      "cold_frac_point01": 0.02054143969962319
+    }
+  ],
+  "ideal_NR_saturated_lower_warmth": {
+    "mean_q_over_Tgamma0": 0.29875677520832133,
+    "rms_q_over_Tgamma0": 0.36903784243339344,
+    "cold_frac_point1": 0.2035212604394744,
+    "cold_frac_point01": 0.020542758193156468
+  },
+  "cold_population_condensate_examples": [
+    {
+      "q_cut_over_Tgamma0": 0.01,
+      "target_cold_fraction": 0.5,
+      "minimum_condensate_fraction_if_excited_component_is_normal_thermal": 0.48683336597353055
+    },
+    {
+      "q_cut_over_Tgamma0": 0.01,
+      "target_cold_fraction": 0.9,
+      "minimum_condensate_fraction_if_excited_component_is_normal_thermal": 0.8954422259054874
+    },
+    {
+      "q_cut_over_Tgamma0": 0.1,
+      "target_cold_fraction": 0.5,
+      "minimum_condensate_fraction_if_excited_component_is_normal_thermal": 0.3473406191959036
+    },
+    {
+      "q_cut_over_Tgamma0": 0.1,
+      "target_cold_fraction": 0.9,
+      "minimum_condensate_fraction_if_excited_component_is_normal_thermal": 0.8418058157989019
+    }
+  ]
+}

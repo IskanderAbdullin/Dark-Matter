@@ -422,6 +422,11 @@ shows count can fit within the selected aggregate energy while a
 zero-chemical-potential scalar gas remains warm at the required
 yield. It neither evaluates conversion rates nor models a condensate.
 
+The [saturated thermal excited-state bound](INDEPENDENT-SCALAR-SATURATED-THERMAL-COLD-ORDER-2026-11-26.md)
+extends beyond zero chemical potential. Even the most favorable ideal
+noncondensed thermal limit constrains how many particles can be below
+an illustrative comoving momentum cut; it does not derive condensation.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
