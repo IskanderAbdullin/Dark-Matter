@@ -1,0 +1,481 @@
+{
+  "scope": "Local linear directed energy-exchange gap of the prompt-return, fixed-count, two-light-species model. Full FD and BE for the two outgoing legs. Heavy heat capacity and off-manifold distortions are not included. Comparison to selected slower number rates is not a spectral gap of the full collision operator.",
+  "rows": [
+    {
+      "i": 0,
+      "visible_T": 0.09998024707143943,
+      "dark_T": 0.09213340518673589,
+      "peak_occupation": [
+        1.7368215014826097e-06,
+        4.2260941276765215e-06,
+        3.080308396578852e-12
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 1.5633979179856338e-24,
+          "finite_difference_relative_check": 1.829203455372408e-11,
+          "heat_gap_over_visible_H": 407358.598001165,
+          "largest_fractional_slow_number_rate_over_H": 4393.046924979381,
+          "heat_to_largest_slow_rate_ratio": 92.72803249263652
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 1.5633979179855926e-24,
+          "finite_difference_relative_check": 2.388766962013733e-11,
+          "heat_gap_over_visible_H": 407358.5980011542,
+          "largest_fractional_slow_number_rate_over_H": 4393.046924979381,
+          "heat_to_largest_slow_rate_ratio": 92.72803249263406
+        }
+      ]
+    },
+    {
+      "i": 1,
+      "visible_T": 0.0987624096875368,
+      "dark_T": 0.08949726168066952,
+      "peak_occupation": [
+        0.0001128370216759002,
+        0.0002726449132234636,
+        1.2584656581692957e-08
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 6.145079295828622e-21,
+          "finite_difference_relative_check": 2.49092968473974e-11,
+          "heat_gap_over_visible_H": 27708948.36278198,
+          "largest_fractional_slow_number_rate_over_H": 72.44937089902129,
+          "heat_to_largest_slow_rate_ratio": 382459.47506434866
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 6.1450792958284675e-21,
+          "finite_difference_relative_check": 2.1441737274585648e-11,
+          "heat_gap_over_visible_H": 27708948.362781275,
+          "largest_fractional_slow_number_rate_over_H": 72.44937089902129,
+          "heat_to_largest_slow_rate_ratio": 382459.47506433894
+        }
+      ]
+    },
+    {
+      "i": 2,
+      "visible_T": 0.09755502260507055,
+      "dark_T": 0.08411732828717741,
+      "peak_occupation": [
+        0.00026673882398805084,
+        0.0006314893205090931,
+        6.507524468633357e-08
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 2.928885258150011e-20,
+          "finite_difference_relative_check": 1.708244656839497e-11,
+          "heat_gap_over_visible_H": 69827158.54089257,
+          "largest_fractional_slow_number_rate_over_H": 40.251705200015316,
+          "heat_to_largest_slow_rate_ratio": 1734762.743439401
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 2.9288852581499404e-20,
+          "finite_difference_relative_check": 1.9301116260805884e-11,
+          "heat_gap_over_visible_H": 69827158.54089086,
+          "largest_fractional_slow_number_rate_over_H": 40.251705200015316,
+          "heat_to_largest_slow_rate_ratio": 1734762.7434393584
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "visible_T": 0.09635874324475512,
+      "dark_T": 0.0760367567549532,
+      "peak_occupation": [
+        0.0005522735907399728,
+        0.001275226869259221,
+        2.459297831052925e-07
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 9.723459241029924e-20,
+          "finite_difference_relative_check": 1.8407053659075245e-11,
+          "heat_gap_over_visible_H": 157397168.73247594,
+          "largest_fractional_slow_number_rate_over_H": 31.745767407398763,
+          "heat_to_largest_slow_rate_ratio": 4958052.099121488
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 9.723459241029705e-20,
+          "finite_difference_relative_check": 9.89319737243477e-12,
+          "heat_gap_over_visible_H": 157397168.73247233,
+          "largest_fractional_slow_number_rate_over_H": 31.745767407398763,
+          "heat_to_largest_slow_rate_ratio": 4958052.099121374
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "visible_T": 0.09517339545364828,
+      "dark_T": 0.0654292178394753,
+      "peak_occupation": [
+        0.0012237397158912221,
+        0.0027582481447764266,
+        9.938323283766606e-07
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 3.264594116652861e-19,
+          "finite_difference_relative_check": 7.921885369910342e-12,
+          "heat_gap_over_visible_H": 387010087.0715653,
+          "largest_fractional_slow_number_rate_over_H": 29.94421952026072,
+          "heat_to_largest_slow_rate_ratio": 12924367.14904886
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 3.264594116652793e-19,
+          "finite_difference_relative_check": 1.216293732397844e-11,
+          "heat_gap_over_visible_H": 387010087.0715571,
+          "largest_fractional_slow_number_rate_over_H": 29.94421952026072,
+          "heat_to_largest_slow_rate_ratio": 12924367.149048587
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "visible_T": 0.09399858726555323,
+      "dark_T": 0.0532350739713712,
+      "peak_occupation": [
+        0.0031218268783310527,
+        0.006839858728279119,
+        4.75130071890567e-06
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 1.2277556858413519e-18,
+          "finite_difference_relative_check": 2.3437252139046905e-11,
+          "heat_gap_over_visible_H": 1092794103.7015412,
+          "largest_fractional_slow_number_rate_over_H": 30.470273621510284,
+          "heat_to_largest_slow_rate_ratio": 35864269.46064871
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 1.2277556858413282e-18,
+          "finite_difference_relative_check": 2.142375166158672e-11,
+          "heat_gap_over_visible_H": 1092794103.7015197,
+          "largest_fractional_slow_number_rate_over_H": 30.470273621510284,
+          "heat_to_largest_slow_rate_ratio": 35864269.460648
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "visible_T": 0.09283489174258262,
+      "dark_T": 0.04182401314902677,
+      "peak_occupation": [
+        0.008584472909338186,
+        0.01819044153478723,
+        2.3059473120209545e-05
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 4.594816866491629e-18,
+          "finite_difference_relative_check": 7.598788265283929e-11,
+          "heat_gap_over_visible_H": 3159784004.692962,
+          "largest_fractional_slow_number_rate_over_H": 28.370727506554775,
+          "heat_to_largest_slow_rate_ratio": 111374796.57378985
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 4.59481686649156e-18,
+          "finite_difference_relative_check": 7.34305949379177e-11,
+          "heat_gap_over_visible_H": 3159784004.6929145,
+          "largest_fractional_slow_number_rate_over_H": 28.370727506554775,
+          "heat_to_largest_slow_rate_ratio": 111374796.57378817
+        }
+      ]
+    },
+    {
+      "i": 7,
+      "visible_T": 0.09168285344654625,
+      "dark_T": 0.033598004977818695,
+      "peak_occupation": [
+        0.02058337673492482,
+        0.04333095018662033,
+        8.24555829364545e-05
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 1.3219591678639514e-17,
+          "finite_difference_relative_check": 1.7247181460788852e-10,
+          "heat_gap_over_visible_H": 7375525450.087007,
+          "largest_fractional_slow_number_rate_over_H": 21.852367471904262,
+          "heat_to_largest_slow_rate_ratio": 337516081.9334459
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 1.321959167863933e-17,
+          "finite_difference_relative_check": 1.6980084005524532e-10,
+          "heat_gap_over_visible_H": 7375525450.086904,
+          "largest_fractional_slow_number_rate_over_H": 21.852367471904262,
+          "heat_to_largest_slow_rate_ratio": 337516081.93344116
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "visible_T": 0.09075142376139536,
+      "dark_T": 0.02935145173602829,
+      "peak_occupation": [
+        0.03473464641474776,
+        0.07499999999999957,
+        0.00017065423351571735
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 2.4130055470234454e-17,
+          "finite_difference_relative_check": 2.5865531938507047e-10,
+          "heat_gap_over_visible_H": 11785726766.491653,
+          "largest_fractional_slow_number_rate_over_H": 16.518232454868162,
+          "heat_to_largest_slow_rate_ratio": 713498057.294758
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 2.4130055470234158e-17,
+          "finite_difference_relative_check": 2.606861393417148e-10,
+          "heat_gap_over_visible_H": 11785726766.491507,
+          "largest_fractional_slow_number_rate_over_H": 16.518232454868162,
+          "heat_to_largest_slow_rate_ratio": 713498057.294749
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "visible_T": 0.09054221563230311,
+      "dark_T": 0.028624149613145564,
+      "peak_occupation": [
+        0.03823525717073426,
+        0.08322216656144629,
+        0.0001944999566694804
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 2.688704070136086e-17,
+          "finite_difference_relative_check": 2.767481799281768e-10,
+          "heat_gap_over_visible_H": 12799423226.954794,
+          "largest_fractional_slow_number_rate_over_H": 15.517206082052507,
+          "heat_to_largest_slow_rate_ratio": 824853595.3749334
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 2.688704070136051e-17,
+          "finite_difference_relative_check": 2.767421847238438e-10,
+          "heat_gap_over_visible_H": 12799423226.954622,
+          "largest_fractional_slow_number_rate_over_H": 15.517206082052507,
+          "heat_to_largest_slow_rate_ratio": 824853595.3749223
+        }
+      ]
+    },
+    {
+      "i": 10,
+      "visible_T": 0.08941271681522185,
+      "dark_T": 0.025672931121800385,
+      "peak_occupation": [
+        0.05778276375397096,
+        0.13187907244614216,
+        0.00033780090893103154
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 4.2450385097356335e-17,
+          "finite_difference_relative_check": 3.7148839560074975e-10,
+          "heat_gap_over_visible_H": 18017105946.28268,
+          "largest_fractional_slow_number_rate_over_H": 12.603228731839124,
+          "heat_to_largest_slow_rate_ratio": 1429562719.9692612
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 4.2450385097355823e-17,
+          "finite_difference_relative_check": 3.719706764826469e-10,
+          "heat_gap_over_visible_H": 18017105946.282455,
+          "largest_fractional_slow_number_rate_over_H": 12.603228731839124,
+          "heat_to_largest_slow_rate_ratio": 1429562719.9692433
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "visible_T": 0.08829476536725236,
+      "dark_T": 0.023806971496991444,
+      "peak_occupation": [
+        0.0766730006596891,
+        0.18302951221074046,
+        0.00048728074446338805
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 5.747322050100164e-17,
+          "finite_difference_relative_check": 4.610469783727922e-10,
+          "heat_gap_over_visible_H": 22506600683.643547,
+          "largest_fractional_slow_number_rate_over_H": 10.300849198097646,
+          "heat_to_largest_slow_rate_ratio": 2184926723.109397
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 5.747322050100105e-17,
+          "finite_difference_relative_check": 4.6264347908220316e-10,
+          "heat_gap_over_visible_H": 22506600683.64331,
+          "largest_fractional_slow_number_rate_over_H": 10.300849198097646,
+          "heat_to_largest_slow_rate_ratio": 2184926723.1093736
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "visible_T": 0.08718873453794614,
+      "dark_T": 0.022534852010337975,
+      "peak_occupation": [
+        0.09390608048225259,
+        0.23298545594545048,
+        0.0006284260694322247
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 7.088467421014078e-17,
+          "finite_difference_relative_check": 5.31758193034193e-10,
+          "heat_gap_over_visible_H": 26265896905.229786,
+          "largest_fractional_slow_number_rate_over_H": 8.579730707233733,
+          "heat_to_largest_slow_rate_ratio": 3061389430.6827736
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 7.088467421014004e-17,
+          "finite_difference_relative_check": 5.418696602532691e-10,
+          "heat_gap_over_visible_H": 26265896905.22951,
+          "largest_fractional_slow_number_rate_over_H": 8.579730707233733,
+          "heat_to_largest_slow_rate_ratio": 3061389430.6827416
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "visible_T": 0.08609425091014969,
+      "dark_T": 0.02160967322024992,
+      "peak_occupation": [
+        0.10922969061203908,
+        0.2800000000000006,
+        0.0007546097291377362
+      ],
+      "levels": [
+        {
+          "orders": [
+            70,
+            42
+          ],
+          "conductance": 8.233884668855406e-17,
+          "finite_difference_relative_check": 6.037088606802854e-10,
+          "heat_gap_over_visible_H": 29414527820.76535,
+          "largest_fractional_slow_number_rate_over_H": 7.282457713139654,
+          "heat_to_largest_slow_rate_ratio": 4039093528.5066
+        },
+        {
+          "orders": [
+            104,
+            68
+          ],
+          "conductance": 8.233884668855325e-17,
+          "finite_difference_relative_check": 6.00220984026123e-10,
+          "heat_gap_over_visible_H": 29414527820.76504,
+          "largest_fractional_slow_number_rate_over_H": 7.282457713139654,
+          "heat_to_largest_slow_rate_ratio": 4039093528.5065575
+        }
+      ]
+    }
+  ]
+}
