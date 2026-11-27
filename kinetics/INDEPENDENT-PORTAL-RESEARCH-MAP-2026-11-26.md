@@ -291,7 +291,8 @@ audit verifies redshift work and collision geometry. A [matched expanding test](
 combines finite lifetime, expansion and selected competing dark reactions. The [coupled clock audit](INDEPENDENT-WARM-COUPLED-CLOCK-AND-SPECIES-BUDGET-2026-11-26.md)
 separates time resolution from the daughter species energy exchange. A [dynamic outgoing pad](INDEPENDENT-WARM-COMOVING-PROMPT-OUTGOING-2026-11-26.md)
 resolves new daughter occupation without an incoming floor. A [two-stage stiff clock](INDEPENDENT-WARM-FINITE-PARENT-SDIRK-CLOCK-2026-11-26.md)
-reduces .68 sensitivity but rejects a tested .80 stage.
+reduces .68 sensitivity but rejects a tested .80 stage. The [durable restart check](INDEPENDENT-WARM-DURABLE-COMOVING-RESTART-2026-11-26.md)
+verifies byte identity for both accepted clocks.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)

@@ -22,6 +22,7 @@ from warm_light_occupation_stage_audit_reference import digest,read
 from warm_prompt_reentry_shape_audit_reference import get_mom,pad
 
 from warm_finite_comoving_sdirk_reference import step as sdirk_step,stability_test
+from warm_comoving_durable_restart_reference import guard,key,restore,seal
 
 KEYS=("entropy_variable_scalar","entropy_variable_fermion")
 
@@ -34,7 +35,7 @@ def parent_equilibrium(k,th):
     return np.divide(a,a+b,out=np.zeros_like(a),where=a+b>0.)
 
 
-def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,root_tol=8e-12,clock_method="be"):
+def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,root_tol=8e-12,clock_method="be",checkpoint=False,resume=False,stop_after=None):
     R=[read(r) for r in paths]
     assert all(x["hash"]==digest(x["snapshot"]) and x["plan"]==R[0]["plan"] for x in R)
     assert R[0]["plan"]["eos_sha256"]==sha(eos)
@@ -78,7 +79,26 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
     initial_E=rho+((dN*np.hypot(M,Q))@hv if fin else 0.)
     out.mkdir(exist_ok=True,parents=True)
     rows=[]
-    for j in range(1,len(R)):
+    row_digests=[]
+    first=1
+    def d(y):
+        return hashlib.sha256(np.asarray(y,dtype="<f8").tobytes()).hexdigest()
+    qhash,whash=d(Q),d(dN)
+    assert checkpoint or (not resume and stop_after is None)
+    assert stop_after is None or (not resume and 1<=stop_after<len(R)-1)
+    if checkpoint:
+        destination=out/"restart-state.json"
+        lineage=key(eos,paths,[mode,order,common_subdivisions,outer,restrict,root_tol,clock_method],qhash,whash)
+        assert destination.exists()==resume
+    if resume:
+        saved,rows,P,ex,hv=restore(destination,lineage,actual,R[0]["hash"],Q,d)
+        first=saved["accepted_blocks"]+1
+        th=[np.asarray(P[k]) for k in KEYS]
+        work=saved["pressure_work"]
+        outside,exchange=np.asarray(saved["outside"]),np.asarray(saved["exchange"])
+        max_pair_defect=saved["max_pair_defect"]
+        row_digests=list(saved["accepted_row_digests"])
+    for j in range(first,len(R)):
         a,c=actual[j-1:j+1]
         b=np.sqrt(a*c)
         h=times[j]-times[j-1]
@@ -163,13 +183,11 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
                 T_visible_GeV=ta.state(c)[0],
                 represented_species_count_a3=(n.sum(axis=1)*(S["scale_factor"]*c)**3).tolist(),
                 **{key:np.asarray(z).tolist() for key,z in zip(KEYS,th,strict=True)})
-        def d(y):
-            return hashlib.sha256(np.asarray(y,dtype="<f8").tobytes()).hexdigest()
         r=dict(a=float(a),b=float(b),c=float(c),time_J=R[j]["time"],step_H=float(h),H_GeV=float(H),
                initial_daughter_hash=R[0]["hash"],daughter_hash=digest(P),parent_hash=d(hv) if fin else None,
                W_over_initial_daughter_rho=float(sum(excess(P,C))/rho),solver=stat,
                pressure_trace_work_over_energy=float(work/initial_E),relative_N_defects=R_N.tolist(),
-               relative_energy_defect=float(R_E),qsha256=d(Q),wsha256=d(dN),parent_nodes=len(Q),
+               relative_energy_defect=float(R_E),qsha256=qhash,wsha256=whash,parent_nodes=len(Q),
                active_angular_nodes=len(k.y))
         if outer:
             from three_species_decay_onsager_reference import m,mp
@@ -191,7 +209,13 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
         if clock_method!="be":
             r["collision_clock_method"]=clock_method
         rows.append(r)
-        atomic(out/f"step-{j}.json",dict(row=r,daughter_snapshot=P))
+        record=dict(row=r,daughter_snapshot=P)
+        atomic(out/f"step-{j}.json",record)
+        if checkpoint:
+            row_digests.append(digest(record))
+            seal(destination,lineage,j,hv,work,ex,outside,exchange,max_pair_defect,row_digests)
+        if stop_after is not None and j==stop_after:
+            return
         del k,op
     start=float(sum(excess(S,C))/rho)
     scope="Source-free closed prompt channel on prescribed FRW clock; finite parent gravity uses matched passive prescription."
@@ -213,5 +237,14 @@ if __name__=="__main__":
     p.add_argument("--restrict-prompt-pad",action="store_true")
     p.add_argument("--root-tol",type=float,default=8e-12)
     p.add_argument("--collision-clock",choices=("be","sdirk2"),default="be")
+    p.add_argument("--checkpoint",action="store_true")
+    p.add_argument("--resume",action="store_true")
+    p.add_argument("--stop-after",type=int)
     a=p.parse_args()
-    run(a.eos,a.paths,a.out,a.mode,a.order,a.common_subdivisions,a.prompt_pad,a.restrict_prompt_pad,a.root_tol,a.collision_clock)
+    args=(a.eos,a.paths,a.out,a.mode,a.order,a.common_subdivisions,a.prompt_pad,
+          a.restrict_prompt_pad,a.root_tol,a.collision_clock,a.checkpoint,a.resume,a.stop_after)
+    if a.checkpoint:
+        with guard(a.out):
+            run(*args)
+    else:
+        run(*args)
