@@ -823,3 +823,6 @@ fit or exclusion.
 - [Archived cold-window redshift and exterior energy ledger](INDEPENDENT-EARLY-POLE-ARCHIVED-COLD-FRW-SPECTATOR-2026-11-26.md):
   frozen exterior momentum populations still redshift consistently;
   the short dark-energy clock correction reduces both reference gains.
+- [Conserving entropy reshaping and heat comparison](INDEPENDENT-EARLY-POLE-ARCHIVED-COLD-ENTROPY-MIXING-2026-11-26.md):
+  separates hard intra-species reshaping from optional energy exchange;
+  neither imposed transport operator is a calibrated gauge rate.
