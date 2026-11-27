@@ -1,0 +1,68 @@
+{
+  "scope": "Short comoving warm continuation under prescribed radiation clock and held polarization.",
+  "projection": "steps",
+  "grid": "fine",
+  "duration": 2.4e-05,
+  "panels": 72,
+  "expands": false,
+  "final_log_scale": 0.0,
+  "initial_warm_nodes": [
+    0.12000292989339252,
+    0.17312821566578732,
+    0.2502281475644967,
+    0.36166332329348394,
+    0.5227244044636229,
+    0.7555115086970491,
+    1.0919666939204746,
+    1.5782569119138967,
+    2.2811088413887064,
+    3.296964839489703,
+    4.765216352505949
+  ],
+  "arms": [
+    {
+      "warm_active": false,
+      "cold_gain": 2.845612936218481e-06,
+      "warm_gain": 0.0,
+      "initial_count_rates": [
+        0.11773242642683411,
+        0.0
+      ],
+      "initial_gap": 0.0008721874799955858,
+      "final_gap": 0.0008722351824950238,
+      "hard_count_defect": -5.551115123125783e-17,
+      "redshift_trace_integral": 0.0,
+      "collision_work": 8.054792832037787e-18,
+      "energy_change": 1.3322676295501878e-15,
+      "redshift_subtracted_defect": 1.3322676295501878e-15,
+      "entropy_defect": -4.371503159461554e-16,
+      "maximum_decay_work": 7.231628490478315e-17,
+      "elastic_splits": 0,
+      "elastic_energy_budget": 5e-15,
+      "peak_abs_elastic_energy_defect": 1.1102230246251565e-15,
+      "sum_absolute_elastic_energy_defects": 2.6645352591003757e-14
+    },
+    {
+      "warm_active": true,
+      "cold_gain": 2.8456129360280493e-06,
+      "warm_gain": 6.597579329793382e-12,
+      "initial_count_rates": [
+        0.11773242642683411,
+        2.7483092418045343e-07
+      ],
+      "initial_gap": 0.0008721874799955858,
+      "final_gap": 0.0008722351824952128,
+      "hard_count_defect": 1.1102230246251565e-16,
+      "redshift_trace_integral": 0.0,
+      "collision_work": -1.182115557086687e-17,
+      "energy_change": 1.7763568394002505e-15,
+      "redshift_subtracted_defect": 1.7763568394002505e-15,
+      "entropy_defect": 2.291569711765362e-15,
+      "maximum_decay_work": 1.161316052003536e-16,
+      "elastic_splits": 0,
+      "elastic_energy_budget": 5e-15,
+      "peak_abs_elastic_energy_defect": 1.5543122344752192e-15,
+      "sum_absolute_elastic_energy_defects": 3.1308289294429414e-14
+    }
+  ]
+}
