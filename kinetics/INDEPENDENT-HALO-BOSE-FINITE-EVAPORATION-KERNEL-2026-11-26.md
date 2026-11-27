@@ -53,6 +53,19 @@ The largest combined grid and scramble difference
 was under .24%; it is not an uncertainty for actual
 self-consistent halo evolution.
 
+## Tidal cutoff versus isolated escape
+
+Here an ejection crosses the adopted cutoff $E_t$.
+It counts as an immediate sink only under the
+specified no-return/tidal-removal prescription.
+For an isolated continuation with vacuum exterior
+and potential zero at infinity, $E_t$ is still
+negative: it is the potential at the tidal radius.
+True escape to infinity then requires a further
+dimensionless energy $GM/(r_t V_0^2)$ above $E_t$.
+The stronger cut would reduce these rates and has
+not been applied in this calculation.
+
 This is a direct large-energy-transfer collision
 kernel, not a solution for diffusion in escape
 energy or a time-dependent evaporation lifetime.
