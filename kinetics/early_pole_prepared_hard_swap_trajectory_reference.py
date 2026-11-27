@@ -9,7 +9,9 @@ import early_pole_cold_screened_split_reference as split
 from early_pole_prepared_hard_swap_reference import read,retune
 
 
-def run(bundle,case,steps,no_elastic=False):
+def run(bundle,case,steps,no_elastic=False,only_unlike=False,only_same=False):
+    if sum((no_elastic,only_unlike,only_same))>1:
+        raise ValueError("Elastic controls are mutually exclusive.")
     raw=read(bundle)
     a,b=[raw[p] for p in ('steps','cell-conservative')]
     sa,sb=[q['snapshots'][0] for q in (a,b)]
@@ -61,9 +63,9 @@ def run(bundle,case,steps,no_elastic=False):
             M.init=y
     with patch.object(split,'Screened',PreparedInput):
         r=split.run(a['grid'],a['duration']/a['steps'],steps,True,aperture_grid=a['aperture_grid'],
-                    strength=0. if no_elastic else 1.,
-                    screening_update='frozen' if no_elastic else 'full',
-                    same_soft_strength=0. if no_elastic else 1.,compton_strength=1.,conversion_strength=1.,
+                    strength=0. if no_elastic or only_same else 1.,
+                    screening_update='frozen' if no_elastic or only_same else 'full',
+                    same_soft_strength=0. if no_elastic or only_unlike else 1.,compton_strength=1.,conversion_strength=1.,
                     snapshots=True,elastic_energy_budget=None if no_elastic else 5e-15)
     r.update(prepared_charged_swap=case,manufactured_hard_shape_control=True,**metadata)
     return r
@@ -74,6 +76,9 @@ if __name__=='__main__':
     p.add_argument('bundle')
     p.add_argument('--case',choices=('native','parent','daughter','both','matched-parent','matched-daughter','matched-both','local-parent','local-daughter','local-both','outside-parent','outside-daughter','outside-both'),required=True)
     p.add_argument('--steps',type=int,default=16)
-    p.add_argument('--no-elastic',action='store_true')
+    group=p.add_mutually_exclusive_group()
+    group.add_argument('--no-elastic',action='store_true')
+    group.add_argument('--only-unlike',action='store_true')
+    group.add_argument('--only-same',action='store_true')
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
