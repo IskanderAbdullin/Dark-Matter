@@ -53,3 +53,6 @@ python -W error warm_direct_vacuum_temperature_path_audit_reference.py \
 
 [Positive spectral counts, exact moments and PSD checksums](results/warm-direct-vacuum-temperature-psd-2026-11-26.json);
 [ballistic path bounds by source](results/warm-direct-vacuum-temperature-path-audit-2026-11-26.json).
+
+The [two-tier native power comparison](INDEPENDENT-WARM-DIRECT-TEMPERATURE-NATIVE-2026-11-26.md)
+reports both density conventions and documents the remaining q-grid sensitivity.

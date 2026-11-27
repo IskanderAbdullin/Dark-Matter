@@ -1,0 +1,157 @@
+{
+  "scope": "Cubic PSD plus linear or transformed q trapezoid; comparison to continuous input moments and the CLASS logged Delta Neff where complete. Neither a numerical guarantee on the hierarchy nor a BBN or CMB constraint.",
+  "tiers": {
+    "78q-cap45": {
+      "direct50_absolute": {
+        "momentum_grid": "linear",
+        "momentum_grid_spacing": 0.5769230769230769,
+        "mean_q_and_q2_full_table": [
+          1.607917160103029,
+          3.748370720981186
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.6275698060166093,
+          3.7864891124161644
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          0.012222424389277009,
+          0.010169322693087457
+        ],
+        "tail_q2_fraction_above_grid_cap": 9.536760336232175e-24,
+        "class_relativistic_delta_Neff": 0.000125819,
+        "calculated_relativistic_delta_Neff": 0.0001258195124712421
+      },
+      "direct100_absolute": {
+        "momentum_grid": "linear",
+        "momentum_grid_spacing": 0.5769230769230769,
+        "mean_q_and_q2_full_table": [
+          1.3765182582443583,
+          2.932821215748083
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.5104340538189638,
+          3.241943593791811
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          0.09728588398486249,
+          0.10540103037439286
+        ],
+        "tail_q2_fraction_above_grid_cap": 1.2835301248787362e-24,
+        "class_relativistic_delta_Neff": 0.00214226,
+        "calculated_relativistic_delta_Neff": 0.0021422621062824883
+      }
+    },
+    "136q-cap45": {
+      "direct50_absolute": {
+        "momentum_grid": "linear",
+        "momentum_grid_spacing": 0.33088235294117646,
+        "mean_q_and_q2_full_table": [
+          1.607917160103029,
+          3.748370720981186
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.6017167122502431,
+          3.7307825144632933
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          -0.003856198569575975,
+          -0.0046922270573303
+        ],
+        "tail_q2_fraction_above_grid_cap": 9.536760336232175e-24,
+        "class_relativistic_delta_Neff": 0.000123821,
+        "calculated_relativistic_delta_Neff": 0.00012382093542616984
+      },
+      "direct100_absolute": {
+        "momentum_grid": "linear",
+        "momentum_grid_spacing": 0.33088235294117646,
+        "mean_q_and_q2_full_table": [
+          1.3765182582443583,
+          2.932821215748083
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.4283195292389668,
+          3.047614989329396
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          0.03763209872760931,
+          0.039141074459266845
+        ],
+        "tail_q2_fraction_above_grid_cap": 1.2835301248787362e-24,
+        "class_relativistic_delta_Neff": 0.0020258,
+        "calculated_relativistic_delta_Neff": 0.0020257983428110817
+      }
+    },
+    "136q-cap18": {
+      "direct50_absolute": {
+        "momentum_grid": "linear",
+        "momentum_grid_spacing": 0.1323529411764706,
+        "mean_q_and_q2_full_table": [
+          1.607917160103029,
+          3.748370720981186
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.6078727116568141,
+          3.7483269735484512
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          -2.7643492661155733e-05,
+          -1.1671052836281781e-05
+        ],
+        "tail_q2_fraction_above_grid_cap": 1.247575115970641e-07
+      },
+      "direct100_absolute": {
+        "momentum_grid": "linear",
+        "momentum_grid_spacing": 0.1323529411764706,
+        "mean_q_and_q2_full_table": [
+          1.3765182582443583,
+          2.932821215748083
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.3799643757235376,
+          2.939875200785121
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          0.002503502920168099,
+          0.00240518753722907
+        ],
+        "tail_q2_fraction_above_grid_cap": 2.0189388162794628e-08
+      }
+    },
+    "100q-transformed": {
+      "direct50_absolute": {
+        "momentum_grid": "1/t-1",
+        "momentum_grid_spacing": null,
+        "mean_q_and_q2_full_table": [
+          1.607917160103029,
+          3.748370720981186
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.6079172144579568,
+          3.7483718132075867
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          3.380455715351616e-08,
+          2.9138697366093425e-07
+        ],
+        "tail_q2_fraction_above_grid_cap": null
+      },
+      "direct100_absolute": {
+        "momentum_grid": "1/t-1",
+        "momentum_grid_spacing": null,
+        "mean_q_and_q2_full_table": [
+          1.3765182582443583,
+          2.932821215748083
+        ],
+        "mean_q_and_q2_native_grid": [
+          1.3765184201140694,
+          2.93282209470955
+        ],
+        "fractional_errors_of_mean_q_and_q2": [
+          1.1759358087282124e-07,
+          2.9969827752829303e-07
+        ],
+        "tail_q2_fraction_above_grid_cap": null
+      }
+    }
+  }
+}
