@@ -1,0 +1,161 @@
+{
+  "scope": "Pointwise thermal rate check, not time integration. Exact FD/BE incoming and final factors on the light/scalar pair; heavy forward test omits heavy final Pauli. Sampling convergence tested independently.",
+  "rows": [
+    {
+      "sample": 0,
+      "T_GeV": 0.05432686172866172,
+      "controls": [
+        {
+          "radial": 3,
+          "angle": 15,
+          "edge_count": 50,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0008860407116005,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -9.810642969676486e-06,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.999712585735099,
+            1.0046895411727912
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9962720322708589,
+              0.9999956356188879,
+              0.996276380400676
+            ],
+            [
+              1.0,
+              1.0102714392022953,
+              1.0102714392022953
+            ]
+          ]
+        },
+        {
+          "radial": 4,
+          "angle": 21,
+          "edge_count": 70,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0008882185778794,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -1.9108855473515263e-06,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9996471892015396,
+            1.0018930956823522
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9962720322708589,
+              0.9999956356188879,
+              0.996276380400676
+            ],
+            [
+              1.0,
+              1.0102714392022953,
+              1.0102714392022953
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample": 4,
+      "T_GeV": 0.034458866999024534,
+      "controls": [
+        {
+          "radial": 3,
+          "angle": 15,
+          "edge_count": 50,
+          "light_to_scalar_forward_multiplier_over_MB": 1.001302324475913,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -3.665006155006978e-06,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9989301528252345,
+            1.0024216982378633
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9797057175898467,
+              0.9999564068995136,
+              0.9797484278615138
+            ],
+            [
+              1.0,
+              1.0446540429280204,
+              1.0446540429280204
+            ]
+          ]
+        },
+        {
+          "radial": 4,
+          "angle": 21,
+          "edge_count": 70,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0013023900436309,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -6.549790964038849e-07,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9989498725453928,
+            1.0013391401951557
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9797057175898467,
+              0.9999564068995136,
+              0.9797484278615138
+            ],
+            [
+              1.0,
+              1.0446540429280204,
+              1.0446540429280204
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample": 10,
+      "T_GeV": 0.02434035463648536,
+      "controls": [
+        {
+          "radial": 3,
+          "angle": 15,
+          "edge_count": 50,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0024560919190795,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -1.8052395638346042e-06,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9986663599294835,
+            1.0017327509221816
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9388835767563859,
+              0.99982094373423,
+              0.9390517198507072
+            ],
+            [
+              1.0,
+              1.1687363038714371,
+              1.1687363038714371
+            ]
+          ]
+        },
+        {
+          "radial": 4,
+          "angle": 21,
+          "edge_count": 70,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0024561124517501,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -3.271021667972107e-07,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9984831941481088,
+            1.001425509864952
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9388835767563859,
+              0.99982094373423,
+              0.9390517198507072
+            ],
+            [
+              1.0,
+              1.1687363038714371,
+              1.1687363038714371
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
