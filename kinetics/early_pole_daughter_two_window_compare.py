@@ -8,7 +8,9 @@ from math import fsum
 import numpy as np
 
 
-def check(short,long):
+def check(short,long,depth=1):
+    if depth not in (1,4):
+        raise ValueError("Use the accepted hard refinement depths.")
     t=np.asarray(short[0]['history_exposure'])
     n=len(t)-1
     finish=2*t[-1]
@@ -22,7 +24,7 @@ def check(short,long):
             raise ValueError('The time extension changed another control.')
         for v,panels,expected_times in ((a,n,t),(b,2*n,t2)):
             if (not np.array_equal(v['history_exposure'],expected_times) or v['report_panels']!=panels or v.get('prepared_charged_swap','native')!=k
-                    or v.get('aperture_subdivision',1)!=1 or not v.get('elastic_channels',True)
+                    or v.get('aperture_subdivision',1)!=depth or not v.get('elastic_channels',True)
                     or v.get('selected_elastic_channel','both')!='both'
                     or abs(v['energy_defect'])>=3e-12 or abs(v['entropy_defect'])>=3e-11
                     or abs(v['hard_number_defect'])>=3e-12):
@@ -62,10 +64,11 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--short',nargs=2,required=True)
     p.add_argument('--long',nargs=2,required=True)
+    p.add_argument('--hard-depth',type=int,choices=(1,4),default=1)
     a=p.parse_args()
     def r(f):
         if f.endswith('.gz'):
             with gzip.open(f,'rt') as h:
                 return json.load(h)
         return json.loads(Path(f).read_text())
-    print(json.dumps(check([r(f) for f in a.short],[r(f) for f in a.long]),indent=2,allow_nan=False))
+    print(json.dumps(check([r(f) for f in a.short],[r(f) for f in a.long],a.hard_depth),indent=2,allow_nan=False))
