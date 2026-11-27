@@ -196,3 +196,39 @@ python -W error warm_clock_path_error_profile_reference.py comoving/080-locked6-
 ~~~
 
 [Matched-time differences and state audit](results/warm-coupled-hard080-path-clock-audit-2026-11-26.json).
+
+## .80 GeV: uniform 24 blocks versus two twelve-block allocations
+
+The fully coupled finite-parent branch accepts 24 equal blocks
+with the same physical endpoint, starting phase, and parent Q
+nodes and weights. W is 1.6314758813e-14 in units of initial
+daughter energy and decreases at every stored step. This is
+another −3.722% from uniform 12; the energy ledger defect is
+4.40e-13 relative. No stationary-parent 24-block branch is
+asserted by this result.
+
+Try a same-cost alternative to uniform 12. Four blocks use the
+short uniform-24 spacing at the start, four use twice that
+spacing, and four use three times the spacing. The first four
+accepted daughter output files are byte-identical to uniform
+24, so the comparison begins to differ only after the shared
+prefix. The final W is 1.7138707327e-14, about 1.140% higher
+than uniform 12. Relative to the computed uniform-24 value,
+the gaps are +5.050% for early-refined 12 and +3.866% for
+uniform 12. This early-refinement allocation is 30.6% farther
+from the finer reference in this test; no optimal adaptive
+schedule or continuum error bar follows.
+
+~~~sh
+t=competing080/tapes
+python -W error warm_late_competing_locked_guides_reference.py EOS.dat "$t/step-5.json" "$t/step-6.json" guides080-24 --steps 24 --refine-clock
+run "$d/080-locked24-expand-finite-all" expand-finite-all guides080-24/step-{0..24}.json --order 2 --common-subdivisions 2
+run "$d/080-early12-expand-finite-all" expand-finite-all guides080-24/step-{0,1,2,3,4,6,8,10,12,15,18,21,24}.json --order 2 --common-subdivisions 2 --checkpoint
+python -W error warm_nonuniform_clock_audit_reference.py "$d/080-locked12-expand-finite-all" "$d/080-early12-expand-finite-all" "$d/080-locked24-expand-finite-all"
+python -W error warm_expanding_clock_ladder_reference.py "$d" 080 1 2 3 6 12 24 --finite-only
+~~~
+
+[Audited allocation, refinement and matched-time diagnostics](results/warm-coupled-hard080-clock24-audit-2026-11-26.json);
+[uniform-24 phases, part 1](results/warm-coupled-hard080-clock24-uniform-a-2026-11-26.json.gz);
+[uniform-24 phases, part 2](results/warm-coupled-hard080-clock24-uniform-b-2026-11-26.json.gz);
+[early-refined twelve-block phases](results/warm-coupled-hard080-clock24-early-2026-11-26.json.gz).
