@@ -491,6 +491,10 @@ measures one-step elastic ejection in the held lowered profiles.
 Both the tidal cutoff and the smaller bound-side Bose enhancement
 matter; it is not an evaporation lifetime.
 
+The [tidal and isolated escape ledger](INDEPENDENT-HALO-BOSE-ESCAPE-ENERGY-LEDGER-2026-11-26.md)
+computes distinct number and particle-energy fluxes after adding the
+vacuum exterior binding energy. It is an instantaneous fixed-halo test.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
