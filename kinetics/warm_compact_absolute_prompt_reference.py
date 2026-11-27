@@ -7,7 +7,7 @@ from pathlib import Path
 
 import numpy as np
 
-from compact_prompt_jacobian_reference import compile_prompt
+from compact_prompt_jacobian_reference import compile_prompt,iter_prompt
 from joint_prompt_two_moment_evolution_reference import Collision
 from joint_resonant_frw_split_reference import pack
 from late_radiation_background_reference import MPL,TabulatedRadiation
@@ -17,10 +17,13 @@ from warm_prompt_reentry_shape_audit_reference import get_mom
 
 
 class LocalAbsolutePrompt(DirectPrompt):
-    def __init__(self,k,H,panels,prompt):
+    def __init__(self,k,H,panels,prompt,stream_local=False):
         super().__init__(k,H,panels,prompt)
         assert prompt and not panels
-        self.parents=compile_prompt(self)
+        self.parents=None if stream_local else compile_prompt(self)
+
+    def local_panels(self):
+        return iter_prompt(self) if self.parents is None else iter(self.parents)
 
     def collision(self,q):
         k=self.k
@@ -40,7 +43,7 @@ class LocalAbsolutePrompt(DirectPrompt):
             nonlocal jac
             if jac is None:
                 jac=np.zeros((self.d,self.d))
-                for s,ix,P,sf in self.parents:
+                for s,ix,P,sf in self.local_panels():
                     p=a[s,None]
                     q=b[s,None]
                     f0=f[s,None]

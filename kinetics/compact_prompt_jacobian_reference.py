@@ -3,10 +3,10 @@ import numpy as np
 from joint_resonant_centered_stiff_reference import Centered
 
 
-def compile_prompt(model):
+def iter_prompt(model):
+    """Yield one parent-local angular projection without retaining the tape."""
     k=model.k
-    segments=[]
-    if not len(k.y): return segments
+    if not len(k.y): return
     ends=np.r_[0,np.flatnonzero(np.diff(k.y))+1,len(k.y)]
     for l,r in zip(ends,ends[1:]):
         s=slice(l,r)
@@ -17,8 +17,11 @@ def compile_prompt(model):
         flow[:,2]=1.;flow[:,3]=model.uc[s]
         P=np.zeros((r-l,len(ix)))
         P[np.arange(r-l)[:,None],inv.reshape(idx.shape)]=flow
-        segments.append((s,ix,P,ix<2*model.n))
-    return segments
+        yield s,ix,P,ix<2*model.n
+
+
+def compile_prompt(model):
+    return list(iter_prompt(model))
 
 
 def local_prompt(model,z,qref,R0,segments):

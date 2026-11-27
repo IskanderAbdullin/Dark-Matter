@@ -20,7 +20,7 @@ from warm_prompt_reentry_shape_audit_reference import get_mom
 
 class FiniteParent(LocalAbsolutePrompt):
     def __init__(self,k,H):
-        super().__init__(k,H,[],True)
+        super().__init__(k,H,[],True,stream_local=hasattr(k,"comoving_Q"))
         # Do not recover tiny lab momenta by subtracting rest energy
         # when the chart already defines exact comoving momenta.
         if hasattr(k,"comoving_Q"):
@@ -68,7 +68,7 @@ class FiniteParent(LocalAbsolutePrompt):
             nonlocal jac
             if jac is None:
                 jac=np.zeros((self.d,self.d))
-                for panel,ix,G,sf in self.parents:
+                for panel,ix,G,sf in self.local_panels():
                     ap,bp=a[panel,None],b[panel,None]
                     da=-ap*G*np.where(sf,1.+f[panel,None],1.-g[panel,None])
                     db=bp*G*np.where(sf,-f[panel,None],g[panel,None])
