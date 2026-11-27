@@ -21,7 +21,7 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
    and [the independent relativistic hierarchy control](INDEPENDENT-FINITE-COOLING-RELATIVISTIC-LOS-2026-11-26.md).
    A large relative scalar contrast need not affect matter if its count is small.
 3. [Combine both tracers and baryons on the same fixed metric](INDEPENDENT-FINITE-COOLING-STABLE-PAIRED-LOS-2026-11-26.md).
-   The squared-contrast change is below 7×10⁻⁸ at five modes, without backreaction. The
+   Squared contrast differs below 7×10⁻⁸ at five modes without backreaction. The
    [separate homogeneous-clock bound](INDEPENDENT-FINITE-COOLING-SHIFTED-CLOCK-2026-11-26.md)
    concerns a converted-versus-unconverted proxy after 1 MeV,
    not perturbations, nucleosynthesis or measured expansion.
@@ -290,7 +290,8 @@ adds a pion window. [Dispersive cold recoil bounds](INDEPENDENT-WARM-LATE-COLD-P
 cover low gaps. [Source limits by travelled distance](INDEPENDENT-WARM-LATE-COLD-TRAVEL-SOURCE-2026-11-26.md)
 use a ballistic diagnostic. [Exact source folds](INDEPENDENT-WARM-LATE-COLD-EXACT-TRAVEL-BANDS-2026-11-26.md)
 resolve longer paths. [Temperature residency and input spectra](INDEPENDENT-WARM-DIRECT-SOURCE-CLOCK-AND-PSD-2026-11-26.md)
-separate peak temperature from production time. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+separate peak T from dose. [Fixed-metric scalar response](INDEPENDENT-WARM-DIRECT-VACUUM-FIXED-METRIC-2026-11-26.md)
+uses positive shell counts. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
