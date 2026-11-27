@@ -55,3 +55,37 @@ done
 ~~~
 
 [Accepted output hashes and refusal diagnostics](results/warm-durable-comoving-restart-audit-2026-11-26.json).
+
+## Check the passive-parent approximation at saved physical phases
+
+The original integrations use an initial parent distribution
+carried collisionlessly in the Friedmann denominator, even when
+the actual reacting parent is different. The new checkpoint
+contains the actual occupation, so the effect of replacing that
+passive parent density can now be evaluated at the *same* daughter,
+radiation and exterior phase. Fold the parent difference per
+comoving node before summation. Compute the resulting Hubble
+shift from the rationalized square-root difference rather than
+subtracting two Hubble rates that may round to the same number.
+
+| Saved phase | Instantaneous (H_active − H_passive) / H_passive |
+| --- | ---: |
+| .68 GeV backward-Euler window endpoint | −3.10e-17 |
+| .68 GeV SDIRK2 window endpoint | −3.16e-17 |
+| .80 GeV Hdt = 2.50e-7, fourth accepted block of an early-refined test | −2.35e-16 |
+
+This supports using the same prescribed clock for comparisons at
+these sampled states. It is not a rerun with the dynamic parent
+density in the expansion loop, a global bound over the entire
+trajectory, or a bound on additional visible and dark sources.
+
+~~~sh
+python -W error warm_checkpoint_parent_gravity_reference.py EOS.dat turn12/step-8.json turn12/step-10.json restart-be
+python -W error warm_checkpoint_parent_gravity_reference.py EOS.dat turn12/step-8.json turn12/step-10.json restart-sdirk2
+# With guides080-24 generated from the .80 anchor as for the earlier clock refinement:
+g=guides080-24
+run early080-sample expand-finite-all "$g"/step-{0,1,2,3,4,6,8,10,12,15,18,21,24}.json --order 2 --common-subdivisions 2 --checkpoint --stop-after 4
+python -W error warm_checkpoint_parent_gravity_reference.py EOS.dat "$g/step-0.json" "$g/step-24.json" early080-sample
+~~~
+
+[Checkpoint gravity comparison](results/warm-durable-parent-gravity-2026-11-26.json).
