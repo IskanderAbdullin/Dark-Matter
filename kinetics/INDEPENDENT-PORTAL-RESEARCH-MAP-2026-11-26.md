@@ -826,3 +826,7 @@ fit or exclusion.
 - [Conserving entropy reshaping and heat comparison](INDEPENDENT-EARLY-POLE-ARCHIVED-COLD-ENTROPY-MIXING-2026-11-26.md):
   separates hard intra-species reshaping from optional energy exchange;
   neither imposed transport operator is a calibrated gauge rate.
+- [Microscopic strict hard interspecies elastic heat](INDEPENDENT-EARLY-POLE-HARD-DISTINCT-FERMION-ELASTIC-2026-11-26.md):
+  the frozen and conservative live vacuum hard subset heats the daughter,
+  opposite to imposed joint entropy mixing at the same archived stage.
+  Momentum-transfer matching and the other gauge channels remain open.
