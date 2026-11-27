@@ -720,6 +720,12 @@ demonstrates how pair-driven fermion population can cross the
 stimulated gate and separates fixed-zero photon chemical
 potential from a number-conserving reservoir.
 
+A [separate fermion heat comparator](INDEPENDENT-EARLY-POLE-SEPARATE-FERMION-HEAT-2026-11-26.md)
+makes the stimulated sign depend on parent energy through two
+temperatures. A [resolved hard photon box](INDEPENDENT-EARLY-POLE-SPECTRAL-PHOTON-BOX-2026-11-26.md)
+relaxes the BE-shaped bath assumption while preserving energy and
+the total gauge particle count.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
