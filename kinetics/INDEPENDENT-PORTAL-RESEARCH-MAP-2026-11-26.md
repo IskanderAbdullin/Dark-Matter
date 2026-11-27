@@ -678,6 +678,11 @@ imposes count loss without a rate and tracks how its pole shift moves
 the fermion window. Window geometry and sampled net gain are reported
 separately on two momentum grids.
 
+The [moving angular chemical comparison](INDEPENDENT-EARLY-POLE-ANGULAR-CHEMICAL-CONTROL-2026-11-26.md)
+reproduces the weak-multiplier threshold branch across two native
+grids using separate angular deposition of both products. It is not
+a controlled in-medium 4-to-2 result.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

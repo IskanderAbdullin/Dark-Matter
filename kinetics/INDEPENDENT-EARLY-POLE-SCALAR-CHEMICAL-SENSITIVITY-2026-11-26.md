@@ -31,13 +31,14 @@ loss is 50.94% of the initial scalar number, partly offset by
 3.2 × 10⁻⁸ of the starting count. This trajectory suggests that
 accepting a small initial sink does not bound the later
 reaction in the illustrative model; the hot-state occupation
-feeds back. The longer result is not confirmed across momentum
-grids or solver starts.
+feeds back. The [follow-up](INDEPENDENT-EARLY-POLE-ANGULAR-CHEMICAL-CONTROL-2026-11-26.md)
+now reproduces this exploratory branch across the two original
+grids and an angular deposition control.
 
 The first attempts with stronger coupling over a longer interval
 failed with a step-size error in the off-center time coordinate.
 Re-centering makes the very short tests reproducible, but no
-longer nonzero-chemistry convergence claim is made here. A
+general nonzero-chemistry convergence claim is made here. A
 threshold angular closure and rapid motion across hot grid cells
 can affect the evolution; a more resolved number-changing kernel
 and physical medium amplitudes are still required. Nothing in
