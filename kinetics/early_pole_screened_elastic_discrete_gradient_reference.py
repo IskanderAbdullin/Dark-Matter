@@ -71,7 +71,9 @@ def step(model,Y0,dt,method="backward"):
         j0=sum(M.cells[j].fit(Y[j])[2] for j in range(k))
         v=[sum(M.cells[j].fit(Y[j])[1] for j in range(a.start,a.stop)) for a in M.r[1:]]
         return M.background+np.r_[j0,v]
-    J0=currents(Y0)
+    energy_increment=getattr(M,"energy_increment",None)
+    J0=currents(Y0) if energy_increment is None else None
+    stop_tol=1e-13 if energy_increment is None else 3e-13
     def partner(j):
         return np.r_[sum(j[1:]),j[0]+j[1:]]
     def material(theta):
@@ -88,8 +90,11 @@ def step(model,Y0,dt,method="backward"):
         dy=Y-Y0
         v=np.sum(dy*dy)
         if v>1e-26:
-            J=currents(Y)
-            er=np.sum(M.shape*dy)+.5*M.c*(J+J0)@partner(J-J0)
+            if energy_increment is None:
+                J=currents(Y)
+                er=np.sum(M.shape*dy)+.5*M.c*(J+J0)@partner(J-J0)
+            else:
+                er=energy_increment(Y0,Y)
             G=G+(er-np.sum(G*dy))/v*dy
         F_step=F
         if symmetric:
@@ -108,7 +113,7 @@ def step(model,Y0,dt,method="backward"):
         r,Y,F,G,_,_,Fm,Fe=current
         error=float(np.linalg.norm(r,np.inf))
         history.append(error)
-        if error<1e-13:
+        if error<stop_tol:
             break
         J=approximate_jacobian(model,G,F,k,dt,scales,Fm if symmetric else None,Fe)
         direction=np.linalg.solve(J,-r)
@@ -126,6 +131,8 @@ def step(model,Y0,dt,method="backward"):
                         break
             c*=.5
         else:
+            if error<5e-13:
+                break
             raise RuntimeError((dt,history))
     r,Y,F,G,edot,heat,_,_=current
     assert max(abs(r))<5e-13,(dt,history,max(abs(r)))

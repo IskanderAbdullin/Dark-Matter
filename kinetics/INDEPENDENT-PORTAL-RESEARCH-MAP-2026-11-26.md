@@ -863,3 +863,6 @@ fit or exclusion.
 - [Hard charged flavor conversion and the initial chemical balance](INDEPENDENT-EARLY-POLE-HARD-FLAVOR-CONVERSION-2026-11-26.md):
   evaluates the disjoint s-channel, independently reverses its integration,
   and measures its number/energy effects in both standalone and joint models.
+- [Joined screened channels under comoving expansion](INDEPENDENT-EARLY-POLE-JOINED-SCREENED-FRW-2026-11-26.md):
+  adds independent trace and discrete variational energy accounting
+  to the finite joint model and separates radial redshift from the Hubble clock.
