@@ -845,3 +845,6 @@ fit or exclusion.
   resolves short coupled comparisons with admissible FD occupations and
   finite energy and entropy checks; large conservative steps still need
   an explicit source-error comparison and do not fix the aperture input.
+- [Daughter shape uncertainty with all three native moments held fixed](INDEPENDENT-EARLY-POLE-SCREENED-NATIVE-MOMENT-UNCERTAINTY-2026-11-26.md):
+  perturbs sub-shell occupations at fixed native counts, energy and J,
+  showing that those archived moments do not constrain the narrow source response.

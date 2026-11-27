@@ -12,8 +12,8 @@ from early_pole_live_joint_hard_pair_packets_reference import gauss_each
 
 
 class Screened(Elastic):
-    def __init__(self,grid,wide,count,exposure,quadrature,cut,strength,aperture_grid=None,projection="steps",subdivision=1):
-        Cold.__init__(self,grid,wide,0,count,True,exposure=exposure,reference_aperture_grid=aperture_grid,archive_projection=projection,aperture_subdivision=subdivision)
+    def __init__(self,grid,wide,count,exposure,quadrature,cut,strength,aperture_grid=None,projection="steps",subdivision=1,shape_amplitude=0.,shape_degree=3):
+        Cold.__init__(self,grid,wide,0,count,True,exposure=exposure,reference_aperture_grid=aperture_grid,archive_projection=projection,aperture_subdivision=subdivision,shape_amplitude=shape_amplitude,shape_degree=shape_degree)
         self.cut=cut
         self.strength=strength
         self.reject_E=0.
@@ -111,7 +111,9 @@ class Screened(Elastic):
         assert max(abs(np.sum(out[k,0])) for k in M.r[1:])<5e-12*norm
         heat=float(np.sum(grad[d]*out[d]))
         leaf=R*(ec-val[1])
-        assert abs(heat-leaf.sum())<5e-12*max(1.,abs(heat))
+        heat_discrepancy=heat-float(leaf.sum())
+        heat_scale=max(1.,float(np.sum(abs(grad[d]*out[d]))))
+        assert abs(heat_discrepancy)<5e-12*heat_scale,(heat_discrepancy,heat,heat_scale)
         self.last_split=[float(leaf[Q<self.cut].sum()),float(leaf[Q>=self.cut].sum())]
         if split_affinity:
             # Logarithmic FD mean makes the exact local nonlinear rate
@@ -139,6 +141,7 @@ class Screened(Elastic):
             return dict(total=out,heat=hdir,shape=shape,conductance=G,
                         entropy=ent,heat_flux=heat,heat_entropy_fraction=normalized_fraction,
                         heat_entropy=heat_entropy,shape_entropy=ent-heat_entropy,
+                        heat_discrepancy=heat_discrepancy,
                         zero_heat_residual=float(np.sum(grad[d]*shape[d])))
         return out,ent,work,heat
 
@@ -228,12 +231,12 @@ class Screened(Elastic):
         return rows
 
 
-def run(grid,wide,n,exposure,level,cut,strength,static,aperture_grid=None,projection="steps",subdivision=1):
+def run(grid,wide,n,exposure,level,cut,strength,static,aperture_grid=None,projection="steps",subdivision=1,shape_amplitude=0.,shape_degree=3):
     order=[(1,1,2),(1,2,3),(2,2,3)][level]
-    M=Screened(grid,wide,n,exposure,order,cut,strength,aperture_grid,projection,subdivision)
+    M=Screened(grid,wide,n,exposure,order,cut,strength,aperture_grid,projection,subdivision,shape_amplitude,shape_degree)
     rows=M.static()
     out=dict(scope='Live two-flavor elastic subset with a frozen polarization, not full gauge transport.',
-             grid=grid,aperture_grid=aperture_grid or grid,projection=projection,subdivision=subdivision,wide=wide,order=order,matching_Q=cut,strength=strength,
+             grid=grid,aperture_grid=aperture_grid or grid,projection=projection,subdivision=subdivision,shape_amplitude=shape_amplitude,shape_degree=shape_degree,wide=wide,order=order,matching_Q=cut,strength=strength,
              packets=M.graph[-1].size,static=rows,max_static_remap_rejection=M.reject_E)
     M.reject_E=0.
     if not static:
@@ -257,5 +260,7 @@ if __name__=='__main__':
     p.add_argument('--aperture-grid',choices=('fine','third'))
     p.add_argument('--projection',choices=('steps','cell-conservative'),default='steps')
     p.add_argument('--subdivision',type=int,choices=range(1,7),default=1)
+    p.add_argument('--shape-amplitude',type=float,default=0.)
+    p.add_argument('--shape-degree',choices=(3,4,5),type=int,default=3)
     p.add_argument('--evolve',dest='static',action='store_false',help='run the short resolved initial transient')
     print(json.dumps(run(**vars(p.parse_args())),indent=2,allow_nan=False))

@@ -7,6 +7,7 @@ from scipy.optimize import brentq
 from scipy.interpolate import PchipInterpolator
 
 from early_pole_frozen_dynamic_vlasov_reference import load
+from early_pole_native_shell_shape_invariants_reference import shape
 from early_pole_snapshot_gauge_ledger_reference import cell_J,photon
 from early_pole_live_joint_hard_pair_packets_reference import Packets
 from early_pole_decay_mode_clock_reference import G,KAPPA,intervals
@@ -48,7 +49,7 @@ def fit_archive_cell(C,edges,f,projection=None):
     return Y
 
 
-def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.45,reference_aperture_grid=None,archive_projection="steps",aperture_subdivision=1):
+def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.45,reference_aperture_grid=None,archive_projection="steps",aperture_subdivision=1,shape_amplitude=0.,shape_degree=3):
     d=load(f'results/early-pole-spectrum-{grid}-m06-2026-11-26.json.gz')
     edges=([.5,.92,1.12,1.55,2.0,2.55,3.15,4.],
            [.45,.65,.85,1.05,1.25,1.7,2.2,2.85,3.7,5.],
@@ -88,6 +89,8 @@ def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.4
         lower=[charge_floor,(charge_floor+.45)/2]
         edges=(edges[0],lower+edges[1],lower+edges[2])
     assert field_floor<=charge_floor<=.45
+    if shape_amplitude and archive_projection!="steps":
+        raise ValueError("fixed native moment perturbations are applied to the step baseline")
     if archive_projection not in ("steps","cell-conservative"):
         raise ValueError("unknown archive projection")
     quad=[(2,3,10,-3),(3,5,14,-3)][level]
@@ -114,6 +117,8 @@ def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.4
             curve=PchipInterpolator(q3,np.r_[0.,np.cumsum(f*np.diff(q3))],extrapolate=False).derivative()
             def projection(p,curve=curve):
                 return np.maximum(np.nan_to_num(curve(p**3/3)),0.)
+        if k==2 and shape_amplitude:
+            projection,_=shape(e,f,m,shape_amplitude,degree=shape_degree)
         for i in range(M.r[k].start,M.r[k].stop):
             C=M.cells[i]
             M.init[i]=fit_archive_cell(C,e,f,projection)

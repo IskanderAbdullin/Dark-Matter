@@ -76,8 +76,10 @@ backward split steps also close the ledgers and keep the gains
 positive. At the larger duration `4e-7`, sixteen backward split
 steps give `2.67737e-8` and `3.18730e-8`, with combined energy
 drifts below `3e-12` and positive sampled increments. This is
-a longer numerical demonstration, not another code-independent
-accuracy claim for that duration.
+a longer numerical demonstration. On the fine archive, the
+independent explicit run at the same duration yields
+`2.66011e-8` (916 RHS calls); the backward split differs by +.65%.
+No comparable explicit long reference has been used on third.
 
 This reference has no phase-space, frozen-field, or FRW
 convergence claim. It does not resolve the representation

@@ -5,9 +5,9 @@ from scipy.special import expit
 from early_pole_archived_shared_cold_window_reference import Cold
 from early_pole_archived_cold_screened_elastic_reference import Screened
 
-def one(grid,mesh,level,projection,cells=False,subdivision=1):
+def one(grid,mesh,level,projection,cells=False,subdivision=1,shape_amplitude=0.,shape_degree=3):
     quad=[(1,1,2),(1,2,3)][level]
-    M=Screened(grid,1,8,8e-8,quad,.08,1.,mesh,projection,subdivision)
+    M=Screened(grid,1,8,8e-8,quad,.08,1.,mesh,projection,subdivision,shape_amplitude,shape_degree)
     N=M.M
     e,f,G,_,_=N.weights(N.init,True)
     z=np.r_[N.init.ravel(),M.ns,0.,0.]
@@ -80,7 +80,7 @@ def one(grid,mesh,level,projection,cells=False,subdivision=1):
         elasticity.append([delta,y['heat_flux'],y['conductance'],y['heat_entropy_fraction']])
     rel=np.max(np.abs(np.asarray(rows['total'])-rows['heat']-rows['shape']))/max(np.max(abs(np.asarray(rows['total']))),1.)
     assert rel<1e-3
-    return dict(grid=grid,mesh=mesh,quad=quad,projection=projection,subdivision=subdivision,archive_scalar_source=C.tolist(),
+    return dict(grid=grid,mesh=mesh,quad=quad,projection=projection,subdivision=subdivision,shape_amplitude=shape_amplitude,shape_degree=shape_degree,archive_scalar_source=C.tolist(),
                 archived={k:v for k,v in x.items() if k not in rows},
                 frozen_two_temperature=elasticity,source_derivatives=rows,centered_logit_derivatives=centered,
                 coordinate_derivative_relative_difference=float(discrepancy),relative_tangent_closure=rel,
@@ -94,7 +94,9 @@ if __name__=='__main__':
     p.add_argument("--subdivision",type=int,choices=range(1,7),default=1)
     p.add_argument("--grid",choices=("fine","third"))
     p.add_argument("--mesh",choices=("fine","third"))
+    p.add_argument("--shape-amplitude",type=float,default=0.)
+    p.add_argument("--shape-degree",type=int,choices=(3,4,5),default=3)
     a=p.parse_args()
-    print(json.dumps([one(g,m,a.level,a.projection,a.cells,a.subdivision)
+    print(json.dumps([one(g,m,a.level,a.projection,a.cells,a.subdivision,a.shape_amplitude,a.shape_degree)
                       for g in ((a.grid,) if a.grid else ('fine','third'))
                       for m in ((a.mesh,) if a.mesh else ('fine','third'))],indent=2,allow_nan=False))
