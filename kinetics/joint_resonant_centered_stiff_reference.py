@@ -48,7 +48,8 @@ class Centered(Model):
         return flux,derivative
 
 def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
-            initial_theta=None,observer=None,centered_diagnostic=None,balanced_merit=False,target_moments=None):
+            initial_theta=None,observer=None,centered_diagnostic=None,balanced_merit=False,target_moments=None,
+            entropy_guard=None):
     U0,S0,_=model.moment(q)
     target=U0 if target_moments is None else np.asarray(target_moments)
     if target_moments is not None:
@@ -85,7 +86,10 @@ def advance(model,q,h,guess,reference_guess=False,vacuum_scaled=False,
         err=np.max(abs(r))
         if observer is not None: observer(it,float(err),int(np.flatnonzero(active)[np.argmax(abs(r))]))
         if err<8e-12:
-            assert S>=S0
+            if entropy_guard is None:
+                assert S>=S0
+            else:
+                assert entropy_guard(qref+z,S,S0)
             if np.any(inactive):
                 assert np.all(F[~active]==0.)
                 assert np.all(abs(U[~active]-U0[~active])<=2e-12*np.abs(U0[~active]))
