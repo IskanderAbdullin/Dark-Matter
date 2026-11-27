@@ -1,6 +1,6 @@
 # Independent portal calculations: what each result does and does not test
 
-This is a navigation aid for the independent numerical work in
+An index to the independent numerical work in
 [PR #2](https://github.com/IskanderAbdullin/Dark-Matter/pull/2).
 It does not replace the upstream research plan or the separate
 energy-closed and BEST calculations in the repository. The
@@ -278,7 +278,8 @@ checks direct outgoing support without claiming dynamical re-entry.
 The [aligned .80 control](INDEPENDENT-WARM-LATE-ALIGNED-HARD080-RELAXATION-2026-11-26.md)
 starts above the cut and has negative transfer at every saved time.
 A [species-resolved comparison](INDEPENDENT-WARM-LATE-TAIL-SPECIES-EXCHANGE-2026-11-26.md)
-identifies which current changes sign and tests its shape sensitivity.
+tracks individual currents and shape sensitivity. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
+checks the bulk effect.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)

@@ -1,0 +1,76 @@
+{
+  "scope": "Independent locked three-microstep replay of selected active intervals, not a new time grid or an assumption on untested adaptive paths.",
+  "active_seed_sha256": "8f70642b7c355a553edd0f32ce5efd01f6fd222b7086539aa45fc3208f580a57",
+  "hard_GeV": 0.8,
+  "controls": [
+    {
+      "interval": 1,
+      "begin": 0.0,
+      "end": 1e-11,
+      "source_sha256": "8f70642b7c355a553edd0f32ce5efd01f6fd222b7086539aa45fc3208f580a57",
+      "end_sha256": "28016eb960276163e19e12e27bad35e449b57b58eae71a051765888074ef4380",
+      "three_microstep_size_H": 3.333333333333333e-12,
+      "residuals": [
+        1.3484636298462835e-14,
+        1.234309041012702e-14,
+        1.485581905700519e-12
+      ],
+      "archived_equivalent_normalized_moment_l1": [
+        [
+          1.3694873581085555e-36,
+          6.8474367905427776e-37
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "interval": 4,
+      "begin": 1e-09,
+      "end": 1e-08,
+      "source_sha256": "ebd2c9f16c2b25178823cecb33f34d7a1d79b4eab99e77691eb3342c6cb5bbf3",
+      "end_sha256": "dbe37f359773afa74f0536ff3c08e0ac644373af407cccc7565e1a039f95c3dd",
+      "three_microstep_size_H": 3e-09,
+      "residuals": [
+        1.5415149422076804e-14,
+        1.2350920800129711e-14,
+        9.026472001537472e-15
+      ],
+      "archived_equivalent_normalized_moment_l1": [
+        [
+          5.294628539969939e-26,
+          9.562446157264054e-27
+        ],
+        [
+          1.65781826196187e-25,
+          3.4264954189217977e-26
+        ]
+      ]
+    },
+    {
+      "interval": 6,
+      "begin": 1e-07,
+      "end": 1e-06,
+      "source_sha256": "c0b0b002d3f71f9b61d601b2b7eb80b6be047aaa4d27bd4914b7375f3022e7d2",
+      "end_sha256": "0ed23423ba2a7f8afa75032c6b1ddfdf4e681f9c2389bf8b6e7b22a4fe3ce825",
+      "three_microstep_size_H": 3e-07,
+      "residuals": [
+        4.036085151637874e-13,
+        3.131223565251105e-13,
+        3.512645104342079e-13
+      ],
+      "archived_equivalent_normalized_moment_l1": [
+        [
+          3.7978378731385105e-16,
+          2.908334938896671e-16
+        ],
+        [
+          4.515518763538112e-16,
+          1.892629621919575e-16
+        ]
+      ]
+    }
+  ]
+}
