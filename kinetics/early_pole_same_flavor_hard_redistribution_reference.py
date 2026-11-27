@@ -49,33 +49,56 @@ class SameFlavorKernel:
         A=np.clip(np.divide(a-b,K,out=np.zeros_like(K),where=K>0.),-1.,1.)
         z,w=roots_legendre(na)
         X,U=gauss_each(np.array([self.floor,.25,.5,.75,1-self.floor]),nc)
-        packs=[]
+        columns=[[] for _ in range(5)]
+        span=M.r[k]
+        mass=M.cells[span.start].m
+        if len(M.cells)>np.iinfo(np.int32).max:
+            raise ValueError("too many cells for the packed graph")
         for x,v in zip(X,U,strict=True):
+            group=[[] for _ in range(5)]
             ct=1-2*x
-            V=(E+K*A*ct)/2
-            R=np.maximum(K*np.sqrt((1-ct*ct)*(1-A*A))/2,1e-30)
-            cuts=np.c_[(grids[0]-V[:,None])/R[:,None],
-                       (E[:,None]-grids[1]-V[:,None])/R[:,None],
-                       np.broadcast_to([-1.,1.],(len(E),2))]
-            cuts=np.sort(np.arccos(np.clip(cuts,-1.,1.)),axis=1)
-            hh=np.diff(cuts,axis=1)/2
-            i,j=np.nonzero(hh>1e-14)
-            p=V[i,None]+R[i,None]*np.cos((cuts[i,j]+cuts[i,j+1])[:,None]/2+hh[i,j,None]*z)
-            q=E[i,None]-p
             polar=spin(x)
             mult=(.125*polar[0] if self.mode in ("both","moller") else 0.)
             mult+=(.25*polar[1] if self.mode in ("both","bhabha") else 0.)
-            f=(W*(2*v)*mult/(16*np.pi*s))[i,None]*hh[i,j,None]*w/np.pi
-            ok=(p>=grids[0][0])&(p<=grids[0][-1])&(q>=grids[1][0])&(q<=grids[1][-1])
-            packs.append(np.array([np.broadcast_to(y[i,None],p.shape)[ok] for y in (a,b,K)]
-                                  +[p[ok],q[ok],f[ok]]))
-        a,b,K,p,q,W=np.concatenate(packs,axis=1)
-        ix=np.stack([np.searchsorted(g[1:],x)+s.start for x,g,s in
-            zip((a,b,p,q),grids*2,[M.r[k]]*4,strict=True)])
-        x=np.hypot(np.stack((a,b,p,q)),M.cells[M.r[k].start].m)
-        basis=(x-M.shape[ix,0])/M.shape[ix,1]
-        assert max(np.ravel(abs(basis)))<=1.+1e-12
-        return ix[:3],basis[:3],p,K,W
+            # Subdivide the incoming pair axis before making its angular
+            # support-by-edge table. Iteration and packet summation order
+            # are unchanged.
+            for start in range(0,len(E),512):
+                j0=slice(start,start+512)
+                e,kvec,a0=E[j0],K[j0],A[j0]
+                V=(e+kvec*a0*ct)/2
+                R=np.maximum(kvec*np.sqrt((1-ct*ct)*(1-a0*a0))/2,1e-30)
+                cuts=np.c_[(grids[0]-V[:,None])/R[:,None],
+                           (e[:,None]-grids[1]-V[:,None])/R[:,None],
+                           np.broadcast_to([-1.,1.],(len(e),2))]
+                cuts=np.sort(np.arccos(np.clip(cuts,-1.,1.)),axis=1)
+                hh=np.diff(cuts,axis=1)/2
+                i,j=np.nonzero(hh>1e-14)
+                p=V[i,None]+R[i,None]*np.cos((cuts[i,j]+cuts[i,j+1])[:,None]/2+hh[i,j,None]*z)
+                q=e[i,None]-p
+                f=(W[j0]*(2*v)*mult/(16*np.pi*s[j0]))[i,None]*hh[i,j,None]*w/np.pi
+                ok=(p>=grids[0][0])&(p<=grids[0][-1])&(q>=grids[1][0])&(q<=grids[1][-1])
+                if not np.any(ok):
+                    continue
+                a1,b1,K1=[np.broadcast_to(y[i,None],p.shape)[ok] for y in (a[j0],b[j0],kvec)]
+                p,q,f=p[ok],q[ok],f[ok]
+                momenta=(a1,b1,p,q)
+                ids=np.stack([np.searchsorted(g[1:],u)+span.start
+                              for u,g in zip(momenta,grids*2,strict=True)]).astype(np.int32)
+                energies=np.hypot(np.stack(momenta),mass)
+                basis=(energies-M.shape[ids,0])/M.shape[ids,1]
+                assert np.max(abs(basis),initial=0.)<=1.+1e-12
+                for lane,arr in zip(group,(ids[:3].copy(),basis[:3].copy(),p,K1,f),strict=True):
+                    lane.append(arr)
+            for lane,stage in zip(columns,group,strict=True):
+                if stage:
+                    lane.append(np.concatenate(stage,axis=-1))
+                    stage.clear()
+        result=[]
+        for lane in columns:
+            result.append(np.concatenate(lane,axis=-1))
+            lane.clear()
+        return tuple(result)
 
     def collision(self,e,F,grad):
         M=self.M
