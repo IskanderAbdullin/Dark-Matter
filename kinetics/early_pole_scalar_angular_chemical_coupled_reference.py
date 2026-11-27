@@ -65,7 +65,7 @@ if __name__=='__main__':
     p.add_argument('--strength',type=float,default=1e-7)
     p.add_argument('--power',type=int,default=2)
     p.add_argument('--hot-cells',type=int,default=0)
-    p.add_argument('--split-outgoing',type=int,default=0)
+    p.add_argument('--split-outgoing',dest='split',type=int,default=0)
     p.add_argument('--xend',type=float,default=.052)
     a=p.parse_args()
     path=Path(a.spectrum)

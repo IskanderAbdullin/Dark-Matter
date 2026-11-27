@@ -26,9 +26,22 @@ of the threshold comparator, not a measurement of the medium
 rate. Local hot-shell refinement and Fermi gain remain
 important distinct checks.
 
+One live sensitivity subdividing the hot band into an additional
+36 segments gives 0.000226931 at the same endpoint (about 3.7%
+lower than the native angular result), with 50.33% net chemical
+loss relative to the initial scalar count. Introducing 100
+segments in the no-chemical comparator changes the original
+endpoint by only about 7 × 10⁻⁹ relative. The hot-refinement
+comparator does not prove convergence of the full chemical path.
+
+The interval-split CLI also passes a separate finite short
+smoke integration with the 36-segment refinement, including
+the numerical number and energy ledgers.
+
 ~~~sh
 python -W error early_pole_scalar_number_change_angular_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz
 python -W error early_pole_scalar_angular_chemical_coupled_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --power 3 --strength 1e-7
+python -W error early_pole_scalar_angular_chemical_coupled_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --hot-cells 36 --split-outgoing 2 --xend .05000001
 ~~~
 
 [Frozen angular ledgers](results/early-pole-number-change-angular-2026-11-26.json.gz);
