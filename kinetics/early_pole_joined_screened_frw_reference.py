@@ -73,6 +73,42 @@ def finite_energy(M,old,new):
     v=np.r_[sum(dj[1:]),dj[0]+dj[1:]]
     return float(r+.5*M.c*(2*j+dj)@v)
 
+def fd_increment(x,dx,f):
+    z=np.expm1(np.clip(dx,-1.,1.))
+    return np.where(abs(dx)<1.,f*(1-f)*z/(1+f*z),expit(x+dx)-f)
+
+
+def finite_energy_stable(M,old,new):
+    j=M.spectators(M.eta)[0].copy()
+    dj=np.zeros(3)
+    a2m1=np.expm1(2*M.eta)
+    r=float(np.sum(M.shape*(new-old)))
+    for flavor,span in enumerate(M.r):
+        for k in range(span.start,span.stop):
+            C=M.cells[k]
+            if flavor==0:
+                a,b,*_=C.fit(old[k]);c,d,*_=C.fit(new[k])
+                f=C.f(a,b)
+                delta=C.f(c,d)-f
+                mult=C.W*C.inv
+            else:
+                a=C.fit(old[k])[0];b=C.fit(new[k])[0]
+                x=a@C.B
+                dx=(b-a)@C.B
+                f=expit(x)
+                delta=fd_increment(x,dx,f)
+                q=a2m1*C.m*C.m
+                bare=np.sqrt(C.energy*C.energy+q)
+                # Bare reference energy is affine in the two moments.
+                # Only the tiny, non-affine redshift correction uses
+                # quadrature of the finite occupation increment.
+                r+=np.sum(C.w*q/(bare+C.energy)*delta)
+                mult=C.w*np.pi**2/2/bare
+            j[flavor]+=mult@f; dj[flavor]+=mult@delta
+    v=np.r_[sum(dj[1:]),dj[0]+dj[1:]]
+    return float(r+.5*M.c*(2*j+dj)@v)
+
+
 def elastic_at_midpoint(model, Y, dt, refinements=3, solver=None):
     """Keep macro ordering and ledgers; bisect only a failed elastic solve."""
     if solver is None:
@@ -114,9 +150,11 @@ def retry_fixture():
 
 
 def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,resume=False,
-        checkpoint_every=12,progress_every=0,stop_after=None,clock_scale=1.):
+        checkpoint_every=12,progress_every=0,stop_after=None,clock_scale=1.,stable_energy_from_step=None):
     if duration<=0. or steps<1:
         raise ValueError("positive duration and step count required")
+    if stable_energy_from_step is not None and not 1<=stable_energy_from_step<=steps:
+        raise ValueError("Stable secant switch must name a valid one-based macro step.")
     if not np.isfinite(clock_scale) or not 0.<clock_scale<=1. or (full_H and clock_scale!=1.):
         raise ValueError("Use a positive constant clock scale <=1 without conditional full H.")
     if resume and not checkpoint:
@@ -131,9 +169,12 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
                    projection=projection,numpy=np.__version__,scipy=scipy_version)
     if clock_scale!=1.:
         requested['constant_clock_scale']=clock_scale
+    if stable_energy_from_step is not None:
+        requested['stable_energy_from_step']=stable_energy_from_step
     old=json.loads(Path(checkpoint).read_text()) if resume else None
     if old is not None and (any(old.get('physics',{}).get(k)!=v for k,v in requested.items())
-                            or old.get('physics',{}).get('constant_clock_scale',1.)!=clock_scale):
+                            or old.get('physics',{}).get('constant_clock_scale',1.)!=clock_scale
+                            or old.get('physics',{}).get('stable_energy_from_step')!=stable_energy_from_step):
         raise ValueError("FRW checkpoint physics does not match these controls.")
     C=Screened(grid,1,8,duration,(1,1,2),.08,1.,None,projection)
     M=C.M
@@ -207,6 +248,8 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
         if clock_scale!=1.:
             scale*=clock_scale
         C.factor,elastic.soft.fac=(k*scale for k in facs[:2])
+        if stable_energy_from_step is not None:
+            M.energy_increment=MethodType(finite_energy_stable if j+1>=stable_energy_from_step else finite_energy,M)
         Y,info=elastic_at_midpoint(elastic,y[:C.j0].reshape(-1,2),dd)
         if progress_every and 'elastic_substeps' in info:
             print(f"elastic solve bisected at macro step {j+1}",file=sys.stderr,flush=True)
@@ -230,7 +273,8 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
                 slow_rhs_calls=calls,state_history=history,initial_dark_visible=e0/vis,
                 scalar_gain=float((y-y0)[C.j0:C.j0+C.n].sum()),energy_ledger=err,
                 entropy_ledger=s-s0-y[-3],trace_integral=y[-1],implicit=an,
-                **(dict(constant_clock_scale=clock_scale) if clock_scale!=1. else {}))
+                **(dict(constant_clock_scale=clock_scale) if clock_scale!=1. else {}),
+                **(dict(stable_energy_from_step=stable_energy_from_step) if stable_energy_from_step is not None else {}))
 
 def fixture():
     retry_fixture()
@@ -256,6 +300,9 @@ def fixture():
             a,analytic=energy(A,t)
             b,_=energy(B,t)
             de=finite_energy(M,A,B)
+            stable=finite_energy_stable(M,A,B)
+            assert abs(stable-(b-a))<2e-15
+            assert abs(stable-de)<8e-16
             assert abs(numeric-analytic)<2e-10
             assert abs(de-(b-a))<2e-15
             out.append(dict(grid=g,eta=t,difference_error=float(de-(b-a)),redshift_trace_error=numeric-analytic))
@@ -271,6 +318,7 @@ if __name__=='__main__':
     p.add_argument("--projection",choices=("steps","cell-conservative"),default="steps")
     p.add_argument("--fixture",action="store_true")
     p.add_argument("--clock-scale",type=float,default=1.)
+    p.add_argument("--stable-energy-from-step",type=int)
     p.add_argument("--checkpoint")
     p.add_argument("--resume",action="store_true")
     p.add_argument("--checkpoint-every",type=int,default=12)
