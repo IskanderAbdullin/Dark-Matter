@@ -21,7 +21,7 @@ an initially empty shell gives no occupation
 tadpole. Damping and nonlocal terms are not included.
 
 The shell shares a single occupation over momenta
-from .5 to 1.5 times $p_*=4.1\times10^{-6}T$.
+from .5 to 1.5 times $p_{\rm piv}=4.1\times10^{-6}T$.
 Compute the number-weighted clock from the finite
 pole interval, keep the parent FD reservoir fixed
 and impose a radiation-era $T\propto a^{-1}$.

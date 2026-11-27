@@ -537,6 +537,11 @@ adds a population-dependent positive tadpole to a controlled thin
 early shell. A held parent bath and no spectral redistribution do
 not make it a final production history.
 
+The [Hartree cold-band upper](INDEPENDENT-EARLY-POLE-HARTREE-BAND-UPPER-2026-11-26.md)
+bounds narrow-band production without assigning a scalar momentum
+shape. It relies on a positive retained tadpole and no other means
+of refilling the selected band.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
