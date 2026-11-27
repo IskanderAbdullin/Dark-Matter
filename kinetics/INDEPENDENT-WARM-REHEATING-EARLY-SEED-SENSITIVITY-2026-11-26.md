@@ -51,3 +51,7 @@ python -W error warm_prompt_reheating_quantum_heat_gap_reference.py EOS.late.dat
 [Seed ladder](results/warm-prompt-reheating-early-seed-sensitivity-2026-11-26.json);
 [initial heat/source race](results/warm-prompt-reheating-onset-heat-2026-11-26.json);
 [heat-rate and finite-difference cross along the earliest path](results/warm-prompt-reheating-early-path-heat-2026-11-26.json).
+
+A [separate direct quantum rate refinement](INDEPENDENT-WARM-REHEATING-EARLY-TABULATED-QUANTUM-2026-11-26.md)
+confirms the earlier applicability stop with the same
+early seed, instead of continuing directly to 60 MeV.

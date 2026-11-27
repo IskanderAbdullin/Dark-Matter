@@ -64,3 +64,9 @@ python -W error warm_prompt_reheating_saturation_distance_reference.py EOS.late.
 [Tabulated path and refinement](results/warm-prompt-reheating-tabulated-quantum-2026-11-26.json);
 [Bose–Fermi heat mode](results/warm-prompt-reheating-tabulated-heat-2026-11-26.json);
 [held source and saturated-capacity checks](results/warm-prompt-reheating-held-source-and-saturation-2026-11-26.json).
+
+The saturated scalar quadrature also reproduces
+the leading small-mass corrections to the independent
+massless Bose count and energy integrals on a separate
+check. These small-mass expansions are not substituted
+for the finite-mass saturated-state solution.

@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 import numpy as np
-from scipy.special import expit,roots_legendre
+from scipy.special import expit,roots_legendre,zeta
 from scipy.optimize import brentq
 
 from archived_collisionless_streaming_reference import Background
@@ -56,6 +56,21 @@ def compare(T,L,S,U,orders=(22,38)):
     return out
 
 
+def independent_massless_limit():
+    T=.017
+    E,w,f=measure(T,40)
+    N=(w[1]*f).sum()
+    rho=(w[1]*f*E[1]).sum()
+    # At mu=m the leading small m/T changes are the chemical-potential
+    # derivatives of the massless integrals. Do not use this to fit
+    # the finite-mass phase boundary.
+    predicted=(mp/T)*np.array([zeta(2)/zeta(3),zeta(3)/zeta(4)])
+    observed=np.array([N/(zeta(3)*T**3/np.pi**2)-1,rho/(np.pi**2/30*T**4)-1])
+    assert max(abs(observed/predicted-1))<1e-3
+    return dict(T=T,fractional_number_and_energy_shifts=observed.tolist(),
+                independent_small_mass_leading_terms=predicted.tolist())
+
+
 def calc(eos,file):
     bg=Background(eos)
     x=json.loads(file.read_text())
@@ -81,7 +96,7 @@ def calc(eos,file):
         U=np.sum(pop*rho)
         result=compare(T,inv[0]*s,inv[1]*s,U)
         rows.append(dict(T_visible=v,T_dark=T,peak=peak,controls=result))
-    return dict(scope="Compare to a saturated thermal normal phase at fixed light-equivalent number and total dark energy, "
+    return dict(independent_massless_limit=independent_massless_limit(),scope="Compare to a saturated thermal normal phase at fixed light-equivalent number and total dark energy, "
                       "with the same fast heavy decay affinity. Does not determine kinetic condensation, the validity of "
                       "the thermal closure, or whether an evolving history reaches saturation.",rows=rows)
 
