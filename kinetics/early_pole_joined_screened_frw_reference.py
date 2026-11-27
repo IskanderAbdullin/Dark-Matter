@@ -1,9 +1,12 @@
 """Joined screened FRW split with a precise finite comoving-energy difference."""
 import argparse
 import json
+from pathlib import Path
+import sys
 
 from types import MethodType
 import numpy as np
+from scipy import __version__ as scipy_version
 from scipy.special import roots_legendre,expit
 from scipy.integrate import quad,solve_ivp
 
@@ -15,6 +18,7 @@ from early_pole_live_joint_hard_packets_frw_reference import Expanding
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 from early_pole_frozen_dynamic_vlasov_reference import load
 from early_pole_screened_elastic_discrete_gradient_reference import step
+from early_pole_cold_screened_split_reference import atomic_write,state_digest
 
 def exterior(M,grid):
     d=load(f'results/early-pole-spectrum-{grid}-m06-2026-11-26.json.gz')
@@ -69,9 +73,23 @@ def finite_energy(M,old,new):
     v=np.r_[sum(dj[1:]),dj[0]+dj[1:]]
     return float(r+.5*M.c*(2*j+dj)@v)
 
-def run(grid,duration,steps,expands,full_H,projection="steps"):
+def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,resume=False,
+        checkpoint_every=12,progress_every=0,stop_after=None):
     if duration<=0. or steps<1:
         raise ValueError("positive duration and step count required")
+    if resume and not checkpoint:
+        raise ValueError("Resume requires a checkpoint path.")
+    if checkpoint_every<1 or progress_every<0:
+        raise ValueError("Invalid progress or checkpoint interval.")
+    if stop_after is not None and (not checkpoint or not 1<=stop_after<=steps):
+        raise ValueError("Stopping at a macro boundary requires a path and a valid boundary.")
+    if checkpoint and not resume and Path(checkpoint).exists():
+        raise FileExistsError("Checkpoint exists; resume explicitly or choose another path.")
+    requested=dict(format=1,grid=grid,duration=duration,steps=steps,expands=expands,full_H=full_H,
+                   projection=projection,numpy=np.__version__,scipy=scipy_version)
+    old=json.loads(Path(checkpoint).read_text()) if resume else None
+    if old is not None and any(old.get('physics',{}).get(k)!=v for k,v in requested.items()):
+        raise ValueError("FRW checkpoint physics does not match these controls.")
     C=Screened(grid,1,8,duration,(1,1,2),.08,1.,None,projection)
     M=C.M
     M.weights=MethodType(Expanding.weights,M)
@@ -115,7 +133,26 @@ def run(grid,duration,steps,expands,full_H,projection="steps"):
     y=y0.copy();e0,s0=totals(y,0.)
     an=[]
     history=[float(C.ns.sum())]
-    for j in range(steps):
+    begin=0
+    end=steps if stop_after is None else stop_after
+    physics=dict(requested,initial=state_digest(y0),edges=[state_digest(e) for e in M.edge_sets])
+    if old is not None:
+        if old['physics']!=physics:
+            raise ValueError("FRW checkpoint physics does not match these controls.")
+        begin=old['steps_done']
+        y=np.asarray(old['state'])
+        history=old['history']
+        an=old['implicit']
+        calls=old['slow_rhs_calls']
+        if (not isinstance(begin,int) or not 0<=begin<=end or y.shape!=y0.shape
+            or not np.all(np.isfinite(y)) or old['state_digest']!=state_digest(y)
+            or len(history)!=begin+1 or not np.all(np.isfinite(history)) or len(an)!=begin
+            or history[0]!=float(C.ns.sum()) or history[-1]!=float(y[C.j0:C.j0+C.n].sum())
+            or not isinstance(calls,int) or calls<0):
+            raise ValueError("Invalid FRW checkpoint state or history.")
+    if progress_every:
+        print(f"initialized fixed supports and exterior; steps {begin}/{steps}",file=sys.stderr,flush=True)
+    for j in range(begin,end):
         t=dd*(j+.5)
         y=advance(y,dd*j,t)
         e,_=totals(y,t)
@@ -127,6 +164,14 @@ def run(grid,duration,steps,expands,full_H,projection="steps"):
         an.append(info)
         y=advance(y,t,dd*(j+1))
         history.append(float(y[C.j0:C.j0+C.n].sum()))
+        k=j+1
+        if checkpoint and (k%checkpoint_every==0 or k==end):
+            atomic_write(checkpoint,dict(physics=physics,steps_done=k,state=y.tolist(),state_digest=state_digest(y),
+                                        history=history,implicit=an,slow_rhs_calls=calls))
+        if progress_every and (k%progress_every==0 or k==end):
+            print(f"steps {k}/{steps}; cold gain {history[-1]-history[0]:.9g}",file=sys.stderr,flush=True)
+    if end<steps:
+        return dict(checkpoint_only=True,steps_done=end,total_steps=steps,scalar_gain_so_far=history[-1]-history[0])
     e,s=totals(y,duration)
     err=e-e0-y[-1]
     assert abs(err)<3e-12 and abs(s-s0-y[-3])<3e-11,(err,s-s0-y[-3])
@@ -172,6 +217,11 @@ if __name__=='__main__':
     p.add_argument('--full-H',dest='full_H',action='store_true')
     p.add_argument("--projection",choices=("steps","cell-conservative"),default="steps")
     p.add_argument("--fixture",action="store_true")
+    p.add_argument("--checkpoint")
+    p.add_argument("--resume",action="store_true")
+    p.add_argument("--checkpoint-every",type=int,default=12)
+    p.add_argument("--progress-every",type=int,default=0)
+    p.add_argument("--stop-after",type=int)
     args=vars(p.parse_args())
     result=fixture() if args.pop("fixture") else run(**args)
     print(json.dumps(result,indent=2,allow_nan=False))
