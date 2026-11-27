@@ -40,7 +40,7 @@ def atomic_write(path, value):
 
 
 def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.,snapshots=False,scalar_bins=8,aperture_subdivision=1,witness_mix=0.,response_radial_order=None,
-        checkpoint=None,resume=False,checkpoint_every=1,stop_after=None,progress_every=0,elastic_energy_budget=None,macro_step_weights=None):
+        checkpoint=None,resume=False,checkpoint_every=1,stop_after=None,progress_every=0,elastic_energy_budget=None,macro_step_weights=None,outer_order='slow-elastic-slow'):
     if elastic_energy_budget is not None and (not np.isfinite(elastic_energy_budget) or elastic_energy_budget<=0. or method!="backward"):
         raise ValueError("A finite positive explicit elastic energy budget requires backward steps.")
     if resume and not checkpoint:
@@ -59,6 +59,10 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
         raise ValueError("witness mix is for archived step inputs and must be in [0,1)")
     if scalar_bins<1 or aperture_subdivision<1:
         raise ValueError("positive scalar bins and aperture subdivisions required")
+    if outer_order not in ('slow-elastic-slow','elastic-slow-elastic'):
+        raise ValueError('Unsupported outer ordering.')
+    if outer_order=='elastic-slow-elastic' and (screening_update!='frozen' or not (strength or same_soft_strength)):
+        raise ValueError('The alternate order is tested only with active elastic terms and held response.')
     weights=None
     if macro_step_weights is not None:
         weights=tuple(macro_step_weights)
@@ -133,6 +137,8 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
         physics["elastic_energy_budget"]=elastic_energy_budget
     if weights is not None:
         physics['macro_step_weights']=list(weights)
+    if outer_order!='slow-elastic-slow':
+        physics['outer_order']=outer_order
     if checkpoint:
         physics.update(format=1,numpy=np.__version__,scipy=scipy_version,state_initial=state_digest(z0),
                        graph_code=[hashlib.sha256(Path(__file__).with_name(n+'.py').read_bytes()).hexdigest()
@@ -180,16 +186,31 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
     for j in range(start,limit):
         if weights is not None:
             h=weights[j]*unit
-        z=advance(z,h/2)
-        if strength or same_soft_strength:
-            Y=z[:M.j0].reshape(-1,2)
-            if active is not None:
-                updates.append(active.refresh(Y,screening_update))
-            f,r=step(elastic,Y,h,method,energy_budget=elastic_energy_budget)
-            z[:M.j0]=f.ravel()
-            z[-2]+=r['entropy_gain']
-            controls.append(r)
-        z=advance(z,h/2)
+        if outer_order=='elastic-slow-elastic':
+            def elastic_half(y):
+                Y=y[:M.j0].reshape(-1,2)
+                f,r=step(elastic,Y,h/2,method,energy_budget=elastic_energy_budget)
+                y[:M.j0]=f.ravel()
+                y[-2]+=r['entropy_gain']
+                return r
+            before=elastic_half(z)
+            z=advance(z,h)
+            after=elastic_half(z)
+            parts=[v for q in (before,after) for v in q.get('elastic_substeps',[q])]
+            controls.append(dict(h=h,rho_drift=before['rho_drift']+after['rho_drift'],
+                                 entropy_gain=before['entropy_gain']+after['entropy_gain'],
+                                 elastic_substeps=parts))
+        else:
+            z=advance(z,h/2)
+            if strength or same_soft_strength:
+                Y=z[:M.j0].reshape(-1,2)
+                if active is not None:
+                    updates.append(active.refresh(Y,screening_update))
+                f,r=step(elastic,Y,h,method,energy_budget=elastic_energy_budget)
+                z[:M.j0]=f.ravel()
+                z[-2]+=r['entropy_gain']
+                controls.append(r)
+            z=advance(z,h/2)
         states.append(float(z[M.j0:M.j0+M.n].sum()))
         if snapshots and (j+1 in (1,2,4,8,count//4,count//2,3*count//4,count)):
             inspect(j+1,z)
@@ -202,6 +223,7 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
     et,st=total(z)
     assert abs(et-E0)<3e-12 and abs(st-S0-z[-2])<3e-11
     return dict(grid=grid,pair=pair,method=method,strength=strength,projection=projection,**(dict(macro_step_weights=list(weights),macro_exposure=boundaries.tolist()) if weights is not None else {}),
+                **(dict(outer_order=outer_order) if outer_order!='slow-elastic-slow' else {}),
                 compton_strength=compton_strength,same_soft_strength=same_soft_strength,
                 conversion_strength=conversion_strength,slow_rhs_calls=slow_calls,
                 aperture_grid=aperture_grid or grid,duration=duration,steps=count,scalar_gain=states[-1]-states[0],
