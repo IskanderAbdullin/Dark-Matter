@@ -451,6 +451,11 @@ shows the finite-cap clipped core has a plateau inaccessible from a
 nonplateau primordial spectrum at the same cap under collisionless
 mixing. A smooth subcritical core has a different high-density tail.
 
+The [matched cap-versus-shift halo comparison](INDEPENDENT-HALO-BOSE-CAP-SHIFT-DEGENERACY-2026-11-26.md)
+shows an illustrative static speed degeneracy after fixing central
+density and dispersion. The matched shifted peak exceeds the clipped
+model's assumed bound; this is not a shared collisionless solution.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
