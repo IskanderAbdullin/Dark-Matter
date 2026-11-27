@@ -646,6 +646,11 @@ tests conservative momentum redistribution, including direct
 continuum weak moments and an entropy check. Bare high-occupancy
 flux is not a justified physical relaxation rate.
 
+The [infrared vertex-response sensitivity](INDEPENDENT-EARLY-POLE-SCALAR-VERTEX-RESPONSE-2026-11-26.md)
+evaluates a large-N-inspired screened cold kernel on the same
+stencil. The drastic formal flux reduction is not a calibrated
+N=1 transport rate.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
