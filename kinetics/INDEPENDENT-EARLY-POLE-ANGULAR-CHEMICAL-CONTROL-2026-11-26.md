@@ -40,6 +40,11 @@ run on the unrefined third grid gives 0.000235659, within 0.004%
 of the sample-angle comparator there. Neither comparison fixes
 the physical width or proves convergence after both refinements.
 
+On the 36-segment mesh the integrated-interval variant also
+completes, giving 0.000226989 rather than 0.000226931 from direct
+angle samples. This agreement is conditional on that mesh
+and the threshold model.
+
 The interval-split CLI also passes a separate finite short
 smoke integration with the 36-segment refinement, including
 the numerical number and energy ledgers.

@@ -696,6 +696,10 @@ uses identical Fourier seeds across resolutions and compares
 early growth with their seeded linear superposition, not with
 the fastest possible single-mode exponent.
 
+An [isolated coherent pressure and action control](INDEPENDENT-EARLY-POLE-COHERENT-PRESSURE-2026-11-26.md)
+separates homogeneous radiation-like pressure from particle
+momentum and tests the adiabatic amplitude crossover only.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
