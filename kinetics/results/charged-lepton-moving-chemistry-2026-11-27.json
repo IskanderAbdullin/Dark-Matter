@@ -1,0 +1,129 @@
+{
+  "scope": "Imposed chemistry clock with held temperature; not a cosmological transfer model.",
+  "states": [
+    {
+      "T": 0.015,
+      "k_over_elastic_heat_scale": 0.00025,
+      "sweep": [
+        {
+          "sweep_duration_in_phase_units": 0.03,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 1.0717691160480207e-12,
+          "radau_bdf_terminal_error": 1.7768185480181506e-12,
+          "norm_full": 0.9999995263453701,
+          "norm_reduced": 0.9999995263463429,
+          "common_fwd_modal_amplitude": 0.9996452891955236,
+          "integrated_instantaneous_acoustic_amplitude": 0.9999811157957006,
+          "reconstructed_vector_relative_error": 5.784221991259766e-10
+        },
+        {
+          "sweep_duration_in_phase_units": 0.3,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 1.848895258356638e-11,
+          "radau_bdf_terminal_error": 9.59461175417961e-12,
+          "norm_full": 0.9999521571451369,
+          "norm_reduced": 0.9999521571412784,
+          "common_fwd_modal_amplitude": 0.9996054681185744,
+          "integrated_instantaneous_acoustic_amplitude": 0.9998111740037914,
+          "reconstructed_vector_relative_error": 1.8136195746925177e-10
+        },
+        {
+          "sweep_duration_in_phase_units": 3.0,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 1.4988113606131948e-09,
+          "radau_bdf_terminal_error": 7.498615015224187e-10,
+          "norm_full": 0.9981279546482643,
+          "norm_reduced": 0.9981279546563693,
+          "common_fwd_modal_amplitude": 0.9981125637460321,
+          "integrated_instantaneous_acoustic_amplitude": 0.9981133437168217,
+          "reconstructed_vector_relative_error": 1.7001861874002647e-10
+        },
+        {
+          "sweep_duration_in_phase_units": 30.0,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 1.5314941918809222e-08,
+          "radau_bdf_terminal_error": 7.447132592871453e-09,
+          "norm_full": 0.9812929892340281,
+          "norm_reduced": 0.9812929893226321,
+          "common_fwd_modal_amplitude": 0.9812929890306278,
+          "integrated_instantaneous_acoustic_amplitude": 0.9812928101997477,
+          "reconstructed_vector_relative_error": 4.879486786393408e-10
+        }
+      ]
+    },
+    {
+      "T": 0.05,
+      "k_over_elastic_heat_scale": 0.00025,
+      "sweep": [
+        {
+          "sweep_duration_in_phase_units": 0.03,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 2.8750605080731624e-12,
+          "radau_bdf_terminal_error": 1.8963454721076135e-12,
+          "norm_full": 0.9999999931777599,
+          "norm_reduced": 0.9999999931785759,
+          "common_fwd_modal_amplitude": 0.9999949456836597,
+          "integrated_instantaneous_acoustic_amplitude": 0.999999730069593,
+          "reconstructed_vector_relative_error": 1.9442268840666004e-10
+        },
+        {
+          "sweep_duration_in_phase_units": 0.3,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 6.850580492418976e-11,
+          "radau_bdf_terminal_error": 3.434583254253089e-11,
+          "norm_full": 0.9999993135830747,
+          "norm_reduced": 0.9999993136047877,
+          "common_fwd_modal_amplitude": 0.9999943751580135,
+          "integrated_instantaneous_acoustic_amplitude": 0.9999973006991844,
+          "reconstructed_vector_relative_error": 4.236595020405662e-11
+        },
+        {
+          "sweep_duration_in_phase_units": 3.0,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 1.5113372674386335e-09,
+          "radau_bdf_terminal_error": 7.553044322460559e-10,
+          "norm_full": 0.9999732123380598,
+          "norm_reduced": 0.9999732122793311,
+          "common_fwd_modal_amplitude": 0.9999729953571393,
+          "integrated_instantaneous_acoustic_amplitude": 0.9999730073196431,
+          "reconstructed_vector_relative_error": 6.533621362961697e-11
+        },
+        {
+          "sweep_duration_in_phase_units": 30.0,
+          "projected_chemical_rate_to_wave_number_ratio": [
+            100,
+            0.01
+          ],
+          "endpoint_free_energy_balance_error": 1.5209149565849692e-08,
+          "radau_bdf_terminal_error": 7.610011772302013e-09,
+          "norm_full": 0.999730101065866,
+          "norm_reduced": 0.9997301004654594,
+          "common_fwd_modal_amplitude": 0.9997301010629058,
+          "integrated_instantaneous_acoustic_amplitude": 0.9997301059760635,
+          "reconstructed_vector_relative_error": 6.011894544817072e-10
+        }
+      ]
+    }
+  ]
+}
