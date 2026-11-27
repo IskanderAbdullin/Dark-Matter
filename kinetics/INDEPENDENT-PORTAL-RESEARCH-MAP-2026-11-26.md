@@ -841,3 +841,7 @@ fit or exclusion.
 - [Crossed hard meshes and local heat versus shape redistribution](INDEPENDENT-EARLY-POLE-SCREENED-HEAT-VS-REDISTRIBUTION-2026-11-26.md):
   isolates daughter energy exchange from the much larger heat-neutral
   aperture response, and tests both shell representation and hard-mesh effects.
+- [Conservative implicit steps for the stiff screened model](INDEPENDENT-EARLY-POLE-SCREENED-DISCRETE-GRADIENT-2026-11-26.md):
+  resolves short coupled comparisons with admissible FD occupations and
+  finite energy and entropy checks; large conservative steps still need
+  an explicit source-error comparison and do not fix the aperture input.
