@@ -4,10 +4,10 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 
 | Question | Evidence available | What is still missing |
 | --- | --- | --- |
-| Does the massive-shell projection conserve the represented moments? | Exact and independent checks of number, energy, pressure/trace, positivity, and unresolved cells; see the PR's projection and restart references. | No complete production validation. |
+| Does the massive-shell projection conserve the represented moments? | Independent number, energy, stress, positivity and restart tests. | No complete production validation. |
 | Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | The stable rest count is set near Ωh²=.120. The shifted first-order scalar rest count is only about 3.05×10⁻¹⁰ or 2.75×10⁻⁹ for the two prescribed histories. | Only these sources and rates; stronger stimulation or other channels are open. |
-| Is the scalar contrast robust to integrating the hierarchy? | A matched native fluid-closure test, the corresponding no-closure positive split, and a memory-bounded independent relativistic calculation on recorded metrics trace the discrepancy to the approximate grouping. | No global hierarchy convergence or coupled matter transfer from the independent fixed-metric run. |
-| Can the *warm 50 MeV* reference be treated as numerically converged? | Restarted q16/q32 runs reach 10.442 MeV on matched grids. Their count difference is small, but absolute time refinement and higher spectral moments must be audited separately. | Not a late relic; earlier exterior shapes are unresolved. |
+| Is the scalar contrast robust to integrating the hierarchy? | Native fluid/no-closure controls and an independent fixed-metric fold trace the discrepancy to grouping. | No global hierarchy convergence or coupled matter transfer from the independent fixed-metric run. |
+| Can the *warm 50 MeV* reference be treated as numerically converged? | Matched q16/q32 reach 10.442 MeV; time and higher moments need separate audits. | Not a late relic; earlier exterior shapes are unresolved. |
 | Can purely ballistic forward depletion rescue the initial warm excess? | An isolated loss-only bound controls Bose gain even with all new scalar momenta and gives a stable lower proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
 | How sensitive are the hard thermal folds to the perturbative range? | Separate Born and strict-NLO extensions, exact measured-window subtraction, and an isolated toy high-mass pole test. | Full physical thermal QCD, unsupported spectral domains and threshold effects are not bounded. |
 
@@ -284,7 +284,9 @@ finds opposite signs at matched initial species excess. A [within-cell perturbat
 preserves cell moments. A [cold-scalar recoil gate](INDEPENDENT-WARM-LATE-COLD-SCALAR-PROMPT-GATE-2026-11-26.md)
 locates the soft gate. A [one-use receipt bound](INDEPENDENT-WARM-LATE-COLD-SCALAR-SINGLE-USE-2026-11-26.md)
 bounds conditional cold decay. A [Pauli count bound](INDEPENDENT-WARM-LATE-COLD-SCALAR-PAULI-COUNT-2026-11-26.md)
-replaces a pointwise assumption. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+avoids a pointwise assumption. A [boosted-parent rate](INDEPENDENT-WARM-LATE-COLD-PARENT-RATE-2026-11-26.md)
+checks hard reactivation. A [ballistic comparison](INDEPENDENT-WARM-LATE-COLD-SCALAR-BALLISTIC-2026-11-26.md)
+separates photon heating from particle creation. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)

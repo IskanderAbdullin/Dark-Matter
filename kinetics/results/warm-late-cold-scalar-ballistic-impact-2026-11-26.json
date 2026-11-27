@@ -1,0 +1,362 @@
+{
+  "scope": "Frozen number-preserving collisionless propagation only; for initial perturbations common to both species, spherical monopole uses j0(k*travelled_distance), without gravity. Not a transfer spectrum, exclusion, late production estimate, or limit on untracked populations.",
+  "equality_scale": 0.000292389101279115,
+  "k_per_Mpc": [
+    0.003,
+    0.03,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0
+  ],
+  "cases": [
+    {
+      "archive": "27950d8171d19c25c85f7c3e96af08755883de82e7d342f6c9629772c2b86d9f",
+      "T_visible_GeV": 0.0073940494651975755,
+      "scale_factor": 2.2726553772203177e-11,
+      "momentum_cut_for_equal_p_over_T_divided_by_anchor_cut": 1.3976549017092528,
+      "scalar_rest_fraction_of_represented_two_species": 2.6323731445799147e-06,
+      "scalar_rest_fraction_with_recorded_exterior_counts": 2.632373144638178e-06,
+      "relative_change_with_known_exterior": 2.213340621892712e-11,
+      "rows": [
+        {
+          "momentum_order": 12,
+          "expansion_order": 4,
+          "max_target_phase_per_panel": 6.0,
+          "species": [
+            {
+              "mean_path_Mpc": 10.417648996921335,
+              "ballistic_monopole": [
+                0.9998059582499731,
+                0.9807907496044229,
+                0.1571060397911687,
+                -0.0013265160190964796,
+                -4.798784631227508e-05,
+                1.089468969204269e-06,
+                -6.816036994194064e-08,
+                1.1175754033545026e-08
+              ],
+              "phase_split_shells": 910,
+              "bands": [
+                {
+                  "cold_at": "at_anchor",
+                  "scalar_count_fraction": 0.00018755387283204974,
+                  "mean_comoving_distance_Mpc": 0.5329835800540881,
+                  "contribution_to_scalar_distance_first_moment": 9.595556024644e-06,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999995504066534,
+                    0.999955041362097,
+                    0.9955110983841091,
+                    0.9509063654520759,
+                    0.615395103195623,
+                    -0.05179483050360948,
+                    0.002788733113475896,
+                    -0.000707747958353089
+                  ]
+                },
+                {
+                  "cold_at": "at_equality",
+                  "scalar_count_fraction": 0.0004975836758303054,
+                  "mean_comoving_distance_Mpc": 0.7118578546169976,
+                  "contribution_to_scalar_distance_first_moment": 3.4000842999574856e-05,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999991979174183,
+                    0.9999197939601931,
+                    0.9920015478037898,
+                    0.9136023910233677,
+                    0.39247899518738233,
+                    0.038369891576105604,
+                    0.003758364087634649,
+                    0.0001292753663820488
+                  ]
+                }
+              ]
+            },
+            {
+              "mean_path_Mpc": 0.00021267559095317505,
+              "ballistic_monopole": [
+                0.9999999999999158,
+                0.9999999999915825,
+                0.9999999991582448,
+                0.9999999906471652,
+                0.9999999158244913,
+                0.999999064717055,
+                0.999991582491618,
+                0.9999064769471874
+              ],
+              "phase_split_shells": 24,
+              "bands": []
+            }
+          ],
+          "full_minus_stable_ballistic_monopole": [
+            -5.107902989465174e-10,
+            -5.056591489971396e-08,
+            -2.2188114223720135e-06,
+            -2.635865005151672e-06,
+            -2.63249924492559e-06,
+            -2.6323678147255336e-06,
+            -2.6323511659320786e-06,
+            -2.6321269276374792e-06
+          ],
+          "largest_magnitude_absolute_delta": 2.635865005151672e-06
+        },
+        {
+          "momentum_order": 20,
+          "expansion_order": 7,
+          "max_target_phase_per_panel": 3.0,
+          "species": [
+            {
+              "mean_path_Mpc": 10.417648996921406,
+              "ballistic_monopole": [
+                0.9998059582499729,
+                0.9807907496044223,
+                0.15710603979116572,
+                -0.001326516019096461,
+                -4.798784631228859e-05,
+                1.0894689692043671e-06,
+                -6.816036994259404e-08,
+                1.117575402912323e-08
+              ],
+              "phase_split_shells": 1805,
+              "bands": [
+                {
+                  "cold_at": "at_anchor",
+                  "scalar_count_fraction": 0.00018755387283204974,
+                  "mean_comoving_distance_Mpc": 0.5329835800540942,
+                  "contribution_to_scalar_distance_first_moment": 9.595556024644046e-06,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999995504066531,
+                    0.9999550413620969,
+                    0.9955110983841087,
+                    0.9509063654520741,
+                    0.6153951031956112,
+                    -0.051794830503587436,
+                    0.0027887331134770813,
+                    -0.0007077479583652362
+                  ]
+                },
+                {
+                  "cold_at": "at_equality",
+                  "scalar_count_fraction": 0.0004975836758303052,
+                  "mean_comoving_distance_Mpc": 0.7118578546170069,
+                  "contribution_to_scalar_distance_first_moment": 3.400084299957506e-05,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999991979174183,
+                    0.9999197939601931,
+                    0.99200154780379,
+                    0.9136023910233657,
+                    0.3924789951873696,
+                    0.03836989157611154,
+                    0.0037583640876346722,
+                    0.00012927536637710138
+                  ]
+                }
+              ]
+            },
+            {
+              "mean_path_Mpc": 0.00021267559095317534,
+              "ballistic_monopole": [
+                0.9999999999999157,
+                0.9999999999915823,
+                0.9999999991582447,
+                0.9999999906471653,
+                0.9999999158244915,
+                0.999999064717055,
+                0.9999915824916182,
+                0.9999064769471873
+              ],
+              "phase_split_shells": 24,
+              "bands": []
+            }
+          ],
+          "full_minus_stable_ballistic_monopole": [
+            -5.107902989465174e-10,
+            -5.056591489971396e-08,
+            -2.2188114223720135e-06,
+            -2.635865005151672e-06,
+            -2.63249924492559e-06,
+            -2.6323678147255336e-06,
+            -2.6323511659320786e-06,
+            -2.6321269276374792e-06
+          ],
+          "largest_magnitude_absolute_delta": 2.635865005151672e-06
+        }
+      ]
+    },
+    {
+      "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+      "T_visible_GeV": 0.0073940494651976016,
+      "scale_factor": 2.2726553772203093e-11,
+      "momentum_cut_for_equal_p_over_T_divided_by_anchor_cut": 1.3976549017092528,
+      "scalar_rest_fraction_of_represented_two_species": 2.632374922180617e-06,
+      "scalar_rest_fraction_with_recorded_exterior_counts": 2.63237492219592e-06,
+      "relative_change_with_known_exterior": 5.813349801542245e-12,
+      "rows": [
+        {
+          "momentum_order": 12,
+          "expansion_order": 4,
+          "max_target_phase_per_panel": 6.0,
+          "species": [
+            {
+              "mean_path_Mpc": 10.41763892899302,
+              "ballistic_monopole": [
+                0.9998059585229281,
+                0.9807907766825341,
+                0.15710708675807272,
+                -0.0013264879423772792,
+                -4.798045811651143e-05,
+                1.0877557250521768e-06,
+                -6.809504897875295e-08,
+                1.1145298379272628e-08
+              ],
+              "phase_split_shells": 1272,
+              "bands": [
+                {
+                  "cold_at": "at_anchor",
+                  "scalar_count_fraction": 0.00018755434685544634,
+                  "mean_comoving_distance_Mpc": 0.5329835823926502,
+                  "contribution_to_scalar_distance_first_moment": 9.595589592006724e-06,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999995504066496,
+                    0.9999550413617063,
+                    0.9955110983451417,
+                    0.950906365031627,
+                    0.6153951003011815,
+                    -0.0517948276991501,
+                    0.002788733362528339,
+                    -0.0007077480051013616
+                  ]
+                },
+                {
+                  "cold_at": "at_equality",
+                  "scalar_count_fraction": 0.000497584948546759,
+                  "mean_comoving_distance_Mpc": 0.7118578588514386,
+                  "contribution_to_scalar_distance_first_moment": 3.400096302852353e-05,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999991979174103,
+                    0.9999197939593812,
+                    0.9920015477229067,
+                    0.9136023901617206,
+                    0.3924789899195947,
+                    0.03836989422421688,
+                    0.0037583642678371597,
+                    0.00012927537299334897
+                  ]
+                }
+              ]
+            },
+            {
+              "mean_path_Mpc": 0.00021267576874410934,
+              "ballistic_monopole": [
+                0.9999999999999157,
+                0.9999999999915823,
+                0.9999999991582436,
+                0.9999999906471514,
+                0.9999999158243658,
+                0.9999990647156543,
+                0.9999915824790138,
+                0.9999064768071532
+              ],
+              "phase_split_shells": 29,
+              "bands": []
+            }
+          ],
+          "full_minus_stable_ballistic_monopole": [
+            -5.1078996587961e-10,
+            -5.0565877707242635e-08,
+            -2.218810164711371e-06,
+            -2.6358667111203715e-06,
+            -2.6325010031857943e-06,
+            -2.6323695967445104e-06,
+            -2.632352943399141e-06,
+            -2.6321287047714748e-06
+          ],
+          "largest_magnitude_absolute_delta": 2.6358667111203715e-06
+        },
+        {
+          "momentum_order": 20,
+          "expansion_order": 7,
+          "max_target_phase_per_panel": 3.0,
+          "species": [
+            {
+              "mean_path_Mpc": 10.417638928993092,
+              "ballistic_monopole": [
+                0.9998059585229281,
+                0.9807907766825336,
+                0.15710708675806975,
+                -0.001326487942377274,
+                -4.7980458116523765e-05,
+                1.0877557250553326e-06,
+                -6.8095048972796e-08,
+                1.1145298373506602e-08
+              ],
+              "phase_split_shells": 2527,
+              "bands": [
+                {
+                  "cold_at": "at_anchor",
+                  "scalar_count_fraction": 0.00018755434685544642,
+                  "mean_comoving_distance_Mpc": 0.5329835823926566,
+                  "contribution_to_scalar_distance_first_moment": 9.595589592006775e-06,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999995504066492,
+                    0.9999550413617061,
+                    0.9955110983451413,
+                    0.9509063650316243,
+                    0.6153951003011696,
+                    -0.05179482769912805,
+                    0.002788733362529526,
+                    -0.0007077480051134979
+                  ]
+                },
+                {
+                  "cold_at": "at_equality",
+                  "scalar_count_fraction": 0.000497584948546759,
+                  "mean_comoving_distance_Mpc": 0.7118578588514478,
+                  "contribution_to_scalar_distance_first_moment": 3.400096302852373e-05,
+                  "scalar_cold_only_ballistic_monopole": [
+                    0.9999991979174103,
+                    0.9999197939593812,
+                    0.9920015477229067,
+                    0.9136023901617181,
+                    0.39247898991958197,
+                    0.03836989422422281,
+                    0.003758364267837191,
+                    0.00012927537298842748
+                  ]
+                }
+              ]
+            },
+            {
+              "mean_path_Mpc": 0.00021267576874410972,
+              "ballistic_monopole": [
+                0.9999999999999157,
+                0.9999999999915822,
+                0.9999999991582437,
+                0.999999990647151,
+                0.9999999158243655,
+                0.9999990647156546,
+                0.9999915824790139,
+                0.999906476807153
+              ],
+              "phase_split_shells": 29,
+              "bands": []
+            }
+          ],
+          "full_minus_stable_ballistic_monopole": [
+            -5.1078996587961e-10,
+            -5.0565877707242635e-08,
+            -2.218810164711371e-06,
+            -2.6358667111203715e-06,
+            -2.6325010031857943e-06,
+            -2.6323695967445104e-06,
+            -2.632352943399141e-06,
+            -2.6321287047714748e-06
+          ],
+          "largest_magnitude_absolute_delta": 2.6358667111203715e-06
+        }
+      ]
+    }
+  ]
+}

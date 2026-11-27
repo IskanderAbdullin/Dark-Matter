@@ -1,0 +1,165 @@
+{
+  "scope": "Frozen scalar occupations in cold band, full open unpolarized decay and any valid light FD shape. Rate bounds multiply Gamma by eligible parent number (r=1) or eligible parent energy / M (r=2). No bound on the heavy population, production history or changing Bose occupations.",
+  "cases": [
+    {
+      "archive": "27950d8171d19c25c85f7c3e96af08755883de82e7d342f6c9629772c2b86d9f",
+      "visible_T_GeV": 0.0073940494651975755,
+      "H_GeV": 2.435958565082868e-23,
+      "parent_rest_width_over_H": 112900008072620.34,
+      "controls": [
+        {
+          "p_over_T": 0.03,
+          "parent_gate_GeV": 10.819741721959904,
+          "vacuum_interval_width_min_GeV": 10.386508410088258,
+          "optional_known_count_blocking_measure_over_min_width": 1.2770130395016963e-06,
+          "rate_bounds": [
+            {
+              "power_of_parent_gamma": 1,
+              "vacuum_rate_coefficient_upper": 2.924367693330601e-08,
+              "sampled_vacuum_max": 2.9242392930308618e-08,
+              "analytic_upper_gamma": 162.29265377013448,
+              "Bose_adjusted_rate_coefficient_upper": 2.9257174365736255e-08,
+              "coefficient_times_rest_width_over_H": 3303135.222073684
+            },
+            {
+              "power_of_parent_gamma": 2,
+              "vacuum_rate_coefficient_upper": 1.924207691881854e-10,
+              "sampled_vacuum_max": 1.9240941570833752e-10,
+              "analytic_upper_gamma": 144.26013668456397,
+              "Bose_adjusted_rate_coefficient_upper": 1.9250958108199125e-10,
+              "coefficient_times_rest_width_over_H": 21734.333258213574
+            }
+          ]
+        },
+        {
+          "p_over_T": 0.1,
+          "parent_gate_GeV": 3.246623521854305,
+          "vacuum_interval_width_min_GeV": 3.1152797710794924,
+          "optional_known_count_blocking_measure_over_min_width": 4.257629378173203e-06,
+          "rate_bounds": [
+            {
+              "power_of_parent_gamma": 1,
+              "vacuum_rate_coefficient_upper": 1.0835667830405555e-06,
+              "sampled_vacuum_max": 1.0830508745053438e-06,
+              "analytic_upper_gamma": 48.687799460863594,
+              "Bose_adjusted_rate_coefficient_upper": 1.0840669037836175e-06,
+              "coefficient_times_rest_width_over_H": 122391162.18843096
+            },
+            {
+              "power_of_parent_gamma": 2,
+              "vacuum_rate_coefficient_upper": 2.3765905597906494e-08,
+              "sampled_vacuum_max": 2.3751459171349285e-08,
+              "analytic_upper_gamma": 43.278043965212085,
+              "Bose_adjusted_rate_coefficient_upper": 2.3776874762477795e-08,
+              "coefficient_times_rest_width_over_H": 2684409.352625426
+            }
+          ]
+        },
+        {
+          "p_over_T": 0.3,
+          "parent_gate_GeV": 1.0842617464998987,
+          "vacuum_interval_width_min_GeV": 1.036454846958252,
+          "optional_known_count_blocking_measure_over_min_width": 1.2797187174629513e-05,
+          "rate_bounds": [
+            {
+              "power_of_parent_gamma": 1,
+              "vacuum_rate_coefficient_upper": 2.9367590294658675e-05,
+              "sampled_vacuum_max": 2.9242307141916344e-05,
+              "analytic_upper_gamma": 16.229266584531786,
+              "Bose_adjusted_rate_coefficient_upper": 2.9381144919357387e-05,
+              "coefficient_times_rest_width_over_H": 3317131498.578277
+            },
+            {
+              "power_of_parent_gamma": 2,
+              "vacuum_rate_coefficient_upper": 1.9323609360542034e-06,
+              "sampled_vacuum_max": 1.9218182525313727e-06,
+              "analytic_upper_gamma": 14.42601474180603,
+              "Bose_adjusted_rate_coefficient_upper": 1.9332528181258296e-06,
+              "coefficient_times_rest_width_over_H": 218264258.7728222
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+      "visible_T_GeV": 0.0073940494651976016,
+      "H_GeV": 2.4359585650790554e-23,
+      "parent_rest_width_over_H": 112900008072797.03,
+      "controls": [
+        {
+          "p_over_T": 0.03,
+          "parent_gate_GeV": 10.819741721959865,
+          "vacuum_interval_width_min_GeV": 10.386508410088222,
+          "optional_known_count_blocking_measure_over_min_width": 1.2770128212771077e-06,
+          "rate_bounds": [
+            {
+              "power_of_parent_gamma": 1,
+              "vacuum_rate_coefficient_upper": 2.924367693330632e-08,
+              "sampled_vacuum_max": 2.924239293030893e-08,
+              "analytic_upper_gamma": 162.2926537701339,
+              "Bose_adjusted_rate_coefficient_upper": 2.925717440605741e-08,
+              "coefficient_times_rest_width_over_H": 3303135.226631112
+            },
+            {
+              "power_of_parent_gamma": 2,
+              "vacuum_rate_coefficient_upper": 1.9242076918818813e-10,
+              "sampled_vacuum_max": 1.924094157083402e-10,
+              "analytic_upper_gamma": 144.26013668456346,
+              "Bose_adjusted_rate_coefficient_upper": 1.9250958134730153e-10,
+              "coefficient_times_rest_width_over_H": 21734.33328820112
+            }
+          ]
+        },
+        {
+          "p_over_T": 0.1,
+          "parent_gate_GeV": 3.246623521854294,
+          "vacuum_interval_width_min_GeV": 3.115279771079482,
+          "optional_known_count_blocking_measure_over_min_width": 4.25762865060082e-06,
+          "rate_bounds": [
+            {
+              "power_of_parent_gamma": 1,
+              "vacuum_rate_coefficient_upper": 1.0835667830405667e-06,
+              "sampled_vacuum_max": 1.0830508745053538e-06,
+              "analytic_upper_gamma": 48.687799460863424,
+              "Bose_adjusted_rate_coefficient_upper": 1.084066905277638e-06,
+              "coefficient_times_rest_width_over_H": 122391162.35729742
+            },
+            {
+              "power_of_parent_gamma": 2,
+              "vacuum_rate_coefficient_upper": 2.3765905597906825e-08,
+              "sampled_vacuum_max": 2.3751459171349626e-08,
+              "analytic_upper_gamma": 43.278043965211936,
+              "Bose_adjusted_rate_coefficient_upper": 2.377687479524628e-08,
+              "coefficient_times_rest_width_over_H": 2684409.356329189
+            }
+          ]
+        },
+        {
+          "p_over_T": 0.3,
+          "parent_gate_GeV": 1.084261746499895,
+          "vacuum_interval_width_min_GeV": 1.0364548469582484,
+          "optional_known_count_blocking_measure_over_min_width": 1.2797184987759983e-05,
+          "rate_bounds": [
+            {
+              "power_of_parent_gamma": 1,
+              "vacuum_rate_coefficient_upper": 2.9367590294658987e-05,
+              "sampled_vacuum_max": 2.9242307141916652e-05,
+              "analytic_upper_gamma": 16.22926658453173,
+              "Bose_adjusted_rate_coefficient_upper": 2.9381144959849394e-05,
+              "coefficient_times_rest_width_over_H": 3317131503.1550164
+            },
+            {
+              "power_of_parent_gamma": 2,
+              "vacuum_rate_coefficient_upper": 1.93236093605423e-06,
+              "sampled_vacuum_max": 1.9218182525313994e-06,
+              "analytic_upper_gamma": 14.42601474180598,
+              "Bose_adjusted_rate_coefficient_upper": 1.933252820790173e-06,
+              "coefficient_times_rest_width_over_H": 218264259.07396817
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
