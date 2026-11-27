@@ -149,7 +149,7 @@ def analyze(d,E,cut,is_edge):
                 relative_step_slope_defect=relative,subtracted_radial_changes=observed.tolist(),rows=rows)
 
 
-def full_radial(d,E,cut,lo,hi,is_edge):
+def full_radial(d,E,cut,lo,hi,is_edge,local_aperture=False):
     """Whole archived support, with separate step and continuous reconstructions."""
     M=d['x_end']
     m=d['mass_ratio']*M
@@ -220,14 +220,21 @@ def full_radial(d,E,cut,lo,hi,is_edge):
         if is_edge and kind=='step':
             j=coefficient*(occ[np.searchsorted(edges,0.,side='right')-1]
                            -occ[np.searchsorted(edges,0.,side='left')-1])
-        bins=sorted({eps,L,*[abs(x) for x in chi if eps<abs(x)<L],
+        local=chi+lim+collar if local_aperture else chi
+        bins=sorted({eps,L,*[abs(x) for x in local if eps<abs(x)<L],
                      *[10.**u for u in range(-12,-3) if eps<10.**u<L]})
         paired=[]
         for a,b in zip(bins[:-1],bins[1:],strict=True):
             x,y=np.log(a),np.log(b)
-            t=np.exp((x+y+(y-x)*nodes)/2)
+            if local_aperture:
+                alpha=np.pi*(nodes+1)/2
+                t=np.exp(x+(y-x)*np.sin(alpha/2)**2)
+                W=weights*np.sin(alpha)*(y-x)*np.pi/4
+            else:
+                t=np.exp((x+y+(y-x)*nodes)/2)
+                W=None
             v=[z*(f(z)+f(-z))-(0. if subtract else j) for z in t]
-            paired.append((y-x)/2*np.dot(weights,v))
+            paired.append(np.dot(W,v) if local_aperture else (y-x)/2*np.dot(weights,v))
         return fsum(tail+paired)+ (exact_odd(kind) if subtract else j*np.log(L/rho))
 
     result={}
