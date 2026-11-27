@@ -1,4 +1,4 @@
-"""Actual local paired gain over three hard geometries at common cold32 sampling."""
+"""Actual local paired gain over nested hard geometries at common cold32 sampling."""
 import argparse
 import gzip
 import json
@@ -48,14 +48,14 @@ def one(v, depth, fixture):
 
 
 def run(pairs):
-    a,b,c=[one(v,d,pairs[0]) for d,v in zip((1,2,4),pairs,strict=True)]
-    rates=np.array([x['paired_mean'] for x in (a,b,c)])
+    levels=[one(v,d,pairs[0]) for d,v in zip((1,2,4,8)[:len(pairs)],pairs,strict=True)]
+    rates=np.array([x['paired_mean'] for x in levels])
     d=np.diff(rates)
     sizes=[int(np.count_nonzero(np.array(w['terminal_mode_gains'])<u['terminal_mode_gains']))
-           for u,w in ((a,b),(b,c))]
+           for u,w in zip(levels[:-1],levels[1:],strict=True)]
     return dict(scope="The actual paired hard ladder at a fixed aperture and time; no continuum bound.",
                 exposure=pairs[0][0]['history_exposure'],
-                levels=[a,b,c],adjacent_mean_shifts=d.tolist(),
+                levels=levels,adjacent_mean_shifts=d.tolist(),
                 last_shift_over_first=float(d[-1]/d[0]) if d[0] else None,
                 modes_smaller_on_each_adjacent_refinement=sizes)
 
@@ -64,5 +64,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for d in (1,2,4):
         p.add_argument(f'--hard{d}',nargs=2,required=True)
+    p.add_argument('--hard8',nargs=2)
     a=p.parse_args()
-    print(json.dumps(run([[read(k) for k in q] for q in (a.hard1,a.hard2,a.hard4)]),indent=2,allow_nan=False))
+    pairs=(a.hard1,a.hard2,a.hard4)+((a.hard8,) if a.hard8 is not None else ())
+    print(json.dumps(run([[read(k) for k in q] for q in pairs]),indent=2,allow_nan=False))
