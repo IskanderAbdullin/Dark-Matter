@@ -7,6 +7,12 @@ from scipy.integrate import solve_ivp
 from scipy.special import roots_legendre
 
 from early_pole_archived_shared_cold_window_reference import Cold
+from early_pole_archived_live_compton_reference import ComptonKernel
+from early_pole_archived_live_flavor_conversion_reference import ConversionKernel
+from early_pole_archived_cold_screened_elastic_reference import Screened
+from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
+from early_pole_screened_active_response_update_reference import ActiveResponse
+from early_pole_screened_elastic_discrete_gradient_reference import step
 from early_pole_live_aperture_witness_reprojection_reference import initial_projection
 from early_pole_native_aperture_witness_reference import PROFILES
 from early_pole_scalar_cold_screened_flux_reference import Screen
@@ -14,13 +20,20 @@ from early_pole_scalar_elastic_stencil_reference import Elastic
 from early_pole_scalar_hartree_discrete_gradient_reference import gradient
 
 
-def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97),refresh=False):
+def run(grid,bins,order,duration,steps,subdivision,hard_slow=False,screened=False,mixes=(0.,.97),refresh=False,reverse_branches=False,mode_diagnostics=False):
     if bins<4 or steps<1 or order<2 or not duration>0.:
         raise ValueError("Invalid scalar mesh, time or order.")
+    if screened and refresh:
+        raise ValueError("Use held scalar scattering for the screened comparison fixture.")
+    if screened and not hard_slow:
+        raise ValueError("Use the matched five-channel hard setting with screened elasticity.")
     if not mixes or any(not 0<=m<1 for m in mixes):
         raise ValueError("Witness mixtures must lie in [0,1).")
     profile=next(x for x in json.loads(PROFILES.read_text()) if x['grid']==grid)
-    C,archive,Y0,Y1,*_=initial_projection(profile,subdivision,bins,duration)
+    box=Screened(grid,1,bins,duration,(1,1,2),.08,1.,subdivision=subdivision) if screened else None
+    C,archive,Y0,Y1,*_=initial_projection(profile,subdivision,bins,duration,model=box)
+    elastic=ElasticChannels(C,grid,1.) if screened else None
+    screened_reference_graph=C.graph if screened else None
     block=slice(C.j0,C.j0+C.n)
     N0=C.ns.copy()
     _,_,_,f0,m0=C.scalar(N0)
@@ -29,8 +42,17 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97),refresh=False)
     Q=Elastic(C.q,m0,edges,order,C.lam,Screen(edges,f0,m0,C.lam,order))
     np.testing.assert_array_equal(Q.vol,C.sw)
     tau=duration/steps
+    hard=[ComptonKernel(C.M),ConversionKernel(C.M)] if hard_slow else []
+
     def decay(_,z):
-        return Cold.rhs(C,z,False)
+        R=Cold.rhs(C,z,hard_slow)
+        if hard:
+            coeff=C.M.weights(z[:C.j0].reshape(-1,2),True)[:3]
+            for sector in hard:
+                D,S,W,*_=sector.collision(*coeff)
+                R[:C.j0]+=D.ravel()
+                R[-2:]+=[S,W]
+        return R
 
     def total(z):
         Y=z[:C.j0].reshape(-1,2)
@@ -94,11 +116,16 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97),refresh=False)
 
     cases=[]
     for mix in mixes:
-        for use in (False,True):
+        for use in ((True,False) if reverse_branches else (False,True)):
+            if screened:
+                # ActiveResponse replaces C.graph with refreshed weights. A
+                # new comparison arm must use the original Born graph.
+                C.graph=screened_reference_graph
             calls=0
             self_count_defect=0.
             max_local_self_work=0.
             max_secant_defect=0.
+            active=ActiveResponse(C,radial_order=(32 if grid=='fine' else 64)) if screened else None
             z0=np.r_[((1-mix)*Y0+mix*Y1).ravel(),N0,0.,0.]
             r0,s0,c0,_=total(z0)
             z=z0.copy()
@@ -112,21 +139,33 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97),refresh=False)
                 if k:
                     if use:
                         z=self_half(z,tau/2)
-                    z=advance(z,tau)
+                    if screened:
+                        z=advance(z,tau/2)
+                        Y=z[:C.j0].reshape(-1,2)
+                        active.refresh(Y,'full')
+                        Y,ledger=step(elastic,Y,tau)
+                        z[:C.j0]=Y.ravel()
+                        z[-2]+=ledger['entropy_gain']
+                        z=advance(z,tau/2)
+                    else:
+                        z=advance(z,tau)
                     if use:
                         z=self_half(z,tau/2)
                 R,S,c,m=total(z)
                 gain=float((z[block]-N0).sum())
                 cc=np.asarray(c)-c0
-                count_defects=np.r_[cc[0],cc[1]+gain,cc[2]-gain]
+                count_defects=np.r_[cc.sum()] if hard_slow else np.r_[cc[0],cc[1]+gain,cc[2]-gain]
                 assert np.max(abs(count_defects))<5e-12
                 assert abs(R-r0)<3e-12 and abs(R-r0-z[-1])<3e-12 and abs(S-s0-z[-2])<3e-11
+                rs=Cold.rhs(C,z,False)[block]
                 trajectory.append(dict(exposure=k*tau,scalar_gain=gain,energy_change=R-r0,
                                        independent_energy_work=z[-1],entropy_closure=S-s0-z[-2],
                                        independent_entropy_ledger=z[-2],
                                        count_defects=count_defects.tolist(),scalar_pole=m,
                                        scalar_l1=float(np.sum(abs(z[block]-N0))/N0.sum()),
-                                       instantaneous_cold_source=float(Cold.rhs(C,z,False)[block].sum())))
+                                       instantaneous_cold_source=float(rs.sum()),
+                                       **(dict(scalar_number_by_bin=z[block].tolist(),source_by_bin=rs.tolist(),
+                                               hard_species_counts=c) if mode_diagnostics else {})))
             assert min(np.diff([s['independent_entropy_ledger'] for s in trajectory]))>=-1e-18
             cases.append(dict(witness_fraction=mix,scalar_elastic_proxy=use,rows=trajectory,
                               scalar_shape_solver_calls=calls,max_isolated_self_count_error=self_count_defect,
@@ -134,7 +173,10 @@ def run(grid,bins,order,duration,steps,subdivision,mixes=(0.,.97),refresh=False)
                               max_hartree_finite_secant_defect=float(max_secant_defect)))
     return dict(grid=grid,bins=bins,order=order,steps=steps,duration=duration,subdivision=subdivision,
                 shape_closed_domain_fraction=1-Q.raw_escape,cases=cases,
-                **(dict(refreshed_scalar_vertex_and_mass=True) if refresh else {}))
+                **(dict(photon_pairs_compton_and_conversion=True) if hard_slow else {}),
+                **(dict(both_screened_sectors=True) if screened else {}),
+                **(dict(refreshed_scalar_vertex_and_mass=True) if refresh else {}),
+                **(dict(scalar_momentum_nodes=C.q.tolist()) if mode_diagnostics else {}))
 
 
 if __name__=='__main__':
@@ -145,6 +187,10 @@ if __name__=='__main__':
     p.add_argument('--duration',type=float,default=2e-7)
     p.add_argument('--steps',type=int,default=8)
     p.add_argument('--subdivision',type=int,default=3)
+    p.add_argument('--hard-slow',action='store_true')
+    p.add_argument('--screened',action='store_true')
     p.add_argument('--mixes',type=float,nargs='+',default=[0.,.97])
     p.add_argument('--refresh',action='store_true')
+    p.add_argument('--reverse-branches',action='store_true')
+    p.add_argument('--mode-diagnostics',action='store_true')
     print(json.dumps(run(**vars(p.parse_args())),indent=2,allow_nan=False))
