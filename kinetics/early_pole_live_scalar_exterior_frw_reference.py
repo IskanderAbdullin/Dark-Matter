@@ -1,13 +1,17 @@
 """Short joined exterior evolution with a prescribed log-scale path and held polarization."""
 import argparse
 import gzip
+import hashlib
 import json
+from pathlib import Path
 from types import MethodType
 
 import numpy as np
+from scipy import __version__ as scipy_version
 from scipy.integrate import solve_ivp
 
 from early_pole_archived_cold_screened_elastic_reference import Screened
+from early_pole_cold_screened_split_reference import atomic_write,state_digest
 from early_pole_archived_live_compton_reference import ComptonKernel
 from early_pole_archived_live_flavor_conversion_reference import ConversionKernel
 from early_pole_joined_scalar_exterior_source_reference import band_kernel
@@ -18,10 +22,44 @@ from early_pole_native_aperture_witness_reference import GRID
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,expands,warm_order=None):
+def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=None,resume=False,
+        checkpoint_every=6,stop_after=None):
+    if checkpoint_every<1 or (stop_after is not None and (not checkpoint or not 1<=stop_after<=2*panels)):
+        raise ValueError("Checkpoint controls must name valid stopped macro steps.")
+    if resume and not checkpoint:
+        raise ValueError("A resumed run needs a checkpoint.")
+    old=None
+    if checkpoint and Path(checkpoint).exists():
+        if not resume:
+            raise FileExistsError("Checkpoint exists; resume explicitly or choose a fresh path.")
+        old=json.loads(Path(checkpoint).read_text())
+    elif resume:
+        raise FileNotFoundError(checkpoint)
+    physics=None
+    if checkpoint:
+        code=[]
+        for fn in (run,exterior,finite_energy_stable,elastic_at_midpoint,
+                   elastic_at_midpoint.__globals__['step'],Expanding.weights,warm_shape,band_kernel,
+                   Screened.__init__,Screened.scalar,ComptonKernel.collision,
+                   ConversionKernel.collision,ElasticChannels.collision):
+            path=Path(fn.__code__.co_filename)
+            code.append(hashlib.sha256(path.read_bytes()).hexdigest())
+        physics=dict(format=1,projection=projection,duration=duration,panels=panels,expands=expands,
+                     warm_order=warm_order,bundle_sha=hashlib.sha256(Path(bundle).read_bytes()).hexdigest(),
+                     code=code,numpy=np.__version__,scipy=scipy_version)
+    results=[] if old is None else old["finished_arms"]
+    if old is not None and (not isinstance(results,list) or len(results)>1 or old.get('arm')!=len(results)):
+        raise ValueError("Checkpoint arm and completed ledger disagree.")
+    if old is not None and stop_after is not None and stop_after<old["global_steps_done"]:
+        raise ValueError("The requested stopping boundary is before the checkpoint.")
     with gzip.open(bundle,'rt') as fp:
         raw=json.load(fp)['branches'][projection]
     grid=raw['grid']
+    if checkpoint:
+        arch=GRID/f'early-pole-spectrum-{grid}-m06-2026-11-26.json.gz'
+        physics['archive_sha']=hashlib.sha256(arch.read_bytes()).hexdigest()
+        if old is not None and old.get("physics")!=physics:
+            raise ValueError("Checkpoint does not match the bundle, archive, controls, or solver.")
     shot=raw['snapshots'][-1]
     Y0=np.array(shot['hard_moments'])
     N0=np.array(shot['cold_bins'])
@@ -71,6 +109,7 @@ def run(bundle,projection,duration,panels,expands,warm_order=None):
         C.factor,elastic.soft.fac,co.fac,cv.fac=ef*a,sf*a,cof*a,cvf*a
 
     def branch(active):
+        arm=int(active)
         C.q,C.sw=(np.r_[cold_q,q],np.r_[cold_w,w]) if active else (cold_q,cold_w)
         C.n=len(C.q)
         C.spect=np.where(selected,0.,spectator) if active else spectator.copy()
@@ -125,7 +164,23 @@ def run(bundle,projection,duration,panels,expands,warm_order=None):
         init_rate=rhs(0.,z0)[C.j0:-3]
         z=z0.copy()
         implicit=[]
-        for j in range(panels):
+        begin=0
+        if old is not None and old['arm']==arm:
+            z=np.asarray(old['state'])
+            begin=old['arm_step']
+            implicit=old['implicit']
+            work_max=old['maximum_decay_work']
+            if (old['initial_digest']!=state_digest(z0) or old['state_digest']!=state_digest(z)
+                or z.shape!=z0.shape or not np.all(np.isfinite(z)) or not 0<=begin<=panels
+                or old['global_steps_done']!=arm*panels+begin or len(implicit)!=begin):
+                raise ValueError("Stored warm FRW state is invalid.")
+
+        def save(k):
+            atomic_write(checkpoint,dict(physics=physics,finished_arms=results,arm=arm,arm_step=k,
+                global_steps_done=arm*panels+k,initial_digest=state_digest(z0),state_digest=state_digest(z),
+                state=z.tolist(),implicit=implicit,maximum_decay_work=work_max))
+
+        for j in range(begin,panels):
             m=(j+.5)*dt
             z=advance(j*dt,m,z)
             clock(m)
@@ -134,6 +189,12 @@ def run(bundle,projection,duration,panels,expands,warm_order=None):
             z[-3]+=d['entropy_gain']
             implicit.append(d)
             z=advance(m,(j+1)*dt,z)
+            k=j+1
+            end_now=stop_after==arm*panels+k
+            if checkpoint and (k%checkpoint_every==0 or k==panels or end_now):
+                save(k)
+            if end_now:
+                return None
         r1,s1,p1,c1=totals(duration,z)
         net=z[C.j0:-3]-Nall
         ledger=r1-r0-z[-1]
@@ -146,7 +207,12 @@ def run(bundle,projection,duration,panels,expands,warm_order=None):
                     redshift_subtracted_defect=ledger,entropy_defect=s1-s0-z[-3],
                     maximum_decay_work=work_max,elastic_splits=sum('elastic_substeps' in d for d in implicit))
 
-    a,b=branch(False),branch(True)
+    for idx in range(len(results),2):
+        out=branch(bool(idx))
+        if out is None:
+            return dict(checkpoint_only=True,steps_done=stop_after,total_steps=2*panels)
+        results.append(out)
+    a,b=results
     np.testing.assert_allclose(a['initial_count_rates'][0],b['initial_count_rates'][0],rtol=2e-13)
     return dict(scope='Short comoving warm continuation under prescribed radiation clock and held polarization.',
                 projection=projection,grid=grid,duration=duration,panels=panels,expands=expands,
@@ -161,6 +227,10 @@ if __name__=='__main__':
     p.add_argument('--panels',type=int,default=6)
     p.add_argument('--expands',action='store_true')
     p.add_argument('--warm-order',type=int)
+    p.add_argument('--checkpoint')
+    p.add_argument('--resume',action='store_true')
+    p.add_argument('--checkpoint-every',type=int,default=6)
+    p.add_argument('--stop-after',type=int)
     a=p.parse_args()
     if a.duration<=0. or a.panels<1 or (a.warm_order is not None and a.warm_order<3):
         p.error('Positive duration, positive macro steps and at least three distributed nodes required.')
