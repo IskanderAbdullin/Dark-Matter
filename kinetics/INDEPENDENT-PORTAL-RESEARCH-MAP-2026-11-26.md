@@ -750,3 +750,6 @@ fit or exclusion.
   exact pole velocities give a comparison to an illustrative screening length;
   imposed stochastic potentials give different pair exponents even with
   identical charged single-line exponents and reference lengths.
+- [Finite closed-current spacelike HTL check](INDEPENDENT-EARLY-POLE-FINITE-WILSON-SPACELIKE-2026-11-26.md):
+  endpoint closure and matched cutoff distinguish spacelike longitudinal
+  and transverse phase covariance; neither is a kinetic width.
