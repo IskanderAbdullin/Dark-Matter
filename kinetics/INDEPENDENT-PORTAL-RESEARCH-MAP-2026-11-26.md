@@ -866,3 +866,6 @@ fit or exclusion.
 - [Joined screened channels under comoving expansion](INDEPENDENT-EARLY-POLE-JOINED-SCREENED-FRW-2026-11-26.md):
   adds independent trace and discrete variational energy accounting
   to the finite joint model and separates radial redshift from the Hubble clock.
+- [Initial representation memory in the longer joined fine-grid source](INDEPENDENT-EARLY-POLE-JOINED-INPUT-MEMORY-2026-11-26.md):
+  distinguishes the late interval source and absolute accumulation from
+  the change relative to each representation's separate no-elastic control.
