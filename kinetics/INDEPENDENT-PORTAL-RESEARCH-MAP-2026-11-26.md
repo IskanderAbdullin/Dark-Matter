@@ -762,3 +762,7 @@ fit or exclusion.
 - [Stationary shared-oscillator neutral operator](INDEPENDENT-EARLY-POLE-STATIONARY-NEUTRAL-OPERATOR-2026-11-26.md):
   an exact discrete Lehmann reference checks positive forward/inverse
   measures, thermal balance, and the need for constrained remapping.
+- [Soft-kick characteristic vs diffusion](INDEPENDENT-EARLY-POLE-SOFT-KICK-CHARACTERISTIC-2026-11-26.md):
+  direct HTL momentum moments match both lightlike sum rules, but
+  moment-matched Gaussian diffusion overestimates the finite kick phase;
+  the soft kick phase and local Doppler phase describe the same effect.
