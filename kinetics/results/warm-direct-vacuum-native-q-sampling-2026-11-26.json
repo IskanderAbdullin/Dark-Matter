@@ -1,0 +1,90 @@
+{
+  "scope": "Manual linear trapezoid as in CLASS, including zero-weight q=0 and half-weight outer edge. Moment errors of the input do not certify its perturbation response.",
+  "PSD_sha256": "d0869ff26565a04c86f0a3510026bed55c35837fe033324a0e6eb2c685ac82f2",
+  "rows": [
+    {
+      "q_nodes": 44,
+      "q_cap": 18.228571428571428,
+      "step": 0.41428571428571426,
+      "positive_raw_number_defect": 0.003357187644656756,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        -0.03693148625396381,
+        -0.0017642221650108203,
+        -0.003285201348030231,
+        -0.0034319228474860575
+      ]
+    },
+    {
+      "q_nodes": 70,
+      "q_cap": 29.0,
+      "step": 0.4142857142857143,
+      "positive_raw_number_defect": 0.003357188907397113,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        -0.03693148740140639,
+        -0.0017642082830180428,
+        -0.0032850760130690437,
+        -0.0034277278164698277
+      ]
+    },
+    {
+      "q_nodes": 96,
+      "q_cap": 29.0,
+      "step": 0.3020833333333333,
+      "positive_raw_number_defect": 0.004523749913232233,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        -0.00047905714124263366,
+        -0.003769887529561311,
+        -0.004393192845799532,
+        -0.0044700161959699836
+      ]
+    },
+    {
+      "q_nodes": 104,
+      "q_cap": 17.952380952380953,
+      "step": 0.17261904761904762,
+      "positive_raw_number_defect": 0.0007154068668862035,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        0.00668821239867845,
+        -0.0006980373579957844,
+        -0.0007107398567144374,
+        -0.0007218747972220774
+      ]
+    },
+    {
+      "q_nodes": 128,
+      "q_cap": 29.0,
+      "step": 0.2265625,
+      "positive_raw_number_defect": 0.0023833349926341008,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        0.00906147073263841,
+        -0.002191222406496496,
+        -0.002355350141150847,
+        -0.002375006152505632
+      ]
+    },
+    {
+      "q_nodes": 168,
+      "q_cap": 29.0,
+      "step": 0.17261904761904762,
+      "positive_raw_number_defect": 0.0007154086074403487,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        0.006688210738524214,
+        -0.0006980185470124578,
+        -0.0007105730426424373,
+        -0.000716526146798846
+      ]
+    },
+    {
+      "q_nodes": 336,
+      "q_cap": 29.0,
+      "step": 0.08630952380952381,
+      "positive_raw_number_defect": -5.485439479369081e-05,
+      "normalized_relative_errors_qminus1_q1_q2_q4": [
+        -0.0005034153258373086,
+        5.574550589115823e-05,
+        5.565669869889156e-05,
+        5.253266554672287e-05
+      ]
+    }
+  ]
+}

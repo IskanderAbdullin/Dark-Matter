@@ -71,3 +71,63 @@ Raw power tables and temporary-path-elided logs:
 [held profiles](results/warm-direct-native-wide-held-raw-2026-11-26.json.gz),
 [cross](results/warm-direct-native-cross-raw-2026-11-26.json.gz), and
 [fine pair](results/warm-direct-native-fine-pair-raw-2026-11-26.json.gz).
+
+## Resolve q more densely after isolating the numerical axes
+
+Keep the compact lmax=20 and all exact-k RK/
+common-start choices, but increase the radial
+momentum nodes alone to 168. The z=5 physical power
+difference is −5.11522e−6 at k=1 and −7.92412e−6 at
+k=2. At z=20 it is −5.09125e−6 and −7.84514e−6.
+Compared with the independent fine NDF result the
+difference at k=2 is below 5.38e−9 absolute at both
+redshifts, about .07% of the signal. This is agreement
+of two numerically different tests, not a strict
+continuum error bound.
+
+Recreate the manual radial trapezoid on the exact
+tabulated PSD. The present native normalization fixes
+abundance even when the raw sampled count varies.
+Over the 70, 96 and 128 node grids the normalized
+q² errors are not monotone; on 168 the magnitude is
+.071%, and on a sampling-only 336 grid .0056%.
+An inverse-q moment is more sensitive to low momentum
+and need not improve monotonically even when q² does.
+Simple moment accuracy is a useful input diagnostic,
+not a substitute for comparing the actual power.
+
+~~~sh
+python -W error warm_direct_vacuum_high_q_native_reference.py wide q168 --points 168
+for arm in trace physical; do
+ /path/to/class "q168/$arm.ini" >"q168/$arm.log"
+done
+python -W error warm_direct_vacuum_q_sampling_audit_reference.py native/direct-sig07.dat
+~~~
+
+[Exact q=168 power differences](results/warm-direct-vacuum-native-168-q-2026-11-26.json),
+[raw q=168 tables](results/warm-direct-vacuum-native-168-q-raw-2026-11-26.json.gz),
+and [manual radial quadrature audit](results/warm-direct-vacuum-native-q-sampling-2026-11-26.json).
+
+At the same radial spacing, shorten only the high-q
+range to about 18. This keeps over .9999998 of the
+second-moment integral of the positive PSD. The k≥1
+power comparisons change by less than 3.38e−9, much
+less than the shift from refining radial spacing with
+the original range. However, the initial all-mode
+comparison target 1e−8 is **not met**: maxima are
+1.10e−8 and 1.79e−8 on the two spacings, driven by
+k=.1 and .3. Do not claim that tail chopping preserves
+the small-mode response at that tolerance. These changes
+may include numerical effects of the altered solver
+setup; they are not evidence for a large physical high-q
+population.
+
+~~~sh
+mkdir -p cap
+python -W error warm_direct_vacuum_q_cap_spacing_control_reference.py wide cap > cap/spec.json
+# Run each generated CLASS input.
+python -W error warm_direct_vacuum_q_cap_native_audit_reference.py wide.json q168 cap
+~~~
+
+[Fixed-spacing outer cutoff control](results/warm-direct-vacuum-native-q-cap-2026-11-26.json)
+and [raw power and elided-path logs](results/warm-direct-vacuum-native-q-cap-raw-2026-11-26.json.gz).
