@@ -19,10 +19,11 @@ def tail_change(l,s,cut):
     return np.minimum(np.minimum(l,s), np.minimum(cut,np.maximum(l+s-cut,0.)))
 
 
-def integrate(S,cut,n,closed):
+def integrate(S,cut,n,closed,split_result=None):
     f,ep,g,el=snapshot_functions(S)
     final=ep[-1]+el[-1]
     if final<=max(cut,M):
+        if split_result is not None: split_result[:]=0.
         return np.zeros(6)
     lo=max(cut,M)
     A=np.unique(np.r_[ep,cut])
@@ -38,6 +39,7 @@ def integrate(S,cut,n,closed):
     E=((edges[:-1,None]+edges[1:,None])/2+dx[:,None]*z).ravel()
     dE=(dx[:,None]*w).ravel()
     total=np.zeros(6)
+    if split_result is not None: split_result[:]=0.
     for i in range(0,len(E),120):
         v=E[i:i+120]
         phi,W=angle_panels(v,A,B,angle=n)
@@ -58,6 +60,10 @@ def integrate(S,cut,n,closed):
         # reverse event lowers it by the same amount.
         z=dE[i:i+120]*2/np.pi**2*np.sqrt((v-M)*(v+M))*width*M
         daughters=np.maximum(chi-cut,0.)+np.maximum(phi-cut,0.)
+        if split_result is not None:
+            for k,x in enumerate((phi,chi)):
+                w=np.maximum(x-cut,0.)
+                split_result[k]+=[z@(pos*w).sum(axis=(1,2)),z@(neg*w).sum(axis=(1,2))]
         # At a stationary parent, its excess energy cancels at each
         # fixed E_H. The independent daughter ledger avoids subtracting
         # the two large gross parent terms when both daughters are soft.
@@ -71,6 +77,8 @@ def integrate(S,cut,n,closed):
     if cut>=max(ep[-1],el[-1]):
         assert total[4]==0.
         assert not closed or total[5]==0.
+    if split_result is not None:
+        np.testing.assert_allclose(split_result.sum(axis=0),total[4:],rtol=5e-14,atol=1e-245)
     return total
 
 

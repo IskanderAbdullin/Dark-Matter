@@ -277,6 +277,8 @@ A [frozen pad-opening audit](INDEPENDENT-WARM-LATE-PROMPT-PAD-OPENING-2026-11-26
 checks direct outgoing support without claiming dynamical re-entry.
 The [aligned .80 control](INDEPENDENT-WARM-LATE-ALIGNED-HARD080-RELAXATION-2026-11-26.md)
 starts above the cut and has negative transfer at every saved time.
+A [species-resolved comparison](INDEPENDENT-WARM-LATE-TAIL-SPECIES-EXCHANGE-2026-11-26.md)
+identifies which current changes sign and tests its shape sensitivity.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)
