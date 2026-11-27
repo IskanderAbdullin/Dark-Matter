@@ -504,6 +504,11 @@ The [tidal crossing geometry](INDEPENDENT-HALO-BOSE-TIDAL-RADIUS-CROSSING-2026-1
 applies the angular-momentum barrier after the elastic energy
 selection; the accessible sphere is not equivalent to infinity.
 
+The [virial energy-family test](INDEPENDENT-HALO-BOSE-LOWERED-ENERGY-FAMILY-2026-11-26.md)
+rules out a fixed-shape homologous sequence as the response to
+isolated positive-energy loss, with independent kinetic and potential
+integrals. Conditional tangents are not dynamical solutions.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

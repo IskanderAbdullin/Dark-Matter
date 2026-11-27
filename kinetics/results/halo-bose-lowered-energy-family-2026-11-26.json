@@ -1,0 +1,122 @@
+{
+  "scope": "Frozen isolated positive-energy escape and exact virial checks on a family of stationary lowered halos. Tangents are algebraic hypothetical constraints on shape changes, not isolated dynamical trajectories or a stability proof.",
+  "outputs": [
+    {
+      "peak_occupation": 7000.0,
+      "escape_depth": 2.0,
+      "virial_K_over_MV02": 0.37206925430348803,
+      "independent_virial_relative_defect": 4.891024123487853e-07,
+      "physical_dlog_bound_mass_per_Gyr": -0.0008143513790951124,
+      "physical_dlog_binding_magnitude_per_Gyr": 0.000398438175107345,
+      "fixed_shape_would_instead_dlog_binding_per_Gyr": -0.0019001532178885957,
+      "conditional_tangents": [
+        {
+          "parameter_held_fixed": "F",
+          "structural_log_derivatives": [
+            0.6834712951223695,
+            0.4615050981802704
+          ],
+          "one_step_tangent_dlog_V0_and_dW_or_dlogF_per_Gyr": [
+            0.0017856247912886867,
+            -0.005110366142593873
+          ],
+          "matrix_condition_number": 24.085452011773544,
+          "relative_difference_of_two_stencils": 2.8617227950000768e-05,
+          "exploratory_ill_conditioned": false
+        },
+        {
+          "parameter_held_fixed": "W",
+          "structural_log_derivatives": [
+            -0.0001252252856842606,
+            -7.566417193072272e-05
+          ],
+          "one_step_tangent_dlog_V0_and_dW_or_dlogF_per_Gyr": [
+            0.0015588347365395646,
+            25.17545451525934
+          ],
+          "matrix_condition_number": 105874.72338111216,
+          "relative_difference_of_two_stencils": 0.015018915894343898,
+          "exploratory_ill_conditioned": true
+        }
+      ]
+    },
+    {
+      "peak_occupation": 7000.0,
+      "escape_depth": 5.0,
+      "virial_K_over_MV02": 0.7626640025154111,
+      "independent_virial_relative_defect": 8.745589854530778e-07,
+      "physical_dlog_bound_mass_per_Gyr": -0.0003849845625658552,
+      "physical_dlog_binding_magnitude_per_Gyr": 0.00021606751565093923,
+      "fixed_shape_would_instead_dlog_binding_per_Gyr": -0.0008982973126536622,
+      "conditional_tangents": [
+        {
+          "parameter_held_fixed": "F",
+          "structural_log_derivatives": [
+            0.39943882615277226,
+            0.10536748000526028
+          ],
+          "one_step_tangent_dlog_V0_and_dW_or_dlogF_per_Gyr": [
+            0.00043794758710535744,
+            -0.0026084243068183774
+          ],
+          "matrix_condition_number": 23.23062004210803,
+          "relative_difference_of_two_stencils": 4.724807948108811e-06,
+          "exploratory_ill_conditioned": false
+        },
+        {
+          "parameter_held_fixed": "W",
+          "structural_log_derivatives": [
+            -5.4530559785437305e-05,
+            -2.843515196748747e-05
+          ],
+          "one_step_tangent_dlog_V0_and_dW_or_dlogF_per_Gyr": [
+            0.0006583927085221854,
+            25.170723182557296
+          ],
+          "matrix_condition_number": 218345.89960561084,
+          "relative_difference_of_two_stencils": 0.1174140485158599,
+          "exploratory_ill_conditioned": true
+        }
+      ]
+    },
+    {
+      "peak_occupation": 7000.0,
+      "escape_depth": 8.0,
+      "virial_K_over_MV02": 0.8281170801515904,
+      "independent_virial_relative_defect": 2.6314627779022715e-06,
+      "physical_dlog_bound_mass_per_Gyr": -6.703971544031061e-05,
+      "physical_dlog_binding_magnitude_per_Gyr": 4.800644974998639e-05,
+      "fixed_shape_would_instead_dlog_binding_per_Gyr": -0.0001564260026940581,
+      "conditional_tangents": [
+        {
+          "parameter_held_fixed": "F",
+          "structural_log_derivatives": [
+            0.4995667610059466,
+            -0.03578805283109184
+          ],
+          "one_step_tangent_dlog_V0_and_dW_or_dlogF_per_Gyr": [
+            5.231117316886008e-05,
+            -0.00029126532538034227
+          ],
+          "matrix_condition_number": 14.143234675669012,
+          "relative_difference_of_two_stencils": 7.157687585279682e-05,
+          "exploratory_ill_conditioned": false
+        },
+        {
+          "parameter_held_fixed": "W",
+          "structural_log_derivatives": [
+            -6.44967783935968e-05,
+            1.0234033985534463e-06
+          ],
+          "one_step_tangent_dlog_V0_and_dW_or_dlogF_per_Gyr": [
+            5.632095083582192e-05,
+            2.3492823280160366
+          ],
+          "matrix_condition_number": 111086.71304533891,
+          "relative_difference_of_two_stencils": 0.052038955110654816,
+          "exploratory_ill_conditioned": true
+        }
+      ]
+    }
+  ]
+}
