@@ -566,6 +566,11 @@ The [finite parent count comparison](INDEPENDENT-EARLY-POLE-PARENT-NUMBER-RESERV
 keeps a maintained momentum shape but lets the parent inventory deplete
 or replenish at illustrative rates. It does not close the parent bath.
 
+The [energy-assigned nodal comparison](INDEPENDENT-EARLY-POLE-PAIRED-NODAL-ENERGY-2026-11-26.md)
+preserves a discrete collision energy identity and pointwise thermal
+balance. Its fine-grid scalar count is close to the exact-aperture,
+cell-centroid control; neither method evolves the holding bath.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
