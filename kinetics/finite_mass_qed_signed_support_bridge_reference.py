@@ -13,7 +13,8 @@ def gl(n):return roots_legendre(n)
 
 
 class BridgeSource:
-    def __init__(self,d):
+    def __init__(self,d,emission_only_extension=False):
+        self.emission_only_extension=bool(emission_only_extension)
         self.M=np.longdouble(str(d['x_end']));self.m=self.M*np.longdouble(str(d['mass_ratio']))
         self.s=np.longdouble(str(d['checkpoints'][-1]['scalar_pole_over_T'])); self.q=np.longdouble(str(Q))
         self.Es,self.lo,self.hi,*_=intervals(self.M,self.s,self.m,Q)
@@ -36,7 +37,10 @@ class BridgeSource:
         # This bridge is limited to a sector in which all parent
         # aperture equations are strictly monotone, including translated
         # archive edges far outside the zero-photon aperture.
-        if abs(k)>np.longdouble('2.01e-4'):
+        if self.emission_only_extension:
+            if k<0. or k>np.longdouble('2.561e-3'):
+                raise ValueError('Outside verified monotone emission geometry')
+        elif abs(k)>np.longdouble('2.01e-4'):
             raise ValueError('Outside verified monotone signed geometry')
         breaks=[0.,2.]
         if k:
@@ -68,7 +72,7 @@ class BridgeSource:
                     dR=dP*(p-k+k*t)/zR
                     return formula,Es+k*dL-sign*q*dR
                 def endpoint(E,sign):
-                    test_lo=np.longdouble('.22');test_hi=np.longdouble('6.')
+                    test_lo=np.longdouble('.18' if self.emission_only_extension else '.22');test_hi=np.longdouble('6.')
                     f_lo,d_lo=bounds(test_lo,sign)
                     f_hi,d_hi=bounds(test_hi,sign)
                     if not f_lo<0.<f_hi or min(d_lo,d_hi)<np.longdouble('.00043'):
