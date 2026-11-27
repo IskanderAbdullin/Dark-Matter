@@ -64,3 +64,28 @@ python -W error warm_direct_vacuum_response_band_audit_reference.py EOS.dat \
 [Clock/shape decomposition](results/warm-direct-vacuum-clock-shape-response-2026-11-26.json);
 [low-q decomposition](results/warm-direct-vacuum-response-band-audit-2026-11-26.json);
 [alternate metric driver](results/warm-direct-vacuum-fixed-metric-on-2026-11-26.json).
+
+## Compare path lengths without selecting a within-shell shape
+
+Propagating both positive direct spectra from the same
+7.394 MeV archive time, the monotone velocity integral
+bounds the contribution of each shell between its
+edge distances. Use a separate conservative horizon
+upper for the overflow bin rather than pretending it has
+a finite momentum cutoff. The resulting mean-distance
+ranges to equality are [8.19,9.08] Mpc for the lepton
+source, [10.33,11.43] Mpc for the measured pions, and
+[8.37,9.28] Mpc for the direct mix. The held archive mean
+is 10.418 Mpc. Thus the direct mix is shorter travelled
+on this comparison even without interpolating its
+shell distributions. This is consistent with the direction
+of the tracer contrast, but a mean path does not determine
+a fixed-metric response or a transfer function.
+
+~~~sh
+python -W error warm_direct_vacuum_shell_path_bounds_reference.py EOS.dat \
+ results/warm-multishell-corrected-q64-fine-stage-48-2026-11-26.json.gz \
+ results/warm-direct-vacuum-scalar-psd-2026-11-26.json
+~~~
+
+[Distance bounds from positive shells](results/warm-direct-vacuum-shell-path-bounds-2026-11-26.json).
