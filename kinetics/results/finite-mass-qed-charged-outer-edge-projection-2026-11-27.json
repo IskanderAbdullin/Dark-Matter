@@ -1,0 +1,55 @@
+{
+  "scope": "Bare charged cut with a normalized external parabolic window. No assignment of real-time cut factors or physical rate.",
+  "rows": [
+    {
+      "grid": "fine",
+      "external_center_parent_energy": 1.4230974518581974,
+      "cut_species": "daughter",
+      "histogram_jump": -0.056034228171934014,
+      "predicted_step_log_coefficient": 0.7227020381182281,
+      "step_difference_under_fourfold_shrink": 1.0014799800882201,
+      "leading_step_difference": 1.001877760213152,
+      "panels": [
+        {
+          "half_width": 0.0002810981197223783,
+          "step_weighted_average": -603.2677114449685,
+          "linear_weighted_average": -534.0022762940921,
+          "resolution_defect": 3.058175934711471e-11,
+          "direct_outer_replay_defect": 1.3627596899823402e-06
+        },
+        {
+          "half_width": 7.027452993059458e-05,
+          "step_weighted_average": -602.2662314648803,
+          "linear_weighted_average": -534.0022705666846,
+          "resolution_defect": 9.094947017729282e-13,
+          "direct_outer_replay_defect": 1.3627603721033665e-06
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "external_center_parent_energy": 1.432354436522056,
+      "cut_species": "parent",
+      "histogram_jump": 0.06335863224304418,
+      "predicted_step_log_coefficient": 0.6159588118386468,
+      "step_difference_under_fourfold_shrink": 0.8534193451505416,
+      "leading_step_difference": 0.8539002275340237,
+      "panels": [
+        {
+          "half_width": 0.0006323598998792535,
+          "step_weighted_average": -785.7557494490965,
+          "linear_weighted_average": -706.6896694726456,
+          "resolution_defect": 3.3651303965598345e-11,
+          "direct_outer_replay_defect": 1.1614793038461357e-06
+        },
+        {
+          "half_width": 0.00015808997496981336,
+          "step_weighted_average": -784.9023301039459,
+          "linear_weighted_average": -706.6896202198438,
+          "resolution_defect": 4.547473508864641e-12,
+          "direct_outer_replay_defect": 1.16147759854357e-06
+        }
+      ]
+    }
+  ]
+}
