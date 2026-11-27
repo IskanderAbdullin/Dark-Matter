@@ -637,6 +637,10 @@ shows that a single cold pair generally remains within the IR band,
 but need not remain in the same fine momentum cell. It does not
 give a net, quantum-statistical redistribution rate.
 
+The [Bose gain–loss affinity witness](INDEPENDENT-EARLY-POLE-SCALAR-ELASTIC-AFFINITY-2026-11-26.md)
+isolates a numerical failure of direct gross-term subtraction at
+the recorded occupancies and verifies a cancellation-safe formula.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
