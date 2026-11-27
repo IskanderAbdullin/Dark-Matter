@@ -33,7 +33,7 @@ def fixture(M,m,ms):
     return max(errors)
 
 
-def integrate(a,q,order,fraction,lower=0.,*,probe_x=None):
+def integrate(a,q,order,fraction,lower=0.,*,probe_x=None,resolve_terms=False):
     if not 0. <= lower < fraction or lower <= 1. <= fraction:
         raise ValueError("Use a separate invariant interval on one side of the real pole.")
     M,m=.05,.003
@@ -86,7 +86,10 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None):
         if not minE<ep<maxE:
             raise ValueError("Fixed invariant point lies outside the tagged rest support.")
         energies,energy_weights=[ep],[M*M/(2*ms)]
+    if resolve_terms and fixed_s is None:
+        raise ValueError("Squared, crossed and interference terms require a fixed invariant probe.")
     F=np.zeros((2,4))
+    terms=np.zeros((3,2,4)) if resolve_terms else None
     max_thermal=0.
     for E,dE in zip(energies,energy_weights,strict=True):
         p=np.sqrt((E-m)*(E+m))
@@ -149,7 +152,7 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None):
             t=-2*r*r*(1-cb)
             if fixed_s is None:
                 matrix=spin(s,t,M,m,ms)@(aw/2)
-            else:
+            elif not resolve_terms:
                 # Multiply both propagators by x before forming the
                 # trace. The rescaled s-channel limit is analytic at x=0.
                 u=2*(m*m+ms*ms)-fixed_s-t
@@ -158,6 +161,20 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None):
                 S=.5*(sa*(fixed_s+m*m-ms*ms)+ub*(u+m*m-ms*ms))
                 C=fixed_s*sa*sa+u*ub*ub+2*(m*m-ms*ms)*sa*ub
                 matrix=(2*A*A*(2*m*m-t/2)+8*A*m*S+4*S*S+t*C)@(aw/2)
+            else:
+                u=2*(m*m+ms*ms)-fixed_s-t
+                sa,ub=1/(M*M),1/(u-M*M)
+                A,B=M*sa,M*ub
+                S=.5*sa*(fixed_s+m*m-ms*ms)
+                U=.5*ub*(u+m*m-ms*ms)
+                L=2*m*m-t/2
+                ss=2*A*A*L+8*A*m*S+4*S*S+t*fixed_s*sa*sa
+                su=4*A*B*L+8*m*(A*U+B*S)+8*S*U+2*t*(m*m-ms*ms)*sa*ub
+                uu=2*B*B*L+8*B*m*U+4*U*U+t*u*ub*ub
+                if probe_x==0:
+                    np.testing.assert_allclose(ss,(((M+m)**2-ms*ms)/(M*M))**2,rtol=1e-14)
+                components=np.array([ss@(aw/2),su@(aw/2),uu@(aw/2)])
+                matrix=np.array([1.,probe_x,probe_x**2])@components
             assert np.min(matrix)>=-1e-12
             benergy=ET-ms-K
             qb=np.sqrt(np.maximum(0.,(benergy-m)*(benergy+m)))
@@ -176,8 +193,14 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None):
             vel=np.sqrt(max(0.,invariant**2-m*m*ms*ms))/(E*E0)
             pref=4*p*E*dE*W*vel/(2*np.pi**2)/(32*np.pi*s*D)
             weight=pref*matrix*WK
-            for k,tag in enumerate((qs1<1e-5,qs1>=1e-5)):
-                F[k]+=np.array([weight[tag]@u[tag] for u in (em,loss,net,vac)])
+            if terms is not None:
+                obs=np.array([em,loss,net,vac])
+                for k,tag in enumerate((qs1<1e-5,qs1>=1e-5)):
+                    F[k]+=obs[:,tag]@weight[tag]
+                    terms[:,k,:]+=(components[:,tag]*pref*WK[tag])@obs[:,tag].T
+            else:
+                for k,tag in enumerate((qs1<1e-5,qs1>=1e-5)):
+                    F[k]+=np.array([weight[tag]@u[tag] for u in (em,loss,net,vac)])
     assert max_thermal<1e-13
     H=np.sqrt(np.pi**2*106.75/90)*(86./a['x_end'])/2.435e18
     fac=H*(16*np.pi*KAPPA*M)**2
@@ -193,7 +216,13 @@ def integrate(a,q,order,fraction,lower=0.,*,probe_x=None):
         if fixed_s is None and lower==0. and fraction<=.90:
             np.testing.assert_allclose(F,expected,rtol=4e-10,atol=1e-14)
     if fixed_s is not None:
-        return dict(q=q,x=probe_x,order=order,net_density_per_reference_H=(fac*F[:,2]).tolist(),
+        extra={}
+        if terms is not None:
+            np.testing.assert_allclose(np.einsum('i,ijk->jk',[1.,probe_x,probe_x**2],terms),F,
+                                       rtol=1e-10,atol=1e-22)
+            extra=dict(term_net_densities_per_reference_H=(fac*terms[:,:,2]).tolist(),
+                       term_gross_densities_per_reference_H=(fac*terms[:,:,:2]).tolist())
+        return dict(q=q,x=probe_x,order=order,**extra,net_density_per_reference_H=(fac*F[:,2]).tolist(),
                     gross_density_per_reference_H=(fac*F[:,:2]).tolist(),
                     direct_per_reference_H=float(direct),thermal_defect=max_thermal)
     return dict(q=q,order=order,pole_guard=fraction,tagged_bose_occupation=ftag,
