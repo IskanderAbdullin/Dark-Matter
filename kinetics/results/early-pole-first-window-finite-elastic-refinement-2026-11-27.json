@@ -1,0 +1,55 @@
+{
+  "cases": {
+    "steps": {
+      "default": 0.06694243427293745,
+      "radial2": 0.067000519528293,
+      "change_ppm": 867.6896199910633,
+      "closure": [
+        {
+          "terminal_energy_drift": 2.6645352591003757e-15,
+          "terminal_entropy_closure": -1.6586176876387526e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 1.9984014443252818e-15,
+          "nonelastic_energy_remainder": 6.661338147750939e-16
+        },
+        {
+          "terminal_energy_drift": 4.884981308350689e-15,
+          "terminal_entropy_closure": -1.657542159083647e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": 8.881784197001252e-16
+        }
+      ]
+    },
+    "cell-conservative": {
+      "default": 0.06528878623152101,
+      "radial2": 0.06543588590771088,
+      "change_ppm": 2253.0618913365606,
+      "closure": [
+        {
+          "terminal_energy_drift": 2.220446049250313e-15,
+          "terminal_entropy_closure": -1.5778984022163378e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.220446049250313e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": -1.7763568394002505e-15
+        },
+        {
+          "terminal_energy_drift": 1.7763568394002505e-15,
+          "terminal_entropy_closure": -1.5719188103946458e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.7763568394002505e-15,
+          "signed_elastic_energy_defect": 8.881784197001252e-16,
+          "nonelastic_energy_remainder": 8.881784197001252e-16
+        }
+      ]
+    }
+  },
+  "contrast_percent": {
+    "default": 2.4702538223724924,
+    "radial2": 2.3352559526369165
+  },
+  "scope": "Finite first-window sensitivity only; both elastic radial orders changed together."
+}
