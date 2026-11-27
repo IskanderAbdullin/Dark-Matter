@@ -1,0 +1,1184 @@
+{
+  "8": {
+    "order": 8,
+    "scope": "Static conditional probability insertion on fixed native dressed dispersion; no dynamics.",
+    "aperture": "fine",
+    "reports": {
+      "parent": {
+        "signed_direct_gain_inverse_net": [
+          -0.0059487380902873135,
+          0.00027828504575490184,
+          -0.006227023136042245
+        ],
+        "additivity_maximum_mode_defect": 6.938893903907228e-18,
+        "max_three_cells": [
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.005523914363913306,
+              0.00023297026369594045,
+              -0.005756884627609276
+            ],
+            "max_logit_offset": 0.1249519277457504
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              -0.00042482372637400707,
+              4.531478205896306e-05,
+              -0.0004701385084329754
+            ],
+            "max_logit_offset": 0.1544515583272963
+          },
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.65
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.004872454824552841
+          }
+        ],
+        "top_three_absolute_fraction": 1.0,
+        "n_cells_with_nonzero_net_effect": 2,
+        "n_cells_with_distinct_occupation": 20,
+        "signed_sum_relative_to_absolute_of_net_changes": -1.0,
+        "all_cells": [
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.65
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.004872454824552841
+          },
+          {
+            "hard_momentum_interval": [
+              0.65,
+              0.85
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.006781976962023761
+          },
+          {
+            "hard_momentum_interval": [
+              0.85,
+              1.05
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.002591115469392502
+          },
+          {
+            "hard_momentum_interval": [
+              1.05,
+              1.25
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.006891051241159352
+          },
+          {
+            "hard_momentum_interval": [
+              1.25,
+              1.32
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.002808146455597439
+          },
+          {
+            "hard_momentum_interval": [
+              1.32,
+              1.3333333333333335
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00701316184634629
+          },
+          {
+            "hard_momentum_interval": [
+              1.3333333333333335,
+              1.3611111111111112
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.011053842091803379
+          },
+          {
+            "hard_momentum_interval": [
+              1.3611111111111112,
+              1.3777777777777778
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.03737462999571819
+          },
+          {
+            "hard_momentum_interval": [
+              1.3777777777777778,
+              1.4138888888888888
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.10924637424849187
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              -0.00042482372637400707,
+              4.531478205896306e-05,
+              -0.0004701385084329754
+            ],
+            "max_logit_offset": 0.1544515583272963
+          },
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.005523914363913306,
+              0.00023297026369594045,
+              -0.005756884627609276
+            ],
+            "max_logit_offset": 0.1249519277457504
+          },
+          {
+            "hard_momentum_interval": [
+              1.4666666666666666,
+              1.511111111111111
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.08995470062855497
+          },
+          {
+            "hard_momentum_interval": [
+              1.511111111111111,
+              1.5194444444444444
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.02341839865765756
+          },
+          {
+            "hard_momentum_interval": [
+              1.5194444444444444,
+              1.5555555555555556
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.01236510828775813
+          },
+          {
+            "hard_momentum_interval": [
+              1.5555555555555556,
+              1.56
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.008962797089433483
+          },
+          {
+            "hard_momentum_interval": [
+              1.56,
+              1.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.002816726514911397
+          },
+          {
+            "hard_momentum_interval": [
+              1.7,
+              2.2
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00033864919321668907
+          },
+          {
+            "hard_momentum_interval": [
+              2.2,
+              2.85
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00047824092328746515
+          },
+          {
+            "hard_momentum_interval": [
+              2.85,
+              3.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00017100333027397774
+          },
+          {
+            "hard_momentum_interval": [
+              3.7,
+              5.0
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.028321360386774685
+          }
+        ]
+      },
+      "daughter": {
+        "signed_direct_gain_inverse_net": [
+          -0.002199115411819421,
+          0.013312079231250733,
+          -0.01551119464307018
+        ],
+        "additivity_maximum_mode_defect": 1.0408340855860843e-17,
+        "max_three_cells": [
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.0023586247417522427,
+              0.014277649672336664,
+              -0.016636274414088933
+            ],
+            "max_logit_offset": 0.759213209908108
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              0.0001595093299328149,
+              -0.0009655704410859314,
+              0.001125079771018741
+            ],
+            "max_logit_offset": 0.3464824929344763
+          },
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.69
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.058229541578689314
+          }
+        ],
+        "top_three_absolute_fraction": 1.0,
+        "n_cells_with_nonzero_net_effect": 2,
+        "n_cells_with_distinct_occupation": 20,
+        "signed_sum_relative_to_absolute_of_net_changes": -0.8733114874808268,
+        "all_cells": [
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.69
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.058229541578689314
+          },
+          {
+            "hard_momentum_interval": [
+              0.69,
+              0.8
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.014051966764984769
+          },
+          {
+            "hard_momentum_interval": [
+              0.8,
+              1.03
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.007879617091227697
+          },
+          {
+            "hard_momentum_interval": [
+              1.03,
+              1.3
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.0010650400750734715
+          },
+          {
+            "hard_momentum_interval": [
+              1.3,
+              1.32
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00604294563658596
+          },
+          {
+            "hard_momentum_interval": [
+              1.32,
+              1.3333333333333335
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.011309202011295483
+          },
+          {
+            "hard_momentum_interval": [
+              1.3333333333333335,
+              1.3611111111111112
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.011712986479091116
+          },
+          {
+            "hard_momentum_interval": [
+              1.3611111111111112,
+              1.3777777777777778
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.014626854423041902
+          },
+          {
+            "hard_momentum_interval": [
+              1.3777777777777778,
+              1.4138888888888888
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.08804545172022911
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              0.0001595093299328149,
+              -0.0009655704410859314,
+              0.001125079771018741
+            ],
+            "max_logit_offset": 0.3464824929344763
+          },
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.0023586247417522427,
+              0.014277649672336664,
+              -0.016636274414088933
+            ],
+            "max_logit_offset": 0.759213209908108
+          },
+          {
+            "hard_momentum_interval": [
+              1.4666666666666666,
+              1.511111111111111
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.5621824781494363
+          },
+          {
+            "hard_momentum_interval": [
+              1.511111111111111,
+              1.5194444444444444
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.06293859148073899
+          },
+          {
+            "hard_momentum_interval": [
+              1.5194444444444444,
+              1.5555555555555556
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.06352850672455553
+          },
+          {
+            "hard_momentum_interval": [
+              1.5555555555555556,
+              1.56
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.0667997010321475
+          },
+          {
+            "hard_momentum_interval": [
+              1.56,
+              1.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.005408835686544267
+          },
+          {
+            "hard_momentum_interval": [
+              1.7,
+              2.2
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.001510157094209874
+          },
+          {
+            "hard_momentum_interval": [
+              2.2,
+              2.85
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.0010102334035195781
+          },
+          {
+            "hard_momentum_interval": [
+              2.85,
+              3.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00044340106596851836
+          },
+          {
+            "hard_momentum_interval": [
+              3.7,
+              5.0
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.2990087500627673
+          }
+        ]
+      }
+    }
+  },
+  "12": {
+    "order": 12,
+    "scope": "Static conditional probability insertion on fixed native dressed dispersion; no dynamics.",
+    "aperture": "fine",
+    "reports": {
+      "parent": {
+        "signed_direct_gain_inverse_net": [
+          -0.0059487380902873204,
+          0.00027828504575490347,
+          -0.006227023136042237
+        ],
+        "additivity_maximum_mode_defect": 1.3877787807814457e-17,
+        "max_three_cells": [
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.005523914363913313,
+              0.00023297026369594213,
+              -0.005756884627609279
+            ],
+            "max_logit_offset": 0.1249519277457504
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              -0.00042482372637400013,
+              4.531478205896306e-05,
+              -0.00047013850843297193
+            ],
+            "max_logit_offset": 0.1544515583272963
+          },
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.65
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.004872454824552841
+          }
+        ],
+        "top_three_absolute_fraction": 1.0,
+        "n_cells_with_nonzero_net_effect": 2,
+        "n_cells_with_distinct_occupation": 20,
+        "signed_sum_relative_to_absolute_of_net_changes": -1.0,
+        "all_cells": [
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.65
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.004872454824552841
+          },
+          {
+            "hard_momentum_interval": [
+              0.65,
+              0.85
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.006781976962023761
+          },
+          {
+            "hard_momentum_interval": [
+              0.85,
+              1.05
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.002591115469392502
+          },
+          {
+            "hard_momentum_interval": [
+              1.05,
+              1.25
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.006891051241159352
+          },
+          {
+            "hard_momentum_interval": [
+              1.25,
+              1.32
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.002808146455597439
+          },
+          {
+            "hard_momentum_interval": [
+              1.32,
+              1.3333333333333335
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00701316184634629
+          },
+          {
+            "hard_momentum_interval": [
+              1.3333333333333335,
+              1.3611111111111112
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.011053842091803379
+          },
+          {
+            "hard_momentum_interval": [
+              1.3611111111111112,
+              1.3777777777777778
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.03737462999571819
+          },
+          {
+            "hard_momentum_interval": [
+              1.3777777777777778,
+              1.4138888888888888
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.10924637424849187
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              -0.00042482372637400013,
+              4.531478205896306e-05,
+              -0.00047013850843297193
+            ],
+            "max_logit_offset": 0.1544515583272963
+          },
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.005523914363913313,
+              0.00023297026369594213,
+              -0.005756884627609279
+            ],
+            "max_logit_offset": 0.1249519277457504
+          },
+          {
+            "hard_momentum_interval": [
+              1.4666666666666666,
+              1.511111111111111
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.08995470062855497
+          },
+          {
+            "hard_momentum_interval": [
+              1.511111111111111,
+              1.5194444444444444
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.02341839865765756
+          },
+          {
+            "hard_momentum_interval": [
+              1.5194444444444444,
+              1.5555555555555556
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.01236510828775813
+          },
+          {
+            "hard_momentum_interval": [
+              1.5555555555555556,
+              1.56
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.008962797089433483
+          },
+          {
+            "hard_momentum_interval": [
+              1.56,
+              1.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.002816726514911397
+          },
+          {
+            "hard_momentum_interval": [
+              1.7,
+              2.2
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00033864919321668907
+          },
+          {
+            "hard_momentum_interval": [
+              2.2,
+              2.85
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00047824092328746515
+          },
+          {
+            "hard_momentum_interval": [
+              2.85,
+              3.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00017100333027397774
+          },
+          {
+            "hard_momentum_interval": [
+              3.7,
+              5.0
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.028321360386774685
+          }
+        ]
+      },
+      "daughter": {
+        "signed_direct_gain_inverse_net": [
+          -0.002199115411819421,
+          0.013312079231250695,
+          -0.015511194643070129
+        ],
+        "additivity_maximum_mode_defect": 6.938893903907228e-18,
+        "max_three_cells": [
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.002358624741752243,
+              0.01427764967233663,
+              -0.016636274414088884
+            ],
+            "max_logit_offset": 0.759213209908108
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              0.0001595093299328149,
+              -0.000965570441085932,
+              0.0011250797710187453
+            ],
+            "max_logit_offset": 0.3464824929344763
+          },
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.69
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.058229541578689314
+          }
+        ],
+        "top_three_absolute_fraction": 1.0,
+        "n_cells_with_nonzero_net_effect": 2,
+        "n_cells_with_distinct_occupation": 20,
+        "signed_sum_relative_to_absolute_of_net_changes": -0.8733114874808259,
+        "all_cells": [
+          {
+            "hard_momentum_interval": [
+              0.45,
+              0.69
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.058229541578689314
+          },
+          {
+            "hard_momentum_interval": [
+              0.69,
+              0.8
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.014051966764984769
+          },
+          {
+            "hard_momentum_interval": [
+              0.8,
+              1.03
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.007879617091227697
+          },
+          {
+            "hard_momentum_interval": [
+              1.03,
+              1.3
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.0010650400750734715
+          },
+          {
+            "hard_momentum_interval": [
+              1.3,
+              1.32
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00604294563658596
+          },
+          {
+            "hard_momentum_interval": [
+              1.32,
+              1.3333333333333335
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.011309202011295483
+          },
+          {
+            "hard_momentum_interval": [
+              1.3333333333333335,
+              1.3611111111111112
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.011712986479091116
+          },
+          {
+            "hard_momentum_interval": [
+              1.3611111111111112,
+              1.3777777777777778
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.014626854423041902
+          },
+          {
+            "hard_momentum_interval": [
+              1.3777777777777778,
+              1.4138888888888888
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.08804545172022911
+          },
+          {
+            "hard_momentum_interval": [
+              1.4138888888888888,
+              1.4222222222222223
+            ],
+            "gain_inverse_net": [
+              0.0001595093299328149,
+              -0.000965570441085932,
+              0.0011250797710187453
+            ],
+            "max_logit_offset": 0.3464824929344763
+          },
+          {
+            "hard_momentum_interval": [
+              1.4222222222222223,
+              1.4666666666666666
+            ],
+            "gain_inverse_net": [
+              -0.002358624741752243,
+              0.01427764967233663,
+              -0.016636274414088884
+            ],
+            "max_logit_offset": 0.759213209908108
+          },
+          {
+            "hard_momentum_interval": [
+              1.4666666666666666,
+              1.511111111111111
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.5621824781494363
+          },
+          {
+            "hard_momentum_interval": [
+              1.511111111111111,
+              1.5194444444444444
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.06293859148073899
+          },
+          {
+            "hard_momentum_interval": [
+              1.5194444444444444,
+              1.5555555555555556
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.06352850672455553
+          },
+          {
+            "hard_momentum_interval": [
+              1.5555555555555556,
+              1.56
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.0667997010321475
+          },
+          {
+            "hard_momentum_interval": [
+              1.56,
+              1.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.005408835686544267
+          },
+          {
+            "hard_momentum_interval": [
+              1.7,
+              2.2
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.001510157094209874
+          },
+          {
+            "hard_momentum_interval": [
+              2.2,
+              2.85
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.0010102334035195781
+          },
+          {
+            "hard_momentum_interval": [
+              2.85,
+              3.7
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.00044340106596851836
+          },
+          {
+            "hard_momentum_interval": [
+              3.7,
+              5.0
+            ],
+            "gain_inverse_net": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "max_logit_offset": 0.2990087500627673
+          }
+        ]
+      }
+    }
+  }
+}
