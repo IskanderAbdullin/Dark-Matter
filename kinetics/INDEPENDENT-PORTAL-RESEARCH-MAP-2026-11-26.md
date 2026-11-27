@@ -119,6 +119,9 @@ reproducible controls below are not observational constraints.
    removes a one-step native cold spike without shifting the full spectrum materially in that block. A [six- and nine-shell lift](INDEPENDENT-WARM-COLD-PAIR-MULTISHELL-2026-11-26.md)
    checks adjacent cold cells without changing the forward operator or the remaining inverse phase space. A [24-step corrected q32 continuation](INDEPENDENT-WARM-MULTISHELL-CORRECTED-TRAJECTORY-2026-11-26.md)
    tests the same change over the whole matched 8.133 to 7.394 MeV interval.
+   The [native recoil-gate time/support cross](INDEPENDENT-WARM-NATIVE-RECOIL-CROSS-AND-GATE-LAW-2026-11-26.md)
+   checks the coarser trajectory and derives the local quadratic shutoff
+   from the narrowing light-momentum/recoil-energy region.
    A [corrected 12/24-step comparison](INDEPENDENT-WARM-CORRECTED-Q32-TIME-LADDER-2026-11-26.md)
    measures the much larger whole-state time sensitivity and checks that the cold-cell decline survives it. A [thermal balance and endpoint budget check](INDEPENDENT-WARM-LIFTED-PAIR-BALANCE-2026-11-26.md)
    independently tests gain/loss cancellation in narrow cells and resolves the remaining elastic contribution.
