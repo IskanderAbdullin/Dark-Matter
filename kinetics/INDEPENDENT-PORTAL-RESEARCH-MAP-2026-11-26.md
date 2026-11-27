@@ -576,6 +576,11 @@ measures the smaller but nonzero centroid bias in the signed daughter
 source separately from the projected continuity residual. This does
 not evolve the parent or the background.
 
+The [resolved parent momentum calculation](INDEPENDENT-EARLY-POLE-RESOLVED-PARENT-2026-11-26.md)
+relaxes the maintained-shape assumption. With no replenishment it
+finds a substantial local deficit and a smaller early count than a
+matched held parent, even though global parent depletion is small.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
