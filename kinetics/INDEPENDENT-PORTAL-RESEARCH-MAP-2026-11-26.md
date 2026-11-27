@@ -514,6 +514,11 @@ computes ballistic outside durations for the negative-energy portion
 of the geometric crossing flux. The halo and vacuum exterior remain
 fixed, so these are not evolved debris counts.
 
+The [F583-4 sampling gate](INDEPENDENT-HALO-F583-4-CORE-PROJECTION-2026-11-26.md)
+uses primary public radii and error scales to check one tiny static
+rounding contrast. A fixed particle mass and velocity scale require
+changing the physical core scale, rather than holding it fixed.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
