@@ -427,6 +427,11 @@ extends beyond zero chemical potential. Even the most favorable ideal
 noncondensed thermal limit constrains how many particles can be below
 an illustrative comoving momentum cut; it does not derive condensation.
 
+The [isolated scalar saturation entropy gate](INDEPENDENT-SCALAR-ISOLATED-ENTROPY-SATURATION-2026-11-26.md)
+compares the stored underoccupied states to the critical entropy per
+particle at every mass-to-temperature ratio. Isolated, number-preserving
+elastic evolution alone cannot saturate such a thermal gas.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

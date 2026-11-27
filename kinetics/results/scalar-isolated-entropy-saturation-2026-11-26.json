@@ -1,0 +1,218 @@
+{
+  "scope": "Ideal scalar thermodynamics with conserved scalar number, no heat or entropy exchange or phase-dependent new physics after each hypothesized anchor. Boltzmann entropy is not assumed to decrease; number or entropy transfers could evade this comparison. The modeled thermal states are illustrative.",
+  "saturated_UL_critical_entropy_per_excitation": 3.601570710558751,
+  "saturated_NR_critical_entropy_per_excitation": 1.2837811169879698,
+  "saturated_tests": [
+    {
+      "m_over_T": 0.0,
+      "s_per_particle": 3.601570710558675
+    },
+    {
+      "m_over_T": 0.01,
+      "s_per_particle": 3.5820398166024523
+    },
+    {
+      "m_over_T": 0.1,
+      "s_per_particle": 3.403399938245677
+    },
+    {
+      "m_over_T": 1.0,
+      "s_per_particle": 2.340613481766189
+    },
+    {
+      "m_over_T": 3.0,
+      "s_per_particle": 1.7502924132850795
+    },
+    {
+      "m_over_T": 10.0,
+      "s_per_particle": 1.4377751892230557
+    },
+    {
+      "m_over_T": 100.0,
+      "s_per_particle": 1.299674415362579
+    },
+    {
+      "m_over_T": 10000.0,
+      "s_per_particle": 1.2839405496904779
+    }
+  ],
+  "modeled_anchor_rows": [
+    {
+      "visible_T_GeV": 0.001999999841639969,
+      "s_per_particle": 5.038873184294795,
+      "critical_s_per_excitation_at_same_x": 3.60138265390434,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2852428352862384,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3990765666552911
+    },
+    {
+      "visible_T_GeV": 0.0017278476499183182,
+      "s_per_particle": 5.043703103837158,
+      "critical_s_per_excitation_at_same_x": 3.6013532983935255,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.28592729658913885,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.4004176258571008
+    },
+    {
+      "visible_T_GeV": 0.0014929838205850142,
+      "s_per_particle": 5.046623355596133,
+      "critical_s_per_excitation_at_same_x": 3.601319191591504,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2863404980351828,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.4012284531304386
+    },
+    {
+      "visible_T_GeV": 0.0012903318256869837,
+      "s_per_particle": 5.047918993653118,
+      "critical_s_per_excitation_at_same_x": 3.601279569419254,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2865236714204208,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.401588195632005
+    },
+    {
+      "visible_T_GeV": 0.0011155207607539306,
+      "s_per_particle": 5.047829874041779,
+      "critical_s_per_excitation_at_same_x": 3.6012335439415355,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.28651107497111683,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.401563450980712
+    },
+    {
+      "visible_T_GeV": 0.0009647661313252116,
+      "s_per_particle": 5.046567541380216,
+      "critical_s_per_excitation_at_same_x": 3.601180084384706,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.28633260507720537,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.401212955943127
+    },
+    {
+      "visible_T_GeV": 0.0008348129076043455,
+      "s_per_particle": 5.0443219149602845,
+      "critical_s_per_excitation_at_same_x": 3.601117994994247,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2860148953068735,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.4005894428705257
+    },
+    {
+      "visible_T_GeV": 0.0007228445576460684,
+      "s_per_particle": 5.041268871411329,
+      "critical_s_per_excitation_at_same_x": 3.6010458897374598,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2855824986873845,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3997417450757816
+    },
+    {
+      "visible_T_GeV": 0.000626427574620328,
+      "s_per_particle": 5.037574583095159,
+      "critical_s_per_excitation_at_same_x": 3.6009621632638757,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2850585830243145,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3987160014175106
+    },
+    {
+      "visible_T_GeV": 0.0005434600260742017,
+      "s_per_particle": 5.033397624281199,
+      "critical_s_per_excitation_at_same_x": 3.600864957222542,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2844652897707286,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3975562410935736
+    },
+    {
+      "visible_T_GeV": 0.00047212045697133726,
+      "s_per_particle": 5.028891498037059,
+      "critical_s_per_excitation_at_same_x": 3.6007521220740517,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2838241365985801,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3963050852490058
+    },
+    {
+      "visible_T_GeV": 0.00041082450205055164,
+      "s_per_particle": 5.024200406380412,
+      "critical_s_per_excitation_at_same_x": 3.6006211720584167,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.28315544380256263,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.395002572530626
+    },
+    {
+      "visible_T_GeV": 0.0003581936131764489,
+      "s_per_particle": 5.019459470116171,
+      "critical_s_per_excitation_at_same_x": 3.6004701245107067,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2824783760082048,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.393686220126287
+    },
+    {
+      "visible_T_GeV": 0.00031302026017988795,
+      "s_per_particle": 5.014791975463281,
+      "critical_s_per_excitation_at_same_x": 3.6002929865398348,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.28181054604442934,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3923902592725386
+    },
+    {
+      "visible_T_GeV": 0.0002742436644451238,
+      "s_per_particle": 5.010310657986079,
+      "critical_s_per_excitation_at_same_x": 3.6000885890778047,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2811681836897473,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3911459917466884
+    },
+    {
+      "visible_T_GeV": 0.00024092857164236168,
+      "s_per_particle": 5.006108131630576,
+      "critical_s_per_excitation_at_same_x": 3.599851598543348,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2805647389430924,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.389979132425231
+    },
+    {
+      "visible_T_GeV": 0.0002122509995077249,
+      "s_per_particle": 5.0022405776288625,
+      "critical_s_per_excitation_at_same_x": 3.599576872971015,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2800084972590523,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3889052803999538
+    },
+    {
+      "visible_T_GeV": 0.00018748508751977155,
+      "s_per_particle": 4.998763850130722,
+      "critical_s_per_excitation_at_same_x": 3.599258454144196,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2795077306033237,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3879399439460702
+    },
+    {
+      "visible_T_GeV": 0.00016599501642459018,
+      "s_per_particle": 4.9956911514341575,
+      "critical_s_per_excitation_at_same_x": 3.5988894370874562,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2790645775760545,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3870867887692038
+    },
+    {
+      "visible_T_GeV": 0.00014722773712954278,
+      "s_per_particle": 4.9930283009456975,
+      "critical_s_per_excitation_at_same_x": 3.5984618109951696,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2786800928253099,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3863474306661814
+    },
+    {
+      "visible_T_GeV": 0.00013070593224429736,
+      "s_per_particle": 4.990756757914497,
+      "critical_s_per_excitation_at_same_x": 3.5979662813296422,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2783517840561417,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3857167216745345
+    },
+    {
+      "visible_T_GeV": 0.0001160244836967175,
+      "s_per_particle": 4.988849249908531,
+      "critical_s_per_excitation_at_same_x": 3.597392056920322,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2780758587514376,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3851870894225915
+    },
+    {
+      "visible_T_GeV": 0.00010284448054332091,
+      "s_per_particle": 4.987265900709923,
+      "critical_s_per_excitation_at_same_x": 3.596726610046188,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.27784666343014164,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3847474620139262
+    },
+    {
+      "visible_T_GeV": 9.089965432281284e-05,
+      "s_per_particle": 4.985978347981004,
+      "critical_s_per_excitation_at_same_x": 3.5959553900059964,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2776601783645627,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3843899644573339
+    },
+    {
+      "visible_T_GeV": 8.000008136535843e-05,
+      "s_per_particle": 4.9849212512772665,
+      "critical_s_per_excitation_at_same_x": 3.5950615049294545,
+      "entropy_fraction_to_remove_at_fixed_count_before_saturation": 0.2775069998074824,
+      "necessary_count_multiplier_at_fixed_entropy_before_saturation": 1.3840964545449397
+    }
+  ],
+  "optimistic_maximum_total_s_per_particle_for_point1_half_cold_exemplar": 2.3505989098754436,
+  "entropy_loss_if_half_target_inherits_80keV_entropy_per_particle": 0.5284581658590577
+}
