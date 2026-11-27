@@ -1,0 +1,60 @@
+{
+  "native_rate": 0.07863619024759733,
+  "cases": {
+    "local": {
+      "fixed_cells": [
+        36,
+        37
+      ],
+      "complement_cells": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "number_and_bare_energy_defect": [
+        -3.469446951953614e-18,
+        0.0
+      ],
+      "original_swap_moment_defect": [
+        -8.812623459669017e-05,
+        -0.00012900341193407966
+      ],
+      "affine_logit_multipliers": [
+        0.006157183172924773,
+        0.053370702703750036
+      ],
+      "jacobian_condition": 65.78379370670073,
+      "original_shift": -0.015510561012681917,
+      "retuned_shift": -0.015511072871403284,
+      "retuned_mode_shift": [
+        -2.973353713595288e-10,
+        -4.995227411574525e-07,
+        -0.00022524688719209411,
+        -0.0029978683846150333,
+        -0.007935687561960638,
+        -0.004273526277144151,
+        -7.800772012983451e-05,
+        -2.3622028500641644e-07
+      ]
+    },
+    "outside": {
+      "rejected": "Retune failed the fixed-moment or local-amplitude gate: defect=[0.0, -3.469446951953614e-18], multipliers=[-0.07932390252035655, 9.794731811181576]"
+    }
+  },
+  "scope": "Fixed bare daughter energy and number with complementary controlled FD retuning; initial source only."
+}
