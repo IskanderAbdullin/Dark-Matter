@@ -14,7 +14,7 @@ from scipy.sparse import coo_matrix
 from scipy.special import roots_legendre
 
 
-def remap(q, m, angle_order, screen=None):
+def remap(q, m, angle_order, screen=None, keep_lab=False):
     """Sparse directions and positive weights for isotropic 2->2 events."""
     p = q
     E = np.hypot(p,m)
@@ -30,6 +30,7 @@ def remap(q, m, angle_order, screen=None):
     d0 = K[i]*eb+m*K[j]
     storage=[]
     weights=[]
+    lab_events=[]
     region=[0.,0.]
     for u,v in zip(x,w,strict=True):
         d=np.maximum(d0-po*pk*u,0.)
@@ -53,6 +54,8 @@ def remap(q, m, angle_order, screen=None):
             vals=np.c_[np.ones((keep.sum(),2)),1-er1,er1,1-er2,er2]
             where=np.c_[i[keep],j[keep],k1-1,k1,k2-1,k2]
             storage.append((where,vals))
+            if keep_lab:
+                lab_events.append(lab[keep])
             if screen is None:
                 factor=1.
             else:
@@ -64,14 +67,18 @@ def remap(q, m, angle_order, screen=None):
     jj=np.concatenate([a[0] for a in storage],axis=0)
     value=np.concatenate([a[1] for a in storage],axis=0)
     W=np.concatenate(weights)
-    return jj,value,W,K,region[1]/region[0]
+    base=(jj,value,W,K,region[1]/region[0])
+    return (*base,np.concatenate(lab_events)) if keep_lab else base
 
 
 class Elastic:
-    def __init__(self,p,m,edges,angular=8,lam=1.,screen=None):
+    def __init__(self,p,m,edges,angular=8,lam=1.,screen=None,keep_lab=False):
         self.p=np.asarray(p)
         self.m=m
-        self.j,self.v,w,self.K,self.raw_escape=remap(self.p,m,angular,screen)
+        # Momentum incidence is optional so existing rate-only graphs do not carry it.
+        work=remap(self.p,m,angular,screen,keep_lab)
+        self.j,self.v,w,self.K,self.raw_escape=work[:5]
+        self.lab=work[5] if keep_lab else None
         self.vol=np.diff(np.asarray(edges)**3)/(6*np.pi**2)
         self.weight=w*self.vol[self.j[:,0]]*self.vol[self.j[:,1]]*lam**2/(32*np.pi)
         nr=np.repeat(np.arange(len(w)),6)
