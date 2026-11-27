@@ -1,0 +1,49 @@
+{
+  "preparation": {
+    "fixed_cells": [
+      36,
+      37
+    ],
+    "donor_cells": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "coefficients": [
+      0.006157183218876376,
+      0.05337072249467955
+    ],
+    "number_and_modeled_energy_residual": [
+      -3.469446951953614e-18,
+      0.0
+    ],
+    "finite_difference_jacobian_max_gap": 3.208987936487162e-11,
+    "bare_match_number_and_modeled_energy_residual": [
+      -3.469446951953614e-18,
+      -1.0296652419583552e-11
+    ],
+    "dressed_match_bare_energy_residual": 1.0296884872529333e-11,
+    "max_absolute_cell_moment_difference_vs_bare_match": 1.3369336020196965e-11
+  },
+  "initial_rate_shifts": {
+    "raw_local": -0.015510561012681914,
+    "bare_match": -0.015511072871403285,
+    "modeled_match": -0.0155110728714033
+  },
+  "scope": "Static same retained daughter number and modeled hard energy; cold seed fixed."
+}
