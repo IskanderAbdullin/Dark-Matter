@@ -67,3 +67,29 @@ python -W error warm_finite_parent_expansion_species_budget_reference.py competi
 [Audited clocks and species budgets](results/warm-coupled-clock-and-species-budget-2026-11-26.json),
 [.68 accepted states](results/warm-coupled-clock-hard068-2026-11-26.json.gz),
 [.80 accepted states](results/warm-coupled-clock-hard080-2026-11-26.json.gz).
+
+## Instantaneous pressure and velocity moments
+
+On those same matched one-block endpoints, integrate pressure, the
+massive pressure trace and the number-weighted squared speed directly
+on the physical momentum grid. Split quadrature at p/m = .1, 1 and 10,
+cross-check 32 and 48 nodes, verify 3P + trace = energy, and validate
+number and energy independently against the stored shell moments.
+
+Despite the 2.80% change in the .80 scalar kinetic-energy *loss over the
+interval*, the scalar endpoint squared speed remains about
+0.999999999922 in both models. At fixed endpoint scale, adding pair and
+elastic changes the light fermion squared speed from 0.5474095600
+to 0.5474095858, a relative shift of 4.71e-8. Its number fraction
+below p = m falls by 3.94e-8 in absolute fraction. The .68 example
+has still smaller shifts, +7.53e-10 in squared speed in relative units
+and −6.58e-10 in fraction below p = m. These are instantaneous
+diagnostics of the two selected warm daughter spectra, not a free
+streaming integral, a different thermal fit, or a matter-power result.
+
+~~~sh
+python -W error warm_expanding_daughter_pressure_reference.py turn6/step-4.json comoving/068-expand-{finite,finite-all}/step-1.json
+python -W error warm_expanding_daughter_pressure_reference.py competing080/tapes/step-5.json comoving/080-expand-{finite,finite-all}/step-1.json
+~~~
+
+[Species pressure, trace, speed and cold-fraction diagnostics](results/warm-coupled-clock-pressure-moments-2026-11-26.json).
