@@ -779,3 +779,7 @@ fit or exclusion.
 - [Frozen flavor-dependent asymptotic mass aperture](INDEPENDENT-EARLY-POLE-FROZEN-FLAVOR-ASYMPTOTIC-MASS-2026-11-26.md):
   a leading lightlike mass proxy shifts the center even at equal
   gauge charge; the occupied-aperture response is not grid converged.
+- [Postprocessed flavor shift at the stimulated gate](INDEPENDENT-EARLY-POLE-FROZEN-MASS-GATE-2026-11-26.md):
+  matched earlier trajectories show tiny instantaneous crossing shifts;
+  a separate reciprocal energy check prevents potential double counting
+  when dynamical feedback is eventually added.
