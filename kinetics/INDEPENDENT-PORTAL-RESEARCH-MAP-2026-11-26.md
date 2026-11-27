@@ -26,8 +26,7 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
    rest density in either. A large relative scalar contrast alone
    is not a large matter effect.
 3. [Combine both tracers and baryons on the same fixed metric](INDEPENDENT-FINITE-COOLING-STABLE-PAIRED-LOS-2026-11-26.md).
-   The direct squared-contrast change is below 7×10⁻⁸ in absolute
-   value at the five sampled modes, with no backreaction. The
+   The squared-contrast change is below 7×10⁻⁸ at five modes, without backreaction. The
    [separate homogeneous-clock bound](INDEPENDENT-FINITE-COOLING-SHIFTED-CLOCK-2026-11-26.md)
    concerns a converted-versus-unconverted proxy after 1 MeV,
    not perturbations, nucleosynthesis or measured expansion.
@@ -284,7 +283,8 @@ isolates lifetime from time-step error. A [species-matched excess check](INDEPEN
 finds opposite signs at matched initial species excess. A [within-cell perturbation](INDEPENDENT-WARM-LATE-WITHIN-CELL-MOMENT-KERNEL-2026-11-26.md)
 preserves cell moments. A [cold-scalar recoil gate](INDEPENDENT-WARM-LATE-COLD-SCALAR-PROMPT-GATE-2026-11-26.md)
 locates the soft gate. A [one-use receipt bound](INDEPENDENT-WARM-LATE-COLD-SCALAR-SINGLE-USE-2026-11-26.md)
-adds conditional cold decay allowances. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+bounds conditional cold decay. A [Pauli count bound](INDEPENDENT-WARM-LATE-COLD-SCALAR-PAULI-COUNT-2026-11-26.md)
+replaces a pointwise assumption. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)

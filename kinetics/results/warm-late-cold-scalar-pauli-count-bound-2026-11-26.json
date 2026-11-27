@@ -1,0 +1,67 @@
+{
+  "scope": "Frozen archived scalar occupations in the cold band, open unpolarized decay and no untracked light count. Pauli bound allows arbitrary isotropic light FD shape at known count. The receipt population is used at most once. No claim about repeated use, polarization, future Bose growth or an untracked light reservoir.",
+  "controls": {
+    "tested_random_positive_FD_profiles": 120,
+    "exact_filled_step_controls": 5
+  },
+  "cases": [
+    {
+      "archive": "27950d8171d19c25c85f7c3e96af08755883de82e7d342f6c9629772c2b86d9f",
+      "represented_light_number_GeV3": 2.611634057362188e-11,
+      "tracked_light_number_GeV3": 9.19766234990828e-23,
+      "maximum_occupied_energy_measure_GeV": 1.3263706674576737e-05,
+      "controls": [
+        {
+          "p_over_T": 0.03,
+          "eligible_parent_minimum_open_width_GeV": 10.386508410088258,
+          "relative_pauli_blocking_length_upper": 1.2770130395016963e-06,
+          "cold_decay_probability_upper": 5.341558911097872e-06,
+          "one_use_cold_supply_upper_over_initial_cold_count": 4.059570520402769e-14
+        },
+        {
+          "p_over_T": 0.1,
+          "eligible_parent_minimum_open_width_GeV": 3.1152797710794924,
+          "relative_pauli_blocking_length_upper": 4.257629378173203e-06,
+          "cold_decay_probability_upper": 5.935403585206896e-05,
+          "one_use_cold_supply_upper_over_initial_cold_count": 4.695123628026005e-14
+        },
+        {
+          "p_over_T": 0.3,
+          "eligible_parent_minimum_open_width_GeV": 1.036454846958252,
+          "relative_pauli_blocking_length_upper": 1.2797187174629513e-05,
+          "cold_decay_probability_upper": 0.0005344446885184849,
+          "one_use_cold_supply_upper_over_initial_cold_count": 7.829749400887635e-14
+        }
+      ]
+    },
+    {
+      "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+      "represented_light_number_GeV3": 2.611633387705412e-11,
+      "tracked_light_number_GeV3": 3.6567970149935256e-23,
+      "maximum_occupied_energy_measure_GeV": 1.3263704407985168e-05,
+      "controls": [
+        {
+          "p_over_T": 0.03,
+          "eligible_parent_minimum_open_width_GeV": 10.386508410088222,
+          "relative_pauli_blocking_length_upper": 1.2770128212771077e-06,
+          "cold_decay_probability_upper": 5.341558918458225e-06,
+          "one_use_cold_supply_upper_over_initial_cold_count": 1.22093225009256e-14
+        },
+        {
+          "p_over_T": 0.1,
+          "eligible_parent_minimum_open_width_GeV": 3.115279771079482,
+          "relative_pauli_blocking_length_upper": 4.25762865060082e-06,
+          "cold_decay_probability_upper": 5.935403593382505e-05,
+          "one_use_cold_supply_upper_over_initial_cold_count": 1.4120826750042988e-14
+        },
+        {
+          "p_over_T": 0.3,
+          "eligible_parent_minimum_open_width_GeV": 1.0364548469582484,
+          "relative_pauli_blocking_length_upper": 1.2797184987759983e-05,
+          "cold_decay_probability_upper": 0.0005344446892538658,
+          "one_use_cold_supply_upper_over_initial_cold_count": 2.3549749497033888e-14
+        }
+      ]
+    }
+  ]
+}
