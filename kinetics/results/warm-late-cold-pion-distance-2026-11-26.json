@@ -1,0 +1,74 @@
+{
+  "scope": "Ballistic travel only; charged-pion vacuum spectrum with KLOE fixed bin plus twice marginal inputs, separate conditional low-gap moments and a chosen upper spectral multiplier at high s. No unmeasured source, scattering, structure or confidence-limit claim.",
+  "cases": [
+    {
+      "max_distance_Mpc": 0.0556,
+      "eligible_q_over_T0": 0.004891552720065441,
+      "held_yield": 3.3262444693217623e-13,
+      "lepton_upper": 2.9746338363154562e-55,
+      "pion_choices": [
+        {
+          "T_panels": 32,
+          "KLOE_conditional_upper": 7.926710823778476e-64,
+          "low_gap_conditional_upper": 3.2127087796705035e-73,
+          "high_unit_R_upper": 2.6173099255158138e-48,
+          "pion_total_at_high_R_1_over_held": 7.86866374271491e-36
+        },
+        {
+          "T_panels": 72,
+          "KLOE_conditional_upper": 1.700349861090257e-64,
+          "low_gap_conditional_upper": 4.999790803474448e-74,
+          "high_unit_R_upper": 1.0221259532994845e-48,
+          "pion_total_at_high_R_1_over_held": 3.072912898395292e-36
+        }
+      ],
+      "combined_conditional_upper_over_held_at_high_R_1": 3.072913792687297e-36
+    },
+    {
+      "max_distance_Mpc": 0.1,
+      "eligible_q_over_T0": 0.008923728692382898,
+      "held_yield": 2.3542914078478075e-12,
+      "lepton_upper": 8.474266451523753e-32,
+      "pion_choices": [
+        {
+          "T_panels": 32,
+          "KLOE_conditional_upper": 4.937341780301237e-38,
+          "low_gap_conditional_upper": 1.020722156326676e-44,
+          "high_unit_R_upper": 2.8452746020124883e-27,
+          "pion_total_at_high_R_1_over_held": 1.208548182513604e-15
+        },
+        {
+          "T_panels": 72,
+          "KLOE_conditional_upper": 1.246533502599991e-38,
+          "low_gap_conditional_upper": 2.5058170180774712e-45,
+          "high_unit_R_upper": 1.3555690185338934e-27,
+          "pion_total_at_high_R_1_over_held": 5.757864188042728e-16
+        }
+      ],
+      "combined_conditional_upper_over_held_at_high_R_1": 5.758224137810343e-16
+    },
+    {
+      "max_distance_Mpc": 0.3,
+      "eligible_q_over_T0": 0.028749614552604788,
+      "held_yield": 9.429480456737532e-11,
+      "lepton_upper": 6.403003473213146e-13,
+      "pion_choices": [
+        {
+          "T_panels": 32,
+          "KLOE_conditional_upper": 2.818477911841356e-16,
+          "low_gap_conditional_upper": 7.29156992067665e-20,
+          "high_unit_R_upper": 3.8031135380491445e-17,
+          "pion_total_at_high_R_1_over_held": 3.3931014941042967e-06
+        },
+        {
+          "T_panels": 72,
+          "KLOE_conditional_upper": 1.2448333451873033e-16,
+          "low_gap_conditional_upper": 3.0588083559005764e-20,
+          "high_unit_R_upper": 1.738520532205051e-17,
+          "pion_total_at_high_R_1_over_held": 1.5048456654146878e-06
+        }
+      ],
+      "combined_conditional_upper_over_held_at_high_R_1": 0.006791914457934229
+    }
+  ]
+}

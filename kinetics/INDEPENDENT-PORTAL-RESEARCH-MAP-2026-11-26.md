@@ -292,7 +292,8 @@ tests late injection. An [off-pole bound](INDEPENDENT-WARM-LATE-COLD-VISIBLE-OFF
 tightens 25 MeV. A [full recoil enclosure](INDEPENDENT-WARM-LATE-COLD-VISIBLE-RECOIL-ENCLOSURE-2026-11-26.md)
 bounds the 50 MeV lepton source. A [KLOE recoil fold](INDEPENDENT-WARM-LATE-COLD-VISIBLE-KLOE-RECOIL-2026-11-26.md)
 adds a pion window. [Dispersive cold recoil bounds](INDEPENDENT-WARM-LATE-COLD-PION-DISPERSIVE-RECOIL-2026-11-26.md)
-cover the separate low gaps and give high-band sensitivity. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+cover low gaps. [Source limits by travelled distance](INDEPENDENT-WARM-LATE-COLD-TRAVEL-SOURCE-2026-11-26.md)
+replace the temperature label with a ballistic diagnostic. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)

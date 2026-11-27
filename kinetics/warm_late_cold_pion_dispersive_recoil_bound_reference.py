@@ -46,7 +46,7 @@ def per_sigma(T,pc,l,h,nq,nx):
     return X*(common+tail)
 
 
-def phase_bound(bg,lo,hi,nt,nq,nx):
+def phase_bound(bg,lo,hi,nt,nq,nx,*,qcut_today=None):
     # Whole time interval upper, split 12-50 more tightly. The final
     # coarse endpoint includes all the range to 0.1 MeV.
     T=np.r_[np.geomspace(.05,.012,nt+1),.0001]
@@ -55,7 +55,9 @@ def phase_bound(bg,lo,hi,nt,nq,nx):
     entropy=(2*np.pi**2/45)*np.exp(bg.gs(z))*T[1:]**3
     H=np.sqrt(np.pi**2/90*np.exp(bg.gr(z)))*T[1:]**2/MPL
     w=np.diff(np.log(A))/(entropy*H)
-    out=np.asarray([per_sigma(t,.1*bg.T0/a,lo,hi,nq,nx) for t,a in zip(T[:-1],A[:-1],strict=True)])
+    if qcut_today is None:
+        qcut_today=.1*bg.T0
+    out=np.asarray([per_sigma(t,qcut_today/a,lo,hi,nq,nx) for t,a in zip(T[:-1],A[:-1],strict=True)])
     return w@out
 
 
