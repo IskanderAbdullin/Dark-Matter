@@ -532,6 +532,11 @@ distinguishes a kinematically open decay from an efficient infrared
 mode source when the parent-energy interval narrows. The input poles
 and fermion FD phases are held, not evolved.
 
+The [scalar Hartree shell feedback](INDEPENDENT-EARLY-POLE-SHELL-HARTREE-FEEDBACK-2026-11-26.md)
+adds a population-dependent positive tadpole to a controlled thin
+early shell. A held parent bath and no spectral redistribution do
+not make it a final production history.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
