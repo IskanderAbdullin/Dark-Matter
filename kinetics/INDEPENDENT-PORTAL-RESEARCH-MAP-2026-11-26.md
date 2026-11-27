@@ -281,7 +281,8 @@ The [aligned .80 control](INDEPENDENT-WARM-LATE-ALIGNED-HARD080-RELAXATION-2026-
 starts above the cut and has negative transfer at every saved time.
 A [species-resolved comparison](INDEPENDENT-WARM-LATE-TAIL-SPECIES-EXCHANGE-2026-11-26.md)
 tracks daughter currents. A [near-cut width evolution](INDEPENDENT-WARM-LATE-NEAR-CUT-SHAPES-2026-11-26.md)
-finds opposite excess changes for matched initial moments. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+finds opposite excess changes for matched moments. A [count comparison](INDEPENDENT-WARM-LATE-NEAR-CUT-COUNTS-2026-11-26.md)
+separates declining counts from growing excess energy. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
