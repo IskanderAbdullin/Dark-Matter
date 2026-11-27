@@ -1,0 +1,344 @@
+{
+  "scope": "Same fixed chart and local FRW/pair/elastic split; only the implicit collision clock differs.",
+  "rows": [
+    {
+      "name": "068-locked1-expand-finite-all",
+      "W": 2.4264732331267503e-18,
+      "rows": [
+        {
+          "H_GeV": 2.4359585285496522e-23,
+          "W_over_initial_daughter_rho": 2.4264732331267503e-18,
+          "a": 1.0,
+          "active_angular_nodes": 2124024,
+          "b": 1.0000000075,
+          "c": 1.0000000150000001,
+          "daughter_hash": "073093a9b3ad7a103813f9992bba8e1624240d80c7ba30d1c00f62820f48671f",
+          "elastic_panels": 9911,
+          "initial_daughter_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+          "pair_comoving_count_exchange_over_initial": [
+            8.396408927321811e-09,
+            -5.1401290352940115e-09
+          ],
+          "pair_conservation_defect": 4.632427199863709e-16,
+          "pair_outside_energy_over_initial": 4.6046504343419324e-36,
+          "parent_hash": "ee41cdc38f187e1ff6df68e00b4c338cd38e52fadbf93e445c882dd4cf51be10",
+          "parent_nodes": 15450,
+          "pressure_trace_work_over_energy": 4.281281339807241e-09,
+          "qsha256": "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+          "relative_N_defects": [
+            -1.8762769116165146e-14,
+            4.196643033083092e-14
+          ],
+          "relative_energy_defect": 1.865174681370263e-14,
+          "solver": {
+            "entropy_gain_relative": 6.362088633693475e-11,
+            "maximum_exponent_departure_from_eq": 60.544417420814604,
+            "newton_iterations": 3,
+            "residual": 4.560652901742036e-12,
+            "structurally_inactive_cells": 0,
+            "structurally_inactive_vacuum_cells": 0
+          },
+          "step_H": 1.5000000000000002e-08,
+          "time_J": 8.5e-08,
+          "wsha256": "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+        }
+      ],
+      "max_collision_stage_invariant_defect": 0.0
+    },
+    {
+      "name": "068-locked2-expand-finite-all",
+      "W": 2.432645581976743e-18,
+      "rows": [
+        {
+          "H_GeV": 2.4359585468188063e-23,
+          "W_over_initial_daughter_rho": 2.4645325833069473e-18,
+          "a": 1.0,
+          "active_angular_nodes": 2124160,
+          "b": 1.0000000037499999,
+          "c": 1.0000000075,
+          "daughter_hash": "e274384a2ce1ed5b224ba93a2be015410efe57031d6552cce9bd34f28dcf06d0",
+          "elastic_panels": 9911,
+          "initial_daughter_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+          "pair_comoving_count_exchange_over_initial": [
+            4.1981982366700945e-09,
+            -2.570060705596335e-09
+          ],
+          "pair_conservation_defect": 4.2287235111190593e-16,
+          "pair_outside_energy_over_initial": 2.3657625252943834e-36,
+          "parent_hash": "0327c79c7a0ed2c3edafb9f3c4326d93c46debbc2026467d7d98b18dcea91a3d",
+          "parent_nodes": 15450,
+          "pressure_trace_work_over_energy": 2.140640749380044e-09,
+          "qsha256": "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+          "relative_N_defects": [
+            -1.7985612998927536e-14,
+            4.1300296516055823e-14
+          ],
+          "relative_energy_defect": 1.8207657603852567e-14,
+          "solver": {
+            "entropy_gain_relative": 3.214539745499678e-11,
+            "maximum_exponent_departure_from_eq": 60.577301138741845,
+            "newton_iterations": 2,
+            "residual": 1.2331925763252557e-14,
+            "structurally_inactive_cells": 0,
+            "structurally_inactive_vacuum_cells": 0
+          },
+          "step_H": 7.499999999999994e-09,
+          "time_J": 7.749999999999999e-08,
+          "wsha256": "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+        },
+        {
+          "H_GeV": 2.4359585102804984e-23,
+          "W_over_initial_daughter_rho": 2.432645581976743e-18,
+          "a": 1.0000000075,
+          "active_angular_nodes": 2123888,
+          "b": 1.00000001125,
+          "c": 1.0000000150000001,
+          "daughter_hash": "c45195909ffb969d460c5f9d06a55828fc30a51930739aa86dd77d43ba034fa7",
+          "elastic_panels": 9911,
+          "initial_daughter_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+          "pair_comoving_count_exchange_over_initial": [
+            8.396409676097835e-09,
+            -5.140129493681088e-09
+          ],
+          "pair_conservation_defect": 1.0441426714225215e-15,
+          "pair_outside_energy_over_initial": 4.59878103440528e-36,
+          "parent_hash": "fe188faca640b0613bc549560d70ed7bf5b8a4e91f30bde015269c2f04229649",
+          "parent_nodes": 15450,
+          "pressure_trace_work_over_energy": 4.281281338356675e-09,
+          "qsha256": "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+          "relative_N_defects": [
+            -3.652633751016765e-14,
+            8.193445921733655e-14
+          ],
+          "relative_energy_defect": 3.574918139293004e-14,
+          "solver": {
+            "entropy_gain_relative": 3.168354467675272e-11,
+            "maximum_exponent_departure_from_eq": 60.543299752220236,
+            "newton_iterations": 2,
+            "residual": 1.4905656345653876e-14,
+            "structurally_inactive_cells": 0,
+            "structurally_inactive_vacuum_cells": 0
+          },
+          "step_H": 7.500000000000008e-09,
+          "time_J": 8.5e-08,
+          "wsha256": "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+        }
+      ],
+      "max_collision_stage_invariant_defect": 0.0
+    },
+    {
+      "name": "068-abs1",
+      "W": 2.442816594128499e-18,
+      "rows": [
+        {
+          "H_GeV": 2.4359585285496522e-23,
+          "W_over_initial_daughter_rho": 2.442816594128499e-18,
+          "a": 1.0,
+          "active_angular_nodes": 2124024,
+          "b": 1.0000000075,
+          "c": 1.0000000150000001,
+          "collision_clock_method": "sdirk2",
+          "daughter_hash": "8e678698a7dc22ded5ad1772813c37a82d5dbfab1143cbcd0ababc189bc6f9d5",
+          "elastic_panels": 9911,
+          "initial_daughter_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+          "pair_comoving_count_exchange_over_initial": [
+            8.396409931833255e-09,
+            -5.1401296502376705e-09
+          ],
+          "pair_conservation_defect": 3.3075592751220897e-16,
+          "pair_outside_energy_over_initial": 4.599436124713593e-36,
+          "parent_hash": "1da7007cd5fb71b049385d2c39cb953c60a39808d1b7dcefd2d968b48e767c3c",
+          "parent_nodes": 15450,
+          "pressure_trace_work_over_energy": 4.2812813271227096e-09,
+          "qsha256": "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+          "relative_N_defects": [
+            -1.942890293094024e-14,
+            4.1522341120980855e-14
+          ],
+          "relative_energy_defect": 1.8207657603852567e-14,
+          "solver": {
+            "affine_daughter_target_outside_simple_cone_cells": 0,
+            "first_stage_parent_min_max": [
+              1.5235798855116434e-80,
+              1.388325441476754e-13
+            ],
+            "max_relative_invariant_defect_at_each_stage": [
+              4.440892098500626e-16,
+              4.440892098500626e-16
+            ],
+            "minimum_and_maximum_affine_parent_target": [
+              1.5235798641848842e-80,
+              1.3883104442517032e-13
+            ],
+            "rejected_stage_2_seeds": [],
+            "residual": 1.9724857462498956e-14,
+            "stage_1": {
+              "entropy_gain_relative": 1.9110490967477745e-11,
+              "maximum_exponent_departure_from_eq": 60.591245151083235,
+              "newton_iterations": 3,
+              "residual": 1.093054433861196e-14,
+              "structurally_inactive_cells": 0,
+              "structurally_inactive_vacuum_cells": 0
+            },
+            "stage_2": {
+              "entropy_gain_relative": 6.419997866657923e-11,
+              "maximum_exponent_departure_from_eq": 60.54211775508888,
+              "newton_iterations": 4,
+              "residual": 1.9724857462498956e-14,
+              "structurally_inactive_cells": 0,
+              "structurally_inactive_vacuum_cells": 0
+            },
+            "stage_2_seed": "stage_shift"
+          },
+          "step_H": 1.5000000000000002e-08,
+          "time_J": 8.5e-08,
+          "wsha256": "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+        }
+      ],
+      "max_collision_stage_invariant_defect": 4.440892098500626e-16
+    },
+    {
+      "name": "068-abs2",
+      "W": 2.4416621246773795e-18,
+      "rows": [
+        {
+          "H_GeV": 2.4359585468188063e-23,
+          "W_over_initial_daughter_rho": 2.4711029858908945e-18,
+          "a": 1.0,
+          "active_angular_nodes": 2124160,
+          "b": 1.0000000037499999,
+          "c": 1.0000000075,
+          "collision_clock_method": "sdirk2",
+          "daughter_hash": "4ac069f559a4da9f858a27c6ffe26fa8469151c70210c779856650951eb24d09",
+          "elastic_panels": 9911,
+          "initial_daughter_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+          "pair_comoving_count_exchange_over_initial": [
+            4.198198412080916e-09,
+            -2.5700608129796557e-09
+          ],
+          "pair_conservation_defect": 3.3225646044239275e-16,
+          "pair_outside_energy_over_initial": 2.3651975887217812e-36,
+          "parent_hash": "fc76614595fa1b0003d7ea1f69ba4cae880317217824c5f7faa286b69a5e1f73",
+          "parent_nodes": 15450,
+          "pressure_trace_work_over_energy": 2.1406407472206657e-09,
+          "qsha256": "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+          "relative_N_defects": [
+            -1.9206858326015208e-14,
+            4.1522341120980855e-14
+          ],
+          "relative_energy_defect": 1.8207657603852567e-14,
+          "solver": {
+            "affine_daughter_target_outside_simple_cone_cells": 0,
+            "first_stage_parent_min_max": [
+              1.5235798952119182e-80,
+              1.3883305105723989e-13
+            ],
+            "max_relative_invariant_defect_at_each_stage": [
+              5.551115123125783e-16,
+              6.661338147750939e-16
+            ],
+            "minimum_and_maximum_affine_parent_target": [
+              1.5235798876034192e-80,
+              1.3883226821311586e-13
+            ],
+            "rejected_stage_2_seeds": [],
+            "residual": 6.530708744419732e-14,
+            "stage_1": {
+              "entropy_gain_relative": 9.880096740744193e-12,
+              "maximum_exponent_departure_from_eq": 60.60122370501411,
+              "newton_iterations": 3,
+              "residual": 6.586223750024168e-15,
+              "structurally_inactive_cells": 0,
+              "structurally_inactive_vacuum_cells": 0
+            },
+            "stage_2": {
+              "entropy_gain_relative": 3.247402347028583e-11,
+              "maximum_exponent_departure_from_eq": 60.57671523218283,
+              "newton_iterations": 3,
+              "residual": 6.530708744419732e-14,
+              "structurally_inactive_cells": 0,
+              "structurally_inactive_vacuum_cells": 0
+            },
+            "stage_2_seed": "stage_shift"
+          },
+          "step_H": 7.499999999999994e-09,
+          "time_J": 7.749999999999999e-08,
+          "wsha256": "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+        },
+        {
+          "H_GeV": 2.4359585102804984e-23,
+          "W_over_initial_daughter_rho": 2.4416621246773795e-18,
+          "a": 1.0000000075,
+          "active_angular_nodes": 2123888,
+          "b": 1.00000001125,
+          "c": 1.0000000150000001,
+          "collision_clock_method": "sdirk2",
+          "daughter_hash": "51ffb27e9e0425307d8b81e3885f0265b2d9bb7c390ce15e08ddbc7d5fafdb75",
+          "elastic_panels": 9911,
+          "initial_daughter_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+          "pair_comoving_count_exchange_over_initial": [
+            8.396410289372262e-09,
+            -5.140129869116557e-09
+          ],
+          "pair_conservation_defect": 7.249240998484731e-16,
+          "pair_outside_energy_over_initial": 4.59636937918261e-36,
+          "parent_hash": "cfc1e306957d3fe60fc01458505ed8a38c81470336fd4ed264f06e085d1f15c1",
+          "parent_nodes": 15450,
+          "pressure_trace_work_over_energy": 4.281281330753997e-09,
+          "qsha256": "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+          "relative_N_defects": [
+            -3.7414515929867775e-14,
+            8.237854842718662e-14
+          ],
+          "relative_energy_defect": 3.597122599785507e-14,
+          "solver": {
+            "affine_daughter_target_outside_simple_cone_cells": 0,
+            "first_stage_parent_min_max": [
+              1.5235798596060815e-80,
+              1.388313098427635e-13
+            ],
+            "max_relative_invariant_defect_at_each_stage": [
+              2.220446049250313e-16,
+              2.220446049250313e-16
+            ],
+            "minimum_and_maximum_affine_parent_target": [
+              1.5235798485894856e-80,
+              1.388306325963451e-13
+            ],
+            "rejected_stage_2_seeds": [],
+            "residual": 3.6345461788549906e-14,
+            "stage_1": {
+              "entropy_gain_relative": 9.568346115429449e-12,
+              "maximum_exponent_departure_from_eq": 60.566636184329525,
+              "newton_iterations": 3,
+              "residual": 1.7863504619289324e-14,
+              "structurally_inactive_cells": 0,
+              "structurally_inactive_vacuum_cells": 0
+            },
+            "stage_2": {
+              "entropy_gain_relative": 3.200306686323984e-11,
+              "maximum_exponent_departure_from_eq": 60.542127791266125,
+              "newton_iterations": 3,
+              "residual": 3.6345461788549906e-14,
+              "structurally_inactive_cells": 0,
+              "structurally_inactive_vacuum_cells": 0
+            },
+            "stage_2_seed": "stage_shift"
+          },
+          "step_H": 7.500000000000008e-09,
+          "time_J": 8.5e-08,
+          "wsha256": "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+        }
+      ],
+      "max_collision_stage_invariant_defect": 6.661338147750939e-16
+    }
+  ],
+  "one_to_two_relative_change_by_method": [
+    0.0025437531169627547,
+    -0.000472597678390696
+  ],
+  "W_differences_absolute_by_method": [
+    6.172348849992671e-21,
+    1.1544694511194602e-21
+  ]
+}

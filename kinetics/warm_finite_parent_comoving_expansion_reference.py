@@ -21,6 +21,8 @@ from warm_late_finite_parent_prompt_reference import FiniteParent
 from warm_light_occupation_stage_audit_reference import digest,read
 from warm_prompt_reentry_shape_audit_reference import get_mom,pad
 
+from warm_finite_comoving_sdirk_reference import step as sdirk_step,stability_test
+
 KEYS=("entropy_variable_scalar","entropy_variable_fermion")
 
 
@@ -32,7 +34,7 @@ def parent_equilibrium(k,th):
     return np.divide(a,a+b,out=np.zeros_like(a),where=a+b>0.)
 
 
-def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,root_tol=8e-12):
+def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,root_tol=8e-12,clock_method="be"):
     R=[read(r) for r in paths]
     assert all(x["hash"]==digest(x["snapshot"]) and x["plan"]==R[0]["plan"] for x in R)
     assert R[0]["plan"]["eos_sha256"]==sha(eos)
@@ -47,6 +49,9 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
         q=np.r_[q,np.geomspace(q[-1],outer,4)[1:]]
     else:
         assert not restrict
+    assert clock_method in ("be","sdirk2") and not (outer and clock_method!="be")
+    if clock_method=="sdirk2":
+        stability_test()
     C=R[0]["plan"]["normalized_cut_GeV"]
     times=np.array([r["time"]-R[0]["time"] for r in R])
     assert np.all(np.diff(times)>0.)
@@ -125,10 +130,15 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
         def log(i,r,index):
             if i in (0,1,2,5,10,20,40,80):
                 print(mode, j, i, f"{r:.5g}", index, file=sys.stderr,flush=True)
-        v,stat=advance(op,target,h,for_stage[0],initial_theta=guess,vacuum_scaled=True,
-                      balanced_merit=True,entropy_guard=ent,observer=log,residual_tolerance=root_tol)
+        if clock_method=="sdirk2":
+            if extra:
+                op.absolute_elastic=True
+            v,newparent,stat=sdirk_step(op,target,h,for_stage[0],guess,fin,log,root_tol)
+        else:
+            v,stat=advance(op,target,h,for_stage[0],initial_theta=guess,vacuum_scaled=True,
+                          balanced_merit=True,entropy_guard=ent,observer=log,residual_tolerance=root_tol)
+            newparent=op.occupation(v) if fin else None
         if fin:
-            newparent=op.occupation(v)
             assert np.all((0.<=newparent)&(newparent<=1.))
             hv=newparent
         th=op.arrays(v)
@@ -178,6 +188,8 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
             r.update(pair_comoving_count_exchange_over_initial=(exchange/initial_N).tolist(),
                      pair_outside_energy_over_initial=float(ex.energy(c)/initial_E),
                      pair_conservation_defect=max_pair_defect,elastic_panels=len(op.panels))
+        if clock_method!="be":
+            r["collision_clock_method"]=clock_method
         rows.append(r)
         atomic(out/f"step-{j}.json",dict(row=r,daughter_snapshot=P))
         del k,op
@@ -200,5 +212,6 @@ if __name__=="__main__":
     p.add_argument("--prompt-pad",type=float,default=0.)
     p.add_argument("--restrict-prompt-pad",action="store_true")
     p.add_argument("--root-tol",type=float,default=8e-12)
+    p.add_argument("--collision-clock",choices=("be","sdirk2"),default="be")
     a=p.parse_args()
-    run(a.eos,a.paths,a.out,a.mode,a.order,a.common_subdivisions,a.prompt_pad,a.restrict_prompt_pad,a.root_tol)
+    run(a.eos,a.paths,a.out,a.mode,a.order,a.common_subdivisions,a.prompt_pad,a.restrict_prompt_pad,a.root_tol,a.collision_clock)
