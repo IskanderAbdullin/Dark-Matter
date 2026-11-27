@@ -71,3 +71,7 @@ python -W error warm_direct_vacuum_native_absolute_abundance_reference.py EOS.da
 
 [Native comparison of separate normalizations](INDEPENDENT-WARM-DIRECT-NATIVE-ABSOLUTE-POWER-2026-11-26.md)
 keeps their power effects distinct and tests an illustrative colder shape.
+
+The [temperature-ladder check](INDEPENDENT-WARM-DIRECT-TEMPERATURE-BRACKET-2026-11-26.md)
+extends this direct-only comparison to 25–100 MeV and gives both
+positive endpoint enclosures and central full-statistics folds.

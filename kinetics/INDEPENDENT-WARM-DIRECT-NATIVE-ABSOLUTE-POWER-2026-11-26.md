@@ -27,17 +27,27 @@ Delta ln P is −.008408. The figures above are the dense
 normalization using the conditional yield upper but
 the *same shape* gives Delta ln P≈−.012516 at k=10,
 z=5; it is not a bound on all source spectral shapes.
-The literal compact absolute run is not counted here:
-one log was empty during a temporary disk limit, and
-that specific comparison is being repeated. The dense
-power tables and density log were verified independently.
+The literal compact absolute run was repeated after its output
+log could not be written to a full temporary disk. At z=5,
+the compact–dense absolute log-power difference is at most
+2.65e−5 across the exact modes. Its relative difference is
+about 2.04% at k=.3, 0.53% at k=2 and 0.16% at k=10.
+These differences are numerical cross-checks, not physical
+error bars. The dense small-abundance tangent from a
+fourfold rescaled-yield control reproduces the absolute
+log-power response to within 0.043% relative on this fixed shape.
+The separately held scalar shape gives a 6.3% larger density-
+normalized response at k=10 (and 32% larger at k=.3), z=5.
+That is a conditional shape comparison, not an uncertainty
+estimate on the physical template.
 
-A separate illustration imposes 10% scalar abundance
-on the same warm template, without deriving that value
-from the production. It leaves P/P_trace≈.5034 at k=10,
-z=5, with no half-power crossing at the sampled points.
-It is not a prediction, constraint or substitute for
-an independent production history.
+An illustration imposes 10% scalar abundance on the warm
+template. It leaves P/P_trace≈.5034 at k=10, z=5, with no
+half-power crossing at the sampled points. At imposed half
+abundance it instead leaves .0180 at k=10, with a sampled
+half-power bracket [0.3,1] h/Mpc at z=5 and 20. These two
+compact runs do not derive either abundance, and the bracket
+is not a fitted crossing. Neither sets a physical constraint.
 
 ## A physical entropy event would also change the momentum unit
 
@@ -61,7 +71,9 @@ the original compact rescaled result. At k=2 it is
 −1.260e−6, rather than −7.852e−6. This cleanly separates
 an algebraic count rescaling at fixed spectrum from
 the colder shape one would get in a simple entropy
-change. It does not solve any entropy release, changes
+change. The cold-shape fourfold-abundance control agrees with
+the own-trace tangent to 6.4e−9 absolute in ln P. This does not
+solve any entropy release, changes
 in neutrino temperature, or observational viability.
 
 ~~~sh
@@ -75,12 +87,12 @@ python -W error warm_direct_vacuum_native_dominant_counterfactual_reference.py h
 python -W error warm_direct_vacuum_native_entropy_shape_counterfactual_reference.py higherk \
  results/warm-direct-vacuum-two-normalizations-2026-11-26.json entropy > entropy/spec.json
 # Run the desired generated CLASS inputs and preserve their logs.
-python -W error warm_direct_vacuum_native_normalization_audit_reference.py higherk absolute major entropy --partial
+python -W error warm_direct_vacuum_native_normalization_audit_reference.py higherk absolute major entropy
 python -W error warm_direct_vacuum_entropy_scaling_audit_reference.py EOS.dat \
  results/warm-direct-vacuum-scalar-psd-2026-11-26.json results/warm-direct-vacuum-two-normalizations-2026-11-26.json
 ~~~
 
-[Native results and incomplete case list](results/warm-direct-vacuum-native-normalization-audit-2026-11-26.json);
+[Strict native results with all 15 configurations](results/warm-direct-vacuum-native-normalization-audit-2026-11-26.json);
 [entropy momentum/path check](results/warm-direct-vacuum-entropy-path-scaling-2026-11-26.json).
 Raw power tables and elided-path logs:
 [rescaled](results/warm-direct-vacuum-normalization-rescaled-raw-2026-11-26.json.gz),

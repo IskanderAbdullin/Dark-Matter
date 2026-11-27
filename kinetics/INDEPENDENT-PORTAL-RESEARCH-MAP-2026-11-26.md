@@ -367,6 +367,14 @@ The [fixed-width coupling sensitivity](INDEPENDENT-WARM-VACUUM-COUPLING-SENSITIV
 shows how changing the specified vector mixing and Yukawa
 moves the 50 MeV sufficient upper boundary. It is not a fit.
 
+The [absolute direct-yield comparison](INDEPENDENT-WARM-DIRECT-ABSOLUTE-NORMALIZATION-2026-11-26.md)
+does not equate an arithmetic rescaling of the two retained components
+with fixing the absolute scalar yield. Its [matched native modes](INDEPENDENT-WARM-DIRECT-NATIVE-ABSOLUTE-POWER-2026-11-26.md)
+use separate traces and an independently prescribed CDM complement.
+The [direct reheating ladder](INDEPENDENT-WARM-DIRECT-TEMPERATURE-BRACKET-2026-11-26.md)
+encloses the selected vacuum direct contribution through 100 MeV,
+without assuming that recycling or unmeasured sources are absent in nature.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

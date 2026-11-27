@@ -16,13 +16,14 @@ from warm_late_cold_visible_recoil_box_upper_reference import log_slope_minimum
 from warm_light_occupation_stage_audit_reference import read
 
 
-def clock(bg,n):
-    T=np.geomspace(.05,.0001,n+1)
+def clock(bg,n,tmax=.05,tmin=.0001,lower=False):
+    assert 0 < tmin < tmax and bg.u[0] <= np.log(tmin) < np.log(tmax) <= bg.u[-1]
+    T=np.geomspace(tmax,tmin,n+1)
     A=np.array([bg.scale(t) for t in T])
-    t=T[1:]
+    t=T[:-1] if lower else T[1:]
     z=np.log(t)
     E=(2*np.pi**2/45)*t**5*np.exp(bg.gs(z)+.5*bg.gr(z))*np.sqrt(np.pi**2/90)/MPL
-    return T[:-1],np.diff(np.log(A))/E
+    return (T[1:] if lower else T[:-1]),np.diff(np.log(A))/E
 
 
 def weight(lo,hi,T,U,bose):
@@ -36,8 +37,8 @@ def weight(lo,hi,T,U,bose):
     return (U@G)*p
 
 
-def bounds(bg,tablefile,old,n):
-    T,U=clock(bg,3*n)
+def bounds(bg,tablefile,old,n,tmax=.05,tmin=.0001):
+    T,U=clock(bg,3*n,tmax,tmin)
     s=np.unique(np.r_[np.geomspace(4*M*M,16,n+1),[4*x*x for x in leptons if .2<=2*x<=4]])
     l,h=s[:-1],s[1:]
     W=weight(l,h,T,U,False)
