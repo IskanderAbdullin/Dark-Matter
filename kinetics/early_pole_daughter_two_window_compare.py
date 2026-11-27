@@ -9,7 +9,7 @@ import numpy as np
 
 
 def check(short,long,depth=1):
-    if depth not in (1,4):
+    if depth not in (1,2,4):
         raise ValueError("Use the accepted hard refinement depths.")
     t=np.asarray(short[0]['history_exposure'])
     n=len(t)-1
@@ -64,7 +64,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--short',nargs=2,required=True)
     p.add_argument('--long',nargs=2,required=True)
-    p.add_argument('--hard-depth',type=int,choices=(1,4),default=1)
+    p.add_argument('--hard-depth',type=int,choices=(1,2,4),default=1)
     a=p.parse_args()
     def r(f):
         if f.endswith('.gz'):
