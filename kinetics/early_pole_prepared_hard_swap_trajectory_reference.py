@@ -30,13 +30,16 @@ def run(bundle,case,steps):
                 np.testing.assert_array_equal(x,y)
             p,d=M.r[1:]
             y=M.init.copy()
-            if case in ('parent','matched-parent','both'):
+            if case in ('parent','matched-parent','both','matched-both'):
                 y[p]=fine_cont[p]
-            if case=='matched-parent':
+            if case in ('matched-parent','matched-both'):
                 y,check=retune(M,y,M.init,p)
                 metadata['parent_moment_match']=check
-            if case in ('daughter','both'):
+            if case in ('daughter','both','matched-daughter','matched-both'):
                 y[d]=fine_cont[d]
+            if case in ('matched-daughter','matched-both'):
+                y,check=retune(M,y,M.init,d)
+                metadata['daughter_moment_match']=check
             # Build all subsequent channels and their reference response
             # relative to this exact prepared state, not a pre-swap state.
             M.init=y
@@ -51,7 +54,7 @@ def run(bundle,case,steps):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('bundle')
-    p.add_argument('--case',choices=('native','parent','daughter','both','matched-parent'),required=True)
+    p.add_argument('--case',choices=('native','parent','daughter','both','matched-parent','matched-daughter','matched-both'),required=True)
     p.add_argument('--steps',type=int,default=16)
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
