@@ -13,6 +13,10 @@ def run(source,dest,limit,templates=None):
         q["root"]=str(dest.resolve()/(name+"_"))
         (dest/(name+".ini")).write_text("".join(f"{k} = {v}\n" for k,v in q.items()))
     if templates is not None:
+        for tag in ("trace","physical"):
+            x=(dest/(tag+".ini")).read_text().replace("direct-sig07.dat","held-sig07.dat")
+            x=x.replace(str(dest.resolve()/(tag+"_")),str(dest.resolve()/("held"+tag+"_")))
+            (dest/("held"+tag+".ini")).write_text(x)
         genesis=(dest/"amp4.ini").read_text()
         for n in ("direct3","p12","thermal3"):
             lines=[]

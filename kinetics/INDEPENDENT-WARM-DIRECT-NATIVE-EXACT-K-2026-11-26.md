@@ -97,3 +97,6 @@ python -W error warm_direct_vacuum_native_early_start_audit_reference.py focus l
 [Common-start intervention](results/warm-direct-vacuum-native-early-start-2026-11-26.json);
 [mid threshold](results/warm-direct-vacuum-native-start-lock-raw-2026-11-26.json.gz)
 and [earliest threshold tables](results/warm-direct-vacuum-native-start-early-raw-2026-11-26.json.gz).
+
+[Moment-matched native templates](INDEPENDENT-WARM-DIRECT-NATIVE-MOMENT-MATCH-2026-11-26.md)
+separately test how much matching early and late energy moments removes spectral sensitivity.
