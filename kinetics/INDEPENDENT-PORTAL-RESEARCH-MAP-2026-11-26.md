@@ -807,3 +807,6 @@ fit or exclusion.
 - [Common dressed equilibrium and moving-remap Jacobian](INDEPENDENT-EARLY-POLE-DRESSED-JOINT-EQUILIBRIUM-2026-11-26.md):
   all channels share a stationary thermal fixture; retaining the
   energy curvature is necessary for the constrained linear response.
+- [Exact split hard-pair support budget](INDEPENDENT-EARLY-POLE-ARCHIVE-HARD-PAIR-EXACT-SUPPORT-2026-11-26.md):
+  the first active momentum box misses most frozen daughter-channel
+  heat; separately audits wider upper supports and the low-side omission.
