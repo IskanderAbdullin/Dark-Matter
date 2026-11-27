@@ -21,7 +21,12 @@ from warm_prompt_reentry_shape_audit_reference import get_mom
 class FiniteParent(LocalAbsolutePrompt):
     def __init__(self,k,H):
         super().__init__(k,H,[],True)
-        p=np.sqrt((k.E-M)*(k.E+M))
+        # Do not recover tiny lab momenta by subtracting rest energy
+        # when the chart already defines exact comoving momenta.
+        if hasattr(k,"comoving_Q"):
+            p=k.comoving_Q/k.scale
+        else:
+            p=np.sqrt((k.E-M)*(k.E+M))
         assert np.all(p>0.)
         self.relax_factor=width*M*M/(2.*P*k.E*p*H)
         self.measure=k.w/(H*self.relax_factor)

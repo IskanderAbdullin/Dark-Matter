@@ -286,7 +286,8 @@ checks selected pair and elastic contributions for .68, with an
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
 checks the bulk effect.
 An [implicit finite-parent replay](INDEPENDENT-WARM-LATE-FINITE-PARENT-TURN-2026-11-26.md)
-checks startup and confirms the late turn on the same discrete clocks.
+checks startup and confirms the late turn on the same discrete clocks. A [comoving parent chart](INDEPENDENT-WARM-COMOVING-PARENT-CHART-2026-11-26.md)
+audit verifies redshift work and collision geometry.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)
