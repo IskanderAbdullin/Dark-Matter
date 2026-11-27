@@ -436,6 +436,11 @@ The [late quartic clock comparison](INDEPENDENT-SCALAR-QUARTIC-LATE-KINETIC-CHEM
 separates gross elastic encounters and a generous chemical ceiling at
 three held states. Neither clock substitutes for a coupled kinetics run.
 
+The [native occupation ladder](INDEPENDENT-SCALAR-COLD-PACKING-CAP-LADDER-2026-11-26.md)
+brackets a chosen .95 linear-power target within the near-packed scalar
+family at half abundance. This is a sampled numerical target, not
+an observed suppression limit or a bound on arbitrary spectra.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
