@@ -547,6 +547,11 @@ shows an interaction-dominated soft scalar shell can have radiation-like
 homogeneous stress while its individual momenta are small. This is
 not a perturbation evolution or a prediction of the transition epoch.
 
+The [multiband early Hartree control](INDEPENDENT-EARLY-POLE-MULTIBAND-HARTREE-2026-11-26.md)
+evolves all represented occupations with a shared pole instead of
+imposing one shell. Both grids retain cold momentum without reaching
+the nominal count at the selected handoff when feedback is enabled.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
