@@ -527,6 +527,11 @@ The [F583-4 mass normalization ledger](INDEPENDENT-HALO-BOSE-MASS-CAP-NORMALIZAT
 separates distance, inclination, finite occupation and finite halo
 effects at fixed benchmark scales. None is a new particle mass fit.
 
+The [early finite-pole mode clock](INDEPENDENT-EARLY-POLE-DECAY-MODE-CLOCK-2026-11-26.md)
+distinguishes a kinematically open decay from an efficient infrared
+mode source when the parent-energy interval narrows. The input poles
+and fermion FD phases are held, not evolved.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
