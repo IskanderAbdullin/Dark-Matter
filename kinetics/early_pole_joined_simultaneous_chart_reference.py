@@ -1,6 +1,9 @@
 """Unsplit finite early joined reference in admissible charged-logit coordinates."""
 import argparse
 import gzip
+import hashlib
+import sys
+import scipy
 import json
 from pathlib import Path
 
@@ -15,7 +18,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None,local_daughter_fraction=1.):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None,local_daughter_fraction=1.,checkpoint_input=None,emit_checkpoint=False):
     if not 0.<local_daughter_fraction<=1. or (local_daughter_fraction!=1. and not local_from_paired_archive):
         raise ValueError('A fractional replacement in (0,1] requires the exact local archive option.')
     with gzip.open(bundle,'rt') as f:
@@ -182,18 +185,58 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 coordinate_defect.append(float(np.max(abs(J@dy[j]-x))))
                 cond.append(float(np.linalg.cond(J)))
         return d
-    e0,s0,nH=totals(anchor)
+    initial=anchor
+    before=0.
+    checkstate=checkpoint_input is not None or emit_checkpoint
+    provenance=None
+    if checkstate:
+        if any((prepared_input is not None, retune_local_daughter, compensation_only,
+                number_only_local_retune, retune_donor_support is not None)):
+            raise ValueError('Checkpoint pilot only retains the native and exact local archive preparations.')
+        H=lambda path:hashlib.sha256(Path(path).read_bytes()).hexdigest()
+        modules={}
+        for name,mod in sorted(sys.modules.items()):
+            src=getattr(mod,'__file__',None)
+            if name.startswith('early_pole_') and src and src.endswith('.py'):
+                modules[name]=H(src)
+        inputs={}
+        for grid in {saved['grid'],saved['aperture_grid']}:
+            inp=f'results/early-pole-spectrum-{grid}-m06-2026-11-26.json.gz'
+            inputs[grid]=H(inp)
+        provenance=dict(initializer=H(bundle),program=H(__file__),state_schema='joined-logit-f64-v1',module_sources=modules,
+                        spectra=inputs,python=sys.version.split()[0],numpy=np.__version__,scipy=scipy.__version__,
+                        longdouble_bits=int(np.finfo(np.longdouble).nmant),projection=projection,depth=depth,
+                        charged_swap=swap,elastic_channel=elastic_channel,without_elastic=without_elastic,
+                        local_daughter_fraction=local_daughter_fraction,rtol=rtol,base_atol=base_atol,
+                        step_bound=duration/panels)
+        if checkpoint_input is not None:
+            prior=json.loads(Path(checkpoint_input).read_text())['checked_end_state']
+            if prior['provenance']!=provenance:
+                raise ValueError('Checkpoint came from different source, solver, or matched scope.')
+            initial=np.asarray(prior['state'])
+            before=float(prior['time'])
+            if initial.shape!=anchor.shape or not np.all(np.isfinite(initial)) or not before>0.:
+                raise ValueError('Checkpoint has invalid state or exposure.')
+            ng=initial[C.j0:-2]
+            if not np.all(ng>0.):
+                raise ValueError('Invalid restarted cold occupations.')
+            E,S,N=totals(initial)
+            A,B,N0=totals(anchor)
+            if (abs(E-A)>3e-12 or abs(E-A-initial[-1])>3e-12
+                    or abs(S-B-initial[-2])>3e-11 or abs(N-N0)>3e-12):
+                raise ValueError('Restart input does not reproduce the original global ledgers.')
+    e0,s0,nH=totals(initial)
     atol=np.r_[np.full(2*k,base_atol),np.full(C.j0-2*k,2e-3*rtol),
                np.full(len(n0),base_atol/10),base_atol,base_atol/10]
-    sample=np.linspace(0.,duration,panels+1)
-    result=solve_ivp(rhs,(0.,duration),anchor,method='DOP853',rtol=rtol,atol=atol,
+    sample=before+np.linspace(0.,duration,panels+1)
+    result=solve_ivp(rhs,(before,before+duration),initial,method='DOP853',rtol=rtol,atol=atol,
                      max_step=duration/panels,t_eval=sample)
     if not result.success:
         raise RuntimeError(result.message)
     z=result.y[:,-1]
     e1,s1,n1=totals(z)
-    en,sn=e1-e0,s1-s0-z[-2]
-    assert abs(en)<3e-12 and abs(en-z[-1])<3e-12
+    en,sn=e1-e0,s1-s0-(z[-2]-initial[-2])
+    assert abs(en)<3e-12 and abs(en-(z[-1]-initial[-1]))<3e-12
     assert abs(sn)<3e-11 and abs(n1-nH)<3e-12
     cold_modes=result.y[C.j0:-2]
     count=cold_modes.sum(axis=0)
@@ -212,6 +255,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 **(dict(selected_elastic_channel=elastic_channel) if elastic_channel!='both' else {}),
                 **(dict(aperture_subdivision=depth) if depth!=1 else {}),
                 **(dict(local_archive_support=local_archive_meta) if local_archive_meta is not None else {}),
+                **(dict(checked_end_state=dict(provenance=provenance,time=float(sample[-1]),state=z.tolist())) if emit_checkpoint else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
@@ -235,6 +279,8 @@ if __name__=='__main__':
     elast.add_argument('--elastic-channel',choices=('both','unlike','same'),default='both')
     p.add_argument('--record-mode-history',action='store_true')
     p.add_argument('--local-daughter-fraction',type=float,default=1.)
+    p.add_argument('--checkpoint-input')
+    p.add_argument('--emit-checkpoint',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
