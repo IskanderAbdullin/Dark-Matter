@@ -9,16 +9,21 @@ import numpy as np
 from early_pole_live_parent_energy_reference import state_moments
 from early_pole_scalar_chemical_sensitivity_reference import Chemical
 from early_pole_scalar_number_change_angular_reference import AngularNumberChange
+from early_pole_scalar_number_change_interval_reference import IntervalNumberChange
 
 
 class AngularChemical(Chemical):
-    def __init__(self,shape,ratio,strength,power):
+    def __init__(self,shape,ratio,strength,power,split=0):
         super().__init__(*shape,ratio,strength)
         self.power=power
+        self.split=split
 
     def collider(self,x,m):
         h=np.sqrt(np.pi**2*106.75/90)*(86./x)/2.435e18
-        return AngularNumberChange(self.d.p,self.d.ed,m,self.qlo,self.strength,power=self.power),h
+        cl=(IntervalNumberChange(self.d.p,self.d.ed,m,self.qlo,self.strength,
+                                 power=self.power,angular_order=self.split)
+            if self.split else AngularNumberChange(self.d.p,self.d.ed,m,self.qlo,self.strength,power=self.power))
+        return cl,h
 
     def setup_hot_grid(self,s,hot_cells,bounds=(.0006,.0025)):
         ed=self.d.ed
@@ -60,14 +65,15 @@ if __name__=='__main__':
     p.add_argument('--strength',type=float,default=1e-7)
     p.add_argument('--power',type=int,default=2)
     p.add_argument('--hot-cells',type=int,default=0)
+    p.add_argument('--split-outgoing',type=int,default=0)
     p.add_argument('--xend',type=float,default=.052)
     a=p.parse_args()
     path=Path(a.spectrum)
     raw=gzip.decompress(path.read_bytes()) if path.suffix=='.gz' else path.read_bytes()
     s=json.loads(raw)
     shape={(67,112,122):(65,90,72),(97,156,176):(95,125,108)}
-    d=AngularChemical(shape[tuple(s['cells'])],s['mass_ratio'],a.strength,a.power)
+    d=AngularChemical(shape[tuple(s['cells'])],s['mass_ratio'],a.strength,a.power,a.split)
     s,meta=d.setup_hot_grid(s,a.hot_cells)
     z=d.from_snapshot(s,a.xend)
-    z.update(meta,angular_samples=2**a.power)
+    z.update(meta,angular_samples=2**a.power,outgoing_interval_order=a.split)
     print(json.dumps(z,indent=2,allow_nan=False))

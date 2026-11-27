@@ -683,6 +683,10 @@ reproduces the weak-multiplier threshold branch across two native
 grids using separate angular deposition of both products. It is not
 a controlled in-medium 4-to-2 result.
 
+The [hard-product feedback control](INDEPENDENT-EARLY-POLE-CHEMICAL-HARD-FEEDBACK-2026-11-26.md)
+separates the stable initial event count from a strongly mesh-sensitive
+local Bose response and adds an interval-split angular stencil.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
