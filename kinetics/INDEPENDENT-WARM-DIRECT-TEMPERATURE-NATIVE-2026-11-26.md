@@ -38,9 +38,42 @@ was 9.73% too high on the linear 78-point grid and
 3.76% too high on the linear 136-point grid when both
 used cap q=45. An independent numerical fold of the
 same cubic spline reproduces the logged early ΔNeff.
-The candidate narrower-cap and transformed grids
-improve the numerical moments, but must be validated
-in the native hierarchy before being used for power.
+The narrower-cap and transformed grids below
+address the main momentum error in the broad grid.
+
+## Momentum-resolved comparison
+
+Two additional native configurations, a linear grid
+with cap 18 and a transformed 100-point grid, agree
+to within 1.49e−5 in the matched-density log-power
+responses across all sampled modes and both redshifts.
+The maximum discrepancy in the 100 MeV case's own
+larger abundance response is 2.73e−4 in ln P, with the
+worst agreement at the smallest k. These differences
+are numerical checks, not error bars on the physical model.
+
+| z=5, transformed 100-point q grid | k=2 h/Mpc | k=10 h/Mpc |
+|---|---:|---:|
+| 50 MeV shape, its own direct abundance | −0.4983% | −0.8808% |
+| 100 MeV shape, at the 50 MeV abundance | −0.4466% | −0.8277% |
+| 100 MeV shape, its own direct abundance | −7.9403% | −14.2333% |
+
+The matched-density shape difference is now
++5.36e−4 in ln P at k=10, larger than the wide-grid
+estimates but much smaller than the abundance effect.
+The lower cap removes less than 1.25e−7 of the
+prepared q² moment; its biggest mean-q or mean-q²
+error is 0.251%. The transformed grid's equivalent
+moment errors are below 3e−7. The background
+relativistic growth of energy density, expressed as
+ΔNeff, then agrees with the same momentum sums.
+A still finer hierarchy cross can test residual error
+in the transfer, which moment agreement alone cannot certify.
+
+[Linear narrow-cap audit](results/warm-direct-vacuum-temperature-native-lowcap-2026-11-26.json),
+[raw](results/warm-direct-vacuum-temperature-native-lowcap-raw-2026-11-26.json.gz);
+[transformed audit](results/warm-direct-vacuum-temperature-native-transform-2026-11-26.json),
+[raw](results/warm-direct-vacuum-temperature-native-transform-raw-2026-11-26.json.gz).
 
 These are conditional linear transfer comparisons of
 the chosen, already produced spectra. The 100 MeV
@@ -52,6 +85,8 @@ exclusion, or a full thermal hadronic source.
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 # Prepare varied-spec.json and the native inputs as in the shapes note.
 python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied dense linear136_cap45
+python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied narrow linear136_cap18
+python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied mapped transform100
 # Run the five configurations on each tier. For example:
 python -W error warm_direct_vacuum_temperature_native_audit_reference.py varied-spec.json varied 50 100
 ~~~
