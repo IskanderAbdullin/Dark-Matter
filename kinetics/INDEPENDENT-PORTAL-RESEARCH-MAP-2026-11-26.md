@@ -726,6 +726,10 @@ temperatures. A [resolved hard photon box](INDEPENDENT-EARLY-POLE-SPECTRAL-PHOTO
 relaxes the BE-shaped bath assumption while preserving energy and
 the total gauge particle count.
 
+The [expanding spectral photon comparison](INDEPENDENT-EARLY-POLE-SPECTRAL-PHOTON-DECAY-2026-11-26.md)
+retains the strong illustrative population gate with hard photon
+occupations rather than a fitted whole-spectrum BE distribution.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
