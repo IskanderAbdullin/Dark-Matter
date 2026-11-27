@@ -603,6 +603,11 @@ separates the earlier centroid discretization defect from heat
 withdrawn by the fixed-temperature momentum restoration. The latter
 is not present under isolated momentum mixing.
 
+The [massive daughter control](INDEPENDENT-EARLY-POLE-MASSIVE-DAUGHTER-ENERGY-2026-11-26.md)
+incorporates its finite rest mass in the threshold, discrete
+collision energy and expansion trace. Selected finite daughter ratios
+raise the early integrated yield relative to the massless null.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

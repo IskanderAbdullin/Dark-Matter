@@ -22,7 +22,8 @@ def state_moments(d,x,y):
     m0=1e-9*x
     m=d.d.gap(x,a)
     E=np.hypot(m,d.d.p)
-    Ef=.75*np.diff(d.d.fed**4)/np.diff(d.d.fed**3)
+    Ef=(d.daughter_energies(x) if hasattr(d,'daughter_energies')
+        else .75*np.diff(d.d.fed**4)/np.diff(d.d.fed**3))
     Ep=shell_mean_energy(d,x)
     n=d.w*y
     U=(m*m-m0*m0)**2/(2*d.d.lam)

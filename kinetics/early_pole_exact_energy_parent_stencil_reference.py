@@ -22,22 +22,31 @@ class EnergyStencil(ResolvedParent):
     def parent_energies(self,x):
         return np.sum(self.pqw*np.hypot(x,self.pq),axis=1)/self.pw
 
+    def daughter_mass(self,x):
+        return 0.
+
+    def daughter_energies(self,x):
+        return self.ed
+
     def channels(self,x,m):
         E=np.hypot(m,self.d.p)
         P=self.parent_energies(x)
-        if x<=m:
+        mass=self.daughter_mass(x)
+        if x<=m+mass:
             z=np.zeros(0,dtype=int)
             f=np.zeros(0,dtype=float)
             return E,P,z,z,z,z,f,f,f,0.
-        D=(x*x-m*m)/2
-        lo=(x*x*E*E+D*D)/(((x*x+m*m)/2)*E+self.d.p*D)
+        D=np.sqrt((x*x-(m+mass)**2)*(x*x-(m-mass)**2))/2
+        A=(x*x+m*m-mass*mass)/2
+        lo=(x*x*E*E+D*D)/(A*E+self.d.p*D)
         hi=lo+2*self.d.p*D/(m*m)
-        a=np.maximum(lo[:,None],E[:,None]+self.d.ef[:-1])
-        b=np.minimum(hi[:,None],E[:,None]+self.d.ef[1:])
-        rate=KAPPA*G*x*(x*x-m*m)/(E*self.d.p)
+        edges=np.hypot(self.d.ef,mass)
+        a=np.maximum(lo[:,None],E[:,None]+edges[:-1])
+        b=np.minimum(hi[:,None],E[:,None]+edges[1:])
+        rate=KAPPA*G*x*((x+mass)**2-m*m)/(E*self.d.p)
         w=np.maximum(b-a,0.)*(rate*self.d.w)[:,None]
         i,j=np.nonzero(w)
-        ep=E[i]+self.ed[j]
+        ep=E[i]+self.daughter_energies(x)[j]
         J=np.searchsorted(P,ep,side='right')
         keep=(J>0)&(J<len(P))
         # The test for omitted support is FD weighted, not an unqualified
@@ -91,10 +100,11 @@ class EnergyStencil(ResolvedParent):
 
     def stencil_checks(self,x=.008,m=8e-5):
         E,P,i,j,k,l,a,b,W,miss=self.channels(x,m)
+        Ed=self.daughter_energies(x)
         eps=np.max(abs((a*P[k-self.iP]+b*P[l-self.iP])/
-                       (E[i]+self.ed[j-self.ns])-1))
+                       (E[i]+Ed[j-self.ns])-1))
         pt=expit(-P)
-        nd=expit(-self.ed)
+        nd=expit(-Ed)
         ns=1/np.expm1(E)
         F,B=self.parent_products(pt[k-self.iP],pt[l-self.iP],a,b,False)
         fo=F*(1+ns[i])*(1-nd[j-self.ns])
@@ -102,7 +112,7 @@ class EnergyStencil(ResolvedParent):
         bal=np.max(abs(fo/re-1))
         y=np.r_[ns*.035,nd*.6,pt*.8]
         v=self.at(x,m,y)
-        er=np.r_[E,self.ed,P]*self.w
+        er=np.r_[E,Ed,P]*self.w
         norm=sum(abs(er*v))
         e_closure=abs(er@v)/norm
         assert max(eps,bal,e_closure)<3e-14
@@ -144,7 +154,7 @@ class EnergyStencil(ResolvedParent):
             m=self.d.gap(x,y[:self.ns])
             E,P,*_,miss=self.channels(x,m)
             rate=self.at(x,m,y)
-            ec=self.w*np.r_[E,self.ed,P]
+            ec=self.w*np.r_[E,self.daughter_energies(x),P]
             norm=sum(abs(ec*rate))
             closure.append((abs(ec@rate)/max(norm,1e-300),miss))
         audits=np.array(closure)
