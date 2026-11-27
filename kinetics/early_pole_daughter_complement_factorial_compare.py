@@ -45,10 +45,33 @@ def compare(native, local, outside, both):
                 scope='Finite interaction under one manufactured held-response retune; bare number and energy only.')
 
 
+def compare_tolerances(nominal,tighter):
+    for a,b in zip(nominal,tighter,strict=True):
+        if a['rtol']!=3e-9 or b['rtol']!=3e-10 or a['base_atol']!=2e-14 or b['base_atol']!=2e-15:
+            raise ValueError('Expected a tenfold tightening of both tolerances.')
+        if any(a[k]!=b[k] for k in ('projection','duration','report_panels','history_exposure')):
+            raise ValueError('The paired strict run changes more than tolerances.')
+        if a.get('complement_retune')!=b.get('complement_retune'):
+            raise ValueError('The complement retune changed with tolerance.')
+    low,high=compare(*nominal),compare(*tighter)
+    fields=('local_effect','compensation_only_effect','combined_effect','signed_interaction')
+    return dict(nominal=low,tighter=high,
+                signed_change={k:high[k]-low[k] for k in fields},
+                largest_absolute_change_in_count_history=max(
+                    float(np.max(abs(np.asarray(b['cold_count_history'])-a['cold_count_history'])))
+                    for a,b in zip(nominal,tighter,strict=True)),
+                scope='Tolerance sensitivity of the same held compensation, not a general error bound.')
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('native','local','outside','both'):
         p.add_argument(k)
+    p.add_argument('--tighter',nargs=4,
+                   help='Tighter native, local, compensation-only and combined raw receipts.')
     q=p.parse_args()
-    print(json.dumps(compare(*(json.loads(Path(f).read_text()) for f in vars(q).values())),
+    def read(paths):
+        return [json.loads(Path(f).read_text()) for f in paths]
+    nominal=read([q.native,q.local,q.outside,q.both])
+    print(json.dumps(compare_tolerances(nominal,read(q.tighter)) if q.tighter else compare(*nominal),
                      indent=2,allow_nan=False))
