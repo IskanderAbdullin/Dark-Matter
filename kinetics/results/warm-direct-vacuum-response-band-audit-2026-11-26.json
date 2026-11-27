@@ -1,0 +1,112 @@
+{
+  "scope": "Linear functional decomposition into q/T0\u2264.1 and its complement on fixed driver, not an independently generated metric or solved production perturbation.",
+  "shape_order": [
+    "direct vacuum mix",
+    "held q64"
+  ],
+  "momentum_cut_over_T0": 0.1,
+  "rows": [
+    {
+      "k_per_Mpc": 2.6944,
+      "controls": [
+        {
+          "q_order": 8,
+          "time_nodes": 7500,
+          "whole_response": [
+            0.7150835338544892,
+            0.6567339437482244
+          ],
+          "cold_only_response": [
+            0.9912293870756713,
+            0.9932073487446051
+          ],
+          "cold_energy_weight_fraction": [
+            0.00018670176875841606,
+            0.0004975849443199347
+          ],
+          "not_cold_only_response": [
+            0.715031967307692,
+            0.656566436298549
+          ],
+          "direct_minus_held_whole": 0.05834959010626484,
+          "direct_minus_held_not_cold": 0.05846553100914298,
+          "cold_removal_change_in_shape_contrast": 0.00011594090287814218
+        },
+        {
+          "q_order": 12,
+          "time_nodes": 13000,
+          "whole_response": [
+            0.7150835338556705,
+            0.6567349159180143
+          ],
+          "cold_only_response": [
+            0.9912293890496431,
+            0.9932073507587145
+          ],
+          "cold_energy_weight_fraction": [
+            0.00018670176875841603,
+            0.0004975849443199349
+          ],
+          "not_cold_only_response": [
+            0.7150319673085049,
+            0.6565674089513142
+          ],
+          "direct_minus_held_whole": 0.05834861793765622,
+          "direct_minus_held_not_cold": 0.05846455835719078,
+          "cold_removal_change_in_shape_contrast": 0.0001159404195345548
+        }
+      ]
+    },
+    {
+      "k_per_Mpc": 6.736,
+      "controls": [
+        {
+          "q_order": 8,
+          "time_nodes": 7500,
+          "whole_response": [
+            0.4630328618662922,
+            0.386747448583946
+          ],
+          "cold_only_response": [
+            0.9674111944882544,
+            0.9727818162367923
+          ],
+          "cold_energy_weight_fraction": [
+            0.00018670176875841603,
+            0.0004975849443199348
+          ],
+          "not_cold_only_response": [
+            0.46293867595479204,
+            0.38645570153680975
+          ],
+          "direct_minus_held_whole": 0.07628541328234623,
+          "direct_minus_held_not_cold": 0.0764829744179823,
+          "cold_removal_change_in_shape_contrast": 0.0001975611356360707
+        },
+        {
+          "q_order": 12,
+          "time_nodes": 13000,
+          "whole_response": [
+            0.46303286201194227,
+            0.3867608986685526
+          ],
+          "cold_only_response": [
+            0.967411196961442,
+            0.972781820300893
+          ],
+          "cold_energy_weight_fraction": [
+            0.00018670176875841603,
+            0.0004975849443199349
+          ],
+          "not_cold_only_response": [
+            0.46293867610000744,
+            0.38646915831528444
+          ],
+          "direct_minus_held_whole": 0.07627196334338965,
+          "direct_minus_held_not_cold": 0.076469517784723,
+          "cold_removal_change_in_shape_contrast": 0.00019755444133334743
+        }
+      ]
+    }
+  ]
+}
