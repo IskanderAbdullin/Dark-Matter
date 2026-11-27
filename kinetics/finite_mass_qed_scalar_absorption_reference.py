@@ -96,7 +96,7 @@ def test_geometry(M,m,ms):
     return metrics
 
 
-def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False):
+def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False,energy_moments=False):
     M=d['x_end'];m=M*d['mass_ratio'];ms=d['checkpoints'][-1]['scalar_pole_over_T']
     es=np.hypot(ms,Q)
     p_edges,b_edges=[np.hypot(a,d[f'endpoint_{n}_momentum_edges'])
@@ -106,6 +106,7 @@ def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False):
     if equilibrium: fs=1/np.expm1(es/T)
     za,wa=gl(rad);zm,wm=gl(polar);zk,wk=gl(inner)
     total=np.zeros(2)
+    heat=np.zeros(4) if energy_moments else None
     for v,wv in zip(zm,wm,strict=True):
         emin=M if not overlap else np.hypot(.45,M)
         if overlap:
@@ -167,10 +168,33 @@ def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False):
             # K/W du = dk/P at fixed E,v. Incoming parent measure
             # p*dE*dv/(8pi²), COM pair measure K/W*du/(8pi).
             clock=(p/(128*np.pi**3*es*P))[:,0]
+            norm=wv*(ew[start:start+64]*clock)
             total+=wv*(ew[start:start+64]*clock)@np.column_stack([gain,loss])
+            if energy_moments:
+                gd=wk0*az*n*b*(1-f0)
+                ld=wk0*az*(1+n)*f0*(1-b)
+                # For a scalar-producing event in this channel the photon
+                # enters. Relativistic charged energy changes by k-Es.
+                ks=((gd*k).sum(axis=(1,2)),(ld*k).sum(axis=(1,2)))
+                dk=E[:,:,None]-(et[:,:,None]-k)
+                ch=((gd*dk).sum(axis=(1,2)),(ld*dk).sum(axis=(1,2)))
+                heat+=norm@np.column_stack([*ks,*ch])
     G,L=total
     N=G+fs*(G-L)
-    return dict(gain=float(G),loss=float(L),net=float(N),net_over_positive_turnover=float(N/((1+fs)*G+fs*L)))
+    out=dict(gain=float(G),loss=float(L),net=float(N),net_over_positive_turnover=float(N/((1+fs)*G+fs*L)))
+    if energy_moments:
+        kn=heat[0]+fs*(heat[0]-heat[1])
+        ch=heat[2]+fs*(heat[2]-heat[3])
+        o=es*N
+        defect=o-kn+ch
+        hnormal=abs(o)+abs(kn)+abs(ch)+abs(heat[0])*(1+fs)+abs(heat[1])*fs
+        if abs(defect)>5e-13*hnormal:
+            raise ArithmeticError(('Photon-bath heat ledger did not close',defect,hnormal))
+        out.update(photon_bath_gain=float(-kn),scalar_energy_gain=float(o),
+                   charged_energy_gain=float(ch),signed_heat_ledger_scaled_defect=float(defect/hnormal),
+                   photon_weighted_scalar_gain=float(heat[0]),photon_weighted_scalar_loss=float(heat[1]),
+                   photon_heat_over_unsigned_turnover=float(-kn/(heat[0]*(1+fs)+heat[1]*fs)))
+    return out
 
 
 def born(d):
