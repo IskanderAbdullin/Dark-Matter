@@ -13,7 +13,7 @@ from early_pole_decay_mode_clock_reference import G, KAPPA
 from early_pole_native_aperture_witness_reference import GRID, occup
 
 
-def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16):
+def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16, ledger=False):
     P,D = C.M.r[1:]
     ep,ed = E[P],E[D]
     a0,a1=ep.T
@@ -25,6 +25,10 @@ def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16):
     iis,jjs = np.where(left<right)
     z,w=roots_legendre(radial_order)
     output=np.zeros(4)
+    derivative=np.zeros_like(E) if ledger else None
+    entropy=0.
+    if ledger and fs<=0.:
+        raise ValueError("A differentiable entropy check requires positive scalar occupation.")
     for i,j in zip(iis,jjs,strict=True):
         ia,ib=P.start+i,D.start+j
         A,B=C.M.cells[ia],C.M.cells[ib]
@@ -51,13 +55,23 @@ def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16):
         E0=ea(pp)
         vD=(b1[j]/B.de)*dd/np.hypot(dd,B.m)
         wq=(h*w).ravel()*pp*dd/(E0*(E0-es)*vD)
-        fp=expit(F[ia,0]+F[ia,1]*A.basis(pp))
-        fd=expit(F[ib,0]+F[ib,1]*B.basis(dd))
+        ua,ub=A.basis(pp),B.basis(dd)
+        a,b=F[ia,0]+F[ia,1]*ua,F[ib,0]+F[ib,1]*ub
+        fp,fd=expit(a),expit(b)
         seed=fp*(1-fd)
         net=seed+fs*(fp-fd)
         out=np.array([seed*(1+fs),fd*(1-fp)*fs,net,net*es])
         output+=out@wq
-    return output*(G*KAPPA*.05*((1.06*.05)**2-ms*ms)/(q*es))
+        if ledger:
+            n=net*wq
+            N=n.sum()
+            derivative[ia]-=[N,n@ua]
+            derivative[ib]+=[N,n@ub]
+            entropy+=n@(a-b+np.log1p(1./fs))
+    scale=G*KAPPA*.05*((1.06*.05)**2-ms*ms)/(q*es)
+    if ledger:
+        return output*scale,derivative*scale,entropy*scale
+    return output*scale
 
 
 def run(path, projection, q_order, radial_order, snapshots):
