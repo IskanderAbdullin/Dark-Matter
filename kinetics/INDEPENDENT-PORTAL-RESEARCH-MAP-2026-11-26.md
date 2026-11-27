@@ -486,6 +486,11 @@ converts the sampled kinetic responses to the contact cross section
 needed to match a circular frequency. It is not an observational
 cross-section constraint or a guarantee of fluid behavior.
 
+The [finite-halo direct evaporation kernel](INDEPENDENT-HALO-BOSE-FINITE-EVAPORATION-KERNEL-2026-11-26.md)
+measures one-step elastic ejection in the held lowered profiles.
+Both the tidal cutoff and the smaller bound-side Bose enhancement
+matter; it is not an evaporation lifetime.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

@@ -7,7 +7,7 @@ from scipy.optimize import brentq
 from scipy.special import roots_legendre, expit
 
 
-def solve(F,W):
+def solve(F,W,return_profile=False):
     d=brentq(lambda d:1/np.expm1(d)-1/np.expm1(d+W)-F,1e-12,4.,
              xtol=1e-15)
     h=1/np.expm1(d+W)
@@ -35,6 +35,8 @@ def solve(F,W):
     bound=s.t_events[0][0]
     rt=np.exp(bound)
     norm=n*s.sol(bound)[1]*rt
+    if return_profile:
+        return d, h, n, norm, s.sol, bound
     # Use a separate quadrature over both full phase volume and lower excess.
     r,w=roots_legendre(18)
     v=np.linspace(l0,bound,450)
