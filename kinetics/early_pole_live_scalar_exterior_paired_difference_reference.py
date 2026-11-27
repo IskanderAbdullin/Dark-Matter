@@ -10,7 +10,10 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
-def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=1.,elastic_energy_budget=None,attribute_feedback=False,warm_order=None,stable_pole_tangent=False,anchor_pole=False,linearize_cold_pole=False,cold_pole_relative_probe=5e-5):
+def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=1.,elastic_energy_budget=None,attribute_feedback=False,warm_order=None,stable_pole_tangent=False,anchor_pole=False,linearize_cold_pole=False,cold_pole_relative_probe=5e-5,hard_probe_boost=None):
+    if hard_probe_boost is not None and (not linearize_cold_pole or not np.isfinite(hard_probe_boost)
+                                         or not 8.<=hard_probe_boost<=1e5):
+        raise ValueError("A finite hard tangent boost in [8,1e5] requires the reciprocal cold tangent.")
     if linearize_cold_pole and (not anchor_pole or attribute_feedback):
         raise ValueError("The paired cold tangent requires anchoring and its own rate ledger.")
     if not np.isfinite(cold_pole_relative_probe) or not 1e-6<=cold_pole_relative_probe<=1e-3:
@@ -90,11 +93,20 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
     closure_audit=[]
     tangent_audit=[]
 
-    def split(z,arm,anchored=None,linear=None):
+    def split(z,arm,anchored=None,linear=None,hard_direction=None):
         set_bank(arm)
         y=z[:C.j0].reshape(-1,2)
         N=z[C.j0:]
         E,F,G,*_=C.M.weights(y,True)
+        cold_chart=None
+        if hard_direction is not None:
+            first,difference=hard_direction
+            dY=hard_probe_boost*difference.reshape(y.shape)
+            base=first.reshape(y.shape)
+            # Limit the displacement itself, not the cold feedback
+            # inferred after returning to the original scale.
+            assert np.max(abs(dY))<1e-5*np.max(abs(base))
+            cold_chart=(C.M.weights(base,True)[:2],C.M.weights(base-dY,True)[:2],C.M.weights(base+dY,True)[:2])
         En,_,_,f,m=C.scalar(N)
         if anchored is not None:
             gap_error=abs(m-anchored)
@@ -108,7 +120,16 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
         for i,w in enumerate(C.sw):
             exterior=i>=len(n0)
             local_mass=m if linear is None or exterior else linear[0]
-            v,H,_=band_kernel(C,E,F,C.q[i],local_mass,f[i],radial_order=order,ledger=True)
+            U,V=(E,F) if exterior or cold_chart is None else cold_chart[0]
+            v,H,_=band_kernel(C,U,V,C.q[i],local_mass,f[i],radial_order=order,ledger=True)
+            if cold_chart is not None and not exterior:
+                def hardprobe(UV):
+                    qv,dy,_=band_kernel(C,*UV,C.q[i],local_mass,f[i],radial_order=order,ledger=True)
+                    return qv[2],dy
+                sa,ha=hardprobe(cold_chart[1]); sb,hb=hardprobe(cold_chart[2])
+                fac=w/(2.*hard_probe_boost)
+                correction[:C.j0]+=fac*(hb-ha).ravel()
+                correction[C.j0+i]+=fac*(sb-sa)
             if linear is not None and not exterior:
                 mp,dm=linear
                 epsilon=mp*cold_pole_relative_probe
@@ -119,7 +140,7 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
                 sb,hb=pair(mp+epsilon)
                 fac=w*dm/(2*epsilon)
                 correction[:C.j0]+=fac*(hb-ha).ravel()
-                correction[C.j0+i]=fac*(sb-sa)
+                correction[C.j0+i]+=fac*(sb-sa)
             effective_w=w*warm_multiplier if exterior else w
             rate[int(exterior),:C.j0]+=effective_w*H.ravel()
             scalar[i]=effective_w*v[2]
@@ -205,7 +226,8 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
         if linearize_cold_pole and abs(dm)>1e-4*m0*cold_pole_relative_probe:
             raise ValueError("The requested cold pole displacement is outside the near-null control.")
         anchored=m0+dm if anchor_pole else None
-        second,w,m1,correction=split(full,1,anchored,(m0,dm) if linearize_cold_pole else None)
+        hdir=(base[:C.j0],diff[:C.j0]) if hard_probe_boost is not None else None
+        second,w,m1,correction=split(full,1,anchored,(m0,dm) if linearize_cold_pole else None,hdir)
         delta=(second[0]-first[0])+second[1]
         if linearize_cold_pole:
             delta+=correction
@@ -308,6 +330,8 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
                         maximum_active_decay_work=max(closure_audit),
                         maximum_cold_rate_tangent=max(map(abs,tangent_audit)))
                    if linearize_cold_pole else {}),
+                **(dict(cold_hard_linearized_at_baseline=True,hard_probe_boost=hard_probe_boost)
+                   if hard_probe_boost is not None else {}),
                 **shape_ledger,**extra,scope=('Short fixed-scale all-channel matched split on one grid; explicit difference variable.'
                                if joined else 'Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid.'))
 
@@ -334,6 +358,7 @@ if __name__=='__main__':
     p.add_argument('--linearize-cold-pole',action='store_true',
                    help='Replace the near-null cold pole response by matched reciprocal tangents.')
     p.add_argument('--cold-pole-relative-probe',type=float,default=5e-5)
+    p.add_argument('--hard-probe-boost',type=float)
     a=p.parse_args()
     if a.duration<=0 or a.steps<1 or a.order<2 or not 1e-5<a.outer[0]<a.outer[1]<=5.:
         p.error('Invalid positive exposure, steps or order.')
