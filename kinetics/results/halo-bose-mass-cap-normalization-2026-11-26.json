@@ -1,0 +1,135 @@
+{
+  "scope": "Source angular scale and V0 held as a benchmark, over different explicitly selected halo density prescriptions. No fitting, uncertainty propagation beyond direct distance rescaling, particle measurement or self-consistent revised cosmology.",
+  "critical_mass_scale_eV": {
+    "D49": 86.20495852353574,
+    "catalog_D": 82.65453419530475,
+    "catalog_distance_minus_error": 92.45395362323687,
+    "catalog_distance_plus_error": 75.42933870809377
+  },
+  "inclination_and_distance_rescale_grid": [
+    {
+      "D_Mpc": 42.599999999999994,
+      "inclination_deg": 45.0,
+      "conditional_mass_eV": 89.11598431502246
+    },
+    {
+      "D_Mpc": 42.599999999999994,
+      "inclination_deg": 55.0,
+      "conditional_mass_eV": 92.45395362323687
+    },
+    {
+      "D_Mpc": 42.599999999999994,
+      "inclination_deg": 65.0,
+      "conditional_mass_eV": 94.82072807796924
+    },
+    {
+      "D_Mpc": 53.3,
+      "inclination_deg": 45.0,
+      "conditional_mass_eV": 79.67036437328704
+    },
+    {
+      "D_Mpc": 53.3,
+      "inclination_deg": 55.0,
+      "conditional_mass_eV": 82.65453419530475
+    },
+    {
+      "D_Mpc": 53.3,
+      "inclination_deg": 65.0,
+      "conditional_mass_eV": 84.77044846867857
+    },
+    {
+      "D_Mpc": 64.0,
+      "inclination_deg": 45.0,
+      "conditional_mass_eV": 72.70602826349591
+    },
+    {
+      "D_Mpc": 64.0,
+      "inclination_deg": 55.0,
+      "conditional_mass_eV": 75.42933870809377
+    },
+    {
+      "D_Mpc": 64.0,
+      "inclination_deg": 65.0,
+      "conditional_mass_eV": 77.36029163109349
+    }
+  ],
+  "cap_comparisons": [
+    {
+      "cap": 0.5123174296,
+      "clipped_max_central_density_over_critical": 0.4121444572256444,
+      "smooth_shift_max_density_over_critical": 0.1489087073027325,
+      "clipped_mass_normalization_at_catalog_D_eV": 103.15833332281069,
+      "smooth_thermal_mass_normalization_at_catalog_D_eV": 133.05667281193436,
+      "clipped_mass_relative_to_critical": 1.2480662352903404,
+      "shifted_mass_relative_to_critical": 1.6097927852032194,
+      "arbitrary_shape_fixed_critical_moments_relative_mass_floor": 1.4692613102835324
+    },
+    {
+      "cap": 1.0,
+      "clipped_max_central_density_over_critical": 0.5243083908165573,
+      "smooth_shift_max_density_over_critical": 0.23918347764777495,
+      "clipped_mass_normalization_at_catalog_D_eV": 97.13371087073439,
+      "smooth_thermal_mass_normalization_at_catalog_D_eV": 118.19085890201778,
+      "clipped_mass_relative_to_critical": 1.1751770403934132,
+      "shifted_mass_relative_to_critical": 1.429937994965214,
+      "arbitrary_shape_fixed_critical_moments_relative_mass_floor": 1.2430363400832065
+    },
+    {
+      "cap": 100.0,
+      "clipped_max_central_density_over_critical": 0.9425518215095191,
+      "smooth_shift_max_density_over_critical": 0.8701991318552899,
+      "clipped_mass_normalization_at_catalog_D_eV": 83.88617140109834,
+      "smooth_thermal_mass_normalization_at_catalog_D_eV": 85.57797807267286,
+      "clipped_mass_relative_to_critical": 1.014901024097279,
+      "shifted_mass_relative_to_critical": 1.0353694314030044,
+      "arbitrary_shape_fixed_critical_moments_relative_mass_floor": 0.3930826049022588
+    },
+    {
+      "cap": 5000.0,
+      "clipped_max_central_density_over_critical": 0.9918557423660086,
+      "smooth_shift_max_density_over_critical": 0.9809223350621378,
+      "clipped_mass_normalization_at_catalog_D_eV": 82.82368604083541,
+      "smooth_thermal_mass_normalization_at_catalog_D_eV": 83.0535168122481,
+      "clipped_mass_relative_to_critical": 1.002046492030685,
+      "shifted_mass_relative_to_critical": 1.0048271110693165,
+      "arbitrary_shape_fixed_critical_moments_relative_mass_floor": 0.14782276598338914
+    },
+    {
+      "cap": 7000.0,
+      "clipped_max_central_density_over_critical": 0.9931167476893518,
+      "smooth_shift_max_density_over_critical": 0.9838615714591363,
+      "clipped_mass_normalization_at_catalog_D_eV": 82.79738226632735,
+      "smooth_thermal_mass_normalization_at_catalog_D_eV": 82.99141766044949,
+      "clipped_mass_relative_to_critical": 1.001728254504285,
+      "shifted_mass_relative_to_critical": 1.004075801387359,
+      "arbitrary_shape_fixed_critical_moments_relative_mass_floor": 0.13589682659590702,
+      "finite_lowered_controls": [
+        {
+          "W": 2.0,
+          "lowered_n0_over_critical": 0.7495021963499715,
+          "corrected_mass_normalization_eV": 88.83282127972252
+        },
+        {
+          "W": 5.0,
+          "lowered_n0_over_critical": 0.9548959576941872,
+          "corrected_mass_normalization_eV": 83.61374373095737
+        },
+        {
+          "W": 8.0,
+          "lowered_n0_over_critical": 0.9812412746029896,
+          "corrected_mass_normalization_eV": 83.04676712678976
+        }
+      ]
+    },
+    {
+      "cap": 200000.0,
+      "clipped_max_central_density_over_critical": 0.9987122170278825,
+      "smooth_shift_max_density_over_critical": 0.9969685279187718,
+      "clipped_mass_normalization_at_catalog_D_eV": 82.68116590910087,
+      "smooth_thermal_mass_normalization_at_catalog_D_eV": 82.71729437847158,
+      "clipped_mass_relative_to_critical": 1.0003222051162155,
+      "shifted_mass_relative_to_critical": 1.0007593072029,
+      "arbitrary_shape_fixed_critical_moments_relative_mass_floor": 0.058779559415985526
+    }
+  ]
+}

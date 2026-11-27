@@ -523,6 +523,10 @@ The [common physical radius perturbation](INDEPENDENT-HALO-BOSE-PHYSICAL-CORE-PE
 checks the small observable remainder of a capped critical core and
 its high-occupation scaling without subtracting large rotation curves.
 
+The [F583-4 mass normalization ledger](INDEPENDENT-HALO-BOSE-MASS-CAP-NORMALIZATION-2026-11-26.md)
+separates distance, inclination, finite occupation and finite halo
+effects at fixed benchmark scales. None is a new particle mass fit.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
