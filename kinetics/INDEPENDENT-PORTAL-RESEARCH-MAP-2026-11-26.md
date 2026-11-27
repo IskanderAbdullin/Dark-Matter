@@ -711,6 +711,10 @@ distinguishes common gauge mass shifts, conserving joint momentum
 relaxation, and chemical inversion. No calibrated gauge rate is
 inserted into the evolution.
 
+A [finite shared photon count-and-heat control](INDEPENDENT-EARLY-POLE-FINITE-SHARED-PHOTON-CHEMISTRY-2026-11-26.md)
+includes both Dirac pair sources and reverse factors, showing
+independent heat flow even at zero integrated particle source.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
