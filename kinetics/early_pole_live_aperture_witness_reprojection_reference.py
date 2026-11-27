@@ -35,14 +35,14 @@ def bare_closed(C, f, E, m, beta):
     return float(sum(vals))
 
 
-def evaluate(profile,subdivision,scalar_bins=8):
+def initial_projection(profile,subdivision,scalar_bins=8,exposure=8e-5,model=None):
     grid=profile['grid']
     with gzip.open(GRID/f'early-pole-spectrum-{grid}-m06-2026-11-26.json.gz','rt') as f:
         a=json.load(f)
     archive=np.asarray(a['endpoint_parent_momentum_edges'])
     f=np.asarray(a['endpoint_parent_occupations'])
     e,p,w,_=refine(archive,f,profile['parent'],a['x_end'])
-    C=Cold(grid,1,0,scalar_bins,True,aperture_subdivision=subdivision)
+    C=Cold(grid,1,0,scalar_bins,True,exposure=exposure,aperture_subdivision=subdivision) if model is None else model
     Y0=C.M.init.copy()
     selection=C.M.r[1]
     Y1=Y0.copy()
@@ -55,6 +55,13 @@ def evaluate(profile,subdivision,scalar_bins=8):
         np.testing.assert_allclose(old,Y0[i],rtol=3e-10,atol=2e-16)
         Y1[i]=fit_archive_cell(K,e,w)
         ids.append(i)
+    return C,a,Y0,Y1,ids,e,p,w
+
+
+def evaluate(profile,subdivision,scalar_bins=8):
+    C,a,Y0,Y1,ids,e,p,w=initial_projection(profile,subdivision,scalar_bins)
+    grid=profile['grid']
+    selection=C.M.r[1]
     E,_,_,_,m=C.scalar(C.ns)
     beta=G*KAPPA*.05*((1.06*.05)**2-m*m)
     d_edges=np.asarray(a['endpoint_fermion_momentum_edges'])
