@@ -35,14 +35,14 @@ def bare_closed(C, f, E, m, beta):
     return float(sum(vals))
 
 
-def evaluate(profile,subdivision):
+def evaluate(profile,subdivision,scalar_bins=8):
     grid=profile['grid']
     with gzip.open(GRID/f'early-pole-spectrum-{grid}-m06-2026-11-26.json.gz','rt') as f:
         a=json.load(f)
     archive=np.asarray(a['endpoint_parent_momentum_edges'])
     f=np.asarray(a['endpoint_parent_occupations'])
     e,p,w,_=refine(archive,f,profile['parent'],a['x_end'])
-    C=Cold(grid,1,0,8,True,aperture_subdivision=subdivision)
+    C=Cold(grid,1,0,scalar_bins,True,aperture_subdivision=subdivision)
     Y0=C.M.init.copy()
     selection=C.M.r[1]
     Y1=Y0.copy()
@@ -91,6 +91,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('grid',choices=('fine','third'))
     p.add_argument('--subdivisions',type=int,nargs='+',default=[1,2,4,8])
+    p.add_argument('--scalar-bins',type=int,default=8)
     a=p.parse_args()
     profile=next(p for p in json.loads(PROFILES.read_text()) if p['grid']==a.grid)
-    print(json.dumps([evaluate(profile,i) for i in a.subdivisions],indent=2,allow_nan=False))
+    print(json.dumps([evaluate(profile,i,a.scalar_bins) for i in a.subdivisions],indent=2,allow_nan=False))
