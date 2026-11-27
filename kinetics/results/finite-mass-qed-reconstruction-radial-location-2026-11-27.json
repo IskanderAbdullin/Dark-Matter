@@ -1,0 +1,86 @@
+{
+  "scope": "Local vs exterior decomposition of isolated positive bare virtual differences; no hot rate.",
+  "radial_band_edges_in_abs_delta_energy": [
+    0,
+    0.0003,
+    0.02,
+    0.25,
+    "archived_end"
+  ],
+  "rows": [
+    {
+      "grid": "fine",
+      "cases": [
+        {
+          "cut": "parent",
+          "total_conservative_minus_steps": -1.1673309358665171,
+          "signed_radial_band_contributions": [
+            -0.0020358916552036866,
+            -1.4701585861937418,
+            0.3540664462173379,
+            -0.04920290423490947
+          ],
+          "polar_aperture_exterior_and_interior": [
+            -0.5275281879790247,
+            -0.6398027478874925
+          ],
+          "resolution_defect": 1.1056711102241934e-11,
+          "independent_full_difference_defect": 3.233247003464612e-10
+        },
+        {
+          "cut": "daughter",
+          "total_conservative_minus_steps": -8.72801884887418,
+          "signed_radial_band_contributions": [
+            0.002020659020241891,
+            -10.594660553249817,
+            1.8689788995180399,
+            -0.0043578541626452475
+          ],
+          "polar_aperture_exterior_and_interior": [
+            -6.7958986721861345,
+            -1.932120176688046
+          ],
+          "resolution_defect": 1.815436689867056e-10,
+          "independent_full_difference_defect": 8.493632464023904e-10
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "cases": [
+        {
+          "cut": "parent",
+          "total_conservative_minus_steps": -12.000181075768971,
+          "signed_radial_band_contributions": [
+            0.0012989645934387715,
+            -13.698968032932358,
+            1.68849703016139,
+            0.00899096240855857
+          ],
+          "polar_aperture_exterior_and_interior": [
+            -8.398287708113983,
+            -3.6018933676549874
+          ],
+          "resolution_defect": 1.0128253791208408e-10,
+          "independent_full_difference_defect": 1.0785704773752514e-08
+        },
+        {
+          "cut": "daughter",
+          "total_conservative_minus_steps": -13.377114434406094,
+          "signed_radial_band_contributions": [
+            0.007559732723475821,
+            -14.031146058565739,
+            0.6369544057019674,
+            0.009517485734202132
+          ],
+          "polar_aperture_exterior_and_interior": [
+            -3.3255330433915833,
+            -10.05158139101451
+          ],
+          "resolution_defect": 1.2219203426866443e-10,
+          "independent_full_difference_defect": 1.2931469228760761e-09
+        }
+      ]
+    }
+  ]
+}
