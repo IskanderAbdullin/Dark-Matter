@@ -402,6 +402,11 @@ makes the required earlier fermion loss explicit for three energy
 retention choices. A separate hypothetical dilution reduces the
 stable component but cannot repair the original scalar deficit.
 
+The [cold phase-space capacity](INDEPENDENT-SCALAR-COLD-OCCUPATION-PHASE-CAPACITY-2026-11-26.md)
+compares minimum ballistic path and cold count fraction at the required
+86 eV abundance for an arbitrary capped spectrum. It is a conditional
+packing control, not a dynamical source or transfer constraint.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
