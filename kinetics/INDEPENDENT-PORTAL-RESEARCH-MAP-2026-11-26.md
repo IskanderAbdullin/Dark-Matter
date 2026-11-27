@@ -783,3 +783,6 @@ fit or exclusion.
   matched earlier trajectories show tiny instantaneous crossing shifts;
   a separate reciprocal energy check prevents potential double counting
   when dynamical feedback is eventually added.
+- [Reciprocal gauge-energy collision and expansion check](INDEPENDENT-EARLY-POLE-CONSERVING-GAUGE-EVENTS-2026-11-26.md):
+  tests energy-conserving events, an independent expansion trace,
+  and the hard daughter-angle aperture using the same energy gradient.
