@@ -40,3 +40,21 @@ fixture the raw file `results/early-pole-spectrum-fine-m06-2026-11-26.json.gz`
 supplies the original daughter steps and their cumulative number
 interpolant. The JSON receipt includes every mode and daughter cell
 sampled in this comparison.
+
+## Within-packet quadrature check
+
+The default rule uses 12 Gauss points per allowed packet interval.
+Re-evaluate with 12, 24 and 48 points, preserving the same native
+geometry, exact frozen bounds and sampled model prescriptions. The
+largest direct mode-cell difference is 8.68e-18 and the largest
+fitted mode-cell difference across these changes is 5.38e-17.
+The within-packet quadrature is thus far below the measured
+fitted-versus-direct difference in these fixtures. This check
+does not estimate the error from locating the aperture boundaries,
+approximating dressed energies, or restricting the represented
+physical support.
+
+Use `--quadrature-order` with 12, 24 and 48 and save each
+output, then pass the default receipt and those three outputs to
+`early_pole_daughter_archive_pointwise_quadrature_compare.py`.
+The unchanged default output was reproduced byte-for-byte.

@@ -1,0 +1,202 @@
+{
+  "scope": "Numerical within-packet Gauss refinement at identical frozen momentum bounds; not aperture-cut or physical convergence.",
+  "cases": [
+    {
+      "hard_depth": 1,
+      "cold_modes": 8,
+      "default_order": 12,
+      "packet_count": 14,
+      "reference_totals": {
+        "pointwise_archive_paired_total": -0.011652808075726594,
+        "reconstructed_paired_total": -0.015511194642951177,
+        "reconstructed_curvature_fixed_packet_geometry": 0.0003298621921183452
+      },
+      "differences": {
+        "default_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            6.938893903907228e-18,
+            5.377642775528102e-17,
+            5.041540102057596e-18
+          ],
+          "max_after_summing_daughter_cells": [
+            7.806255641895632e-18,
+            5.377642775528102e-17,
+            5.041540102057596e-18
+          ]
+        },
+        "12_to_24": {
+          "per_mode_cell_max_by_diagnostic": [
+            8.673617379884035e-18,
+            4.85722573273506e-17,
+            4.1470733097570545e-18
+          ],
+          "max_after_summing_daughter_cells": [
+            6.938893903907228e-18,
+            4.85722573273506e-17,
+            4.1470733097570545e-18
+          ]
+        },
+        "24_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            6.7220534694101275e-18,
+            1.734723475976807e-17,
+            1.3010426069826053e-18
+          ],
+          "max_after_summing_daughter_cells": [
+            3.2526065174565133e-18,
+            1.3227266504323154e-17,
+            1.4640964493290581e-18
+          ]
+        }
+      }
+    },
+    {
+      "hard_depth": 4,
+      "cold_modes": 8,
+      "default_order": 12,
+      "packet_count": 33,
+      "reference_totals": {
+        "pointwise_archive_paired_total": -0.011652684943952373,
+        "reconstructed_paired_total": -0.011670965301178808,
+        "reconstructed_curvature_fixed_packet_geometry": 1.197114933357165e-06
+      },
+      "differences": {
+        "default_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            7.15573433840433e-18,
+            4.553649124439119e-18,
+            1.1351159663687558e-18
+          ],
+          "max_after_summing_daughter_cells": [
+            6.7220534694101275e-18,
+            4.87890977618477e-18,
+            1.1790558005075727e-18
+          ]
+        },
+        "12_to_24": {
+          "per_mode_cell_max_by_diagnostic": [
+            6.938893903907228e-18,
+            4.119968255444917e-18,
+            7.951174376492472e-19
+          ],
+          "max_after_summing_daughter_cells": [
+            6.5052130349130266e-18,
+            4.87890977618477e-18,
+            8.66479963455422e-19
+          ]
+        },
+        "24_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            6.071532165918825e-18,
+            2.6020852139652106e-18,
+            3.3999852871950862e-19
+          ],
+          "max_after_summing_daughter_cells": [
+            5.9631119486702744e-18,
+            3.2526065174565133e-18,
+            3.1257583705215065e-19
+          ]
+        }
+      }
+    },
+    {
+      "hard_depth": 1,
+      "cold_modes": 32,
+      "default_order": 12,
+      "packet_count": 59,
+      "reference_totals": {
+        "pointwise_archive_paired_total": -0.012215292769775584,
+        "reconstructed_paired_total": -0.01625109635539682,
+        "reconstructed_curvature_fixed_packet_geometry": 0.00034621474214454787
+      },
+      "differences": {
+        "default_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            3.63207727782644e-18,
+            1.8214596497756474e-17,
+            1.7618285302889447e-18
+          ],
+          "max_after_summing_daughter_cells": [
+            3.198396408832238e-18,
+            1.8512752095189988e-17,
+            1.7475877888632318e-18
+          ]
+        },
+        "12_to_24": {
+          "per_mode_cell_max_by_diagnostic": [
+            4.336808689942018e-18,
+            7.15573433840433e-18,
+            7.386127300057499e-19
+          ],
+          "max_after_summing_daughter_cells": [
+            1.951563910473908e-18,
+            7.15573433840433e-18,
+            7.386127300057499e-19
+          ]
+        },
+        "24_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            3.903127820947816e-18,
+            1.214306433183765e-17,
+            1.1180834903756764e-18
+          ],
+          "max_after_summing_daughter_cells": [
+            4.553649124439119e-18,
+            1.2332799712022613e-17,
+            1.1017251665818278e-18
+          ]
+        }
+      }
+    },
+    {
+      "hard_depth": 4,
+      "cold_modes": 32,
+      "default_order": 12,
+      "packet_count": 133,
+      "reference_totals": {
+        "pointwise_archive_paired_total": -0.012215192542958529,
+        "reconstructed_paired_total": -0.01223593237768526,
+        "reconstructed_curvature_fixed_packet_geometry": 1.4648914621784003e-06
+      },
+      "differences": {
+        "default_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            1.4094628242311558e-18,
+            1.734723475976807e-18,
+            3.852833585343367e-19
+          ],
+          "max_after_summing_daughter_cells": [
+            1.5178830414797062e-18,
+            2.927345865710862e-18,
+            3.6175172446842815e-19
+          ]
+        },
+        "12_to_24": {
+          "per_mode_cell_max_by_diagnostic": [
+            1.5178830414797062e-18,
+            1.7889335846010823e-18,
+            3.899691993795432e-19
+          ],
+          "max_after_summing_daughter_cells": [
+            1.7889335846010823e-18,
+            2.3852447794681098e-18,
+            4.566598090860185e-19
+          ]
+        },
+        "24_to_48": {
+          "per_mode_cell_max_by_diagnostic": [
+            1.3010426069826053e-18,
+            1.5720931501039814e-18,
+            4.570557797990128e-19
+          ],
+          "max_after_summing_daughter_cells": [
+            3.198396408832238e-18,
+            3.5236570605778894e-18,
+            4.991890514800138e-19
+          ]
+        }
+      }
+    }
+  ],
+  "maximum_pointwise_mode_cell_change": 8.673617379884035e-18
+}

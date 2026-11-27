@@ -6,7 +6,7 @@ from math import fsum
 
 import numpy as np
 from scipy.interpolate import PchipInterpolator
-from scipy.special import expit
+from scipy.special import expit, roots_legendre
 
 from early_pole_decay_mode_clock_reference import G,KAPPA
 from early_pole_daughter_local_fraction_curvature_attribution import initial
@@ -14,8 +14,13 @@ from early_pole_frozen_dynamic_vlasov_reference import load
 from early_pole_live_pauli_gauge_moment_decay_reference import Tool
 
 
-def compare(bundle):
+def compare(bundle,quadrature_order=None):
     C,n,(y0,ym,y1),_,depth=initial(bundle)
+    if quadrature_order is not None:
+        if not 2<=quadrature_order<=128:
+            raise ValueError('Use packet quadrature orders from 2 to 128.')
+        for opt in C.lambdas:
+            opt.nod,opt.w=roots_legendre(quadrature_order)
     M=C.M
     with gzip.open(bundle,'rt') as f:
         grid=json.load(f)['branches']['steps']['grid']
@@ -62,7 +67,8 @@ def compare(bundle):
         raise ValueError('Expected active cold packets over the archived daughter aperture.')
     v=np.asarray(cells_by_q).sum(axis=1).T
     direct,fit,curve=map(fsum,v)
-    return dict(scope='Keep native packet energy and parent occupation; evaluate exact archive and fitted daughter shapes on the same sampled daughter momenta.',
+    return dict(**({'quadrature_order':quadrature_order} if quadrature_order is not None else {}),
+                scope='Keep native packet energy and parent occupation; evaluate exact archive and fitted daughter shapes on the same sampled daughter momenta.',
                 hard_depth=depth,cold_modes=len(n),daughter_cells=cells,sample_counter=sample_counter,
                 pointwise_archive_paired_total=direct,reconstructed_paired_total=fit,
                 reconstructed_minus_pointwise_archive=fit-direct,
@@ -74,5 +80,7 @@ def compare(bundle):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('archives',nargs='+')
+    p.add_argument('--quadrature-order',type=int,
+                   help='Override the within-packet Gauss rule without changing geometry.')
     args=p.parse_args()
-    print(json.dumps([compare(a) for a in args.archives],indent=2,allow_nan=False))
+    print(json.dumps([compare(a,args.quadrature_order) for a in args.archives],indent=2,allow_nan=False))
