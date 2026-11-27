@@ -6,7 +6,9 @@ from scipy.integrate import quad_vec
 from timelike_portal_onsager_coverage_reference import width, V, mchi, factor
 from timelike_chemical_heat_eigenmodes_reference import leptons, rates
 
-def integrator(Td,Ts,eta,ny=36,nx=44):
+def integrator(Td,Ts,eta,ny=36,nx=44,*,equilibrium_spatial_moment=False):
+    if equilibrium_spatial_moment and (Td!=Ts or eta!=0.):
+        raise ValueError("Equilibrium spatial response requires detailed balance.")
     hot=max(Td,Ts)
     z,w=roots_legendre(ny)
     y=(z+1)*np.sqrt(55.)/2
@@ -33,7 +35,10 @@ def integrator(Td,Ts,eta,ny=36,nx=44):
         out=np.zeros((4,3))
         weights=np.array([np.exp(ls)*q_w,
                           np.sign(delta)*np.exp(np.maximum(ls,ld))*(-np.expm1(-abs(delta)))*q_w])
-        qpowers=np.stack((np.ones_like(qq),qq,qq*qq),axis=1)
+        # The opt-in third column uses |p_pair|^2 instead of E_lab^2.
+        # Build it from the invariant constraint in this independent quadrature.
+        last=(qq-E)*(qq+E) if equilibrium_spatial_moment else qq*qq
+        qpowers=np.stack((np.ones_like(qq),qq,last),axis=1)
         for m in leptons:
             vf2=1-4*m*m/s
             if vf2<=0.: continue

@@ -42,7 +42,7 @@ class PositivePortal:
         W=b0[:,None]*(dq*p/E[:,None])
         return E,q,p,W,vi2
 
-    def moments(self,Ts,Td,eta):
+    def moments(self,Ts,Td,eta,*,common_momentum=False):
         assert Ts>0. and Td>0. and abs(eta)<50.
         hot=max(Ts,Td)
         E,q,p,W,vi2=self.geometry(hot)
@@ -76,6 +76,11 @@ class PositivePortal:
         flux=I*np.exp(a)*np.sign(d)*(-np.expm1(-abs(d)))
         eq=np.exp(-q/Ts)*I
         mb=np.exp(-q/Ts)*W*C
+        if common_momentum:
+            if Ts!=Td or eta!=0.:
+                raise ValueError("Common momentum susceptibility requires full FD detailed balance.")
+            return np.array([np.sum(eq*q*q)/Ts, np.sum(eq*p*p)/(3*Ts),
+                             np.sum(eq*E[:,None]**2)/Ts])
         return np.array([np.sum(flux),np.sum(flux*q),np.sum(flux*d),
                        np.sum(eq),np.sum(eq*q),np.sum(eq*q*q),np.sum(mb)])
 
