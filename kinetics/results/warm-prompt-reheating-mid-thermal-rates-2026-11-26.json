@@ -1,0 +1,167 @@
+{
+  "scope": "Pointwise thermal rate check, not time integration. Exact FD/BE incoming and final factors on the light/scalar pair; heavy forward test omits heavy final Pauli. Sampling convergence tested independently.",
+  "rows": [
+    {
+      "sample": 0,
+      "T_GeV": 0.09213340518673589,
+      "controls": [
+        {
+          "radial": 3,
+          "angle": 15,
+          "edge_count": 50,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0000008622524361,
+          "matched_lab_MB_over_invariant_MB": 0.9999282467767872,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -2.5109025384217887e-05,
+          "heavy_forward_without_final_pauli_over_MB": [
+            1.0000737142297262,
+            1.0030280567589034
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9999965263598863,
+              0.9999999999938396,
+              0.9999965263660466
+            ],
+            [
+              1.0,
+              1.0000084522418353,
+              1.0000084522418353
+            ]
+          ]
+        },
+        {
+          "radial": 4,
+          "angle": 21,
+          "edge_count": 70,
+          "light_to_scalar_forward_multiplier_over_MB": 1.000000862194074,
+          "matched_lab_MB_over_invariant_MB": 0.9999978699535436,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": -6.39676879421458e-06,
+          "heavy_forward_without_final_pauli_over_MB": [
+            1.0000281696099615,
+            1.0021555835823557
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.9999965263598863,
+              0.9999999999938396,
+              0.9999965263660466
+            ],
+            [
+              1.0,
+              1.0000084522418353,
+              1.0000084522418353
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample": 1,
+      "T_GeV": 0.015391895209358844,
+      "controls": [
+        {
+          "radial": 3,
+          "angle": 23,
+          "edge_count": 62,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0279859788693975,
+          "matched_lab_MB_over_invariant_MB": 0.9999999947269641,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": 1.5446691170595273e-07,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9987480186059889,
+            1.0017176758669641
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.7244724089784085,
+              0.9987703603230002,
+              0.725364345758234
+            ],
+            [
+              1.0,
+              7.673135720408208,
+              7.673135720408208
+            ]
+          ]
+        },
+        {
+          "radial": 4,
+          "angle": 34,
+          "edge_count": 85,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0279859788693984,
+          "matched_lab_MB_over_invariant_MB": 1.0000000000030786,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": 8.426301234543132e-08,
+          "heavy_forward_without_final_pauli_over_MB": [
+            0.9982371920005225,
+            1.00158831854741
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.7244724089784085,
+              0.9987703603230002,
+              0.725364345758234
+            ],
+            [
+              1.0,
+              7.673135720408208,
+              7.673135720408208
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample": 2,
+      "T_GeV": 0.010678803219394524,
+      "controls": [
+        {
+          "radial": 3,
+          "angle": 23,
+          "edge_count": 62,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0184995495078202,
+          "matched_lab_MB_over_invariant_MB": 0.99999999472725,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": 5.405176428663339e-07,
+          "heavy_forward_without_final_pauli_over_MB": [
+            1.0016029766964403,
+            1.000501437970249
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.8346008702038642,
+              0.9999351318890851,
+              0.8346550126978037
+            ],
+            [
+              1.0,
+              6.739704076925847,
+              6.739704076925847
+            ]
+          ]
+        },
+        {
+          "radial": 4,
+          "angle": 34,
+          "edge_count": 85,
+          "light_to_scalar_forward_multiplier_over_MB": 1.0184995495078188,
+          "matched_lab_MB_over_invariant_MB": 1.0000000000033562,
+          "light_to_scalar_reverse_forward_ratio_relative_identity_defect": 5.3570925473422903e-11,
+          "heavy_forward_without_final_pauli_over_MB": [
+            1.0002476789062336,
+            1.0000920021878124
+          ],
+          "conditional_forward_multiplier_bounds": [
+            [
+              0.8346008702038642,
+              0.9999351318890851,
+              0.8346550126978037
+            ],
+            [
+              1.0,
+              6.739704076925847,
+              6.739704076925847
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

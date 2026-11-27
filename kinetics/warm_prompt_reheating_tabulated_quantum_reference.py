@@ -23,7 +23,7 @@ SCALAR_LIMIT=.28
 
 def factors(T,eta,index):
     peaks=np.exp(eta-MASSES/T)
-    assert peaks.max()<.45
+    assert peaks.max()<.78
     l,s,h=peaks
     F=lambda E:1./np.expm1(E/T-eta[1])
     G=lambda E:expit(eta[0]-E/T)
@@ -51,7 +51,7 @@ def factors(T,eta,index):
                 approximate_heavy_Pauli_factor_total_width=1-(1+h)**-2,max_finite_quad_violation=defect)
 
 
-def build(bg,seed):
+def build(bg,seed,wide=False):
     t0=seed["TF"]
     a0=np.log(bg.scale(t0))
     y=np.array([sum(seed["stable_yields"]),seed["stable_yields"][1]])
@@ -62,22 +62,24 @@ def build(bg,seed):
         t=float(np.exp(bg.v_to_u(a0+x)))
         rv,sv=visible(bg,t)
         tm,_,zm=closed(Y[:2]*sv,Y[2]*sv,t)
-        T,eta,N,E,P=quantum_state(Y[:2]*sv,Y[2]*sv,tm,zm,28,True)
+        T,eta,N,E,P=quantum_state(Y[:2]*sv,Y[2]*sv,tm,zm,80 if wide else 28,True)
         z=np.exp(eta)
         pk=z*np.exp(-MASSES/T)
-        assert pk.max()<.45
+        assert pk.max()<(.78 if wide else .45)
         return t,rv,sv,T,eta,N,E,P,pk
     return t0,a0,np.r_[y,energy],src,unpack
 
 
-def run(eos,seed,early=False):
+def run(eos,seed,early=False,wide=False):
+    assert not wide or early
     bg=Background(eos)
     if early:
         prepared=spectrum(StandardModel(eos),.1,.09998,order=(12,35,24),nout=15)
     else:
         prepared=json.loads(seed.read_text())
-    t0,a0,y0,src,unpack=build(bg,prepared)
-    end=np.log(bg.scale(.035))-a0
+    t0,a0,y0,src,unpack=build(bg,prepared,wide)
+    end=np.log(bg.scale(.04 if wide else .035))-a0
+    limit=.65 if wide else SCALAR_LIMIT
     def integrate(table,order):
         def fun(x,Y,ret=False):
             t,rv,sv,T,eta,N,E,P,pk=unpack(x,Y)
@@ -92,18 +94,18 @@ def run(eos,seed,early=False):
             d=np.r_[(2*np.array([net[1]-net[2],net[0]+net[2]])+J[:2])/(H*sv),J[2]/(H*sv)-3*P/sv]
             return (t,T,N/sv,pk,d) if ret else d
         def active(x,Y):
-            return max(unpack(x,Y)[-1])-SCALAR_LIMIT
+            return max(unpack(x,Y)[-1])-limit
         active.terminal=True
         active.direction=1
         s=solve_ivp(fun,(0.,end),y0,rtol=3e-9,atol=2e-16,method="DOP853",
                     max_step=.002,dense_output=True,events=active)
-        assert s.success and len(s.t_events[0])==1
+        assert s.success and (wide or len(s.t_events[0])==1)
         return s,fun
     source,ff=integrate(None,52)
     history=[]
     # Evaluate a new rate table on the recalculated trajectory and repeat
     # with separate numbers of knots and event-angle quadrature.
-    for grid,index in (((9,0),(13,1)) if early else ((9,0),(13,1),(17,1))):
+    for grid,index in (((11,0),(16,1)) if wide else (((9,0),(13,1)) if early else ((9,0),(13,1),(17,1)))):
         nodes=np.linspace(0.,source.t[-1],grid)
         rows=[]
         for x in nodes:
@@ -113,17 +115,17 @@ def run(eos,seed,early=False):
         table=PchipInterpolator(nodes,[q["weights"] for q in rows],axis=0)
         source,ff=integrate(table,52)
         trace=[]
-        for x in np.linspace(0.,source.t[-1],15):
+        for x in np.linspace(0.,source.t[-1],65 if wide else 15):
             Y=source.sol(x)
             t,T,N,pk,d=ff(x,Y,True)
             trace.append(dict(log_scale_growth=x,visible_T=t,dark_T=T,invariants=Y[:2].tolist(),actual_counts=N.tolist(),
                               phase_peak=pk.tolist(),d_invariants_over_Hs=d[:2].tolist()))
         history.append(dict(grid=grid,angle_high=bool(index),table=rows,samples=trace))
-    return dict(scope="Thermal FD/BE moment closure, exact thermal affinities, selected vacuum rates with tabulated "
+    return dict(phase_limit=limit,wide=wide,scope="Thermal FD/BE moment closure, exact thermal affinities, selected vacuum rates with tabulated "
                       "quantum multipliers iterated on their own path. LS uses direct in/out occupation integration. "
                       "Heavy production uses direct incoming distributions and midpoint of its final Pauli envelope. "
                       "No dark/visible elastic heating, fully coupled visible cooling, hadronic injection, or "
-                      "validation of an actual thermal kinetic distribution. The .28 phase-factor stop is a chosen "
+                      "validation of an actual thermal kinetic distribution. The chosen phase-factor stop or minimum temperature is a "
                       "test boundary, not a physical transition, freeze-out, or a final relic yield.",history=history)
 
 
@@ -132,5 +134,6 @@ if __name__=="__main__":
     p.add_argument("eos",type=Path)
     p.add_argument("seed",type=Path,nargs="?")
     p.add_argument("--early",action="store_true")
+    p.add_argument("--wide",action="store_true")
     a=p.parse_args()
-    print(json.dumps(run(a.eos,a.seed,a.early),indent=2,allow_nan=False))
+    print(json.dumps(run(a.eos,a.seed,a.early,a.wide),indent=2,allow_nan=False))

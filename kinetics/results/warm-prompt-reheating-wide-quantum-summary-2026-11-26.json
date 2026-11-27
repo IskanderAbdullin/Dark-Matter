@@ -1,0 +1,109 @@
+{
+  "scope": "Thermal FD/BE moment closure, exact thermal affinities, selected vacuum rates with tabulated quantum multipliers iterated on their own path. LS uses direct in/out occupation integration. Heavy production uses direct incoming distributions and midpoint of its final Pauli envelope. No dark/visible elastic heating, fully coupled visible cooling, hadronic injection, or validation of an actual thermal kinetic distribution. The chosen phase-factor stop or minimum temperature is a test boundary, not a physical transition, freeze-out, or a final relic yield.",
+  "rows": [
+    {
+      "grid": 11,
+      "data": "warm-prompt-reheating-wide-quantum-grid11-2026-11-26.json.gz",
+      "peak_row": {
+        "log_scale_growth": 0.5159712452920395,
+        "visible_T": 0.06243782171482086,
+        "dark_T": 0.015396893912271788,
+        "invariants": [
+          0.00041245568766674966,
+          0.00016845833783720485
+        ],
+        "actual_counts": [
+          0.00040482286585249067,
+          0.00016082551602294534,
+          7.632821814259704e-06
+        ],
+        "phase_peak": [
+          0.17397621169873798,
+          0.6380938753495798,
+          0.0006149594965351754
+        ],
+        "d_invariants_over_Hs": [
+          0.00023170325538542384,
+          0.0001372933636978813
+        ]
+      },
+      "terminal": {
+        "log_scale_growth": 1.0006715060209252,
+        "visible_T": 0.0400000000406652,
+        "dark_T": 0.010681272299275969,
+        "invariants": [
+          0.0004285737615116746,
+          0.0002211618418042765
+        ],
+        "actual_counts": [
+          0.00042765234175884127,
+          0.00022024042205144354,
+          9.214197528337738e-07
+        ],
+        "phase_peak": [
+          0.0945176453319771,
+          0.6141622551812197,
+          3.2437309460621436e-05
+        ],
+        "d_invariants_over_Hs": [
+          -9.543700536978657e-05,
+          0.00013236197393650553
+        ]
+      },
+      "max_finite_quad_violation": 0.002899612595493428,
+      "max_ratio_defect": 1.548277887730709e-05
+    },
+    {
+      "grid": 16,
+      "data": "warm-prompt-reheating-wide-quantum-grid16-2026-11-26.json.gz",
+      "peak_row": {
+        "log_scale_growth": 0.5159712452920395,
+        "visible_T": 0.06243782171482086,
+        "dark_T": 0.015395572062081685,
+        "invariants": [
+          0.00041247667845667485,
+          0.0001684833743928587
+        ],
+        "actual_counts": [
+          0.00040484364652257723,
+          0.0001608503424587613,
+          7.633031934097427e-06
+        ],
+        "phase_peak": [
+          0.17402076473404143,
+          0.6383285673519365,
+          0.0006150687706108439
+        ],
+        "d_invariants_over_Hs": [
+          0.00023172102918417014,
+          0.00013733462473887253
+        ]
+      },
+      "terminal": {
+        "log_scale_growth": 1.0006715060209252,
+        "visible_T": 0.0400000000406652,
+        "dark_T": 0.010680259412631852,
+        "invariants": [
+          0.0004285926848737014,
+          0.00022120441261818476
+        ],
+        "actual_counts": [
+          0.0004276714376477734,
+          0.00022028316539225712,
+          9.212472259284544e-07
+        ],
+        "phase_peak": [
+          0.09454151239813538,
+          0.6144263463801292,
+          3.243640402695407e-05
+        ],
+        "d_invariants_over_Hs": [
+          -9.546545952130148e-05,
+          0.00013239577812590203
+        ]
+      },
+      "max_finite_quad_violation": 0.0014362233880622632,
+      "max_ratio_defect": 2.9098789779968826e-06
+    }
+  ]
+}

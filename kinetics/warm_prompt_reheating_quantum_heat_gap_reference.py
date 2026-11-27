@@ -64,6 +64,10 @@ def run(eos,history):
                       phase_peak=r["peak"],invariants=r["invariant_yields"],
                       d_invariants_over_Hs=np.sum(r["dark_and_visible_count_sources"],axis=0).tolist())
                  for r in data["arms"][0]["rows"]]
+    elif "controls" in data:
+        samples=[dict(dark_T=v["dark_T"],visible_T=v["T_visible"],phase_peak=v["phase_factor"],
+                      invariants=v["invariants"],d_invariants_over_Hs=v["net_invariant_rates"])
+                 for v in data["controls"][-1]["rows"]]
     else:
         samples=data["history"][-1]["samples"]
     out=[]
