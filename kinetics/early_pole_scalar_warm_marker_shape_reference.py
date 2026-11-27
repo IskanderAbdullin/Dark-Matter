@@ -12,6 +12,30 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
+def compensate_spectators(q, counts, m, target):
+    """Least relative-count norm under explicit N, free E, and inverse E constraints."""
+    allowed=(q>1e-5)&(counts>0.)
+    en=np.hypot(q[allowed],m)
+    Q=np.array([np.ones(len(en)),en,1/en])
+    A=Q*counts[allowed]
+    norm=np.linalg.norm(A,axis=1)
+    if np.any(norm<=0.):
+        raise ValueError("Moment compensation requires nonzero spectator support.")
+    x,_,rank,_=np.linalg.lstsq(A/norm[:,None],target/norm,rcond=1e-14)
+    if rank!=3 or max(abs(x))>=.8:
+        raise ValueError("The constrained spectator change is rank-deficient or too large.")
+    delta=x*counts[allowed]
+    adjusted=counts.copy()
+    adjusted[allowed]+=delta
+    shift=Q@delta
+    err=shift-target
+    assert np.max(abs(err))<3e-22 and np.all(adjusted>=0.)
+    ledger=dict(outer_adjustment_bins=int(len(x)),maximum_relative_occupation_adjustment=float(max(abs(x))),
+                total_abs_count_moved=float(np.sum(abs(delta))),
+                adjusted_other_marker_moments=shift.tolist(),moment_defect=err.tolist())
+    return adjusted,ledger
+
+
 def run(path,projection,order,compensate=False):
     with gzip.open(path,'rt') as fh:r=json.load(fh)['branches'][projection]
     grid=r['grid']
@@ -75,21 +99,7 @@ def run(path,projection,order,compensate=False):
         adjusted=nk.copy()
         ext={}
         if name=='global_nej_matched':
-            allowed=(keep>1e-5)&(nk>0.)
-            en=np.hypot(keep[allowed],m0)
-            Q=np.array([np.ones(len(en)),en,1/en])
-            A=Q*nk[allowed]
-            norm=np.linalg.norm(A,axis=1)
-            target=np.array([0.,-dE,old_j-J0])
-            x=np.linalg.lstsq(A/norm[:,None],target/norm,rcond=1e-14)[0]
-            assert max(abs(x))<.8
-            delta=x*nk[allowed]
-            adjusted[allowed]+=delta
-            err=Q@delta-target
-            assert np.max(abs(err))<3e-22 and np.all(adjusted>=0.)
-            ext=dict(outer_adjustment_bins=int(len(x)),maximum_relative_occupation_adjustment=float(max(abs(x))),
-                     total_abs_count_moved=float(np.sum(abs(delta))),
-                     adjusted_other_marker_moments=(Q@delta).tolist(),moment_defect=err.tolist())
+            adjusted,ext=compensate_spectators(keep,nk,m0,np.array([0.,-dE,old_j-J0]))
         total=np.r_[adjusted,weights_new]
         def gap(m):
             return m*m-.5*C.lam*(total@np.reciprocal(np.hypot(seq,m)))

@@ -13,7 +13,9 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
-def run(path,projection,duration,panels,radial_order,outer,linear_probe=False,joined=False,warm_order=None):
+def run(path,projection,duration,panels,radial_order,outer,linear_probe=False,joined=False,warm_order=None,warm_compensate=False):
+    if warm_compensate and warm_order is None:
+        raise ValueError("Spectator compensation requires a distributed warm shape.")
     with gzip.open(path,'rt') as f:
         raw=json.load(f)['branches'][projection]
     grid=raw['grid']
@@ -78,16 +80,32 @@ def run(path,projection,duration,panels,radial_order,outer,linear_probe=False,jo
                 return v/v.sum()
             b=brentq(lambda a:probabilities(a)@g,-200.,200.)
             shape[j]=probabilities(b)
-        warm_N=(warm_N[:,None]*shape).ravel()
+        populations=warm_N[:,None]*shape
+        left=spectator[~take]
+        if warm_compensate:
+            from early_pole_scalar_warm_marker_shape_reference import compensate_spectators
+            dE=np.sum(populations*de)
+            # For an energy-matched shell, predict the inverse-energy excess
+            # from the positive variance identity, avoiding large subtraction.
+            dJ=np.sum(populations*de*de/(Enew*Eref[:,None]**2))-np.sum(
+                populations*de/Eref[:,None]**2)
+            left,ledger=compensate_spectators(spine[~take],left,old_pole,np.array([0.,-dE,-dJ]))
+            dN=float(populations.sum()-warm_N.sum()+ledger['adjusted_other_marker_moments'][0])
+            assert abs(dN)<1e-22
+            distributed['manufactured_spectator_compensation']=dict(ledger,
+                warm_energy_shift_at_marker_gap=float(dE),warm_inverse_energy_shift_at_marker_gap=float(dJ),
+                full_initial_number_defect=dN)
+        warm_N=populations.ravel()
         warm_q=qnew.ravel()
         warm_w=v.ravel()
-        left=spectator[~take]
         C.spq=np.r_[spine[~take],warm_q]
         spectator=np.r_[left,warm_N]
         take=np.r_[np.zeros(len(left),dtype=bool),np.ones(len(warm_N),dtype=bool)]
         C.spect=spectator.copy()
         _,new_rho,_,_,new_pole=C.scalar(N0)
         assert abs(new_rho-old_rho)<2e-21
+        if warm_compensate:
+            assert abs(new_pole-old_pole)<4e-18
         distributed.update(warm_quadrature_order=warm_order,initial_warm_shape="energy_matched",
                            common_old_marker_gap=old_pole,common_reconstructed_gap=new_pole,
                            common_initial_energy_difference=new_rho-old_rho)
@@ -155,7 +173,7 @@ def run(path,projection,duration,panels,radial_order,outer,linear_probe=False,jo
             return a
 
         init,_=evaluate(0.,base)
-        if not tail and warm_order is None:
+        if not tail and (warm_order is None or warm_compensate):
             np.testing.assert_allclose(init[C.j0:C.j0+n],shot['instantaneous_source_by_q'],
                                        rtol=5e-9,atol=2e-12)
         atol=np.r_[np.full(C.j0,3e-15),np.full(n,2e-18),
@@ -268,8 +286,10 @@ if __name__=='__main__':
     p.add_argument('--linear-probe',action='store_true')
     p.add_argument('--joined',action='store_true')
     p.add_argument('--warm-order',type=int)
+    p.add_argument('--warm-compensate',action='store_true',
+                   help='Manufactured N/E/J matching by changing unpromoted exterior spectators.')
     a=p.parse_args()
     if (a.duration<=0. or a.panels<1 or a.radial_order<2 or not 1e-5<a.outer[0]<a.outer[1]<=5.
-        or (a.warm_order is not None and a.warm_order<3)):
+        or (a.warm_order is not None and a.warm_order<3) or (a.warm_compensate and a.warm_order is None)):
         p.error('Invalid duration, resolution or warm-node limits.')
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
