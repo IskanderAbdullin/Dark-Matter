@@ -73,10 +73,52 @@ def finite_energy(M,old,new):
     v=np.r_[sum(dj[1:]),dj[0]+dj[1:]]
     return float(r+.5*M.c*(2*j+dj)@v)
 
+def elastic_at_midpoint(model, Y, dt, refinements=3, solver=None):
+    """Keep macro ordering and ledgers; bisect only a failed elastic solve."""
+    if solver is None:
+        solver=step
+    try:
+        return solver(model,Y,dt)
+    except RuntimeError as error:
+        # The known full-step failure is a two-field (duration, residuals)
+        # line-search failure. Never silently retry other runtime errors.
+        if (refinements<=0 or len(error.args)!=1
+            or not isinstance(error.args[0],tuple) or len(error.args[0])!=2
+            or error.args[0][0]!=dt or not isinstance(error.args[0][1],list)):
+            raise
+        mid,aa=elastic_at_midpoint(model,Y,dt/2,refinements-1,solver)
+        out,bb=elastic_at_midpoint(model,mid,dt/2,refinements-1,solver)
+        return out,dict(h=dt,entropy_gain=aa['entropy_gain']+bb['entropy_gain'],
+                        rejected_full_step_history=error.args[0][1],
+                        elastic_substeps=[aa,bb])
+
+
+def retry_fixture():
+    seq=[]
+    def toy(_,Y,h):
+        seq.append(h)
+        if h>.5:
+            raise RuntimeError((h,[3e-13,2e-13]))
+        return Y+h,dict(h=h,entropy_gain=2*h)
+    Y,info=elastic_at_midpoint(None,3.,1.,solver=toy)
+    assert seq==[1.,.5,.5] and Y==4. and info['entropy_gain']==2.
+    assert len(info['elastic_substeps'])==2
+    def other(*_):
+        raise RuntimeError("unrelated fixture")
+    try:
+        elastic_at_midpoint(None,3.,1.,solver=other)
+    except RuntimeError as e:
+        assert e.args==("unrelated fixture",)
+    else:
+        raise AssertionError("Unrelated runtime error did not propagate.")
+
+
 def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,resume=False,
-        checkpoint_every=12,progress_every=0,stop_after=None):
+        checkpoint_every=12,progress_every=0,stop_after=None,clock_scale=1.):
     if duration<=0. or steps<1:
         raise ValueError("positive duration and step count required")
+    if not np.isfinite(clock_scale) or not 0.<clock_scale<=1. or (full_H and clock_scale!=1.):
+        raise ValueError("Use a positive constant clock scale <=1 without conditional full H.")
     if resume and not checkpoint:
         raise ValueError("Resume requires a checkpoint path.")
     if checkpoint_every<1 or progress_every<0:
@@ -87,8 +129,11 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
         raise FileExistsError("Checkpoint exists; resume explicitly or choose another path.")
     requested=dict(format=1,grid=grid,duration=duration,steps=steps,expands=expands,full_H=full_H,
                    projection=projection,numpy=np.__version__,scipy=scipy_version)
+    if clock_scale!=1.:
+        requested['constant_clock_scale']=clock_scale
     old=json.loads(Path(checkpoint).read_text()) if resume else None
-    if old is not None and any(old.get('physics',{}).get(k)!=v for k,v in requested.items()):
+    if old is not None and (any(old.get('physics',{}).get(k)!=v for k,v in requested.items())
+                            or old.get('physics',{}).get('constant_clock_scale',1.)!=clock_scale):
         raise ValueError("FRW checkpoint physics does not match these controls.")
     C=Screened(grid,1,8,duration,(1,1,2),.08,1.,None,projection)
     M=C.M
@@ -125,6 +170,8 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
                 R[:C.j0]+=D.ravel(); R[-2:]+=[S,W]
             if full_H:
                 R/=np.sqrt(1+(rho+C.scalar(zz[C.j0:C.j0+C.n])[1])/vis)
+            elif clock_scale!=1.:
+                R*=clock_scale
             return np.r_[R,M.trace if expands else 0.]
         h=solve_ivp(f,(a,b),y,method='DOP853',rtol=2e-10,atol=3e-13)
         assert h.success
@@ -157,8 +204,12 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
         y=advance(y,dd*j,t)
         e,_=totals(y,t)
         scale=np.exp(M.eta)/(np.sqrt(1+e/vis) if full_H else 1.)
+        if clock_scale!=1.:
+            scale*=clock_scale
         C.factor,elastic.soft.fac=(k*scale for k in facs[:2])
-        Y,info=step(elastic,y[:C.j0].reshape(-1,2),dd)
+        Y,info=elastic_at_midpoint(elastic,y[:C.j0].reshape(-1,2),dd)
+        if progress_every and 'elastic_substeps' in info:
+            print(f"elastic solve bisected at macro step {j+1}",file=sys.stderr,flush=True)
         y[:C.j0]=Y.ravel()
         y[-3]+=info['entropy_gain']
         an.append(info)
@@ -178,9 +229,11 @@ def run(grid,duration,steps,expands,full_H,projection="steps",checkpoint=None,re
     return dict(grid=grid,expands=expands,full_H=full_H,steps=steps,duration=duration,projection=projection,
                 slow_rhs_calls=calls,state_history=history,initial_dark_visible=e0/vis,
                 scalar_gain=float((y-y0)[C.j0:C.j0+C.n].sum()),energy_ledger=err,
-                entropy_ledger=s-s0-y[-3],trace_integral=y[-1],implicit=an)
+                entropy_ledger=s-s0-y[-3],trace_integral=y[-1],implicit=an,
+                **(dict(constant_clock_scale=clock_scale) if clock_scale!=1. else {}))
 
 def fixture():
+    retry_fixture()
     out=[]
     for g in ('fine','third'):
         M=Screened(g,1,8,2e-6,(1,1,2),.08,1.).M
@@ -217,6 +270,7 @@ if __name__=='__main__':
     p.add_argument('--full-H',dest='full_H',action='store_true')
     p.add_argument("--projection",choices=("steps","cell-conservative"),default="steps")
     p.add_argument("--fixture",action="store_true")
+    p.add_argument("--clock-scale",type=float,default=1.)
     p.add_argument("--checkpoint")
     p.add_argument("--resume",action="store_true")
     p.add_argument("--checkpoint-every",type=int,default=12)
