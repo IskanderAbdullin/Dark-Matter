@@ -1,0 +1,483 @@
+{
+  "scope": "Three-mode static reduction bounded only in tested local domains.",
+  "rows": [
+    {
+      "T": 0.015,
+      "elastic_clock": 1,
+      "analytic_cubic_damping_pole_residue": 9.393063180140731e-05,
+      "isolated_chemical_peak": {
+        "squared_sound_speed_ratio": 0.9985871119159745,
+        "peak_k_over_gamma": 1.7372146759936538,
+        "peak_attenuation_to_angular_frequency": 0.0003535967817457586,
+        "amplitude_loss_fraction_per_cycle": 0.0022192479236720097,
+        "direct_root_ratios_at_relative_k": [
+          0.8,
+          1.0,
+          1.25
+        ],
+        "direct_attenuation_to_frequency": [
+          0.00034496070700941873,
+          0.0003535967817456464,
+          0.0003449607070094371
+        ]
+      },
+      "sweep": [
+        {
+          "timelike_weight": 0.001,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.2734750408116708e-08,
+              "cubic_damping_relative_error": 0.000621942988853541,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.5008143544528126e-10,
+              "schur_damping_relative_error": 5.94095883599266e-11
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 5.615534950576987e-07,
+              "cubic_damping_relative_error": 0.0006214212982731393,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.667018180757389e-10,
+              "schur_damping_relative_error": 1.5856747026532503e-09
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 8.696416743735808e-06,
+              "cubic_damping_relative_error": 0.0006134641240767014,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.296490177283327e-08,
+              "schur_damping_relative_error": 2.5025567618186528e-08
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 9.540012682320962e-05,
+              "cubic_damping_relative_error": 0.0005027308494095495,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.8545521230409325e-07,
+              "schur_damping_relative_error": 4.905820523148918e-07
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 0.00027101155972015665,
+              "cubic_damping_relative_error": 0.002475420232180281,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.3885357426460165e-06,
+              "schur_damping_relative_error": 2.4538067378010453e-06
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 0.0003715180092788832,
+              "cubic_damping_relative_error": 0.06636422377731876,
+              "schur_phase_error_as_fraction_of_speed_gap": 9.276751927926248e-05,
+              "schur_damping_relative_error": 6.811837916709251e-05
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 0.002726649771166173,
+              "cubic_damping_relative_error": 0.6374216222052793,
+              "schur_phase_error_as_fraction_of_speed_gap": 0.002232710604883665,
+              "schur_damping_relative_error": 0.010745520125229113
+            }
+          ]
+        },
+        {
+          "timelike_weight": 0.0001,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 3.603520596552693e-09,
+              "cubic_damping_relative_error": 6.226743169213123e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.3590670148980458e-09,
+              "schur_damping_relative_error": 2.6642243966534807e-11
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 5.233581970427798e-08,
+              "cubic_damping_relative_error": 6.22154076707071e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.791627702471687e-09,
+              "schur_damping_relative_error": 4.0208503193639444e-11
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 8.690338072163549e-07,
+              "cubic_damping_relative_error": 6.141977866891413e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.017525665834676e-09,
+              "schur_damping_relative_error": 2.435522894472797e-10
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 9.504940672102435e-06,
+              "cubic_damping_relative_error": 5.0356045779520464e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.8396782839546234e-09,
+              "schur_damping_relative_error": 4.9174022631603975e-09
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.7636273101898658e-05,
+              "cubic_damping_relative_error": 0.0002485807023966391,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.410553829551902e-08,
+              "schur_damping_relative_error": 2.3676383964499337e-08
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.9279171785066614e-05,
+              "cubic_damping_relative_error": 0.007076190929321102,
+              "schur_phase_error_as_fraction_of_speed_gap": 9.338210068620661e-07,
+              "schur_damping_relative_error": 2.8704860666195486e-07
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.823026939611359e-05,
+              "cubic_damping_relative_error": 0.15217812153392962,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.349842976624105e-05,
+              "schur_damping_relative_error": 3.043914404576853e-05
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-05,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.628963687745353e-09,
+              "cubic_damping_relative_error": 6.2276772601066455e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 4.468158048578027e-09,
+              "schur_damping_relative_error": 3.48198803123978e-10
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.0633102255772235e-08,
+              "cubic_damping_relative_error": 6.2223293478824715e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 5.082441050490562e-09,
+              "schur_damping_relative_error": 4.885136739574136e-11
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 6.335359962658123e-08,
+              "cubic_damping_relative_error": 6.142741926007389e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.339298877149943e-08,
+              "schur_damping_relative_error": 5.4497295565170134e-11
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 9.495974324391852e-07,
+              "cubic_damping_relative_error": 5.036658361490254e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 4.622138321057436e-10,
+              "schur_damping_relative_error": 8.964806674782722e-11
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.7694981902986777e-06,
+              "cubic_damping_relative_error": 2.486848731242386e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.4469777378384175e-10,
+              "schur_damping_relative_error": 2.3127166848269098e-10
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 5.0496211382643794e-06,
+              "cubic_damping_relative_error": 0.000712288666810168,
+              "schur_phase_error_as_fraction_of_speed_gap": 9.486713666869687e-09,
+              "schur_damping_relative_error": 2.4593815872719915e-09
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.84934986383418e-06,
+              "cubic_damping_relative_error": 0.017639299702414624,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.3517947584821815e-07,
+              "schur_damping_relative_error": 8.464649248196565e-08
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-06,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 3.5676218979209246e-07,
+              "cubic_damping_relative_error": 6.231218779850778e-07,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.569937062301466e-07,
+              "schur_damping_relative_error": 5.71279357153287e-10
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 6.571244635392536e-08,
+              "cubic_damping_relative_error": 6.231445118798362e-07,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.60206799135517e-08,
+              "schur_damping_relative_error": 9.072065321191758e-10
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.295994999242007e-07,
+              "cubic_damping_relative_error": 6.138698102065021e-07,
+              "schur_phase_error_as_fraction_of_speed_gap": 4.3802691668110565e-07,
+              "schur_damping_relative_error": 4.172382439548983e-10
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.5584496265854792e-07,
+              "cubic_damping_relative_error": 5.053051619352544e-07,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.103488605536203e-08,
+              "schur_damping_relative_error": 1.633517987542632e-09
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.9492682473157153e-07,
+              "cubic_damping_relative_error": 2.486556777370197e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.792259387846766e-08,
+              "schur_damping_relative_error": 4.3520298476096286e-10
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.989815364242178e-07,
+              "cubic_damping_relative_error": 7.12759408993957e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 7.308875664089109e-09,
+              "schur_damping_relative_error": 1.904543189823471e-11
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 5.158104335446136e-07,
+              "cubic_damping_relative_error": 0.0017924204046311232,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.7573954148048858e-09,
+              "schur_damping_relative_error": 6.700029420159126e-10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "T": 0.05,
+      "elastic_clock": 1,
+      "analytic_cubic_damping_pole_residue": 1.576849284367611e-06,
+      "isolated_chemical_peak": {
+        "squared_sound_speed_ratio": 0.9999798610041781,
+        "peak_k_over_gamma": 1.7327259677651576,
+        "peak_attenuation_to_angular_frequency": 5.034825002899286e-06,
+        "amplitude_loss_fraction_per_cycle": 3.1634238109374186e-05,
+        "direct_root_ratios_at_relative_k": [
+          0.8,
+          1.0,
+          1.25
+        ],
+        "direct_attenuation_to_frequency": [
+          4.912022009389554e-06,
+          5.034825002711742e-06,
+          4.912022009788487e-06
+        ]
+      },
+      "sweep": [
+        {
+          "timelike_weight": 0.001,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 7.616904901922986e-08,
+              "cubic_damping_relative_error": 0.0013456323384667401,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.3823126191868485e-08,
+              "schur_damping_relative_error": 1.1699574642420885e-10
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.3125262540175947e-06,
+              "cubic_damping_relative_error": 0.0013447343970494074,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.6483142861028325e-09,
+              "schur_damping_relative_error": 3.113017399414275e-09
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.0387323219253892e-05,
+              "cubic_damping_relative_error": 0.0013312283064562669,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.50373804618178e-08,
+              "schur_damping_relative_error": 4.967943501021921e-08
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 0.0002834760018100811,
+              "cubic_damping_relative_error": 0.00112368919833028,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.991810524218146e-07,
+              "schur_damping_relative_error": 1.020035630849847e-06
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 8.205215761448339e-05,
+              "cubic_damping_relative_error": 0.0033395685233221784,
+              "schur_phase_error_as_fraction_of_speed_gap": 4.6027158602854166e-06,
+              "schur_damping_relative_error": 7.500486521871963e-06
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.082225208363741e-05,
+              "cubic_damping_relative_error": 0.07979483671780296,
+              "schur_phase_error_as_fraction_of_speed_gap": 0.0001147831461495654,
+              "schur_damping_relative_error": 0.00016793270373427482
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 0.003804940287896346,
+              "cubic_damping_relative_error": 0.6818380560570318,
+              "schur_phase_error_as_fraction_of_speed_gap": 0.0027882826272485877,
+              "schur_damping_relative_error": 0.011261993575720775
+            }
+          ]
+        },
+        {
+          "timelike_weight": 0.0001,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.2874422406335343e-07,
+              "cubic_damping_relative_error": 0.00013482184922875007,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.235096317806173e-07,
+              "schur_damping_relative_error": 7.744516139496227e-11
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.647941351492041e-07,
+              "cubic_damping_relative_error": 0.00013471280962051857,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.956589422176076e-07,
+              "schur_damping_relative_error": 3.1982549941744765e-10
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.9710341423155213e-06,
+              "cubic_damping_relative_error": 0.00013336143993813998,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.623478629286932e-08,
+              "schur_damping_relative_error": 8.694369668660329e-10
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.8370573163562823e-05,
+              "cubic_damping_relative_error": 0.00011263351128310006,
+              "schur_phase_error_as_fraction_of_speed_gap": 7.609263161364248e-08,
+              "schur_damping_relative_error": 1.021492823660708e-08
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 7.5517208549569445e-06,
+              "cubic_damping_relative_error": 0.00033614303469775564,
+              "schur_phase_error_as_fraction_of_speed_gap": 5.194473144802759e-08,
+              "schur_damping_relative_error": 7.449839700690575e-08
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.5870767983768257e-05,
+              "cubic_damping_relative_error": 0.008630858570826017,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.1621176954702163e-06,
+              "schur_damping_relative_error": 1.333118170965264e-06
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.217528036213343e-05,
+              "cubic_damping_relative_error": 0.17937014611000512,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.901075997887117e-05,
+              "schur_damping_relative_error": 5.325903810060595e-05
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-05,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.724874574567145e-06,
+              "cubic_damping_relative_error": 1.3447179427639178e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.7255814355688283e-06,
+              "schur_damping_relative_error": 1.2151439854335422e-09
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 3.5524732465951376e-06,
+              "cubic_damping_relative_error": 1.3467056075189276e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.5658653969243275e-06,
+              "schur_damping_relative_error": 5.8584708195752455e-09
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 5.138764856129553e-06,
+              "cubic_damping_relative_error": 1.3339559677527646e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 4.934825904968208e-06,
+              "schur_damping_relative_error": 1.5290601007578175e-09
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.7192942734758367e-06,
+              "cubic_damping_relative_error": 1.1265288003659002e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.1049956847936432e-07,
+              "schur_damping_relative_error": 4.7282666670867e-10
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.593259206343977e-07,
+              "cubic_damping_relative_error": 3.363520299526357e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.882082451728372e-07,
+              "schur_damping_relative_error": 1.3548198118940036e-09
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.7553651193965132e-06,
+              "cubic_damping_relative_error": 0.0008701350008103459,
+              "schur_phase_error_as_fraction_of_speed_gap": 7.278757882198791e-09,
+              "schur_damping_relative_error": 1.3023517819732433e-08
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.4789251546841338e-06,
+              "cubic_damping_relative_error": 0.021400471995524417,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.9193359369522236e-07,
+              "schur_damping_relative_error": 3.420271841303446e-07
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-06,
+          "trace": [
+            {
+              "k_over_chem": 0.01,
+              "cubic_phase_error_as_fraction_of_speed_gap": 7.969418393897611e-06,
+              "cubic_damping_relative_error": 1.3190412680996744e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 7.968768845950119e-06,
+              "schur_damping_relative_error": 1.484302214471711e-08
+            },
+            {
+              "k_over_chem": 0.05,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.8011983688326894e-05,
+              "cubic_damping_relative_error": 1.335644417177484e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.801404695827775e-05,
+              "schur_damping_relative_error": 4.417914034604564e-09
+            },
+            {
+              "k_over_chem": 0.2,
+              "cubic_phase_error_as_fraction_of_speed_gap": 4.319264598610395e-06,
+              "cubic_damping_relative_error": 1.326681625224424e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 4.298116081614084e-06,
+              "schur_damping_relative_error": 1.3715034663519532e-09
+            },
+            {
+              "k_over_chem": 1.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 2.660491079876341e-06,
+              "cubic_damping_relative_error": 1.130567787943626e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 2.376963400795731e-06,
+              "schur_damping_relative_error": 1.236205982024785e-08
+            },
+            {
+              "k_over_chem": 4.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 7.441909043127867e-07,
+              "cubic_damping_relative_error": 3.3523804394697265e-06,
+              "schur_phase_error_as_fraction_of_speed_gap": 6.692254294315581e-07,
+              "schur_damping_relative_error": 3.015621530266799e-09
+            },
+            {
+              "k_over_chem": 20.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 5.297827685859703e-07,
+              "cubic_damping_relative_error": 8.707651127637384e-05,
+              "schur_phase_error_as_fraction_of_speed_gap": 3.5459586627688125e-07,
+              "schur_damping_relative_error": 5.791045420977525e-11
+            },
+            {
+              "k_over_chem": 100.0,
+              "cubic_phase_error_as_fraction_of_speed_gap": 1.8661130444440364e-07,
+              "cubic_damping_relative_error": 0.0021821429165875816,
+              "schur_phase_error_as_fraction_of_speed_gap": 1.299095894985611e-09,
+              "schur_damping_relative_error": 2.0374655296251376e-09
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
