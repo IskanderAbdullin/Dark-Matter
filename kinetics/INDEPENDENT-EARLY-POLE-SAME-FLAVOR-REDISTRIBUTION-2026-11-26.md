@@ -78,7 +78,16 @@ same step count. The initial tangent therefore does not
 predict the relative effect of adding self scattering over
 the whole finite interval. The calculations keep scalar
 gain positive and close the energy and entropy ledgers.
-No full temporal or collision-domain convergence is implied.
+Halving the time step (24 steps) changes the two joined
+absolute gains by about 0.14%, preserving their opposite
+relative signs in this particular step representation.
+With count-conserving continuous inputs on the unchanged
+native hard meshes (12 steps), the joined relative shifts
+are instead +31.89% and −5.58%. The temporal control does not
+remove the occupation-representation ambiguity. The
+[flavor conversion note](INDEPENDENT-EARLY-POLE-HARD-FLAVOR-CONVERSION-2026-11-26.md)
+links the extended reproduction data. No complete
+collision-domain convergence is implied.
 
 These are constrained local numerical experiments, not the
 full elastic gauge rate or a late scalar result.

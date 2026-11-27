@@ -860,3 +860,6 @@ fit or exclusion.
 - [Hard and screened same-flavor redistribution](INDEPENDENT-EARLY-POLE-SAME-FLAVOR-REDISTRIBUTION-2026-11-26.md):
   conserves each charged flavor's own energy while isolating soft
   aperture reshaping; the initial tangent does not fix the finite-time response.
+- [Hard charged flavor conversion and the initial chemical balance](INDEPENDENT-EARLY-POLE-HARD-FLAVOR-CONVERSION-2026-11-26.md):
+  evaluates the disjoint s-channel, independently reverses its integration,
+  and measures its number/energy effects in both standalone and joint models.
