@@ -15,7 +15,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False):
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
@@ -44,7 +44,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
     retune_check=None
-    if retune_local_daughter:
+    if retune_local_daughter or compensation_only:
         if projection!='steps' or prepared_input is not None:
             raise ValueError('Retuned local preparation requires the native graph and no alternate input.')
         from early_pole_daughter_complement_retune_reference import prepare
@@ -57,8 +57,17 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         local=np.flatnonzero((ed[:-1]>=1.4138888888888888-2e-14)&(ed[1:]<=1.4666666666666666+2e-14))
         if len(local)!=2:
             raise ValueError('Exactly two initial aperture cells required.')
-        _,y0,retune_check=prepare(M,y0,np.asarray(other['hard_moments']),M.r[2].start+local)
+        fixed=M.r[2].start+local
+        native=y0
+        _,y0,retune_check=prepare(M,native,np.asarray(other['hard_moments']),fixed)
         swap='retuned-local-daughter'
+        if compensation_only:
+            y0[fixed]=native[fixed]
+            swap='local-complement-only'
+            retune_check['actual_complement_only_number_and_bare_energy_difference']=[
+                float(np.sum((y0-native)[M.r[2],0])),
+                float(np.sum(M.shape[M.r[2]]*(y0-native)[M.r[2]]))]
+
     elastic=ElasticChannels(C,saved['grid'],1.)
     add=(ComptonKernel(M),ConversionKernel(M))
     k=M.r[1].start
@@ -145,6 +154,7 @@ if __name__=='__main__':
     group=p.add_mutually_exclusive_group()
     group.add_argument('--prepared-input')
     group.add_argument('--retune-local-daughter',action='store_true')
+    group.add_argument('--compensation-only',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')

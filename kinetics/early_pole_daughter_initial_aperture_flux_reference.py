@@ -11,7 +11,7 @@ from early_pole_archived_shared_cold_window_reference import Cold
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,local_result=None):
+def run(bundle,local_result=None,include_retuned=False):
     with gzip.open(bundle,'rt') as f:
         old=json.load(f)['branches']
     a,b=(old[k] for k in ('steps','cell-conservative'))
@@ -37,8 +37,15 @@ def run(bundle,local_result=None):
     out={}
     selectors=[('native',np.zeros_like(active)),
                ('outer_daughter',daughter&~active),('local_daughter',daughter&active)]
-    for case,selector in selectors:
-        Y=np.where(selector[:,None],y1,y0)
+    states={k:np.where(mask[:,None],y1,y0) for k,mask in selectors}
+    if include_retuned:
+        from early_pole_daughter_complement_retune_reference import prepare
+        ix=np.flatnonzero(daughter&active)
+        _,matched,_=prepare(M,y0,y1,ix)
+        outside=matched.copy()
+        outside[ix]=y0[ix]
+        states.update(retuned_local=matched,complement_only=outside)
+    for case,Y in states.items():
         if case=='local_daughter' and local_result is not None:
             ref=json.loads(Path(local_result).read_text())['snapshots'][0]
             np.testing.assert_array_equal(Y,ref['hard_moments'])
@@ -67,5 +74,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('bundle')
     p.add_argument('--local-result')
+    p.add_argument('--include-retuned',action='store_true')
     a=p.parse_args()
-    print(json.dumps(run(a.bundle,a.local_result),indent=2,allow_nan=False))
+    print(json.dumps(run(a.bundle,a.local_result,a.include_retuned),indent=2,allow_nan=False))
