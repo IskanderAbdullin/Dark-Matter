@@ -1,0 +1,104 @@
+{
+  "cases": {
+    "both": {
+      "fixed_cells": [
+        36,
+        37
+      ],
+      "complement_cells": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "number_and_bare_energy_defect": [
+        -3.469446951953614e-18,
+        0.0
+      ],
+      "original_swap_moment_defect": [
+        -8.812623459669017e-05,
+        -0.00012900341193407966
+      ],
+      "affine_logit_multipliers": [
+        0.006157183172924773,
+        0.053370702703750036
+      ],
+      "jacobian_condition": 65.78379370670073,
+      "raw_shift": -0.015510561012681914,
+      "retuned_shift": -0.015511072871403285,
+      "relative_change": 3.300065812927855e-05
+    },
+    "number": {
+      "fixed_cells": [
+        36,
+        37
+      ],
+      "complement_cells": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "number_and_bare_energy_defect": [
+        0.0,
+        0.0
+      ],
+      "original_swap_moment_defect": [
+        -8.812623459669017e-05,
+        -0.00012900341193407966
+      ],
+      "affine_logit_multipliers": [
+        0.006202557135977592,
+        -0.19123220428885263
+      ],
+      "jacobian_condition": 63.63659458152958,
+      "match_axes": [
+        true,
+        false
+      ],
+      "actual_moments_relative_to_native": [
+        0.0,
+        -0.00012900341193407966
+      ],
+      "target_moments_relative_to_native": [
+        0.0,
+        -0.00012900341193407966
+      ],
+      "raw_shift": -0.015510561012681914,
+      "retuned_shift": -0.015512196236130479,
+      "relative_change": 0.00010542645409339357
+    },
+    "bare_energy": {
+      "rejected": "Retune failed the fixed-moment or local-amplitude gate: defect=[0.0, 3.469446951953614e-18], multipliers=[0.0016106829207551724, 0.251263552525209]"
+    }
+  },
+  "scope": "Static controlled complement retunes, no time integration."
+}

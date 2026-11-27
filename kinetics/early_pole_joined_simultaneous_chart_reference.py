@@ -15,7 +15,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False):
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
@@ -44,7 +44,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
     retune_check=None
-    if retune_local_daughter or compensation_only:
+    if retune_local_daughter or compensation_only or number_only_local_retune:
         if projection!='steps' or prepared_input is not None:
             raise ValueError('Retuned local preparation requires the native graph and no alternate input.')
         from early_pole_daughter_complement_retune_reference import prepare
@@ -59,8 +59,9 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
             raise ValueError('Exactly two initial aperture cells required.')
         fixed=M.r[2].start+local
         native=y0
-        _,y0,retune_check=prepare(M,native,np.asarray(other['hard_moments']),fixed)
-        swap='retuned-local-daughter'
+        match=(True,not number_only_local_retune)
+        _,y0,retune_check=prepare(M,native,np.asarray(other['hard_moments']),fixed,match)
+        swap='number-only-retuned-local-daughter' if number_only_local_retune else 'retuned-local-daughter'
         if compensation_only:
             y0[fixed]=native[fixed]
             swap='local-complement-only'
@@ -155,6 +156,7 @@ if __name__=='__main__':
     group.add_argument('--prepared-input')
     group.add_argument('--retune-local-daughter',action='store_true')
     group.add_argument('--compensation-only',action='store_true')
+    group.add_argument('--number-only-local-retune',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')

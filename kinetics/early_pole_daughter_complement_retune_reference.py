@@ -10,7 +10,7 @@ from scipy.special import expit
 from early_pole_archived_shared_cold_window_reference import Cold
 
 
-def prepare(M,native,continuous,fixed_ids):
+def prepare(M,native,continuous,fixed_ids,match=(True,True)):
     full=np.arange(M.r[2].start,M.r[2].stop)
     fixed=np.asarray(fixed_ids)
     complement=np.setdiff1d(full,fixed,assume_unique=True)
@@ -20,7 +20,10 @@ def prepare(M,native,continuous,fixed_ids):
     swapped[fixed]=continuous[fixed]
     weights=M.shape
     moments=lambda y,ids:np.array([y[ids,0].sum(),np.sum(y[ids]*weights[ids])])
-    target=moments(native,full)-moments(swapped,fixed)
+    if match not in ((True,True),(True,False),(False,True)):
+        raise ValueError('Choose both moments or one moment with the other held at the raw swap.')
+    total_target=np.where(match,moments(native,full),moments(swapped,full))
+    target=total_target-moments(swapped,fixed)
     pivot=target[1]/target[0]
     bases=[np.vstack([np.ones_like(M.cells[i].B[0]),weights[i]@M.cells[i].B-pivot])
            for i in complement]
@@ -37,16 +40,21 @@ def prepare(M,native,continuous,fixed_ids):
         return moments(trial,complement)-target,J,trial
     fit=root(lambda x:eval_at(x)[0],np.zeros(2),jac=lambda x:eval_at(x)[1],tol=1e-11)
     _,jac,trial=eval_at(fit.x)
-    defect=moments(trial,full)-moments(native,full)
+    defect=moments(trial,full)-total_target
     if np.max(abs(defect))>=5e-14 or np.max(abs(fit.x))>=.2:
         raise ValueError('Retune failed the fixed-moment or local-amplitude gate: '
                          f'defect={defect.tolist()}, multipliers={fit.x.tolist()}')
     np.testing.assert_array_equal(trial[fixed],continuous[fixed])
+    extra={}
+    if match!=(True,True):
+        extra=dict(match_axes=list(match),actual_moments_relative_to_native=(
+                   moments(trial,full)-moments(native,full)).tolist(),
+                   target_moments_relative_to_native=(total_target-moments(native,full)).tolist())
     return swapped,trial,dict(fixed_cells=fixed.tolist(),complement_cells=complement.tolist(),
                               number_and_bare_energy_defect=defect.tolist(),
                               original_swap_moment_defect=(moments(swapped,full)-moments(native,full)).tolist(),
                               affine_logit_multipliers=fit.x.tolist(),
-                              jacobian_condition=float(np.linalg.cond(jac)))
+                              jacobian_condition=float(np.linalg.cond(jac)),**extra)
 
 
 def run(bundle):
