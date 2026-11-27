@@ -54,3 +54,33 @@ python -W error warm_prompt_reheating_post_anchor_scalar_ceiling_reference.py EO
 ~~~
 
 [Energy, count and normalization ledgers](results/warm-prompt-reheating-post-anchor-scalar-ceiling-2026-11-26.json).
+
+## Allow the specified vacuum charged-lepton energy input
+
+Use the [separate vacuum late lepton comparison](INDEPENDENT-WARM-LATE-LEPTON-RECYCLING-2026-11-26.md)
+to enclose pair input by C_lepton T_visible^9
+and fractional elastic heating by κ T_visible^5.
+With entropy degrees at least two, take
+T_visible≤A T_anchor/b where A=(g_s,anchor/2)^(1/3).
+The photon expansion floor then bounds the
+energy integral by C_lepton(A T_anchor)^9/(4H_gamma)
+and the heating exponent by κ(A T_anchor)^5/(3H_gamma).
+Grant the entire positive input from the start
+of the subsequent regeneration test. Each produced
+count unit costs at least m_light in the retained
+processes, including two fast daughters per heavy
+parent. Include both the direct count and the extra
+regeneration due to this energy.
+
+This increases the .016920 isolated result to
+.016938 at 2 MeV. At 80 keV the upper remains
+.01564651 at the shown precision. The extension is
+still restricted to the stated vacuum lepton and
+dark channels, not a bound for arbitrary external heating.
+
+~~~sh
+python -W error warm_prompt_reheating_cold_lepton_energy_allowance_reference.py EOS.late.dat \
+ results/warm-prompt-reheating-post-anchor-scalar-ceiling-2026-11-26.json
+~~~
+
+[Lepton energy allowance and updated count upper](results/warm-prompt-reheating-cold-lepton-energy-allowance-2026-11-26.json).
