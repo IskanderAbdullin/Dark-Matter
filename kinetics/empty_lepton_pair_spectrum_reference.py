@@ -48,7 +48,7 @@ def reduced_moments(T,src):
     return np.array([N.sum(),np.sum(q*N),
         np.sum((q*q/2+p*p*v[:,None]/6)*N+(p*p*v[:,None]/15)*A)])
 
-def spectrum(eos,TR,TF,order=(9,24,16),nout=18):
+def spectrum(eos,TR,TF,order=(9,24,16),nout=18,nhist=97):
     srcs=[Source(order,dark_mass=j) for j in (m,M)]
     x,w=rule(nout)
     lo,hi=np.log([TF,TR])
@@ -59,7 +59,7 @@ def spectrum(eos,TR,TF,order=(9,24,16),nout=18):
     rho=np.zeros(4)
     pp=np.zeros(4)
     before=after=0.
-    edges=np.r_[0.,np.geomspace(.005,90.,97)]
+    edges=np.r_[0.,np.geomspace(.005,90.,nhist)]
     hist=np.zeros((3,len(edges)-1))
     inscale=np.zeros(3)
     pcuts=np.array([.005,.01,.025,.05,.1])

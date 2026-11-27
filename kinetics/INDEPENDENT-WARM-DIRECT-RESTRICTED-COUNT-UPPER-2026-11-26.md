@@ -70,3 +70,6 @@ python -W error warm_direct_restricted_count_upper_reference.py EOS.late.dat KLO
 
 A [separate data-moment extension](INDEPENDENT-WARM-DIRECT-THREE-PION-DISPERSION-2026-11-26.md)
 adds the covered vacuum three-pion channel without assigning its resonance shape.
+
+A [gross-rate diagnostic of omitted heavy regeneration](INDEPENDENT-WARM-REHEATING-HEAVY-GAIN-PROBE-2026-11-26.md)
+finds the fixed-spectrum approximation is not perturbative at the hotter benchmark.
