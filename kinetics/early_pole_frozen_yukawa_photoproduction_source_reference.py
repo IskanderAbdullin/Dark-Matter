@@ -7,7 +7,7 @@ import numpy as np
 from scipy.special import roots_legendre
 
 from early_pole_hard_yukawa_photoproduction_reference import amplitudes, com, invariant_total, dot
-from early_pole_native_aperture_witness_reference import GRID, mode, occup
+from early_pole_native_aperture_witness_reference import GRID, PROFILES, mode, occup, refine
 
 
 def edges_between(e,lo,hi):
@@ -132,12 +132,24 @@ def frozen(q,ms,M,m,ie,fi,oe,fo,n,temperature=1.,chemical=False,pole_panels=True
     return lines*2  # charge conjugate; both spins and photon pols summed by the trace.
 
 
-def case(g,n,q,pole_panels=True,trace=False):
+def parent_input(grid,a,witness_mix):
+    if not 0<=witness_mix<=1:
+        raise ValueError("mix must be in [0,1]")
+    p=np.asarray(a['endpoint_parent_momentum_edges'])
+    P=np.asarray(a['endpoint_parent_occupations'])
+    if witness_mix:
+        profile=next(x for x in json.loads(PROFILES.read_text()) if x['grid']==grid)
+        p,P,change,_=refine(p,P,profile['parent'],a['x_end'])
+        P=P+witness_mix*(change-P)
+    return p,P
+
+
+def case(g,n,q,pole_panels=True,trace=False,witness_mix=0.):
     with gzip.open(GRID/f'early-pole-spectrum-{g}-m06-2026-11-26.json.gz','rt') as f:
         a=json.load(f)
     ms=a['checkpoints'][-1]['scalar_pole_over_T']
     heavy,light=.05,.003
-    p=np.asarray(a['endpoint_parent_momentum_edges']); P=np.asarray(a['endpoint_parent_occupations'])
+    p,P=parent_input(g,a,witness_mix)
     b=np.asarray(a['endpoint_fermion_momentum_edges']); B=np.asarray(a['endpoint_fermion_occupations'])
     ph=frozen(q,ms,heavy,light,p,P,b,B,n,pole_panels=pole_panels,trace=trace)
     bh=frozen(q,ms,light,heavy,b,B,p,P,n,pole_panels=pole_panels,trace=trace)
@@ -152,7 +164,9 @@ def case(g,n,q,pole_panels=True,trace=False):
                                                             coordinate_fixture(light,heavy,ms,q)),
                 parent_plus_photon=ph.tolist(),daughter_plus_photon=bh.tolist(),
                 direct_seed_and_stimulated_without_y2=vacuum.tolist(),
-                associated_seed_and_stimulated_relative_at_g005=((ph+bh)[[0,2]]*.005**2/vacuum).tolist())
+                associated_seed_and_stimulated_relative_at_g005=[
+                    float(x*.005**2/y) if abs(y)>1e-30 else None for x,y in zip((ph+bh)[[0,2]],vacuum)],
+                **(dict(witness_mix=witness_mix) if witness_mix else {}))
 
 
 if __name__=='__main__':
@@ -162,5 +176,6 @@ if __name__=='__main__':
     p.add_argument('--order',type=int,default=6)
     p.add_argument('--no-pole-panels',action='store_true')
     p.add_argument('--trace',action='store_true')
+    p.add_argument('--witness-mix',type=float,default=0.)
     a=p.parse_args()
-    print(json.dumps(case(a.grid,a.order,a.q,not a.no_pole_panels,a.trace),indent=2,allow_nan=False))
+    print(json.dumps(case(a.grid,a.order,a.q,not a.no_pole_panels,a.trace,a.witness_mix),indent=2,allow_nan=False))

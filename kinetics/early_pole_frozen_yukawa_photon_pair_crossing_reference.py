@@ -7,7 +7,7 @@ import numpy as np
 from scipy.special import roots_legendre
 
 from early_pole_hard_yukawa_photoproduction_reference import amplitudes,invariant_form
-from early_pole_frozen_yukawa_photoproduction_source_reference import edges_between
+from early_pole_frozen_yukawa_photoproduction_source_reference import edges_between,parent_input
 from early_pole_native_aperture_witness_reference import GRID,occup
 
 
@@ -42,15 +42,14 @@ def trace_control(M,m,ms):
     return max(errors)
 
 
-def source(g,n,q):
+def source(g,n,q,witness_mix=0.):
     with gzip.open(GRID/f'early-pole-spectrum-{g}-m06-2026-11-26.json.gz','rt') as f:
         a=json.load(f)
     ms=a['checkpoints'][-1]['scalar_pole_over_T']
     M,m=.05,.003
     es=np.hypot(q,ms)
-    ep=np.asarray(a['endpoint_parent_momentum_edges'])
+    ep,FP=parent_input(g,a,witness_mix)
     eb=np.asarray(a['endpoint_fermion_momentum_edges'])
-    FP=np.asarray(a['endpoint_parent_occupations'])
     FB=np.asarray(a['endpoint_fermion_occupations'])
     h0=(M+m)**2-ms*ms
     cuts=edges_between(np.array([h0/(2*(es+q)),h0/(2*es),h0/(2*(es-q)),.8,1.,1.5,2.,2.5,3.]),.5,4.)
@@ -112,7 +111,8 @@ def source(g,n,q):
     assert out<1e-13
     assert abs(res[0]-res[1]-res[2])<1e-10
     return dict(grid=g,q=q,order=n,emission_absorption_and_stimulated_without_couplings=res.tolist(),
-                thermal_balance_defect=out,independent_crossed_trace_relative_defect=trace_control(M,m,ms))
+                thermal_balance_defect=out,independent_crossed_trace_relative_defect=trace_control(M,m,ms),
+                **(dict(witness_mix=witness_mix) if witness_mix else {}))
 
 
 if __name__=='__main__':
@@ -120,5 +120,6 @@ if __name__=='__main__':
     p.add_argument('grid',choices=('fine','third'))
     p.add_argument('--q',type=float,default=4.1e-6)
     p.add_argument('--order',type=int,default=8)
+    p.add_argument('--witness-mix',type=float,default=0.)
     a=p.parse_args()
-    print(json.dumps(source(a.grid,a.order,a.q),indent=2,allow_nan=False))
+    print(json.dumps(source(a.grid,a.order,a.q,a.witness_mix),indent=2,allow_nan=False))
