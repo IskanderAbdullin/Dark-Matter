@@ -557,6 +557,11 @@ adds a momentum-resolved fermion daughter to the scalar pole feedback
 with a shared event count and an inverse-versus-Pauli-only control.
 The parent remains held and supplies energy and number.
 
+The [daughter occupation sign check](INDEPENDENT-EARLY-POLE-DAUGHTER-PAULI-BOUND-2026-11-26.md)
+distinguishes spontaneous seed from net stimulated gain and derives
+the least daughter count that could reverse a chosen mode.
+A plentiful daughter population can still miss the kinematic window.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
