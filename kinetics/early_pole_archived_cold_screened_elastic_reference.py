@@ -12,8 +12,8 @@ from early_pole_live_joint_hard_pair_packets_reference import gauss_each
 
 
 class Screened(Elastic):
-    def __init__(self,grid,wide,count,exposure,quadrature,cut,strength):
-        Cold.__init__(self,grid,wide,0,count,True,exposure=exposure)
+    def __init__(self,grid,wide,count,exposure,quadrature,cut,strength,aperture_grid=None,projection="steps",subdivision=1):
+        Cold.__init__(self,grid,wide,0,count,True,exposure=exposure,reference_aperture_grid=aperture_grid,archive_projection=projection,aperture_subdivision=subdivision)
         self.cut=cut
         self.strength=strength
         self.reject_E=0.
@@ -74,7 +74,7 @@ class Screened(Elastic):
         self.original_geometry=(pa,P,B)
         return ids[:3],xv[:3],pb,Q,W
 
-    def collision(self,e,f,grad):
+    def collision(self,e,f,grad,split_affinity=False):
         M=self.M
         ix,u,pb,Q,W=self.graph
         d=M.r[2]
@@ -113,6 +113,33 @@ class Screened(Elastic):
         leaf=R*(ec-val[1])
         assert abs(heat-leaf.sum())<5e-12*max(1.,abs(heat))
         self.last_split=[float(leaf[Q<self.cut].sum()),float(leaf[Q>=self.cut].sum())]
+        if split_affinity:
+            # Logarithmic FD mean makes the exact local nonlinear rate
+            # a positive packet mobility times the affinity.
+            L=np.divide(raw,affinity,out=size.copy(),where=abs(affinity)>1e-14)
+            mobility=self.factor*self.strength*W*ok*L
+            assert np.min(mobility)>=0.
+            eq=ec-val[1]
+            G=float(mobility@(eq*eq))
+            assert G>0.
+            hdir=np.zeros_like(out)
+            for ids,basis,sgn in zip([*ix,j],[*u,v],(-1.,-1.,1.,1.),strict=True):
+                r=sgn*mobility*eq*(heat/G)
+                hdir[:,0]+=np.bincount(ids,weights=r,minlength=len(out))
+                hdir[:,1]+=np.bincount(ids,weights=r*basis,minlength=len(out))
+            shape=out-hdir
+            normalized_fraction=heat**2/(G*ent) if ent>0. else 0.
+            assert 0.<=normalized_fraction<=1.+2e-10
+            assert abs(np.sum(grad[d]*shape[d]))<3e-10*max(1.,abs(heat))
+            heat_entropy=float(-np.sum(f[self.M.r[1].start:]*hdir[self.M.r[1].start:]))
+            assert abs(heat_entropy-heat**2/G)<2e-10*max(1.,heat_entropy)
+            for vec in (hdir,shape):
+                assert abs(np.sum(grad*vec))<2e-10*max(np.sum(abs(vec)),1.)
+                assert max(abs(vec[sl,0].sum()) for sl in self.M.r[1:])<2e-10*max(np.sum(abs(vec)),1.)
+            return dict(total=out,heat=hdir,shape=shape,conductance=G,
+                        entropy=ent,heat_flux=heat,heat_entropy_fraction=normalized_fraction,
+                        heat_entropy=heat_entropy,shape_entropy=ent-heat_entropy,
+                        zero_heat_residual=float(np.sum(grad[d]*shape[d])))
         return out,ent,work,heat
 
     def one(self,pair):
@@ -201,12 +228,12 @@ class Screened(Elastic):
         return rows
 
 
-def run(grid,wide,n,exposure,level,cut,strength,static):
+def run(grid,wide,n,exposure,level,cut,strength,static,aperture_grid=None,projection="steps",subdivision=1):
     order=[(1,1,2),(1,2,3),(2,2,3)][level]
-    M=Screened(grid,wide,n,exposure,order,cut,strength)
+    M=Screened(grid,wide,n,exposure,order,cut,strength,aperture_grid,projection,subdivision)
     rows=M.static()
     out=dict(scope='Live two-flavor elastic subset with a frozen polarization, not full gauge transport.',
-             grid=grid,wide=wide,order=order,matching_Q=cut,strength=strength,
+             grid=grid,aperture_grid=aperture_grid or grid,projection=projection,subdivision=subdivision,wide=wide,order=order,matching_Q=cut,strength=strength,
              packets=M.graph[-1].size,static=rows,max_static_remap_rejection=M.reject_E)
     M.reject_E=0.
     if not static:
@@ -227,5 +254,8 @@ if __name__=='__main__':
     p.add_argument('--level',type=int,default=0,choices=(0,1,2))
     p.add_argument('--cut',type=float,default=.08,choices=(.04,.08,.16))
     p.add_argument('--strength',type=float,default=1.)
+    p.add_argument('--aperture-grid',choices=('fine','third'))
+    p.add_argument('--projection',choices=('steps','cell-conservative'),default='steps')
+    p.add_argument('--subdivision',type=int,choices=range(1,7),default=1)
     p.add_argument('--evolve',dest='static',action='store_false',help='run the short resolved initial transient')
     print(json.dumps(run(**vars(p.parse_args())),indent=2,allow_nan=False))

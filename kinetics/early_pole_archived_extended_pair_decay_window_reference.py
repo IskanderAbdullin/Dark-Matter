@@ -4,6 +4,7 @@ import json
 import numpy as np
 from scipy.special import roots_legendre
 from scipy.optimize import brentq
+from scipy.interpolate import PchipInterpolator
 
 from early_pole_frozen_dynamic_vlasov_reference import load
 from early_pole_snapshot_gauge_ledger_reference import cell_J,photon
@@ -33,19 +34,21 @@ class ArchivePackets(Packets):
         return E,rho,S,f
 
 
-def fit_archive_cell(C,edges,f):
+def fit_archive_cell(C,edges,f,projection=None):
     q,sw=roots_legendre(12)
     lo,hi=C.lo,C.hi
     p=np.unique(np.r_[lo,edges[(edges>lo)&(edges<hi)],hi])
     dh=np.diff(p)[:,None]/2
     z=((p[1:]+p[:-1])[:,None]/2+dh*q).ravel()
     w=(dh*sw).ravel()*z*z*2/np.pi**2
-    u=f[np.searchsorted(edges,z)-1]
+    u=f[np.searchsorted(edges,z)-1] if projection is None else projection(z)
+    if projection is not None:
+        assert np.min(u)>=0. and np.max(u)<=1.
     Y=np.r_[w@u,(w*u)@C.basis(z)]
     return Y
 
 
-def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.45):
+def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.45,reference_aperture_grid=None,archive_projection="steps",aperture_subdivision=1):
     d=load(f'results/early-pole-spectrum-{grid}-m06-2026-11-26.json.gz')
     edges=([.5,.92,1.12,1.55,2.0,2.55,3.15,4.],
            [.45,.65,.85,1.05,1.25,1.7,2.2,2.85,3.7,5.],
@@ -53,17 +56,27 @@ def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.4
     if wide==2:
         edges=tuple(z+extra for z,extra in zip(
             edges,([4.7,5.7,6.8,8.],[6.1,7.25,8.55,10.],[6.1,7.25,8.55,10.]),strict=True))
+    if aperture_subdivision<1 or (aperture_subdivision>1 and not aperture_refined):
+        raise ValueError("subdivision requires a refined aperture")
     if aperture_refined:
         if edges is None:
             edges=([.5,.92,1.12,1.55,2.0],
                    [.45,.65,.85,1.05,1.25,1.7,2.2],
                    [.45,.69,.8,1.03,1.3,1.7,2.2])
+        ref=d if reference_aperture_grid is None or reference_aperture_grid==grid else load(
+            f"results/early-pole-spectrum-{reference_aperture_grid}-m06-2026-11-26.json.gz")
         add=[1.32,1.56]
         for t in ('parent','fermion'):
-            old=np.array(d[f'endpoint_{t}_momentum_edges'])
+            old=np.array(ref[f'endpoint_{t}_momentum_edges'])
             add.extend(old[(old>1.32)&(old<1.56)])
         def join(existing):
             a=np.unique(np.r_[existing,add])
+            if aperture_subdivision>1:
+                near=(a[1:]>1.395)&(a[:-1]<1.475)
+                left=a[:-1][near]
+                widths=a[1:][near]-left
+                extra=left[:,None]+widths[:,None]*np.arange(1,aperture_subdivision)/aperture_subdivision
+                a=np.unique(np.r_[a,extra.ravel()])
             return a[np.r_[True,np.diff(a)>1e-10]].tolist()
         edges=(edges[0],join(edges[1]),join(edges[2]))
         assert len(edges[1])==len(edges[2])
@@ -75,6 +88,8 @@ def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.4
         lower=[charge_floor,(charge_floor+.45)/2]
         edges=(edges[0],lower+edges[1],lower+edges[2])
     assert field_floor<=charge_floor<=.45
+    if archive_projection not in ("steps","cell-conservative"):
+        raise ValueError("unknown archive projection")
     quad=[(2,3,10,-3),(3,5,14,-3)][level]
     M=ArchivePackets(12,quad,0.,edges=edges)
     total=np.zeros(3)
@@ -93,9 +108,15 @@ def mount(grid,wide,level,aperture_refined=False,charge_floor=.45,field_floor=.4
         f=np.asarray(d[f'endpoint_{name}_occupations'])
         total[k]=cell_J(e,f,m,field_floor)
         original[k]=cell_J(e,f,m,M.edge_sets[k][0])-cell_J(e,f,m,M.edge_sets[k][-1])
+        projection=None
+        if archive_projection=="cell-conservative":
+            q3=e**3/3
+            curve=PchipInterpolator(q3,np.r_[0.,np.cumsum(f*np.diff(q3))],extrapolate=False).derivative()
+            def projection(p,curve=curve):
+                return np.maximum(np.nan_to_num(curve(p**3/3)),0.)
         for i in range(M.r[k].start,M.r[k].stop):
             C=M.cells[i]
-            M.init[i]=fit_archive_cell(C,e,f)
+            M.init[i]=fit_archive_cell(C,e,f,projection)
             active[k]+=C.fit(M.init[i])[1]
     M.background=total-original
     assert np.min(M.background)>=0.

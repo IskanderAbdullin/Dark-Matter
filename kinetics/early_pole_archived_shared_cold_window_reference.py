@@ -14,11 +14,17 @@ from early_pole_decay_mode_clock_reference import G,KAPPA
 
 
 class Cold:
-    def __init__(self,grid,wide,level,n,aperture_refined=False,charge_floor=.45,field_floor=.45,exposure=8e-5):
+    def __init__(self,grid,wide,level,n,aperture_refined=False,charge_floor=.45,field_floor=.45,exposure=8e-5,reference_aperture_grid=None,archive_projection="steps",aperture_subdivision=1):
         self.exposure=exposure
-        self.M,d,quad,remap=mount(grid,wide,level,aperture_refined,charge_floor,field_floor)
+        self.M,d,quad,remap=mount(grid,wide,level,aperture_refined,charge_floor,field_floor,reference_aperture_grid,archive_projection,aperture_subdivision)
         self.info=dict(grid=grid,wide=wide,quad=quad,initial_hard_moment_difference=remap,
                        aperture_refined=aperture_refined,charge_floor=charge_floor,field_floor=field_floor,hard_cells=[k.stop-k.start for k in self.M.r])
+        if reference_aperture_grid is not None:
+            self.info['reference_aperture_grid']=reference_aperture_grid
+        if archive_projection!='steps':
+            self.info['archive_projection']=archive_projection
+        if aperture_subdivision>1:
+            self.info['aperture_subdivision']=aperture_subdivision
         old=np.asarray(d['scalar_momentum_edges'])
         counts=np.array(d['endpoint_scalar_signed_shell_number_over_T3'])
         assert -np.minimum(counts,0.).sum()<1e-10*counts.sum()

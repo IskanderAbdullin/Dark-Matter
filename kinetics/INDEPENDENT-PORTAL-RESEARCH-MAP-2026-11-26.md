@@ -838,3 +838,6 @@ fit or exclusion.
   conserving packets reproduce initial daughter heating but give
   opposite short relative scalar-gain changes on the two archive
   reconstructions; the full dynamical sign is unresolved.
+- [Crossed hard meshes and local heat versus shape redistribution](INDEPENDENT-EARLY-POLE-SCREENED-HEAT-VS-REDISTRIBUTION-2026-11-26.md):
+  isolates daughter energy exchange from the much larger heat-neutral
+  aperture response, and tests both shell representation and hard-mesh effects.
