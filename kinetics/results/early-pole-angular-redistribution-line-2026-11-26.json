@@ -1,0 +1,127 @@
+{
+  "scope": "fixed radial momentum; linear angular detuning; uniform Markov redraw with gain equals loss on the isotropic component; no physical gauge collision calibration, no radial diffusion, no KMS rate",
+  "finite_matrix_max_relative_error": 4.5071292575259414e-14,
+  "independent_legendre_max_relative_error": 1.7823520437332263e-12,
+  "rows": [
+    {
+      "nu_over_angular_halfspan": 0.1,
+      "loss_only": {
+        "peak": 1.4711276742047248,
+        "half_width": 1.0049875621220394,
+        "area_over_pi": 1.0000000000000462
+      },
+      "rotational_diffusion_half_width": 0.8942073710222361,
+      "conserving_redraw": {
+        "peak": 1.724879465900024,
+        "half_width": 0.943501239193537,
+        "area_over_pi": 1.000000000000011
+      },
+      "isolated_decay_pole": null
+    },
+    {
+      "nu_over_angular_halfspan": 0.3,
+      "loss_only": {
+        "peak": 1.2793395322252865,
+        "half_width": 1.0440306509197896,
+        "area_over_pi": 1.0000000000000189
+      },
+      "rotational_diffusion_half_width": 0.8038289748506695,
+      "conserving_redraw": {
+        "peak": 2.0761820727585034,
+        "half_width": 0.7534731317548434,
+        "area_over_pi": 1.0000000000000178
+      },
+      "isolated_decay_pole": null
+    },
+    {
+      "nu_over_angular_halfspan": 0.6366197723675814,
+      "loss_only": {
+        "peak": 1.0038848217827272,
+        "half_width": 1.1854470611109866,
+        "area_over_pi": 0.9999999999999474
+      },
+      "rotational_diffusion_half_width": 0.6149278517143583,
+      "conserving_redraw": {
+        "peak": 2.781560396357819,
+        "half_width": 0.49236359172229244,
+        "area_over_pi": 0.9999999999999467
+      },
+      "isolated_decay_pole": null
+    },
+    {
+      "nu_over_angular_halfspan": 1.0,
+      "loss_only": {
+        "peak": 0.7853981633474483,
+        "half_width": 1.4142135624433596,
+        "area_over_pi": 0.9999999999999486
+      },
+      "rotational_diffusion_half_width": 0.40229009715683095,
+      "conserving_redraw": {
+        "peak": 3.659792365239804,
+        "half_width": 0.3343519561246087,
+        "area_over_pi": 0.9999999999999474
+      },
+      "isolated_decay_pole": 0.35790738406566935
+    },
+    {
+      "nu_over_angular_halfspan": 3.0,
+      "loss_only": {
+        "peak": 0.3217505543866422,
+        "half_width": 3.1622776602632503,
+        "area_over_pi": 1.0000000000001363
+      },
+      "rotational_diffusion_half_width": 0.11415234732194439,
+      "conserving_redraw": {
+        "peak": 9.259451923338805,
+        "half_width": 0.11179839477827191,
+        "area_over_pi": 0.9999999999999947
+      },
+      "isolated_decay_pole": 0.11194296372272294
+    },
+    {
+      "nu_over_angular_halfspan": 10.0,
+      "loss_only": {
+        "peak": 0.09966865249017193,
+        "half_width": 10.049875621220393,
+        "area_over_pi": 1.0000000000000127
+      },
+      "rotational_diffusion_half_width": 0.03341488539912827,
+      "conserving_redraw": {
+        "peak": 30.07979524031652,
+        "half_width": 0.0333552081987024,
+        "area_over_pi": 1.0000000000001528
+      },
+      "isolated_decay_pole": 0.03335557674076206
+    },
+    {
+      "nu_over_angular_halfspan": 30.0,
+      "loss_only": {
+        "peak": 0.03332099587813621,
+        "half_width": 30.016662039707217,
+        "area_over_pi": 1.0000000000005556
+      },
+      "rotational_diffusion_half_width": 0.011114129338350513,
+      "conserving_redraw": {
+        "peak": 90.0266582417645,
+        "half_width": 0.01111193281997998,
+        "area_over_pi": 1.0000000000000877
+      },
+      "isolated_decay_pole": 0.011111934243480448
+    },
+    {
+      "nu_over_angular_halfspan": 100.0,
+      "loss_only": {
+        "peak": 0.009999666686655239,
+        "half_width": 100.0049998751061,
+        "area_over_pi": 0.9999999999985406
+      },
+      "rotational_diffusion_half_width": 0.0033334149155490856,
+      "conserving_redraw": {
+        "peak": 300.00799079358177,
+        "half_width": 0.003333355650096267,
+        "area_over_pi": 1.0000000000725122
+      },
+      "isolated_decay_pole": 0.0033333555557817363
+    }
+  ]
+}

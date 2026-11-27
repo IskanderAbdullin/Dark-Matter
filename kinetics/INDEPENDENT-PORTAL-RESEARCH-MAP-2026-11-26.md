@@ -736,3 +736,13 @@ A viable mechanism at the intended abundance needs a self-consistent
 transfer calculation before observation tests. The linked inputs,
 commands, negative results and controls do not establish a general
 fit or exclusion.
+
+### Soft neutral scalar line: what broadening may and may not change
+
+- [Broadened angular aperture and thermal balance](INDEPENDENT-EARLY-POLE-FINITE-RESONANCE-APERTURE-2026-11-26.md):
+  normalizing an imposed width can mostly move seed support between radial
+  shells rather than suppress the integrated seed; a naive energy smearing
+  does not preserve thermal balance.
+- [Conserving angular-dephasing witness](INDEPENDENT-EARLY-POLE-ANGULAR-REDISTRIBUTION-LINE-2026-11-26.md):
+  matching gain and loss yields an opposite width trend from loss-only at
+  fixed radial momentum. A calibrated gauge two-line vertex remains open.
