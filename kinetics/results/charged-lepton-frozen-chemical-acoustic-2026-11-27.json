@@ -1,0 +1,445 @@
+{
+  "scope": "Static ideal thermal limit with both directions of pair reactions removed; not a cosmological transition.",
+  "rows": [
+    {
+      "T": 0.015,
+      "visible_to_dark_enthalpy_ratio": 1.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 0.0,
+          "damping": 0.023302207837510528,
+          "bulk_term": 0.023302207837510528,
+          "heat_term": 0.0,
+          "smaller_k": 0.011848770462301123,
+          "direct_damping": 0.023302120937475405
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.3211920869000139,
+          "damping": 0.00011311015332334418,
+          "bulk_term": 7.622897684415162e-05,
+          "heat_term": 3.688117647919256e-05,
+          "smaller_k": 0.011848770462301123,
+          "direct_damping": 0.00011310701419431342
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 0.0,
+          "damping": 0.0623649729855299,
+          "bulk_term": 0.0623649729855299,
+          "heat_term": 0.0,
+          "smaller_k": 0.011848770462301123,
+          "direct_damping": 0.062364521971454714
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.3211920869000139,
+          "damping": 0.0002408969553594821,
+          "bulk_term": 0.00020401577888028955,
+          "heat_term": 3.688117647919256e-05,
+          "smaller_k": 0.011848770462301123,
+          "direct_damping": 0.00024088756258171693
+        }
+      ]
+    },
+    {
+      "T": 0.015,
+      "visible_to_dark_enthalpy_ratio": 10.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 5.689392657979872e-32,
+          "damping": 0.05503051495512213,
+          "bulk_term": 0.05503051495512213,
+          "heat_term": 0.0,
+          "smaller_k": 0.008848770462301122,
+          "direct_damping": 0.0550303486495384
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33112044652647105,
+          "damping": 5.095425980706613e-05,
+          "bulk_term": 3.893098454311739e-05,
+          "heat_term": 1.2023275263948736e-05,
+          "smaller_k": 0.008848770462301122,
+          "direct_damping": 5.095299483842762e-05
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 5.689392657979872e-32,
+          "damping": 0.14728117620817868,
+          "bulk_term": 0.14728117620817868,
+          "heat_term": 0.0,
+          "smaller_k": 0.008848770462301122,
+          "direct_damping": 0.14728095277467596
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33112044652647105,
+          "damping": 0.00011621639791832908,
+          "bulk_term": 0.00010419312265438034,
+          "heat_term": 1.2023275263948736e-05,
+          "smaller_k": 0.008848770462301122,
+          "direct_damping": 0.00011621203392801334
+        }
+      ]
+    },
+    {
+      "T": 0.05,
+      "visible_to_dark_enthalpy_ratio": 1.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 2.4104969276606025e-32,
+          "damping": 0.027301881518251945,
+          "bulk_term": 0.027301881518251945,
+          "heat_term": 0.0,
+          "smaller_k": 0.01187844981131601,
+          "direct_damping": 0.027301785129562824
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.331887351683041,
+          "damping": 2.4678816046938537e-06,
+          "bulk_term": 1.3335464471221814e-06,
+          "heat_term": 1.1343351575716723e-06,
+          "smaller_k": 0.01187844981131601,
+          "direct_damping": 2.467799686758321e-06
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 2.4104969276606025e-32,
+          "damping": 0.0716865612830729,
+          "bulk_term": 0.0716865612830729,
+          "heat_term": 0.0,
+          "smaller_k": 0.01187844981131601,
+          "direct_damping": 0.0716861212252427
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.331887351683041,
+          "damping": 4.6358286001221186e-06,
+          "bulk_term": 3.501493442550446e-06,
+          "heat_term": 1.1343351575716725e-06,
+          "smaller_k": 0.01187844981131601,
+          "direct_damping": 4.635623088536063e-06
+        }
+      ]
+    },
+    {
+      "T": 0.05,
+      "visible_to_dark_enthalpy_ratio": 10.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 1.3171391129865162e-42,
+          "damping": 0.06617704246545458,
+          "bulk_term": 0.06617704246545458,
+          "heat_term": 0.0,
+          "smaller_k": 0.008878449811316011,
+          "direct_damping": 0.06617687806601373
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.3330702620198178,
+          "damping": 1.0355509267052904e-06,
+          "bulk_term": 6.663830111731094e-07,
+          "heat_term": 3.6916791553218103e-07,
+          "smaller_k": 0.008878449811316011,
+          "direct_damping": 1.0355203971915057e-06
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 3.2638351573961874e-42,
+          "damping": 0.17376108701742213,
+          "bulk_term": 0.17376108701742213,
+          "heat_term": 0.0,
+          "smaller_k": 0.008878449811316011,
+          "direct_damping": 0.17376129321792208
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.3330702620198177,
+          "damping": 2.1188900559834453e-06,
+          "bulk_term": 1.7497221404512225e-06,
+          "heat_term": 3.6916791553222275e-07,
+          "smaller_k": 0.008878449811316011,
+          "direct_damping": 2.118805157293103e-06
+        }
+      ]
+    },
+    {
+      "T": 0.1,
+      "visible_to_dark_enthalpy_ratio": 1.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 1.3108360683985624e-32,
+          "damping": 0.028583120614547302,
+          "bulk_term": 0.028583120614547302,
+          "heat_term": 0.0,
+          "smaller_k": 0.01185979389443132,
+          "direct_damping": 0.02858301792958811
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.3329617269054438,
+          "damping": 1.8277999011850903e-07,
+          "bulk_term": 9.554654841410164e-08,
+          "heat_term": 8.723344170440739e-08,
+          "smaller_k": 0.01185979389443132,
+          "direct_damping": 1.8277373291423921e-07
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 1.3108360683985624e-32,
+          "damping": 0.0725962567834243,
+          "bulk_term": 0.0725962567834243,
+          "heat_term": 0.0,
+          "smaller_k": 0.01185979389443132,
+          "direct_damping": 0.07259581909418457
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.3329617269054438,
+          "damping": 3.2990539684109667e-07,
+          "bulk_term": 2.426719551366893e-07,
+          "heat_term": 8.723344170440738e-08,
+          "smaller_k": 0.01185979389443132,
+          "direct_damping": 3.2989043975837263e-07
+        }
+      ]
+    },
+    {
+      "T": 0.1,
+      "visible_to_dark_enthalpy_ratio": 10.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 2.7733391199176196e-32,
+          "damping": 0.06950308787351431,
+          "bulk_term": 0.06950308787351431,
+          "heat_term": 0.0,
+          "smaller_k": 0.008859793894431324,
+          "direct_damping": 0.0695029183745913
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33326575578956313,
+          "damping": 7.580479959926875e-08,
+          "bulk_term": 4.7384584318183755e-08,
+          "heat_term": 2.8420215281084996e-08,
+          "smaller_k": 0.008859793894431324,
+          "direct_damping": 7.580248657713252e-08
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 2.7733391199176196e-32,
+          "damping": 0.17652600227067475,
+          "bulk_term": 0.17652600227067475,
+          "heat_term": 0.0,
+          "smaller_k": 0.008859793894431324,
+          "direct_damping": 0.17652625701902827
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33326575578956313,
+          "damping": 1.4876898675105308e-07,
+          "bulk_term": 1.2034877146996808e-07,
+          "heat_term": 2.8420215281084996e-08,
+          "smaller_k": 0.008859793894431324,
+          "direct_damping": 1.487629142855948e-07
+        }
+      ]
+    },
+    {
+      "T": 0.3,
+      "visible_to_dark_enthalpy_ratio": 1.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 2.336862465965941e-34,
+          "damping": 0.029359189529904434,
+          "bulk_term": 0.029359189529904434,
+          "heat_term": 0.0,
+          "smaller_k": 0.011852943815590105,
+          "direct_damping": 0.029359082479196903
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33329168369112927,
+          "damping": 2.440044288634424e-09,
+          "bulk_term": 1.2593161233938177e-09,
+          "heat_term": 1.1807281652406065e-09,
+          "smaller_k": 0.011852943815590105,
+          "direct_damping": 2.4399594660737523e-09
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 2.336862465965941e-34,
+          "damping": 0.0728815645844634,
+          "bulk_term": 0.0728815645844634,
+          "heat_term": 0.0,
+          "smaller_k": 0.011852943815590105,
+          "direct_damping": 0.07288112771274606
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33329168369112927,
+          "damping": 4.306867913951898e-09,
+          "bulk_term": 3.126139748711291e-09,
+          "heat_term": 1.1807281652406065e-09,
+          "smaller_k": 0.011852943815590105,
+          "direct_damping": 4.3066705091018845e-09
+        }
+      ]
+    },
+    {
+      "T": 0.3,
+      "visible_to_dark_enthalpy_ratio": 10.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 3.801209933060722e-35,
+          "damping": 0.07146205312771912,
+          "bulk_term": 0.07146205312771912,
+          "heat_term": 0.0,
+          "smaller_k": 0.008852943815590111,
+          "direct_damping": 0.07146187969908743
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33332576049865875,
+          "damping": 1.006709964617852e-09,
+          "bulk_term": 6.218840864119294e-10,
+          "heat_term": 3.8482587820592254e-10,
+          "smaller_k": 0.008852943815590111,
+          "direct_damping": 1.0066786950670858e-09
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 1.0135591182156563e-34,
+          "damping": 0.17739816131713132,
+          "bulk_term": 0.17739816131713132,
+          "heat_term": 0.0,
+          "smaller_k": 0.008852943815590111,
+          "direct_damping": 0.17739843155756732
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33332576049865864,
+          "damping": 1.9285975535724775e-09,
+          "bulk_term": 1.5437716753654662e-09,
+          "heat_term": 3.848258782070112e-10,
+          "smaller_k": 0.008852943815590111,
+          "direct_damping": 1.9285179903495887e-09
+        }
+      ]
+    },
+    {
+      "T": 0.6882487043,
+      "visible_to_dark_enthalpy_ratio": 1.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 9.437056727497456e-33,
+          "damping": 0.030321190856367038,
+          "bulk_term": 0.030321190856367038,
+          "heat_term": 0.0,
+          "smaller_k": 0.011852200310662305,
+          "direct_damping": 0.0303210775979843
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33332541281362704,
+          "damping": 9.043278089710998e-11,
+          "bulk_term": 4.7213482613856023e-11,
+          "heat_term": 4.3219298283253954e-11,
+          "smaller_k": 0.011852200310662305,
+          "direct_damping": 9.042961545724535e-11
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 9.437056727497456e-33,
+          "damping": 0.07291107970328713,
+          "bulk_term": 0.07291107970328713,
+          "heat_term": 0.0,
+          "smaller_k": 0.011852200310662305,
+          "direct_damping": 0.07291064291909832
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33332541281362704,
+          "damping": 1.5674999733248878e-10,
+          "bulk_term": 1.1353069904923483e-10,
+          "heat_term": 4.3219298283253954e-11,
+          "smaller_k": 0.011852200310662305,
+          "direct_damping": 1.5674279971881883e-10
+        }
+      ]
+    },
+    {
+      "T": 0.6882487043,
+      "visible_to_dark_enthalpy_ratio": 10.0,
+      "true_drag": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 0.0,
+          "damping": 0.07381130286794434,
+          "bulk_term": 0.07381130286794434,
+          "heat_term": 0.0,
+          "smaller_k": 0.008852200310662306,
+          "direct_damping": 0.07381112317670677
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33333189323252854,
+          "damping": 3.738487802255474e-11,
+          "bulk_term": 2.3298137276298222e-11,
+          "heat_term": 1.408674074625652e-11,
+          "smaller_k": 0.008852200310662306,
+          "direct_damping": 3.7383709223397314e-11
+        }
+      ],
+      "heat_proxy": [
+        {
+          "branch": "nonpropagating",
+          "speed_squared": 3.0814879110195774e-33,
+          "damping": 0.17748847041995638,
+          "bulk_term": 0.17748847041995638,
+          "heat_term": 0.0,
+          "smaller_k": 0.008852200310662306,
+          "direct_damping": 0.17748874227172737
+        },
+        {
+          "branch": "sound",
+          "speed_squared": 0.33333189323252854,
+          "damping": 7.011001344519653e-11,
+          "bulk_term": 5.6023272699050736e-11,
+          "heat_term": 1.4086740746145798e-11,
+          "smaller_k": 0.008852200310662306,
+          "direct_damping": 7.010711564588745e-11
+        }
+      ]
+    }
+  ]
+}

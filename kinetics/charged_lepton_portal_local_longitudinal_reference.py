@@ -10,7 +10,7 @@ from fd_number_heat_state_reference import evaluate
 from positive_fd_portal_quadrature_reference import PositivePortal
 
 
-def model(T,xi,portal,receipt,k,proxy=None):
+def model(T,xi,portal,receipt,k,proxy=None,*,elastic_only=False):
     h=evaluate(T,0.)
     n,d,chi,Cv,n_eta=(h[q] for q in
                       ("n","rho","chemical_energy","cv_fixed_number","dn_deta"))
@@ -20,6 +20,12 @@ def model(T,xi,portal,receipt,k,proxy=None):
     _,_,_,m0,m1,m2,_=portal.moments(T,T,0.)
     Kq=receipt["timelike_heat"]+receipt["spacelike_heat"]
     Kp=receipt["timelike_bulk"]+receipt["spacelike_bulk"]
+    if elastic_only:
+        if proxy not in (None,"heat_as_momentum"):
+            raise ValueError("A frozen-number control needs an active elastic momentum channel.")
+        m0=m1=m2=0.
+        Kq=receipt["spacelike_heat"]
+        Kp=receipt["spacelike_bulk"]
     gamma=Kq/d
     if proxy=="heat_as_momentum":
         Kp=Kq
@@ -57,6 +63,10 @@ def model(T,xi,portal,receipt,k,proxy=None):
     if eig.real.max()>3e-9*max(1.,k):
         raise ValueError("Unexpected growing local perturbation.")
     lock=(d+v)/(T*(Cv+chi**2*n_eta/T**2+Cv_v))
+    if elastic_only:
+        td_lock=(d+v-chi*n)/(Cv+Cv_v)
+        eta_lock=n/n_eta-chi*td_lock/T**2
+        lock=td_lock/T+n*T*eta_lock/(d+v)
     temperature_in_free_wave=(d-chi*n)/Cv
     chemically_frozen_speed_squared=((d/T)*temperature_in_free_wave+
           n*T*(n/n_eta-chi*temperature_in_free_wave/T**2))/d
