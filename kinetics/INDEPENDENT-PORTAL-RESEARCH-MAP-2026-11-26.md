@@ -770,3 +770,6 @@ fit or exclusion.
   positive resolvents with equal bulk second moment exhibit different
   conditioned resonance correlations; large imposed transport can
   remain sensitive to the chosen endpoint probe and radial domain.
+- [Frozen-spectrum screening and noise check](INDEPENDENT-EARLY-POLE-SNAPSHOT-HARD-LOOP-SCREENING-2026-11-26.md):
+  the actual resolved early electric screening mass squared is close
+  to half the two-thermal-Dirac value on both available grids.
