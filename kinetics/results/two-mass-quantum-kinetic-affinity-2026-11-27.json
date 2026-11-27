@@ -1,0 +1,223 @@
+{
+  "scope": "Thermal signed Bose/Pauli event and bounded omitted strip, not physical rates.",
+  "events": [
+    {
+      "kinetic_inputs": [
+        1.926317055648847e-23,
+        4.445267643804705e-23,
+        0.03,
+        0.03,
+        0.03,
+        -2e-23,
+        -0.35,
+        0.0
+      ],
+      "event_affinity": 0.0,
+      "stable_net": 0.0,
+      "mp_net": 4.2168791772922093e-81,
+      "conventional_float_subtract": 0.0,
+      "reference_error": 4.2168791772922093e-81,
+      "reference_error_absolute_when_equilibrated": true
+    },
+    {
+      "kinetic_inputs": [
+        1.926317055648847e-23,
+        4.445267643804705e-23,
+        0.03,
+        0.03,
+        0.03,
+        -2e-23,
+        -0.35,
+        1e-28
+      ],
+      "event_affinity": 1e-28,
+      "stable_net": 3.662517939915986e-08,
+      "mp_net": 3.662517939915986e-08,
+      "conventional_float_subtract": 0.0,
+      "reference_error": 0.0,
+      "reference_error_absolute_when_equilibrated": false
+    },
+    {
+      "kinetic_inputs": [
+        1.926317055648847e-23,
+        4.445267643804705e-23,
+        0.03,
+        0.03,
+        0.03,
+        -2e-23,
+        -0.35,
+        -1e-28
+      ],
+      "event_affinity": -1e-28,
+      "stable_net": -3.662517939915986e-08,
+      "mp_net": -3.662517939915986e-08,
+      "conventional_float_subtract": 0.0,
+      "reference_error": 0.0,
+      "reference_error_absolute_when_equilibrated": false
+    },
+    {
+      "kinetic_inputs": [
+        1.926317055648847e-23,
+        4.445267643804705e-23,
+        0.030000029999999997,
+        0.03,
+        0.03,
+        -2e-23,
+        -0.35,
+        0.0
+      ],
+      "event_affinity": -6.421050430702968e-28,
+      "stable_net": -2.3517235202390204e-07,
+      "mp_net": -2.3517235202390204e-07,
+      "conventional_float_subtract": 0.0,
+      "reference_error": 0.0,
+      "reference_error_absolute_when_equilibrated": false
+    },
+    {
+      "kinetic_inputs": [
+        1.926317055648847e-23,
+        4.445267643804705e-23,
+        0.03,
+        0.02999994,
+        0.03,
+        -2e-23,
+        -0.35,
+        0.0
+      ],
+      "event_affinity": 2.9635176895542495e-27,
+      "stable_net": 1.0853936703250814e-06,
+      "mp_net": 1.0853936703250814e-06,
+      "conventional_float_subtract": 0.0,
+      "reference_error": 0.0,
+      "reference_error_absolute_when_equilibrated": false
+    }
+  ],
+  "profiles": [
+    {
+      "profile": "saturated_nonzero_affinity",
+      "near_rest_power": 1.0,
+      "rows": [
+        {
+          "p_over_scalar_mass": 0.01,
+          "integrated_signed_source": 8.379831157605075e-13,
+          "independent_bound": 7.492284433526185e-12,
+          "geometric_area": 2.7053908466548268e-09
+        },
+        {
+          "p_over_scalar_mass": 0.0001,
+          "integrated_signed_source": 8.38017197284455e-15,
+          "independent_bound": 7.492076346412862e-14,
+          "geometric_area": 2.7054719983508068e-15
+        },
+        {
+          "p_over_scalar_mass": 1e-05,
+          "integrated_signed_source": 8.380172006590708e-16,
+          "independent_bound": 7.492076325809651e-15,
+          "geometric_area": 2.7054720063860588e-18
+        },
+        {
+          "p_over_scalar_mass": 1e-06,
+          "integrated_signed_source": 8.380172006928168e-17,
+          "independent_bound": 7.492076325603619e-16,
+          "geometric_area": 2.7054720064664103e-21
+        },
+        {
+          "p_over_scalar_mass": 1e-08,
+          "integrated_signed_source": 8.380172006931577e-19,
+          "independent_bound": 7.492076325601539e-18,
+          "geometric_area": 2.7054720064672224e-27
+        },
+        {
+          "p_over_scalar_mass": 1e-10,
+          "integrated_signed_source": 8.380172006931577e-21,
+          "independent_bound": 7.492076325601538e-20,
+          "geometric_area": 2.7054720064672226e-33
+        }
+      ]
+    },
+    {
+      "profile": "positive_bose_exponent_floor",
+      "near_rest_power": 2.9999999999999933,
+      "rows": [
+        {
+          "p_over_scalar_mass": 0.01,
+          "integrated_signed_source": 1.4645197806748026e-14,
+          "independent_bound": 1.354048569649185e-13,
+          "geometric_area": 2.7053908466548268e-09
+        },
+        {
+          "p_over_scalar_mass": 0.0001,
+          "integrated_signed_source": 1.5119567442792063e-20,
+          "independent_bound": 1.3540891860865483e-19,
+          "geometric_area": 2.7054719983508068e-15
+        },
+        {
+          "p_over_scalar_mass": 1e-05,
+          "integrated_signed_source": 1.5119616222041617e-23,
+          "independent_bound": 1.3540891901081933e-22,
+          "geometric_area": 2.7054720063860588e-18
+        },
+        {
+          "p_over_scalar_mass": 1e-06,
+          "integrated_signed_source": 1.5119616709835997e-26,
+          "independent_bound": 1.3540891901484093e-25,
+          "geometric_area": 2.7054720064664103e-21
+        },
+        {
+          "p_over_scalar_mass": 1e-08,
+          "integrated_signed_source": 1.5119616714762724e-32,
+          "independent_bound": 1.3540891901488158e-31,
+          "geometric_area": 2.7054720064672224e-27
+        },
+        {
+          "p_over_scalar_mass": 1e-10,
+          "integrated_signed_source": 1.5119616714763216e-38,
+          "independent_bound": 1.3540891901488158e-37,
+          "geometric_area": 2.7054720064672226e-33
+        }
+      ]
+    },
+    {
+      "profile": "affinity_tuned",
+      "near_rest_power": 3.0,
+      "rows": [
+        {
+          "p_over_scalar_mass": 0.01,
+          "integrated_signed_source": 9.115112905364174e-12,
+          "independent_bound": 7.88063278641694e-11,
+          "geometric_area": 2.7053908466548268e-09
+        },
+        {
+          "p_over_scalar_mass": 0.0001,
+          "integrated_signed_source": 9.115904750020415e-18,
+          "independent_bound": 7.880015614543948e-17,
+          "geometric_area": 2.7054719983508068e-15
+        },
+        {
+          "p_over_scalar_mass": 1e-05,
+          "integrated_signed_source": 9.115904828427153e-21,
+          "independent_bound": 7.880015553434429e-20,
+          "geometric_area": 2.7054720063860588e-18
+        },
+        {
+          "p_over_scalar_mass": 1e-06,
+          "integrated_signed_source": 9.115904829211218e-24,
+          "independent_bound": 7.880015552823331e-23,
+          "geometric_area": 2.7054720064664103e-21
+        },
+        {
+          "p_over_scalar_mass": 1e-08,
+          "integrated_signed_source": 9.115904829219138e-30,
+          "independent_bound": 7.88001555281716e-29,
+          "geometric_area": 2.7054720064672224e-27
+        },
+        {
+          "p_over_scalar_mass": 1e-10,
+          "integrated_signed_source": 9.115904829219139e-36,
+          "independent_bound": 7.88001555281716e-35,
+          "geometric_area": 2.7054720064672226e-33
+        }
+      ]
+    }
+  ]
+}
