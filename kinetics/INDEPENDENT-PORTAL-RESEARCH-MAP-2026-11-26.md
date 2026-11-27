@@ -641,6 +641,11 @@ The [Bose gain–loss affinity witness](INDEPENDENT-EARLY-POLE-SCALAR-ELASTIC-AF
 isolates a numerical failure of direct gross-term subtraction at
 the recorded occupancies and verifies a cancellation-safe formula.
 
+The [reversible scalar 2-to-2 stencil](INDEPENDENT-EARLY-POLE-SCALAR-ELASTIC-STENCIL-2026-11-26.md)
+tests conservative momentum redistribution, including direct
+continuum weak moments and an entropy check. Bare high-occupancy
+flux is not a justified physical relaxation rate.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

@@ -1,0 +1,70 @@
+{
+  "elastic-stencil-20": {
+    "dynamic_max_number_residual": 4.440892098500626e-16,
+    "dynamic_max_energy_residual": 2.220446049250313e-16,
+    "entropy_fractional_increase": 0.00924372789657224,
+    "minimum_sampled_occupation": 0.00023219255388720394,
+    "thermal_to_perturbed_flux": 4.886489662730184e-16,
+    "number_rate_residual": 4.2190515217124076e-16,
+    "energy_rate_residual": 8.611201924049402e-16,
+    "entropy_production": 1.1831400947178187e-08,
+    "cells": 20,
+    "angular_order": 8,
+    "projected_events": 10950,
+    "unweighted_escape_fraction": 0.06525772932949069
+  },
+  "elastic-stencil-36": {
+    "dynamic_max_number_residual": 6.661338147750939e-16,
+    "dynamic_max_energy_residual": 4.440892098500626e-16,
+    "entropy_fractional_increase": 0.008760222925691563,
+    "minimum_sampled_occupation": 0.0002349539583114305,
+    "thermal_to_perturbed_flux": 4.589068610356978e-16,
+    "number_rate_residual": 1.7367630797521258e-15,
+    "energy_rate_residual": 2.3647309343941344e-16,
+    "entropy_production": 1.1569999017040726e-08,
+    "cells": 36,
+    "angular_order": 12,
+    "projected_events": 80088,
+    "unweighted_escape_fraction": 0.05094839973313307
+  },
+  "elastic-weak-moment": {
+    "continuum": [
+      -2.1540374022265656e-07,
+      -2.1464812433603327e-07
+    ],
+    "projected": [
+      -2.70371267353021e-07,
+      -2.3372278348455667e-07,
+      -2.2166768588948062e-07
+    ],
+    "relative_projection_errors": [
+      0.25960228252333906,
+      0.08886478373629703,
+      0.03270264566793135
+    ],
+    "continuum_orders": [
+      [
+        54,
+        14
+      ],
+      [
+        78,
+        20
+      ]
+    ],
+    "projection_orders": [
+      [
+        20,
+        8
+      ],
+      [
+        36,
+        12
+      ],
+      [
+        52,
+        16
+      ]
+    ]
+  }
+}
