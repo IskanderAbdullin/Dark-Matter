@@ -1,0 +1,121 @@
+{
+  "scope": "Isotropic lab photon bath, all scalar angles integrated, no finite virtual remainder.",
+  "columns": [
+    "vacuum_recoil",
+    "even_thermal_recoil"
+  ],
+  "rows": [
+    {
+      "grid": "fine",
+      "parent_gamma": 28.573717690536665,
+      "inverse_doppler_mean": 0.14166192375614853,
+      "inverse_doppler_squared_mean": 0.9999999999999998,
+      "comparisons": [
+        {
+          "lab_photon_cap": 2.5e-06,
+          "rest_angle": [
+            -6.583662477376773e-05,
+            0.016902092969955814
+          ],
+          "plasma_angle": [
+            -6.583662477376775e-05,
+            0.016902092969904994
+          ],
+          "chart_abs_defect": 5.082045895221654e-14,
+          "small_cap_leading": [
+            -6.584835970148757e-05,
+            0.016902108299632408
+          ]
+        },
+        {
+          "lab_photon_cap": 5e-06,
+          "rest_angle": [
+            -0.00013164979031220125,
+            0.03380414091223158
+          ],
+          "plasma_angle": [
+            -0.00013164979031220157,
+            0.03380414091214914
+          ],
+          "chart_abs_defect": 8.244099847232178e-14,
+          "small_cap_leading": [
+            -0.00013169671940297515,
+            0.033804216599264816
+          ]
+        },
+        {
+          "lab_photon_cap": 1e-05,
+          "rest_angle": [
+            -0.00026320580776902026,
+            0.06760801548841452
+          ],
+          "plasma_angle": [
+            -0.0002632058077690201,
+            0.0676080154884443
+          ],
+          "chart_abs_defect": 2.9781732635569824e-14,
+          "small_cap_leading": [
+            -0.0002633934388059503,
+            0.06760843319852963
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "parent_gamma": 28.73225168907164,
+      "inverse_doppler_mean": 0.14107213689528655,
+      "inverse_doppler_squared_mean": 0.9999999999999998,
+      "comparisons": [
+        {
+          "lab_photon_cap": 2.5e-06,
+          "rest_angle": [
+            -6.556230106568449e-05,
+            0.01690199464563498
+          ],
+          "plasma_angle": [
+            -6.556230106568449e-05,
+            0.01690199464561577
+          ],
+          "chart_abs_defect": 1.9210327772967162e-14,
+          "small_cap_leading": [
+            -6.557403591046653e-05,
+            0.016902010015107008
+          ]
+        },
+        {
+          "lab_photon_cap": 5e-06,
+          "rest_angle": [
+            -0.00013110114312098553,
+            0.03380394402426309
+          ],
+          "plasma_angle": [
+            -0.0001311011431209854,
+            0.03380394402434744
+          ],
+          "chart_abs_defect": 8.435613318980018e-14,
+          "small_cap_leading": [
+            -0.00013114807182093306,
+            0.033804020030214016
+          ]
+        },
+        {
+          "lab_photon_cap": 1e-05,
+          "rest_angle": [
+            -0.0002621085146449396,
+            0.06760761979556341
+          ],
+          "plasma_angle": [
+            -0.00026210851464493896,
+            0.06760761979552798
+          ],
+          "chart_abs_defect": 3.542999227335031e-14,
+          "small_cap_leading": [
+            -0.0002622961436418661,
+            0.06760804006042803
+          ]
+        }
+      ]
+    }
+  ]
+}
