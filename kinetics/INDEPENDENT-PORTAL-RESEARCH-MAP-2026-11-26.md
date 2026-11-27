@@ -746,3 +746,7 @@ fit or exclusion.
 - [Conserving angular-dephasing witness](INDEPENDENT-EARLY-POLE-ANGULAR-REDISTRIBUTION-LINE-2026-11-26.md):
   matching gain and loss yields an opposite width trend from loss-only at
   fixed radial momentum. A calibrated gauge two-line vertex remains open.
+- [Differential phase and path separation](INDEPENDENT-EARLY-POLE-DIFFERENTIAL-PHASE-SEPARATION-2026-11-26.md):
+  exact pole velocities give a comparison to an illustrative screening length;
+  imposed stochastic potentials give different pair exponents even with
+  identical charged single-line exponents and reference lengths.
