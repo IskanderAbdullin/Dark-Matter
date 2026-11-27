@@ -104,6 +104,16 @@ four subdivisions keeps both tangents negative, from −.308 to
 table units. This does not establish the physical sign or full
 grid convergence.
 
+The independent short live controls with the continuous shell
+representation, still compared on each unchanged native hard
+mesh with photon pairs on, now give **+3.35% (fine)** and
+**−9.87% (third)** at `8e-8`. In both cases this is also the
+opposite relative sign from the step-occupation initial condition
+on the identical mesh. No net cold gain turns negative. Thus the
+initial representation changes the sign in the integrated
+experiment, not only in the tangent. It still does not select
+the physical representation or imply either effect at late time.
+
 To reproduce from `kinetics/` (one BLAS thread):
 
 ```sh
@@ -112,9 +122,12 @@ python early_pole_cold_screened_affinity_reference.py --level 1 --projection cel
 python early_pole_cold_screened_affinity_reference.py --grid fine --mesh third --projection cell-conservative --subdivision 4
 python early_pole_archived_cold_screened_elastic_reference.py --grid third --aperture-grid fine --evolve
 python early_pole_archived_cold_screened_elastic_reference.py --grid third --aperture-grid fine --evolve --strength 0
+python early_pole_archived_cold_screened_elastic_reference.py --grid fine --projection cell-conservative --evolve
+python early_pole_archived_cold_screened_elastic_reference.py --grid fine --projection cell-conservative --evolve --strength 0
 ```
 
 Raw: `results/early-pole-screened-heat-vs-redistribution-2026-11-26.json.gz`.
 Individual cell derivatives: `results/early-pole-screened-heat-cell-attribution-2026-11-26.json.gz`.
+Continuous live control: `results/early-pole-live-screened-continuous-control-2026-11-26.json.gz`.
 No finite-temperature conclusion about the final scalar relic or
 its transfer function follows.
