@@ -10,7 +10,13 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
-def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=1.,elastic_energy_budget=None,attribute_feedback=False,warm_order=None,stable_pole_tangent=False):
+def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=1.,elastic_energy_budget=None,attribute_feedback=False,warm_order=None,stable_pole_tangent=False,anchor_pole=False,linearize_cold_pole=False,cold_pole_relative_probe=5e-5):
+    if linearize_cold_pole and (not anchor_pole or attribute_feedback):
+        raise ValueError("The paired cold tangent requires anchoring and its own rate ledger.")
+    if not np.isfinite(cold_pole_relative_probe) or not 1e-6<=cold_pole_relative_probe<=1e-3:
+        raise ValueError("Use a finite relative pole probe in [1e-6,1e-3].")
+    if cold_pole_relative_probe!=5e-5 and not linearize_cold_pole:
+        raise ValueError("The relative pole probe requires the matched linear option.")
     if stable_pole_tangent and not attribute_feedback:
         raise ValueError("The anchored pole tangent requires the feedback attribution ledger.")
     if not np.isfinite(warm_multiplier) or warm_multiplier<0.:
@@ -80,24 +86,52 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
         C.q,C.sw=banks[arm]
         C.n=len(C.q)
 
-    def split(z,arm):
+    anchor_audit=[]
+    closure_audit=[]
+    tangent_audit=[]
+
+    def split(z,arm,anchored=None,linear=None):
         set_bank(arm)
         y=z[:C.j0].reshape(-1,2)
         N=z[C.j0:]
         E,F,G,*_=C.M.weights(y,True)
         En,_,_,f,m=C.scalar(N)
+        if anchored is not None:
+            gap_error=abs(m-anchored)
+            assert gap_error<2e-17
+            anchor_audit.append(float(gap_error))
+            m=anchored
+            En=np.hypot(C.q,m)
         rate=np.zeros((2,h0))
         scalar=np.zeros(C.n)
+        correction=np.zeros(h0)
         for i,w in enumerate(C.sw):
-            v,H,_=band_kernel(C,E,F,C.q[i],m,f[i],radial_order=order,ledger=True)
             exterior=i>=len(n0)
+            local_mass=m if linear is None or exterior else linear[0]
+            v,H,_=band_kernel(C,E,F,C.q[i],local_mass,f[i],radial_order=order,ledger=True)
+            if linear is not None and not exterior:
+                mp,dm=linear
+                epsilon=mp*cold_pole_relative_probe
+                def pair(mu):
+                    out,hard,_=band_kernel(C,E,F,C.q[i],mu,f[i],radial_order=order,ledger=True)
+                    return out[2],hard
+                sa,ha=pair(mp-epsilon)
+                sb,hb=pair(mp+epsilon)
+                fac=w*dm/(2*epsilon)
+                correction[:C.j0]+=fac*(hb-ha).ravel()
+                correction[C.j0+i]=fac*(sb-sa)
             effective_w=w*warm_multiplier if exterior else w
             rate[int(exterior),:C.j0]+=effective_w*H.ravel()
             scalar[i]=effective_w*v[2]
         rate[0,C.j0:]=scalar[:len(n0)]
-        defect=En@scalar+np.sum(G*rate[:,:C.j0].sum(axis=0).reshape(y.shape))
+        work_basic=En@scalar+np.sum(G*rate[:,:C.j0].sum(axis=0).reshape(y.shape))
+        work_fix=En[:len(n0)]@correction[C.j0:]+np.sum(G*correction[:C.j0].reshape(y.shape))
+        defect=work_basic+work_fix
+        if linear is not None:
+            closure_audit.append(float(abs(defect)))
+            tangent_audit.append(float(correction[C.j0:].sum()))
         assert abs(defect)<3e-13
-        return rate,scalar[len(n0):]
+        return rate,scalar[len(n0):],m,correction
 
     def other_slow(Y):
         out=[C.M.pair_rhs(Y,True)[:-2]]
@@ -112,14 +146,34 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
         return np.array([w*band_kernel(C,E,F,q,pole,float(x/w),radial_order=order)[2]
                          for q,w,x in zip(c_q,c_w,N,strict=True)])
 
-    def attribute(base,diff,full,first,second,warm_delta):
+    def increments(base,diff,warm_delta):
+        N=np.r_[base[C.j0:],specs[0]]
+        dN=np.zeros_like(N)
+        dN[:len(n0)]=diff[C.j0:]
+        dN[len(n0)+np.flatnonzero(warm)]=warm_delta
+        return np.r_[c_q,C.spq],N,dN
+
+    def gap_delta(base,diff,warm_delta,m0):
+        # Exact difference of the two common gap equations; rationalize
+        # the difference in reciprocal one-particle energies.
+        nodes,N,dN=increments(base,diff,warm_delta)
+        A=np.hypot(nodes,m0)
+        m=m0
+        dm=0.
+        for _ in range(8):
+            B=np.hypot(nodes,m)
+            new=(.5*C.lam*(dN@np.reciprocal(B)))/(
+                (m+m0)*(1.+.5*C.lam*(N@np.reciprocal(A*B*(A+B)))))
+            if abs(new-dm)<1e-29:
+                return float(new)
+            dm=new
+            m=m0+dm
+        raise RuntimeError("The anchored scalar gap correction did not converge.")
+
+    def attribute(base,diff,first,second,m0,m1,warm_delta):
         hard_base=base[:C.j0]
         hard_add=hard_base+diff[:C.j0]
         nb=base[C.j0:]
-        set_bank(0)
-        m0=C.scalar(nb)[-1]
-        set_bank(1)
-        m1=C.scalar(full[C.j0:])[-1]
         # Order is hard state, then scalar pole, then cold occupation.
         at_hard=cold_at(hard_add,nb,m0)
         at_pole=cold_at(hard_add,nb,m1)
@@ -131,11 +185,8 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
         # At fixed q, d(m² - λJ/2)/dm is analytically positive.
         # Use the evolution variables for δN, before floating subtraction
         # of a short accumulated gain from its larger initial counts.
-        em=np.hypot(np.r_[c_q,C.spq],m0)
-        N=np.r_[nb,specs[0]]
-        dN=np.zeros_like(N)
-        dN[:len(nb)]=diff[C.j0:]
-        dN[len(nb)+np.flatnonzero(warm)]=warm_delta
+        nodes,N,dN=increments(base,diff,warm_delta)
+        em=np.hypot(nodes,m0)
         dm=(.5*C.lam*(dN@np.reciprocal(em)))/(2*m0+.5*C.lam*m0*(N@em**-3))
         t=[]
         for epsilon in (m0*1e-4,m0*5e-5):
@@ -148,17 +199,23 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
     def evaluate(U):
         base=initial+U[:h0]
         diff=U[h0:2*h0]
-        first,_=split(base,0)
+        first,_,m0,_=split(base,0)
         full=np.r_[base+diff,w0+U[warm_slice]]
-        second,w=split(full,1)
+        dm=gap_delta(base,diff,U[warm_slice],m0) if anchor_pole else 0.
+        if linearize_cold_pole and abs(dm)>1e-4*m0*cold_pole_relative_probe:
+            raise ValueError("The requested cold pole displacement is outside the near-null control.")
+        anchored=m0+dm if anchor_pole else None
+        second,w,m1,correction=split(full,1,anchored,(m0,dm) if linearize_cold_pole else None)
         delta=(second[0]-first[0])+second[1]
+        if linearize_cold_pole:
+            delta+=correction
         if joined:
             a0=other_slow(base[:C.j0].reshape(-1,2))
             a1=other_slow((base[:C.j0]+diff[:C.j0]).reshape(-1,2))
             first[0,:C.j0]+=a0.sum(axis=0)
             delta[:C.j0]+=(a1-a0).sum(axis=0)
         if attribute_feedback:
-            return np.r_[first[0],delta,w,attribute(base,diff,full,first,second,U[warm_slice])]
+            return np.r_[first[0],delta,w,attribute(base,diff,first,second,m0,m1,U[warm_slice])]
         return np.r_[first[0],delta,w]
 
     def total(state,arm):
@@ -244,6 +301,13 @@ def run(path,projection,duration,steps,order,outer,joined=False,warm_multiplier=
                 **(dict(warm_node_cuts=outer) if outer!=[.1,5.] else {}),
                 **(dict(warm_collision_multiplier=warm_multiplier,
                         manufactured_rate_scaling=True) if warm_multiplier!=1. else {}),
+                **(dict(uses_anchored_live_gap=True,maximum_pole_difference_from_independent_root=max(anchor_audit))
+                   if anchor_pole else {}),
+                **(dict(cold_pole_linearized_at_common_state=True,
+                        cold_pole_relative_probe=cold_pole_relative_probe,
+                        maximum_active_decay_work=max(closure_audit),
+                        maximum_cold_rate_tangent=max(map(abs,tangent_audit)))
+                   if linearize_cold_pole else {}),
                 **shape_ledger,**extra,scope=('Short fixed-scale all-channel matched split on one grid; explicit difference variable.'
                                if joined else 'Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid.'))
 
@@ -265,6 +329,11 @@ if __name__=='__main__':
     p.add_argument('--warm-order',type=int)
     p.add_argument('--stable-pole-tangent',action='store_true',
                    help='Independent first-order near-null pole diagnostic of the feedback ledger.')
+    p.add_argument('--anchor-pole',action='store_true',
+                   help='Solve the active pole from the common baseline gap and the evolved count difference.')
+    p.add_argument('--linearize-cold-pole',action='store_true',
+                   help='Replace the near-null cold pole response by matched reciprocal tangents.')
+    p.add_argument('--cold-pole-relative-probe',type=float,default=5e-5)
     a=p.parse_args()
     if a.duration<=0 or a.steps<1 or a.order<2 or not 1e-5<a.outer[0]<a.outer[1]<=5.:
         p.error('Invalid positive exposure, steps or order.')
