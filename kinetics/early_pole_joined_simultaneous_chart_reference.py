@@ -31,8 +31,8 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None):
     if prepared_input is not None:
         src=json.loads(Path(prepared_input).read_text())
         swap=src.get('prepared_charged_swap')
-        if not src.get('manufactured_hard_shape_control') or swap not in ('local-daughter','outside-daughter'):
-            raise ValueError("Only the accepted aperture-local or outside daughter input is supported.")
+        if not src.get('manufactured_hard_shape_control') or swap not in ('daughter','local-daughter','outside-daughter'):
+            raise ValueError("Only accepted whole, aperture-local or outside daughter inputs are supported.")
         if any(src[k]!=saved[k] for k in ('projection','grid','hard_edge_sets','aperture_grid')):
             raise ValueError("Prepared input uses a different hard support.")
         if not abs(src['energy_drift'])<3e-12 or not abs(src['entropy_closure'])<3e-11:
