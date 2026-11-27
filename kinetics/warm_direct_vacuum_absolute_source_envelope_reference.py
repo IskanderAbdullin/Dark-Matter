@@ -26,22 +26,22 @@ def clock(bg,n,tmax=.05,tmin=.0001,lower=False):
     return (T[1:] if lower else T[:-1]),np.diff(np.log(A))/E
 
 
-def weight(lo,hi,T,U,bose):
-    assert np.all(lo>=4*M*M*(1-2e-14))
+def weight(lo,hi,T,U,bose,mass=M):
+    assert np.all(lo>=4*mass*mass*(1-2e-14))
     den=(np.clip(V*V,lo,hi)-V*V)**2+(V*width)**2
     eu=np.sqrt(lo)[None,:]/T[:,None]
     G=T[:,None]*kve(1,eu)*np.exp(-eu)
     if bose:
         G*=(-1/np.expm1(-mpi/T))[:,None]**2
-    p=2*factor*(hi+2*M*M)*hi**1.5*np.sqrt(1-4*M*M/hi)/den
+    p=2*factor*(hi+2*mass*mass)*hi**1.5*np.sqrt(1-4*mass*mass/hi)/den
     return (U@G)*p
 
 
-def bounds(bg,tablefile,old,n,tmax=.05,tmin=.0001):
+def bounds(bg,tablefile,old,n,tmax=.05,tmin=.0001,mass=M):
     T,U=clock(bg,3*n,tmax,tmin)
-    s=np.unique(np.r_[np.geomspace(4*M*M,16,n+1),[4*x*x for x in leptons if .2<=2*x<=4]])
+    s=np.unique(np.r_[np.geomspace(4*mass*mass,16,n+1),[4*x*x for x in leptons if 2*mass<=2*x<=4]])
     l,h=s[:-1],s[1:]
-    W=weight(l,h,T,U,False)
+    W=weight(l,h,T,U,False,mass)
     a=np.array(leptons)[:,None]**2/h
     R=(1+2*a)*np.sqrt(np.maximum(0,1-4*a))
     lepton=float((W*(h-l))@R.sum(axis=0))
@@ -55,17 +55,17 @@ def bounds(bg,tablefile,old,n,tmax=.05,tmin=.0001):
     few=5 if n<192 else 12
     sub=(d[:,None]-.005+.01*np.linspace(0,1,few+1))
     lo,hi=sub[:,:-1].ravel(),sub[:,1:].ravel()
-    q=weight(lo,hi,T,U,True)*hi/POINT
+    q=weight(lo,hi,T,U,True,mass)*hi/POINT
     kloe=float(np.sum(q*(hi-lo)*np.repeat(x+2*e,few)/NB_PER_GEV2))
     low=[]
     for row in old["bands"]:
         q=np.linspace(*row["s_GeV2"],n//4+1)
         lo,hi=q[:-1],q[1:]
-        f=weight(lo,hi,T,U,True)*hi/POINT
+        f=weight(lo,hi,T,U,True,mass)*hi/POINT
         H=mu_kernel_lower(hi)/(4*np.pi**3)
         low.append(float(max(f/H)*row["assumed_positive_dispersion_cap"]))
     q=np.geomspace(.95,16,n//2+1)
-    b=float((np.diff(q)*weight(q[:-1],q[1:],T,U,True)).sum()+U@(tail/(-np.expm1(-mpi/T))**2))
+    b=float((np.diff(q)*weight(q[:-1],q[1:],T,U,True,mass)).sum()+U@(tail/(-np.expm1(-mpi/T))**2))
     return dict(invariant_base_bins=n,temperature_panels=len(T),lepton_yield_upper=lepton,
                 KLOE_fixed_bin_plus_two_marginals_upper=kloe,additional_conditional_low_moment_upper_each=low,
                 high_yield_upper_per_unit_R_pi=b,total_known_plus_unit_high_yield_upper=lepton+kloe+sum(low)+b)

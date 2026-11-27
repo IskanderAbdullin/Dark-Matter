@@ -76,3 +76,6 @@ and the [measured-band calculation](INDEPENDENT-WARM-LATE-COLD-VISIBLE-KLOE-RECO
 
 The [temperature-dependent spectra](INDEPENDENT-WARM-DIRECT-TEMPERATURE-SHAPES-2026-11-26.md)
 retain source attribution and test the redshifted momenta independently of this count bracket.
+
+The [weighted count comparison](INDEPENDENT-WARM-DIRECT-RESTRICTED-COUNT-UPPER-2026-11-26.md)
+allows stable-pair conversion while excluding heavy regeneration and other new number sources.

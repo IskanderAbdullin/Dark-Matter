@@ -1,0 +1,552 @@
+{
+  "scope": "Initially empty, prescribed adiabatic visible radiation through .1 MeV. Direct selected vacuum portals to heavy and light equal-mass pairs have the same supplied vector coupling. Charged leptons and the charged-pion measured window, two lower-band positive caps and assumed R_pi<=1 in the high band are used in both. Individual heavy decay/reverse preserves the weighted count Q=N_scalar+N_light+2N_heavy. Stable pair conversion/reverse preserves Q; forward heavy-pair to scalars only lowers it. Do not use this if inverse heavy pair creation from dark light particles or other unrepresented number sources may increase Q. No depletion rates or transfer predicted.",
+  "masses_GeV": {
+    "parent": 0.1,
+    "stable": 0.02,
+    "scalar": 8.6e-08
+  },
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "KLOE_sha256": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+  "eos_min_slopes": [
+    3.0,
+    4.0
+  ],
+  "rows": [
+    {
+      "T_reheat_GeV": 0.025,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 3.804489526366797e-06,
+          "direct_light_scalar_equivalent_upper": 3.2401107060565515e-05,
+          "total_count_scalar_equivalent_upper": 4.001008611329911e-05,
+          "fraction_of_reference_half_dark_upper": 0.0006668347685549851,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.4008915322840053e-07,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 9.149003550328355e-10,
+            "additional_conditional_low_moment_upper_each": [
+              1.4151795993286023e-08,
+              5.169294166186816e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.605121013503781e-18,
+            "total_known_plus_unit_high_yield_upper": 1.6032514374651133e-07
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.3426646010401664e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 9.534415110987497e-10,
+            "additional_conditional_low_moment_upper_each": [
+              1.61268854037151e-08,
+              5.671407407724694e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.607246278527789e-18,
+            "total_known_plus_unit_high_yield_upper": 1.3654163353663123e-06
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 3.4680279050880177e-06,
+          "direct_light_scalar_equivalent_upper": 2.970780127107433e-05,
+          "total_count_scalar_equivalent_upper": 3.664385708125037e-05,
+          "fraction_of_reference_half_dark_upper": 0.0006107309513541728,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.2675610337894476e-07,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.758355421435311e-10,
+            "additional_conditional_low_moment_upper_each": [
+              1.3560155227299554e-08,
+              4.954207092749133e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.8903874084398903e-18,
+            "total_known_plus_unit_high_yield_upper": 1.4614630124402738e-07
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.2301092553480006e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 9.127827159971393e-10,
+            "additional_conditional_low_moment_upper_each": [
+              1.5459071813365134e-08,
+              5.436519585859912e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.892114666867422e-18,
+            "total_known_plus_unit_high_yield_upper": 1.2519176294661152e-06
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.04,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 7.70986198646612e-05,
+          "direct_light_scalar_equivalent_upper": 0.00016540847766762957,
+          "total_count_scalar_equivalent_upper": 0.000319605717396952,
+          "fraction_of_reference_half_dark_upper": 0.0053267619566158666,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 2.6899207601031243e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.136336596544714e-07,
+            "additional_conditional_low_moment_upper_each": [
+              2.986825792528052e-07,
+              1.4677551571532078e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.4772472606216267e-12,
+            "total_known_plus_unit_high_yield_upper": 3.2490159919729823e-06
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 6.353485431411482e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.1645946374931856e-07,
+            "additional_conditional_low_moment_upper_each": [
+              3.395044505321335e-07,
+              1.6103238088973536e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.4791630542995245e-12,
+            "total_known_plus_unit_high_yield_upper": 6.9704852057457244e-06
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 7.14263694924319e-05,
+          "direct_light_scalar_equivalent_upper": 0.00015167670040238434,
+          "total_count_scalar_equivalent_upper": 0.00029452943938724813,
+          "fraction_of_reference_half_dark_upper": 0.004908823989787469,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 2.4719776879032178e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.0909349080214286e-07,
+            "additional_conditional_low_moment_upper_each": [
+              2.8751523375068156e-07,
+              1.413920938179631e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.958204212901561e-12,
+            "total_known_plus_unit_high_yield_upper": 3.0099814644782184e-06
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 5.797888288008556e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.1181548362357233e-07,
+            "additional_conditional_low_moment_upper_each": [
+              3.2694990760115303e-07,
+              1.5515719729442128e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.9598561661659902e-12,
+            "total_known_plus_unit_high_yield_upper": 6.391813836383868e-06
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.045,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 0.00013828832577762463,
+          "direct_light_scalar_equivalent_upper": 0.0002482149848201051,
+          "total_count_scalar_equivalent_upper": 0.0005247916363753544,
+          "fraction_of_reference_half_dark_upper": 0.008746527272922572,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 4.740431935419014e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.125851929133812e-07,
+            "additional_conditional_low_moment_upper_each": [
+              5.161353069455811e-07,
+              2.584181351323621e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 4.3240879336518813e-11,
+            "total_known_plus_unit_high_yield_upper": 5.827613811289674e-06
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 9.292807207755164e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.1887868232701167e-07,
+            "additional_conditional_low_moment_upper_each": [
+              5.66878030545651e-07,
+              2.814303170986282e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 4.3264157513173614e-11,
+            "total_known_plus_unit_high_yield_upper": 1.0460037501883968e-05
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 0.00012848402977014468,
+          "direct_light_scalar_equivalent_upper": 0.0002278104311492737,
+          "total_count_scalar_equivalent_upper": 0.00048477849068956304,
+          "fraction_of_reference_half_dark_upper": 0.008079641511492718,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 4.367881810172857e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.000990674703504e-07,
+            "additional_conditional_low_moment_upper_each": [
+              4.973211145790411e-07,
+              2.491113876124899e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.720526157042944e-11,
+            "total_known_plus_unit_high_yield_upper": 5.4144505850963096e-06
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 8.476284017773203e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.061657063247484e-07,
+            "additional_conditional_low_moment_upper_each": [
+              5.46274495371506e-07,
+              2.7140695281307516e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.722556331164357e-11,
+            "total_known_plus_unit_high_yield_upper": 9.600168397845843e-06
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.05,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 0.0002255086673976285,
+          "direct_light_scalar_equivalent_upper": 0.0003573115374260148,
+          "total_count_scalar_equivalent_upper": 0.0008083288722212719,
+          "fraction_of_reference_half_dark_upper": 0.013472147870354532,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 7.5526787439309496e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 7.467220893432637e-07,
+            "additional_conditional_low_moment_upper_each": [
+              7.929155712886851e-07,
+              4.1052966017288985e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.2361572747778064e-10,
+            "total_known_plus_unit_high_yield_upper": 9.503169680463267e-06
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.29864347026369e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 7.588197064083126e-07,
+            "additional_conditional_low_moment_upper_each": [
+              8.702844832239378e-07,
+              4.4161696609600103e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.237859065082763e-10,
+            "total_known_plus_unit_high_yield_upper": 1.5057479644271661e-05
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 0.00021003735634028925,
+          "direct_light_scalar_equivalent_upper": 0.00032836045180335653,
+          "total_count_scalar_equivalent_upper": 0.000748435164483935,
+          "fraction_of_reference_half_dark_upper": 0.012473919408065585,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 6.973127389041641e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 7.168577474383912e-07,
+            "additional_conditional_low_moment_upper_each": [
+              7.648054014634502e-07,
+              3.9612101800097146e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.8099275794001346e-10,
+            "total_known_plus_unit_high_yield_upper": 8.851192548702394e-06
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.1843096072878384e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 7.285248947667964e-07,
+            "additional_conditional_low_moment_upper_each": [
+              8.394314573715992e-07,
+              4.2611723134152386e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.8114254475300086e-10,
+            "total_known_plus_unit_high_yield_upper": 1.3837450798903055e-05
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.0555,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 0.00035797590001492285,
+          "direct_light_scalar_equivalent_upper": 0.0005138112427654161,
+          "total_count_scalar_equivalent_upper": 0.0012297630427952617,
+          "fraction_of_reference_half_dark_upper": 0.020496050713254364,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.1605822830252584e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.7175765973983255e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.1478062532537268e-06,
+              6.12322591988807e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.948301538834661e-09,
+            "total_known_plus_unit_high_yield_upper": 1.5085476574432279e-05
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.7992472310115663e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.7396239691606884e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.2598037018375536e-06,
+              6.586906418217277e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.949299708614486e-09,
+            "total_known_plus_unit_high_yield_upper": 2.1652539922644244e-05
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 0.00033419797148565565,
+          "direct_light_scalar_equivalent_upper": 0.00047298352346102855,
+          "total_count_scalar_equivalent_upper": 0.00114137946643234,
+          "fraction_of_reference_half_dark_upper": 0.019022991107205664,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.0733363019614632e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.6489260901801902e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.1080993754647475e-06,
+              5.913559422199689e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.7055194567775471e-09,
+            "total_known_plus_unit_high_yield_upper": 1.4083449946936315e-05
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.640775622110193e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.6701960488643698e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.2162224166814866e-06,
+              6.361362951852085e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.7064052769795907e-09,
+            "total_known_plus_unit_high_yield_upper": 1.993201738710998e-05
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.06,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 0.000501308845210238,
+          "direct_light_scalar_equivalent_upper": 0.0006766690797684476,
+          "total_count_scalar_equivalent_upper": 0.0016792867701889234,
+          "fraction_of_reference_half_dark_upper": 0.027988112836482056,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.5722097895989644e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.1324189996709702e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.4662862403429313e-06,
+              7.982358927539957e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 6.6368635566800365e-09,
+            "total_known_plus_unit_high_yield_upper": 2.1125675892314222e-05
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 2.287477660022295e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.166080040238885e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.6093594439837542e-06,
+              8.586822034697692e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 6.640191250500564e-09,
+            "total_known_plus_unit_high_yield_upper": 2.851553847916586e-05
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 0.0004688304424813048,
+          "direct_light_scalar_equivalent_upper": 0.0006238808875333225,
+          "total_count_scalar_equivalent_upper": 0.001561541772495932,
+          "fraction_of_reference_half_dark_upper": 0.026025696208265534,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.455585661244721e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.0075727229487275e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.4163812983385655e-06,
+              7.713494823379293e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 5.842121054738546e-09,
+            "total_known_plus_unit_high_yield_upper": 1.975700223712717e-05
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 2.0860746878652827e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.040052371524111e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.5545850162448677e-06,
+              8.297598230693986e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 5.845090863172335e-09,
+            "total_known_plus_unit_high_yield_upper": 2.6290989180354375e-05
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.075,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 0.0013006277416336318,
+          "direct_light_scalar_equivalent_upper": 0.0015408309923731582,
+          "total_count_scalar_equivalent_upper": 0.004142086475640422,
+          "fraction_of_reference_half_dark_upper": 0.06903477459400703,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 3.5155271744094476e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.540991864313921e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.6118456532444605e-06,
+              1.4939159691256156e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.3885314111446813e-07,
+            "total_known_plus_unit_high_yield_upper": 5.480980515071823e-05
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 4.4806883895396014e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.5512678480458048e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.8666970695256677e-06,
+              1.6070425645001641e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.3891783965619457e-07,
+            "total_known_plus_unit_high_yield_upper": 6.493221984953609e-05
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 0.0012226764986100077,
+          "direct_light_scalar_equivalent_upper": 0.0014291860915394956,
+          "total_count_scalar_equivalent_upper": 0.003874539088759511,
+          "fraction_of_reference_half_dark_upper": 0.06457565147932519,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 3.262160108030301e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.480774546914496e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.5261756428013207e-06,
+              1.4454462579276944e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.2389028227191997e-07,
+            "total_known_plus_unit_high_yield_upper": 5.15248587324489e-05
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 4.0868946123789024e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.4906922431541819e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.772667788898572e-06,
+              1.5549024906312971e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.2394882873542458e-07,
+            "total_known_plus_unit_high_yield_upper": 6.0227387663596134e-05
+          }
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.1,
+      "controls": [
+        {
+          "panels": 240,
+          "heavy_pair_scalar_equivalent_upper": 0.004438583191563531,
+          "direct_light_scalar_equivalent_upper": 0.00479313228968776,
+          "total_count_scalar_equivalent_upper": 0.013670298672814822,
+          "fraction_of_reference_half_dark_upper": 0.22783831121358036,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 9.02894197157955e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.593318529211931e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.459481673388103e-06,
+              2.6769060595197786e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.68751725387031e-06,
+            "total_known_plus_unit_high_yield_upper": 0.00018704650999469303
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 0.00010423016384937653,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.629440062413209e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.89461658227189e-06,
+              2.8796144279350497e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.688782091270431e-06,
+            "total_known_plus_unit_high_yield_upper": 0.00020198757757498598
+          }
+        },
+        {
+          "panels": 480,
+          "heavy_pair_scalar_equivalent_upper": 0.00419554778911957,
+          "direct_light_scalar_equivalent_upper": 0.004483534232249361,
+          "total_count_scalar_equivalent_upper": 0.012874629810488501,
+          "fraction_of_reference_half_dark_upper": 0.21457716350814168,
+          "full_parent_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 8.387993401574383e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.26892332858651e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.316932138698039e-06,
+              2.592294140615031e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.326351897854577e-06,
+            "total_known_plus_unit_high_yield_upper": 0.00017680474547877658
+          },
+          "full_light_source_bounds": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 9.504865428072246e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.30378742728661e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.738157745261126e-06,
+              2.7885952823109804e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.3275119986401414e-06,
+            "total_known_plus_unit_high_yield_upper": 0.0001889407935798008
+          }
+        }
+      ]
+    }
+  ]
+}
