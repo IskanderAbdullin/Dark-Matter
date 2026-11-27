@@ -38,6 +38,18 @@ All six snapshots and three reported lower cuts retain a
 positive minimum. Re-solving the scalar gap at each selected
 extreme gives effectively the same source in the tested cases.
 
+**Extended energy-and-gap check.** Widening a two-moment envelope
+can change the inverse-energy moment and invalidate a held pole.
+Add that third linear constraint exactly, using the stable identity
+1/E = 1/m − K/m² + K²/(m²E), with K=E−m. At fixed number and
+kinetic energy, constrain the smaller residual moment K²/E.
+This preserves the same gap and Hartree energy. On the entire
+represented scalar grid up to q=25, the .06 third-grid envelope
+is [1.318, 2.901] at x=0.05 and [3.115, 6.252] at x=0.10;
+both finer-than-coarse grids agree on positive lower bounds,
+but not on exact rates. Numerically recomputing the pole and
+total source verifies each extremal state. [Full data](results/early-pole-scalar-source-fixed-gap-envelopes-2026-11-26.json.gz).
+
 This is a conditional non-freeze-out test under fixed fermion
 states; it does not bound what happens after those states or
 the total scalar particle count change. The dynamical screened
