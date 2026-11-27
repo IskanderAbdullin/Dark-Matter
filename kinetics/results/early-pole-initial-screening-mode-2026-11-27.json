@@ -1,0 +1,234 @@
+{
+  "steps": {
+    "projection": "steps",
+    "duration": 3.3333333333333335e-07,
+    "steps": 16,
+    "compared": {
+      "frozen": {
+        "mean_rate": 0.06694247062927206,
+        "gain_relative_to_held": 0.0,
+        "supremum_absolute_count_difference_from_held": 0.0,
+        "terminal_source": 0.07091680026788474,
+        "maximum_absolute_debye_squared_fractional_change": 0.0,
+        "maximum_absolute_soft_packet_ratio_shift": 0.0,
+        "conservation": {
+          "terminal_energy_drift": 2.220446049250313e-15,
+          "terminal_entropy_closure": -1.6602717464730965e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.4424906541753444e-15,
+          "signed_elastic_energy_defect": -2.220446049250313e-16,
+          "nonelastic_energy_remainder": 2.4424906541753444e-15
+        }
+      },
+      "debye": {
+        "mean_rate": 0.06694243428334579,
+        "gain_relative_to_held": -5.429427077929816e-07,
+        "supremum_absolute_count_difference_from_held": 1.211530875622202e-14,
+        "terminal_source": 0.07091673046687923,
+        "maximum_absolute_debye_squared_fractional_change": 0.000391880453818225,
+        "maximum_absolute_soft_packet_ratio_shift": 0.0008575865442196351,
+        "conservation": {
+          "terminal_energy_drift": 1.7763568394002505e-15,
+          "terminal_entropy_closure": -1.6570434260843037e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.4424906541753444e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": -2.220446049250313e-15
+        }
+      },
+      "full": {
+        "mean_rate": 0.06694243427293745,
+        "gain_relative_to_held": -5.43098189642599e-07,
+        "supremum_absolute_count_difference_from_held": 1.2118778203173974e-14,
+        "terminal_source": 0.07091673045410277,
+        "maximum_absolute_debye_squared_fractional_change": 0.00039188045225005885,
+        "maximum_absolute_soft_packet_ratio_shift": 0.0008573638810163153,
+        "conservation": {
+          "terminal_energy_drift": 2.6645352591003757e-15,
+          "terminal_entropy_closure": -1.6586176876387526e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 1.9984014443252818e-15,
+          "nonelastic_energy_remainder": 6.661338147750939e-16
+        }
+      }
+    },
+    "absolute_count_differences_from_held": {
+      "frozen": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "debye": [
+        0.0,
+        7.28583859910259e-17,
+        1.97758476261356e-16,
+        1.942890293094024e-16,
+        -1.3877787807814457e-17,
+        -4.128641872824801e-16,
+        -9.853229343548264e-16,
+        -1.6965595595053173e-15,
+        -2.525757381022231e-15,
+        -3.4555691641457997e-15,
+        -4.4825254619240695e-15,
+        -5.585809592645319e-15,
+        -6.765421556309548e-15,
+        -8.014422459012849e-15,
+        -9.322403959899361e-15,
+        -1.0689366058969085e-14,
+        -1.211530875622202e-14
+      ],
+      "full": [
+        0.0,
+        7.28583859910259e-17,
+        1.97758476261356e-16,
+        1.942890293094024e-16,
+        -1.3877787807814457e-17,
+        -4.128641872824801e-16,
+        -9.853229343548264e-16,
+        -1.6965595595053173e-15,
+        -2.525757381022231e-15,
+        -3.4555691641457997e-15,
+        -4.4825254619240695e-15,
+        -5.585809592645319e-15,
+        -6.765421556309548e-15,
+        -8.014422459012849e-15,
+        -9.322403959899361e-15,
+        -1.0689366058969085e-14,
+        -1.2118778203173974e-14
+      ]
+    },
+    "full_minus_debye_gain_fraction": -1.5548187507901102e-10,
+    "scope": "Matching finite early seeded histories. Same-flavor polarization held on all arms."
+  },
+  "cell-conservative": {
+    "projection": "cell-conservative",
+    "duration": 3.3333333333333335e-07,
+    "steps": 16,
+    "compared": {
+      "frozen": {
+        "mean_rate": 0.06528882438849859,
+        "gain_relative_to_held": 0.0,
+        "supremum_absolute_count_difference_from_held": 0.0,
+        "terminal_source": 0.07078257985468185,
+        "maximum_absolute_debye_squared_fractional_change": 0.0,
+        "maximum_absolute_soft_packet_ratio_shift": 0.0,
+        "conservation": {
+          "terminal_energy_drift": 1.1102230246251565e-15,
+          "terminal_entropy_closure": -1.571831206859109e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.7763568394002505e-15,
+          "signed_elastic_energy_defect": 1.7763568394002505e-15,
+          "nonelastic_energy_remainder": -6.661338147750939e-16
+        }
+      },
+      "debye": {
+        "mean_rate": 0.06528878623152101,
+        "gain_relative_to_held": -5.844335219107322e-07,
+        "supremum_absolute_count_difference_from_held": 1.271899252586195e-14,
+        "terminal_source": 0.07078251241369819,
+        "maximum_absolute_debye_squared_fractional_change": 0.00038434433715164856,
+        "maximum_absolute_soft_packet_ratio_shift": 0.0008411047665036753,
+        "conservation": {
+          "terminal_energy_drift": 1.9984014443252818e-15,
+          "terminal_entropy_closure": -1.576693636762272e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.7763568394002505e-15,
+          "signed_elastic_energy_defect": 3.552713678800501e-15,
+          "nonelastic_energy_remainder": -1.5543122344752192e-15
+        }
+      },
+      "full": {
+        "mean_rate": 0.06528878623152101,
+        "gain_relative_to_held": -5.844335219107322e-07,
+        "supremum_absolute_count_difference_from_held": 1.271899252586195e-14,
+        "terminal_source": 0.0707825124007722,
+        "maximum_absolute_debye_squared_fractional_change": 0.00038434433553472767,
+        "maximum_absolute_soft_packet_ratio_shift": 0.0008408719974476453,
+        "conservation": {
+          "terminal_energy_drift": 2.220446049250313e-15,
+          "terminal_entropy_closure": -1.5778984022163378e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.220446049250313e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": -1.7763568394002505e-15
+        }
+      }
+    },
+    "absolute_count_differences_from_held": {
+      "frozen": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "debye": [
+        0.0,
+        -2.0816681711721685e-17,
+        -1.0755285551056204e-16,
+        -3.2612801348363973e-16,
+        -6.904199434387692e-16,
+        -1.1934897514720433e-15,
+        -1.8214596497756474e-15,
+        -2.5604518505417673e-15,
+        -3.3965885659625883e-15,
+        -4.315992008230296e-15,
+        -5.325601071248798e-15,
+        -6.394190732450511e-15,
+        -7.546047120499111e-15,
+        -8.749945212827015e-15,
+        -1.0019762797242038e-14,
+        -1.1338152638984411e-14,
+        -1.271899252586195e-14
+      ],
+      "full": [
+        0.0,
+        -2.0816681711721685e-17,
+        -1.0755285551056204e-16,
+        -3.2612801348363973e-16,
+        -6.904199434387692e-16,
+        -1.1934897514720433e-15,
+        -1.8214596497756474e-15,
+        -2.5604518505417673e-15,
+        -3.3965885659625883e-15,
+        -4.315992008230296e-15,
+        -5.325601071248798e-15,
+        -6.394190732450511e-15,
+        -7.546047120499111e-15,
+        -8.749945212827015e-15,
+        -1.0019762797242038e-14,
+        -1.1341622085936365e-14,
+        -1.271899252586195e-14
+      ]
+    },
+    "full_minus_debye_gain_fraction": 0.0,
+    "scope": "Matching finite early seeded histories. Same-flavor polarization held on all arms."
+  }
+}
