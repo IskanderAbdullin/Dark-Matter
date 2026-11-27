@@ -21,7 +21,7 @@ def rebin(path):
         x=np.asarray(shot['hard_moments'])
         cold=np.asarray(shot['cold_bins'])
         dep=v.get('aperture_subdivision',1)
-        if dep not in (1,4) or cold.shape!=(8,) or v['projection']!=label:
+        if dep not in (1,2,4) or cold.shape!=(8,) or v['projection']!=label:
             raise ValueError('Use an accepted 8-mode paired initializer on a validated hard mesh.')
         def make(n):
             model=Cold(v['grid'],1,0,n,True,exposure=v['duration'],

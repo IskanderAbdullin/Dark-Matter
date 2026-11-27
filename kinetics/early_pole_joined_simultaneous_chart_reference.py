@@ -54,7 +54,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
     local_archive_meta=None
     if local_from_paired_archive:
-        if projection!='steps' or depth not in (1,4) or any((prepared_input is not None,
+        if projection!='steps' or depth not in (1,2,4) or any((prepared_input is not None,
                 retune_local_daughter, compensation_only, number_only_local_retune, retune_donor_support is not None)):
             raise ValueError('Exact local archive swap requires validated native hard supports.')
         counterpart=branches['cell-conservative']
