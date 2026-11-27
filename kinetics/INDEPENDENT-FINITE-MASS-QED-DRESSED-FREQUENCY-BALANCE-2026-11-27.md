@@ -2,35 +2,35 @@
 
 The [common-aperture statistics gate](INDEPENDENT-FINITE-MASS-QED-APERTURE-STATISTICS-2026-11-27.md)
 tests exact Born kinematics. To test a **possible implementation error**
-at finite width, fix the scalar energy (E_s) and give the on-shell
-mismatch (delta=E_{P,mathrm{pole}}-E_{b,mathrm{pole}}-E_s)
+at finite width, fix the scalar energy $E_s$ and give the on-shell
+mismatch $\delta=E_{P,\mathrm{pole}}-E_{b,\mathrm{pole}}-E_s$
 a manufactured Lorentzian weight on a finite positive-energy strip.
 Use equal bath temperature, vanishing chemical potentials, and
 full FD and BE factors.
 
 If the occupations still use the two pole energies, the ratio of
-forward to reverse statistical weights is (e^{-delta/T}).
+forward to reverse statistical weights is $e^{-\delta/T}$.
 Equivalently the net divided by forward-plus-reverse turnover is
-(-	anh(delta/(2T))) at each mismatch. Sharing the same
+$-\tanh(\delta/(2T))$ at each mismatch. Sharing the same
 positive Lorentzian between forward and reverse does not fix it.
 If instead the FD factors use conserving frequencies
-(E_P'=E_{P,mathrm{pole}}-lambdadelta) and
-(E_b'=E_{b,mathrm{pole}}+(1-lambda)delta), balance is exact for
-any (lambda). The specific frequency routing in this control
+$E_P'=E_{P,\mathrm{pole}}-\lambda\delta$ and
+$E_b'=E_{b,\mathrm{pole}}+(1-\lambda)\delta$, balance is exact for
+any $\lambda$. The specific frequency routing in this control
 does not derive the interacting spectral functions.
 
 The pole-frozen error integrated over the strip is generally
-linear in the width parameter (gamma), not quadratic. Write
-(F) for the smooth net including the phase weight, so (F(0)=0),
-and (H_0) for the zero-mismatch turnover. For endpoints
-([-a,b]) with (a,b>0), the limiting ratio of integrated
-net/turnover divided by (gamma) is
+linear in the width parameter $\gamma$, not quadratic. Write
+$F$ for the smooth net including the phase weight, so $F(0)=0$,
+and $H_0$ for the zero-mismatch turnover. For endpoints
+$[-a,b]$ with $a,b>0$, the limiting ratio of integrated
+net/turnover divided by $\gamma$ is
 
-[
- rac{ F'(0)log(b/a)
- +int_{-a}^{b} [F(delta)-F'(0)delta],ddelta/delta^2 }
- {pi H_0}.
-]
+$$
+ \frac{F'(0)\log(b/a)
+ +\int_{-a}^{b} [F(\delta)-F'(0)\delta]\,d\delta/\delta^2}
+ {\pi H_0}.
+$$
 
 A symmetric window cancels the term odd in mismatch but not the
 even term from the changing FD weights and phase factor.
