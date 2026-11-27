@@ -795,3 +795,6 @@ fit or exclusion.
 - [Live reciprocal hard photon-pair control](INDEPENDENT-EARLY-POLE-LIVE-RECIPROCAL-PAIR-MOMENTS-2026-11-26.md):
   makes the hard photon moments live while verifying reversibility,
   count/energy, admissible occupations and exact two-body geometry.
+- [Joint live hard pair and cold decay moments](INDEPENDENT-EARLY-POLE-LIVE-JOINT-PAIR-DECAY-MOMENTS-2026-11-26.md):
+  both channels now close the same numerical energy and entropy;
+  conditional scalar gains are not the sum of independent runs.
