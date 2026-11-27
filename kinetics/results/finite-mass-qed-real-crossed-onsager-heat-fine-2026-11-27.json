@@ -1,0 +1,107 @@
+{
+  "scope": "FD/BE equilibrium matrix of two separate infrared-finite real processes; held scalar q and masses, no chemical or thermal history.",
+  "rows": [
+    {
+      "grid": "fine",
+      "T": 0.4,
+      "refined": {
+        "channels": [
+          {
+            "channel": "pair",
+            "exchange_matrix": [
+              [
+                29.59947845472491,
+                67.18042621243325
+              ],
+              [
+                67.18042621243326,
+                161.03131215958854
+              ]
+            ],
+            "independent_fd_relative_defect": 9.367950701861528e-09,
+            "equilibrium_defect": 9.705787462640054e-16
+          },
+          {
+            "channel": "scalar_absorption",
+            "exchange_matrix": [
+              [
+                17.21887849507148,
+                -12.870724817320491
+              ],
+              [
+                -12.870724817320491,
+                15.86215494561531
+              ]
+            ],
+            "independent_fd_relative_defect": 2.891320471312355e-09,
+            "equilibrium_defect": 7.779490526289174e-17
+          }
+        ],
+        "combined_matrix": [
+          [
+            46.81835694979639,
+            54.309701395112754
+          ],
+          [
+            54.30970139511277,
+            176.89346710520385
+          ]
+        ],
+        "determinant": 5332.317819392188,
+        "number_heat_correlation": 0.5967788643418612
+      },
+      "maximum_matrix_mesh_relative_difference": 1.471291928289986e-07
+    },
+    {
+      "grid": "fine",
+      "T": 1.0,
+      "refined": {
+        "channels": [
+          {
+            "channel": "pair",
+            "exchange_matrix": [
+              [
+                3241.5824971490965,
+                11352.381516779982
+              ],
+              [
+                11352.381516779982,
+                47119.87339087476
+              ]
+            ],
+            "independent_fd_relative_defect": 1.6178632006411352e-08,
+            "equilibrium_defect": 2.241809403221217e-17
+          },
+          {
+            "channel": "scalar_absorption",
+            "exchange_matrix": [
+              [
+                698.8704213347714,
+                -1277.107845098781
+              ],
+              [
+                -1277.107845098781,
+                3847.8628215053177
+              ]
+            ],
+            "independent_fd_relative_defect": 5.907291679177801e-09,
+            "equilibrium_defect": 4.109068060280496e-17
+          }
+        ],
+        "combined_matrix": [
+          [
+            3940.452918483868,
+            10075.273671681201
+          ],
+          [
+            10075.273671681201,
+            50967.73621238008
+          ]
+        ],
+        "determinant": 99324825.3473165,
+        "number_heat_correlation": 0.7109451698973229
+      },
+      "maximum_matrix_mesh_relative_difference": 7.763867186927342e-07
+    }
+  ]
+}

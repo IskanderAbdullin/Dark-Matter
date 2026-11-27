@@ -96,7 +96,7 @@ def test_geometry(M,m,ms):
     return metrics
 
 
-def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False,energy_moments=False):
+def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False,energy_moments=False,thermal_measure=None):
     M=d['x_end'];m=M*d['mass_ratio'];ms=d['checkpoints'][-1]['scalar_pole_over_T']
     es=np.hypot(ms,Q)
     p_edges,b_edges=[np.hypot(a,d[f'endpoint_{n}_momentum_edges'])
@@ -147,6 +147,13 @@ def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False,energy_moments
                 hh=np.maximum(ll,np.minimum.reduce([h,np.full_like(h,4.),et-bmin]))
             if equilibrium:
                 edges=np.concatenate([ll,hh],axis=1)
+                if thermal_measure is not None:
+                    rstar=np.hypot(Ppar,Pperp)
+                    rho=M*M/(rstar*(P0+rstar))
+                    dif=rho*np.array([.06,.25,1.,4.,16.,64.,256.])
+                    half=(h-l)/2
+                    guards=np.where(Ppar>0,h-half*dif,l+half*dif)
+                    edges=np.sort(np.clip(np.concatenate([ll,hh,guards],axis=1),ll,hh),axis=1)
             else:
                 edges=np.sort(np.clip(np.concatenate([ll,hh,et-b_edges],axis=1),ll,hh),axis=1)
             lo,hi=edges[:,:-1],edges[:,1:]
@@ -170,6 +177,11 @@ def audit(d,T,cap,rad,polar,inner,equilibrium=False,overlap=False,energy_moments
             clock=(p/(128*np.pi**3*es*P))[:,0]
             norm=wv*(ew[start:start+64]*clock)
             total+=wv*(ew[start:start+64]*clock)@np.column_stack([gain,loss])
+            if thermal_measure is not None and equilibrium:
+                part=norm[:,None,None]*wk0*az
+                AA=part*b*(1-f0)
+                BB=part*f0*(1-b)
+                thermal_measure.append(np.column_stack([k.ravel(),AA.ravel(),BB.ravel()]))
             if energy_moments:
                 gd=wk0*az*n*b*(1-f0)
                 ld=wk0*az*(1+n)*f0*(1-b)

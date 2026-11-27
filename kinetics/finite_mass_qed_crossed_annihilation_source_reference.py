@@ -63,7 +63,7 @@ def angle_primitive(M,m,s2,S,J,r,K,sp,a,b):
     return one(M,a,b)+one(m,-b,-a)
 
 
-def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False,capture=None):
+def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False,capture=None,thermal_measure=None):
     if capture is not None and (nphi>=0 or equilibrium):
         raise ValueError('Photon clock capture requires the exact frozen-archive integrator')
     M=data['x_end']; m=M*data['mass_ratio']
@@ -121,6 +121,11 @@ def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False,capture=None):
         def inner(k):
             S,t,r,K,lab,EC,R,sp=params(k)
             knots=np.array([-1.,1.]) if equilibrium else np.unique(np.clip(np.r_[-1.,1.,(p_edges-EC)/R,(lab-b_edges-EC)/R],-1.,1.))
+            if equilibrium and thermal_measure is not None:
+                ramps=np.array([.04,.17,.65,2.5,10.,40.,160.,640.])
+                left=m*m/(r*(np.hypot(r,m)+r))
+                right=M*M/(r*(np.hypot(r,M)+r))
+                knots=np.unique(np.clip(np.r_[-1.,-1.+left*ramps,1.-right*ramps,1.],-1.,1.))
             a,b=knots[:-1],knots[1:]
             e_mid=EC+R*(a+b)/2
             f=fp[np.searchsorted(p_edges,e_mid)]
@@ -208,8 +213,15 @@ def value(data,T,kcap,nk,nphi,nmu,nouter,equilibrium=False,capture=None):
                     n=1/np.expm1(k/T)
                     vec+=np.sum(part*np.column_stack([n+1,n,n]),axis=0)
         else:
+            points=[]
             for k,v in zip(kn,wr,strict=True):
-                vec+=v*inner(k)
+                raw=inner(k)
+                vec+=v*raw
+                if thermal_measure is not None and equilibrium:
+                    nb=1/np.expm1(k/T)
+                    points.append([k,wm*v*raw[0]/(1+nb),wm*v*raw[1]/nb])
+            if points:
+                thermal_measure.append(np.asarray(points))
         rows.append(wm*vec)
     G,L,L0=np.sum(rows,axis=0)
     if L0 < L or min(G,L)<0.:
