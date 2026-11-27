@@ -848,3 +848,6 @@ fit or exclusion.
 - [Daughter shape uncertainty with all three native moments held fixed](INDEPENDENT-EARLY-POLE-SCREENED-NATIVE-MOMENT-UNCERTAINTY-2026-11-26.md):
   perturbs sub-shell occupations at fixed native counts, energy and J,
   showing that those archived moments do not constrain the narrow source response.
+- [Longer screened runs and active retarded feedback](INDEPENDENT-EARLY-POLE-SCREENED-RESPONSE-FEEDBACK-2026-11-26.md):
+  keeps the exterior frozen while updating the active kernel; temporal
+  refinement and polarization refresh do not remove the input-shape ambiguity.

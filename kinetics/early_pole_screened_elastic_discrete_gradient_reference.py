@@ -104,7 +104,7 @@ def step(model,Y0,dt,method="backward"):
         r,Y,F,G,_,_,Fm,Fe=current
         error=float(np.linalg.norm(r,np.inf))
         history.append(error)
-        if error<3e-12:
+        if error<1e-13:
             break
         J=approximate_jacobian(model,G,F,k,dt,scales,Fm if symmetric else None,Fe)
         direction=np.linalg.solve(J,-r)
@@ -124,7 +124,7 @@ def step(model,Y0,dt,method="backward"):
         else:
             raise RuntimeError((dt,history))
     r,Y,F,G,edot,heat,_,_=current
-    assert max(abs(r))<8e-12,(dt,history,max(abs(r)))
+    assert max(abs(r))<5e-13,(dt,history,max(abs(r)))
     _,_,_,r1,s1=M.weights(Y,True)
     count=[np.sum(Y[z,0]-Y0[z,0]) for z in M.r[1:]]
     assert abs(r1-rho0)<2e-12 and max(abs(x) for x in count)<2e-12,(r1-rho0,count)

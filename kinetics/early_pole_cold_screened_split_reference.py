@@ -8,13 +8,16 @@ from scipy.integrate import solve_ivp
 from early_pole_archived_shared_cold_window_reference import Cold
 from early_pole_archived_cold_screened_elastic_reference import Screened
 from early_pole_screened_elastic_discrete_gradient_reference import step
+from early_pole_screened_active_response_update_reference import ActiveResponse
 
-def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None):
+def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12):
     if duration<=0. or count<1:
         raise ValueError("positive duration and step count required")
     if strength<0.:
         raise ValueError("elastic strength cannot be negative")
     M=Screened(grid,1,8,duration,(1,1,2),.08,strength,aperture_grid,projection)
+    active=None if screening_update=="frozen" or not strength else ActiveResponse(M,response_smear)
+    updates=[]
     z0=np.r_[M.M.init.ravel(),M.ns,0.,0.]
     def total(z):
         _,_,_,r,s=M.M.weights(z[:M.j0].reshape(-1,2),True)
@@ -33,7 +36,10 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
     for j in range(count):
         z=advance(z,h/2)
         if strength:
-            f,r=step(M,z[:M.j0].reshape(-1,2),h,method)
+            Y=z[:M.j0].reshape(-1,2)
+            if active is not None:
+                updates.append(active.refresh(Y,screening_update))
+            f,r=step(M,Y,h,method)
             z[:M.j0]=f.ravel()
             z[-2]+=r['entropy_gain']
             controls.append(r)
@@ -43,7 +49,8 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
     assert abs(et-E0)<3e-12 and abs(st-S0-z[-2])<3e-11
     return dict(grid=grid,pair=pair,method=method,strength=strength,projection=projection,
                 aperture_grid=aperture_grid or grid,duration=duration,steps=count,scalar_gain=states[-1]-states[0],
-                state_history=states,energy_drift=et-E0,entropy_closure=st-S0-z[-2],elastic=controls)
+                state_history=states,energy_drift=et-E0,entropy_closure=st-S0-z[-2],elastic=controls,
+                screening_update=screening_update,response_smear=response_smear,response_history=updates)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -55,5 +62,7 @@ if __name__=='__main__':
     p.add_argument("--strength",type=float,default=1.)
     p.add_argument("--projection",choices=("steps","cell-conservative"),default="steps")
     p.add_argument("--aperture-grid",choices=("fine","third"))
+    p.add_argument("--screening-update",choices=("frozen","debye","full"),default="frozen")
+    p.add_argument("--response-smear",type=float,default=.12)
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
