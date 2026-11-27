@@ -1,5 +1,6 @@
 """Selected competing dark reactions for the comoving parent block."""
 import numpy as np
+from scipy.special import expit
 
 from compact_elastic_panel_reference import compile_panels,compact_elastic
 from joint_below_pole_elastic_linear_modes_reference import setup
@@ -8,6 +9,38 @@ from scalar_pair_expanding_continuation_reference import MASS,moments,reconstruc
 from warm_compact_absolute_prompt_reference import LocalAbsolutePrompt
 from warm_late_finite_parent_prompt_reference import FiniteParent
 from warm_pair_common_fermion_chart_reference import rate
+
+
+def absolute_elastic(theta,H,compiled,num):
+    """Avoid separately exponentiating the possibly large relative coordinate."""
+    value=np.zeros(num)
+    cache=[]
+    for p,c,L,ix,P,sf,raw in compiled:
+        a=P@(theta[ix]*sf)
+        b=P@(theta[ix]*(~sf))
+        if np.min(a)<=0.:
+            raise ValueError("absolute elastic Bose exponent")
+        f=np.exp(-a)/(-np.expm1(-a))
+        g=expit(-b)
+        block=(1.+f)*expit(b)
+        J=raw*((f*g)[:,None]*block[None,:])/H
+        z=-a-b
+        diff=z[None,:]-z[:,None]
+        N=np.sign(diff)*np.maximum(J,J.T)*(-np.expm1(-abs(diff)))
+        v=N.sum(axis=1)
+        value[ix]+=P.T@v
+        cache.append((ix,P,sf,f,g,J,N,v))
+    jac=None
+    def derivative(d):
+        nonlocal jac
+        if jac is None:
+            jac=np.zeros((num,num))
+            for ix,P,sf,f,g,J,N,v in cache:
+                C=P*np.where(sf[None,:],-f[:,None],g[:,None])
+                element=v[:,None]*C+N@C+J.sum(axis=1)[:,None]*P-J.T@P
+                jac[np.ix_(ix,ix)]+=P.T@element
+        return jac@d
+    return value,derivative
 
 
 class ElasticMixin:
@@ -19,7 +52,10 @@ class ElasticMixin:
 
     def centered(self,z,ref,R0):
         a,da=self.collision(ref+z)
-        b,db=compact_elastic(z,self.t,self.eta,self.H,self.elastic,self.d,True)
+        if getattr(self,"absolute_elastic",False):
+            b,db=absolute_elastic(ref+z,self.H,self.elastic,self.d)
+        else:
+            b,db=compact_elastic(z,self.t,self.eta,self.H,self.elastic,self.d,True)
         return a+b,lambda v: da(v)+db(v)
 
 
