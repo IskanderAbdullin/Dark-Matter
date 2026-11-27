@@ -40,6 +40,19 @@ def run(bundle,case,steps):
             if case in ('matched-daughter','matched-both'):
                 y,check=retune(M,y,M.init,d)
                 metadata['daughter_moment_match']=check
+            if case in ('local-parent','local-daughter','local-both'):
+                cut=(1.4138888888888888,1.4666666666666666)
+                role=(1,2) if case=='local-both' else ((1,) if case=='local-parent' else (2,))
+                boxes={}
+                for j in role:
+                    edge=np.asarray(M.edge_sets[j])
+                    sel=np.flatnonzero((edge[:-1]>=cut[0]-2e-14)&(edge[1:]<=cut[1]+2e-14))
+                    if len(sel)!=2 or not np.allclose(edge[[sel[0],sel[1]+1]],cut,rtol=0.,atol=2e-14):
+                        raise ValueError("The chosen two hard cells are not present on this aperture.")
+                    ix=M.r[j].start+sel
+                    y[ix]=fine_cont[ix]
+                    boxes[str(j)]=np.c_[edge[sel],edge[sel+1]].tolist()
+                metadata['localized_aperture_swaps']=boxes
             # Build all subsequent channels and their reference response
             # relative to this exact prepared state, not a pre-swap state.
             M.init=y
@@ -54,7 +67,7 @@ def run(bundle,case,steps):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('bundle')
-    p.add_argument('--case',choices=('native','parent','daughter','both','matched-parent','matched-daughter','matched-both'),required=True)
+    p.add_argument('--case',choices=('native','parent','daughter','both','matched-parent','matched-daughter','matched-both','local-parent','local-daughter','local-both'),required=True)
     p.add_argument('--steps',type=int,default=16)
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
