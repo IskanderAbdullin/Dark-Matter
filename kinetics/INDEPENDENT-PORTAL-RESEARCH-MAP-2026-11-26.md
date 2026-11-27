@@ -456,6 +456,11 @@ shows an illustrative static speed degeneracy after fixing central
 density and dispersion. The matched shifted peak exceeds the clipped
 model's assumed bound; this is not a shared collisionless solution.
 
+The [local halo covariance bound](INDEPENDENT-HALO-COLLISIONLESS-BOSE-COVARIANCE-CAP-2026-11-26.md)
+separates necessary collisionless occupation to support density and
+velocity moments from the much stronger requirement to reach an
+exactly critical profile. Its anisotropic examples are fiducial.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
