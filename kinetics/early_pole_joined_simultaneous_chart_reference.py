@@ -15,7 +15,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False):
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
@@ -69,7 +69,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 float(np.sum((y0-native)[M.r[2],0])),
                 float(np.sum(M.shape[M.r[2]]*(y0-native)[M.r[2]]))]
 
-    elastic=ElasticChannels(C,saved['grid'],1.)
+    elastic=None if without_elastic else ElasticChannels(C,saved['grid'],1.)
     add=(ComptonKernel(M),ConversionKernel(M))
     k=M.r[1].start
     charts=M.cells[k:]
@@ -108,9 +108,10 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
             dr,S,W,*_=p.collision(E,F,G)
             d[:C.j0]+=dr.ravel()
             d[-2:]+=[S,W]
-        dr,S,W,_=elastic.collision(G,F,G)
-        d[:C.j0]+=dr.ravel()
-        d[-2:]+=[S,W]
+        if elastic is not None:
+            dr,S,W,_=elastic.collision(G,F,G)
+            d[:C.j0]+=dr.ravel()
+            d[-2:]+=[S,W]
         dy=d[:C.j0].reshape(y0.shape)
         for j,J in enumerate(jac,start=k):
             x=dy[j].copy()
@@ -141,6 +142,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 energy_defect=en,entropy_defect=sn,hard_number_defect=n1-nH,
                 **(dict(prepared_charged_swap=swap) if swap is not None else {}),
                 **(dict(complement_retune=retune_check) if retune_check is not None else {}),
+                **(dict(elastic_channels=False) if without_elastic else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
@@ -157,6 +159,7 @@ if __name__=='__main__':
     group.add_argument('--retune-local-daughter',action='store_true')
     group.add_argument('--compensation-only',action='store_true')
     group.add_argument('--number-only-local-retune',action='store_true')
+    p.add_argument('--without-elastic',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
