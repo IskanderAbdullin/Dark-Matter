@@ -13,7 +13,7 @@ from early_pole_archived_live_compton_reference import ComptonKernel
 from early_pole_archived_live_flavor_conversion_reference import ConversionKernel
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
-def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.):
+def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps",aperture_grid=None,screening_update="frozen",response_smear=.12,compton_strength=0.,same_soft_strength=0.,conversion_strength=0.,snapshots=False):
     if duration<=0. or count<1:
         raise ValueError("positive duration and step count required")
     if strength<0. or same_soft_strength<0.:
@@ -29,8 +29,11 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
         _,_,_,r,s=M.M.weights(z[:M.j0].reshape(-1,2),True)
         _,rho,ent,_,_=M.scalar(z[M.j0:M.j0+M.n])
         return r+rho,s+ent
+    slow_calls=0
     def advance(z,dt):
         def f(_,y):
+            nonlocal slow_calls
+            slow_calls+=1
             out=Cold.rhs(M,y,pair)
             if photon_scattering is not None or conversion is not None:
                 state=M.M.weights(y[:M.j0].reshape(-1,2),True)[:3]
@@ -48,6 +51,19 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
     z=z0.copy()
     E0,S0=total(z)
     controls=[]
+    pictures=[]
+    def inspect(k,y):
+        Y=y[:M.j0].reshape(-1,2)
+        e,F,E,R,S=M.M.weights(Y,True)
+        pr=M.j0
+        n=y[pr:pr+M.n]
+        d=Cold.rhs(M,y,False)[pr:pr+M.n]
+        pictures.append(dict(step=k,exposure=duration*k/count,cold_bins=n.tolist(),
+                             instantaneous_source_by_q=d.tolist(),
+                             charged_and_photon_counts=[float(Y[a,0].sum()) for a in M.M.r],
+                             hard_logits=F.tolist(),hard_moments=Y.tolist()))
+    if snapshots:
+        inspect(0,z)
     states=[float(M.ns.sum())]
     for j in range(count):
         z=advance(z,h/2)
@@ -61,16 +77,19 @@ def run(grid,duration,count,pair,method="backward",strength=1.,projection="steps
             controls.append(r)
         z=advance(z,h/2)
         states.append(float(z[M.j0:M.j0+M.n].sum()))
+        if snapshots and (j+1 in (1,2,4,8,count//4,count//2,3*count//4,count)):
+            inspect(j+1,z)
     et,st=total(z)
     assert abs(et-E0)<3e-12 and abs(st-S0-z[-2])<3e-11
     return dict(grid=grid,pair=pair,method=method,strength=strength,projection=projection,
                 compton_strength=compton_strength,same_soft_strength=same_soft_strength,
-                conversion_strength=conversion_strength,
+                conversion_strength=conversion_strength,slow_rhs_calls=slow_calls,
                 aperture_grid=aperture_grid or grid,duration=duration,steps=count,scalar_gain=states[-1]-states[0],
                 state_history=states,energy_drift=et-E0,entropy_closure=st-S0-z[-2],elastic=controls,
                 screening_update=screening_update,response_smear=response_smear,response_history=updates,
                 maximum_compton_remap_rejection=None if photon_scattering is None else photon_scattering.reject,
-                maximum_conversion_remap_rejection=None if conversion is None else conversion.reject)
+                maximum_conversion_remap_rejection=None if conversion is None else conversion.reject,
+                hard_edge_sets=M.M.edge_sets if snapshots else None, snapshots=pictures)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
@@ -87,5 +106,6 @@ if __name__=='__main__':
     p.add_argument("--compton-strength",type=float,default=0.)
     p.add_argument("--same-soft-strength",type=float,default=0.)
     p.add_argument("--conversion-strength",type=float,default=0.)
+    p.add_argument("--snapshots",action="store_true")
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
