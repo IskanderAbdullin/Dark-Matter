@@ -273,6 +273,8 @@ initial retained phase ceiling need not persist after reactivation.
 The [aligned .68 time refinement](INDEPENDENT-WARM-LATE-TAIL-TIME-REFINEMENT-2026-11-26.md)
 tracks the transient decay and distinguishes full energy above the cut
 from the smaller convex excess.
+A [frozen pad-opening audit](INDEPENDENT-WARM-LATE-PROMPT-PAD-OPENING-2026-11-26.md)
+checks direct outgoing support without claiming dynamical re-entry.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)
