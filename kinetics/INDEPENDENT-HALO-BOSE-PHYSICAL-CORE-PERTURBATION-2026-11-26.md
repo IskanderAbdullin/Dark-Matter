@@ -59,6 +59,39 @@ the fixed physical normalization of one isothermal
 model, not a bound on other halo cores, observations
 or the full cosmological prior.
 
+
+## Resolving the radius would still require a velocity-precision test
+
+At $r/R=\sqrt{6\delta}\,s$, the local
+harmonic expansion gives the inner speed
+contrast
+$$
+ \frac{\Delta V}{V_0\delta} \to
+ -\frac{3}{\sqrt2\,I_c s^2}
+ \int_0^{\min(s,1)} t^2 C(t^2)\,dt .
+$$
+Unlike the fixed-physical-radius exterior
+effect, the *largest inner effect* here is
+of order $F^{-1}$ because the reference
+speed is itself proportional to $\sqrt\delta$.
+The driver checks the limiting extremum against
+direct scaled integrations in the inner region.
+This is the intrinsic halo circular speed, not
+the response of a real observing instrument:
+baryons, inclination, tracer profiles, noise
+and beam averaging are deliberately omitted
+from this ideal comparison.
+
+The limiting extremum is at $s=0.40793$, with
+a relative peak deficit $\Delta V/V_0=-0.07100\delta$.
+At $F=7000$ in the illustrative F583-4 scales
+the fully integrated inner peak is about
+$-4.49\times10^{-4}$ km/s (0.45 m/s), at
+roughly 7.8 pc or .030 arcsec. Resolving the
+position alone would not remove the velocity
+precision problem in this paired model.
+
+
 ~~~sh
 python -W error halo_bose_physical_core_perturbation_reference.py
 ~~~

@@ -3,6 +3,7 @@ import json
 import numpy as np
 from scipy.integrate import quad, solve_ivp
 from scipy.interpolate import PchipInterpolator
+from scipy.optimize import minimize_scalar
 from scipy.special import gamma, zeta, roots_legendre
 from halo_bose_primordial_cap_core_reference import integrate
 
@@ -51,6 +52,20 @@ def damping(y,d):
     return np.sqrt(d)*quad(func,0.,top,epsabs=2e-11,epsrel=2e-10)[0]/Ic
 
 
+def correction(w):
+    if w<=0:
+        return 4/3
+    if w>=1:
+        return 0.
+    a=np.sqrt(1-w)
+    return 2*a-2*np.sqrt(w)*np.arctan(a/np.sqrt(w))-2*a**3/3
+
+
+def inner_speed(w):
+    J=quad(lambda u:u*u*correction(u*u),0.,min(1.,w),epsabs=1e-12)[0]
+    return -3*J/(np.sqrt(2)*Ic*w*w)
+
+
 def run():
     F,Fp=functions()
     tiny=1e-10
@@ -70,6 +85,8 @@ def run():
     outer=solve_ivp(tangent,log,[-A, A*k*tiny/2],rtol=1e-11,atol=1e-13,dense_output=True)
     grid=np.array([.12,.337,1.,2.,4.,8.,12.])
     cases=[]
+    im=minimize_scalar(inner_speed,bounds=(.03,1.),method='bounded')
+    assert im.success
     root,w=roots_legendre(5)
     for cap in (100.,7000.,200000.,1e7,1e9):
         d=np.log1p(1/cap)
@@ -90,12 +107,27 @@ def run():
         vc=np.sqrt(ref.sol(np.log(grid))[1])
         dv=a*dc/(np.sqrt(vc*vc+a*dc)+vc)
         pred=outer.sol(np.log(grid))[1]/(2*vc)
+        def differ(w):
+            x=np.sqrt(6*d)*w
+            lc=np.log(x)
+            base=ref.sol(lc)[1]
+            dif=a*rr.sol(lc)[1]
+            return dif/(np.sqrt(base)+np.sqrt(base+dif))
+        inn=minimize_scalar(differ,bounds=(.03,1.),method='bounded',
+                            options=dict(xatol=1e-10))
+        assert inn.success
         cases.append(dict(cap=cap,common_radius_units=grid.tolist(),
+                          exact_inner_peak_radius_relative_to_rounding_scale=inn.x,
+                          exact_inner_peak_velocity_difference_over_V0=inn.fun,
+                          exact_inner_peak_velocity_difference_for_F583_4_V0_km_s=44.1*inn.fun,
                           relative_to_V0_speed_shift=dv.tolist(),
                           scaled_delta_minus_one_point_five=(dv/a).tolist(),
                           relative_defect_from_asymptotic=float(np.linalg.norm(dv/a-pred)/np.linalg.norm(pred))))
     assert cases[-1]['relative_defect_from_asymptotic']<.012
-    return dict(scope="Critical-versus-capped isothermal family at fixed physical mass and dispersion, "
+    assert abs(cases[-1]['exact_inner_peak_velocity_difference_over_V0']/(np.log1p(1/1e9)*im.fun)-1)<.005
+    return dict(asymptotic_inner_peak_radius_in_rounding_units=im.x,
+                asymptotic_peak_inner_velocity_difference_over_V0_delta=im.fun,
+                scope="Critical-versus-capped isothermal family at fixed physical mass and dispersion, "
                       "small-signal perturbation in a common physical scale; no fit or tidal truncation.",
                 potential_offset_leading_coefficient=-A,common_radius_units=grid.tolist(),
                 asymptotic_speed_response_scaled_by_delta_one_point_five=pred.tolist(),rows=cases)
