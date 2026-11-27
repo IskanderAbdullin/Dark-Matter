@@ -562,6 +562,10 @@ distinguishes spontaneous seed from net stimulated gain and derives
 the least daughter count that could reverse a chosen mode.
 A plentiful daughter population can still miss the kinematic window.
 
+The [finite parent count comparison](INDEPENDENT-EARLY-POLE-PARENT-NUMBER-RESERVOIR-2026-11-26.md)
+keeps a maintained momentum shape but lets the parent inventory deplete
+or replenish at illustrative rates. It does not close the parent bath.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
