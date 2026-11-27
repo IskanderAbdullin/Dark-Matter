@@ -1,0 +1,60 @@
+{
+  "scope": "Actual matched one-step solutions. Common-chart runs may use different fallback microstep paths, so differences need not isolate quadrature.",
+  "original_chart_sha256": "721024d5361aae8057ec5993c08db3a1a5c0002702617223a0c614a9cf8df7d1",
+  "branches": [
+    {
+      "label": "nine-cell",
+      "snapshot_sha256": "4d24a8be25500bda3e6108edbe0ed6d83c999b41077346cb493eb31715e2db0e",
+      "cold_slope_per_ln_a": -5.07827451977022e-05,
+      "new_positive_outside_count_over_retained": [
+        1.1912908974830964e-26,
+        6.89120778464028e-28
+      ],
+      "new_positive_receipt_count": 4
+    },
+    {
+      "label": "common default",
+      "snapshot_sha256": "6ab16d4009e8e92826ba9d638c7c269811bcd172ece92eafa4b0f6deae4a8591",
+      "cold_slope_per_ln_a": -5.078265824694055e-05,
+      "new_positive_outside_count_over_retained": [
+        1.1913243451566326e-26,
+        6.025958914351897e-28
+      ],
+      "new_positive_receipt_count": 4
+    },
+    {
+      "label": "common fine",
+      "snapshot_sha256": "1c5126f85412dc881f4bf2b65dac1023aaf656137e8c5f67ecaa1103c8ade733",
+      "cold_slope_per_ln_a": -5.1331597832562386e-05,
+      "new_positive_outside_count_over_retained": [
+        1.2000621935549813e-26,
+        6.750940224782588e-28
+      ],
+      "new_positive_receipt_count": 4
+    }
+  ],
+  "whole_shell_L1_default_vs_fine": [
+    [
+      8.296816953402291e-05,
+      8.14543089548446e-05
+    ],
+    [
+      9.858569379694277e-05,
+      7.233627327816504e-05
+    ],
+    [
+      9.858569379776179e-05,
+      6.106755610555211e-05
+    ]
+  ],
+  "common_fallback_reasons": [
+    {
+      "fallback_reason": "centered residual not reduced: 8.27e-12, stepH=0.00397126",
+      "used_nine_cell_guess": false
+    },
+    {
+      "fallback_reason": "centered residual not reduced: 1.07e-11, stepH=0.00397126",
+      "used_nine_cell_guess": false
+    }
+  ]
+}
