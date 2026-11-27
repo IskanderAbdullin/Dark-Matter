@@ -1,6 +1,6 @@
 # Exterior scalar gain under live hard channels and distributed shell controls
 
-Continue the [reciprocal exterior experiment](INDEPENDENT-EARLY-POLE-LIVE-SCALAR-EXTERIOR-DECAY-2026-11-27.md) from the same accepted fine hard snapshots. The joined control retains the reciprocal decay packets, hard photon pair, Compton and flavor-conversion terms, unlike screened scattering with a refreshed active response, and held same-flavor polarization. Elastic midpoint solves are surrounded by the matched slow half steps. No expansion is included. This is a conditional short continuation at exposure 2e−6.
+Continue the [reciprocal exterior experiment](INDEPENDENT-EARLY-POLE-LIVE-SCALAR-EXTERIOR-DECAY-2026-11-27.md) from the same accepted fine hard snapshots. The joined control retains the reciprocal decay packets, hard photon pair, Compton and flavor-conversion terms, unlike screened scattering with a refreshed active response, and held same-flavor polarization. Elastic backward solves are surrounded by the matched slow half steps. No expansion is included. This is a conditional short continuation at exposure 2e−6.
 
 | Control, q=.1–5 warm shell selection | Integrated warm gain |
 | --- | ---: |
