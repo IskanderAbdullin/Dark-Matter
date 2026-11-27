@@ -1,0 +1,368 @@
+{
+  "scope": "Paired positive charged scalar-latest polar delta over common vacuum Born support; no common physical thermal factor or damping assigned.",
+  "radial_finite_part_reference": 0.0003,
+  "rows": [
+    {
+      "grid": "fine",
+      "controls": [
+        {
+          "parent_energy": 1.4253294719530705,
+          "tuned_step": null,
+          "constant_kernel_term": -383224.80590267276,
+          "photon_odd_inverse_abs_prefactor": 1.5821538812264804,
+          "occupation_difference_across_coincidence": [
+            0.10130790400586626,
+            0.10130790400586626
+          ],
+          "full_aperture_log_coefficient": 0.320569387043602,
+          "chosen_finite_part": -496.1745222432104,
+          "normalized_common_kernel_audit": 4.9857068530676774e-15,
+          "scalar_rest_azimuth_defect": 1.1102230246251565e-15,
+          "exterior_root_abs_excess": [
+            0.15048183278957794,
+            0.14747067479319415
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -494.2684167877817,
+              "independent_radial_replay_defect": 3.922195901395753e-12,
+              "identical_smooth_residual": 2.5851489289221585e-18
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -492.86901113368907,
+              "independent_radial_replay_defect": 5.8548721426632255e-12,
+              "identical_smooth_residual": 1.129013858190406e-19
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -491.39350325923203,
+              "independent_radial_replay_defect": 7.844391802791506e-12,
+              "identical_smooth_residual": 5.168759556968719e-19
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -489.91723436257126,
+              "independent_radial_replay_defect": 9.094947017729282e-12,
+              "identical_smooth_residual": 1.7712724547395923e-18
+            }
+          ]
+        },
+        {
+          "parent_energy": 1.4286858845268333,
+          "tuned_step": null,
+          "constant_kernel_term": -383224.80590267276,
+          "photon_odd_inverse_abs_prefactor": 1.5821538812264804,
+          "occupation_difference_across_coincidence": [
+            0.10130790400586626,
+            0.10130790400586626
+          ],
+          "full_aperture_log_coefficient": 0.320569387043602,
+          "chosen_finite_part": -496.1084953912861,
+          "normalized_common_kernel_audit": 4.979813656661662e-15,
+          "scalar_rest_azimuth_defect": 1.3322676295501878e-15,
+          "exterior_root_abs_excess": [
+            0.15048183278957797,
+            0.147470674793194
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -494.20238993585735,
+              "independent_radial_replay_defect": 3.069544618483633e-12,
+              "identical_smooth_residual": 3.236312783715004e-19
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -492.80298428176485,
+              "independent_radial_replay_defect": 5.115907697472721e-12,
+              "identical_smooth_residual": 7.323545030411443e-19
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -491.32747640730787,
+              "independent_radial_replay_defect": 7.560174708487466e-12,
+              "identical_smooth_residual": 2.0523142905854976e-19
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -489.85120751064704,
+              "independent_radial_replay_defect": 8.924416761146858e-12,
+              "identical_smooth_residual": 1.110092424617352e-18
+            }
+          ]
+        },
+        {
+          "parent_energy": 1.432042297100596,
+          "tuned_step": null,
+          "constant_kernel_term": -383224.80590267276,
+          "photon_odd_inverse_abs_prefactor": 1.5821538812264804,
+          "occupation_difference_across_coincidence": [
+            0.10130790400586626,
+            0.10130790400586626
+          ],
+          "full_aperture_log_coefficient": 0.320569387043602,
+          "chosen_finite_part": -496.1488515378061,
+          "normalized_common_kernel_audit": 4.979813656661662e-15,
+          "scalar_rest_azimuth_defect": 7.216449660063518e-15,
+          "exterior_root_abs_excess": [
+            0.15048183278957808,
+            0.147470674793194
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -494.2427460823774,
+              "independent_radial_replay_defect": 3.922195901395753e-12,
+              "identical_smooth_residual": 1.2612682109730907e-19
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -492.8433404282848,
+              "independent_radial_replay_defect": 5.9685589803848416e-12,
+              "identical_smooth_residual": 1.5117835432418715e-18
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -491.36783255382784,
+              "independent_radial_replay_defect": 6.707523425575346e-12,
+              "identical_smooth_residual": 9.568609683383233e-19
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -489.891563657167,
+              "independent_radial_replay_defect": 1.0231815394945443e-11,
+              "identical_smooth_residual": 1.573592907741223e-18
+            }
+          ]
+        },
+        {
+          "parent_energy": 1.4230974518581974,
+          "tuned_step": "fermion",
+          "constant_kernel_term": -383224.80590267276,
+          "photon_odd_inverse_abs_prefactor": 1.5821538812264804,
+          "occupation_difference_across_coincidence": [
+            0.04527367583393224,
+            0.10130790400586626
+          ],
+          "full_aperture_log_coefficient": 0.2319146154598464,
+          "chosen_finite_part": -496.3986866962027,
+          "normalized_common_kernel_audit": 4.9857068530676774e-15,
+          "scalar_rest_azimuth_defect": 3.1086244689504383e-15,
+          "exterior_root_abs_excess": [
+            0.15048183278957794,
+            0.14747067479319415
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -495.0197224794432,
+              "independent_radial_replay_defect": 4.092726157978177e-12,
+              "identical_smooth_residual": 3.8707636202257754e-19
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -494.0073281671409,
+              "independent_radial_replay_defect": 6.423306331271306e-12,
+              "identical_smooth_residual": 5.494728740566518e-19
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -492.9398780139353,
+              "independent_radial_replay_defect": 7.105427357601002e-12,
+              "identical_smooth_residual": 1.302579471422745e-18
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -491.87187730232085,
+              "independent_radial_replay_defect": 1.0800249583553523e-11,
+              "identical_smooth_residual": 2.717384701487664e-18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "controls": [
+        {
+          "parent_energy": 1.4332187906880605,
+          "tuned_step": null,
+          "constant_kernel_term": -383223.6631757478,
+          "photon_odd_inverse_abs_prefactor": 1.5821538045673331,
+          "occupation_difference_across_coincidence": [
+            0.07666734058966233,
+            0.07666734058966233
+          ],
+          "full_aperture_log_coefficient": 0.24259904919998757,
+          "chosen_finite_part": -423.5995680440282,
+          "normalized_common_kernel_audit": 8.245906665729156e-15,
+          "scalar_rest_azimuth_defect": 2.7755575615628914e-15,
+          "exterior_root_abs_excess": [
+            0.1488315321987688,
+            0.14583930462375475
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -422.1570743606197,
+              "independent_radial_replay_defect": 1.8189894035458565e-12,
+              "identical_smooth_residual": 2.15349862980483e-18
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -421.0980383155261,
+              "independent_radial_replay_defect": 2.8990143619012088e-12,
+              "identical_smooth_residual": 5.917223299808246e-19
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -419.9814101456356,
+              "independent_radial_replay_defect": 3.979039320256561e-12,
+              "identical_smooth_residual": 3.938588226056605e-18
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -418.86420605449706,
+              "independent_radial_replay_defect": 5.286437954055145e-12,
+              "identical_smooth_residual": 5.650177075351708e-18
+            }
+          ]
+        },
+        {
+          "parent_energy": 1.4366125844535822,
+          "tuned_step": null,
+          "constant_kernel_term": -383223.6631757478,
+          "photon_odd_inverse_abs_prefactor": 1.5821538045673331,
+          "occupation_difference_across_coincidence": [
+            0.07666734058966233,
+            0.07666734058966233
+          ],
+          "full_aperture_log_coefficient": 0.24259904919998757,
+          "chosen_finite_part": -423.4487129546975,
+          "normalized_common_kernel_audit": 8.245906665729156e-15,
+          "scalar_rest_azimuth_defect": 8.881784197001252e-16,
+          "exterior_root_abs_excess": [
+            0.1488315321987688,
+            0.1458393046237546
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -422.0062192712889,
+              "independent_radial_replay_defect": 1.3073986337985843e-12,
+              "identical_smooth_residual": 9.112502798696935e-19
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -420.94718322619536,
+              "independent_radial_replay_defect": 2.3874235921539366e-12,
+              "identical_smooth_residual": 4.533841537844447e-18
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -419.8305550563049,
+              "independent_radial_replay_defect": 3.808509063674137e-12,
+              "identical_smooth_residual": 3.629862329700093e-18
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -418.71335096516634,
+              "independent_radial_replay_defect": 4.547473508864641e-12,
+              "identical_smooth_residual": 9.498300809941042e-18
+            }
+          ]
+        },
+        {
+          "parent_energy": 1.4400063782191037,
+          "tuned_step": null,
+          "constant_kernel_term": -383223.6631757478,
+          "photon_odd_inverse_abs_prefactor": 1.5821538045673331,
+          "occupation_difference_across_coincidence": [
+            0.07666734058966233,
+            0.07666734058966233
+          ],
+          "full_aperture_log_coefficient": 0.24259904919998757,
+          "chosen_finite_part": -423.33776781265937,
+          "normalized_common_kernel_audit": 8.245906665729156e-15,
+          "scalar_rest_azimuth_defect": 6.661338147750939e-15,
+          "exterior_root_abs_excess": [
+            0.14883153219876893,
+            0.1458393046237546
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -421.89527412925077,
+              "independent_radial_replay_defect": 1.5916157281026244e-12,
+              "identical_smooth_residual": 1.182221573408484e-18
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -420.83623808415723,
+              "independent_radial_replay_defect": 2.6716406864579767e-12,
+              "identical_smooth_residual": 2.031281159169662e-18
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -419.7196099142667,
+              "independent_radial_replay_defect": 3.751665644813329e-12,
+              "identical_smooth_residual": 2.8882593583522684e-18
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -418.6024058231282,
+              "independent_radial_replay_defect": 4.774847184307873e-12,
+              "identical_smooth_residual": 4.423996917988356e-18
+            }
+          ]
+        },
+        {
+          "parent_energy": 1.432354436522056,
+          "tuned_step": "parent",
+          "constant_kernel_term": -383223.6631757478,
+          "photon_odd_inverse_abs_prefactor": 1.5821538045673331,
+          "occupation_difference_across_coincidence": [
+            0.013308708346618153,
+            0.07666734058966233
+          ],
+          "full_aperture_log_coefficient": 0.14235594814447272,
+          "chosen_finite_part": -423.7055688798727,
+          "normalized_common_kernel_audit": 8.245906665729156e-15,
+          "scalar_rest_azimuth_defect": 6.661338147750939e-16,
+          "exterior_root_abs_excess": [
+            0.1488315321987688,
+            0.14583930462375475
+          ],
+          "ladder": [
+            {
+              "hard_radial_guard": 1e-06,
+              "integrated_raw": -422.85912056661175,
+              "independent_radial_replay_defect": 2.0463630789890885e-12,
+              "identical_smooth_residual": 2.586463486945627e-19
+            },
+            {
+              "hard_radial_guard": 1e-08,
+              "integrated_raw": -422.2376833399795,
+              "independent_radial_replay_defect": 3.183231456205249e-12,
+              "identical_smooth_residual": 1.9360014790174065e-18
+            },
+            {
+              "hard_radial_guard": 1e-10,
+              "integrated_raw": -421.5824513332021,
+              "independent_radial_replay_defect": 4.888534022029489e-12,
+              "identical_smooth_residual": 2.061608439794949e-18
+            },
+            {
+              "hard_radial_guard": 1e-12,
+              "integrated_raw": -420.9268813786233,
+              "independent_radial_replay_defect": 5.229594535194337e-12,
+              "identical_smooth_residual": 2.3620098221927218e-18
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
