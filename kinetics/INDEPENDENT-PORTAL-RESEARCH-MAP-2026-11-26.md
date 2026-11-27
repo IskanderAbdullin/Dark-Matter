@@ -618,6 +618,16 @@ retain raw three-species distributions, refine the mass control, and
 show that the early endpoint is not freeze-out. The low-momentum
 number peak coexists with a small tail controlling the RMS.
 
+The [conditional scalar-only capacity test](INDEPENDENT-EARLY-POLE-SCALAR-CONDENSATE-CAPACITY-2026-11-26.md)
+matches the retained number and Hartree energy to an auxiliary
+thermal distribution. A formal zero-mode population in this closure
+does not show that the ongoing driven system is condensed.
+
+The [parent local drain clock](INDEPENDENT-EARLY-POLE-PARENT-LOCAL-CLOCK-2026-11-26.md)
+tests the hierarchy that a maintained parent shape would require.
+It finds stronger instantaneous depletion in selected shells than
+a global number rate would suggest, with mesh-sensitive maxima.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

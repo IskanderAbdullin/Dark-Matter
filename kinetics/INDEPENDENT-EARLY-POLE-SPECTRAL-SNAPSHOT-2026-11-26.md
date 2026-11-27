@@ -31,6 +31,14 @@ the count by about 5.9 times. Do not export x=0.05 as a frozen
 relic to CLASS. The extension remains the same conditional
 effective-kinetic model, not a completed freeze-out calculation.
 
+A separate third-grid extension at mass ratio 0.06 yields 0.00216926
+at x=0.10, versus 0.00219014 on the second grid (0.95% lower).
+The yield grows by 5.96 times between x=0.05 and 0.10, and the
+endpoint still has d ln Y/d ln a = 3.12. The same third-grid
+x=0.075 derivative differs substantially from the second grid;
+the instantaneous local evolution is less converged than total count.
+[Third-grid extension](results/early-pole-spectrum-third-extend-2026-11-26.json.gz).
+
 ~~~sh
 python -W error early_pole_spectrum_snapshot_reference.py --ratio .06
 python -W error early_pole_spectrum_snapshot_reference.py --ratio .06 --scalar 95 --fermion 125 --parent 108
