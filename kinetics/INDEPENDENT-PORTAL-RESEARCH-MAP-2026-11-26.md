@@ -830,3 +830,7 @@ fit or exclusion.
   the frozen and conservative live vacuum hard subset heats the daughter,
   opposite to imposed joint entropy mixing at the same archived stage.
   Momentum-transfer matching and the other gauge channels remain open.
+- [Screened interspecies heat and an independent transfer integral](INDEPENDENT-EARLY-POLE-SCREENED-ELASTIC-TRANSFER-2026-11-26.md):
+  distinguishes matching-scale stability from true convergence,
+  finds the missed incoming edge layers in the CM comparison, and
+  recovers vacuum and detailed-balance controls in direct Q coordinates.

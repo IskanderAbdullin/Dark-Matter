@@ -51,7 +51,8 @@ class Elastic(Cold):
         low = [e[0] for e in edges]
         # Split at both outgoing momentum grid edges before dressing the energy.
         mass = [M.cells[span.start].m for span in M.r[1:]]
-        tau, tw = gauss_each(np.unique(np.r_[self.cut, [.25,.4,.7,1.]]), nt)
+        angles = np.array([.15,.25,.4,.7,1.])
+        tau, tw = gauss_each(np.r_[self.cut, angles[angles>self.cut]], nt)
         for t, wt in zip(tau, tw, strict=True):
             spin = (1+(1-t)**2)/(16*np.pi*s*t*t)
             ct = 1-2*t

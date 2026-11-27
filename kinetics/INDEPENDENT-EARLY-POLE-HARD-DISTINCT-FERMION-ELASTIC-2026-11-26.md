@@ -73,8 +73,14 @@ residual was below 2e-12. On the fine model at reference exposure
 `8e-5`, adding this elastic subset changes the scalar gain from
 `6.2342e-6` to `6.4086e-6` without photon pairs (+2.80%) and
 from `6.0151e-6` to `6.1918e-6` with photon pairs (+2.94%).
-Both use the same initial state and live window; these changes
-are not a measurement of full transport.
+Both use the same initial state and live window. The independently
+continued third archive gave +6.02% and +6.28% under the
+same cuts and physical reference clock. No sampled net cold gain
+reversed in these short runs. A lower transfer boundary .10 needs
+an extra quadrature panel ending at .15; after that split the angular
+normalization agrees to better than 1e-6. These changes are not a
+measurement of full transport. The live sensitivity rows added in the
+follow-up are preserved with the [rest-frame transfer audit](INDEPENDENT-EARLY-POLE-SCREENED-ELASTIC-TRANSFER-2026-11-26.md).
 
 Run from `kinetics/`:
 ```sh
