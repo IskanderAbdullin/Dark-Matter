@@ -10,37 +10,41 @@ from early_pole_archived_cold_screened_elastic_reference import Screened
 
 def approximate_jacobian(m,G,F,k,dt,cell_sizes,F_mid=None,F_end=None):
     M=m.M
-    ix,u,pb,Q,W=m.graph
-    d=M.r[2]
-    v0=G[ix,0]+G[ix,1]*u
-    target=v0[0]+v0[1]-v0[2]
-    j=d.start+np.searchsorted(G[d,0]+G[d,1],target)
-    inside=j<d.stop
-    j=np.minimum(j,d.stop-1)
-    v=(target-G[j,0])/G[j,1]
-    p=M.cells[d.start].pfrombare(M.shape[j,0]+M.shape[j,1]*v)
-    take=inside&(abs(v)<=1.)&(abs(pb-p)<=Q)&(Q<=pb+p)
-    v=np.where(take,v,0.)
-    A,B,C=expit(F[ix,0]+F[ix,1]*u)
-    D=expit(F[j,0]+F[j,1]*v)
-    # Forward-minus-reverse derivatives in the four event logits.
-    Delta=np.array([A*(1-A)*(B*(1-C)*(1-D)+C*D*(1-B)),
-                    B*(1-B)*(A*(1-C)*(1-D)+C*D*(1-A)),
-                   -C*(1-C)*(A*B*(1-D)+D*(1-A)*(1-B)),
-                   -D*(1-D)*(A*B*(1-C)+C*(1-A)*(1-B))])
-    pos=np.stack([*ix,j])-k
-    basis=np.stack([*u,v])
-    b=np.stack([np.ones_like(basis),basis],axis=1)
-    deriv=(b*Delta[:,None,:]).reshape(8,-1)
-    deposit=(b*np.array([-1.,-1.,1.,1.])[:,None,None]).reshape(8,-1)
-    ids=(2*pos[:,None,:]+np.array([0,1])[None,:,None]).reshape(8,-1)
-    fw=m.factor*W*take*m.strength
     n=(len(F)-k)*2
     J=np.zeros((n,n))
-    for a in range(8):
-        for b in range(8):
-            J+=np.bincount(ids[a]*n+ids[b],weights=fw*deposit[a]*deriv[b],
-                           minlength=n*n).reshape(n,n)
+    if hasattr(m,"linear_graphs"):
+        graphs=m.linear_graphs()
+    else:
+        graphs=[(m.graph,M.r[2],m.factor*m.strength)]
+    for table,d,normalization in graphs:
+        ix,u,pb,Q,W=table
+        v0=G[ix,0]+G[ix,1]*u
+        target=v0[0]+v0[1]-v0[2]
+        j=d.start+np.searchsorted(G[d,0]+G[d,1],target)
+        inside=j<d.stop
+        j=np.minimum(j,d.stop-1)
+        v=(target-G[j,0])/G[j,1]
+        p=M.cells[d.start].pfrombare(M.shape[j,0]+M.shape[j,1]*v)
+        take=inside&(abs(v)<=1.)&(abs(pb-p)<=Q)&(Q<=pb+p)
+        v=np.where(take,v,0.)
+        A,B,C=expit(F[ix,0]+F[ix,1]*u)
+        D=expit(F[j,0]+F[j,1]*v)
+        # Forward-minus-reverse derivatives in the four event logits.
+        Delta=np.array([A*(1-A)*(B*(1-C)*(1-D)+C*D*(1-B)),
+                        B*(1-B)*(A*(1-C)*(1-D)+C*D*(1-A)),
+                       -C*(1-C)*(A*B*(1-D)+D*(1-A)*(1-B)),
+                       -D*(1-D)*(A*B*(1-C)+C*(1-A)*(1-B))])
+        pos=np.stack([*ix,j])-k
+        basis=np.stack([*u,v])
+        b=np.stack([np.ones_like(basis),basis],axis=1)
+        deriv=(b*Delta[:,None,:]).reshape(8,-1)
+        deposit=(b*np.array([-1.,-1.,1.,1.])[:,None,None]).reshape(8,-1)
+        ids=(2*pos[:,None,:]+np.array([0,1])[None,:,None]).reshape(8,-1)
+        fw=normalization*W*take
+        for a in range(8):
+            for b in range(8):
+                J+=np.bincount(ids[a]*n+ids[b],weights=fw*deposit[a]*deriv[b],
+                               minlength=n*n).reshape(n,n)
     def susceptibility(state):
         blocks=[]
         for j,cell in enumerate(M.cells[k:],start=k):

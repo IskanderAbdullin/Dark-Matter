@@ -857,3 +857,6 @@ fit or exclusion.
 - [Live hard Compton on the conserved photon and charged moments](INDEPENDENT-EARLY-POLE-LIVE-COMPTON-2026-11-26.md):
   checks the separate photon/fermion count ledgers and initial heating
   against the exact frozen window, then compares matched short and longer effects.
+- [Hard and screened same-flavor redistribution](INDEPENDENT-EARLY-POLE-SAME-FLAVOR-REDISTRIBUTION-2026-11-26.md):
+  conserves each charged flavor's own energy while isolating soft
+  aperture reshaping; the initial tangent does not fix the finite-time response.
