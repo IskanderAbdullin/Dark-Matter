@@ -1,0 +1,78 @@
+{
+  "live": {
+    "thermostat": false,
+    "thermal_rate_over_H_ref": 100.0,
+    "cells": [
+      37,
+      50,
+      74
+    ],
+    "daughter_mass_ratio": 0.06,
+    "scalar_yield": 0.00046346003767364487,
+    "added_heat_to_radiation_over_Tref4": 0.04472435879784678,
+    "radiation_temperature_over_Tref": 1.000318222189475,
+    "final_daughter_energy_over_Tref4": 0.024384941112711146,
+    "final_parent_energy_over_Tref4": 1.0634035041320498,
+    "total_energy_residual_over_final_daughter_energy": 1.1050650065042563e-11,
+    "absolute_final_number_invariant_over_Tref3": 7.424616477180734e-16,
+    "scalar_yield_over_actual_visible_entropy": 0.0004630178693152891,
+    "temperature_jacobian_error": 1.1161988000552014e-11
+  },
+  "hold": {
+    "thermostat": true,
+    "thermal_rate_over_H_ref": 100.0,
+    "cells": [
+      37,
+      50,
+      74
+    ],
+    "daughter_mass_ratio": 0.06,
+    "scalar_yield": 0.0004636213533629565,
+    "added_heat_to_radiation_over_Tref4": 0.04502934339286801,
+    "radiation_temperature_over_Tref": 1.0,
+    "final_daughter_energy_over_Tref4": 0.024392660673278537,
+    "final_parent_energy_over_Tref4": 1.0630908167472104,
+    "total_energy_residual_over_final_daughter_energy": 1.9927709128177764e-11,
+    "absolute_final_number_invariant_over_Tref3": 1.0685896612017132e-15,
+    "scalar_yield_over_actual_visible_entropy": 0.0004636213533629565,
+    "temperature_jacobian_error": 0.0
+  },
+  "refined": {
+    "thermostat": false,
+    "thermal_rate_over_H_ref": 100.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "daughter_mass_ratio": 0.06,
+    "scalar_yield": 0.00044006738655458683,
+    "added_heat_to_radiation_over_Tref4": 0.04259720851366901,
+    "radiation_temperature_over_Tref": 1.000303093994263,
+    "final_daughter_energy_over_Tref4": 0.023130217772461027,
+    "final_parent_energy_over_Tref4": 1.0799511926914518,
+    "total_energy_residual_over_final_daughter_energy": 1.0042526114586105e-11,
+    "absolute_final_number_invariant_over_Tref3": 6.800116025829084e-16,
+    "scalar_yield_over_actual_visible_entropy": 0.00043966748364960526,
+    "temperature_jacobian_error": 1.0874856570808333e-11
+  },
+  "hold-refined": {
+    "thermostat": true,
+    "thermal_rate_over_H_ref": 100.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "daughter_mass_ratio": 0.06,
+    "scalar_yield": 0.0004402129030755462,
+    "added_heat_to_radiation_over_Tref4": 0.04288861277108269,
+    "radiation_temperature_over_Tref": 1.0,
+    "final_daughter_energy_over_Tref4": 0.023137186611382605,
+    "final_parent_energy_over_Tref4": 1.0796528359026505,
+    "total_energy_residual_over_final_daughter_energy": 1.0947414345898546e-11,
+    "absolute_final_number_invariant_over_Tref3": 1.3010426069826053e-15,
+    "scalar_yield_over_actual_visible_entropy": 0.0004402129030755462,
+    "temperature_jacobian_error": 0.0
+  }
+}

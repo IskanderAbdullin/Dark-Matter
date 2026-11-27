@@ -608,6 +608,11 @@ incorporates its finite rest mass in the threshold, discrete
 collision energy and expansion trace. Selected finite daughter ratios
 raise the early integrated yield relative to the massless null.
 
+The [finite radiation heat test](INDEPENDENT-EARLY-POLE-FINITE-RADIATION-HEAT-2026-11-26.md)
+returns momentum-relaxation heat to a live bath and counts it in H.
+The heat is appreciable compared with daughter energy but the
+reference radiation reservoir changes temperature only slightly.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
