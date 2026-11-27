@@ -67,6 +67,8 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
     del op0
     fin="finite" in mode
     extra=mode.endswith("-all")
+    do_pair=extra or mode.endswith("-pair")
+    do_elastic=extra or mode.endswith("-elastic")
     ex=Exterior()
     outside,exchange=np.zeros(2),np.zeros(2)
     max_pair_defect=0.
@@ -120,20 +122,20 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
         rho_mid=get_mom(p,th)[2].sum()
         ex.advance(b)
         H=np.sqrt((for_stage[1]+rho_mid+grav+ex.energy(b)/b**4)/3.)/MPL
-        if extra:
+        if do_pair:
             th,change,new,err=midpoint_pair_kick(p,th,b,h/(2*H),ex)
             outside+=new
             exchange+=change
             max_pair_defect=max(max_pair_defect,err)
         k=ComovingCollision(q,b,Q,dN,retained_shells=old_shells if restrict else None)
         if fin:
-            op=FiniteParentElastic(k,H,for_stage[0]) if extra else FiniteParent(k,H)
+            op=FiniteParentElastic(k,H,for_stage[0]) if do_elastic else FiniteParent(k,H)
             np.testing.assert_allclose(op.measure,dN/b**3,rtol=2e-14,atol=1e-300)
             op.old=hv
             op.dt=h
             ent=lambda u,after,before: after+op.heavy_entropy(op.occupation(u))>=before+op.heavy_entropy(hv)
         else:
-            op=StationaryParentElastic(k,H,for_stage[0]) if extra else LocalAbsolutePrompt(k,H,[],True,stream_local=True)
+            op=StationaryParentElastic(k,H,for_stage[0]) if do_elastic else LocalAbsolutePrompt(k,H,[],True,stream_local=True)
             ent=None
         target=pack(th)
         gs=[pack(drift(1.,b,pad(r["snapshot"],q) if outer else
@@ -151,7 +153,7 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
             if i in (0,1,2,5,10,20,40,80):
                 print(mode, j, i, f"{r:.5g}", index, file=sys.stderr,flush=True)
         if clock_method=="sdirk2":
-            if extra:
+            if do_elastic:
                 op.absolute_elastic=True
             v,newparent,stat=sdirk_step(op,target,h,for_stage[0],guess,fin,log,root_tol)
         else:
@@ -162,7 +164,7 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
             assert np.all((0.<=newparent)&(newparent<=1.))
             hv=newparent
         th=op.arrays(v)
-        if extra:
+        if do_pair:
             th,change,new,err=midpoint_pair_kick(p,th,b,h/(2*H),ex)
             outside+=new
             exchange+=change
@@ -202,10 +204,12 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
                 newly_resolved_excess_by_species_over_rho=((newE-C*newN)/rho).tolist(),
                 newly_resolved_energy_by_species_over_rho=(newE/rho).tolist(),
                 newly_resolved_number_by_species_a3=(newN*c**3).tolist())
-        if extra:
+        if do_pair:
             r.update(pair_comoving_count_exchange_over_initial=(exchange/initial_N).tolist(),
                      pair_outside_energy_over_initial=float(ex.energy(c)/initial_E),
-                     pair_conservation_defect=max_pair_defect,elastic_panels=len(op.panels))
+                     pair_conservation_defect=max_pair_defect)
+        if do_elastic:
+            r["elastic_panels"]=len(op.panels)
         if clock_method!="be":
             r["collision_clock_method"]=clock_method
         rows.append(r)
@@ -221,6 +225,10 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
     scope="Source-free closed prompt channel on prescribed FRW clock; finite parent gravity uses matched passive prescription."
     if extra:
         scope+=" Includes selected closed subpole elastic and open-outgoing pair channels. Exterior does not reenter."
+    elif do_pair:
+        scope+=" Selected pair channel with outgoing exterior and no reentry; elastic off."
+    elif do_elastic:
+        scope+=" Selected closed below-pole elastic channel; pair off."
     atomic(out/"summary.json",dict(scope=scope,
                                   input_sha256=R[0]["hash"],eos_sha256=sha(eos),mode=mode,radial_order=order,
                                   cut_GeV=C,W_initial_over_rho=start,rows=rows))
@@ -229,7 +237,7 @@ def run(eos,paths,out,mode,order,common_subdivisions,outer=0.,restrict=False,roo
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("eos",type=Path);p.add_argument("out",type=Path)
-    p.add_argument("mode",choices=("expand-finite","expand-stationary","frozen-finite","frozen-stationary","expand-finite-all","expand-stationary-all"))
+    p.add_argument("mode",choices=("expand-finite","expand-stationary","frozen-finite","frozen-stationary","expand-finite-all","expand-stationary-all","expand-finite-pair","expand-finite-elastic"))
     p.add_argument("paths",type=Path,nargs="+")
     p.add_argument("--order",type=int,default=3)
     p.add_argument("--common-subdivisions",type=int,default=1)

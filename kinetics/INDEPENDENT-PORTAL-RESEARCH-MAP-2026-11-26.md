@@ -289,7 +289,8 @@ An [implicit finite-parent replay](INDEPENDENT-WARM-LATE-FINITE-PARENT-TURN-2026
 checks startup and confirms the late turn on the same discrete clocks. A [comoving parent chart](INDEPENDENT-WARM-COMOVING-PARENT-CHART-2026-11-26.md)
 audit verifies redshift work and collision geometry. A [matched expanding test](INDEPENDENT-WARM-FINITE-PARENT-COMOVING-EXPANSION-2026-11-26.md)
 combines finite lifetime, expansion and selected competing dark reactions. The [coupled clock audit](INDEPENDENT-WARM-COUPLED-CLOCK-AND-SPECIES-BUDGET-2026-11-26.md)
-separates time resolution from the daughter species energy exchange. A [dynamic outgoing pad](INDEPENDENT-WARM-COMOVING-PROMPT-OUTGOING-2026-11-26.md)
+separates time resolution from the daughter species energy exchange. A [pair-versus-elastic comparison](INDEPENDENT-WARM-COUPLED-PAIR-ELASTIC-ATTRIBUTION-2026-11-26.md)
+separates their opposite scalar energy increments. A [dynamic outgoing pad](INDEPENDENT-WARM-COMOVING-PROMPT-OUTGOING-2026-11-26.md)
 resolves new daughter occupation without an incoming floor. A [two-stage stiff clock](INDEPENDENT-WARM-FINITE-PARENT-SDIRK-CLOCK-2026-11-26.md)
 reduces .68 sensitivity but rejects a tested .80 stage. The [durable restart check](INDEPENDENT-WARM-DURABLE-COMOVING-RESTART-2026-11-26.md)
 verifies byte identity for both accepted clocks.
