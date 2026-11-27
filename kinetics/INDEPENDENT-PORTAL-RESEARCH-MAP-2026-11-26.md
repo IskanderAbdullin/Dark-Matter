@@ -766,3 +766,7 @@ fit or exclusion.
   direct HTL momentum moments match both lightlike sum rules, but
   moment-matched Gaussian diffusion overestimates the finite kick phase;
   the soft kick phase and local Doppler phase describe the same effect.
+- [Stationary reversible jump-versus-diffusion response](INDEPENDENT-EARLY-POLE-REVERSIBLE-SOFT-JUMP-2026-11-26.md):
+  positive resolvents with equal bulk second moment exhibit different
+  conditioned resonance correlations; large imposed transport can
+  remain sensitive to the chosen endpoint probe and radial domain.
