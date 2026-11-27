@@ -476,6 +476,11 @@ integrates both final-state occupations exactly over the contact
 scattering angle. Large local enhancement need not persist over
 eccentric orbits; the result is a gross, not a relaxation clock.
 
+The [linearized local halo kinetic clocks](INDEPENDENT-HALO-BOSE-LINEARIZED-KINETIC-CLOCKS-2026-11-26.md)
+test shear and a projected isotropic speed distortion, separating
+true linear collision dissipation from large gross encounter counts.
+These are local test perturbations, not a halo evolution calculation.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
