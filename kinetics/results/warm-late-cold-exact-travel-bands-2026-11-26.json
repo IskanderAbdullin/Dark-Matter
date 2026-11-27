@@ -1,0 +1,143 @@
+{
+  "scope": "Numerical 12\u201350 MeV Fermi-Dirac charged leptons plus measured charged pion vacuum window, using the actual injection-time-dependent reference path cutoff. No dark scattering or complete hadronic source.",
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "KLOE_sha256": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+  "rows": [
+    {
+      "max_actual_path_Mpc": 0.3,
+      "held_distance_selected_yield": 9.429480456737532e-11,
+      "controls": [
+        {
+          "time_order": 12,
+          "kinetic_order": 8,
+          "lepton_FD": 1.5117570741113206e-17,
+          "lepton_MB": 1.5216357875870398e-17,
+          "pion_MB": 1.701234957083106e-17,
+          "pion_BE": 1.7043729220459837e-17,
+          "pion_linear_marginal": 1.6311848498832359e-19,
+          "combined_central_over_held": 3.4107181311981216e-07,
+          "qcut_over_T0_range": [
+            0.02761781746688188,
+            0.027618389263804912
+          ]
+        },
+        {
+          "time_order": 20,
+          "kinetic_order": 12,
+          "lepton_FD": 1.512575718745527e-17,
+          "lepton_MB": 1.5224552154856727e-17,
+          "pion_MB": 1.702102897136382e-17,
+          "pion_BE": 1.7052461938377127e-17,
+          "pion_linear_marginal": 1.632056827302077e-19,
+          "combined_central_over_held": 3.412512415022875e-07,
+          "qcut_over_T0_range": [
+            0.027617815943591927,
+            0.02761839537518938
+          ]
+        }
+      ]
+    },
+    {
+      "max_actual_path_Mpc": 0.5,
+      "held_distance_selected_yield": 5.28915966099717e-10,
+      "controls": [
+        {
+          "time_order": 12,
+          "kinetic_order": 8,
+          "lepton_FD": 5.878422598942091e-13,
+          "lepton_MB": 5.94086939358883e-13,
+          "pion_MB": 7.918950188945105e-13,
+          "pion_BE": 7.939207559805417e-13,
+          "pion_linear_marginal": 9.658962831574445e-15,
+          "combined_central_over_held": 0.0026124433831408406,
+          "qcut_over_T0_range": [
+            0.049375974568904225,
+            0.049376593816018964
+          ]
+        },
+        {
+          "time_order": 20,
+          "kinetic_order": 12,
+          "lepton_FD": 5.879306354172679e-13,
+          "lepton_MB": 5.941753115176643e-13,
+          "pion_MB": 7.919058634692064e-13,
+          "pion_BE": 7.939316181825702e-13,
+          "pion_linear_marginal": 9.659097987082448e-15,
+          "combined_central_over_held": 0.0026126310078892845,
+          "qcut_over_T0_range": [
+            0.04937597291920431,
+            0.04937660043454957
+          ]
+        }
+      ]
+    },
+    {
+      "max_actual_path_Mpc": 1.0,
+      "held_distance_selected_yield": 5.4645389730917865e-09,
+      "controls": [
+        {
+          "time_order": 12,
+          "kinetic_order": 8,
+          "lepton_FD": 1.453852636015508e-09,
+          "lepton_MB": 1.4835913215108978e-09,
+          "pion_MB": 8.200127278891842e-10,
+          "pion_BE": 8.237955577172433e-10,
+          "pion_linear_marginal": 2.148522681457401e-11,
+          "combined_central_over_held": 0.41680518794874266,
+          "qcut_over_T0_range": [
+            0.1097019395745727,
+            0.10970263848426476
+          ]
+        },
+        {
+          "time_order": 20,
+          "kinetic_order": 12,
+          "lepton_FD": 1.4531123020582279e-09,
+          "lepton_MB": 1.4828512929594221e-09,
+          "pion_MB": 8.200116462253098e-10,
+          "pion_BE": 8.237945010769414e-10,
+          "pion_linear_marginal": 2.1485313337062636e-11,
+          "combined_central_over_held": 0.41666951491187115,
+          "qcut_over_T0_range": [
+            0.10970193771264762,
+            0.10970264595422836
+          ]
+        }
+      ]
+    },
+    {
+      "max_actual_path_Mpc": 2.0,
+      "held_distance_selected_yield": 5.412465737191456e-08,
+      "controls": [
+        {
+          "time_order": 12,
+          "kinetic_order": 8,
+          "lepton_FD": 8.297916410384464e-08,
+          "lepton_MB": 8.612194892426309e-08,
+          "pion_MB": 1.440169832103093e-08,
+          "pion_BE": 1.4540925486819908e-08,
+          "pion_linear_marginal": 8.088801086872042e-10,
+          "combined_central_over_held": 1.8017682573131262,
+          "qcut_over_T0_range": [
+            0.24730507937043528,
+            0.24730588352497299
+          ]
+        },
+        {
+          "time_order": 20,
+          "kinetic_order": 12,
+          "lepton_FD": 8.288448899634175e-08,
+          "lepton_MB": 8.602595025726067e-08,
+          "pion_MB": 1.4401501212711262e-08,
+          "pion_BE": 1.4540726754418179e-08,
+          "pion_linear_marginal": 8.088694010394801e-10,
+          "combined_central_over_held": 1.8000153808144779,
+          "qcut_over_T0_range": [
+            0.247305077228133,
+            0.24730589211979426
+          ]
+        }
+      ]
+    }
+  ]
+}

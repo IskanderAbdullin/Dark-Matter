@@ -13,12 +13,14 @@ from timelike_portal_onsager_coverage_reference import V,width,mpi,factor
 from warm_late_cold_visible_vacuum_dose_reference import run as base
 
 
-def rates(T,pc,grid,cs,sigma,n):
+def rates(T,pc,grid,cs,sigma,n,*,spectral_profile=None):
     C,L,span=limits(pc)
     z,w=roots_legendre(n)
     x=(z+1)/2;w=w/2
     ss=(grid[:,None]+.01*(x-.5)).ravel()
-    cs=np.repeat(cs,n);err=np.repeat(sigma,n)
+    cs=(np.repeat(cs,n) if spectral_profile is None else np.asarray(spectral_profile(ss)))
+    assert cs.shape==ss.shape and np.min(cs)>0.
+    err=np.repeat(sigma,n)
     W=np.tile(.01*w,len(grid))
     R=np.sqrt(ss)
     v=(R-2*M)*(R+2*M)/ss
