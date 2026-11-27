@@ -15,7 +15,9 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None,local_daughter_fraction=1.):
+    if not 0.<local_daughter_fraction<=1. or (local_daughter_fraction!=1. and not local_from_paired_archive):
+        raise ValueError('A fractional replacement in (0,1] requires the exact local archive option.')
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
@@ -70,12 +72,19 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         np.testing.assert_allclose([ed[loc[0]],ed[loc[-1]+1]],[lo,hi],rtol=0.,atol=2e-14)
         y0=y0.copy()
         ix=M.r[2].start+loc
-        y0[ix]=np.asarray(other['hard_moments'])[ix]
-        if depth!=1:
+        from_archive=np.asarray(other['hard_moments'])[ix]
+        if local_daughter_fraction==1.:
+            y0[ix]=from_archive
+        else:
+            y0[ix]+=local_daughter_fraction*(from_archive-y0[ix])
+        if depth!=1 or local_daughter_fraction!=1.:
             local_archive_meta=dict(indices=ix.tolist(),
                 momentum_interval=[float(ed[loc[0]]),float(ed[loc[-1]+1])],
                 initialized_cold_rate=float(Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2].sum()))
         swap='local-daughter'
+        if local_daughter_fraction!=1.:
+            local_archive_meta['replacement_fraction']=local_daughter_fraction
+            swap='local-daughter-fractional'
     retune_check=None
     if retune_local_daughter or compensation_only or number_only_local_retune or retune_donor_support is not None:
         if projection!='steps' or prepared_input is not None:
@@ -225,6 +234,7 @@ if __name__=='__main__':
     elast.add_argument('--without-elastic',action='store_true')
     elast.add_argument('--elastic-channel',choices=('both','unlike','same'),default='both')
     p.add_argument('--record-mode-history',action='store_true')
+    p.add_argument('--local-daughter-fraction',type=float,default=1.)
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
