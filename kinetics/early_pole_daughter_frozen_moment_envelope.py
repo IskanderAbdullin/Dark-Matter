@@ -26,7 +26,7 @@ def receiver_packets(C,e,j,es,fs,q,width):
     return result
 
 
-def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge):
+def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge,mesh_breaks=()):
     M=C.M
     B=M.cells[j]
     q=C.q
@@ -36,7 +36,7 @@ def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge):
     parts=[]
     for k in range(len(n)):
         parts.extend(receiver_packets(C,loge,j,es[k],fs[k],q[k],coeff[k]))
-    cut=np.unique(np.r_[B.lo,B.hi,[v for u in parts for v in u[:2]]])
+    cut=np.unique(np.r_[B.lo,B.hi,mesh_breaks,[v for u in parts for v in u[:2]]])
     fine=np.unique(np.concatenate([np.linspace(a,b,oversample+1) for a,b in zip(cut[:-1],cut[1:])]))
     dx=np.diff(fine)/2
     mid=(fine[:-1]+fine[1:])/2
