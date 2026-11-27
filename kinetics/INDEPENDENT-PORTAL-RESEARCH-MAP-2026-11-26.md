@@ -519,6 +519,10 @@ uses primary public radii and error scales to check one tiny static
 rounding contrast. A fixed particle mass and velocity scale require
 changing the physical core scale, rather than holding it fixed.
 
+The [common physical radius perturbation](INDEPENDENT-HALO-BOSE-PHYSICAL-CORE-PERTURBATION-2026-11-26.md)
+checks the small observable remainder of a capped critical core and
+its high-occupation scaling without subtracting large rotation curves.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
