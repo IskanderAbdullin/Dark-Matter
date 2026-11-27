@@ -38,7 +38,23 @@ def compare(profiles, chart):
     np.testing.assert_array_equal(t,np.linspace(0,a0['duration'],17))
     ca,cb=(np.asarray(x['cold_count_history']) for x in (a,b))
     out['unsplit']=receipt(t,(cb-cb[0])-(ca-ca[0]))
-    return dict(cases=out, scope='Matched local daughter inputs: changes in the first-window integrated source.')
+    convergence={}
+    if 'held64' in out:
+        coarse=np.asarray(out['held16']['cumulative_effect'])
+        fine=np.asarray(out['held64']['cumulative_effect'])
+        exact=np.asarray(out['unsplit']['cumulative_effect'])
+        # A diagnostic cancellation of a leading width-linear term, not a proven order.
+        lead=(4*fine-coarse)/3
+        convergence=dict(
+            coarse_signed_mean_error=float((coarse[-1]-exact[-1])/t[-1]),
+            fine_signed_mean_error=float((fine[-1]-exact[-1])/t[-1]),
+            extrapolated_signed_mean_error=float((lead[-1]-exact[-1])/t[-1]),
+            coarse_max_count_error=float(np.max(abs(coarse-exact))),
+            fine_max_count_error=float(np.max(abs(fine-exact))),
+            extrapolated_max_count_error=float(np.max(abs(lead-exact))),
+            width_linear_mean_estimate=float(lead[-1]/t[-1]))
+    return dict(cases=out, width_comparison=convergence,
+                scope='Matched local daughter inputs: changes in the first-window integrated source.')
 
 
 def receipt(t,d):
