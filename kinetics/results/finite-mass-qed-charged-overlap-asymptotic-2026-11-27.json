@@ -1,0 +1,505 @@
+{
+  "scope": "Local bare geometrical PV overlap asymptote only, no physical cut weights or residues.",
+  "rows": [
+    {
+      "grid": "fine",
+      "cut": "parent",
+      "analytic_odd_limit": 13.26911184122435,
+      "expected_even_log_coefficient": 0.05528019233306579,
+      "measured_even_log_coefficient": 0.0556218412461939,
+      "relative_even_log_slope_defect": 0.006180313394527515,
+      "rows": [
+        {
+          "abs_energy_shift": 0.0001,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 12.921797736389328,
+              "shift_slope": 148.97571693361797,
+              "width_coefficient": 0.02452756181033639,
+              "direct_angular_relative_defect": 2.3026025530725747e-13
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 12.598522349697557,
+              "shift_slope": 148.9548378930984,
+              "width_coefficient": 0.02452412425706007,
+              "direct_angular_relative_defect": 3.559375016948252e-13
+            }
+          ],
+          "odd_coefficient": 12.760160043043442,
+          "even_part": -1616.376933458854,
+          "even_after_log_subtraction": -1615.8677840716382,
+          "odd_limit_relative_defect": 0.03835613146312489
+        },
+        {
+          "abs_energy_shift": 1e-05,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.280191269250148,
+              "shift_slope": 148.9663206406476,
+              "width_coefficient": 0.024526014792059316,
+              "direct_angular_relative_defect": 6.6702199319479405e-12
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.24785412268452,
+              "shift_slope": 148.96423273660582,
+              "width_coefficient": 0.02452567103673324,
+              "direct_angular_relative_defect": 1.4916956558863603e-11
+            }
+          ],
+          "odd_coefficient": 13.264022695967334,
+          "even_part": -1616.8573282813625,
+          "even_after_log_subtraction": -1616.2208915473427,
+          "odd_limit_relative_defect": 0.0003835332249747525
+        },
+        {
+          "abs_energy_shift": 1e-06,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.270677937955737,
+              "shift_slope": 148.96538107658148,
+              "width_coefficient": 0.02452586010096644,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.267443961663098,
+              "shift_slope": 148.96517228617734,
+              "width_coefficient": 0.024525825725429128,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": 13.269060949809418,
+          "even_part": -1616.98814631972,
+          "even_after_log_subtraction": -1616.2244222388963,
+          "odd_limit_relative_defect": 3.835329413170996e-06
+        },
+        {
+          "abs_energy_shift": 1e-07,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.269273043858504,
+              "shift_slope": 148.96528712082716,
+              "width_coefficient": 0.024525844631943156,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.26894962076812,
+              "shift_slope": 148.96526624178674,
+              "width_coefficient": 0.024525841194330197,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": 13.269111332313312,
+          "even_part": -1617.1154519195597,
+          "even_after_log_subtraction": -1616.224440491932,
+          "odd_limit_relative_defect": 3.835305961708002e-08
+        },
+        {
+          "abs_energy_shift": 1e-08,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.269128008547368,
+              "shift_slope": 148.96527772525823,
+              "width_coefficient": 0.024525843085336167,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.269095663676849,
+              "shift_slope": 148.9652756373542,
+              "width_coefficient": 0.02452584274184823,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": 13.269111836112108,
+          "even_part": -1617.243525942058,
+          "even_after_log_subtraction": -1616.2252271676264,
+          "odd_limit_relative_defect": 3.852738128529154e-10
+        }
+      ]
+    },
+    {
+      "grid": "fine",
+      "cut": "daughter",
+      "analytic_odd_limit": -17.2384799243678,
+      "expected_even_log_coefficient": 0.9254987345481833,
+      "measured_even_log_coefficient": 0.9252898783516861,
+      "relative_even_log_slope_defect": 0.00022566880828767122,
+      "rows": [
+        {
+          "abs_energy_shift": 0.0001,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -16.889749728161686,
+              "shift_slope": 148.97571659601866,
+              "width_coefficient": 0.001471653705284926,
+              "direct_angular_relative_defect": 2.288502720659835e-12
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -16.569306298219455,
+              "shift_slope": 148.95485029831232,
+              "width_coefficient": 0.001471447577970762,
+              "direct_angular_relative_defect": 7.535305712735862e-12
+            }
+          ],
+          "odd_coefficient": -16.72952801319057,
+          "even_part": 1602.2171497111515,
+          "even_after_log_subtraction": 1610.7413080701735,
+          "odd_limit_relative_defect": 0.029524175763188443
+        },
+        {
+          "abs_energy_shift": 1e-05,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.249395167850228,
+              "shift_slope": 148.9663260386401,
+              "width_coefficient": 0.0014715609408473861,
+              "direct_angular_relative_defect": 6.11490857949093e-11
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.217386387795077,
+              "shift_slope": 148.9642394088796,
+              "width_coefficient": 0.0014715403281159948,
+              "direct_angular_relative_defect": 1.2195799925507345e-11
+            }
+          ],
+          "odd_coefficient": -17.233390777822652,
+          "even_part": 1600.4390027575253,
+          "even_after_log_subtraction": 1611.0942007063027,
+          "odd_limit_relative_defect": 0.0002952201451332792
+        },
+        {
+          "abs_energy_shift": 1e-06,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.240027344429983,
+              "shift_slope": 148.9653870480138,
+              "width_coefficient": 0.0014715516650467822,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.23683072144639,
+              "shift_slope": 148.96517838503777,
+              "width_coefficient": 0.0014715496037735702,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": -17.238429032938186,
+          "even_part": 1598.311491797233,
+          "even_after_log_subtraction": 1611.097729335766,
+          "odd_limit_relative_defect": 2.9521993725190043e-06
+        },
+        {
+          "abs_energy_shift": 1e-07,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.238639033499016,
+              "shift_slope": 148.96529314960225,
+              "width_coefficient": 0.0014715507374765495,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.238319797404138,
+              "shift_slope": 148.96527228330464,
+              "width_coefficient": 0.0014715505313464947,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": -17.23847941545158,
+          "even_part": 1596.180474390252,
+          "even_after_log_subtraction": 1611.0977515185405,
+          "odd_limit_relative_defect": 2.95221055379713e-08
+        },
+        {
+          "abs_energy_shift": 1e-08,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.238495859762793,
+              "shift_slope": 148.9652837597676,
+              "width_coefficient": 0.0014715506447266764,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.23846397876448,
+              "shift_slope": 148.96528167313784,
+              "width_coefficient": 0.0014715506241236942,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": -17.238479919263636,
+          "even_part": 1594.049915709661,
+          "even_after_log_subtraction": 1611.098232427705,
+          "odd_limit_relative_defect": 2.9609137364161597e-10
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "cut": "parent",
+      "analytic_odd_limit": 13.19581300705342,
+      "expected_even_log_coefficient": 0.05467383604654084,
+      "measured_even_log_coefficient": 0.05454116959945589,
+      "relative_even_log_slope_defect": 0.0024265070219696705,
+      "rows": [
+        {
+          "abs_energy_shift": 0.0001,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 12.856874896420685,
+              "shift_slope": 147.33471953816257,
+              "width_coefficient": 0.02425730065465482,
+              "direct_angular_relative_defect": 1.5634160632771454e-12
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 12.533622069048564,
+              "shift_slope": 147.31418468750996,
+              "width_coefficient": 0.024253919781127616,
+              "direct_angular_relative_defect": 1.549538275469331e-12
+            }
+          ],
+          "odd_coefficient": 12.695248482734623,
+          "even_part": -1616.2641368606055,
+          "even_after_log_subtraction": -1615.7605722211752,
+          "odd_limit_relative_defect": 0.037933587271298475
+        },
+        {
+          "abs_energy_shift": 1e-05,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.206975074318166,
+              "shift_slope": 147.32547814652688,
+              "width_coefficient": 0.02425577914488081,
+              "direct_angular_relative_defect": 8.132827744589122e-12
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.174640366406637,
+              "shift_slope": 147.3234246614715,
+              "width_coefficient": 0.024255441057529508,
+              "direct_angular_relative_defect": 1.1188827642172328e-12
+            }
+          ],
+          "odd_coefficient": 13.1908077203624,
+          "even_part": -1616.7353955764518,
+          "even_after_log_subtraction": -1616.105939777164,
+          "odd_limit_relative_defect": 0.0003793087010511842
+        },
+        {
+          "abs_energy_shift": 1e-06,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.197379818962983,
+              "shift_slope": 147.3245540711636,
+              "width_coefficient": 0.024255627004399868,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.19414608948245,
+              "shift_slope": 147.32434872265804,
+              "width_coefficient": 0.024255593195667908,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": 13.195762954222715,
+          "even_part": -1616.864740266344,
+          "even_after_log_subtraction": -1616.1093933071986,
+          "odd_limit_relative_defect": 3.7930842667899256e-06
+        },
+        {
+          "abs_energy_shift": 1e-07,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.195974205591448,
+              "shift_slope": 147.32446166426521,
+              "width_coefficient": 0.024255611790467993,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.195650807459744,
+              "shift_slope": 147.32444112941465,
+              "width_coefficient": 0.024255608409569123,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": 13.195812506525595,
+          "even_part": -1616.9906585172812,
+          "even_after_log_subtraction": -1616.1094203982782,
+          "odd_limit_relative_defect": 3.7930806162655983e-08
+        },
+        {
+          "abs_energy_shift": 1e-08,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": 13.19582917322416,
+              "shift_slope": 147.32445242358176,
+              "width_coefficient": 0.02425561026888974,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": 13.195796830899276,
+              "shift_slope": 147.3244503700967,
+              "width_coefficient": 0.024255609930694134,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": 13.195813002061719,
+          "even_part": -1617.1162442013554,
+          "even_after_log_subtraction": -1616.1091149224949,
+          "odd_limit_relative_defect": 3.78279185753172e-10
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "cut": "daughter",
+      "analytic_odd_limit": -17.14325274978296,
+      "expected_even_log_coefficient": 0.9153015989092105,
+      "measured_even_log_coefficient": 0.9155859822042958,
+      "relative_even_log_slope_defect": 0.00031069900393942973,
+      "rows": [
+        {
+          "abs_energy_shift": 0.0001,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -16.80291307774906,
+              "shift_slope": 147.33471930811018,
+              "width_coefficient": 0.0014554380370064197,
+              "direct_angular_relative_defect": 1.0199618927231313e-12
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -16.48246315076359,
+              "shift_slope": 147.31419685222866,
+              "width_coefficient": 0.0014552353070386075,
+              "direct_angular_relative_defect": 3.695710404372221e-12
+            }
+          ],
+          "odd_coefficient": -16.642688114256323,
+          "even_part": 1602.2496349273574,
+          "even_after_log_subtraction": 1610.6798741963253,
+          "odd_limit_relative_defect": 0.029198929913284655
+        },
+        {
+          "abs_energy_shift": 1e-05,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.15425233417297,
+              "shift_slope": 147.32548349540397,
+              "width_coefficient": 0.0014553468015312625,
+              "direct_angular_relative_defect": 1.0613732115416497e-11
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.12224258947557,
+              "shift_slope": 147.32343124982566,
+              "width_coefficient": 0.0014553265285346458,
+              "direct_angular_relative_defect": 1.2501333301884188e-11
+            }
+          ],
+          "odd_coefficient": -17.13824746182427,
+          "even_part": 1600.4872348700515,
+          "even_after_log_subtraction": 1611.0250339562613,
+          "odd_limit_relative_defect": 0.0002919683931482675
+        },
+        {
+          "abs_energy_shift": 1e-06,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.144801080064326,
+              "shift_slope": 147.32455997781818,
+              "width_coefficient": 0.0014553376786127364,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.141604313811037,
+              "shift_slope": 147.32435475326037,
+              "width_coefficient": 0.0014553356513135824,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": -17.14320269693768,
+          "even_part": 1598.3831266446202,
+          "even_after_log_subtraction": 1611.028485548072,
+          "odd_limit_relative_defect": 2.919681930224627e-06
+        },
+        {
+          "abs_energy_shift": 1e-07,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.14341187681857,
+              "shift_slope": 147.3244676266964,
+              "width_coefficient": 0.0014553367663232562,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.143092621688954,
+              "shift_slope": 147.32444710424062,
+              "width_coefficient": 0.0014553365636030369,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": -17.143252249253763,
+          "even_part": 1596.2756480725204,
+          "even_after_log_subtraction": 1611.0285667932142,
+          "odd_limit_relative_defect": 2.9196862705305193e-08
+        },
+        {
+          "abs_energy_shift": 1e-08,
+          "sides": [
+            {
+              "sign": -1,
+              "delta_times_principal_value": -17.14326868645564,
+              "shift_slope": 147.32445839159058,
+              "width_coefficient": 0.0014553366751014181,
+              "direct_angular_relative_defect": null
+            },
+            {
+              "sign": 1,
+              "delta_times_principal_value": -17.143236803106973,
+              "shift_slope": 147.32445633934503,
+              "width_coefficient": 0.0014553366548158036,
+              "direct_angular_relative_defect": null
+            }
+          ],
+          "odd_coefficient": -17.143252744781307,
+          "even_part": 1594.1674334385425,
+          "even_after_log_subtraction": 1611.0279119764782,
+          "odd_limit_relative_defect": 2.917562857973621e-10
+        }
+      ]
+    }
+  ]
+}
