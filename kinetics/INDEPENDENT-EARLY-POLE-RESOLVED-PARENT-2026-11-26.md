@@ -36,6 +36,15 @@ $3\times10^{-17}T^3$. The roughly 20% reduction is relative to a
 matched numerical held-parent run, not relative to a no-Hartree
 comparison or to an observed relic abundance.
 
+At fixed scalar and daughter grids (67, 112), increasing the parent
+resolution alone from 122 to 230 cells lowers the live yield by a
+further 0.78%; the minimum parent occupation relative to its initial
+cell occupation occurs in a narrower shell and the maximum local
+depletion increases to 55.69%. Local spectral extrema are therefore
+not yet converged even though the total early count is comparatively
+stable. [Raw refinement](results/early-pole-resolved-parent-shell-refinement-2026-11-26.json.gz),
+generated with `--scalar 65 --fermion 90 --parent 144`.
+
 An additional pair of illustrative external chemical-relaxation
 runs at fixed grid (47, 75, 86) gives yields 0.00036782 and 0.00042659
 for rates 3 and 100 per e-fold respectively, with largest parent-cell

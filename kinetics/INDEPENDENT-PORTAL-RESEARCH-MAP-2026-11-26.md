@@ -581,6 +581,11 @@ relaxes the maintained-shape assumption. With no replenishment it
 finds a substantial local deficit and a smaller early count than a
 matched held parent, even though global parent depletion is small.
 
+The [local demand diagnostic](INDEPENDENT-EARLY-POLE-PARENT-LOCAL-DEMAND-2026-11-26.md)
+explains why conserved total parent count does not ensure that the
+fixed thermal shape is accurate. It is a held-trajectory audit, not
+a measurement of live depletion.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
