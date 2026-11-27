@@ -801,3 +801,6 @@ fit or exclusion.
 - [Vacuum hard packets in the joint moment test](INDEPENDENT-EARLY-POLE-LIVE-JOINT-HARD-PAIR-PACKETS-2026-11-26.md):
   exact variational energy remap with vacuum spin weights;
   a coarse unsplit angular grid can flip the small conditional gain effect.
+- [Expansion check with simultaneous hard pair and decay moments](INDEPENDENT-EARLY-POLE-LIVE-JOINT-HARD-PACKETS-FRW-2026-11-26.md):
+  independently integrates redshift trace and collisional work;
+  the combined dressed events close the comoving energy ledger.
