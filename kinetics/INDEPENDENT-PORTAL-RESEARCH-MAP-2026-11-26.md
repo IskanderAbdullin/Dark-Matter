@@ -552,6 +552,11 @@ evolves all represented occupations with a shared pole instead of
 imposing one shell. Both grids retain cold momentum without reaching
 the nominal count at the selected handoff when feedback is enabled.
 
+The [paired early Hartree matrix](INDEPENDENT-EARLY-POLE-PAIRED-HARTREE-MATRIX-2026-11-26.md)
+adds a momentum-resolved fermion daughter to the scalar pole feedback
+with a shared event count and an inverse-versus-Pauli-only control.
+The parent remains held and supplies energy and number.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
