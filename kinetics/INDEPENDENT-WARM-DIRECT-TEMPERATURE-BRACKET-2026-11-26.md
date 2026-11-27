@@ -73,3 +73,6 @@ The [machine-readable ladder](results/warm-direct-vacuum-temperature-bracket-202
 pins both source files by SHA-256. EOS and KLOE data preparation are
 described in the [benchmark setup](INDEPENDENT-BENCHMARK-SETUP.md)
 and the [measured-band calculation](INDEPENDENT-WARM-LATE-COLD-VISIBLE-KLOE-RECOIL-2026-11-26.md).
+
+The [temperature-dependent spectra](INDEPENDENT-WARM-DIRECT-TEMPERATURE-SHAPES-2026-11-26.md)
+retain source attribution and test the redshifted momenta independently of this count bracket.
