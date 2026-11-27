@@ -1,0 +1,125 @@
+{
+  "scope": "Frozen charge-symmetric bare loop Hamiltonian spin-projector correction at held Born momenta. No derivative residue, phase shift or complete thermal rate.",
+  "rows": [
+    {
+      "grid": "fine",
+      "parent": {
+        "components_negative_positive": [
+          [
+            1.7692648918387623,
+            -1.2524424951004176,
+            0.12094717118753351
+          ],
+          [
+            2.5544485224089164,
+            -2.0329406112000425,
+            -0.17414157891252507
+          ]
+        ],
+        "pole_projection": [
+          0.521822441720838,
+          0.5166588023006181
+        ],
+        "refinement_error": 1.5579804113485807e-10,
+        "independent_diagonalization_error": 5.263295355106834e-11,
+        "direct_matrix_angular_defect": 2.4008112656812023e-14
+      },
+      "daughter": {
+        "components_negative_positive": [
+          [
+            0.3193521811224648,
+            -0.2663675420086984,
+            0.0017543221236268859
+          ],
+          [
+            0.45361809972589,
+            -0.40062935308958925,
+            -0.0024376292199824864
+          ]
+        ],
+        "pole_projection": [
+          0.05298891310956652,
+          0.05298450922515813
+        ],
+        "refinement_error": 4.446887302833602e-11,
+        "independent_diagonalization_error": 2.2065152764823293e-11,
+        "direct_matrix_angular_defect": 3.1385807591454847e-12
+      },
+      "Born_normalized_spin_trace": 0.0006883286020091216,
+      "charged_spin_trace_derivatives_by_branch_and_leg": [
+        [
+          6.213159716669518,
+          0.08734371416827064
+        ],
+        [
+          -3.8812262846726706,
+          -0.06023714818763288
+        ]
+      ],
+      "sum_before_gauge": 2.359039997977485,
+      "fraction_at_g005": 1.4938795303418558e-06,
+      "exact_frozen_matrix_at_g005": 1.4938820571686051e-06,
+      "combined_centered_trace_derivative_defect": 1.7867595847320672e-08
+    },
+    {
+      "grid": "third",
+      "parent": {
+        "components_negative_positive": [
+          [
+            1.7672142333427463,
+            -1.2514668796705473,
+            0.12072620016478704
+          ],
+          [
+            2.555490773363037,
+            -2.0350899628753853,
+            -0.17396394069668975
+          ]
+        ],
+        "pole_projection": [
+          0.520707315964611,
+          0.5155791042245724
+        ],
+        "refinement_error": 1.8338752738600306e-10,
+        "independent_diagonalization_error": 2.959923278700316e-11,
+        "direct_matrix_angular_defect": 2.2293694246254108e-14
+      },
+      "daughter": {
+        "components_negative_positive": [
+          [
+            0.31271577818329904,
+            -0.26085057043420096,
+            0.001718673176827896
+          ],
+          [
+            0.44265056625543064,
+            -0.3907813595455694,
+            -0.0023804779222400723
+          ]
+        ],
+        "pole_projection": [
+          0.05186936837142029,
+          0.051865085768854347
+        ],
+        "refinement_error": 9.913347920331717e-11,
+        "independent_diagonalization_error": 2.3076811186788226e-11,
+        "direct_matrix_angular_defect": 1.2513586747116631e-11
+      },
+      "Born_normalized_spin_trace": 0.000680751122517885,
+      "charged_spin_trace_derivatives_by_branch_and_leg": [
+        [
+          6.194479038671301,
+          0.08544603251218144
+        ],
+        [
+          -3.8865750084916364,
+          -0.0590319908984737
+        ]
+      ],
+      "sum_before_gauge": 2.3343180717933727,
+      "fraction_at_g005": 1.4782241876987758e-06,
+      "exact_frozen_matrix_at_g005": 1.4782270194579894e-06,
+      "combined_centered_trace_derivative_defect": 1.2177322439299587e-07
+    }
+  ]
+}
