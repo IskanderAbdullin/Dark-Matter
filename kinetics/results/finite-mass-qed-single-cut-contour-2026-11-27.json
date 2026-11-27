@@ -1,0 +1,220 @@
+{
+  "scope": "Latest scalar insertion on a directed one-loop triangle and mathematical single-cut absorptive check; no complete retarded medium rate or width inferred.",
+  "loop_edge_order": [
+    "daughter",
+    "photon",
+    "parent"
+  ],
+  "symbolic_causal_assignment": [
+    {
+      "latest_vertex": 0,
+      "single_thermal_terms": [
+        "A1*A2",
+        "A2*R0",
+        "R0*R1"
+      ]
+    },
+    {
+      "latest_vertex": 1,
+      "single_thermal_terms": [
+        "R1*R2",
+        "A0*A2",
+        "A0*R1"
+      ]
+    },
+    {
+      "latest_vertex": 2,
+      "single_thermal_terms": [
+        "A1*R2",
+        "R0*R2",
+        "A0*A1"
+      ]
+    }
+  ],
+  "grids": [
+    {
+      "grid": "fine",
+      "rows": [
+        {
+          "parent_energy": 1.424926702444219,
+          "born_aperture_fraction": 0.22,
+          "positive_charged_cuts": [
+            {
+              "cut": "parent",
+              "charged_denominator_eta_sign": 1,
+              "occupation": 0.14177601805815226,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": 0.4486229544710822,
+              "numerical_absorptive_log_coefficient": 0.44862303630618033,
+              "absolute_angular_and_radial_defect": 8.183509814241319e-08
+            },
+            {
+              "cut": "daughter",
+              "charged_denominator_eta_sign": -1,
+              "occupation": 0.04046811405228601,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": -0.12805356742748034,
+              "numerical_absorptive_log_coefficient": -0.1280536078729561,
+              "absolute_angular_and_radial_defect": 4.044547577408686e-08
+            }
+          ],
+          "local_coefficient_per_occupation": 3.1643077624529607,
+          "signed_coefficient_from_occupation_difference": 0.320569387043602,
+          "invariant_matching_defect": 1.3322676295501878e-15,
+          "signed_sum": 0.32056938704360183,
+          "sum_of_magnitudes": 0.5766765218985626
+        },
+        {
+          "parent_energy": 1.4286858845268333,
+          "born_aperture_fraction": 0.5,
+          "positive_charged_cuts": [
+            {
+              "cut": "parent",
+              "charged_denominator_eta_sign": 1,
+              "occupation": 0.14177601805815226,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": 0.44862295447108236,
+              "numerical_absorptive_log_coefficient": 0.44862306441350863,
+              "absolute_angular_and_radial_defect": 1.099424262740456e-07
+            },
+            {
+              "cut": "daughter",
+              "charged_denominator_eta_sign": -1,
+              "occupation": 0.04046811405228601,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": -0.1280535674274803,
+              "numerical_absorptive_log_coefficient": -0.12805361594084602,
+              "absolute_angular_and_radial_defect": 4.851336571354281e-08
+            }
+          ],
+          "local_coefficient_per_occupation": 3.1643077624529607,
+          "signed_coefficient_from_occupation_difference": 0.320569387043602,
+          "invariant_matching_defect": 1.3322676295501878e-15,
+          "signed_sum": 0.32056938704360205,
+          "sum_of_magnitudes": 0.5766765218985627
+        },
+        {
+          "parent_energy": 1.4324450666094475,
+          "born_aperture_fraction": 0.78,
+          "positive_charged_cuts": [
+            {
+              "cut": "parent",
+              "charged_denominator_eta_sign": 1,
+              "occupation": 0.14177601805815226,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": 0.4486229544710824,
+              "numerical_absorptive_log_coefficient": 0.4486230368512167,
+              "absolute_angular_and_radial_defect": 8.238013426975499e-08
+            },
+            {
+              "cut": "daughter",
+              "charged_denominator_eta_sign": -1,
+              "occupation": 0.04046811405228601,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": -0.1280535674274803,
+              "numerical_absorptive_log_coefficient": -0.12805360811856836,
+              "absolute_angular_and_radial_defect": 4.0691088054600755e-08
+            }
+          ],
+          "local_coefficient_per_occupation": 3.1643077624529607,
+          "signed_coefficient_from_occupation_difference": 0.320569387043602,
+          "invariant_matching_defect": 1.3322676295501878e-15,
+          "signed_sum": 0.3205693870436021,
+          "sum_of_magnitudes": 0.5766765218985628
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "rows": [
+        {
+          "parent_energy": 1.4328115354361979,
+          "born_aperture_fraction": 0.22,
+          "positive_charged_cuts": [
+            {
+              "cut": "parent",
+              "charged_denominator_eta_sign": 1,
+              "occupation": 0.1668848956840856,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": 0.5280751452627972,
+              "numerical_absorptive_log_coefficient": 0.5280752434471062,
+              "absolute_angular_and_radial_defect": 9.818430901642472e-08
+            },
+            {
+              "cut": "daughter",
+              "charged_denominator_eta_sign": -1,
+              "occupation": 0.09021755509442327,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": -0.2854760960628096,
+              "numerical_absorptive_log_coefficient": -0.2854761874442009,
+              "absolute_angular_and_radial_defect": 9.138139128728184e-08
+            }
+          ],
+          "local_coefficient_per_occupation": 3.1643076091346662,
+          "signed_coefficient_from_occupation_difference": 0.24259904919998757,
+          "invariant_matching_defect": 8.881784197001252e-16,
+          "signed_sum": 0.2425990491999876,
+          "sum_of_magnitudes": 0.8135512413256067
+        },
+        {
+          "parent_energy": 1.4366125844535822,
+          "born_aperture_fraction": 0.5,
+          "positive_charged_cuts": [
+            {
+              "cut": "parent",
+              "charged_denominator_eta_sign": 1,
+              "occupation": 0.1668848956840856,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": 0.5280751452627971,
+              "numerical_absorptive_log_coefficient": 0.5280752763004655,
+              "absolute_angular_and_radial_defect": 1.3103766838273856e-07
+            },
+            {
+              "cut": "daughter",
+              "charged_denominator_eta_sign": -1,
+              "occupation": 0.09021755509442327,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": -0.28547609606280955,
+              "numerical_absorptive_log_coefficient": -0.2854762053061292,
+              "absolute_angular_and_radial_defect": 1.0924331966810641e-07
+            }
+          ],
+          "local_coefficient_per_occupation": 3.1643076091346662,
+          "signed_coefficient_from_occupation_difference": 0.24259904919998757,
+          "invariant_matching_defect": 4.440892098500626e-16,
+          "signed_sum": 0.24259904919998754,
+          "sum_of_magnitudes": 0.8135512413256066
+        },
+        {
+          "parent_energy": 1.4404136334709663,
+          "born_aperture_fraction": 0.78,
+          "positive_charged_cuts": [
+            {
+              "cut": "parent",
+              "charged_denominator_eta_sign": 1,
+              "occupation": 0.1668848956840856,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": 0.5280751452627972,
+              "numerical_absorptive_log_coefficient": 0.5280752441028582,
+              "absolute_angular_and_radial_defect": 9.884006102467424e-08
+            },
+            {
+              "cut": "daughter",
+              "charged_denominator_eta_sign": -1,
+              "occupation": 0.09021755509442327,
+              "local_radial_half_width": 0.0003,
+              "analytic_absorptive_log_coefficient": -0.2854760960628096,
+              "numerical_absorptive_log_coefficient": -0.2854761880016663,
+              "absolute_angular_and_radial_defect": 9.193885669445123e-08
+            }
+          ],
+          "local_coefficient_per_occupation": 3.1643076091346662,
+          "signed_coefficient_from_occupation_difference": 0.24259904919998757,
+          "invariant_matching_defect": 8.881784197001252e-16,
+          "signed_sum": 0.2425990491999876,
+          "sum_of_magnitudes": 0.8135512413256067
+        }
+      ]
+    }
+  ]
+}
