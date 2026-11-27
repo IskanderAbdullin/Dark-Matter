@@ -656,6 +656,12 @@ separates peak reshaping from the outer number and energy budget.
 Nonnegative moment-preserving IR redistributions do not make the
 frozen snapshot source vanish in the tested meshes.
 
+The [cold scalar 4-to-2 reference](INDEPENDENT-EARLY-POLE-SCALAR-NUMBER-CHANGE-2026-11-26.md)
+separates number loss and semi-relativistic injection from elastic
+reshaping. A separate [coherent Floquet control](INDEPENDENT-EARLY-POLE-COHERENT-QUARTIC-FLOQUET-2026-11-26.md)
+tests a homogeneous-field assumption at matched scalar energy.
+Neither calculation establishes the actual kinetic/coherent branch.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
