@@ -1,0 +1,227 @@
+{
+  "scope": "Independent geometric two-mass shell-weight control, not a collision rate or evolution.",
+  "fields": [
+    "area_fraction",
+    "scalar_trace",
+    "fermion_trace",
+    "scalar_trace_deficit",
+    "fermion_trace_deficit"
+  ],
+  "cases": [
+    {
+      "name": "ordinary_partial",
+      "parent_excess": 0.093,
+      "scalar_mass": 0.061,
+      "fermion_mass": 0.122,
+      "parent_excess_lost_in_absolute_mass": false,
+      "kinetic_energy_cell_widths": [
+        0.03584869077217741,
+        0.0697209489335065
+      ],
+      "momentum_edges": [
+        [
+          0.024,
+          0.081
+        ],
+        [
+          0.02,
+          0.15
+        ]
+      ],
+      "absolute_energy_width_collapsed": [
+        false,
+        false
+      ],
+      "normalized_geometry_and_traces": [
+        0.02288657228031038,
+        0.0008624507564764357,
+        0.0018077004550978617,
+        0.0005336301526224974,
+        0.0009844613631000043
+      ],
+      "reference": [
+        0.02288657228031038,
+        0.0008624507564764357,
+        0.001807700455097862,
+        0.0005336301526224974,
+        0.0009844613631000043
+      ],
+      "relative_error": 1.1995374227272735e-16,
+      "normalized_trace_defect_closure": 4.336808689942018e-19,
+      "subdivision_relative_error": 1.5159312235403748e-16
+    },
+    {
+      "name": "near_threshold_double_collapse",
+      "parent_excess": 2e-23,
+      "scalar_mass": 0.061,
+      "fermion_mass": 0.122,
+      "parent_excess_lost_in_absolute_mass": true,
+      "kinetic_energy_cell_widths": [
+        1.9672131147540981e-22,
+        2.001639344262295e-22
+      ],
+      "momentum_edges": [
+        [
+          1e-12,
+          5e-12
+        ],
+        [
+          4e-13,
+          7e-12
+        ]
+      ],
+      "absolute_energy_width_collapsed": [
+        true,
+        true
+      ],
+      "normalized_geometry_and_traces": [
+        0.7087506279640841,
+        0.04323378830580913,
+        0.08646757661161826,
+        6.291034229394251e-23,
+        8.498099977048007e-23
+      ],
+      "reference": [
+        0.708750627964084,
+        0.043233788305809116,
+        0.08646757661161823,
+        6.291034229394248e-23,
+        8.498099977048002e-23
+      ],
+      "relative_error": 6.916218648857441e-16,
+      "normalized_trace_defect_closure": 2.0816681711721685e-17,
+      "subdivision_relative_error": 2.766487459542974e-16
+    },
+    {
+      "name": "asymmetric_one_near_rest",
+      "parent_excess": 0.031,
+      "scalar_mass": 0.065,
+      "fermion_mass": 0.018,
+      "parent_excess_lost_in_absolute_mass": false,
+      "kinetic_energy_cell_widths": [
+        3.768738461538462e-20,
+        3.8434552823036225e-11
+      ],
+      "momentum_edges": [
+        [
+          8e-13,
+          7e-11
+        ],
+        [
+          0.06243396937001282,
+          0.06243396941001282
+        ]
+      ],
+      "absolute_energy_width_collapsed": [
+        true,
+        false
+      ],
+      "normalized_geometry_and_traces": [
+        0.9524680407693946,
+        0.06191042265001065,
+        0.004749373016646571,
+        1.875270565929024e-20,
+        0.01239505171720253
+      ],
+      "reference": [
+        0.9524680407950578,
+        0.06191042265167876,
+        0.004749373016774537,
+        1.875270565939524e-20,
+        0.012395051717536501
+      ],
+      "relative_error": 2.6943930004878837e-11,
+      "normalized_trace_defect_closure": 0.0,
+      "subdivision_relative_error": 1.7381300604281174e-12
+    },
+    {
+      "name": "full",
+      "parent_excess": 0.031,
+      "scalar_mass": 0.061,
+      "fermion_mass": 0.122,
+      "parent_excess_lost_in_absolute_mass": false,
+      "kinetic_energy_cell_widths": [
+        0.006051836874992037,
+        0.02053404529084445
+      ],
+      "momentum_edges": [
+        [
+          0.051,
+          0.06
+        ],
+        [
+          0.1,
+          0.13
+        ]
+      ],
+      "absolute_energy_width_collapsed": [
+        false,
+        false
+      ],
+      "normalized_geometry_and_traces": [
+        1.0,
+        0.04510306716405056,
+        0.08869855450404919,
+        0.015896932835949437,
+        0.03330144549595081
+      ],
+      "reference": [
+        1.0,
+        0.04510306716405056,
+        0.08869855450404919,
+        0.015896932835949437,
+        0.03330144549595081
+      ],
+      "relative_error": 0.0,
+      "normalized_trace_defect_closure": 0.0,
+      "subdivision_relative_error": 2.220446049250313e-16
+    },
+    {
+      "name": "empty",
+      "parent_excess": 0.09,
+      "scalar_mass": 0.05,
+      "fermion_mass": 0.08,
+      "parent_excess_lost_in_absolute_mass": false,
+      "kinetic_energy_cell_widths": [
+        9.999000199950013e-06,
+        6.249755878446624e-06
+      ],
+      "momentum_edges": [
+        [
+          0.0,
+          0.001
+        ],
+        [
+          0.0,
+          0.001
+        ]
+      ],
+      "absolute_energy_width_collapsed": [
+        false,
+        false
+      ],
+      "normalized_geometry_and_traces": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reference": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_error": 0.0,
+      "normalized_trace_defect_closure": 0.0,
+      "subdivision_relative_error": 0.0
+    }
+  ],
+  "ordinary_width_upstream": {
+    "controls": 96,
+    "mixed": 23,
+    "max_absolute_area_fraction_discrepancy": 1.6764367671839864e-14
+  }
+}

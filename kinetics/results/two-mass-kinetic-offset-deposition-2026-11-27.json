@@ -1,0 +1,182 @@
+{
+  "scope": "Independent positive event deposition; no collision kernels or evolving source.",
+  "cases": [
+    {
+      "event_daughter_excess": [
+        0.1502868467065602,
+        0.09691775577928027
+      ],
+      "parent_energy_above_daughter_rest": 0.24720460248584047,
+      "energy_relative_error": 4.237827041363942e-17,
+      "paired_bin_number_weights": [
+        [
+          0.3816207370769376,
+          0.2314280160950457
+        ],
+        [
+          0.2408758182172195,
+          0.14607542861079714
+        ]
+      ],
+      "per_daughter": [
+        {
+          "mean_pair_K": [
+            0.12967009365424553,
+            0.18295006941687159
+          ],
+          "convex_weights": [
+            0.6130487531719834,
+            0.3869512468280167
+          ],
+          "trace_bias": 0.0003407241729831351,
+          "trace_bias_certified_upper": 0.014587172204280283,
+          "projected_K": 0.1502868467065602
+        },
+        {
+          "mean_pair_K": [
+            0.08115716275136248,
+            0.1229066970905755
+          ],
+          "convex_weights": [
+            0.6224965552941572,
+            0.37750344470584285
+          ],
+          "trace_bias": 0.0007399659910712395,
+          "trace_bias_certified_upper": 0.004432960067036207,
+          "projected_K": 0.09691775577928027
+        }
+      ],
+      "name": "ordinary",
+      "inputs": [
+        0.093,
+        0.061,
+        0.122,
+        0.33,
+        0.23
+      ],
+      "raw_absolute_daughter_energy_rounded_to_rest": [
+        false,
+        false
+      ],
+      "high_precision_reference_relative_error": 0.0
+    },
+    {
+      "event_daughter_excess": [
+        1.926317055648847e-23,
+        4.445267643804705e-23
+      ],
+      "parent_energy_above_daughter_rest": 6.371584699453551e-23,
+      "energy_relative_error": 3.666380568901878e-17,
+      "paired_bin_number_weights": [
+        [
+          0.4241387790968824,
+          0.22712060018059288
+        ],
+        [
+          0.22712060018059288,
+          0.12162002054193183
+        ]
+      ],
+      "per_daughter": [
+        {
+          "mean_pair_K": [
+            1.5440213123492717e-23,
+            2.640239305273442e-23
+          ],
+          "convex_weights": [
+            0.6512593792774752,
+            0.3487406207225247
+          ],
+          "trace_bias": 5.922588056418817e-46,
+          "trace_bias_certified_upper": 5.922588056418817e-46,
+          "projected_K": 1.926317055648847e-23
+        },
+        {
+          "mean_pair_K": [
+            3.5630624569324663e-23,
+            6.092751097861292e-23
+          ],
+          "convex_weights": [
+            0.6512593792774752,
+            0.3487406207225247
+          ],
+          "trace_bias": 1.576964147939649e-45,
+          "trace_bias_certified_upper": 1.576964147939649e-45,
+          "projected_K": 4.445267643804705e-23
+        }
+      ],
+      "name": "near_threshold",
+      "inputs": [
+        2e-23,
+        0.061,
+        0.122,
+        4e-12,
+        -0.31
+      ],
+      "raw_absolute_daughter_energy_rounded_to_rest": [
+        true,
+        true
+      ],
+      "high_precision_reference_relative_error": 0.0
+    },
+    {
+      "event_daughter_excess": [
+        4.3289819356736365e-18,
+        0.04697692307692307
+      ],
+      "parent_energy_above_daughter_rest": 0.046976923076923076,
+      "energy_relative_error": 3.3897961733903886e-17,
+      "paired_bin_number_weights": [
+        [
+          0.39907352717124567,
+          0.25218585210622957
+        ],
+        [
+          0.21369849557334591,
+          0.13504212514917882
+        ]
+      ],
+      "per_daughter": [
+        {
+          "mean_pair_K": [
+            3.4698547416451615e-18,
+            5.9333681466753114e-18
+          ],
+          "convex_weights": [
+            0.6512593792774752,
+            0.3487406207225247
+          ],
+          "trace_bias": 2.807010338329693e-35,
+          "trace_bias_certified_upper": 2.8070103383296935e-35,
+          "projected_K": 4.3289819356736365e-18
+        },
+        {
+          "mean_pair_K": [
+            0.04058722587222467,
+            0.05708835073925325
+          ],
+          "convex_weights": [
+            0.6127720227445916,
+            0.3872279772554084
+          ],
+          "trace_bias": 9.79034420447203e-05,
+          "trace_bias_certified_upper": 0.004743038263762764,
+          "projected_K": 0.04697692307692307
+        }
+      ],
+      "name": "backward_near_rest",
+      "inputs": [
+        0.031,
+        0.065,
+        0.018,
+        0.06243396938001282,
+        -0.9999999999999998
+      ],
+      "raw_absolute_daughter_energy_rounded_to_rest": [
+        true,
+        false
+      ],
+      "high_precision_reference_relative_error": 0.0
+    }
+  ]
+}
