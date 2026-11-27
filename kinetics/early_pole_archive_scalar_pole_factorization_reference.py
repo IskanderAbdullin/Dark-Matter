@@ -17,7 +17,7 @@ def step(value, edges, density):
                     density[np.clip(k, 0, len(density) - 1)], 0.)
 
 
-def residue(a, q, order):
+def residue(a, q, order, exposures=None):
     M, m = .05, .003
     ms = a['checkpoints'][-1]['scalar_pole_over_T']
     H = np.sqrt(np.pi**2*106.75/90)*(86./a['x_end'])/2.435e18
@@ -45,6 +45,9 @@ def residue(a, q, order):
         a, b = max(a, pmin), min(b, pmax)
         assert b > a
         cuts = np.unique(np.r_[a, E[(a < E) & (E < b)], b])
+        if exposures is not None:
+            parent_edges = np.hypot(pn,M)-w0
+            cuts = np.unique(np.r_[cuts,parent_edges[(a<parent_edges)&(parent_edges<b)]])
         h = np.diff(cuts)[:, None]/2
         x, y = roots_legendre(order)
         es = ((cuts[:-1] + cuts[1:])[:, None]/2 + h*x).ravel()
@@ -63,6 +66,10 @@ def residue(a, q, order):
     source_prefactor = (G*KAPPA*M*vertex/(q*w0) if q
                         else G*KAPPA*M*vertex*2*mr/ms**3)
     max_thermal = 0.
+    if exposures is not None:
+        instantaneous=np.zeros((3,len(exposures)))
+        integrated=np.zeros_like(instantaneous)
+        old_est=np.zeros(3)
     for e, weight in zip(es, es_weight, strict=True):
         et = e + w0
         lab = np.sqrt((et - M)*(et + M))
@@ -101,6 +108,15 @@ def residue(a, q, order):
         stationary_sources += source_prefactor*weight*direct(fill)
         if not q:
             exact_sources += source_prefactor*weight*direct(Pfin)
+        if exposures is not None:
+            labrate=gamma_vac*damping*M*M/(H*et)
+            endpoint_fraction=-np.expm1(-labrate*exposures)
+            avg_fraction=mean_relaxation(labrate*exposures)
+            da=source_prefactor*weight*direct(Pfin)
+            df=source_prefactor*weight*(fill-Pfin)*np.array([ (1-fin)*(1+1/tagged),-fin,1+(1-fin)/tagged])
+            old_est+=da
+            instantaneous+=da[:,None]+df[:,None]*endpoint_fraction
+            integrated+=(da[:,None]+df[:,None]*avg_fraction)*exposures
         # Independent thermal local check: common-T chemical equilibrium
         # implies this stationary parent occupation at each lab energy.
         be = 1/np.expm1(ms+k)
@@ -145,7 +161,40 @@ def residue(a, q, order):
                   stationary_parent_direct_over_H=stationary_sources.tolist(),
                   archived_parent_direct_over_H=exact_sources.tolist(),
                   stationary_matching_error=float(err),maximum_thermal_equilibrium_error=max_thermal)
+    if exposures is not None:
+        np.testing.assert_allclose(old_est, exact_sources, rtol=3e-13, atol=1e-12)
+        return dict(tagged_q=q,order=order,exposure=exposures.tolist(),
+                    exact_archived_initial_gross_and_net_rate=exact_sources.tolist(),
+                    stationary_direct_gross_and_net_rate=stationary_sources.tolist(),
+                    instant_gross_and_net_rate=instantaneous.T.tolist(),
+                    integrated_gross_and_net_gain=integrated.T.tolist(),
+                    maximum_frozen_parent_relaxation=float(relaxation_bound))
     return out, [a, b], residue_spin, spectral
+
+
+def mean_relaxation(z):
+    # 1 - (1 - exp(-z))/z, evaluated without cancellation at small z.
+    out=np.empty_like(z)
+    lo=z<2e-3
+    y=z[lo]
+    out[lo]=y*(.5+y*(-1/6+y*(1/24+y*(-1/120+y/720))))
+    out[~lo]=1.+np.expm1(-z[~lo])/z[~lo]
+    return out
+
+
+def transient_fixture():
+    # Cross-check the decay exponential and accumulated fill against an ODE
+    # on synthetic detailed-balance ion/return coefficients.
+    from scipy.integrate import solve_ivp
+    for rate in (.02, 3., 170., 2200.):
+        for p0, peq in ((.11,.63),(.77,.15),(.44,.44)):
+            t=np.array([0.,2e-8,7.2e-5,.002,.02])
+            y=solve_ivp(lambda _, y:[rate*(peq-y[0]),y[0]], (0.,t[-1]), [p0,0.],
+                        t_eval=t, method='Radau', atol=4e-14, rtol=4e-13)
+            assert y.success
+            v = p0+(peq-p0)*(-np.expm1(-rate*t))
+            g = t*(p0+(peq-p0)*mean_relaxation(rate*t))
+            np.testing.assert_allclose(y.y,[v,g],rtol=5e-11,atol=4e-14)
 
 
 def compare(a, q, order):
@@ -168,8 +217,17 @@ if __name__ == '__main__':
     p.add_argument('grid', choices=('fine', 'third'))
     p.add_argument('--order', type=int, default=14)
     p.add_argument('--q', type=float, nargs='+', default=[0., 4.1e-6])
+    p.add_argument('--exposure', type=float, nargs='+', default=None,
+                   help='Check analytic single-channel parent time evolution in a frozen bath.')
     args = p.parse_args()
     with gzip.open(GRID/f'early-pole-spectrum-{args.grid}-m06-2026-11-26.json.gz', 'rt') as fh:
         data = json.load(fh)
-    print(json.dumps(dict(grid=args.grid, cases=[compare(data,q,args.order) for q in args.q]),
-                     indent=2,allow_nan=False))
+    if args.exposure is not None:
+        transient_fixture()
+        t=np.asarray(args.exposure)
+        if np.any(~np.isfinite(t)) or np.any(t<0.):
+            p.error("Use finite nonnegative exposures.")
+        cases=[residue(data,q,args.order,t) for q in args.q]
+    else:
+        cases=[compare(data,q,args.order) for q in args.q]
+    print(json.dumps(dict(grid=args.grid,cases=cases),indent=2,allow_nan=False))
