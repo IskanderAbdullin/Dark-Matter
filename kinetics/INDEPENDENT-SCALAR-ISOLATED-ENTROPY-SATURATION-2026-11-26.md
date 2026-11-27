@@ -79,3 +79,30 @@ python -W error scalar_isolated_entropy_saturation_reference.py \
 ~~~
 
 [Entropy and saturation ledger](results/scalar-isolated-entropy-saturation-2026-11-26.json).
+
+## How much was actually exchanged on the stored coupled path?
+
+Reconstruct the ideal FD entropy of the stable species
+alongside the scalar BE entropy, multiplying each
+entropy per particle by its recorded yield. With
+constant visible comoving entropy these two ratios
+can be compared as comoving entropies. Between the
+modeled 2 MeV and 80 keV anchors on the fine feedback
+arm, the stable component gains 23.88% of its own
+starting entropy, the scalar loses .816% of its own,
+and the total rises 1.919%. The scalar entropy per
+particle falls 1.071%, well short of the isolated
+saturation gap. The two independently calibrated arms
+give the same qualitative changes, and the total
+rises across every stored adjacent pair.
+This checks the sign and size of the sampled
+approximate thermal history, not an H-theorem
+for its MB collision closure. It does not constrain
+an alternative cooling or number source.
+
+~~~sh
+python -W error scalar_coupled_entropy_archive_audit_reference.py \
+ results/warm-prompt-reheating-post-2mev-elastic-2026-11-26.json.gz
+~~~
+
+[Separate species entropy ledger and both arms](results/scalar-coupled-entropy-audit-2026-11-26.json.gz).
