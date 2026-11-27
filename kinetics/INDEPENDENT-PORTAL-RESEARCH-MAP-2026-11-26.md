@@ -407,6 +407,11 @@ compares minimum ballistic path and cold count fraction at the required
 86 eV abundance for an arbitrary capped spectrum. It is a conditional
 packing control, not a dynamical source or transfer constraint.
 
+The [late vacuum daughter-angle bound](INDEPENDENT-WARM-REHEATING-LATE-DECAY-COLD-SOURCE-2026-11-26.md)
+shows why the unscattered cold yield of a late isotropic two-body
+decay is tiny even at the optimal boost. The illustrative integrated
+count does not allow repeated inverse prompt cycling.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
