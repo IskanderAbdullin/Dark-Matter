@@ -466,6 +466,11 @@ checks the entire phase-space excess after solving a finite tidal boundary.
 An infinite-tail primordial patch cannot place all particles in compact
 phase support, even if ordinary finite-threshold tests do not exclude it.
 
+The [orbital halo encounter clock](INDEPENDENT-HALO-BOSE-ORBITAL-ELASTIC-CLOCK-2026-11-26.md)
+adds time-weighted vacuum collisions and energy exchange on held
+orbits to the original one-passage density proxy. It is not a
+relaxation or formation calculation.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
