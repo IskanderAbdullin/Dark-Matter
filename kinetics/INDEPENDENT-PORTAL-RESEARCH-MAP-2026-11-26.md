@@ -753,3 +753,9 @@ fit or exclusion.
 - [Finite closed-current spacelike HTL check](INDEPENDENT-EARLY-POLE-FINITE-WILSON-SPACELIKE-2026-11-26.md):
   endpoint closure and matched cutoff distinguish spacelike longitudinal
   and transverse phase covariance; neither is a kinetic width.
+- [Timelike complement and phase at a matched formation time](INDEPENDENT-EARLY-POLE-FINITE-WILSON-FORMATION-2026-11-26.md):
+  compares finite soft cut and plasmon contributions, including the
+  small-k Ward limit and exact transverse-velocity cut sensitivity.
+- [Stationary spectral positivity gate](INDEPENDENT-EARLY-POLE-WILSON-STATIONARY-LINE-GATE-2026-11-26.md):
+  a finite contour exponent starting at fourth order cannot itself
+  define a nontrivial stationary line with a nonnegative spectral measure.
