@@ -1,0 +1,41 @@
+{
+  "scope": "Same physical flux and direct entropy-variable Jacobian, not a new physics approximation. Wall timings in one cloud process, not a resource guarantee.",
+  "cases": [
+    {
+      "source_snapshot_sha256": "79960d9f8c9f69d6a2774ed0455f4bd396c49dd06e1a68d002ab252bd9190cd9",
+      "shells": 41,
+      "rates_bit_for_bit_equal": true,
+      "jacobian_whole_relative_error": 1.9886202749927713e-14,
+      "max_column_relative_error": 2.9860722446514e-14,
+      "relative_finite_difference_check": 1.5707476942852108e-10,
+      "per_call_timings_seconds_direct_and_local": [
+        10.252796676002617,
+        1.7470623419940239
+      ]
+    },
+    {
+      "source_snapshot_sha256": "3d0348af0cbf7d36756b83552f236cb1adf0ecab5006af06ff34ccb8b4052454",
+      "shells": 41,
+      "rates_bit_for_bit_equal": true,
+      "jacobian_whole_relative_error": 2.4471723931500457e-14,
+      "max_column_relative_error": 8.921365717803323e-14,
+      "relative_finite_difference_check": 1.5802044234085897e-10,
+      "per_call_timings_seconds_direct_and_local": [
+        9.75549740200222,
+        1.7777461430014228
+      ]
+    },
+    {
+      "source_snapshot_sha256": "8b326528f7dbf2cdba1dc64d6dc69499a18530d00bb436e77c6cf615aeeb54ca",
+      "shells": 39,
+      "rates_bit_for_bit_equal": true,
+      "jacobian_whole_relative_error": 1.7753851219212513e-14,
+      "max_column_relative_error": 2.7062272370491924e-14,
+      "relative_finite_difference_check": 5.34274587643565e-10,
+      "per_call_timings_seconds_direct_and_local": [
+        7.173421109000628,
+        1.3108446020050906
+      ]
+    }
+  ]
+}

@@ -267,6 +267,9 @@ reacting rate or its sign when the unknown phase shape is changed.
 The [late mixed-source envelope](INDEPENDENT-WARM-LATE-INVERSE-MOMENT-ENVELOPE-2026-11-26.md)
 provides an instantaneous upper on known-cohort contributions with
 finite support, or with unbounded exterior under a retained phase ceiling.
+The [cut-aligned prompt control](INDEPENDENT-WARM-CUT-ALIGNED-PROMPT-VACUUM-CONTROL-2026-11-26.md)
+keeps the physical vacuum in an accepted root and shows why an
+initial retained phase ceiling need not persist after reactivation.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)

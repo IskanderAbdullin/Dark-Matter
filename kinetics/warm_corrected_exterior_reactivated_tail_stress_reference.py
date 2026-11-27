@@ -17,10 +17,13 @@ from warm_prompt_excess_energy_tail_reference import integrate
 from warm_prompt_reentry_shape_audit_reference import get_mom,pad
 
 
-def reactivate(S,hard,half_width):
+def reactivate(S,hard,half_width,cap=None):
     q=np.asarray(S["lab_momentum_edges_GeV"])
     assert q[-1]<hard-half_width
     wide=np.unique(np.r_[q,np.geomspace(q[-1],hard-half_width,5),hard+half_width,hard*.025+hard])
+    if cap is not None:
+        assert cap>wide[-1]
+        wide=np.r_[wide,np.geomspace(wide[-1],cap,5)[1:]]
     X=import_restart(S["positive_exterior_restart"])
     a,d,j,s,L,n,E=X.array()
     assert np.all(s==1)
