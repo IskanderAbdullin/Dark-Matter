@@ -495,6 +495,11 @@ The [tidal and isolated escape ledger](INDEPENDENT-HALO-BOSE-ESCAPE-ENERGY-LEDGE
 computes distinct number and particle-energy fluxes after adding the
 vacuum exterior binding energy. It is an instantaneous fixed-halo test.
 
+The [internal collisional entropy production](INDEPENDENT-HALO-BOSE-LOWERED-UU-ENTROPY-2026-11-26.md)
+is nonzero for the initial lowered DF even after excluding all
+ejection events. The finite collisionless profile is not thereby
+a local elastic equilibrium.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
