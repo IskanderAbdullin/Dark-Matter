@@ -1,0 +1,264 @@
+[
+  {
+    "input_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+    "initial": 2.48475682546712E-18,
+    "comoving_chart": [
+      "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+      "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7"
+    ],
+    "modes": [
+      "expand-stationary-all",
+      "expand-finite-all"
+    ],
+    "W_stationary_and_finite_by_clock": [
+      [
+        2.426472969913161E-18,
+        2.4326452911791143E-18
+      ],
+      [
+        2.4264732331267503E-18,
+        2.432645581976743E-18
+      ]
+    ],
+    "finite_parent_shift_at_fixed_clock": [
+      1.0847579701156462E-7,
+      1.1953967549160893E-7
+    ],
+    "time_refinement_shift_at_fixed_physics": [
+      0.0025437420249416753,
+      0.0025437531169627547
+    ],
+    "decline_from_anchor": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ]
+  },
+  {
+    "input_hash": "f4d13b780378f8adde153dde9caab415ede71df990502df72f6e047322569956",
+    "initial": 6.621907064428997E-14,
+    "comoving_chart": [
+      "e21430f44b7f51833cd355c277433fe96d841e4d3647ae64693f3d9939ef50f9",
+      "0bdfa6f137751cb6e2f78c9f54e6caa78f2247f397b38f9110ced6ca2a1e01cd"
+    ],
+    "modes": [
+      "expand-stationary-all",
+      "expand-finite-all"
+    ],
+    "W_stationary_and_finite_by_clock": [
+      [
+        2.6911957074645155E-14,
+        2.222994640939854E-14
+      ],
+      [
+        2.69119572433599E-14,
+        2.2229946585969402E-14
+      ]
+    ],
+    "finite_parent_shift_at_fixed_clock": [
+      6.269136987313573E-9,
+      7.942927870985272E-9
+    ],
+    "time_refinement_shift_at_fixed_physics": [
+      -0.17397510899189594,
+      -0.1739751076093029
+    ],
+    "decline_from_anchor": [
+      [
+        true,
+        true
+      ],
+      [
+        true,
+        true
+      ]
+    ]
+  },
+  {
+    "scope": "Observed per-species net changes; projected FRW trace and reaction exchange both contribute.",
+    "initial_hash": "bbd02b6b7b226df8b14bafad81b5d5d2a9eb2a9cd706ab19b1fd4c06be46e169",
+    "hard_GeV": 0.68,
+    "rows": [
+      {
+        "case": "068-expand-stationary",
+        "daughter_sha256": "e26d41bcd216c39c98a1fa912e6ba1d1e1055c1b1aea21cd69c4d51fa6eee91a",
+        "count_change_comoving_relative_by_species": [
+          -8.881784197001252E-15,
+          2.042810365310288E-14
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -3.4509128291923485E-7,
+          3.4280145557283775E-7
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -3.450912656008363E-7,
+          3.493725554941572E-7
+        ],
+        "physical_excess_change_over_initial_rho": [
+          1.2850730017806883E-20,
+          -4.493360683524431E-20
+        ]
+      },
+      {
+        "case": "068-expand-finite",
+        "daughter_sha256": "c05c7da6045be7b55a2757eefb4600a61e3e573e17fc93c843167c2c8dce96a4",
+        "count_change_comoving_relative_by_species": [
+          3.930189507173054E-13,
+          2.6711965972481266E-13
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -3.450910165800498E-7,
+          3.428016636900229E-7
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -3.450909992616513E-7,
+          3.493728718830905E-7
+        ],
+        "physical_excess_change_over_initial_rho": [
+          1.2850734661633814E-20,
+          -4.493334717491932E-20
+        ]
+      },
+      {
+        "case": "068-expand-stationary-all",
+        "daughter_sha256": "bd20f9a82c43579588d5c0e0127fcaab494d67bb220b1a54abdaf810f1253250",
+        "count_change_comoving_relative_by_species": [
+          8.396385142717122E-9,
+          -5.1400848022353784E-9
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -3.4168336922104036E-7,
+          3.4164528102384983E-7
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -3.4168334229071894E-7,
+          3.459646409490972E-7
+        ],
+        "physical_excess_change_over_initial_rho": [
+          1.285072854095169E-20,
+          -4.493363826854951E-20
+        ]
+      },
+      {
+        "case": "068-expand-finite-all",
+        "daughter_sha256": "00caa2b81d41b59a109229cb6f39662c18183e89facb5c385272ae25cec9261c",
+        "count_change_comoving_relative_by_species": [
+          8.396787043452036E-9,
+          -5.139838443746214E-9
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -3.4168310313591497E-7,
+          3.4164548880228873E-7
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -3.4168307616325026E-7,
+          3.459649568299113E-7
+        ],
+        "physical_excess_change_over_initial_rho": [
+          1.2850733184780183E-20,
+          -4.493337860811228E-20
+        ]
+      }
+    ],
+    "columns": [
+      "scalar",
+      "light_fermion"
+    ]
+  },
+  {
+    "scope": "Observed per-species net changes; projected FRW trace and reaction exchange both contribute.",
+    "initial_hash": "f4d13b780378f8adde153dde9caab415ede71df990502df72f6e047322569956",
+    "hard_GeV": 0.8,
+    "rows": [
+      {
+        "case": "080-expand-stationary",
+        "daughter_sha256": "36fe2240a0664212d2d96b1fbfa33a3119f393cfe1f5c081e10d4cad4d6bfbc9",
+        "count_change_comoving_relative_by_species": [
+          -9.325873406851315E-15,
+          2.042810365310288E-14
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -0.000007209147469463806,
+          0.0000070717569778342604
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -0.000007209146431630193,
+          0.000007466022623103932
+        ],
+        "physical_excess_change_over_initial_rho": [
+          -3.80226745403982E-14,
+          -1.2842227980501734E-15
+        ]
+      },
+      {
+        "case": "080-expand-finite",
+        "daughter_sha256": "51d1a72373f73dcf7416b050871c463bafc22d06cbe04373ed7fcdf1a8897348",
+        "count_change_comoving_relative_by_species": [
+          8.774980742032312E-12,
+          5.398570479542286E-12
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -0.000007209141922452745,
+          0.0000070717622356831136
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -0.000007209140884576788,
+          0.000007466030236763103
+        ],
+        "physical_excess_change_over_initial_rho": [
+          -3.8022674394738175E-14,
+          -1.2842227749975311E-15
+        ]
+      },
+      {
+        "case": "080-expand-stationary-all",
+        "daughter_sha256": "6f26e6ba76faefd6b15804223885ce4c2babf674b39b16fe963c8fd66aa10759",
+        "count_change_comoving_relative_by_species": [
+          5.038240553645323E-7,
+          -3.084318990209667E-7
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -0.00000700758021118442,
+          0.000007005304840254742
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -0.00000700757859231642,
+          0.00000726445475029663
+        ],
+        "physical_excess_change_over_initial_rho": [
+          -3.802274831885873E-14,
+          -1.2842186320265827E-15
+        ]
+      },
+      {
+        "case": "080-expand-finite-all",
+        "daughter_sha256": "1ed54058dc03e48c61b337a7a3336e680fc9206c9be22bcd93a3f6bf5f596f15",
+        "count_change_comoving_relative_by_species": [
+          5.038328010353865E-7,
+          -3.0842654596963115E-7
+        ],
+        "daughter_a4_kinetic_energy_change_over_initial_rho": [
+          -0.000007007574688605426,
+          0.000007005310074518391
+        ],
+        "daughter_a4_full_energy_change_over_initial_rho": [
+          -0.0000070075730698221125,
+          0.00000726446232965775
+        ],
+        "physical_excess_change_over_initial_rho": [
+          -3.8022748173197973E-14,
+          -1.2842186089739222E-15
+        ]
+      }
+    ],
+    "columns": [
+      "scalar",
+      "light_fermion"
+    ]
+  }
+]
