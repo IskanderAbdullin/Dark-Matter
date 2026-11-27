@@ -651,6 +651,11 @@ evaluates a large-N-inspired screened cold kernel on the same
 stencil. The drastic formal flux reduction is not a calibrated
 N=1 transport rate.
 
+A [conditional redistribution-to-source comparison](INDEPENDENT-EARLY-POLE-SCALAR-REDISTRIBUTION-SOURCE-2026-11-26.md)
+separates peak reshaping from the outer number and energy budget.
+Nonnegative moment-preserving IR redistributions do not make the
+frozen snapshot source vanish in the tested meshes.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
