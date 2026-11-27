@@ -417,6 +417,11 @@ gives exact-mode power for half-abundance 86 eV spectra at two
 occupation scales, each with a matched CDM comparator. These
 are counterfactual input shapes, not actual production histories.
 
+The [normal-phase chemical-equilibrium comparison](INDEPENDENT-SCALAR-CHEMICAL-EQUILIBRIUM-COLD-ORDER-2026-11-26.md)
+shows count can fit within the selected aggregate energy while a
+zero-chemical-potential scalar gas remains warm at the required
+yield. It neither evaluates conversion rates nor models a condensate.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

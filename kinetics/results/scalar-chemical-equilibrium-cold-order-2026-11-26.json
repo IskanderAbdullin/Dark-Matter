@@ -1,0 +1,78 @@
+{
+  "scope": "One normal-phase real scalar, ideal Bose chemical equilibrium with mu=0 at a hypothetical sudden freeze of the comoving count, no condensate, subsequent momentum redshift, no changed visible entropy, comparison fixed mass and count. No rate calculation or guarantee of early equilibration or subsequent decoupling.",
+  "target_Y": 0.002528462375339247,
+  "dimensionless_comoving_shape_ledger": [
+    {
+      "m_over_Tfreeze": 0.0,
+      "comoving_T_over_Tgamma0": 0.32957046552487557,
+      "mean_q_over_Tgamma0": 0.8902285017747037,
+      "rms_q_over_Tgamma0": 1.0603534278351654,
+      "fraction_q_over_Tgamma0_below_point1": 0.01728451748678636,
+      "f_at_rest": null
+    },
+    {
+      "m_over_Tfreeze": 0.01,
+      "comoving_T_over_Tgamma0": 0.32958371443259765,
+      "mean_q_over_Tgamma0": 0.8903491988975476,
+      "rms_q_over_Tgamma0": 1.0604523151032132,
+      "fraction_q_over_Tgamma0_below_point1": 0.017210356896521808,
+      "f_at_rest": 99.50083333194443,
+      "one_crossing_q_over_Tgamma0_relative_to_previous_row": 0.36756189892816615
+    },
+    {
+      "m_over_Tfreeze": 0.1,
+      "comoving_T_over_Tgamma0": 0.33037329995303844,
+      "mean_q_over_Tgamma0": 0.8967481858981269,
+      "rms_q_over_Tgamma0": 1.0660525770556546,
+      "fraction_q_over_Tgamma0_below_point1": 0.014531264814893669,
+      "f_at_rest": 9.50833194477505,
+      "one_crossing_q_over_Tgamma0_relative_to_previous_row": 0.4746034274519566
+    },
+    {
+      "m_over_Tfreeze": 1.0,
+      "comoving_T_over_Tgamma0": 0.36443522983238136,
+      "mean_q_over_Tgamma0": 1.1071650807088051,
+      "rms_q_over_Tgamma0": 1.2771638569793182,
+      "fraction_q_over_Tgamma0_below_point1": 0.0021768746819256354,
+      "f_at_rest": 0.5819767068693263,
+      "one_crossing_q_over_Tgamma0_relative_to_previous_row": 0.7787099000426375
+    },
+    {
+      "m_over_Tfreeze": 3.0,
+      "comoving_T_over_Tgamma0": 0.5351906745723252,
+      "mean_q_over_Tgamma0": 2.010593584305243,
+      "rms_q_over_Tgamma0": 2.2527286228683097,
+      "fraction_q_over_Tgamma0_below_point1": 0.000202199760256503,
+      "f_at_rest": 0.05239569649125595,
+      "one_crossing_q_over_Tgamma0_relative_to_previous_row": 1.4075234137866537
+    },
+    {
+      "m_over_Tfreeze": 6.0,
+      "comoving_T_over_Tgamma0": 1.1218234919455035,
+      "mean_q_over_Tgamma0": 5.202982662394551,
+      "rms_q_over_Tgamma0": 5.751530538877335,
+      "fraction_q_over_Tgamma0_below_point1": 9.62092564833896e-06,
+      "f_at_rest": 0.0024849116568445855,
+      "one_crossing_q_over_Tgamma0_relative_to_previous_row": 3.1642345030801744
+    },
+    {
+      "m_over_Tfreeze": 10.0,
+      "comoving_T_over_Tgamma0": 3.4202059465808543,
+      "mean_q_over_Tgamma0": 19.202167764604464,
+      "rms_q_over_Tgamma0": 21.08616138739974,
+      "fraction_q_over_Tgamma0_below_point1": 1.7585010277576638e-07,
+      "f_at_rest": 4.5401991009687765e-05,
+      "one_crossing_q_over_Tgamma0_relative_to_previous_row": 9.500154184425515
+    }
+  ],
+  "modeled_anchor_counterfactual": {
+    "visible_T_GeV": 8.000008136535843e-05,
+    "required_dark_temperature_GeV": 2.7162513573797352e-05,
+    "required_scalar_energy_share_of_recorded_dark_total": 0.28325699204023874,
+    "required_scalar_energy_over_recorded_scalar_energy": 3.929386424188449,
+    "average_path_from_anchor_in_fixed_background_Mpc": 5.535813559886366,
+    "all_recorded_dark_energy_to_scalar_equilibrium_T_GeV": 3.723271735348559e-05,
+    "all_energy_thermal_Y": 0.006512138339955554,
+    "all_energy_thermal_scalar_omega_if_counts_freeze": 0.1545319812579409
+  }
+}
