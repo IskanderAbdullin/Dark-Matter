@@ -280,7 +280,8 @@ checks direct outgoing support without claiming dynamical re-entry.
 The [aligned .80 control](INDEPENDENT-WARM-LATE-ALIGNED-HARD080-RELAXATION-2026-11-26.md)
 starts above the cut and has negative transfer at every saved time.
 A [species-resolved comparison](INDEPENDENT-WARM-LATE-TAIL-SPECIES-EXCHANGE-2026-11-26.md)
-tracks individual currents and shape sensitivity. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
+tracks individual currents. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+checks selected pair and elastic contributions. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
 checks the bulk effect.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter

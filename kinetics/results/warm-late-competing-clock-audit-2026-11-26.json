@@ -1,0 +1,47 @@
+{
+  "initial_W_over_rho": 2.48475682546712e-18,
+  "rows": [
+    {
+      "mode": "prompt",
+      "first_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+      "coarse_mid_fine_hashes": [
+        "e5b41efa2985f780372f7d3dbd9742bec06600c6984eca9b344775d36e40d833",
+        "d67fa70d1fab3f8905ba4dd06d9863204d0e1537f660934ca20a3a3628983c1a",
+        "7cf056afd63b8d32242242f34b07e2359ea2576567e79cf3bcbdeaec480f99c5"
+      ],
+      "W_coarse_and_fine_over_initial_rho": [
+        2.4264740074730027e-18,
+        2.432646384601705e-18
+      ],
+      "relative_time_resolution_change": 0.002543763959429457,
+      "exact_local_step_residuals": [
+        4.564614575359977e-12,
+        1.1335218391232895e-14,
+        9.885008820815157e-15
+      ]
+    },
+    {
+      "mode": "all",
+      "first_hash": "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+      "coarse_mid_fine_hashes": [
+        "ab2f7b8c1f095578f321dfefae90efd08631df81815dea9cd2a7bac0585f35d0",
+        "2dc783acc842564aea937c19d8b7a8e7f3b3f5bccd59372be419b5f021b9fafc",
+        "4488e3b8538c88b68d696de23b68a02b293729915671c1c4922741776fa9e91e"
+      ],
+      "W_coarse_and_fine_over_initial_rho": [
+        2.426473973917439e-18,
+        2.4326463463769944e-18
+      ],
+      "relative_time_resolution_change": 0.0025437620703552266,
+      "exact_local_step_residuals": [
+        4.555461803636115e-12,
+        1.4724394857492685e-14,
+        4.551487468317967e-14
+      ]
+    }
+  ],
+  "coupled_relative_delta_coarse_and_fine": [
+    -1.3828940104154697e-08,
+    -1.5713221057644944e-08
+  ]
+}
