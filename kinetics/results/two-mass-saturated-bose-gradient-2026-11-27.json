@@ -1,0 +1,89 @@
+{
+  "scope": "Local arithmetic for high Bose occupations; not a full saturated kinetic solve.",
+  "cases": [
+    {
+      "starting_bose_occupation": 100000000.0,
+      "end_to_start_count": 1.00000000001,
+      "chosen_capacity": 1e-12,
+      "averaged_affinity": 9.99999994995e-09,
+      "negative_end_gradient": 4.9999999499333335e-05,
+      "stable_entropy_increment": 1.0000000780318321e-23,
+      "direct_float_difference_increment": 1.0000001575921398e-23,
+      "naive_start_log_difference": 9.999999949633631e-09,
+      "high_precision_relative_error": 1.1102230246251565e-16,
+      "relative_order_error": 3.885780586188048e-16
+    },
+    {
+      "starting_bose_occupation": 1e+24,
+      "end_to_start_count": 1.0,
+      "chosen_capacity": 1e-05,
+      "averaged_affinity": 1.0000000000000001e-24,
+      "negative_end_gradient": 4.999999999999999e-44,
+      "stable_entropy_increment": 0.0,
+      "direct_float_difference_increment": 0.0,
+      "naive_start_log_difference": 0.0,
+      "high_precision_relative_error": 0.0,
+      "relative_order_error": 0.0
+    },
+    {
+      "starting_bose_occupation": 1e+23,
+      "end_to_start_count": 1.004,
+      "chosen_capacity": 1.0,
+      "averaged_affinity": 9.980053173843633e-24,
+      "negative_end_gradient": 4.973452823457926e-47,
+      "stable_entropy_increment": 0.003992021269537456,
+      "direct_float_difference_increment": 0.003992021269537457,
+      "naive_start_log_difference": 0.0,
+      "high_precision_relative_error": 2.220446049250313e-16,
+      "relative_order_error": 3.8912015970504754e-16
+    },
+    {
+      "starting_bose_occupation": 1e+22,
+      "end_to_start_count": 0.99,
+      "chosen_capacity": 0.06,
+      "averaged_affinity": 1.005033585350144e-22,
+      "negative_end_gradient": 8.445707918109971e-44,
+      "stable_entropy_increment": -0.000603020151210087,
+      "direct_float_difference_increment": -0.0006030201512100869,
+      "naive_start_log_difference": 0.0,
+      "high_precision_relative_error": 1.1102230246251565e-16,
+      "relative_order_error": 3.8651807449108233e-16
+    },
+    {
+      "starting_bose_occupation": 1e+30,
+      "end_to_start_count": 100000000.0,
+      "chosen_capacity": 1e-09,
+      "averaged_affinity": 1.8420680928159172e-37,
+      "negative_end_gradient": 1.7420681102365982e-66,
+      "stable_entropy_increment": 1.8420680743952367e-08,
+      "direct_float_difference_increment": 1.8420680743952367e-08,
+      "naive_start_log_difference": 0.0,
+      "high_precision_relative_error": 1.1102230246251565e-16,
+      "relative_order_error": 3.9042120231203015e-16
+    },
+    {
+      "starting_bose_occupation": 1e+35,
+      "end_to_start_count": 1e-08,
+      "chosen_capacity": 1e-09,
+      "averaged_affinity": 1.8420680928159174e-34,
+      "negative_end_gradient": 9.999998257931889e-54,
+      "stable_entropy_increment": -1.8420680743952367e-08,
+      "direct_float_difference_increment": -1.8420680743952367e-08,
+      "naive_start_log_difference": 0.0,
+      "high_precision_relative_error": 1.1102230246251565e-16,
+      "relative_order_error": 3.5475095083725705e-16
+    },
+    {
+      "starting_bose_occupation": 1e+21,
+      "end_to_start_count": 1.3,
+      "chosen_capacity": 1e-18,
+      "averaged_affinity": 8.7454754822497e-22,
+      "negative_end_gradient": 3.510559299806697e-25,
+      "stable_entropy_increment": 2.623642644674911e-19,
+      "direct_float_difference_increment": 2.623642644674911e-19,
+      "naive_start_log_difference": 0.0,
+      "high_precision_relative_error": 2.220446049250313e-16,
+      "relative_order_error": 4.367166350771612e-16
+    }
+  ]
+}
