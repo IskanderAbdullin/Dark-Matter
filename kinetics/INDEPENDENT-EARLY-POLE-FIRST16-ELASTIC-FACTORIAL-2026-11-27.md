@@ -11,6 +11,12 @@ Use the matched first interval of 3.3333333333333335e−7 and the common 16-step
 
 The signed interaction in the mean rate, defined as both minus unlike minus same plus neither, is +.01152275 for the native input and −.00012207 for the continuous input. In the native case each channel alone suppresses production over this window, but it would be wrong to add the two suppressions: the fully coupled mean is close to each one-channel mean. In the continuous case the same-flavor term alone **increases** the finite mean, even though its [starting directional derivative](INDEPENDENT-EARLY-POLE-INITIAL-COLD-RATE-DIRECTION-2026-11-27.md) is negative. Thus the local slopes explain how the prepared time-zero states begin moving, not the accumulated contribution of each elastic term. This is a finite numerical comparison, not a channel decomposition along the fully coupled trajectory or a late-time prediction.
 
+### The continuous interaction reverses sign inside the window
+
+Apply the same factorial to the cumulative count at each saved step. For the native input all 16 interval contributions are positive; only 10.38% of the final interaction has accumulated at the first quarter. For the continuous input the interval contribution becomes negative at step 8, and the cumulative value changes sign between 2.083e−7 and 2.292e−7. That reversal is not represented by the small negative full-window average.
+
+In a smooth simultaneous flow, let R be the instantaneous scalar source, and U and V the two elastic vector fields. The common R and first source derivative cancel in the toggle difference, so the first possible integrated mixed term is cubic, with coefficient `[2 D²R(U,V) + DR(DU·V + DV·U)]/6`. By themselves the stored first two prefix ratios, 3.92 and 4.74, do not resolve the nonzero cubic asymptote (which would give a ratio of eight). Finite split width and changing support can matter, so no initial mixed coefficient is estimated from this grid.
+
 From `kinetics/`, with `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1`:
 ```sh
 for p in steps cell-conservative; do

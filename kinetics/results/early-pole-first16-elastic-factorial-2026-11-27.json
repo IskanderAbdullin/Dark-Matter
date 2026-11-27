@@ -128,6 +128,49 @@
         "nonelastic_energy_remainder": 6.661338147750939e-16
       }
     },
+    "prefix_interaction": {
+      "rows": [
+        {
+          "step": 1,
+          "exposure": 2.0833333333333335e-08,
+          "signed_cumulative_interaction": 2.75341867361778e-11,
+          "mean_interaction_in_interval": 0.0013216409633365345
+        },
+        {
+          "step": 2,
+          "exposure": 4.166666666666667e-08,
+          "signed_cumulative_interaction": 1.0783596585128841e-10,
+          "mean_interaction_in_interval": 0.0038544853975253086
+        },
+        {
+          "step": 4,
+          "exposure": 8.333333333333334e-08,
+          "signed_cumulative_interaction": 3.985422929175808e-10,
+          "mean_interaction_in_interval": 0.00788831416853597
+        },
+        {
+          "step": 8,
+          "exposure": 1.6666666666666668e-07,
+          "signed_cumulative_interaction": 1.3224683986789998e-09,
+          "mean_interaction_in_interval": 0.012599287779746504
+        },
+        {
+          "step": 12,
+          "exposure": 2.5000000000000004e-07,
+          "signed_cumulative_interaction": 2.510095915841948e-09,
+          "mean_interaction_in_interval": 0.015057526558948096
+        },
+        {
+          "step": 16,
+          "exposure": 3.3333333333333335e-07,
+          "signed_cumulative_interaction": 3.840917722763848e-09,
+          "mean_interaction_in_interval": 0.016419086257268845
+        }
+      ],
+      "first_negative_increment_step": null,
+      "cumulative_sign_transition_intervals_in_exposure": [],
+      "cumulative_I2_over_I1": 3.9164391120221556
+    },
     "scope": "Matched finite early window; separating interactions conditional on this split and not a decomposition of the continuous kinetics."
   },
   "cell-conservative": {
@@ -258,6 +301,54 @@
         "signed_elastic_energy_defect": 3.9968028886505635e-15,
         "nonelastic_energy_remainder": -1.7763568394002505e-15
       }
+    },
+    "prefix_interaction": {
+      "rows": [
+        {
+          "step": 1,
+          "exposure": 2.0833333333333335e-08,
+          "signed_cumulative_interaction": 1.9733173428626571e-13,
+          "mean_interaction_in_interval": 9.471923245740754e-06
+        },
+        {
+          "step": 2,
+          "exposure": 4.166666666666667e-08,
+          "signed_cumulative_interaction": 9.34863297885613e-13,
+          "mean_interaction_in_interval": 3.540151505276867e-05
+        },
+        {
+          "step": 4,
+          "exposure": 8.333333333333334e-08,
+          "signed_cumulative_interaction": 3.634981204925225e-12,
+          "mean_interaction_in_interval": 6.912703742756321e-05
+        },
+        {
+          "step": 8,
+          "exposure": 1.6666666666666668e-07,
+          "signed_cumulative_interaction": 5.684359233315561e-12,
+          "mean_interaction_in_interval": -2.210648331057996e-05
+        },
+        {
+          "step": 12,
+          "exposure": 2.5000000000000004e-07,
+          "signed_cumulative_interaction": -6.564575272260953e-12,
+          "mean_interaction_in_interval": -0.00023349089328661418
+        },
+        {
+          "step": 16,
+          "exposure": 3.3333333333333335e-07,
+          "signed_cumulative_interaction": -4.069143286211663e-11,
+          "mean_interaction_in_interval": -0.0005233397049053679
+        }
+      ],
+      "first_negative_increment_step": 8,
+      "cumulative_sign_transition_intervals_in_exposure": [
+        [
+          2.0833333333333333e-07,
+          2.291666666666667e-07
+        ]
+      ],
+      "cumulative_I2_over_I1": 4.7375213179316775
     },
     "scope": "Matched finite early window; separating interactions conditional on this split and not a decomposition of the continuous kinetics."
   }
