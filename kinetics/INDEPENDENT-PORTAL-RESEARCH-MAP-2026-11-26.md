@@ -290,7 +290,8 @@ identify the missing through-time dose. A [ballistic comparison](INDEPENDENT-WAR
 separates photon heating from creation. A [direct visible upper](INDEPENDENT-WARM-LATE-COLD-VISIBLE-DOSE-2026-11-26.md)
 tests late injection. An [off-pole bound](INDEPENDENT-WARM-LATE-COLD-VISIBLE-OFFPOLE-2026-11-26.md)
 tightens 25 MeV. A [full recoil enclosure](INDEPENDENT-WARM-LATE-COLD-VISIBLE-RECOIL-ENCLOSURE-2026-11-26.md)
-bounds the 50 MeV vacuum charged-lepton source. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+bounds the 50 MeV lepton source. A [KLOE recoil fold](INDEPENDENT-WARM-LATE-COLD-VISIBLE-KLOE-RECOIL-2026-11-26.md)
+adds a measured pion window. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
