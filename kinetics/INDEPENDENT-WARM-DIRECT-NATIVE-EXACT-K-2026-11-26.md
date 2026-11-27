@@ -103,3 +103,6 @@ separately test how much matching early and late energy moments removes spectral
 
 [Stable-fermion CDM proxy](INDEPENDENT-WARM-NATIVE-STABLE-CDM-PROXY-2026-11-26.md)
 independently checks the represented phase in the same reference.
+
+[Wide exact modes and independent numerical axes](INDEPENDENT-WARM-DIRECT-NATIVE-WIDE-CONVERGENCE-2026-11-26.md)
+extend the checked power signal to k=2 h/Mpc.
