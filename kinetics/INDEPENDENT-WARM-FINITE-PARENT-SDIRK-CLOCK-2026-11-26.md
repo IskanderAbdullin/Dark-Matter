@@ -69,3 +69,35 @@ run "$d/080-negative" expand-finite-all guides080/step-{0..6}.json --order 2 --c
 
 [Method comparison and conservation audit](results/warm-finite-parent-sdirk-clock-audit-2026-11-26.json);
 [accepted .68 phase records](results/warm-finite-parent-sdirk-hard068-2026-11-26.json.gz).
+
+## .80 GeV short-prefix acceptance and hard-shell rate
+
+A much shorter selected prefix, with Δlog a = 1.875e-8, accepts
+both schemes from the same .80 initial phase and common parent
+chart. The endpoint W values are 6.390821982e-14 (backward Euler)
+and 6.377395203e-14 (SDIRK2). The latter changes by −0.2101%
+relative to the former, and both are below the same initial W.
+SDIRK2 has stage invariant defects at or below 4.45e-16 relative.
+This is a short-prefix result, not an accepted high-order run
+over the full original 9e-7 interval.
+
+In a separate frozen ordered-rate diagnostic, the .795–.805 GeV
+light shell of that same initial phase has a prompt loss per
+particle per Hubble time of 3.97e7, with a gain of 1.81e6.
+That is about 5.96 gross-loss turnovers over a 1.5e-7 block
+at the initial rate. It helps explain why a longer step can
+be difficult, but the turnover is not a linear eigenvalue or
+a proof of a positivity timestep threshold.
+
+~~~sh
+# First reproduce guides080-12 with the twelve-block recipe.
+g=guides080-12
+python -W error warm_late_competing_intermediate_guide_reference.py EOS.dat "$g/step-0.json" "$g/step-1.json" half.json
+python -W error warm_late_competing_intermediate_guide_reference.py EOS.dat "$g/step-0.json" half.json quarter.json
+for m in be sdirk2; do
+ run "$d/080-quarter-$m" expand-finite-all "$g/step-0.json" quarter.json --order 2 --common-subdivisions 2 --collision-clock "$m"
+done
+python -W error warm_prompt_shell_activity_reference.py EOS.dat competing080/tapes/step-{5,6}.json
+~~~
+
+[Both accepted .80 short-prefix phases and frozen shell activity](results/warm-finite-parent-sdirk-hard080-short-2026-11-26.json).
