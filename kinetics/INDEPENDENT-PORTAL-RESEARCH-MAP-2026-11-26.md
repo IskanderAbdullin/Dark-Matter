@@ -5,7 +5,7 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 | Question | Evidence available | What is still missing |
 | --- | --- | --- |
 | Does the massive-shell projection conserve the represented moments? | Independent number, energy, stress, positivity and restart tests. | No complete production validation. |
-| Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | The stable rest count is set near Ωh²=.120. The shifted first-order scalar rest count is only about 3.05×10⁻¹⁰ or 2.75×10⁻⁹ for the two prescribed histories. | Only these sources and rates; stronger stimulation or other channels are open. |
+| Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | Stable Ωh²≈.120; shifted first-order scalar rest count ≈3.05×10⁻¹⁰ or 2.75×10⁻⁹. | Only these sources and rates; stronger stimulation or other channels are open. |
 | Is the scalar contrast robust to integrating the hierarchy? | Native fluid/no-closure controls and an independent fixed-metric fold trace the discrepancy to grouping. | No global hierarchy convergence or coupled matter transfer from the independent fixed-metric run. |
 | Can the *warm 50 MeV* reference be treated as numerically converged? | Matched q16/q32 reach 10.442 MeV; time and higher moments need separate audits. | Not a late relic; earlier exterior shapes are unresolved. |
 | Can purely ballistic forward depletion rescue the initial warm excess? | A loss-only bound gives a stable proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
@@ -289,7 +289,8 @@ checks hard reactivation. [Pointwise gain and loss limits](INDEPENDENT-WARM-LATE
 identify the missing through-time dose. A [ballistic comparison](INDEPENDENT-WARM-LATE-COLD-SCALAR-BALLISTIC-2026-11-26.md)
 separates photon heating from creation. A [direct visible upper](INDEPENDENT-WARM-LATE-COLD-VISIBLE-DOSE-2026-11-26.md)
 tests late injection. An [off-pole bound](INDEPENDENT-WARM-LATE-COLD-VISIBLE-OFFPOLE-2026-11-26.md)
-tightens the conditional ceiling at 25 MeV. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+tightens 25 MeV. A [full recoil enclosure](INDEPENDENT-WARM-LATE-COLD-VISIBLE-RECOIL-ENCLOSURE-2026-11-26.md)
+bounds the 50 MeV vacuum charged-lepton source. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)

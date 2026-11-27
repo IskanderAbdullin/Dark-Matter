@@ -1,0 +1,190 @@
+{
+  "local_controls": [
+    {
+      "temperature_GeV": 0.025,
+      "exact_sampled_local_MB": 7.362722185316446e-44,
+      "box_local_upper": 1.274396298887583e-43,
+      "box_local_FD_lower": 3.972654538073335e-44
+    },
+    {
+      "temperature_GeV": 0.035,
+      "exact_sampled_local_MB": 8.043239703654055e-37,
+      "box_local_upper": 1.1454319546609717e-36,
+      "box_local_FD_lower": 5.3110848692842824e-37
+    },
+    {
+      "temperature_GeV": 0.05,
+      "exact_sampled_local_MB": 1.201755549083446e-32,
+      "box_local_upper": 1.5701986134609938e-32,
+      "box_local_FD_lower": 8.39382567573102e-33
+    }
+  ],
+  "scope": "Analytical interval ceilings and floors for thermal charged-lepton heavy-pair production and open unpolarized vacuum decay, monotone EOS photon-time background and no scatter-in. Ending at .1 MeV.",
+  "log_entropy_and_radiation_slope_lower": [
+    3.0,
+    4.0
+  ],
+  "held_yield": 4.18022180557062e-09,
+  "reused_sub12_upper": 8.548574113956758e-43,
+  "rows": [
+    {
+      "start_T_GeV": 0.025,
+      "controls": [
+        {
+          "temperature_bins": 24,
+          "total_energy_base_bins": 16,
+          "invariant_bins": 20,
+          "parent_angle_bins": 12,
+          "upper_12_to_start": 6.87491873628534e-19,
+          "truncated_tail_upper": 5.083946231022316e-36,
+          "early_plus_low_T_check_upper": 6.87491873628534e-19,
+          "upper_fraction_of_held_yield": 1.64463013113891e-10,
+          "lower_FD_yield": 1.983273558038076e-21,
+          "lower_fraction_of_held_yield": 4.744421828035869e-13
+        },
+        {
+          "temperature_bins": 48,
+          "total_energy_base_bins": 32,
+          "invariant_bins": 40,
+          "parent_angle_bins": 24,
+          "upper_12_to_start": 2.120351177099715e-19,
+          "truncated_tail_upper": 3.2933671113931995e-36,
+          "early_plus_low_T_check_upper": 2.120351177099715e-19,
+          "upper_fraction_of_held_yield": 5.072341315176401e-11,
+          "lower_FD_yield": 1.1609509948565677e-20,
+          "lower_fraction_of_held_yield": 2.7772473539788456e-12
+        },
+        {
+          "temperature_bins": 96,
+          "total_energy_base_bins": 48,
+          "invariant_bins": 64,
+          "parent_angle_bins": 36,
+          "upper_12_to_start": 1.2619113593068726e-19,
+          "truncated_tail_upper": 2.5871199486165126e-36,
+          "early_plus_low_T_check_upper": 1.2619113593068726e-19,
+          "upper_fraction_of_held_yield": 3.0187665104881097e-11,
+          "lower_FD_yield": 2.2144507976531512e-20,
+          "lower_fraction_of_held_yield": 5.2974480796740114e-12
+        },
+        {
+          "temperature_bins": 192,
+          "total_energy_base_bins": 72,
+          "invariant_bins": 96,
+          "parent_angle_bins": 54,
+          "upper_12_to_start": 9.255852021945878e-20,
+          "truncated_tail_upper": 2.2781493108246317e-36,
+          "early_plus_low_T_check_upper": 9.255852021945878e-20,
+          "upper_fraction_of_held_yield": 2.214201172198902e-11,
+          "lower_FD_yield": 3.1522993711051755e-20,
+          "lower_fraction_of_held_yield": 7.54098590391634e-12
+        }
+      ]
+    },
+    {
+      "start_T_GeV": 0.035,
+      "controls": [
+        {
+          "temperature_bins": 24,
+          "total_energy_base_bins": 16,
+          "invariant_bins": 20,
+          "parent_angle_bins": 12,
+          "upper_12_to_start": 1.31684275088447e-12,
+          "truncated_tail_upper": 1.2056895366163871e-29,
+          "early_plus_low_T_check_upper": 1.31684275088447e-12,
+          "upper_fraction_of_held_yield": 0.00031501743499103983,
+          "lower_FD_yield": 1.8152475243995208e-14,
+          "lower_fraction_of_held_yield": 4.342467000149363e-06
+        },
+        {
+          "temperature_bins": 48,
+          "total_energy_base_bins": 32,
+          "invariant_bins": 40,
+          "parent_angle_bins": 24,
+          "upper_12_to_start": 5.154040386822714e-13,
+          "truncated_tail_upper": 8.014115707523291e-30,
+          "early_plus_low_T_check_upper": 5.154040386822714e-13,
+          "upper_fraction_of_held_yield": 0.00012329585908466318,
+          "lower_FD_yield": 6.027311234191164e-14,
+          "lower_fraction_of_held_yield": 1.441863976250994e-05
+        },
+        {
+          "temperature_bins": 96,
+          "total_energy_base_bins": 48,
+          "invariant_bins": 64,
+          "parent_angle_bins": 36,
+          "upper_12_to_start": 3.4273613404789717e-13,
+          "truncated_tail_upper": 6.436928859692171e-30,
+          "early_plus_low_T_check_upper": 3.4273613404789717e-13,
+          "upper_fraction_of_held_yield": 8.198993976615364e-05,
+          "lower_FD_yield": 9.627247161771653e-14,
+          "lower_fraction_of_held_yield": 2.303046969646982e-05
+        },
+        {
+          "temperature_bins": 192,
+          "total_energy_base_bins": 72,
+          "invariant_bins": 96,
+          "parent_angle_bins": 54,
+          "upper_12_to_start": 2.710090502180052e-13,
+          "truncated_tail_upper": 5.745830495953686e-30,
+          "early_plus_low_T_check_upper": 2.710090502180052e-13,
+          "upper_fraction_of_held_yield": 6.483126083330193e-05,
+          "lower_FD_yield": 1.2406969514722404e-13,
+          "lower_fraction_of_held_yield": 2.968017031581604e-05
+        }
+      ]
+    },
+    {
+      "start_T_GeV": 0.05,
+      "controls": [
+        {
+          "temperature_bins": 24,
+          "total_energy_base_bins": 16,
+          "invariant_bins": 20,
+          "parent_angle_bins": 12,
+          "upper_12_to_start": 3.8246704742027e-09,
+          "truncated_tail_upper": 4.04024031010119e-26,
+          "early_plus_low_T_check_upper": 3.8246704742027e-09,
+          "upper_fraction_of_held_yield": 0.9149443862299108,
+          "lower_FD_yield": 1.2146674607258804e-10,
+          "lower_fraction_of_held_yield": 0.029057488267899997
+        },
+        {
+          "temperature_bins": 48,
+          "total_energy_base_bins": 32,
+          "invariant_bins": 40,
+          "parent_angle_bins": 24,
+          "upper_12_to_start": 1.7410584735114592e-09,
+          "truncated_tail_upper": 2.7818023153325043e-26,
+          "early_plus_low_T_check_upper": 1.7410584735114592e-09,
+          "upper_fraction_of_held_yield": 0.4164990649996852,
+          "lower_FD_yield": 3.0187015457913974e-10,
+          "lower_fraction_of_held_yield": 0.07221390840477974
+        },
+        {
+          "temperature_bins": 96,
+          "total_energy_base_bins": 48,
+          "invariant_bins": 64,
+          "parent_angle_bins": 36,
+          "upper_12_to_start": 1.2396701152966167e-09,
+          "truncated_tail_upper": 2.290280464895614e-26,
+          "early_plus_low_T_check_upper": 1.2396701152966167e-09,
+          "upper_fraction_of_held_yield": 0.2965560616052994,
+          "lower_FD_yield": 4.3675895288438017e-10,
+          "lower_fraction_of_held_yield": 0.104482243574336
+        },
+        {
+          "temperature_bins": 192,
+          "total_energy_base_bins": 72,
+          "invariant_bins": 96,
+          "parent_angle_bins": 54,
+          "upper_12_to_start": 1.024044250641758e-09,
+          "truncated_tail_upper": 2.07375654054024e-26,
+          "early_plus_low_T_check_upper": 1.024044250641758e-09,
+          "upper_fraction_of_held_yield": 0.24497366366471338,
+          "lower_FD_yield": 5.338892923770505e-10,
+          "lower_fraction_of_held_yield": 0.12771793393010447
+        }
+      ]
+    }
+  ]
+}
