@@ -15,14 +15,21 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,retune_donor_support=None,elastic_channel='both'):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None):
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
     shot=saved['snapshots'][0]
     y0=np.asarray(shot['hard_moments'])
     n0=np.asarray(shot['cold_bins'])
-    C=Screened(saved['grid'],1,len(n0),duration,(1,1,2),.08,1.,saved['aperture_grid'],projection)
+    depth=saved.get('aperture_subdivision',1)
+    if depth<1:
+        raise ValueError('Invalid archived aperture subdivision.')
+    if depth!=1 and (prepared_input is not None or retune_local_daughter
+                     or compensation_only or number_only_local_retune or retune_donor_support is not None):
+        raise ValueError('Prepared control requires its validated original aperture support.')
+    C=Screened(saved['grid'],1,len(n0),duration,(1,1,2),.08,1.,saved['aperture_grid'],projection,
+               subdivision=depth)
     M=C.M
     np.testing.assert_array_equal(y0,M.init)
     np.testing.assert_array_equal(n0,C.ns)
@@ -43,6 +50,23 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         y0=np.asarray(ss['hard_moments'])
         expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
+    if local_from_paired_archive:
+        if projection!='steps' or depth!=1 or any((prepared_input is not None,
+                retune_local_daughter, compensation_only, number_only_local_retune, retune_donor_support is not None)):
+            raise ValueError('Exact local archive swap requires original native hard supports.')
+        counterpart=branches['cell-conservative']
+        other=counterpart['snapshots'][0]
+        np.testing.assert_array_equal(n0,other['cold_bins'])
+        for e,f in zip(M.edge_sets,counterpart['hard_edge_sets'],strict=True):
+            np.testing.assert_array_equal(e,f)
+        ed=np.asarray(M.edge_sets[2])
+        loc=np.flatnonzero((ed[:-1]>=1.4138888888888888-2e-14)&(ed[1:]<=1.4666666666666666+2e-14))
+        if len(loc)!=2:
+            raise ValueError('Expected the two original local daughter cells.')
+        y0=y0.copy()
+        ix=M.r[2].start+loc
+        y0[ix]=np.asarray(other['hard_moments'])[ix]
+        swap='local-daughter'
     retune_check=None
     if retune_local_daughter or compensation_only or number_only_local_retune or retune_donor_support is not None:
         if projection!='steps' or prepared_input is not None:
@@ -153,10 +177,14 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
     en,sn=e1-e0,s1-s0-z[-2]
     assert abs(en)<3e-12 and abs(en-z[-1])<3e-12
     assert abs(sn)<3e-11 and abs(n1-nH)<3e-12
-    count=result.y[C.j0:-2].sum(axis=0)
+    cold_modes=result.y[C.j0:-2]
+    count=cold_modes.sum(axis=0)
+    modes=(dict(cold_mode_count_history=cold_modes.T.tolist(),
+                cold_momentum_nodes_over_T=C.q.tolist())
+           if record_mode_history else {})
     return dict(projection=projection,duration=duration,report_panels=panels,rtol=rtol,base_atol=base_atol,
                 calls=calls,mean_cold_rate=float((count[-1]-count[0])/duration),
-                cold_count_history=count.tolist(),history_exposure=sample.tolist(),
+                cold_count_history=count.tolist(),history_exposure=sample.tolist(),**modes,
                 largest_sample_coordinate_residual=max(coordinate_defect),
                 largest_sample_chart_condition_number=max(cond),
                 energy_defect=en,entropy_defect=sn,hard_number_defect=n1-nH,
@@ -164,6 +192,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
                 **(dict(complement_retune=retune_check) if retune_check is not None else {}),
                 **(dict(elastic_channels=False) if without_elastic else {}),
                 **(dict(selected_elastic_channel=elastic_channel) if elastic_channel!='both' else {}),
+                **(dict(aperture_subdivision=depth) if depth!=1 else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
@@ -180,10 +209,12 @@ if __name__=='__main__':
     group.add_argument('--retune-local-daughter',action='store_true')
     group.add_argument('--compensation-only',action='store_true')
     group.add_argument('--number-only-local-retune',action='store_true')
+    group.add_argument('--local-from-paired-archive',action='store_true')
     group.add_argument('--retune-donor-support',choices=('below','no_neighbors'))
     elast=p.add_mutually_exclusive_group()
     elast.add_argument('--without-elastic',action='store_true')
     elast.add_argument('--elastic-channel',choices=('both','unlike','same'),default='both')
+    p.add_argument('--record-mode-history',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
