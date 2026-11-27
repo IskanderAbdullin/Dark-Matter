@@ -1,0 +1,149 @@
+{
+  "scope": "Manufactured time-order and stiff fallback control for the three offset-shell events.",
+  "cases": [
+    {
+      "title": "ordinary",
+      "nominal_span": 0.8,
+      "directional_entropy_error": 1.6160718596669454e-12,
+      "mesh": [
+        {
+          "order": 1,
+          "observed_last_rate": 0.9880295651894249,
+          "mesh": [
+            {
+              "steps": 8,
+              "max_population_error_vs_unsplit": 0.011807165603065582,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.4434780878183349
+            },
+            {
+              "steps": 16,
+              "max_population_error_vs_unsplit": 0.0060969994601294385,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.4468592023847777
+            },
+            {
+              "steps": 32,
+              "max_population_error_vs_unsplit": 0.003099013813259213,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.448393636352378
+            },
+            {
+              "steps": 64,
+              "max_population_error_vs_unsplit": 0.001562417074191643,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.4491165798310235
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "observed_last_rate": 1.9997859901110475,
+          "mesh": [
+            {
+              "steps": 8,
+              "max_population_error_vs_unsplit": 0.0007885952288898401,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.449523383910138
+            },
+            {
+              "steps": 16,
+              "max_population_error_vs_unsplit": 0.00019746857907924881,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.4497369983860229
+            },
+            {
+              "steps": 32,
+              "max_population_error_vs_unsplit": 4.939347020248557e-05,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.4497900954670615
+            },
+            {
+              "steps": 64,
+              "max_population_error_vs_unsplit": 1.2350199447668615e-05,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 1.4498033567350839
+            }
+          ]
+        }
+      ],
+      "stiff_fallback": {
+        "used": true,
+        "signed_extent": 0.7158587671964288,
+        "entropy_gain": 2.965935150811021
+      }
+    },
+    {
+      "title": "near-rest",
+      "nominal_span": 0.8,
+      "directional_entropy_error": 1.8446620099477062e-12,
+      "mesh": [
+        {
+          "order": 1,
+          "observed_last_rate": 0.9881726150913528,
+          "mesh": [
+            {
+              "steps": 8,
+              "max_population_error_vs_unsplit": 0.010354296911103308,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.7286054559314654
+            },
+            {
+              "steps": 16,
+              "max_population_error_vs_unsplit": 0.005347042339410537,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.7295719398722839
+            },
+            {
+              "steps": 32,
+              "max_population_error_vs_unsplit": 0.0027174880095428757,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.7299907960900958
+            },
+            {
+              "steps": 64,
+              "max_population_error_vs_unsplit": 0.0013699289341818745,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.7301820969143179
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "observed_last_rate": 1.9998152113199277,
+          "mesh": [
+            {
+              "steps": 8,
+              "max_population_error_vs_unsplit": 0.0010164295169462507,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.73030717286367
+            },
+            {
+              "steps": 16,
+              "max_population_error_vs_unsplit": 0.0002546197512316794,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.7303477510707534
+            },
+            {
+              "steps": 32,
+              "max_population_error_vs_unsplit": 6.368743747227346e-05,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.7303573360264212
+            },
+            {
+              "steps": 64,
+              "max_population_error_vs_unsplit": 1.592389886202045e-05,
+              "midpoint_fallbacks": 0,
+              "entropy_gain": 0.73035969709138
+            }
+          ]
+        }
+      ],
+      "stiff_fallback": {
+        "used": true,
+        "signed_extent": 0.7779369947765611,
+        "entropy_gain": 3.397660941732958
+      }
+    }
+  ]
+}
