@@ -461,6 +461,11 @@ separates necessary collisionless occupation to support density and
 velocity moments from the much stronger requirement to reach an
 exactly critical profile. Its anisotropic examples are fiducial.
 
+The [full finite lowered halo test](INDEPENDENT-HALO-BOSE-FINITE-LOWERED-MIXING-2026-11-26.md)
+checks the entire phase-space excess after solving a finite tidal boundary.
+An infinite-tail primordial patch cannot place all particles in compact
+phase support, even if ordinary finite-threshold tests do not exclude it.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
