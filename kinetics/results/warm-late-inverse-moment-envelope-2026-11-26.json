@@ -1,0 +1,354 @@
+{
+  "scope": "Instantaneous, shape-independent two-moment bound only for specified represented shells and ballistic saved cohorts. Finite cases impose admitted support and no phase ceilings. The alternative with unbounded exterior uses a separate resolved pointwise ceiling. Does not bound rates of unarchived matter, later re-entry, or integrated evolution.",
+  "snapshot_sha256": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "parent_momentum_cut_GeV": 0.7077920751642082,
+  "core_or_exterior_indices": [
+    "retained",
+    "known exterior"
+  ],
+  "sampled_kinematically_valid_rectangles": 492847,
+  "cases": [
+    {
+      "admitted_momentum_cap_GeV": 0.7,
+      "separate_retained_occupancy_ceiling": false,
+      "native_retained_inverse_check": 4.117268173678002e-32,
+      "controls": [
+        {
+          "use_number_and_birth_or_cell_energy": false,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              3.4079351567221537e-29,
+              0.00040107765666726403
+            ],
+            [
+              0.0006731126268546462,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              1.581998133038461e-29,
+              9.929883035583722e-06
+            ],
+            [
+              3.2261845686369174e-05,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 0.001074190283522075,
+          "normalized_positive_excess_sum": 4.219172872203517e-05
+        },
+        {
+          "use_number_and_birth_or_cell_energy": true,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              1.2306990713591213e-29,
+              5.525761588794149e-06
+            ],
+            [
+              8.148389022181257e-06,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              5.550885937209046e-30,
+              1.3758018488599646e-07
+            ],
+            [
+              3.9701560589380704e-07,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 1.3674150611140311e-05,
+          "normalized_positive_excess_sum": 5.345957908620787e-07
+        }
+      ]
+    },
+    {
+      "admitted_momentum_cap_GeV": 0.85,
+      "separate_retained_occupancy_ceiling": false,
+      "native_retained_inverse_check": 4.117268173678002e-32,
+      "controls": [
+        {
+          "use_number_and_birth_or_cell_energy": false,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              3.4079351567221537e-29,
+              0.001920703593682388
+            ],
+            [
+              0.0006731126268546462,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              1.581998133038461e-29,
+              2.0485000350085647e-05
+            ],
+            [
+              3.2261845686369174e-05,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 0.002593816220537199,
+          "normalized_positive_excess_sum": 5.27468460365371e-05
+        },
+        {
+          "use_number_and_birth_or_cell_energy": true,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              1.2306990713591213e-29,
+              2.5015674313880128e-05
+            ],
+            [
+              8.148389022181257e-06,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              5.550885937209046e-30,
+              2.7584362627774966e-07
+            ],
+            [
+              3.9701560589380704e-07,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 3.316406333622629e-05,
+          "normalized_positive_excess_sum": 6.728592322538318e-07
+        }
+      ]
+    },
+    {
+      "admitted_momentum_cap_GeV": 1.05,
+      "separate_retained_occupancy_ceiling": false,
+      "native_retained_inverse_check": 4.117268173678002e-32,
+      "controls": [
+        {
+          "use_number_and_birth_or_cell_energy": false,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              3.4079351567221537e-29,
+              0.0019850894823067954
+            ],
+            [
+              0.0006731126268546462,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              1.581998133038461e-29,
+              2.05856448522277e-05
+            ],
+            [
+              3.2261845686369174e-05,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 0.0026582021091616065,
+          "normalized_positive_excess_sum": 5.284749053867915e-05
+        },
+        {
+          "use_number_and_birth_or_cell_energy": true,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              1.2306990713591213e-29,
+              2.6197918298737863e-05
+            ],
+            [
+              8.148389022181257e-06,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              5.550885937209046e-30,
+              2.785975572087837e-07
+            ],
+            [
+              3.9701560589380704e-07,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 3.4346307321084026e-05,
+          "normalized_positive_excess_sum": 6.756131631848659e-07
+        }
+      ]
+    },
+    {
+      "admitted_momentum_cap_GeV": 1.5,
+      "separate_retained_occupancy_ceiling": false,
+      "native_retained_inverse_check": 4.117268173678002e-32,
+      "controls": [
+        {
+          "use_number_and_birth_or_cell_energy": false,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              3.4079351567221537e-29,
+              0.0021404353087465934
+            ],
+            [
+              0.0006731126268546462,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              1.581998133038461e-29,
+              2.078379202763901e-05
+            ],
+            [
+              3.2261845686369174e-05,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 0.0028135479356014045,
+          "normalized_positive_excess_sum": 5.304563771409046e-05
+        },
+        {
+          "use_number_and_birth_or_cell_energy": true,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              1.2306990713591213e-29,
+              2.7568109779558427e-05
+            ],
+            [
+              8.148389022181257e-06,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              5.550885937209046e-30,
+              2.8034887247663743e-07
+            ],
+            [
+              3.9701560589380704e-07,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 3.571649880190459e-05,
+          "normalized_positive_excess_sum": 6.773644784527197e-07
+        }
+      ]
+    },
+    {
+      "admitted_momentum_cap_GeV": 2.0,
+      "separate_retained_occupancy_ceiling": false,
+      "native_retained_inverse_check": 4.117268173678002e-32,
+      "controls": [
+        {
+          "use_number_and_birth_or_cell_energy": false,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              3.4079351567221537e-29,
+              0.002216535268602811
+            ],
+            [
+              0.0006731126268546462,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              1.581998133038461e-29,
+              2.0826740782621788e-05
+            ],
+            [
+              3.2261845686369174e-05,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 0.002889647895457622,
+          "normalized_positive_excess_sum": 5.308858646907324e-05
+        },
+        {
+          "use_number_and_birth_or_cell_energy": true,
+          "normalized_bare_inverse_sector_matrix": [
+            [
+              1.2306990713591213e-29,
+              2.7948966821409147e-05
+            ],
+            [
+              8.148389022181257e-06,
+              1.6490554033839642e-16
+            ]
+          ],
+          "normalized_positive_excess_source_sector_matrix": [
+            [
+              5.550885937209046e-30,
+              2.8055987903643825e-07
+            ],
+            [
+              3.9701560589380704e-07,
+              8.227515184862147e-17
+            ]
+          ],
+          "normalized_bare_inverse_sum": 3.609735584375531e-05,
+          "normalized_positive_excess_sum": 6.775754850125205e-07
+        }
+      ]
+    }
+  ],
+  "unbounded_exterior_with_resolved_ceiling": {
+    "admitted_momentum_cap_GeV": null,
+    "separate_retained_occupancy_ceiling": true,
+    "native_retained_inverse_check": 4.117268173678002e-32,
+    "controls": [
+      {
+        "use_number_and_birth_or_cell_energy": false,
+        "normalized_bare_inverse_sector_matrix": [
+          [
+            3.4079351567221537e-29,
+            0.0017942107795876467
+          ],
+          [
+            0.0005458041956049692,
+            1.6490554033839642e-16
+          ]
+        ],
+        "normalized_positive_excess_source_sector_matrix": [
+          [
+            1.581998133038461e-29,
+            2.0362678263420742e-05
+          ],
+          [
+            2.6982826659515116e-05,
+            8.227515184862147e-17
+          ]
+        ],
+        "normalized_bare_inverse_sum": 0.0023400149751927808,
+        "normalized_positive_excess_sum": 4.734550492301814e-05
+      },
+      {
+        "use_number_and_birth_or_cell_energy": true,
+        "normalized_bare_inverse_sector_matrix": [
+          [
+            1.2306990713591213e-29,
+            2.2519142490000633e-05
+          ],
+          [
+            7.94910446162052e-06,
+            1.6490554033839642e-16
+          ]
+        ],
+        "normalized_positive_excess_source_sector_matrix": [
+          [
+            5.550885937209046e-30,
+            2.7475581159597636e-07
+          ],
+          [
+            3.940674604940699e-07,
+            8.227515184862147e-17
+          ]
+        ],
+        "normalized_bare_inverse_sum": 3.046824695178606e-05,
+        "normalized_positive_excess_sum": 6.688232721723214e-07
+      }
+    ]
+  }
+}

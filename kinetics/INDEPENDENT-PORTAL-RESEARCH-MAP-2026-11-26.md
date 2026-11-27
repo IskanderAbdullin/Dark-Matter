@@ -264,6 +264,9 @@ bounds the latter for the known ballistic receipts without assuming a shape.
 The [late fixed-moment reactivation stress](INDEPENDENT-WARM-LATE-RECORDED-TAIL-REACTIVATION-2026-11-26.md)
 shows that even known stored moment bounds do not determine the initial
 reacting rate or its sign when the unknown phase shape is changed.
+The [late mixed-source envelope](INDEPENDENT-WARM-LATE-INVERSE-MOMENT-ENVELOPE-2026-11-26.md)
+provides an instantaneous upper on known-cohort contributions with
+finite support, or with unbounded exterior under a retained phase ceiling.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)
