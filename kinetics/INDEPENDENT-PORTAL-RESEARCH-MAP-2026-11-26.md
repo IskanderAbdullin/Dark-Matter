@@ -283,7 +283,8 @@ checks .710. The [stabilized full clock](INDEPENDENT-WARM-LATE-STABLE-ENTROPY-CL
 isolates lifetime from time-step error. A [species-matched excess check](INDEPENDENT-WARM-LATE-MATCHED-EXCESS-CLOSURE-2026-11-26.md)
 finds opposite signs at matched initial species excess. A [within-cell perturbation](INDEPENDENT-WARM-LATE-WITHIN-CELL-MOMENT-KERNEL-2026-11-26.md)
 preserves cell moments. A [cold-scalar recoil gate](INDEPENDENT-WARM-LATE-COLD-SCALAR-PROMPT-GATE-2026-11-26.md)
-separates soft populations from high excess. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+locates the soft gate. A [one-use receipt bound](INDEPENDENT-WARM-LATE-COLD-SCALAR-SINGLE-USE-2026-11-26.md)
+adds conditional cold decay allowances. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
