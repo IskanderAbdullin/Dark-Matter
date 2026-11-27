@@ -11,7 +11,7 @@ from early_pole_archived_shared_cold_window_reference import Cold
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,local_result=None,include_retuned=False):
+def run(bundle,local_result=None,include_retuned=False,include_donor_variant=False):
     with gzip.open(bundle,'rt') as f:
         old=json.load(f)['branches']
     a,b=(old[k] for k in ('steps','cell-conservative'))
@@ -45,6 +45,16 @@ def run(bundle,local_result=None,include_retuned=False):
         outside=matched.copy()
         outside[ix]=y0[ix]
         states.update(retuned_local=matched,complement_only=outside)
+        if include_donor_variant:
+            from early_pole_daughter_equal_moments_donor_support import choose_donors
+            span=M.r[2]
+            donor=choose_donors(np.arange(span.start,span.stop),ix)['no_neighbors']
+            _,z,_=prepare(M,y0,y1,ix,donor_ids=donor)
+            comp=z.copy()
+            comp[ix]=y0[ix]
+            states.update(retuned_no_neighbors=z,comp_no_neighbors=comp)
+    elif include_donor_variant:
+        raise ValueError('Use --include-retuned together with donor variants.')
     for case,Y in states.items():
         if case=='local_daughter' and local_result is not None:
             ref=json.loads(Path(local_result).read_text())['snapshots'][0]
@@ -75,5 +85,6 @@ if __name__=='__main__':
     p.add_argument('bundle')
     p.add_argument('--local-result')
     p.add_argument('--include-retuned',action='store_true')
+    p.add_argument('--include-donor-variant',action='store_true')
     a=p.parse_args()
-    print(json.dumps(run(a.bundle,a.local_result,a.include_retuned),indent=2,allow_nan=False))
+    print(json.dumps(run(a.bundle,a.local_result,a.include_retuned,a.include_donor_variant),indent=2,allow_nan=False))
