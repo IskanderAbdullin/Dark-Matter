@@ -387,6 +387,11 @@ removes the soft occupation cap entirely by paying the scalar number
 density and two high-energy incoming legs. The hard cap and modeled
 anchor still enter. This is not coherent condensate evolution.
 
+The [cap-free cold survival barrier](INDEPENDENT-WARM-REHEATING-CAP-FREE-LATE-BARRIER-2026-11-26.md)
+also removes the hard occupation cap for the same isotropic continuum
+closure. It pays the available scalar energy, fermion Pauli cap and
+modeled anchor; the 2 MeV comparison remains inconclusive.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
