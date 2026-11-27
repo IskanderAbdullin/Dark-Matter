@@ -31,8 +31,12 @@ class SelfSoft(SameFlavorKernel):
         nodes=np.array([.0001,.001,.0025,.005,.01,.02,.04,.08,self.cut])
         nodes=np.unique(nodes[nodes<=self.cut])
         zz,qw=gauss_each(np.log(nodes),nq)
-        packets=[]
+        columns=[[] for _ in range(5)]
+        spans=[M.r[k]]*4
+        if len(M.cells)>np.iinfo(np.int32).max:
+            raise ValueError("too many cells for the packed graph")
         for q,wq in zip(np.exp(zz),qw,strict=True):
+            group=[[] for _ in range(5)]
             def panel(e):
                 x=np.r_[e,e-q,e+q] if q<.08 else e
                 return gauss_each(np.unique(x[(x>=e[0])&(x<=e[-1])]),nr)
@@ -60,16 +64,29 @@ class SelfSoft(SameFlavorKernel):
                 _,screen=traces(p,pb[i,None],q,X,1.,0.,self.polarization)
                 W*=screen*.5
                 keep=W>0.
-                packets.append(np.array([np.full(P.shape,p)[keep],
-                     np.broadcast_to(pb[i,None],P.shape)[keep],P[keep],B[keep],
-                     np.full(P.shape,q)[keep],W[keep]]))
-        pa,pb,P,B,Q,W=np.concatenate(packets,axis=1)
-        ids=np.stack([np.searchsorted(e[1:],x)+f.start for x,e,f in
-                      zip((pa,pb,P,B),edge+edge,[M.r[k]]*4,strict=True)])
-        moment=np.hypot(np.stack([pa,pb,P,B]),np.asarray(masses*2)[:,None])
-        xv=(moment-M.shape[ids,0])/M.shape[ids,1]
-        assert max(np.ravel(abs(xv)))<1.+2e-12 and min(W)>0.
-        return ids[:3],xv[:3],pb,Q,W
+                P,B,W=P[keep],B[keep],W[keep]
+                pa=np.full(P.shape,p)
+                pp=np.broadcast_to(pb[i,None],keep.shape)[keep]
+                ps=(pa,pp,P,B)
+                ids=np.stack([np.searchsorted(e[1:],v)+span.start for v,e,span in
+                              zip(ps,edge+edge,spans,strict=True)]).astype(np.int32)
+                moment=np.hypot(np.stack(ps),np.asarray(masses*2)[:,None])
+                xv=(moment-M.shape[ids,0])/M.shape[ids,1]
+                assert np.max(abs(xv),initial=0.)<1.+2e-12
+                for column,arr in zip(group,(ids[:3].copy(),xv[:3].copy(),pp,np.full(W.shape,q),W),strict=True):
+                    column.append(arr)
+            for column,batch in zip(columns,group,strict=True):
+                if batch:
+                    column.append(np.concatenate(batch,axis=-1))
+                    batch.clear()
+        out=[]
+        # Do not retain six raw momenta, or unused fourth-leg storage,
+        # while assembling the packed physical graph for large apertures.
+        for column in columns:
+            out.append(np.concatenate(column,axis=-1))
+            column.clear()
+        assert np.min(out[-1])>0.
+        return tuple(out)
 
 def run(grid,level,cut):
     M=Cold(grid,1,0,8,True)

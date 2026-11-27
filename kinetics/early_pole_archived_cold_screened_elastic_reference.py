@@ -33,8 +33,12 @@ class Screened(Elastic):
                               self.cut,2*max(hi)])
         nodes=nodes[nodes<=2*max(hi)]
         zz,qw=gauss_each(np.log(nodes),nq)
-        packets=[]
+        columns=[[] for _ in range(8)]
+        spans=M.r[1:]*2
+        if len(M.cells)>np.iinfo(np.int32).max:
+            raise ValueError("too many cells for the packed graph")
         for q,wq in zip(np.exp(zz),qw,strict=True):
+            group=[[] for _ in range(8)]
             def panel(e):
                 x=np.r_[e,e-q,e+q] if q<.08 else e
                 return gauss_each(np.unique(x[(x>=e[0])&(x<=e[-1])]),nr)
@@ -62,17 +66,30 @@ class Screened(Elastic):
                 vacc,sc=traces(p,pb[i,None],q,X,1.,0.,self.polarization)
                 W*=sc if q<self.cut else vacc
                 keep=W>0.
-                packets.append(np.array([np.full(P.shape,p)[keep],
-                     np.broadcast_to(pb[i,None],P.shape)[keep],P[keep],B[keep],
-                     np.full(P.shape,q)[keep],W[keep]]))
-        pa,pb,P,B,Q,W=np.concatenate(packets,axis=1)
-        ids=np.stack([np.searchsorted(e[1:],x)+f.start for x,e,f in
-                      zip((pa,pb,P,B),edge+edge,M.r[1:]*2,strict=True)])
-        moment=np.hypot(np.stack([pa,pb,P,B]),np.asarray(masses*2)[:,None])
-        xv=(moment-M.shape[ids,0])/M.shape[ids,1]
-        assert max(np.ravel(abs(xv)))<1.+2e-12 and min(W)>0.
-        self.original_geometry=(pa,P,B)
-        return ids[:3],xv[:3],pb,Q,W
+                pa=np.full(np.count_nonzero(keep),p)
+                pp=np.broadcast_to(pb[i,None],keep.shape)[keep]
+                P,B,W=P[keep],B[keep],W[keep]
+                ps=(pa,pp,P,B)
+                ids=np.stack([np.searchsorted(e[1:],v)+span.start for v,e,span in
+                              zip(ps,edge+edge,spans,strict=True)]).astype(np.int32)
+                moment=np.hypot(np.stack(ps),np.asarray(masses*2)[:,None])
+                xv=(moment-M.shape[ids,0])/M.shape[ids,1]
+                assert np.max(abs(xv),initial=0.)<1.+2e-12
+                for column,arr in zip(group,(ids[:3].copy(),xv[:3].copy(),pp,np.full(W.shape,q),W,pa,P,B),strict=True):
+                    column.append(arr)
+            for column,batch in zip(columns,group,strict=True):
+                if batch:
+                    column.append(np.concatenate(batch,axis=-1))
+                    batch.clear()
+        out=[]
+        # Keep the original raw three momenta for response/closure checks;
+        # concatenate one lane at a time, not a second complete graph.
+        for column in columns:
+            out.append(np.concatenate(column,axis=-1))
+            column.clear()
+        assert np.min(out[4])>0.
+        self.original_geometry=tuple(out[5:])
+        return tuple(out[:5])
 
     def collision(self,e,f,grad,split_affinity=False):
         M=self.M
