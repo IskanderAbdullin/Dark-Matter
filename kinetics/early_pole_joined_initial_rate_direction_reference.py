@@ -11,15 +11,19 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_active_response_update_reference import ActiveResponse
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 from early_pole_archived_shared_cold_window_reference import Cold
+from early_pole_same_flavor_screened_pole_reference import SelfSoft
 
 
-def run(bundle,projection):
+def run(bundle,projection,unlike_quad=(1,1,2),same_quad=(1,1,2)):
+    unlike_quad,same_quad=tuple(unlike_quad),tuple(same_quad)
+    if min(*unlike_quad,*same_quad)<1:
+        raise ValueError("Positive packet quadrature orders are required.")
     with gzip.open(bundle,'rt') as f:
         old=json.load(f)['branches'][projection]
     grid=old['grid']
     shot=old['snapshots'][0]
     N=np.array(shot['cold_bins'])
-    C=Screened(grid,1,len(N),old['duration'],(1,1,2),.08,1.,old['aperture_grid'],projection)
+    C=Screened(grid,1,len(N),old['duration'],unlike_quad,.08,1.,old['aperture_grid'],projection)
     M=C.M
     Y=np.array(shot['hard_moments'])
     np.testing.assert_array_equal(Y,M.init)
@@ -28,10 +32,14 @@ def run(bundle,projection):
         np.testing.assert_array_equal(a,b)
     active=ActiveResponse(C,.12)
     active.refresh(Y,'full')
-    el=ElasticChannels(C,grid,1.)
+    if same_quad==(1,1,2):
+        same_graph=ElasticChannels(C,grid,1.).soft
+    else:
+        same_graph=SelfSoft(C.M,grid,same_quad,.08)
+        same_graph.strength=1.
     E,F,G,*_=M.weights(Y,True)
-    unlike=el.unlike.collision(G,F,G)[0]
-    same=el.soft.collision(G,F,G)[0]
+    unlike=C.collision(G,F,G)[0]
+    same=same_graph.collision(G,F,G)[0]
     D=Cold.rhs(C,np.r_[Y.ravel(),N,0.,0.],False)
     df=D[:C.j0].reshape(Y.shape)
     dn=D[C.j0:-2]
@@ -62,6 +70,8 @@ def run(bundle,projection):
         agg.append(dict(probe_exposure=t,channels=item,
                         relative_additivity_defect=float(np.max(abs(ref-terms))/np.max(abs(ref)))))
     return dict(projection=projection,initial_exposure=shot['exposure'],source=float(b.sum()),directions=agg,
+                **(dict(unlike_quad=list(unlike_quad),same_quad=list(same_quad))
+                   if unlike_quad!=(1,1,2) or same_quad!=(1,1,2) else {}),
                 scope='Tangent from the prepared input at time zero, not a finite trajectory or fitted rate.')
 
 
@@ -69,5 +79,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('bundle')
     p.add_argument('--projection',choices=('steps','cell-conservative'),default='steps')
+    p.add_argument('--unlike-quad',type=int,nargs=3,default=[1,1,2])
+    p.add_argument('--same-quad',type=int,nargs=3,default=[1,1,2])
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
