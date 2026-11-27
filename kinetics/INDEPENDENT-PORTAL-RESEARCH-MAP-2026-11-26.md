@@ -662,6 +662,12 @@ reshaping. A separate [coherent Floquet control](INDEPENDENT-EARLY-POLE-COHERENT
 tests a homogeneous-field assumption at matched scalar energy.
 Neither calculation establishes the actual kinetic/coherent branch.
 
+The [reversible 4-to-2 threshold stencil](INDEPENDENT-EARLY-POLE-SCALAR-NUMBER-CHANGE-STENCIL-2026-11-26.md)
+separates projected energy from changing particle count. The
+[coherent band-sweep check](INDEPENDENT-EARLY-POLE-COHERENT-BAND-SWEEP-2026-11-26.md)
+shows why a narrow band's local growth is not the gain of a
+redshifting mode. Both use explicitly limited reference closures.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
