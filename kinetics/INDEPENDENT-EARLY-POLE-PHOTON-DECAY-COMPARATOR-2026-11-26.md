@@ -54,8 +54,14 @@ Nγ+N_parent+N_daughter is conserved in both modeled pair and
 decay reactions, while scalar number can grow. The g=.001
 number-budget run at x=.052 gives n_scalar/Tref³=.02274259
 and μγ/Tγ=−.04188, compared with .02274323 when μγ=0 is
-imposed. This mild result does not yet settle the strong
-coupling sign crossing. [Coupled number-budget controls](results/early-pole-joint-photon-decay-number-2026-11-26.json.gz).
+imposed. In the hotter g=.005 case the number-budget gate crosses near
+x=.050885, later than the zero-photon-chemical-potential value
+.050616. The other spectrum grid gives .050880 and the pair
+quadrature refinement gives .050896. At g=.004 the number-budget
+case no longer reaches the sign change by .052 (the difference
+above the gate is 0.000608), whereas .0045 crosses near .051348.
+The attained photon fugacity, scalar growth and gate location
+remain tests of this assumed thermalized hard-pair model only. [Coupled number-budget controls](results/early-pole-joint-photon-decay-number-2026-11-26.json.gz).
 
 ~~~sh
 python -W error early_pole_joint_photon_decay_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --g .004 --xend .052
