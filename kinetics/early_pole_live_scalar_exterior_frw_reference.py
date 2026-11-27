@@ -23,7 +23,9 @@ from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
 def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=None,resume=False,
-        checkpoint_every=6,stop_after=None):
+        checkpoint_every=6,stop_after=None,clock_mode="radiation"):
+    if clock_mode not in ("radiation","initial-density","live-density"):
+        raise ValueError("Unknown collision clock normalization.")
     if checkpoint_every<1 or (stop_after is not None and (not checkpoint or not 1<=stop_after<=2*panels)):
         raise ValueError("Checkpoint controls must name valid stopped macro steps.")
     if resume and not checkpoint:
@@ -45,7 +47,7 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
             path=Path(fn.__code__.co_filename)
             code.append(hashlib.sha256(path.read_bytes()).hexdigest())
         physics=dict(format=1,projection=projection,duration=duration,panels=panels,expands=expands,
-                     warm_order=warm_order,bundle_sha=hashlib.sha256(Path(bundle).read_bytes()).hexdigest(),
+                     warm_order=warm_order,clock_mode=clock_mode,bundle_sha=hashlib.sha256(Path(bundle).read_bytes()).hexdigest(),
                      code=code,numpy=np.__version__,scipy=scipy_version)
     results=[] if old is None else old["finished_arms"]
     if old is not None and (not isinstance(results,list) or len(results)>1 or old.get('arm')!=len(results)):
@@ -100,6 +102,7 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
     ef,sf,cof,cvf=C.factor,elastic.soft.fac,co.fac,cv.fac
     nor=M.norm
     dt=duration/panels
+    visible=np.pi**2*106.75/30
 
     def clock(t):
         eta=t if expands else 0.
@@ -127,14 +130,21 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
             return rho+sr,s+ss,pole,float(y[:,0].sum())
 
         r0,s0,p0,c0=totals(0.,z0)
+        def collision_clock(rho):
+            if clock_mode=="radiation":
+                return 1.
+            target=r0 if clock_mode=="initial-density" else rho
+            if not np.isfinite(target) or target<0.:
+                raise ValueError("A conditional total-energy normalization requires nonnegative finite density.")
+            return 1./np.sqrt(1.+target/visible)
         work_max=0.
         def rhs(t,z):
             nonlocal work_max
             clock(t)
             Y=z[:C.j0].reshape(-1,2)
-            E,F,G,*_=M.weights(Y,True)
+            E,F,G,rho,_=M.weights(Y,True)
             trace=M.trace
-            se,_,_,f,pole=C.scalar(z[C.j0:-3])
+            se,srho,_,f,pole=C.scalar(z[C.j0:-3])
             hard=np.zeros_like(Y)
             ds=np.zeros(C.n)
             entropy=0.
@@ -153,7 +163,10 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
             for kernel in (co,cv):
                 d,s,w0,*_=kernel.collision(E,F,G)
                 hard+=d;entropy+=s;work+=w0
-            return np.r_[hard.ravel(),ds,entropy,work,trace if expands else 0.]
+            collided=np.r_[hard.ravel(),ds,entropy,work]
+            if clock_mode!="radiation":
+                collided*=collision_clock(rho+srho)
+            return np.r_[collided,trace if expands else 0.]
 
         atol=np.r_[np.full(C.j0,3e-15),np.full(cold_n,2e-18),
                    np.full(C.n-cold_n,2e-23),3e-16,3e-20,3e-19]
@@ -184,6 +197,11 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
             m=(j+.5)*dt
             z=advance(j*dt,m,z)
             clock(m)
+            if clock_mode!="radiation":
+                r_mid=totals(m,z)[0]
+                f_mid=collision_clock(r_mid)
+                C.factor*=f_mid
+                elastic.soft.fac*=f_mid
             y,d=elastic_at_midpoint(elastic,z[:C.j0].reshape(-1,2),dt)
             z[:C.j0]=y.ravel()
             z[-3]+=d['entropy_gain']
@@ -205,7 +223,10 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
                     initial_gap=p0,final_gap=p1,hard_count_defect=c1-c0,
                     redshift_trace_integral=z[-1],collision_work=z[-2],energy_change=r1-r0,
                     redshift_subtracted_defect=ledger,entropy_defect=s1-s0-z[-3],
-                    maximum_decay_work=work_max,elastic_splits=sum('elastic_substeps' in d for d in implicit))
+                    maximum_decay_work=work_max,elastic_splits=sum('elastic_substeps' in d for d in implicit),
+                    **(dict(initial_collision_clock=collision_clock(r0),final_collision_clock=collision_clock(r1),
+                            initial_model_density=r0,final_model_density=r1)
+                       if clock_mode!="radiation" else {}))
 
     for idx in range(len(results),2):
         out=branch(bool(idx))
@@ -216,7 +237,8 @@ def run(bundle,projection,duration,panels,expands,warm_order=None,checkpoint=Non
     np.testing.assert_allclose(a['initial_count_rates'][0],b['initial_count_rates'][0],rtol=2e-13)
     return dict(scope='Short comoving warm continuation under prescribed radiation clock and held polarization.',
                 projection=projection,grid=grid,duration=duration,panels=panels,expands=expands,
-                final_log_scale=duration if expands else 0.,initial_warm_nodes=q.tolist(),arms=[a,b],**shape)
+                final_log_scale=duration if expands else 0.,initial_warm_nodes=q.tolist(),arms=[a,b],
+                **(dict(collision_clock=clock_mode) if clock_mode!="radiation" else {}),**shape)
 
 
 if __name__=='__main__':
@@ -231,6 +253,7 @@ if __name__=='__main__':
     p.add_argument('--resume',action='store_true')
     p.add_argument('--checkpoint-every',type=int,default=6)
     p.add_argument('--stop-after',type=int)
+    p.add_argument('--clock-mode',choices=('radiation','initial-density','live-density'),default='radiation')
     a=p.parse_args()
     if a.duration<=0. or a.panels<1 or (a.warm_order is not None and a.warm_order<3):
         p.error('Positive duration, positive macro steps and at least three distributed nodes required.')
