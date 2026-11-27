@@ -412,6 +412,11 @@ shows why the unscattered cold yield of a late isotropic two-body
 decay is tiny even at the optimal boost. The illustrative integrated
 count does not allow repeated inverse prompt cycling.
 
+The [near-packed native CLASS comparison](INDEPENDENT-SCALAR-COLD-PACKING-NATIVE-CLASS-2026-11-26.md)
+gives exact-mode power for half-abundance 86 eV spectra at two
+occupation scales, each with a matched CDM comparator. These
+are counterfactual input shapes, not actual production histories.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
