@@ -53,7 +53,19 @@ def compare(profiles, chart):
             fine_max_count_error=float(np.max(abs(fine-exact))),
             extrapolated_max_count_error=float(np.max(abs(lead-exact))),
             width_linear_mean_estimate=float(lead[-1]/t[-1]))
+    response={}
+    if 'active64' in out:
+        if 'held64' not in out:
+            raise ValueError('Need the held reference at the same 64-step width.')
+        for n in (16,64):
+            active=np.array(out[f'active{n}']['cumulative_effect'])
+            held=np.array(out[f'held{n}']['cumulative_effect'])
+            d=active-held
+            response[n]=dict(mean_effect_change=float(d[-1]/t[-1]),
+                             cumulative_effect_change=d.tolist(),
+                             max_absolute_cumulative_change=float(np.max(abs(d))))
     return dict(cases=out, width_comparison=convergence,
+                **(dict(active_minus_held=response) if response else {}),
                 scope='Matched local daughter inputs: changes in the first-window integrated source.')
 
 
@@ -71,8 +83,8 @@ def receipt(t,d):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    for k in ('active16','held16','held64','chart'):
-        p.add_argument('--'+k,nargs=2,required=(k!='held64'),
+    for k in ('active16','held16','held64','active64','chart'):
+        p.add_argument('--'+k,nargs=2,required=(k not in ('held64','active64')),
                        help='Native and local-daughter output, in order.')
     q=p.parse_args()
     def read(paths):
