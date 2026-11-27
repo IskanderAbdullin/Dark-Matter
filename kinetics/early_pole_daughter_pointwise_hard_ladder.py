@@ -13,7 +13,7 @@ from early_pole_daughter_archive_pointwise_frozen_packets import compare
 
 def build(template,depth,cold):
     base=template['branches']['steps']
-    if depth not in (1,2,4,8,16) or cold not in (8,32):
+    if depth not in (1,2,4,8,16) or cold not in (8,16,32,64,128,256):
         raise ValueError('Use the declared nested hard and cold supports.')
     d={}
     for k in ('steps','cell-conservative'):
