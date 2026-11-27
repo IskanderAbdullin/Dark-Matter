@@ -34,6 +34,9 @@ class Joint(Pair):
         S=self.Ws*(np.log1p(f)+f*np.log1p(1/f))
         return E,rho,S,f
 
+    def pair_rhs(self,Y,closed):
+        return super().rhs(np.r_[Y.ravel(),0.,0.],closed)
+
     def rhs_joint(self,y,closed,decay_scale):
         n=y[:-4]
         Y=n[:-1].reshape(-1,2)
@@ -57,7 +60,7 @@ class Joint(Pair):
         work=(grad*out).sum()+es*scalar
         if closed: assert abs(work)<3e-13
         if self.pair_scale:
-            z=self.pair_scale*super().rhs(np.r_[Y.ravel(),0.,0.],closed)
+            z=self.pair_scale*self.pair_rhs(Y,closed)
             out+=z[:-2].reshape(-1,2);ent+=z[-2];work+=z[-1]
         assert abs(sum(out[:,0]))<3e-13
         # Two independent ledgers separate total substitution and decay.

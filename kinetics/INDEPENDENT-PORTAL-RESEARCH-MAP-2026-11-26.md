@@ -798,3 +798,6 @@ fit or exclusion.
 - [Joint live hard pair and cold decay moments](INDEPENDENT-EARLY-POLE-LIVE-JOINT-PAIR-DECAY-MOMENTS-2026-11-26.md):
   both channels now close the same numerical energy and entropy;
   conditional scalar gains are not the sum of independent runs.
+- [Vacuum hard packets in the joint moment test](INDEPENDENT-EARLY-POLE-LIVE-JOINT-HARD-PAIR-PACKETS-2026-11-26.md):
+  exact variational energy remap with vacuum spin weights;
+  a coarse unsplit angular grid can flip the small conditional gain effect.
