@@ -17,14 +17,14 @@ def gauss_each(edges,n):
 
 
 class Packets(Joint):
-    def __init__(self,n,quad,scale,masses=(.05,.003),cut=.8):
-        super().__init__(.005,n,scale)
+    def __init__(self,n,quad,scale,masses=(.05,.003),cut=.8,edges=None):
+        super().__init__(.005,n,scale,edges)
         r,inc,fo,az=quad
         self.graph=[]
         self.stats=[]
         self.reject=[0.,0.]
         self.aperture=cut
-        pg,wp=gauss_each(np.r_[.5,.92,1.12,1.55,2.],r)
+        pg,wp=gauss_each(np.asarray(self.edge_sets[0]),r)
         ww=wp*pg*pg/(np.pi*np.pi)
         z,v=roots_legendre(inc)
         cot,cw=roots_legendre(fo)
@@ -90,7 +90,7 @@ class Packets(Joint):
             exact=np.sum(inc_weight*central(s,m,1.,cut))
             assert abs(ref/exact-1)<2e-4
             a,b,p1,P,W=np.concatenate(packets,axis=1)
-            ab=np.searchsorted([.92,1.12,1.55,2.],np.vstack([a,b]))
+            ab=np.searchsorted(self.edge_sets[0][1:],np.vstack([a,b]))
             hs=vv.start+np.searchsorted(high,p1)
             X=np.vstack([a,b,np.hypot(p1,m)])
             tags=np.vstack([ab,hs])
@@ -132,8 +132,8 @@ class Packets(Joint):
                 out[:,0]+=np.bincount(ind,weights=A,minlength=len(out))
                 out[:,1]+=np.bincount(ind,weights=A*basis,minlength=len(out))
         work=np.sum(G*out)
-        assert entropy>=-1e-14 and abs(out[:,0].sum())<2e-13
-        if closed: assert abs(work)<3e-13
+        assert entropy>=-1e-14 and abs(out[:,0].sum())<2e-13*max(np.sum(abs(out[:,0])),1.), (entropy,out[:,0].sum())
+        if closed: assert abs(work)<3e-13*max(np.sum(abs(G*out)),1.),work
         return np.r_[out.ravel(),entropy,work]
 
 

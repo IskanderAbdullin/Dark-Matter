@@ -810,3 +810,7 @@ fit or exclusion.
 - [Exact split hard-pair support budget](INDEPENDENT-EARLY-POLE-ARCHIVE-HARD-PAIR-EXACT-SUPPORT-2026-11-26.md):
   the first active momentum box misses most frozen daughter-channel
   heat; separately audits wider upper supports and the low-side omission.
+- [Live hard support extension on archived states](INDEPENDENT-EARLY-POLE-ARCHIVED-EXTENDED-PAIR-DECAY-WINDOW-2026-11-26.md):
+  under matched conditional clocks, the wider hard domain roughly
+  doubles the short scalar suppression; a single native scalar bin
+  is not comparable between original archives.

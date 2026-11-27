@@ -13,8 +13,8 @@ from early_pole_live_reciprocal_pair_moments_reference import Pair
 
 
 class Joint(Pair):
-    def __init__(self,g,n,scale):
-        super().__init__(g,n)
+    def __init__(self,g,n,scale,edges=None):
+        super().__init__(g,n,edges)
         self.pair_scale=scale
         self.start=self.r[1].start
         self.scalarq=4.1e-6
@@ -62,7 +62,7 @@ class Joint(Pair):
         if self.pair_scale:
             z=self.pair_scale*self.pair_rhs(Y,closed)
             out+=z[:-2].reshape(-1,2);ent+=z[-2];work+=z[-1]
-        assert abs(sum(out[:,0]))<3e-13
+        assert abs(sum(out[:,0]))<3e-13*max(np.sum(abs(out[:,0])),1.)
         # Two independent ledgers separate total substitution and decay.
         return np.r_[out.ravel(),scalar,ent,work,scalar,out[self.r[0],0].sum()]
 

@@ -10,13 +10,15 @@ from early_pole_live_pauli_gauge_moment_decay_reference import Cell as Fermion
 
 
 class Pair:
-    def __init__(self,g,n):
+    def __init__(self,g,n,edges=None):
         self.c=g*g/np.pi**4
         self.cells=[]
         self.r=[];state=[];self.shape=[]
-        for k,edges,m in [(0,[.5,.92,1.12,1.55,2.0],0.),
-                          (1,[.45,.65,.85,1.05,1.25,1.7,2.2],.05),
-                          (2,[.45,.69,.8,1.03,1.3,1.7,2.2],.003)]:
+        self.edge_sets=edges or ([.5,.92,1.12,1.55,2.0],
+                                 [.45,.65,.85,1.05,1.25,1.7,2.2],
+                                 [.45,.69,.8,1.03,1.3,1.7,2.2])
+        self.background=np.zeros(3)
+        for k,(edges,m) in enumerate(zip(self.edge_sets,(0.,.05,.003),strict=True)):
             begin=len(state)
             for l,h in zip(edges[:-1],edges[1:]):
                 if k==0:
@@ -45,7 +47,7 @@ class Pair:
                 v,j,d,s=self.cells[k].fit(U)
             F.append(v);D.append(d);J.append(j);S+=s
         J=np.array(J)
-        j=np.array([sum(J[sl]) for sl in self.r])
+        j=self.background+np.array([sum(J[sl]) for sl in self.r])
         partners=np.r_[sum(j[1:]),j[0]+j[1:]]
         inc=np.empty(len(J))
         for k,v in enumerate(self.r):inc[v]=partners[k]
