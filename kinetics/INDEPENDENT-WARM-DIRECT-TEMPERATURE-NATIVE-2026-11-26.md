@@ -67,8 +67,22 @@ error is 0.251%. The transformed grid's equivalent
 moment errors are below 3e−7. The background
 relativistic growth of energy density, expressed as
 ΔNeff, then agrees with the same momentum sums.
-A still finer hierarchy cross can test residual error
-in the transfer, which moment agreement alone cannot certify.
+Increasing the transformed grid from 100 to 160
+points, lmax from 40 to 48, and tightening the solver
+moves matched-density log power by below 4.7e−7
+over all sampled modes/redshifts. The difference in
+the **matched-abundance shape effect** is below 4.4e−8
+in ln P; the own-abundance 100 MeV contrast changes
+by no more than 8.1e−6. This joint refinement supports
+the small shape effect and the much larger conditional
+count effect on these preset spectra. At k=10 and z=5
+the fine values relative to the appropriate traces
+are −0.88077%, −0.82766% and −14.23266%.
+The [opt-in output control](INDEPENDENT-CLASS-EXACT-K-POWER-ONLY-2026-11-26.md)
+keeps the exact mode calculation while omitting the
+large perturbation-history files; the seven-mode
+100-point control matches the original power outputs
+byte for byte.
 
 [Linear narrow-cap audit](results/warm-direct-vacuum-temperature-native-lowcap-2026-11-26.json),
 [raw](results/warm-direct-vacuum-temperature-native-lowcap-raw-2026-11-26.json.gz);
@@ -87,6 +101,7 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
 python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied dense linear136_cap45
 python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied narrow linear136_cap18
 python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied mapped transform100
+python -W error warm_direct_vacuum_temperature_native_tiers_reference.py varied mappedfine transform160
 # Run the five configurations on each tier. For example:
 python -W error warm_direct_vacuum_temperature_native_audit_reference.py varied-spec.json varied 50 100
 ~~~
@@ -96,3 +111,6 @@ python -W error warm_direct_vacuum_temperature_native_audit_reference.py varied-
 [dense audit](results/warm-direct-vacuum-temperature-native-dense-2026-11-26.json);
 [dense raw](results/warm-direct-vacuum-temperature-native-dense-raw-2026-11-26.json.gz);
 [separate grid moment diagnostic](results/warm-direct-vacuum-temperature-native-grid-moments-2026-11-26.json).
+
+[Transformed 160-point audit](results/warm-direct-vacuum-temperature-native-transform160-2026-11-26.json);
+[raw power with narrow logs and inputs](results/warm-direct-vacuum-temperature-native-transform160-raw-2026-11-26.json.gz).

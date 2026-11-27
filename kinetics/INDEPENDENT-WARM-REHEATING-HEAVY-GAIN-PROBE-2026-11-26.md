@@ -66,3 +66,6 @@ python -W error warm_prompt_reheating_heavy_gain_probe_reference.py EOS.late.dat
 ~~~
 
 [All rates, energy ledgers and numerical controls](results/warm-prompt-reheating-heavy-gain-probe-2026-11-26.json).
+
+A [matched-energy shape check](INDEPENDENT-WARM-REHEATING-MATCHED-ENTROPY-GAIN-2026-11-26.md)
+keeps separate counts and total energy fixed while changing the momentum distributions.

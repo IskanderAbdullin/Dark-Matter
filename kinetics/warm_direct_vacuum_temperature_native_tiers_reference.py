@@ -8,6 +8,7 @@ TIERS={
     "linear136_cap45":(3,136,45,40,"7e-10"),
     "linear136_cap18":(3,136,18,40,"7e-10"),
     "transform100":(2,100,45,40,"7e-10"),
+    "transform160":(2,160,45,48,"4e-10"),
 }
 NAMES=("direct50_trace","direct50_absolute","direct100_trace","direct100_absolute","direct100_matched50")
 
