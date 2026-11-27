@@ -381,6 +381,12 @@ are normally produced in stable-pair annihilation. It uses a pair-energy
 gate and the total dark energy to limit access to the soft band, and
 does not derive either occupation cap.
 
+For an isotropic homogeneous collision integral, the
+[angularly averaged soft-band extension](INDEPENDENT-WARM-REHEATING-ISOTROPIC-SOFT-BAND-2026-11-26.md)
+removes the soft occupation cap entirely by paying the scalar number
+density and two high-energy incoming legs. The hard cap and modeled
+anchor still enter. This is not coherent condensate evolution.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
