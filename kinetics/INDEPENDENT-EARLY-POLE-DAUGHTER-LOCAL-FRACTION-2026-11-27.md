@@ -33,3 +33,38 @@ the depth-4 version is retained in `results/`. This tool reconstructs
 only the initial cold seed and source on the nested 32-mode grid.
 It verifies exact hard data, exact old initial sources and grouped
 cold counts, and does not synthesize trajectory histories.
+
+## Which static choices give curvature?
+
+Replay the full packet cold-source computation exactly at zero,
+half, and full replacement. Hold the initial parent occupation and
+scalar seed as before. In one diagnostic vary the reconstructed
+daughter occupations while freezing packet geometry at native. In
+another move the packet geometry while freezing native occupation
+logits. These diagnostics intentionally separate coupled model
+inputs; neither is a new physical source or time-evolution kernel.
+
+| Hard depth × cold modes | Full midpoint curvature | Reconstructed occupations at fixed geometry | Geometry only, fixed logits |
+|---|---:|---:|---:|
+| 1 × 8 | +3.29827e-4 | +3.29862e-4 | -6.9234e-9 |
+| 1 × 32 | +3.46261e-4 | +3.46215e-4 | -8.5078e-9 |
+| 4 × 8 | +1.27911e-6 | +1.19711e-6 | -1.0006e-10 |
+| 4 × 32 | +1.61783e-6 | +1.46489e-6 | -1.6215e-10 |
+
+The occupation reconstruction alone accounts for nearly all
+the coarse curvature in this diagnostic. On the refined hard
+mesh its contribution is smaller in absolute terms and is about
+91–94% of the residual total. The difference between the full
+curve and the two individual diagnostics is a mixed term; the
+moving geometry with native logits alone is small. At fixed
+geometry, replacing reconstructed midpoint occupations by the
+pointwise average of their endpoints gives exact affine
+cold-source interpolation up to 6.94e-18. This follows because
+the gain-minus-loss packet expression is affine in the daughter
+occupation with parent and scalar occupations fixed. It does
+not imply that the reconstructed midpoint moment state agrees
+with that pointwise average.
+
+Use `early_pole_daughter_local_fraction_curvature_attribution.py`
+on the same four fixtures. Raw per-mode curvature and mixed
+terms are in `results/early-pole-daughter-local-fraction-curvature-2026-11-27.json`.
