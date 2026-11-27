@@ -586,6 +586,11 @@ explains why conserved total parent count does not ensure that the
 fixed thermal shape is accurate. It is a held-trajectory audit, not
 a measurement of live depletion.
 
+The [parent momentum redistribution control](INDEPENDENT-EARLY-POLE-PARENT-MOMENTUM-RELAXATION-2026-11-26.md)
+separates heating at a held bath temperature from mixing at fixed
+parent number and projected energy. Fast energy-conserving mixing
+partly restores yield without supplying more parent particles.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
