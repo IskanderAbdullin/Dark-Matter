@@ -571,6 +571,11 @@ preserves a discrete collision energy identity and pointwise thermal
 balance. Its fine-grid scalar count is close to the exact-aperture,
 cell-centroid control; neither method evolves the holding bath.
 
+The [continuum energy ledger](INDEPENDENT-EARLY-POLE-PAIRED-ENERGY-LEDGER-2026-11-26.md)
+measures the smaller but nonzero centroid bias in the signed daughter
+source separately from the projected continuity residual. This does
+not evolve the parent or the background.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
