@@ -12,7 +12,7 @@ from early_pole_joined_scalar_exterior_source_reference import band_kernel
 from early_pole_native_aperture_witness_reference import GRID
 
 
-def run(path,projection,order):
+def run(path,projection,order,compensate=False):
     with gzip.open(path,'rt') as fh:r=json.load(fh)['branches'][projection]
     grid=r['grid']
     with gzip.open(GRID/f'early-pole-spectrum-{grid}-m06-2026-11-26.json.gz','rt') as fh:a=json.load(fh)
@@ -54,6 +54,8 @@ def run(path,projection,order):
     old_e=float(Ns@E0)
     old_j=float(Ns@np.reciprocal(E0))
     scope=[('volume_uniform',uniform),('energy_matched',tilted)]
+    if compensate:
+        scope.append(('global_nej_matched',tilted))
     base=C.scalar(nc)
     base_cold=sum(w*band_kernel(C,E,F,q,m0,f,10)[2] for q,f,w in zip(C.q,base[3],C.sw,strict=True))
     original_vol=v.sum(axis=1)
@@ -65,12 +67,30 @@ def run(path,projection,order):
         nodes_new=z.ravel()
         J0=weights_new@np.reciprocal(np.hypot(nodes_new,m0))
         dE=float(np.sum(Ns[:,None]*p*u))
-        if name=='energy_matched':
+        if name in ('energy_matched','global_nej_matched'):
             variance=np.sum(Ns[:,None]*p*u*u/(Eb*E0[:,None]**2))
             assert abs(dE)<2e-21 and J0>old_j
             assert abs(J0-old_j-variance)<1e-20
         seq=np.r_[keep,nodes_new]
-        total=np.r_[nk,weights_new]
+        adjusted=nk.copy()
+        ext={}
+        if name=='global_nej_matched':
+            allowed=(keep>1e-5)&(nk>0.)
+            en=np.hypot(keep[allowed],m0)
+            Q=np.array([np.ones(len(en)),en,1/en])
+            A=Q*nk[allowed]
+            norm=np.linalg.norm(A,axis=1)
+            target=np.array([0.,-dE,old_j-J0])
+            x=np.linalg.lstsq(A/norm[:,None],target/norm,rcond=1e-14)[0]
+            assert max(abs(x))<.8
+            delta=x*nk[allowed]
+            adjusted[allowed]+=delta
+            err=Q@delta-target
+            assert np.max(abs(err))<3e-22 and np.all(adjusted>=0.)
+            ext=dict(outer_adjustment_bins=int(len(x)),maximum_relative_occupation_adjustment=float(max(abs(x))),
+                     total_abs_count_moved=float(np.sum(abs(delta))),
+                     adjusted_other_marker_moments=(Q@delta).tolist(),moment_defect=err.tolist())
+        total=np.r_[adjusted,weights_new]
         def gap(m):
             return m*m-.5*C.lam*(total@np.reciprocal(np.hypot(seq,m)))
         m=brentq(gap,1e-8,.03,xtol=1e-17)
@@ -86,7 +106,7 @@ def run(path,projection,order):
                         scalar_pole=m,pole_displacement=m-m0,
                         scalar_field_energy_difference=float(field-base[1]),
                         cold_rate_difference=float(d_cold),
-                        warm_rate_and_energy=warm_flux.tolist()))
+                        warm_rate_and_energy=warm_flux.tolist(),**ext))
     return dict(grid=grid,projection=projection,order=order,marker_nodes=q0.tolist(),
                 marker_warm_energy=old_e,marker_inverse_energy_moment=old_j,
                 marker_pole=m0,marker_cold_rate=base_cold,marker_warm_rate=float(orig_flux),
@@ -98,6 +118,7 @@ if __name__=='__main__':
     p.add_argument('path')
     p.add_argument('--projection',choices=('steps','cell-conservative'),default='steps')
     p.add_argument('--order',type=int,default=8)
+    p.add_argument('--compensate',action='store_true')
     a=p.parse_args()
     if a.order<3:
         p.error('Use order at least 3.')
