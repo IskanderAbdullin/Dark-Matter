@@ -27,6 +27,12 @@ continuity to within 3 × 10⁻¹¹ of the final daughter energy. The exact
 zero-ratio rerun matches the previous massless refined solve to a
 relative 2.3 × 10⁻⁸.
 
+On a third matched grid with 97 scalar, 156 daughter, 176 parent
+cells, mass ratios 0, 0.06, and 0.30 yield 0.000346861,
+0.000364093, and 0.000380008. The relative enhancements become
++5.0% and +9.6%. The third grid changes the 0.06 result by −1.65%
+and the 0.30 result by −0.46% relative to the previous grid.
+
 At x=0.02 and scalar pole/T = 0.0005 an independent finite-pole
 continuum rate test gives maximum active-row seed errors of 1.26%,
 1.17%, and 0.88% for the three masses on the refined grid. The

@@ -613,6 +613,11 @@ returns momentum-relaxation heat to a live bath and counts it in H.
 The heat is appreciable compared with daughter energy but the
 reference radiation reservoir changes temperature only slightly.
 
+The [early spectral snapshots](INDEPENDENT-EARLY-POLE-SPECTRAL-SNAPSHOT-2026-11-26.md)
+retain raw three-species distributions, refine the mass control, and
+show that the early endpoint is not freeze-out. The low-momentum
+number peak coexists with a small tail controlling the RMS.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

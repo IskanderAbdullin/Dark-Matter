@@ -215,6 +215,141 @@
         "jacobian_error_relative": 2.7038909148208336e-11,
         "omitted_thermal_seed_fraction": 2.272017414286648e-12
       }
+    },
+    "0-third": {
+      "visible_gstar": 106.75,
+      "self_consistent_H": true,
+      "cells": [
+        97,
+        156,
+        176
+      ],
+      "xend": 0.05,
+      "dark_to_radiation_initial": 0.03271100521533162,
+      "dark_to_radiation_final": 0.032716662442773624,
+      "initial_H_over_H_radiation": 1.0162238952196172,
+      "final_H_over_H_radiation": 1.0162266786710403,
+      "scalar_yield_from_visible_entropy": 0.0003468609913522812,
+      "final_daughter_energy_over_T4": 0.01953000479219198,
+      "initial_parent_energy_over_T4": 1.148788990024371,
+      "final_parent_energy_over_T4": 1.1294576633393376,
+      "final_scalar_pole_over_T": 0.0008533380639482546,
+      "integrated_trace_over_T4": 0.00019867810715509576,
+      "continuity_residual_over_daughter_energy": 1.7545417948439966e-13,
+      "largest_absolute_endpoint_number_invariant": 3.608224830031759e-16,
+      "elastic_rate_over_radiation_H": 0.0,
+      "isolated_target_checks": {
+        "number_relative_defect": 0.0,
+        "energy_relative_defect": 8.881784197001252e-16,
+        "directional_derivative_error": 2.1235911671750526e-10
+      },
+      "daughter_vacuum_mass_over_parent": 0.0,
+      "massive_daughter_discrete_collision_checks": {
+        "event_energy_error_relative": 2.220446049250313e-16,
+        "detailed_balance_error_relative": 3.3306690738754696e-15,
+        "bulk_energy_error_relative": 2.546481050601544e-17,
+        "jacobian_error_relative": 1.8024599114095124e-11,
+        "omitted_thermal_seed_fraction": 1.9054596108408207e-12
+      },
+      "independent_continuum_seed_check": {
+        "max_relative_active_seed_error": 0.0014132993768892765,
+        "signed_weighted_seed_error": -0.001354419347095348,
+        "omitted_thermal_seed_fraction": 1.9073893108282737e-12,
+        "x": 0.02,
+        "scalar_pole_over_T": 0.0005,
+        "daughter_pole_over_T": 0.0,
+        "active_rows": 78
+      }
+    },
+    "0.06-third": {
+      "visible_gstar": 106.75,
+      "self_consistent_H": true,
+      "cells": [
+        97,
+        156,
+        176
+      ],
+      "xend": 0.05,
+      "dark_to_radiation_initial": 0.03271100521533162,
+      "dark_to_radiation_final": 0.03271664209538621,
+      "initial_H_over_H_radiation": 1.0162238952196172,
+      "final_H_over_H_radiation": 1.0162266686597956,
+      "scalar_yield_from_visible_entropy": 0.00036409278799470697,
+      "final_daughter_energy_over_T4": 0.0199012862556594,
+      "initial_parent_energy_over_T4": 1.148788990024371,
+      "final_parent_energy_over_T4": 1.1290856672890062,
+      "final_scalar_pole_over_T": 0.0008672414471781534,
+      "integrated_trace_over_T4": 0.00019796352039707328,
+      "continuity_residual_over_daughter_energy": -5.154235029595657e-12,
+      "largest_absolute_endpoint_number_invariant": 2.8102520310824275e-16,
+      "elastic_rate_over_radiation_H": 0.0,
+      "isolated_target_checks": {
+        "number_relative_defect": 0.0,
+        "energy_relative_defect": 8.881784197001252e-16,
+        "directional_derivative_error": 2.1235911671750526e-10
+      },
+      "daughter_vacuum_mass_over_parent": 0.06,
+      "massive_daughter_discrete_collision_checks": {
+        "event_energy_error_relative": 2.220446049250313e-16,
+        "detailed_balance_error_relative": 3.3306690738754696e-15,
+        "bulk_energy_error_relative": 1.6295156484603854e-17,
+        "jacobian_error_relative": 1.9885299906986735e-11,
+        "omitted_thermal_seed_fraction": 1.9122419546984334e-12
+      },
+      "independent_continuum_seed_check": {
+        "max_relative_active_seed_error": 0.0014359723018569914,
+        "signed_weighted_seed_error": -0.0013000061925811934,
+        "omitted_thermal_seed_fraction": 1.9141900705374418e-12,
+        "x": 0.02,
+        "scalar_pole_over_T": 0.0005,
+        "daughter_pole_over_T": 0.0012,
+        "active_rows": 78
+      }
+    },
+    "0.3-third": {
+      "visible_gstar": 106.75,
+      "self_consistent_H": true,
+      "cells": [
+        97,
+        156,
+        176
+      ],
+      "xend": 0.05,
+      "dark_to_radiation_initial": 0.03271100521533162,
+      "dark_to_radiation_final": 0.03271660438516118,
+      "initial_H_over_H_radiation": 1.0162238952196172,
+      "final_H_over_H_radiation": 1.0162266501057533,
+      "scalar_yield_from_visible_entropy": 0.00038000804575119703,
+      "final_daughter_energy_over_T4": 0.018205880530079252,
+      "initial_parent_energy_over_T4": 1.148788990024371,
+      "final_parent_energy_over_T4": 1.130779748656284,
+      "final_scalar_pole_over_T": 0.0008796980026256418,
+      "integrated_trace_over_T4": 0.00019663916221922598,
+      "continuity_residual_over_daughter_energy": -1.2467864876753635e-11,
+      "largest_absolute_endpoint_number_invariant": 3.7816971776294395e-16,
+      "elastic_rate_over_radiation_H": 0.0,
+      "isolated_target_checks": {
+        "number_relative_defect": 0.0,
+        "energy_relative_defect": 8.881784197001252e-16,
+        "directional_derivative_error": 2.1235911671750526e-10
+      },
+      "daughter_vacuum_mass_over_parent": 0.3,
+      "massive_daughter_discrete_collision_checks": {
+        "event_energy_error_relative": 2.220446049250313e-16,
+        "detailed_balance_error_relative": 3.3306690738754696e-15,
+        "bulk_energy_error_relative": 5.1679164636710157e-17,
+        "jacobian_error_relative": 1.3297680985134245e-11,
+        "omitted_thermal_seed_fraction": 2.0935924070959155e-12
+      },
+      "independent_continuum_seed_check": {
+        "max_relative_active_seed_error": 0.0028382547819063575,
+        "signed_weighted_seed_error": -0.001161313505443018,
+        "omitted_thermal_seed_fraction": 2.096060914232764e-12,
+        "x": 0.02,
+        "scalar_pole_over_T": 0.0005,
+        "daughter_pole_over_T": 0.006,
+        "active_rows": 78
+      }
     }
   },
   "seed_rate": {
