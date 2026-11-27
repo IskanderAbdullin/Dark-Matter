@@ -375,6 +375,12 @@ The [direct reheating ladder](INDEPENDENT-WARM-DIRECT-TEMPERATURE-BRACKET-2026-1
 encloses the selected vacuum direct contribution through 100 MeV,
 without assuming that recycling or unmeasured sources are absent in nature.
 
+The [late two-band occupation comparison](INDEPENDENT-WARM-REHEATING-COLD-BAND-LOSS-2026-11-26.md)
+separates highly occupied soft scalar modes from hard daughters that
+are normally produced in stable-pair annihilation. It uses a pair-energy
+gate and the total dark energy to limit access to the soft band, and
+does not derive either occupation cap.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
