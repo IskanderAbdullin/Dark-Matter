@@ -11,12 +11,14 @@ from scipy.special import expit, roots_legendre
 
 from early_pole_finite_shared_photon_chemistry_reference import Pair
 from early_pole_joint_fermion_thermal_reference import Joint
+from early_pole_shared_photon_number_budget_reference import coefficients, photon_fit
 
 
 class Coupled:
-    def __init__(self,s,g,theta,order):
+    def __init__(self,s,g,theta,order,number_budget=False):
         self.spec=s
         self.x0=s['x_end']; self.g=g
+        self.number_budget=number_budget
         self.gamma_const=np.pi**2/15
         self.visible=np.pi**2*106.75/30
         self.ratio=s['mass_ratio']
@@ -31,6 +33,7 @@ class Coupled:
         nB=self.d.d.wf@b;nP=self.d.pw@p
         heat=(self.d.d.wf*b)@self.d.daughter_energies(self.x0)+(self.d.pw*p)@self.d.parent_energies(self.x0)
         self.y0=np.r_[f,nB,nP,heat,self.gamma_const*theta**4]
+        self.N_gauge=nB+nP+coefficients(0.)[0]*theta**3
 
     def target(self,x,mom):
         d=self.d
@@ -59,6 +62,9 @@ class Coupled:
         fb,mu,tf=self.target(x,np.array([NB,NP,RF]))
         b=fb[:d.nf];p=fb[d.nf:]
         Tg=(max(RG,1e-30)/self.gamma_const)**.25
+        ag=condensate=0.
+        if self.number_budget:
+            Tg,ag,condensate=photon_fit(self.N_gauge-NB-NP,RG)
         parent_trace=x*x*np.sum(d.pqw/np.hypot(x,d.pq),axis=1)@p
         mm=d.daughter_mass(x)
         daughter_trace=mm*mm*np.sum(d.daughter_w/np.hypot(mm,d.daughter_q),axis=1)@b
@@ -73,7 +79,7 @@ class Coupled:
         Q=V@E
         Href=np.sqrt(np.pi**2*106.75/90)*(86./x)/2.435e18
         if self.bath:
-            gamma=[self.g**4/Href*pair.rate(Tg,tf,mi) for pair,mi in zip(self.bath,mu,strict=True)]
+            gamma=[self.g**4/Href*pair.rate(Tg,tf,mi,ag) for pair,mi in zip(self.bath,mu,strict=True)]
             srcB,srcP=gamma[0][0],gamma[1][0]
             heat=gamma[0][1]+gamma[1][1]
         else:
@@ -81,7 +87,7 @@ class Coupled:
         solar=self.visible+R+RF+RG
         Hinv=np.sqrt(self.visible/solar)
         value=np.r_[V/self.weights,D+srcB,-D+srcP,-Q+heat+parent_trace+daughter_trace,-heat]
-        return value,Hinv,deriv,np.r_[E,solar],np.array([D,srcB,srcP,heat,tr_s+parent_trace+daughter_trace]),(tf,Tg,mu)
+        return value,Hinv,deriv,np.r_[E,solar],np.array([D,srcB,srcP,heat,tr_s+parent_trace+daughter_trace]),(tf,Tg,mu,ag,condensate)
 
     def local(self,t,u):
         x=self.x0*np.exp(t)
@@ -154,7 +160,7 @@ class Coupled:
         errors=np.array([(n1-n0-dS)/n0,(q[-4]-y0[-4]-dS-dB)/n0,
                          (q[-3]-y0[-3]+dS-dP)/n0,(whole-whole0-trace)/part])
         assert np.max(abs(errors))<3e-6,errors
-        _,_,_,_,_,(tf,Tg,mu)=self.physics(end,m,q)
+        _,_,_,_,_,(tf,Tg,mu,ag,cond)=self.physics(end,m,q)
         def gate(t):
             x=self.x0*np.exp(t)
             u=sol.sol(t)
@@ -173,6 +179,8 @@ class Coupled:
                     scalar_count_initial_over_T3=n0,scalar_count_final_over_T3=n1,
                     final_parent_number_over_T3=q[-3],final_daughter_number_over_T3=q[-4],
                     final_fermion_T_over_Tref=tf,final_photon_T_over_Tref=Tg,
+                    photon_number_budget=self.number_budget,final_photon_mu_over_Tgamma=ag,
+                    final_photon_condensate_count_over_T3=cond,
                     final_mu_difference_over_Tref=(mu[1]-mu[0])*tf,
                     final_scalar_pole_over_T=m,integrated_scalar_decay_count_over_T3=dS,
                     integrated_photon_pair_counts=[dB,dP],integrated_pair_heat_over_T4=heat,
@@ -189,9 +197,10 @@ if __name__=='__main__':
     p.add_argument('--xend',type=float,default=.0505)
     p.add_argument('--order',type=int,default=10)
     p.add_argument('--rtol',type=float,default=2e-9)
+    p.add_argument('--photon-number',action='store_true')
     a=p.parse_args()
     f=Path(a.spec)
     raw=gzip.decompress(f.read_bytes()) if f.suffix=='.gz' else f.read_bytes()
     d=json.loads(raw)
     assert d['x_end']<a.xend<=1.05*d['x_end']
-    print(json.dumps(Coupled(d,a.g,a.theta,a.order).go(a.xend,a.rtol),indent=2,allow_nan=False))
+    print(json.dumps(Coupled(d,a.g,a.theta,a.order,a.photon_number).go(a.xend,a.rtol),indent=2,allow_nan=False))

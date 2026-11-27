@@ -49,6 +49,14 @@ population is needed in the examined states. This number
 budget still assumes rapid thermal momentum redistribution,
 not a study of true in-medium photon equilibration.
 
+The combined expansion also supports the number-budget option:
+Nγ+N_parent+N_daughter is conserved in both modeled pair and
+decay reactions, while scalar number can grow. The g=.001
+number-budget run at x=.052 gives n_scalar/Tref³=.02274259
+and μγ/Tγ=−.04188, compared with .02274323 when μγ=0 is
+imposed. This mild result does not yet settle the strong
+coupling sign crossing. [Coupled number-budget controls](results/early-pole-joint-photon-decay-number-2026-11-26.json.gz).
+
 ~~~sh
 python -W error early_pole_joint_photon_decay_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --g .004 --xend .052
 python -W error early_pole_shared_photon_number_budget_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --end .8
