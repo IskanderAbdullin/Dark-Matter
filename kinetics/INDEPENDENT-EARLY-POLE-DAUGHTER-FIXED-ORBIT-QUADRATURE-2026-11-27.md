@@ -72,3 +72,33 @@ to the held runner and retain the two arm files in that order.
 This is temporal method evidence on one held archived model.
 It does not establish accuracy in the hard mesh, under refreshed
 screening or for a physical relic prediction.
+
+## Measured tangent on the two actual held elastic orbits
+
+Compute both 64-leaf orbits with the slow stage absent, and
+evaluate all eight raw cold-source modes at each of the 65
+boundaries, keeping each initial cold mode fixed. The native and
+local seed arrays and initial sources matched the accepted
+nonlinear prepared snapshots exactly. The maximum absolute
+energy defect of an individual elastic leaf was 3.331e-15
+in both arms, below the 5e-15 gate. On these data the composite
+trapezoid identity replays exactly for each stored block and
+each mode of the paired source.
+
+| Macro intervals | Alternate minus original mean: tangent | Full slow field | Full / tangent minus one |
+|---|---:|---:|---:|
+| 16 | +2.67703192e-4 | +2.67706617e-4 | +12.80 ppm |
+| 32 | +7.59182687e-5 | +7.59190107e-5 | +9.77 ppm |
+
+The comparison isolates the order contrast, not the total
+contrast between the two physical inputs. For example, the
+linear small-leaf trapezoid gives +3.84774506e-4 at 64
+macro intervals while the full slow-coupled value is
++3.84570917e-4. Nonlinear dynamics remain necessary for the
+latter value. The near agreement here does not provide a
+bound for another exposure or regime.
+
+Reproduce the fixed orbit via
+`OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python early_pole_daughter_fixed_orbit_quadrature.py results/early-pole-joined-fine-216-memory-2026-11-27.json.gz`.
+Use `early_pole_daughter_order_linear_limit_compare.py` with
+the fixed-orbit and the full dyadic-order JSONs in that order.
