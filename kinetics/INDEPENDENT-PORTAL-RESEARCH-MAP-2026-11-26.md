@@ -253,6 +253,9 @@ source-to-decay reservoir without information about momentum location.
 The [convex excess-energy ledger](INDEPENDENT-WARM-CONVEX-HIGH-ENERGY-TAIL-2026-11-26.md)
 separates high-parent circulation from actual new above-cut energy and
 bounds the latter for the known ballistic receipts without assuming a shape.
+The [late fixed-moment reactivation stress](INDEPENDENT-WARM-LATE-RECORDED-TAIL-REACTIVATION-2026-11-26.md)
+shows that even known stored moment bounds do not determine the initial
+reacting rate or its sign when the unknown phase shape is changed.
 The [conditional high-band closure](INDEPENDENT-WARM-HEAVY-HIGH-BAND-FINITE-DAUGHTER-SUPPORT-2026-11-26.md)
 covers that part only with a separate persistent daughter
 support hypothesis; visible thermal tails are still bounded. A [finite ancestry extension](INDEPENDENT-WARM-HEAVY-PERIPHERAL-ANCESTRY-2026-11-26.md)
