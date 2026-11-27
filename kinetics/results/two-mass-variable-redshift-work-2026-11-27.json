@@ -1,0 +1,187 @@
+{
+  "scope": "Prescribed masses and events with externally supplied work, not physical evolution or rates.",
+  "cases": [
+    {
+      "case": "ordinary",
+      "initial": [
+        0.093,
+        0.061,
+        0.122,
+        0.33
+      ],
+      "rows": [
+        {
+          "a": 1.3,
+          "comoving_kinetic_excess": [
+            0.08761757905467567,
+            0.019998407486613336,
+            0.010281231223343373
+          ],
+          "comoving_trace_deficit": [
+            0.06328642142867662,
+            0.00643277075644523,
+            0.006440359692653521
+          ],
+          "decayed_parent_count": 0.15,
+          "accumulated_mass_offset_work": 0.0005274915450431476,
+          "accumulated_rest_work_from_external_mass_protocol": 0.0016932962968369799,
+          "pressure_work": 0.05700997059173383,
+          "cumulative_decay_rest_excess": 0.014817712994425707,
+          "normalized_kinetic_defect": 3.794026242864862e-17,
+          "normalized_rest_defect": 2.762063958437936e-20
+        },
+        {
+          "a": 2.1,
+          "comoving_kinetic_excess": [
+            0.027019192290403404,
+            0.022323012763873724,
+            0.026142720692461322
+          ],
+          "comoving_trace_deficit": [
+            0.023314242345102217,
+            0.011796780086379247,
+            0.014714158315612442
+          ],
+          "decayed_parent_count": 0.37,
+          "accumulated_mass_offset_work": 0.001270125496679018,
+          "accumulated_rest_work_from_external_mass_protocol": 0.005155856217157963,
+          "pressure_work": 0.12294662737444507,
+          "cumulative_decay_rest_excess": 0.03908471171087888,
+          "normalized_kinetic_defect": 6.610155580878639e-17,
+          "normalized_rest_defect": 2.381512924164265e-18
+        },
+        {
+          "a": 4.2,
+          "comoving_kinetic_excess": [
+            0.0048963035507583975,
+            0.020288010761740884,
+            0.02058416593572476
+          ],
+          "comoving_trace_deficit": [
+            0.004712582618546251,
+            0.012089795069732763,
+            0.013551381340325824
+          ],
+          "decayed_parent_count": 0.55,
+          "accumulated_mass_offset_work": 0.0011778773853659576,
+          "accumulated_rest_work_from_external_mass_protocol": 0.01049492928784845,
+          "pressure_work": 0.1760417444268719,
+          "cumulative_decay_rest_excess": 0.06237113515347823,
+          "normalized_kinetic_defect": 6.325603612663775e-17,
+          "normalized_rest_defect": 4.713922489067411e-18
+        },
+        {
+          "a": 7.999999999999998,
+          "comoving_kinetic_excess": [
+            0.0012949914404723703,
+            0.006291871243004869,
+            0.007412825377458488
+          ],
+          "comoving_trace_deficit": [
+            0.0012824509442474906,
+            0.005134083549015818,
+            0.006044399168496311
+          ],
+          "decayed_parent_count": 0.55,
+          "accumulated_mass_offset_work": 0.0008511083372192293,
+          "accumulated_rest_work_from_external_mass_protocol": 0.016049028731275356,
+          "pressure_work": 0.20713730566230695,
+          "cumulative_decay_rest_excess": 0.06237113515347823,
+          "normalized_kinetic_defect": 9.748242779642569e-17,
+          "normalized_rest_defect": 1.7922726130308386e-18
+        }
+      ]
+    },
+    {
+      "case": "near-rest",
+      "initial": [
+        2e-23,
+        0.061,
+        0.122,
+        4e-12
+      ],
+      "rows": [
+        {
+          "a": 1.3,
+          "comoving_kinetic_excess": [
+            2.3865801356973898e-23,
+            4.601677842155421e-24,
+            2.7965391070542297e-24
+          ],
+          "comoving_trace_deficit": [
+            2.3865801356973898e-23,
+            4.601677842155421e-24,
+            2.7965391070542297e-24
+          ],
+          "decayed_parent_count": 0.15,
+          "accumulated_mass_offset_work": -8.27848213948999e-25,
+          "accumulated_rest_work_from_external_mass_protocol": -0.004091456999334404,
+          "pressure_work": 1.914037258767928e-23,
+          "cumulative_decay_rest_excess": 3.1866049450377865e-24,
+          "normalized_kinetic_defect": 4.809039637704707e-19,
+          "normalized_rest_defect": 2.0250278744737782e-18
+        },
+        {
+          "a": 2.1,
+          "comoving_kinetic_excess": [
+            7.027294835893075e-24,
+            4.367925014320142e-24,
+            6.1310564001127694e-24
+          ],
+          "comoving_trace_deficit": [
+            7.027294835893075e-24,
+            4.367925014320142e-24,
+            6.1310564001127694e-24
+          ],
+          "decayed_parent_count": 0.37,
+          "accumulated_mass_offset_work": -1.3801449798022838e-24,
+          "accumulated_rest_work_from_external_mass_protocol": -0.010420715454473189,
+          "pressure_work": 3.8649120810777906e-23,
+          "cumulative_decay_rest_excess": 8.405314346425566e-24,
+          "normalized_kinetic_defect": 5.111630895807474e-18,
+          "normalized_rest_defect": 1.740397778589964e-18
+        },
+        {
+          "a": 4.2,
+          "comoving_kinetic_excess": [
+            1.3053355822075947e-24,
+            4.107644557222304e-24,
+            4.179401407237389e-24
+          ],
+          "comoving_trace_deficit": [
+            1.3053355822075947e-24,
+            4.107644557222304e-24,
+            4.179401407237389e-24
+          ],
+          "decayed_parent_count": 0.55,
+          "accumulated_mass_offset_work": -1.8141484673596083e-24,
+          "accumulated_rest_work_from_external_mass_protocol": -0.017092264472128155,
+          "pressure_work": 5.20248520004024e-23,
+          "cumulative_decay_rest_excess": 1.3413147344834027e-23,
+          "normalized_kinetic_defect": 3.9639454811462615e-17,
+          "normalized_rest_defect": 1.3793947072629855e-18
+        },
+        {
+          "a": 7.999999999999998,
+          "comoving_kinetic_excess": [
+            3.680937005652056e-25,
+            1.027863296930892e-24,
+            1.3188616430986385e-24
+          ],
+          "comoving_trace_deficit": [
+            3.680937005652056e-25,
+            1.027863296930892e-24,
+            1.3188616430986385e-24
+          ],
+          "decayed_parent_count": 0.55,
+          "accumulated_mass_offset_work": -1.9528226599054978e-24,
+          "accumulated_rest_work_from_external_mass_protocol": -0.020838021669094847,
+          "pressure_work": 5.904108909902084e-23,
+          "cumulative_decay_rest_excess": 1.3413147344834027e-23,
+          "normalized_kinetic_defect": 7.39835626061268e-17,
+          "normalized_rest_defect": 5.6099308481943e-18
+        }
+      ]
+    }
+  ]
+}
