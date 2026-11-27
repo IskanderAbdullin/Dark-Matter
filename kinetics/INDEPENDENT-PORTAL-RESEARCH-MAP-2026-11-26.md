@@ -792,3 +792,6 @@ fit or exclusion.
 - [Evolving Pauli cells with reciprocal gauge energy](INDEPENDENT-EARLY-POLE-LIVE-PAULI-GAUGE-MOMENT-DECAY-2026-11-26.md):
   evolves the hard aperture with separate local count and energy,
   exact variational ledger, and live spectator scalar Hartree energy.
+- [Live reciprocal hard photon-pair control](INDEPENDENT-EARLY-POLE-LIVE-RECIPROCAL-PAIR-MOMENTS-2026-11-26.md):
+  makes the hard photon moments live while verifying reversibility,
+  count/energy, admissible occupations and exact two-body geometry.
