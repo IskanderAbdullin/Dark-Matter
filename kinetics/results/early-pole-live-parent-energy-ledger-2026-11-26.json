@@ -1,0 +1,176 @@
+{
+  "none_coarse": {
+    "model": "none",
+    "rate": 0,
+    "cells": [
+      37,
+      50,
+      74
+    ],
+    "xend": 0.05,
+    "energy_unit": "rho/Tref^4; Tref proportional to 1/a",
+    "initial_parent_energy": 1.1629287328470344,
+    "final_parent_energy": 1.142775464291859,
+    "final_daughter_energy": 0.020461219019377003,
+    "final_scalar_pole_over_T": 0.0008687627850439778,
+    "signed_decay_centroid_defect": 0.00010999220877495225,
+    "gross_parent_decay_moment": 0.027926614448701738,
+    "net_parent_decay_moment": 0.02035123866483334,
+    "integrated_parent_trace": 0.0001979567240707918,
+    "integrated_scalar_trace": 1.1136726910179873e-20,
+    "integrated_heat_from_fixed_temperature_bath": 0.0,
+    "centroid_defect_fraction_of_final_daughter_energy": 0.00537564299911889,
+    "signed_heat_fraction_of_final_daughter_energy": 0.0,
+    "absolute_continuity_errors_over_final_daughter_energy": {
+      "total": 7.484187333202538e-08,
+      "daughters": 5.793511753294935e-07,
+      "parent": 6.541930486668178e-07
+    },
+    "two_order_quadrature_disagreement_over_daughter_energy": 1.6088805484533263e-08
+  },
+  "none_refined": {
+    "model": "none",
+    "rate": 0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "energy_unit": "rho/Tref^4; Tref proportional to 1/a",
+    "initial_parent_energy": 1.1550189854156783,
+    "final_parent_energy": 1.135259790838316,
+    "final_daughter_energy": 0.019947108640412523,
+    "final_scalar_pole_over_T": 0.0008609603465214864,
+    "signed_decay_centroid_defect": -1.0662393102366277e-05,
+    "gross_parent_decay_moment": 0.028006619416743067,
+    "net_parent_decay_moment": 0.019957784346889083,
+    "integrated_parent_trace": 0.00019857534643200192,
+    "integrated_scalar_trace": 1.0974329713686593e-20,
+    "integrated_heat_from_fixed_temperature_bath": 0.0,
+    "centroid_defect_fraction_of_final_daughter_energy": -0.0005345332646739808,
+    "signed_heat_fraction_of_final_daughter_energy": 0.0,
+    "absolute_continuity_errors_over_final_daughter_energy": {
+      "total": 5.563315480999516e-08,
+      "daughters": 6.67433783750135e-07,
+      "parent": 7.230669385492594e-07
+    },
+    "two_order_quadrature_disagreement_over_daughter_energy": 2.6885622292422315e-08
+  },
+  "fixed-T_coarse": {
+    "model": "fixed-T",
+    "rate": 100.0,
+    "cells": [
+      37,
+      50,
+      74
+    ],
+    "xend": 0.05,
+    "energy_unit": "rho/Tref^4; Tref proportional to 1/a",
+    "initial_parent_energy": 1.1629287328470344,
+    "final_parent_energy": 1.09853765815877,
+    "final_daughter_energy": 0.022855620047145964,
+    "final_scalar_pole_over_T": 0.0009116892489390449,
+    "signed_decay_centroid_defect": 0.00043025802484079493,
+    "gross_parent_decay_moment": 0.03297414930720175,
+    "net_parent_decay_moment": 0.022425369050366222,
+    "integrated_parent_trace": 0.00020151661635487317,
+    "integrated_scalar_trace": 1.2146733302023067e-20,
+    "integrated_heat_from_fixed_temperature_bath": -0.0421672444326289,
+    "centroid_defect_fraction_of_final_daughter_energy": 0.01882504276642988,
+    "signed_heat_fraction_of_final_daughter_energy": -1.8449398592401969,
+    "absolute_continuity_errors_over_final_daughter_energy": {
+      "total": 6.628704376653898e-07,
+      "daughters": 3.0749815751086665e-07,
+      "parent": 9.70368595024458e-07
+    },
+    "two_order_quadrature_disagreement_over_daughter_energy": 1.1936339757224887e-08
+  },
+  "fixed-T_refined": {
+    "model": "fixed-T",
+    "rate": 100.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "energy_unit": "rho/Tref^4; Tref proportional to 1/a",
+    "initial_parent_energy": 1.1550189854156783,
+    "final_parent_energy": 1.0936094711923185,
+    "final_daughter_energy": 0.022177667898216544,
+    "final_scalar_pole_over_T": 0.0009017637257859532,
+    "signed_decay_centroid_defect": 0.00010698087240896775,
+    "gross_parent_decay_moment": 0.03221219245698825,
+    "net_parent_decay_moment": 0.02207069286602801,
+    "integrated_parent_trace": 0.00020206484927535784,
+    "integrated_scalar_trace": 1.1864741101774049e-20,
+    "integrated_heat_from_fixed_temperature_bath": -0.03954090589852813,
+    "centroid_defect_fraction_of_final_daughter_energy": 0.0048238107315860205,
+    "signed_heat_fraction_of_final_daughter_energy": -1.7829154120261617,
+    "absolute_continuity_errors_over_final_daughter_energy": {
+      "total": 6.245787740333999e-07,
+      "daughters": 2.6333789734187443e-07,
+      "parent": 8.879166716881518e-07
+    },
+    "two_order_quadrature_disagreement_over_daughter_energy": 1.1431874524957118e-08
+  },
+  "isolated_coarse": {
+    "model": "isolated",
+    "rate": 100.0,
+    "cells": [
+      37,
+      50,
+      74
+    ],
+    "xend": 0.05,
+    "energy_unit": "rho/Tref^4; Tref proportional to 1/a",
+    "initial_parent_energy": 1.1629287328470344,
+    "final_parent_energy": 1.141733277849301,
+    "final_daughter_energy": 0.021760634466728074,
+    "final_scalar_pole_over_T": 0.0008963849493581604,
+    "signed_decay_centroid_defect": 0.00036625176042881963,
+    "gross_parent_decay_moment": 0.0317281087048864,
+    "net_parent_decay_moment": 0.0213943903112487,
+    "integrated_parent_trace": 0.00019892837121326246,
+    "integrated_scalar_trace": 1.193857395912878e-20,
+    "integrated_heat_from_fixed_temperature_bath": -1.9824774694620789e-13,
+    "centroid_defect_fraction_of_final_daughter_energy": 0.016830932066287736,
+    "signed_heat_fraction_of_final_daughter_energy": -9.110384499557121e-12,
+    "absolute_continuity_errors_over_final_daughter_energy": {
+      "total": 3.0442545432110596e-08,
+      "daughters": 3.4948197195801335e-07,
+      "parent": 3.1903942656576196e-07
+    },
+    "two_order_quadrature_disagreement_over_daughter_energy": 2.282147390004958e-08
+  },
+  "isolated_refined": {
+    "model": "isolated",
+    "rate": 100.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "xend": 0.05,
+    "energy_unit": "rho/Tref^4; Tref proportional to 1/a",
+    "initial_parent_energy": 1.1550189854156783,
+    "final_parent_energy": 1.1336629705912402,
+    "final_daughter_energy": 0.021658252610393884,
+    "final_scalar_pole_over_T": 0.0008935908309084132,
+    "signed_decay_centroid_defect": 0.00010247962862883839,
+    "gross_parent_decay_moment": 0.031107406488010546,
+    "net_parent_decay_moment": 0.02155578043624474,
+    "integrated_parent_trace": 0.00019975916361579936,
+    "integrated_scalar_trace": 1.1727086202930037e-20,
+    "integrated_heat_from_fixed_temperature_bath": -3.376884604029693e-14,
+    "centroid_defect_fraction_of_final_daughter_energy": 0.004731666514022373,
+    "signed_heat_fraction_of_final_daughter_energy": -1.5591676137386597e-12,
+    "absolute_continuity_errors_over_final_daughter_energy": {
+      "total": 4.646058271755997e-08,
+      "daughters": 3.441865706963812e-07,
+      "parent": 2.9772598794628256e-07
+    },
+    "two_order_quadrature_disagreement_over_daughter_energy": 1.691390991812291e-08
+  }
+}

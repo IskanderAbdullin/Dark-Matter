@@ -598,6 +598,11 @@ count, projected energy and discrete detailed balance. The
 checks full comoving continuity for a separated visible bath and
 retains the fast isolated parent-mixing sensitivity.
 
+The [live-parent energy ledger](INDEPENDENT-EARLY-POLE-LIVE-PARENT-ENERGY-LEDGER-2026-11-26.md)
+separates the earlier centroid discretization defect from heat
+withdrawn by the fixed-temperature momentum restoration. The latter
+is not present under isolated momentum mixing.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
