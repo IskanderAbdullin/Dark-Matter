@@ -31,6 +31,17 @@ the actual two-line spectral/vertex kernel, and including
 soft/collinear processes consistently, remain separate work.
 No final abundance or transfer spectrum is inferred.
 
+A static normalization check illustrates the cut dependence:
+tightening the input radial energy, invariant mass and central
+angle cuts retains about 41% or 23% of the earlier unblocked
+source in the two narrower examples. Purely rescaling a g⁴
+normalization would require g factors 1.25 or 1.45, but the
+lost phase space can also change heat and shape, so these are
+not corrected dynamical thresholds. The illustrative single-line
+damping proxy divided by the angular energy split is 0.86 at
+g=.004 and 1.29 at .005. Neither number is the two-line width.
+[Static cut and line scales](results/early-pole-hard-gauge-cut-sensitivity-2026-11-26.json).
+
 ~~~sh
 python -W error early_pole_spectral_photon_decay_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --order 20
 ~~~
