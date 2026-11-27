@@ -11,6 +11,47 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 | Can purely ballistic forward depletion rescue the initial warm excess? | A loss-only bound gives a stable proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
 | How sensitive are the hard thermal folds to the perturbative range? | Born/NLO, measured-window subtraction, and a toy pole test. | Thermal QCD and missing spectral domains are open. |
 
+## Early-pole first window: separate time, support, and population
+
+These results use a short archived first-window model with a held
+dielectric and retained modes. They answer different numerical questions:
+
+1. **Time integration at fixed hard and cold supports.** Opposite
+   symmetric orderings with the same elastic leaves give different
+   answers. In the [fixed-orbit audit](INDEPENDENT-EARLY-POLE-DAUGHTER-FIXED-ORBIT-QUADRATURE-2026-11-27.md)
+   their average is exactly the next dyadic trapezoid only to first
+   order in a formal slow-coupling scale. The full finite calculation
+   tests that approximation; the [unsplit reference](INDEPENDENT-EARLY-POLE-FIRST-WINDOW-UNSPLIT-CHART-2026-11-27.md)
+   is a separate fixed-support control. Refining the first two outer
+   blocks recovers [97.54% of the fixed-inner timing difference](INDEPENDENT-EARLY-POLE-LOCAL-DAUGHTER-STARTUP-HYBRID-2026-11-27.md);
+   the [startup allocation audit](INDEPENDENT-EARLY-POLE-DAUGHTER-STARTUP-ALLOCATION-2026-11-27.md)
+   tests where that improvement comes from.
+2. **Hard aperture versus cold output mesh.** Increasing the hard
+   aperture depth changes the [whole-archive contrast](INDEPENDENT-EARLY-POLE-UNSPLIT-HARD-APERTURE-DEPTH-2026-11-27.md)
+   from about 1.47% to 1.75% in magnitude. Keeping the hard grid
+   fixed while increasing the cold mesh from eight to 32 instead
+   changes the [local daughter's paired mean](INDEPENDENT-EARLY-POLE-UNSPLIT-LOCAL-COLD32-2026-11-27.md)
+   by about 1.75% relative. These are not the same observable.
+   The [original-interval replay](INDEPENDENT-EARLY-POLE-DAUGHTER-ORIGINAL-INTERVAL-HARD-REFINEMENT-2026-11-27.md)
+   locks the daughter intervention to one momentum interval across
+   hard meshes instead of swapping a different physical aperture.
+3. **Compensation and denominators.** The same aperture cells and
+   full daughter number/bare energy can give different
+   [time-integrated results](INDEPENDENT-EARLY-POLE-DAUGHTER-DONOR-SUPPORT-TIME-2026-11-27.md)
+   if the exterior compensation occupies different cells. The
+   [initial slope](INDEPENDENT-EARLY-POLE-DAUGHTER-DONOR-INITIAL-SLOPE-2026-11-27.md)
+   does not account for that history by itself. On the 32-bin mesh,
+   the [increment-versus-population audit](INDEPENDENT-EARLY-POLE-DAUGHTER-COLD-DISTRIBUTION-AUDIT-2026-11-27.md)
+   finds a roughly 0.764% relative effect on the cold amount
+   produced *during the window*, but only about 9.77e-9 on the
+   existing cold population at the end. Do not use the first
+   denominator as an abundance effect.
+
+An energy or entropy ledger is necessary, not a substitute for
+checking the observable across hard meshes, elastic response
+models, and time controls. No result here is a converged physical
+production history or a likelihood for a dark-matter relic.
+
 ## Low-reheat branch: follow the count, then the spectrum
 
 1. [The fixed-loss retarget](INDEPENDENT-FINITE-COOLING-FROZEN-COUNT-RETARGET-2026-11-26.md)
