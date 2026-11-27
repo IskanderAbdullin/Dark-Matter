@@ -1,0 +1,96 @@
+{
+  "scope": "Leading-soft eikonal subtraction, artificial measurement weights, not matched physical finite-temperature radiation.",
+  "angular": [
+    {
+      "grid": "fine",
+      "relative_rapidity": 2.8131053781378377,
+      "leading_radiator": 3.6668907564882725,
+      "independent_rest_angular": 3.6668907564882667,
+      "independent_plasma_angular": 3.666890756487682,
+      "plasma_parent_momentum": 1.4278106865569469,
+      "matrix_element_soft_sequence": [
+        {
+          "rest_photon_energy_over_parent_mass": 0.001,
+          "maximum_relative_soft_residual": 0.002957767866682226
+        },
+        {
+          "rest_photon_energy_over_parent_mass": 1e-05,
+          "maximum_relative_soft_residual": 2.9607276185283915e-05
+        },
+        {
+          "rest_photon_energy_over_parent_mass": 1e-07,
+          "maximum_relative_soft_residual": 2.960757224945709e-07
+        },
+        {
+          "rest_photon_energy_over_parent_mass": 1e-09,
+          "maximum_relative_soft_residual": 2.9607559737243605e-09
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "relative_rapidity": 2.8131087408011948,
+      "leading_radiator": 3.666897255867317,
+      "independent_rest_angular": 3.6668972558673145,
+      "independent_plasma_angular": 3.6668972558667585,
+      "plasma_parent_momentum": 1.4357422184397868,
+      "matrix_element_soft_sequence": [
+        {
+          "rest_photon_energy_over_parent_mass": 0.001,
+          "maximum_relative_soft_residual": 0.002957756448641824
+        },
+        {
+          "rest_photon_energy_over_parent_mass": 1e-05,
+          "maximum_relative_soft_residual": 2.9607161780909053e-05
+        },
+        {
+          "rest_photon_energy_over_parent_mass": 1e-07,
+          "maximum_relative_soft_residual": 2.9607457863178865e-07
+        },
+        {
+          "rest_photon_energy_over_parent_mass": 1e-09,
+          "maximum_relative_soft_residual": 2.9607419849142502e-09
+        }
+      ]
+    }
+  ],
+  "subtraction": {
+    "smooth_zero_cut_result": 0.022820321453771594,
+    "high_precision_combination_defect": 6.938893903907228e-18,
+    "cusp_log_coefficient": 1.2599999999999996,
+    "rows": [
+      {
+        "lower_cut": 0.001,
+        "real_plus_constant_measurement": 1710.003518508359,
+        "leading_virtual_constant_measurement": -1710.003518508359,
+        "smooth_combined": 0.02167932141359008,
+        "smooth_error_to_zero_cut": 0.001141000040181514,
+        "nonsmooth_cusp_combined": 3.774648525682449
+      },
+      {
+        "lower_cut": 1e-05,
+        "real_plus_constant_measurement": 179910.0037018418,
+        "leading_virtual_constant_measurement": -179910.0037018418,
+        "smooth_combined": 0.022808911453771553,
+        "smooth_error_to_zero_cut": 1.1410000000041526e-05,
+        "nonsmooth_cusp_combined": 9.577163024835778
+      },
+      {
+        "lower_cut": 1e-08,
+        "real_plus_constant_measurement": 179999910.00370398,
+        "leading_virtual_constant_measurement": -179999910.00370398,
+        "smooth_combined": 0.02282031004377159,
+        "smooth_error_to_zero_cut": 1.1410000003847509e-08,
+        "nonsmooth_cusp_combined": 18.280934676359752
+      },
+      {
+        "lower_cut": 1e-12,
+        "real_plus_constant_measurement": 1799999999910.001,
+        "leading_virtual_constant_measurement": -1799999999910.001,
+        "smooth_combined": 0.022820321452630597,
+        "smooth_error_to_zero_cut": 1.140997019088985e-12,
+        "nonsmooth_cusp_combined": 29.88596354504974
+      }
+    ]
+  }
+}
