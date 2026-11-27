@@ -471,6 +471,11 @@ adds time-weighted vacuum collisions and energy exchange on held
 orbits to the original one-passage density proxy. It is not a
 relaxation or formation calculation.
 
+The [Bose-weighted halo encounter comparison](INDEPENDENT-HALO-BOSE-QUANTUM-ORBITAL-ELASTIC-2026-11-26.md)
+integrates both final-state occupations exactly over the contact
+scattering angle. Large local enhancement need not persist over
+eccentric orbits; the result is a gross, not a relaxation clock.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
