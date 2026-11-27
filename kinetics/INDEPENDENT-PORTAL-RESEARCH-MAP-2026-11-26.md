@@ -668,6 +668,11 @@ separates projected energy from changing particle count. The
 shows why a narrow band's local growth is not the gain of a
 redshifting mode. Both use explicitly limited reference closures.
 
+The [short coupled chemical sensitivity](INDEPENDENT-EARLY-POLE-SCALAR-CHEMICAL-SENSITIVITY-2026-11-26.md)
+tests dynamic count loss and conserving stress–energy with the
+threshold comparator. Stiff larger-interval attempts do not
+establish an actual chemical freeze-out endpoint.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
