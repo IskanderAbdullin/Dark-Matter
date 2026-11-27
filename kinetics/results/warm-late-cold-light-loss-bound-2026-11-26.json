@@ -1,0 +1,121 @@
+{
+  "scope": "Instantaneous conditional light-loss bound at original stored light moments, with no untracked input and finite parent cap. A finite time estimate requires sustaining these tail bounds and cap, and pertains only to this inverse channel; no time persistence inferred.",
+  "cases": [
+    {
+      "archive": "27950d8171d19c25c85f7c3e96af08755883de82e7d342f6c9629772c2b86d9f",
+      "untracked_light_excluded": true,
+      "cut_p_over_T": 0.1,
+      "minimum_required_light_energy_GeV": 3.245884116902784,
+      "studies": [
+        {
+          "common_daughter_cap_GeV": 1.05,
+          "parent_energy_cap_GeV": 2.1001904589168614,
+          "inverse_loss_log_derivative_bound_over_H": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 0.0
+        },
+        {
+          "common_daughter_cap_GeV": 2.0,
+          "parent_energy_cap_GeV": 4.000099997500127,
+          "inverse_loss_log_derivative_bound_over_H": [
+            8.094872380109816e-06,
+            7.9899281832714e-06,
+            7.963905409179743e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 7.963905409176572e-13
+        },
+        {
+          "common_daughter_cap_GeV": 3.5,
+          "parent_energy_cap_GeV": 7.000057142390679,
+          "inverse_loss_log_derivative_bound_over_H": [
+            8.48137717700999e-06,
+            8.083640078674647e-06,
+            7.987155069200322e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 7.987155069197133e-13
+        },
+        {
+          "common_daughter_cap_GeV": 7.5,
+          "parent_energy_cap_GeV": 15.00002666661926,
+          "inverse_loss_log_derivative_bound_over_H": [
+            9.037542668162644e-06,
+            8.213021587145253e-06,
+            8.01892432862673e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 8.018924328623514e-13
+        },
+        {
+          "common_daughter_cap_GeV": 20.0,
+          "parent_energy_cap_GeV": 40.0000099999975,
+          "inverse_loss_log_derivative_bound_over_H": [
+            9.807268400919845e-06,
+            8.38257387307034e-06,
+            8.059994055627689e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 8.05999405562444e-13
+        }
+      ]
+    },
+    {
+      "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+      "untracked_light_excluded": true,
+      "cut_p_over_T": 0.1,
+      "minimum_required_light_energy_GeV": 3.245884116902773,
+      "studies": [
+        {
+          "common_daughter_cap_GeV": 1.05,
+          "parent_energy_cap_GeV": 2.1001904589168614,
+          "inverse_loss_log_derivative_bound_over_H": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 0.0
+        },
+        {
+          "common_daughter_cap_GeV": 2.0,
+          "parent_energy_cap_GeV": 4.000099997500127,
+          "inverse_loss_log_derivative_bound_over_H": [
+            3.232584252477157e-06,
+            3.190676123212231e-06,
+            3.1802842595997587e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 3.180284259599253e-13
+        },
+        {
+          "common_daughter_cap_GeV": 3.5,
+          "parent_energy_cap_GeV": 7.000057142390679,
+          "inverse_loss_log_derivative_bound_over_H": [
+            3.386930023639202e-06,
+            3.22809877586512e-06,
+            3.189568715404479e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 3.18956871540397e-13
+        },
+        {
+          "common_daughter_cap_GeV": 7.5,
+          "parent_energy_cap_GeV": 15.00002666661926,
+          "inverse_loss_log_derivative_bound_over_H": [
+            3.6090276335890338e-06,
+            3.2797656344892953e-06,
+            3.202255364793419e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 3.2022553647929057e-13
+        },
+        {
+          "common_daughter_cap_GeV": 20.0,
+          "parent_energy_cap_GeV": 40.0000099999975,
+          "inverse_loss_log_derivative_bound_over_H": [
+            3.916407807802924e-06,
+            3.347474181791366e-06,
+            3.218656037530775e-06
+          ],
+          "loss_fraction_upper_for_Hdt_1e_minus7": 3.218656037530257e-13
+        }
+      ]
+    }
+  ]
+}
