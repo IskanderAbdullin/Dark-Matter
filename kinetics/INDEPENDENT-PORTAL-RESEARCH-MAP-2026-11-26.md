@@ -509,6 +509,11 @@ rules out a fixed-shape homologous sequence as the response to
 isolated positive-energy loss, with independent kinetic and potential
 integrals. Conditional tangents are not dynamical solutions.
 
+The [exterior return clock](INDEPENDENT-HALO-BOSE-EXTERIOR-RETURN-CLOCK-2026-11-26.md)
+computes ballistic outside durations for the negative-energy portion
+of the geometric crossing flux. The halo and vacuum exterior remain
+fixed, so these are not evolved debris counts.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent

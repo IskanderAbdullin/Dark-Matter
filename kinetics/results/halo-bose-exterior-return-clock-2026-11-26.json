@@ -1,0 +1,50 @@
+{
+  "scope": "Ballistic exterior part only, fixed spherical vacuum exterior and no rescattering in the time between ejection and exterior crossing. Return delay is conditional on negative orbital energy and reaching the boundary. Not a formed debris halo.",
+  "exterior_duration_targets_Gyr": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "independent_radial_integral_defect": 1.7985612998927536e-13,
+  "outputs": [
+    {
+      "escape_depth": 2.0,
+      "peak_occupation": 7000.0,
+      "outward_accessible_rate_per_Gyr": 0.00563742970927388,
+      "outward_accessible_but_negative_energy_rate_per_Gyr": 0.00482412397337879,
+      "fraction_of_negative_energy_outward_flux_exterior_longer_than_target": [
+        0.5109210740094056,
+        0.08387937338649443,
+        0.015933650303964386
+      ],
+      "finest_scramble_maximum_relative_drift": 0.002486394604859443,
+      "coarse_to_fine_maximum_relative_difference": 0.017121414835949977
+    },
+    {
+      "escape_depth": 5.0,
+      "peak_occupation": 7000.0,
+      "outward_accessible_rate_per_Gyr": 0.0014602865992508522,
+      "outward_accessible_but_negative_energy_rate_per_Gyr": 0.0010804594492692674,
+      "fraction_of_negative_energy_outward_flux_exterior_longer_than_target": [
+        0.852476303051523,
+        0.22269047635591183,
+        0.04245548526045145
+      ],
+      "finest_scramble_maximum_relative_drift": 0.0028126638157692785,
+      "coarse_to_fine_maximum_relative_difference": 0.0092974253303868
+    },
+    {
+      "escape_depth": 8.0,
+      "peak_occupation": 7000.0,
+      "outward_accessible_rate_per_Gyr": 0.0001384597849002885,
+      "outward_accessible_but_negative_energy_rate_per_Gyr": 7.201176137104008e-05,
+      "fraction_of_negative_energy_outward_flux_exterior_longer_than_target": [
+        0.9901332437682315,
+        0.7680291352166256,
+        0.19927401167065228
+      ],
+      "finest_scramble_maximum_relative_drift": 0.004431705909557548,
+      "coarse_to_fine_maximum_relative_difference": 0.014620987670630914
+    }
+  ]
+}
