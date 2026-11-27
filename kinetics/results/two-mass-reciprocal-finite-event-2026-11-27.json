@@ -1,0 +1,213 @@
+{
+  "scope": "Conservative finite event in a specified quadratic proxy; not a matched dispersion or physical source.",
+  "cases": [
+    {
+      "case": "ordinary",
+      "masses": [
+        0.055,
+        0.002,
+        0.007
+      ],
+      "coupling": 0.005,
+      "manufactured_outside_bracket": true,
+      "controls": [
+        {
+          "extent": -0.012,
+          "frozen_weight": 0.4997931070329424,
+          "conserved_weight": 0.4998403560805424,
+          "exact_energy_residual": -3.3881317890172014e-21,
+          "frozen_energy_drift": 1.1028830861841787e-08,
+          "quadratic_prediction": 1.1028830861836364e-08,
+          "reverse_weight": 0.4998403560805424
+        },
+        {
+          "extent": -0.003,
+          "frozen_weight": 0.4997931070329424,
+          "conserved_weight": 0.4998049193412116,
+          "exact_energy_residual": -2.0328790734103208e-20,
+          "frozen_energy_drift": 6.893019288663823e-10,
+          "quadratic_prediction": 6.893019288647728e-10,
+          "reverse_weight": 0.49980491934121124
+        },
+        {
+          "extent": 0.003,
+          "frozen_weight": 0.4997931070329424,
+          "conserved_weight": 0.49978129469376076,
+          "exact_energy_residual": 0.0,
+          "frozen_energy_drift": 6.89301928859606e-10,
+          "quadratic_prediction": 6.893019288647728e-10,
+          "reverse_weight": 0.4997812946937611
+        },
+        {
+          "extent": 0.012,
+          "frozen_weight": 0.4997931070329424,
+          "conserved_weight": 0.499745857490737,
+          "exact_energy_residual": -6.776263578034403e-21,
+          "frozen_energy_drift": 1.1028830861831623e-08,
+          "quadratic_prediction": 1.1028830861836364e-08,
+          "reverse_weight": 0.499745857490737
+        }
+      ],
+      "coupled_entropy": [
+        {
+          "type": "forward",
+          "timestep": 0.02,
+          "extent": 0.005736022204439676,
+          "finite_weight": 0.5000789741083057,
+          "abs_full_energy_change": 1.3552527156068805e-19,
+          "abs_entropy_identity_defect": 2.693564772268675e-19,
+          "entropy_increase": 0.030261435640982357
+        },
+        {
+          "type": "forward",
+          "timestep": 0.08,
+          "extent": 0.022216917706992235,
+          "finite_weight": 0.5000140817481555,
+          "abs_full_energy_change": 1.3552527156068805e-20,
+          "abs_entropy_identity_defect": 4.336808689942018e-19,
+          "entropy_increase": 0.11066158577613401
+        },
+        {
+          "type": "forward",
+          "timestep": 0.2,
+          "extent": 0.05215031273415347,
+          "finite_weight": 0.4998962187366983,
+          "abs_full_energy_change": 0.0,
+          "abs_entropy_identity_defect": 1.0028870095490916e-17,
+          "entropy_increase": 0.23638221452353528
+        },
+        {
+          "type": "inverse",
+          "timestep": 0.02,
+          "extent": -0.0036409141646056324,
+          "finite_weight": 0.4942801433278951,
+          "abs_full_energy_change": 5.421010862427522e-20,
+          "abs_entropy_identity_defect": 1.5585406229479126e-19,
+          "entropy_increase": 0.01160843076025204
+        },
+        {
+          "type": "inverse",
+          "timestep": 0.08,
+          "extent": -0.0139828897573267,
+          "finite_weight": 0.49432090663468337,
+          "abs_full_energy_change": 0.0,
+          "abs_entropy_identity_defect": 1.9481757786848908e-18,
+          "entropy_increase": 0.0401506674157412
+        },
+        {
+          "type": "inverse",
+          "timestep": 0.2,
+          "extent": -0.032451986819712855,
+          "finite_weight": 0.4943937023973536,
+          "abs_full_energy_change": 0.0,
+          "abs_entropy_identity_defect": 2.7233803320120265e-16,
+          "entropy_increase": 0.08008854879459305
+        }
+      ]
+    },
+    {
+      "case": "soft-scalar",
+      "masses": [
+        0.0519,
+        0.0009,
+        0.003
+      ],
+      "coupling": 0.012,
+      "manufactured_outside_bracket": true,
+      "controls": [
+        {
+          "extent": -0.012,
+          "frozen_weight": 0.5000693905654879,
+          "conserved_weight": 0.5000889763441854,
+          "exact_energy_residual": 3.3881317890172014e-20,
+          "frozen_energy_drift": 1.2235887741257926e-08,
+          "quadratic_prediction": 1.2235887741273068e-08,
+          "reverse_weight": 0.5000889763441849
+        },
+        {
+          "extent": -0.003,
+          "frozen_weight": 0.5000693905654879,
+          "conserved_weight": 0.5000742870159369,
+          "exact_energy_residual": 6.776263578034403e-21,
+          "frozen_energy_drift": 7.647429838298909e-10,
+          "quadratic_prediction": 7.647429838295668e-10,
+          "reverse_weight": 0.5000742870159369
+        },
+        {
+          "extent": 0.003,
+          "frozen_weight": 0.5000693905654879,
+          "conserved_weight": 0.500064494111189,
+          "exact_energy_residual": -1.3552527156068805e-20,
+          "frozen_energy_drift": 7.647429838298909e-10,
+          "quadratic_prediction": 7.647429838295668e-10,
+          "reverse_weight": 0.500064494111189
+        },
+        {
+          "extent": 0.012,
+          "frozen_weight": 0.5000693905654879,
+          "conserved_weight": 0.5000498047251932,
+          "exact_energy_residual": -3.3203691532368573e-19,
+          "frozen_energy_drift": 1.2235887741285031e-08,
+          "quadratic_prediction": 1.2235887741273068e-08,
+          "reverse_weight": 0.5000498047251938
+        }
+      ],
+      "coupled_entropy": [
+        {
+          "type": "forward",
+          "timestep": 0.02,
+          "extent": 0.005735979090687435,
+          "finite_weight": 0.5003548475635944,
+          "abs_full_energy_change": 2.710505431213761e-20,
+          "abs_entropy_identity_defect": 1.582257545471033e-18,
+          "entropy_increase": 0.030260554242241677
+        },
+        {
+          "type": "forward",
+          "timestep": 0.08,
+          "extent": 0.022216749057074506,
+          "finite_weight": 0.5003279488470175,
+          "abs_full_energy_change": 1.260385025514399e-18,
+          "abs_entropy_identity_defect": 2.3649159887340065e-18,
+          "entropy_increase": 0.11065838932857351
+        },
+        {
+          "type": "forward",
+          "timestep": 0.2,
+          "extent": 0.052149916777581115,
+          "finite_weight": 0.5002790938060511,
+          "abs_full_energy_change": 6.776263578034403e-20,
+          "abs_entropy_identity_defect": 5.407458335271453e-18,
+          "entropy_increase": 0.23637553159952976
+        },
+        {
+          "type": "inverse",
+          "timestep": 0.02,
+          "extent": -0.0036385551540838714,
+          "finite_weight": 0.4983861191050698,
+          "abs_full_energy_change": 0.0,
+          "abs_entropy_identity_defect": 7.182839392716467e-19,
+          "entropy_increase": 0.011595494288619742
+        },
+        {
+          "type": "inverse",
+          "timestep": 0.08,
+          "extent": -0.013973953885068667,
+          "finite_weight": 0.4984029924920852,
+          "abs_full_energy_change": 4.87890977618477e-19,
+          "abs_entropy_identity_defect": 2.812149384884277e-19,
+          "entropy_increase": 0.04010676329547785
+        },
+        {
+          "type": "inverse",
+          "timestep": 0.2,
+          "extent": -0.03243176989833699,
+          "finite_weight": 0.49843312627847597,
+          "abs_full_energy_change": 0.0,
+          "abs_entropy_identity_defect": 2.6164508927506436e-16,
+          "entropy_increase": 0.08000265544084306
+        }
+      ]
+    }
+  ]
+}
