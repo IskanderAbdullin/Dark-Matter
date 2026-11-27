@@ -15,9 +15,10 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False):
     with gzip.open(bundle,'rt') as f:
-        saved=json.load(f)['branches'][projection]
+        branches=json.load(f)['branches']
+    saved=branches[projection]
     shot=saved['snapshots'][0]
     y0=np.asarray(shot['hard_moments'])
     n0=np.asarray(shot['cold_bins'])
@@ -42,6 +43,22 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None):
         y0=np.asarray(ss['hard_moments'])
         expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
+    retune_check=None
+    if retune_local_daughter:
+        if projection!='steps' or prepared_input is not None:
+            raise ValueError('Retuned local preparation requires the native graph and no alternate input.')
+        from early_pole_daughter_complement_retune_reference import prepare
+        independent=branches['cell-conservative']
+        for x,y in zip(M.edge_sets,independent['hard_edge_sets'],strict=True):
+            np.testing.assert_array_equal(x,y)
+        other=independent['snapshots'][0]
+        np.testing.assert_array_equal(n0,other['cold_bins'])
+        ed=np.asarray(M.edge_sets[2])
+        local=np.flatnonzero((ed[:-1]>=1.4138888888888888-2e-14)&(ed[1:]<=1.4666666666666666+2e-14))
+        if len(local)!=2:
+            raise ValueError('Exactly two initial aperture cells required.')
+        _,y0,retune_check=prepare(M,y0,np.asarray(other['hard_moments']),M.r[2].start+local)
+        swap='retuned-local-daughter'
     elastic=ElasticChannels(C,saved['grid'],1.)
     add=(ComptonKernel(M),ConversionKernel(M))
     k=M.r[1].start
@@ -113,6 +130,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None):
                 largest_sample_chart_condition_number=max(cond),
                 energy_defect=en,entropy_defect=sn,hard_number_defect=n1-nH,
                 **(dict(prepared_charged_swap=swap) if swap is not None else {}),
+                **(dict(complement_retune=retune_check) if retune_check is not None else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
@@ -124,7 +142,9 @@ if __name__=='__main__':
     p.add_argument('--panels',type=int,default=16)
     p.add_argument('--rtol',type=float,default=3e-9)
     p.add_argument('--base-atol',type=float,default=2e-14)
-    p.add_argument('--prepared-input')
+    group=p.add_mutually_exclusive_group()
+    group.add_argument('--prepared-input')
+    group.add_argument('--retune-local-daughter',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
