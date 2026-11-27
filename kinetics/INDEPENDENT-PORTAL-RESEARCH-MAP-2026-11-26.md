@@ -854,3 +854,6 @@ fit or exclusion.
 - [Frozen hard photon–fermion Compton exchange](INDEPENDENT-EARLY-POLE-HARD-COMPTON-HEAT-2026-11-26.md):
   tests full Bose/Pauli balance and shows opposite parent/daughter heat
   at the reference imposed photon bath, with a parent sign change under heating.
+- [Live hard Compton on the conserved photon and charged moments](INDEPENDENT-EARLY-POLE-LIVE-COMPTON-2026-11-26.md):
+  checks the separate photon/fermion count ledgers and initial heating
+  against the exact frozen window, then compares matched short and longer effects.

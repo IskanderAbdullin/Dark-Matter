@@ -22,7 +22,7 @@ def check_spin():
     assert np.max(abs(compton(2*m*e,2*m*out,m)/expect-1))<2e-13
 
 
-def integrate(level, bounds, temperature, angular_floor, mixed_fixture, flavor=None):
+def integrate(level, bounds, temperature, angular_floor, mixed_fixture, flavor=None, photon_bounds=None):
     np_,ns,nt,naz=[(2,4,4,4),(3,6,6,5),(4,8,8,5),(1,3,4,3)][level]
     profiles=[]
     for g in ('fine','third'):
@@ -37,11 +37,12 @@ def integrate(level, bounds, temperature, angular_floor, mixed_fixture, flavor=N
         names,profiles=map(list,zip(*pairs,strict=True))
     child=len(names)
     low,high=bounds
-    if not 0.<low<high or temperature<=0. or not 0.<angular_floor<1.:
+    gl,gh=bounds if photon_bounds is None else photon_bounds
+    if not 0.<low<high or not 0.<gl<gh or temperature<=0. or not 0.<angular_floor<1.:
         raise ValueError("Positive temperature, valid radial and angular cuts required")
     base=[.45,.55,.65,.8,1.,1.25,1.32,1.56,1.7,2.2,2.8,3.7,5.,6.5,8.,10.,14.]
     knots=lambda a:np.unique(np.r_[low,[p for p in a if low<p<high],high])
-    ge=knots(base)
+    ge=np.unique(np.r_[gl,[p for p in base if gl<p<gh],gh])
     fe=knots(base+[p for e,occ in profiles for p,j in zip(e,abs(np.diff(occ)),strict=True)
                            if 1.25<p<1.6 and j>.012])
     p,wp=gauss_each(ge,np_)
@@ -95,7 +96,7 @@ def integrate(level, bounds, temperature, angular_floor, mixed_fixture, flavor=N
             D=span[sl]
             # Photon has smooth Bose occupations; split only its box ends,
             # and all actual outgoing fermion occupation jumps.
-            chops=np.c_[([low,high]-C[:,None])/D[:,None],
+            chops=np.c_[([gl,gh]-C[:,None])/D[:,None],
                         (H[:,None]-q-C[:,None])/D[:,None],
                         np.broadcast_to([-1.,1.],(len(H),2))]
             Pha=np.sort(np.arccos(np.clip(chops,-1.,1.)),axis=1)
@@ -106,7 +107,7 @@ def integrate(level, bounds, temperature, angular_floor, mixed_fixture, flavor=N
             go=C[i,None]+D[i,None]*np.cos(az[:,None]+half[:,None]*xa)
             Eout=H[i,None]-go
             fo=np.sqrt(np.maximum((Eout-m)*(Eout+m),0.))
-            valid=(go>=low)&(go<=high)&(fo>=low)&(fo<=high)
+            valid=(go>=gl)&(go<=gh)&(fo>=low)&(fo<=high)
             wt=(W*angular)[sl][i,None]*(half[:,None]*xw)/(np.pi)*valid
             dE=Eout-Ein[sl][i,None]
             for k in range(out.shape[1]):
@@ -140,7 +141,7 @@ def integrate(level, bounds, temperature, angular_floor, mixed_fixture, flavor=N
         names+=['common_T','photons_hotter']
     return dict(scope='Strict vacuum hard gamma-f Compton; imposed photons at a fixed BE temperature, no soft or collinear completion.',
                 flavor=flavor,fermion_mass=m,
-                bounds=bounds,photon_temperature=temperature,order=[np_,ns,nt,naz],
+                bounds=bounds,photon_bounds=[gl,gh],photon_temperature=temperature,order=[np_,ns,nt,naz],
                 tau_edges=transfer.tolist(),angular_normalization_error=defect,
                 rows={k:dict(total_heat_into_fermion=float(v[:,0].sum()*factor),
                              heat_by_angle_band=(v[:,0]*factor).tolist(),
@@ -156,6 +157,7 @@ if __name__=='__main__':
     p.add_argument('--angular-floor',type=float,default=.15)
     p.add_argument('--without-fixtures',dest='mixed_fixture',action='store_false')
     p.add_argument("--flavor",choices=("parent","daughter"),help="include the chosen fermion bare mass")
+    p.add_argument("--photon-bounds",type=float,nargs=2)
     a=p.parse_args()
     check_spin()
     print(json.dumps(integrate(**vars(a)),indent=2,allow_nan=False))

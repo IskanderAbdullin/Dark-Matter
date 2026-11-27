@@ -100,7 +100,7 @@ def step(model,Y0,dt,method="backward"):
         theta=theta0[k:].ravel().copy()
     current=evaluate(theta)
     history=[]
-    for _ in range(80 if symmetric else 24):
+    for _ in range(80 if symmetric else 56):
         r,Y,F,G,_,_,Fm,Fe=current
         error=float(np.linalg.norm(r,np.inf))
         history.append(error)
