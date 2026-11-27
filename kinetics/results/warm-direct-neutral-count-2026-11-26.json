@@ -1,0 +1,776 @@
+{
+  "scope": "Exclusive pi0 photon vacuum slot only. Conditional positive moment through 1.35 GeV taken from a data-constrained dispersive fit and spent on the upper interval alone. Below each tested split assume a separate constant |Fhat| cap; overlapping split alternatives are never summed. Massless photon enhancement bounded at fixed total lab energy Q. No new channels above 1.35 included in quoted totals; a separate finite weight only covers 1.35\u20134 GeV per unit R. No thermal photon masses, in-medium spectral states or dark regeneration bound.",
+  "source": "https://arxiv.org/abs/2007.12696",
+  "positive_a_mu_cap": 4.5e-10,
+  "sub_060_conditional_a_mu_cap": 2.6e-11,
+  "rows": [
+    {
+      "T_reheat_GeV": 0.025,
+      "prior_upper": 3.664420480597104e-05,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.5694382723253744e-09,
+              "upper_count_omega_from_positive_moment": 2.6344624406610313e-08,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10363580413750462
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 3.6673118868649976e-05,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 3.6927493257610186e-05
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.1067745265859106e-09,
+              "upper_count_omega_from_positive_moment": 2.9929303173849844e-09,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.1781247569576998
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 3.665030451081501e-05,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 3.6957875188947015e-05
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.393545208322271e-09,
+              "upper_count_omega_from_positive_moment": 2.6434444834479864e-11,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 3.66476247856242e-05,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 3.69835857612481e-05
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 2.5694382723253744e-09,
+            "mid_032_060_count_omega_upper": 1.47649330116002e-09,
+            "high_060_135_count_omega_upper": 2.6434444834479864e-11,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 3.690265156094957e-05
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 3.216122551629825e-22
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.4371297549943864e-09,
+              "upper_count_omega_from_positive_moment": 2.4628425521225946e-08,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10301604896170534
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 3.667127036124726e-05,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 3.6912546206991707e-05
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.905472398564188e-09,
+              "upper_count_omega_from_positive_moment": 2.792531025220935e-09,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.17726028073806674
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 3.664990280939482e-05,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 3.693754457685268e-05
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.0614476591501306e-09,
+              "upper_count_omega_from_positive_moment": 2.4504255023508896e-11,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 3.664729075788521e-05,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 3.695037407614108e-05
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 2.4371297549943864e-09,
+            "mid_032_060_count_omega_upper": 1.401478348952965e-09,
+            "high_060_135_count_omega_upper": 2.4504255023508896e-11,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 3.6889343764074456e-05
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 2.6758650609941114e-22
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.04,
+      "prior_upper": 0.00029565186877068594,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 4.6267753871340747e-08,
+              "upper_count_omega_from_positive_moment": 1.1468126079288788e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10363580413750462
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.00029684494913248614,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0003014254567657489
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 8.15372942614677e-08,
+              "upper_count_omega_from_positive_moment": 5.401871346552384e-07,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.1781247569576998
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.00029627359319960267,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.00030434578533148796
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.0343542576637818e-07,
+              "upper_count_omega_from_positive_moment": 6.55322560784071e-08,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.00029582083645253074,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.00030606094360340215
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 4.6267753871340747e-08,
+            "mid_032_060_count_omega_upper": 6.425898436052283e-08,
+            "high_060_135_count_omega_upper": 6.55322560784071e-08,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.00030040843539825895
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 8.671298800659408e-14
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 4.4254458099687375e-08,
+              "upper_count_omega_from_positive_moment": 1.077787413270739e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10301604896170534
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0002967739106420564,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.00030115510199392546
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 7.73752700265556e-08,
+              "upper_count_omega_from_positive_moment": 5.079654403563935e-07,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.17726028073806674
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0002962372094810689,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0003038973612136979
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 9.63391650764725e-08,
+              "upper_count_omega_from_positive_moment": 6.149065425602768e-08,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0002958096985900185,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.00030534727593258925
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 4.4254458099687375e-08,
+            "mid_032_060_count_omega_upper": 6.132447849637235e-08,
+            "high_060_135_count_omega_upper": 6.149065425602768e-08,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0003002001297134071
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 7.584221978823882e-14
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.045,
+      "prior_upper": 0.0004894903352217408,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 7.75304607703371e-08,
+              "upper_count_omega_from_positive_moment": 2.1919357258265013e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10363580413750462
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0004917598014083376,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0004994353170246009
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.525503544284895e-07,
+              "upper_count_omega_from_positive_moment": 1.3341385844700055e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.1781247569576998
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0004909770241606393,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0005060795092490598
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.118622348769919e-07,
+              "upper_count_omega_from_positive_moment": 2.609512347714067e-07,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0004899631486913891,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0005109375099442114
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 7.75304607703371e-08,
+            "mid_032_060_count_omega_upper": 1.228137131759531e-07,
+            "high_060_135_count_omega_upper": 2.609512347714067e-07,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0004976271462467217
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 3.0378165935130955e-12
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 7.426361697293676e-08,
+              "upper_count_omega_from_positive_moment": 2.061936355180454e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10301604896170534
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0004916265351938942,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0004989786332742149
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.4511673013030214e-07,
+              "upper_count_omega_from_positive_moment": 1.2563740475438825e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.17726028073806674
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0004908918259994149,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0005052583822823148
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.9837817857059243e-07,
+              "upper_count_omega_from_positive_moment": 2.4542999187009725e-07,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0004899341433921814,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0005095735830706701
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 7.426361697293676e-08,
+            "mid_032_060_count_omega_upper": 1.173180501159052e-07,
+            "high_060_135_count_omega_upper": 2.4542999187009725e-07,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0004972794449610204
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 2.682802798459126e-12
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.05,
+      "prior_upper": 0.0007630639882693715,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.1641151568446902e-07,
+              "upper_count_omega_from_positive_moment": 3.632498829721941e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10363580413750462
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0007668128986147779,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0007783376386675403
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.5241373055335805e-07,
+              "upper_count_omega_from_positive_moment": 2.7079224507773076e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.1781247569576998
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0007660243244507022,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0007910132837754847
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.8617079625284865e-07,
+              "upper_count_omega_from_positive_moment": 7.741423380129153e-07,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0007642243014036373,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0008024552102326694
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 1.1641151568446902e-07,
+            "mid_032_060_count_omega_upper": 2.0351943373908516e-07,
+            "high_060_135_count_omega_upper": 7.741423380129153e-07,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0007756828016095705
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 5.185636995919374e-11
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.1163083986712453e-07,
+              "upper_count_omega_from_positive_moment": 3.41953687222511e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.1024,
+                0.10301604896170534
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0007665951559814638,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0007776466091283091
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.405663845249965e-07,
+              "upper_count_omega_from_positive_moment": 2.5529947860720557e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.17726028073806674
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0007658575494399686,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0007896736215079433
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.6305954921622324e-07,
+              "upper_count_omega_from_positive_moment": 7.294623546075468e-07,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0007641565101731952,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0008000994055456013
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 1.1163083986712453e-07,
+            "mid_032_060_count_omega_upper": 1.9455730610376613e-07,
+            "high_060_135_count_omega_upper": 7.294623546075468e-07,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0007751510919167952
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 4.615593629647072e-11
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.0555,
+      "prior_upper": 0.0011811458029677784,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.6641923435159912e-07,
+              "upper_count_omega_from_positive_moment": 5.709494257665913e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.11684455280051528,
+                0.11825467957586443
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.001187021716459796,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0012034972206606041
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.95946850638044e-07,
+              "upper_count_omega_from_positive_moment": 5.030967700081201e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.1781247569576998
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0011865727175184976,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0012257714557316638
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 6.740049899344665e-07,
+              "upper_count_omega_from_positive_moment": 2.012840460743544e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0011838326484184564,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0012505591424219686
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 1.6641923435159912e-07,
+            "mid_032_060_count_omega_upper": 3.1992184346912484e-07,
+            "high_060_135_count_omega_upper": 2.012840460743544e-06,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.001200120488707151
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 6.485007608523305e-10
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.5973795491317893e-07,
+              "upper_count_omega_from_positive_moment": 5.374684958183142e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.11684455280051528,
+                0.11754750168170358
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0011866802258808746,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0012024942834172794
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.7797511468463504e-07,
+              "upper_count_omega_from_positive_moment": 4.7478491447138515e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.17726028073806674
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.001186271627227177,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0012236911635809557
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 6.358475801795674e-07,
+              "upper_count_omega_from_positive_moment": 1.8998249509711323e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.001183681475498929,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0012466303859367063
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 1.5973795491317893e-07,
+            "mid_032_060_count_omega_upper": 3.058118579442796e-07,
+            "high_060_135_count_omega_upper": 1.8998249509711323e-06,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0011993252352680117
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 5.812856734230413e-10
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.06,
+      "prior_upper": 0.001639782599924459,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.1174203256031137e-07,
+              "upper_count_omega_from_positive_moment": 8.011573434585631e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.13821226354095228,
+                0.13988026439190723
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.001648005915391605,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0016689683766150758
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 5.383431441081153e-07,
+              "upper_count_omega_from_positive_moment": 7.624427667283508e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.1781247569576998
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0016479453707358507,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0017012413420025541
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 9.970800086099553e-07,
+              "upper_count_omega_from_positive_moment": 3.830170161088114e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0016446098500941572,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0017433207709465427
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 2.1174203256031137e-07,
+            "mid_032_060_count_omega_upper": 4.489423218882795e-07,
+            "high_060_135_count_omega_upper": 3.830170161088114e-06,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.0016652359156634666
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 3.6246285261825172e-09
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.033687025473709e-07,
+              "upper_count_omega_from_positive_moment": 7.538554767796916e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.13821226354095228,
+                0.13904376277385608
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0016475245233948032,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.001667658024946993
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 5.14457678865212e-07,
+              "upper_count_omega_from_positive_moment": 7.200085266502904e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.17639999999999997,
+                0.17726028073806674
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.001647497142869827,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0016984284530774832
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 9.427364710324601e-07,
+              "upper_count_omega_from_positive_moment": 3.6191685673213326e-06,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.001644344504962813,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0017376754155950264
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 2.033687025473709e-07,
+            "mid_032_060_count_omega_upper": 4.289493475404819e-07,
+            "high_060_135_count_omega_upper": 3.6191685673213326e-06,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.001664167588094058
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 3.2646173706396715e-09
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.075,
+      "prior_upper": 0.004284719437510406,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.7994745867368183e-07,
+              "upper_count_omega_from_positive_moment": 2.178532431685611e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.22602217054256743,
+                0.22874989645589044
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.004306884709285936,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.00434449950769463
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.1480385136756427e-06,
+              "upper_count_omega_from_positive_moment": 2.1562645592679493e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.2249785847093378,
+                0.22717832041971694
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.004307430121616761,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.004421085934470649
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.7249901250453042e-06,
+              "upper_count_omega_from_positive_moment": 1.8163749690369387e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.36244102929412836
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.0043056081773258205,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0045753821997053055
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 3.7994745867368183e-07,
+            "mid_032_060_count_omega_upper": 1.2207434658233711e-06,
+            "high_060_135_count_omega_upper": 1.8163749690369387e-05,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.004342098676533967
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 2.528385480199949e-07
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 3.6543577403516673e-07,
+              "upper_count_omega_from_positive_moment": 2.046780601136485e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.22467052946441954,
+                0.22602217054256743
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.004305552679295806,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.004341730820925287
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 1.0998011391561063e-06,
+              "upper_count_omega_from_positive_moment": 2.0362930241442723e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.2249785847093378,
+                0.22607577712942264
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.004306182168891004,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.0044150624816674585
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.5895877259495443e-06,
+              "upper_count_omega_from_positive_moment": 1.7208597742499278e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.36,
+                0.3612184526652621
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.004304517622978854,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.004560886807847859
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 3.6543577403516673e-07,
+            "mid_032_060_count_omega_upper": 1.1646153225863458e-06,
+            "high_060_135_count_omega_upper": 1.7208597742499278e-05,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.004339636227979007
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 2.3043752811502546e-07
+        }
+      ]
+    },
+    {
+      "T_reheat_GeV": 0.1,
+      "prior_upper": 0.015148551124613165,
+      "controls": [
+        {
+          "panels": 240,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 6.731312993680382e-07,
+              "upper_count_omega_from_positive_moment": 8.52939152518827e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.4217586679895678,
+                0.4268486202056806
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.015234518171164417,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.015301158169801852
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.4384146118671063e-06,
+              "upper_count_omega_from_positive_moment": 8.441658053722284e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.4234595575104454,
+                0.4275999476358458
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.015235406119762256,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.015476809166337098
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 7.799755844228705e-06,
+              "upper_count_omega_from_positive_moment": 8.327961326288167e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.4233884481088825,
+                0.4262592914550751
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.015239630493720275,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.016011806322298917
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 6.731312993680382e-07,
+            "mid_032_060_count_omega_upper": 4.692415139286454e-06,
+            "high_060_135_count_omega_upper": 8.327961326288167e-05,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.015303836282952137
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 1.7911069122496638e-05
+        },
+        {
+          "panels": 480,
+          "cross": [
+            {
+              "separation_GeV": 0.32,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 6.480723569218646e-07,
+              "upper_count_omega_from_positive_moment": 7.993587042525596e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.41923649797699253,
+                0.4217586679895678
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.015229135067395342,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.015293294230730607
+            },
+            {
+              "separation_GeV": 0.42,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 2.340595827248713e-06,
+              "upper_count_omega_from_positive_moment": 7.952386747435563e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.4193592582000353,
+                0.4214044208540005
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.01523041558791477,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.015462134574812393
+            },
+            {
+              "separation_GeV": 0.6,
+              "low_omega_ceiling_per_GeVminus2_Fhat_squared": 7.443606269606234e-06,
+              "upper_count_omega_from_positive_moment": 7.898690495237468e-05,
+              "invariant_controlling_panel_GeV2": [
+                0.4205369398051948,
+                0.42196028523615814
+              ],
+              "total_omega_if_low_cap_Fhat1_and_no_others": 0.015234981635835147,
+              "total_omega_if_low_cap_Fhat10_and_no_others": 0.01597189865652616
+            }
+          ],
+          "disjoint_moment_variant": {
+            "low_Fhat_squared_coefficient": 6.480723569218646e-07,
+            "mid_032_060_count_omega_upper": 4.473412398578471e-06,
+            "high_060_135_count_omega_upper": 7.898690495237468e-05,
+            "total_omega_with_Fhat10_local_and_disjoint_moments": 0.015296818677656305
+          },
+          "tail_1p35_to_4_omega_per_unit_R": 1.6510533392852184e-05
+        }
+      ]
+    }
+  ]
+}

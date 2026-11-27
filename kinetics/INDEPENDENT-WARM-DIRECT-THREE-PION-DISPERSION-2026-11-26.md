@@ -62,3 +62,6 @@ python -W error warm_direct_three_pion_moment_bound_reference.py EOS.late.dat \
 ~~~
 
 [Both grid controls, experimental alternatives and all bands](results/warm-direct-three-pion-count-2026-11-26.json).
+
+The [radiative neutral-pion follow-up](INDEPENDENT-WARM-DIRECT-NEUTRAL-PION-PHOTON-2026-11-26.md)
+tests the distinct π⁰γ channel and treats the soft photon separately.
