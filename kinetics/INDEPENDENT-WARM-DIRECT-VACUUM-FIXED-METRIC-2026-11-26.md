@@ -68,3 +68,6 @@ python -W error warm_direct_vacuum_fixed_metric_response_reference.py EOS.dat \
 
 The [follow-up response controls](INDEPENDENT-WARM-DIRECT-SOURCE-RESPONSE-CONTROLS-2026-11-26.md)
 compare fixed-peak production clocks, an alternate metric fixture, and removal of the rare low-q population.
+
+The [matched native setup and positive-shell homogeneous bounds](INDEPENDENT-WARM-DIRECT-NATIVE-BASELINE-2026-11-26.md)
+separate any subsequent perturbation response from small expansion changes.

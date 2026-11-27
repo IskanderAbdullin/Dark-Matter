@@ -1,0 +1,211 @@
+{
+  "scope": "Conditional CLASS: keep omega_cdm+omega_ncdm=.120 with CDM proxy for all other dark matter, same radiation/background parameters, fixed post-production scalar distribution. No inference of the actual cosmological abundance.",
+  "inputs": {
+    "direct": [
+      {
+        "PSD": "direct-sig07",
+        "mean_q2": 3.7597238415745484,
+        "number_fraction_in_Class_q_cap": 0.9999999999111632,
+        "q2_fraction_in_Class_q_cap": 0.9999999746011834,
+        "sha256": "d0869ff26565a04c86f0a3510026bed55c35837fe033324a0e6eb2c685ac82f2"
+      },
+      {
+        "PSD": "direct-sig11",
+        "mean_q2": 3.7597238415745484,
+        "number_fraction_in_Class_q_cap": 0.9999999999173144,
+        "q2_fraction_in_Class_q_cap": 0.9999999753842101,
+        "sha256": "12d9ca683914cc0e169f5f3ee53b9950bd92a00f4f29c365d5cc65554ba66eeb"
+      }
+    ],
+    "held": [
+      {
+        "PSD": "held-sig07",
+        "mean_q2": 5.171326565054396,
+        "number_fraction_in_Class_q_cap": 0.9999999999999987,
+        "q2_fraction_in_Class_q_cap": 0.9999999999997485,
+        "sha256": "e60716fb4219a97da609b2472f72e83ec70f54d40e8c931f60a676a5d7835518"
+      },
+      {
+        "PSD": "held-sig11",
+        "mean_q2": 5.171326565054393,
+        "number_fraction_in_Class_q_cap": 0.9999999999999488,
+        "q2_fraction_in_Class_q_cap": 0.9999999999911539,
+        "sha256": "4aee30c3d0d88ee4f17b34107544fb201b1e194abc4450f69c87c8bc32caac0d"
+      }
+    ]
+  },
+  "physical_rest_fraction": 2.099185018297396e-06,
+  "cases": [
+    {
+      "label": "std-base",
+      "kind": "direct",
+      "rest_fraction": 0.0,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "std-physical",
+      "kind": "direct",
+      "rest_fraction": 2.099185018297396e-06,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "std-amp4",
+      "kind": "direct",
+      "rest_fraction": 0.0001,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "std-amp3",
+      "kind": "direct",
+      "rest_fraction": 0.001,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "std-amp2",
+      "kind": "direct",
+      "rest_fraction": 0.01,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "std-held3",
+      "kind": "held",
+      "rest_fraction": 0.001,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "std-thermal3",
+      "kind": "matched_FD",
+      "rest_fraction": 0.001,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-base",
+      "kind": "direct",
+      "rest_fraction": 0.0,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-physical",
+      "kind": "direct",
+      "rest_fraction": 2.099185018297396e-06,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-amp4",
+      "kind": "direct",
+      "rest_fraction": 0.0001,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-amp3",
+      "kind": "direct",
+      "rest_fraction": 0.001,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-amp2",
+      "kind": "direct",
+      "rest_fraction": 0.01,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-held3",
+      "kind": "held",
+      "rest_fraction": 0.001,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-thermal3",
+      "kind": "matched_FD",
+      "rest_fraction": 0.001,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "shape-base",
+      "kind": "direct",
+      "rest_fraction": 0.0,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig11"
+    },
+    {
+      "label": "shape-amp3",
+      "kind": "direct",
+      "rest_fraction": 0.001,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig11"
+    },
+    {
+      "label": "shape-held3",
+      "kind": "held",
+      "rest_fraction": 0.001,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig11"
+    },
+    {
+      "label": "std-trace",
+      "kind": "direct",
+      "rest_fraction": 1e-10,
+      "rtol": 2e-08,
+      "quadrature": 70,
+      "lmax": 20,
+      "smoothing": "sig07"
+    },
+    {
+      "label": "fine-trace",
+      "kind": "direct",
+      "rest_fraction": 1e-10,
+      "rtol": 8e-10,
+      "quadrature": 128,
+      "lmax": 32,
+      "smoothing": "sig07"
+    }
+  ]
+}
