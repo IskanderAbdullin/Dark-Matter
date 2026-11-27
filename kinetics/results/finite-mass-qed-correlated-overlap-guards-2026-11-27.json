@@ -1,0 +1,751 @@
+{
+  "scope": "Regulator-path test for two bare scalar-latest charged overlap denominators, not a causal physical width or medium rate.",
+  "rows": [
+    {
+      "grid": "fine",
+      "rows": [
+        {
+          "cut": "daughter",
+          "external_parent_energy": 1.4286858845268333,
+          "tuned_step": false,
+          "occupations_left_right": [
+            0.04046811405228601,
+            0.04046811405228601
+          ],
+          "local_relative_angular_scales": [
+            9.878480458690041e-06,
+            0.9999999999512078
+          ],
+          "outer_half_width": 0.0003,
+          "comparators": [
+            {
+              "dimensionless_photon_width": 0.03,
+              "local_asymptotic_shift_real_and_imag": [
+                0.0,
+                1.8754889997813113
+              ],
+              "local_side_real": [
+                -1.9165462102512416,
+                1.9165462102512416
+              ],
+              "local_side_imaginary": [
+                0.9377444998906557,
+                0.9377444998906557
+              ],
+              "parity_defect": 0.0,
+              "local_mesh_defect": 9.948433587587351e-12,
+              "local_tail_extent_defect": 4.480106445108346e-12,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    9.151466162649058e-07,
+                    1.87546611372054
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    1.8754661137162636
+                  ],
+                  "difference_at_same_support": 9.151466162748966e-07
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    9.151519542172082e-09,
+                    1.8754889974901587
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    1.8754889974901578
+                  ],
+                  "difference_at_same_support": 9.151519542172136e-09
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    9.151546187524673e-11,
+                    1.8754889997829642
+                  ],
+                  "local_same_support": [
+                    2.220446049250313e-16,
+                    1.8754889997829642
+                  ],
+                  "difference_at_same_support": 9.151523983091118e-11
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 1.0,
+              "local_asymptotic_shift_real_and_imag": [
+                8.881784197001252e-16,
+                2.195896648826503
+              ],
+              "local_side_real": [
+                -2.6721193822949556,
+                2.6721193822949565
+              ],
+              "local_side_imaginary": [
+                1.0979483244132515,
+                1.0979483244132515
+              ],
+              "parity_defect": 1.4210854715202004e-14,
+              "local_mesh_defect": 1.5475756637479008e-12,
+              "local_tail_extent_defect": 1.03264797665216e-10,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    5.281194552342328e-06,
+                    2.1951338986201394
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    2.1951338985790936
+                  ],
+                  "difference_at_same_support": 5.281194552501833e-06
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    5.287064119841034e-08,
+                    2.195896572542503
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    2.1958965725424733
+                  ],
+                  "difference_at_same_support": 5.2870641198418837e-08
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    5.287077442517329e-10,
+                    2.1958966488269165
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    2.195896648826917
+                  ],
+                  "difference_at_same_support": 5.287077442521526e-10
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 30.0,
+              "local_asymptotic_shift_real_and_imag": [
+                -4.440892098500626e-16,
+                2.4606394297299987
+              ],
+              "local_side_real": [
+                -3.4854349392263466,
+                3.485434939226346
+              ],
+              "local_side_imaginary": [
+                1.2303197148649994,
+                1.2303197148649996
+              ],
+              "parity_defect": 1.4210854715202004e-14,
+              "local_mesh_defect": 2.0674609041995937e-11,
+              "local_tail_extent_defect": 3.0918207372943085e-09,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    2.510172739045302e-05,
+                    2.440047198031639
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    2.4400471990616883
+                  ],
+                  "difference_at_same_support": 2.510172741158707e-05
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    2.896219517545262e-07,
+                    2.460637141201212
+                  ],
+                  "local_same_support": [
+                    4.440892098500626e-16,
+                    2.4606371412005927
+                  ],
+                  "difference_at_same_support": 2.896219513110977e-07
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    2.896220596682042e-09,
+                    2.460639429593958
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    2.460639429593958
+                  ],
+                  "difference_at_same_support": 2.896220596682042e-09
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cut": "daughter",
+          "external_parent_energy": 1.4230974518581974,
+          "tuned_step": true,
+          "occupations_left_right": [
+            0.09650234222422002,
+            0.04046811405228601
+          ],
+          "local_relative_angular_scales": [
+            5.494418027894851e-06,
+            0.9999999999849057
+          ],
+          "outer_half_width": 0.0003,
+          "comparators": [
+            {
+              "dimensionless_photon_width": 0.03,
+              "local_asymptotic_shift_real_and_imag": [
+                -2.98699300721276,
+                3.3646244217751264
+              ],
+              "local_side_real": [
+                -5.144209723366462,
+                2.1572167161537017
+              ],
+              "local_side_imaginary": [
+                2.3705414016482695,
+                0.9940830201268568
+              ],
+              "parity_defect": 7.105427357601002e-15,
+              "local_mesh_defect": 1.8180615235078198e-12,
+              "local_tail_extent_defect": 2.271859941021265e-11,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -2.9869901773701204,
+                    3.3644991037165863
+                  ],
+                  "local_same_support": [
+                    -2.986992961522048,
+                    3.3645002036218603
+                  ],
+                  "difference_at_same_support": 2.9935419768777117e-06
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -2.986992979370419,
+                    3.364624397944045
+                  ],
+                  "local_same_support": [
+                    -2.986993007212899,
+                    3.3646244093542945
+                  ],
+                  "difference_at_same_support": 3.008982393797298e-08
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -2.9869930069276243,
+                    3.364624421644582
+                  ],
+                  "local_same_support": [
+                    -2.9869930072060495,
+                    3.364624421758724
+                  ],
+                  "difference_at_same_support": 3.0091380322882473e-10
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 1.0,
+              "local_asymptotic_shift_real_and_imag": [
+                -4.091248699624158,
+                3.906861718732332
+              ],
+              "local_side_real": [
+                -7.045962709151359,
+                2.954714009527201
+              ],
+              "local_side_imaginary": [
+                2.752573926180903,
+                1.154287792551429
+              ],
+              "parity_defect": 1.4210854715202004e-14,
+              "local_mesh_defect": 2.7000670372740033e-11,
+              "local_tail_extent_defect": 7.854281516718808e-10,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -4.0911820734751885,
+                    3.9027224980635244
+                  ],
+                  "local_same_support": [
+                    -4.091198044478208,
+                    3.902727704005328
+                  ],
+                  "difference_at_same_support": 1.6798058445550524e-05
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -4.091248538892955,
+                    3.9068612389856936
+                  ],
+                  "local_same_support": [
+                    -4.091248699625158,
+                    3.9068613047193566
+                  ],
+                  "difference_at_same_support": 1.7365412574451722e-07
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -4.091248698007613,
+                    3.9068617180731913
+                  ],
+                  "local_same_support": [
+                    -4.091248699614934,
+                    3.9068617187318995
+                  ],
+                  "difference_at_same_support": 1.7370599868508768e-09
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 30.0,
+              "local_asymptotic_shift_real_and_imag": [
+                -5.273712194665128,
+                4.354893271470222
+              ],
+              "local_side_real": [
+                -9.082405444044705,
+                3.8086932493795764
+              ],
+              "local_side_imaginary": [
+                3.0682339261905303,
+                1.2866593452796917
+              ],
+              "parity_defect": 3.552713678800501e-15,
+              "local_mesh_defect": 7.017181308148448e-10,
+              "local_tail_extent_defect": 2.3233336420649325e-08,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -5.256534147804414,
+                    4.275967110876558
+                  ],
+                  "local_same_support": [
+                    -5.256593207313563,
+                    4.275975933427997
+                  ],
+                  "difference_at_same_support": 5.971484769190391e-05
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -5.273711313976652,
+                    4.354880494217171
+                  ],
+                  "local_same_support": [
+                    -5.273712194251326,
+                    4.354880850937567
+                  ],
+                  "difference_at_same_support": 9.498067918378078e-07
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -5.27371218590363,
+                    4.354893267917621
+                  ],
+                  "local_same_support": [
+                    -5.273712194706393,
+                    4.354893271525956
+                  ],
+                  "difference_at_same_support": 9.513606770908608e-09
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "rows": [
+        {
+          "cut": "parent",
+          "external_parent_energy": 1.4366125844535822,
+          "tuned_step": false,
+          "occupations_left_right": [
+            0.1668848956840856,
+            0.1668848956840856
+          ],
+          "local_relative_angular_scales": [
+            0.00016464076086017453,
+            0.9999999864467098
+          ],
+          "outer_half_width": 0.0003,
+          "comparators": [
+            {
+              "dimensionless_photon_width": 0.03,
+              "local_asymptotic_shift_real_and_imag": [
+                0.0,
+                -1.8438398768528768
+              ],
+              "local_side_real": [
+                4.362160081429615,
+                -4.362160081429615
+              ],
+              "local_side_imaginary": [
+                -0.9219199384264383,
+                -0.9219199384264385
+              ],
+              "parity_defect": 8.881784197001252e-16,
+              "local_mesh_defect": 4.047002311429198e-11,
+              "local_tail_extent_defect": 1.2069516043786399e-11,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -7.008256819318603e-08,
+                    -1.8438402204076132
+                  ],
+                  "local_same_support": [
+                    -8.881784197001252e-16,
+                    -1.8438402204017625
+                  ],
+                  "difference_at_same_support": 7.008256754922058e-08
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -7.008242874917414e-10,
+                    -1.843839876892182
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -1.8438398768921807
+                  ],
+                  "difference_at_same_support": 7.008242874930077e-10
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -7.007727731433988e-12,
+                    -1.843839876843799
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -1.8438398768437982
+                  ],
+                  "difference_at_same_support": 7.007727753420344e-12
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 1.0,
+              "local_asymptotic_shift_real_and_imag": [
+                0.0,
+                -2.3739392707673024
+              ],
+              "local_side_real": [
+                6.649051435480422,
+                -6.649051435480422
+              ],
+              "local_side_imaginary": [
+                -1.1869696353836512,
+                -1.1869696353836512
+              ],
+              "parity_defect": 0.0,
+              "local_mesh_defect": 1.9742473318281687e-11,
+              "local_tail_extent_defect": 1.3118746774774144e-11,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -4.0468291562234526e-07,
+                    -2.373950722552924
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -2.3739507223852185
+                  ],
+                  "difference_at_same_support": 4.046829503718073e-07
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -4.046830426318593e-09,
+                    -2.3739392718651335
+                  ],
+                  "local_same_support": [
+                    -8.881784197001252e-16,
+                    -2.373939271865108
+                  ],
+                  "difference_at_same_support": 4.0468295382221426e-09
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -4.0467185158377106e-11,
+                    -2.3739392707145557
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -2.3739392707145557
+                  ],
+                  "difference_at_same_support": 4.0467185158986286e-11
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 30.0,
+              "local_asymptotic_shift_real_and_imag": [
+                1.7763568394002505e-15,
+                -3.078211346952947
+              ],
+              "local_side_real": [
+                9.198848545455412,
+                -9.19884854545541
+              ],
+              "local_side_imaginary": [
+                -1.5391056734764736,
+                -1.5391056734764734
+              ],
+              "parity_defect": 1.4210854715202004e-14,
+              "local_mesh_defect": 5.575347918551564e-10,
+              "local_tail_extent_defect": 6.098344284266908e-10,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -2.2164179416250818e-06,
+                    -3.0785549014941846
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -3.0785548973754255
+                  ],
+                  "difference_at_same_support": 2.2164217685571904e-06
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -2.216607875027421e-08,
+                    -3.078211382464393
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -3.0782113824637145
+                  ],
+                  "difference_at_same_support": 2.2166078760660686e-08
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -2.2166091184772085e-10,
+                    -3.078211348255846
+                  ],
+                  "local_same_support": [
+                    0.0,
+                    -3.0782113482558473
+                  ],
+                  "difference_at_same_support": 2.2166091185172456e-10
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cut": "parent",
+          "external_parent_energy": 1.432354436522056,
+          "tuned_step": true,
+          "occupations_left_right": [
+            0.10352626344104142,
+            0.1668848956840856
+          ],
+          "local_relative_angular_scales": [
+            0.00012859442295178123,
+            0.9999999917317371
+          ],
+          "outer_half_width": 0.0003,
+          "comparators": [
+            {
+              "dimensionless_photon_width": 0.03,
+              "local_asymptotic_shift_real_and_imag": [
+                -1.767807505117628,
+                -1.5466252077594715
+              ],
+              "local_side_real": [
+                2.8885488686973684,
+                -4.6563563738149965
+              ],
+              "local_side_imaginary": [
+                -0.5921217497868572,
+                -0.9545034579726143
+              ],
+              "parity_defect": 7.105427357601002e-15,
+              "local_mesh_defect": 1.460889478526176e-11,
+              "local_tail_extent_defect": 3.33985164004165e-12,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -1.7678075786953924,
+                    -1.5466256444296884
+                  ],
+                  "local_same_support": [
+                    -1.7678075051173714,
+                    -1.5466256612998022
+                  ],
+                  "difference_at_same_support": 7.548725663045248e-08
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -1.7678075058555573,
+                    -1.5466252076325304
+                  ],
+                  "local_same_support": [
+                    -1.7678075051197717,
+                    -1.5466252078017262
+                  ],
+                  "difference_at_same_support": 7.549885430028829e-10
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -1.7678075051243103,
+                    -1.5466252077628073
+                  ],
+                  "local_same_support": [
+                    -1.7678075051169508,
+                    -1.5466252077645
+                  ],
+                  "difference_at_same_support": 7.551614232640837e-12
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 1.0,
+              "local_asymptotic_shift_real_and_imag": [
+                -2.66367226433713,
+                -1.9761489704011428
+              ],
+              "local_side_real": [
+                4.35236725913753,
+                -7.01603952347466
+              ],
+              "local_side_imaginary": [
+                -0.756563891706203,
+                -1.2195850786949398
+              ],
+              "parity_defect": 7.105427357601002e-15,
+              "local_mesh_defect": 4.4132712940818836e-11,
+              "local_tail_extent_defect": 5.478228797678837e-11,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -2.6636726948060527,
+                    -1.976163993133239
+                  ],
+                  "local_same_support": [
+                    -2.66367226413331,
+                    -1.9761640883284675
+                  ],
+                  "difference_at_same_support": 4.4106818395353494e-07
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -2.6636722686411956,
+                    -1.9761489708577638
+                  ],
+                  "local_same_support": [
+                    -2.663672264334288,
+                    -1.9761489718258227
+                  ],
+                  "difference_at_same_support": 4.414362045109564e-09
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -2.6636722643710433,
+                    -1.976148970346424
+                  ],
+                  "local_same_support": [
+                    -2.6636722643279738,
+                    -1.976148970356106
+                  ],
+                  "difference_at_same_support": 4.414434755661946e-11
+                }
+              ]
+            },
+            {
+              "dimensionless_photon_width": 30.0,
+              "local_asymptotic_shift_real_and_imag": [
+                -3.65852979553304,
+                -2.546739850944168
+              ],
+              "local_side_real": [
+                5.977937117808189,
+                -9.636466913341229
+              ],
+              "local_side_imaginary": [
+                -0.9750132412347822,
+                -1.5717266097093858
+              ],
+              "parity_defect": 2.1316282072803006e-14,
+              "local_mesh_defect": 2.387134615898068e-09,
+              "local_tail_extent_defect": 2.332822949457709e-09,
+              "ladder": [
+                {
+                  "charged_eta": 1e-12,
+                  "exact_shift": [
+                    -3.6585319882995337,
+                    -2.5471929088791003
+                  ],
+                  "local_same_support": [
+                    -3.658529618361375,
+                    -2.5471933854512203
+                  ],
+                  "difference_at_same_support": 2.417380371615886e-06
+                },
+                {
+                  "charged_eta": 1e-14,
+                  "exact_shift": [
+                    -3.6585298191612994,
+                    -2.546739887243217
+                  ],
+                  "local_same_support": [
+                    -3.658529795452945,
+                    -2.5467398924800873
+                  ],
+                  "difference_at_same_support": 2.4279845077554055e-08
+                },
+                {
+                  "charged_eta": 1e-16,
+                  "exact_shift": [
+                    -3.6585297956820044,
+                    -2.546739847138651
+                  ],
+                  "local_same_support": [
+                    -3.6585297954449194,
+                    -2.5467398471910703
+                  ],
+                  "difference_at_same_support": 2.4281085489799586e-10
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
