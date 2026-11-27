@@ -759,3 +759,6 @@ fit or exclusion.
 - [Stationary spectral positivity gate](INDEPENDENT-EARLY-POLE-WILSON-STATIONARY-LINE-GATE-2026-11-26.md):
   a finite contour exponent starting at fourth order cannot itself
   define a nontrivial stationary line with a nonnegative spectral measure.
+- [Stationary shared-oscillator neutral operator](INDEPENDENT-EARLY-POLE-STATIONARY-NEUTRAL-OPERATOR-2026-11-26.md):
+  an exact discrete Lehmann reference checks positive forward/inverse
+  measures, thermal balance, and the need for constrained remapping.
