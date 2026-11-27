@@ -46,3 +46,29 @@ python -W error warm_q64_common_chart_locked_clock_audit_reference.py "$b" "$c" 
 [Matched-clock audit](results/warm-q64-late-common-locked-compare-2026-11-26.json);
 [default root and state](results/warm-q64-late-common-locked-default-2026-11-26.json.gz);
 [finer root and state](results/warm-q64-late-common-locked-fine-2026-11-26.json.gz).
+
+## One-step control
+
+Lock the default order to one full implicit step. Its accepted
+end state reproduces the original default adaptive output to
+1.38e-14 maximum normalized shell L1. The already locked finer
+two-step output reproduces the original finer adaptive one
+to 1.54e-14. This identifies which controlled numerical clocks
+recover the published adaptive endpoints, without assuming the
+adaptive solver logs recorded their substeps.
+
+The finer chart on a single locked implicit step does not meet
+the original 8e-12 scaled residual tolerance. Three documented
+initializations stop at residuals between 1.02e-11 and 1.28e-11.
+There is no accepted one-step finer result; the comparison
+does not loosen the tolerance or substitute the reference shape.
+
+~~~sh
+python -W error warm_q64_common_chart_locked_clock_reference.py EOS.dat "$a" "$b" "$c" locked-default-one.json --substeps 1
+python -W error warm_q64_common_default_one_step_audit_reference.py "$c" locked-default-one.json "$d" locked-fine.json
+# Expected controlled failure at the unchanged residual tolerance:
+python -W error warm_q64_common_chart_locked_clock_reference.py EOS.dat "$a" "$b" "$d" locked-fine-one.json --fine --substeps 1
+~~~
+
+[Accepted one-step default](results/warm-q64-late-common-locked-default-one-2026-11-26.json.gz);
+[adaptive-to-locked endpoint reproduction](results/warm-q64-late-common-adaptive-clock-reproduction-2026-11-26.json).
