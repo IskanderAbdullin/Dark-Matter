@@ -2,6 +2,7 @@
 import argparse
 import gzip
 import json
+from pathlib import Path
 
 import numpy as np
 from scipy.integrate import solve_ivp
@@ -14,7 +15,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None):
     with gzip.open(bundle,'rt') as f:
         saved=json.load(f)['branches'][projection]
     shot=saved['snapshots'][0]
@@ -26,6 +27,21 @@ def run(bundle,projection,duration,panels,rtol,base_atol):
     np.testing.assert_array_equal(n0,C.ns)
     for x,y in zip(M.edge_sets,saved['hard_edge_sets'],strict=True):
         np.testing.assert_array_equal(x,y)
+    swap=None
+    if prepared_input is not None:
+        src=json.loads(Path(prepared_input).read_text())
+        swap=src.get('prepared_charged_swap')
+        if not src.get('manufactured_hard_shape_control') or swap not in ('local-daughter','outside-daughter'):
+            raise ValueError("Only the accepted aperture-local or outside daughter input is supported.")
+        if any(src[k]!=saved[k] for k in ('projection','grid','hard_edge_sets','aperture_grid')):
+            raise ValueError("Prepared input uses a different hard support.")
+        if not abs(src['energy_drift'])<3e-12 or not abs(src['entropy_closure'])<3e-11:
+            raise ValueError("Prepared input must come from an accepted solver history.")
+        ss=src['snapshots'][0]
+        np.testing.assert_array_equal(ss['cold_bins'],n0)
+        y0=np.asarray(ss['hard_moments'])
+        expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
+        np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
     elastic=ElasticChannels(C,saved['grid'],1.)
     add=(ComptonKernel(M),ConversionKernel(M))
     k=M.r[1].start
@@ -96,6 +112,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol):
                 largest_sample_coordinate_residual=max(coordinate_defect),
                 largest_sample_chart_condition_number=max(cond),
                 energy_defect=en,entropy_defect=sn,hard_number_defect=n1-nH,
+                **(dict(prepared_charged_swap=swap) if swap is not None else {}),
                 scope='Unsplit frozen unlike and same-flavor response; finite explicit time reference in charged logits.')
 
 
@@ -107,6 +124,7 @@ if __name__=='__main__':
     p.add_argument('--panels',type=int,default=16)
     p.add_argument('--rtol',type=float,default=3e-9)
     p.add_argument('--base-atol',type=float,default=2e-14)
+    p.add_argument('--prepared-input')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
         p.error('Use positive scope and accuracy controls.')
