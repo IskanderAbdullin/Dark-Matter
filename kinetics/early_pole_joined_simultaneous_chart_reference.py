@@ -15,7 +15,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,retune_donor_support=None):
     with gzip.open(bundle,'rt') as f:
         branches=json.load(f)['branches']
     saved=branches[projection]
@@ -44,7 +44,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         expected=Cold.rhs(C,np.r_[y0.ravel(),n0,0.,0.],False)[C.j0:-2]
         np.testing.assert_allclose(expected,ss['instantaneous_source_by_q'],rtol=1e-12,atol=2e-14)
     retune_check=None
-    if retune_local_daughter or compensation_only or number_only_local_retune:
+    if retune_local_daughter or compensation_only or number_only_local_retune or retune_donor_support is not None:
         if projection!='steps' or prepared_input is not None:
             raise ValueError('Retuned local preparation requires the native graph and no alternate input.')
         from early_pole_daughter_complement_retune_reference import prepare
@@ -60,8 +60,19 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         fixed=M.r[2].start+local
         native=y0
         match=(True,not number_only_local_retune)
-        _,y0,retune_check=prepare(M,native,np.asarray(other['hard_moments']),fixed,match)
+        donor=None
+        if retune_donor_support is not None:
+            if retune_donor_support not in ('below','no_neighbors') or any((
+                    retune_local_daughter, compensation_only, number_only_local_retune)):
+                raise ValueError('Require one accepted donor-support control.')
+            from early_pole_daughter_equal_moments_donor_support import choose_donors
+            span=M.r[2]
+            donor=choose_donors(np.arange(span.start,span.stop),fixed)[retune_donor_support]
+        _,y0,retune_check=prepare(M,native,np.asarray(other['hard_moments']),fixed,match,donor_ids=donor)
         swap='number-only-retuned-local-daughter' if number_only_local_retune else 'retuned-local-daughter'
+        if retune_donor_support is not None:
+            swap+='-'+retune_donor_support.replace('_','-')
+            retune_check['donor_support_variant']=retune_donor_support
         if compensation_only:
             y0[fixed]=native[fixed]
             swap='local-complement-only'
@@ -159,6 +170,7 @@ if __name__=='__main__':
     group.add_argument('--retune-local-daughter',action='store_true')
     group.add_argument('--compensation-only',action='store_true')
     group.add_argument('--number-only-local-retune',action='store_true')
+    group.add_argument('--retune-donor-support',choices=('below','no_neighbors'))
     p.add_argument('--without-elastic',action='store_true')
     a=p.parse_args()
     if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
