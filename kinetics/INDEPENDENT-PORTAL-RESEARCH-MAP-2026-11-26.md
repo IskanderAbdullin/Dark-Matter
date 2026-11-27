@@ -789,3 +789,6 @@ fit or exclusion.
 - [Cold-event momentum and separate volume-moment deposits](INDEPENDENT-EARLY-POLE-GAUGE-VOLUME-MOMENTS-2026-11-26.md):
   exact radial energy interpolation can distort a very soft recoil;
   retaining distinct subcell transfers closes vector and energy ledgers.
+- [Evolving Pauli cells with reciprocal gauge energy](INDEPENDENT-EARLY-POLE-LIVE-PAULI-GAUGE-MOMENT-DECAY-2026-11-26.md):
+  evolves the hard aperture with separate local count and energy,
+  exact variational ledger, and live spectator scalar Hartree energy.
