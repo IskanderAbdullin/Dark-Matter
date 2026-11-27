@@ -71,3 +71,8 @@ python -W error warm_prompt_reheating_late_stream_diagnostic_reference.py EOS.la
 [Two-temperature solutions](results/warm-prompt-reheating-two-temperature-late-2026-11-26.json.gz);
 [conditional shellwise survival](results/warm-prompt-reheating-late-ballistic-floor-2026-11-26.json);
 [conditional free-streaming and rest-density probes](results/warm-prompt-reheating-late-stream-diagnostic-2026-11-26.json).
+
+The [below-pole elastic follow-up](INDEPENDENT-WARM-REHEATING-ELASTIC-HEAT-AUDIT-2026-11-26.md)
+shows non-negligible heat transfer on these held states.
+In particular the uncertainties here are not limited
+to the difference between the prompt-heat switch arms.

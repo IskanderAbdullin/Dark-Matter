@@ -1,0 +1,306 @@
+{
+  "scope": "Heat transfer folds on the held two-temperature diagnostic, not an evolving result.",
+  "contact": {
+    "scope": "Low-invariant off-shell contact approximation only; isotropic total threshold cross section, full lab kinematics and quantum occupancy on fixed two-temperature states. The strict cut s<.003 GeV\u00b2 excludes the pole, without calculating the omitted high-invariant region. Not the exact invariant s/u amplitude or an evolved late energy transfer history.",
+    "rows": [
+      {
+        "T_visible": 0.005999850788921707,
+        "T_light": 0.00248461723578662,
+        "T_scalar": 0.002484617233307096,
+        "controls": [
+          {
+            "orders": [
+              10,
+              12,
+              13
+            ],
+            "heat_Q_over_Hs": 1.8663306356046981e-13,
+            "heat_over_scalar_energy_per_H": 4.222945770030239e-08,
+            "gross_events_over_scalar_count_per_H": 167.20021035781542,
+            "full_contact_count_fraction_outside_s_cut": 0.0001533066572022425
+          },
+          {
+            "orders": [
+              15,
+              18,
+              21
+            ],
+            "heat_Q_over_Hs": 1.8663393970946433e-13,
+            "heat_over_scalar_energy_per_H": 4.222965594650914e-08,
+            "gross_events_over_scalar_count_per_H": 167.20024545886912,
+            "full_contact_count_fraction_outside_s_cut": 0.00015308739959416138
+          }
+        ]
+      },
+      {
+        "T_visible": 0.004557980744869318,
+        "T_light": 0.001544087805580894,
+        "T_scalar": 0.0019596818006005086,
+        "controls": [
+          {
+            "orders": [
+              10,
+              12,
+              13
+            ],
+            "heat_Q_over_Hs": -1.6787395092139804e-05,
+            "heat_over_scalar_energy_per_H": -4.729526997249947,
+            "gross_events_over_scalar_count_per_H": 102.73982310572316,
+            "full_contact_count_fraction_outside_s_cut": 1.617018120922157e-06
+          },
+          {
+            "orders": [
+              15,
+              18,
+              21
+            ],
+            "heat_Q_over_Hs": -1.678739308639596e-05,
+            "heat_over_scalar_energy_per_H": -4.72952643217004,
+            "gross_events_over_scalar_count_per_H": 102.73981960265934,
+            "full_contact_count_fraction_outside_s_cut": 1.6410610624470102e-06
+          }
+        ]
+      },
+      {
+        "T_visible": 0.0034629261040715533,
+        "T_light": 0.0009303409825167841,
+        "T_scalar": 0.0015165226713674284,
+        "controls": [
+          {
+            "orders": [
+              10,
+              12,
+              13
+            ],
+            "heat_Q_over_Hs": -1.382679782465723e-05,
+            "heat_over_scalar_energy_per_H": -4.997959018426527,
+            "gross_events_over_scalar_count_per_H": 70.94314902887477,
+            "full_contact_count_fraction_outside_s_cut": 1.7675225501886498e-09
+          },
+          {
+            "orders": [
+              15,
+              18,
+              21
+            ],
+            "heat_Q_over_Hs": -1.3826797737564032e-05,
+            "heat_over_scalar_energy_per_H": -4.997958986945035,
+            "gross_events_over_scalar_count_per_H": 70.94314827835282,
+            "full_contact_count_fraction_outside_s_cut": 1.7815438905246298e-09
+          }
+        ]
+      },
+      {
+        "T_visible": 0.0026313507911600287,
+        "T_light": 0.0005540463722885275,
+        "T_scalar": 0.0011637973819273832,
+        "controls": [
+          {
+            "orders": [
+              10,
+              12,
+              13
+            ],
+            "heat_Q_over_Hs": -8.688275899384028e-06,
+            "heat_over_scalar_energy_per_H": -4.079513293920975,
+            "gross_events_over_scalar_count_per_H": 51.585165807977766,
+            "full_contact_count_fraction_outside_s_cut": 8.706683983389676e-14
+          },
+          {
+            "orders": [
+              15,
+              18,
+              21
+            ],
+            "heat_Q_over_Hs": -8.688275847746875e-06,
+            "heat_over_scalar_energy_per_H": -4.079513269675146,
+            "gross_events_over_scalar_count_per_H": 51.585165245625795,
+            "full_contact_count_fraction_outside_s_cut": 8.997862917067653e-14
+          }
+        ]
+      },
+      {
+        "T_visible": 0.001999999933137417,
+        "T_light": 0.0003266088624537293,
+        "T_scalar": 0.0008892972156983343,
+        "controls": [
+          {
+            "orders": [
+              10,
+              12,
+              13
+            ],
+            "heat_Q_over_Hs": -4.889916571593836e-06,
+            "heat_over_scalar_energy_per_H": -3.0003050142964005,
+            "gross_events_over_scalar_count_per_H": 38.387650127748316,
+            "full_contact_count_fraction_outside_s_cut": 1.9519856173456996e-20
+          },
+          {
+            "orders": [
+              15,
+              18,
+              21
+            ],
+            "heat_Q_over_Hs": -4.8899165436062875e-06,
+            "heat_over_scalar_energy_per_H": -3.000304997124087,
+            "gross_events_over_scalar_count_per_H": 38.387649701126435,
+            "full_contact_count_fraction_outside_s_cut": 1.9746781876773224e-20
+          }
+        ]
+      }
+    ],
+    "exact_unpolarized_amplitude_below_cut": false
+  },
+  "selected_invariant_amplitude": {
+    "exact_unpolarized_amplitude_below_cut": true,
+    "scope": "Invariant differential s/u amplitude below s=.003 GeV\u00b2 with explicit boost and azimuth. The contact proxy outside that cut is not a bound.",
+    "rows": [
+      {
+        "T_visible": 0.004557980744869318,
+        "T_light": 0.001544087805580894,
+        "T_scalar": 0.0019596818006005086,
+        "controls": [
+          {
+            "orders": [
+              8,
+              10,
+              12
+            ],
+            "heat_Q_over_Hs": -9.569477628277965e-06,
+            "heat_over_scalar_energy_per_H": -2.6960170142008066,
+            "gross_events_over_scalar_count_per_H": 67.9477362146476,
+            "full_contact_count_fraction_outside_s_cut": 2.440585780628233e-06
+          },
+          {
+            "orders": [
+              12,
+              15,
+              17
+            ],
+            "heat_Q_over_Hs": -9.569475023283145e-06,
+            "heat_over_scalar_energy_per_H": -2.6960162802934162,
+            "gross_events_over_scalar_count_per_H": 67.94773401168807,
+            "full_contact_count_fraction_outside_s_cut": 2.4800302023794763e-06
+          }
+        ]
+      },
+      {
+        "T_visible": 0.0034629261040715533,
+        "T_light": 0.0009303409825167841,
+        "T_scalar": 0.0015165226713674284,
+        "controls": [
+          {
+            "orders": [
+              8,
+              10,
+              12
+            ],
+            "heat_Q_over_Hs": -8.653085432898111e-06,
+            "heat_over_scalar_energy_per_H": -3.127822285753314,
+            "gross_events_over_scalar_count_per_H": 50.86448948945266,
+            "full_contact_count_fraction_outside_s_cut": 2.460989602965492e-09
+          },
+          {
+            "orders": [
+              12,
+              15,
+              17
+            ],
+            "heat_Q_over_Hs": -8.653085332464761e-06,
+            "heat_over_scalar_energy_per_H": -3.12782224944977,
+            "gross_events_over_scalar_count_per_H": 50.86448845296686,
+            "full_contact_count_fraction_outside_s_cut": 2.575021402827144e-09
+          }
+        ]
+      },
+      {
+        "T_visible": 0.001999999933137417,
+        "T_light": 0.0003266088624537293,
+        "T_scalar": 0.0008892972156983343,
+        "controls": [
+          {
+            "orders": [
+              8,
+              10,
+              12
+            ],
+            "heat_Q_over_Hs": -3.569393362571568e-06,
+            "heat_over_scalar_energy_per_H": -2.1900718850565486,
+            "gross_events_over_scalar_count_per_H": 31.09559430389294,
+            "full_contact_count_fraction_outside_s_cut": 1.9009103584695467e-20
+          },
+          {
+            "orders": [
+              12,
+              15,
+              17
+            ],
+            "heat_Q_over_Hs": -3.5693933250445166e-06,
+            "heat_over_scalar_energy_per_H": -2.190071862031084,
+            "gross_events_over_scalar_count_per_H": 31.095593649676548,
+            "full_contact_count_fraction_outside_s_cut": 1.9764400972467448e-20
+          }
+        ]
+      }
+    ]
+  },
+  "independent_frame_and_balance": {
+    "scope": "Selected below-pole invariant angle only; both cuts strictly exclude the pole. Contact-only proxy outside each cut is not a bound on omitted near-pole physics.",
+    "invariant_vs_rest_trace_relative_defect": 9.992007221626409e-16,
+    "common_temperature_zero_heat_over_gross_x_T": 1.756666114984621e-18,
+    "case_checks": [
+      {
+        "T_visible_GeV": 0.004557980744869318,
+        "controls": [
+          {
+            "s_max": 0.0024,
+            "azimuth_count": 10,
+            "off_shell_heat_GeV5": -3.9473067142386375e-35,
+            "gross_below_cut_event_density_GeV4": 1.7338624370363011e-31,
+            "outside_contact_proxy_share": 4.0954136430685544e-05
+          },
+          {
+            "s_max": 0.003,
+            "azimuth_count": 10,
+            "off_shell_heat_GeV5": -3.9478295901480436e-35,
+            "gross_below_cut_event_density_GeV4": 1.733883676936724e-31,
+            "outside_contact_proxy_share": 2.5720899842079127e-06
+          },
+          {
+            "s_max": 0.003,
+            "azimuth_count": 19,
+            "off_shell_heat_GeV5": -3.9478295901480436e-35,
+            "gross_below_cut_event_density_GeV4": 1.733883676936724e-31,
+            "outside_contact_proxy_share": 2.5720899842079127e-06
+          }
+        ]
+      },
+      {
+        "T_visible_GeV": 0.001999999933137417,
+        "controls": [
+          {
+            "s_max": 0.0024,
+            "azimuth_count": 10,
+            "off_shell_heat_GeV5": -2.382687684212321e-37,
+            "gross_below_cut_event_density_GeV4": 1.2960940883781923e-33,
+            "outside_contact_proxy_share": 8.41596279580776e-16
+          },
+          {
+            "s_max": 0.003,
+            "azimuth_count": 10,
+            "off_shell_heat_GeV5": -2.3826876842123405e-37,
+            "gross_below_cut_event_density_GeV4": 1.2960940883781924e-33,
+            "outside_contact_proxy_share": 1.8801314274471393e-20
+          },
+          {
+            "s_max": 0.003,
+            "azimuth_count": 19,
+            "off_shell_heat_GeV5": -2.3826876842123405e-37,
+            "gross_below_cut_event_density_GeV4": 1.2960940883781924e-33,
+            "outside_contact_proxy_share": 1.8801314274471393e-20
+          }
+        ]
+      }
+    ]
+  }
+}
