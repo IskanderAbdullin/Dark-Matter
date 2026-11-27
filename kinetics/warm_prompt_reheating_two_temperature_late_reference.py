@@ -18,7 +18,7 @@ from warm_prompt_reheating_quantum_heat_gap_reference import thermal
 from warm_prompt_reheating_signed_slow_closure_reference import pair_mb
 
 
-def mb_both(T,n):
+def mb_both(T,n,scaled=False):
     w,wp=roots_legendre(n)
     x,xp=roots_legendre(n+16)
     ranges=np.array([0.,.5,2.,6.,12.,23.,42.,74.])
@@ -29,7 +29,7 @@ def mb_both(T,n):
     q=np.sqrt(s/4-mp*mp)
     invariant=4*(amplitude(s[:,:,None],x)@xp)*q/(64*np.pi*s*p)
     factor=2*u*T*d*wp*(s-4*m*m)*u*invariant/(32*np.pi**4)
-    K0,K1=(kve(i,u/T)*np.exp(-u/T) for i in (0,1))
+    K0,K1=(kve(i,u/T)*np.exp(-(u-2*m if scaled else u)/T) for i in (0,1))
     return np.array([np.sum(factor*T*K1),np.sum(factor*(2*T*T*K1+T*u*K0))])
 
 

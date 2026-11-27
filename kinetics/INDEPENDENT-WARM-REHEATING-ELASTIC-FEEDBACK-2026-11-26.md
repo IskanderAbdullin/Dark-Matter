@@ -46,3 +46,9 @@ python -W error warm_prompt_reheating_late_kick_reference.py EOS.late.dat twoT.j
 
 [Iterated thermal trajectories](results/warm-prompt-reheating-elastic-feedback-2026-11-26.json.gz);
 [separate held-state momentum kick moments](results/warm-prompt-reheating-elastic-kicks-2026-11-26.json).
+
+The [later shape-independent count inequality](INDEPENDENT-WARM-REHEATING-POST-2MEV-ELASTIC-2026-11-26.md)
+does not require an assumption of ballistic
+fermion momenta, but keeps an explicit bound on
+every later scalar occupation and on the participating
+number-changing interactions.
