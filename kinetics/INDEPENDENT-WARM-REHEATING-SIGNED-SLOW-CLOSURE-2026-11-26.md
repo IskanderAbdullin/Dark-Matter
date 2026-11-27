@@ -80,3 +80,9 @@ python -W error warm_prompt_reheating_signed_slow_closure_reference.py EOS.late.
 ~~~
 
 [All signed rates, closure checks and short history](results/warm-prompt-reheating-signed-slow-closure-2026-11-26.json).
+
+The [nonthermal fast-clock dose](INDEPENDENT-WARM-REHEATING-OMITTED-SLOW-DOSE-2026-11-26.md)
+checks the scale separation only over the actual brief
+relaxation. A separate [expanding slow comparison](INDEPENDENT-WARM-REHEATING-EXPANDING-SLOW-2026-11-26.md)
+uses the dilute common-temperature closure on a longer
+clock, with a declared applicability stop.

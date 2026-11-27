@@ -105,7 +105,7 @@ def signed(T,z,n):
     return np.array((dl,ds)),forward,reverse
 
 
-def quantum_state(latent,energy,T0,z0,k):
+def quantum_state(latent,energy,T0,z0,k,pressure=False):
     """Dilute finite-fugacity series on the same unbounded momentum domain."""
     xi=np.arange(1,k+1)
     masses=np.array([m,mp,M])
@@ -117,13 +117,14 @@ def quantum_state(latent,energy,T0,z0,k):
         x=xi[:,None]*masses/T
         dens=sign*g*masses**2*(T/xi)[:,None]*kve(2,x)*np.exp(xi[:,None]*eta-x)/(2*np.pi**2)
         e=3*(T/xi)[:,None]+masses*kve(1,x)/kve(2,x)
-        return T,eta,dens.sum(axis=0),(dens*e).sum()
+        return T,eta,dens.sum(axis=0),(dens*e).sum(),(dens*(T/xi)[:,None]).sum()
     def residual(p):
-        _,_,N,E=state(p)
+        _,_,N,E,_=state(p)
         return np.log(np.r_[(N[:2]+N[2])/latent,E/energy])
     sol=root(residual,np.r_[np.log(T0),np.log(z0[:2])],tol=2e-11)
     assert max(abs(residual(sol.x)))<2e-11
-    return state(sol.x)
+    result=state(sol.x)
+    return result if pressure else result[:4]
 
 
 def enclose_quantum_snapshot(latent,energy,T0,z0,units):
