@@ -44,3 +44,27 @@ and the exact depth-4 initializer. Select `--split-angular-edges`
 for 8/16 Gauss nodes and 1/2 subpanels, and vary `--root-scan`
 from 129 to 257. The plain controls omit the angular switch.
 Combine them with `early_pole_daughter_cold_volume_ladder_compare.py`.
+
+## Use identical event-aligned scalar evaluation points on both hard grids
+
+Keep the union of the 24 distinct angular cuts, the retained
+eight-shell boundaries, and the native scalar density cuts.
+The result has 39 volume intervals and preserves the exact
+grouped scalar seed. Evaluate each interval with the same
+Gauss rule on both hard meshes; the mesh selection did not
+use the measured cold-rate errors.
+
+| Scalar evaluations | Relative error at hard depth 1 | Relative error at hard depth 4 |
+|---:|---:|---:|
+| 39 (one per interval) | 0.18114% | 0.18114% |
+| 78 (two per interval) | 10.752 ppm | 10.752 ppm |
+| 156 (four per interval) | 0.570 ppb | 0.565 ppb |
+
+The two-point panel rule is more accurate here than 128 and
+256 logarithmic-volume-centroid samples. The count is scalar
+integrand evaluations, not edge-search work, wall time or
+the number of modes retained in a dynamical solver. The cuts
+are located in the frozen starting hard state; moving supports
+would have to be handled and checked separately. Run
+`early_pole_daughter_shared_cold_angular_sampling.py` with the
+original and depth-4 fixtures and the combined volume ladder JSON.

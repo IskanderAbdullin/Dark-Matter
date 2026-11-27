@@ -46,7 +46,7 @@ def angular_edge_modes(M,e,mass,root_scan):
     return value[np.r_[True,np.diff(value)>1e-12]]
 
 
-def direct_cold(archive,order,sub,split_angular_edges=False,root_scan=129):
+def direct_cold(archive,order,sub,split_angular_edges=False,root_scan=129,shared_angular_edges=None):
     C,seed,(Y,_,_),_,depth=initial(archive)
     M=C.M
     _,_,_,_,mass=C.scalar(seed)
@@ -62,7 +62,13 @@ def direct_cold(archive,order,sub,split_angular_edges=False,root_scan=129):
     nn=np.maximum(d['endpoint_scalar_signed_shell_number_over_T3'],0.)
     if nn.shape!=(len(cd)-1,):
         raise ValueError('Incompatible scalar archive support.')
-    knots=angular_edge_modes(M,e,mass,root_scan) if split_angular_edges else np.array([])
+    if shared_angular_edges is not None:
+        knots=np.asarray(shared_angular_edges)
+        if (knots.ndim!=1 or not np.all(np.isfinite(knots)&(knots>1e-6)&(knots<1e-5))
+                or not np.all(np.diff(knots)>0.)):
+            raise ValueError('Invalid shared angular cuts.')
+    else:
+        knots=angular_edge_modes(M,e,mass,root_scan) if split_angular_edges else np.array([])
     v=np.unique(np.r_[np.geomspace(1e-6,1e-5,9)**3,cd[(cd>1e-18)&(cd<1e-15)],knots**3])
     # Scalar number weight is d(q^3)/(6*pi^2).
     x=.05*np.exp(getattr(M,"eta",0.))
@@ -105,7 +111,9 @@ def direct_cold(archive,order,sub,split_angular_edges=False,root_scan=129):
                     term_count+=1
     np.testing.assert_allclose(initial_groups,seed,rtol=0.,atol=5e-18)
     sums=[fsum(g) for g in integrated]
-    return dict(hard_depth=depth,scalar_order=order,subpanels_per_base_cut=sub,
+    return dict(**(dict(shared_scalar_volume_edges=v.tolist(),scalar_evaluations=(len(v)-1)*order*sub)
+                   if shared_angular_edges is not None else {}),
+                hard_depth=depth,scalar_order=order,subpanels_per_base_cut=sub,
                 angular_edge_modes=knots.tolist(),angular_root_scan=root_scan if split_angular_edges else None,
                 initial_pole=float(mass),grouped_seed_error=float(max(abs(initial_groups-seed))),
                 direct_scalar_volume_rate=fsum(sums),grouped_rate=sums,packet_cold_terms=term_count)
