@@ -851,3 +851,6 @@ fit or exclusion.
 - [Longer screened runs and active retarded feedback](INDEPENDENT-EARLY-POLE-SCREENED-RESPONSE-FEEDBACK-2026-11-26.md):
   keeps the exterior frozen while updating the active kernel; temporal
   refinement and polarization refresh do not remove the input-shape ambiguity.
+- [Frozen hard photon–fermion Compton exchange](INDEPENDENT-EARLY-POLE-HARD-COMPTON-HEAT-2026-11-26.md):
+  tests full Bose/Pauli balance and shows opposite parent/daughter heat
+  at the reference imposed photon bath, with a parent sign change under heating.
