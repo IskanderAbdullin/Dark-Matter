@@ -700,6 +700,12 @@ An [isolated coherent pressure and action control](INDEPENDENT-EARLY-POLE-COHERE
 separates homogeneous radiation-like pressure from particle
 momentum and tests the adiabatic amplitude crossover only.
 
+A [small 3D coherent lattice](INDEPENDENT-EARLY-POLE-COHERENT-LATTICE-3D-2026-11-26.md)
+checks the selected aligned field state, while a
+[Gaussian handoff control](INDEPENDENT-EARLY-POLE-GAUSSIAN-FIELD-HANDOFF-2026-11-26.md)
+matches the same energy without a homogeneous initial field and
+separates local band overlap from global power.
+
 ## Evidence boundary
 
 A viable mechanism at the intended abundance needs a self-consistent
