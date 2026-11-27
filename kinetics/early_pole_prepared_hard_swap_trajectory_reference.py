@@ -9,7 +9,7 @@ import early_pole_cold_screened_split_reference as split
 from early_pole_prepared_hard_swap_reference import read,retune
 
 
-def run(bundle,case,steps,no_elastic=False,only_unlike=False,only_same=False):
+def run(bundle,case,steps,no_elastic=False,only_unlike=False,only_same=False,hold_screening=False):
     if sum((no_elastic,only_unlike,only_same))>1:
         raise ValueError("Elastic controls are mutually exclusive.")
     raw=read(bundle)
@@ -64,7 +64,7 @@ def run(bundle,case,steps,no_elastic=False,only_unlike=False,only_same=False):
     with patch.object(split,'Screened',PreparedInput):
         r=split.run(a['grid'],a['duration']/a['steps'],steps,True,aperture_grid=a['aperture_grid'],
                     strength=0. if no_elastic or only_same else 1.,
-                    screening_update='frozen' if no_elastic or only_same else 'full',
+                    screening_update='frozen' if no_elastic or only_same or hold_screening else 'full',
                     same_soft_strength=0. if no_elastic or only_unlike else 1.,compton_strength=1.,conversion_strength=1.,
                     snapshots=True,elastic_energy_budget=None if no_elastic else 5e-15)
     r.update(prepared_charged_swap=case,manufactured_hard_shape_control=True,**metadata)
@@ -80,5 +80,6 @@ if __name__=='__main__':
     group.add_argument('--no-elastic',action='store_true')
     group.add_argument('--only-unlike',action='store_true')
     group.add_argument('--only-same',action='store_true')
+    p.add_argument('--hold-screening',action='store_true')
     a=p.parse_args()
     print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
