@@ -1,0 +1,38 @@
+{
+  "scope": "Only the direct positive vacuum charged-lepton and conditional charged-pion sources, 50\u2013.1 MeV adiabatic radiation. Fixed KLOE bin choices and moment caps are not confidence limits; high pion contribution proportional to the separate assumed uniform R cap. No other hadrons or nonlinear dark conversion/production bounded.",
+  "monotone_slopes": [
+    3.0,
+    4.0
+  ],
+  "numerical_direct_lepton_and_KLOE_yield_12_to_50": 6.699383408012698e-06,
+  "Omega_h2_per_scalar_Y": 23.72983698915026,
+  "direct_numerical_Omega_h2": 0.00015897527619995925,
+  "direct_known_plus_unit_high_Omega_h2_upper": 0.0002255086673976285,
+  "ratio_of_imposed_half_dark_omega_to_numerical_direct": 377.41717727561576,
+  "rows": [
+    {
+      "invariant_base_bins": 96,
+      "temperature_panels": 288,
+      "lepton_yield_upper": 9.575174473743457e-06,
+      "KLOE_fixed_bin_plus_two_marginals_upper": 8.631239808794565e-07,
+      "additional_conditional_low_moment_upper_each": [
+        8.833487169405274e-07,
+        4.568393949832512e-07
+      ],
+      "high_yield_upper_per_unit_R_pi": 4.899659963067852e-10,
+      "total_known_plus_unit_high_yield_upper": 1.1778976532542998e-05
+    },
+    {
+      "invariant_base_bins": 240,
+      "temperature_panels": 720,
+      "lepton_yield_upper": 7.5526787439309496e-06,
+      "KLOE_fixed_bin_plus_two_marginals_upper": 7.467220893432637e-07,
+      "additional_conditional_low_moment_upper_each": [
+        7.929155712886851e-07,
+        4.1052966017288985e-07
+      ],
+      "high_yield_upper_per_unit_R_pi": 3.2361572747778064e-10,
+      "total_known_plus_unit_high_yield_upper": 9.503169680463267e-06
+    }
+  ]
+}

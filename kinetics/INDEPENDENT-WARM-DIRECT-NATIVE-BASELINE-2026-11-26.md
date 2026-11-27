@@ -1,5 +1,9 @@
 # Separate background effects from the native response of a small scalar component
 
+**Normalization:** the few-ppm case rescales the held dark
+composition. It does not keep the absolute scalar yield.
+See the [separate abundance scenarios](INDEPENDENT-WARM-DIRECT-ABSOLUTE-NORMALIZATION-2026-11-26.md).
+
 Use the [positive direct vacuum shell input](INDEPENDENT-WARM-DIRECT-SOURCE-CLOCK-AND-PSD-2026-11-26.md)
 with its conditional 2.0992e−6 scalar share of dark
 mass when the held stable count is used. This note sets

@@ -1,5 +1,9 @@
 # A matched native pilot resolves the trace-species baseline issue
 
+**Normalization:** the few-ppm case rescales the held dark
+composition. It does not keep the absolute scalar yield.
+See the [separate abundance scenarios](INDEPENDENT-WARM-DIRECT-ABSOLUTE-NORMALIZATION-2026-11-26.md).
+
 The [matched setup](INDEPENDENT-WARM-DIRECT-NATIVE-BASELINE-2026-11-26.md)
 puts the scalar at its conditional physical fraction
 2.099185e−6 of present dark density and replaces the same

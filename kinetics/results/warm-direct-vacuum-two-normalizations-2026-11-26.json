@@ -1,0 +1,35 @@
+{
+  "scope": "Different normalization scenarios. Direct absolute yield with prescribed stable CDM fill keeps scalar abundance derived from only the selected vacuum channels. The old held-count ratio instead represents common dilution to imposed dark density. Neither gives a fully coupled production model.",
+  "independent_SI_relative_conversion_difference": 0.0,
+  "omega_h2_of_held_scalar_and_stable": [
+    0.00019935486857951162,
+    75.7317440319683
+  ],
+  "held_species_yields": [
+    8.40102140906659e-06,
+    1.3723082020595237e-05
+  ],
+  "direct_absolute_omega_h2": 0.00015897527619995925,
+  "direct_plus_held_scalar_fraction": 2.0991850182973973e-06,
+  "dilution_factoring_old_fraction_to_reference_total": 631.0991917270375,
+  "native_cases": [
+    {
+      "name": "compact-absolute",
+      "omega_ncdm": 0.00015897527619995925,
+      "omega_cdm": 0.11984102472380004,
+      "scalar_fraction_of_0p12": 0.0013247939683329938
+    },
+    {
+      "name": "compact-upper_normalization",
+      "omega_ncdm": 0.0002255086673976285,
+      "omega_cdm": 0.11977449133260237,
+      "scalar_fraction_of_0p12": 0.0018792388949802376
+    },
+    {
+      "name": "dense-absolute",
+      "omega_ncdm": 0.00015897527619995925,
+      "omega_cdm": 0.11984102472380004,
+      "scalar_fraction_of_0p12": 0.0013247939683329938
+    }
+  ]
+}

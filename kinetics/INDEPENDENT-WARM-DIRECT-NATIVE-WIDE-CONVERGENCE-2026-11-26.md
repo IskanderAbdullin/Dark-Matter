@@ -1,5 +1,9 @@
 # Extend the physical scalar power check to k=2 h/Mpc
 
+**Normalization:** the few-ppm case rescales the held dark
+composition. It does not keep the absolute scalar yield.
+See the [separate abundance scenarios](INDEPENDENT-WARM-DIRECT-ABSOLUTE-NORMALIZATION-2026-11-26.md).
+
 The [earlier exact-mode test](INDEPENDENT-WARM-DIRECT-NATIVE-EXACT-K-2026-11-26.md)
 stopped at k=1. Keep the early common initialization and
 the same physical scalar fraction and spectrum. Extend
