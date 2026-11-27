@@ -58,3 +58,7 @@ python -W error warm_prompt_reheating_quantum_heat_gap_reference.py EOS.late.dat
 [8 MeV path](results/warm-prompt-reheating-late-probe-2026-11-26.json.gz),
 [heat gap](results/warm-prompt-reheating-deep-heat-2026-11-26.json.gz),
 [clock-limited extension](results/warm-prompt-reheating-cold-probe-2026-11-26.json.gz).
+
+The [two-temperature handoff](INDEPENDENT-WARM-REHEATING-TWO-TEMPERATURE-LATE-2026-11-26.md)
+continues the selected diagnostic from the 6 MeV clock stop,
+allowing the two dark temperatures to separate.
