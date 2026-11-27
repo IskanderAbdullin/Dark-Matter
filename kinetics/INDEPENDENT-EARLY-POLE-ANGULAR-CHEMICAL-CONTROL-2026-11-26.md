@@ -34,6 +34,12 @@ segments in the no-chemical comparator changes the original
 endpoint by only about 7 × 10⁻⁹ relative. The hot-refinement
 comparator does not prove convergence of the full chemical path.
 
+The 100-segment run with chemistry now gives 0.000224704,
+roughly 1.0% below the 36-segment result. The full interval-split
+run on the unrefined third grid gives 0.000235659, within 0.004%
+of the sample-angle comparator there. Neither comparison fixes
+the physical width or proves convergence after both refinements.
+
 The interval-split CLI also passes a separate finite short
 smoke integration with the 36-segment refinement, including
 the numerical number and energy ledgers.

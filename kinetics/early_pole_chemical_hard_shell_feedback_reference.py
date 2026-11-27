@@ -12,7 +12,7 @@ from early_pole_scalar_number_change_angular_reference import data
 from early_pole_scalar_number_change_threshold_reference import LAMBDA, threshold
 
 
-def one(s,extra,power):
+def one(s,extra,power,broadening=0.):
     shape={(67,112,122):(65,90,72),(97,156,176):(95,125,108)}
     d=AngularChemical(shape[tuple(s['cells'])],s['mass_ratio'],0.,power)
     xm=s['x_end']
@@ -31,7 +31,10 @@ def one(s,extra,power):
     energy=E[I].sum(axis=1)
     S=energy[:,None]**2-lab**2
     beta=np.sqrt(1-4*m*m/S)
-    angular_span=.5*lab*beta
+    physical_span=.5*lab*beta
+    # Optional diagnostic spread: keep E3+E4 exact while replacing the
+    # on-shell sharing interval. It is not a width or scattering model.
+    angular_span=np.hypot(physical_span,broadening*m)
     eb=np.hypot(m,edges)
     k=np.flatnonzero((eb[1:]>=np.min(energy[:,None]/2-angular_span))&
                   (eb[:-1]<=np.max(energy[:,None]/2+angular_span)))
@@ -69,7 +72,7 @@ def one(s,extra,power):
     eigen=np.linalg.eigvals(J)
     assert max(abs(eigen.imag))<1e-7*max(eigen.real)
     return dict(x=xm,angular_samples=2**power,hard_receiver_bins=h,
-                exact_continuum_pair_energy_identity_error=eps,
+                exact_continuum_pair_energy_identity_error=eps,extra_sharing_halfwidth_in_pole_units=broadening,
                 frozen_initial_formal_loss_per_log_a=float(2*net/(vol@f)),
                 frozen_formal_hard_count_growth_eigenvalue_per_log_a=float(max(eigen.real)),**meta)
 
@@ -77,11 +80,17 @@ def one(s,extra,power):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('spec')
+    p.add_argument('--broadening-study',action='store_true')
     a=p.parse_args()
     path=Path(a.spec)
     raw=gzip.decompress(path.read_bytes()) if path.suffix=='.gz' else path.read_bytes()
     s=json.loads(raw)
     results=[]
-    for hot,power in [(0,5),(36,5),(100,5),(300,5),(300,7),(700,7)]:
-        results.append(one(s,hot,power))
+    if a.broadening_study:
+        for wd in (0.,.003,.01,.03,.1):
+            for hot,power in ((300,6),(700,7)):
+                results.append(one(s,hot,power,wd))
+    else:
+        for hot,power in [(0,5),(36,5),(100,5),(300,5),(300,7),(700,7)]:
+            results.append(one(s,hot,power))
     print(json.dumps(results,indent=2,allow_nan=False))

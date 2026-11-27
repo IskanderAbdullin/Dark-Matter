@@ -37,10 +37,24 @@ only a few outgoing angles. On the frozen input, one to four
 Gauss points give the same initial rate at the tested resolution;
 that does not independently establish the later hard feedback.
 
+As a separate width sensitivity, add an illustrative energy-sharing
+half-width in quadrature to the on-shell angular width while keeping
+the sum of outgoing energies fixed. This is not a spectral-function
+calculation and need not satisfy exact on-shell momentum kinematics.
+At 700 inserted hot cells, increasing the extra width from zero to
+0.01 m, 0.03 m and 0.10 m changes the hard-feedback eigenvalue from
+1.04 × 10¹² to 2.72 × 10¹¹, 9.56 × 10¹⁰ and 2.91 × 10¹⁰ per log a.
+Initial formal net loss does not change on this snapshot because
+the broadened products still sample essentially the same initial
+hard occupancy. These stable nonzero-width trends do not justify
+assigning any of these widths to the actual scalar medium.
+[Width diagnostic data](results/early-pole-chemical-hot-width-sensitivity-2026-11-26.json).
+
 ~~~sh
 python -W error early_pole_chemical_hot_feedback_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz
 python -W error early_pole_chemical_hard_shell_feedback_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz
 python -W error early_pole_scalar_number_change_interval_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz
+python -W error early_pole_chemical_hard_shell_feedback_reference.py results/early-pole-spectrum-third-m06-2026-11-26.json.gz --broadening-study
 ~~~
 
 [Raw feedback and interval diagnostics](results/early-pole-chemical-hard-feedback-2026-11-26.json.gz).
