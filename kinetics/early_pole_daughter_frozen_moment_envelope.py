@@ -26,7 +26,7 @@ def receiver_packets(C,e,j,es,fs,q,width):
     return result
 
 
-def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge,mesh_breaks=()):
+def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge,mesh_breaks=(),min_half_width=2e-15):
     M=C.M
     B=M.cells[j]
     q=C.q
@@ -41,7 +41,7 @@ def cell_objects(C,j,loge,logf,oversample,poles,n,fix_gauge,mesh_breaks=()):
     dx=np.diff(fine)/2
     mid=(fine[:-1]+fine[1:])/2
     # Do not create bins narrower than a handful of stored spacings.
-    good=dx>2e-15
+    good=dx>min_half_width
     dx=dx[good]
     mid=mid[good]
     def sample(order):
