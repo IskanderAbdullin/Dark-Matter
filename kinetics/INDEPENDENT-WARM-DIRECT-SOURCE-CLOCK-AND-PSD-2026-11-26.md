@@ -65,3 +65,22 @@ python -W error warm_direct_vacuum_scalar_psd_reference.py EOS.dat KLOExSec.data
 
 [Temperature residency and clock choices](results/warm-late-cold-source-temperature-localization-2026-11-26.json);
 [positive comoving input spectra](results/warm-direct-vacuum-scalar-psd-2026-11-26.json).
+
+## Differentiate the finite temperature endpoint separately
+
+Holding the reference expansion and production model
+fixed, the derivative of the integrated yield with
+respect to log peak temperature equals the positive
+integrand at the peak divided by the integrated yield.
+At 50 MeV this logarithmic derivative is 16.77 for
+p/T≤.1 at equality, 50.71 for path ≤.3 Mpc, and 15.66
+for path ≤1 Mpc. Centered quadrature of successively
+smaller windows verifies the endpoint identity.
+For the .3 Mpc subset, changing only the start to
+49 or 51 MeV gives .3515 or 2.677 times the 50 MeV
+yield; a single first-order estimate is not reliable
+across a full MeV there. This is not the response to
+a cosmological temperature perturbation or a model of
+inhomogeneous reheating.
+
+[Temperature endpoint derivative and finite changes](results/warm-direct-vacuum-peak-temperature-differential-2026-11-26.json).

@@ -62,3 +62,19 @@ python -W error warm_direct_vacuum_native_class_audit_reference.py native /path/
 [Provisional signed native comparison (temporary paths elided in logs)](results/warm-direct-vacuum-native-class-pilot-2026-11-26.json);
 [raw base, trace, physical](results/warm-direct-vacuum-native-pilot-raw1-2026-11-26.json.gz);
 [raw amplified and thermal outputs](results/warm-direct-vacuum-native-pilot-raw2-2026-11-26.json.gz).
+
+## Standard-tier PSD smoothing control
+
+At the same amplified scalar abundance 1e−3, replacing
+the direct spectrum with the held q64 spectrum lowers
+Delta ln P by about 4.55e−4 at k=1, z=5. Altering the
+positive PSD smoothing width from .07 to .11 in log q
+while preserving the chosen squared momentum changes
+either individual power response by at most 1.22e−5,
+and the held-versus-direct contrast by at most 3.27e−6
+over the sample. These are controls on the specified
+smoothing choices, not a bound on all reconstructions
+or the higher native tier.
+
+[Smoothing comparison](results/warm-direct-vacuum-native-pilot-smoothing-2026-11-26.json)
+and [native tables and elided-path logs](results/warm-direct-vacuum-native-pilot-shape-raw-2026-11-26.json.gz).

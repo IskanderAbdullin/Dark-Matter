@@ -1,0 +1,158 @@
+{
+  "scope": "Different upper temperature cut in the same prescribed adiabatic radiation source, zero other changes; not a response to an actual reheating perturbation or solved alternate expansion.",
+  "cases": [
+    {
+      "selection": "eq_p_over_T_0.1",
+      "initial_yield": 1.2509207724192332e-09,
+      "analytic_log_endpoint_derivative": 16.774402302995824,
+      "centered_temperature_checks": [
+        {
+          "log_T_half_step": 0.002,
+          "dlnY_dln_peak": 16.776650413110392
+        },
+        {
+          "log_T_half_step": 0.001,
+          "dlnY_dln_peak": 16.774964321490074
+        },
+        {
+          "log_T_half_step": 0.0005,
+          "dlnY_dln_peak": 16.77454280706086
+        }
+      ],
+      "finite_peak_shifts": [
+        {
+          "delta_peak_MeV": -2.0,
+          "yield_ratio_to_peak50": 0.4922107100847277,
+          "first_order_ratio_at_peak": 0.3290239078801671
+        },
+        {
+          "delta_peak_MeV": -1.0,
+          "yield_ratio_to_peak50": 0.7084362012755892,
+          "first_order_ratio_at_peak": 0.6645119539400836
+        },
+        {
+          "delta_peak_MeV": -0.5,
+          "yield_ratio_to_peak50": 0.8436525367344334,
+          "first_order_ratio_at_peak": 0.8322559769700417
+        },
+        {
+          "delta_peak_MeV": 0.5,
+          "yield_ratio_to_peak50": 1.1800225641075817,
+          "first_order_ratio_at_peak": 1.1677440230299583
+        },
+        {
+          "delta_peak_MeV": 1.0,
+          "yield_ratio_to_peak50": 1.3864708651872721,
+          "first_order_ratio_at_peak": 1.3354880460599166
+        },
+        {
+          "delta_peak_MeV": 2.0,
+          "yield_ratio_to_peak50": 1.8907028738583578,
+          "first_order_ratio_at_peak": 1.670976092119833
+        }
+      ]
+    },
+    {
+      "selection": "travel_at_most_0.3_Mpc",
+      "initial_yield": 3.217826698784191e-17,
+      "analytic_log_endpoint_derivative": 50.713544442669594,
+      "centered_temperature_checks": [
+        {
+          "log_T_half_step": 0.002,
+          "dlnY_dln_peak": 50.79043919905368
+        },
+        {
+          "log_T_half_step": 0.001,
+          "dlnY_dln_peak": 50.73276270844715
+        },
+        {
+          "log_T_half_step": 0.0005,
+          "dlnY_dln_peak": 50.71834867020123
+        }
+      ],
+      "finite_peak_shifts": [
+        {
+          "delta_peak_MeV": -2.0,
+          "yield_ratio_to_peak50": 0.11568674575369586,
+          "first_order_ratio_at_peak": -1.0285417777067836
+        },
+        {
+          "delta_peak_MeV": -1.0,
+          "yield_ratio_to_peak50": 0.3515343778623069,
+          "first_order_ratio_at_peak": -0.014270888853391783
+        },
+        {
+          "delta_peak_MeV": -0.5,
+          "yield_ratio_to_peak50": 0.597607406531466,
+          "first_order_ratio_at_peak": 0.4928645555733041
+        },
+        {
+          "delta_peak_MeV": 0.5,
+          "yield_ratio_to_peak50": 1.648157223934846,
+          "first_order_ratio_at_peak": 1.5071354444266958
+        },
+        {
+          "delta_peak_MeV": 1.0,
+          "yield_ratio_to_peak50": 2.6771710016585297,
+          "first_order_ratio_at_peak": 2.0142708888533916
+        },
+        {
+          "delta_peak_MeV": 2.0,
+          "yield_ratio_to_peak50": 6.777140203317829,
+          "first_order_ratio_at_peak": 3.0285417777067836
+        }
+      ]
+    },
+    {
+      "selection": "travel_at_most_1_Mpc",
+      "initial_yield": 2.2769101511603663e-09,
+      "analytic_log_endpoint_derivative": 15.661817246868932,
+      "centered_temperature_checks": [
+        {
+          "log_T_half_step": 0.002,
+          "dlnY_dln_peak": 15.663614982602526
+        },
+        {
+          "log_T_half_step": 0.001,
+          "dlnY_dln_peak": 15.662266675138085
+        },
+        {
+          "log_T_half_step": 0.0005,
+          "dlnY_dln_peak": 15.661929603575556
+        }
+      ],
+      "finite_peak_shifts": [
+        {
+          "delta_peak_MeV": -2.0,
+          "yield_ratio_to_peak50": 0.5161580906553564,
+          "first_order_ratio_at_peak": 0.37352731012524276
+        },
+        {
+          "delta_peak_MeV": -1.0,
+          "yield_ratio_to_peak50": 0.7249053329043035,
+          "first_order_ratio_at_peak": 0.6867636550626214
+        },
+        {
+          "delta_peak_MeV": -0.5,
+          "yield_ratio_to_peak50": 0.8532446841794645,
+          "first_order_ratio_at_peak": 0.8433818275313107
+        },
+        {
+          "delta_peak_MeV": 0.5,
+          "yield_ratio_to_peak50": 1.1671706730074642,
+          "first_order_ratio_at_peak": 1.1566181724686893
+        },
+        {
+          "delta_peak_MeV": 1.0,
+          "yield_ratio_to_peak50": 1.3568963648624803,
+          "first_order_ratio_at_peak": 1.3132363449373785
+        },
+        {
+          "delta_peak_MeV": 2.0,
+          "yield_ratio_to_peak50": 1.8132737100498013,
+          "first_order_ratio_at_peak": 1.6264726898747572
+        }
+      ]
+    }
+  ]
+}
