@@ -1,0 +1,79 @@
+{
+  "scope": "One fixed-clock cut-aligned prompt-only ladder, no time refinement.",
+  "hard_packet_GeV": 0.68,
+  "completed_intervals": 5,
+  "opposite_sign_brackets": [
+    [
+      1e-08,
+      1e-07
+    ]
+  ],
+  "rows": [
+    {
+      "state_sha256": "79960d9f8c9f69d6a2774ed0455f4bd396c49dd06e1a68d002ab252bd9190cd9",
+      "time": 0.0,
+      "excess_energy": [
+        0.0,
+        0.0
+      ],
+      "signed_native_flux": 1.4777636343225836e-10,
+      "angular_check": 1.4777636439587714e-10,
+      "signed_flux_discrepancy_over_gross": 1.95102970640528e-11
+    },
+    {
+      "state_sha256": "cde94878020f86ae999d3de8c6b7bfffddbbc2e2f6c747f6a6717400723bd856",
+      "time": 1e-11,
+      "excess_energy": [
+        1.5464914467926852e-23,
+        1.461807251226116e-21
+      ],
+      "signed_native_flux": 1.4770264694499112e-10,
+      "angular_check": 1.477026479123381e-10,
+      "signed_flux_discrepancy_over_gross": 1.9586816112863645e-11
+    },
+    {
+      "state_sha256": "1c966ffc853a9e3fb51a5de2d7b61e35939c27a3e1313b0d4fb9c94d1096c905",
+      "time": 1e-10,
+      "excess_energy": [
+        1.5460253222197931e-22,
+        1.4576199430681625e-20
+      ],
+      "signed_native_flux": 1.4704114709180651e-10,
+      "angular_check": 1.4704114809258088e-10,
+      "signed_flux_discrepancy_over_gross": 2.0273281144466443e-11
+    },
+    {
+      "state_sha256": "68d4a8df885ba6a4a3d5b1b9f3f3b60632de121ef0425725f529067fe6b1a7fa",
+      "time": 1e-09,
+      "excess_energy": [
+        1.5413152121371513e-21,
+        1.416532855376001e-19
+      ],
+      "signed_native_flux": 1.4061542507098765e-10,
+      "angular_check": 1.4061542639447262e-10,
+      "signed_flux_discrepancy_over_gross": 2.6937567520194808e-11
+    },
+    {
+      "state_sha256": "3d0348af0cbf7d36756b83552f236cb1adf0ecab5006af06ff34ccb8b4052454",
+      "time": 1e-08,
+      "excess_energy": [
+        1.492389538349255e-20,
+        1.0865933404151571e-18
+      ],
+      "signed_native_flux": 9.154608640320875e-11,
+      "angular_check": 9.154609009747177e-11,
+      "signed_flux_discrepancy_over_gross": 7.865616210679115e-11
+    },
+    {
+      "state_sha256": "7eb698bf46aabb694beb3e10092f3fabecdd1fccf62389676464dc3edd40bd5d",
+      "time": 1e-07,
+      "excess_energy": [
+        1.0388522301029229e-19,
+        2.171286872921709e-18
+      ],
+      "signed_native_flux": -1.432540810333398e-12,
+      "angular_check": -1.4325301559124986e-12,
+      "signed_flux_discrepancy_over_gross": 3.3112307477526174e-10
+    }
+  ]
+}

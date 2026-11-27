@@ -75,3 +75,30 @@ python -W error warm_late_retained_cap_after_reactivation_reference.py \
 [Jacobian controls](results/warm-compact-direct-prompt-jacobian-2026-11-26.json);
 [accepted numerical control](results/warm-compact-direct-prompt-accepted-2026-11-26.json);
 [original cap persistence test](results/warm-late-retained-cap-persistence-2026-11-26.json).
+
+## First sign bracket on one accepted time ladder
+
+The aligned .68 GeV choice has positive signed excess transfer
+at Hdt=1e-8 (+9.155e-11 in the units above) and negative
+transfer at Hdt=1e-7 (−1.433e-12). The independent angle
+fold gives the same signs. Thus there is at least one
+reversal between those samples in this selected fixed-clock
+prompt-only run. It does not locate the first or unique
+turning time. By the latter sample the total accumulated excess
+is 2.2752e-18 of the initial represented dark energy. This is
+the directly integrated state moment, not a rate multiplied by
+a guessed duration. The values use three equal implicit
+substeps per reporting interval and are not a time-refined
+comparison.
+
+~~~sh
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
+python -W error warm_corrected_late_prompt_cut_aligned_reference.py EOS.dat \
+  results/warm-corrected-anchor-signed-floor-2026-11-26.json \
+  results/warm-multishell-corrected-q64-fine-stage-48-2026-11-26.json.gz trial068 \
+  --hard .68 --substeps 3 --predictor
+python -W error warm_late_cut_aligned_prompt_clock_audit_reference.py trial068 --intervals 5
+~~~
+
+[Accepted bracket](results/warm-late-cut-aligned-hard068-first-sign-bracket-2026-11-26.json);
+[raw state at Hdt=1e-7](results/warm-late-cut-aligned-hard068-test-step5-2026-11-26.json.gz).
