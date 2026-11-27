@@ -1,0 +1,125 @@
+{
+  "cases": {
+    "steps": {
+      "levels": {
+        "16x1": {
+          "mean": 0.06694243427293745,
+          "closure": {
+            "terminal_energy_drift": 2.6645352591003757e-15,
+            "terminal_entropy_closure": -1.6586176876387526e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.9984014443252818e-15,
+            "signed_elastic_energy_defect": 1.9984014443252818e-15,
+            "nonelastic_energy_remainder": 6.661338147750939e-16
+          }
+        },
+        "16x4": {
+          "mean": 0.06680149350346554,
+          "closure": {
+            "terminal_energy_drift": 1.9984014443252818e-15,
+            "terminal_entropy_closure": -2.072883531489822e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.5543122344752192e-15,
+            "signed_elastic_energy_defect": 2.886579864025407e-15,
+            "nonelastic_energy_remainder": -8.881784197001252e-16
+          }
+        },
+        "32x1": {
+          "mean": 0.06672255625089774,
+          "closure": {
+            "terminal_energy_drift": 1.3100631690576847e-14,
+            "terminal_entropy_closure": -1.870471659504158e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 3.774758283725532e-15,
+            "signed_elastic_energy_defect": 1.354472090042691e-14,
+            "nonelastic_energy_remainder": -4.440892098500626e-16
+          }
+        },
+        "32x4": {
+          "mean": 0.06658244638968469,
+          "closure": {
+            "terminal_energy_drift": 1.1546319456101628e-14,
+            "terminal_entropy_closure": -2.3065091503404744e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 3.1086244689504383e-15,
+            "signed_elastic_energy_defect": 1.354472090042691e-14,
+            "nonelastic_energy_remainder": -1.9984014443252818e-15
+          }
+        }
+      },
+      "aperture_effect": [
+        -0.00014094076947190892,
+        -0.0001401098612130447
+      ],
+      "time_effect": [
+        -0.00021987802203971007,
+        -0.00021904711378084585
+      ],
+      "interaction": 8.309082588642269e-07
+    },
+    "cell-conservative": {
+      "levels": {
+        "16x1": {
+          "mean": 0.06528878623152101,
+          "closure": {
+            "terminal_energy_drift": 2.220446049250313e-15,
+            "terminal_entropy_closure": -1.5778984022163378e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 2.220446049250313e-15,
+            "signed_elastic_energy_defect": 3.9968028886505635e-15,
+            "nonelastic_energy_remainder": -1.7763568394002505e-15
+          }
+        },
+        "16x4": {
+          "mean": 0.06507936700997363,
+          "closure": {
+            "terminal_energy_drift": 6.661338147750939e-16,
+            "terminal_entropy_closure": -1.966438296918671e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.5543122344752192e-15,
+            "signed_elastic_energy_defect": 6.661338147750939e-16,
+            "nonelastic_energy_remainder": 0.0
+          }
+        },
+        "32x1": {
+          "mean": 0.06540677345567847,
+          "closure": {
+            "terminal_energy_drift": 1.3766765505351941e-14,
+            "terminal_entropy_closure": -1.7722863107638709e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 4.218847493575595e-15,
+            "signed_elastic_energy_defect": 1.687538997430238e-14,
+            "nonelastic_energy_remainder": -3.1086244689504383e-15
+          }
+        },
+        "32x4": {
+          "mean": 0.06513950570607996,
+          "closure": {
+            "terminal_energy_drift": 1.3766765505351941e-14,
+            "terminal_entropy_closure": -2.1875166608675833e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 3.774758283725532e-15,
+            "signed_elastic_energy_defect": 1.4654943925052066e-14,
+            "nonelastic_energy_remainder": -8.881784197001252e-16
+          }
+        }
+      },
+      "aperture_effect": [
+        -0.00020941922154738002,
+        -0.00026726774959850985
+      ],
+      "time_effect": [
+        0.00011798722415745644,
+        6.0138696106326606e-05
+      ],
+      "interaction": -5.784852805112983e-05
+    }
+  },
+  "projection_contrast_percent": {
+    "16x1": 2.4702538223724924,
+    "16x4": 2.5779760349258662,
+    "32x1": 1.9720209613545259,
+    "32x4": 2.167148793481821
+  },
+  "scope": "A time by hard-aperture finite sensitivity at one cold mesh and elastic quadrature."
+}
