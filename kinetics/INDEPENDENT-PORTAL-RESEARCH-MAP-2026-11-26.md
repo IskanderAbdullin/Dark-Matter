@@ -8,7 +8,7 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 | Does this *low-reheat* spontaneous branch make a dominant 86 eV species? | The stable rest count is set near Ωh²=.120. The shifted first-order scalar rest count is only about 3.05×10⁻¹⁰ or 2.75×10⁻⁹ for the two prescribed histories. | Only these sources and rates; stronger stimulation or other channels are open. |
 | Is the scalar contrast robust to integrating the hierarchy? | Native fluid/no-closure controls and an independent fixed-metric fold trace the discrepancy to grouping. | No global hierarchy convergence or coupled matter transfer from the independent fixed-metric run. |
 | Can the *warm 50 MeV* reference be treated as numerically converged? | Matched q16/q32 reach 10.442 MeV; time and higher moments need separate audits. | Not a late relic; earlier exterior shapes are unresolved. |
-| Can purely ballistic forward depletion rescue the initial warm excess? | An isolated loss-only bound controls Bose gain even with all new scalar momenta and gives a stable lower proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
+| Can purely ballistic forward depletion rescue the initial warm excess? | A loss-only bound gives a stable proxy around 56 at the late anchor. | Inverse repopulation, scattering and inherited tails remain open. |
 | How sensitive are the hard thermal folds to the perturbative range? | Born/NLO, measured-window subtraction, and a toy pole test. | Thermal QCD and missing spectral domains are open. |
 
 ## Low-reheat branch: follow the count, then the spectrum
@@ -287,7 +287,8 @@ bounds conditional cold decay. A [Pauli count bound](INDEPENDENT-WARM-LATE-COLD-
 avoids a pointwise assumption. A [boosted-parent rate](INDEPENDENT-WARM-LATE-COLD-PARENT-RATE-2026-11-26.md)
 checks hard reactivation. [Pointwise gain and loss limits](INDEPENDENT-WARM-LATE-COLD-POINTWISE-DOSE-2026-11-26.md)
 identify the missing through-time dose. A [ballistic comparison](INDEPENDENT-WARM-LATE-COLD-SCALAR-BALLISTIC-2026-11-26.md)
-separates photon heating from particle creation. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+separates photon heating from creation. A [direct visible upper](INDEPENDENT-WARM-LATE-COLD-VISIBLE-DOSE-2026-11-26.md)
+separates late from unresolved early cold injection. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
