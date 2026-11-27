@@ -14,17 +14,12 @@ Index of numerical controls in [PR #2](https://github.com/IskanderAbdullin/Dark-
 ## Low-reheat branch: follow the count, then the spectrum
 
 1. [The fixed-loss retarget](INDEPENDENT-FINITE-COOLING-FROZEN-COUNT-RETARGET-2026-11-26.md)
-   shifts illustrative temperatures by 1.11–1.31 keV. The
+   shifts temperatures by 1.11–1.31 keV. The
    [actual re-evaluation](INDEPENDENT-FINITE-COOLING-SHIFTED-COUNT-2026-11-26.md)
-   leaves only a 1.50–2.75 eV local tangent update. These are
-   still conditional spontaneous forward counts, not a fitted
-   or self-consistently iterated reheating temperature.
+   leaves a 1.50–2.75 eV local update, not a reheating fit.
 2. [Compare matched scalar spectra](INDEPENDENT-FINITE-COOLING-SHIFTED-SPECTRUM-2026-11-26.md)
    and [the independent relativistic hierarchy control](INDEPENDENT-FINITE-COOLING-RELATIVISTIC-LOS-2026-11-26.md).
-   A scalar density contrast can differ strongly between histories
-   while its physical count is much too small to dominate the dark
-   rest density in either. A large relative scalar contrast alone
-   is not a large matter effect.
+   A large relative scalar contrast need not affect matter if its count is small.
 3. [Combine both tracers and baryons on the same fixed metric](INDEPENDENT-FINITE-COOLING-STABLE-PAIRED-LOS-2026-11-26.md).
    The squared-contrast change is below 7×10⁻⁸ at five modes, without backreaction. The
    [separate homogeneous-clock bound](INDEPENDENT-FINITE-COOLING-SHIFTED-CLOCK-2026-11-26.md)
@@ -294,7 +289,8 @@ bounds the 50 MeV lepton source. A [KLOE recoil fold](INDEPENDENT-WARM-LATE-COLD
 adds a pion window. [Dispersive cold recoil bounds](INDEPENDENT-WARM-LATE-COLD-PION-DISPERSIVE-RECOIL-2026-11-26.md)
 cover low gaps. [Source limits by travelled distance](INDEPENDENT-WARM-LATE-COLD-TRAVEL-SOURCE-2026-11-26.md)
 use a ballistic diagnostic. [Exact source folds](INDEPENDENT-WARM-LATE-COLD-EXACT-TRAVEL-BANDS-2026-11-26.md)
-resolve the longer path bands. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
+resolve longer paths. [Temperature residency and input spectra](INDEPENDENT-WARM-DIRECT-SOURCE-CLOCK-AND-PSD-2026-11-26.md)
+separate peak temperature from production time. The [local expanding comparison](INDEPENDENT-WARM-LATE-COMPETING-FLUX-2026-11-26.md)
 checks selected pair and elastic contributions for .68, with an
 [already above-cut .80 control](INDEPENDENT-WARM-LATE-HARD080-COMPETING-FLUX-2026-11-26.md). An [open elastic receipt check](INDEPENDENT-WARM-LATE-OPEN-ELASTIC-RECEIPT-2026-11-26.md)
 measures the separate outgoing-only channel. A [matched vacuum pad](INDEPENDENT-WARM-LATE-MATCHED-VACUUM-PAD-2026-11-26.md)
