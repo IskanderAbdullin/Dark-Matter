@@ -35,3 +35,21 @@ Use `early_pole_daughter_startup_hybrid.py` with the two
 prepared cases and default `--startup-outer-intervals 1`.
 Then run `early_pole_local_startup_hybrid_compare.py` on
 the three native/local profile pairs.
+
+## Second startup-width test
+
+Refine the first **two** original coarse intervals into eight
+fine outer intervals, retain 14 original coarse intervals,
+and use the same 64 elastic solves. All eight initial fine
+checkpoints replay exactly in each preparation. The resulting
+22 macro intervals use 44 slow half-step solves. The local-minus-native
+mean is +3.80337241e-4, only 4.23368e-6 below uniform fine.
+This recovers 97.5359% of the original fixed-inner discrepancy;
+the separately predicted first-two-block correction was 97.5347%.
+The maximum individual elastic defect is 4.22e-15 under 5e-15,
+and both global ledgers pass. This tightens the interleaving
+comparison, not the separate error from the common elastic step.
+
+Reproduce with `--startup-outer-intervals 2` on the hybrid runner
+and `--startup-blocks 2` on the comparator. The original one-block
+audit replays byte-for-byte.
