@@ -13,7 +13,7 @@ from early_pole_decay_mode_clock_reference import G, KAPPA
 from early_pole_native_aperture_witness_reference import GRID, occup
 
 
-def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16, ledger=False):
+def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16, ledger=False, *, scale_log=0.):
     P,D = C.M.r[1:]
     ep,ed = E[P],E[D]
     a0,a1=ep.T
@@ -68,7 +68,8 @@ def band_kernel(C, E, F, q, ms, fs, radial_order=8, angles=16, ledger=False):
             derivative[ia]-=[N,n@ua]
             derivative[ib]+=[N,n@ub]
             entropy+=n@(a-b+np.log1p(1./fs))
-    scale=G*KAPPA*.05*((1.06*.05)**2-ms*ms)/(q*es)
+    x=.05 if scale_log==0. else .05*np.exp(scale_log)
+    scale=G*KAPPA*x*((1.06*x)**2-ms*ms)/(q*es)
     if ledger:
         return output*scale,derivative*scale,entropy*scale
     return output*scale

@@ -1,0 +1,198 @@
+{
+  "steps": {
+    "projection": "steps",
+    "grid": "fine",
+    "history_exposure": 7.2e-05,
+    "rows": [
+      {
+        "log_scale": 0.0,
+        "cold_replay_max_mode_defect": 1.0539832895339885e-13,
+        "cold_total_rate": 0.11773242642683415,
+        "warm_rates": [
+          2.7483165087371283e-07,
+          7.266932592576206e-13,
+          2.7483092418045354e-07,
+          2.815994137348069e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.748309241804535e-07,
+          2.7483092418045354e-07
+        ],
+        "energy_exchange_defect": 5.293955920339377e-23,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7483092418045354e-07,
+        "warm_entropy_rate": 3.894638290672596e-06
+      },
+      {
+        "log_scale": 2e-05,
+        "cold_replay_max_mode_defect": 1.04279779256089e-12,
+        "cold_total_rate": 0.11773961747204235,
+        "warm_rates": [
+          2.748481501491182e-07,
+          7.267368638269224e-13,
+          2.7484742341225435e-07,
+          2.8161631839435026e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.7484742341225435e-07,
+          2.748474234122543e-07
+        ],
+        "energy_exchange_defect": -5.293955920339377e-23,
+        "unscaled_warm_rate_on_same_hard_energy": 2.748309300837173e-07,
+        "warm_entropy_rate": 3.894872106239827e-06
+      },
+      {
+        "log_scale": 7.2e-05,
+        "cold_replay_max_mode_defect": 5.782319068003972e-13,
+        "cold_total_rate": 0.11775831313641297,
+        "warm_rates": [
+          2.748910529015015e-07,
+          7.26850247949865e-13,
+          2.7489032605125355e-07,
+          2.816602752589782e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.7489032605125355e-07,
+          2.748903260512536e-07
+        ],
+        "energy_exchange_defect": 5.293955920339377e-23,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7483094543331105e-07,
+        "warm_entropy_rate": 3.89548009241933e-06
+      },
+      {
+        "log_scale": 0.0003,
+        "cold_replay_max_mode_defect": 3.726394193215299e-13,
+        "cold_total_rate": 0.11784026868875466,
+        "warm_rates": [
+          2.7507924404872516e-07,
+          7.273476025369761e-13,
+          2.7507851670112254e-07,
+          2.818530902186224e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.750785167011226e-07,
+          2.750785167011226e-07
+        ],
+        "energy_exchange_defect": 0.0,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7483101275425023e-07,
+        "warm_entropy_rate": 3.898146998661162e-06
+      },
+      {
+        "log_scale": 0.001,
+        "cold_replay_max_mode_defect": 4.3787196091216174e-13,
+        "cold_total_rate": 0.11809311109761915,
+        "warm_rates": [
+          2.756578293409328e-07,
+          7.288766952649833e-13,
+          2.756571004642375e-07,
+          2.8244589114152265e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.756571004642375e-07,
+          2.756571004642375e-07
+        ],
+        "energy_exchange_defect": -5.293955920339377e-23,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7483121963354074e-07,
+        "warm_entropy_rate": 3.90634628336383e-06
+      }
+    ],
+    "scope": "Prescribed snapshot scale only; held comoving distributions and no live FRW history."
+  },
+  "cell-conservative": {
+    "projection": "cell-conservative",
+    "grid": "fine",
+    "history_exposure": 7.2e-05,
+    "rows": [
+      {
+        "log_scale": 0.0,
+        "cold_replay_max_mode_defect": 6.602635105323884e-13,
+        "cold_total_rate": 0.11754952860020251,
+        "warm_rates": [
+          2.7610828570483854e-07,
+          7.235514471530143e-13,
+          2.7610756215339137e-07,
+          2.8390181221660554e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.761075621533914e-07,
+          2.7610756215339137e-07
+        ],
+        "energy_exchange_defect": 0.0,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7610756215339137e-07,
+        "warm_entropy_rate": 3.917237984457873e-06
+      },
+      {
+        "log_scale": 2e-05,
+        "cold_replay_max_mode_defect": 7.78245523580523e-13,
+        "cold_total_rate": 0.11755672680107351,
+        "warm_rates": [
+          2.7612486157669954e-07,
+          7.235948632685902e-13,
+          2.7612413798183627e-07,
+          2.839188550501029e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.7612413798183627e-07,
+          2.761241379818362e-07
+        ],
+        "energy_exchange_defect": 0.0,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7610756803889186e-07,
+        "warm_entropy_rate": 3.917473156101154e-06
+      },
+      {
+        "log_scale": 7.2e-05,
+        "cold_replay_max_mode_defect": 6.06736882957648e-13,
+        "cold_total_rate": 0.11757544111029,
+        "warm_rates": [
+          2.761679635013682e-07,
+          7.237077573589623e-13,
+          2.761672397936108e-07,
+          2.839631712058138e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.761672397936108e-07,
+          2.7616723979361085e-07
+        ],
+        "energy_exchange_defect": -1.0587911840678754e-22,
+        "unscaled_warm_rate_on_same_hard_energy": 2.761075833422955e-07,
+        "warm_entropy_rate": 3.918084668459101e-06
+      },
+      {
+        "log_scale": 0.0003,
+        "cold_replay_max_mode_defect": 4.5254772151892553e-13,
+        "cold_total_rate": 0.11765747904749738,
+        "warm_rates": [
+          2.76357028309216e-07,
+          7.242029624397852e-13,
+          2.763563041062535e-07,
+          2.8415756218053377e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.763563041062535e-07,
+          2.763563041062535e-07
+        ],
+        "energy_exchange_defect": 0.0,
+        "unscaled_warm_rate_on_same_hard_energy": 2.761076504606539e-07,
+        "warm_entropy_rate": 3.9207670421313124e-06
+      },
+      {
+        "log_scale": 0.001,
+        "cold_replay_max_mode_defect": 4.635875017200419e-13,
+        "cold_total_rate": 0.117910576206528,
+        "warm_rates": [
+          2.769382996283811e-07,
+          7.257254466197542e-13,
+          2.769375739029345e-07,
+          2.847552084875699e-07
+        ],
+        "hard_count_reciprocity": [
+          -2.769375739029345e-07,
+          2.769375739029345e-07
+        ],
+        "energy_exchange_defect": 0.0,
+        "unscaled_warm_rate_on_same_hard_energy": 2.7610785671740684e-07,
+        "warm_entropy_rate": 3.929013880703983e-06
+      }
+    ],
+    "scope": "Prescribed snapshot scale only; held comoving distributions and no live FRW history."
+  }
+}
