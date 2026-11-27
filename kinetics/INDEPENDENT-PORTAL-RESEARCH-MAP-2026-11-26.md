@@ -773,3 +773,6 @@ fit or exclusion.
 - [Frozen-spectrum screening and noise check](INDEPENDENT-EARLY-POLE-SNAPSHOT-HARD-LOOP-SCREENING-2026-11-26.md):
   the actual resolved early electric screening mass squared is close
   to half the two-thermal-Dirac value on both available grids.
+- [Frozen dynamic Vlasov response and soft kicks](INDEPENDENT-EARLY-POLE-FROZEN-DYNAMIC-VLASOV-2026-11-26.md):
+  recomputes both retarded and statistical inputs and normalizes the
+  soft-cut comparison separately by fixed k/T and fixed k/m_D.
