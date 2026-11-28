@@ -17,9 +17,12 @@ from early_pole_endpoint_stencil_remap_pilot import SPECS,load
 def histogram(p,s):
     card=read(p)
     g=card['grid']
-    if g!='fine' or (card['charge_div'],card['scalar_div'],card['x_end'])!=(2,s,.05):
+    charge=card.get('charge_div',card.get('subcells_per_archived_cell'))
+    if g!='fine' or (charge,card.get('scalar_div',1),card['x_end'],card['steps'])!=(2,s,.05,2048):
         raise ArithmeticError('Expected the exact fixed-charge scalar-refined endpoint')
-    d=ScalarSubshellChart(load(g)[0],SPECS[g],2,s,card['cut'])
+    d=ScalarSubshellChart(load(g)[0],SPECS[g],2,s,card.get('cut',1e-5))
+    if card['counts']!=[d.ns,d.nf,d.np]:
+        raise ArithmeticError('Different chart dimensions')
     y=np.array(card['endpoint_occupation'])
     if y.shape!=(d.n,) or not np.all(np.isfinite(y)) or min(y)<0 or max(y[d.ns:])>1:
         raise ArithmeticError('Invalid saved phase space')
@@ -28,21 +31,28 @@ def histogram(p,s):
     return d.ds.ed,np.r_[0.,np.cumsum(counts)]
 
 
-def render(paths,output,receipt=None):
+def pair(left,right):
+    union=np.union1d(left[0],right[0])
+    a=np.interp(union**3,left[0]**3,left[1])
+    b=np.interp(union**3,right[0]**3,right[1])
+    delta=b-a
+    j=np.argmax(abs(delta))
+    return dict(union_shells=len(union)-1,union_cdf_total_variation=fsum(abs(np.diff(delta)))/2,
+                maximum_absolute_cdf_difference=float(abs(delta[j])),q_at_maximum=float(union[j]))
+
+
+def render(paths,output,receipt=None,matched_native=None):
     both=[histogram(p,s) for p,s in zip(paths,(2,4),strict=True)]
     for e,c in both:
         if not np.all(np.diff(c)>=0) or abs(c[-1]-1)>1e-14:
             raise ArithmeticError('Invalid CDF')
     union=np.union1d(both[0][0],both[1][0])
-    patches=[np.interp(union**3,e**3,c) for e,c in both]
-    delta=patches[1]-patches[0]
-    j=np.argmax(abs(delta))
     if receipt is not None:
-        record=dict(x=.05,chart='fine charge d2, scalar S2 and S4',
-                    union_shells=len(union)-1,union_cdf_total_variation=fsum(abs(np.diff(delta)))/2,
-                    maximum_absolute_cdf_difference=float(abs(delta[j])),
-                    q_at_maximum=float(union[j]),
+        record=dict(x=.05,chart='fine charge d2, scalar S2 and S4',**pair(*both),
                     scope='Exact given the piecewise-constant occupation reconstruction in each chart.')
+        if matched_native is not None:
+            native=histogram(matched_native,1)
+            record['matched_native_to_refined']=[dict(scalar_div=n,**pair(native,r)) for n,r in zip((2,4),both,strict=True)]
         receipt.write_text(json.dumps(record,indent=2,allow_nan=False)+'\n')
     q=np.union1d(np.linspace(2e-6,5.8e-6,480),union)
     q=q[(q>=2e-6)&(q<=5.8e-6)]
@@ -76,5 +86,6 @@ if __name__=='__main__':
     p.add_argument('states',type=Path,nargs=2)
     p.add_argument('output',type=Path)
     p.add_argument('--receipt',type=Path)
+    p.add_argument('--matched-native',type=Path,help='Optional native 4096-step-start control; affects receipt only')
     a=p.parse_args()
-    render(a.states,a.output,a.receipt)
+    render(a.states,a.output,a.receipt,a.matched_native)
