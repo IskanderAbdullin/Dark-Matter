@@ -19,8 +19,8 @@ LABELS=('count','q','q2','kinetic_energy','pressure_numerator')
 def load_card(path,n):
     c=read(path)
     if (c.get('scalar_div',1),c.get('charge_div',c.get('subcells_per_archived_cell')),
-            c['grid'],c['x_end'],c['steps'],c['reference_x'])!=(n,2,'fine',.05,2048,X):
-        raise ArithmeticError('Need a matched fine scalar d=1,2,4 endpoint at fixed charge d=2')
+            c['grid'],c['x_end'],c['steps'],c['reference_x'],c.get('cut',1e-5))!=(n,2,'fine',.05,2048,X,1e-5):
+        raise ArithmeticError('Need a matched fine scalar ladder endpoint at fixed charge d=2')
     d=ScalarSubshellChart(load('fine')[0],SPECS['fine'],2,n,1e-5)
     a=np.asarray(c['endpoint_occupation'])
     if c['counts']!=[d.ns,d.nf,d.np] or a.shape!=(d.n,) or not np.all(np.isfinite(a)) or (
@@ -57,10 +57,11 @@ def integrate(d,a,m,n):
 
 
 def run(paths):
-    ds=[load_card(p,n) for p,n in zip(paths,(1,2,4),strict=True)]
+    levels=(1,2,4,8)[:len(paths)]
+    ds=[load_card(p,n) for p,n in zip(paths,levels,strict=True)]
     m=ds[1][-1]  # hold the mass fixed to isolate this spectral comparison.
     out=[]
-    for n,(d,a,_) in zip((1,2,4),ds,strict=True):
+    for n,(d,a,_) in zip(levels,ds,strict=True):
         u,v=[integrate(d,a,m,i) for i in (24,48)]
         z=np.array([fsum(v[:,j]) for j in range(len(LABELS))])
         defect=np.max(abs(u-v)/np.maximum(abs(v),1e-105))
@@ -78,6 +79,8 @@ def run(paths):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('state',type=Path,nargs=3)
+    p.add_argument('state',type=Path,nargs='+')
     args=p.parse_args()
+    if len(args.state) not in (3,4):
+        p.error('Supply native,S2,S4[,S8]')
     print(json.dumps(run(args.state),indent=2,allow_nan=False))

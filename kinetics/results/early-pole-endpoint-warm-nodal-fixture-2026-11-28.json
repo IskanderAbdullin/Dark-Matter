@@ -1,0 +1,63 @@
+{
+  "cold_scalar_div": 4,
+  "charge_div": 2,
+  "warm_floor_for_complete_native_cells": 0.01,
+  "moment_columns": [
+    "count",
+    "q",
+    "q2",
+    "kinetic_energy",
+    "pressure_numerator"
+  ],
+  "cards": [
+    {
+      "warm_div": 1,
+      "scalar_bins": 145,
+      "relative_error_of_nodal_moment": [
+        0.0,
+        -0.028953420856189904,
+        -0.08347401950031974,
+        -0.037768109521708504,
+        -0.03771731988763116
+      ],
+      "invariance_of_exact_total": 0.0
+    },
+    {
+      "warm_div": 2,
+      "scalar_bins": 167,
+      "relative_error_of_nodal_moment": [
+        0.0,
+        -0.007951585206102063,
+        -0.02214922103606698,
+        -0.009780329709887847,
+        -0.009770156745333436
+      ],
+      "invariance_of_exact_total": 2.220446049250313e-16
+    },
+    {
+      "warm_div": 4,
+      "scalar_bins": 211,
+      "relative_error_of_nodal_moment": [
+        0.0,
+        -0.002466864429601534,
+        -0.005623696039650405,
+        -0.0024711989552606006,
+        -0.0024716337273626987
+      ],
+      "invariance_of_exact_total": 4.440892098500626e-16
+    },
+    {
+      "warm_div": 8,
+      "scalar_bins": 299,
+      "relative_error_of_nodal_moment": [
+        0.0,
+        -0.0010802799518416784,
+        -0.001411441362782151,
+        -0.0006233879631362127,
+        -0.0006265044946055509
+      ],
+      "invariance_of_exact_total": 4.440892098500626e-16
+    }
+  ],
+  "scope": "One frozen piecewise-constant histogram; a representational audit, not re-evolution or dynamic convergence."
+}
