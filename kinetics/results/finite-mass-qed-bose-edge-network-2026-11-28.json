@@ -1,0 +1,53 @@
+{
+  "scope": "Multiple held reservoir edges, not a self-consistent relaxation model.",
+  "controls": {
+    "meshes": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "absolute_errors": [
+      0.003990078260831975,
+      0.0010040788068088613,
+      0.00025143233548763355,
+      6.288391566133811e-05
+    ],
+    "convergence_ratios": [
+      3.973869614391269,
+      3.993435469871161,
+      3.9983568587192413
+    ],
+    "thermal_state_defect": 6.661338147750939e-16
+  },
+  "archived_shapes": [
+    {
+      "grid": "fine",
+      "total_scalar_extent": 0.14912660341097098,
+      "native_compensated_rounding": 0.0,
+      "naive_repeated_scalar_update": 0.0,
+      "photon_final": [
+        0.0799756597174828,
+        0.001011256508854347,
+        0.3999999999993914,
+        0.29995566937913615
+      ],
+      "energy_roundoff": 9.82348183364406e-21,
+      "compensated_charge_energy": 0.0002799706367306335
+    },
+    {
+      "grid": "third",
+      "total_scalar_extent": 0.14910887814746504,
+      "native_compensated_rounding": 0.25,
+      "naive_repeated_scalar_update": 12.0,
+      "photon_final": [
+        0.07998349991637276,
+        0.0010112318436454294,
+        0.39999999999992253,
+        0.29996106334190265
+      ],
+      "energy_roundoff": 3.418426502606822e-20,
+      "compensated_charge_energy": 0.00028074405246974446
+    }
+  ]
+}
