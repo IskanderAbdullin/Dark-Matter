@@ -90,11 +90,11 @@ def trial(d,x0,z,span,n,midpoint):
                 scalar_pole_at_end=state_moments(d,x0*np.exp(span),f)[-1])
 
 
-def run(g,span,midpoint=False,base=32):
+def run(g,span,midpoint=False,base=32,pad=1/4096):
     a=load(g)[0]
     x0=a['x_end']
     d=MassiveFermion(*SPECS[g],a['mass_ratio'],a['elastic_rate'],True)
-    charge_mesh(d,1/4096,1/4096)
+    charge_mesh(d,pad,pad)
     values=[a['endpoint_'+s+'_occupations'] for s in LABELS]
     z=np.concatenate([remap(o,f,e)[0] for o,f,e in zip(archives(a),values,parts(d),strict=True)])
     cases=[trial(d,x0,z,span,n,midpoint) for n in (base,2*base,4*base)]
@@ -102,8 +102,11 @@ def run(g,span,midpoint=False,base=32):
     diff=float(abs(c-b)/max(abs(c),1e-50))
     if diff>2e-3 or abs(c-b)>=abs(b-a):
         raise ArithmeticError(('Live time refinement not resolved for the declared interval',g,span,a,b,c))
-    return dict(grid=g,span_in_log_scale_factor=span,time_scheme='midpoint' if midpoint else 'euler',scope='Local archive-started pilot, not a full time history.',
+    x=dict(grid=g,span_in_log_scale_factor=span,time_scheme='midpoint' if midpoint else 'euler',scope='Local archive-started pilot, not a full time history.',
                 last_relative_scalar_number_change=diff,refinement_ratio=float((b-a)/(c-b)),data=cases)
+    if pad!=1/4096:
+        x['charged_face_fraction']=pad
+    return x
 
 
 if __name__=='__main__':
@@ -112,5 +115,8 @@ if __name__=='__main__':
     p.add_argument('--span',type=float,default=1e-6)
     p.add_argument('--midpoint',action='store_true')
     p.add_argument('--base',type=int,default=32)
+    p.add_argument('--pad',type=float,default=1/4096)
     a=p.parse_args()
-    print(json.dumps(run(a.grid,a.span,a.midpoint,a.base),indent=2,allow_nan=False))
+    if not 0<a.pad<.5:
+        raise ValueError('Face fraction must lie between zero and one half')
+    print(json.dumps(run(a.grid,a.span,a.midpoint,a.base,a.pad),indent=2,allow_nan=False))

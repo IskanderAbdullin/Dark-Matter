@@ -1,0 +1,256 @@
+[
+  {
+    "grid": "fine",
+    "face_widths": [
+      0.000244140625,
+      3.0517578125e-05
+    ],
+    "fine_to_regular_width_scalar_increment_ratio": 0.3708965885411956,
+    "cases": [
+      {
+        "grid": "fine",
+        "span_in_log_scale_factor": 5e-05,
+        "time_scheme": "midpoint",
+        "scope": "Local archive-started pilot, not a full time history.",
+        "last_relative_scalar_number_change": 1.17362367471222e-06,
+        "refinement_ratio": 4.072640417913777,
+        "data": [
+          {
+            "steps": 128,
+            "paired_delta_N": [
+              8.221822354238335e-07,
+              8.22182235425524e-07,
+              -8.221822358255909e-07
+            ],
+            "number_error": 4.0175746776160808e-16,
+            "continuity_residual": -1.7356845043386386e-15,
+            "sum_fixed_clock_collision_energy_jumps": -1.7356838394637465e-15,
+            "delta_total_energy": 1.8815443465998504e-08,
+            "independent_collisionless_trace": 1.8815445201683008e-08,
+            "maximum_charged_occupation": 0.9998876498657012,
+            "maximum_limited_extent_fraction": 1.4701058918320908e-07,
+            "scalar_pole_at_end": 0.0008720697258745768
+          },
+          {
+            "steps": 256,
+            "paired_delta_N": [
+              8.221861652704777e-07,
+              8.221861652651166e-07,
+              -8.221861651930705e-07
+            ],
+            "number_error": 7.74071646760183e-17,
+            "continuity_residual": 3.398049022817222e-16,
+            "sum_fixed_clock_collision_energy_jumps": 3.39805484485607e-16,
+            "delta_total_energy": 1.8815445537674134e-08,
+            "independent_collisionless_trace": 1.8815445197869232e-08,
+            "maximum_charged_occupation": 0.9999438249539149,
+            "maximum_limited_extent_fraction": 1.3808928139168236e-07,
+            "scalar_pole_at_end": 0.0008720697259404764
+          },
+          {
+            "steps": 512,
+            "paired_delta_N": [
+              8.221871302087587e-07,
+              8.221871302103576e-07,
+              -8.221871292398896e-07
+            ],
+            "number_error": 9.688691075961748e-16,
+            "continuity_residual": 3.2348333574731743e-15,
+            "sum_fixed_clock_collision_energy_jumps": 3.2348341683370636e-15,
+            "delta_total_energy": 1.8815448431762423e-08,
+            "independent_collisionless_trace": 1.8815445196929065e-08,
+            "maximum_charged_occupation": 0.9999856400844929,
+            "maximum_limited_extent_fraction": 1.1886866319944997e-07,
+            "scalar_pole_at_end": 0.000872069725956658
+          }
+        ]
+      },
+      {
+        "grid": "fine",
+        "span_in_log_scale_factor": 5e-05,
+        "time_scheme": "midpoint",
+        "scope": "Local archive-started pilot, not a full time history.",
+        "last_relative_scalar_number_change": 8.15201529552004e-06,
+        "refinement_ratio": 4.017989286532196,
+        "data": [
+          {
+            "steps": 128,
+            "paired_delta_N": [
+              3.049339273781818e-07,
+              3.049339273782995e-07,
+              -3.049339275985216e-07
+            ],
+            "number_error": 2.2033979230000442e-16,
+            "continuity_residual": -4.568287475041674e-16,
+            "sum_fixed_clock_collision_energy_jumps": -4.568277997737945e-16,
+            "delta_total_energy": 1.8815481715565213e-08,
+            "independent_collisionless_trace": 1.881548217239396e-08,
+            "maximum_charged_occupation": 0.9991161099958136,
+            "maximum_limited_extent_fraction": 2.3693455683934806e-07,
+            "scalar_pole_at_end": 0.000872061052078626
+          },
+          {
+            "steps": 256,
+            "paired_delta_N": [
+              3.0494391580917316e-07,
+              3.049439158204868e-07,
+              -3.0494391642642454e-07
+            ],
+            "number_error": 6.172513845703706e-16,
+            "continuity_residual": -2.325411291898907e-15,
+            "sum_fixed_clock_collision_energy_jumps": -2.325410317222712e-15,
+            "delta_total_energy": 1.881547984151473e-08,
+            "independent_collisionless_trace": 1.8815482166926022e-08,
+            "maximum_charged_occupation": 0.9991161099958132,
+            "maximum_limited_extent_fraction": 1.9973395324366242e-07,
+            "scalar_pole_at_end": 0.0008720610522461238
+          },
+          {
+            "steps": 512,
+            "paired_delta_N": [
+              3.0494640173690443e-07,
+              3.0494640173064073e-07,
+              -3.0494640146152894e-07
+            ],
+            "number_error": 2.7537549335005657e-16,
+            "continuity_residual": 8.84632786105033e-16,
+            "sum_fixed_clock_collision_energy_jumps": 8.846337474168139e-16,
+            "delta_total_energy": 1.881548305033018e-08,
+            "independent_collisionless_trace": 1.8815482165697394e-08,
+            "maximum_charged_occupation": 0.999116109995814,
+            "maximum_limited_extent_fraction": 1.7043247698453875e-07,
+            "scalar_pole_at_end": 0.0008720610522878108
+          }
+        ],
+        "charged_face_fraction": 3.0517578125e-05
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "face_widths": [
+      0.000244140625,
+      3.0517578125e-05
+    ],
+    "fine_to_regular_width_scalar_increment_ratio": 0.17431017701705878,
+    "cases": [
+      {
+        "grid": "third",
+        "span_in_log_scale_factor": 5e-05,
+        "time_scheme": "midpoint",
+        "scope": "Local archive-started pilot, not a full time history.",
+        "last_relative_scalar_number_change": 7.210205849264602e-07,
+        "refinement_ratio": 4.018572770341303,
+        "data": [
+          {
+            "steps": 128,
+            "paired_delta_N": [
+              5.360047481810274e-07,
+              5.360047481797202e-07,
+              -5.360047483119289e-07
+            ],
+            "number_error": 1.3090153045986364e-16,
+            "continuity_residual": -5.264986334752096e-16,
+            "sum_fixed_clock_collision_energy_jumps": -5.264977800519589e-16,
+            "delta_total_energy": 1.887969317777739e-08,
+            "independent_collisionless_trace": 1.8879693704276025e-08,
+            "maximum_charged_occupation": 0.9998246605065337,
+            "maximum_limited_extent_fraction": 2.1265418966246517e-07,
+            "scalar_pole_at_end": 0.000867250535295431
+          },
+          {
+            "steps": 256,
+            "paired_delta_N": [
+              5.360063012463024e-07,
+              5.360063012391117e-07,
+              -5.360063014869567e-07
+            ],
+            "number_error": 2.406543422926819e-16,
+            "continuity_residual": -1.5798721120943853e-15,
+            "sum_fixed_clock_collision_energy_jumps": -1.5798712707767542e-15,
+            "delta_total_energy": 1.8879692121394888e-08,
+            "independent_collisionless_trace": 1.8879693701267e-08,
+            "maximum_charged_occupation": 0.9999123302858028,
+            "maximum_limited_extent_fraction": 2.142724946531723e-07,
+            "scalar_pole_at_end": 0.0008672505353217653
+          },
+          {
+            "steps": 512,
+            "paired_delta_N": [
+              5.360066877181579e-07,
+              5.360066876977114e-07,
+              -5.360066880549419e-07
+            ],
+            "number_error": 3.3678400559745405e-16,
+            "continuity_residual": -9.014622488147348e-16,
+            "sum_fixed_clock_collision_energy_jumps": -9.014614498795583e-16,
+            "delta_total_energy": 1.887969279906809e-08,
+            "independent_collisionless_trace": 1.887969370053034e-08,
+            "maximum_charged_occupation": 0.9999561011067335,
+            "maximum_limited_extent_fraction": 2.1789186812359635e-07,
+            "scalar_pole_at_end": 0.000867250535328318
+          }
+        ]
+      },
+      {
+        "grid": "third",
+        "span_in_log_scale_factor": 5e-05,
+        "time_scheme": "midpoint",
+        "scope": "Local archive-started pilot, not a full time history.",
+        "last_relative_scalar_number_change": 1.8836764120502332e-07,
+        "refinement_ratio": 1.3039576253203693,
+        "data": [
+          {
+            "steps": 128,
+            "paired_delta_N": [
+              9.343138007007787e-08,
+              9.343138006424532e-08,
+              -9.343138023905743e-08
+            ],
+            "number_error": 1.689795657314357e-16,
+            "continuity_residual": -2.602083460342312e-16,
+            "sum_fixed_clock_collision_energy_jumps": -2.6020746622273125e-16,
+            "delta_total_energy": 1.8879721228656304e-08,
+            "independent_collisionless_trace": 1.887972148886465e-08,
+            "maximum_charged_occupation": 0.998417547141717,
+            "maximum_limited_extent_fraction": 7.569043511786963e-07,
+            "scalar_pole_at_end": 0.0008672430310346371
+          },
+          {
+            "steps": 256,
+            "paired_delta_N": [
+              9.343140301902313e-08,
+              9.343140303284792e-08,
+              -9.343140325225403e-08
+            ],
+            "number_error": 2.33230892603386e-16,
+            "continuity_residual": -1.5855321417578937e-15,
+            "sum_fixed_clock_collision_energy_jumps": -1.5855312748103485e-15,
+            "delta_total_energy": 1.887971989887554e-08,
+            "independent_collisionless_trace": 1.8879721484407682e-08,
+            "maximum_charged_occupation": 0.9984175471417169,
+            "maximum_limited_extent_fraction": 6.273100479458432e-07,
+            "scalar_pole_at_end": 0.0008672430310350265
+          },
+          {
+            "steps": 512,
+            "paired_delta_N": [
+              9.343142061847945e-08,
+              9.343142061462278e-08,
+              -9.343142148252782e-08
+            ],
+            "number_error": 8.640483700918713e-16,
+            "continuity_residual": -2.9519563186578295e-15,
+            "sum_fixed_clock_collision_energy_jumps": -2.951955417188936e-15,
+            "delta_total_energy": 1.887971853153971e-08,
+            "independent_collisionless_trace": 1.887972148349603e-08,
+            "maximum_charged_occupation": 0.9984175471417175,
+            "maximum_limited_extent_fraction": 5.313459817813582e-07,
+            "scalar_pole_at_end": 0.0008672430310353255
+          }
+        ],
+        "charged_face_fraction": 3.0517578125e-05
+      }
+    ]
+  }
+]

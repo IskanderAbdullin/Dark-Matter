@@ -1,0 +1,96 @@
+[
+  {
+    "grid": "fine",
+    "entropy_production_event_and_ledger": [
+      0.10269678904622108,
+      0.10269678904622077
+    ],
+    "entropy_relative_defect": 2.886579864025407e-15,
+    "scope": "Entropy is of the held collision chart, not thermodynamic equivalence of two cosmologies.",
+    "trials": [
+      {
+        "scheme": "step",
+        "steps": 16,
+        "minimum_entropy_increment": 4.847658873632342e-09,
+        "total_entropy_increase": 8.909524846628528e-08
+      },
+      {
+        "scheme": "step",
+        "steps": 64,
+        "minimum_entropy_increment": 1.2017285362111797e-09,
+        "total_entropy_increase": 8.888333065252674e-08
+      },
+      {
+        "scheme": "step",
+        "steps": 256,
+        "minimum_entropy_increment": 2.9980217943133213e-10,
+        "total_entropy_increase": 8.883059927511251e-08
+      },
+      {
+        "scheme": "ssp",
+        "steps": 16,
+        "minimum_entropy_increment": 4.8351746408922544e-09,
+        "total_entropy_increase": 8.881239611208442e-08
+      },
+      {
+        "scheme": "ssp",
+        "steps": 64,
+        "minimum_entropy_increment": 1.2009649293817985e-09,
+        "total_entropy_increase": 8.881299895299616e-08
+      },
+      {
+        "scheme": "ssp",
+        "steps": 256,
+        "minimum_entropy_increment": 2.997547081753562e-10,
+        "total_entropy_increase": 8.881304012490758e-08
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "entropy_production_event_and_ledger": [
+      0.13021032469078436,
+      0.13021032469078467
+    ],
+    "entropy_relative_defect": 2.3314683517128287e-15,
+    "scope": "Entropy is of the held collision chart, not thermodynamic equivalence of two cosmologies.",
+    "trials": [
+      {
+        "scheme": "step",
+        "steps": 16,
+        "minimum_entropy_increment": 5.130678871634895e-09,
+        "total_entropy_increase": 9.962382231163742e-08
+      },
+      {
+        "scheme": "step",
+        "steps": 64,
+        "minimum_entropy_increment": 1.2712790822265136e-09,
+        "total_entropy_increase": 9.944311307080389e-08
+      },
+      {
+        "scheme": "step",
+        "steps": 256,
+        "minimum_entropy_increment": 3.1711934712263837e-10,
+        "total_entropy_increase": 9.939818907963162e-08
+      },
+      {
+        "scheme": "ssp",
+        "steps": 16,
+        "minimum_entropy_increment": 5.121175978786778e-09,
+        "total_entropy_increase": 9.938246553694124e-08
+      },
+      {
+        "scheme": "ssp",
+        "steps": 64,
+        "minimum_entropy_increment": 1.2707008812852742e-09,
+        "total_entropy_increase": 9.938318925002939e-08
+      },
+      {
+        "scheme": "ssp",
+        "steps": 256,
+        "minimum_entropy_increment": 3.1708344916505213e-10,
+        "total_entropy_increase": 9.938323392987091e-08
+      }
+    ]
+  }
+]
