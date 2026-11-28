@@ -51,7 +51,10 @@ def sample(d,target_repeats,y,m,rows):
     return np.r_[occ,y],maxerr
 
 
-def run(native,g7,mixed,control,history):
+def run(native,g7,mixed,control,history,*,volumes=(32,64,96)):
+    volumes=tuple(volumes)
+    if volumes not in ((32,64,96),(96,128,160)):
+        raise ArithmeticError('Use one independently declared three-volume ladder')
     base,sha=read(native)
     card,_=read(history)
     rr=card['contrasts'][-1]
@@ -90,7 +93,7 @@ def run(native,g7,mixed,control,history):
             panels.append(g[w])
         keep(d,y,'actual_nodal',0.)
         keep(d,rec,'same_low_rule_sampled_reconstruction',err)
-        for n in (32,64,96):
+        for n in volumes:
             e=WarmVolume(load('fine')[0],SPECS['fine'],n)
             rec,err=sample(e,e.repeats,y[d.ns:],m,z)
             if err>4e-12:
@@ -110,8 +113,11 @@ def run(native,g7,mixed,control,history):
         out.append(dict(chart=tag,input_sha256=sha,common_reference_scale=scale,checks=mask,
                         aggregate_errors=[[fsum(v),fsum(abs(v))] for v in (diff(p,t),closure,order,sdiff)],
                         all_cell_errors=[diff(p,t).tolist(),closure.tolist(),order.tolist(),sdiff.tolist()]))
+    L,U=volumes[-2:]
+    optional=dict(volume_orders=volumes) if volumes!=(32,64,96) else {}
     return dict(x=.05,native_sha256=rr['common_native_sha256'],fixed_optics_mass=m,fixed_clock_H=H,
-                fields=['actual_minus_volume96','stored_vs_moment_fit_at_same_nodes','same_fit_low_minus_volume96','volume64_minus_volume96'],
+                fields=[f'actual_minus_volume{U}','stored_vs_moment_fit_at_same_nodes',
+                        f'same_fit_low_minus_volume{U}',f'volume{L}_minus_volume{U}'],**optional,
                 scalar_cells=a.ds.ed[a.ds.ed>=.01].tolist(),paired_actual_results=out,
                 scope='Terminal-state frozen source check, with the positive count/mean representative as a controlled reference, not a unique shape or integrated trajectory accuracy measure.')
 
@@ -120,5 +126,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('native','g7','mixed','control','history'):
         p.add_argument('--'+k,type=Path,required=True)
+    p.add_argument('--volumes',nargs=3,type=int,default=(32,64,96))
     a=p.parse_args()
-    print(json.dumps(run(a.native,a.g7,a.mixed,a.control,a.history),indent=2,allow_nan=False))
+    print(json.dumps(run(a.native,a.g7,a.mixed,a.control,a.history,volumes=a.volumes),indent=2,allow_nan=False))
