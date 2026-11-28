@@ -1,0 +1,268 @@
+{
+  "levels": [
+    1,
+    2
+  ],
+  "pole_scope": "same numerical charge partition, independently fitted pole per scalar chart",
+  "exact_common_q_edges": [
+    1e-06,
+    1.094958977489465e-06,
+    1.5825817619770524e-06,
+    2.287359695506477e-06,
+    3.3059994133202632e-06,
+    4.778274331905574e-06,
+    6.906203763665279e-06,
+    9.9817731491033e-06,
+    1e-05,
+    1.4426999059072134e-05,
+    1.5e-05
+  ],
+  "gross_forward_number": {
+    "TV_lower_bound_from_exact_common_bins": 0.08501923524873546,
+    "max_shared_boundary_CDF_difference": 0.07124786405111615,
+    "Wasserstein1_q_panel_supported_interval": [
+      4.6884599642654327e-08,
+      8.023856878542565e-07
+    ],
+    "important_bins": [
+      {
+        "q": [
+          3.3059994133202632e-06,
+          4.778274331905574e-06
+        ],
+        "old_new_normalized_mass": [
+          0.7618608621373648,
+          0.6768416268886294
+        ],
+        "signed_normalized_difference": -0.08501923524873545
+      },
+      {
+        "q": [
+          2.287359695506477e-06,
+          3.3059994133202632e-06
+        ],
+        "old_new_normalized_mass": [
+          0.21521146915975492,
+          0.2859232407621148
+        ],
+        "signed_normalized_difference": 0.07071177160235986
+      },
+      {
+        "q": [
+          4.778274331905574e-06,
+          6.906203763665279e-06
+        ],
+        "old_new_normalized_mass": [
+          0.022577268699337252,
+          0.03623125669888399
+        ],
+        "signed_normalized_difference": 0.013653987999546736
+      },
+      {
+        "q": [
+          1.5825817619770524e-06,
+          2.287359695506477e-06
+        ],
+        "old_new_normalized_mass": [
+          0.00015396907912902668,
+          0.0006899747697318174
+        ],
+        "signed_normalized_difference": 0.0005360056906027908
+      },
+      {
+        "q": [
+          6.906203763665279e-06,
+          9.9817731491033e-06
+        ],
+        "old_new_normalized_mass": [
+          0.00019141642181440824,
+          0.00030879733528666646
+        ],
+        "signed_normalized_difference": 0.00011738091347225822
+      }
+    ]
+  },
+  "gross_inverse_number": {
+    "TV_lower_bound_from_exact_common_bins": 0.08578876258933187,
+    "max_shared_boundary_CDF_difference": 0.07179777953370083,
+    "Wasserstein1_q_panel_supported_interval": [
+      4.748937632607265e-08,
+      8.026928483055073e-07
+    ],
+    "important_bins": [
+      {
+        "q": [
+          3.3059994133202632e-06,
+          4.778274331905574e-06
+        ],
+        "old_new_normalized_mass": [
+          0.7648972355794929,
+          0.679108472990161
+        ],
+        "signed_normalized_difference": -0.08578876258933188
+      },
+      {
+        "q": [
+          2.287359695506477e-06,
+          3.3059994133202632e-06
+        ],
+        "old_new_normalized_mass": [
+          0.21116519775960207,
+          0.2824393594367972
+        ],
+        "signed_normalized_difference": 0.07127416167719514
+      },
+      {
+        "q": [
+          4.778274331905574e-06,
+          6.906203763665279e-06
+        ],
+        "old_new_normalized_mass": [
+          0.023569170291511867,
+          0.03743579623005132
+        ],
+        "signed_normalized_difference": 0.013866625938539451
+      },
+      {
+        "q": [
+          1.5825817619770524e-06,
+          2.287359695506477e-06
+        ],
+        "old_new_normalized_mass": [
+          0.0001493845442211086,
+          0.0006729181225330899
+        ],
+        "signed_normalized_difference": 0.0005235335783119813
+      },
+      {
+        "q": [
+          6.906203763665279e-06,
+          9.9817731491033e-06
+        ],
+        "old_new_normalized_mass": [
+          0.00021290629421982554,
+          0.00033724103186845433
+        ],
+        "signed_normalized_difference": 0.0001243347376486288
+      }
+    ]
+  },
+  "gross_forward_excess": {
+    "TV_lower_bound_from_exact_common_bins": 0.09617034541018225,
+    "max_shared_boundary_CDF_difference": 0.0720979852868847,
+    "Wasserstein1_q_panel_supported_interval": [
+      5.6301431027345854e-08,
+      7.908591523160283e-07
+    ],
+    "important_bins": [
+      {
+        "q": [
+          3.3059994133202632e-06,
+          4.778274331905574e-06
+        ],
+        "old_new_normalized_mass": [
+          0.8345717534616816,
+          0.7384014080514992
+        ],
+        "signed_normalized_difference": -0.09617034541018232
+      },
+      {
+        "q": [
+          2.287359695506477e-06,
+          3.3059994133202632e-06
+        ],
+        "old_new_normalized_mass": [
+          0.1123576046093103,
+          0.18427561594359682
+        ],
+        "signed_normalized_difference": 0.07191801133428652
+      },
+      {
+        "q": [
+          4.778274331905574e-06,
+          6.906203763665279e-06
+        ],
+        "old_new_normalized_mass": [
+          0.05204886971508209,
+          0.0756896745861249
+        ],
+        "signed_normalized_difference": 0.02364080487104281
+      },
+      {
+        "q": [
+          6.906203763665279e-06,
+          9.9817731491033e-06
+        ],
+        "old_new_normalized_mass": [
+          0.0009322613488238982,
+          0.0013570216879123715
+        ],
+        "signed_normalized_difference": 0.0004247603390884733
+      },
+      {
+        "q": [
+          1.5825817619770524e-06,
+          2.287359695506477e-06
+        ],
+        "old_new_normalized_mass": [
+          3.839206162885069e-05,
+          0.0002183518961976444
+        ],
+        "signed_normalized_difference": 0.0001799598345687937
+      }
+    ]
+  },
+  "neutral_flux_by_chart": [
+    {
+      "number_neutral_occupation": 2.9089301952164843e-09,
+      "positive_flux_sum_over_total_gross_inverse": 0.004050857058969023,
+      "negative_flux_sum_over_total_gross_inverse": -0.004050857058969006,
+      "net_flux_normalized_by_total_gross_inverse": [
+        1.5595451508585208e-12,
+        1.1105650926086566e-09,
+        4.58453492125423e-06,
+        0.004046271411923131,
+        -0.003036373450960597,
+        -0.000991901595059985,
+        -2.148987246792982e-05,
+        -1.5469480822547804e-08,
+        -1.0699384992635508e-06,
+        -6.732500407456059e-09
+      ],
+      "sum_roundoff": 1.7268642185481384e-17,
+      "strongest_bin_q": [
+        2.287359695506477e-06,
+        3.3059994133202632e-06
+      ]
+    },
+    {
+      "number_neutral_occupation": 2.9152300351210983e-09,
+      "positive_flux_sum_over_total_gross_inverse": 0.0035009415748067678,
+      "negative_flux_sum_over_total_gross_inverse": -0.0035009415748068202,
+      "net_flux_normalized_by_total_gross_inverse": [
+        2.826691906226432e-12,
+        3.5892577428678393e-09,
+        1.7056647248451413e-05,
+        0.0034838813354738816,
+        -0.002266846108140098,
+        -0.0012045395346788406,
+        -2.844369666470784e-05,
+        -1.5938733741094042e-08,
+        -1.089467119406278e-06,
+        -6.8294700263526736e-09
+      ],
+      "sum_roundoff": -5.22566286924879e-17,
+      "strongest_bin_q": [
+        2.287359695506477e-06,
+        3.3059994133202632e-06
+      ]
+    }
+  ],
+  "absolute_pair_mesh_difference_TV": [
+    4.758693439299577e-14,
+    3.366751322175787e-14,
+    3.774758283725532e-14
+  ],
+  "absolute_pair_mesh_difference_neutral_redistribution": 1.2139594884885696e-14,
+  "scope": "Finite positive panel measures; coarsened TV and W1 enclosures do not interpolate within panels or claim real momentum/distribution limits."
+}
