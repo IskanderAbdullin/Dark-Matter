@@ -1,0 +1,59 @@
+{
+  "mass": 0.000873183268934027,
+  "moment_columns": [
+    "count",
+    "q",
+    "q2",
+    "kinetic_energy",
+    "pressure_numerator"
+  ],
+  "rows": [
+    {
+      "scalar_div": 1,
+      "nodal_over_exact_minus_one": [
+        0.0,
+        -0.03776352751970491,
+        -0.08347406264490576,
+        -0.03782789750403026,
+        -0.03783671770991326
+      ],
+      "number_weighted_velocity_squared": 2.959393578169742e-05,
+      "fraction_velocity_squared_at_q_at_least_point01": 0.31411274484793805,
+      "exact_cold_conditional_mean_velocity_squared": 2.0228663697239586e-05,
+      "quadrature_defect": 1.995442758648571e-16
+    },
+    {
+      "scalar_div": 2,
+      "nodal_over_exact_minus_one": [
+        0.0,
+        -0.03073926559162743,
+        -0.08347402808811266,
+        -0.03777962204819918,
+        -0.037740312127023445
+      ],
+      "number_weighted_velocity_squared": 2.73121081463796e-05,
+      "fraction_velocity_squared_at_q_at_least_point01": 0.34005180853300165,
+      "exact_cold_conditional_mean_velocity_squared": 1.795518229936286e-05,
+      "quadrature_defect": 1.9937541259574406e-16
+    },
+    {
+      "scalar_div": 4,
+      "nodal_over_exact_minus_one": [
+        0.0,
+        -0.028953420856189904,
+        -0.08347401950031974,
+        -0.03776810953755927,
+        -0.037717319901837354
+      ],
+      "number_weighted_velocity_squared": 2.701426301066014e-05,
+      "fraction_velocity_squared_at_q_at_least_point01": 0.3438014235080842,
+      "exact_cold_conditional_mean_velocity_squared": 1.7657322570230046e-05,
+      "quadrature_defect": 1.3439008782634294e-16
+    }
+  ],
+  "cold_cut": 1e-05,
+  "exact_S4_minus_S2_cold_conditional_v_squared": -2.978597291328157e-07,
+  "cold_lipschitz_bound_for_v_squared": 26.224382516074453,
+  "transport_bound_for_absolute_cold_v_squared_change": 1.0156433007009261e-06,
+  "scope": "Instantaneous relativistic dispersion proxy on numerical histograms, not a cosmological velocity or pressure prediction."
+}
