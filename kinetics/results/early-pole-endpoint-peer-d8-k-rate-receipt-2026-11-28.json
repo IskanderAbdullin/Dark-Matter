@@ -1,0 +1,271 @@
+{
+  "x": 0.05,
+  "charge_subcells": 8,
+  "modes": "past-spacelike transverse",
+  "columns": [
+    "gross_forward",
+    "gross_inverse",
+    "signed_slope"
+  ],
+  "rules": [
+    [
+      4,
+      10,
+      18
+    ],
+    [
+      8,
+      16,
+      24
+    ]
+  ],
+  "grids": [
+    {
+      "grid": "fine",
+      "rows": [
+        {
+          "k": 0.0014,
+          "q": 3.5e-06,
+          "forward_parent_cap_cosine_fraction": 0.0,
+          "reverse_daughter_cap_cosine_fraction": 0.0,
+          "coefficients": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inverse_gross_resolved_zero": true,
+          "conditional_neutral": null,
+          "joint_mesh_defect": 0.0,
+          "ratios_to_same_q_at_k_point0015": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "k": 0.0014,
+          "q": 1.5e-05,
+          "forward_parent_cap_cosine_fraction": 0.08098234045271774,
+          "reverse_daughter_cap_cosine_fraction": 0.0,
+          "coefficients": [
+            2.6749655461628256e-16,
+            0.0,
+            2.6749655461628256e-16
+          ],
+          "inverse_gross_resolved_zero": true,
+          "conditional_neutral": 0.0,
+          "joint_mesh_defect": 5.049294315995212e-13,
+          "ratios_to_same_q_at_k_point0015": [
+            2.2799140348505673e-07,
+            0.0,
+            2.2799140412062562e-07
+          ]
+        },
+        {
+          "k": 0.0014500000000000001,
+          "q": 3.5e-06,
+          "forward_parent_cap_cosine_fraction": 0.88532121117822,
+          "reverse_daughter_cap_cosine_fraction": 0.0,
+          "coefficients": [
+            6.305135095089555e-07,
+            0.0,
+            6.305135095089555e-07
+          ],
+          "inverse_gross_resolved_zero": true,
+          "conditional_neutral": 0.0,
+          "joint_mesh_defect": 9.788836408120005e-13,
+          "ratios_to_same_q_at_k_point0015": [
+            0.0002524380601246037,
+            0.0,
+            0.0002524380606195747
+          ]
+        },
+        {
+          "k": 0.0014500000000000001,
+          "q": 1.5e-05,
+          "forward_parent_cap_cosine_fraction": 0.5964652563920432,
+          "reverse_daughter_cap_cosine_fraction": 0.2966317685372428,
+          "coefficients": [
+            3.5014233805810508e-12,
+            5.6486279485754566e-21,
+            3.5014233749324206e-12
+          ],
+          "inverse_gross_resolved_zero": false,
+          "conditional_neutral": 1.6132376304492107e-09,
+          "joint_mesh_defect": 7.893685705084863e-14,
+          "ratios_to_same_q_at_k_point0015": [
+            0.0029843166835520555,
+            0.0017270260982134118,
+            0.0029843166870569854
+          ]
+        },
+        {
+          "k": 0.0015,
+          "q": 3.5e-06,
+          "forward_parent_cap_cosine_fraction": 1.0,
+          "reverse_daughter_cap_cosine_fraction": 1.0,
+          "coefficients": [
+            0.002497695906860215,
+            4.8973868755304055e-12,
+            0.0024976959019628276
+          ],
+          "inverse_gross_resolved_zero": false,
+          "conditional_neutral": 1.960761865238185e-09,
+          "joint_mesh_defect": 5.540012892879531e-14,
+          "ratios_to_same_q_at_k_point0015": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "k": 0.0015,
+          "q": 1.5e-05,
+          "forward_parent_cap_cosine_fraction": 1.0,
+          "reverse_daughter_cap_cosine_fraction": 0.7914433631829518,
+          "coefficients": [
+            1.1732747398689316e-09,
+            3.270725297329841e-18,
+            1.1732747365982078e-09
+          ],
+          "inverse_gross_resolved_zero": false,
+          "conditional_neutral": 2.787689187626234e-09,
+          "joint_mesh_defect": 1.8207657603852567e-14,
+          "ratios_to_same_q_at_k_point0015": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "independent_base_point_max_relative_defects": {
+        "3.5e-06": 7.194245199571014e-14,
+        "1.5e-05": 4.596323321948148e-14
+      }
+    },
+    {
+      "grid": "third",
+      "rows": [
+        {
+          "k": 0.0014,
+          "q": 3.5e-06,
+          "forward_parent_cap_cosine_fraction": 0.0,
+          "reverse_daughter_cap_cosine_fraction": 0.0,
+          "coefficients": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "inverse_gross_resolved_zero": true,
+          "conditional_neutral": null,
+          "joint_mesh_defect": 0.0,
+          "ratios_to_same_q_at_k_point0015": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "k": 0.0014,
+          "q": 1.5e-05,
+          "forward_parent_cap_cosine_fraction": 0.019865223264150578,
+          "reverse_daughter_cap_cosine_fraction": 0.0,
+          "coefficients": [
+            1.2954941344370505e-17,
+            0.0,
+            1.2954941344370506e-17
+          ],
+          "inverse_gross_resolved_zero": true,
+          "conditional_neutral": 0.0,
+          "joint_mesh_defect": 1.092237411626229e-12,
+          "ratios_to_same_q_at_k_point0015": [
+            1.1685606060812866e-08,
+            0.0,
+            1.1685606091075785e-08
+          ]
+        },
+        {
+          "k": 0.0014500000000000001,
+          "q": 3.5e-06,
+          "forward_parent_cap_cosine_fraction": 0.6280780500561883,
+          "reverse_daughter_cap_cosine_fraction": 0.0,
+          "coefficients": [
+            3.9659422718803535e-07,
+            0.0,
+            3.965942271880353e-07
+          ],
+          "inverse_gross_resolved_zero": true,
+          "conditional_neutral": 0.0,
+          "joint_mesh_defect": 5.3734794391857577e-14,
+          "ratios_to_same_q_at_k_point0015": [
+            0.00020889606867348584,
+            0.0,
+            0.00020889606903967507
+          ]
+        },
+        {
+          "k": 0.0014500000000000001,
+          "q": 1.5e-05,
+          "forward_parent_cap_cosine_fraction": 0.5364507064529893,
+          "reverse_daughter_cap_cosine_fraction": 0.23624474641709747,
+          "coefficients": [
+            2.400488728116626e-12,
+            3.2060336481726736e-21,
+            2.40048872491059e-12
+          ],
+          "inverse_gross_resolved_zero": false,
+          "conditional_neutral": 1.3355753830054284e-09,
+          "joint_mesh_defect": 1.7108536809473662e-13,
+          "ratios_to_same_q_at_k_point0015": [
+            0.0021652869653772757,
+            0.0011166676969475598,
+            0.0021652869680929433
+          ]
+        },
+        {
+          "k": 0.0015,
+          "q": 3.5e-06,
+          "forward_parent_cap_cosine_fraction": 1.0,
+          "reverse_daughter_cap_cosine_fraction": 1.0,
+          "coefficients": [
+            0.0018985241307146394,
+            3.3280591185347072e-12,
+            0.0018985241273865772
+          ],
+          "inverse_gross_resolved_zero": false,
+          "conditional_neutral": 1.7529717271046555e-09,
+          "joint_mesh_defect": 6.5503158452884236e-15,
+          "ratios_to_same_q_at_k_point0015": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "k": 0.0015,
+          "q": 1.5e-05,
+          "forward_parent_cap_cosine_fraction": 1.0,
+          "reverse_daughter_cap_cosine_fraction": 0.7320908891750628,
+          "coefficients": [
+            1.1086238297741608e-09,
+            2.8710722598463717e-18,
+            1.108623826903091e-09
+          ],
+          "inverse_gross_resolved_zero": false,
+          "conditional_neutral": 2.589762361383329e-09,
+          "joint_mesh_defect": 7.993605777301127e-15,
+          "ratios_to_same_q_at_k_point0015": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "independent_base_point_max_relative_defects": {
+        "3.5e-06": 2.731148640577885e-14,
+        "1.5e-05": 6.228351168147128e-14
+      }
+    }
+  ],
+  "scope": "Only twelve discrete (grid,k,q) diagnostics on the retained spectra. No interpolation, k/q integration, or physical net source assumed."
+}
