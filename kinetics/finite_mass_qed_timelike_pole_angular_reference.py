@@ -51,15 +51,16 @@ def angular_knots(ch,k,w,es,qscalar=Q,*,allow_sum_boundaries=False):
     return np.unique(np.clip(np.r_[-1.,1.,ce,past],-1.,1.)),defect
 
 
-def angle(ch,k,w,R,es,name,order,inner,qscalar=Q,*,allow_future_spacelike=False):
+def angle(ch,k,w,R,es,name,order,inner,qscalar=Q,*,allow_future_spacelike=False,occupation_callbacks=None):
     bins,defect=angular_knots(ch,k,w,es,qscalar,allow_sum_boundaries=allow_future_spacelike)
     x,v=roots_legendre(order)
     counts=np.zeros(3,dtype=int)
     A=np.zeros(3)
     for a,b in zip(bins[:-1],bins[1:],strict=True):
         for u,z in zip((a+b)/2+(b-a)*x/2,(b-a)*v/4,strict=True):
+            kwargs={} if occupation_callbacks is None else {'occupation_callbacks':occupation_callbacks}
             C,_,_=radial(ch,k,w,R,es,u,name,*inner,qscalar=qscalar,
-                         allow_future_spacelike=allow_future_spacelike)
+                         allow_future_spacelike=allow_future_spacelike,**kwargs)
             counts[0]+=C[0]>0
             counts[1]+=C[1]>0
             counts[2]+=(C[0]>0)&(C[1]==0)

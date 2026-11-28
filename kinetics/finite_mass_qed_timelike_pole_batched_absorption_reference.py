@@ -57,7 +57,7 @@ def spacelike_parent_minimum(M,m,t,v,s):
 
 
 def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=Q,
-           *,allow_future_spacelike=False):
+           *,allow_future_spacelike=False,occupation_callbacks=None):
     P,F=ch
     M,m=P.m,F.m
     T=np.array([es-w,qscalar*np.sqrt((1-c)*(1+c)),0.,qscalar*c-k])
@@ -114,8 +114,17 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=
             B=norm_spinors(P0,B0,M,m,full_vertex(P0,B0,K,M,m,u))
             max_def=max(max_def,float(np.sum(abs(A-B))/np.sum(B)))
         integral=integral+A.mean(axis=-1)
-    e_int=((b-a)/2)*((integral.reshape(-1,n))@h)*R/v
-    C=np.asarray([ff*(1-gg),gg*(1-ff),ff-gg])@e_int
+    if occupation_callbacks is None:
+        e_int=((b-a)/2)*((integral.reshape(-1,n))@h)*R/v
+        C=np.asarray([ff*(1-gg),gg*(1-ff),ff-gg])@e_int
+    else:
+        # A number/energy-conserving continuum reconstruction carries
+        # occupation variation *inside* each of the same support panels.
+        fp,fb=[fn(z) for fn,z in zip(occupation_callbacks,(e,e-t),strict=True)]
+        if fp.shape!=e.shape or fb.shape!=e.shape or np.min([fp.min(),fb.min()])<0 or np.max([fp.max(),fb.max()])>1:
+            raise ArithmeticError('Continuum charged occupation left its Pauli domain')
+        w0=(((b-a)/2)[:,None]*h).ravel()*integral*R/v
+        C=np.asarray([fp*(1-fb),fb*(1-fp),fp-fb])@w0
     if min(C[:2])<0 or abs(C[0]-C[1]-C[2])>5e-13*max(C[:2]):
         raise ArithmeticError('Impossible signed population support')
     return C,True,max_def
