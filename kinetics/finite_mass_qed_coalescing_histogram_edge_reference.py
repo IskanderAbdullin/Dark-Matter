@@ -25,7 +25,7 @@ def weight(y,w,b):
     return (w[0]-w[1])*cumulative(y,b)+w[1]*2*np.pi
 
 
-def actual(d,g,h,eta,e):
+def actual(d,g,h,eta,e,*,halfwidths=()):
     k,c=.0008,.25
     Es=np.hypot(Q,d['checkpoints'][-1]['scalar_pole_over_T'])
     omega=(h*e/2+Q*k*c)/Es
@@ -69,6 +69,11 @@ def actual(d,g,h,eta,e):
     convert=h*h/(h*h+4)
     xs,ws=roots_legendre(50)
     guards=np.unique(np.sort(np.r_[-320,320,eta, np.linspace(-8, h+8,12),-64,-24,h+24,h+64]))
+    if halfwidths:
+        if not all(0 < w < 50 for w in halfwidths):
+            raise ValueError("Smoothing support must lie inside the diagnostic window")
+        guards=np.unique(np.r_[guards, [eta+sign*w for w in halfwidths for sign in (-1,1)]])
+    smoothed=np.zeros((len(halfwidths),2,2))  # width, profile, sign
     vals=np.zeros(2)
     for a,b in zip(guards[:-1],guards[1:],strict=True):
         for x,wj in zip((a+b)/2+(b-a)*xs/2,(b-a)*ws/2,strict=True):
@@ -76,17 +81,25 @@ def actual(d,g,h,eta,e):
             if f!=[lower,upper][int(x>eta)]:
                 raise ArithmeticError('Numerical integral crossed a second histogram edge')
             m0=A/(x+1j)
-            vals+=wj*(J*f/(norm*mean))*np.array([np.sum(abs(m0+B/(draw-x+1j))**2),
-                                                  np.sum(abs(m0+B/(draw-x-1j))**2)])
+            norms=np.array([np.sum(abs(m0+B/(draw-x+1j))**2),
+                            np.sum(abs(m0+B/(draw-x-1j))**2)])
+            vals+=wj*(J*f/(norm*mean))*norms
+            for index,w in enumerate(halfwidths):
+                z=max(0.,min(1.,.5+(x-eta)/(2*w)))
+                smooth_weights=W[0]+(W[1]-W[0])*np.array([z,z*z*(3-2*z)])
+                smoothed[index]+=wj*(J/norm)*smooth_weights[:,None]*norms[None,:]
     pred=np.array([analytic,analytic*convert])
     E=float(max(abs(vals-pred)))
     if E>7e-4:
         raise ArithmeticError(('Joint scaling at actual edge',g,h,eta,e,vals,pred,diff))
-    return dict(grid=g,separation_in_widths=h,edge_displacement_in_widths=eta,width=e,
+    row=dict(grid=g,separation_in_widths=h,edge_displacement_in_widths=eta,width=e,
                 physical_k=k,physical_omega=omega,edge_parent_energy=ref,azimuth=ph,
                 normalized_step_weights=W.tolist(),relative_residue_difference_squared=diff,
                 actual_same_and_opposite_imag_sign=vals.tolist(),joint_limit=pred.tolist(),
                 maximum_joint_deviation_absolute=E)
+    if halfwidths:
+        row["smoothed_spinor_integrals"]=smoothed.tolist()
+    return row
 
 
 def run():
