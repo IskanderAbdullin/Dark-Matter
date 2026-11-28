@@ -1,0 +1,69 @@
+{
+  "accepted_band_receipt_sha256": "90a58669c6781a78feba04c90f2b51fe1c094018437b8fe8f293971033f1578a",
+  "q_band": [
+    1e-06,
+    1.5e-05
+  ],
+  "fine_and_third_native_scalar_masses": [
+    0.0008729364825319565,
+    0.0008686630429680542
+  ],
+  "native_minus_fine_mass_relative": -0.004895475958923257,
+  "band_speed_results": {
+    "forward_number": {
+      "shared_mass_speed_difference": [
+        -0.00038771355024677656,
+        -1.6129711041753397e-05
+      ],
+      "native_mass_speed_difference": [
+        -0.000367027299600144,
+        5.309160799984655e-06
+      ],
+      "third_mass_correction_only": [
+        2.0686250646632706e-05,
+        2.1438871841738154e-05
+      ],
+      "signed_order": [
+        "third_lower",
+        "unresolved"
+      ]
+    },
+    "inverse_number": {
+      "shared_mass_speed_difference": [
+        -0.00038786587981139587,
+        -1.6049180509616554e-05
+      ],
+      "native_mass_speed_difference": [
+        -0.00036712376281230856,
+        5.446612384795747e-06
+      ],
+      "third_mass_correction_only": [
+        2.0742116999087287e-05,
+        2.149579289441272e-05
+      ],
+      "signed_order": [
+        "third_lower",
+        "unresolved"
+      ]
+    },
+    "forward_excess": {
+      "shared_mass_speed_difference": [
+        -0.00041400275349342316,
+        -3.612785855748677e-05
+      ],
+      "native_mass_speed_difference": [
+        -0.0003919243470698018,
+        -1.326897049331189e-05
+      ],
+      "third_mass_correction_only": [
+        2.2078406423621907e-05,
+        2.285888806417491e-05
+      ],
+      "signed_order": [
+        "third_lower",
+        "third_lower"
+      ]
+    }
+  },
+  "scope": "Mean speed proxy for two held chart masses only. No speed ordering beyond the measured q band, kinetic history, or observable abundance inferred."
+}
