@@ -14,7 +14,7 @@ from early_pole_endpoint_warm_pressure_cells import partition
 
 
 def run(native, native_chain, reports6, states6, reports7, states7, *, levels=(6,7)):
-    if tuple(levels) not in ((6,7),(7,8)):
+    if tuple(levels) not in ((6,7),(7,8),(8,9)):
         raise ArithmeticError('Expected adjacent independently evolved positive orders')
     n=len(native)
     if not 1<=n<=len(EPOCHS) or any(len(x)!=n for x in (reports6,states6,reports7,states7)):
