@@ -1,0 +1,117 @@
+{
+  "scope": "Timelike pole kinematics and bare denominators only; no cut matching or rate.",
+  "data": [
+    {
+      "grid": "fine",
+      "transverse_floors": [
+        {
+          "mass": 0.05,
+          "plus_uniform_floor": 0.0001691544823233924,
+          "minus_magnitude_uniform_floor": 0.00016361761876040613
+        },
+        {
+          "mass": 0.003,
+          "plus_uniform_floor": 1.27515948140071e-05,
+          "minus_magnitude_uniform_floor": 7.21473125102081e-06
+        }
+      ],
+      "comoving_sharpness_max_rel": 2.220446049250313e-16,
+      "direct_dot_absolute_defect_in_m_mu_units": 7.314483430010358e-10,
+      "direct_checks": 1728,
+      "longitudinal_light_cone_examples": [
+        {
+          "m": 0.05,
+          "beta": 0.98,
+          "mu": 0.0006768682007809286,
+          "comoving_minus_magnitude": 6.722866951686445e-05
+        },
+        {
+          "m": 0.05,
+          "beta": 0.999,
+          "mu": 0.00021202620722528766,
+          "comoving_minus_magnitude": 2.1157665609978427e-05
+        },
+        {
+          "m": 0.05,
+          "beta": 0.99999,
+          "mu": 2.5297366866903598e-05,
+          "comoving_minus_magnitude": 2.5290967299199616e-06
+        },
+        {
+          "m": 0.003,
+          "beta": 0.98,
+          "mu": 0.0006768682007809286,
+          "comoving_minus_magnitude": 3.603058643457161e-06
+        },
+        {
+          "m": 0.003,
+          "beta": 0.999,
+          "mu": 0.00021202620722528766,
+          "comoving_minus_magnitude": 1.2272021308013855e-06
+        },
+        {
+          "m": 0.003,
+          "beta": 0.99999,
+          "mu": 2.5297366866903598e-05,
+          "comoving_minus_magnitude": 1.5114424443102288e-07
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "transverse_floors": [
+        {
+          "mass": 0.05,
+          "plus_uniform_floor": 0.00016929650760979118,
+          "minus_magnitude_uniform_floor": 0.00016375049239904685
+        },
+        {
+          "mass": 0.003,
+          "plus_uniform_floor": 1.2764417605637313e-05,
+          "minus_magnitude_uniform_floor": 7.218402394892968e-06
+        }
+      ],
+      "comoving_sharpness_max_rel": 2.220446049250313e-16,
+      "direct_dot_absolute_defect_in_m_mu_units": 1.1624460492665462e-09,
+      "direct_checks": 1728,
+      "longitudinal_light_cone_examples": [
+        {
+          "m": 0.05,
+          "beta": 0.98,
+          "mu": 0.0006774290808981973,
+          "comoving_minus_magnitude": 6.728399793017316e-05
+        },
+        {
+          "m": 0.05,
+          "beta": 0.999,
+          "mu": 0.00021219956728107665,
+          "comoving_minus_magnitude": 2.1174928071753387e-05
+        },
+        {
+          "m": 0.05,
+          "beta": 0.99999,
+          "mu": 2.531228080553057e-05,
+          "comoving_minus_magnitude": 2.5305873689934793e-06
+        },
+        {
+          "m": 0.003,
+          "beta": 0.98,
+          "mu": 0.0006774290808981973,
+          "comoving_minus_magnitude": 3.605664325742608e-06
+        },
+        {
+          "m": 0.003,
+          "beta": 0.999,
+          "mu": 0.00021219956728107665,
+          "comoving_minus_magnitude": 1.2281687473321838e-06
+        },
+        {
+          "m": 0.003,
+          "beta": 0.99999,
+          "mu": 2.531228080553057e-05,
+          "comoving_minus_magnitude": 1.512329732736054e-07
+        }
+      ]
+    }
+  ]
+}
