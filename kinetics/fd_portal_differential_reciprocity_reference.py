@@ -8,7 +8,7 @@ from scipy.special import expit
 from positive_fd_portal_quadrature_reference import PositivePortal, rule, leptons
 
 
-def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.,return_secant=False):
+def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.,return_secant=False,return_frozen_activity=False):
     """At fixed Ts, coordinates are 2 eta and 1 - Ts / Td."""
     if not Ts>0. or not beta<1. or not np.all(np.isfinite([Ts,alpha,beta])):
         raise ValueError('Need finite positive local temperature and admissible force')
@@ -72,6 +72,14 @@ def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.,
     if np.min(D)<=0. or f[2]<0. or abs(D[0,1]-D[1,0]-antisymmetric)>3e-14*np.max(D):
         raise ArithmeticError('Derivative positivity, entropy, or direct antisymmetry failed')
     base=f,D,antisymmetric,np.array([np.sum(L*B),np.sum(L*B*pair)])
+    if return_frozen_activity:
+        activity=I*np.exp((alpha-(2-beta)*pair)/2)
+        # Differentiate the activity with respect to the actual state,
+        # separately from its fixed-state test-force potential.
+        physical_bias=np.array([[(np.sum(diff*(.5*I+J)*pair**i)),
+                                 (np.sum(diff*(.5*I*pair+K)*pair**i))]
+                                for i in (0,1)])
+        return (*base,pair,activity,physical_bias)
     if not return_secant:
         return base
     # Antisymmetry of the derivative is compatible with a symmetric,
