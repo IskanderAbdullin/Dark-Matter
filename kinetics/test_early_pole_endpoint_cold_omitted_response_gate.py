@@ -1,6 +1,7 @@
+from itertools import product
 import unittest
 
-from early_pole_endpoint_cold_omitted_response_gate import break_order,tv_interval
+from early_pole_endpoint_cold_omitted_response_gate import break_order,tv_interval,worst_rank_gap
 
 
 class OmittedResponse(unittest.TestCase):
@@ -19,6 +20,16 @@ class OmittedResponse(unittest.TestCase):
             v=tv_interval(b,c,t,t)[1]
             self.assertAlmostEqual(v-u,1.2*delta)
             self.assertEqual((v-u>1e-15)-(v-u<-1e-15),s)
+
+    def test_adversarial_unequal_caps_are_bounded_by_shared_witness(self):
+        a,b,c=[.55,.15,.30],[.12,.53,.35],[.18,.43,.39]
+        for cap in (.01,.15,.45,.94):
+            worst=worst_rank_gap(a,b,c,cap)
+            for e,f,g in product((0.,cap/5.,cap/2.,cap),repeat=3):
+                x=tv_interval(a,b,e,f)[0]
+                y=tv_interval(b,c,f,g)[1]
+                self.assertLessEqual(y-x,worst+1e-14)
+
 
     def test_invalid_mass_fraction_rejected(self):
         with self.assertRaises(ArithmeticError):

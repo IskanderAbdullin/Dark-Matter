@@ -41,6 +41,7 @@
           ],
           "cold_native_tv_decrease": 0.015723694961424124,
           "minimum_common_outside_fraction_to_erase_contraction": 0.01548028764064748,
+          "minimum_per_chart_omitted_fraction_cap_for_possible_reversal": 0.01548028764064748,
           "matched_distance_with_worst_outside_shapes": 0.019926871470148738
         },
         {
@@ -51,6 +52,7 @@
           ],
           "cold_native_tv_decrease": 0.0034082673547073776,
           "minimum_common_outside_fraction_to_erase_contraction": 0.0033966905252760357,
+          "minimum_per_chart_omitted_fraction_cap_for_possible_reversal": 0.0033966905252760357,
           "matched_distance_with_worst_outside_shapes": 0.004501159402606482
         }
       ],
@@ -108,6 +110,7 @@
           ],
           "cold_native_tv_decrease": 0.015714230126135837,
           "minimum_common_outside_fraction_to_erase_contraction": 0.015471113488470446,
+          "minimum_per_chart_omitted_fraction_cap_for_possible_reversal": 0.015471113488470446,
           "matched_distance_with_worst_outside_shapes": 0.01991272150288647
         },
         {
@@ -118,6 +121,7 @@
           ],
           "cold_native_tv_decrease": 0.0034043855413139253,
           "minimum_common_outside_fraction_to_erase_contraction": 0.0033928350228181795,
+          "minimum_per_chart_omitted_fraction_cap_for_possible_reversal": 0.0033928350228181795,
           "matched_distance_with_worst_outside_shapes": 0.0044960980138140805
         }
       ],
@@ -175,6 +179,7 @@
           ],
           "cold_native_tv_decrease": 0.014707525501982028,
           "minimum_common_outside_fraction_to_erase_contraction": 0.014494349487263462,
+          "minimum_per_chart_omitted_fraction_cap_for_possible_reversal": 0.014494349487263462,
           "matched_distance_with_worst_outside_shapes": 0.018799870649410293
         },
         {
@@ -185,6 +190,7 @@
           ],
           "cold_native_tv_decrease": 0.0032828567058580333,
           "minimum_common_outside_fraction_to_erase_contraction": 0.003272114821773038,
+          "minimum_per_chart_omitted_fraction_cap_for_possible_reversal": 0.003272114821773038,
           "matched_distance_with_worst_outside_shapes": 0.004354549362861584
         }
       ],
@@ -228,5 +234,5 @@
       ]
     }
   },
-  "scope": "Worst-case algebra for arbitrary exterior response. Common missing fraction for shape ranks is hypothetical; not measured tail masses, physical response or conditional profile optimum."
+  "scope": "Worst-case algebra for arbitrary exterior response. Analytical cap on each unknown omitted fraction, not measured tail masses, physical response or conditional profile optimum."
 }

@@ -23,6 +23,19 @@ def break_order(d_prev,d_next):
     return change/(1+change)
 
 
+def worst_rank_gap(p,q,r,cap):
+    """Maximum next TV minus previous TV if each omitted fraction is at most cap.
+
+    At fixed middle fraction f, the smallest possible first distance has its
+    left fraction equal to f. The next upper bound is nondecreasing in both
+    of its fractions. Thus the simultaneous extreme takes all fractions=cap,
+    with the first two exterior shapes identical and the third disjoint.
+    """
+    first=tv_interval(p,q,cap,cap)[0]
+    second=tv_interval(q,r,cap,cap)[1]
+    return second-first
+
+
 def run(card):
     if card['levels']!=[2,4,8,16] or len(card['common_q_edges'])!=18:
         raise ArithmeticError('Use the published common 17-bin raw spatial profiles')
@@ -56,11 +69,13 @@ def run(card):
             e=break_order(x,y)
             lower=tv_interval(profiles[i],profiles[i+1],e,e)[0]
             upper=tv_interval(profiles[i+1],profiles[i+2],e,e)[1]
-            if abs(upper-lower)>1e-14:
+            rank=worst_rank_gap(*profiles[i:i+3],e)
+            if max(abs(upper-lower),abs(rank))>1e-14:
                 raise ArithmeticError('Disjoint-versus-identical exterior witnesses did not meet')
             rows.append(dict(spatial_levels=card['levels'][i:i+3],
                              cold_native_tv_decrease=x-y,
                              minimum_common_outside_fraction_to_erase_contraction=e,
+                             minimum_per_chart_omitted_fraction_cap_for_possible_reversal=e,
                              matched_distance_with_worst_outside_shapes=lower))
         amp=[]
         for i in range(3):
@@ -72,7 +87,7 @@ def run(card):
                             extra_outside_response_relative_to_coarser_cold=(a-b)/a))
         results[field]=dict(cold_native_tv=known,shape_order_limits=rows,absolute_band_order_limits=amp)
     return dict(levels=card['levels'],common_q_edges=card['common_q_edges'],results=results,
-                scope='Worst-case algebra for arbitrary exterior response. Common missing fraction for shape ranks is hypothetical; not measured tail masses, physical response or conditional profile optimum.')
+                scope='Worst-case algebra for arbitrary exterior response. Analytical cap on each unknown omitted fraction, not measured tail masses, physical response or conditional profile optimum.')
 
 
 if __name__=='__main__':
