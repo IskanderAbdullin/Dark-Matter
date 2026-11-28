@@ -10,7 +10,7 @@ from early_pole_endpoint_stencil_remap_pilot import LABELS,SPECS,archives,load,p
 from early_pole_live_parent_energy_reference import state_moments
 
 
-def chart(d,x,m,order):
+def chart(d,x,m,order,*,histogram_cuts=False):
     Es=np.hypot(m,d.d.p)
     Ep=d.parent_energies(x)
     Ed=d.daughter_energies(x)
@@ -28,6 +28,10 @@ def chart(d,x,m,order):
     valid=left<right
     clip_right=np.maximum(left,right)
     nt=np.concatenate((np.broadcast_to(Ep,(d.ns,len(Ep))),Es[:,None]+Ed),axis=1)
+    if histogram_cuts:
+        exact_ep=np.hypot(d.pe,x)
+        exact_ed=np.hypot(d.d.fed,mb)
+        nt=np.column_stack([nt,np.broadcast_to(exact_ep,(d.ns,len(exact_ep))),Es[:,None]+exact_ed])
     raw=np.sort(np.column_stack([left,right,np.clip(nt,left[:,None],clip_right[:,None])]),axis=1)
     low,high=raw[:,:-1],raw[:,1:]
     si,slot=np.where((high>low)&valid[:,None])

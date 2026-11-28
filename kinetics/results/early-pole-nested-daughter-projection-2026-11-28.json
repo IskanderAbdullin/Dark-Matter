@@ -1,0 +1,280 @@
+[
+  {
+    "grid": "fine",
+    "preconditioning_arm_order": [
+      "both_exact_steps",
+      "parent_smoothed",
+      "daughter_smoothed",
+      "both_smoothed"
+    ],
+    "levels": [
+      {
+        "level": 0,
+        "daughter_cells": 112,
+        "gross_forward_and_inverse": [
+          [
+            6.106110175986744,
+            1.6878451225876268
+          ],
+          [
+            5.672875022432651,
+            1.7059525465333567
+          ],
+          [
+            5.988304694937356,
+            2.180505106443574
+          ],
+          [
+            5.563329818660615,
+            2.203539686401978
+          ]
+        ],
+        "net_clocks": [
+          4.418265053399118,
+          3.966922475899294,
+          3.807799588493782,
+          3.359790132258637
+        ],
+        "last_quadrature_difference": 1.965094753586527e-13,
+        "quadrature_events": 91784,
+        "maximum_relative_event_energy_error": 4.630011039326626e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.02260188740632385
+      },
+      {
+        "level": 1,
+        "daughter_cells": 224,
+        "gross_forward_and_inverse": [
+          [
+            6.106110545940977,
+            1.687845122587653
+          ],
+          [
+            5.6728753940119425,
+            1.705952546533383
+          ],
+          [
+            6.034388398152712,
+            1.966656878589863
+          ],
+          [
+            5.606682908490136,
+            1.9878178147132508
+          ]
+        ],
+        "net_clocks": [
+          4.418265423353324,
+          3.9669228474785596,
+          4.06773151956285,
+          3.618865093776885
+        ],
+        "last_quadrature_difference": 7.098766019453251e-13,
+        "quadrature_events": 143800,
+        "maximum_relative_event_energy_error": 4.3585736337072014e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.009127757762974142
+      },
+      {
+        "level": 2,
+        "daughter_cells": 448,
+        "gross_forward_and_inverse": [
+          [
+            6.106110715780957,
+            1.687845122587659
+          ],
+          [
+            5.6728755640346815,
+            1.7059525465333893
+          ],
+          [
+            6.076713050912946,
+            1.7843544710218864
+          ],
+          [
+            5.646011209650838,
+            1.8036107357510955
+          ]
+        ],
+        "net_clocks": [
+          4.418265593193299,
+          3.9669230175012924,
+          4.29235857989106,
+          3.842400473899742
+        ],
+        "last_quadrature_difference": 3.5726976932437537e-13,
+        "quadrature_events": 247424,
+        "maximum_relative_event_energy_error": 4.3781784520095845e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.0029359013654703947
+      },
+      {
+        "level": 3,
+        "daughter_cells": 896,
+        "gross_forward_and_inverse": [
+          [
+            6.106110775021675,
+            1.6878451225876605
+          ],
+          [
+            5.6728756235544315,
+            1.7059525465333907
+          ],
+          [
+            6.0967608677949805,
+            1.7002269041405123
+          ],
+          [
+            5.664355937647181,
+            1.7184356167908876
+          ]
+        ],
+        "net_clocks": [
+          4.418265652434015,
+          3.9669230770210406,
+          4.396533963654468,
+          3.945920320856293
+        ],
+        "last_quadrature_difference": 1.7430501486614958e-13,
+        "quadrature_events": 454240,
+        "maximum_relative_event_energy_error": 4.5534546688647065e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.0007090265819754693
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "preconditioning_arm_order": [
+      "both_exact_steps",
+      "parent_smoothed",
+      "daughter_smoothed",
+      "both_smoothed"
+    ],
+    "levels": [
+      {
+        "level": 0,
+        "daughter_cells": 156,
+        "gross_forward_and_inverse": [
+          [
+            6.686098745662695,
+            3.015617388175216
+          ],
+          [
+            5.879065256050602,
+            3.0702740121463123
+          ],
+          [
+            6.828369546132028,
+            0.6879476584997744
+          ],
+          [
+            6.000516865493307,
+            0.6960437593418359
+          ]
+        ],
+        "net_clocks": [
+          3.6704813574874784,
+          2.8087912439042895,
+          6.140421887632254,
+          5.304473106151471
+        ],
+        "last_quadrature_difference": 3.1802671607294997e-09,
+        "quadrature_events": 190696,
+        "maximum_relative_event_energy_error": 4.3724245992821147e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.015021705762353066
+      },
+      {
+        "level": 1,
+        "daughter_cells": 312,
+        "gross_forward_and_inverse": [
+          [
+            6.686098993422331,
+            3.01561738817524
+          ],
+          [
+            5.879065504402695,
+            3.070274012146337
+          ],
+          [
+            6.757364166582534,
+            1.5766117063592229
+          ],
+          [
+            5.9379946325749495,
+            1.5936252857834836
+          ]
+        ],
+        "net_clocks": [
+          3.670481605247091,
+          2.808791492256358,
+          5.180752460223312,
+          4.344369346791466
+        ],
+        "last_quadrature_difference": 3.3191811543709093e-07,
+        "quadrature_events": 295160,
+        "maximum_relative_event_energy_error": 4.411571758050875e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.005532334926763971
+      },
+      {
+        "level": 2,
+        "daughter_cells": 624,
+        "gross_forward_and_inverse": [
+          [
+            6.686099095940809,
+            3.0156173881752455
+          ],
+          [
+            5.879065606868063,
+            3.070274012146343
+          ],
+          [
+            6.707392391590465,
+            2.3013066441069934
+          ],
+          [
+            5.896614960472979,
+            2.339657157481673
+          ]
+        ],
+        "net_clocks": [
+          3.670481707765563,
+          2.80879159472172,
+          4.406085747483472,
+          3.556957802991306
+        ],
+        "last_quadrature_difference": 1.1138119204723296e-07,
+        "quadrature_events": 503496,
+        "maximum_relative_event_energy_error": 4.64641488831236e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.0015412469047659805
+      },
+      {
+        "level": 3,
+        "daughter_cells": 1248,
+        "gross_forward_and_inverse": [
+          [
+            6.686099126779653,
+            3.0156173881752473
+          ],
+          [
+            5.879065637692685,
+            3.0702740121463443
+          ],
+          [
+            6.689571316714967,
+            2.660940514661646
+          ],
+          [
+            5.881726287546442,
+            2.70810206437274
+          ]
+        ],
+        "net_clocks": [
+          3.6704817386044057,
+          2.8087916255463408,
+          4.028630802053321,
+          3.1736242231737024
+        ],
+        "last_quadrature_difference": 4.8755766757224706e-08,
+        "quadrature_events": 919888,
+        "maximum_relative_event_energy_error": 4.4403223465849327e-16,
+        "omitted_fraction_for_thermal_parent_seed": 0.0003183461216077488
+      }
+    ]
+  }
+]
