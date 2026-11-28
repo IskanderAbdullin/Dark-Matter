@@ -1,0 +1,72 @@
+{
+  "x": 0.05,
+  "k": 0.0015,
+  "conditional_coefficients": [
+    "forward_number",
+    "inverse_number",
+    "affine_slope"
+  ],
+  "results": [
+    {
+      "scalar_subcells": 2,
+      "original_and_alternate_state_sha256": [
+        "ccd47774094abd22a75a17223cad61cdd148ff58f641de5ee2b35984e046e90a",
+        "9bc68d9ce2751d81ea3c481065ff1c540606c78b361b8ffbeff149f49b9e7abf"
+      ],
+      "original_coarse_recovery_state_sha256": "1cf58586eb42ab7255e6992dcc7f65d224a4663189d0dce35a54a1095f51adb0",
+      "scalar_band_normalized_TV": 3.7464176399285975e-06,
+      "scalar_band_count_alternate_over_original_minus_one": -5.1505529583550924e-05,
+      "rows": [
+        {
+          "q": 3.5e-06,
+          "alternate_over_original_minus_one": [
+            -0.004607847153512923,
+            -0.005012404408911708,
+            -0.00460784715233753
+          ],
+          "maximum_paired_mesh_defect": 3.1652458432063213e-13
+        },
+        {
+          "q": 4.7e-06,
+          "alternate_over_original_minus_one": [
+            -0.004526037351601286,
+            -0.004894646306677797,
+            -0.004526037350507162
+          ],
+          "maximum_paired_mesh_defect": 7.404077351225169e-13
+        }
+      ]
+    },
+    {
+      "scalar_subcells": 4,
+      "original_and_alternate_state_sha256": [
+        "cd4d6b834aab835535e64ececa68468224f79902c848e9c2c03fae6eb97e3688",
+        "ec48c081e6653fc56c73b7e0d7f8d0dc501ae7235b80e559cd19b2def704f422"
+      ],
+      "original_coarse_recovery_state_sha256": "b050ade5ce2bcf261456cf4e88e076c9a61cdaefea866b93e1bc9b15c3876c5b",
+      "scalar_band_normalized_TV": 5.1748651727881545e-06,
+      "scalar_band_count_alternate_over_original_minus_one": -5.091573394566673e-05,
+      "rows": [
+        {
+          "q": 3.5e-06,
+          "alternate_over_original_minus_one": [
+            -0.0045457876378381945,
+            -0.0049457509177665004,
+            -0.004545787636676235
+          ],
+          "maximum_paired_mesh_defect": 3.9035441545820504e-13
+        },
+        {
+          "q": 4.7e-06,
+          "alternate_over_original_minus_one": [
+            -0.004468080780013706,
+            -0.004832494294609968,
+            -0.0044680807789324595
+          ],
+          "maximum_paired_mesh_defect": 5.797584634592567e-13
+        }
+      ]
+    }
+  ],
+  "scope": "Same terminal clock with prior .02\u2013.04 timing changed. Point-only response, not a q-integrated or complete history error estimate."
+}
