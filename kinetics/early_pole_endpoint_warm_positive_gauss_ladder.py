@@ -6,6 +6,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.linalg import eigh
+from scipy.special import roots_legendre
 
 from early_pole_endpoint_scalar_subshell_pilot import ScalarSubshellChart
 from early_pole_endpoint_scalar_subshell_spectrum_audit import read
@@ -14,25 +15,49 @@ from early_pole_endpoint_stencil_remap_pilot import SPECS,load
 from early_pole_endpoint_warm_source_cells import local
 
 
+def orthogonal_volume_gauss(a,b,p):
+    """Use bounded orthogonal polynomials instead of nearly collinear monomials."""
+    z,W=roots_legendre(p+2)
+    t=(1+z)/2
+    P=np.polynomial.legendre.legvander(z,p-1)*np.sqrt(2*np.arange(p)+1)
+    A,D=a/b,(b-a)/b
+    q=[]
+    g=[]
+    for u,v in zip(A,D,strict=True):
+        rho=W*(u+v*t)**2
+        rho/=rho.sum()
+        B=(P.T*rho)@P
+        X=(P.T*(rho*t))@P
+        nodes,vec=eigh(X,B)
+        weight=(B[0]@vec)**2
+        q.append(nodes)
+        g.append(weight)
+    return np.array(q),np.array(g)
+
+
 def volume_gauss(a,b,p):
     """Work on u=(q-a)/(b-a): H and X are the volume Gram and multiplication matrices."""
     a,b=np.asarray(a),np.asarray(b)
-    if a.ndim!=1 or a.shape!=b.shape or not np.all(np.isfinite([a,b])) or np.min(a)<0 or np.any(a>=b) or p not in (2,3,4,5,6):
-        raise ValueError('Use positive finite shells and Gauss orders 2 through 6')
+    if a.ndim!=1 or a.shape!=b.shape or not np.all(np.isfinite([a,b])) or np.min(a)<0 or np.any(a>=b) or p not in (2,3,4,5,6,7,8):
+        raise ValueError('Use positive finite shells and Gauss orders 2 through 8')
     A,H=a/b,(b-a)/b
     t=np.arange(2*p,dtype=float)
     I=(A[:,None]**2/(1+t)+(2*A*H)[:,None]/(2+t)+H[:,None]**2/(3+t))
     I/=I[:,:1].copy()
-    ix=np.arange(p)[None,:]+np.arange(p)[:,None]
-    U=[]
-    W=[]
-    for z in I:
-        B=z[ix]
-        u,v=eigh(z[ix+1],B)
-        w=(B[0]@v)**2
-        U.append(u)
-        W.append(w)
-    u,w=np.array(U),np.array(W)
+    if p>=7:
+        u,w=orthogonal_volume_gauss(a,b,p)
+    else:
+        # Preserve the exact lower-order archives and the originally checked rule.
+        ix=np.arange(p)[None,:]+np.arange(p)[:,None]
+        U=[]
+        W=[]
+        for z in I:
+            B=z[ix]
+            u,v=eigh(z[ix+1],B)
+            w=(B[0]@v)**2
+            U.append(u)
+            W.append(w)
+        u,w=np.array(U),np.array(W)
     if np.any(u<=0) or np.any(u>=1) or np.any(w<=0):
         raise ArithmeticError('A node or weight is not interior and positive')
     err=np.max(abs(np.einsum('ij,ijk->ik',w,u[:,:,None]**t)/I-1))

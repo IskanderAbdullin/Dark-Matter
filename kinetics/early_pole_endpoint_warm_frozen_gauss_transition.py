@@ -13,7 +13,7 @@ from early_pole_endpoint_warm_source_cells import local
 
 
 def run(card,ref,through=5):
-    if through not in (5,6):
+    if through not in (5,6,7,8):
         raise ArithmeticError('Use the original or one higher positive quadrature')
     x=card['x_end']
     a,y=unpack(card,False,x)
@@ -69,6 +69,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('state',type=Path)
     p.add_argument('reference',type=Path)
-    p.add_argument('--through',type=int,choices=(5,6),default=5)
+    p.add_argument('--through',type=int,choices=(5,6,7,8),default=5)
     a=p.parse_args()
     print(json.dumps(run(read(a.state),read(a.reference),a.through),indent=2,allow_nan=False))
