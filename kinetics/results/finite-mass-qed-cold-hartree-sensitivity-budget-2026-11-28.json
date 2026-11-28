@@ -1,0 +1,86 @@
+{
+  "scope": "Frozen Hartree bookkeeping and local conditional sensitivity, not an evolved remesh.",
+  "common_count_over_T3": 0.017048932347272363,
+  "counts_ratio": 1.0167477053921499,
+  "relative_step_mass_difference": 0.005551341057062009,
+  "common_count_relative_step_mass_difference": -3.852104558665914e-07,
+  "cases": {
+    "fine": {
+      "archived_mass": 0.0008720559389048312,
+      "scalar_total_number_over_T3": 0.017334462843475167,
+      "extra_vacuum_mass": 5.000000000000001e-11,
+      "exact_step_gap_mass": 0.0008720556904180599,
+      "common_count_step_gap_mass": 0.0008672410039017626,
+      "exact_step_minus_native_relative": -2.8494361453339697e-07,
+      "working_density_elasticity": 0.33333561051662136,
+      "tadpole_fraction_q_below_1e_5": 0.9999987906345752
+    },
+    "third": {
+      "archived_mass": 0.0008672414471781534,
+      "scalar_total_number_over_T3": 0.017048932347272356,
+      "extra_vacuum_mass": 5.000000000000001e-11,
+      "exact_step_gap_mass": 0.0008672413379721936,
+      "common_count_step_gap_mass": 0.0008672413379721938,
+      "exact_step_minus_native_relative": -1.259233632901768e-07,
+      "working_density_elasticity": 0.33333539522765737,
+      "tadpole_fraction_q_below_1e_5": 0.9999982051470575
+    }
+  },
+  "archive_checkpoint_ratios": [
+    {
+      "x": 0.0075,
+      "fine_to_third_yield": 0.9962599788745774,
+      "fine_to_third_pole": 0.9986793108973396
+    },
+    {
+      "x": 0.01,
+      "fine_to_third_yield": 1.0002002222541502,
+      "fine_to_third_pole": 1.0000454665786587
+    },
+    {
+      "x": 0.02,
+      "fine_to_third_yield": 1.0008371727418983,
+      "fine_to_third_pole": 1.0002766459953811
+    },
+    {
+      "x": 0.04,
+      "fine_to_third_yield": 1.025233556903537,
+      "fine_to_third_pole": 1.0083411660888366
+    },
+    {
+      "x": 0.05,
+      "fine_to_third_yield": 1.0167477053921488,
+      "fine_to_third_pole": 1.0055515009601343
+    }
+  ],
+  "local_response": [
+    {
+      "q": 3.5e-06,
+      "raw_A_B_D": [
+        1.1451095130001567e-09,
+        3.3156483969032684e-18,
+        1.1451095096845086e-09
+      ],
+      "d_log_coeff_d_log_mass": [
+        274.81353996897235,
+        301.9992137320601,
+        274.81353989081265
+      ],
+      "local_fractional_density_tolerance_for_1_percent_raw_forward": 0.00010862197195859968
+    },
+    {
+      "q": 8.2e-06,
+      "raw_A_B_D": [
+        2.234678267187684e-09,
+        7.197505254370442e-18,
+        2.2346782599901794e-09
+      ],
+      "d_log_coeff_d_log_mass": [
+        249.99756947932565,
+        274.2044684022718,
+        249.99756940116595
+      ],
+      "local_fractional_density_tolerance_for_1_percent_raw_forward": 0.00011940431538804154
+    }
+  ]
+}
