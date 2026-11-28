@@ -11,8 +11,8 @@ from early_pole_endpoint_scalar_subshell_spectrum_audit import read
 def values(card,kind):
     if (card['x_start'],card['x_end'],card['steps'])!=(.04,.05,[1024,2048]):
         raise ArithmeticError('Expected paired last-segment clocks')
-    if kind in ('Gauss','Gauss3'):
-        if card.get('warm_gauss_order',2)!=(3 if kind=='Gauss3' else 2):
+    if kind in ('Gauss','Gauss3','Gauss4'):
+        if card.get('warm_gauss_order',2)!={'Gauss':2,'Gauss3':3,'Gauss4':4}[kind]:
             raise ArithmeticError('Invalid matched warm Gaussian chart')
         x=np.asarray([card['coarse_count_and_pressures'],card['fine_count_and_pressures']])
         declared=np.asarray(card['coarse_over_fine_minus_one'])
@@ -31,7 +31,7 @@ def values(card,kind):
     return x
 
 
-def run(w1,w2,g,w4=None,gauss3=None):
+def run(w1,w2,g,w4=None,gauss3=None,gauss4=None):
     mass=w1['fixed_pressure_mass']
     if not np.isfinite(mass) or mass<=0 or any(card['fixed_pressure_mass']!=mass for card in (w2,g) if card is not None):
         raise ArithmeticError('Not all moments share one fixed pressure mass')
@@ -52,6 +52,14 @@ def run(w1,w2,g,w4=None,gauss3=None):
         pairs.update(Gauss3_over_W1=h/a-1,Gauss3_over_W2=h/b-1,Gauss3_over_Gauss2=h/c-1,Gauss3_over_W4=h/d-1)
         reference=(*reference,h)
         scope='Last-segment time-step contrast on five separately archived warm chart restarts; no full-history error bound.'
+    if gauss4 is not None:
+        if gauss3 is None or gauss4['fixed_pressure_mass']!=mass:
+            raise ArithmeticError('Need all five reference charts and the same mass for Gauss4')
+        j=values(gauss4,'Gauss4')
+        pairs.update(Gauss4_over_W1=j/a-1,Gauss4_over_W2=j/b-1,Gauss4_over_Gauss2=j/c-1,
+                     Gauss4_over_W4=j/d-1,Gauss4_over_Gauss3=j/h-1)
+        reference=(*reference,j)
+        scope='Last-segment time-step contrast on six separately archived warm chart restarts; no full-history error bound.'
     return dict(fixed_mass=mass,columns=('number','pressure','warm_pressure'),steps=(1024,2048),
                 individual_coarse_over_fine_minus_one=[(r[0]/r[1]-1).tolist() for r in reference],
                 same_clock_relative_contrasts={k:v.tolist() for k,v in pairs.items()},
@@ -66,5 +74,6 @@ if __name__=='__main__':
     p.add_argument('gauss',type=Path)
     p.add_argument('--w4',type=Path)
     p.add_argument('--gauss3',type=Path)
+    p.add_argument('--gauss4',type=Path)
     a=p.parse_args()
-    print(json.dumps(run(*map(read,(a.w1,a.w2,a.gauss)),w4=read(a.w4) if a.w4 else None,gauss3=read(a.gauss3) if a.gauss3 else None),indent=2,allow_nan=False))
+    print(json.dumps(run(*map(read,(a.w1,a.w2,a.gauss)),w4=read(a.w4) if a.w4 else None,gauss3=read(a.gauss3) if a.gauss3 else None,gauss4=read(a.gauss4) if a.gauss4 else None),indent=2,allow_nan=False))

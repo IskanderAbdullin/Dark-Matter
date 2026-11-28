@@ -28,3 +28,7 @@ python -W error early_pole_endpoint_warm_gauss_order_contrast.py --levels 3 4 \
   --stress results/early-pole-frozen-stress-sweep-w124-gauss3-$d.json \
            results/early-pole-frozen-stress-sweep-w124-gauss4-$d.json
 ```
+
+## Direct final-interval pressure check
+
+A separate recovery from the exact same archived .04 G4 restart reproduces the checked coarse trace. G4's pressure changes by +2.50375e-7 in relative fraction from the fine to coarse endpoint at the same held measurement mass. After paired comparison with the independently recovered G3 clock, the G4/G3 pressure contrast is −0.12538826% on the coarse clock and −0.12538973% on the fine clock (fine minus coarse = −1.47268e-8 in relative fraction). The final step choice is therefore far too small to account for this numerical pressure difference in this restart check. Earlier clock history was not refined. Reproduce the G4 record with `early_pole_endpoint_gauss_warm_pressure_clock.py` on the archived .04 state, .05 state and paired .05 report along with the common S4 .05 state. Append `--gauss4` with this receipt to `early_pole_endpoint_warm_pressure_clock_contrast.py` after the existing W1/W2/W4/G2/G3 inputs.
