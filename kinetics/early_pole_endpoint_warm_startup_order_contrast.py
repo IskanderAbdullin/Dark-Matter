@@ -1,6 +1,7 @@
 """Compare actual warm quadrature startup endpoints on the same archived clock."""
 import argparse
 import json
+from math import fsum
 from pathlib import Path
 
 import numpy as np
@@ -10,6 +11,7 @@ from early_pole_endpoint_gauss_warm_comparison import gauss
 from early_pole_endpoint_scalar_subshell_chain_receipt import read
 from early_pole_endpoint_scalar_subshell_pilot import ScalarSubshellChart,SPECS,load
 from early_pole_endpoint_targeted_warm_history import audit as targeted_audit
+from early_pole_endpoint_warm_pressure_cells import partition
 
 
 def run(native,native_chain,reports,states):
@@ -25,10 +27,12 @@ def run(native,native_chain,reports,states):
     mass=d.state(x,values)[0]
     labels=('G2','G3','G4','G5','G6','targeted_2xG4')
     rows=[]
+    cells={}
     for label,order,r,s in zip(labels,(None,3,4,5,6,None),reports,states,strict=True):
         a=targeted_audit([r],[s],prefix=True) if label.startswith('target') else gaussian_audit([r],[s],prefix=True,order=order)
         q,_=read(s)
-        z,h,_=gauss(q,d,mass,x,expected_steps=4096)
+        z,h,cell=gauss(q,d,mass,x,expected_steps=4096)
+        cells[label]=cell
         rows.append(dict(chart=label,source=a['checked_epoch_pairs'][0],fixed_mass_count_and_pressures=z.tolist(),
                          conditional_pressure_envelope=h))
     pairs=[]
@@ -40,8 +44,21 @@ def run(native,native_chain,reports,states):
             raise ArithmeticError('Reconstructed startup pressure escaped its joint conditional bracket')
         pairs.append(dict(left=labels[i],right=labels[j],right_over_left_minus_one=(b/a-1.).tolist(),
                           pressure_relative_conditional_bounds=bounds))
+    a,b=[cells[k] for k in ('G5','G6')]
+    p=fsum(a[:,1])
+    z=partition(a,b)/p
+    edges=d.ds.ed
+    total=[fsum(v) for v in z.T]
+    select=np.argsort(-abs(z[:,0]))[:4]
+    gross=fsum(abs(z[:,0]))
+    if abs(total[0]-(fsum(b[:,1])/p-1.))>5e-15 or abs(total[0]-sum(total[1:]))>5e-15 or gross<=0.:
+        raise ArithmeticError('Paired startup cell-pressure partition did not close')
+    attr=dict(component_order=['total','changed_cell_count','changed_pressure_per_particle'],
+              total_relative_to_G5=total,net_over_gross_abs=abs(total[0])/gross,
+              parent_q_edges=edges.tolist(),all_cell_parts=z.tolist(),
+              largest_cells=[dict(q_edges=edges[i:i+2].tolist(),relative_parts=z[i].tolist()) for i in select])
     return dict(x=x,steps=[2048,4096],fixed_mass=mass,native_state_sha256_uncompressed=sha,
-                fields=['count','pressure','warm_pressure'],charts=rows,contrasts=pairs,
+                fields=['count','pressure','warm_pressure'],charts=rows,contrasts=pairs,G6_minus_G5_cell_attribution=attr,
                 scope='Startup only at a fixed mass; this verifies a prefix, not subsequent warm evolution or a physical pressure prediction.')
 
 

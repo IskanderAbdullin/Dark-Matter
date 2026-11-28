@@ -14,6 +14,8 @@ At the single native S4 startup mass, the whole-band pressure numerator changes 
 
 G6 lies between G4 and G5 at this epoch, and the targeted chart lies between G6 and G5. The signs survive the separate positive pressure envelopes conditional on each saved count and mean energy. This is an actual startup evolution comparison, not a frozen derivative and not a test of the later trajectories, continuum convergence, or physical pressure.
 
+The direct cell-by-cell comparison also assigns most of the G6/G5 pressure difference to the same two warm cells used in the targeted rule. Together they contribute −0.082368 percentage points to the net −0.080177%. They slightly over-account for the decrease because other cells offset part of it. Dividing each cell pressure by its own count and symmetrizing the two replacement paths assigns −0.080497 percentage points to changed counts and +0.000320 percentage points to changed pressure per particle. This is a decomposition of two archived endpoint populations, not an intervention on the evolution.
+
 From `kinetics/`:
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
