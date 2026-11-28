@@ -14,7 +14,7 @@ from early_pole_live_bounded_face_extents_pilot import hold_trace
 from early_pole_resolved_parent_reference import S
 
 
-def drive(d,xend,n,*,x_start=X,initial=None):
+def drive(d,xend,n,*,x_start=X,initial=None,stepper=step):
     folds=len(d.wp)//(2*d.d0.np)
     parent=np.repeat(expit(-d.d0.parent_energies(X)),2*folds)
     y=np.r_[np.zeros(d.iP),parent] if initial is None else initial.copy()
@@ -26,10 +26,10 @@ def drive(d,xend,n,*,x_start=X,initial=None):
         x=x_start*np.exp(mid)
         M,_,_,H=d.state(x,state)
         c,_=d.chart(x,M,3)
-        predictor,cap1=step(c,d,state,H*(b-a)/2)
+        predictor,cap1=stepper(c,d,state,H*(b-a)/2)
         M,_,_,H=d.state(x,predictor)
         c,_=d.chart(x,M,3)
-        now,cap2=step(c,d,state,H*(b-a),rate_state=predictor)
+        now,cap2=stepper(c,d,state,H*(b-a),rate_state=predictor)
         trace.append(hold_trace(d,x_start,a,mid,state)+hold_trace(d,x_start,mid,b,now))
         state=now
         caps.append(max(cap1,cap2))
@@ -44,7 +44,7 @@ def drive(d,xend,n,*,x_start=X,initial=None):
     return checks,state
 
 
-def run(g,xend,div,n,state_path=None,one=False,restart=None):
+def run(g,xend,div,n,state_path=None,one=False,restart=None,fast_capacity=False):
     a=load(g)[0]
     d=CellChart(a,SPECS[g],div,reference_x=X)
     x0=X
@@ -57,7 +57,10 @@ def run(g,xend,div,n,state_path=None,one=False,restart=None):
         initial=np.array(saved['endpoint_occupation'])
         if not X<x0<xend or initial.shape!=(d.n,) or not np.all(np.isfinite(initial)) or min(initial)<0 or max(initial[d.ns:])>1:
             raise ArithmeticError('Invalid restart interval or occupations')
-    arm=lambda k: drive(d,xend,k,x_start=x0,initial=initial)
+    stepper=step
+    if fast_capacity:
+        from early_pole_endpoint_capacity_fast_step import step as stepper
+    arm=lambda k: drive(d,xend,k,x_start=x0,initial=initial,stepper=stepper)
     if one:
         hard,hard_state=arm(n)
         result=[hard]
@@ -96,8 +99,9 @@ if __name__=='__main__':
     p.add_argument('--steps',type=int,default=256)
     p.add_argument('--state-path',type=Path)
     p.add_argument('--one',action='store_true')
+    p.add_argument('--fast-capacity',action='store_true',help='Opt in to the proved no-limiting fast path')
     p.add_argument('--restart',type=Path)
     a=p.parse_args()
     if not X<a.x_end or a.steps<8 or a.div<1:
         raise ValueError('Invalid startup interval or resolution')
-    print(json.dumps(run(a.grid,a.x_end,a.div,a.steps,a.state_path,a.one,a.restart),indent=2,allow_nan=False))
+    print(json.dumps(run(a.grid,a.x_end,a.div,a.steps,a.state_path,a.one,a.restart,a.fast_capacity),indent=2,allow_nan=False))
