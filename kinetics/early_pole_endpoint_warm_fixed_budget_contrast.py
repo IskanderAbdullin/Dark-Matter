@@ -1,4 +1,4 @@
-"""Compare actual mixed255 and uniform G7 warm prefixes on one fixed S4 mass."""
+"""Compare actual mixed255 and uniform positive Gauss warm prefixes on one fixed S4 mass."""
 import argparse
 import json
 from math import fsum
@@ -14,13 +14,15 @@ from early_pole_endpoint_warm_pressure_cells import partition
 from early_pole_endpoint_scalar_subshell_pilot import ScalarSubshellChart, SPECS, load
 
 
-def run(control, native_receipt, native_states, mixed_reports, mixed_states, g7_reports, g7_states, *, attribution=False):
+def run(control, native_receipt, native_states, mixed_reports, mixed_states, g7_reports, g7_states, *, attribution=False, uniform_order=7):
+    if uniform_order not in (7,8):
+        raise ArithmeticError("Require a validated uniform order, G7 or G8")
     k = len(native_states)
     if not 1 <= k <= len(EPOCHS) or any(len(seq) != k for seq in
             (mixed_reports, mixed_states, g7_reports, g7_states)):
         raise ArithmeticError('Require the same actual chronological prefix on all three charts')
     a = audit(control, mixed_reports, mixed_states)
-    b = chain(g7_reports, g7_states, prefix=True, order=7)
+    b = chain(g7_reports, g7_states, prefix=True, order=uniform_order)
     out = []
     d = ScalarSubshellChart(load('fine')[0], SPECS['fine'], 2, 4, 1e-5)
     for i, (x, clock) in enumerate(zip(EPOCHS[:k], CLOCK[:k], strict=True)):
@@ -58,8 +60,8 @@ def run(control, native_receipt, native_states, mixed_reports, mixed_states, g7_
                 all_cells=tot,leading=[dict(q=d.ds.ed[j:j+2].tolist(),contributions=tab[j].tolist()) for j in ix]))
         out.append(dict(x=x, steps=[clock, 2*clock], common_native_sha256=q['uncompressed_state_sha256'],
                         fixed_native_mass=m, moments=[v.tolist() for v in vals],
-                        mixed255_over_G7_minus_one=contrast.tolist(), conditional_pressure_contrast=p,**details))
-    return dict(charts=['mixed255','G7'], fields=['count','pressure','warm_pressure'],
+                        **{f"mixed255_over_G{uniform_order}_minus_one":contrast.tolist()}, conditional_pressure_contrast=p,**details))
+    return dict(charts=['mixed255',f'G{uniform_order}'], fields=['count','pressure','warm_pressure'],
                 budget_reference_sha256=a['budget_reference_sha256'], contrasts=out,
                 mixed_trace=a['states'], uniform_trace=b['checked_epoch_pairs'],
                 scope='Actual paired prefixes at common S4 measurement mass. Cell count/energy bounds do not include solver error; held-source ranking and physical pressure are not inferred.')
@@ -71,7 +73,8 @@ if __name__ == '__main__':
         p.add_argument('--'+flag, type=Path, required=True)
     for flag in ('native-states','mixed-reports','mixed-states','g7-reports','g7-states'):
         p.add_argument('--'+flag, type=Path, nargs='+', required=True)
+    p.add_argument('--uniform-order',type=int,choices=(7,8),default=7)
     p.add_argument('--attribution',action='store_true')
     a = p.parse_args()
     print(json.dumps(run(a.control,json.loads(a.native_chain.read_text()),a.native_states,a.mixed_reports,
-                         a.mixed_states,a.g7_reports,a.g7_states,attribution=a.attribution),indent=2,allow_nan=False))
+                         a.mixed_states,a.g7_reports,a.g7_states,attribution=a.attribution,uniform_order=a.uniform_order),indent=2,allow_nan=False))
