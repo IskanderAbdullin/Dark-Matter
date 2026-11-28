@@ -56,12 +56,16 @@ def sum_rule(ledger,M,n):
     return limits,real
 
 
-def run(native,gauss):
+def run(native,gauss,levels=(3,4)):
+    levels=tuple(levels)
+    if levels not in ((3,4),(4,5)):
+        raise ArithmeticError('Use adjacent archived positive Gauss histories')
+    key=f'conditional_G{levels[1]}_G{levels[0]}_minus_one'
     d,y=unpack(native,False,.05)
     m0=d.state(.05,y)[0]
     A,B=[conditioned(d,g,m0) for g in gauss]
-    if [A[0],B[0]]!=[3,4]:
-        raise ArithmeticError('Need actual G3 then G4')
+    if (A[0],B[0])!=levels:
+        raise ArithmeticError('Wrong ordered positive warm histories')
     out=[]
     for M in (1.,3.,10.,100.):
         known=[]
@@ -72,7 +76,7 @@ def run(native,gauss):
                 raise ArithmeticError('Need strictly positive coarser stress lower bound')
             limits=np.array([b[0]/a[1]-1,b[1]/a[0]-1]).T
             known.append(dict(degree=n,additional_even_powers_by_field=[list(range(2*j,2*(j+n)+1,2)) for j in (1,2)],
-                              conditional_G4_G3_minus_one=limits.tolist(),
+                              **{key:limits.tolist()},
                               direct_nodal_minus_one=(d/c-1).tolist()))
         out.append(dict(formal_mass=M,orders=known))
     return dict(x=.05,measurement_mass=m0,field_order=['pressure','pseudo_pressure'],rows=out,
@@ -83,5 +87,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--native',type=Path,required=True)
     p.add_argument('--gauss',nargs=2,type=Path,required=True)
+    p.add_argument('--levels',nargs=2,type=int,default=(3,4))
     a=p.parse_args()
-    print(json.dumps(run(read(a.native),[read(f) for f in a.gauss]),indent=2,allow_nan=False))
+    print(json.dumps(run(read(a.native),[read(f) for f in a.gauss],a.levels),indent=2,allow_nan=False))

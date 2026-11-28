@@ -109,12 +109,16 @@ def measure(c,m,m0,n):
     return tuple(np.asarray(x).sum(axis=0) for x in (bounds,witness,errors,feasible))
 
 
-def run(base,states,receipts):
+def run(base,states,receipts,levels=(3,4)):
+    levels=tuple(levels)
+    if levels not in ((3,4),(4,5)):
+        raise ArithmeticError('Need two independent adjacent accepted warm Gauss histories')
+    obs=f'recorded_G{levels[1]}_G{levels[0]}_ratio_minus_one'
     d,y=unpack(base,False,.05)
     m0=d.state(.05,y)[0]
     C=[conditioned(d,g,m0) for g in states]
-    if [a for a,_ in C]!=[3,4]:
-        raise ArithmeticError('Use complete G3 then G4 positive archives')
+    if tuple(a for a,_ in C)!=levels:
+        raise ArithmeticError('Wrong ordered positive warm archives')
     check=[[s['rows'][-1]['totals'][2:] for s in r['measurements']] for r in receipts]
     mm=[[s['test_mass'] for s in r['measurements']] for r in receipts]
     if mm[0]!=mm[1] or any(r['reference_fitted_mass']!=m0 for r in receipts):
@@ -138,7 +142,7 @@ def run(base,states,receipts):
         feasible=np.array([high[0]/low[1]-1,high[1]/low[0]-1]).T
         if np.any(feasible[:,0]<ratio[:,0]-2e-15) or np.any(feasible[:,1]>ratio[:,1]+2e-15):
             raise ArithmeticError('Constructive atom witness escaped its outer envelope')
-        out.append(dict(formal_mass=m,recorded_G4_G3_ratio_minus_one=(np.asarray(check[1][j])/check[0][j]-1).tolist(),
+        out.append(dict(formal_mass=m,**{obs:(np.asarray(check[1][j])/check[0][j]-1).tolist()},
                         conditional_ratio_minus_one=ratio.tolist(),feasible_atom_ratio_minus_one=feasible.tolist(),charts=delta))
     return dict(x=.05,reference_mass=m0,field_order=['pressure','pseudo_pressure'],rows=out,
                 scope='All nonnegative in-cell measures preserving warm count and mean excess energy at the reference mass, cold kept in archived constant convention. Analytic interpolation remainder, ordinary floating point; no physical clock or continuum dynamics claim.')
@@ -149,5 +153,6 @@ if __name__=='__main__':
     p.add_argument('--native',type=Path,required=True)
     p.add_argument('--gauss',nargs=2,type=Path,required=True)
     p.add_argument('--receipts',nargs=2,type=Path,required=True)
+    p.add_argument('--levels',type=int,nargs=2,default=(3,4))
     a=p.parse_args()
-    print(json.dumps(run(read(a.native),[read(p) for p in a.gauss],[read(p) for p in a.receipts]),indent=2,allow_nan=False))
+    print(json.dumps(run(read(a.native),[read(p) for p in a.gauss],[read(p) for p in a.receipts],a.levels),indent=2,allow_nan=False))
