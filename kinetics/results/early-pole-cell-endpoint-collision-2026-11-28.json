@@ -1,0 +1,426 @@
+[
+  {
+    "grid": "fine",
+    "scope": "Local opt-in phase-space control; no full evolving archive",
+    "results": [
+      {
+        "subintervals_per_native_bin": 1,
+        "counts": [
+          67,
+          224,
+          244
+        ],
+        "initial": {
+          "max_event_energy_error": 3.928985970294228e-16,
+          "max_thermal_defect": 4.1814379998843884e-15,
+          "direct_step_relative_defect": 0.0,
+          "forward_inverse": [
+            0.10755876946596236,
+            0.029731288957157216
+          ],
+          "initial_log_clock": 4.418265671877322
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.8225371951281076e-06,
+              3.822537195132201e-06,
+              -3.82253719513742e-06
+            ],
+            "energy_residual": -3.012785351181464e-17,
+            "max_fermion": 0.4986881523241572
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.822537240298071e-06,
+              3.822537240303908e-06,
+              -3.822537240334214e-06
+            ],
+            "energy_residual": -8.610619635304242e-17,
+            "max_fermion": 0.4986881523241572
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 2,
+        "counts": [
+          67,
+          448,
+          488
+        ],
+        "initial": {
+          "max_event_energy_error": 4.0408995633417016e-16,
+          "max_thermal_defect": 4.219390954519705e-15,
+          "direct_step_relative_defect": 2.220446049250313e-16,
+          "forward_inverse": [
+            0.10755876946596235,
+            0.029731288957157216
+          ],
+          "initial_log_clock": 4.418265671877322
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.816432492977998e-06,
+              3.816432492980588e-06,
+              -3.816432492978481e-06
+            ],
+            "energy_residual": -5.8477897363905815e-18,
+            "max_fermion": 0.4986881523241572
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.816432573206537e-06,
+              3.816432573203241e-06,
+              -3.816432573170138e-06
+            ],
+            "energy_residual": 1.7555844416298024e-16,
+            "max_fermion": 0.4986881523241572
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 4,
+        "counts": [
+          67,
+          896,
+          976
+        ],
+        "initial": {
+          "max_event_energy_error": 4.3543289121416257e-16,
+          "max_thermal_defect": 4.6626224019583105e-15,
+          "direct_step_relative_defect": 2.220446049250313e-16,
+          "forward_inverse": [
+            0.10755876946596236,
+            0.029731288957157216
+          ],
+          "initial_log_clock": 4.4182656718773226
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.8102551823272775e-06,
+              3.8102551823272415e-06,
+              -3.8102551823245195e-06
+            ],
+            "energy_residual": 1.00879043214476e-17,
+            "max_fermion": 0.4986881523241572
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.810255288563642e-06,
+              3.8102552885643126e-06,
+              -3.8102552885657576e-06
+            ],
+            "energy_residual": -2.930869324248093e-17,
+            "max_fermion": 0.4986881523241572
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 8,
+        "counts": [
+          67,
+          1792,
+          1952
+        ],
+        "initial": {
+          "max_event_energy_error": 4.636428468335509e-16,
+          "max_thermal_defect": 4.580367546993536e-15,
+          "direct_step_relative_defect": 2.220446049250313e-16,
+          "forward_inverse": [
+            0.10755876946596236,
+            0.029731288957157213
+          ],
+          "initial_log_clock": 4.418265671877324
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.8060735521230553e-06,
+              3.806073552121848e-06,
+              -3.80607355212351e-06
+            ],
+            "energy_residual": -7.371234740309094e-18,
+            "max_fermion": 0.4986881523241572
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.806073676054438e-06,
+              3.806073676060942e-06,
+              -3.8060736760714617e-06
+            ],
+            "energy_residual": -6.104012239851332e-17,
+            "max_fermion": 0.4986881523241572
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 16,
+        "counts": [
+          67,
+          3584,
+          3904
+        ],
+        "initial": {
+          "max_event_energy_error": 4.77635364168861e-16,
+          "max_thermal_defect": 4.822242957663459e-15,
+          "direct_step_relative_defect": 2.220446049250313e-16,
+          "forward_inverse": [
+            0.10755876946596236,
+            0.029731288957157213
+          ],
+          "initial_log_clock": 4.4182656718773226
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.8053430183436516e-06,
+              3.805343018341854e-06,
+              -3.805343018341064e-06
+            ],
+            "energy_residual": -3.8293830149774884e-19,
+            "max_fermion": 0.4986881523241572
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.80534315545727e-06,
+              3.8053431554668576e-06,
+              -3.805343155485934e-06
+            ],
+            "energy_residual": -9.105049971973318e-17,
+            "max_fermion": 0.4986881523241572
+          }
+        ]
+      }
+    ],
+    "relative_adjacent_changes": [
+      -0.0015970196515489032,
+      -0.0016186018027051219,
+      -0.0010974625563161533,
+      -0.00019193548505480607
+    ]
+  },
+  {
+    "grid": "third",
+    "scope": "Local opt-in phase-space control; no full evolving archive",
+    "results": [
+      {
+        "subintervals_per_native_bin": 1,
+        "counts": [
+          97,
+          312,
+          352
+        ],
+        "initial": {
+          "max_event_energy_error": 4.1105910984774593e-16,
+          "max_thermal_defect": 4.1706911217973925e-15,
+          "direct_step_relative_defect": 0.0,
+          "forward_inverse": [
+            0.1158405436175098,
+            0.052247319474327175
+          ],
+          "initial_log_clock": 3.670481747691174
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.133671042597176e-06,
+              3.1336710425999542e-06,
+              -3.1336710426072425e-06
+            ],
+            "energy_residual": -5.044592067645671e-17,
+            "max_fermion": 0.498664931178995
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.1336712686455913e-06,
+              3.133671268640404e-06,
+              -3.1336712686526653e-06
+            ],
+            "energy_residual": 3.289571564670283e-18,
+            "max_fermion": 0.498664931178995
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 2,
+        "counts": [
+          97,
+          624,
+          704
+        ],
+        "initial": {
+          "max_event_energy_error": 4.3952121851479927e-16,
+          "max_thermal_defect": 4.430096875601153e-15,
+          "direct_step_relative_defect": 0.0,
+          "forward_inverse": [
+            0.1158405436175098,
+            0.052247319474327175
+          ],
+          "initial_log_clock": 3.670481747691173
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.128189999372995e-06,
+              3.1281899993701523e-06,
+              -3.1281899993748458e-06
+            ],
+            "energy_residual": -3.146353182540607e-17,
+            "max_fermion": 0.4986649363192491
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.1281902846164124e-06,
+              3.1281902846099216e-06,
+              -3.1281902845753987e-06
+            ],
+            "energy_residual": 1.9233500701814798e-16,
+            "max_fermion": 0.4986649363192493
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 4,
+        "counts": [
+          97,
+          1248,
+          1408
+        ],
+        "initial": {
+          "max_event_energy_error": 4.846179436096362e-16,
+          "max_thermal_defect": 4.754004538133119e-15,
+          "direct_step_relative_defect": 0.0,
+          "forward_inverse": [
+            0.1158405436175098,
+            0.052247319474327175
+          ],
+          "initial_log_clock": 3.670481747691173
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.1238445313504297e-06,
+              3.1238445313461272e-06,
+              -3.123844531344292e-06
+            ],
+            "energy_residual": 3.568999793035596e-18,
+            "max_fermion": 0.4986649364979766
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.1238448442040135e-06,
+              3.1238448442074266e-06,
+              -3.123844844191498e-06
+            ],
+            "energy_residual": 9.274868166496985e-17,
+            "max_fermion": 0.4986649364979766
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 8,
+        "counts": [
+          97,
+          2496,
+          2816
+        ],
+        "initial": {
+          "max_event_energy_error": 4.608350015206878e-16,
+          "max_thermal_defect": 4.8184601807015835e-15,
+          "direct_step_relative_defect": 2.220446049250313e-16,
+          "forward_inverse": [
+            0.1158405436175098,
+            0.05224731947432717
+          ],
+          "initial_log_clock": 3.670481747691173
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.122539222103314e-06,
+              3.1225392221066833e-06,
+              -3.122539222109279e-06
+            ],
+            "energy_residual": -1.6220293819393177e-17,
+            "max_fermion": 0.4986649364979766
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.1225395630620543e-06,
+              3.122539563064623e-06,
+              -3.1225395630772102e-06
+            ],
+            "energy_residual": -4.696148190308119e-17,
+            "max_fermion": 0.4986649364979766
+          }
+        ]
+      },
+      {
+        "subintervals_per_native_bin": 16,
+        "counts": [
+          97,
+          4992,
+          5632
+        ],
+        "initial": {
+          "max_event_energy_error": 4.925152943921296e-16,
+          "max_thermal_defect": 4.845022532583285e-15,
+          "direct_step_relative_defect": 2.220446049250313e-16,
+          "forward_inverse": [
+            0.1158405436175098,
+            0.05224731947432717
+          ],
+          "initial_log_clock": 3.670481747691173
+        },
+        "live": [
+          {
+            "steps": 32,
+            "delta_species": [
+              3.121275836839194e-06,
+              3.121275836840979e-06,
+              -3.121275836840976e-06
+            ],
+            "energy_residual": -5.2790335820889205e-18,
+            "max_fermion": 0.4986649364979766
+          },
+          {
+            "steps": 64,
+            "delta_species": [
+              3.121276206194935e-06,
+              3.1212762061992683e-06,
+              -3.121276206198598e-06
+            ],
+            "energy_residual": 2.77803513293361e-17,
+            "max_fermion": 0.4986649364979766
+          }
+        ]
+      }
+    ],
+    "relative_adjacent_changes": [
+      -0.0017490615828212874,
+      -0.0013891227889072377,
+      -0.000417844421556679,
+      -0.00040459274946080814
+    ]
+  }
+]
