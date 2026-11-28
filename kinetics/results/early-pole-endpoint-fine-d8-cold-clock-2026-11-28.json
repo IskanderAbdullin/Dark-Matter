@@ -1,0 +1,34 @@
+{
+  "grid": "fine",
+  "charge_subcells": 8,
+  "start": 0.04,
+  "end": 0.05,
+  "steps": [
+    1024,
+    2048
+  ],
+  "k": 0.0015,
+  "optical_columns": [
+    "scalar_gap",
+    "photon_energy",
+    "photon_residue"
+  ],
+  "optical_params_coarse": [
+    0.0008606852188034445,
+    0.002304225220959834,
+    202.97248593833552
+  ],
+  "optical_params_fine": [
+    0.0008606945751381399,
+    0.002304225220983558,
+    202.97248593622592
+  ],
+  "coarse_fine_optical_relative": [
+    -1.0870679292840357e-05,
+    -1.0295875263466314e-11,
+    1.0393463867330865e-11
+  ],
+  "scalar_count_coarse_fine_relative": -3.261128107701072e-05,
+  "maximum_archived_trace_absolute_difference": 0.0,
+  "scope": "Common saved D8 .04 restart; clock sensitivity of late optical parameters only."
+}

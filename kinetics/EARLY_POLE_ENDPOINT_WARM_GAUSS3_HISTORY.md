@@ -31,3 +31,7 @@ python -W error early_pole_endpoint_warm_gauss_order_contrast.py \
   --stress results/early-pole-frozen-stress-sweep-w124-gauss-$d.json \
            results/early-pole-frozen-stress-sweep-w124-gauss3-$d.json
 ```
+
+## Direct final-interval pressure check
+
+The recovered 1024-step endpoint from the identical archived .04 Gauss3 restart reproduces every audited coarse trace entry. At the held W1 mass its pressure coarse/fine minus one is (+2.35630	imes10^{-7}), while count shifts by (-3.18010	imes10^{-5}). The Gauss3/Gauss2 pressure contrast changes by only (1.86219	imes10^{-8}) in relative fraction between coarse and fine time grids. This directly rules out the final time-step choice as the explanation of the +0.08266% spatial-order difference in this particular restart test. It is not a bound on time-error accumulation earlier in either history. Reproduce with `early_pole_endpoint_gauss_warm_pressure_clock.py` using the Gauss3 .04 state, .05 state and .05 paired trace, then pass its receipt as `--gauss3` along with the other four inputs to `early_pole_endpoint_warm_pressure_clock_contrast.py`.
