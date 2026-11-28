@@ -1,0 +1,124 @@
+{
+  "steps": [
+    1024,
+    2048,
+    4096
+  ],
+  "x_start": 0.02,
+  "x_end": 0.04,
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "mass": 0.0006770053032736531,
+  "terminal_moments": [
+    [
+      0.008109623460073542,
+      9.05732126283934e-08,
+      9.040867372366064e-08
+    ],
+    [
+      0.008110658955505487,
+      9.057318531838565e-08,
+      9.040862667704004e-08
+    ],
+    [
+      0.008110916198856172,
+      9.057317791769439e-08,
+      9.040861429779413e-08
+    ]
+  ],
+  "previous_over_next_minus_one": [
+    [
+      -0.0001276709374202767,
+      3.015242056036982e-07,
+      5.203775605977512e-07
+    ],
+    [
+      -3.171569578308553e-05,
+      8.170952403574461e-08,
+      1.3692551337207703e-07
+    ]
+  ],
+  "input_hashes": [
+    "0768a0c6406661d23a0fb292718e76d86381acef1ca1f99267697351fd7f4a84",
+    "7a12c104a73bf18e65ce87c9b86a5b3a62c8e8c78ae66fa0b1afce9442b88340",
+    "76f7409c37da5b9adaaddb3cad046d5b18b0e17dfb84879974cfcbc1c9d02fcc",
+    "b19f8f679ecd65d16817c0efe570d54544947ec1eb486a23f22b539f7ebc81b3"
+  ],
+  "driver_source_hashes": [
+    "5670323633ad026998f977d89734e8170f13dcec196c3919434841eb4017b182",
+    "f41ca84f0a272422c5f4bf1623f51af86298611f015a03d6e058eee5db548f4a",
+    "ca694051a580629300d1fd69a7e7abc6eefc7c1eba70465358f83cc30ae5e086"
+  ],
+  "checkpoint_payload_sha256": "3736fc179116f907d9fa8ec2236a50b8c742ae2c99e63889242f23dc9b6bc640",
+  "provenance": "c0c50b7354d66665cd449c15542c76da70109bc3f5be2dafc6c7e528c5e044fe",
+  "checks": [
+    {
+      "x": 0.021810154653305155,
+      "scalar_yield": 1.5090984438334878e-05,
+      "pair_number_error": 1.0028870095490916e-17,
+      "continuity_residual": -1.4089706133855063e-14,
+      "max_charged": 0.49868879700186963,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.02378414230005442,
+      "scalar_yield": 2.2030575909358242e-05,
+      "pair_number_error": 2.3418766925686896e-17,
+      "continuity_residual": -4.6033069391916703e-14,
+      "max_charged": 0.49868837718156245,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.025936791093020193,
+      "scalar_yield": 3.193211518393423e-05,
+      "pair_number_error": 5.4860629927766524e-17,
+      "continuity_residual": -1.168753543381515e-13,
+      "max_charged": 0.4986877377286784,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.028284271247461898,
+      "scalar_yield": 4.5768404222840414e-05,
+      "pair_number_error": 6.808789643208968e-17,
+      "continuity_residual": -2.628650132307543e-13,
+      "max_charged": 0.49868699027418345,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.030844216508158814,
+      "scalar_yield": 6.488467130693555e-05,
+      "pair_number_error": 7.068998164605489e-17,
+      "continuity_residual": -5.544495526761672e-13,
+      "max_charged": 0.49868610539686037,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.03363585661014858,
+      "scalar_yield": 9.129570695367794e-05,
+      "pair_number_error": 3.903127820947816e-17,
+      "continuity_residual": -1.1527112950141319e-12,
+      "max_charged": 0.49868501414960253,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.03668016172818685,
+      "scalar_yield": 0.00012644744431858373,
+      "pair_number_error": 7.892991815694472e-17,
+      "continuity_residual": -2.2723062987435247e-12,
+      "max_charged": 0.4986837743594175,
+      "max_limited_extent": 0.0
+    },
+    {
+      "x": 0.04,
+      "scalar_yield": 0.00017321472288588447,
+      "pair_number_error": 5.724587470723463e-17,
+      "continuity_residual": -4.343463441561571e-12,
+      "max_charged": 0.4986822615553475,
+      "max_limited_extent": 0.0
+    }
+  ],
+  "scope": "One chart with fixed exact restart only. No full-history or cross-chart time-error claim."
+}
