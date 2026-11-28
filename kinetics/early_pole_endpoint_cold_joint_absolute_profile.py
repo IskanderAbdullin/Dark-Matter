@@ -35,7 +35,7 @@ def make(e, z, state, bins, shared):
         if sign and np.any((s == 0) & (values != 0)):
             raise ArithmeticError('Inverse reaction in a zero occupation cell')
         if sign and np.any(s == 0) and shared is not None:
-            ce, cf, _ = shared
+            ce, cf, _, *_ = shared
             idx = np.searchsorted(ce, mid)-1
             if np.any((s == 0) & (cf[idx]>0)):
                 raise ArithmeticError('No known inverse coefficient for a newly occupied panel')
@@ -51,13 +51,14 @@ def make(e, z, state, bins, shared):
         ce = np.r_[a[0], d.ds.ed[(d.ds.ed>a[0]) & (d.ds.ed<b[-1])], b[-1]]
         cf = f[np.searchsorted(d.ds.ed, (ce[:-1]+ce[1:])/2)-1]
     else:
-        ce, cf, mass = shared
+        ce, cf, mass, *fixed_means = shared
     parent = np.searchsorted(ce, mid)-1
     if (np.any(parent<0) or np.any(parent>=len(cf)) or
             np.any(a<ce[parent]) or np.any(b>ce[parent+1])):
         raise ArithmeticError('No matching prescribed moment parent')
     X = panel_excess(a, b, mass, 48)
     pre = panel_excess(ce[:-1], ce[1:], mass, 48)
+    means = fixed_means[0] if shared is not None and fixed_means else pre
     count, both = [], []
     for g, s in enumerate(cf):
         sel = parent == g
@@ -68,7 +69,9 @@ def make(e, z, state, bins, shared):
             continue
         P = H[sel].reshape(np.count_nonzero(sel), -1)*target*s
         count.append(P)
-        W = mean_vertices(X[sel], pre[g]) if len(P)>1 else np.ones((1,1))
+        if len(P)==1 and abs(X[sel][0]/means[g]-1)>8e-14:
+            raise ArithmeticError('Single panel does not attain prescribed mean')
+        W = mean_vertices(X[sel], means[g]) if len(P)>1 else np.ones((1,1))
         both.append(W@P)
     return O, original, count, both
 
