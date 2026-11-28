@@ -23,6 +23,8 @@ class JointAbsoluteResponseTest(unittest.TestCase):
         b = card([[2., 1., 2.]])
         r = solve(a, b, (0, 1, 2), 1)
         self.assertEqual(r['witness_l1_by_field'], [1., 0., 1.])
+        self.assertAlmostEqual(r['support_hyperplane_value'], 2.)
+        self.assertAlmostEqual(r['projected_witness_value'], 2.)
         self.assertLess(r['max_verification_defect'], 1e-12)
 
 

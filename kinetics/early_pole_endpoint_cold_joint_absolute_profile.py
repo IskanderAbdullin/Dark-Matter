@@ -109,18 +109,42 @@ def solve(a,b,field,member):
     if not z.success:
         raise ArithmeticError(z.message)
     x=z.x
-    left=U+F@x[:k]
-    right=V+G@x[k:k+l]
+    # Independently project each group of vertex weights to its simplex.
+    # Report the direct objective at this concrete near-feasible witness.
+    def projected(raw,A):
+        out=np.maximum(raw,0.)
+        scale=A@out
+        if min(scale)<=0:
+            raise ArithmeticError('Degenerate approximate primal witness')
+        out/=scale@A
+        return out
+    xleft=projected(x[:k],P)
+    xright=projected(x[k:k+l],Q)
+    left=U+F@xleft
+    right=V+G@xright
     pp,qq=z.eqlin.marginals,z.ineqlin.marginals
+    # Audit a lower bound directly on the stored convex vertices. For any
+    # |w| <= 1, w dot (left-right) <= ||left-right||_1. Its minimum separates
+    # over the scalar parents. Clipping makes this independent of the solver's
+    # feasibility errors in the dual multipliers.
+    w=np.clip(qq[j:]-qq[:j],-1.,1.)
+    ll=w@F; rr=-w@G
+    m,n0=[np.array([min(t[row!=0]) for row in C]) for t,C in ((ll,P),(rr,Q))]
+    support=float(np.longdouble(w)@np.longdouble(D)
+                  +m.sum(dtype=np.longdouble)+n0.sum(dtype=np.longdouble))
     verb=(abs(left-right).reshape(len(field),n)).sum(axis=1)
     dual=rhs@pp+ub@qq
     residuals=[abs(z.fun-verb.sum()),float(np.max(abs(E@x-rhs))),float(max(0.,max(A@x-ub),-min(x))),
-               float(max(0.,max(E.T@pp+A.T@qq-c),max(qq))),abs(z.fun-dual)]
-    if max(residuals)>2e-9:
+               float(max(0.,max(E.T@pp+A.T@qq-c),max(qq))),abs(z.fun-dual),abs(z.fun-support)]
+    if max(residuals)>2e-9 or support>verb.sum()+2e-12:
         raise ArithmeticError(('Unverified optimization',residuals))
     return dict(minimum_l1=float(z.fun), witness_l1_by_field=verb.tolist(),
                 field_signed_sum_delta_left_minus_right=(left-right).reshape(len(field),n).sum(axis=1).tolist(),
-                verified_dual_value=float(dual), max_verification_defect=max(residuals))
+                verified_dual_value=float(dual), support_hyperplane_value=support,
+                projected_witness_value=float(verb.sum()),
+                support_signed_weights_by_field=w.reshape(len(field),n).tolist(),
+                witness_abs_residuals_by_field=abs(left-right).reshape(len(field),n).tolist(),
+                max_verification_defect=max(residuals))
 
 
 def run(left,right,states,archive):

@@ -24,3 +24,7 @@ python -W error early_pole_endpoint_cold_joint_absolute_profile.py \
  --states "$s"{2,4}-x05-state-$d.json.gz \
  --archive results/finite-mass-qed-fixed-pole-cold-scalar-band-$d.json
 ```
+
+## Independent finite loss bounds
+
+The signed support weights are clipped to [-1, 1]. For any such weights the signed projection is no larger than the L1 norm; minimizing it separately over every stored scalar parent gives a computed lower bound without relying on approximate LP dual feasibility. For the upper witness the solver weights are clipped nonnegative and explicitly projected onto their separate simplices. In the shared count+mean control the two bounds are 0.0001475753957192 and 0.0001475753957561, with no directed rounding. The own count+mean bounds are 0.1264569558607 and 0.1264569560867. The finite interval [3.306e-6, 3.97454e-6] accounts for 57.06% of the native and 46.92% of the counterfactual joint residual *at these projected optimum witnesses*. The split need not be unique across different optimum witnesses. Exact signed weight and absolute residual vectors are in the JSON.
