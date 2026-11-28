@@ -1,0 +1,86 @@
+"""Complete cosine integration at fixed timelike pole momentum."""
+import argparse
+import json
+
+import numpy as np
+from scipy.special import roots_legendre
+
+from finite_mass_qed_frozen_transverse_plasmon_gate_reference import Q
+from finite_mass_qed_timelike_pole_affine_source_reference import setup
+from finite_mass_qed_timelike_pole_batched_absorption_reference import load, pole, radial
+
+
+def angular_knots(ch,k,w,es):
+    parent,daughter=ch
+    m0,m1=parent.m,daughter.m
+    t=es-w
+    e=np.unique(np.r_[parent.E,daughter.E+t])
+    e=e[(e>m0)&(e-t>m1)]
+    p=np.sqrt((e-m0)*(e+m0))
+    b=np.sqrt((e-t-m1)*(e-t+m1))
+    sep=(m0*m0-m1*m1-2*e*t+t*t)/(b+p)
+    c=((k-sep)*(k+sep)+Q*Q)/(2*k*Q)
+    upper=((k-p-b)*(k+p+b)+Q*Q)/(2*k*Q)
+    if np.any((upper>-1)&(upper<1)):
+        raise ArithmeticError('Unexpected sum-of-momenta angular boundary in this soft branch')
+    ce=c[(c>-1)&(c<1)]
+    ee=e[(c>-1)&(c<1)]
+    err=[]
+    for u,E in zip(ce,ee,strict=True):
+        _,_,_,edge,_=setup(m0,m1,k,w,es,u)
+        err.append(abs(edge/E-1))
+    defect=max(err,default=0.)
+    if defect>3e-12:
+        raise ArithmeticError(('Exact angular energy support knot',k,w,defect))
+    past=((k+t)*(k-t)+Q*Q)/(2*k*Q)
+    return np.unique(np.clip(np.r_[-1.,1.,ce,past],-1.,1.)),defect
+
+
+def angle(ch,k,w,R,es,name,order,inner):
+    bins,defect=angular_knots(ch,k,w,es)
+    x,v=roots_legendre(order)
+    counts=np.zeros(3,dtype=int)
+    A=np.zeros(3)
+    for a,b in zip(bins[:-1],bins[1:],strict=True):
+        for u,z in zip((a+b)/2+(b-a)*x/2,(b-a)*v/4,strict=True):
+            C,_,_=radial(ch,k,w,R,es,u,name,*inner)
+            counts[0]+=C[0]>0
+            counts[1]+=C[1]>0
+            counts[2]+=(C[0]>0)&(C[1]==0)
+            A+=z*C
+    return A,counts,len(bins)-1,defect
+
+
+def tabulate(g):
+    d,ch,es=load(g)
+    n=d['endpoint_scalar_occupations'][np.searchsorted(d['scalar_momentum_edges'],Q)-1]
+    output=[]
+    near={'fine':(.001395,.001405),'third':(.001415,.001425)}
+    targets=[('T',.00135),*[('T',x) for x in near[g]],('T',.0015),('T',.00256),('L',.0012),('L',.00256)]
+    for name,k in targets:
+        w,R=pole(ch,name,k)
+        A,C,N,J=angle(ch,k,w,R,es,name,3,(3,8))
+        B,D,_,K=angle(ch,k,w,R,es,name,6,(6,12))
+        if np.any(np.sign(A)!=np.sign(B)):
+            raise ArithmeticError(('Unsupported angular directional claim',g,name,k,A,B))
+        err=float(max(abs(A/B-1.))) if np.all(B!=0.) else float(max(abs(A-B))/max(1e-50,max(abs(B))))
+        if err>3e-7:
+            raise ArithmeticError(('Joint angular estimate did not converge',g,name,k,err))
+        center,_,_=radial(ch,k,w,R,es,0.,name,6,12)
+        output.append(dict(grid=g,mode=name,k=k,omega=w,accepted_inner_mesh=[6,12],outer_order=6,
+                           complete_cosine_average=B.tolist(),cosine_zero=center.tolist(),
+                           max_joint_mesh_relative_defect=err,angular_panels=N,accepted_gain_nodes=int(D[0]),
+                           accepted_inverse_nodes=int(D[1]),accepted_forward_only_nodes=int(D[2]),
+                           max_analytic_angle_knot_defect=max(J,K),
+                           conditional_balancing_population=B[1]/(B[2]+B[0]/n)
+                            if (B[1]>0. and B[2]+B[0]/n>0.) else None))
+    if not (output[0]['accepted_gain_nodes']==0 and output[1]['accepted_forward_only_nodes']>0
+            and all(q['accepted_inverse_nodes']==0 for q in output[1:3])):
+        raise ArithmeticError('Past-null or one-sided support fixture failed')
+    return output
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('grid',choices=('fine','third'))
+    print(json.dumps(tabulate(p.parse_args().grid),indent=2,allow_nan=False))
