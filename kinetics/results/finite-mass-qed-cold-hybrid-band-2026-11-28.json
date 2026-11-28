@@ -1,0 +1,264 @@
+{
+  "scope": "Controlled substitutions of archived cells within one cold band and fixed photon k.",
+  "factor_order": [
+    "charged_histogram",
+    "dispersion_pair",
+    "scalar_histogram"
+  ],
+  "quantity_order": [
+    "forward_coeff",
+    "inverse_coeff",
+    "affine_coeff",
+    "conditional_number_neutral"
+  ],
+  "log_effects": [
+    [
+      0.008277249646437983,
+      1.970847022069029,
+      0.044277131321006344
+    ],
+    [
+      0.04747242635694467,
+      2.135880858681124,
+      0.04885125752664739
+    ],
+    [
+      0.008277249542585057,
+      1.9708470216334173,
+      0.044277131308840964
+    ],
+    [
+      0.03919517681436169,
+      0.16503383704770516,
+      0.004574126217809393
+    ]
+  ],
+  "data": [
+    {
+      "charged_grid": "fine",
+      "dispersion_grid": "fine",
+      "scalar_histogram": "fine",
+      "raw_number_scalar_energy_excess": [
+        [
+          4.7163301986302185e-07,
+          1.3806014387387522e-15,
+          4.7163301848242035e-07
+        ],
+        [
+          4.1129470630240425e-10,
+          1.2039744334070992e-18,
+          4.1129470509842974e-10
+        ],
+        [
+          4.330347235830764e-15,
+          1.2749494415907339e-23,
+          4.330347223081268e-15
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.9272790170228777e-09,
+        2.927279195386111e-09
+      ],
+      "mesh_max_discrepancy": 2.0211310305545914e-05,
+      "q_panels": 41,
+      "native_relative_replay_defect": 9.217820130316696e-14
+    },
+    {
+      "charged_grid": "fine",
+      "dispersion_grid": "fine",
+      "scalar_histogram": "third",
+      "raw_number_scalar_energy_excess": [
+        [
+          4.531391015393577e-07,
+          1.3195607494083702e-15,
+          4.5313910021979696e-07
+        ],
+        [
+          3.9516635866940053e-10,
+          1.1507416618843825e-18,
+          3.9516635751865887e-10
+        ],
+        [
+          3.714022004311171e-15,
+          1.0873617103524757e-23,
+          3.7140219934375545e-15
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.912043451488322e-09,
+        2.9120435988279873e-09
+      ],
+      "mesh_max_discrepancy": 2.0211310305545914e-05,
+      "q_panels": 41
+    },
+    {
+      "charged_grid": "fine",
+      "dispersion_grid": "third",
+      "scalar_histogram": "fine",
+      "raw_number_scalar_energy_excess": [
+        [
+          6.600105934010114e-08,
+          1.6360235203809542e-16,
+          6.600105917649878e-08
+        ],
+        [
+          5.723946975340894e-11,
+          1.4188427487005154e-19,
+          5.7239469611524654e-11
+        ],
+        [
+          6.155360084446276e-16,
+          1.5343267839882173e-24,
+          6.155360069103007e-16
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.4787837358881333e-09,
+        2.4787838851931713e-09
+      ],
+      "mesh_max_discrepancy": 1.741480512511232e-05,
+      "q_panels": 43
+    },
+    {
+      "charged_grid": "fine",
+      "dispersion_grid": "third",
+      "scalar_histogram": "third",
+      "raw_number_scalar_energy_excess": [
+        [
+          6.287037560592396e-08,
+          1.5523623879904442e-16,
+          6.287037545068772e-08
+        ],
+        [
+          5.452431853882475e-11,
+          1.3462859853303919e-19,
+          5.452431840419614e-11
+        ],
+        [
+          5.230137091755405e-16,
+          1.2981424624971526e-24,
+          5.23013707877398e-16
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.4691476341000017e-09,
+        2.4691477577953236e-09
+      ],
+      "mesh_max_discrepancy": 1.741480512511232e-05,
+      "q_panels": 43
+    },
+    {
+      "charged_grid": "third",
+      "dispersion_grid": "fine",
+      "scalar_histogram": "fine",
+      "raw_number_scalar_energy_excess": [
+        [
+          4.677933924995634e-07,
+          1.3150761951932644e-15,
+          4.677933911844872e-07
+        ],
+        [
+          4.0794630144147273e-10,
+          1.146832140971597e-18,
+          4.079463002946406e-10
+        ],
+        [
+          4.295331789760431e-15,
+          1.213484094186568e-23,
+          4.29533177762559e-15
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.811232950220598e-09,
+        2.811233096471996e-09
+      ],
+      "mesh_max_discrepancy": 1.0389276116365403e-05,
+      "q_panels": 49
+    },
+    {
+      "charged_grid": "third",
+      "dispersion_grid": "fine",
+      "scalar_histogram": "third",
+      "raw_number_scalar_energy_excess": [
+        [
+          4.4937542967257805e-07,
+          1.2583465261756038e-15,
+          4.4937542841423146e-07
+        ],
+        [
+          3.918841956737947e-10,
+          1.097358922732787e-18,
+          3.918841945764358e-10
+        ],
+        [
+          3.6834299127763904e-15,
+          1.0361381088252386e-23,
+          3.683429902415009e-15
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.8002121313488193e-09,
+        2.800212251271978e-09
+      ],
+      "mesh_max_discrepancy": 1.0389276116365403e-05,
+      "q_panels": 49
+    },
+    {
+      "charged_grid": "third",
+      "dispersion_grid": "third",
+      "scalar_histogram": "fine",
+      "raw_number_scalar_energy_excess": [
+        [
+          6.544743205659475e-08,
+          1.5619575319827966e-16,
+          6.544743190039899e-08
+        ],
+        [
+          5.6759336022451663e-11,
+          1.354608965412232e-19,
+          5.6759335886990763e-11
+        ],
+        [
+          6.103315965592174e-16,
+          1.4654944654764246e-24,
+          6.103315950937229e-16
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.3865833794057154e-09,
+        2.386583535983035e-09
+      ],
+      "mesh_max_discrepancy": 8.628602455081955e-06,
+      "q_panels": 55
+    },
+    {
+      "charged_grid": "third",
+      "dispersion_grid": "third",
+      "scalar_histogram": "third",
+      "raw_number_scalar_energy_excess": [
+        [
+          6.235225135715687e-08,
+          1.481269928761856e-16,
+          6.235225120902986e-08
+        ],
+        [
+          5.407497537921704e-11,
+          1.2846310693064155e-19,
+          5.4074975250753925e-11
+        ],
+        [
+          5.186774203381386e-16,
+          1.2392625503233958e-24,
+          5.18677419098876e-16
+        ]
+      ],
+      "conditional_neutral_n": [
+        2.37564787163184e-09,
+        2.375648002332659e-09
+      ],
+      "mesh_max_discrepancy": 8.628602455081955e-06,
+      "q_panels": 55,
+      "native_relative_replay_defect": 1.1026817380017311e-13
+    }
+  ]
+}
