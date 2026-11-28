@@ -10,7 +10,7 @@ from finite_mass_qed_timelike_pole_affine_source_reference import setup
 from finite_mass_qed_timelike_pole_batched_absorption_reference import load, pole, radial, spacelike_parent_minimum
 
 
-def angular_knots(ch,k,w,es,qscalar=Q,*,allow_sum_boundaries=False):
+def angular_knots(ch,k,w,es,qscalar=Q,*,allow_sum_boundaries=False,parent_energy_edges=None):
     if qscalar<0:
         raise ValueError('A scalar momentum magnitude cannot be negative')
     if qscalar==0:
@@ -18,7 +18,8 @@ def angular_knots(ch,k,w,es,qscalar=Q,*,allow_sum_boundaries=False):
     parent,daughter=ch
     m0,m1=parent.m,daughter.m
     t=es-w
-    e=np.unique(np.r_[parent.E,daughter.E+t])
+    extra=[] if parent_energy_edges is None else parent_energy_edges
+    e=np.unique(np.r_[parent.E,daughter.E+t,extra])
     e=e[(e>m0)&(e-t>m1)]
     p=np.sqrt((e-m0)*(e+m0))
     b=np.sqrt((e-t-m1)*(e-t+m1))
@@ -51,21 +52,25 @@ def angular_knots(ch,k,w,es,qscalar=Q,*,allow_sum_boundaries=False):
     return np.unique(np.clip(np.r_[-1.,1.,ce,past],-1.,1.)),defect
 
 
-def angle(ch,k,w,R,es,name,order,inner,qscalar=Q,*,allow_future_spacelike=False,occupation_callbacks=None,mirror_azimuth=False):
-    bins,defect=angular_knots(ch,k,w,es,qscalar,allow_sum_boundaries=allow_future_spacelike)
+def angle(ch,k,w,R,es,name,order,inner,qscalar=Q,*,allow_future_spacelike=False,occupation_callbacks=None,mirror_azimuth=False,parent_energy_edges=None):
+    bins,defect=angular_knots(ch,k,w,es,qscalar,allow_sum_boundaries=allow_future_spacelike,
+                             parent_energy_edges=parent_energy_edges)
     x,v=roots_legendre(order)
     counts=np.zeros(3,dtype=int)
-    A=np.zeros(3)
+    A=np.zeros(3) if parent_energy_edges is None else np.zeros((len(parent_energy_edges)-1,3))
     for a,b in zip(bins[:-1],bins[1:],strict=True):
         for u,z in zip((a+b)/2+(b-a)*x/2,(b-a)*v/4,strict=True):
             kwargs={} if occupation_callbacks is None else {'occupation_callbacks':occupation_callbacks}
             if mirror_azimuth:
                 kwargs['mirror_azimuth']=True
+            if parent_energy_edges is not None:
+                kwargs['parent_energy_edges']=parent_energy_edges
             C,_,_=radial(ch,k,w,R,es,u,name,*inner,qscalar=qscalar,
                          allow_future_spacelike=allow_future_spacelike,**kwargs)
-            counts[0]+=C[0]>0
-            counts[1]+=C[1]>0
-            counts[2]+=(C[0]>0)&(C[1]==0)
+            tot=C if parent_energy_edges is None else C.sum(axis=0)
+            counts[0]+=tot[0]>0
+            counts[1]+=tot[1]>0
+            counts[2]+=(tot[0]>0)&(tot[1]==0)
             A+=z*C
     return A,counts,len(bins)-1,defect
 

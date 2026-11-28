@@ -57,12 +57,18 @@ def spacelike_parent_minimum(M,m,t,v,s):
 
 
 def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=Q,
-           *,allow_future_spacelike=False,occupation_callbacks=None,mirror_azimuth=False):
+           *,allow_future_spacelike=False,occupation_callbacks=None,mirror_azimuth=False,parent_energy_edges=None):
     P,F=ch
     M,m=P.m,F.m
     T=np.array([es-w,qscalar*np.sqrt((1-c)*(1+c)),0.,qscalar*c-k])
     v=np.linalg.norm(T[1:])
     t=T[0]
+    hi=max(P.E[-1],F.E[-1]+t)
+    edges=None if parent_energy_edges is None else np.asarray(parent_energy_edges,dtype=float)
+    if edges is not None and (edges.ndim!=1 or len(edges)<2 or not np.all(np.isfinite(edges)) or
+            edges[0]>M or edges[-1]<hi or np.any(np.diff(edges)<=0)):
+        raise ValueError('Parent energy bands must partition the entire retained support')
+    empty=lambda: np.zeros(3) if edges is None else np.zeros((len(edges)-1,3))
     s=(t-v)*(t+v)
     if t>=0 and not allow_future_spacelike:
         raise ValueError('This branch requires a past-directed transfer energy')
@@ -72,14 +78,15 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=
         if (w-k)*(w+k)<=es*es-qscalar*qscalar or not M>m:
             raise ValueError('Timelike-transfer exclusion does not hold here')
     if s>=0:
-        return np.zeros(3),False,0.
+        return empty(),False,0.
     A=M*M+s-m*m
     lo=(spacelike_parent_minimum(M,m,t,v,s) if t>=0 else
         (-A*t+v*np.sqrt(A*A-4*M*M*s))/(-2*s))
-    hi=max(P.E[-1],F.E[-1]+t)
     if not lo<hi:
-        return np.zeros(3),False,0.
+        return empty(),False,0.
     extras=[] if extra_energy_breaks is None else extra_energy_breaks(M,m,T,s,A,v,lo,hi)
+    if edges is not None:
+        extras=np.r_[extras,edges]
     ee=np.unique(np.clip(np.r_[lo,hi,P.E,F.E+t,extras],lo,hi))
     a,b=ee[:-1],ee[1:]
     c0=(a+b)/2
@@ -87,7 +94,7 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=
     gg=np.r_[0.,F.f,0.][np.searchsorted(F.E,c0-t)]
     keep=(ff>0)|(gg>0)
     if not any(keep):
-        return np.zeros(3),False,0.
+        return empty(),False,0.
     a,b,ff,gg,c0=(x[keep] for x in (a,b,ff,gg,c0))
     x,h=roots_legendre(n)
     e=(c0[:,None]+(b-a)[:,None]*x/2).ravel()
@@ -121,7 +128,9 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=
         integral=integral+A.mean(axis=-1)
     if occupation_callbacks is None:
         e_int=((b-a)/2)*((integral.reshape(-1,n))@h)*R/v
-        C=np.asarray([ff*(1-gg),gg*(1-ff),ff-gg])@e_int
+        rows=np.asarray([ff*(1-gg),gg*(1-ff),ff-gg])
+        w0=e_int
+        node_bin=c0
     else:
         # A number/energy-conserving continuum reconstruction carries
         # occupation variation *inside* each of the same support panels.
@@ -129,8 +138,17 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=
         if fp.shape!=e.shape or fb.shape!=e.shape or np.min([fp.min(),fb.min()])<0 or np.max([fp.max(),fb.max()])>1:
             raise ArithmeticError('Continuum charged occupation left its Pauli domain')
         w0=(((b-a)/2)[:,None]*h).ravel()*integral*R/v
-        C=np.asarray([fp*(1-fb),fb*(1-fp),fp-fb])@w0
-    if min(C[:2])<0 or abs(C[0]-C[1]-C[2])>5e-13*max(C[:2]):
+        rows=np.asarray([fp*(1-fb),fb*(1-fp),fp-fb])
+        node_bin=e
+    if edges is None:
+        C=rows@w0
+    else:
+        kbin=np.searchsorted(edges,node_bin,side='right')-1
+        if min(kbin)<0 or max(kbin)>=len(edges)-1:
+            raise ArithmeticError('An energy sample left its declared retained band')
+        C=np.column_stack([np.bincount(kbin,v*w0,minlength=len(edges)-1) for v in rows])
+    D=np.atleast_2d(C)
+    if np.min(D[:,:2])<0 or np.any(abs(D[:,0]-D[:,1]-D[:,2])>5e-13*np.max(D[:,:2],axis=1)):
         raise ArithmeticError('Impossible signed population support')
     return C,True,max_def
 
