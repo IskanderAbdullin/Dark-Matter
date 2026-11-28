@@ -1,0 +1,310 @@
+{
+  "rows": [
+    {
+      "T_SM": 0.05,
+      "initial_forces": [
+        0.6,
+        0.16
+      ],
+      "base_time_in_rate_units": 3.841067542275605e+22,
+      "checks": [
+        {
+          "relative_timestep_factor": 0.5,
+          "force_two_mesh_absolute_defect": 1.1102230246251565e-16,
+          "final_forces": [
+            0.5671329216218172,
+            0.15491455500474158
+          ],
+          "dark_state": [
+            9.578525578642216e-05,
+            2.233316764027531e-05
+          ],
+          "final_step_entropy": 3.515795395912675e-06,
+          "free_energy_decrease": 3.5854337024091238e-06,
+          "strict_remainder": 6.963830649644895e-08,
+          "normalized_count_heat_residual": 1.8276259854368836e-16,
+          "maximum_absolute_force_update": 0.03286707837818281
+        },
+        {
+          "relative_timestep_factor": 1.0,
+          "force_two_mesh_absolute_defect": 2.220446049250313e-16,
+          "final_forces": [
+            0.5380784434198428,
+            0.15054622671550616
+          ],
+          "dark_state": [
+            9.307356702363896e-05,
+            2.1632166291839977e-05
+          ],
+          "final_step_entropy": 6.235825825497542e-06,
+          "free_energy_decrease": 6.4762496077928194e-06,
+          "strict_remainder": 2.4042378229527774e-07,
+          "normalized_count_heat_residual": 6.396690949029092e-17,
+          "maximum_absolute_force_update": 0.06192155658015719
+        },
+        {
+          "relative_timestep_factor": 4.0,
+          "force_two_mesh_absolute_defect": 2.1094237467877974e-15,
+          "final_forces": [
+            0.4109398810038214,
+            0.13246989644223656
+          ],
+          "dark_state": [
+            8.244128317420692e-05,
+            1.893296121576499e-05
+          ],
+          "final_step_entropy": 1.463744678946279e-05,
+          "free_energy_decrease": 1.665745410032299e-05,
+          "strict_remainder": 2.0200073108602007e-06,
+          "normalized_count_heat_residual": 1.9848220587966927e-15,
+          "maximum_absolute_force_update": 0.18906011899617858
+        }
+      ]
+    },
+    {
+      "T_SM": 0.05,
+      "initial_forces": [
+        -0.6,
+        -0.16
+      ],
+      "base_time_in_rate_units": 6.161615044002118e+22,
+      "checks": [
+        {
+          "relative_timestep_factor": 0.5,
+          "force_two_mesh_absolute_defect": 8.881784197001252e-16,
+          "final_forces": [
+            -0.5813540552254122,
+            -0.15078178748527937
+          ],
+          "dark_state": [
+            2.2003021727292887e-05,
+            4.22846276844432e-06
+          ],
+          "final_step_entropy": 6.922784944841414e-07,
+          "free_energy_decrease": 7.102621596673996e-07,
+          "strict_remainder": 1.7983665183258132e-08,
+          "normalized_count_heat_residual": 2.338242182692229e-16,
+          "maximum_absolute_force_update": 0.018645944774587808
+        },
+        {
+          "relative_timestep_factor": 1.0,
+          "force_two_mesh_absolute_defect": 1.1102230246251565e-15,
+          "final_forces": [
+            -0.5635100745864062,
+            -0.1423149515376299
+          ],
+          "dark_state": [
+            2.269772328031347e-05,
+            4.383190629951146e-06
+          ],
+          "final_step_entropy": 1.2948760307901004e-06,
+          "free_energy_decrease": 1.362488124222728e-06,
+          "strict_remainder": 6.761209343262751e-08,
+          "normalized_count_heat_residual": 1.392995342880477e-16,
+          "maximum_absolute_force_update": 0.03648992541359375
+        },
+        {
+          "relative_timestep_factor": 4.0,
+          "force_two_mesh_absolute_defect": 8.326672684688674e-16,
+          "final_forces": [
+            -0.47300332262404654,
+            -0.10363048112303651
+          ],
+          "dark_state": [
+            2.6324197995982254e-05,
+            5.197307508272587e-06
+          ],
+          "final_step_entropy": 3.5322636158346255e-06,
+          "free_energy_decrease": 4.291664025656431e-06,
+          "strict_remainder": 7.594004098218058e-07,
+          "normalized_count_heat_residual": 6.245988333515791e-16,
+          "maximum_absolute_force_update": 0.12699667737595344
+        }
+      ]
+    },
+    {
+      "T_SM": 0.3,
+      "initial_forces": [
+        -1.5,
+        0.16
+      ],
+      "base_time_in_rate_units": 4.4693763643827175e+19,
+      "checks": [
+        {
+          "relative_timestep_factor": 0.5,
+          "force_two_mesh_absolute_defect": 3.0739411016611484e-11,
+          "final_forces": [
+            -1.4104761159084216,
+            0.1479078083102302
+          ],
+          "dark_state": [
+            0.008257940994338577,
+            0.01402063326147863
+          ],
+          "final_step_entropy": 0.00020502423842925482,
+          "free_energy_decrease": 0.00021350823308352584,
+          "strict_remainder": 8.483994654271022e-06,
+          "normalized_count_heat_residual": 4.647406728142922e-16,
+          "maximum_absolute_force_update": 0.08952388409157841
+        },
+        {
+          "relative_timestep_factor": 1.0,
+          "force_two_mesh_absolute_defect": 4.7236214939516685e-11,
+          "final_forces": [
+            -1.3295209913668784,
+            0.1385238495515256
+          ],
+          "dark_state": [
+            0.008303672125300206,
+            0.013764245716560616
+          ],
+          "final_step_entropy": 0.0003407901340816293,
+          "free_energy_decrease": 0.00036726258965989744,
+          "strict_remainder": 2.647245557826813e-05,
+          "normalized_count_heat_residual": 3.0031811041207004e-16,
+          "maximum_absolute_force_update": 0.1704790086331216
+        },
+        {
+          "relative_timestep_factor": 4.0,
+          "force_two_mesh_absolute_defect": 6.503775296096137e-11,
+          "final_forces": [
+            -0.9888358954168632,
+            0.10300354376327592
+          ],
+          "dark_state": [
+            0.008638353621695669,
+            0.013074651465021733
+          ],
+          "final_step_entropy": 0.0006556509927458888,
+          "free_energy_decrease": 0.0008401662448418099,
+          "strict_remainder": 0.00018451525209592107,
+          "normalized_count_heat_residual": 1.50159055206035e-17,
+          "maximum_absolute_force_update": 0.5111641045831368
+        }
+      ]
+    },
+    {
+      "T_SM": 0.64135,
+      "initial_forces": [
+        -0.034187877771,
+        0.002
+      ],
+      "base_time_in_rate_units": 8.425783165930581e+18,
+      "checks": [
+        {
+          "relative_timestep_factor": 0.5,
+          "force_two_mesh_absolute_defect": 5.201878858218656e-12,
+          "final_forces": [
+            -0.004561983296574517,
+            0.00026540562004210997
+          ],
+          "dark_state": [
+            0.09624822491591406,
+            0.250308397501673
+          ],
+          "final_step_entropy": 1.40366747308307e-06,
+          "free_energy_decrease": 5.948395235100268e-06,
+          "strict_remainder": 4.544727762017198e-06,
+          "normalized_count_heat_residual": 7.566979076386393e-17,
+          "maximum_absolute_force_update": 0.02962589447442548
+        },
+        {
+          "relative_timestep_factor": 1.0,
+          "force_two_mesh_absolute_defect": 2.9863334027879773e-12,
+          "final_forces": [
+            -0.002444580027176686,
+            0.0001422207197039701
+          ],
+          "dark_state": [
+            0.09630563682536923,
+            0.25038119419683974
+          ],
+          "final_step_entropy": 8.061979809584964e-07,
+          "free_energy_decrease": 6.0258247326916425e-06,
+          "strict_remainder": 5.219626751733146e-06,
+          "normalized_count_heat_residual": 2.8396696564997564e-17,
+          "maximum_absolute_force_update": 0.03174329774382331
+        },
+        {
+          "relative_timestep_factor": 4.0,
+          "force_two_mesh_absolute_defect": 8.337274013531237e-13,
+          "final_forces": [
+            -0.000645892711013504,
+            3.7576897509792046e-05
+          ],
+          "dark_state": [
+            0.09635443166644944,
+            0.25044308908238444
+          ],
+          "final_step_entropy": 2.2514033659689582e-07,
+          "free_energy_decrease": 6.054847621284054e-06,
+          "strict_remainder": 5.829707284687158e-06,
+          "normalized_count_heat_residual": 1.1133026687097223e-16,
+          "maximum_absolute_force_update": 0.03354198505998649
+        }
+      ]
+    },
+    {
+      "T_SM": 0.6882487043,
+      "initial_forces": [
+        1.8,
+        -0.16
+      ],
+      "base_time_in_rate_units": 806676202556146.0,
+      "checks": [
+        {
+          "relative_timestep_factor": 0.5,
+          "force_two_mesh_absolute_defect": 1.422022499752984e-10,
+          "final_forces": [
+            1.7081065511912634,
+            -0.1404481852285334
+          ],
+          "dark_state": [
+            0.1704793311131696,
+            0.3824382417648624
+          ],
+          "final_step_entropy": 0.0006145859548545715,
+          "free_energy_decrease": 0.0007310597043228562,
+          "strict_remainder": 0.00011647374946828471,
+          "normalized_count_heat_residual": 5.291049428801913e-15,
+          "maximum_absolute_force_update": 0.09189344880873662
+        },
+        {
+          "relative_timestep_factor": 1.0,
+          "force_two_mesh_absolute_defect": 1.7634960158829927e-10,
+          "final_forces": [
+            1.653579743104446,
+            -0.12894746474189875
+          ],
+          "dark_state": [
+            0.1717232749554727,
+            0.3895988689147738
+          ],
+          "final_step_entropy": 0.0007895093150304362,
+          "free_energy_decrease": 0.0010867317448227665,
+          "strict_remainder": 0.0002972224297923303,
+          "normalized_count_heat_residual": 2.1519741266568344e-16,
+          "maximum_absolute_force_update": 0.14642025689555394
+        },
+        {
+          "relative_timestep_factor": 4.0,
+          "force_two_mesh_absolute_defect": 1.366242674549767e-10,
+          "final_forces": [
+            1.5407384560348232,
+            -0.10618427391460163
+          ],
+          "dark_state": [
+            0.17397446831927854,
+            0.4039005160838974
+          ],
+          "final_step_entropy": 0.0008266566338405607,
+          "free_energy_decrease": 0.0017295264033564406,
+          "strict_remainder": 0.0009028697695158799,
+          "normalized_count_heat_residual": 1.3098972944867688e-16,
+          "maximum_absolute_force_update": 0.25926154396517687
+        }
+      ]
+    }
+  ],
+  "scope": "Dark FD and massless-scalar moments against a fixed visible reservoir, on short finite implicit collision steps. Not a cosmological trajectory, an expanding self-consistent visible bath, or a universal timestep bound."
+}
