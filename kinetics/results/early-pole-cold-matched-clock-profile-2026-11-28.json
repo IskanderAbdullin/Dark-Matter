@@ -1,0 +1,139 @@
+{
+  "x": 0.05,
+  "common_q_edges": [
+    1e-06,
+    1.094958977489465e-06,
+    1.3163822043342373e-06,
+    1.5825817619770524e-06,
+    1.9026123454844749e-06,
+    2.287359695506477e-06,
+    2.7499108733551402e-06,
+    3.3059994133202632e-06,
+    3.974540493939284e-06,
+    4.778274331905574e-06,
+    5.7445396834586724e-06,
+    6.906203763665279e-06,
+    8.302780214505868e-06,
+    9.9817731491033e-06,
+    9.990882418036608e-06,
+    1e-05,
+    1.4426999059072134e-05,
+    1.5e-05
+  ],
+  "ordered_state_sha256_uncompressed": [
+    "3ce45fc989808360c376ba0e9920a37fe78b942ecdaef96cdc136e7f04bc7aac",
+    "b9ed8d78fea795969850fd7121536a8de3b7396f7a34e0eff690bb1baaab2bb8",
+    "ccd47774094abd22a75a17223cad61cdd148ff58f641de5ee2b35984e046e90a",
+    "cd4d6b834aab835535e64ececa68468224f79902c848e9c2c03fae6eb97e3688"
+  ],
+  "coarse": {
+    "forward_number": {
+      "original_S2_S4_TV": 0.02023986234535054,
+      "S4_over_S2_absolute_band_response": 0.9966821253139684,
+      "count_only": {
+        "minimum": 0.008822943363407575,
+        "projected_profile_TV": 0.008822943668966816,
+        "regrouped_lower_bound": 0.007296328894655057
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020226333338154625,
+        "projected_profile_TV": 0.02022633364509449,
+        "regrouped_lower_bound": 0.020226273627625635
+      }
+    },
+    "inverse_number": {
+      "original_S2_S4_TV": 0.020225552210364494,
+      "S4_over_S2_absolute_band_response": 0.9961142671455914,
+      "count_only": {
+        "minimum": 0.007953967863244192,
+        "projected_profile_TV": 0.007953968158510787,
+        "regrouped_lower_bound": 0.006319754077553612
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020205299887128565,
+        "projected_profile_TV": 0.0202053001844648,
+        "regrouped_lower_bound": 0.020205196062295205
+      }
+    },
+    "forward_excess": {
+      "original_S2_S4_TV": 0.019075500481568895,
+      "S4_over_S2_absolute_band_response": 0.9781515777942118,
+      "count_only": {
+        "minimum": 0.0014946511689385782,
+        "projected_profile_TV": 0.0014946512086186977,
+        "regrouped_lower_bound": 0.0009350637236454502
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.018733571437749164,
+        "projected_profile_TV": 0.01873357150648212,
+        "regrouped_lower_bound": 0.018730886121189894
+      }
+    }
+  },
+  "fine": {
+    "forward_number": {
+      "original_S2_S4_TV": 0.02024019551868088,
+      "S4_over_S2_absolute_band_response": 0.9966982206457554,
+      "count_only": {
+        "minimum": 0.00883306610109459,
+        "projected_profile_TV": 0.008833066406640827,
+        "regrouped_lower_bound": 0.007291413239077329
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020225558377649364,
+        "projected_profile_TV": 0.020225558684611677,
+        "regrouped_lower_bound": 0.020225498300099676
+      }
+    },
+    "inverse_number": {
+      "original_S2_S4_TV": 0.020225634591020475,
+      "S4_over_S2_absolute_band_response": 0.9961321915367449,
+      "count_only": {
+        "minimum": 0.007967101908126498,
+        "projected_profile_TV": 0.007967102203413871,
+        "regrouped_lower_bound": 0.00631327809275803
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020203947034989178,
+        "projected_profile_TV": 0.020203947332349276,
+        "regrouped_lower_bound": 0.020203842647835035
+      }
+    },
+    "forward_excess": {
+      "original_S2_S4_TV": 0.01907637022642045,
+      "S4_over_S2_absolute_band_response": 0.9781679707980534,
+      "count_only": {
+        "minimum": 0.0015185551327208276,
+        "projected_profile_TV": 0.001518555172684686,
+        "regrouped_lower_bound": 0.0009279685821546836
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.018711101045210933,
+        "projected_profile_TV": 0.018711101113953042,
+        "regrouped_lower_bound": 0.018707574911559055
+      }
+    }
+  },
+  "fine_minus_coarse": {
+    "forward_number": {
+      "original_S2_S4_TV": 3.3317333033786034e-07,
+      "S4_over_S2_absolute_band_response": 1.6095331787036038e-05,
+      "count_only": 1.0122737687015201e-05,
+      "count_and_mean_excess": -7.749605052606579e-07
+    },
+    "inverse_number": {
+      "original_S2_S4_TV": 8.23806559809015e-08,
+      "S4_over_S2_absolute_band_response": 1.7924391153556485e-05,
+      "count_only": 1.313404488230592e-05,
+      "count_and_mean_excess": -1.3528521393864346e-06
+    },
+    "forward_excess": {
+      "original_S2_S4_TV": 8.69744851555998e-07,
+      "S4_over_S2_absolute_band_response": 1.6393003841597142e-05,
+      "count_only": 2.3903963782249352e-05,
+      "count_and_mean_excess": -2.2470392538231215e-05
+    }
+  },
+  "maximum_pair_mesh_absolute_defect": 1.4876988529977098e-13,
+  "scope": "Discrete absolute and normalized cold responses at matched clocks, held optics and exact four-way q partition. No earlier-history or continuum guarantee."
+}

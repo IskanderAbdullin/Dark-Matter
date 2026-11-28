@@ -11,9 +11,9 @@ from early_pole_endpoint_continuum_cold_band_receipt import run as receipt,read 
 from early_pole_endpoint_scalar_subshell_chain_receipt import read
 
 
-def verify_pair(files,card_path,archive,scale):
+def verify_pair(files,card_path,archive,scale,*,steps=2048):
     c,s=read(card_path)
-    if (c['grid'],c['x_end'],c['steps'])!=('fine',.05,2048):
+    if (c['grid'],c['x_end'],c['steps'])!=('fine',.05,steps):
         raise ArithmeticError('Use the evolved fine endpoint on the same clock')
     u=receipt(files,archive)
     t=u['full_pole_and_snapshot']
@@ -32,7 +32,9 @@ def verify_pair(files,card_path,archive,scale):
 
 
 def run(pairs,states,archive):
-    levels=(1,2,4)
+    if len(pairs)!=len(states) or len(pairs) not in (3,5):
+        raise ArithmeticError('Expected complete S1/S2/S4 or S1/S2/S4/S8/S16 from the same clocks')
+    levels=(1,2,4,8,16)[:len(pairs)]
     entries=[verify_pair(f,p,archive,i) for f,p,i in zip(pairs,states,levels,strict=True)]
     out=[]
     for a,b in zip(entries[:-1],entries[1:],strict=True):
@@ -47,14 +49,19 @@ def run(pairs,states,archive):
                         relative_neutrality_roots=(nn[1]/nn[0]-1).tolist(),
                         constructed_common_occupation=common,net_over_inverse_on_common_occupation=net))
     return dict(x=.05,grid='fine',charge_subcells=2,band=[1e-6,1.5e-5],entries=entries,adjacent_contrasts=out,
-                scope='Same charge partition and retained band, three independently evolved scalar charts and their own optical fits. No physical photon occupation, net rate or asymptotic error claimed.')
+                scope=('Same charge partition and retained band, three independently evolved scalar charts and their own optical fits. No physical photon occupation, net rate or asymptotic error claimed.' if len(pairs)==3 else 'Same charge partition and retained band, five independently evolved scalar charts and their own optical fits. No physical photon occupation, net rate or asymptotic error claimed.'))
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('s1','s2','s4'):
         p.add_argument('--'+k,nargs=2,type=Path,required=True)
-    p.add_argument('--states',nargs=3,type=Path,required=True)
+    for k in ('s8','s16'):
+        p.add_argument('--'+k,nargs=2,type=Path)
+    p.add_argument('--states',nargs='+',type=Path,required=True)
     p.add_argument('--archive',type=Path,required=True)
     a=p.parse_args()
-    print(json.dumps(run((a.s1,a.s2,a.s4),a.states,a.archive),indent=2,allow_nan=False))
+    if bool(a.s8)!=bool(a.s16):
+        p.error('Supply both higher complete scalar levels or neither')
+    pairs=(a.s1,a.s2,a.s4) if not a.s8 else (a.s1,a.s2,a.s4,a.s8,a.s16)
+    print(json.dumps(run(pairs,a.states,a.archive),indent=2,allow_nan=False))
