@@ -22,6 +22,11 @@ def reduce(path):
     if (b[0][0],b[-1][1])!=(1e-6,1.5e-5) or any(not lo<hi for lo,hi in b) or any(p[1]!=q[0] for p,q in zip(b[:-1],b[1:],strict=True)):
         raise ArithmeticError('Incomplete or overlapping retained support')
     tags=['grid','time_x','scalar_mass','omega','residue','mesh']
+    refined=['scalar_div','charge_div','scalar_cut','state_sha256']
+    if any(k in r for r in x for k in refined):
+        if any(k not in r for r in x for k in refined):
+            raise ArithmeticError('Mixed or incomplete scalar refinement provenance')
+        tags+=refined
     if any(any(y[t]!=x[0][t] for t in tags) for y in x):
         raise ArithmeticError('Mixed endpoint or order')
     a=np.array([r['coeff'] for r in x])
@@ -37,7 +42,7 @@ def reduce(path):
 
 def run(files,archive):
     (a,ac,m),(b,bc,n)=[reduce(f) for f in files]
-    if ac!=bc or any(m[k]!=n[k] for k in m if k!='mesh') or n['grid'] not in ('fine','third') or n['time_x']!=.05:
+    if ac!=bc or m.keys()!=n.keys() or any(m[k]!=n[k] for k in m if k!='mesh') or n['grid'] not in ('fine','third') or n['time_x']!=.05:
         raise ArithmeticError('Changed support or reference')
     if any(u>=v for u,v in zip(m['mesh'],n['mesh'],strict=True)) or min(np.min(a),np.min(b))<=0:
         raise ArithmeticError('Need positive moments on two distinct ordered meshes')

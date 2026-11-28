@@ -1,5 +1,6 @@
 """Integrated fixed-pole cold response on an opt-in continuum endpoint reconstruction."""
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -14,12 +15,21 @@ from finite_mass_qed_fixed_pole_scalar_q_band_reference import q_knots
 from finite_mass_qed_timelike_pole_angular_reference import angle
 
 
-def run(card,mesh,output):
+def run(card,mesh,output,topology_only=False):
     g=card['grid']
     bundle=load(g)[0]
-    d=CellChart(bundle,SPECS[g],card['subcells_per_archived_cell'],reference_x=card['reference_x'])
+    tags={}
+    if 'scalar_div' in card:
+        from early_pole_endpoint_scalar_subshell_pilot import ScalarSubshellChart
+        d=ScalarSubshellChart(bundle,SPECS[g],card['charge_div'],card['scalar_div'],card['cut'])
+        bundle=dict(bundle,scalar_momentum_edges=d.ds.ed)
+        serial=json.dumps(card,sort_keys=True,separators=(',',':'),allow_nan=False).encode()
+        tags=dict(scalar_div=card['scalar_div'],charge_div=card['charge_div'],scalar_cut=card['cut'],
+                  state_sha256=hashlib.sha256(serial).hexdigest())
+    else:
+        d=CellChart(bundle,SPECS[g],card['subcells_per_archived_cell'],reference_x=card['reference_x'])
     y=np.asarray(card['endpoint_occupation'])
-    if card['counts']!=[d.ns,d.nf,d.np] or y.shape!=(d.n,) or min(y)<0 or max(y[d.ns:])>1:
+    if card['counts']!=[d.ns,d.nf,d.np] or y.shape!=(d.n,) or not np.all(np.isfinite(y)) or min(y)<0 or max(y[d.ns:])>1:
         raise ArithmeticError('Invalid endpoint occupation card')
     x=card['x_end']
     m=d.state(x,y)[0]
@@ -32,6 +42,8 @@ def run(card,mesh,output):
     k=.0015
     _,omega,res=root(lambda b:sum(charge_field(*a,b,36) for a in fit),k)
     span=(1e-6,1.5e-5)
+    if d.ds.ed[0]>span[0] or d.ds.ed[-1]<span[1]:
+        raise ArithmeticError('Missing retained scalar occupation support')
     u,v=[q_knots(bundle,C,k,omega,m,span,s) for s in (49,89)]
     if u.shape!=v.shape or max(abs(u-v))>9e-16:
         raise ArithmeticError('Shifted cold topology not resolved')
@@ -39,6 +51,9 @@ def run(card,mesh,output):
     order,angular,inn,az=meshes[mesh]
     xs,ws=roots_legendre(order)
     expected={'grid':g,'time_x':x,'scalar_mass':m,'omega':omega,'residue':res,'mesh':list(meshes[mesh]),'total':len(v)-1}
+    expected.update(tags)
+    if topology_only:
+        return dict(expected,edges=v.tolist())
     done=set()
     if output.exists():
         for line in output.read_text().splitlines():
@@ -69,6 +84,11 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('state',type=Path)
     p.add_argument('mesh',type=int,choices=(0,1,2))
-    p.add_argument('output',type=Path)
+    p.add_argument('output',type=Path,nargs='?')
+    p.add_argument('--topology-only',action='store_true')
     o=p.parse_args()
-    run(json.loads(o.state.read_text()),o.mesh,o.output)
+    if o.output is None and not o.topology_only:
+        p.error('output is required except in topology-only mode')
+    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only)
+    if result is not None:
+        print(json.dumps(result,indent=2,allow_nan=False))
