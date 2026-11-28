@@ -17,13 +17,28 @@ from early_pole_endpoint_warm_pressure_source_control import cell_weights
 from early_pole_endpoint_warm_pressure_cells import partition
 
 
+def chart_for(card):
+    schema=card['scalar_nodal_rule']
+    if schema=='gauss-volume-v1' and 'warm_gauss_order' not in card:
+        d=ScalarGauss2(load('fine')[0],SPECS['fine'],2,4,1e-5,gauss_floor=.01)
+        return 2,d,d.scalar_repeats
+    if schema=='gauss-volume-v2-general' and card.get('warm_gauss_order') in (3,4):
+        from early_pole_endpoint_warm_positive_gauss_ladder import WarmGauss
+        order=card['warm_gauss_order']
+        d=WarmGauss(load('fine')[0],order)
+        return order,d,d.repeats
+    raise ArithmeticError('Unknown warm Gauss node convention')
+
+
 def gauss(card,base,m,x,*,expected_steps=None):
     n=(1024 if x==.01 else 2048) if expected_steps is None else expected_steps
     if (card['grid'],card['x_end'],card['steps'],card['reference_x'],card['charge_div'],card['scalar_div'],
-          card['cut'],card['gauss_floor'],card['scalar_nodal_rule'])!=(
-            'fine',x,n,X,2,4,1e-5,.01,'gauss-volume-v1'):
+          card['cut'],card['gauss_floor'])!=('fine',x,n,X,2,4,1e-5,.01):
         raise ArithmeticError('Require the matched warm-only Gauss chart')
-    d=ScalarGauss2(load('fine')[0],SPECS['fine'],2,4,1e-5,gauss_floor=.01)
+    order,d,repeats=chart_for(card)
+    expected_cells=d.old_ns if order==2 else d.old_count
+    if card['scalar_cell_count']!=expected_cells:
+        raise ArithmeticError('Unrecognized native cell count')
     y=np.asarray(card['nodal_occupation'])
     if card['nodes']!=[d.ns,d.nf,d.np] or y.shape!=(d.n,) or min(y)<0 or not np.all(np.isfinite(y)) or max(y[d.ns:])>1:
         raise ArithmeticError('Nodal archive mismatch')
@@ -36,7 +51,7 @@ def gauss(card,base,m,x,*,expected_steps=None):
     upper=[]
     stable_width=[]
     max_fit_error=0.
-    pos=np.r_[0,np.cumsum(d.scalar_repeats)]
+    pos=np.r_[0,np.cumsum(repeats)]
     N=d.ds.w*y[:d.ns]
     for j,(a,b) in enumerate(zip(d.ds.ed[:-1],d.ds.ed[1:],strict=True)):
         ix=slice(pos[j],pos[j+1])
@@ -44,7 +59,7 @@ def gauss(card,base,m,x,*,expected_steps=None):
         if not u:
             cell_pairs.append((0.,0.))
             continue
-        if d.scalar_repeats[j]==2:
+        if repeats[j]>1:
             s=fsum(N[ix]*scaled_energy(d.ds.p[ix],a,b,m))/u
             rec=fit(a,b,m,u,s)
             rho=u*rec['mean_pressure_numerator']
@@ -103,7 +118,8 @@ def run(s,ga,others,x=.05):
         p=direct(e,z)
         out.append(dict(warm_div=w['warm_div'],moments=p.tolist(),relative_to_S4=(p/base-1).tolist(),
                         gauss_relative_to_this_warm=(G/p-1).tolist()))
-    return dict(x=x,fixed_mass=float(m),columns=['count','pressure','pressure_q_ge_.01'],
+    tag={} if ga['scalar_nodal_rule']=='gauss-volume-v1' else dict(warm_gauss_order=ga['warm_gauss_order'])
+    return dict(x=x,fixed_mass=float(m),**tag,columns=['count','pressure','pressure_q_ge_.01'],
                 S4_reference=base.tolist(),warm_gauss_moments=G.tolist(),
                 warm_gauss_conditional_pressure_envelope=envelope,warm_gauss_cell_attribution=contribution,
                 warm_gauss_relative_to_S4=(G/base-1).tolist(),geometric_warm_charts=out,

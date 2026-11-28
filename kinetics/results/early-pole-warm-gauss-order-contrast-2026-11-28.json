@@ -1,0 +1,187 @@
+{
+  "dynamic_rows": [
+    {
+      "x": 0.01,
+      "measurement_mass": 8.535844540506035e-05,
+      "Gauss3_over_Gauss2_minus_one": [
+        9.240765175277943e-08,
+        0.0009232336899236415,
+        0.0009251388399786897
+      ],
+      "pressure_contrast_interval_at_discrete_cell_count_and_energy": [
+        0.0009232328928960865,
+        0.0009232344870864218
+      ],
+      "Gauss3_over_W4_minus_one": [
+        -2.1465022481681473e-07,
+        -0.00491085779360434,
+        -0.004920932459519078
+      ]
+    },
+    {
+      "x": 0.02,
+      "measurement_mass": 0.0002635393844550805,
+      "Gauss3_over_Gauss2_minus_one": [
+        3.050634256318574e-08,
+        0.000946944460584298,
+        0.0009490169582178076
+      ],
+      "pressure_contrast_interval_at_discrete_cell_count_and_energy": [
+        0.0009469368871519723,
+        0.0009469520353559968
+      ],
+      "Gauss3_over_W4_minus_one": [
+        -6.406944952352944e-08,
+        -0.00489459208048626,
+        -0.004905241833334739
+      ]
+    },
+    {
+      "x": 0.04,
+      "measurement_mass": 0.0006770053032736531,
+      "Gauss3_over_Gauss2_minus_one": [
+        1.277925165688032e-08,
+        0.0010535836057115056,
+        0.0010555022761924437
+      ],
+      "pressure_contrast_interval_at_discrete_cell_count_and_energy": [
+        0.0010535347809967899,
+        0.0010536324404821773
+      ],
+      "Gauss3_over_W4_minus_one": [
+        -2.9577195581609317e-08,
+        -0.004908531269823491,
+        -0.004917416800805041
+      ]
+    },
+    {
+      "x": 0.05,
+      "measurement_mass": 0.0008731829968237441,
+      "Gauss3_over_Gauss2_minus_one": [
+        6.41790265376585e-09,
+        0.0008265659785089419,
+        0.0008278752775783271
+      ],
+      "pressure_contrast_interval_at_discrete_cell_count_and_energy": [
+        0.0008264861324818185,
+        0.0008266458354500017
+      ],
+      "Gauss3_over_W4_minus_one": [
+        -2.4587669789077893e-08,
+        -0.004903116478394809,
+        -0.004910838546798635
+      ]
+    }
+  ],
+  "frozen_stress": {
+    "frozen_columns": [
+      "count",
+      "energy",
+      "pressure",
+      "pseudo_pressure"
+    ],
+    "rows": [
+      {
+        "test_mass": 0.0,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          0.0006072244222836698,
+          0.0006072244222838918,
+          0.0006072244222838918
+        ]
+      },
+      {
+        "test_mass": 1e-06,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          0.0006010917685159711,
+          0.0006132293284850654,
+          0.000624855852408901
+        ]
+      },
+      {
+        "test_mass": 1e-05,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          0.0004002413995383147,
+          0.000735184963426283,
+          0.0008147126796291815
+        ]
+      },
+      {
+        "test_mass": 0.0008731829968237441,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          9.33925063195673e-06,
+          0.0008265659785089419,
+          0.0008278450881191723
+        ]
+      },
+      {
+        "test_mass": 0.01,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          8.196364862378402e-07,
+          0.0008277136608878521,
+          0.000827774577415008
+        ]
+      },
+      {
+        "test_mass": 0.1,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          7.876207752666176e-08,
+          0.0008255141924244924,
+          0.0008210599388462914
+        ]
+      },
+      {
+        "test_mass": 1.0,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          8.689579944487491e-09,
+          0.0006879644924313588,
+          0.000389168124404371
+        ]
+      },
+      {
+        "test_mass": 3.0,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          6.183505707468839e-09,
+          0.00018240181957351886,
+          -0.0016275621739028079
+        ]
+      },
+      {
+        "test_mass": 10.0,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          6.3128395844103125e-09,
+          -0.0008008436763293769,
+          -0.00786980558557826
+        ]
+      },
+      {
+        "test_mass": 100.0,
+        "Gauss3_over_Gauss2_minus_one": [
+          6.41790265376585e-09,
+          6.416527975616759e-09,
+          -0.0012913993530506707,
+          -0.013413975704063441
+        ]
+      }
+    ],
+    "limit_columns": [
+      "massless_energy",
+      "heavy_limit_3MP",
+      "heavy_limit_3M3PseudoPressure"
+    ],
+    "Gauss3_over_Gauss2_limit_minus_one": [
+      0.0006072244222836698,
+      -0.0012991233981454187,
+      -0.013535305269614328
+    ]
+  },
+  "scope": "Two fully evolved numerical warm charts and their conditioned positive reconstructions; no momentum convergence or physical late-epoch prediction."
+}

@@ -14,10 +14,15 @@ from early_pole_resolved_parent_reference import S
 CLOCK = (2048, 512, 1024, 1024, 1024)
 
 
-def verify(r, s, d, lo, hi, n):
+def verify(r, s, d, lo, hi, n, *, order=None):
+    if order not in (None,3,4):
+        raise ArithmeticError('Unsupported higher positive Gauss chart')
+    cells_n, repeats = (d.old_ns,d.scalar_repeats) if order is None else (d.old_count,d.repeats)
     key = dict(grid='fine', charge_div=2, scalar_div=4, cut=1e-5, gauss_floor=.01,
-               reference_x=X, nodes=[d.ns, d.nf, d.np], scalar_cell_count=d.old_ns,
-               scalar_nodal_rule='gauss-volume-v1')
+               reference_x=X, nodes=[d.ns, d.nf, d.np], scalar_cell_count=cells_n,
+               scalar_nodal_rule='gauss-volume-v1' if order is None else 'gauss-volume-v2-general')
+    if order is not None:
+        key['warm_gauss_order']=order
     if any(r.get(k)!=v or s.get(k)!=v for k,v in key.items()):
         raise ArithmeticError('Warm Gauss chart is not the declared chart')
     if (r['starting_x'],r['x_end'],r['coarse_steps'],s['x_end'],s['steps'])!=(lo,hi,n,hi,2*n):
@@ -41,7 +46,7 @@ def verify(r, s, d, lo, hi, n):
         raise ArithmeticError('Terminal scalar yield not positive')
     drift = abs(u[0,-1,1]/v-1)
     w = (d.ds.w*y[:d.ns])/S
-    agg = np.add.reduceat(w,np.r_[0,np.cumsum(d.scalar_repeats)[:-1]])
+    agg = np.add.reduceat(w,np.r_[0,np.cumsum(repeats)[:-1]])
     cells = np.asarray(r['scalar_cell_yields'])
     mass = d.state(hi,y)[0]
     observed_drift=r['relative_time_drift']
@@ -57,19 +62,31 @@ def verify(r, s, d, lo, hi, n):
                 maximum_pair_number_error=float(np.max(u[:,:,2])))
 
 
-def run(reports, states, *, prefix=False):
+def run(reports, states, *, prefix=False, order=None):
     k = len(reports)
     if k!=len(states) or not 1<=k<=len(EPOCHS) or not prefix and k!=len(EPOCHS):
         raise ArithmeticError('Need all epochs unless explicitly checking one chronological prefix')
-    d = ScalarGauss2(load('fine')[0],SPECS['fine'],2,4,1e-5,gauss_floor=.01)
+    g=load('fine')[0]
+    if order is None:
+        d = ScalarGauss2(g,SPECS['fine'],2,4,1e-5,gauss_floor=.01)
+    else:
+        from early_pole_endpoint_warm_positive_gauss_ladder import WarmGauss
+        d = WarmGauss(g,order)
     out = []
+    previous=None
     for p,q,lo,hi,n in zip(reports,states,(X,*EPOCHS[:-1])[:k],EPOCHS[:k],CLOCK[:k],strict=True):
         r,rhash = read(p)
         s,shash = read(q)
-        row = verify(r,s,d,lo,hi,n)
+        row = verify(r,s,d,lo,hi,n,order=order)
+        if order is not None:
+            if any('actual_previous_raw_sha256' not in c or c['actual_previous_raw_sha256']!=previous for c in (r,s)):
+                raise ArithmeticError('Higher warm Gauss restart does not bind its previous fine bytes')
+            row['verified_previous_raw_sha256']=previous
+            previous=shash
         row.update(source_report_sha256=rhash,uncompressed_state_sha256=shash)
         out.append(row)
-    return dict(complete=k==len(EPOCHS),scalar_nodal_rule='gauss-volume-v1',nodal_counts=[d.ns,d.nf,d.np],
+    x={} if order is None else dict(warm_gauss_order=order)
+    return dict(complete=k==len(EPOCHS),scalar_nodal_rule='gauss-volume-v1' if order is None else 'gauss-volume-v2-general',nodal_counts=[d.ns,d.nf,d.np],**x,
                 checked_epoch_pairs=out,
                 scope='Archived trace and saved-state audit; hashes bind endpoint artifacts, not a claim of bytewise replay of every trajectory.')
 
@@ -79,5 +96,6 @@ if __name__=='__main__':
     p.add_argument('--reports',nargs='+',type=Path,required=True)
     p.add_argument('--states',nargs='+',type=Path,required=True)
     p.add_argument('--prefix',action='store_true')
+    p.add_argument('--order',type=int,choices=(3,4))
     a=p.parse_args()
-    print(json.dumps(run(a.reports,a.states,prefix=a.prefix),indent=2,allow_nan=False))
+    print(json.dumps(run(a.reports,a.states,prefix=a.prefix,order=a.order),indent=2,allow_nan=False))

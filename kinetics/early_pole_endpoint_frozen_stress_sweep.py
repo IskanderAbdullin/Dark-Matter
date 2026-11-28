@@ -7,10 +7,8 @@ from pathlib import Path
 import numpy as np
 from scipy.special import roots_legendre
 
-from early_pole_endpoint_gauss_warm_comparison import gauss
+from early_pole_endpoint_gauss_warm_comparison import chart_for,gauss
 from early_pole_endpoint_scalar_gauss2_energy_reconstruction import fit,scaled_energy
-from early_pole_endpoint_scalar_gauss2_live_fixture import ScalarGauss2
-from early_pole_endpoint_stencil_remap_pilot import SPECS,load
 from early_pole_endpoint_scalar_subshell_spectrum_audit import read
 from early_pole_endpoint_scalar_warm_evolution_audit import unpack
 
@@ -41,10 +39,10 @@ def evaluate(q,w,warm,M):
 
 def nodal_frozen(card,base,M0):
     direct,_,_=gauss(card,base,M0,.05)
-    d=ScalarGauss2(load('fine')[0],SPECS['fine'],2,4,1e-5,gauss_floor=.01)
+    order,d,repeats=chart_for(card)
     y=np.asarray(card['nodal_occupation'])
     n=d.ds.w*y[:d.ns]
-    ends=np.r_[0,np.cumsum(d.scalar_repeats)]
+    ends=np.r_[0,np.cumsum(repeats)]
     def occ(j,q):
         f=np.empty(q.shape)
         for k,i in enumerate(j):
@@ -60,7 +58,7 @@ def nodal_frozen(card,base,M0):
                 r=fit(a,b,M0,u,mu)
                 f[k]=np.exp(r['log_occupation_at_lower_edge']+r['tilt']*scaled_energy(q[k],a,b,M0))
         return f
-    return direct,occ
+    return direct,occ,order
 
 
 def run(cards,gauss_card=None):
@@ -74,12 +72,12 @@ def run(cards,gauss_card=None):
     charts=[(j,weights(d,y,24),weights(d,y,48),fsum(d.ds.w*y[:d.ns])) for j,(d,y) in zip(n,l,strict=True)]
     if gauss_card is not None:
         d=l[0][0]
-        expected,f=nodal_frozen(gauss_card,d,M0)
+        expected,f,order=nodal_frozen(gauss_card,d,M0)
         z=[weights(d,f,j) for j in (24,48)]
         h,t=evaluate(*z[-1],M0)
         if max(abs(np.array([h[0],3*h[2],3*t[2]])/expected-1))>2e-12:
             raise ArithmeticError('Frozen positive Gauss shape does not match the accepted pressure receipt')
-        charts.append(('Gauss2',*z,expected[0]))
+        charts.append((f'Gauss{order}',*z,expected[0]))
     limiting=[]
     for level,_,sample,_ in charts:
         q,w,_=sample
@@ -96,8 +94,8 @@ def run(cards,gauss_card=None):
             a,b=evaluate(*hi,M)
             lo=evaluate(*low,M)
             err=max(np.max(abs(x/z-1)) for x,z in zip(lo,(a,b),strict=True))
-            if err>2e-12 or not 0<a[3]<=a[2]<=a[1]/3 or abs(a[0]/count-1)>3e-14:
-                raise ArithmeticError('Frozen stress moments did not close')
+            if err>2e-12 or a[3]<=0 or a[3]>a[2]*(1+4e-15) or 3*a[2]>a[1]*(1+4e-15) or abs(a[0]/count-1)>3e-14:
+                raise ArithmeticError(('Frozen stress moments did not close',level,M,err,a.tolist(),count))
             span=1e-4
             lag=[evaluate(*hi,M*np.exp(t))[0]*np.exp(np.array([-3,-4,-4,-4])*t) for t in (-span,span)]
             slope=(lag[1]-lag[0])/(2*span)
