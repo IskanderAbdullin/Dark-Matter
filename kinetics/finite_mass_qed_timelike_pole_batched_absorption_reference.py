@@ -57,7 +57,7 @@ def spacelike_parent_minimum(M,m,t,v,s):
 
 
 def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=Q,
-           *,allow_future_spacelike=False,occupation_callbacks=None):
+           *,allow_future_spacelike=False,occupation_callbacks=None,mirror_azimuth=False):
     P,F=ch
     M,m=P.m,F.m
     T=np.array([es-w,qscalar*np.sqrt((1-c)*(1+c)),0.,qscalar*c-k])
@@ -99,7 +99,12 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=
     p=np.sqrt(np.maximum(radicand,0.))
     axis=T[1:]/v
     cross=np.array([axis[2],0.,-axis[0]])
-    aphi=(np.arange(az)+.5)*2*np.pi/az
+    if mirror_azimuth and (az<2 or az%2):
+        raise ValueError('Mirror reduction requires a positive even full azimuth order')
+    # With k and q in the x-z plane, reflection in y is complex conjugation
+    # of spinors and slashed real vectors in this basis. For e_y there is
+    # one additional overall sign. Every squared amplitude is thus even.
+    aphi=(np.arange(az//2 if mirror_azimuth else az)+.5)*2*np.pi/az
     transverse=np.cos(aphi)[:,None]*cross+np.sin(aphi)[:,None]*np.array([0.,1.,0.])
     mom=z[:,None,None]*axis+p[:,None,None]*transverse[None,:,:]
     P0=np.concatenate([np.broadcast_to(e[:,None,None],(*mom.shape[:2],1)),mom],axis=-1)

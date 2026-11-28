@@ -1,0 +1,208 @@
+{
+  "radial": [
+    {
+      "grid": "fine",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 3.5e-06,
+      "cosine": 0.0,
+      "forward_inverse_signed": [
+        9.56319694081645e-10,
+        2.7071776589517068e-18,
+        9.563196913744672e-10
+      ],
+      "nonempty": true,
+      "relative_defect": 1.6111180863940769e-24,
+      "symmetric_cpu_speedup": 1.7669998520761143
+    },
+    {
+      "grid": "fine",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 0.0009,
+      "cosine": -0.61,
+      "forward_inverse_signed": [
+        134.86170808706427,
+        43.575638174724006,
+        91.28606991234022
+      ],
+      "nonempty": true,
+      "relative_defect": 3.1612060050494985e-16,
+      "symmetric_cpu_speedup": 4.0985505334463825
+    },
+    {
+      "grid": "fine",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 0.0021,
+      "cosine": 0.23,
+      "forward_inverse_signed": [
+        981.4238417060352,
+        158.98967632243318,
+        822.4341653836019
+      ],
+      "nonempty": true,
+      "relative_defect": 9.267094023229855e-16,
+      "symmetric_cpu_speedup": 2.142844219021519
+    },
+    {
+      "grid": "fine",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 0.007,
+      "cosine": -0.22,
+      "forward_inverse_signed": [
+        27323.89287275923,
+        69.47910864281906,
+        27254.413764116423
+      ],
+      "nonempty": true,
+      "relative_defect": 2.6628554167101314e-16,
+      "symmetric_cpu_speedup": 1.6425329819158156
+    },
+    {
+      "grid": "fine",
+      "mode": "L",
+      "k": 0.0012,
+      "q": 3.5e-06,
+      "cosine": 0.53,
+      "forward_inverse_signed": [
+        0.028961260654519504,
+        4.1459057050801325e-10,
+        0.028961260239928933
+      ],
+      "nonempty": true,
+      "relative_defect": 9.583690415526701e-15,
+      "symmetric_cpu_speedup": 1.509564351504711
+    },
+    {
+      "grid": "fine",
+      "mode": "L",
+      "k": 0.00256,
+      "q": 0.0012,
+      "cosine": -0.37,
+      "forward_inverse_signed": [
+        27714.842349752435,
+        4225.05367926793,
+        23489.788670484486
+      ],
+      "nonempty": true,
+      "relative_defect": 5.250585604899477e-16,
+      "symmetric_cpu_speedup": 1.9267498414168358
+    },
+    {
+      "grid": "third",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 3.5e-06,
+      "cosine": 0.0,
+      "forward_inverse_signed": [
+        1.207424098839737e-10,
+        2.731468708394501e-19,
+        1.207424096108268e-10
+      ],
+      "nonempty": true,
+      "relative_defect": 1.3273401105390846e-14,
+      "symmetric_cpu_speedup": 1.7546416183939926
+    },
+    {
+      "grid": "third",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 0.0009,
+      "cosine": -0.61,
+      "forward_inverse_signed": [
+        134.1103207609044,
+        42.15526029986034,
+        91.9550604610441
+      ],
+      "nonempty": true,
+      "relative_defect": 1.80138656583439e-15,
+      "symmetric_cpu_speedup": 2.072027540932212
+    },
+    {
+      "grid": "third",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 0.0021,
+      "cosine": 0.23,
+      "forward_inverse_signed": [
+        980.2121154318495,
+        156.23422459523226,
+        823.977890836617
+      ],
+      "nonempty": true,
+      "relative_defect": 3.479456209481638e-16,
+      "symmetric_cpu_speedup": 1.9609461212173123
+    },
+    {
+      "grid": "third",
+      "mode": "T",
+      "k": 0.0015,
+      "q": 0.007,
+      "cosine": -0.22,
+      "forward_inverse_signed": [
+        27266.522608379204,
+        68.16800915585573,
+        27198.354599223334
+      ],
+      "nonempty": true,
+      "relative_defect": 2.668458211076564e-16,
+      "symmetric_cpu_speedup": 2.344421083057606
+    },
+    {
+      "grid": "third",
+      "mode": "L",
+      "k": 0.0012,
+      "q": 3.5e-06,
+      "cosine": 0.53,
+      "forward_inverse_signed": [
+        0.01872984024132164,
+        2.554853022377387e-10,
+        0.01872983998583633
+      ],
+      "nonempty": true,
+      "relative_defect": 7.594689714238627e-15,
+      "symmetric_cpu_speedup": 1.9093563554436916
+    },
+    {
+      "grid": "third",
+      "mode": "L",
+      "k": 0.00256,
+      "q": 0.0012,
+      "cosine": -0.37,
+      "forward_inverse_signed": [
+        27510.178233265957,
+        4118.4610686074375,
+        23391.717164658523
+      ],
+      "nonempty": true,
+      "relative_defect": 5.289647746000545e-16,
+      "symmetric_cpu_speedup": 1.9290174976937078
+    }
+  ],
+  "complete_cosine": [
+    {
+      "grid": "fine",
+      "q": 3.5e-06,
+      "angular_panels": 6,
+      "relative_defect": 8.307133017732817e-15
+    },
+    {
+      "grid": "third",
+      "q": 0.007,
+      "angular_panels": 3,
+      "relative_defect": 1.687957276683589e-16
+    }
+  ],
+  "evolved_continuum": {
+    "q": 4e-06,
+    "relative_defect": 2.886579864025407e-15,
+    "affine": [
+      1.6951712443868006e-09,
+      4.9675140657705415e-18,
+      1.695171239419286e-09
+    ]
+  },
+  "scope": "Same discrete azimuth quadrature by exact mirror pairing; not a new angular refinement."
+}

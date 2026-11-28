@@ -15,7 +15,7 @@ from finite_mass_qed_fixed_pole_scalar_q_band_reference import q_knots
 from finite_mass_qed_timelike_pole_angular_reference import angle
 
 
-def run(card,mesh,output,topology_only=False):
+def run(card,mesh,output,topology_only=False,mirror_azimuth=False):
     g=card['grid']
     bundle=load(g)[0]
     tags={}
@@ -52,6 +52,8 @@ def run(card,mesh,output,topology_only=False):
     xs,ws=roots_legendre(order)
     expected={'grid':g,'time_x':x,'scalar_mass':m,'omega':omega,'residue':res,'mesh':list(meshes[mesh]),'total':len(v)-1}
     expected.update(tags)
+    if mirror_azimuth:
+        expected['mirror_azimuth']=True
     if topology_only:
         return dict(expected,edges=v.tolist())
     done=set()
@@ -59,7 +61,7 @@ def run(card,mesh,output,topology_only=False):
         for line in output.read_text().splitlines():
             r=json.loads(line)
             j=r['panel']
-            if j in done or r['bounds']!=v[j:j+2].tolist() or any(r[k]!=a for k,a in expected.items()):
+            if j in done or r['bounds']!=v[j:j+2].tolist() or r.get('mirror_azimuth',False)!=mirror_azimuth or any(r[k]!=a for k,a in expected.items()):
                 raise ArithmeticError('Changed endpoint or mesh in resume')
             done.add(j)
     with output.open('a',encoding='utf-8',buffering=1) as f:
@@ -70,7 +72,8 @@ def run(card,mesh,output,topology_only=False):
             for q,z in zip((a+b)/2+(b-a)*xs/2,(b-a)*ws/2,strict=True):
                 E=np.hypot(q,m)
                 n=y[np.searchsorted(d.ds.ed,q,side='right')-1]
-                A,B,D=angle(C,k,omega,res,E,'T',angular,(inn,az),q,occupation_callbacks=callbacks)[0]
+                kw={} if not mirror_azimuth else {'mirror_azimuth':True}
+                A,B,D=angle(C,k,omega,res,E,'T',angular,(inn,az),q,occupation_callbacks=callbacks,**kw)[0]
                 data=z*q*q/E*np.array([(1+n)*A,n*B,n*D+A])
                 coeff[0]+=data
                 coeff[1]+=E*data
@@ -86,9 +89,10 @@ if __name__=='__main__':
     p.add_argument('mesh',type=int,choices=(0,1,2))
     p.add_argument('output',type=Path,nargs='?')
     p.add_argument('--topology-only',action='store_true')
+    p.add_argument('--mirror-azimuth',action='store_true')
     o=p.parse_args()
     if o.output is None and not o.topology_only:
         p.error('output is required except in topology-only mode')
-    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only)
+    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth)
     if result is not None:
         print(json.dumps(result,indent=2,allow_nan=False))

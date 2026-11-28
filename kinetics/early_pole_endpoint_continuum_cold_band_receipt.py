@@ -22,6 +22,10 @@ def reduce(path):
     if (b[0][0],b[-1][1])!=(1e-6,1.5e-5) or any(not lo<hi for lo,hi in b) or any(p[1]!=q[0] for p,q in zip(b[:-1],b[1:],strict=True)):
         raise ArithmeticError('Incomplete or overlapping retained support')
     tags=['grid','time_x','scalar_mass','omega','residue','mesh']
+    if any('mirror_azimuth' in r for r in x):
+        if not all(r.get('mirror_azimuth') is True for r in x):
+            raise ArithmeticError('Mixed or invalid mirror-azimuth mode')
+        tags+=['mirror_azimuth']
     refined=['scalar_div','charge_div','scalar_cut','state_sha256']
     if any(k in r for r in x for k in refined):
         if any(k not in r for r in x for k in refined):
