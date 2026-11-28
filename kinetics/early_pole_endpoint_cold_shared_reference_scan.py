@@ -112,11 +112,13 @@ def run(left,right,states,archive,*,baseline=None,splits=None,levels=(2,4)):
     def optimizer(*args):
         methods=('highs',) if levels==(2,4) else ('highs','highs-ipm','highs-ds')
         fails=[]
-        for method in methods:
-            try:
-                return solve(*args,method=method,independent_bracket=levels!=(2,4))
-            except ArithmeticError as e:
-                fails.append(str(e))
+        scales=(256.,32.,1.) if levels==(8,16) else (1.,)
+        for scale in scales:
+            for method in methods:
+                try:
+                    return solve(*args,method=method,independent_bracket=levels!=(2,4),optimization_scale=scale)
+                except ArithmeticError as e:
+                    fails.append(str(e))
         raise ArithmeticError(f'No independently checked optimization: {fails}')
     if (baseline is None)!=(splits is None):
         raise ValueError('Supply the split plan and both original panels together')

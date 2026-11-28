@@ -87,7 +87,7 @@ def gradients(card, member, ix, factors):
     return start.ravel()[ix]/factors, out.T, E
 
 
-def solve(a,b,field,member,*,method="highs",independent_bracket=False):
+def solve(a,b,field,member,*,method="highs",independent_bracket=False,optimization_scale=1.):
     """One common occupancy per chart must serve all requested fields."""
     totals=a[1].sum(axis=1)
     n=a[0].shape[1]
@@ -100,9 +100,11 @@ def solve(a,b,field,member,*,method="highs",independent_bracket=False):
     D=U-V
     k,l=F.shape[1],G.shape[1]
     j=len(D)
-    delta=np.c_[F,-G]
+    if not np.isfinite(optimization_scale) or optimization_scale<1. or (optimization_scale!=1. and not independent_bracket):
+        raise ValueError('Positive optimization scale requires independent bracket verification')
+    delta=np.c_[F,-G]*optimization_scale
     A=np.block([[delta,-np.eye(j)],[-delta,-np.eye(j)]])
-    ub=np.r_[-D,D]
+    ub=np.r_[-D,D]*optimization_scale
     E=np.block([[P,np.zeros((len(P),l+j))],
                 [np.zeros((len(Q),k)),Q,np.zeros((len(Q),j))]])
     rhs=np.ones(len(E))
@@ -137,9 +139,13 @@ def solve(a,b,field,member,*,method="highs",independent_bracket=False):
     support=float(np.longdouble(w)@np.longdouble(D)
                   +m.sum(dtype=np.longdouble)+n0.sum(dtype=np.longdouble))
     verb=(abs(left-right).reshape(len(field),n)).sum(axis=1)
-    dual=rhs@pp+ub@qq
-    residuals=[abs(z.fun-verb.sum()),float(np.max(abs(E@x-rhs))),float(max(0.,max(A@x-ub),-min(x))),
-               float(max(0.,max(E.T@pp+A.T@qq-c),max(qq))),abs(z.fun-dual),abs(z.fun-support)]
+    dual=(rhs@pp+ub@qq)/optimization_scale
+    objective=z.fun/optimization_scale
+    signed_defect=E.T@pp+A.T@qq-c
+    signed_defect[:k+l]/=optimization_scale
+    residuals=[abs(objective-verb.sum()),float(np.max(abs(E@x-rhs))),
+               float(max(0.,max(A@x-ub)/optimization_scale,-min(x))),
+               float(max(0.,max(signed_defect),max(qq))),abs(objective-dual),abs(objective-support)]
     if independent_bracket:
         # The LP proposes two candidates, but accuracy is measured only by
         # actual projected simplex weights and a recomputed signed support.
@@ -147,8 +153,9 @@ def solve(a,b,field,member,*,method="highs",independent_bracket=False):
         hi=float(fsum(verb))
         lo=max(0.,support)
         if min(xleft)<0 or min(xright)<0 or proj>2e-14 or not -2e-12<=hi-lo<=2e-9:
-            raise ArithmeticError('Independent finite lower/upper bracket did not resolve')
-        return dict(minimum_l1=(hi+lo)/2,support_hyperplane_value=lo,projected_witness_value=hi,
+            raise ArithmeticError(('Independent finite lower/upper bracket did not resolve',lo,hi,proj,optimization_scale))
+        info={} if optimization_scale==1. else dict(optimizer_response_scale=optimization_scale)
+        return dict(**info,minimum_l1=(hi+lo)/2,support_hyperplane_value=lo,projected_witness_value=hi,
                     verified_bracket_width=max(0.,hi-lo),projected_simplex_defect=proj,
                     optimizer_nominal_residuals=[float(x) for x in residuals],
                     support_signed_weights_by_field=w.reshape(len(field),n).tolist(),

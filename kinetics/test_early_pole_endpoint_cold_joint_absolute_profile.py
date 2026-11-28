@@ -35,6 +35,17 @@ class JointAbsoluteResponseTest(unittest.TestCase):
         self.assertAlmostEqual(r['projected_witness_value'],1.)
         self.assertLess(r['verified_bracket_width'],1e-9)
 
+    def test_scaled_proposal_returns_unscaled_witness_and_support(self):
+        a=card([[.1,.3,.5],[.3,.1,.5]])
+        b=card([[0.,0.,.5]])
+        for scale in (1.,32.,256.):
+            r=solve(a,b,(0,1,2),0,independent_bracket=True,optimization_scale=scale)
+            self.assertAlmostEqual(r['support_hyperplane_value'],.4,places=13)
+            self.assertAlmostEqual(r['projected_witness_value'],.4,places=13)
+            self.assertLess(r['verified_bracket_width'],1e-12)
+        with self.assertRaises(ValueError):
+            solve(a,b,(0,),0,optimization_scale=256.)
+
 
 if __name__ == '__main__':
     unittest.main()
