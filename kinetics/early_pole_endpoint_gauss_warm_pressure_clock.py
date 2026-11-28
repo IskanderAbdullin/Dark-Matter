@@ -8,15 +8,18 @@ import numpy as np
 
 from early_pole_cell_endpoint_startup_pilot import drive
 from early_pole_endpoint_capacity_fast_step import step
-from early_pole_endpoint_gauss_warm_chain_receipt import verify
+from early_pole_endpoint_gauss_warm_chain_receipt import verify,read as read_and_hash
 from early_pole_endpoint_gauss_warm_comparison import chart_for,gauss
 from early_pole_endpoint_scalar_subshell_spectrum_audit import read
 from early_pole_endpoint_scalar_warm_evolution_audit import unpack
 from early_pole_resolved_parent_reference import S
 
 
-def run(native,restart,ref_fine,old_report):
-    lo,hi,n=.04,.05,1024
+def run(native,restart,ref_fine,old_report,*,first_continuation=False,restart_sha=None):
+    lo,hi,n=(.0075,.01,512) if first_continuation else (.04,.05,1024)
+    if first_continuation and (not restart_sha or restart.get('steps')!=4096
+                              or any(q.get('actual_previous_raw_sha256')!=restart_sha for q in (ref_fine,old_report))):
+        raise ArithmeticError('First continuation does not bind the original startup checkpoint')
     orig,f=unpack(native,False,hi)
     mass=orig.state(hi,f)[0]
     order,d,_=chart_for(ref_fine)
@@ -55,8 +58,11 @@ if __name__=='__main__':
     a.add_argument('fine_state',type=Path)
     a.add_argument('report',type=Path)
     a.add_argument('--coarse',type=Path,required=True)
+    a.add_argument('--first-continuation',action='store_true',help='replay .0075 to .01 instead of .04 to .05')
     p=a.parse_args()
-    r,c=run(*map(read,(p.native,p.restart,p.fine_state,p.report)))
+    k,l,m,n=map(read,(p.native,p.restart,p.fine_state,p.report))
+    digest=read_and_hash(p.restart)[1] if p.first_continuation else None
+    r,c=run(k,l,m,n,first_continuation=p.first_continuation,restart_sha=digest)
     tmp=p.coarse.with_suffix(p.coarse.suffix+'.tmp')
     tmp.write_text(json.dumps(c,indent=2,allow_nan=False)+'\n')
     tmp.replace(p.coarse)
