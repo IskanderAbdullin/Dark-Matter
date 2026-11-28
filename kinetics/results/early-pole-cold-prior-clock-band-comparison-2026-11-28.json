@@ -1,0 +1,206 @@
+{
+  "x": 0.05,
+  "k": 0.0015,
+  "common_q_edges": [
+    1e-06,
+    1.094958977489465e-06,
+    1.3163822043342373e-06,
+    1.5825817619770524e-06,
+    1.9026123454844749e-06,
+    2.287359695506477e-06,
+    2.7499108733551402e-06,
+    3.3059994133202632e-06,
+    3.974540493939284e-06,
+    4.778274331905574e-06,
+    5.7445396834586724e-06,
+    6.906203763665279e-06,
+    8.302780214505868e-06,
+    9.9817731491033e-06,
+    9.990882418036608e-06,
+    1e-05,
+    1.4426999059072134e-05,
+    1.5e-05
+  ],
+  "original_terminal_step_count": 2048,
+  "alternate_terminal_step_count": 2048,
+  "state_hashes": [
+    "9bc68d9ce2751d81ea3c481065ff1c540606c78b361b8ffbeff149f49b9e7abf",
+    "ec48c081e6653fc56c73b7e0d7f8d0dc501ae7235b80e559cd19b2def704f422",
+    "ccd47774094abd22a75a17223cad61cdd148ff58f641de5ee2b35984e046e90a",
+    "cd4d6b834aab835535e64ececa68468224f79902c848e9c2c03fae6eb97e3688"
+  ],
+  "earlier_coarse_S2_S4_profiles": {
+    "forward_number": {
+      "original_S2_S4_TV": 0.020234828190343297,
+      "S4_over_S2_absolute_band_response": 0.9967494424914956,
+      "count_only": {
+        "minimum": 0.00881498995630845,
+        "projected_profile_TV": 0.008814989988564791,
+        "regrouped_lower_bound": 0.007298599601306272,
+        "verified_independent_interval": [
+          0.008814989924052108,
+          0.008814989988564791
+        ]
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.02022196337284516,
+        "projected_profile_TV": 0.020221963385366484,
+        "regrouped_lower_bound": 0.020221903614669356,
+        "verified_independent_interval": [
+          0.02022196336032384,
+          0.020221963385366484
+        ]
+      }
+    },
+    "inverse_number": {
+      "original_S2_S4_TV": 0.020220720381309454,
+      "S4_over_S2_absolute_band_response": 0.9961871574171206,
+      "count_only": {
+        "minimum": 0.007944257851733786,
+        "projected_profile_TV": 0.007944257882082823,
+        "regrouped_lower_bound": 0.006323080274418338,
+        "verified_independent_interval": [
+          0.007944257821384748,
+          0.007944257882082823
+        ]
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020201328523663728,
+        "projected_profile_TV": 0.020201328535800814,
+        "regrouped_lower_bound": 0.020201224738071732,
+        "verified_independent_interval": [
+          0.020201328511526645,
+          0.020201328535800814
+        ]
+      }
+    },
+    "forward_excess": {
+      "original_S2_S4_TV": 0.019071364529185314,
+      "S4_over_S2_absolute_band_response": 0.9782191259637429,
+      "count_only": {
+        "minimum": 0.0014773896501790347,
+        "projected_profile_TV": 0.0014773896734828,
+        "regrouped_lower_bound": 0.0009378054624572692,
+        "verified_independent_interval": [
+          0.0014773896268752695,
+          0.0014773896734828
+        ]
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.018743910949341636,
+        "projected_profile_TV": 0.01874391098372858,
+        "regrouped_lower_bound": 0.018741234763317294,
+        "verified_independent_interval": [
+          0.01874391091495469,
+          0.01874391098372858
+        ]
+      }
+    }
+  },
+  "earlier_fine_S2_S4_profiles": {
+    "forward_number": {
+      "original_S2_S4_TV": 0.02024019551868088,
+      "S4_over_S2_absolute_band_response": 0.9966982206457554,
+      "count_only": {
+        "minimum": 0.008833066632794144,
+        "projected_profile_TV": 0.008833066665011642,
+        "regrouped_lower_bound": 0.007291413239077329,
+        "verified_independent_interval": [
+          0.008833066600576645,
+          0.008833066665011642
+        ]
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020225558640213942,
+        "projected_profile_TV": 0.020225558652735818,
+        "regrouped_lower_bound": 0.020225498300099676,
+        "verified_independent_interval": [
+          0.020225558627692063,
+          0.020225558652735818
+        ]
+      }
+    },
+    "inverse_number": {
+      "original_S2_S4_TV": 0.020225634591020475,
+      "S4_over_S2_absolute_band_response": 0.9961321915367449,
+      "count_only": {
+        "minimum": 0.007967102422849582,
+        "projected_profile_TV": 0.007967102453151723,
+        "regrouped_lower_bound": 0.00631327809275803,
+        "verified_independent_interval": [
+          0.007967102392547443,
+          0.007967102453151723
+        ]
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.020203947289134265,
+        "projected_profile_TV": 0.020203947301272153,
+        "regrouped_lower_bound": 0.020203842647835035,
+        "verified_independent_interval": [
+          0.02020394727699638,
+          0.020203947301272153
+        ]
+      }
+    },
+    "forward_excess": {
+      "original_S2_S4_TV": 0.01907637022642045,
+      "S4_over_S2_absolute_band_response": 0.9781679707980534,
+      "count_only": {
+        "minimum": 0.0015185551870657659,
+        "projected_profile_TV": 0.001518555210853719,
+        "regrouped_lower_bound": 0.0009279685821546836,
+        "verified_independent_interval": [
+          0.0015185551632778127,
+          0.001518555210853719
+        ]
+      },
+      "count_and_mean_excess": {
+        "minimum": 0.018711101097011018,
+        "projected_profile_TV": 0.018711101139125042,
+        "regrouped_lower_bound": 0.018707574911559055,
+        "verified_independent_interval": [
+          0.018711101054896997,
+          0.018711101139125042
+        ]
+      }
+    }
+  },
+  "earlier_coarse_over_original_band_minus_one": [
+    [
+      [
+        -0.004589539645574514,
+        -0.004986853249256296,
+        -0.0045895396444163294
+      ],
+      [
+        -0.004606629299491072,
+        -0.005003936024834954,
+        -0.004606629298333109
+      ],
+      [
+        -0.00455789935040718,
+        -0.004949245575707195,
+        -0.0045578993492614295
+      ]
+    ],
+    [
+      [
+        -0.004538383979805216,
+        -0.004931949116992462,
+        -0.004538383978658578
+      ],
+      [
+        -0.004555278808148766,
+        -0.004948837212472745,
+        -0.00455527880700235
+      ],
+      [
+        -0.004505840801044214,
+        -0.0048937185358381985,
+        -0.004505840799909677
+      ]
+    ]
+  ],
+  "maximum_absolute_pair_defect": 1.6642243139131097e-13,
+  "scope": "Absolute and normalized finite response, altered x=.02\u2013.04 timing only; not other intervals, continuum or physical error."
+}

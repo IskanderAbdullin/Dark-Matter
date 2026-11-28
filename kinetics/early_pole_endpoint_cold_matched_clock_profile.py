@@ -33,7 +33,7 @@ def common_partition(books):
     return q
 
 
-def at_clock(books,states,bins):
+def at_clock(books,states,bins,*,independent_bracket=False):
     r={}
     for obs in ('forward_number','inverse_number','forward_excess'):
         a,b=[build(p,s,bins,raw=True,observable=obs) for p,s in zip(books,states,strict=True)]
@@ -42,12 +42,15 @@ def at_clock(books,states,bins):
         u=compare(m,n,bins)
         row={'original_S2_S4_TV':orig,'S4_over_S2_absolute_band_response':b['total']/a['total']}
         for k in ('count_only','count_and_mean_excess'):
-            s=solve(a,b,k)
+            s=solve(a,b,k,independent_bracket=independent_bracket)
             val=s['minimum_finite_common_bin_TV']
             lo=u[k]['robust_total_variation_lower_bound']
             if not lo-2e-9<=val<=orig+2e-9:
                 raise ArithmeticError('Finite simplex result conflicts with known bounds')
             row[k]=dict(minimum=val,projected_profile_TV=s['direct_witness_TV'],regrouped_lower_bound=lo)
+            if independent_bracket:
+                t=s['independent_profile_bracket']
+                row[k]['verified_independent_interval']=[t['support_lower_bound'],t['projected_profile_upper_bound']]
         r[obs]=row
     return r
 
