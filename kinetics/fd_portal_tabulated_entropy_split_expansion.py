@@ -67,9 +67,12 @@ class Stage:
             raise ArithmeticError('Independent pressure-work quadratures do not close the adiabatic energy ledger')
         return x+dx,b,z,defect
 
+    def closed_bath(self,T,u):
+        return Tabulated(T,u,self.nodes,self.eos)
+
     def step(self,x,a,dt):
         w,b,j,k=self.drift(x,a,dt/2)
-        c=Tabulated(b[0],b[1:],self.nodes,self.eos)
+        c=self.closed_bath(b[0],b[1:])
         u,e,s=c.step(self.p,b[1:],dt)
         p,v,l,m=self.drift(w,np.r_[c.point(u)[3],u],dt/2)
         return p,v,np.exp(3*w)*s,e,j+l,max(k,m)
@@ -80,6 +83,10 @@ class Stage:
     def entropy(self,x,a):
         return np.exp(3*x)*(self.eos.state(a[0])[2]+self.bath(a[1:])['entropy'])
 
+    def collision(self,Ts,Td,eta):
+        f=integrate(self.p,Ts,2*eta,1-Ts/Td)[0]
+        return np.array([2.,Ts])*f[:2],f[2]
+
     def rhs(self,x,a):
         Ts,eta,l=a
         Td=np.exp(l)
@@ -87,22 +94,21 @@ class Stage:
         d=self.bath(a[1:])
         rd,pd,n,B,E,C=(d[k] for k in ('rho','pressure','n','dn_deta','chemical_energy','cv_fixed_number'))
         H=hubble(rs,rd)
-        f=integrate(self.p,Ts,2*eta,1-Ts/Td)[0]
-        k=np.array([2.,Ts])*f[:2]
+        k,sigma=self.collision(Ts,Td,eta)
         A=np.array([[B,B*E/Td],[B*E,Td*C+B*E*E/Td]])
         vel=np.linalg.solve(A,-3*H*np.array([n,rd+pd])-k)
-        return H,np.r_[(-3*H*(rs+ps)+k[1])/cv,vel],np.exp(3*x)*f[2]
+        return H,np.r_[(-3*H*(rs+ps)+k[1])/cv,vel],np.exp(3*x)*sigma
 
 
-def run(path):
+def run(path,stage=Stage):
     eos=StandardModel(path)
     p,q=[PositivePortal(o) for o in ((13,36,26),(17,44,32))]
-    ref=Stage(eos,q,168)
-    secondary=Stage(eos,p,112)
+    ref=stage(eos,q,168)
+    secondary=stage(eos,p,112)
     rows=[]
     for T,eta,r in ((.05,.3,1.16),(.3,-.75,1.16),(.6882487043,.9,.86)):
         a=np.array([T,eta,np.log(T*r)])
-        iso=Tabulated(T,a[1:],168,eos)
+        iso=ref.closed_bath(T,a[1:])
         y=iso.point(a[1:])[0]
         f=iso.flux(q,a[1:])[0]
         H=ref.rhs(0,a)[0]
