@@ -1,0 +1,502 @@
+{
+  "rows": [
+    {
+      "T_SM": 0.3,
+      "controls": [
+        {
+          "max_order_condition_defect": 5.206535202972873e-11,
+          "pole_widths": 30,
+          "actual_lab_moments": [
+            2.873663965549114e-23,
+            2.508981604441986e-22,
+            2.4632130286475515e-21
+          ],
+          "actual": {
+            "mean_scaled_energy": 8.73094987625861,
+            "variance_scaled_energy": 9.487322422949575,
+            "heat_schur_over_heat_diagonal": 0.11068217104772904,
+            "normalized_condition_number": 34.11019842804534
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              9.200135760207926,
+              0.0006392155095453299,
+              1.384771695858064e-06
+            ],
+            [
+              0.00012036727557586391,
+              0.2858513832219809,
+              0.0005743119628458982
+            ]
+          ],
+          "variance_fraction_inside_near_region": 6.737575482826272e-05,
+          "invariant_region_weights": [
+            0.9995799364403043,
+            0.00041927798719482005,
+            7.855725010238405e-07
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                2.8736639655491144e-23,
+                2.5089816044419866e-22,
+                2.4631946597417913e-21
+              ],
+              "mean_scaled_energy": 8.73094987625861,
+              "variance_scaled_energy": 9.486683207439995,
+              "heat_schur_over_heat_diagonal": 0.11067553909303274,
+              "normalized_condition_number": 34.112365860775476
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                2.8736639655491144e-23,
+                2.508799868435681e-22,
+                2.461955674164876e-21
+              ],
+              "mean_scaled_energy": 8.730317457129287,
+              "variance_scaled_energy": 9.454610860466119,
+              "heat_schur_over_heat_diagonal": 0.11035687938300091,
+              "normalized_condition_number": 34.21681583260128
+            }
+          ]
+        },
+        {
+          "max_order_condition_defect": 5.206535202972873e-11,
+          "pole_widths": 100,
+          "actual_lab_moments": [
+            2.873663965549114e-23,
+            2.508981604441986e-22,
+            2.4632130286475515e-21
+          ],
+          "actual": {
+            "mean_scaled_energy": 8.73094987625861,
+            "variance_scaled_energy": 9.487322422949575,
+            "heat_schur_over_heat_diagonal": 0.11068217104772904,
+            "normalized_condition_number": 34.11019842804534
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              9.197858550285693,
+              0.0006505151597173733,
+              9.33612085676161e-08
+            ],
+            [
+              0.00012236010257086176,
+              0.28865296119472733,
+              3.794284565245569e-05
+            ]
+          ],
+          "variance_fraction_inside_near_region": 6.856678109134299e-05,
+          "invariant_region_weights": [
+            0.999576334493913,
+            0.000423618849451356,
+            4.6656635614602803e-08
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                2.873663965549114e-23,
+                2.508981604441986e-22,
+                2.463194335027816e-21
+              ],
+              "mean_scaled_energy": 8.73094987625861,
+              "variance_scaled_energy": 9.486671907789841,
+              "heat_schur_over_heat_diagonal": 0.1106754218566148,
+              "normalized_condition_number": 34.11240417791453
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                2.873663965549114e-23,
+                2.5087988558738654e-22,
+                2.461948576761967e-21
+              ],
+              "mean_scaled_energy": 8.730313933537708,
+              "variance_scaled_energy": 9.45442540363777,
+              "heat_schur_over_heat_diagonal": 0.11035503281363952,
+              "normalized_condition_number": 34.21742285561196
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "T_SM": 0.6,
+      "controls": [
+        {
+          "max_order_condition_defect": 2.1399237937202997e-09,
+          "pole_widths": 30,
+          "actual_lab_moments": [
+            6.153959809986776e-19,
+            1.1068520063355196e-17,
+            2.011206311111511e-16
+          ],
+          "actual": {
+            "mean_scaled_energy": 17.986012917070028,
+            "variance_scaled_energy": 3.31832891641875,
+            "heat_schur_over_heat_diagonal": 0.01015353953253666,
+            "normalized_condition_number": 391.9487389504033
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              0.564680441586474,
+              1.486563735739971,
+              0.005153452330724002
+            ],
+            [
+              1.2215496775685843,
+              0.03862474907099685,
+              0.0017568601220520055
+            ]
+          ],
+          "variance_fraction_inside_near_region": 0.44798564976021715,
+          "invariant_region_weights": [
+            0.031266286562043624,
+            0.9657333566050659,
+            0.0030003568328904953
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                6.153959809986776e-19,
+                1.1068520063355195e-17,
+                2.0020580576267833e-16
+              ],
+              "mean_scaled_energy": 17.986012917070024,
+              "variance_scaled_energy": 1.8317651806788717,
+              "heat_schur_over_heat_diagonal": 0.005630510693877361,
+              "normalized_condition_number": 708.4137207830191
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                6.153959809986776e-19,
+                1.0165566838648133e-17,
+                1.687354770609799e-16
+              ],
+              "mean_scaled_energy": 16.51874102614586,
+              "variance_scaled_energy": 1.3212810848318668,
+              "heat_schur_over_heat_diagonal": 0.004818850685924516,
+              "normalized_condition_number": 828.0722394912852
+            }
+          ]
+        },
+        {
+          "max_order_condition_defect": 2.0267774125670712e-09,
+          "pole_widths": 100,
+          "actual_lab_moments": [
+            6.153959809986776e-19,
+            1.1068520063355196e-17,
+            2.011206311111511e-16
+          ],
+          "actual": {
+            "mean_scaled_energy": 17.986012917070028,
+            "variance_scaled_energy": 3.31832891641875,
+            "heat_schur_over_heat_diagonal": 0.01015353953253666,
+            "normalized_condition_number": 391.9487389504033
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              0.34015409870294405,
+              1.5002523742589071,
+              0.0007529232541176061
+            ],
+            [
+              1.4377244131185742,
+              0.038425504282251825,
+              0.001019602801842216
+            ]
+          ],
+          "variance_fraction_inside_near_region": 0.45211081000313524,
+          "invariant_region_weights": [
+            0.02618630846314913,
+            0.9734233786912381,
+            0.0003903128456129558
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                6.153959809986776e-19,
+                1.1068520063355199e-17,
+                2.001973818295484e-16
+              ],
+              "mean_scaled_energy": 17.98601291707003,
+              "variance_scaled_energy": 1.8180765421596448,
+              "heat_schur_over_heat_diagonal": 0.005588669476934598,
+              "normalized_condition_number": 713.7324630319698
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                6.153959809986776e-19,
+                1.0159159048858007e-17,
+                1.6850491214567918e-16
+              ],
+              "mean_scaled_energy": 16.50832856004602,
+              "variance_scaled_energy": 1.2905132595727764,
+              "heat_schur_over_heat_diagonal": 0.004713077282162507,
+              "normalized_condition_number": 846.7012187852588
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "T_SM": 0.64135,
+      "controls": [
+        {
+          "max_order_condition_defect": 2.302168899959156e-09,
+          "pole_widths": 30,
+          "actual_lab_moments": [
+            1.9720813887754394e-18,
+            3.354064666975653e-17,
+            5.751171357585036e-16
+          ],
+          "actual": {
+            "mean_scaled_energy": 17.0077395693002,
+            "variance_scaled_energy": 2.366308124973557,
+            "heat_schur_over_heat_diagonal": 0.008114090023093977,
+            "normalized_condition_number": 490.9675985702847
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              0.33775631980969595,
+              1.5031809836720638,
+              0.005394076500742946
+            ],
+            [
+              0.5079896305987406,
+              0.010679242320947809,
+              0.0013078720714110265
+            ]
+          ],
+          "variance_fraction_inside_near_region": 0.6352431316140883,
+          "invariant_region_weights": [
+            0.021331117236735843,
+            0.9755237771673333,
+            0.003145105595930994
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                1.9720813887754398e-18,
+                3.354064666975653e-17,
+                5.721527405166428e-16
+              ],
+              "mean_scaled_energy": 17.007739569300195,
+              "variance_scaled_energy": 0.8631271413016179,
+              "heat_schur_over_heat_diagonal": 0.0029750044891349386,
+              "normalized_condition_number": 1342.5350414253492
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                1.9720813887754398e-18,
+                3.061595567495082e-17,
+                4.765022459604263e-16
+              ],
+              "mean_scaled_energy": 15.524691754208856,
+              "variance_scaled_energy": 0.6079725477445663,
+              "heat_schur_over_heat_diagonal": 0.002516192434469704,
+              "normalized_condition_number": 1587.702902052595
+            }
+          ]
+        },
+        {
+          "max_order_condition_defect": 2.0647619169977816e-09,
+          "pole_widths": 100,
+          "actual_lab_moments": [
+            1.9720813887754394e-18,
+            3.354064666975653e-17,
+            5.751171357585036e-16
+          ],
+          "actual": {
+            "mean_scaled_energy": 17.0077395693002,
+            "variance_scaled_energy": 2.366308124973557,
+            "heat_schur_over_heat_diagonal": 0.008114090023093977,
+            "normalized_condition_number": 490.9675985702847
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              0.19609759810955738,
+              1.5166399495464193,
+              0.0008323799052615216
+            ],
+            [
+              0.641286135262735,
+              0.01053679841458526,
+              0.0009152637350135366
+            ]
+          ],
+          "variance_fraction_inside_near_region": 0.6409308802772113,
+          "invariant_region_weights": [
+            0.016355236560175446,
+            0.9832122396888642,
+            0.0004325237509603617
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                1.9720813887754394e-18,
+                3.354064666975653e-17,
+                5.721261983405298e-16
+              ],
+              "mean_scaled_energy": 17.0077395693002,
+              "variance_scaled_energy": 0.8496681754272117,
+              "heat_schur_over_heat_diagonal": 0.0029287503355989696,
+              "normalized_condition_number": 1363.7694900925935
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                1.9720813887754394e-18,
+                3.0595052089960545e-17,
+                4.757953245233972e-16
+              ],
+              "mean_scaled_energy": 15.514091996455832,
+              "variance_scaled_energy": 0.578511500531647,
+              "heat_schur_over_heat_diagonal": 0.002397820458899679,
+              "normalized_condition_number": 1666.1810124866286
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "T_SM": 0.6882487043,
+      "controls": [
+        {
+          "max_order_condition_defect": 2.60294630294311e-09,
+          "pole_widths": 30,
+          "actual_lab_moments": [
+            6.305257724765682e-18,
+            1.0084762086073986e-16,
+            1.6251630738156646e-15
+          ],
+          "actual": {
+            "mean_scaled_energy": 15.994210746474698,
+            "variance_scaled_energy": 1.9325098228028423,
+            "heat_schur_over_heat_diagonal": 0.0074976921914700545,
+            "normalized_condition_number": 531.4956131927873
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              0.1982331345839082,
+              1.5134345850305722,
+              0.005624641018271211
+            ],
+            [
+              0.21099898320353702,
+              0.003144484766968344,
+              0.0010739941995407483
+            ]
+          ],
+          "variance_fraction_inside_near_region": 0.7831445756045583,
+          "invariant_region_weights": [
+            0.015626479133333426,
+            0.9810895060763326,
+            0.003284014790334013
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                6.305257724765682e-18,
+                1.0084762086073988e-16,
+                1.615620478707473e-15
+              ],
+              "mean_scaled_energy": 15.9942107464747,
+              "variance_scaled_energy": 0.4190752377721765,
+              "heat_schur_over_heat_diagonal": 0.0016355186227491885,
+              "normalized_condition_number": 2443.7069917053423
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                6.305257724765682e-18,
+                9.143748795204328e-17,
+                1.3278543259363656e-15
+              ],
+              "mean_scaled_energy": 14.501784374791962,
+              "variance_scaled_energy": 0.2930240069234742,
+              "heat_schur_over_heat_diagonal": 0.001391411578143678,
+              "normalized_condition_number": 2872.7780875824187
+            }
+          ]
+        },
+        {
+          "max_order_condition_defect": 2.123923259489402e-09,
+          "pole_widths": 100,
+          "actual_lab_moments": [
+            6.305257724765682e-18,
+            1.0084762086073986e-16,
+            1.6251630738156646e-15
+          ],
+          "actual": {
+            "mean_scaled_energy": 15.994210746474698,
+            "variance_scaled_energy": 1.9325098228028423,
+            "heat_schur_over_heat_diagonal": 0.0074976921914700545,
+            "normalized_condition_number": 531.4956131927873
+          },
+          "total_variance_partition_by_invariant_region": [
+            [
+              0.11301661785305142,
+              1.5266402899928324,
+              0.0009172065244496746
+            ],
+            [
+              0.2880109130790973,
+              0.0030660454004390212,
+              0.00085874995302994
+            ]
+          ],
+          "variance_fraction_inside_near_region": 0.7899780233865247,
+          "invariant_region_weights": [
+            0.010772128521371304,
+            0.9887502066251963,
+            0.0004776648534322894
+          ],
+          "collapse_controls": [
+            {
+              "collapsed_pole_lab_energy": "within_pole_region_mean",
+              "reconstructed_moments": [
+                6.305257724765681e-18,
+                1.0084762086073985e-16,
+                1.6155372133342491e-15
+              ],
+              "mean_scaled_energy": 15.994210746474698,
+              "variance_scaled_energy": 0.40586953281007254,
+              "heat_schur_over_heat_diagonal": 0.0015840625557093104,
+              "normalized_condition_number": 2523.152404980621
+            },
+            {
+              "collapsed_pole_lab_energy": "invariant_pole_energy",
+              "reconstructed_moments": [
+                6.305257724765681e-18,
+                9.136979294636308e-17,
+                1.3257097076842429e-15
+              ],
+              "mean_scaled_energy": 14.491048095858542,
+              "variance_scaled_energy": 0.2641674079897882,
+              "heat_schur_over_heat_diagonal": 0.0012564165293535454,
+              "normalized_condition_number": 3181.6572598775483
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "partition": [
+    "below",
+    "near",
+    "above"
+  ],
+  "scope": "Positive equilibrium lab energy moments of a local timelike charged-lepton FD portal. Resonance collapse is deliberately a counterfactual, not a physical model or trajectory."
+}
