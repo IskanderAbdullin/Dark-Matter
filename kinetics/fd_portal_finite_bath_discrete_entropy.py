@@ -58,6 +58,9 @@ class Bath:
             raise ArithmeticError('Finite reservoir force did not match physical FD entropy')
         return v,f[2]
 
+    def step_flux(self,p,u,dt):
+        return self.flux(p,u)
+
     def step(self,p,a,dt):
         y,L,_,_,_=self.point(a)
 
@@ -71,7 +74,7 @@ class Bath:
                    jac=lambda q:solve(q)[1],tol=6e-13).x[0]
             if abs(solve([l])[0][0])>3e-12*max(1.,abs(g[1])):
                 raise ArithmeticError('Averaged force does not bind an actual isoenergy state')
-            v,s=self.flux(p,[g[0],l])
+            v,s=self.step_flux(p,[g[0],l],dt)
             return (z-y+dt*v)/y,z,M,g,s
 
         b=root(lambda x:packet(x)[0],a,tol=3e-12).x

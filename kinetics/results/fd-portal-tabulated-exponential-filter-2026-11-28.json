@@ -1,0 +1,186 @@
+{
+  "rows": [
+    {
+      "max_mesh_amplitude_difference": 1.6018575355047915e-11,
+      "T_SM": 0.3,
+      "eigenvalues": [
+        3.550217590702734e-21,
+        1.6915461797775682e-20
+      ],
+      "checks": [
+        {
+          "fast_dt_times_rate": 0.25,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.94888278069208,
+            -8.333782550325606e-11
+          ],
+          "exact_factor": 0.9488827805410258,
+          "maximum_discrete_entropy_defect": 1.3332967501411156e-16
+        },
+        {
+          "fast_dt_times_rate": 0.25,
+          "initial_mode": 1,
+          "measured_factors": [
+            -2.8099242753027624e-09,
+            0.778800777799223
+          ],
+          "exact_factor": 0.7788007830714049,
+          "maximum_discrete_entropy_defect": 4.640595738699614e-16
+        },
+        {
+          "fast_dt_times_rate": 4.0,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.43191774664740856,
+            7.441477209929792e-11
+          ],
+          "exact_factor": 0.43191774636206076,
+          "maximum_discrete_entropy_defect": 1.565108771637187e-16
+        },
+        {
+          "fast_dt_times_rate": 4.0,
+          "initial_mode": 1,
+          "measured_factors": [
+            5.0503440648790695e-09,
+            0.018315651347567255
+          ],
+          "exact_factor": 0.01831563888873418,
+          "maximum_discrete_entropy_defect": 9.668555132718855e-16
+        },
+        {
+          "fast_dt_times_rate": 20.0,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.01503160270237441,
+            4.021681486677077e-10
+          ],
+          "exact_factor": 0.015031601098684455,
+          "maximum_discrete_entropy_defect": 2.7437210340210556e-16
+        },
+        {
+          "fast_dt_times_rate": 20.0,
+          "initial_mode": 1,
+          "measured_factors": [
+            1.383059989462646e-08,
+            1.469292667008464e-08
+          ],
+          "exact_factor": 2.061153622438558e-09,
+          "maximum_discrete_entropy_defect": 1.0481538181019577e-15
+        },
+        {
+          "fast_dt_times_rate": 80.0,
+          "initial_mode": 0,
+          "measured_factors": [
+            5.287522735734531e-08,
+            4.130440895258988e-10
+          ],
+          "exact_factor": 5.1052964876446036e-08,
+          "maximum_discrete_entropy_defect": 5.918447288980022e-16
+        },
+        {
+          "fast_dt_times_rate": 80.0,
+          "initial_mode": 1,
+          "measured_factors": [
+            1.3961641566576576e-08,
+            1.2629485841811296e-08
+          ],
+          "exact_factor": 1.804851387845415e-35,
+          "maximum_discrete_entropy_defect": 7.0379726973211e-16
+        }
+      ]
+    },
+    {
+      "max_mesh_amplitude_difference": 9.789180577257639e-11,
+      "T_SM": 0.6882487043,
+      "eigenvalues": [
+        3.837009542978923e-18,
+        1.039796411761952e-15
+      ],
+      "checks": [
+        {
+          "fast_dt_times_rate": 0.25,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.9990778867621388,
+            3.796622974387468e-12
+          ],
+          "exact_factor": 0.9990778867504929,
+          "maximum_discrete_entropy_defect": 5.400718497051597e-16
+        },
+        {
+          "fast_dt_times_rate": 0.25,
+          "initial_mode": 1,
+          "measured_factors": [
+            1.1749322684492231e-08,
+            0.7788007734358476
+          ],
+          "exact_factor": 0.7788007830714049,
+          "maximum_discrete_entropy_defect": 4.2980836701480674e-16
+        },
+        {
+          "fast_dt_times_rate": 4.0,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.9853477853802122,
+            3.2180081335896095e-11
+          ],
+          "exact_factor": 0.985347785385098,
+          "maximum_discrete_entropy_defect": 2.9639561049787817e-16
+        },
+        {
+          "fast_dt_times_rate": 4.0,
+          "initial_mode": 1,
+          "measured_factors": [
+            2.090520390068024e-08,
+            0.01831566562374986
+          ],
+          "exact_factor": 0.01831563888873418,
+          "maximum_discrete_entropy_defect": 4.867070414682658e-16
+        },
+        {
+          "fast_dt_times_rate": 20.0,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.9288545738891397,
+            1.0917733465714936e-10
+          ],
+          "exact_factor": 0.9288545741771635,
+          "maximum_discrete_entropy_defect": 6.841173719314093e-16
+        },
+        {
+          "fast_dt_times_rate": 20.0,
+          "initial_mode": 1,
+          "measured_factors": [
+            2.0005527964630673e-08,
+            2.6963301377967384e-08
+          ],
+          "exact_factor": 2.061153622438558e-09,
+          "maximum_discrete_entropy_defect": 4.768527209347845e-16
+        },
+        {
+          "fast_dt_times_rate": 80.0,
+          "initial_mode": 0,
+          "measured_factors": [
+            0.7443734870468163,
+            2.380626669704529e-10
+          ],
+          "exact_factor": 0.74437348779143,
+          "maximum_discrete_entropy_defect": 4.088419016922877e-16
+        },
+        {
+          "fast_dt_times_rate": 80.0,
+          "initial_mode": 1,
+          "measured_factors": [
+            1.630623453429063e-08,
+            2.4858946880267897e-08
+          ],
+          "exact_factor": 1.804851387845415e-35,
+          "maximum_discrete_entropy_defect": 2.965281260579867e-16
+        }
+      ]
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Near-equilibrium numerical damping in a fixed-energy tabulated FD bath. Modified discrete entropy, not the exact finite-step physical rate."
+}
