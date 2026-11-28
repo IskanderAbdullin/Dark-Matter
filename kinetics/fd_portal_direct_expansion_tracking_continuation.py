@@ -13,7 +13,7 @@ from fd_portal_tabulated_entropy_split_expansion import Stage,hubble
 from sm_dark_entropy_exchange_reference import StandardModel
 
 
-def follow(s,old,xout,method,tol):
+def follow(s,old,xout,method,tol,*,maximum_step=np.inf):
     T=.90
     original=np.array([T,0.,np.log(T)])
     S,E=s.entropy(0.,original),s.energy(0.,original)
@@ -33,7 +33,7 @@ def follow(s,old,xout,method,tol):
         a=np.exp(3*x)
         return np.r_[(-3*(rs+ps)+z[1]/H)/(cv*T),du,a*sigma/(H*S),3*a*(ps+p)/E,-a*z[0]/(H*N)]
 
-    t=solve_ivp(rhs,(x0,xout[-1]),initial,t_eval=xout,method=method,rtol=tol,atol=.022*tol)
+    t=solve_ivp(rhs,(x0,xout[-1]),initial,t_eval=xout,method=method,rtol=tol,atol=.022*tol,max_step=maximum_step)
     if not t.success:
         raise ArithmeticError('Continuation did not finish')
     a=t.y.T.copy()
@@ -44,7 +44,7 @@ def follow(s,old,xout,method,tol):
         n=s.bath(v[1:3])['n']
         L=[abs(s.entropy(x,v[:3])/S-1.-v[3]),abs(s.energy(x,v[:3])/E-1.+v[4]),abs(np.exp(3*x)*n/N-1.-v[5])]
         if max(L)>2e-7 or v[3]<ep-2e-12:
-            raise ArithmeticError('Combined continuation conservation check failed')
+            raise ArithmeticError(('Continuation conservation check failed',method,float(x),L,float(v[3]-ep)))
         resolved.append(L)
     b=np.column_stack((xout,a[:,:3],1.-a[:,0]/np.exp(a[:,2]),a[:,3:]))
     if max(abs(b[0]-old))>2e-15:
