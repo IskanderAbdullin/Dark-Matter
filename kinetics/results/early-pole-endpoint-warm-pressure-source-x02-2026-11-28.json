@@ -1,0 +1,96 @@
+{
+  "x": 0.02,
+  "held_mass": 0.0002635393844550805,
+  "held_expansion_normalization": 0.9840796254725941,
+  "observables": [
+    "total_scalar_number",
+    "reconstructed_pressure_numerator",
+    "pressure_at_q_greater_equal_point01"
+  ],
+  "cases": [
+    "S4_original",
+    "W2_with_lifted_S4_step",
+    "W2_actual_state"
+  ],
+  "records": [
+    {
+      "gross_forward_inverse_net": [
+        [
+          0.0023230840078501095,
+          0.00012955881080053302,
+          0.0021935251970495763
+        ],
+        [
+          3.7835596226043844e-08,
+          6.6037739945910774e-12,
+          3.782899245204925e-08
+        ],
+        [
+          3.7715883339096244e-08,
+          1.1431877716242795e-16,
+          3.771588322477747e-08
+        ]
+      ],
+      "relative_mesh_defect": 1.2542027158553458e-10,
+      "eventwise_energy_projection": 5.056957925558007e-16
+    },
+    {
+      "gross_forward_inverse_net": [
+        [
+          0.0023230827904828083,
+          0.00012955881080046306,
+          0.0021935239796823454
+        ],
+        [
+          3.545577281281883e-08,
+          6.6037687455624655e-12,
+          3.544916904407326e-08
+        ],
+        [
+          3.533605992587122e-08,
+          1.0906974855061484e-16,
+          3.533605981680148e-08
+        ]
+      ],
+      "relative_mesh_defect": 1.947309342558841e-10,
+      "eventwise_energy_projection": 4.093533530981604e-16
+    },
+    {
+      "gross_forward_inverse_net": [
+        [
+          0.0023230827965981817,
+          0.00012955880779088786,
+          0.0021935239888072936
+        ],
+        [
+          3.5455778780138274e-08,
+          6.6037667949138005e-12,
+          3.544917501334336e-08
+        ],
+        [
+          3.5336065891715626e-08,
+          1.0721669378958779e-16,
+          3.533606578449893e-08
+        ]
+      ],
+      "relative_mesh_defect": 2.046628620859544e-10,
+      "eventwise_energy_projection": 4.093533530981604e-16
+    }
+  ],
+  "frozen_chart_relative_net_change": [
+    -5.549821048278503e-07,
+    -0.06291003946226104,
+    -0.06309870549213492
+  ],
+  "evolved_state_given_refined_chart_relative_net_change": [
+    4.159949051896206e-09,
+    1.6838956340414768e-07,
+    1.6888406562109992e-07
+  ],
+  "combined_relative_net_change": [
+    -5.508221579964001e-07,
+    -0.06290988166609168,
+    -0.06309854726443509
+  ],
+  "scope": "Instantaneous collision source of reconstructed moments at held mass and clock, not their total time derivatives."
+}
