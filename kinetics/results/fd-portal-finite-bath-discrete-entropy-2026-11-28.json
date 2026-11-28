@@ -1,0 +1,125 @@
+{
+  "rows": [
+    {
+      "initial_visible_T": 0.05,
+      "initial_dark_T": 0.057999999999999996,
+      "initial_eta": 0.3,
+      "total_energy": 4.2985945291436e-05,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.050990708628211,
+          "dark_T": 0.05712511220041226,
+          "eta": 0.2619209982465646,
+          "normalized_reference_error": 0.00011399301122440341,
+          "total_entropy_produced": 6.376299403177526e-06,
+          "max_entropy_balance_error": 1.7638463050369945e-16
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.05098975609265973,
+          "dark_T": 0.05712607200515569,
+          "eta": 0.261955029360571,
+          "normalized_reference_error": 2.8444189627928886e-05,
+          "total_entropy_produced": 6.37072909261068e-06,
+          "max_entropy_balance_error": 2.666011238318943e-16
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.050989518514894645,
+          "dark_T": 0.05712631139944867,
+          "eta": 0.26196351432320075,
+          "normalized_reference_error": 7.1076775589672225e-06,
+          "total_entropy_produced": 6.369339614395484e-06,
+          "max_entropy_balance_error": 4.796555522113393e-16
+        }
+      ],
+      "halving_ratios": [
+        4.007602702538431,
+        4.001896455199067
+      ],
+      "independent_mesh_difference": 1.2212453270876722e-15
+    },
+    {
+      "initial_visible_T": 0.3,
+      "initial_dark_T": 0.348,
+      "initial_eta": -0.75,
+      "total_energy": 0.04166422819931546,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.3002784061345041,
+          "dark_T": 0.33790733456111943,
+          "eta": -0.5763670387242579,
+          "normalized_reference_error": 0.00037836006575591114,
+          "total_entropy_produced": 0.00044559141043399886,
+          "max_entropy_balance_error": 1.4249676918400118e-16
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.3002849735772717,
+          "dark_T": 0.33790521259558354,
+          "eta": -0.5766290350439841,
+          "normalized_reference_error": 9.120764974799133e-05,
+          "total_entropy_produced": 0.00044525905786616156,
+          "max_entropy_balance_error": 3.6185967138992744e-16
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.30028651662721906,
+          "dark_T": 0.33790483911875935,
+          "eta": -0.5766928925517044,
+          "normalized_reference_error": 2.260701189024549e-05,
+          "total_entropy_produced": 0.00044517586928391467,
+          "max_entropy_balance_error": 2.9302629498675446e-16
+        }
+      ],
+      "halving_ratios": [
+        4.148336973941638,
+        4.034484972662209
+      ],
+      "independent_mesh_difference": 3.1042168835426764e-11
+    },
+    {
+      "initial_visible_T": 0.6882487043,
+      "initial_dark_T": 0.5918938856979999,
+      "initial_eta": 0.9,
+      "total_energy": 1.1608020976556528,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.6830692592755995,
+          "dark_T": 0.6123697777759399,
+          "eta": 0.8086722939129517,
+          "normalized_reference_error": 0.0009191707934212361,
+          "total_entropy_produced": 0.001215954989750754,
+          "max_entropy_balance_error": 2.5008822446899545e-16
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.6831258490728648,
+          "dark_T": 0.6121604762808253,
+          "eta": 0.8095591147254748,
+          "normalized_reference_error": 0.00022437591662706732,
+          "total_entropy_produced": 0.0012102534932423529,
+          "max_entropy_balance_error": 2.447803552274236e-16
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.683139579742353,
+          "dark_T": 0.6121096601386302,
+          "eta": 0.8097745220873758,
+          "normalized_reference_error": 5.576827958980564e-05,
+          "total_entropy_produced": 0.0012088501050801107,
+          "max_entropy_balance_error": 3.5927050542354684e-16
+        }
+      ],
+      "halving_ratios": [
+        4.096566187845283,
+        4.02336091910002
+      ],
+      "independent_mesh_difference": 1.008613192965413e-10
+    }
+  ],
+  "scope": "Closed homogeneous collision substep with a finite ideal visible reservoir. No expansion, tabulated Standard Model EOS, complete interaction network, or abundance claim."
+}
