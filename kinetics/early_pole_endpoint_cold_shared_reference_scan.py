@@ -86,10 +86,10 @@ def max_feasible_common_partition(ce, fields, charts, m):
     return np.asarray(best[-1])
 
 
-def fit_refined_left(left, baseline, state, archive, splits):
+def fit_refined_left(left, baseline, state, archive, splits, *, level=2):
     from early_pole_endpoint_continuum_cold_band_pilot import refine_panels
     from early_pole_endpoint_continuum_cold_band_receipt import run as receipt
-    x=fit_state(state,archive,2,baseline)
+    x=fit_state(state,archive,level,baseline)
     native=receipt(baseline,archive)
     finer=receipt(left,archive)
     if finer['full_pole_and_snapshot']!=native['full_pole_and_snapshot']:
@@ -104,13 +104,26 @@ def fit_refined_left(left, baseline, state, archive, splits):
     return x
 
 
-def run(left,right,states,archive,*,baseline=None,splits=None):
+def run(left,right,states,archive,*,baseline=None,splits=None,levels=(2,4)):
+    levels=tuple(levels)
+    if levels not in ((2,4),(4,8),(8,16)):
+        raise ArithmeticError('Use two adjacent accepted scalar levels')
+    weight=f'S{levels[1]}_reference_weight'
+    def optimizer(*args):
+        methods=('highs',) if levels==(2,4) else ('highs','highs-ipm','highs-ds')
+        fails=[]
+        for method in methods:
+            try:
+                return solve(*args,method=method,independent_bracket=levels!=(2,4))
+            except ArithmeticError as e:
+                fails.append(str(e))
+        raise ArithmeticError(f'No independently checked optimization: {fails}')
     if (baseline is None)!=(splits is None):
         raise ValueError('Supply the split plan and both original panels together')
     if baseline is None:
-        charts=[fit_state(p,archive,n,raw) for p,n,raw in zip(states,(2,4),(left,right),strict=True)]
+        charts=[fit_state(p,archive,n,raw) for p,n,raw in zip(states,levels,(left,right),strict=True)]
     else:
-        charts=[fit_refined_left(left,baseline,states[0],archive,splits),fit_state(states[1],archive,4,right)]
+        charts=[fit_refined_left(left,baseline,states[0],archive,splits,level=levels[0]),fit_state(states[1],archive,levels[1],right)]
     d,f,m,_=charts[0]
     lo,hi=1e-6,1.5e-5
     ce=np.r_[lo,d.ds.ed[(d.ds.ed>lo)&(d.ds.ed<hi)],hi]
@@ -134,12 +147,12 @@ def run(left,right,states,archive,*,baseline=None,splits=None):
             U=(1-alpha)*u0+alpha*u1
             means=np.divide(U,N,out=panel_excess(ce[:-1],ce[1:],m,48),where=N>0)
             fails=[feasibility(z[0],ce,m,means,N) for z in Z]
-            row=dict(S4_reference_weight=float(alpha), mean_feasibility_failures_by_chart=fails)
+            row=dict({weight:float(alpha)}, mean_feasibility_failures_by_chart=fails)
             counts=[make(*z,s,bins,(ce,N/V,m)) for z,s in zip(Z,charts,strict=True)]
-            row['shared_count_only']=solve(*counts,tuple(range(len(FIELDS))),0)
+            row['shared_count_only']=optimizer(*counts,tuple(range(len(FIELDS))),0)
             if not any(fails):
                 both=[make(*z,s,bins,(ce,N/V,m,means)) for z,s in zip(Z,charts,strict=True)]
-                row['shared_count_and_mean']=solve(*both,tuple(range(len(FIELDS))),1)
+                row['shared_count_and_mean']=optimizer(*both,tuple(range(len(FIELDS))),1)
             data.append(row)
         idx=max_feasible_common_partition(ce,[(n0,u0),(n1,u1)],[z[0] for z in Z],m)
         ne=ce[idx]
@@ -154,7 +167,7 @@ def run(left,right,states,archive,*,baseline=None,splits=None):
             if any(feasibility(z[0],ne,m,means,n) for z in Z):
                 raise ArithmeticError('Coarsened witness is not feasible')
             cards=[make(*z,s,bins,(ne,n/NV,m,means)) for z,s in zip(Z,charts,strict=True)]
-            folded.append(dict(S4_reference_weight=float(alpha), both=solve(*cards,tuple(range(len(FIELDS))),1)))
+            folded.append(dict({weight:float(alpha)}, both=optimizer(*cards,tuple(range(len(FIELDS))),1)))
         meshes.append((data,idx,folded))
     (a,ia,ca),(b,ib,cb)=meshes
     if not np.array_equal(ia,ib):
@@ -163,12 +176,13 @@ def run(left,right,states,archive,*,baseline=None,splits=None):
     for p,q in zip(a,b,strict=True):
         if p.keys()!=q.keys() or p['mean_feasibility_failures_by_chart']!=q['mean_feasibility_failures_by_chart']:
             raise ArithmeticError('The paired meshes disagree about prescribed moment attainability')
-        for field in p.keys()-{'S4_reference_weight','mean_feasibility_failures_by_chart'}:
+        for field in p.keys()-{weight,'mean_feasibility_failures_by_chart'}:
             defect=max(defect,abs(p[field]['minimum_l1']-q[field]['minimum_l1']))
     defect=max(defect,max(abs(x['both']['minimum_l1']-y['both']['minimum_l1']) for x,y in zip(ca,cb,strict=True)))
     if defect>2e-9:
         raise ArithmeticError('Inconsistent absolute response comparison')
-    return dict(x=.05, fixed_reference_mass=m,coarse_parent_edges=ce.tolist(),
+    tag={} if levels==(2,4) else dict(levels=levels)
+    return dict(x=.05, **tag, fixed_reference_mass=m,coarse_parent_edges=ce.tolist(),
                 reference_count=[n0.tolist(),n1.tolist()],reference_excess=[u0.tolist(),u1.tolist()],
                 maximum_optimum_difference=defect, rows=b,
                 common_maximal_partition_indices=ib.tolist(), coarsened_rows=cb,
@@ -182,6 +196,7 @@ if __name__=='__main__':
     p.add_argument('--archive',type=Path,required=True)
     p.add_argument('--left-baseline',nargs=2,type=Path)
     p.add_argument('--left-split-plan',type=Path)
+    p.add_argument('--levels',type=int,nargs=2,default=(2,4))
     a=p.parse_args()
     r=None if a.left_split_plan is None else json.loads(a.left_split_plan.read_text())['targeted_parent_panel_splits']
-    print(json.dumps(run(a.left,a.right,a.states,a.archive,baseline=a.left_baseline,splits=r),indent=2,allow_nan=False))
+    print(json.dumps(run(a.left,a.right,a.states,a.archive,baseline=a.left_baseline,splits=r,levels=a.levels),indent=2,allow_nan=False))

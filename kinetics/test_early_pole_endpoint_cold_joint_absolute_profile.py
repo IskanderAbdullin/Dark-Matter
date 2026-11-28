@@ -27,6 +27,14 @@ class JointAbsoluteResponseTest(unittest.TestCase):
         self.assertAlmostEqual(r['projected_witness_value'], 2.)
         self.assertLess(r['max_verification_defect'], 1e-12)
 
+    def test_independent_bound_mode(self):
+        a=card([[0.,1.,.5],[1.,0.,.5]])
+        b=card([[0.,0.,.5]])
+        r=solve(a,b,(0,1,2),0,method='highs-ipm',independent_bracket=True)
+        self.assertAlmostEqual(r['support_hyperplane_value'],1.)
+        self.assertAlmostEqual(r['projected_witness_value'],1.)
+        self.assertLess(r['verified_bracket_width'],1e-9)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,6 +1,7 @@
 """Conditional finite joint comparison of absolute cold response profiles."""
 import argparse
 import json
+from math import fsum
 from pathlib import Path
 
 import numpy as np
@@ -86,12 +87,12 @@ def gradients(card, member, ix, factors):
     return start.ravel()[ix]/factors, out.T, E
 
 
-def solve(a,b,field,member):
+def solve(a,b,field,member,*,method="highs",independent_bracket=False):
     """One common occupancy per chart must serve all requested fields."""
     totals=a[1].sum(axis=1)
     n=a[0].shape[1]
     if min(totals)<=0:
-        raise ArithmeticError('Original S2 reference totals must be positive')
+        raise ArithmeticError('Original left-chart reference totals must be positive')
     idx=np.concatenate([np.arange(i*n,(i+1)*n) for i in field])
     factor=np.repeat(totals[list(field)],n)
     U,F,P=gradients(a,member,idx,factor)
@@ -107,7 +108,7 @@ def solve(a,b,field,member):
     rhs=np.ones(len(E))
     c=np.r_[np.zeros(k+l),np.ones(j)]
     z=linprog(c,A_ub=A,b_ub=ub,A_eq=E,b_eq=rhs,bounds=(0.,None),
-              method='highs',options={'primal_feasibility_tolerance':1e-10,
+              method=method,options={'primal_feasibility_tolerance':1e-10,
               'dual_feasibility_tolerance':1e-10})
     if not z.success:
         raise ArithmeticError(z.message)
@@ -139,6 +140,19 @@ def solve(a,b,field,member):
     dual=rhs@pp+ub@qq
     residuals=[abs(z.fun-verb.sum()),float(np.max(abs(E@x-rhs))),float(max(0.,max(A@x-ub),-min(x))),
                float(max(0.,max(E.T@pp+A.T@qq-c),max(qq))),abs(z.fun-dual),abs(z.fun-support)]
+    if independent_bracket:
+        # The LP proposes two candidates, but accuracy is measured only by
+        # actual projected simplex weights and a recomputed signed support.
+        proj=max(float(np.max(abs(P@xleft-1))),float(np.max(abs(Q@xright-1))))
+        hi=float(fsum(verb))
+        lo=max(0.,support)
+        if min(xleft)<0 or min(xright)<0 or proj>2e-14 or not -2e-12<=hi-lo<=2e-9:
+            raise ArithmeticError('Independent finite lower/upper bracket did not resolve')
+        return dict(minimum_l1=(hi+lo)/2,support_hyperplane_value=lo,projected_witness_value=hi,
+                    verified_bracket_width=max(0.,hi-lo),projected_simplex_defect=proj,
+                    optimizer_nominal_residuals=[float(x) for x in residuals],
+                    support_signed_weights_by_field=w.reshape(len(field),n).tolist(),
+                    witness_l1_by_field=verb.tolist())
     if max(residuals)>2e-9 or support>verb.sum()+2e-12:
         raise ArithmeticError(('Unverified optimization',residuals))
     return dict(minimum_l1=float(z.fun), witness_l1_by_field=verb.tolist(),
