@@ -29,14 +29,21 @@ def values(card,kind):
     return x
 
 
-def run(w1,w2,g):
+def run(w1,w2,g,w4=None):
     mass=w1['fixed_pressure_mass']
-    if not np.isfinite(mass) or mass<=0 or any(card['fixed_pressure_mass']!=mass for card in (w2,g)):
+    if not np.isfinite(mass) or mass<=0 or any(card['fixed_pressure_mass']!=mass for card in (w2,g) if card is not None):
         raise ArithmeticError('Not all moments share one fixed pressure mass')
     a,b,c=[values(r,k) for r,k in ((w1,1),(w2,2),(g,'Gauss'))]
     pairs=dict(W2_over_W1=b/a-1,Gauss_over_W1=c/a-1,Gauss_over_W2=c/b-1)
+    reference=(a,b,c)
+    if w4 is not None:
+        if w4['fixed_pressure_mass']!=mass:
+            raise ArithmeticError('W4 measurement mass changed')
+        d=values(w4,4)
+        pairs.update(W4_over_W1=d/a-1,W4_over_W2=d/b-1,Gauss_over_W4=c/d-1)
+        reference=(*reference,d)
     return dict(fixed_mass=mass,columns=('number','pressure','warm_pressure'),steps=(1024,2048),
-                individual_coarse_over_fine_minus_one=[(r[0]/r[1]-1).tolist() for r in (a,b,c)],
+                individual_coarse_over_fine_minus_one=[(r[0]/r[1]-1).tolist() for r in reference],
                 same_clock_relative_contrasts={k:v.tolist() for k,v in pairs.items()},
                 fine_minus_coarse_contrast={k:(v[1]-v[0]).tolist() for k,v in pairs.items()},
                 scope='Three same-restart last-segment sensitivities, with each chart using its own archived .04 state. No full-history timestep error bound.')
@@ -47,5 +54,6 @@ if __name__=='__main__':
     p.add_argument('w1',type=Path)
     p.add_argument('w2',type=Path)
     p.add_argument('gauss',type=Path)
+    p.add_argument('--w4',type=Path)
     a=p.parse_args()
-    print(json.dumps(run(*map(read,(a.w1,a.w2,a.gauss))),indent=2,allow_nan=False))
+    print(json.dumps(run(*map(read,(a.w1,a.w2,a.gauss)),w4=read(a.w4) if a.w4 else None),indent=2,allow_nan=False))
