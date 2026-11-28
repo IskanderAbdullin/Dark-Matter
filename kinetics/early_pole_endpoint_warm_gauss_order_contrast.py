@@ -13,7 +13,7 @@ ORDER=('count','pressure','pressure_q_ge_.01')
 
 def match(d2,d3,levels=(2,3)):
     lo,hi=levels
-    if (lo,hi) not in ((2,3),(3,4)):
+    if (lo,hi) not in ((2,3),(3,4),(4,5)):
         raise ArithmeticError('Need matched adjacent positive warm Gaussian orders')
     if len(d2)!=4 or len(d3)!=4:
         raise ArithmeticError('Need four complete matched comparison states')

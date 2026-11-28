@@ -21,7 +21,10 @@ def nodal_warm(card,m):
     return order,v,repeats>1
 
 
-def run(base,cards):
+def run(base,cards,levels=(2,3,4)):
+    levels=tuple(levels)
+    if levels not in ((2,3,4),(4,5)) or len(cards)!=len(levels):
+        raise ArithmeticError('Need the accepted original or adjacent warm Gauss orders')
     x=base['x_end']
     d,y=unpack(base,False,x)
     m=d.state(x,y)[0]
@@ -29,11 +32,11 @@ def run(base,cards):
     refined=edges[:-1]>=.01
     results=[]
     cell=[]
-    for k,raw in enumerate(cards,2):
+    for k,raw in zip(levels,cards,strict=True):
         z,env,ms=gauss(raw,d,m,x)
         j,mono,W=nodal_warm(raw,m)
         if j!=k or not np.array_equal(W,refined):
-            raise ArithmeticError('Need matched Gauss2, Gauss3 and Gauss4')
+            raise ArithmeticError('Warm Gauss archive does not match proposed order and warm edges')
         direct=fsum(mono[W])+fsum(ms[~W,1])
         lo,hi=env['pressure_total_min_max']
         if not lo-9e-14*lo<=direct<=hi+9e-14*hi:
@@ -42,7 +45,7 @@ def run(base,cards):
                             direct_over_reconstruction_minus_one=direct/z[1]-1))
         cell.append(ms)
     out=[]
-    for i,(a,b) in enumerate(zip(cell[:-1],cell[1:],strict=True),2):
+    for i,(a,b) in enumerate(zip(cell[:-1],cell[1:],strict=True),levels[0]):
         P=fsum(a[:,1])
         Q=fsum(b[:,1])
         r=partition(a,b)/P
@@ -67,6 +70,7 @@ def run(base,cards):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('base',type=Path)
-    p.add_argument('states',type=Path,nargs=3)
+    p.add_argument('states',type=Path,nargs='+')
+    p.add_argument('--levels',type=int,nargs='+',default=(2,3,4))
     a=p.parse_args()
-    print(json.dumps(run(read(a.base),[read(p) for p in a.states]),indent=2,allow_nan=False))
+    print(json.dumps(run(read(a.base),[read(p) for p in a.states],a.levels),indent=2,allow_nan=False))
