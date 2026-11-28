@@ -26,15 +26,20 @@ def run(reports,states):
         raise ArithmeticError('A complete startup and four continuations are required')
     first=read(reports[0])[0]
     tags=('grid','charge_div','scalar_div','cut','counts','reference_x')
+    opt={}
+    if 'warm_floor' in first:
+        tags+=('warm_floor','warm_div')
+        opt={k:first[k] for k in ('warm_floor','warm_div')}
     g=first['grid']
-    d=ScalarSubshellChart(load(g)[0],SPECS[g],first['charge_div'],first['scalar_div'],first['cut'])
+    d=ScalarSubshellChart(load(g)[0],SPECS[g],first['charge_div'],first['scalar_div'],first['cut'],**opt)
     if first['counts']!=[d.ns,d.nf,d.np] or first['reference_x']!=X:
         raise ArithmeticError('Unexpected scalar or charge chart')
     out=[]
     for p,q,lo,hi,n in zip(reports,states,(X,*EPOCHS[:-1]),EPOCHS,(2048,512,1024,1024,1024),strict=True):
         r,rhash=read(p)
         s,shash=read(q)
-        if any(r[t]!=first[t] or s[t]!=first[t] for t in tags):
+        if any(r.get(t)!=first[t] or s.get(t)!=first[t] for t in tags) or (
+            r.get('warm_floor')!=first.get('warm_floor') or s.get('warm_floor')!=first.get('warm_floor')):
             raise ArithmeticError('The chart does not match the startup')
         if (r['starting_x'],r['x_end'],r['coarse_steps'],s['steps'],s['x_end'])!=(lo,hi,n,2*n,hi):
             raise ArithmeticError('Missing or reordered time interval')

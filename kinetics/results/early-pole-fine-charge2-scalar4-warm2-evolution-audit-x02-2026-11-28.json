@@ -1,0 +1,79 @@
+{
+  "x": 0.02,
+  "warm_div": 2,
+  "warm_floor": 0.01,
+  "fixed_mass": 0.0002635393844550805,
+  "scalar_counts": [
+    145,
+    167
+  ],
+  "columns": [
+    "count",
+    "q",
+    "q2",
+    "kinetic_energy",
+    "pressure_numerator"
+  ],
+  "cold_conditional_transport": {
+    "wasserstein1_q": 1.677991455553642e-14,
+    "total_variation": 1.2962499629232127e-08,
+    "maximum_absolute_cdf_difference": 1.2962499629232127e-08,
+    "means": [
+      3.6179749296400345e-06,
+      3.617974946419949e-06
+    ],
+    "signed_mean_shift": 1.6779914538070243e-14,
+    "transport_over_old_mean": 4.637930024906478e-09,
+    "absolute_mean_shift_over_transport": 0.9999999989591022
+  },
+  "warm_conditional_transport": {
+    "wasserstein1_q": 0.032173704976787,
+    "total_variation": 0.13531739549792055,
+    "maximum_absolute_cdf_difference": 0.019809201079916683,
+    "means": [
+      1.143550435330305,
+      1.1124653146765326
+    ],
+    "signed_mean_shift": -0.031085120653772336,
+    "transport_over_old_mean": 0.028134924339820566,
+    "absolute_mean_shift_over_transport": 0.9661654035865602
+  },
+  "total_relative_changes": [
+    -8.315737242137189e-07,
+    -0.05516551650301449,
+    -0.09434026107735372,
+    -0.06281046581878535,
+    -0.06274272642221379
+  ],
+  "nodal_total_relative_changes": [
+    -8.315737244357635e-07,
+    -0.031108085240442396,
+    -0.033742514139609714,
+    -0.0355734181302102,
+    -0.035537550239716054
+  ],
+  "base_and_refined_nodal_over_exact_minus_one": [
+    [
+      2.220446049250313e-16,
+      -0.033438972318918236,
+      -0.08347402359090628,
+      -0.037739682661345086,
+      -0.037699444061364495
+    ],
+    [
+      -1.1102230246251565e-16,
+      -0.008828338508797717,
+      -0.02214921605736664,
+      -0.009774015956504734,
+      -0.009767352305073196
+    ]
+  ],
+  "relative_changes_at_q_at_least_point01": [
+    -0.0366825008071584,
+    -0.0628683512647733,
+    -0.09434029357056095,
+    -0.06287438233784948,
+    -0.06286835629732013
+  ],
+  "scope": "Warm-only evolution sensitivity on a fixed cold and charged chart. No physical convergence claim."
+}
