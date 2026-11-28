@@ -32,7 +32,7 @@ def refine_panels(edges,splits):
     return out,set(np.r_[v-1,v].tolist())
 
 
-def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,patch_only=False):
+def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,patch_only=False,prior_splits=None):
     g=card['grid']
     bundle=load(g)[0]
     tags={}
@@ -64,6 +64,8 @@ def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,pa
     u,v=[q_knots(bundle,C,k,omega,m,span,s) for s in (49,89)]
     if u.shape!=v.shape or max(abs(u-v))>9e-16:
         raise ArithmeticError('Shifted cold topology not resolved')
+    if prior_splits:
+        v,_=refine_panels(v,prior_splits)
     if splits is not None:
         v,changed=refine_panels(v,splits)
     elif patch_only:
@@ -115,10 +117,12 @@ if __name__=='__main__':
     p.add_argument('--mirror-azimuth',action='store_true')
     p.add_argument('--split-plan',type=Path)
     p.add_argument('--patch-only',action='store_true')
+    p.add_argument('--prior-split-plan',type=Path)
     o=p.parse_args()
     if o.output is None and not o.topology_only:
         p.error('output is required except in topology-only mode')
     splits=None if o.split_plan is None else json.loads(o.split_plan.read_text())['targeted_parent_panel_splits']
-    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth,splits,o.patch_only)
+    prior=None if o.prior_split_plan is None else json.loads(o.prior_split_plan.read_text())['targeted_parent_panel_splits']
+    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth,splits,o.patch_only,prior_splits=prior)
     if result is not None:
         print(json.dumps(result,indent=2,allow_nan=False))
