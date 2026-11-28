@@ -38,8 +38,8 @@ def orthogonal_volume_gauss(a,b,p):
 def volume_gauss(a,b,p):
     """Work on u=(q-a)/(b-a): H and X are the volume Gram and multiplication matrices."""
     a,b=np.asarray(a),np.asarray(b)
-    if a.ndim!=1 or a.shape!=b.shape or not np.all(np.isfinite([a,b])) or np.min(a)<0 or np.any(a>=b) or p not in (2,3,4,5,6,7,8):
-        raise ValueError('Use positive finite shells and Gauss orders 2 through 8')
+    if a.ndim!=1 or a.shape!=b.shape or not np.all(np.isfinite([a,b])) or np.min(a)<0 or np.any(a>=b) or p not in range(2,13):
+        raise ValueError('Use positive finite shells and Gauss orders 2 through 12')
     A,H=a/b,(b-a)/b
     t=np.arange(2*p,dtype=float)
     I=(A[:,None]**2/(1+t)+(2*A*H)[:,None]/(2+t)+H[:,None]**2/(3+t))
