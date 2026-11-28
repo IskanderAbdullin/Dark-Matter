@@ -20,3 +20,7 @@ cmp periodic.json resumed.json
 ```
 
 Use a different sidecar per branch and per intended solver scope. To guard against loss of an execution environment, retain validated sidecars somewhere durable before the workspace is reset; an atomic write alone cannot survive a lost volume. The [physical checkpoint receipt](results/early-pole-h1-periodic-process-resume-2026-11-28.json) and [synthetic periodic check](results/toy-accepted-dop853-resume-data-2026-11-28.json) do not claim that any existing H8 run was checkpointed or rerun.
+
+## Local-daughter counterpart
+
+The same periodic and fresh-process resume commands have also been verified with `--local-from-paired-archive` added to both commands and a new sidecar file. The locally reconstructed daughter variant reproduced its full endpoint bytes at SHA-256 `47056054618c0755fd11da0df66f59776f494b0ce3dd7b883abab7522ec3b7e9`. The sidecar contains 25 accepted steps, 308 physical calls, and the resumed calculation ends at 323 calls. See the [local-daughter receipt](results/early-pole-h1-daughter-periodic-process-resume-2026-11-28.json). This is the short H1 paired initializer, not the pending H8 double window.
