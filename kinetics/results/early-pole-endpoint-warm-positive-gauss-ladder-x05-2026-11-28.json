@@ -1,0 +1,30 @@
+{
+  "x": 0.05,
+  "orders": [
+    {
+      "moment_order": 2,
+      "nodes": 167,
+      "relative_polynomial_error": 8.881784197001252e-16,
+      "radial_relative_error": 2.2619042458735813e-13,
+      "relative_signed": 0.0008226835861383602,
+      "relative_unsigned": 0.0020486653977818898
+    },
+    {
+      "moment_order": 3,
+      "nodes": 189,
+      "relative_polynomial_error": 2.6645352591003757e-15,
+      "radial_relative_error": 2.438140610997539e-13,
+      "relative_signed": 0.0004983080217547768,
+      "relative_unsigned": 0.0011469349514862082
+    },
+    {
+      "moment_order": 4,
+      "nodes": 211,
+      "relative_polynomial_error": 7.993605777301127e-15,
+      "radial_relative_error": 2.365180162777181e-13,
+      "relative_signed": -0.0009351968384639681,
+      "relative_unsigned": 0.0009510215006305418
+    }
+  ],
+  "scope": "Frozen warm affine moments on a finite retained chart. Volume64 is a compared reference, not a universal cell-wise error bound."
+}
