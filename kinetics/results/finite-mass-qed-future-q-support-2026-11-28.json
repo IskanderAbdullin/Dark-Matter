@@ -1,0 +1,289 @@
+[
+  {
+    "grid": "fine",
+    "k": 0.0015,
+    "omega": 0.0023041975951177784,
+    "archive_scalar_support": 25.0,
+    "forward_max_q_energy_bound": 31.999343248188502,
+    "all_source_max_q_bound": 31.999343248188502,
+    "kinematic_null_q_endpoints": [
+      7.07212936699404e-05,
+      0.0018021458453837483
+    ],
+    "excluded_cosine_fraction_at_three_probes": [
+      0.0,
+      0.1303140162454341,
+      0.0
+    ],
+    "first_opposite_charged_orientation": 0.026328048838752026,
+    "interior_radial_edge_order": [
+      {
+        "q": 0.015715247256321237,
+        "c": 0.4572501724949824,
+        "parent": 0.05798080610005999,
+        "daughter": 0.04454557937635685,
+        "charged_collinear_arrangement": "same",
+        "left_and_right_angle_differences": [
+          9.77051788432769e-07,
+          -9.770511346785915e-07
+        ]
+      }
+    ],
+    "exact_retained_panel_counts": [
+      {
+        "q_span": [
+          1e-06,
+          0.0003
+        ],
+        "panels": 121,
+        "root_counts": {
+          "scalar_edges": 17,
+          "charged_collinear": 102,
+          "charged_opposite": 0,
+          "null": 1,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.0003,
+          0.0015
+        ],
+        "panels": 108,
+        "root_counts": {
+          "scalar_edges": 4,
+          "charged_collinear": 103,
+          "charged_opposite": 0,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.0015,
+          0.004
+        ],
+        "panels": 234,
+        "root_counts": {
+          "scalar_edges": 3,
+          "charged_collinear": 228,
+          "charged_opposite": 0,
+          "null": 1,
+          "zero_transfer": 1,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.004,
+          0.015
+        ],
+        "panels": 22,
+        "root_counts": {
+          "scalar_edges": 3,
+          "charged_collinear": 18,
+          "charged_opposite": 0,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.015,
+          0.1
+        ],
+        "panels": 46,
+        "root_counts": {
+          "scalar_edges": 6,
+          "charged_collinear": 17,
+          "charged_opposite": 21,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 1
+        }
+      },
+      {
+        "q_span": [
+          0.1,
+          1.0
+        ],
+        "panels": 42,
+        "root_counts": {
+          "scalar_edges": 6,
+          "charged_collinear": 9,
+          "charged_opposite": 26,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          1.0,
+          31.999343248188502
+        ],
+        "panels": 160,
+        "root_counts": {
+          "scalar_edges": 9,
+          "charged_collinear": 67,
+          "charged_opposite": 83,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "k": 0.0015,
+    "omega": 0.002305223782122649,
+    "archive_scalar_support": 25.0,
+    "forward_max_q_energy_bound": 31.999344274506353,
+    "all_source_max_q_bound": 31.999344274506353,
+    "kinematic_null_q_endpoints": [
+      6.440593951058671e-05,
+      0.0018037862015923977
+    ],
+    "excluded_cosine_fraction_at_three_probes": [
+      0.0,
+      0.13237527893538004,
+      0.0
+    ],
+    "first_opposite_charged_orientation": 0.02632864355023428,
+    "interior_radial_edge_order": [
+      {
+        "q": 0.0018158742822368906,
+        "c": 0.38880153551024216,
+        "parent": 0.7997127399212283,
+        "daughter": 0.8000056249802248,
+        "charged_collinear_arrangement": "same",
+        "left_and_right_angle_differences": [
+          2.1759894938428587e-10,
+          -2.1759879361153874e-10
+        ]
+      },
+      {
+        "q": 0.001083407808391676,
+        "c": -0.17728858768702496,
+        "parent": 1.1510864433221337,
+        "daughter": 1.1520039062433773,
+        "charged_collinear_arrangement": "same",
+        "left_and_right_angle_differences": [
+          9.798580534198936e-11,
+          -9.79859108619658e-11
+        ]
+      }
+    ],
+    "exact_retained_panel_counts": [
+      {
+        "q_span": [
+          1e-06,
+          0.0003
+        ],
+        "panels": 169,
+        "root_counts": {
+          "scalar_edges": 24,
+          "charged_collinear": 143,
+          "charged_opposite": 0,
+          "null": 1,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.0003,
+          0.0015
+        ],
+        "panels": 158,
+        "root_counts": {
+          "scalar_edges": 6,
+          "charged_collinear": 150,
+          "charged_opposite": 0,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 1
+        }
+      },
+      {
+        "q_span": [
+          0.0015,
+          0.004
+        ],
+        "panels": 336,
+        "root_counts": {
+          "scalar_edges": 4,
+          "charged_collinear": 328,
+          "charged_opposite": 0,
+          "null": 1,
+          "zero_transfer": 1,
+          "interior_radial_edge_order": 1
+        }
+      },
+      {
+        "q_span": [
+          0.004,
+          0.015
+        ],
+        "panels": 30,
+        "root_counts": {
+          "scalar_edges": 5,
+          "charged_collinear": 24,
+          "charged_opposite": 0,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.015,
+          0.1
+        ],
+        "panels": 47,
+        "root_counts": {
+          "scalar_edges": 8,
+          "charged_collinear": 17,
+          "charged_opposite": 21,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          0.1,
+          1.0
+        ],
+        "panels": 59,
+        "root_counts": {
+          "scalar_edges": 9,
+          "charged_collinear": 12,
+          "charged_opposite": 37,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      },
+      {
+        "q_span": [
+          1.0,
+          31.999344274506353
+        ],
+        "panels": 239,
+        "root_counts": {
+          "scalar_edges": 13,
+          "charged_collinear": 98,
+          "charged_opposite": 127,
+          "null": 0,
+          "zero_transfer": 0,
+          "interior_radial_edge_order": 0
+        }
+      }
+    ]
+  }
+]
