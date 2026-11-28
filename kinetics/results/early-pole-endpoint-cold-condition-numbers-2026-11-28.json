@@ -1,0 +1,176 @@
+{
+  "x": 0.05,
+  "k": 0.0015,
+  "axes": [
+    "scalar_pole_mass",
+    "photon_energy"
+  ],
+  "columns": [
+    "gross_forward",
+    "inverse"
+  ],
+  "fixed_residue": 202.97270363749854,
+  "base_mass": 0.0008729364825319565,
+  "base_energy": 0.0023042221316844375,
+  "sampled_frequency_interval": [
+    0.002304138859810128,
+    0.002304382261432874
+  ],
+  "points": [
+    {
+      "q": 3.5e-06,
+      "scalar_occupation": 1.0500730555226852e+16,
+      "base_forward_inverse": [
+        0.2200662282128442,
+        6.349425683639943e-10
+      ],
+      "variations": [
+        {
+          "step_sizes_log": [
+            2.5e-05,
+            1.25e-05
+          ],
+          "centered_slopes": [
+            [
+              266.6337741869269,
+              290.9074977458871
+            ],
+            [
+              266.63360706947094,
+              290.90747158403707
+            ]
+          ],
+          "richardson_slopes": [
+            266.63355136365226,
+            290.9074628634204
+          ],
+          "local_log_parameter_change_for_one_percent_coefficient": [
+            3.731837498423884e-05,
+            3.420445372980931e-05
+          ],
+          "paired_slopes_relative_defect": [
+            6.267682935351343e-07,
+            8.99318627746284e-08
+          ]
+        },
+        {
+          "step_sizes_log": [
+            2.5e-05,
+            1.25e-05
+          ],
+          "centered_slopes": [
+            [
+              -710.0119550987569,
+              -774.0451292524101
+            ],
+            [
+              -710.0088680213016,
+              -774.044610312024
+            ]
+          ],
+          "richardson_slopes": [
+            -710.0078389954832,
+            -774.0444373318954
+          ],
+          "local_log_parameter_change_for_one_percent_coefficient": [
+            1.4014395766736574e-05,
+            1.2854986578634337e-05
+          ],
+          "paired_slopes_relative_defect": [
+            4.347948410825511e-06,
+            6.704271241526735e-07
+          ]
+        }
+      ],
+      "relative_change_at_frequency_endpoints_holding_residue": [
+        [
+          0.025970396911292326,
+          0.028337763078865486
+        ],
+        [
+          -0.04821743269964662,
+          -0.052473776160770536
+        ]
+      ],
+      "maximum_paired_quadrature_defect": 4.4730885662147557e-13
+    },
+    {
+      "q": 4.7e-06,
+      "scalar_occupation": 1.0500730555226852e+16,
+      "base_forward_inverse": [
+        0.4532924441071836,
+        1.3376112359334648e-09
+      ],
+      "variations": [
+        {
+          "step_sizes_log": [
+            2.5e-05,
+            1.25e-05
+          ],
+          "centered_slopes": [
+            [
+              263.1912101516564,
+              284.7970231206375
+            ],
+            [
+              263.1913611227541,
+              284.7970012220004
+            ]
+          ],
+          "richardson_slopes": [
+            263.1914114464533,
+            284.7969939224547
+          ],
+          "local_log_parameter_change_for_one_percent_coefficient": [
+            3.780644208138416e-05,
+            3.493832823206479e-05
+          ],
+          "paired_slopes_relative_defect": [
+            5.736171133640659e-07,
+            7.689209355547439e-08
+          ]
+        },
+        {
+          "step_sizes_log": [
+            2.5e-05,
+            1.25e-05
+          ],
+          "centered_slopes": [
+            [
+              -700.9338947162753,
+              -757.936163552969
+            ],
+            [
+              -700.936636210242,
+              -757.9357291519528
+            ]
+          ],
+          "richardson_slopes": [
+            -700.9375500415641,
+            -757.9355843516141
+          ],
+          "local_log_parameter_change_for_one_percent_coefficient": [
+            1.419574518810991e-05,
+            1.3128201206808654e-05
+          ],
+          "paired_slopes_relative_defect": [
+            3.911181483353368e-06,
+            5.731371176113153e-07
+          ]
+        }
+      ],
+      "relative_change_at_frequency_endpoints_holding_residue": [
+        [
+          0.02562996383122851,
+          0.02774303064776862
+        ],
+        [
+          -0.04762547152330976,
+          -0.05139962681390897
+        ]
+      ],
+      "maximum_paired_quadrature_defect": 3.105293799876563e-13
+    }
+  ],
+  "scope": "Local perturbation in either fitted pole parameter at held occupations and residue. The 1% tolerances are local first-order scales, not global error certificates."
+}
