@@ -1,0 +1,57 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "charge_div": 2,
+  "scalar_div": 4,
+  "band": [
+    1e-06,
+    1.5e-05
+  ],
+  "columns": [
+    "forward",
+    "inverse",
+    "slope"
+  ],
+  "fixed_scalar_mass": 0.0008731829968237441,
+  "count_only": {
+    "coefficient_relative_to_original_min_max": [
+      [
+        0.995024339150138,
+        0.9941216302825805,
+        0.9950243391527681
+      ],
+      [
+        1.0057437278255525,
+        1.006776957832816,
+        1.005743727822542
+      ]
+    ],
+    "conditional_neutrality_relative_to_original_min_max": [
+      0.9990927770963309,
+      1.0010273293103311
+    ]
+  },
+  "count_and_mean_excess": {
+    "coefficient_relative_to_original_min_max": [
+      [
+        0.999996518597037,
+        0.9999965532117107,
+        0.9999965185970369
+      ],
+      [
+        1.0000003538100344,
+        1.000000465701784,
+        1.000000353810034
+      ]
+    ],
+    "conditional_neutrality_relative_to_original_min_max": [
+      0.9999997093835375,
+      1.000000437123689
+    ]
+  },
+  "conditioned_nonempty_cells": 31,
+  "max_panels_in_a_cell": 14,
+  "max_two_constraint_vertices_in_a_cell": 48,
+  "maximum_absolute_paired_mesh_defect": 1.5987211554602254e-14,
+  "scope": "Finite piecewise-constant q-panel reweights on retained support, fixing each shell amount wholly inside the band and optionally its mean E-m. Charges and pole held. Not a continuum extremum, actual evolving uncertainty or photon prediction."
+}
