@@ -22,7 +22,7 @@ def chart_for(card):
     if schema=='gauss-volume-v1' and 'warm_gauss_order' not in card:
         d=ScalarGauss2(load('fine')[0],SPECS['fine'],2,4,1e-5,gauss_floor=.01)
         return 2,d,d.scalar_repeats
-    if schema=='gauss-volume-v2-general' and card.get('warm_gauss_order') in (3,4,5,6):
+    if schema=='gauss-volume-v2-general' and card.get('warm_gauss_order') in (3,4,5,6,7,8):
         from early_pole_endpoint_warm_positive_gauss_ladder import WarmGauss
         order=card['warm_gauss_order']
         d=WarmGauss(load('fine')[0],order)

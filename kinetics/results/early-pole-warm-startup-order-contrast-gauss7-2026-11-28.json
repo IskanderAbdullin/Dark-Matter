@@ -1,0 +1,71 @@
+{
+  "x": 0.0075,
+  "steps": [
+    2048,
+    4096
+  ],
+  "fixed_mass": 4.69152878376991e-05,
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "charts": [
+    {
+      "order": 6,
+      "source": {
+        "x": 0.0075,
+        "scalar_yield": 5.782325892522487e-08,
+        "pole_mass": 4.691528784578627e-05,
+        "relative_time_drift": 5.115556924784048e-05,
+        "maximum_absolute_continuity": 2.5498846910082962e-16,
+        "maximum_pair_number_error": 4.6173698248742835e-17,
+        "verified_previous_raw_sha256": null,
+        "source_report_sha256": "322e3fe6b8ae0e6e2be711a2be037c79ce7ed1eb921dc73da41f6172ab73a684",
+        "uncompressed_state_sha256": "054802a5ce43bb37865ea99dadfd343c70c9530e2108a5d7b3b767a0ded63103"
+      },
+      "charted_moments": [
+        2.707619766226469e-06,
+        4.292259215799616e-10,
+        4.2843708471334026e-10
+      ],
+      "conditioned_pressure_interval": [
+        4.2922592151030617e-10,
+        4.2922592161370297e-10
+      ]
+    },
+    {
+      "order": 7,
+      "source": {
+        "x": 0.0075,
+        "scalar_yield": 5.7823259970737054e-08,
+        "pole_mass": 4.6915287845809444e-05,
+        "relative_time_drift": 5.115556832535617e-05,
+        "maximum_absolute_continuity": 1.773252887165037e-16,
+        "maximum_pair_number_error": 4.115118991821886e-17,
+        "verified_previous_raw_sha256": null,
+        "source_report_sha256": "484304d52c914fc81dba6b1b186f227fa2c6de39582bdb0b8462862255287eb1",
+        "uncompressed_state_sha256": "636561cceb30fb04bdf134299e16a24b584ea6f8ab06cb5c3b4fe34c0258726b"
+      },
+      "charted_moments": [
+        2.7076198151834027e-06,
+        4.294795153959316e-10,
+        4.286906785293119e-10
+      ],
+      "conditioned_pressure_interval": [
+        4.294795153262756e-10,
+        4.294795154296731e-10
+      ]
+    }
+  ],
+  "G7_over_G6_minus_one": [
+    1.8081170116701628e-08,
+    0.0005908166380925728,
+    0.0005919044476303537
+  ],
+  "conditioned_pressure_contrast_bound": [
+    0.0005908163971533043,
+    0.000590816879079803
+  ],
+  "scope": "Two completed startup epochs only, not full warm history, numerical convergence or physical prediction."
+}
