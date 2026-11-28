@@ -1,0 +1,115 @@
+{
+  "rows": [
+    {
+      "independent_order_defect": 3.774758283725532e-15,
+      "visible_temperature": 0.05,
+      "original_forces": [
+        0.6,
+        0.16
+      ],
+      "oracle_test_force": [
+        0.72,
+        0.152
+      ],
+      "recovered_test_force": [
+        0.7199999999999994,
+        0.15200000000000005
+      ],
+      "iterations": 6,
+      "scaled_residual": 8.20378698971722e-17,
+      "frozen_thermal_schur_over_heat_diagonal": 0.09232521818887533,
+      "independent_heat_only_inverse_ratio": 1.000000015961487,
+      "off_target_fenchel_gap_over_target_activity": 0.0006682289172962114,
+      "original_force_recovery_max_error": 3.552713678800501e-15
+    },
+    {
+      "independent_order_defect": 5.995204332975845e-15,
+      "visible_temperature": 0.05,
+      "original_forces": [
+        -0.6,
+        -0.16
+      ],
+      "oracle_test_force": [
+        -0.48,
+        -0.168
+      ],
+      "recovered_test_force": [
+        -0.480000000000001,
+        -0.1679999999999999
+      ],
+      "iterations": 6,
+      "scaled_residual": 1.7905102279851452e-16,
+      "frozen_thermal_schur_over_heat_diagonal": 0.09101156471112912,
+      "independent_heat_only_inverse_ratio": 0.9999999961389704,
+      "off_target_fenchel_gap_over_target_activity": 0.0011881974522252711,
+      "original_force_recovery_max_error": 5.10702591327572e-15
+    },
+    {
+      "independent_order_defect": 5.392231106071677e-10,
+      "visible_temperature": 0.3,
+      "original_forces": [
+        -1.5,
+        0.16
+      ],
+      "oracle_test_force": [
+        -1.38,
+        0.152
+      ],
+      "recovered_test_force": [
+        -1.3799999999999994,
+        0.15199999999999994
+      ],
+      "iterations": 5,
+      "scaled_residual": 6.983246378215634e-16,
+      "frozen_thermal_schur_over_heat_diagonal": 0.1729283262723697,
+      "independent_heat_only_inverse_ratio": 1.0000006596048003,
+      "off_target_fenchel_gap_over_target_activity": 0.009037514491514761,
+      "original_force_recovery_max_error": 0.0
+    },
+    {
+      "independent_order_defect": 7.172313853942569e-10,
+      "visible_temperature": 0.64135,
+      "original_forces": [
+        -0.03418787777103929,
+        0.002
+      ],
+      "oracle_test_force": [
+        0.0858121222289607,
+        -0.006
+      ],
+      "recovered_test_force": [
+        0.08581212222904269,
+        -0.006000000000004878
+      ],
+      "iterations": 2,
+      "scaled_residual": 8.203499906851186e-14,
+      "frozen_thermal_schur_over_heat_diagonal": 0.008101706106368387,
+      "independent_heat_only_inverse_ratio": 0.9999998027050448,
+      "off_target_fenchel_gap_over_target_activity": 1.1740585582199385,
+      "original_force_recovery_max_error": 3.469446951953614e-17
+    },
+    {
+      "independent_order_defect": 6.723469558878037e-10,
+      "visible_temperature": 0.6882487043,
+      "original_forces": [
+        1.8,
+        -0.16
+      ],
+      "oracle_test_force": [
+        1.92,
+        -0.168
+      ],
+      "recovered_test_force": [
+        1.9199999999999946,
+        -0.16799999999999968
+      ],
+      "iterations": 4,
+      "scaled_residual": 8.118964396934061e-17,
+      "frozen_thermal_schur_over_heat_diagonal": 0.008275361562428654,
+      "independent_heat_only_inverse_ratio": 0.999999889721873,
+      "off_target_fenchel_gap_over_target_activity": 0.0003250664066295151,
+      "original_force_recovery_max_error": 1.6209256159527285e-14
+    }
+  ],
+  "scope": "Inverse of the fixed-state convex test-force map. It is not an inversion of physical forces with changing activity, nor a bound on bath evolution."
+}
