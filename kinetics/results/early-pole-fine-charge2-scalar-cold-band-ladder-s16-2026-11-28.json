@@ -1,0 +1,527 @@
+{
+  "x": 0.05,
+  "grid": "fine",
+  "charge_subcells": 2,
+  "band": [
+    1e-06,
+    1.5e-05
+  ],
+  "entries": [
+    {
+      "level": 1,
+      "state_sha256_uncompressed": "4dce57ad0cb0ba1e387409dc16e78f66fc4c95a5af1a268db9885c5f02832787",
+      "diagnostic": {
+        "band": [
+          1e-06,
+          1.5e-05
+        ],
+        "full_pole_and_snapshot": {
+          "grid": "fine",
+          "time_x": 0.05,
+          "scalar_mass": 0.0008729364825319565,
+          "omega": 0.0023042221316844375,
+          "residue": 202.97270363749854,
+          "mesh": [
+            8,
+            10,
+            16,
+            24
+          ]
+        },
+        "accepted_meshes": [
+          [
+            4,
+            6,
+            10,
+            18
+          ],
+          [
+            8,
+            10,
+            16,
+            24
+          ]
+        ],
+        "raw_number_scalar_energy_and_excess": [
+          [
+            6.144016292518788e-07,
+            1.7872514461220037e-15,
+            6.144016274646272e-07
+          ],
+          [
+            5.363391845103451e-10,
+            1.5601733275217451e-18,
+            5.363391829501717e-10
+          ],
+          [
+            5.5874093068010246e-15,
+            1.6336743850554352e-23,
+            5.58740929046428e-15
+          ]
+        ],
+        "old_matched_pole_omega": 0.0023041975951177784,
+        "maximum_componentwise_mesh_difference": 5.775158129495139e-12,
+        "panels": 49,
+        "conditional_number_energy_neutral": [
+          2.9089301952164843e-09,
+          2.90893035064099e-09
+        ],
+        "number_A_B_D_new_to_old": [
+          1.3027112254147721,
+          1.294545548029154,
+          1.302711225438675
+        ],
+        "relative_neutrality_split": 5.343012566177809e-08,
+        "mesh_difference_in_relative_split": 5.861503729202221e-17,
+        "scope": "One evolved snapshot and continuum closure, not spatial convergence or full reaction."
+      }
+    },
+    {
+      "level": 2,
+      "state_sha256_uncompressed": "ccd47774094abd22a75a17223cad61cdd148ff58f641de5ee2b35984e046e90a",
+      "diagnostic": {
+        "band": [
+          1e-06,
+          1.5e-05
+        ],
+        "full_pole_and_snapshot": {
+          "grid": "fine",
+          "time_x": 0.05,
+          "scalar_mass": 0.000873183268934027,
+          "omega": 0.0023042221339155395,
+          "residue": 202.9727034411523,
+          "mesh": [
+            8,
+            10,
+            16,
+            24
+          ],
+          "mirror_azimuth": true,
+          "scalar_div": 2,
+          "charge_div": 2,
+          "scalar_cut": 1e-05,
+          "state_sha256": "80f77b29eac269ead2601c2e35f3994a6dd640f20760c6152764a5d14be4a45e"
+        },
+        "accepted_meshes": [
+          [
+            4,
+            6,
+            10,
+            18
+          ],
+          [
+            8,
+            10,
+            16,
+            24
+          ]
+        ],
+        "raw_number_scalar_energy_and_excess": [
+          [
+            6.470290051255009e-07,
+            1.886238383837565e-15,
+            6.470290032392626e-07
+          ],
+          [
+            5.649800947967225e-10,
+            1.6470470004709283e-18,
+            5.649800931496755e-10
+          ],
+          [
+            5.193006106254998e-15,
+            1.520248280749785e-23,
+            5.193006091052515e-15
+          ]
+        ],
+        "old_matched_pole_omega": 0.0023041975951177784,
+        "maximum_componentwise_mesh_difference": 1.341149413747189e-13,
+        "panels": 57,
+        "conditional_number_energy_neutral": [
+          2.9152300351210983e-09,
+          2.915230147825031e-09
+        ],
+        "number_A_B_D_new_to_old": [
+          1.371890808903425,
+          1.3662439650654166,
+          1.371890808919955
+        ],
+        "relative_neutrality_split": 3.866039083174872e-08,
+        "mesh_difference_in_relative_split": 6.119614520565307e-19,
+        "scope": "One evolved snapshot and continuum closure, not spatial convergence or full reaction."
+      }
+    },
+    {
+      "level": 4,
+      "state_sha256_uncompressed": "cd4d6b834aab835535e64ececa68468224f79902c848e9c2c03fae6eb97e3688",
+      "diagnostic": {
+        "band": [
+          1e-06,
+          1.5e-05
+        ],
+        "full_pole_and_snapshot": {
+          "grid": "fine",
+          "time_x": 0.05,
+          "scalar_mass": 0.0008731829968237441,
+          "omega": 0.0023042221339116186,
+          "residue": 202.97270344168,
+          "mesh": [
+            8,
+            10,
+            16,
+            24
+          ],
+          "mirror_azimuth": true,
+          "scalar_div": 4,
+          "charge_div": 2,
+          "scalar_cut": 1e-05,
+          "state_sha256": "928f1eca664e4ea65fed1270277de9608914de9bc2b6e6553808105516577511"
+        },
+        "accepted_meshes": [
+          [
+            4,
+            6,
+            10,
+            18
+          ],
+          [
+            8,
+            10,
+            16,
+            24
+          ]
+        ],
+        "raw_number_scalar_energy_and_excess": [
+          [
+            6.448926581147803e-07,
+            1.8789427750528415e-15,
+            6.448926562358375e-07
+          ],
+          [
+            5.631143834745394e-10,
+            1.6406757400355791e-18,
+            5.631143818338637e-10
+          ],
+          [
+            5.079632245297352e-15,
+            1.4856854616806732e-23,
+            5.079632230440497e-15
+          ]
+        ],
+        "old_matched_pole_omega": 0.0023041975951177784,
+        "maximum_componentwise_mesh_difference": 1.5198953207118393e-13,
+        "panels": 71,
+        "conditional_number_energy_neutral": [
+          2.913574463725497e-09,
+          2.913574564891205e-09
+        ],
+        "number_A_B_D_new_to_old": [
+          1.36736112815431,
+          1.3609595950944653,
+          1.3673611281730491
+        ],
+        "relative_neutrality_split": 3.472219748621684e-08,
+        "mesh_difference_in_relative_split": 1.1368770338928812e-20,
+        "scope": "One evolved snapshot and continuum closure, not spatial convergence or full reaction."
+      }
+    },
+    {
+      "level": 8,
+      "state_sha256_uncompressed": "34c9bf3096d05ecc3a320e34c6a1d2787d2e4083e84533c95f5524deea628c17",
+      "diagnostic": {
+        "band": [
+          1e-06,
+          1.5e-05
+        ],
+        "full_pole_and_snapshot": {
+          "grid": "fine",
+          "time_x": 0.05,
+          "scalar_mass": 0.0008731828153892864,
+          "omega": 0.002304222133910329,
+          "residue": 202.97270344184636,
+          "mesh": [
+            8,
+            10,
+            16,
+            24
+          ],
+          "mirror_azimuth": true,
+          "scalar_div": 8,
+          "charge_div": 2,
+          "scalar_cut": 1e-05,
+          "state_sha256": "35af068d9760d5ad7adee8798f0309aff1d73b4be6d1b1308edec94217194fe5"
+        },
+        "accepted_meshes": [
+          [
+            4,
+            6,
+            10,
+            18
+          ],
+          [
+            8,
+            10,
+            16,
+            24
+          ]
+        ],
+        "raw_number_scalar_energy_and_excess": [
+          [
+            6.443407477910264e-07,
+            1.877063747259042e-15,
+            6.443407459139628e-07
+          ],
+          [
+            5.626323196595142e-10,
+            1.6390345784071903e-18,
+            5.626323180204796e-10
+          ],
+          [
+            5.0514333076096816e-15,
+            1.4770910376324774e-23,
+            5.0514332928387715e-15
+          ]
+        ],
+        "old_matched_pole_omega": 0.0023041975951177784,
+        "maximum_componentwise_mesh_difference": 5.6288307348495437e-14,
+        "panels": 100,
+        "conditional_number_energy_neutral": [
+          2.9131538850558453e-09,
+          2.9131539833577957e-09
+        ],
+        "number_A_B_D_new_to_old": [
+          1.3661909167812512,
+          1.359598573918422,
+          1.366190916800549
+        ],
+        "relative_neutrality_split": 3.3744166710095004e-08,
+        "mesh_difference_in_relative_split": 3.785178483042655e-21,
+        "scope": "One evolved snapshot and continuum closure, not spatial convergence or full reaction."
+      }
+    },
+    {
+      "level": 16,
+      "state_sha256_uncompressed": "db5a7ddcc2b6048e23021ef518b8e401c6000dc98aa9aed9cbff7cd15eb0cdbc",
+      "diagnostic": {
+        "band": [
+          1e-06,
+          1.5e-05
+        ],
+        "full_pole_and_snapshot": {
+          "grid": "fine",
+          "time_x": 0.05,
+          "scalar_mass": 0.0008731828039958324,
+          "omega": 0.0023042221339100444,
+          "residue": 202.97270344188203,
+          "mesh": [
+            8,
+            10,
+            16,
+            24
+          ],
+          "mirror_azimuth": true,
+          "scalar_div": 16,
+          "charge_div": 2,
+          "scalar_cut": 1e-05,
+          "state_sha256": "d3f1d8ab1ed7331d87ad1d3e067402ab038e05db37a27fd9656b1f323e09ef26"
+        },
+        "accepted_meshes": [
+          [
+            4,
+            6,
+            10,
+            18
+          ],
+          [
+            8,
+            10,
+            16,
+            24
+          ]
+        ],
+        "raw_number_scalar_energy_and_excess": [
+          [
+            6.442082068329405e-07,
+            1.876610350271382e-15,
+            6.442082049563302e-07
+          ],
+          [
+            5.625165727735353e-10,
+            1.6386386370598905e-18,
+            5.625165711348967e-10
+          ],
+          [
+            5.044374021211525e-15,
+            1.4749402323966664e-23,
+            5.0443740064621226e-15
+          ]
+        ],
+        "old_matched_pole_omega": 0.0023041975951177784,
+        "maximum_componentwise_mesh_difference": 2.0261570199409107e-13,
+        "panels": 158,
+        "conditional_number_energy_neutral": [
+          2.913049439347942e-09,
+          2.9130495369298724e-09
+        ],
+        "number_A_B_D_new_to_old": [
+          1.3659098911691674,
+          1.3592701685039859,
+          1.3659098911886038
+        ],
+        "relative_neutrality_split": 3.349820587539531e-08,
+        "mesh_difference_in_relative_split": 3.791795927943079e-21,
+        "scope": "One evolved snapshot and continuum closure, not spatial convergence or full reaction."
+      }
+    }
+  ],
+  "adjacent_contrasts": [
+    {
+      "levels": [
+        1,
+        2
+      ],
+      "relative_all_coefficients": [
+        [
+          0.053104312098505746,
+          0.055385009160487275,
+          0.05310431209187172
+        ],
+        [
+          0.053400741757336556,
+          0.0556820652018053,
+          0.05340074175070053
+        ],
+        [
+          -0.07058784830135079,
+          -0.06943005616250841,
+          -0.07058784830473597
+        ]
+      ],
+      "relative_pole_parameters": [
+        0.0002827083149907761,
+        9.68266800072115e-10,
+        -9.673528644782436e-10
+      ],
+      "relative_neutrality_roots": [
+        0.0021656896115875846,
+        0.0021656748098670686
+      ],
+      "constructed_common_occupation": 2.9120784115757897e-09,
+      "net_over_inverse_on_common_occupation": [
+        0.0010822591633454781,
+        -0.0010810891447122772
+      ]
+    },
+    {
+      "levels": [
+        2,
+        4
+      ],
+      "relative_all_coefficients": [
+        [
+          -0.0033017793542443608,
+          -0.0038678084632550735,
+          -0.0033017793525944583
+        ],
+        [
+          -0.003302260273177149,
+          -0.003868293032030956,
+          -0.0033022602715271354
+        ],
+        [
+          -0.0218320292019466,
+          -0.02273498316476663,
+          -0.02183202919930316
+        ]
+      ],
+      "relative_pole_parameters": [
+        -3.1163020708380174e-07,
+        -1.7016388298429774e-12,
+        2.5999202790671916e-12
+      ],
+      "relative_neutrality_roots": [
+        -0.0005679042050390493,
+        -0.000567908140995721
+      ],
+      "constructed_common_occupation": 2.9144021318641693e-09,
+      "net_over_inverse_on_common_occupation": [
+        -0.00028399242836929517,
+        0.00028407310297962063
+      ]
+    },
+    {
+      "levels": [
+        4,
+        8
+      ],
+      "relative_all_coefficients": [
+        [
+          -0.0008558173469787045,
+          -0.0010000452481830902,
+          -0.000855817346558374
+        ],
+        [
+          -0.0008560673091863036,
+          -0.00100029615136088,
+          -0.0008560673087661952
+        ],
+        [
+          -0.005551373864471576,
+          -0.005784820724080708,
+          -0.005551373863788678
+        ]
+      ],
+      "relative_pole_parameters": [
+        -2.0778514742136878e-07,
+        -5.597744490160039e-13,
+        8.195666367782906e-13
+      ],
+      "relative_neutrality_roots": [
+        -0.00014435144009117273,
+        -0.00014435241798071985
+      ],
+      "constructed_common_occupation": 2.9133641668012315e-09,
+      "net_over_inverse_on_common_occupation": [
+        -7.217832490080678e-05,
+        7.218353498750218e-05
+      ]
+    },
+    {
+      "levels": [
+        8,
+        16
+      ],
+      "relative_all_coefficients": [
+        [
+          -0.00020570010284204354,
+          -0.00024154586562241676,
+          -0.00020570010273768258
+        ],
+        [
+          -0.00020572384830108703,
+          -0.0002415698561312185,
+          -0.00020572384819650402
+        ],
+        [
+          -0.0013974818567874525,
+          -0.001456108784776311,
+          -0.001397481856616145
+        ]
+      ],
+      "relative_pole_parameters": [
+        -1.3048188529651839e-08,
+        -1.234568003383174e-13,
+        1.7563728249569976e-13
+      ],
+      "relative_neutrality_roots": [
+        -3.585313787879407e-05,
+        -3.5853383830719565e-05
+      ],
+      "constructed_common_occupation": 2.913101661733797e-09,
+      "net_over_inverse_on_common_occupation": [
+        -1.7926729623196636e-05,
+        1.7927050996568994e-05
+      ]
+    }
+  ],
+  "scope": "Same charge partition and retained band, five independently evolved scalar charts and their own optical fits. No physical photon occupation, net rate or asymptotic error claimed."
+}
