@@ -18,7 +18,7 @@ from early_pole_archived_live_flavor_conversion_reference import ConversionKerne
 from early_pole_screened_elastic_channel_sum_reference import ElasticChannels
 
 
-def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None,local_daughter_fraction=1.,checkpoint_input=None,emit_checkpoint=False):
+def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,retune_local_daughter=False,compensation_only=False,number_only_local_retune=False,without_elastic=False,elastic_channel='both',record_mode_history=False,local_from_paired_archive=False,retune_donor_support=None,local_daughter_fraction=1.,checkpoint_input=None,emit_checkpoint=False,adaptive=None):
     if not 0.<local_daughter_fraction<=1. or (local_daughter_fraction!=1. and not local_from_paired_archive):
         raise ValueError('A fractional replacement in (0,1] requires the exact local archive option.')
     with gzip.open(bundle,'rt') as f:
@@ -187,7 +187,7 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
         return d
     initial=anchor
     before=0.
-    checkstate=checkpoint_input is not None or emit_checkpoint
+    checkstate=checkpoint_input is not None or emit_checkpoint or adaptive is not None
     provenance=None
     if checkstate:
         if any((prepared_input is not None, retune_local_daughter, compensation_only,
@@ -229,8 +229,39 @@ def run(bundle,projection,duration,panels,rtol,base_atol,prepared_input=None,ret
     atol=np.r_[np.full(2*k,base_atol),np.full(C.j0-2*k,2e-3*rtol),
                np.full(len(n0),base_atol/10),base_atol,base_atol/10]
     sample=before+np.linspace(0.,duration,panels+1)
-    result=solve_ivp(rhs,(before,before+duration),initial,method='DOP853',rtol=rtol,atol=atol,
-                     max_step=duration/panels,t_eval=sample)
+    if adaptive is None:
+        result=solve_ivp(rhs,(before,before+duration),initial,method='DOP853',rtol=rtol,atol=atol,
+                         max_step=duration/panels,t_eval=sample)
+    else:
+        from types import SimpleNamespace
+        from accepted_dop853_checkpoint_reference import evolve,dense_matrix
+        mode,path,cadence,stop=adaptive
+        if checkpoint_input is not None:
+            raise ValueError('Accepted-step restart cannot be combined with the legacy end-state input')
+        path=Path(path)
+        def save():
+            return dict(calls=calls,coordinate_defect=coordinate_defect,condition=cond)
+        def restore(payload):
+            nonlocal calls
+            count=payload['calls']
+            err,conditions=payload['coordinate_defect'],payload['condition']
+            if not isinstance(count,int) or count<1 or not np.all(np.isfinite(err+conditions)):
+                raise ValueError('Invalid stateful diagnostics in accepted-step file')
+            calls=count
+            coordinate_defect[:]=err
+            cond[:]=conditions
+        mode_opts=dict(save_model_state=save,save_every=cadence,
+                       stop=stop if mode=='suspend' else None,
+                       start=path if mode=='resume' else None,
+                       load_model_state=restore if mode=='resume' else None)
+        tag=dict(provenance=provenance,record_mode_history=record_mode_history)
+        control=evolve(rhs,(before,before+duration),initial,sample,duration/panels,rtol,atol,
+                       tag,path,**mode_opts)
+        if mode=='suspend':
+            if control is not None:
+                raise ArithmeticError('Requested adaptive save did not happen')
+            return dict(suspended=True)
+        result=SimpleNamespace(y=dense_matrix(control),success=True,message='validated resume')
     if not result.success:
         raise RuntimeError(result.message)
     z=result.y[:,-1]
@@ -281,7 +312,17 @@ if __name__=='__main__':
     p.add_argument('--local-daughter-fraction',type=float,default=1.)
     p.add_argument('--checkpoint-input')
     p.add_argument('--emit-checkpoint',action='store_true')
+    p.add_argument('--adaptive-mode',choices=('run','suspend','resume'))
+    p.add_argument('--adaptive-path',type=Path)
+    p.add_argument('--adaptive-save-every',type=int,default=1)
+    p.add_argument('--adaptive-stop-after',type=int,default=1)
     a=p.parse_args()
-    if min(a.duration,a.panels,a.rtol,a.base_atol)<=0.:
-        p.error('Use positive scope and accuracy controls.')
-    print(json.dumps(run(**vars(a)),indent=2,allow_nan=False))
+    opts=vars(a)
+    mode,path=opts.pop('adaptive_mode'),opts.pop('adaptive_path')
+    gap,stop=opts.pop('adaptive_save_every'),opts.pop('adaptive_stop_after')
+    if min(a.duration,a.panels,a.rtol,a.base_atol,gap,stop)<=0.:
+        p.error('Use positive scope, adaptive cadence and accuracy controls.')
+    if (mode is None)!=(path is None):
+        p.error('Adaptive operation needs both --adaptive-mode and --adaptive-path')
+    adaptive=None if mode is None else (mode,path,gap,stop)
+    print(json.dumps(run(**opts,adaptive=adaptive),indent=2,allow_nan=False))

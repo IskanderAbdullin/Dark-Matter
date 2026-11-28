@@ -20,7 +20,9 @@ def fingerprint():
                           inspect.getsource(DOP853._dense_output_impl).encode()).hexdigest()
 
 
-def evolve(rhs,span,initial,times,max_step,rtol,atol,tag,path,start=None,stop=None):
+def evolve(rhs,span,initial,times,max_step,rtol,atol,tag,path,start=None,stop=None,save_model_state=None,load_model_state=None,save_every=None):
+    if save_every is not None and save_every<1:
+        raise ValueError('Accepted-step save cadence must be positive')
     a,b=span
     times=np.asarray(times,dtype=float)
     if (times.ndim!=1 or not len(times) or not np.all(np.isfinite(times))
@@ -28,13 +30,16 @@ def evolve(rhs,span,initial,times,max_step,rtol,atol,tag,path,start=None,stop=No
         raise ValueError('Use forward integration with strictly ordered report times')
     config=dict(span=list(span),initial=np.asarray(initial).tolist(),times=np.asarray(times).tolist(),
                 max_step=max_step,rtol=rtol,atol=np.asarray(atol).tolist(),
-                scipy=scipy.__version__,numpy=np.__version__,python=sys.version.split()[0],solver_sources=fingerprint(),caller=tag,schema=2)
+                scipy=scipy.__version__,numpy=np.__version__,python=sys.version.split()[0],solver_sources=fingerprint(),caller=tag,external_state=bool(save_model_state or load_model_state),
+                schema=3 if (save_model_state or load_model_state) else 2)
     steps=[];history=[];widths=[];i=0
     if start is not None:
         package=json.loads(start.read_text())
         saved=package['body']
         if hashlib.sha256(encode(saved)).hexdigest()!=package['sha256'] or saved['spec']!=config:
             raise ValueError('Damaged or mismatched accepted-step checkpoint')
+        if load_model_state is not None:
+            load_model_state(saved['model_state'])
         t,state,f,H,nev=(saved[k] for k in ('t','y','f','next_step','calls'))
         state,f=np.asarray(state),np.asarray(f)
         steps=list(saved['steps'])
@@ -71,9 +76,12 @@ def evolve(rhs,span,initial,times,max_step,rtol,atol,tag,path,start=None,stop=No
             history.extend(D(times[i:j]).T.tolist())
             widths.append(int(j-i))
         i=j
-        if stop is not None and len(steps)==stop and s.status=='running':
+        suspended=stop is not None and len(steps)==stop
+        periodic=save_every is not None and len(steps)%save_every==0
+        if (suspended or periodic) and s.status=='running':
             data=dict(spec=config,t=float(s.t),y=s.y.tolist(),f=s.f.tolist(),next_step=float(s.h_abs),
-                      calls=s.nfev,samples=history,steps=steps,widths=widths)
+                      calls=s.nfev,samples=history,steps=steps,widths=widths,
+                      model_state=None if save_model_state is None else save_model_state())
             temp=path.with_suffix('.tmp')
             import os
             with temp.open('wb') as f:
@@ -81,7 +89,13 @@ def evolve(rhs,span,initial,times,max_step,rtol,atol,tag,path,start=None,stop=No
                 f.flush()
                 os.fsync(f.fileno())
             temp.replace(path)
-            return None
+            parent_fd=os.open(path.parent,os.O_RDONLY)
+            try:
+                os.fsync(parent_fd)
+            finally:
+                os.close(parent_fd)
+            if suspended:
+                return None
     return dict(steps=steps,samples=history,calls=s.nfev,widths=widths)
 
 
@@ -118,6 +132,9 @@ def run():
             b=evolve(rhs,*c,f,start=f)
             if a!=b:raise ArithmeticError(('Nonbitwise adaptive continuation',j))
             checks.append(j)
+        live=evolve(rhs,*c,f,save_every=9)
+        if live!=a or evolve(rhs,*c,f,start=f)!=a:
+            raise ArithmeticError('Periodic writes or their restart changed the result')
         bad=json.loads(f.read_text())
         bad['body']['next_step']*=1.01
         f.write_bytes(encode(bad))
@@ -129,7 +146,7 @@ def run():
             raise ArithmeticError('Corrupt checkpoint accepted')
         return dict(scipy=scipy.__version__,adaptive_steps=len(a['steps']),dense_samples=len(t),
                     nfev=a['calls'],exact_restarted_steps=checks,bitwise_solver_and_resume=True,
-                    corrupted_checkpoint_rejected=True)
+                    corrupted_checkpoint_rejected=True,periodic_replay_is_bitwise=True)
 
 
 if __name__=='__main__':
