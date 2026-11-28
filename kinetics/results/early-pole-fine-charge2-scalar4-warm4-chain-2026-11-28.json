@@ -1,0 +1,57 @@
+{
+  "grid": "fine",
+  "charge_div": 2,
+  "scalar_div": 4,
+  "cut": 1e-05,
+  "counts": [
+    211,
+    448,
+    488
+  ],
+  "reference_x": 0.005,
+  "warm_floor": 0.01,
+  "warm_div": 4,
+  "validated_chain": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.782328593435918e-08,
+      "gate_temporal_relative_drift": 5.115554536261335e-05,
+      "max_absolute_continuity": 2.9197119812737326e-16,
+      "source_report_sha256": "25a67ec4f6486a749b97f0c0fd5326e433c80d680c31198c3b263773fcaefd8f",
+      "uncompressed_state_sha256": "10ca2aae01d8239d7b2838cd5672c663a354b838d190c35bf4528bd9787f7623"
+    },
+    {
+      "x": 0.01,
+      "scalar_yield": 3.474977321130967e-07,
+      "gate_temporal_relative_drift": 1.252308549082315e-07,
+      "max_absolute_continuity": 2.4087922954017793e-16,
+      "source_report_sha256": "54aab54f1c868324def5cd01a9e6b96c8732be7ab2703f0082090e59ae9efd0d",
+      "uncompressed_state_sha256": "76e22487ca0f72b202c97510cbb5a18f3d2ff6ecd2f14ee45dcafd3873a03687"
+    },
+    {
+      "x": 0.02,
+      "scalar_yield": 1.0218141379654658e-05,
+      "gate_temporal_relative_drift": 2.1847423465892746e-06,
+      "max_absolute_continuity": 1.6851199390955154e-13,
+      "source_report_sha256": "687cdf74fdbe8e377a67a1556b9446cd84fc8e6d3a851cc050709bf0cfbce893",
+      "uncompressed_state_sha256": "13753ddeb8e388d56fe3cf248c93b142660151f72306282422495e1c9eceee9b"
+    },
+    {
+      "x": 0.04,
+      "scalar_yield": 0.00017320923446193615,
+      "gate_temporal_relative_drift": 0.00012767092960797033,
+      "max_absolute_continuity": 7.203145993897857e-11,
+      "source_report_sha256": "2f1bb665858e271cee83616dcfcc84c8c175a3c25a054977e40115db6af84776",
+      "uncompressed_state_sha256": "886284764d0d1fd35ed72da2f82ad6382a33d34968c42b0e6efb1db1f5322eee"
+    },
+    {
+      "x": 0.05,
+      "scalar_yield": 0.0003716273001819891,
+      "gate_temporal_relative_drift": 3.1800957711713984e-05,
+      "max_absolute_continuity": 2.7740297716240606e-11,
+      "source_report_sha256": "750ce14507e5b40e1b0297a35f3b9e692dc73a8e4bea729ed1bdb7a1e65a9d66",
+      "uncompressed_state_sha256": "afb91e874f89946403370ca64cc47890df5dab9aac4374540f5f22acfdf102b1"
+    }
+  ],
+  "scope": "All clocks, saved states and reported budgets checked; optional diagnostic, not spatial convergence."
+}
