@@ -1,0 +1,74 @@
+{
+  "x": 0.05,
+  "starts": 0.04,
+  "steps": [
+    1024,
+    2048
+  ],
+  "measurement_mass": 0.0008731829968237441,
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "charts": [
+    {
+      "order": 6,
+      "source_report_sha256": "4a4a077f367bcd6d80b302f1296d5cd17c10771cbf8507fed53d17bb9597a8ac",
+      "coarse_replay_sha256": "d8d3e48372740483d09f5b26a66732623a1ece98481673424b30f80521c62db8",
+      "coarse_state_sha256": "f0f46c1f6cd0d3a6d4ced69d8fdcc6cca637f018fb0953fe9ff47a00299616ca",
+      "fine_state_sha256": "b4bc9a3b49ea348b5a8d68e57bd4a9bae063b28683876f7fa60a8095cfda1968",
+      "maximum_trace_abs_difference": 0.0,
+      "values": [
+        [
+          0.01740118798083483,
+          1.737144192323835e-07,
+          1.7343966378926736e-07
+        ],
+        [
+          0.01740174137286251,
+          1.7371437530692726e-07,
+          1.734396115252124e-07
+        ]
+      ]
+    },
+    {
+      "order": 7,
+      "source_report_sha256": "befe8653ee642dad7932957fdd3d8dee5d5daebd30b607d0670f91060baf739a",
+      "coarse_replay_sha256": "e95b1459fbc56ff0ce6472c4c9619744c596acd24379734742239a538aea8431",
+      "coarse_state_sha256": "ea3527e771642134560bf1def60e40ad5a4acf4af623b805803638634b92dfc0",
+      "fine_state_sha256": "754e24a56064b7127fce2c4515256deb841d204ddb10ffaf2acdbc41d3e5ed56",
+      "maximum_trace_abs_difference": 0.0,
+      "values": [
+        [
+          0.017401187996007518,
+          1.7382130985265665e-07,
+          1.7354655440966964e-07
+        ],
+        [
+          0.017401741388035154,
+          1.7382126664748463e-07,
+          1.735465028658987e-07
+        ]
+      ]
+    }
+  ],
+  "G7_over_G6_minus_one": [
+    [
+      8.719340804930198e-10,
+      0.0006153238213930656,
+      0.0006162985909161645
+    ],
+    [
+      8.7190388242675e-10,
+      0.0006153281233547414,
+      0.0006163029295689348
+    ]
+  ],
+  "fine_minus_coarse_contrast": [
+    -3.019806626980426e-14,
+    4.301961675778898e-09,
+    4.33865277038592e-09
+  ],
+  "scope": "Conditional replay of the terminal continuation at each order, retaining its own x=.04 state. No full-history clock bound."
+}
