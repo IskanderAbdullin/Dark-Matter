@@ -17,7 +17,7 @@ from early_pole_endpoint_warm_pressure_source_control import cell_weights
 from early_pole_endpoint_warm_pressure_cells import partition
 
 
-def chart_for(card):
+def chart_for(card, *, budget_control=None):
     schema=card['scalar_nodal_rule']
     if schema=='gauss-volume-v1' and 'warm_gauss_order' not in card:
         d=ScalarGauss2(load('fine')[0],SPECS['fine'],2,4,1e-5,gauss_floor=.01)
@@ -33,15 +33,21 @@ def chart_for(card):
         if any(card.get(k)!=v for k,v in meta.items()):
             raise ArithmeticError('Targeted warm archive does not bind the declared chart')
         return 'targeted-2xG4',d,d.repeats
-    raise ArithmeticError('Unknown warm Gauss node convention')
+    if schema=='gauss-volume-v4-fixed-budget' and budget_control is not None:
+        from early_pole_endpoint_budgeted_warm_history import build
+        d,meta=build(budget_control)
+        if any(card.get(k)!=v for k,v in meta.items()):
+            raise ArithmeticError('Fixed-budget warm archive does not bind the frozen selection')
+        return 'mixed255',d,d.repeats
+    raise ArithmeticError('Unknown or unbound warm Gauss node convention')
 
 
-def gauss(card,base,m,x,*,expected_steps=None):
+def gauss(card,base,m,x,*,expected_steps=None,budget_control=None):
     n=(1024 if x==.01 else 2048) if expected_steps is None else expected_steps
     if (card['grid'],card['x_end'],card['steps'],card['reference_x'],card['charge_div'],card['scalar_div'],
           card['cut'],card['gauss_floor'])!=('fine',x,n,X,2,4,1e-5,.01):
         raise ArithmeticError('Require the matched warm-only Gauss chart')
-    order,d,repeats=chart_for(card)
+    order,d,repeats=chart_for(card,budget_control=budget_control)
     expected_cells=d.old_ns if order==2 else d.old_count
     if card['scalar_cell_count']!=expected_cells:
         raise ArithmeticError('Unrecognized native cell count')
