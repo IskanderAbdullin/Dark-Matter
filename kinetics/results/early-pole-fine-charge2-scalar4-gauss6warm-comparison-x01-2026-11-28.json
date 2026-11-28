@@ -1,0 +1,130 @@
+{
+  "x": 0.01,
+  "fixed_mass": 8.535844540506035e-05,
+  "warm_gauss_order": 6,
+  "columns": [
+    "count",
+    "pressure",
+    "pressure_q_ge_.01"
+  ],
+  "S4_reference": [
+    1.62719112408652e-05,
+    1.382634803504894e-09,
+    1.3800292376219663e-09
+  ],
+  "warm_gauss_moments": [
+    1.62718520231156e-05,
+    1.2652665708077875e-09,
+    1.2626610048862075e-09
+  ],
+  "warm_gauss_conditional_pressure_envelope": {
+    "pressure_total_min_max": [
+      1.2652665701283556e-09,
+      1.2652665711369012e-09
+    ],
+    "relative_width_at_fixed_nodal_count_and_energy": 7.971011986596817e-10,
+    "warm_exponential_fit_max_moment_error": 5.684341886080963e-14
+  },
+  "warm_gauss_cell_attribution": {
+    "components": [
+      "total_pressure_change",
+      "changed_cell_count",
+      "changed_within_cell_pressure_per_particle"
+    ],
+    "total_relative_to_S4": [
+      -0.08488737040293277,
+      -0.0428166995391831,
+      -0.042070670863749667
+    ],
+    "largest_absolute_changes": [
+      {
+        "q": [
+          1.8974129217831404,
+          2.7423959679644474
+        ],
+        "relative_to_S4": [
+          -0.02008263739059568,
+          -0.011000818057397305,
+          -0.009081819333198377
+        ]
+      },
+      {
+        "q": [
+          1.3127848194809963,
+          1.8974129217831404
+        ],
+        "relative_to_S4": [
+          -0.017592476147588697,
+          -0.010662003623432078,
+          -0.006930472524156619
+        ]
+      },
+      {
+        "q": [
+          2.7423959679644474,
+          3.9636789434531003
+        ],
+        "relative_to_S4": [
+          -0.015052220389721226,
+          -0.006217116550126058,
+          -0.008835103839595163
+        ]
+      },
+      {
+        "q": [
+          0.9082914754476046,
+          1.3127848194809963
+        ],
+        "relative_to_S4": [
+          -0.012027834353787084,
+          -0.007634639583265795,
+          -0.004393194770521286
+        ]
+      }
+    ]
+  },
+  "warm_gauss_relative_to_S4": [
+    -3.639262083021677e-06,
+    -0.08488737040293304,
+    -0.08504764213402094
+  ],
+  "geometric_warm_charts": [
+    {
+      "warm_div": 2,
+      "moments": [
+        1.6271867069650725e-05,
+        1.2959849250987766e-09,
+        1.2933793591863601e-09
+      ],
+      "relative_to_S4": [
+        -2.714568302364384e-06,
+        -0.06267011230041752,
+        -0.06278843670364498
+      ],
+      "gauss_relative_to_this_warm": [
+        -9.246962907605294e-07,
+        -0.02370270957329834,
+        -0.023750459663649526
+      ]
+    },
+    {
+      "warm_div": 4,
+      "moments": [
+        1.6271855749345108e-05,
+        1.272679026689413e-09,
+        1.270073460770014e-09
+      ],
+      "relative_to_S4": [
+        -3.41026442862713e-06,
+        -0.07952626140810992,
+        -0.07967641108925017
+      ],
+      "gauss_relative_to_this_warm": [
+        -2.2899843532542263e-07,
+        -0.005824293263406277,
+        -0.005836241849595414
+      ]
+    }
+  ],
+  "scope": "Fixed-mass postprocessing; warm Gauss cells match nodal count and energy, other cells retain their constant convention. The interval conditions on evolved discrete moments, not solver error."
+}
