@@ -8,12 +8,17 @@ from scipy.special import expit
 from positive_fd_portal_quadrature_reference import PositivePortal, rule, leptons
 
 
-def integrate(p,Ts,alpha,beta):
+def integrate(p,Ts,alpha,beta,*,invariant_window=None):
     """At fixed Ts, coordinates are 2 eta and 1 - Ts / Td."""
     if not Ts>0. or not beta<1. or not np.all(np.isfinite([Ts,alpha,beta])):
         raise ValueError('Need finite positive local temperature and admissible force')
     Td=Ts/(1-beta)
     E,q,p3,W,vi2=p.geometry(max(Ts,Td))
+    if invariant_window is not None:
+        a,b=invariant_window
+        if not 0.<=a<b:
+            raise ValueError('Need an ordered invariant-energy window')
+        W=np.where((E[:,None]>=a)&(E[:,None]<b),W,0.)
     u,w=rule(p.orders[2])
     u=(u+1)/2
     w=w/2
