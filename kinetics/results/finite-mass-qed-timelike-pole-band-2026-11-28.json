@@ -1,0 +1,126 @@
+[
+  {
+    "grid": "fine",
+    "mode": "T",
+    "momentum_interval": [
+      0.0012,
+      0.003
+    ],
+    "panels": 161,
+    "panel_mesh_relative_defect": 1.8587043639772816e-06,
+    "phase_prefactor_excluding_couplings_and_n_s": 1.1557163562294253,
+    "raw_integrated_number_coefficients": [
+      2.1155297031862202e-09,
+      1.1719671234714357e-16,
+      2.115529585989508e-09
+    ],
+    "number_balancing_occupation": 5.539828566960292e-08,
+    "lower_upper_heat_threshold": [
+      5.498273022083232e-08,
+      5.644830412326237e-08
+    ],
+    "heat_above_number_resolved_by_bounds": false,
+    "full_gain_photon_energy_bounds": [
+      0.0033104054123683775,
+      0.003356424825343308
+    ],
+    "full_inverse_photon_energy_bounds": [
+      0.0033312475020559045,
+      0.003373150793996218
+    ],
+    "forward_only_angle_nodes": 1224
+  },
+  {
+    "grid": "fine",
+    "mode": "L",
+    "momentum_interval": [
+      0.00085,
+      0.003
+    ],
+    "panels": 320,
+    "panel_mesh_relative_defect": 5.432669074600938e-07,
+    "phase_prefactor_excluding_couplings_and_n_s": 1.1557163562294253,
+    "raw_integrated_number_coefficients": [
+      2.4906818589335942e-05,
+      1.7888576166330997e-11,
+      2.4906800700759776e-05
+    ],
+    "number_balancing_occupation": 7.182205527418585e-07,
+    "lower_upper_heat_threshold": [
+      7.185893987497941e-07,
+      7.345718336997792e-07
+    ],
+    "heat_above_number_resolved_by_bounds": true,
+    "full_gain_photon_energy_bounds": [
+      0.002903903239901142,
+      0.002935438837994506
+    ],
+    "full_inverse_photon_energy_bounds": [
+      0.0029369463472335073,
+      0.0029700145516558143
+    ],
+    "forward_only_angle_nodes": 1224
+  },
+  {
+    "grid": "third",
+    "mode": "T",
+    "momentum_interval": [
+      0.0012,
+      0.003
+    ],
+    "panels": 225,
+    "panel_mesh_relative_defect": 1.8606065332882338e-07,
+    "phase_prefactor_excluding_couplings_and_n_s": 1.162132173689646,
+    "raw_integrated_number_coefficients": [
+      1.87246512217915e-09,
+      1.0045450088710271e-16,
+      1.8724650217246492e-09
+    ],
+    "number_balancing_occupation": 5.364826564000551e-08,
+    "lower_upper_heat_threshold": [
+      5.350763898789461e-08,
+      5.445539971617238e-08
+    ],
+    "heat_above_number_resolved_by_bounds": false,
+    "full_gain_photon_energy_bounds": [
+      0.0033249343042848004,
+      0.00335581391503329
+    ],
+    "full_inverse_photon_energy_bounds": [
+      0.0033470174172323384,
+      0.00337495768528042
+    ],
+    "forward_only_angle_nodes": 2034
+  },
+  {
+    "grid": "third",
+    "mode": "L",
+    "momentum_interval": [
+      0.00085,
+      0.003
+    ],
+    "panels": 458,
+    "panel_mesh_relative_defect": 1.908641455994342e-07,
+    "phase_prefactor_excluding_couplings_and_n_s": 1.162132173689646,
+    "raw_integrated_number_coefficients": [
+      2.4080905474957698e-05,
+      1.65449065280026e-11,
+      2.408088893005117e-05
+    ],
+    "number_balancing_occupation": 6.870554727469288e-07,
+    "lower_upper_heat_threshold": [
+      6.892914048777075e-07,
+      7.008113115299398e-07
+    ],
+    "heat_above_number_resolved_by_bounds": true,
+    "full_gain_photon_energy_bounds": [
+      0.002909065422886766,
+      0.0029327264476777196
+    ],
+    "full_inverse_photon_energy_bounds": [
+      0.002942270615558355,
+      0.002967309056057141
+    ],
+    "forward_only_angle_nodes": 2034
+  }
+]
