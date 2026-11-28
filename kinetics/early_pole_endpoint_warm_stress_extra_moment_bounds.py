@@ -58,7 +58,7 @@ def sum_rule(ledger,M,n):
 
 def run(native,gauss,levels=(3,4)):
     levels=tuple(levels)
-    if levels not in ((3,4),(4,5)):
+    if levels not in ((3,4),(4,5),(5,6)):
         raise ArithmeticError('Use adjacent archived positive Gauss histories')
     key=f'conditional_G{levels[1]}_G{levels[0]}_minus_one'
     d,y=unpack(native,False,.05)

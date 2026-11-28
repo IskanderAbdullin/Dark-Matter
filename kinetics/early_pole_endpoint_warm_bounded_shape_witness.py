@@ -53,12 +53,16 @@ def total(ledger,m,m0,width,spread,n):
     return out
 
 
-def run(native,charts):
+def run(native,charts,levels=(3,4)):
+    levels=tuple(levels)
+    if levels not in ((3,4),(5,6)):
+        raise ArithmeticError('Use an accepted contrasting pair of actual histories')
+    i,j=levels
     d,y=unpack(native,False,.05)
     m0=d.state(.05,y)[0]
     tags,ledger=zip(*[conditioned(d,c,m0) for c in charts],strict=True)
-    if list(tags)!=[3,4]:
-        raise ArithmeticError('Need the archived G3 and G4 states')
+    if tags!=levels:
+        raise ArithmeticError('Need the declared archived warm states')
     rows=[]
     for width in (.05,.10,.20):
         result=[]
@@ -70,9 +74,9 @@ def run(native,charts):
                 raise ArithmeticError('Resolved positive witness requires both quadratures')
             # The exact same two density families are used for both probes
             # and each test mass; no kernel-specific optimization is involved.
-            row=dict(formal_mass=M,G3_G4_center_and_spread_totals=b.tolist(),
-                     G4_center_vs_G3_spread_minus_one=(b[1,0]/b[0,1]-1).tolist(),
-                     G4_spread_vs_G3_center_minus_one=(b[1,1]/b[0,0]-1).tolist(),
+            row=dict(formal_mass=M,**{f'G{i}_G{j}_center_and_spread_totals':b.tolist(),
+                     f'G{j}_center_vs_G{i}_spread_minus_one':(b[1,0]/b[0,1]-1).tolist(),
+                     f'G{j}_spread_vs_G{i}_center_minus_one':(b[1,1]/b[0,0]-1).tolist()},
                      max_paired_relative_defect=err)
             result.append(row)
         rows.append(dict(width_cap_in_normalized_energy=width,mass_rows=result))
@@ -84,5 +88,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--native',type=Path,required=True)
     p.add_argument('--gauss',nargs=2,type=Path,required=True)
+    p.add_argument('--levels',type=int,nargs=2,default=(3,4))
     a=p.parse_args()
-    print(json.dumps(run(read(a.native),[read(f) for f in a.gauss]),indent=2,allow_nan=False))
+    print(json.dumps(run(read(a.native),[read(f) for f in a.gauss],a.levels),indent=2,allow_nan=False))
