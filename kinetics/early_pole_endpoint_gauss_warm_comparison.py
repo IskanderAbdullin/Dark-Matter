@@ -39,6 +39,12 @@ def chart_for(card, *, budget_control=None):
         if any(card.get(k)!=v for k,v in meta.items()):
             raise ArithmeticError('Fixed-budget warm archive does not bind the frozen selection')
         return 'mixed255',d,d.repeats
+    if schema=='gauss-volume-v5-single-upgrade' and budget_control is not None:
+        from early_pole_endpoint_warm_single_upgrade_history import build
+        d,meta=build(budget_control)
+        if any(card.get(k)!=v for k,v in meta.items()):
+            raise ArithmeticError('300-node archive does not bind the fixed trained selection')
+        return 'mixed300',d,d.repeats
     raise ArithmeticError('Unknown or unbound warm Gauss node convention')
 
 
