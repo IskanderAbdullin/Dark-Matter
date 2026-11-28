@@ -46,19 +46,36 @@ def full_vertex(p,b,K,m0,m1,e):
              +slash(e)@(slash(b-K)+m1*I)/(s-2*dot(b,K))[...,None,None])
 
 
-def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=Q):
+def spacelike_parent_minimum(M,m,t,v,s):
+    # The upper quadratic root is the positive-energy threshold. For
+    # positive A*t, rationalize the subtractive numerator near s=0.
+    A=M*M+s-m*m
+    z=v*np.sqrt(A*A-4*M*M*s)
+    if A*t>0:
+        return (A*A+4*M*M*v*v)/(2*(z+A*t))
+    return (-A*t+z)/(-2*s)
+
+
+def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=Q,
+           *,allow_future_spacelike=False):
     P,F=ch
     M,m=P.m,F.m
     T=np.array([es-w,qscalar*np.sqrt((1-c)*(1+c)),0.,qscalar*c-k])
     v=np.linalg.norm(T[1:])
     t=T[0]
     s=(t-v)*(t+v)
-    if t>=0:
+    if t>=0 and not allow_future_spacelike:
         raise ValueError('This branch requires a past-directed transfer energy')
+    if allow_future_spacelike:
+        # K heavier than the external scalar implies that a timelike
+        # q-K is past-directed, and therefore cannot equal P-b for M>m.
+        if (w-k)*(w+k)<=es*es-qscalar*qscalar or not M>m:
+            raise ValueError('Timelike-transfer exclusion does not hold here')
     if s>=0:
         return np.zeros(3),False,0.
     A=M*M+s-m*m
-    lo=(-A*t+v*np.sqrt(A*A-4*M*M*s))/(-2*s)
+    lo=(spacelike_parent_minimum(M,m,t,v,s) if t>=0 else
+        (-A*t+v*np.sqrt(A*A-4*M*M*s))/(-2*s))
     hi=max(P.E[-1],F.E[-1]+t)
     if not lo<hi:
         return np.zeros(3),False,0.
