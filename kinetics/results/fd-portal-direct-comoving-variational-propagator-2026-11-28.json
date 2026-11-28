@@ -1,0 +1,78 @@
+{
+  "interval": [
+    0.96,
+    1.2
+  ],
+  "operator": "combined",
+  "fields": [
+    "comoving_number",
+    "comoving_dark_energy",
+    "comoving_total_energy"
+  ],
+  "ordered_response": [
+    [
+      0.9825375864564333,
+      -0.02966123622414475,
+      0.05139244568356963
+    ],
+    [
+      0.008129893234993517,
+      0.7316869264478915,
+      0.060861068356436426
+    ],
+    [
+      -4.7431945358878954e-06,
+      -0.001487117372946036,
+      0.8098203234077939
+    ]
+  ],
+  "finite_perturbation_response": [
+    [
+      0.9825375832879976,
+      -0.02966131592822367,
+      0.05139249811048075
+    ],
+    [
+      0.00812989064606177,
+      0.731686831292322,
+      0.060861131876976955
+    ],
+    [
+      -4.7247363429055635e-06,
+      -0.0014868141406942927,
+      0.8098201732659184
+    ]
+  ],
+  "mesh_defects": [
+    1.0952122524443553e-06,
+    7.599987094097926e-07
+  ],
+  "separate_nonlinear_max_defect": 3.0323225174333675e-07,
+  "bg_defects": [
+    1.4896133215813734e-09,
+    1.9785517668680086e-10
+  ],
+  "liouville_abs_error": 5.551115123125783e-16,
+  "integrated_trace": -0.540474801873648,
+  "final_baseline_in_start_units": [
+    1.0078371118908864,
+    0.7948062932586127,
+    0.8167089420519453
+  ],
+  "singular_values_start_units": [
+    0.9871125880159581,
+    0.8179067968603634,
+    0.7214467286796142
+  ],
+  "singular_values_endpoint_fractions": [
+    1.0187359022216393,
+    0.9700987592333028,
+    0.9009034721045874
+  ],
+  "input_sha256": [
+    "e83a57a475ace1b1e361d5bcf822614c0e5da16e19b74dcf2791edc309e62cbf",
+    "2b7ec60b6632a1c2ff45f0be5b8b877f9c4764aabfc25680e9d55a3ec4f69470"
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Finite-interval tangent of direct expanding restricted FD dynamics. Gains depend on chosen dimensionless comoving norm; not a complete interval or physical stability criterion."
+}
