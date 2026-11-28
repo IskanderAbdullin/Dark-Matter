@@ -32,3 +32,16 @@ The archived reports and nodal states have names beginning `early-pole-fine-char
 At the terminal snapshot, the total scalar number differs from W1 by only −4.25e−7 relative. The Gauss count/shape ledger accounts for −4.4015 percentage points through changed populations between the unchanged cells and −4.0474 points through changed mean pressure weights within them. The higher-order positive fit preserves both prescribed warm moments to 2.14e−14 or better over the four snapshots. The pressure interval is small even without selecting that particular reconstruction, because at fixed high momentum and positive mass the pressure weight is nearly linear in energy. It does not measure the uncertainty in the evolved nodal moments themselves.
 
 The terminal independent trace receipt gives scalar yield 3.7162728866e−4. The clock difference for this yield using the same .04 restart is 3.1801e−5 relative; the pressure comparison above uses both finer saved snapshots and is not controlled by a count-only clock gate. These same-model results cannot be moved into CLASS, and W4 remains a separate diagnostic.
+
+## Pressure clock control on the last segment
+
+Recover the 1024-step nodal endpoint from the same archived .04 Gauss restart used by the 2048-step state. The recovered coarse trace matches all four checked scalars at every saved sample exactly. At the common W1 reference mass, the pressure numerator on the 1024-step endpoint differs from the finer comparison by +2.5424e−7 relative (+3.0271e−7 for q≥.01); the scalar number differs by −3.1801e−5. This directly checks pressure sensitivity to the time step **on the last segment only**, without a claim about accumulating clock error earlier.
+
+```sh
+p=results/early-pole-fine-charge2-scalar4-gausswarm
+d=2026-11-28
+python -W error early_pole_endpoint_gauss_warm_pressure_clock.py \
+  results/early-pole-fine-charge2-scalar4-x05-state-$d.json.gz \
+  "$p-x04-state-$d.json.gz" "$p-x05-state-$d.json.gz" "$p-x05-$d.json.gz" \
+  --coarse /tmp/gauss-warm-coarse-x05-state.json
+```
