@@ -8,7 +8,7 @@ from scipy.special import expit
 from positive_fd_portal_quadrature_reference import PositivePortal, rule, leptons
 
 
-def integrate(p,Ts,alpha,beta,*,invariant_window=None):
+def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.):
     """At fixed Ts, coordinates are 2 eta and 1 - Ts / Td."""
     if not Ts>0. or not beta<1. or not np.all(np.isfinite([Ts,alpha,beta])):
         raise ValueError('Need finite positive local temperature and admissible force')
@@ -35,6 +35,11 @@ def integrate(p,Ts,alpha,beta,*,invariant_window=None):
     anti=.5*(e1-e2)*(f2-f1)*D
     if np.min(anti)<0. or np.max(abs(db-pair[:,:,None]*da-anti))>8e-14:
         raise ArithmeticError('Exact sign of the angular blocking derivative failed')
+    t=dark_blocking_fraction
+    if not 0.<=t<=1.:
+        raise ValueError('A retained blocking fraction must lie between zero and one')
+    if t!=1.:
+        D,da,db,anti=(1-t)+t*D,t*da,t*db,t*anti
     dark=[(a@w,a@w2) for a in (D,da,db,anti)]
     light=np.zeros((4,)+q.shape)
     s=E*E
