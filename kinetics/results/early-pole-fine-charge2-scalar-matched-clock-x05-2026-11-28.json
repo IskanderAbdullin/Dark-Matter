@@ -1,0 +1,85 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "cuts": [
+    1e-06,
+    1e-05,
+    0.0003
+  ],
+  "quantile_levels": [
+    0.1,
+    0.5,
+    0.9,
+    0.999
+  ],
+  "scope": "One matched charge chart. Coarsening TV does not measure intrabin shape.",
+  "rows": [
+    {
+      "scalar_div": 1,
+      "scalar_bins": 67,
+      "total_yield": 0.0003713133140562329,
+      "scalar_mass": 0.000872936749892401,
+      "node_rms_q": 0.0047198778273282735,
+      "mean_excess": 1.0487626732592474e-05,
+      "cut_fractions": [
+        2.056429748765287e-11,
+        0.9999892804861709,
+        0.9999906204617495
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.8059028996642027e-06,
+        3.953204087625508e-06,
+        4.657060024626121e-06,
+        6.8260637782425854e-06
+      ]
+    },
+    {
+      "scalar_div": 2,
+      "scalar_bins": 93,
+      "total_yield": 0.0003716277940783188,
+      "scalar_mass": 0.000873183268934027,
+      "node_rms_q": 0.004717841466872444,
+      "mean_excess": 1.0478033710094302e-05,
+      "cut_fractions": [
+        5.252315257983185e-11,
+        0.9999893020252304,
+        0.9999906288516506
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.9093996592445996e-06,
+        3.6100131712476697e-06,
+        4.515307696626999e-06,
+        6.537696354847188e-06
+      ],
+      "yield_change_from_previous": 0.0008469397949955049,
+      "pole_change_from_previous": 0.00028240195140871727,
+      "native_coarsened_total_variation": 0.08014615100220779,
+      "native_max_signed_cdf_difference": 0.06772754115155746,
+      "native_max_cdf_difference_upper_q": 3.3059994133202632e-06
+    },
+    {
+      "scalar_div": 4,
+      "scalar_bins": 145,
+      "total_yield": 0.00037162744675107843,
+      "scalar_mass": 0.0008731829968237441,
+      "node_rms_q": 0.004717843864270663,
+      "mean_excess": 1.0478044818434742e-05,
+      "cut_fractions": [
+        1.0928807586965329e-10,
+        0.9999892970849399,
+        0.999990628841184
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.930317679203901e-06,
+        3.557075520287513e-06,
+        4.3523704269580384e-06,
+        6.254971467146007e-06
+      ],
+      "yield_change_from_previous": -9.346105052099318e-07,
+      "pole_change_from_previous": -3.1163020708380174e-07,
+      "native_coarsened_total_variation": 0.013237632697302564,
+      "native_max_signed_cdf_difference": 0.008651929466235572,
+      "native_max_cdf_difference_upper_q": 3.3059994133202632e-06
+    }
+  ]
+}
