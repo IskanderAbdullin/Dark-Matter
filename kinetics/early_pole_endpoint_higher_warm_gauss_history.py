@@ -57,7 +57,7 @@ def run_chart(d,metadata,end,steps,restart,*,scope):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--warm-order',type=int,choices=(3,4,5),default=3)
+    p.add_argument('--warm-order',type=int,choices=(3,4,5,6),default=3)
     p.add_argument('--x-end',type=float,default=.0075)
     p.add_argument('--steps',type=int,default=2048)
     p.add_argument('--restart',type=Path)

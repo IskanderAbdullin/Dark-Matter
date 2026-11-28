@@ -15,7 +15,7 @@ CLOCK = (2048, 512, 1024, 1024, 1024)
 
 
 def verify(r, s, d, lo, hi, n, *, order=None):
-    if order not in (None,3,4,5):
+    if order not in (None,3,4,5,6):
         raise ArithmeticError('Unsupported higher positive Gauss chart')
     cells_n, repeats = (d.old_ns,d.scalar_repeats) if order is None else (d.old_count,d.repeats)
     key = dict(grid='fine', charge_div=2, scalar_div=4, cut=1e-5, gauss_floor=.01,
@@ -100,6 +100,6 @@ if __name__=='__main__':
     p.add_argument('--reports',nargs='+',type=Path,required=True)
     p.add_argument('--states',nargs='+',type=Path,required=True)
     p.add_argument('--prefix',action='store_true')
-    p.add_argument('--order',type=int,choices=(3,4,5))
+    p.add_argument('--order',type=int,choices=(3,4,5,6))
     a=p.parse_args()
     print(json.dumps(run(a.reports,a.states,prefix=a.prefix,order=a.order),indent=2,allow_nan=False))
