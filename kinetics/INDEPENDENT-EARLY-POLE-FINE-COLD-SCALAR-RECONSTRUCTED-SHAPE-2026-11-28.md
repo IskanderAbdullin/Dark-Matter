@@ -20,6 +20,8 @@ Use each frozen state to reconstruct the charged distributions by their cell mom
 
 At these points the change is chiefly the different scalar occupation, not changes to the raw transverse kernel. The conditional photon occupation that cancels the net source changes by only about 8–10 parts per million, since the same large scalar occupation multiplies both opposite process coefficients. This photon balance is a hypothetical value for an isolated mode pair, not a solved photon density. The [point receipt](results/early-pole-endpoint-scalar-refined-pole-points-2026-11-28.json) preserves each occupation and both quadrature comparisons (relative differences <6.5e−13). No q integral, physical collision rate, or convergence of either evolved history is inferred.
 
+Holding the S2 raw coefficients fixed isolates the direct scalar-occupation effect on the neutral threshold `B/(D+A/f)`. Its stable fractional change is `(A/D)(1/f_S2−1/f_S4)/(1+A/(D f_S4))`, which avoids subtracting nearly equal threshold values. Across the five points its magnitude is at most 1.684e−12, even though the gross forward changes above are large. The remaining 8–10 ppm is the change in the raw kernel after that replacement. The [decomposition receipt](results/early-pole-endpoint-pole-neutrality-decomposition-2026-11-28.json) recomposes both factors with their product term; regenerate it with `early_pole_endpoint_pole_neutrality_decomposition.py` on the point receipt. This amplification/cancellation statement is for the given positive fixed-q crossings only.
+
 From `kinetics/`:
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
