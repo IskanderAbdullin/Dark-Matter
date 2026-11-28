@@ -111,7 +111,7 @@ def measure(c,m,m0,n):
 
 def run(base,states,receipts,levels=(3,4)):
     levels=tuple(levels)
-    if levels not in ((3,4),(4,5),(5,6)):
+    if levels not in ((3,4),(4,5),(5,6),(6,7)):
         raise ArithmeticError('Need two independent adjacent accepted warm Gauss histories')
     obs=f'recorded_G{levels[1]}_G{levels[0]}_ratio_minus_one'
     d,y=unpack(base,False,.05)
