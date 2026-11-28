@@ -32,7 +32,12 @@ def refine_panels(edges,splits):
     return out,set(np.r_[v-1,v].tolist())
 
 
-def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,patch_only=False,prior_splits=None):
+COLD_SPAN=(1e-6,1.5e-5)
+FIRST_SIDE_BAND=(1.5e-5,1.8e-5)
+
+
+def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,patch_only=False,prior_splits=None,
+        *,span=COLD_SPAN):
     g=card['grid']
     bundle=load(g)[0]
     tags={}
@@ -58,7 +63,13 @@ def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,pa
         C.append(piecewise_logit(mass,edges,alpha,beta,n,1))
     k=.0015
     _,omega,res=root(lambda b:sum(charge_field(*a,b,36) for a in fit),k)
-    span=(1e-6,1.5e-5)
+    span=tuple(span)
+    if span!=COLD_SPAN:
+        if (span!=FIRST_SIDE_BAND or 'scalar_div' in card or card.get('subcells_per_archived_cell')!=2
+                or card.get('steps')!=2048 or x!=.05):
+            raise ArithmeticError('Adjacent extension is only the held native D2 x=.05 experiment')
+        serial=json.dumps(card,sort_keys=True,separators=(',',':'),allow_nan=False).encode()
+        tags.update(sideband_q_span=list(span),sideband_state_sha256=hashlib.sha256(serial).hexdigest())
     if d.ds.ed[0]>span[0] or d.ds.ed[-1]<span[1]:
         raise ArithmeticError('Missing retained scalar occupation support')
     u,v=[q_knots(bundle,C,k,omega,m,span,s) for s in (49,89)]
@@ -118,11 +129,13 @@ if __name__=='__main__':
     p.add_argument('--split-plan',type=Path)
     p.add_argument('--patch-only',action='store_true')
     p.add_argument('--prior-split-plan',type=Path)
+    p.add_argument('--first-sideband',action='store_true')
     o=p.parse_args()
     if o.output is None and not o.topology_only:
         p.error('output is required except in topology-only mode')
     splits=None if o.split_plan is None else json.loads(o.split_plan.read_text())['targeted_parent_panel_splits']
     prior=None if o.prior_split_plan is None else json.loads(o.prior_split_plan.read_text())['targeted_parent_panel_splits']
-    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth,splits,o.patch_only,prior_splits=prior)
+    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth,splits,o.patch_only,prior_splits=prior,
+               span=FIRST_SIDE_BAND if o.first_sideband else COLD_SPAN)
     if result is not None:
         print(json.dumps(result,indent=2,allow_nan=False))
