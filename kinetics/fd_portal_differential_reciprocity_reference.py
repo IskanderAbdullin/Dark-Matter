@@ -8,7 +8,7 @@ from scipy.special import expit
 from positive_fd_portal_quadrature_reference import PositivePortal, rule, leptons
 
 
-def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.):
+def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.,return_secant=False):
     """At fixed Ts, coordinates are 2 eta and 1 - Ts / Td."""
     if not Ts>0. or not beta<1. or not np.all(np.isfinite([Ts,alpha,beta])):
         raise ValueError('Need finite positive local temperature and admissible force')
@@ -71,7 +71,15 @@ def integrate(p,Ts,alpha,beta,*,invariant_window=None,dark_blocking_fraction=1.)
     antisymmetric=np.sum(L*diff)
     if np.min(D)<=0. or f[2]<0. or abs(D[0,1]-D[1,0]-antisymmetric)>3e-14*np.max(D):
         raise ArithmeticError('Derivative positivity, entropy, or direct antisymmetry failed')
-    return f,D,antisymmetric,np.array([np.sum(L*B),np.sum(L*B*pair)])
+    base=f,D,antisymmetric,np.array([np.sum(L*B),np.sum(L*B*pair)])
+    if not return_secant:
+        return base
+    # Antisymmetry of the derivative is compatible with a symmetric,
+    # positive state-dependent secant relation. At zero affinity the
+    # logarithmic-mean factor diff/d is its smooth limit exp(-z).
+    w=I*np.divide(diff,d,out=B.copy(),where=d!=0.)
+    v0,v1,v2=[np.sum(w*pair**j) for j in (0,1,2)]
+    return (*base,np.array([[v0,v1],[v1,v2]]))
 
 
 def zeros(p,T,b):
