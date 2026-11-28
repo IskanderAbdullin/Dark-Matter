@@ -55,7 +55,7 @@ def geometry(path):
     return e,H
 
 
-def build(book,pop,common):
+def build(book,pop,common,*,raw=False):
     (e,z),(d,y,m,_)=book,pop
     a,b=e[:-1],e[1:]
     ix=np.searchsorted(d.ds.ed,(a+b)/2)-1
@@ -91,6 +91,8 @@ def build(book,pop,common):
             mat=mean_vertices(X[u],fsum(w*X[u])/N)
         U.append(N*P[u])
         W.append(N*(mat@P[u]))
+    if raw:
+        return dict(offset=C,count_only=U,count_and_mean_excess=W,total=fsum(T),base=T/fsum(T))
     return dict(base=T/fsum(T),count_only=shares(C,U,T),count_and_mean_excess=shares(C,W,T))
 
 
