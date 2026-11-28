@@ -6,33 +6,41 @@ from functools import reduce
 import numpy as np
 from scipy.integrate import quad, solve_ivp
 from scipy.optimize import brentq
-from scipy.special import expit,logit
+from scipy.special import expit,logit,xlogy
 
 S=np.array([-1.,1.,-1.,1.])
 SW=np.array([1,0,3,2])
 
 
+def directional(y):
+    a,b,p,s=y
+    return a*(1-b)*p*(1+s),(1-a)*b*(1+p)*s
+
+
 def affinity(y):
+    g,l=directional(y)
+    if min(g,l)==0.:
+        return np.inf if g>0. else (-np.inf if l>0. else 0.)
     a,b,p,s=y
     return logit(a)-logit(b)+np.log(p)-np.log1p(p)-np.log(s)+np.log1p(s)
 
 
 def net(y):
-    a,b,p,s=y
-    return a*(1-b)*p*(1+s)-(1-a)*b*(1+p)*s
+    a,b=directional(y)
+    return a-b
 
 
 def entropy(y,w):
     a,b,p,s=y
-    fb=lambda x:-x*np.log(x)-(1-x)*np.log1p(-x)
-    bb=lambda x:np.log1p(x)+x*np.log1p(1/x)
+    fb=lambda x:-xlogy(x,x)-xlogy(1-x,1-x)
+    bb=lambda x:np.log1p(x)+x*np.log1p(1/x) if x>0 else 0.
     return np.dot(w,[fb(a),fb(b),bb(p),bb(s)])
 
 
 def flow(y,w,t):
     y,w=np.asarray(y,dtype=float),np.asarray(w,dtype=float)
-    if (not np.all(np.isfinite(np.r_[y,w,t])) or min(w)<=0 or t<0 or not min(y)>0 or max(y[:2])>=1):
-        raise ValueError('Open fermionic and bosonic cells and positive capacities required')
+    if (not np.all(np.isfinite(np.r_[y,w,t])) or min(w)<=0 or t<0 or min(y)<0 or max(y[:2])>1):
+        raise ValueError('Fermion occupations must be in [0,1], Bose occupations nonnegative')
     a=affinity(y)
     if abs(a)<1e-14 or t==0:
         return y.copy(),0.,0.
@@ -42,8 +50,8 @@ def flow(y,w,t):
     d=U*S/w
     def af(x):
         value=y+d*x
-        if not (0.<value[0]<1. and 0.<value[1]<1. and min(value[2:])>0.):
-            return -np.inf
+        if x==1.:
+            return -np.inf  # one reactant is exhausted in the chosen direction
         return affinity(value)
     r=brentq(af,0.,1.,xtol=7e-17,rtol=1e-15)
     p=[np.array([z,v]) for z,v in zip(y,d,strict=True)]
@@ -110,11 +118,23 @@ def run():
             raise ArithmeticError(('Large-occupation extent mismatch',I,ref))
         stressed.append(dict(scalar_baseline=y[-1],physical_extent=I,observed_float64_scalar_difference=z[-1]-y[-1],
                              independent_extent_absolute_defect=abs(ref-I)))
+    boundary=[]
+    for st in ((.7,0.,1.,0.),(1.,0.,.4,0.),(0.,1.,0.,.9),(.0,.0,.0,2.),(.2,.3,.9,0.),(.4,.7,0.,1.2)):
+        c=np.array([.62,1.43,.71,.91])
+        dt=.3
+        f=lambda _,z:net(z)*S/c
+        a=solve_ivp(f,(0.,dt),st,method='DOP853',rtol=3e-13,atol=2e-15).y[:,-1]
+        b,I,_=flow(st,c,dt)
+        w=max(abs(a-b))
+        if w>3e-12 or min(b)<0 or max(b[:2])>1 or entropy(b,c)+2e-13<entropy(st,c):
+            raise ArithmeticError(('Boundary occupation guard',st,w))
+        boundary.append(dict(initial=list(st),final=b.tolist(),explicit_extent=I,reference_error=w))
     return dict(scope='Isolated conservative quantum quartet only; no network or fitted amplitude.',
                 cases=len(x),independent_dop853_abs=x[:,0].max(),energy_event_closure=x[:,1].max(),
                 individual_cell_extent_closure=x[:,2].max(),quartic_factorization_abs=x[:,3].max(),
                 minimum_entropy_increase=x[:,4].min(),common_temperature_stationarity=max(thermal),
-                semigroup_maximum_absolute_defect=max(semigroup),large_occupation_stress=stressed)
+                semigroup_maximum_absolute_defect=max(semigroup),large_occupation_stress=stressed,
+                boundary_stress=boundary)
 
 
 if __name__=='__main__':
