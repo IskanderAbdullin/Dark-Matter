@@ -28,6 +28,17 @@ class GaussLadder(unittest.TestCase):
                 expect=(b-a)*sum(a**k*b**(p-1-k) for k in range(p))/(2*np.pi**2*p)
                 assert_allclose((w*q**order).sum(axis=1),expect,rtol=5e-14,atol=0)
 
+    def test_higher_volume_moments(self):
+        a=np.array([0.,1e-12,.01,4.])
+        b=np.array([2e-10,3e-12,.013,4.8])
+        q,w,e=volume_gauss(a,b,6)
+        self.assertTrue(np.all(w>0) and np.all(q>a[:,None]) and np.all(q<b[:,None]))
+        self.assertLess(e,2e-12)
+        for k in range(12):
+            p=3+k
+            expect=(b-a)*sum(a**i*b**(p-1-i) for i in range(p))/(2*np.pi**2*p)
+            assert_allclose((w*q**k).sum(axis=1),expect,rtol=2e-12,atol=0)
+
 
 if __name__=='__main__':
     unittest.main()

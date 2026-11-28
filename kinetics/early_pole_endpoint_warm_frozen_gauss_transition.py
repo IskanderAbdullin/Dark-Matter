@@ -12,7 +12,9 @@ from early_pole_endpoint_stencil_remap_pilot import load
 from early_pole_endpoint_warm_source_cells import local
 
 
-def run(card,ref):
+def run(card,ref,through=5):
+    if through not in (5,6):
+        raise ArithmeticError('Use the original or one higher positive quadrature')
     x=card['x_end']
     a,y=unpack(card,False,x)
     m,_,_,H=a.state(x,y)
@@ -29,7 +31,7 @@ def run(card,ref):
         raise ArithmeticError('Expected positive paired volume reference')
     output=[]
     raw=[]
-    for p in (2,3,4,5):
+    for p in range(2,through+1):
         b=WarmGauss(load('fine')[0],p)
         z=b.transfer_step(y)
         q=b.ds.p
@@ -67,5 +69,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('state',type=Path)
     p.add_argument('reference',type=Path)
+    p.add_argument('--through',type=int,choices=(5,6),default=5)
     a=p.parse_args()
-    print(json.dumps(run(read(a.state),read(a.reference)),indent=2,allow_nan=False))
+    print(json.dumps(run(read(a.state),read(a.reference),a.through),indent=2,allow_nan=False))
