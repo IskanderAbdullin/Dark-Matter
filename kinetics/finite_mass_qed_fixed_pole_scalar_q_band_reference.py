@@ -1,4 +1,4 @@
-"""Finite cold scalar q-band at one transverse pole momentum."""
+"""Finite cold, gap, and shoulder scalar q-bands at one transverse pole momentum."""
 import argparse
 import json
 import os
@@ -40,12 +40,15 @@ def q_knots(d,ch,k,w,ms,limits,n):
     return np.unique(np.r_[limits,out,sel])
 
 
+REGIONS={'cold':(1e-6,1.5e-5),'gap':(1.5e-5,4e-5),'shoulder':(4e-5,3e-4)}
+
+
 def run(g,m,region,output):
     d,ch,_=load(g)
     k=.0015
     w,R=pole(ch,'T',k)
     ms=d['checkpoints'][-1]['scalar_pole_over_T']
-    interval=(1e-6,1.5e-5) if region=='cold' else (4e-5,3e-4)
+    interval=REGIONS[region]
     a=q_knots(d,ch,k,w,ms,interval,49)
     b=q_knots(d,ch,k,w,ms,interval,89)
     if a.shape!=b.shape or max(abs(a-b))>9e-16:
@@ -58,7 +61,8 @@ def run(g,m,region,output):
     if output.is_file():
         for row in map(json.loads,output.read_text().splitlines()):
             j=row['panel']
-            if j in old or row['limits']!=b[j:j+2].tolist() or row['region']!=region or row['mesh']!=[n,c,E,Z]:
+            if (j in old or not 0<=j<len(b)-1 or row['grid']!=g or row['total']!=len(b)-1
+                    or row['limits']!=b[j:j+2].tolist() or row['region']!=region or row['mesh']!=[n,c,E,Z]):
                 raise ArithmeticError('Invalid partial q-band receipt')
             old[j]=row
     with output.open('a',buffering=1) as f:
@@ -85,7 +89,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser()
     p.add_argument('grid',choices=('fine','third'))
     p.add_argument('mesh',type=int,choices=(0,1,2))
-    p.add_argument('region',choices=('cold','shoulder'))
+    p.add_argument('region',choices=tuple(REGIONS))
     p.add_argument('out',type=Path)
     o=p.parse_args()
     run(o.grid,o.mesh,o.region,o.out)
