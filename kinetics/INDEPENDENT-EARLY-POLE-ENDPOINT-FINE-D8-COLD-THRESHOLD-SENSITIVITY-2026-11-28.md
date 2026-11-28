@@ -1,0 +1,11 @@
+# Fine d8 shifts the cold parent threshold despite a nearly fixed photon pole
+
+On the [fine d4 and d8 completed states](INDEPENDENT-EARLY-POLE-ENDPOINT-FINE-EIGHT-CHARGE-SUBCELLS-2026-11-28.md) use their fitted photon frequencies at k=.0015, and fixed x=.05. For each cold q and relative cosine, write u=ω−E_s, v=the magnitude of the scalar–photon momentum difference with the prescribed geometry, A=M²−m_f²+u²−v², and P=sqrt(E²−M²) at the parent threshold. The nonempty past-spacelike branch here has v>u>0, and its radial opening solves
+`F(E,u)=vP−uE−A/2=0`.
+Thus `dE/du=(E+u)/(vE/P−u)`, and at fixed geometry `dE/dω=dE/du` while `dE/dm_s=−(m_s/E_s)dE/du`.
+
+The [derivative receipt](results/early-pole-endpoint-cold-threshold-sensitivity-2026-11-28.json) checks these derivatives by independent perturbations of the exact root. At q=3.5e−6 and cosine zero the d4 derivative dE/dω is 3.40669e5. The d4→d8 scalar mass change would raise the threshold about 1.3572 in a first-order estimate; the simultaneous photon frequency change would raise it only .000217. The actual nonlinear shift is +1.4532 (from 20.5987 to 22.0519), so first order underestimates it by 6.59%. At q=1.5e−5 and cosine .9 the exact shift is +2.4437, with an 8.46% underestimate at first order. These are kinematic derivatives and nonlinear root comparisons only.
+
+Separately measure the raw forward coefficient against the **same original fine archive** via the declared sequential mass→pole→charged-distribution path used in the [earlier d4 point test](INDEPENDENT-EARLY-POLE-ENDPOINT-FINE4-THIRD2-COLD-APERTURE-2026-11-28.md). At q=3.5e−6 it falls from .07603 times the original value for d4 to .01492 for d8. For the original→d8 path the mass-only factor is .01510, the subsequent optical factor .98805, and the subsequent charge-occupation factor 1.000000002. At q=8.2e−6 the total d8 factor is .02330. The [aperture receipt](results/early-pole-endpoint-fine8-cold-aperture-2026-11-28.json) retains the two quadrature orders and all intermediate coefficients. A rate from a full q band or a self-consistent photon distribution cannot be inferred from these points.
+
+From `kinetics/`, use `early_pole_endpoint_cold_threshold_sensitivity.py` on the fine d4 and d8 threshold JSONs, and `early_pole_endpoint_cold_aperture_attribution.py` on the decompressed fine d8 x=.05 checkpoint.
