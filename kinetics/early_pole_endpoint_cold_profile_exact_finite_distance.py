@@ -31,7 +31,68 @@ def as_system(card,mode):
     return qs,eq,target
 
 
-def solve(a,b,mode):
+def profile_from_projected_blocks(card,mode,proposal):
+    """Normalize the response of independently projected positive simplex blocks."""
+    v=np.asarray(card['offset'],dtype=float).copy()/card['total']
+    k=1
+    for z in card[mode]:
+        a=np.maximum(0.,proposal[k:k+len(z)])
+        N=fsum(a)
+        if np.isfinite(N) and N>0.:
+            a=a/N
+        else:  # A valid witness even when the optimizer returns an empty block.
+            a=np.full(len(z),1./len(z))
+        v+=a@(z/card['total'])
+        k+=len(z)
+    if k!=len(proposal) or min(v)<0. or not np.all(np.isfinite(v)) or not fsum(v)>0.:
+        raise ArithmeticError('Invalid projected normalized profile')
+    return v/fsum(v)
+
+
+def normalized_support_lower(card,mode,direction):
+    """Independent lower bound on min(direction dot normalized response).
+
+    With bin-response numerator U and total denominator T, the minimum
+    of U - t*T separates over the positive simplex cells. For a trial t
+    with a negative residual h, min(U/T) >= t + h/min(T).
+    """
+    V=[np.asarray(card['offset'],dtype=float)[None,:]/card['total']]
+    V.extend(z/card['total'] for z in card[mode])
+    blocks=[(v@direction,v.sum(axis=1)) for v in V]
+    minimum=fsum(min(t) for _,t in blocks)
+    maximum=fsum(max(t) for _,t in blocks)
+    if not 0.<minimum<=maximum or not np.isfinite(maximum):
+        raise ArithmeticError('The support probe needs a positive bounded response')
+    lo,hi=float(min(direction)),float(max(direction))
+    # Bisection only proposes a threshold. The separately evaluated
+    # residual correction below determines the reported lower bound.
+    for _ in range(50):
+        pivot=(lo+hi)/2
+        if fsum(min(u-pivot*t) for u,t in blocks)<0.:
+            hi=pivot
+        else:
+            lo=pivot
+    pivot=(lo+hi)/2
+    h=fsum(min(u-pivot*t) for u,t in blocks)
+    # A small scale-aware floating-point guard, not directed rounding.
+    guard=64*np.finfo(float).eps*maximum
+    return max(float(min(direction)),pivot+min(0.,h-guard)/minimum)
+
+
+def verify_normalized_tv_bracket(a,b,mode,pa,pb,sign):
+    sign=np.clip(sign,-.5,.5)
+    lower=max(0.,normalized_support_lower(a,mode,sign)+normalized_support_lower(b,mode,-sign))
+    a_profile=profile_from_projected_blocks(a,mode,pa)
+    b_profile=profile_from_projected_blocks(b,mode,pb)
+    upper=fsum(abs(a_profile-b_profile))/2+64*np.finfo(float).eps
+    if not np.isfinite(upper) or upper<lower or upper-lower>2e-9:
+        raise ArithmeticError(('Independent support / projected TV bracket did not close',lower,upper))
+    return dict(support_lower_bound=lower,projected_profile_upper_bound=upper,
+                verified_TV_bracket_width=upper-lower,signed_support=sign.tolist(),
+                projected_profiles=[a_profile.tolist(),b_profile.tolist()])
+
+
+def solve(a,b,mode,*,independent_bracket=False):
     F,P,x=as_system(a,mode)
     G,Q,y=as_system(b,mode)
     n,k=F.shape
@@ -58,6 +119,11 @@ def solve(a,b,mode):
     dual=max(float(np.max(E.T@yy+A.T@zz-c)),float(np.max(zz)),0.)
     lower=float(rhs@yy)
     gap=max(abs(float(z.fun)-lower),abs(direct-z.fun))
+    if independent_bracket:
+        check=verify_normalized_tv_bracket(a,b,mode,w[:k],w[k:k+j],zz[n:]-zz[:n])
+        return dict(minimum_finite_common_bin_TV=(check['support_lower_bound']+check['projected_profile_upper_bound'])/2,
+                    direct_witness_TV=check['projected_profile_upper_bound'],independent_profile_bracket=check,
+                    optimizer_nominal_maximum_residual=max(eq,feas,dual,gap))
     if max(eq,feas,dual,gap)>2e-9 or min(u)<-2e-12 or min(v)<-2e-12:
         raise ArithmeticError('Primal/dual or independent profile witness failed')
     return dict(minimum_finite_common_bin_TV=float(z.fun),direct_witness_TV=direct,
@@ -67,7 +133,7 @@ def solve(a,b,mode):
                 chart_total_response_relative_to_separate_original=[1/w[0],1/w[k]])
 
 
-def run(left,right,states,archive,levels,observable='forward_number'):
+def run(left,right,states,archive,levels,observable='forward_number',*,independent_bracket=False):
     if tuple(levels) not in ((2,4),(4,8),(8,16)):
         raise ArithmeticError('The accepted pair must be independent and adjacent')
     entries=[fit_state(p,archive,n,pair) for p,n,pair in zip(states,levels,(left,right),strict=True)]
@@ -82,7 +148,7 @@ def run(left,right,states,archive,levels,observable='forward_number'):
         outer=compare(x,y,common)
         r={}
         for mode in ('count_only','count_and_mean_excess'):
-            ans=solve(p,q,mode)
+            ans=solve(p,q,mode,independent_bracket=independent_bracket)
             lower=outer[mode]['robust_total_variation_lower_bound']
             base=fsum(abs(np.asarray(p['base'])-q['base']))/2
             if not lower-2e-9<=ans['minimum_finite_common_bin_TV']<=base+2e-9:
@@ -106,5 +172,6 @@ if __name__=='__main__':
     p.add_argument('--levels',nargs=2,type=int,required=True)
     p.add_argument('--archive',type=Path,required=True)
     p.add_argument('--observable',choices=('forward_number','inverse_number','forward_excess'),default='forward_number')
+    p.add_argument('--independent-bracket',action='store_true')
     a=p.parse_args()
-    print(json.dumps(run(a.left,a.right,a.states,a.archive,a.levels,a.observable),indent=2,allow_nan=False))
+    print(json.dumps(run(a.left,a.right,a.states,a.archive,a.levels,a.observable,independent_bracket=a.independent_bracket),indent=2,allow_nan=False))
