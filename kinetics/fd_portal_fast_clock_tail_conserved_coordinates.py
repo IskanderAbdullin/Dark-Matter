@@ -14,7 +14,7 @@ from fd_portal_tabulated_entropy_split_expansion import Stage,hubble
 from sm_dark_entropy_exchange_reference import StandardModel
 
 
-def integrate(stage,old):
+def integrate(stage,old,xout=None,*,maximum_step=.002):
     Ts=.90
     root_case=np.array([Ts,0.,np.log(Ts)])
     E,S=stage.energy(0.,root_case),stage.entropy(0.,root_case)
@@ -56,8 +56,10 @@ def integrate(stage,old):
         work=3*a*(ps+pd)/E
         return [-a*Q[0]/(N*H),-a*(3*pd+Q[1]/H)/E,-work,a*P/(S*H),work]
 
-    x=np.array([.91,.93,.96])
-    t=solve_ivp(rhs,(x[0],x[-1]),u0,method='Radau',atol=1e-13,rtol=4e-12,max_step=.002,t_eval=x)
+    x=np.array([.91,.93,.96]) if xout is None else np.asarray(xout)
+    if x[0]!=x0 or np.any(np.diff(x)<=0.) or maximum_step<=0.:
+        raise ValueError('Need strictly ordered outputs starting at the exact archived endpoint')
+    t=solve_ivp(rhs,(x[0],x[-1]),u0,method='Radau',atol=1e-13,rtol=4e-12,max_step=maximum_step,t_eval=x)
     if not t.success:
         raise ArithmeticError('Independent extensive Radau solve failed')
     rows=[]
