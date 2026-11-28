@@ -48,7 +48,8 @@ def run(native,restart,ref_fine,old_report,*,first_continuation=False,restart_sh
     return dict(x_start=lo,x_end=hi,steps=[n,2*n],fixed_pressure_mass=mass,maximum_trace_absolute_difference=gate,**kind,
                 coarse_count_and_pressures=a.tolist(),fine_count_and_pressures=b.tolist(),
                 coarse_over_fine_minus_one=(a/b-1).tolist(),
-                scope='One conditional last-segment clock test with identical warm Gauss .04 restart; not a full-history error bound.'),coarse
+                scope=('One conditional first-continuation clock test with identical warm Gauss .0075 restart; not a full-history error bound.' if first_continuation else
+                       'One conditional last-segment clock test with identical warm Gauss .04 restart; not a full-history error bound.')),coarse
 
 
 if __name__=='__main__':
