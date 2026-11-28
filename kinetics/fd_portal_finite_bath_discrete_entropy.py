@@ -34,6 +34,9 @@ class Bath:
         g=np.array([u[0],1./T-np.exp(-u[1])])
         return y,-s-4*C_VIS*T**3/3,g,T,A
 
+    def visible_temperature_slope_denominator(self,T):
+        return 4*C_VIS*T**5
+
     def invert(self,y,guess):
         def fit(u):
             z,_,A=self.dark(u)
@@ -63,7 +66,7 @@ class Bath:
             g=self.path(a,b,y,z,5)
             def solve(l):
                 zz,s,h,T,A=self.point([g[0],l[0]])
-                return [h[1]-g[1]], [[np.exp(-l[0])+A[1,1]/(4*C_VIS*T**5)]]
+                return [h[1]-g[1]], [[np.exp(-l[0])+A[1,1]/self.visible_temperature_slope_denominator(T)]]
             l=root(lambda q:solve(q)[0],[(a[1]+b[1])/2],
                    jac=lambda q:solve(q)[1],tol=6e-13).x[0]
             if abs(solve([l])[0][0])>3e-12*max(1.,abs(g[1])):
@@ -81,12 +84,12 @@ class Bath:
         return b,err,dt*s
 
 
-def run():
+def run(factory=Bath):
     p,q=[PositivePortal(o) for o in ((13,36,26),(17,44,32))]
     rows=[]
     for T,eta,ratio in ((.05,.3,1.16),(.3,-.75,1.16),(.6882487043,.9,.86)):
         a=np.array([eta,np.log(T*ratio)])
-        major=Bath(T,a,168)
+        major=factory(T,a,168)
         y0,L,_,_,_=major.point(a)
         f,_=major.flux(q,a)
         tau=.10/np.max(abs(f/y0))
@@ -114,7 +117,7 @@ def run():
                         normalized_reference_error=np.max(abs(y-target)/y0),total_entropy_produced=sum(ent),
                         max_entropy_balance_error=max(defects))
         out=[follow(q,major,n) for n in (2,4,8)]
-        independent=follow(p,Bath(T,a,112),4)
+        independent=follow(p,factory(T,a,112),4)
         fields=('visible_T','dark_T','eta')
         agreement=max(abs(out[1][k]-independent[k]) for k in fields)
         x=np.array([r['normalized_reference_error'] for r in out])
