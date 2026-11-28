@@ -86,8 +86,31 @@ def max_feasible_common_partition(ce, fields, charts, m):
     return np.asarray(best[-1])
 
 
-def run(left,right,states,archive):
-    charts=[fit_state(p,archive,n,raw) for p,n,raw in zip(states,(2,4),(left,right),strict=True)]
+def fit_refined_left(left, baseline, state, archive, splits):
+    from early_pole_endpoint_continuum_cold_band_pilot import refine_panels
+    from early_pole_endpoint_continuum_cold_band_receipt import run as receipt
+    x=fit_state(state,archive,2,baseline)
+    native=receipt(baseline,archive)
+    finer=receipt(left,archive)
+    if finer['full_pole_and_snapshot']!=native['full_pole_and_snapshot']:
+        raise ArithmeticError('Reintegrated panels changed the state or optical metadata')
+    for old,new in zip(baseline,left,strict=True):
+        expected,_=refine_panels(geometry(old)[0],splits)
+        if not np.array_equal(expected,geometry(new)[0]):
+            raise ArithmeticError('The exact refined panel support is invalid')
+    if np.max(abs(np.asarray(finer['raw_number_scalar_energy_and_excess'])/
+                  np.asarray(native['raw_number_scalar_energy_and_excess'])-1))>6e-5:
+        raise ArithmeticError('Reintegration did not preserve its base total')
+    return x
+
+
+def run(left,right,states,archive,*,baseline=None,splits=None):
+    if (baseline is None)!=(splits is None):
+        raise ValueError('Supply the split plan and both original panels together')
+    if baseline is None:
+        charts=[fit_state(p,archive,n,raw) for p,n,raw in zip(states,(2,4),(left,right),strict=True)]
+    else:
+        charts=[fit_refined_left(left,baseline,states[0],archive,splits),fit_state(states[1],archive,4,right)]
     d,f,m,_=charts[0]
     lo,hi=1e-6,1.5e-5
     ce=np.r_[lo,d.ds.ed[(d.ds.ed>lo)&(d.ds.ed<hi)],hi]
@@ -101,6 +124,8 @@ def run(left,right,states,archive):
     for t in (0,1):
         Z=list(map(geometry,(left[t],right[t])))
         bins=np.intersect1d(Z[0][0],Z[1][0])
+        if baseline is not None and not np.array_equal(bins,np.intersect1d(geometry(baseline[t])[0],Z[1][0])):
+            raise ArithmeticError('Reintegration changed the comparison partition')
         if len(bins)<5 or [bins[0],bins[-1]]!=[lo,hi]:
             raise ArithmeticError('Incomplete common support')
         data=[]
@@ -155,5 +180,8 @@ if __name__=='__main__':
     for k in ('left','right','states'):
         p.add_argument('--'+k,nargs=2,type=Path,required=True)
     p.add_argument('--archive',type=Path,required=True)
+    p.add_argument('--left-baseline',nargs=2,type=Path)
+    p.add_argument('--left-split-plan',type=Path)
     a=p.parse_args()
-    print(json.dumps(run(a.left,a.right,a.states,a.archive),indent=2,allow_nan=False))
+    r=None if a.left_split_plan is None else json.loads(a.left_split_plan.read_text())['targeted_parent_panel_splits']
+    print(json.dumps(run(a.left,a.right,a.states,a.archive,baseline=a.left_baseline,splits=r),indent=2,allow_nan=False))

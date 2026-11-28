@@ -15,7 +15,24 @@ from finite_mass_qed_fixed_pole_scalar_q_band_reference import q_knots
 from finite_mass_qed_timelike_pole_angular_reference import angle
 
 
-def run(card,mesh,output,topology_only=False,mirror_azimuth=False):
+def refine_panels(edges,splits):
+    """Add exactly one strictly interior knot in each requested existing panel."""
+    split=np.asarray(splits,dtype=float)
+    if (split.ndim!=2 or split.shape[1]!=3 or not np.all(np.isfinite(split))
+            or np.any(split[:,0]>=split[:,1]) or np.any(split[:,1]>=split[:,2])):
+        raise ArithmeticError('Need finite strictly ordered split intervals')
+    j=np.searchsorted(edges,split[:,0])
+    if (np.any(j>=len(edges)-1) or len(j)!=len(np.unique(j))
+            or np.any(edges[j]!=split[:,0]) or np.any(edges[j+1]!=split[:,2])):
+        raise ArithmeticError('Requested split does not match an original panel exactly')
+    out=np.union1d(edges,split[:,1])
+    v=np.searchsorted(out,split[:,1])
+    if np.any(out[v-1]!=split[:,0]) or np.any(out[v+1]!=split[:,2]):
+        raise ArithmeticError('Split panel geometry did not close')
+    return out,set(np.r_[v-1,v].tolist())
+
+
+def run(card,mesh,output,topology_only=False,mirror_azimuth=False,splits=None,patch_only=False):
     g=card['grid']
     bundle=load(g)[0]
     tags={}
@@ -47,6 +64,10 @@ def run(card,mesh,output,topology_only=False,mirror_azimuth=False):
     u,v=[q_knots(bundle,C,k,omega,m,span,s) for s in (49,89)]
     if u.shape!=v.shape or max(abs(u-v))>9e-16:
         raise ArithmeticError('Shifted cold topology not resolved')
+    if splits is not None:
+        v,changed=refine_panels(v,splits)
+    elif patch_only:
+        raise ArithmeticError('Patch-only mode requires a split plan')
     meshes=((2,3,6,12),(4,6,10,18),(8,10,16,24))
     order,angular,inn,az=meshes[mesh]
     xs,ws=roots_legendre(order)
@@ -55,18 +76,20 @@ def run(card,mesh,output,topology_only=False,mirror_azimuth=False):
     if mirror_azimuth:
         expected['mirror_azimuth']=True
     if topology_only:
-        return dict(expected,edges=v.tolist())
+        return dict(expected,edges=v.tolist(),**({} if splits is None else
+                    dict(recalculated_panel_indices=sorted(changed))))
+    permitted=changed if patch_only else set(range(len(v)-1))
     done=set()
     if output.exists():
         for line in output.read_text().splitlines():
             r=json.loads(line)
             j=r['panel']
-            if j in done or r['bounds']!=v[j:j+2].tolist() or r.get('mirror_azimuth',False)!=mirror_azimuth or any(r[k]!=a for k,a in expected.items()):
+            if j not in permitted or j in done or r['bounds']!=v[j:j+2].tolist() or r.get('mirror_azimuth',False)!=mirror_azimuth or any(r[k]!=a for k,a in expected.items()):
                 raise ArithmeticError('Changed endpoint or mesh in resume')
             done.add(j)
     with output.open('a',encoding='utf-8',buffering=1) as f:
         for j,(a,b) in enumerate(zip(v[:-1],v[1:],strict=True)):
-            if j in done:
+            if j in done or j not in permitted:
                 continue
             coeff=np.zeros((3,3))
             for q,z in zip((a+b)/2+(b-a)*xs/2,(b-a)*ws/2,strict=True):
@@ -90,9 +113,12 @@ if __name__=='__main__':
     p.add_argument('output',type=Path,nargs='?')
     p.add_argument('--topology-only',action='store_true')
     p.add_argument('--mirror-azimuth',action='store_true')
+    p.add_argument('--split-plan',type=Path)
+    p.add_argument('--patch-only',action='store_true')
     o=p.parse_args()
     if o.output is None and not o.topology_only:
         p.error('output is required except in topology-only mode')
-    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth)
+    splits=None if o.split_plan is None else json.loads(o.split_plan.read_text())['targeted_parent_panel_splits']
+    result=run(json.loads(o.state.read_text()),o.mesh,o.output,o.topology_only,o.mirror_azimuth,splits,o.patch_only)
     if result is not None:
         print(json.dumps(result,indent=2,allow_nan=False))
