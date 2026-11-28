@@ -1,0 +1,123 @@
+{
+  "x": 0.05,
+  "common_q_edges": [
+    1e-06,
+    1.094958977489465e-06,
+    1.3163822043342373e-06,
+    1.5825817619770524e-06,
+    1.9026123454844749e-06,
+    2.287359695506477e-06,
+    2.7499108733551402e-06,
+    3.3059994133202632e-06,
+    3.974540493939284e-06,
+    4.778274331905574e-06,
+    5.7445396834586724e-06,
+    6.906203763665279e-06,
+    8.302780214505868e-06,
+    9.9817731491033e-06,
+    9.990882418036608e-06,
+    1e-05,
+    1.4426999059072134e-05,
+    1.5e-05
+  ],
+  "results": {
+    "count_only": {
+      "forward_only": {
+        "minimum_finite_loss": 0.0,
+        "projected_upper_witness": 2.9623822592800995e-13,
+        "support_lower_bound": -2.8784370623068295e-21,
+        "unconstrained_forward_total_range": [
+          -0.04463264188168289,
+          0.03902192028499146
+        ],
+        "absolute_witness_losses_by_field": [
+          2.9623822592800995e-13
+        ],
+        "signed_witness_differences_by_field": [
+          -8.114637739158094e-17
+        ],
+        "matched_forward_totals_in_S2_scale": [
+          0.9967332055683954,
+          0.9967332055683955
+        ],
+        "maximum_defect": 2.96238228806447e-13,
+        "without_total_anchor": 0.0
+      },
+      "joint_three_fields": {
+        "minimum_finite_loss": 3.3486927901505765e-05,
+        "projected_upper_witness": 3.348692894307015e-05,
+        "support_lower_bound": 3.348692764605995e-05,
+        "unconstrained_forward_total_range": [
+          -0.04463264188168289,
+          0.03902192028499146
+        ],
+        "absolute_witness_losses_by_field": [
+          4.278611596599432e-06,
+          2.9208316336939627e-05,
+          1.0095310917140646e-12
+        ],
+        "signed_witness_differences_by_field": [
+          -8.944724833031555e-17,
+          -2.552698719670004e-05,
+          -1.0048665005877857e-12
+        ],
+        "matched_forward_totals_in_S2_scale": [
+          0.9883261875831125,
+          0.9883261875831126
+        ],
+        "maximum_defect": 1.2970102016051158e-12,
+        "without_total_anchor": 2.3779167340781664e-05
+      }
+    },
+    "count_and_mean": {
+      "forward_only": {
+        "minimum_finite_loss": 6.641816980482133e-05,
+        "projected_upper_witness": 6.641816981974854e-05,
+        "support_lower_bound": 6.641816981233528e-05,
+        "unconstrained_forward_total_range": [
+          -5.9406227728028826e-06,
+          0.00016661759291826115
+        ],
+        "absolute_witness_losses_by_field": [
+          6.641816981974855e-05
+        ],
+        "signed_witness_differences_by_field": [
+          2.126743227983653e-17
+        ],
+        "matched_forward_totals_in_S2_scale": [
+          0.9999645072576884,
+          0.9999645072576884
+        ],
+        "maximum_defect": 1.492721419561749e-14,
+        "without_total_anchor": 3.320908490245024e-05
+      },
+      "joint_three_fields": {
+        "minimum_finite_loss": 0.001856101888878005,
+        "projected_upper_witness": 0.0018561018941242184,
+        "support_lower_bound": 0.001856101889195989,
+        "unconstrained_forward_total_range": [
+          -5.9406227728028826e-06,
+          0.00016661759291826115
+        ],
+        "absolute_witness_losses_by_field": [
+          6.731853845154776e-05,
+          8.634439320673102e-05,
+          0.0017024389624659398
+        ],
+        "signed_witness_differences_by_field": [
+          2.2785315321316237e-17,
+          -2.967415232711382e-05,
+          -0.0017003183854276988
+        ],
+        "matched_forward_totals_in_S2_scale": [
+          0.9999611817422744,
+          0.9999611817422744
+        ],
+        "maximum_defect": 5.24621340293463e-12,
+        "without_total_anchor": 0.0001475753957193558
+      }
+    }
+  },
+  "max_paired_mesh_defect": 4.069820218680076e-12,
+  "scope": "Finite common S2 cell moments, with matched forward band total. Chart optical fits and charge states retained. No continuum or physical inference."
+}
