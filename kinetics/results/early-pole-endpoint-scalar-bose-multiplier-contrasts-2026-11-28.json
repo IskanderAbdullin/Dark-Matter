@@ -1,0 +1,145 @@
+{
+  "cold_upper": 1e-05,
+  "point_q": [
+    2.6e-06,
+    3.5e-06,
+    4e-06,
+    4.7e-06,
+    8.2e-06
+  ],
+  "cases": [
+    {
+      "scalar_levels": [
+        2,
+        4
+      ],
+      "absolute_unscaled_shape_change_over_old_cold_count": 0.28437908528248734,
+      "fractions_above_change_thresholds": [
+        {
+          "absolute_relative_bose_factor_threshold": 0.01,
+          "fraction_of_old_and_new_cold_counts": [
+            0.9999999574366834,
+            0.9999999572238566
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.05,
+          "fraction_of_old_and_new_cold_counts": [
+            0.9999999574292782,
+            0.9999999572164071
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.1,
+          "fraction_of_old_and_new_cold_counts": [
+            0.9999999574189075,
+            0.9999999572057764
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.2,
+          "fraction_of_old_and_new_cold_counts": [
+            0.6395193105298098,
+            0.5767374124507026
+          ]
+        }
+      ],
+      "pointwise_Bose_factor_relative_changes": [
+        0.7713551826955807,
+        0.1749371938527724,
+        0.6328452859778384,
+        -0.4148499327767897,
+        -0.5389816868439932
+      ]
+    },
+    {
+      "scalar_levels": [
+        4,
+        8
+      ],
+      "absolute_unscaled_shape_change_over_old_cold_count": 0.13700128529856287,
+      "fractions_above_change_thresholds": [
+        {
+          "absolute_relative_bose_factor_threshold": 0.01,
+          "fraction_of_old_and_new_cold_counts": [
+            0.9999999572212792,
+            0.9999999571676688
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.05,
+          "fraction_of_old_and_new_cold_counts": [
+            0.7903188184471407,
+            0.7816774161369409
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.1,
+          "fraction_of_old_and_new_cold_counts": [
+            0.5767374124507026,
+            0.5806984275499053
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.2,
+          "fraction_of_old_and_new_cold_counts": [
+            0.2709886042309893,
+            0.27557698066569714
+          ]
+        }
+      ],
+      "pointwise_Bose_factor_relative_changes": [
+        -0.23501888812997618,
+        -0.05956638256423874,
+        0.24153078912587644,
+        -0.25313332045190273,
+        -0.3193184875736569
+      ]
+    },
+    {
+      "scalar_levels": [
+        8,
+        16
+      ],
+      "absolute_unscaled_shape_change_over_old_cold_count": 0.06796838832610175,
+      "fractions_above_change_thresholds": [
+        {
+          "absolute_relative_bose_factor_threshold": 0.01,
+          "fraction_of_old_and_new_cold_counts": [
+            0.9473157093235417,
+            0.9468185716428273
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.05,
+          "fraction_of_old_and_new_cold_counts": [
+            0.5806984275532955,
+            0.5815881901419029
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.1,
+          "fraction_of_old_and_new_cold_counts": [
+            0.23544327660313918,
+            0.24053061545307503
+          ]
+        },
+        {
+          "absolute_relative_bose_factor_threshold": 0.2,
+          "fraction_of_old_and_new_cold_counts": [
+            0.004968319605914338,
+            0.005929595311200362
+          ]
+        }
+      ],
+      "pointwise_Bose_factor_relative_changes": [
+        0.1481972663116713,
+        0.036312969424749486,
+        0.10587167099544392,
+        -0.14092529362020612,
+        -0.173985494045252
+      ]
+    }
+  ],
+  "scope": "Frozen kernel would multiply each forward event by (1+f). Count-weighted support, not rate-weighted or an integrated rate."
+}

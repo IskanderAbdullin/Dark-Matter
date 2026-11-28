@@ -1,0 +1,126 @@
+{
+  "cold_upper_q": 1e-05,
+  "comparisons": [
+    {
+      "scalar_levels": [
+        1,
+        2
+      ],
+      "cold_normalized": {
+        "wasserstein1_q": 2.591430771173985e-07,
+        "total_variation": 0.34703399669528795,
+        "maximum_absolute_cdf_difference": 0.26927866315274035,
+        "means": [
+          3.859243126783027e-06,
+          3.6484038006256917e-06
+        ],
+        "signed_mean_shift": -2.108393261573354e-07,
+        "transport_over_old_mean": 0.06714867879635611,
+        "absolute_mean_shift_over_transport": 0.8136020012675073
+      },
+      "full": {
+        "wasserstein1_q": 2.6866678386332765e-07,
+        "total_variation": 0.34703029338604463,
+        "maximum_absolute_cdf_difference": 0.26927579340695873,
+        "means": [
+          1.4758497532616077e-05,
+          1.4538133912826425e-05
+        ],
+        "signed_mean_shift": -2.2036361978965144e-07,
+        "transport_over_old_mean": 0.018204209694759086,
+        "absolute_mean_shift_over_transport": 0.8202116265394076
+      }
+    },
+    {
+      "scalar_levels": [
+        2,
+        4
+      ],
+      "cold_normalized": {
+        "wasserstein1_q": 3.8728969121708744e-08,
+        "total_variation": 0.14218965124165645,
+        "maximum_absolute_cdf_difference": 0.04437299772698822,
+        "means": [
+          3.6484038006256917e-06,
+          3.6217500951798887e-06
+        ],
+        "signed_mean_shift": -2.6653705445802953e-08,
+        "transport_over_old_mean": 0.010615318708709498,
+        "absolute_mean_shift_over_transport": 0.6882110743005229
+      },
+      "full": {
+        "wasserstein1_q": 3.873985969304204e-08,
+        "total_variation": 0.1421881319994641,
+        "maximum_absolute_cdf_difference": 0.0443725202851466,
+        "means": [
+          1.4538133912826425e-05,
+          1.4511491846458585e-05
+        ],
+        "signed_mean_shift": -2.6642066367840795e-08,
+        "transport_over_old_mean": 0.002664706483330944,
+        "absolute_mean_shift_over_transport": 0.68771716208941
+      }
+    },
+    {
+      "scalar_levels": [
+        4,
+        8
+      ],
+      "cold_normalized": {
+        "wasserstein1_q": 8.879089188814807e-09,
+        "total_variation": 0.06850067744324823,
+        "maximum_absolute_cdf_difference": 0.013382892329863005,
+        "means": [
+          3.6217500951798887e-06,
+          3.6151196059166427e-06
+        ],
+        "signed_mean_shift": -6.630489263246009e-09,
+        "transport_over_old_mean": 0.002451601837639709,
+        "absolute_mean_shift_over_transport": 0.7467533124454464
+      },
+      "full": {
+        "wasserstein1_q": 8.886180052304775e-09,
+        "total_variation": 0.06849994484097474,
+        "maximum_absolute_cdf_difference": 0.013382748260726718,
+        "means": [
+          1.4511491846458585e-05,
+          1.4504868626964375e-05
+        ],
+        "signed_mean_shift": -6.623219494209545e-09,
+        "transport_over_old_mean": 0.0006123546873282623,
+        "absolute_mean_shift_over_transport": 0.745339330873867
+      }
+    },
+    {
+      "scalar_levels": [
+        8,
+        16
+      ],
+      "cold_normalized": {
+        "wasserstein1_q": 2.2200194385541478e-09,
+        "total_variation": 0.03398419525444253,
+        "maximum_absolute_cdf_difference": 0.003453768698858606,
+        "means": [
+          3.6151196059166427e-06,
+          3.6134428338913656e-06
+        ],
+        "signed_mean_shift": -1.6767720252770935e-09,
+        "transport_over_old_mean": 0.000614092943127187,
+        "absolute_mean_shift_over_transport": 0.7552961006364611
+      },
+      "full": {
+        "wasserstein1_q": 2.220471183021253e-09,
+        "total_variation": 0.03398383162007829,
+        "maximum_absolute_cdf_difference": 0.0034537315193389206,
+        "means": [
+          1.4504868626964375e-05,
+          1.4503192351464309e-05
+        ],
+        "signed_mean_shift": -1.6762755000661626e-09,
+        "transport_over_old_mean": 0.0001530845428612448,
+        "absolute_mean_shift_over_transport": 0.7549188266363186
+      }
+    }
+  ],
+  "scope": "One-dimensional transport between numerical histograms; no physical transfer-function inference."
+}

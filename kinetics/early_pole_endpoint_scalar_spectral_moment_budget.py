@@ -57,7 +57,7 @@ def integrate(d,a,m,n):
 
 
 def run(paths):
-    levels=(1,2,4,8)[:len(paths)]
+    levels=(1,2,4,8,16)[:len(paths)]
     ds=[load_card(p,n) for p,n in zip(paths,levels,strict=True)]
     m=ds[1][-1]  # hold the mass fixed to isolate this spectral comparison.
     out=[]
@@ -81,6 +81,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('state',type=Path,nargs='+')
     args=p.parse_args()
-    if len(args.state) not in (3,4):
-        p.error('Supply native,S2,S4[,S8]')
+    if len(args.state) not in (3,4,5):
+        p.error('Supply native,S2,S4[,S8[,S16]]')
     print(json.dumps(run(args.state),indent=2,allow_nan=False))

@@ -76,7 +76,7 @@ def pair(L,R):
 
 
 def run(paths):
-    lev={2:(2,4),3:(1,2,4),4:(1,2,4,8)}[len(paths)]
+    lev={2:(2,4),3:(1,2,4),4:(1,2,4,8),5:(1,2,4,8,16)}[len(paths)]
     ds=[load_card(p,n) for n,p in zip(lev,paths,strict=True)]
     v=[(cdf(d,a,CUT),cdf(d,a,d.ds.ed[-1])) for d,a,_ in ds]
     out=[]
@@ -90,6 +90,6 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('states',nargs='+',type=Path)
     a=p.parse_args()
-    if not 2<=len(a.states)<=4:
-        p.error('need S2,S4 or native,S2,S4[,S8]')
+    if not 2<=len(a.states)<=5:
+        p.error('need S2,S4 or native,S2,S4[,S8[,S16]]')
     print(json.dumps(run(a.states),indent=2,allow_nan=False))
