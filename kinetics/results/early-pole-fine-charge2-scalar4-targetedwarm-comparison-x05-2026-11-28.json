@@ -1,0 +1,78 @@
+{
+  "fixed_x": 0.05,
+  "fixed_mass": 0.0008731829968237441,
+  "targeted_moments": [
+    0.01740174136959032,
+    1.737978700594509e-07,
+    1.7352310627802522e-07
+  ],
+  "comparisons": [
+    {
+      "uniform_order": 4,
+      "target_over_uniform_minus_one": [
+        1.7235322058439806e-09,
+        0.0007882718801339728,
+        0.0007895210481692061
+      ],
+      "pressure_ratio_interval": [
+        0.0007881919697658724,
+        0.0007883518121096778
+      ],
+      "fixed_reference_uniform_pressure": 1.736609779938218e-07,
+      "all_pressure_differences": [
+        0.0007882718801340059,
+        0.0008212054003734151,
+        -3.2933520239400914e-05
+      ],
+      "targeted_parents_only_pressure_differences": [
+        0.0007882432931755212,
+        0.0008211768154790231,
+        -3.293352230350112e-05
+      ],
+      "untouched_parents_pressure_differences": [
+        2.8586958484733728e-08,
+        2.8584894392000307e-08,
+        2.064100207944664e-12
+      ]
+    },
+    {
+      "uniform_order": 5,
+      "target_over_uniform_minus_one": [
+        -1.919069458899969e-09,
+        -0.0003373319085591131,
+        -0.0003378658718402594
+      ],
+      "pressure_ratio_interval": [
+        -0.000337411700153889,
+        -0.0003372521260063266
+      ],
+      "fixed_reference_uniform_pressure": 1.7385651741028435e-07,
+      "all_pressure_differences": [
+        -0.0003373319085591612,
+        -0.00036731295108773186,
+        2.9981042528601456e-05
+      ],
+      "targeted_parents_only_pressure_differences": [
+        -0.0003123540911633957,
+        -0.0003399310484047545,
+        2.7576957241359456e-05
+      ],
+      "untouched_parents_pressure_differences": [
+        -2.497781739576546e-05,
+        -2.7381902682977344e-05,
+        2.404085287242e-06
+      ]
+    }
+  ],
+  "moment_columns": [
+    "number",
+    "pressure",
+    "warm_pressure"
+  ],
+  "pressure_difference_columns": [
+    "total",
+    "changed_cell_count",
+    "changed_pressure_per_particle"
+  ],
+  "scope": "Separate conditional finite evolutions at a common measurement mass; no claim targeted improves physical accuracy."
+}

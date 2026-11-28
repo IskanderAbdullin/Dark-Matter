@@ -19,6 +19,10 @@ def run(order,end,steps,restart=None):
     metadata=dict(grid='fine',charge_div=2,scalar_div=4,cut=1e-5,gauss_floor=.01,reference_x=X,
                   nodes=[d.ns,d.nf,d.np],scalar_cell_count=d.old_count,scalar_nodal_rule='gauss-volume-v2-general',
                   warm_gauss_order=order)
+    return run_chart(d,metadata,end,steps,restart,scope='Independent positive warm Gauss nodal continuation, not a piecewise-constant archive.')
+
+
+def run_chart(d,metadata,end,steps,restart,*,scope):
     z=None
     x0=X
     previous=None
@@ -48,7 +52,7 @@ def run(order,end,steps,restart=None):
     return dict(metadata,starting_x=x0,x_end=end,coarse_steps=steps,checkpoint_trajectories=[coarse,fine],
                 relative_time_drift=r,scalar_cell_yields=count.tolist(),scalar_pole_mass=d.state(end,y)[0],
                 actual_previous_raw_sha256=previous,
-                scope='Independent positive warm Gauss nodal continuation, not a piecewise-constant archive.'),output
+                scope=scope),output
 
 
 if __name__=='__main__':

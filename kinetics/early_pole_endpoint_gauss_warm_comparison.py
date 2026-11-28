@@ -27,6 +27,12 @@ def chart_for(card):
         order=card['warm_gauss_order']
         d=WarmGauss(load('fine')[0],order)
         return order,d,d.repeats
+    if schema=='gauss-volume-v3-targeted':
+        from early_pole_endpoint_targeted_warm_history import build
+        d,meta=build()
+        if any(card.get(k)!=v for k,v in meta.items()):
+            raise ArithmeticError('Targeted warm archive does not bind the declared chart')
+        return 'targeted-2xG4',d,d.repeats
     raise ArithmeticError('Unknown warm Gauss node convention')
 
 
@@ -118,7 +124,9 @@ def run(s,ga,others,x=.05):
         p=direct(e,z)
         out.append(dict(warm_div=w['warm_div'],moments=p.tolist(),relative_to_S4=(p/base-1).tolist(),
                         gauss_relative_to_this_warm=(G/p-1).tolist()))
-    tag={} if ga['scalar_nodal_rule']=='gauss-volume-v1' else dict(warm_gauss_order=ga['warm_gauss_order'])
+    kind=ga['scalar_nodal_rule']
+    tag=({} if kind=='gauss-volume-v1' else dict(warm_gauss_order=ga['warm_gauss_order'])
+         if kind=='gauss-volume-v2-general' else dict(scalar_nodal_rule=kind,targeted_rule=ga['targeted_rule']))
     return dict(x=x,fixed_mass=float(m),**tag,columns=['count','pressure','pressure_q_ge_.01'],
                 S4_reference=base.tolist(),warm_gauss_moments=G.tolist(),
                 warm_gauss_conditional_pressure_envelope=envelope,warm_gauss_cell_attribution=contribution,

@@ -23,6 +23,10 @@ def verify(r, s, d, lo, hi, n, *, order=None):
                scalar_nodal_rule='gauss-volume-v1' if order is None else 'gauss-volume-v2-general')
     if order is not None:
         key['warm_gauss_order']=order
+    return verify_chart(r,s,d,lo,hi,n,key,repeats)
+
+
+def verify_chart(r,s,d,lo,hi,n,key,repeats):
     if any(r.get(k)!=v or s.get(k)!=v for k,v in key.items()):
         raise ArithmeticError('Warm Gauss chart is not the declared chart')
     if (r['starting_x'],r['x_end'],r['coarse_steps'],s['x_end'],s['steps'])!=(lo,hi,n,hi,2*n):
