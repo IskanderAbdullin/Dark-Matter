@@ -1,0 +1,147 @@
+{
+  "grid": "third",
+  "x": 0.05,
+  "subcells": [
+    1,
+    2,
+    4
+  ],
+  "rows_charge_chart_and_state_columns_scalar_state": [
+    [
+      {
+        "clock_net_forward_inverse": [
+          2.897065716663733,
+          4.841350889362026,
+          1.9442851726982928
+        ],
+        "scalar_mass": 0.0008769998831215954,
+        "clock_prefactor": 0.9840324322335313,
+        "last_order_relative_drift": 1.3846701563124952e-11
+      },
+      {
+        "clock_net_forward_inverse": [
+          6.563524279589555,
+          7.547776933651196,
+          0.9842526540616428
+        ],
+        "scalar_mass": 0.0008686630429680542,
+        "clock_prefactor": 0.9840324381285283,
+        "last_order_relative_drift": 1.1579626146840383e-13
+      },
+      {
+        "clock_net_forward_inverse": [
+          8.719970256030424,
+          8.831463101309488,
+          0.11149284527906582
+        ],
+        "scalar_mass": 0.0008621801283247386,
+        "clock_prefactor": 0.9840324425968806,
+        "last_order_relative_drift": 9.992007221626409e-16
+      }
+    ],
+    [
+      {
+        "clock_net_forward_inverse": [
+          -0.13751742981186843,
+          3.745275878261621,
+          3.8827933080734898
+        ],
+        "scalar_mass": 0.0008769998831215954,
+        "clock_prefactor": 0.9840324250364925,
+        "last_order_relative_drift": 2.220446049250313e-16
+      },
+      {
+        "clock_net_forward_inverse": [
+          3.074225328782913,
+          5.7805629472041025,
+          2.706337618421189
+        ],
+        "scalar_mass": 0.0008686630429680542,
+        "clock_prefactor": 0.9840324309314892,
+        "last_order_relative_drift": 1.865174681370263e-14
+      },
+      {
+        "clock_net_forward_inverse": [
+          7.647709484104941,
+          7.978620068160771,
+          0.3309105840558303
+        ],
+        "scalar_mass": 0.0008621801283247386,
+        "clock_prefactor": 0.9840324353998415,
+        "last_order_relative_drift": 5.48781353693073e-10
+      }
+    ],
+    [
+      {
+        "clock_net_forward_inverse": [
+          0.37568038670077575,
+          4.077351837097207,
+          3.7016714503964305
+        ],
+        "scalar_mass": 0.0008769998831215954,
+        "clock_prefactor": 0.9840324190814681,
+        "last_order_relative_drift": 5.551115123125783e-16
+      },
+      {
+        "clock_net_forward_inverse": [
+          0.5190895619410132,
+          4.200139669169141,
+          3.6810501072281268
+        ],
+        "scalar_mass": 0.0008686630429680542,
+        "clock_prefactor": 0.9840324249764647,
+        "last_order_relative_drift": 6.217248937900877e-15
+      },
+      {
+        "clock_net_forward_inverse": [
+          3.091011538857348,
+          5.578077578382405,
+          2.4870660395250566
+        ],
+        "scalar_mass": 0.0008621801283247386,
+        "clock_prefactor": 0.9840324294448171,
+        "last_order_relative_drift": 1.4336309916984646e-12
+      }
+    ]
+  ],
+  "mixed_net_clock": [
+    [
+      2.897065716663733,
+      6.563524279589555,
+      8.719970256030424
+    ],
+    [
+      -0.13751742981186843,
+      3.074225328782913,
+      7.647709484104941
+    ],
+    [
+      0.37568038670077575,
+      0.5190895619410132,
+      3.091011538857348
+    ]
+  ],
+  "finite_difference_decompositions": [
+    {
+      "from_to_subcells": [
+        1,
+        2
+      ],
+      "total": 0.1771596121191803,
+      "charge_chart_and_state_at_old_scalar": -3.034583146475601,
+      "scalar_at_old_charge": 3.6664585629258224,
+      "interaction": -0.45471580433104064
+    },
+    {
+      "from_to_subcells": [
+        2,
+        4
+      ],
+      "total": 0.016786210074434926,
+      "charge_chart_and_state_at_old_scalar": -2.5551357668419,
+      "scalar_at_old_charge": 4.573484155322028,
+      "interaction": -2.0015621784056927
+    }
+  ],
+  "scope": "Instantaneous frozen counterfactuals, not a coupled decomposition of the trajectory."
+}
