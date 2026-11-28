@@ -23,7 +23,7 @@ def nodal_warm(card,m):
 
 def run(base,cards,levels=(2,3,4)):
     levels=tuple(levels)
-    if levels not in ((2,3,4),(4,5)) or len(cards)!=len(levels):
+    if levels not in ((2,3,4),(4,5),(5,6)) or len(cards)!=len(levels):
         raise ArithmeticError('Need the accepted original or adjacent warm Gauss orders')
     x=base['x_end']
     d,y=unpack(base,False,x)
