@@ -22,3 +22,13 @@ python -W error early_pole_endpoint_warm_source_cell_hybrid.py \
 ```
 
 As an independent check of the frozen-mask construction, `early_pole_endpoint_warm_live_mask.py` builds the actual mixed 153-node chart (native W1: 145, full Gauss: 167). Its paired 4/8 radial collision evaluations at both snapshots reproduce the hybrid’s native-cell affine ledgers exactly in these runs, while conserving energy and retaining each native scalar cell count on lift. This verifies the mixed chart for the frozen test, without executing an adaptive or masked history. For reproduction, pass the corresponding S4 state, the cell-source JSON for that time and the hybrid JSON to the script, with its default `--cells 8`.
+
+## Short time-dependent cross-check
+
+The fixed eight-cell mask was then advanced for `Delta log(x) = 5e-5` from x=.05, paired with W1 on the same clock and native cold/charge chart. The scalar mass and reaction states evolve, but to isolate the spectral gain the pressure measurement uses its common starting mass. The number increment changes by -2.93e-7 relative, while the warm pressure increment changes by -8.19855%. The latter matches the independent frozen-source contrast (-8.19853%) within 1.25e-7 in relative change. The 16/32 clock comparison changes any reported gain by at most 1.98e-7 relative; the pressures agree much more closely. These are increments over a short local interval, not changes in the starting total distribution or predictions for a whole history.
+
+```sh
+python -W error early_pole_endpoint_warm_mask_transient.py \
+  results/early-pole-fine-charge2-scalar4-x05-state-2026-11-28.json.gz \
+  results/early-pole-endpoint-warm-source-cell-hybrid-2026-11-28.json
+```
