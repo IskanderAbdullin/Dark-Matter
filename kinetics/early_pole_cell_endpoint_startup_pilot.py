@@ -1,5 +1,6 @@
 """Run opt-in endpoint cells from an actual empty-daughter startup."""
 import argparse
+import hashlib
 import json
 from math import fsum
 from pathlib import Path
@@ -14,14 +15,62 @@ from early_pole_live_bounded_face_extents_pilot import hold_trace
 from early_pole_resolved_parent_reference import S
 
 
-def drive(d,xend,n,*,x_start=X,initial=None,stepper=step):
+def checkpoint_signature(d,y,t,x_start,xend,n,stepper,provenance):
+    if (not isinstance(provenance,str) or len(provenance)!=64
+            or set(provenance)-set('0123456789abcdef') or n<8 or not 0.<x_start<xend):
+        raise ValueError('Resumable drive requires locked provenance and a valid positive clock')
+    a=hashlib.sha256()
+    a.update(json.dumps([provenance,stepper.__module__,stepper.__name__,x_start,xend,n,d.ns,d.iP,d.n]).encode())
+    for z in (d.ds.ed,d.ds.p,d.ds.w,d.wp,d.wd,d.qp,d.qd,y,t):
+        b=np.asarray(z,dtype='<f8')
+        a.update(str(b.shape).encode()+b.tobytes())
+    return a.hexdigest()
+
+
+def drive_checkpoint_digest(packet):
+    payload={k:v for k,v in packet.items() if k!='payload_sha256'}
+    return hashlib.sha256(json.dumps(payload,allow_nan=False,separators=(',',':'),sort_keys=True).encode()).hexdigest()
+
+
+def write_drive_checkpoint(path,packet):
+    target=Path(path)
+    tmp=target.with_suffix(target.suffix+'.tmp')
+    p=dict(packet,payload_sha256=drive_checkpoint_digest(packet))
+    tmp.write_text(json.dumps(p,allow_nan=False,separators=(',',':'))+'\n')
+    tmp.replace(target)
+
+
+def drive(d,xend,n,*,x_start=X,initial=None,stepper=step,checkpoint=None,checkpoint_stride=0,
+          restart=None,provenance=None):
     folds=len(d.wp)//(2*d.d0.np)
     parent=np.repeat(expit(-d.d0.parent_energies(X)),2*folds)
     y=np.r_[np.zeros(d.iP),parent] if initial is None else initial.copy()
     state=y.copy()
     t=np.linspace(0.,np.log(xend/x_start),n+1)
     trace=[]; caps=[]; checks=[]
-    for index,(a,b) in enumerate(zip(t[:-1],t[1:],strict=True)):
+    cursor=0
+    key=None
+    if checkpoint is not None or restart is not None:
+        key=checkpoint_signature(d,y,t,x_start,xend,n,stepper,provenance)
+        if checkpoint is not None and (not callable(checkpoint) or type(checkpoint_stride) is not int or checkpoint_stride<=0):
+            raise ValueError('Checkpoint requires a callback and positive integral stride')
+        if restart is not None:
+            if restart.get('payload_sha256')!=drive_checkpoint_digest(restart):
+                raise ArithmeticError('Corrupt step-checkpoint payload')
+            if restart.get('signature')!=key:
+                raise ArithmeticError('Step checkpoint does not bind this exact clock, initial state and geometry')
+            cursor=restart.get('completed')
+            trace=list(restart['trace'])
+            caps=list(restart['caps'])
+            checks=list(restart['checks'])
+            state=np.asarray(restart['occupation'],dtype=float)
+            if (type(cursor) is not int or not 1<=cursor<=n or len(trace)!=cursor or len(caps)!=cursor
+                    or len(checks)!=cursor//(n//8)+int(cursor==n and cursor%(n//8)!=0)
+                    or restart.get('target_steps')!=n or restart.get('x_reached')!=float(x_start*np.exp(t[cursor]))
+                    or state.shape!=(d.n,) or not np.all(np.isfinite(np.r_[state,trace,caps]))
+                    or min(state)<0. or max(state[d.ns:])>1.):
+                raise ArithmeticError('Invalid checkpoint state or unresolved continuity ledger')
+    for index,(a,b) in enumerate(zip(t[cursor:-1],t[cursor+1:],strict=True),cursor):
         mid=(a+b)/2
         x=x_start*np.exp(mid)
         M,_,_,H=d.state(x,state)
@@ -41,6 +90,11 @@ def drive(d,xend,n,*,x_start=X,initial=None,stepper=step):
             checks.append(dict(x=float(x_start*np.exp(b)),scalar_yield=fsum(d.w[:d.ns]*state[:d.ns])/S,pair_number_error=max(abs(s-f),abs(s+p)),
                                continuity_residual=e,max_charged=float(max(state[d.ns:])),
                                max_limited_extent=float(max(caps))))
+        if checkpoint is not None and ((index+1)%checkpoint_stride==0 or index+1==n):
+            record=dict(signature=key,completed=index+1,target_steps=n,x_reached=float(x_start*np.exp(b)),
+                        occupation=state.tolist(),trace=trace.copy(),
+                        caps=caps.copy(),checks=[dict(z) for z in checks])
+            checkpoint(dict(record,payload_sha256=drive_checkpoint_digest(record)))
     return checks,state
 
 

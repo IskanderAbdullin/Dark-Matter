@@ -7,22 +7,22 @@ from pathlib import Path
 
 import numpy as np
 
-from early_pole_cell_endpoint_startup_pilot import drive
+from early_pole_cell_endpoint_startup_pilot import drive,write_drive_checkpoint
 from early_pole_endpoint_capacity_fast_step import step
 from early_pole_endpoint_stencil_remap_pilot import X,load
 from early_pole_endpoint_warm_positive_gauss_ladder import WarmGauss
 from early_pole_resolved_parent_reference import S
 
 
-def run(order,end,steps,restart=None):
+def run(order,end,steps,restart=None,**checkpoints):
     d=WarmGauss(load('fine')[0],order)
     metadata=dict(grid='fine',charge_div=2,scalar_div=4,cut=1e-5,gauss_floor=.01,reference_x=X,
                   nodes=[d.ns,d.nf,d.np],scalar_cell_count=d.old_count,scalar_nodal_rule='gauss-volume-v2-general',
                   warm_gauss_order=order)
-    return run_chart(d,metadata,end,steps,restart,scope='Independent positive warm Gauss nodal continuation, not a piecewise-constant archive.')
+    return run_chart(d,metadata,end,steps,restart,scope='Independent positive warm Gauss nodal continuation, not a piecewise-constant archive.', **checkpoints)
 
 
-def run_chart(d,metadata,end,steps,restart,*,scope):
+def run_chart(d,metadata,end,steps,restart,*,scope,checkpoint_prefix=None,checkpoint_provenance=None,checkpoint_stride=128):
     z=None
     x0=X
     previous=None
@@ -40,8 +40,18 @@ def run_chart(d,metadata,end,steps,restart,*,scope):
         raise ValueError('Invalid clock segments')
     if (x0,end,steps) not in ((X,.0075,2048),(.0075,.01,512),(.01,.02,1024),(.02,.04,1024),(.04,.05,1024)):
         raise ValueError('Use the matched warm clock with replayable stage starts')
-    coarse,_=drive(d,end,steps,x_start=x0,initial=z,stepper=step)
-    fine,y=drive(d,end,2*steps,x_start=x0,initial=z,stepper=step)
+    def arm(n):
+        args=dict(x_start=x0,initial=z,stepper=step)
+        if checkpoint_prefix is not None:
+            path=Path(f'{checkpoint_prefix}.{n}.drive.json')
+            load=json.loads(path.read_text()) if path.is_file() else None
+            args.update(checkpoint=lambda p:write_drive_checkpoint(path,p),restart=load,
+                        provenance=checkpoint_provenance,checkpoint_stride=checkpoint_stride)
+        elif checkpoint_provenance is not None:
+            raise ValueError('Checkpoint provenance requires a prefix')
+        return drive(d,end,n,**args)
+    coarse,_=arm(steps)
+    fine,y=arm(2*steps)
     r=abs(coarse[-1]['scalar_yield']/fine[-1]['scalar_yield']-1)
     count=np.add.reduceat(d.ds.w*y[:d.ns]/S,np.r_[0,np.cumsum(d.repeats)[:-1]])
     if (r>1e-3 or max(abs(a['continuity_residual']) for a in coarse+fine)>3e-10
@@ -62,8 +72,12 @@ if __name__=='__main__':
     p.add_argument('--steps',type=int,default=2048)
     p.add_argument('--restart',type=Path)
     p.add_argument('--state',type=Path,required=True)
+    p.add_argument('--checkpoint-prefix',type=Path)
+    p.add_argument('--checkpoint-provenance')
+    p.add_argument('--checkpoint-stride',type=int,default=128)
     a=p.parse_args()
-    r,z=run(a.warm_order,a.x_end,a.steps,a.restart)
+    r,z=run(a.warm_order,a.x_end,a.steps,a.restart,checkpoint_prefix=a.checkpoint_prefix,
+            checkpoint_provenance=a.checkpoint_provenance,checkpoint_stride=a.checkpoint_stride)
     temp=a.state.with_suffix('.tmp')
     temp.write_text(json.dumps(z,indent=2,allow_nan=False)+'\n')
     temp.replace(a.state)
