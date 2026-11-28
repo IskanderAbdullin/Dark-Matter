@@ -1,0 +1,82 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "mode": "slow",
+      "maximum_cross_mesh_shift": 4.242206586013708e-11,
+      "crossing_T": 0.5561481775480923,
+      "sampled_bracket": [
+        0.5557093750000001,
+        0.5614187500000001
+      ],
+      "rate_crossing_slope": 11.428448331363137,
+      "both_rates_over_H": [
+        0.9999999999999902,
+        217.43319194107505
+      ],
+      "algebraic_eta_and_beta": [
+        -0.19418471326567374,
+        0.019629627432395953
+      ]
+    },
+    {
+      "operator": "timelike",
+      "mode": "fast",
+      "maximum_cross_mesh_shift": 3.4966030071359455e-11,
+      "crossing_T": 0.3851821875686101,
+      "sampled_bracket": [
+        0.384375,
+        0.39375
+      ],
+      "rate_crossing_slope": 36.73120845030242,
+      "both_rates_over_H": [
+        0.20334556768048317,
+        0.999999999998973
+      ],
+      "algebraic_eta_and_beta": [
+        -0.9093751547668169,
+        0.008787751221555173
+      ]
+    },
+    {
+      "operator": "combined",
+      "mode": "slow",
+      "maximum_cross_mesh_shift": 1.300409779858569e-10,
+      "crossing_T": 0.551875954351779,
+      "sampled_bracket": [
+        0.55,
+        0.5557093750000001
+      ],
+      "rate_crossing_slope": 11.026839247152418,
+      "both_rates_over_H": [
+        0.999999999999988,
+        198.4403499991574
+      ],
+      "algebraic_eta_and_beta": [
+        -0.1964142723407828,
+        0.019670831028702193
+      ]
+    },
+    {
+      "operator": "combined",
+      "mode": "fast",
+      "maximum_cross_mesh_shift": 2.0548646118001557e-10,
+      "crossing_T": 0.3824093505472154,
+      "sampled_bracket": [
+        0.375,
+        0.384375
+      ],
+      "rate_crossing_slope": 33.778132010220396,
+      "both_rates_over_H": [
+        0.21940342972745286,
+        1.0
+      ],
+      "algebraic_eta_and_beta": [
+        -0.9040200315106657,
+        -0.0002910671860275049
+      ]
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Clock equality for local linearized vacuum FD modes, not a decoupling temperature or trajectory determination."
+}
