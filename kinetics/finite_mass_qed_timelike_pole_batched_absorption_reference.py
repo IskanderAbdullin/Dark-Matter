@@ -46,10 +46,10 @@ def full_vertex(p,b,K,m0,m1,e):
              +slash(e)@(slash(b-K)+m1*I)/(s-2*dot(b,K))[...,None,None])
 
 
-def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None):
+def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None,qscalar=Q):
     P,F=ch
     M,m=P.m,F.m
-    T=np.array([es-w,Q*np.sqrt((1-c)*(1+c)),0.,Q*c-k])
+    T=np.array([es-w,qscalar*np.sqrt((1-c)*(1+c)),0.,qscalar*c-k])
     v=np.linalg.norm(T[1:])
     t=T[0]
     s=(t-v)*(t+v)

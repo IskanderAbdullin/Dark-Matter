@@ -10,7 +10,11 @@ from finite_mass_qed_timelike_pole_affine_source_reference import setup
 from finite_mass_qed_timelike_pole_batched_absorption_reference import load, pole, radial
 
 
-def angular_knots(ch,k,w,es):
+def angular_knots(ch,k,w,es,qscalar=Q):
+    if qscalar<0:
+        raise ValueError('A scalar momentum magnitude cannot be negative')
+    if qscalar==0:
+        return np.array([-1.,1.]),0.
     parent,daughter=ch
     m0,m1=parent.m,daughter.m
     t=es-w
@@ -19,31 +23,37 @@ def angular_knots(ch,k,w,es):
     p=np.sqrt((e-m0)*(e+m0))
     b=np.sqrt((e-t-m1)*(e-t+m1))
     sep=(m0*m0-m1*m1-2*e*t+t*t)/(b+p)
-    c=((k-sep)*(k+sep)+Q*Q)/(2*k*Q)
-    upper=((k-p-b)*(k+p+b)+Q*Q)/(2*k*Q)
+    c=((k-sep)*(k+sep)+qscalar*qscalar)/(2*k*qscalar)
+    upper=((k-p-b)*(k+p+b)+qscalar*qscalar)/(2*k*qscalar)
     if np.any((upper>-1)&(upper<1)):
         raise ArithmeticError('Unexpected sum-of-momenta angular boundary in this soft branch')
     ce=c[(c>-1)&(c<1)]
     ee=e[(c>-1)&(c<1)]
     err=[]
     for u,E in zip(ce,ee,strict=True):
-        _,_,_,edge,_=setup(m0,m1,k,w,es,u)
+        if qscalar==Q:
+            _,_,_,edge,_=setup(m0,m1,k,w,es,u)
+        else:
+            V=np.hypot(qscalar*np.sqrt((1-u)*(1+u)),qscalar*u-k)
+            s=(t-V)*(t+V)
+            A=m0*m0+s-m1*m1
+            edge=(-A*t+V*np.sqrt(A*A-4*m0*m0*s))/(-2*s)
         err.append(abs(edge/E-1))
     defect=max(err,default=0.)
     if defect>3e-12:
         raise ArithmeticError(('Exact angular energy support knot',k,w,defect))
-    past=((k+t)*(k-t)+Q*Q)/(2*k*Q)
+    past=((k+t)*(k-t)+qscalar*qscalar)/(2*k*qscalar)
     return np.unique(np.clip(np.r_[-1.,1.,ce,past],-1.,1.)),defect
 
 
-def angle(ch,k,w,R,es,name,order,inner):
-    bins,defect=angular_knots(ch,k,w,es)
+def angle(ch,k,w,R,es,name,order,inner,qscalar=Q):
+    bins,defect=angular_knots(ch,k,w,es,qscalar)
     x,v=roots_legendre(order)
     counts=np.zeros(3,dtype=int)
     A=np.zeros(3)
     for a,b in zip(bins[:-1],bins[1:],strict=True):
         for u,z in zip((a+b)/2+(b-a)*x/2,(b-a)*v/4,strict=True):
-            C,_,_=radial(ch,k,w,R,es,u,name,*inner)
+            C,_,_=radial(ch,k,w,R,es,u,name,*inner,qscalar=qscalar)
             counts[0]+=C[0]>0
             counts[1]+=C[1]>0
             counts[2]+=(C[0]>0)&(C[1]==0)
