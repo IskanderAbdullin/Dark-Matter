@@ -1,0 +1,222 @@
+[
+  {
+    "mesh": "fine",
+    "archive": "fine",
+    "result": {
+      "native_clock": 4.457996604037878,
+      "double_centroid": [
+        {
+          "order": 4,
+          "thermal_event_relative_defect": 3.772341174319534e-15,
+          "energy_relative_defect": 3.34575786518086e-16,
+          "pair_absolute_defect": 6.245004513516506e-17,
+          "net_clock": 3.359790132268298,
+          "gross_forward": 5.563329818660616,
+          "gross_inverse": 2.203539686392318,
+          "quadrature_events": 23032,
+          "maximum_relative_event_energy_error": 4.151957354585191e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.02260188740632385
+        },
+        {
+          "order": 8,
+          "thermal_event_relative_defect": 3.821861687820076e-15,
+          "energy_relative_defect": 6.832746907955222e-16,
+          "pair_absolute_defect": 4.85722573273506e-17,
+          "net_clock": 3.359790132258637,
+          "gross_forward": 5.563329818660615,
+          "gross_inverse": 2.203539686401978,
+          "quadrature_events": 46064,
+          "maximum_relative_event_energy_error": 4.326974077304975e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.02260188740632385
+        }
+      ],
+      "mesh_relative_defect": 4.384048679639818e-12,
+      "exact_step_on_shared_support_gross": [
+        6.106110175986744,
+        1.6878451225876265
+      ],
+      "exact_step_on_shared_support_net": 4.418265053399118,
+      "occupied_charge_boundary_controls": [
+        {
+          "cell": 32,
+          "sources_at_empty_and_full": [
+            0.06262378008994184,
+            -0.18301724097909297
+          ]
+        },
+        {
+          "cell": 86,
+          "sources_at_empty_and_full": [
+            1.160750284858545e-16,
+            -7.727211035165349e-07
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "mesh": "fine",
+    "archive": "third",
+    "result": {
+      "native_clock": 5.173667234832184,
+      "double_centroid": [
+        {
+          "order": 4,
+          "thermal_event_relative_defect": 4.8308964032792896e-15,
+          "energy_relative_defect": 1.40180295227162e-16,
+          "pair_absolute_defect": 1.3877787807814457e-17,
+          "net_clock": 4.45238953761761,
+          "gross_forward": 6.173006527461489,
+          "gross_inverse": 1.7206169898438806,
+          "quadrature_events": 23084,
+          "maximum_relative_event_energy_error": 4.1475674352044754e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.02260181852419263
+        },
+        {
+          "order": 8,
+          "thermal_event_relative_defect": 4.581390569862543e-15,
+          "energy_relative_defect": 4.310359674902196e-16,
+          "pair_absolute_defect": 2.7755575615628914e-17,
+          "net_clock": 4.452389537617001,
+          "gross_forward": 6.173006527461489,
+          "gross_inverse": 1.7206169898444872,
+          "quadrature_events": 46168,
+          "maximum_relative_event_energy_error": 4.332530812504981e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.02260181852419263
+        }
+      ],
+      "mesh_relative_defect": 3.526068326209497e-13,
+      "exact_step_on_shared_support_gross": [
+        6.457506139634725,
+        1.4010148776180213
+      ],
+      "exact_step_on_shared_support_net": 5.056491262016703,
+      "occupied_charge_boundary_controls": [
+        {
+          "cell": 32,
+          "sources_at_empty_and_full": [
+            0.08828601965980726,
+            -0.35210176888825684
+          ]
+        },
+        {
+          "cell": 86,
+          "sources_at_empty_and_full": [
+            1.1510619003646269e-16,
+            -7.704377541897545e-07
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "mesh": "third",
+    "archive": "fine",
+    "result": {
+      "native_clock": 2.8529868781875494,
+      "double_centroid": [
+        {
+          "order": 4,
+          "thermal_event_relative_defect": 4.154903827885183e-15,
+          "energy_relative_defect": 6.637028627820753e-16,
+          "pair_absolute_defect": 1.3183898417423734e-16,
+          "net_clock": 3.146107755366662,
+          "gross_forward": 5.507195832310198,
+          "gross_inverse": 2.361088076943536,
+          "quadrature_events": 47756,
+          "maximum_relative_event_energy_error": 4.4170198098939723e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.015021748360196763
+        },
+        {
+          "order": 8,
+          "thermal_event_relative_defect": 4.4476619838383185e-15,
+          "energy_relative_defect": 8.257799813078365e-16,
+          "pair_absolute_defect": 6.938893903907228e-17,
+          "net_clock": 3.14610775536383,
+          "gross_forward": 5.507195832310199,
+          "gross_inverse": 2.3610880769463694,
+          "quadrature_events": 95512,
+          "maximum_relative_event_energy_error": 4.393205344219033e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.015021748360196763
+        }
+      ],
+      "mesh_relative_defect": 1.1999290450148692e-12,
+      "exact_step_on_shared_support_gross": [
+        5.350447148199497,
+        2.5576406047136517
+      ],
+      "exact_step_on_shared_support_net": 2.7928065434858453,
+      "occupied_charge_boundary_controls": [
+        {
+          "cell": 45,
+          "sources_at_empty_and_full": [
+            0.012413646169643367,
+            -0.010229677529083955
+          ]
+        },
+        {
+          "cell": 122,
+          "sources_at_empty_and_full": [
+            1.9078148998403875e-16,
+            -3.9903081602913607e-07
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "mesh": "third",
+    "archive": "third",
+    "result": {
+      "native_clock": 2.189096622070682,
+      "double_centroid": [
+        {
+          "order": 4,
+          "thermal_event_relative_defect": 4.437156914744569e-15,
+          "energy_relative_defect": 2.990606663492739e-16,
+          "pair_absolute_defect": 6.938893903907228e-17,
+          "net_clock": 5.304473206749645,
+          "gross_forward": 6.000516865493291,
+          "gross_inverse": 0.6960436587436458,
+          "quadrature_events": 47812,
+          "maximum_relative_event_energy_error": 4.415506832107915e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.015021705762353066
+        },
+        {
+          "order": 8,
+          "thermal_event_relative_defect": 4.325505798354499e-15,
+          "energy_relative_defect": 1.6387999825801184e-15,
+          "pair_absolute_defect": 1.6653345369377348e-16,
+          "net_clock": 5.3044731061514705,
+          "gross_forward": 6.000516865493307,
+          "gross_inverse": 0.6960437593418366,
+          "quadrature_events": 95624,
+          "maximum_relative_event_energy_error": 4.334778720030439e-16,
+          "omitted_fraction_for_thermal_parent_seed": 0.015021705762353066
+        }
+      ],
+      "mesh_relative_defect": 1.4452856444968631e-07,
+      "exact_step_on_shared_support_gross": [
+        6.6860987456626955,
+        3.015617388175216
+      ],
+      "exact_step_on_shared_support_net": 3.6704813574874793,
+      "occupied_charge_boundary_controls": [
+        {
+          "cell": 45,
+          "sources_at_empty_and_full": [
+            0.038416246577381206,
+            -0.05928090929957107
+          ]
+        },
+        {
+          "cell": 122,
+          "sources_at_empty_and_full": [
+            1.418622984097442e-16,
+            -4.002755198287449e-07
+          ]
+        }
+      ]
+    }
+  }
+]
