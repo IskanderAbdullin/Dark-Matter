@@ -1,0 +1,237 @@
+{
+  "x": 0.05,
+  "field_order": [
+    "forward_number",
+    "inverse_number",
+    "forward_excess"
+  ],
+  "common_q_edges": [
+    1e-06,
+    1.094958977489465e-06,
+    1.3163822043342373e-06,
+    1.5825817619770524e-06,
+    1.9026123454844749e-06,
+    2.287359695506477e-06,
+    2.7499108733551402e-06,
+    3.3059994133202632e-06,
+    3.974540493939284e-06,
+    4.778274331905574e-06,
+    5.7445396834586724e-06,
+    6.906203763665279e-06,
+    8.302780214505868e-06,
+    9.9817731491033e-06,
+    9.990882418036608e-06,
+    1e-05,
+    1.4426999059072134e-05,
+    1.5e-05
+  ],
+  "original_l1_by_field": [
+    0.04015638005792123,
+    0.04006906796524612,
+    0.04734603128872378
+  ],
+  "paired_mesh_optimum_maximum_defect": 1.8587101259168182e-13,
+  "cases": {
+    "own_count_only": {
+      "forward_number": {
+        "minimum_l1": 0.015877501575458308,
+        "witness_l1_by_field": [
+          0.015877502187083947
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          -0.0024027837508483452
+        ],
+        "verified_dual_value": 0.015877501575458308,
+        "max_verification_defect": 6.116256390242825e-10
+      },
+      "inverse_number": {
+        "minimum_l1": 0.012854298670375226,
+        "witness_l1_by_field": [
+          0.012854299262484787
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          -0.00418916629667106
+        ],
+        "verified_dual_value": 0.012854298670375242,
+        "max_verification_defect": 5.92109561034504e-10
+      },
+      "forward_excess": {
+        "minimum_l1": 0.0038050395563934422,
+        "witness_l1_by_field": [
+          0.0038050396849234904
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          -0.0038050396849234726
+        ],
+        "verified_dual_value": 0.0038050395563934405,
+        "max_verification_defect": 1.2853004814974978e-10
+      },
+      "joint": {
+        "minimum_l1": 0.07255557016736487,
+        "witness_l1_by_field": [
+          0.03488900438279748,
+          0.033861527431909184,
+          0.0038050396849234904
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          -0.0008113730355591865,
+          -0.0009629783189675303,
+          -0.0038050396849234726
+        ],
+        "verified_dual_value": 0.07255557016736502,
+        "max_verification_defect": 1.3322652842040483e-09
+      }
+    },
+    "own_count_and_mean": {
+      "forward_number": {
+        "minimum_l1": 0.04012590618842497,
+        "witness_l1_by_field": [
+          0.04012590680003139
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          0.0033224396601590754
+        ],
+        "verified_dual_value": 0.04012590618842504,
+        "max_verification_defect": 6.116064182881686e-10
+      },
+      "inverse_number": {
+        "minimum_l1": 0.04002355030614362,
+        "witness_l1_by_field": [
+          0.04002355089823241
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          0.0039043612089113434
+        ],
+        "verified_dual_value": 0.040023550306143685,
+        "max_verification_defect": 5.920887877208791e-10
+      },
+      "forward_excess": {
+        "minimum_l1": 0.0461939355978993,
+        "witness_l1_by_field": [
+          0.046193935726341846
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          0.021349045704344205
+        ],
+        "verified_dual_value": 0.04619393559789928,
+        "max_verification_defect": 1.2844254826394064e-10
+      },
+      "joint": {
+        "minimum_l1": 0.12645695475453092,
+        "witness_l1_by_field": [
+          0.0401731904524764,
+          0.04008982990785041,
+          0.046193935726341846
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          0.0032751560077140672,
+          0.00383808219929334,
+          0.021349045704344205
+        ],
+        "verified_dual_value": 0.12645695475453111,
+        "max_verification_defect": 1.3321377334563067e-09
+      }
+    },
+    "shared_S2_count_only": {
+      "forward_number": {
+        "minimum_l1": 0.0,
+        "witness_l1_by_field": [
+          7.821622128882337e-15
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          7.821622128882337e-15
+        ],
+        "verified_dual_value": 0.0,
+        "max_verification_defect": 7.821622128882337e-15
+      },
+      "inverse_number": {
+        "minimum_l1": 0.0,
+        "witness_l1_by_field": [
+          6.930580533209613e-15
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          6.930580533209613e-15
+        ],
+        "verified_dual_value": 0.0,
+        "max_verification_defect": 6.930580533209613e-15
+      },
+      "forward_excess": {
+        "minimum_l1": 0.0,
+        "witness_l1_by_field": [
+          2.093352487620265e-11
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          -2.092884335898881e-11
+        ],
+        "verified_dual_value": 0.0,
+        "max_verification_defect": 2.093352487620265e-11
+      },
+      "joint": {
+        "minimum_l1": 2.3779167340781664e-05,
+        "witness_l1_by_field": [
+          2.1803447494875293e-05,
+          1.9757199028756537e-06,
+          7.641936605663808e-13
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          2.1803447494875293e-05,
+          1.7056092374576851e-06,
+          -7.590750376742592e-13
+        ],
+        "verified_dual_value": 2.3779167340801403e-05,
+        "max_verification_defect": 1.4551915228366852e-11
+      }
+    },
+    "shared_S2_count_and_mean": {
+      "forward_number": {
+        "minimum_l1": 3.320908490245024e-05,
+        "witness_l1_by_field": [
+          3.320908490988549e-05
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          3.320908490988549e-05
+        ],
+        "verified_dual_value": 3.320908490243653e-05,
+        "max_verification_defect": 7.435255210998248e-15
+      },
+      "inverse_number": {
+        "minimum_l1": 2.8327512750713594e-05,
+        "witness_l1_by_field": [
+          2.83275127572295e-05
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          2.83275127572295e-05
+        ],
+        "verified_dual_value": 2.832751275068425e-05,
+        "max_verification_defect": 6.515906541412454e-15
+      },
+      "forward_excess": {
+        "minimum_l1": 1.0598648892307953e-06,
+        "witness_l1_by_field": [
+          1.0598649120445933e-06
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          1.0598649120445933e-06
+        ],
+        "verified_dual_value": 1.0598648892335717e-06,
+        "max_verification_defect": 2.2813797995307745e-14
+      },
+      "joint": {
+        "minimum_l1": 0.0001475753957193558,
+        "witness_l1_by_field": [
+          7.725791072418374e-05,
+          6.925762011986029e-05,
+          1.059864912100328e-06
+        ],
+        "field_signed_sum_delta_left_minus_right": [
+          7.725791072418374e-05,
+          6.925762011986029e-05,
+          1.059864912100328e-06
+        ],
+        "verified_dual_value": 0.00014757539571929758,
+        "max_verification_defect": 3.678855180558327e-14
+      }
+    }
+  },
+  "scope": "Conditional finite q panels and held chart-specific optical fits. Each field divided by its own original S2 band total, not each chart total. No directed rounding or physical bound."
+}
