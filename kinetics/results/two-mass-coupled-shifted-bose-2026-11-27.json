@@ -1,0 +1,241 @@
+{
+  "scope": "Three manufactured shared Bose/Pauli events with normalized weights; no physical rates.",
+  "starts": [
+    {
+      "fermion_shifts": [
+        0.57,
+        -0.63,
+        0.23,
+        -0.36
+      ],
+      "cases": [
+        {
+          "epsilon": 0.001,
+          "scaled_event_extents": [
+            0.4039117090495487,
+            -0.31909809415482004,
+            0.1492966832873843
+          ],
+          "scaled_initial_signed_rates": [
+            0.8169515890742606,
+            -0.36110553617704655,
+            0.4332263314653577
+          ],
+          "analytic_limit_extents": [
+            0.4037777889144267,
+            -0.31889611813587115,
+            0.1493047449875659
+          ],
+          "max_absolute_extent_error": 0.0002019760189488906,
+          "integrated_scaled_entropy": 1.6595879053891396,
+          "analytic_limit_scaled_entropy": 1.6594557406008759,
+          "high_precision_scaled_entropy_relative_error": 2.275957200481571e-14,
+          "fermion_count_rounded_unchanged": 0,
+          "exact_count_checks": [
+            2.710505431213761e-20,
+            0.0
+          ]
+        },
+        {
+          "epsilon": 1e-07,
+          "scaled_event_extents": [
+            0.4037778023051668,
+            -0.31889613833411545,
+            0.14930474418384287
+          ],
+          "scaled_initial_signed_rates": [
+            0.8165220082710559,
+            -0.3606980605428516,
+            0.4331228674946657
+          ],
+          "analytic_limit_extents": [
+            0.4037777889144267,
+            -0.31889611813587115,
+            0.1493047449875659
+          ],
+          "max_absolute_extent_error": 2.0198244299329815e-08,
+          "integrated_scaled_entropy": 1.6594557537617545,
+          "analytic_limit_scaled_entropy": 1.6594557406008759,
+          "high_precision_scaled_entropy_relative_error": 1.4099832412739488e-14,
+          "fermion_count_rounded_unchanged": 0,
+          "exact_count_checks": [
+            1.3552527156068805e-20,
+            2.710505431213761e-20
+          ]
+        },
+        {
+          "epsilon": 1e-12,
+          "scaled_event_extents": [
+            0.40377778891455834,
+            -0.31889611813607716,
+            0.14930474498755464
+          ],
+          "scaled_initial_signed_rates": [
+            0.8165219653183485,
+            -0.36069801980238764,
+            0.4331228571429606
+          ],
+          "analytic_limit_extents": [
+            0.4037777889144267,
+            -0.31889611813587115,
+            0.1493047449875659
+          ],
+          "max_absolute_extent_error": 2.060018822191978e-13,
+          "integrated_scaled_entropy": 1.6594557406009527,
+          "analytic_limit_scaled_entropy": 1.6594557406008759,
+          "high_precision_scaled_entropy_relative_error": 3.26405569239796e-14,
+          "fermion_count_rounded_unchanged": 0,
+          "exact_count_checks": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "epsilon": 1e-24,
+          "scaled_event_extents": [
+            0.4037777889144246,
+            -0.3188961181358751,
+            0.14930474498756272
+          ],
+          "scaled_initial_signed_rates": [
+            0.816521965317919,
+            -0.36069801980198024,
+            0.4331228571428571
+          ],
+          "analytic_limit_extents": [
+            0.4037777889144267,
+            -0.31889611813587115,
+            0.1493047449875659
+          ],
+          "max_absolute_extent_error": 3.941291737419306e-15,
+          "integrated_scaled_entropy": 1.659455740600857,
+          "analytic_limit_scaled_entropy": 1.6594557406008759,
+          "high_precision_scaled_entropy_relative_error": 1.1102230246251565e-14,
+          "fermion_count_rounded_unchanged": 4,
+          "exact_count_checks": [
+            2.710505431213761e-20,
+            4.0657581468206416e-20
+          ]
+        }
+      ]
+    },
+    {
+      "fermion_shifts": [
+        -0.7,
+        0.38,
+        0.31,
+        -0.53
+      ],
+      "cases": [
+        {
+          "epsilon": 0.001,
+          "scaled_event_extents": [
+            0.037891106437178405,
+            0.24765498546096293,
+            -0.29191406895592636
+          ],
+          "scaled_initial_signed_rates": [
+            0.00048169265437141565,
+            0.3535048796866912,
+            -0.47953781672750556
+          ],
+          "analytic_limit_extents": [
+            0.0379390197304279,
+            0.2475366708732519,
+            -0.2917065414265933
+          ],
+          "max_absolute_extent_error": 0.0002075275293330625,
+          "integrated_scaled_entropy": 0.7017340669298691,
+          "analytic_limit_scaled_entropy": 0.7012593650693597,
+          "high_precision_scaled_entropy_relative_error": 7.327471962526033e-15,
+          "fermion_count_rounded_unchanged": 0,
+          "exact_count_checks": [
+            1.3552527156068805e-20,
+            6.938893903907228e-18
+          ]
+        },
+        {
+          "epsilon": 1e-07,
+          "scaled_event_extents": [
+            0.03793901494171318,
+            0.24753668270589704,
+            -0.2917065621894026
+          ],
+          "scaled_initial_signed_rates": [
+            0.0007161615390540669,
+            0.35345644049580843,
+            -0.479014338066442
+          ],
+          "analytic_limit_extents": [
+            0.0379390197304279,
+            0.2475366708732519,
+            -0.2917065414265933
+          ],
+          "max_absolute_extent_error": 2.0762809305185925e-08,
+          "integrated_scaled_entropy": 0.7012594125237239,
+          "analytic_limit_scaled_entropy": 0.7012593650693597,
+          "high_precision_scaled_entropy_relative_error": 5.995204332975845e-15,
+          "fermion_count_rounded_unchanged": 0,
+          "exact_count_checks": [
+            1.3552527156068805e-20,
+            6.932117640329194e-18
+          ]
+        },
+        {
+          "epsilon": 1e-12,
+          "scaled_event_extents": [
+            0.03793901973038078,
+            0.24753667087337164,
+            -0.29170654142679975
+          ],
+          "scaled_initial_signed_rates": [
+            0.0007161849708640005,
+            0.3534564356436129,
+            -0.4790142857148092
+          ],
+          "analytic_limit_extents": [
+            0.0379390197304279,
+            0.2475366708732519,
+            -0.2917065414265933
+          ],
+          "max_absolute_extent_error": 2.0644597142904786e-13,
+          "integrated_scaled_entropy": 0.7012593650698352,
+          "analytic_limit_scaled_entropy": 0.7012593650693597,
+          "high_precision_scaled_entropy_relative_error": 1.5543122344752192e-15,
+          "fermion_count_rounded_unchanged": 0,
+          "exact_count_checks": [
+            1.3552527156068805e-20,
+            2.0830234238877754e-17
+          ]
+        },
+        {
+          "epsilon": 1e-24,
+          "scaled_event_extents": [
+            0.037939019730428666,
+            0.24753667087325332,
+            -0.29170654142659214
+          ],
+          "scaled_initial_signed_rates": [
+            0.0007161849710983209,
+            0.3534564356435644,
+            -0.47901428571428567
+          ],
+          "analytic_limit_extents": [
+            0.0379390197304279,
+            0.2475366708732519,
+            -0.2917065414265933
+          ],
+          "max_absolute_extent_error": 1.4155343563970746e-15,
+          "integrated_scaled_entropy": 0.7012593650693607,
+          "analytic_limit_scaled_entropy": 0.7012593650693597,
+          "high_precision_scaled_entropy_relative_error": 1.5543122344752192e-15,
+          "fermion_count_rounded_unchanged": 4,
+          "exact_count_checks": [
+            1.3552527156068805e-20,
+            1.3877787807814457e-17
+          ]
+        }
+      ]
+    }
+  ]
+}

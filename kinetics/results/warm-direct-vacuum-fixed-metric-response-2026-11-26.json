@@ -1,0 +1,151 @@
+{
+  "scope": "Post-production scalar tracer response on recorded Newtonian-gauge metrics with shared approximate adiabatic initial monopole/dipole/quadrupole. No injection perturbations, backreaction, inhomogeneous production or transfer prediction.",
+  "held_and_actual_direct_scalar_rest_fractions_with_same_archived_stable_count": [
+    2.6323749221806165e-06,
+    2.099185018297396e-06
+  ],
+  "z": 20,
+  "source_T_selected_GeV": [
+    0.012,
+    0.05
+  ],
+  "response_columns": [
+    "direct leptons",
+    "measured pion window",
+    "yield-weighted direct mix",
+    "q64 held warm reference"
+  ],
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "rows": [
+    {
+      "k_per_Mpc": 2.6944,
+      "metric_sha256": "1c62d8c918ac762d67d3b5ba3c36ab7e0a70bf386044c98da74120a530f8e21c",
+      "driver_initial_scale": 5.604963241164e-08,
+      "analytic_log_q_kernel_gradient_relative_defect": 2.2612363182732645e-10,
+      "maximum_time_momentum_refinement_shift": 9.721663749573395e-07,
+      "maximum_between_shell_measure_shift": 0.0003805542812447271,
+      "controls": [
+        {
+          "time_nodes": 7000,
+          "q_order": 8,
+          "within_source_shell_measure": "q",
+          "response_over_native_CDM": [
+            0.7213175840012462,
+            0.6456576988671959,
+            0.7150835338515621,
+            0.6567339437516393
+          ],
+          "initial_only_direct_mix_and_held_over_native_CDM": [
+            -2.3178484009318025e-07,
+            7.234383443480347e-07
+          ],
+          "prescribed_metric_component_of_mix_minus_held": 0.05835054532310724,
+          "total_amplitude_replacement_effect_if_other_matter_held_CDM_and_equal_scalar_rest_count": 1.5359799769855515e-07,
+          "total_amplitude_effect_if_swap_actual_direct_rest_yield_and_other_matter_is_CDM": 3.055125808989876e-07
+        },
+        {
+          "time_nodes": 13000,
+          "q_order": 12,
+          "within_source_shell_measure": "q",
+          "response_over_native_CDM": [
+            0.7213175840093935,
+            0.645657698826327,
+            0.7150835338556707,
+            0.6567349159180143
+          ],
+          "initial_only_direct_mix_and_held_over_native_CDM": [
+            -2.3178467727052522e-07,
+            -1.159089193005024e-08
+          ],
+          "prescribed_metric_component_of_mix_minus_held": 0.05834883813144178,
+          "total_amplitude_replacement_effect_if_other_matter_held_CDM_and_equal_scalar_rest_count": 1.535954386029849e-07,
+          "total_amplitude_effect_if_swap_actual_direct_rest_yield_and_other_matter_is_CDM": 3.055100218012267e-07,
+          "direct_jump_vs_kernel_IBP_max_difference": 3.2085445411667024e-14
+        },
+        {
+          "time_nodes": 13000,
+          "q_order": 12,
+          "within_source_shell_measure": "log_q",
+          "response_over_native_CDM": [
+            0.721663096469879,
+            0.6460382531075717,
+            0.7154319336120345,
+            0.6567349159180143
+          ],
+          "initial_only_direct_mix_and_held_over_native_CDM": [
+            -1.1066408462321168e-07,
+            -1.159089193005024e-08
+          ],
+          "prescribed_metric_component_of_mix_minus_held": 0.05869711676721294,
+          "total_amplitude_replacement_effect_if_other_matter_held_CDM_and_equal_scalar_rest_count": 1.545125573845308e-07,
+          "total_amplitude_effect_if_swap_actual_direct_rest_yield_and_other_matter_is_CDM": 3.0624137735016404e-07
+        }
+      ]
+    },
+    {
+      "k_per_Mpc": 6.736,
+      "metric_sha256": "ca63579f11f236428adea604d9705f0e64fee4b82ee9a77496c5adc9241f2156",
+      "driver_initial_scale": 2.241856986726e-08,
+      "analytic_log_q_kernel_gradient_relative_defect": 2.331557412880782e-09,
+      "maximum_time_momentum_refinement_shift": 1.3450116972790749e-05,
+      "maximum_between_shell_measure_shift": 0.0004293254120154022,
+      "controls": [
+        {
+          "time_nodes": 7000,
+          "q_order": 8,
+          "within_source_shell_measure": "q",
+          "response_over_native_CDM": [
+            0.46932320392966054,
+            0.392980128868274,
+            0.46303286185908304,
+            0.3867474485515799
+          ],
+          "initial_only_direct_mix_and_held_over_native_CDM": [
+            7.216586600032099e-08,
+            6.955157466704032e-06
+          ],
+          "prescribed_metric_component_of_mix_minus_held": 0.07629229629910386,
+          "total_amplitude_replacement_effect_if_other_matter_held_CDM_and_equal_scalar_rest_count": 2.0081180891885478e-07,
+          "total_amplitude_effect_if_swap_actual_direct_rest_yield_and_other_matter_is_CDM": 4.871172656926587e-07
+        },
+        {
+          "time_nodes": 13000,
+          "q_order": 12,
+          "within_source_shell_measure": "q",
+          "response_over_native_CDM": [
+            0.46932320405237193,
+            0.39298012935687704,
+            0.4630328620119422,
+            0.3867608986685527
+          ],
+          "initial_only_direct_mix_and_held_over_native_CDM": [
+            6.793620582038353e-08,
+            1.4739299833790568e-07
+          ],
+          "prescribed_metric_component_of_mix_minus_held": 0.07627204280018206,
+          "total_amplitude_replacement_effect_if_other_matter_held_CDM_and_equal_scalar_rest_count": 2.0077640357061786e-07,
+          "total_amplitude_effect_if_swap_actual_direct_rest_yield_and_other_matter_is_CDM": 4.870818602629182e-07,
+          "direct_jump_vs_kernel_IBP_max_difference": 2.5724589125530883e-10
+        },
+        {
+          "time_nodes": 13000,
+          "q_order": 12,
+          "within_source_shell_measure": "log_q",
+          "response_over_native_CDM": [
+            0.46975252946438734,
+            0.3933739703851916,
+            0.4634592636629646,
+            0.3867608986685527
+          ],
+          "initial_only_direct_mix_and_held_over_native_CDM": [
+            1.4271124460123555e-07,
+            1.4739299833790568e-07
+          ],
+          "prescribed_metric_component_of_mix_minus_held": 0.07669836967616564,
+          "total_amplitude_replacement_effect_if_other_matter_held_CDM_and_equal_scalar_rest_count": 2.0189885258354555e-07,
+          "total_amplitude_effect_if_swap_actual_direct_rest_yield_and_other_matter_is_CDM": 4.879769562205217e-07
+        }
+      ]
+    }
+  ]
+}

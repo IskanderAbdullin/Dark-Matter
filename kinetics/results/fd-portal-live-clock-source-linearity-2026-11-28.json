@@ -1,0 +1,126 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "mode_label": "slow",
+      "T_SM": 0.5561481775480923,
+      "eta_and_beta": [
+        -0.03396746176370381,
+        0.0031881499763817267
+      ],
+      "direct_number_heat_entropy": [
+        -2.164444118530886e-21,
+        -9.859368092594055e-21,
+        1.7001303681192667e-23
+      ],
+      "linear_number_heat_entropy": [
+        -2.1805030895659322e-21,
+        -9.917791410395399e-21,
+        1.721187128736738e-23
+      ],
+      "linear_over_direct_minus_one": [
+        0.007419443587181274,
+        0.005925665544958214,
+        0.012385379975751398
+      ],
+      "same_sign": [
+        true,
+        true,
+        true
+      ],
+      "maximum_relative_mesh_difference": 1.800627202896976e-09
+    },
+    {
+      "operator": "timelike",
+      "mode_label": "fast",
+      "T_SM": 0.3851821875686101,
+      "eta_and_beta": [
+        -0.07567834856669056,
+        -0.008782814991774801
+      ],
+      "direct_number_heat_entropy": [
+        -1.1882475141141426e-22,
+        -2.801205654510879e-22,
+        1.5379690638526154e-23
+      ],
+      "linear_number_heat_entropy": [
+        -1.3417812747494483e-22,
+        -3.2281964461998084e-22,
+        1.751522107641334e-23
+      ],
+      "linear_over_direct_minus_one": [
+        0.12921025191436453,
+        0.15243107588381855,
+        0.13885392678430608
+      ],
+      "same_sign": [
+        true,
+        true,
+        true
+      ],
+      "maximum_relative_mesh_difference": 7.532687806843796e-10
+    },
+    {
+      "operator": "combined",
+      "mode_label": "slow",
+      "T_SM": 0.551875954351779,
+      "eta_and_beta": [
+        -0.03481283621563771,
+        0.0032183212620146007
+      ],
+      "direct_number_heat_entropy": [
+        -2.0756227564910414e-21,
+        -9.39588286823295e-21,
+        1.746525990362491e-23
+      ],
+      "linear_number_heat_entropy": [
+        -2.091711973884383e-21,
+        -9.453033864012465e-21,
+        1.7692089296780984e-23
+      ],
+      "linear_over_direct_minus_one": [
+        0.0077515132954801835,
+        0.006082557283971779,
+        0.01298746164716369
+      ],
+      "same_sign": [
+        true,
+        true,
+        true
+      ],
+      "maximum_relative_mesh_difference": 1.7579646627297052e-09
+    },
+    {
+      "operator": "combined",
+      "mode_label": "fast",
+      "T_SM": 0.3824093505472154,
+      "eta_and_beta": [
+        -0.07551644489304812,
+        -0.00944511316753327
+      ],
+      "direct_number_heat_entropy": [
+        -1.119663857412788e-22,
+        -2.645425340976345e-22,
+        1.4989228807701254e-23
+      ],
+      "linear_number_heat_entropy": [
+        -1.2675066878067604e-22,
+        -3.0563144613149156e-22,
+        1.712053868873608e-23
+      ],
+      "linear_over_direct_minus_one": [
+        0.13204215659474206,
+        0.15532062612922726,
+        0.1421894287142904
+      ],
+      "same_sign": [
+        true,
+        true,
+        true
+      ],
+      "maximum_relative_mesh_difference": 1.5997847491178163e-09
+    }
+  ],
+  "archive_sha256": "e8412eba83a27753b77688805880d2a0fb7a0816023dd7de39abe0c29b6d266d",
+  "scope": "Instantaneous source comparison on resolved finite states, not a stationary or relic-abundance model."
+}

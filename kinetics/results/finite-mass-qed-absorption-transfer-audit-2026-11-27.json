@@ -1,0 +1,105 @@
+{
+  "scope": "Positive bare real absorption; no finite virtual interpretation.",
+  "data": [
+    {
+      "grid": "fine",
+      "angle_and_direct_trace": {
+        "direct_azimuth_quadrature_max_relative_defect": 8.43591863031179e-12,
+        "analytic_lower_parent_endpoint_max_cosine_defect": 2.4424906541753444e-15
+      },
+      "null_continuation": [
+        {
+          "cos": -0.97,
+          "zero_transfer_k": 0.0004340437214752771,
+          "lower_limit_relative_defect": 2.4424906541753444e-15
+        },
+        {
+          "cos": -0.5,
+          "zero_transfer_k": 0.0004350005769224234,
+          "lower_limit_relative_defect": 1.7541523789077473e-14
+        },
+        {
+          "cos": 0.2,
+          "zero_transfer_k": 0.00043643352727388884,
+          "lower_limit_relative_defect": 2.2426505097428162e-14
+        },
+        {
+          "cos": 0.7,
+          "zero_transfer_k": 0.0004374628568685065,
+          "lower_limit_relative_defect": 1.2656542480726785e-14
+        },
+        {
+          "cos": 0.999,
+          "zero_transfer_k": 0.00043808071914002263,
+          "lower_limit_relative_defect": 1.1102230246251565e-15
+        }
+      ],
+      "shared_chart": [
+        {
+          "k": 0.00016,
+          "independent_parent_signed_chart_relative_errors": [
+            1.3194774162172962e-08,
+            2.8446654720681863e-07
+          ]
+        },
+        {
+          "k": 0.0002,
+          "independent_parent_signed_chart_relative_errors": [
+            5.390507817892853e-09,
+            1.1677471867255207e-07
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "angle_and_direct_trace": {
+        "direct_azimuth_quadrature_max_relative_defect": 1.1827760992844105e-11,
+        "analytic_lower_parent_endpoint_max_cosine_defect": 2.886579864025407e-15
+      },
+      "null_continuation": [
+        {
+          "cos": -0.97,
+          "zero_transfer_k": 0.0004316364992311881,
+          "lower_limit_relative_defect": 2.4424906541753444e-15
+        },
+        {
+          "cos": -0.5,
+          "zero_transfer_k": 0.0004325933178719553,
+          "lower_limit_relative_defect": 1.7763568394002505e-14
+        },
+        {
+          "cos": 0.2,
+          "zero_transfer_k": 0.00043402625670198194,
+          "lower_limit_relative_defect": 2.2648549702353193e-14
+        },
+        {
+          "cos": 0.7,
+          "zero_transfer_k": 0.00043505561028956915,
+          "lower_limit_relative_defect": 1.2878587085651816e-14
+        },
+        {
+          "cos": 0.999,
+          "zero_transfer_k": 0.0004356734999213484,
+          "lower_limit_relative_defect": 1.3322676295501878e-15
+        }
+      ],
+      "shared_chart": [
+        {
+          "k": 0.00016,
+          "independent_parent_signed_chart_relative_errors": [
+            1.2179351154273377e-06,
+            1.4436907523229792e-05
+          ]
+        },
+        {
+          "k": 0.0002,
+          "independent_parent_signed_chart_relative_errors": [
+            1.6269964775439405e-07,
+            1.9665425164960837e-06
+          ]
+        }
+      ]
+    }
+  ]
+}

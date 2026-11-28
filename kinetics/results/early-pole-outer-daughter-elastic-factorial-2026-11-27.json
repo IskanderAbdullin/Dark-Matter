@@ -1,0 +1,176 @@
+{
+  "cases": {
+    "none": {
+      "native_mean": 0.0786218300671826,
+      "outside_mean": 0.07862135902730882,
+      "mean_outside_effect": -4.7103987377283824e-07,
+      "conservation": [
+        {
+          "terminal_energy_drift": 0.0,
+          "terminal_entropy_closure": -1.7609459355104329e-12,
+          "elastic_energy_budget": null,
+          "largest_step_energy_defect": 0.0,
+          "signed_elastic_energy_defect": 0.0,
+          "nonelastic_energy_remainder": 0.0
+        },
+        {
+          "terminal_energy_drift": -2.220446049250313e-16,
+          "terminal_entropy_closure": -1.6737729366562981e-12,
+          "elastic_energy_budget": null,
+          "largest_step_energy_defect": 0.0,
+          "signed_elastic_energy_defect": 0.0,
+          "nonelastic_energy_remainder": -2.220446049250313e-16
+        }
+      ]
+    },
+    "unlike": {
+      "native_mean": 0.06670942047717898,
+      "outside_mean": 0.06595707495796188,
+      "mean_outside_effect": -0.0007523455192171014,
+      "conservation": [
+        {
+          "terminal_energy_drift": 3.1086244689504383e-15,
+          "terminal_entropy_closure": -1.6584602614833077e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.7763568394002505e-15,
+          "signed_elastic_energy_defect": 1.9984014443252818e-15,
+          "nonelastic_energy_remainder": 1.1102230246251565e-15
+        },
+        {
+          "terminal_energy_drift": 2.886579864025407e-15,
+          "terminal_entropy_closure": -1.5691037878740044e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.5543122344752192e-15,
+          "signed_elastic_energy_defect": 2.220446049250313e-15,
+          "nonelastic_energy_remainder": 6.661338147750939e-16
+        }
+      ]
+    },
+    "same": {
+      "native_mean": 0.06733209069464952,
+      "outside_mean": 0.06719156523879444,
+      "mean_outside_effect": -0.00014052545585507836,
+      "conservation": [
+        {
+          "terminal_energy_drift": 4.6629367034256575e-15,
+          "terminal_entropy_closure": -1.7583532286452597e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.886579864025407e-15,
+          "signed_elastic_energy_defect": 7.771561172376096e-15,
+          "nonelastic_energy_remainder": -3.1086244689504383e-15
+        },
+        {
+          "terminal_energy_drift": 4.6629367034256575e-15,
+          "terminal_entropy_closure": -1.673544983149533e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 3.1086244689504383e-15,
+          "signed_elastic_energy_defect": 3.774758283725532e-15,
+          "nonelastic_energy_remainder": 8.881784197001252e-16
+        }
+      ]
+    },
+    "both": {
+      "native_mean": 0.06694243427293745,
+      "outside_mean": 0.06620059799303246,
+      "mean_outside_effect": -0.0007418362799049838,
+      "conservation": [
+        {
+          "terminal_energy_drift": 2.6645352591003757e-15,
+          "terminal_entropy_closure": -1.6586176876387526e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 1.9984014443252818e-15,
+          "nonelastic_energy_remainder": 6.661338147750939e-16
+        },
+        {
+          "terminal_energy_drift": 2.4424906541753444e-15,
+          "terminal_entropy_closure": -1.5730654626122664e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 2.6645352591003757e-15,
+          "nonelastic_energy_remainder": -2.220446049250313e-16
+        }
+      ]
+    }
+  },
+  "signed_elastic_interaction_in_outside_effect": 0.00015056365529342308,
+  "outside_effect_by_macro": {
+    "none": [
+      0.0,
+      -9.454242944073599e-15,
+      -1.8963997039378455e-14,
+      -2.8515384498106755e-14,
+      -3.8115344214162405e-14,
+      -4.7763876187545407e-14,
+      -5.746098041825576e-14,
+      -6.719971801238955e-14,
+      -7.69870278638507e-14,
+      -8.682637941959115e-14,
+      -9.6710833785707e-14,
+      -1.0664386040915019e-13,
+      -1.1662198984296879e-13,
+      -1.2664869153411473e-13,
+      -1.3672396548258803e-13,
+      -1.4684781168838867e-13,
+      -1.5701329125761276e-13
+    ],
+    "unlike": [
+      0.0,
+      -3.583369712067963e-12,
+      -1.3516160413118428e-11,
+      -2.7873925390053955e-11,
+      -4.473212078526245e-11,
+      -6.280811287728838e-11,
+      -8.134081602717558e-11,
+      -9.989956431533109e-11,
+      -1.1824783860414634e-10,
+      -1.3626041614478446e-10,
+      -1.538754297591982e-10,
+      -1.710669488008687e-10,
+      -1.8782941868522585e-10,
+      -2.0416866114425503e-10,
+      -2.2009672556722037e-10,
+      -2.356288775207105e-10,
+      -2.507818397390338e-10
+    ],
+    "same": [
+      0.0,
+      -1.8678808499927868e-13,
+      -7.085478037627269e-13,
+      -1.540111788100873e-12,
+      -2.6794920449102477e-12,
+      -4.138713677326322e-12,
+      -5.9374519190136255e-12,
+      -8.098636344877619e-12,
+      -1.0645470616132968e-11,
+      -1.3599555509502537e-11,
+      -1.6979771755298856e-11,
+      -2.080168329254839e-11,
+      -2.507734991885613e-11,
+      -2.9815355045981207e-11,
+      -3.502100345831316e-11,
+      -4.0696612746415894e-11,
+      -4.6841818618359454e-11
+    ],
+    "both": [
+      0.0,
+      -3.695498768108152e-12,
+      -1.3848557717244248e-11,
+      -2.8365466225865887e-11,
+      -4.5259799380525934e-11,
+      -6.324896162368532e-11,
+      -8.159341605140646e-11,
+      -9.988716104247786e-11,
+      -1.1791520537762779e-10,
+      -1.3556937170089434e-10,
+      -1.5280076162693668e-10,
+      -1.6959319018572394e-10,
+      -1.8594834699792173e-10,
+      -2.0187745919386657e-10,
+      -2.173966041907338e-10,
+      -2.325240486267255e-10,
+      -2.4727875996832793e-10
+    ]
+  },
+  "scope": "Conditional finite count effects of the same outside daughter preparation at separately held channel controls."
+}

@@ -1,0 +1,181 @@
+{
+  "cases": {
+    "base72": {
+      "redshift_ppm": {
+        "warm_gain": 36.020441495976385,
+        "cold_gain": 35.917497132054166
+      },
+      "active": {
+        "fixed": {
+          "warm_active": true,
+          "cold_gain": 2.8456129360493285e-06,
+          "warm_gain": 6.597579329793382e-12,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008722351824952131,
+          "hard_count_defect": 4.556910404573955e-13,
+          "redshift_trace_integral": 0.0,
+          "collision_work": -1.3118914300432049e-17,
+          "energy_change": 1.8256507416936074e-12,
+          "redshift_subtracted_defect": 1.8256507416936074e-12,
+          "entropy_defect": 1.8214596497756474e-15,
+          "maximum_decay_work": 1.161316052003536e-16,
+          "elastic_splits": 0
+        },
+        "expands": {
+          "warm_active": true,
+          "cold_gain": 2.845715143343798e-06,
+          "warm_gain": 6.597816977513646e-12,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.000872235184208474,
+          "hard_count_defect": 4.552469512475454e-13,
+          "redshift_trace_integral": 9.364953502100536e-09,
+          "collision_work": -4.903063538011611e-18,
+          "energy_change": 9.366778241926e-09,
+          "redshift_subtracted_defect": 1.8247398254635686e-12,
+          "entropy_defect": 6.6405214660392176e-15,
+          "maximum_decay_work": 1.346850148770118e-16,
+          "elastic_splits": 0
+        }
+      },
+      "max_abs_trace_subtracted_energy_defect_4_arms": 1.8260948309034575e-12,
+      "max_abs_entropy_defect_4_arms": 6.6405214660392176e-15
+    },
+    "strict72": {
+      "redshift_ppm": {
+        "warm_gain": 36.02044199757515,
+        "cold_gain": 35.91749800890831
+      },
+      "active": {
+        "fixed": {
+          "warm_active": true,
+          "cold_gain": 2.8456129360280493e-06,
+          "warm_gain": 6.597579329793382e-12,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008722351824952128,
+          "hard_count_defect": 1.1102230246251565e-16,
+          "redshift_trace_integral": 0.0,
+          "collision_work": -1.182115557086687e-17,
+          "energy_change": 1.7763568394002505e-15,
+          "redshift_subtracted_defect": 1.7763568394002505e-15,
+          "entropy_defect": 2.291569711765362e-15,
+          "maximum_decay_work": 1.161316052003536e-16,
+          "elastic_splits": 0,
+          "elastic_energy_budget": 5e-15,
+          "peak_abs_elastic_energy_defect": 1.5543122344752192e-15,
+          "sum_absolute_elastic_energy_defects": 3.1308289294429414e-14
+        },
+        "expands": {
+          "warm_active": true,
+          "cold_gain": 2.8457151433250134e-06,
+          "warm_gain": 6.597816977516955e-12,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008722351842084736,
+          "hard_count_defect": -3.3306690738754696e-16,
+          "redshift_trace_integral": 9.364953502100536e-09,
+          "collision_work": -3.066561952476172e-18,
+          "energy_change": 9.364953479362725e-09,
+          "redshift_subtracted_defect": -2.2737810338737317e-17,
+          "entropy_defect": 5.773159728050814e-15,
+          "maximum_decay_work": 1.346850148770118e-16,
+          "elastic_splits": 0,
+          "elastic_energy_budget": 5e-15,
+          "peak_abs_elastic_energy_defect": 1.3322676295501878e-15,
+          "sum_absolute_elastic_energy_defects": 3.019806626980426e-14
+        }
+      },
+      "max_abs_trace_subtracted_energy_defect_4_arms": 1.7763568394002505e-15,
+      "max_abs_entropy_defect_4_arms": 5.773159728050814e-15
+    },
+    "strict144": {
+      "redshift_ppm": {
+        "warm_gain": 36.020607173892216,
+        "cold_gain": 35.899086954005455
+      },
+      "active": {
+        "fixed": {
+          "warm_active": true,
+          "cold_gain": 2.8457009674391548e-06,
+          "warm_gain": 6.59762997838158e-12,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008722351839708489,
+          "hard_count_defect": 2.220446049250313e-16,
+          "redshift_trace_integral": 0.0,
+          "collision_work": -3.929399071257776e-19,
+          "energy_change": 1.7763568394002505e-15,
+          "redshift_subtracted_defect": 1.7763568394002505e-15,
+          "entropy_defect": 4.9144716074422945e-15,
+          "maximum_decay_work": 1.306870193659715e-16,
+          "elastic_splits": 0,
+          "elastic_energy_budget": 5e-15,
+          "peak_abs_elastic_energy_defect": 1.3322676295501878e-15,
+          "sum_absolute_elastic_energy_defects": 5.595524044110789e-14
+        },
+        "expands": {
+          "warm_active": true,
+          "cold_gain": 2.8458031255056297e-06,
+          "warm_gain": 6.5978676290193105e-12,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008722351856832844,
+          "hard_count_defect": 7.771561172376096e-16,
+          "redshift_trace_integral": 9.364992546322831e-09,
+          "collision_work": -6.725989107333455e-18,
+          "energy_change": 9.36499700010529e-09,
+          "redshift_subtracted_defect": 4.45378245930454e-15,
+          "entropy_defect": 4.926614671774132e-16,
+          "maximum_decay_work": 1.210376200308505e-16,
+          "elastic_splits": 0,
+          "elastic_energy_budget": 5e-15,
+          "peak_abs_elastic_energy_defect": 1.3322676295501878e-15,
+          "sum_absolute_elastic_energy_defects": 6.350475700855895e-14
+        }
+      },
+      "max_abs_trace_subtracted_energy_defect_4_arms": 4.45378245930454e-15,
+      "max_abs_entropy_defect_4_arms": 6.689093723366568e-15
+    }
+  },
+  "change_budget_at_72_ppm": {
+    "fixed": {
+      "cold_gain": -7.477907182362742e-06,
+      "warm_gain": 0.0
+    },
+    "expands": {
+      "cold_gain": -6.601053037513793e-06,
+      "warm_gain": 5.013767179207207e-07
+    }
+  },
+  "change_width_at_fixed_budget_ppm": {
+    "fixed": {
+      "cold_gain": 30.935834593348588,
+      "warm_gain": 7.676844137272099
+    },
+    "expands": {
+      "cold_gain": 30.91742362992811,
+      "warm_gain": 7.67700930892623
+    }
+  },
+  "scope": "Finite profile differences, not a two-axis interaction or convergence bound."
+}

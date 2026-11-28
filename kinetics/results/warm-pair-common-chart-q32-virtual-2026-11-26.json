@@ -1,0 +1,49 @@
+{
+  "snapshot_sha256": "a30af2d3112aab05be0af640aec597ab2fedb277ce01170fc550444cd47ea0c3",
+  "cases": [
+    {
+      "virtual_panels": 2,
+      "maximum_final_fermion_p": 0.4305065882513171,
+      "maximum_material_p": 0.22548545341145468,
+      "reverse_rate_number_energy": [
+        1.6308179177946692e-34,
+        1.1427420803827783e-35
+      ],
+      "fraction_inverse_light_products_exterior": 1.0274908412902783e-11,
+      "ledger": 1.0064863019650172e-15
+    },
+    {
+      "virtual_panels": 4,
+      "maximum_final_fermion_p": 0.4305065882513171,
+      "maximum_material_p": 0.22548545341145468,
+      "reverse_rate_number_energy": [
+        1.6308179177999422e-34,
+        1.1427420803957413e-35
+      ],
+      "fraction_inverse_light_products_exterior": 1.1891573876780644e-11,
+      "ledger": 9.448646916368632e-16
+    },
+    {
+      "virtual_panels": 8,
+      "maximum_final_fermion_p": 0.4305065882513171,
+      "maximum_material_p": 0.22548545341145468,
+      "reverse_rate_number_energy": [
+        1.6308179178002317e-34,
+        1.1427420803964181e-35
+      ],
+      "fraction_inverse_light_products_exterior": 1.1980391463664395e-11,
+      "ledger": 8.832430813125361e-16
+    }
+  ],
+  "four_to_eight_virtual_inverse_grid_L1": [
+    [
+      1.8768827075746667e-13,
+      6.019921272655986e-13
+    ],
+    [
+      1.7776761356523517e-13,
+      1.1441405075005572e-12
+    ]
+  ],
+  "scope": "Only the empty final fermion virtual radial mesh is varied; represented input phase space is fixed."
+}

@@ -1,0 +1,74 @@
+{
+  "x": 0.01,
+  "starts": 0.0075,
+  "steps": [
+    512,
+    1024
+  ],
+  "measurement_mass": 8.535844540506035e-05,
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "charts": [
+    {
+      "order": 6,
+      "source_report_sha256": "ee73d5bb9b6c833cdc282e3f2faf5c1816b1b9d916c9bf3ee3db72a287545db4",
+      "coarse_replay_sha256": "dbe95a0f87b3d827fb40b70df121d68853997f2339140a2611356f61a471ce5b",
+      "coarse_state_sha256": "fb7e598f565ed3aced834da50eca1977959d7ce5d60da5dec211716372259cbf",
+      "fine_state_sha256": "b127c38593a03564acf481824825e8412a2127491040e2da135f4cfd44ce777f",
+      "maximum_trace_abs_difference": 0.0,
+      "values": [
+        [
+          1.6271849985377605e-05,
+          1.265266496503114e-09,
+          1.2626609308925881e-09
+        ],
+        [
+          1.62718520231156e-05,
+          1.2652665708077875e-09,
+          1.2626610048862075e-09
+        ]
+      ]
+    },
+    {
+      "order": 7,
+      "source_report_sha256": "557d25cf5c119f813bee74c4b031e99f519510153c08d0ecccbcbbf4a5416ea2",
+      "coarse_replay_sha256": "dd7b71a796b5a863d491073c427678793f917ba078f4cb291d10b96a49fefead",
+      "coarse_state_sha256": "53f576f32396a748581b619719dabcf5ee1a94d9fe43aebceed2bfeb160ebfbd",
+      "fine_state_sha256": "f61960ad7aaaaac5bfe6946aa47ba5f357eea7ed24208e268c7547cbd20ac7f6",
+      "maximum_trace_abs_difference": 0.0,
+      "values": [
+        [
+          1.6271850129428348e-05,
+          1.2660140190061807e-09,
+          1.263408453395692e-09
+        ],
+        [
+          1.6271852167166348e-05,
+          1.2660140933530046e-09,
+          1.263408527431462e-09
+        ]
+      ]
+    }
+  ],
+  "G7_over_G6_minus_one": [
+    [
+      8.852757638067033e-09,
+      0.0005908024160385938,
+      0.0005920215671639806
+    ],
+    [
+      8.852756749888613e-09,
+      0.0005908024146563662,
+      0.0005920215658532513
+    ]
+  ],
+  "fine_minus_coarse_contrast": [
+    -8.881784197001252e-16,
+    -1.3822276656583199e-12,
+    -1.3107293028724598e-12
+  ],
+  "scope": "Conditional replay of the first continuation at each order, retaining its own startup state. No startup or full-history clock bound."
+}

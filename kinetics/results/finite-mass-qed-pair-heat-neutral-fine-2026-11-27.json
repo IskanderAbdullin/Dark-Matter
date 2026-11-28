@@ -1,0 +1,27 @@
+{
+  "scope": "Only the IR-finite charged-pair crossing, frozen charges and scalar mode with daughter-shaped anti proxy, solely photon T varied.",
+  "data": [
+    {
+      "grid": "fine",
+      "meshes": [
+        {
+          "T_number_neutral": 0.49937297863436586,
+          "T_photon_heat_neutral": 0.5250755831390409,
+          "photon_heat_divided_by_held_scalar_occupation_at_T_number_neutral": 0.15859248027545833,
+          "scalar_net_divided_by_held_scalar_occupation_at_T_heat_neutral": -0.06136614095027755,
+          "charge_crossed_inverse_heat_tail_bound_unscaled": 4.77980386036906e-22,
+          "parent_scalar_absorption_gain_heat_tail_bound_unscaled": 3.383304213924832e-08
+        },
+        {
+          "T_number_neutral": 0.49937297864994873,
+          "T_photon_heat_neutral": 0.5250755831512205,
+          "photon_heat_divided_by_held_scalar_occupation_at_T_number_neutral": 0.15859248026713768,
+          "scalar_net_divided_by_held_scalar_occupation_at_T_heat_neutral": -0.061366140945569234,
+          "charge_crossed_inverse_heat_tail_bound_unscaled": 4.77980386036906e-22,
+          "parent_scalar_absorption_gain_heat_tail_bound_unscaled": 3.383304213924832e-08
+        }
+      ],
+      "root_absolute_mesh_drift": 1.5582868329033772e-11
+    }
+  ]
+}

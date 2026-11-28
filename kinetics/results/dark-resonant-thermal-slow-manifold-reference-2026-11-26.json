@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "TR": 0.02,
+      "visible_start": 0.018000000000000002,
+      "visible_end": 0.013000000000000001,
+      "initial_fitted_temperatures_chi_phi": [
+        0.02320543954341977,
+        0.020743286019655232
+      ],
+      "common_after_initial_energy_sharing": 0.023040828995618,
+      "terminal_common": 0.01601968415462166,
+      "cumulative_opposite_heat_chi_phi": [
+        -0.004030976405583878,
+        0.004030976393822881
+      ],
+      "relative_total_energy_residual": 1.1760996690424186e-11,
+      "conductance_checks": [
+        {
+          "T_visible": 0.018000000000000002,
+          "T_common": 0.023040828995618,
+          "conductance": 3.7574123895342428e-28,
+          "relative_derivative_check": 4.338085446420337e-12,
+          "thermal_mode_per_H": 3071149.938413223
+        },
+        {
+          "T_visible": 0.013000000000000001,
+          "T_common": 0.01601968415462166,
+          "conductance": 5.803052021172153e-29,
+          "relative_derivative_check": 1.918620817775718e-11,
+          "thermal_mode_per_H": 2517032.631694816
+        }
+      ]
+    },
+    {
+      "TR": 0.05,
+      "visible_start": 0.045000000000000005,
+      "visible_end": 0.0325,
+      "initial_fitted_temperatures_chi_phi": [
+        0.05059942622662167,
+        0.033146074190853574
+      ],
+      "common_after_initial_energy_sharing": 0.045122910880492265,
+      "terminal_common": 0.03130411985133312,
+      "cumulative_opposite_heat_chi_phi": [
+        -0.07776851071848578,
+        0.07776851071837355
+      ],
+      "relative_total_energy_residual": 1.1222967000179551e-13,
+      "conductance_checks": [
+        {
+          "T_visible": 0.045000000000000005,
+          "T_common": 0.045122910880492265,
+          "conductance": 2.5497318238168145e-22,
+          "relative_derivative_check": 2.7953417358617116e-11,
+          "thermal_mode_per_H": 94230351.73995076
+        },
+        {
+          "T_visible": 0.0325,
+          "T_common": 0.03130411985133312,
+          "conductance": 7.329376327553915e-23,
+          "relative_derivative_check": 1.8978596472152276e-11,
+          "thermal_mode_per_H": 160173769.516469
+        }
+      ]
+    },
+    {
+      "TR": 0.1,
+      "visible_start": 0.09000000000000001,
+      "visible_end": 0.065,
+      "initial_fitted_temperatures_chi_phi": [
+        0.09383649043574166,
+        0.059812653283372215
+      ],
+      "common_after_initial_energy_sharing": 0.0825220445073173,
+      "terminal_common": 0.057722544150811614,
+      "cumulative_opposite_heat_chi_phi": [
+        -0.08951179343232235,
+        0.08951179343231935
+      ],
+      "relative_total_energy_residual": 2.9976021664879227e-15,
+      "conductance_checks": [
+        {
+          "T_visible": 0.09000000000000001,
+          "T_common": 0.0825220445073173,
+          "conductance": 2.3701177289042904e-19,
+          "relative_derivative_check": 6.5391025927397095e-12,
+          "thermal_mode_per_H": 243239186.38911423
+        },
+        {
+          "T_visible": 0.065,
+          "T_common": 0.057722544150811614,
+          "conductance": 9.378242129899345e-20,
+          "relative_derivative_check": 2.8875346558265846e-11,
+          "thermal_mode_per_H": 560070565.9313285
+        }
+      ]
+    }
+  ],
+  "scope": "Strong-resonant-thermal-exchange moment control, not a kinetic spectrum."
+}

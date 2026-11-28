@@ -1,0 +1,237 @@
+{
+  "scope": "Collisionless isotropic transverse spectral density, no longitudinal conversion or nonthermal photon statistical law.",
+  "data": [
+    {
+      "grid": "fine",
+      "positive_radial_identity_max_defect_in_Debye_units": 8.91724940834245e-17,
+      "rows": [
+        {
+          "k": 4e-05,
+          "pole_weight": 0.9998846109635885,
+          "landau_cut_weight": 0.0001153890364115763,
+          "canonical_weight_defect": 0.0,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.0001153890364115763
+        },
+        {
+          "k": 0.0002,
+          "pole_weight": 0.9971833764104848,
+          "landau_cut_weight": 0.0028166235895145716,
+          "canonical_weight_defect": -5.551115123125783e-16,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.0028166235895145716
+        },
+        {
+          "k": 0.0004,
+          "pole_weight": 0.9895106212689834,
+          "landau_cut_weight": 0.010489378731013695,
+          "canonical_weight_defect": -2.886579864025407e-15,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.010489378731013695
+        },
+        {
+          "k": 0.0008,
+          "pole_weight": 0.9672375006157627,
+          "landau_cut_weight": 0.03276249938422629,
+          "canonical_weight_defect": -1.099120794378905e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.03276249938422629
+        },
+        {
+          "k": 0.00128,
+          "pole_weight": 0.9431963017751636,
+          "landau_cut_weight": 0.05680369822481113,
+          "canonical_weight_defect": -2.531308496145357e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.04025251706251948
+        },
+        {
+          "k": 0.00256,
+          "pole_weight": 0.9206691154791096,
+          "landau_cut_weight": 0.07933088452082888,
+          "canonical_weight_defect": -6.150635556423367e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.0071394706504495226
+        },
+        {
+          "k": 0.005,
+          "pole_weight": 0.9344882567520539,
+          "landau_cut_weight": 0.06551174324787537,
+          "canonical_weight_defect": -7.072120666862247e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.0002953312037939506
+        },
+        {
+          "k": 0.01,
+          "pole_weight": 0.963791695330036,
+          "landau_cut_weight": 0.036208304669933536,
+          "canonical_weight_defect": -3.0531133177191805e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 9.218458273187877e-06
+        },
+        {
+          "k": 0.02,
+          "pole_weight": 0.9847185236834961,
+          "landau_cut_weight": 0.015281476316498038,
+          "canonical_weight_defect": -5.88418203051333e-15,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 2.8730011997993474e-07
+        }
+      ],
+      "below_scalar_energy_positive_cut_with_charged_support": [
+        {
+          "k": 0.0008,
+          "omega": 0.0002,
+          "cosine": 0.0,
+          "minimum_parent_energy": 0.8468229141647297,
+          "nonzero_parent_and_daughter_fixture_energy": 0.855291143306377,
+          "occupations": [
+            0.22195491489745905,
+            0.07742746469050818
+          ],
+          "minus_retarded_transverse_Im": 1.5293050617438916e-06
+        },
+        {
+          "k": 0.00128,
+          "omega": 0.00064,
+          "cosine": -0.5,
+          "minimum_parent_energy": 0.8233514403063603,
+          "nonzero_parent_and_daughter_fixture_energy": 0.831584954709424,
+          "occupations": [
+            0.24484577456068948,
+            0.06927446533890218
+          ],
+          "minus_retarded_transverse_Im": 2.4463964299995663e-06
+        },
+        {
+          "k": 0.00256,
+          "omega": 0.00064,
+          "cosine": 0.5,
+          "minimum_parent_energy": 0.44781711072762354,
+          "nonzero_parent_and_daughter_fixture_energy": 0.45229528183489975,
+          "occupations": [
+            0.39207642791974323,
+            2.154607901732523e-06
+          ],
+          "minus_retarded_transverse_Im": 1.5293050617438916e-06
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "positive_radial_identity_max_defect_in_Debye_units": 2.5435844146433284e-17,
+      "rows": [
+        {
+          "k": 4e-05,
+          "pole_weight": 0.9998848010515434,
+          "landau_cut_weight": 0.00011519894845650354,
+          "canonical_weight_defect": -1.1102230246251565e-16,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.00011519894845650354
+        },
+        {
+          "k": 0.0002,
+          "pole_weight": 0.9971879068541682,
+          "landau_cut_weight": 0.002812093145830988,
+          "canonical_weight_defect": -7.771561172376096e-16,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.002812093145830988
+        },
+        {
+          "k": 0.0004,
+          "pole_weight": 0.9895263237031243,
+          "landau_cut_weight": 0.010473676296872897,
+          "canonical_weight_defect": -2.7755575615628914e-15,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.010473676296872897
+        },
+        {
+          "k": 0.0008,
+          "pole_weight": 0.9672755216518178,
+          "landau_cut_weight": 0.03272447834817091,
+          "canonical_weight_defect": -1.1213252548714081e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.03272447834817091
+        },
+        {
+          "k": 0.00128,
+          "pole_weight": 0.9432388632547801,
+          "landau_cut_weight": 0.056761136745194965,
+          "canonical_weight_defect": -2.4868995751603507e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.039944871576699
+        },
+        {
+          "k": 0.00256,
+          "pole_weight": 0.920673122940365,
+          "landau_cut_weight": 0.07932687705957452,
+          "canonical_weight_defect": -6.050715484207103e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.007041442522029773
+        },
+        {
+          "k": 0.005,
+          "pole_weight": 0.934455565090773,
+          "landau_cut_weight": 0.06554443490915933,
+          "canonical_weight_defect": -6.772360450213455e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 0.000290923664025757
+        },
+        {
+          "k": 0.01,
+          "pole_weight": 0.9637592072314041,
+          "landau_cut_weight": 0.03624079276856896,
+          "canonical_weight_defect": -2.6978419498391304e-14,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 9.081210094727948e-06
+        },
+        {
+          "k": 0.02,
+          "pole_weight": 0.9847008807243474,
+          "landau_cut_weight": 0.015299119275648258,
+          "canonical_weight_defect": -4.3298697960381105e-15,
+          "mesh_cut_abs_change": 0.0,
+          "cut_weight_below_scalar_energy": 2.8303147059338835e-07
+        }
+      ],
+      "below_scalar_energy_positive_cut_with_charged_support": [
+        {
+          "k": 0.0008,
+          "omega": 0.0002,
+          "cosine": 0.0,
+          "minimum_parent_energy": 0.849596711914396,
+          "nonzero_parent_and_daughter_fixture_energy": 0.85809267903354,
+          "occupations": [
+            0.22393418280550967,
+            0.07389420079340749
+          ],
+          "minus_retarded_transverse_Im": 1.5318320181695641e-06
+        },
+        {
+          "k": 0.00128,
+          "omega": 0.00064,
+          "cosine": -0.5,
+          "minimum_parent_energy": 0.8259729591732531,
+          "nonzero_parent_and_daughter_fixture_energy": 0.8342326887649856,
+          "occupations": [
+            0.2373711720811294,
+            0.07389420079340749
+          ],
+          "minus_retarded_transverse_Im": 2.4504395598761708e-06
+        },
+        {
+          "k": 0.00256,
+          "omega": 0.00064,
+          "cosine": 0.5,
+          "minimum_parent_energy": 0.44858636243699035,
+          "nonzero_parent_and_daughter_fixture_energy": 0.4530722260613603,
+          "occupations": [
+            0.38595111304861457,
+            2.1309803505360106e-06
+          ],
+          "minus_retarded_transverse_Im": 1.5318320181695641e-06
+        }
+      ]
+    }
+  ]
+}

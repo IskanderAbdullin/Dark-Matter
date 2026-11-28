@@ -1,0 +1,43 @@
+{
+  "scope": "After the solver has populated output arrays, optionally skip writing perturbation tables. This does not bypass integrating/storing exact modes or change memory needs for those arrays.",
+  "original_source_sha256": "5475e501d0c60f772e02fa9919dbf4db69e09e32cda3d19d403990f5873ed9d2",
+  "patched_source_sha256": "7f043dae7aaf65873135f11c368a10f993a2d2f9f20d1a4dfae10e64507b9834",
+  "version": "CLASS 3.3.4",
+  "k_h_per_Mpc": [
+    0.3,
+    2.0
+  ],
+  "z": [
+    5,
+    20
+  ],
+  "matched_total_and_cb_power_sha256": {
+    "case_00_z1_pk_cb.dat": "53ad00f55d9764f7ed4adef9b4114ecdd95b4029ddc21fb28e31f7a0707ac714",
+    "case_00_z2_pk_cb.dat": "35c9e964a61cccf002cd6bca26e85bfa9e90ba44cfe10220fa046a23b59672e4",
+    "case_00_z2_pk.dat": "fc6d9cd7fc3b75f6e8b45a60020b381fc31c27e18c7f667c7dac44f9fdb7f572",
+    "case_00_z1_pk.dat": "a6f595ebccb87a3c3ab9f3739be6005b0172fbe74a5e16b78563592e0426e1ed"
+  },
+  "skipped_perturbation_table_bytes": 26454999,
+  "seven_mode_control": {
+    "k_h_per_Mpc": [
+      0.3,
+      1,
+      2,
+      3,
+      5,
+      8,
+      10
+    ],
+    "z": [
+      5,
+      20
+    ],
+    "matched_power_tables_sha256": {
+      "direct100_absolute_00_z1_pk.dat": "ba6f2c10e3b0469212e92f3cbfc21615413148331defe2f71fa3f5d11d00e4cf",
+      "direct100_absolute_00_z1_pk_cb.dat": "9ca148292e335f893471ca7db81ea1051a9eeaec13f89304d9f2028789e4bef9",
+      "direct100_absolute_00_z2_pk.dat": "8e194894bf510b1330924e7f79244f3c3fd68c9424fd2ea41b17bddeace462da",
+      "direct100_absolute_00_z2_pk_cb.dat": "75c21d75584821840b921d6b0c4d581afe4aff434d41b5dc99febad29eb43a56"
+    },
+    "omitted_perturbation_table_bytes": 319300255
+  }
+}

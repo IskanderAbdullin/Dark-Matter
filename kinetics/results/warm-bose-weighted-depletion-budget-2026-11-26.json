@@ -1,0 +1,128 @@
+{
+  "scope": "Necessary weighted Bose losses in the specified vacuum charged-lepton network. Caps outside and inside time windows are conditional, not model-derived. Windows give alternatives, not simultaneous budgets.",
+  "target": 0.12,
+  "cases": [
+    {
+      "q": 16,
+      "min_weighted_bose_enhancement_relative_to_I_upper": 34.74496963692836,
+      "windows": [
+        {
+          "relative_b": [
+            1.0,
+            1.12
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.10704035145384401,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 16.734226324890674,
+            "1.0": 16.065399101756153
+          }
+        },
+        {
+          "relative_b": [
+            1.0,
+            1.5
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.3329743201730631,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 9.095711029867182,
+            "1.0": 8.815006706994211
+          }
+        },
+        {
+          "relative_b": [
+            1.0,
+            3.0
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.6658947966902714,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 6.181278604546369,
+            "1.0": 6.083142760511864
+          }
+        },
+        {
+          "relative_b": [
+            1.5,
+            3.0
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.3329202164951254,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 9.096521597870879,
+            "1.0": 8.815771092495934
+          }
+        },
+        {
+          "relative_b": [
+            3.0,
+            10.0
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.2329396068303235,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 11.048826647182814,
+            "1.0": 10.661340837954034
+          }
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "min_weighted_bose_enhancement_relative_to_I_upper": 34.7489264000452,
+      "windows": [
+        {
+          "relative_b": [
+            1.0,
+            1.12
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.10704035145384398,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 16.735268492380648,
+            "1.0": 16.066482111337535
+          }
+        },
+        {
+          "relative_b": [
+            1.0,
+            1.5
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.33297432017306294,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 9.096299534308958,
+            "1.0": 8.815612041347537
+          }
+        },
+        {
+          "relative_b": [
+            1.0,
+            3.0
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.6658947966902707,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 6.18169230895449,
+            "1.0": 6.0835621963932995
+          }
+        },
+        {
+          "relative_b": [
+            1.5,
+            3.0
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.33292021649512493,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 9.097110150697985,
+            "1.0": 8.816376478076519
+          }
+        },
+        {
+          "relative_b": [
+            3.0,
+            10.0
+          ],
+          "weighted_dose_share_using_upper_integrals": 0.2329396068303236,
+          "necessary_burst_peak_allowed_at_reference_total": {
+            "0.1": 11.049531517557487,
+            "1.0": 10.662069128490153
+          }
+        }
+      ]
+    }
+  ]
+}

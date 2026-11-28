@@ -1,0 +1,74 @@
+{
+  "scope": "Positive moment bound for nonoverlap 0.30\u2013sqrt(.10)GeV, effective massive two-charged-pion vacuum kernel with bounded Bose weights. The experimental moment cap is a conditional input. No data assumed under 0.30 GeV or other hadronic sources resolved.",
+  "source": "https://arxiv.org/html/2611.04596v1#S0.T1",
+  "gap_s_GeV2": [
+    0.09,
+    0.1
+  ],
+  "prior_remaining_after_measured_bosonic_band_GeV4": 1.1070525182235668e-09,
+  "prior_scalar_Omega_upper": 0.02823471437979361,
+  "folds": [
+    {
+      "s_cells": 40,
+      "temperature_cells": 671,
+      "Q_over_positive_moment_upper_GeV4": 0.018804373916082365,
+      "controlling_s_interval_GeV2": [
+        0.09975,
+        0.1
+      ],
+      "max_gauss_over_kernel_lower": 1.0066376856229462,
+      "normalization_vs_previous_hadronic_kernel_max_defect": 7.771561172376096e-16,
+      "max_cold_share": 2.0243457337051906e-40
+    },
+    {
+      "s_cells": 90,
+      "temperature_cells": 1321,
+      "Q_over_positive_moment_upper_GeV4": 0.01821832681509297,
+      "controlling_s_interval_GeV2": [
+        0.09988888888888889,
+        0.1
+      ],
+      "max_gauss_over_kernel_lower": 1.0066376856229464,
+      "normalization_vs_previous_hadronic_kernel_max_defect": 6.661338147750939e-16,
+      "max_cold_share": 2.077868047741465e-40
+    }
+  ],
+  "moment_variants": [
+    {
+      "data": "BABAR 2026",
+      "linear_error_multiple": 1,
+      "input_whole_dispersion_moment": 6.380000000000001e-09,
+      "gap_energy_upper_GeV4": 1.1623292508029315e-10,
+      "share_of_available_extra_energy": 0.10499314455903723,
+      "remaining_budget_GeV4": 9.908195931432736e-10,
+      "scalar_Omega_upper_with_this_gap_if_no_else": 0.03156985160487505
+    },
+    {
+      "data": "BABAR 2026",
+      "linear_error_multiple": 2,
+      "input_whole_dispersion_moment": 6.690000000000001e-09,
+      "gap_energy_upper_GeV4": 1.2188060639297197e-10,
+      "share_of_available_extra_energy": 0.11009469233541679,
+      "remaining_budget_GeV4": 9.851719118305948e-10,
+      "scalar_Omega_upper_with_this_gap_if_no_else": 0.031731903727096875
+    },
+    {
+      "data": "BABAR combination",
+      "linear_error_multiple": 1,
+      "input_whole_dispersion_moment": 5.984000000000001e-09,
+      "gap_energy_upper_GeV4": 1.0901846766151635e-10,
+      "share_of_available_extra_energy": 0.09847632868985562,
+      "remaining_budget_GeV4": 9.980340505620506e-10,
+      "scalar_Omega_upper_with_this_gap_if_no_else": 0.031362843087456196
+    },
+    {
+      "data": "BABAR combination",
+      "linear_error_multiple": 2,
+      "input_whole_dispersion_moment": 6.148000000000001e-09,
+      "gap_energy_upper_GeV4": 1.1200627325919159e-10,
+      "share_of_available_extra_energy": 0.1011752120296177,
+      "remaining_budget_GeV4": 9.950462449643753e-10,
+      "scalar_Omega_upper_with_this_gap_if_no_else": 0.031448573887599356
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "x": 0.05,
+  "k": 0.0015,
+  "clock_order": [
+    "coarse",
+    "fine"
+  ],
+  "field_order": [
+    "forward_number",
+    "inverse_number",
+    "forward_excess"
+  ],
+  "results": [
+    {
+      "scalar_subcells": 2,
+      "paired_mesh_maximum_relative_defect": 8.182343691487404e-14,
+      "matrix_kernel_by_population": [
+        [
+          [
+            6.452036996757394e-07,
+            1.88045611961299e-15,
+            5.1784566521095694e-15
+          ],
+          [
+            6.452240439491298e-07,
+            1.8805153789066073e-15,
+            5.178616774684979e-15
+          ]
+        ],
+        [
+          [
+            6.470086039163777e-07,
+            1.8861789441003957e-15,
+            5.192845538370593e-15
+          ],
+          [
+            6.470290051255009e-07,
+            1.886238383837565e-15,
+            5.193006106254998e-15
+          ]
+        ]
+      ],
+      "increasing_fine_minus_coarse_total_log": [
+        0.0028250432866148145,
+        0.003070208513769046,
+        0.0028056724550040713
+      ],
+      "all_bare_kernel_log": [
+        0.0027935122138993407,
+        0.0030386957289181282,
+        0.0027747519885608085
+      ],
+      "explicit_population_log": [
+        3.153107271547384e-05,
+        3.1512784850917797e-05,
+        3.092046644326274e-05
+      ],
+      "explicit_population_share_of_total_log": [
+        0.011161270648442634,
+        0.010264053633357985,
+        0.011020697155191578
+      ],
+      "mixed_kernel_population_log_interaction": [
+        3.7561065369118296e-11,
+        5.233857791608898e-11,
+        7.540279511886183e-11
+      ]
+    },
+    {
+      "scalar_subcells": 4,
+      "paired_mesh_maximum_relative_defect": 2.332578574737454e-13,
+      "matrix_kernel_by_population": [
+        [
+          [
+            6.430629946532513e-07,
+            1.873149169487737e-15,
+            5.065315544799907e-15
+          ],
+          [
+            6.430833589046619e-07,
+            1.8732084424842723e-15,
+            5.065471997142016e-15
+          ]
+        ],
+        [
+          [
+            6.448722365414894e-07,
+            1.8788833204774116e-15,
+            5.0794753552285885e-15
+          ],
+          [
+            6.448926581147803e-07,
+            1.8789427750528415e-15,
+            5.079632245297352e-15
+          ]
+        ]
+      ],
+      "increasing_fine_minus_coarse_total_log": [
+        0.002841192068077092,
+        0.0030882026641165794,
+        0.0028224314797284933
+      ],
+      "all_bare_kernel_log": [
+        0.0028095249640998077,
+        0.003056559629669664,
+        0.002791544931699974
+      ],
+      "explicit_population_log": [
+        3.166710397728423e-05,
+        3.164303444691541e-05,
+        3.08865480285192e-05
+      ],
+      "explicit_population_share_of_total_log": [
+        0.011145710398493547,
+        0.010246424178889603,
+        0.010943241049554324
+      ],
+      "mixed_kernel_population_log_interaction": [
+        4.2739145555970026e-11,
+        6.933476015547058e-11,
+        7.337774832194555e-11
+      ]
+    }
+  ],
+  "scope": "Exact explicit scalar factor replacement on independently held kernels. Kernel bundles optical and charged state changes; no dynamical causality or extrapolation."
+}

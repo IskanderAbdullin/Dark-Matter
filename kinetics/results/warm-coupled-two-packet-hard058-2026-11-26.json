@@ -1,0 +1,95 @@
+{
+  "hard_GeV": 0.58,
+  "matched_visible_T_GeV": 0.010380161500367366,
+  "expansion_factor": 1.001,
+  "inclusive_total_count_closure": -6.439293542825908e-15,
+  "segment_ledgers": [
+    {
+      "T_visible_GeV": 0.01038533431387967,
+      "energy_ledger": 9.437980672213087e-16,
+      "count_ledger": -3.1086244689504383e-15,
+      "accepted_microsteps": 5,
+      "rejected_microsteps": 9
+    },
+    {
+      "T_visible_GeV": 0.010380161500367366,
+      "energy_ledger": 1.7020557580888333e-15,
+      "count_ledger": -2.4424906541753444e-15,
+      "accepted_microsteps": 1,
+      "rejected_microsteps": 0
+    }
+  ],
+  "terminal_over_initial": [
+    5.69235895399634e-12,
+    3.327037098543482e-12
+  ],
+  "terminal_over_vacuum": [
+    0.9999836096492578,
+    0.9999835984962315
+  ],
+  "results": {
+    "scope": "Known stored exterior only; two distinguished packets preserve each birth mean/count but one is placed in a hard shell before moment reconstruction. This is a stress realization, not a statistical or dynamical upper bound.",
+    "seed_ledger": {
+      "cohorts": 132,
+      "anchor_hard_p_GeV": 0.58,
+      "relative_total_energy_above_jensen": 0.0,
+      "cohort_energy_between_Jensen_realization_and_upper": [
+        1.3156356500964279e-22,
+        1.315636646599281e-22,
+        1.3156383613293079e-22
+      ],
+      "per_species": [
+        {
+          "added_count": 3.20465876278008e-22,
+          "hard_packet_count": 8.673981687995928e-24,
+          "reconstruction_error": 1.0480505352461478e-13
+        },
+        {
+          "added_count": 1.01609341718887e-22,
+          "hard_packet_count": 2.7082917979369288e-24,
+          "reconstruction_error": 6.494804694057166e-14
+        }
+      ]
+    },
+    "initial_high_inverse_and_tagged_energy_rate": [
+      [
+        6.639121181251326e-21,
+        6.639121181251324e-21
+      ],
+      [
+        6.639121181251313e-21,
+        6.639121181251313e-21
+      ]
+    ],
+    "terminal_high_inverse_and_tagged_energy_rate": [
+      [
+        3.7792260902762464e-32,
+        2.208860247174879e-32
+      ],
+      [
+        3.7792260902762666e-32,
+        2.2088602471748942e-32
+      ]
+    ],
+    "vacuum_terminal_high_inverse_and_tagged_energy_rate": [
+      [
+        3.779288034132681e-32,
+        2.208896476398761e-32
+      ],
+      [
+        3.7792880341327017e-32,
+        2.208896476398776e-32
+      ]
+    ],
+    "retained_shared_count_L1": [
+      1.322209566288277e-05,
+      4.443144293352417e-06
+    ],
+    "retained_shared_energy_L1": [
+      2.480156813157159e-06,
+      2.931413208949727e-06
+    ],
+    "terminal_q64_sha256": "bb4339f48023836f6728e31dbc7662d0acd91b61c0323c4cbcdd394844a01330",
+    "vacuum_q64_sha256": "91b58845387b97fc8bf36f4879ef4a1d37819f1c41fb8fd9f25c289a0c67cf11"
+  }
+}

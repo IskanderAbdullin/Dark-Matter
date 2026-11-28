@@ -1,0 +1,148 @@
+{
+  "scope": "Upper comparison for prompt gain of ln(1+f_s) with a specified finite parent cap and integrated eligible-heavy energy. Other terms, redshift and actual time-dependent energy are excluded. Frozen energy benchmarks are not verified as time-dependent bounds.",
+  "cases": [
+    {
+      "common_daughter_cap_GeV": 1.05,
+      "implied_parent_energy_cap_GeV": 2.1001904589168614,
+      "refinement": [
+        {
+          "cold_reach_floor_GeV": 0.0011434019367468104,
+          "coefficient_over_rest_width_GeV_minus4": 0.0,
+          "panels": 0
+        },
+        {
+          "cold_reach_floor_GeV": 0.0011434019367468104,
+          "coefficient_over_rest_width_GeV_minus4": 0.0,
+          "panels": 0
+        },
+        {
+          "cold_reach_floor_GeV": 0.0011434019367468104,
+          "coefficient_over_rest_width_GeV_minus4": 0.0,
+          "panels": 0
+        }
+      ],
+      "max_exponent_per_H_time_if_hard_energy_equals_anchor_dark_energy": 0.0,
+      "required_integrated_hard_energy_fraction_times_Hdt_for_one_percent_Bose_factor": null,
+      "illustrative_not_verified_through_time_benchmarks": []
+    },
+    {
+      "common_daughter_cap_GeV": 2.0,
+      "implied_parent_energy_cap_GeV": 4.000099997500127,
+      "refinement": [
+        {
+          "cold_reach_floor_GeV": 0.0006000787699426093,
+          "coefficient_over_rest_width_GeV_minus4": 111882.01831695912,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 24
+        },
+        {
+          "cold_reach_floor_GeV": 0.0006000787699426093,
+          "coefficient_over_rest_width_GeV_minus4": 110431.54843904181,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 96
+        },
+        {
+          "cold_reach_floor_GeV": 0.0006000787699426093,
+          "coefficient_over_rest_width_GeV_minus4": 110071.87871840053,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 384
+        }
+      ],
+      "max_exponent_per_H_time_if_hard_energy_equals_anchor_dark_energy": 14817206.675106127,
+      "required_integrated_hard_energy_fraction_times_Hdt_for_one_percent_Bose_factor": 6.715389122489118e-10,
+      "illustrative_not_verified_through_time_benchmarks": []
+    },
+    {
+      "common_daughter_cap_GeV": 3.5,
+      "implied_parent_energy_cap_GeV": 7.000057142390679,
+      "refinement": [
+        {
+          "cold_reach_floor_GeV": 0.00034287183274443473,
+          "coefficient_over_rest_width_GeV_minus4": 117224.03419266727,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 24
+        },
+        {
+          "cold_reach_floor_GeV": 0.00034287183274443473,
+          "coefficient_over_rest_width_GeV_minus4": 111726.77281142169,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 96
+        },
+        {
+          "cold_reach_floor_GeV": 0.00034287183274443473,
+          "coefficient_over_rest_width_GeV_minus4": 110393.22027465251,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 384
+        }
+      ],
+      "max_exponent_per_H_time_if_hard_energy_equals_anchor_dark_energy": 14860463.720481602,
+      "required_integrated_hard_energy_fraction_times_Hdt_for_one_percent_Bose_factor": 6.695841422131348e-10,
+      "illustrative_not_verified_through_time_benchmarks": []
+    },
+    {
+      "common_daughter_cap_GeV": 7.5,
+      "implied_parent_energy_cap_GeV": 15.00002666661926,
+      "refinement": [
+        {
+          "cold_reach_floor_GeV": 0.00016000148180822299,
+          "coefficient_over_rest_width_GeV_minus4": 124910.9889396373,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 24
+        },
+        {
+          "cold_reach_floor_GeV": 0.00016000148180822299,
+          "coefficient_over_rest_width_GeV_minus4": 113514.99918743646,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 96
+        },
+        {
+          "cold_reach_floor_GeV": 0.00016000148180822299,
+          "coefficient_over_rest_width_GeV_minus4": 110832.31414768194,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 384
+        }
+      ],
+      "max_exponent_per_H_time_if_hard_energy_equals_anchor_dark_energy": 14919571.866378656,
+      "required_integrated_hard_energy_fraction_times_Hdt_for_one_percent_Bose_factor": 6.66931393359297e-10,
+      "illustrative_not_verified_through_time_benchmarks": [
+        {
+          "hard": 3.3,
+          "fixed_benchmark_for_parent_energy_fraction": 1.6320340653455203e-19,
+          "hypothetic_uniform_exponent_over_short_step_using_benchmark_as_cap": 2.434924952630061e-19
+        },
+        {
+          "hard": 6.5,
+          "fixed_benchmark_for_parent_energy_fraction": 8.408731017641758e-20,
+          "hypothetic_uniform_exponent_over_short_step_using_benchmark_as_cap": 1.2545466672275354e-19
+        }
+      ]
+    },
+    {
+      "common_daughter_cap_GeV": 20.0,
+      "implied_parent_energy_cap_GeV": 40.0000099999975,
+      "refinement": [
+        {
+          "cold_reach_floor_GeV": 6.000004793360202e-05,
+          "coefficient_over_rest_width_GeV_minus4": 135549.63331690757,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 24
+        },
+        {
+          "cold_reach_floor_GeV": 6.000004793360202e-05,
+          "coefficient_over_rest_width_GeV_minus4": 115858.43970987911,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 96
+        },
+        {
+          "cold_reach_floor_GeV": 6.000004793360202e-05,
+          "coefficient_over_rest_width_GeV_minus4": 111399.95298531014,
+          "sampled_coefficient_GeV_minus4": 109952.24931691248,
+          "panels": 384
+        }
+      ],
+      "max_exponent_per_H_time_if_hard_energy_equals_anchor_dark_energy": 14995983.953388378,
+      "required_integrated_hard_energy_fraction_times_Hdt_for_one_percent_Bose_factor": 6.63533042186257e-10,
+      "illustrative_not_verified_through_time_benchmarks": []
+    }
+  ]
+}

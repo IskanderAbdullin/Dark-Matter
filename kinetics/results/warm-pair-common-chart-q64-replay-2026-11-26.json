@@ -1,0 +1,127 @@
+{
+  "snapshot_sha256": "82337f88f81e65df77d35b04c20597a37bc6135e41fb6aa62372107c7b6a2ecd",
+  "source_sha256": "e5be41935ce381f184225796700c67643d3c78925b0ddd6bebd80c9a388e995c",
+  "original_output_sha256": "c755c6c77eae7ae7cff583f1f7498e0a56a08c69e7ec808c0058a7a69cc64d71",
+  "guide_sha256": "850b41b6ee16d4978cdaa67a76ea39948e688048aaa9121afc7cefa7b7ac2094",
+  "chart_sha256": "721024d5361aae8057ec5993c08db3a1a5c0002702617223a0c614a9cf8df7d1",
+  "solver": {
+    "used_guide": true,
+    "observation": [
+      [
+        0,
+        3881.282241604083,
+        40
+      ],
+      [
+        1,
+        19.705409843834083,
+        40
+      ],
+      [
+        2,
+        0.00047631819195181375,
+        40
+      ],
+      [
+        3,
+        1.9457781831286206e-11,
+        46
+      ],
+      [
+        4,
+        9.357947096134047e-12,
+        114
+      ],
+      [
+        5,
+        8.444875168207126e-12,
+        44
+      ],
+      [
+        6,
+        8.489404163616746e-12,
+        40
+      ],
+      [
+        7,
+        5.690821233266386e-12,
+        108
+      ]
+    ],
+    "newton_iterations": 7,
+    "residual": 5.690821233266386e-12,
+    "entropy_gain_relative": 1.2781774647585564e-06,
+    "maximum_exponent_departure_from_eq": 0.12489469935115691,
+    "structurally_inactive_cells": 0,
+    "structurally_inactive_vacuum_cells": 0
+  },
+  "corrections": [
+    {
+      "order": [
+        3,
+        7,
+        6,
+        2
+      ],
+      "conservation": 9.125917388802506e-16,
+      "inverse_exterior_fraction": 4.1519877571060025e-25,
+      "virtual_cap_GeV": 0.8835081731724442
+    },
+    {
+      "order": [
+        3,
+        7,
+        6,
+        2
+      ],
+      "conservation": 9.714465452003918e-16,
+      "inverse_exterior_fraction": 4.1714030674020525e-25,
+      "virtual_cap_GeV": 0.8835081731724442
+    },
+    {
+      "order": [
+        3,
+        7,
+        6,
+        2
+      ],
+      "conservation": 2.1340348051182498e-16,
+      "inverse_exterior_fraction": 4.091506030202172e-25,
+      "virtual_cap_GeV": 0.8835081731724442
+    },
+    {
+      "order": [
+        3,
+        7,
+        6,
+        2
+      ],
+      "conservation": 5.864198089366723e-16,
+      "inverse_exterior_fraction": 4.1113507920324695e-25,
+      "virtual_cap_GeV": 0.8835081731724442
+    }
+  ],
+  "ledgers": [
+    1.9568719511691122e-15,
+    8.881784197001252e-16
+  ],
+  "slopes": [
+    0.00014355429766505908,
+    -4.717237971215993e-05,
+    -4.717228537056607e-05
+  ],
+  "L1_vs_native": [
+    [
+      1.5009687890147683e-06,
+      2.141872270038316e-06
+    ],
+    [
+      1.0091940036056332e-06,
+      2.163783033523923e-06
+    ],
+    [
+      1.0091940034738967e-06,
+      2.0562651604745036e-06
+    ]
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "cosmology": {
+    "H0_km_per_s_Mpc": 67.36,
+    "matter_fraction": 0.3153,
+    "present_effective_massless_radiation_fraction": 9.219028363330498e-05,
+    "equality_scale_factor": 0.000292389101279115
+  },
+  "controls": [
+    {
+      "snapshot": "low-reheat-quantum-bridge-ordinary-shape-2026-11-26.json",
+      "T_visible_GeV": 0.00033147810898904507,
+      "a_snapshot": 5.326008998418959e-10,
+      "controls": [
+        {
+          "momentum_order": 12,
+          "expansion_order": 4,
+          "scalar": {
+            "initial_number_density_GeV3": 1.8241242993731955e-21,
+            "comoving_particle_momentum_over_present_photon_T_mean": 4.588201522431989,
+            "comoving_particle_momentum_over_present_photon_T_rms": 4.965642835692187,
+            "mean_comoving_distance_to_equality_Mpc": 19.799071928615028,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              12.838265645105325,
+              19.125049207350294,
+              27.843148010684434
+            ],
+            "rms_speed_at_equality_over_c": 0.046293345949540085,
+            "rho_over_rest_density_at_equality": 1.0010745493021174,
+            "kinetic_pressure_over_energy_at_equality": 0.0007149279493060818
+          },
+          "stable": {
+            "initial_number_density_GeV3": 3.1661602686294525e-18,
+            "comoving_particle_momentum_over_present_photon_T_mean": 2.8912640183363707,
+            "comoving_particle_momentum_over_present_photon_T_rms": 3.2254376640167886,
+            "mean_comoving_distance_to_equality_Mpc": 0.00020304845740759772,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              8.914762790443657e-05,
+              0.00018634165305672642,
+              0.00033817775843189443
+            ],
+            "rms_speed_at_equality_over_c": 1.295428254912291e-07,
+            "rho_over_rest_density_at_equality": 1.0000000000000084,
+            "kinetic_pressure_over_energy_at_equality": 5.593781212083729e-15
+          },
+          "collisionless_represented_energy_fraction_of_visible_radiation_at_1_MeV": null
+        },
+        {
+          "momentum_order": 32,
+          "expansion_order": 7,
+          "scalar": {
+            "initial_number_density_GeV3": 1.824124299373195e-21,
+            "comoving_particle_momentum_over_present_photon_T_mean": 4.588201522431992,
+            "comoving_particle_momentum_over_present_photon_T_rms": 4.965642835692188,
+            "mean_comoving_distance_to_equality_Mpc": 19.79907192861506,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              12.836698086799238,
+              19.130207944467433,
+              27.844655139494357
+            ],
+            "rms_speed_at_equality_over_c": 0.0462933459495401,
+            "rho_over_rest_density_at_equality": 1.0010745493021176,
+            "kinetic_pressure_over_energy_at_equality": 0.0007149279493060821
+          },
+          "stable": {
+            "initial_number_density_GeV3": 3.166160268629464e-18,
+            "comoving_particle_momentum_over_present_photon_T_mean": 2.891264018336374,
+            "comoving_particle_momentum_over_present_photon_T_rms": 3.2254376640167903,
+            "mean_comoving_distance_to_equality_Mpc": 0.00020304845740759796,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              8.913461645293058e-05,
+              0.0001863824624884758,
+              0.00033807393828229717
+            ],
+            "rms_speed_at_equality_over_c": 1.2954282549122917e-07,
+            "rho_over_rest_density_at_equality": 1.0000000000000084,
+            "kinetic_pressure_over_energy_at_equality": 5.5937812120837356e-15
+          },
+          "collisionless_represented_energy_fraction_of_visible_radiation_at_1_MeV": null
+        }
+      ]
+    },
+    {
+      "snapshot": "low-reheat-quantum-bridge-wide-shape-2026-11-26.json",
+      "T_visible_GeV": 0.00033147810898904507,
+      "a_snapshot": 5.326008998418959e-10,
+      "controls": [
+        {
+          "momentum_order": 12,
+          "expansion_order": 4,
+          "scalar": {
+            "initial_number_density_GeV3": 1.8629728230489135e-21,
+            "comoving_particle_momentum_over_present_photon_T_mean": 4.822505130297505,
+            "comoving_particle_momentum_over_present_photon_T_rms": 5.472523435445553,
+            "mean_comoving_distance_to_equality_Mpc": 20.32847882676153,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              12.887861100809658,
+              19.280876020558665,
+              28.763513890221827
+            ],
+            "rms_speed_at_equality_over_c": 0.05084236445199507,
+            "rho_over_rest_density_at_equality": 1.0013027849330494,
+            "kinetic_pressure_over_energy_at_equality": 0.000865085076830437
+          },
+          "stable": {
+            "initial_number_density_GeV3": 3.166160268630101e-18,
+            "comoving_particle_momentum_over_present_photon_T_mean": 2.891264018336793,
+            "comoving_particle_momentum_over_present_photon_T_rms": 3.2254376640178632,
+            "mean_comoving_distance_to_equality_Mpc": 0.00020304845740762734,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              8.914762790440643e-05,
+              0.00018634165305671707,
+              0.0003381777584319865
+            ],
+            "rms_speed_at_equality_over_c": 1.2954282549127226e-07,
+            "rho_over_rest_density_at_equality": 1.0000000000000084,
+            "kinetic_pressure_over_energy_at_equality": 5.593781212087456e-15
+          },
+          "collisionless_represented_energy_fraction_of_visible_radiation_at_1_MeV": null
+        },
+        {
+          "momentum_order": 32,
+          "expansion_order": 7,
+          "scalar": {
+            "initial_number_density_GeV3": 1.8629728230489346e-21,
+            "comoving_particle_momentum_over_present_photon_T_mean": 4.822505130297994,
+            "comoving_particle_momentum_over_present_photon_T_rms": 5.472523435447798,
+            "mean_comoving_distance_to_equality_Mpc": 20.32847882676225,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              12.886405304184622,
+              19.285084838712823,
+              28.757742812209163
+            ],
+            "rms_speed_at_equality_over_c": 0.05084236445201285,
+            "rho_over_rest_density_at_equality": 1.0013027849330507,
+            "kinetic_pressure_over_energy_at_equality": 0.0008650850768310911
+          },
+          "stable": {
+            "initial_number_density_GeV3": 3.1661602686301127e-18,
+            "comoving_particle_momentum_over_present_photon_T_mean": 2.8912640183367966,
+            "comoving_particle_momentum_over_present_photon_T_rms": 3.2254376640178646,
+            "mean_comoving_distance_to_equality_Mpc": 0.00020304845740762761,
+            "characteristic_quantiles_probability": [
+              0.1,
+              0.5,
+              0.9
+            ],
+            "free_stream_distance_quantiles_Mpc": [
+              8.913461645290077e-05,
+              0.00018638246248846643,
+              0.0003380739382823914
+            ],
+            "rms_speed_at_equality_over_c": 1.2954282549127232e-07,
+            "rho_over_rest_density_at_equality": 1.0000000000000082,
+            "kinetic_pressure_over_energy_at_equality": 5.593781212087462e-15
+          },
+          "collisionless_represented_energy_fraction_of_visible_radiation_at_1_MeV": null
+        }
+      ]
+    }
+  ],
+  "thermal_reference": {
+    "species_mass_GeV": 5.7e-06,
+    "present_reference_distribution_temperature_GeV": 2.1051592332134018e-14,
+    "assumed_full_thermal_Omega_h2": 0.12,
+    "initial_number_density_GeV3": 5.985435879204733e-08,
+    "comoving_particle_momentum_over_present_photon_T_mean": 0.28246787429072234,
+    "comoving_particle_momentum_over_present_photon_T_rms": 0.32242330735489305,
+    "mean_comoving_distance_to_equality_Mpc": 0.05564315508837307,
+    "characteristic_quantiles_probability": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "free_stream_distance_quantiles_Mpc": [
+      0.02416270270197013,
+      0.05134240335154268,
+      0.09271891010638968
+    ],
+    "rms_speed_at_equality_over_c": 4.543664749735187e-05,
+    "rho_over_rest_density_at_equality": 1.0000000010322445,
+    "kinetic_pressure_over_energy_at_equality": 6.881629795708214e-10
+  },
+  "scope": "Exact geodesic streaming after each finite-support snapshot in prescribed reference radiation/matter/constant background; collisionless, no perturbations or transfer function, no power/halo or Lyman-alpha exclusion. Number-weighted for retained modes only."
+}

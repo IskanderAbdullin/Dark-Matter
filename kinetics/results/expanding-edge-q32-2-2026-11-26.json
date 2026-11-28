@@ -1,0 +1,97 @@
+{
+  "nsteps": 2,
+  "elastic_orders": [
+    3,
+    2,
+    2,
+    8
+  ],
+  "elastic": true,
+  "prompt_until": 20.0,
+  "initial": {
+    "b": 1.0,
+    "equivalent_T_GeV": [
+      0.01115968903446504,
+      0.011094194526041734
+    ],
+    "scalar_count_over_own_saturation": 0.00029579391869167393,
+    "maximum_resolved_scalar_occupation": 0.00034868672845491316,
+    "scalar_first_cell_number_fraction": 1.909883042158644e-08,
+    "count_defect": 0.0,
+    "dark_entropy_a3": 2.2559750674645087e-09,
+    "scalar_count_below_archived_first_edge": 1.909883042158644e-08,
+    "exterior_count_fractions_beyond_q16": [
+      2.2135010441086893e-05,
+      3.4821955742815765e-05
+    ]
+  },
+  "steps": [
+    {
+      "b": 1.0519895055084914,
+      "equivalent_T_GeV": [
+        0.010533773614046216,
+        0.01047662193671407
+      ],
+      "scalar_count_over_own_saturation": 0.0003021058148464921,
+      "maximum_resolved_scalar_occupation": 0.0003542449392301538,
+      "scalar_first_cell_number_fraction": 1.9412902381112805e-08,
+      "count_defect": 1.4432899320127035e-14,
+      "dark_entropy_a3": 2.2559852599409134e-09,
+      "scalar_count_below_archived_first_edge": 1.9412902381112805e-08,
+      "exterior_count_fractions_beyond_q16": [
+        2.002990107343652e-05,
+        3.2892987820898975e-05
+      ],
+      "H_GeV": 5.809794942697983e-23,
+      "photon_temperature_GeV": 0.011410456408670003
+    },
+    {
+      "b": 1.1066819197,
+      "equivalent_T_GeV": [
+        0.00994545822564276,
+        0.009886352889244703
+      ],
+      "scalar_count_over_own_saturation": 0.0003083203030995838,
+      "maximum_resolved_scalar_occupation": 0.0003602003619145187,
+      "scalar_first_cell_number_fraction": 1.9748507049234937e-08,
+      "count_defect": 2.9531932455029164e-14,
+      "dark_entropy_a3": 2.2559945290287703e-09,
+      "scalar_count_below_archived_first_edge": 1.9748507049234937e-08,
+      "exterior_count_fractions_beyond_q16": [
+        1.817513362228556e-05,
+        3.1293258846384126e-05
+      ],
+      "H_GeV": 5.249972344061656e-23,
+      "photon_temperature_GeV": 0.010849164441695078
+    }
+  ],
+  "compact_elastic": true,
+  "pivoted_prompt": false,
+  "prompt_only": false,
+  "preroll_stop": null,
+  "preroll_steps": 0,
+  "upper_support_kinematic_prompt_end": 7.277347182869643,
+  "intervals_with_prompt": 2,
+  "actual_intervals": 2,
+  "background": "tabulated radiation",
+  "includes_retained_dark_energy_in_H": true,
+  "initial_first_cell_upper_q_over_TR": 0.005,
+  "initial_archive_shells": 23,
+  "shells": 23,
+  "refinement_stride": 0,
+  "accepted_collision_solves": 2,
+  "rejected_collision_attempts": 0,
+  "max_collision_residual": 7.112500634456012e-12,
+  "energy_ledger_defect": 1.0004900552986892e-14,
+  "opposite_heat_defect": 1.9982427917046324e-15,
+  "pressure_trace_a4_energy": [
+    1.8757811536813102e-24,
+    1.4998361989767988e-13
+  ],
+  "collision_energy_a4": [
+    -2.3017640778291742e-14,
+    2.3017640778277e-14
+  ],
+  "energy_ledger_defect_in_initial_kinetic_units": 1.5468024408383526e-14,
+  "collision_scalar_a3_heat_over_initial_a3_kinetic": -0.0045891628514156835
+}

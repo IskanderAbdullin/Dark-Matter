@@ -1,0 +1,46 @@
+{
+  "x": 0.0075,
+  "control_and_actual_comparison_sha256": [
+    "00f22b6d97eac4517db24564c15f0ef99a990a013768a5164b0cac791a55a723",
+    "71564171dadcf54ac367910484a4b1d63f59df7741930f99b13187fa6aaf9f27"
+  ],
+  "selected_parent": [
+    3.9636789434531003,
+    5.728841112042199
+  ],
+  "fields": [
+    "number",
+    "pressure"
+  ],
+  "actual_mixed300_minus_G8_total": [
+    7.126789732158343e-09,
+    0.00023176584733095314
+  ],
+  "selected_cell_residual_vs_G9": [
+    4.8748297080639184e-17,
+    1.4174657344133844e-12
+  ],
+  "off_target_l1_relative_to_G8": [
+    2.3265355560237636e-12,
+    6.453909978345008e-11
+  ],
+  "off_target_fraction_of_mixed300_total_l1": [
+    0.0003264399433846288,
+    2.7846667049663164e-07
+  ],
+  "largest_off_target_pressure_parent": {
+    "bounds": [
+      1.8974129217831404,
+      2.7423959679644474
+    ],
+    "residual": [
+      -1.035051787412859e-15,
+      -1.4767127250499454e-11
+    ]
+  },
+  "max_absolute_charged_occupation_differences": [
+    7.486742825727432e-09,
+    5.278320094681236e-09
+  ],
+  "scope": "Counterfactual diagnostic on actual evolved states at a common native mass. Not a separately evolved transplanted trajectory, exact absence of feedback, or physical prediction."
+}

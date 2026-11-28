@@ -1,0 +1,68 @@
+{
+  "m_scalar_over_m_fermion": 4.3e-06,
+  "observational_reference_Omega_h2": 0.12,
+  "scope": "Fixed initial total dark number per visible comoving entropy; subsequent conversion among these retained species can preserve or reduce the total, not increase it. No additional sources, number multiplication, cooling and clustering assumptions, or applicability to other model parameters.",
+  "rows": [
+    {
+      "case": "12-quantum-48-2026-11-26.json",
+      "initial_fixed_count_Omega_h2": [
+        0.0001457898214499675,
+        88.17764333855483
+      ],
+      "scalar_upper_Omega_h2_if_all_particles_become_scalars": 0.0005249536878057533,
+      "scalar_ceiling_fraction_of_reference": 0.004374614065047944,
+      "scalar_number_multiplier_needed_for_half_reference": 114.29579674121953,
+      "scalar_number_multiplier_needed_for_99_percent_reference": 226.30567754761466,
+      "scalar_number_multiplier_needed_for_all_reference": 228.59159348243907,
+      "conditional_species_Omega_h2_if_conversion_only_matches_total_reference": [
+        0.0005244399428975077,
+        0.11947556005711135
+      ]
+    },
+    {
+      "case": "early-9p3-quantum-2026-11-26.json",
+      "initial_fixed_count_Omega_h2": [
+        0.00014576197808423565,
+        88.44446868229674
+      ],
+      "scalar_upper_Omega_h2_if_all_particles_become_scalars": 0.0005260731934181117,
+      "scalar_ceiling_fraction_of_reference": 0.004383943278484264,
+      "scalar_number_multiplier_needed_for_half_reference": 114.0525705371064,
+      "scalar_number_multiplier_needed_for_99_percent_reference": 225.82408966347066,
+      "scalar_number_multiplier_needed_for_all_reference": 228.1051410742128,
+      "conditional_species_Omega_h2_if_conversion_only_matches_total_reference": [
+        0.0005255594533237609,
+        0.1194744405466821
+      ]
+    },
+    {
+      "case": "50 MeV full prescribed vacuum source to 1 MeV",
+      "initial_fixed_count_Omega_h2": [
+        0.00014587652027177542,
+        88.64868534982067
+      ],
+      "scalar_upper_Omega_h2_if_all_particles_become_scalars": 0.0005270658672760043,
+      "scalar_ceiling_fraction_of_reference": 0.004392215560633369,
+      "scalar_number_multiplier_needed_for_half_reference": 113.83776435779,
+      "scalar_number_multiplier_needed_for_99_percent_reference": 225.39877342842416,
+      "scalar_number_multiplier_needed_for_all_reference": 227.67552871558,
+      "conditional_species_Omega_h2_if_conversion_only_matches_total_reference": [
+        0.0005265521314501696,
+        0.11947344786855751
+      ]
+    },
+    {
+      "case": "9.019 MeV prescribed vacuum root",
+      "initial_fixed_count_Omega_h2": [
+        2.363537330362595e-12,
+        0.11999999923148086
+      ],
+      "scalar_upper_Omega_h2_if_all_particles_become_scalars": 5.160023602326982e-07,
+      "scalar_ceiling_fraction_of_reference": 4.300019668605818e-06,
+      "scalar_number_multiplier_needed_for_half_reference": 116278.53789843558,
+      "scalar_number_multiplier_needed_for_99_percent_reference": 230231.50503890243,
+      "scalar_number_multiplier_needed_for_all_reference": 232557.07579687116,
+      "conditional_species_Omega_h2_if_conversion_only_matches_total_reference": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "seed": 273426,
+  "events_per_case": 20000,
+  "statistics": {
+    "increasing": {
+      "limited_events": 19987,
+      "max_absolute_bound_violation": 0.0,
+      "absolute_number_residual": 8.881784197001252e-16,
+      "absolute_energy_residual": 0.0,
+      "accepted_absolute_fraction": 0.0014685472530458225
+    },
+    "reverse": {
+      "limited_events": 19990,
+      "max_absolute_bound_violation": 3.469446951953614e-18,
+      "absolute_number_residual": 0.0,
+      "absolute_energy_residual": 0.0,
+      "accepted_absolute_fraction": 0.0017378623121737662
+    },
+    "mixed": {
+      "limited_events": 19371,
+      "max_absolute_bound_violation": 2.7755575615628914e-17,
+      "absolute_number_residual": 1.3322676295501878e-15,
+      "absolute_energy_residual": 1.199040866595169e-14,
+      "accepted_absolute_fraction": 0.10086212998837304
+    },
+    "zero_net": {
+      "limited_events": 0,
+      "max_absolute_bound_violation": 0.0,
+      "absolute_number_residual": 0.0,
+      "absolute_energy_residual": 0.0,
+      "accepted_absolute_fraction": 0.0
+    }
+  },
+  "mixed_order_fermion_L1_over_total_capacity": 0.35065144096986245
+}

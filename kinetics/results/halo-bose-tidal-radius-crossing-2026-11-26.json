@@ -1,0 +1,36 @@
+{
+  "scope": "Initial elastic production in a fixed spherical lowered halo. No rescattering en route, time-dependent tides or return dynamics. Only reachability of the geometric outer sphere and the sign of isolated orbital energy; not a time-dependent escape model.",
+  "analytic_selection_quadrature_defect": 1.7763568394002505e-15,
+  "outputs": [
+    {
+      "peak_occupation": 7000.0,
+      "escape_depth": 2.0,
+      "tidal_energy_selected_rate": 0.006156843076092006,
+      "angular_momentum_blocked_from_crossing_radius_rate": 0.0005185125149649874,
+      "actual_outward_accessible_rate": 0.0056383305611270185,
+      "isolated_positive_energy_rate": 0.0008143513790951124,
+      "negative_energy_among_outward_accessible_fraction": 0.8555687059730787,
+      "grid_scramble_defect_of_blocked_rate": 0.0019546132011061257
+    },
+    {
+      "peak_occupation": 7000.0,
+      "escape_depth": 5.0,
+      "tidal_energy_selected_rate": 0.0015302991705762382,
+      "angular_momentum_blocked_from_crossing_radius_rate": 6.933919045204774e-05,
+      "actual_outward_accessible_rate": 0.0014609599801241905,
+      "isolated_positive_energy_rate": 0.0003849845625658552,
+      "negative_energy_among_outward_accessible_fraction": 0.7364852098596643,
+      "grid_scramble_defect_of_blocked_rate": 0.00035871825557221015
+    },
+    {
+      "peak_occupation": 7000.0,
+      "escape_depth": 8.0,
+      "tidal_energy_selected_rate": 0.00014035499986557025,
+      "angular_momentum_blocked_from_crossing_radius_rate": 1.6447799464384954e-06,
+      "actual_outward_accessible_rate": 0.00013871021991913177,
+      "isolated_positive_energy_rate": 6.703971544031061e-05,
+      "negative_energy_among_outward_accessible_fraction": 0.5166923138079166,
+      "grid_scramble_defect_of_blocked_rate": 0.0029278127604885906
+    }
+  ]
+}

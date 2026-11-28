@@ -1,0 +1,155 @@
+{
+  "scope": "O(g\u00b2) complete rest-frame vacuum decay with on-shell massive fermions and MS-bar Yukawa at mu=M; no thermal or cosmological operator.",
+  "rows": [
+    {
+      "grid": "fine",
+      "scalar_mass": 0.0008720559389048312,
+      "endpoint_k_over_M": 0.4970014365611984,
+      "separator_checks": [
+        {
+          "separator": 0.001,
+          "unresolved_and_virtual": -19.527791143588377,
+          "hard_real": 19.108181630476302,
+          "full": -0.41960951311207495,
+          "independent_real_defect": 7.460698725481052e-14,
+          "mass_regulator_last_defect": 3.224140563418132e-07
+        },
+        {
+          "separator": 0.01,
+          "unresolved_and_virtual": -11.167668039426442,
+          "hard_real": 10.748058526314454,
+          "full": -0.4196095131119879,
+          "independent_real_defect": 3.019806626980426e-14,
+          "mass_regulator_last_defect": 3.224140563418132e-07
+        },
+        {
+          "separator": 0.05,
+          "unresolved_and_virtual": -5.626724395431947,
+          "hard_real": 5.207114882319975,
+          "full": -0.4196095131119719,
+          "independent_real_defect": 6.217248937900877e-15,
+          "mass_regulator_last_defect": 3.224140483482074e-07
+        },
+        {
+          "separator": 0.14,
+          "unresolved_and_virtual": -2.6098139978782355,
+          "hard_real": 2.190204484766267,
+          "full": -0.41960951311196837,
+          "independent_real_defect": 3.1086244689504383e-15,
+          "mass_regulator_last_defect": 3.2241405856225924e-07
+        },
+        {
+          "separator": 0.3528710199584508,
+          "unresolved_and_virtual": -0.7517341730949259,
+          "hard_real": 0.33212465998295393,
+          "full": -0.4196095131119719,
+          "independent_real_defect": 8.326672684688674e-16,
+          "mass_regulator_last_defect": 3.2241405811817003e-07
+        }
+      ],
+      "stable_separator_spread": 1.0658141036401503e-13,
+      "absolute_inclusive_coefficient": -0.41960951289006365,
+      "vacuum_rate_correction_at_g_005": -2.6572082821003777e-07,
+      "real_radiated_energy_over_M_before_gauge": 0.9749079967687336,
+      "real_energy_ladder": [
+        {
+          "minimum_k_over_M": 0.001,
+          "finite_band_moment": 0.9712457511579121,
+          "independent_defect": 1.4432899320127035e-15,
+          "omitted_soft_energy": 0.003662245610822956
+        },
+        {
+          "minimum_k_over_M": 1e-05,
+          "finite_band_moment": 0.9748713283259949,
+          "independent_defect": 1.6653345369377348e-15,
+          "omitted_soft_energy": 3.666844274041736e-05
+        },
+        {
+          "minimum_k_over_M": 1e-07,
+          "finite_band_moment": 0.9749076300797063,
+          "independent_defect": 1.887379141862766e-15,
+          "omitted_soft_energy": 3.6668902925196534e-07
+        }
+      ],
+      "scalar_energy_shift_over_M_before_gauge": -0.1387953496840206,
+      "daughter_energy_shift_over_M_before_gauge": -0.836112647084713,
+      "scalar_energy_finite_band_defect": 8.326672684688674e-17,
+      "scalar_energy_omitted_below_1e7": 4.8131406332752036e-08
+    },
+    {
+      "grid": "third",
+      "scalar_mass": 0.0008672414471781534,
+      "endpoint_k_over_M": 0.4970088887178455,
+      "separator_checks": [
+        {
+          "separator": 0.001,
+          "unresolved_and_virtual": -19.52784168751447,
+          "hard_real": 19.10823262288199,
+          "full": -0.41960906463248193,
+          "independent_real_defect": 7.105427357601002e-14,
+          "mass_regulator_last_defect": 3.2241428371548864e-07
+        },
+        {
+          "separator": 0.01,
+          "unresolved_and_virtual": -11.167703397855407,
+          "hard_real": 10.748094333223,
+          "full": -0.4196090646324073,
+          "independent_real_defect": 2.6645352591003757e-14,
+          "mass_regulator_last_defect": 3.2241429259727283e-07
+        },
+        {
+          "separator": 0.05,
+          "unresolved_and_virtual": -5.626748367811429,
+          "hard_real": 5.207139303179048,
+          "full": -0.41960906463238157,
+          "independent_real_defect": 7.105427357601002e-15,
+          "mass_regulator_last_defect": 3.22414273945526e-07
+        },
+        {
+          "separator": 0.14,
+          "unresolved_and_virtual": -2.6098294953215255,
+          "hard_real": 2.190220430689146,
+          "full": -0.41960906463237935,
+          "independent_real_defect": 4.440892098500626e-15,
+          "mass_regulator_last_defect": 3.2241428904455915e-07
+        },
+        {
+          "separator": 0.35287631098967026,
+          "unresolved_and_virtual": -0.7517199871872631,
+          "hard_real": 0.3321109225548804,
+          "full": -0.4196090646323827,
+          "independent_real_defect": 9.992007221626409e-16,
+          "mass_regulator_last_defect": 3.2241428904455915e-07
+        }
+      ],
+      "stable_separator_spread": 1.0258460747536446e-13,
+      "absolute_inclusive_coefficient": -0.41960906440160395,
+      "vacuum_rate_correction_at_g_005": -2.657205442014028e-07,
+      "real_radiated_energy_over_M_before_gauge": 0.9749143128947011,
+      "real_energy_ladder": [
+        {
+          "minimum_k_over_M": 0.001,
+          "finite_band_moment": 0.97125206077214,
+          "independent_defect": 1.887379141862766e-15,
+          "omitted_soft_energy": 0.0036622521225629923
+        },
+        {
+          "minimum_k_over_M": 1e-05,
+          "finite_band_moment": 0.9748776443869674,
+          "independent_defect": 1.887379141862766e-15,
+          "omitted_soft_energy": 3.666850773553776e-05
+        },
+        {
+          "minimum_k_over_M": 1e-07,
+          "finite_band_moment": 0.9749139462050239,
+          "independent_defect": 2.220446049250313e-15,
+          "omitted_soft_energy": 3.6668967939856856e-07
+        }
+      ],
+      "scalar_energy_shift_over_M_before_gauge": -0.1387967997949109,
+      "daughter_energy_shift_over_M_before_gauge": -0.8361175130997902,
+      "scalar_energy_finite_band_defect": 2.220446049250313e-16,
+      "scalar_energy_omitted_below_1e7": 4.8131578278542975e-08
+    }
+  ]
+}

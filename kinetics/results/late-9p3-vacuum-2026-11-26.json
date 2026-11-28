@@ -1,0 +1,605 @@
+{
+  "nsteps": 36,
+  "elastic_orders": [
+    3,
+    2,
+    2,
+    8
+  ],
+  "elastic": true,
+  "prompt_until": 8.0,
+  "initial": {
+    "b": 1.0,
+    "equivalent_T_GeV": [
+      0.008328195976697827,
+      0.00825882764376103
+    ],
+    "scalar_count_over_own_saturation": 0.00033075709289018924,
+    "maximum_resolved_scalar_occupation": 0.00038270305085801916,
+    "scalar_first_cell_number_fraction": 2.0945471704620148e-08,
+    "count_defect": 0.0,
+    "dark_entropy_a3": 1.0502809924155344e-09,
+    "scalar_count_below_archived_first_edge": 2.0945471704620148e-08
+  },
+  "steps": [
+    {
+      "b": 1.1735196259752954,
+      "equivalent_T_GeV": [
+        0.006977222198513033,
+        0.006787158141347382
+      ],
+      "scalar_count_over_own_saturation": 0.0003480503331079259,
+      "maximum_resolved_scalar_occupation": 0.0004043613256969584,
+      "scalar_first_cell_number_fraction": 2.2126935966526608e-08,
+      "count_defect": 7.632783294297951e-13,
+      "dark_entropy_a3": 1.0503118097767968e-09,
+      "scalar_count_below_archived_first_edge": 2.2126935966526608e-08,
+      "H_GeV": 2.799024766553328e-23,
+      "photon_temperature_GeV": 0.007925756969607577
+    },
+    {
+      "b": 1.377148312549197,
+      "equivalent_T_GeV": [
+        0.0057876430526371675,
+        0.005563669031591842
+      ],
+      "scalar_count_over_own_saturation": 0.00037732182164889965,
+      "maximum_resolved_scalar_occupation": 0.00043294438321311184,
+      "scalar_first_cell_number_fraction": 2.3661595829016448e-08,
+      "count_defect": 1.0524914273446484e-12,
+      "dark_entropy_a3": 1.0503984912792992e-09,
+      "scalar_count_below_archived_first_edge": 2.3661595829016448e-08,
+      "H_GeV": 2.032525556998692e-23,
+      "photon_temperature_GeV": 0.00675422712636254
+    },
+    {
+      "b": 1.616110572655243,
+      "equivalent_T_GeV": [
+        0.0047851375996158544,
+        0.004532179676408221
+      ],
+      "scalar_count_over_own_saturation": 0.0004131054499087851,
+      "maximum_resolved_scalar_occupation": 0.0004686209188223874,
+      "scalar_first_cell_number_fraction": 2.5520439355637894e-08,
+      "count_defect": 1.2241319069516976e-12,
+      "dark_entropy_a3": 1.0505367701716795e-09,
+      "scalar_count_below_archived_first_edge": 2.5520439355637894e-08,
+      "H_GeV": 1.475939896686119e-23,
+      "photon_temperature_GeV": 0.005755835587138388
+    },
+    {
+      "b": 1.896537474757101,
+      "equivalent_T_GeV": [
+        0.003938392024715413,
+        0.0036706461170607422
+      ],
+      "scalar_count_over_own_saturation": 0.00045847326813889687,
+      "maximum_resolved_scalar_occupation": 0.0005107449486385434,
+      "scalar_first_cell_number_fraction": 2.7610497655955543e-08,
+      "count_defect": 1.2222445278098348e-12,
+      "dark_entropy_a3": 1.050742490066832e-09,
+      "scalar_count_below_archived_first_edge": 2.7610497655955543e-08,
+      "H_GeV": 1.0717777511185117e-23,
+      "photon_temperature_GeV": 0.004905094001734849
+    },
+    {
+      "b": 2.2256239480250843,
+      "equivalent_T_GeV": [
+        0.0032275932966904755,
+        0.0029556231637780962
+      ],
+      "scalar_count_over_own_saturation": 0.0005154190956063294,
+      "maximum_resolved_scalar_occupation": 0.0005581575270972638,
+      "scalar_first_cell_number_fraction": 2.982654639182862e-08,
+      "count_defect": 1.22379884004431e-12,
+      "dark_entropy_a3": 1.0510224383449333e-09,
+      "scalar_count_below_archived_first_edge": 2.982654639182862e-08,
+      "H_GeV": 7.782997514764555e-24,
+      "photon_temperature_GeV": 0.004180204074571154
+    },
+    {
+      "b": 2.6118133830480574,
+      "equivalent_T_GeV": [
+        0.0026362972978450972,
+        0.0023654779554118017
+      ],
+      "scalar_count_over_own_saturation": 0.0005852469271197291,
+      "maximum_resolved_scalar_occupation": 0.0006104930240301029,
+      "scalar_first_cell_number_fraction": 3.204276815148865e-08,
+      "count_defect": 1.226574397605873e-12,
+      "dark_entropy_a3": 1.0513871037377011e-09,
+      "scalar_count_below_archived_first_edge": 3.204276815148865e-08,
+      "H_GeV": 5.651951193986058e-24,
+      "photon_temperature_GeV": 0.0035625653395203382
+    },
+    {
+      "b": 2.8171638016510108,
+      "equivalent_T_GeV": [
+        0.002384356842659277,
+        0.0021300111861641217
+      ],
+      "scalar_count_over_own_saturation": 0.0006303715729303345,
+      "maximum_resolved_scalar_occupation": 0.0006351595932130969,
+      "scalar_first_cell_number_fraction": 3.2977262098269714e-08,
+      "count_defect": 1.2290168882600483e-12,
+      "dark_entropy_a3": 1.0516212088579876e-09,
+      "scalar_count_below_archived_first_edge": 3.2977262098269714e-08,
+      "H_GeV": 4.85822413433898e-24,
+      "photon_temperature_GeV": 0.003303133365185435
+    },
+    {
+      "b": 3.0650142643918272,
+      "equivalent_T_GeV": [
+        0.002135005817795901,
+        0.0018895518306578552
+      ],
+      "scalar_count_over_own_saturation": 0.0006817882045196784,
+      "maximum_resolved_scalar_occupation": 0.0006648780480844139,
+      "scalar_first_cell_number_fraction": 3.3997485819255424e-08,
+      "count_defect": 1.2277956429329606e-12,
+      "dark_entropy_a3": 1.0518819941238079e-09,
+      "scalar_count_below_archived_first_edge": 3.3997485819255424e-08,
+      "H_GeV": 4.1044835841789116e-24,
+      "photon_temperature_GeV": 0.0030363285743614838
+    },
+    {
+      "b": 3.596854393158042,
+      "equivalent_T_GeV": [
+        0.0017419175174535242,
+        0.0014908220016435862
+      ],
+      "scalar_count_over_own_saturation": 0.0007767610454388739,
+      "maximum_resolved_scalar_occupation": 0.0007250374582575922,
+      "scalar_first_cell_number_fraction": 3.58871133704882e-08,
+      "count_defect": 1.2212453270876722e-12,
+      "dark_entropy_a3": 1.0523876469233666e-09,
+      "scalar_count_below_archived_first_edge": 3.58871133704882e-08,
+      "H_GeV": 2.980814213302174e-24,
+      "photon_temperature_GeV": 0.0025879934868144362
+    },
+    {
+      "b": 4.220979222146423,
+      "equivalent_T_GeV": [
+        0.0014197556484944662,
+        0.0011699483967357884
+      ],
+      "scalar_count_over_own_saturation": 0.0008876702228787197,
+      "maximum_resolved_scalar_occupation": 0.000779849039469006,
+      "scalar_first_cell_number_fraction": 3.740099623731698e-08,
+      "count_defect": 1.2230216839270724e-12,
+      "dark_entropy_a3": 1.0530236688868707e-09,
+      "scalar_count_below_archived_first_edge": 3.740099623731698e-08,
+      "H_GeV": 2.164872564528744e-24,
+      "photon_temperature_GeV": 0.002206062583840681
+    },
+    {
+      "b": 4.953401958022764,
+      "equivalent_T_GeV": [
+        0.001157585877423672,
+        0.0009132455428100371
+      ],
+      "scalar_count_over_own_saturation": 0.0010133362575515353,
+      "maximum_resolved_scalar_occupation": 0.0008389444390669964,
+      "scalar_first_cell_number_fraction": 3.860743325687938e-08,
+      "count_defect": 1.2244649738590851e-12,
+      "dark_entropy_a3": 1.0538019612632014e-09,
+      "scalar_count_below_archived_first_edge": 3.860743325687938e-08,
+      "H_GeV": 1.572373094904818e-24,
+      "photon_temperature_GeV": 0.0018807276234532586
+    },
+    {
+      "b": 5.812914413084169,
+      "equivalent_T_GeV": [
+        0.0009465657912941649,
+        0.0007082806938517861
+      ],
+      "scalar_count_over_own_saturation": 0.0011467794708505837,
+      "maximum_resolved_scalar_occupation": 0.0008869466969392562,
+      "scalar_first_cell_number_fraction": 3.9551622238683834e-08,
+      "count_defect": 1.226574397605873e-12,
+      "dark_entropy_a3": 1.0546897687338382e-09,
+      "scalar_count_below_archived_first_edge": 3.9551622238683834e-08,
+      "H_GeV": 1.142134667757767e-24,
+      "photon_temperature_GeV": 0.001603645269286684
+    },
+    {
+      "b": 6.821569147868939,
+      "equivalent_T_GeV": [
+        0.0007761409656038233,
+        0.0005463801622770507
+      ],
+      "scalar_count_over_own_saturation": 0.001287145299078374,
+      "maximum_resolved_scalar_occupation": 0.000927969815828645,
+      "scalar_first_cell_number_fraction": 4.020207764553906e-08,
+      "count_defect": 1.2301271112846734e-12,
+      "dark_entropy_a3": 1.0557157040332092e-09,
+      "scalar_count_below_archived_first_edge": 4.020207764553906e-08,
+      "H_GeV": 8.297038088773315e-25,
+      "photon_temperature_GeV": 0.0013676974117711928
+    },
+    {
+      "b": 8.00524527497177,
+      "equivalent_T_GeV": [
+        0.0006387869519740424,
+        0.000419172976978997
+      ],
+      "scalar_count_over_own_saturation": 0.0014285519890396205,
+      "maximum_resolved_scalar_occupation": 0.0009757095391456238,
+      "scalar_first_cell_number_fraction": 4.053818790010948e-08,
+      "count_defect": 1.2387868508767497e-12,
+      "dark_entropy_a3": 1.0568496198554654e-09,
+      "scalar_count_below_archived_first_edge": 4.053818790010948e-08,
+      "H_GeV": 6.028334532970768e-25,
+      "photon_temperature_GeV": 0.0011668391709813268
+    },
+    {
+      "b": 9.394312440925374,
+      "equivalent_T_GeV": [
+        0.0005283714552437218,
+        0.00031957081852988914
+      ],
+      "scalar_count_over_own_saturation": 0.0015619183285373287,
+      "maximum_resolved_scalar_occupation": 0.000997323223664682,
+      "scalar_first_cell_number_fraction": 4.0696970906048016e-08,
+      "count_defect": 1.2427836537654002e-12,
+      "dark_entropy_a3": 1.0580392884304882e-09,
+      "scalar_count_below_archived_first_edge": 4.0696970906048016e-08,
+      "H_GeV": 4.380785810125913e-25,
+      "photon_temperature_GeV": 0.0009958995603832257
+    },
+    {
+      "b": 11.024410021969805,
+      "equivalent_T_GeV": [
+        0.0004387571732389146,
+        0.00024249590012900623
+      ],
+      "scalar_count_over_own_saturation": 0.0016877683472189971,
+      "maximum_resolved_scalar_occupation": 0.0010255605885909262,
+      "scalar_first_cell_number_fraction": 4.100343774953144e-08,
+      "count_defect": 1.241007296926e-12,
+      "dark_entropy_a3": 1.0593484989429176e-09,
+      "scalar_count_below_archived_first_edge": 4.100343774953144e-08,
+      "H_GeV": 3.184340528338776e-25,
+      "photon_temperature_GeV": 0.0008504913073968486
+    },
+    {
+      "b": 12.937361525580306,
+      "equivalent_T_GeV": [
+        0.0003660147027878206,
+        0.00018301329044385825
+      ],
+      "scalar_count_over_own_saturation": 0.001798853106992007,
+      "maximum_resolved_scalar_occupation": 0.0010403798585836763,
+      "scalar_first_cell_number_fraction": 4.1193455621231665e-08,
+      "count_defect": 1.2411183192284625e-12,
+      "dark_entropy_a3": 1.0606421623111715e-09,
+      "scalar_count_below_archived_first_edge": 4.1193455621231665e-08,
+      "H_GeV": 2.3154046403426396e-25,
+      "photon_temperature_GeV": 0.0007268696893585503
+    },
+    {
+      "b": 15.182247658606181,
+      "equivalent_T_GeV": [
+        0.000306203186191959,
+        0.0001377065980668148
+      ],
+      "scalar_count_over_own_saturation": 0.0019009198990524046,
+      "maximum_resolved_scalar_occupation": 0.0010464186306845767,
+      "scalar_first_cell_number_fraction": 4.1205275595246596e-08,
+      "count_defect": 1.2329026688462363e-12,
+      "dark_entropy_a3": 1.062067838526216e-09,
+      "scalar_count_below_archived_first_edge": 4.1205275595246596e-08,
+      "H_GeV": 1.684253745384884e-25,
+      "photon_temperature_GeV": 0.0006218409375701253
+    },
+    {
+      "b": 17.816665593791825,
+      "equivalent_T_GeV": [
+        0.0002568170324727014,
+        0.00010335242594739012
+      ],
+      "scalar_count_over_own_saturation": 0.0019935093402543443,
+      "maximum_resolved_scalar_occupation": 0.001059200141393182,
+      "scalar_first_cell_number_fraction": 4.122270211749643e-08,
+      "count_defect": 1.2239098623467726e-12,
+      "dark_entropy_a3": 1.0635772789889643e-09,
+      "scalar_count_below_archived_first_edge": 4.122270211749643e-08,
+      "H_GeV": 1.22576796938857e-25,
+      "photon_temperature_GeV": 0.0005326830091735013
+    },
+    {
+      "b": 20.9082067437535,
+      "equivalent_T_GeV": [
+        0.00021619079841140362,
+        7.7182532651137e-05
+      ],
+      "scalar_count_over_own_saturation": 0.0020676148066767746,
+      "maximum_resolved_scalar_occupation": 0.0010497876328904776,
+      "scalar_first_cell_number_fraction": 4.131391110962926e-08,
+      "count_defect": 1.2186918141310343e-12,
+      "dark_entropy_a3": 1.064931442220528e-09,
+      "scalar_count_below_archived_first_edge": 4.131391110962926e-08,
+      "H_GeV": 8.92626438141189e-26,
+      "photon_temperature_GeV": 0.00045706607217739937
+    },
+    {
+      "b": 24.53619095774375,
+      "equivalent_T_GeV": [
+        0.0001823801561031078,
+        5.749495799557093e-05
+      ],
+      "scalar_count_over_own_saturation": 0.002130755251529278,
+      "maximum_resolved_scalar_occupation": 0.0010484459711725073,
+      "scalar_first_cell_number_fraction": 4.13179848425086e-08,
+      "count_defect": 1.2039258479035198e-12,
+      "dark_entropy_a3": 1.0663136991550004e-09,
+      "scalar_count_below_archived_first_edge": 4.13179848425086e-08,
+      "H_GeV": 6.504805843507862e-26,
+      "photon_temperature_GeV": 0.0003929896044365758
+    },
+    {
+      "b": 28.793701635589873,
+      "equivalent_T_GeV": [
+        0.0001541269825394806,
+        4.274025369144846e-05
+      ],
+      "scalar_count_over_own_saturation": 0.002184277439933236,
+      "maximum_resolved_scalar_occupation": 0.0010871792920561269,
+      "scalar_first_cell_number_fraction": 4.137161018496651e-08,
+      "count_defect": 1.2108092306561957e-12,
+      "dark_entropy_a3": 1.0676919285469735e-09,
+      "scalar_count_below_archived_first_edge": 4.137161018496651e-08,
+      "H_GeV": 4.7439455695551966e-26,
+      "photon_temperature_GeV": 0.0003387313873471018
+    },
+    {
+      "b": 33.78997397384167,
+      "equivalent_T_GeV": [
+        0.00013051440650880213,
+        3.1662868230809496e-05
+      ],
+      "scalar_count_over_own_saturation": 0.0022255499274896713,
+      "maximum_resolved_scalar_occupation": 0.0010560765212660292,
+      "scalar_first_cell_number_fraction": 4.137173462652339e-08,
+      "count_defect": 1.2172485241990216e-12,
+      "dark_entropy_a3": 1.0689252467445712e-09,
+      "scalar_count_below_archived_first_edge": 4.137173462652339e-08,
+      "H_GeV": 3.462664564361876e-26,
+      "photon_temperature_GeV": 0.0002927996222358632
+    },
+    {
+      "b": 39.653197619497654,
+      "equivalent_T_GeV": [
+        0.0001106748204520391,
+        2.3399700767111664e-05
+      ],
+      "scalar_count_over_own_saturation": 0.002258004838776394,
+      "maximum_resolved_scalar_occupation": 0.001058119958800823,
+      "scalar_first_cell_number_fraction": 4.137173462652342e-08,
+      "count_defect": 1.2174705688039467e-12,
+      "dark_entropy_a3": 1.0700807257304035e-09,
+      "scalar_count_below_archived_first_edge": 4.137173462652342e-08,
+      "H_GeV": 2.5296049414616813e-26,
+      "photon_temperature_GeV": 0.00025389686383710117
+    },
+    {
+      "b": 46.533805639157364,
+      "equivalent_T_GeV": [
+        9.394619085169802e-05,
+        1.7262692115523335e-05
+      ],
+      "scalar_count_over_own_saturation": 0.0022839174611980696,
+      "maximum_resolved_scalar_occupation": 0.0010577929890812632,
+      "scalar_first_cell_number_fraction": 4.1376115630011036e-08,
+      "count_defect": 1.2175815911064092e-12,
+      "dark_entropy_a3": 1.07116602362393e-09,
+      "scalar_count_below_archived_first_edge": 4.1376115630011036e-08,
+      "H_GeV": 1.8494619512104613e-26,
+      "photon_temperature_GeV": 0.00022089175593613413
+    },
+    {
+      "b": 54.60833418887103,
+      "equivalent_T_GeV": [
+        7.983262451137742e-05,
+        1.2700028796733322e-05
+      ],
+      "scalar_count_over_own_saturation": 0.0023025512848059556,
+      "maximum_resolved_scalar_occupation": 0.001063553487300702,
+      "scalar_first_cell_number_fraction": 4.1376279547440404e-08,
+      "count_defect": 1.2181367026187218e-12,
+      "dark_entropy_a3": 1.072084807002611e-09,
+      "scalar_count_below_archived_first_edge": 4.1376279547440404e-08,
+      "H_GeV": 1.353115249989471e-26,
+      "photon_temperature_GeV": 0.0001927987054575129
+    },
+    {
+      "b": 64.08395191245785,
+      "equivalent_T_GeV": [
+        6.788702254671743e-05,
+        9.326089292204127e-06
+      ],
+      "scalar_count_over_own_saturation": 0.0023163614347219094,
+      "maximum_resolved_scalar_occupation": 0.0010671522857451203,
+      "scalar_first_cell_number_fraction": 4.13762795474403e-08,
+      "count_defect": 1.2145839889399213e-12,
+      "dark_entropy_a3": 1.0729006515544464e-09,
+      "scalar_count_below_archived_first_edge": 4.13762795474403e-08,
+      "H_GeV": 9.904485210671525e-27,
+      "photon_temperature_GeV": 0.00016876352738176721
+    },
+    {
+      "b": 75.2037752793264,
+      "equivalent_T_GeV": [
+        5.775277813762919e-05,
+        6.8423865620150756e-06
+      ],
+      "scalar_count_over_own_saturation": 0.0023272579543087454,
+      "maximum_resolved_scalar_occupation": 0.0010730866449595638,
+      "scalar_first_cell_number_fraction": 4.137627954744041e-08,
+      "count_defect": 1.216915457291634e-12,
+      "dark_entropy_a3": 1.0736725130034023e-09,
+      "scalar_count_below_archived_first_edge": 4.137627954744041e-08,
+      "H_GeV": 7.25118854676656e-27,
+      "photon_temperature_GeV": 0.00014805029554577047
+    },
+    {
+      "b": 88.25310623772525,
+      "equivalent_T_GeV": [
+        4.915740235628395e-05,
+        5.00927403834443e-06
+      ],
+      "scalar_count_over_own_saturation": 0.002334372857414068,
+      "maximum_resolved_scalar_occupation": 0.0010729761166638522,
+      "scalar_first_cell_number_fraction": 4.137640272916698e-08,
+      "count_defect": 1.224020884649235e-12,
+      "dark_entropy_a3": 1.074296147862351e-09,
+      "scalar_count_below_archived_first_edge": 4.137640272916698e-08,
+      "H_GeV": 5.307692390617399e-27,
+      "photon_temperature_GeV": 0.00013003163239706802
+    },
+    {
+      "b": 103.56675222325332,
+      "equivalent_T_GeV": [
+        4.18564971026163e-05,
+        3.6609714609680625e-06
+      ],
+      "scalar_count_over_own_saturation": 0.0023388128337864782,
+      "maximum_resolved_scalar_occupation": 0.0010743730710895151,
+      "scalar_first_cell_number_fraction": 4.1376402729166945e-08,
+      "count_defect": 1.2243539515566226e-12,
+      "dark_entropy_a3": 1.074803341884719e-09,
+      "scalar_count_below_archived_first_edge": 4.1376402729166945e-08,
+      "H_GeV": 3.8827568948768626e-27,
+      "photon_temperature_GeV": 0.00011418177291432996
+    },
+    {
+      "b": 121.53761633250829,
+      "equivalent_T_GeV": [
+        3.5643263895473335e-05,
+        2.6758561043435795e-06
+      ],
+      "scalar_count_over_own_saturation": 0.0023424329456812228,
+      "maximum_resolved_scalar_occupation": 0.001076570327145384,
+      "scalar_first_cell_number_fraction": 4.13764027291639e-08,
+      "count_defect": 1.1515233211412124e-12,
+      "dark_entropy_a3": 1.0753495129122437e-09,
+      "scalar_count_below_archived_first_edge": 4.13764027291639e-08,
+      "H_GeV": 2.837491010135944e-27,
+      "photon_temperature_GeV": 0.00010007141122533357
+    },
+    {
+      "b": 142.62677806045417,
+      "equivalent_T_GeV": [
+        3.0358614500206545e-05,
+        1.953374041438037e-06
+      ],
+      "scalar_count_over_own_saturation": 0.0023444027650495014,
+      "maximum_resolved_scalar_occupation": 0.0010799991423029664,
+      "scalar_first_cell_number_fraction": 4.1376402729163676e-08,
+      "count_defect": 1.146083228320549e-12,
+      "dark_entropy_a3": 1.0757830476161806e-09,
+      "scalar_count_below_archived_first_edge": 4.1376402729163676e-08,
+      "H_GeV": 2.0708572329772674e-27,
+      "photon_temperature_GeV": 8.73706814022758e-05
+    },
+    {
+      "b": 167.3753232435656,
+      "equivalent_T_GeV": [
+        2.586146005352487e-05,
+        1.424353235248575e-06
+      ],
+      "scalar_count_over_own_saturation": 0.002345060428298705,
+      "maximum_resolved_scalar_occupation": 0.0010794090775241235,
+      "scalar_first_cell_number_fraction": 4.137640272916366e-08,
+      "count_defect": 1.1464162952279366e-12,
+      "dark_entropy_a3": 1.0761298631720049e-09,
+      "scalar_count_below_archived_first_edge": 4.137640272916366e-08,
+      "H_GeV": 1.5091855686390881e-27,
+      "photon_temperature_GeV": 7.586466576024132e-05
+    },
+    {
+      "b": 196.4182267302832,
+      "equivalent_T_GeV": [
+        2.2031467851281584e-05,
+        1.0386060895671344e-06
+      ],
+      "scalar_count_over_own_saturation": 0.0023451293367053963,
+      "maximum_resolved_scalar_occupation": 0.0010797303609290263,
+      "scalar_first_cell_number_fraction": 4.137640272916386e-08,
+      "count_defect": 1.1513012765362873e-12,
+      "dark_entropy_a3": 1.0764954184185413e-09,
+      "scalar_count_below_archived_first_edge": 4.137640272916386e-08,
+      "H_GeV": 1.0984645185380014e-27,
+      "photon_temperature_GeV": 6.546086570359888e-05
+    },
+    {
+      "b": 230.50064396725287,
+      "equivalent_T_GeV": [
+        1.8770285094786447e-05,
+        7.567075643573669e-07
+      ],
+      "scalar_count_over_own_saturation": 0.002344274630451533,
+      "maximum_resolved_scalar_occupation": 0.0010802352930632702,
+      "scalar_first_cell_number_fraction": 4.137640272916428e-08,
+      "count_defect": 1.1607381722456012e-12,
+      "dark_entropy_a3": 1.0767824280106734e-09,
+      "scalar_count_below_archived_first_edge": 4.137640272916428e-08,
+      "H_GeV": 7.988278679612786e-28,
+      "photon_temperature_GeV": 5.6163985868393965e-05
+    },
+    {
+      "b": 270.4970294955152,
+      "equivalent_T_GeV": [
+        1.5992627558462314e-05,
+        5.510628992090171e-07
+      ],
+      "scalar_count_over_own_saturation": 0.0023426918287230633,
+      "maximum_resolved_scalar_occupation": 0.0010799722663166963,
+      "scalar_first_cell_number_fraction": 4.137727160647422e-08,
+      "count_defect": 1.1720624470967778e-12,
+      "dark_entropy_a3": 1.0770375982450916e-09,
+      "scalar_count_below_archived_first_edge": 4.137727160647422e-08,
+      "H_GeV": 5.806790838198177e-28,
+      "photon_temperature_GeV": 4.800012695245875e-05
+    },
+    {
+      "b": 317.4335728810054,
+      "equivalent_T_GeV": [
+        1.3626391909487422e-05,
+        4.0122534518242543e-07
+      ],
+      "scalar_count_over_own_saturation": 0.0023404681992012168,
+      "maximum_resolved_scalar_occupation": 0.0010802173416691325,
+      "scalar_first_cell_number_fraction": 4.1377271606474754e-08,
+      "count_defect": 1.1840528557627295e-12,
+      "dark_entropy_a3": 1.0772723276262526e-09,
+      "scalar_count_below_archived_first_edge": 4.1377271606474754e-08,
+      "H_GeV": 4.220644763442491e-28,
+      "photon_temperature_GeV": 4.094206532408991e-05
+    }
+  ],
+  "upper_support_kinematic_prompt_end": 2.817163801651011,
+  "intervals_with_prompt": 7,
+  "actual_intervals": 37,
+  "background": "tabulated radiation",
+  "includes_retained_dark_energy_in_H": true,
+  "initial_first_cell_upper_q_over_TR": 0.005,
+  "initial_archive_shells": 19,
+  "shells": 19,
+  "refinement_stride": 0,
+  "accepted_collision_solves": 37,
+  "rejected_collision_attempts": 0,
+  "max_collision_residual": 7.556522323131497e-12,
+  "energy_ledger_defect": 6.132487192209257e-12,
+  "opposite_heat_defect": 1.1793479162783323e-12,
+  "pressure_trace_a4_energy": [
+    9.174630588228683e-19,
+    3.829542773201942e-10
+  ],
+  "collision_energy_a4": [
+    -2.79466121573285e-13,
+    2.7946612156996554e-13
+  ],
+  "energy_ledger_defect_in_initial_kinetic_units": 1.0785508662978676e-11,
+  "collision_scalar_a3_heat_over_initial_a3_kinetic": -0.05945251084170933
+}

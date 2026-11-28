@@ -1,0 +1,30 @@
+{
+  "seed": 261126,
+  "events": 50000,
+  "daughter_masses_parent_units": [
+    0.08,
+    0.18
+  ],
+  "meshes": [
+    {
+      "cells": 48,
+      "max_relative_pair_error": 3.749246887438528e-16,
+      "single_cell_relative_rms": 0.06642902871953446,
+      "single_cell_max_relative_error": 0.20773215159851263
+    },
+    {
+      "cells": 96,
+      "max_relative_pair_error": 3.99650495638896e-16,
+      "single_cell_relative_rms": 0.03648557909123711,
+      "single_cell_max_relative_error": 0.09020432693039658
+    },
+    {
+      "cells": 192,
+      "max_relative_pair_error": 3.4177782991759845e-16,
+      "single_cell_relative_rms": 0.015705620691796002,
+      "single_cell_max_relative_error": 0.04171384202407464
+    }
+  ],
+  "near_rest_support_failure_reproduced": true,
+  "daughter_events_outside_tight_48_cell_mean_support": 30
+}

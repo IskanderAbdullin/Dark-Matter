@@ -1,0 +1,114 @@
+{
+  "signed_identity_relative_defect": 4.657522853559227e-16,
+  "anchors": [
+    {
+      "temperature_GeV": 0.0012061354624147524,
+      "support_upper_GeV": 0.017465633238872572,
+      "photon_floor_comoving_temperature_fraction": 1.0,
+      "stable_fixed_count_Omega_h2": 57.44724173055141,
+      "exact_anchor_retained_fermion_peak": 5.7246407640503505e-06,
+      "initial_inclusive_stable_and_total_dark_density_GeV3": [
+        8.497278816470452e-14,
+        1.8059372948501405e-13
+      ],
+      "vacuum_quadratic_coefficient": 0.27972695785906593,
+      "integrated_linear_loss_coefficient_per_F_squared": 606597925.8969748,
+      "cap_threshold_above_which_Omega_0p120_is_not_excluded": 3.584343539486782e-05,
+      "rows": [
+        {
+          "assumed_fermion_occupation_cap": 5.7246407640503505e-06,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.019879131133355283,
+          "conditional_final_stable_Omega_h2_floor": 43.74823207336185
+        },
+        {
+          "assumed_fermion_occupation_cap": 1e-05,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.06065979258969749,
+          "conditional_final_stable_Omega_h2_floor": 41.405495556747574
+        },
+        {
+          "assumed_fermion_occupation_cap": 3e-05,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.5459381333072774,
+          "conditional_final_stable_Omega_h2_floor": 13.527593410943872
+        },
+        {
+          "assumed_fermion_occupation_cap": 0.0001,
+          "integrated_linear_loss_upper_fraction_of_initial": 6.065979258969749,
+          "conditional_final_stable_Omega_h2_floor": 0.0
+        },
+        {
+          "assumed_fermion_occupation_cap": 0.0002,
+          "integrated_linear_loss_upper_fraction_of_initial": 24.263917035878997,
+          "conditional_final_stable_Omega_h2_floor": 0.0
+        }
+      ]
+    },
+    {
+      "temperature_GeV": 0.00041376297480725746,
+      "support_upper_GeV": 0.005821877746290857,
+      "photon_floor_comoving_temperature_fraction": 1.0,
+      "stable_fixed_count_Omega_h2": 57.042400057744935,
+      "exact_anchor_retained_fermion_peak": 3.0601801475603775e-06,
+      "initial_inclusive_stable_and_total_dark_density_GeV3": [
+        3.124961804244108e-15,
+        6.688656647594794e-15
+      ],
+      "vacuum_quadratic_coefficient": 0.008649382310794556,
+      "integrated_linear_loss_coefficient_per_F_squared": 27107788.631117087,
+      "cap_threshold_above_which_Omega_0p120_is_not_excluded": 0.00019103880299460918,
+      "rows": [
+        {
+          "assumed_fermion_occupation_cap": 3.0601801475603775e-06,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.00025385637692623437,
+          "conditional_final_stable_Omega_h2_floor": 56.53876880590457
+        },
+        {
+          "assumed_fermion_occupation_cap": 1e-05,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.0027107788631117093,
+          "conditional_final_stable_Omega_h2_floor": 56.39862005053671
+        },
+        {
+          "assumed_fermion_occupation_cap": 3e-05,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.02439700976800538,
+          "conditional_final_stable_Omega_h2_floor": 55.16158539151513
+        },
+        {
+          "assumed_fermion_occupation_cap": 0.0001,
+          "integrated_linear_loss_upper_fraction_of_initial": 0.27107788631117086,
+          "conditional_final_stable_Omega_h2_floor": 41.09031614514469
+        },
+        {
+          "assumed_fermion_occupation_cap": 0.0002,
+          "integrated_linear_loss_upper_fraction_of_initial": 1.0843115452446834,
+          "conditional_final_stable_Omega_h2_floor": 0.0
+        }
+      ]
+    }
+  ],
+  "independent_collision_controls": [
+    {
+      "stable_support_GeV": 0.00582,
+      "fermion_f": 0.0001,
+      "measured_linear_over_analytic_envelope": 0.00015752294743601763,
+      "quadratic_forward_over_inverse": 1.7631137645112462e-11
+    },
+    {
+      "stable_support_GeV": 0.00582,
+      "fermion_f": 0.19,
+      "measured_linear_over_analytic_envelope": 0.00015752294743601788,
+      "quadratic_forward_over_inverse": 6.549794179868933e-05
+    },
+    {
+      "stable_support_GeV": 0.01746,
+      "fermion_f": 0.0001,
+      "measured_linear_over_analytic_envelope": 0.0011000058759154272,
+      "quadratic_forward_over_inverse": 6.023114540964712e-10
+    },
+    {
+      "stable_support_GeV": 0.01746,
+      "fermion_f": 0.19,
+      "measured_linear_over_analytic_envelope": 0.0011000058759154322,
+      "quadratic_forward_over_inverse": 0.002562042941923746
+    }
+  ],
+  "scope": "Prescribed late expansion floor, stable incident support inside P/b, uniform stable FD cap <=1/2, conserved total dark number and only signed stable pair conversion changing stable count. No bound on scalar occupancy or scalar momentum support. Growing stable support or additional number-changing channels can invalidate this result."
+}

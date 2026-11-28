@@ -1,0 +1,196 @@
+{
+  "scope": "Frozen retained bath on two actual post-recoil checkpoints; no correction to evolved states.",
+  "thermal": [
+    {
+      "p_GeV": 0.0,
+      "event_balance": 1.874618153971385e-14,
+      "integrated_balance": 1.1102230246251565e-16
+    },
+    {
+      "p_GeV": 0.014,
+      "event_balance": 1.960991947940489e-14,
+      "integrated_balance": 2.220446049250313e-16
+    },
+    {
+      "p_GeV": 0.085,
+      "event_balance": 2.072387929633935e-14,
+      "integrated_balance": 4.440892098500626e-16
+    }
+  ],
+  "cases": [
+    {
+      "q": 32,
+      "sha256": "f0824abe08ca7baf8cc1e6a9a3c0a1e7cac2e643ec541a66e5f6a7e39db66e00",
+      "native_to_independent_net_ratio": [
+        2.2528712220947504,
+        1.5942732077438189
+      ],
+      "T_GeV": 0.008133099595474874,
+      "first_edge_GeV": 3.695174041743622e-05,
+      "rest_gain_loss_per_H": [
+        1.4077759452494642e-05,
+        2.5138806245020008e-05
+      ],
+      "native_gross": [
+        {
+          "order": [
+            3,
+            7,
+            6,
+            2
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.9962758963032813e-10,
+            2.5313918477004152e-05
+          ]
+        },
+        {
+          "order": [
+            4,
+            10,
+            10,
+            4
+          ],
+          "first_cell_gain_loss_per_H": [
+            7.400364304783665e-06,
+            2.5313942033588238e-05
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "order": [
+            4,
+            8,
+            6,
+            8,
+            8
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.4077736947390067e-05,
+            2.5313940103527702e-05
+          ],
+          "first_cell_net_per_H": -1.1236203156137634e-05,
+          "rest_match": 9.931304667532004e-10
+        },
+        {
+          "order": [
+            6,
+            12,
+            9,
+            12,
+            12
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.4077736887167226e-05,
+            2.5313940103984744e-05
+          ],
+          "first_cell_net_per_H": -1.1236203216817518e-05,
+          "rest_match": 8.048447464048536e-10
+        },
+        {
+          "order": [
+            8,
+            18,
+            12,
+            18,
+            16
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.407773689752569e-05,
+            2.5313940103973275e-05
+          ],
+          "first_cell_net_per_H": -1.1236203206447585e-05,
+          "rest_match": 1.3038945478882624e-09
+        }
+      ]
+    },
+    {
+      "q": 64,
+      "sha256": "8863902ab0f659ee625b7508a1853e23ef590922d52ff798c0cdc7fc625de262",
+      "native_to_independent_net_ratio": [
+        2.2529694161222094,
+        1.5943199445733311
+      ],
+      "T_GeV": 0.008133099595474874,
+      "first_edge_GeV": 3.69517404174362e-05,
+      "rest_gain_loss_per_H": [
+        1.4077711572530143e-05,
+        2.5137991823201266e-05
+      ],
+      "native_gross": [
+        {
+          "order": [
+            3,
+            7,
+            6,
+            2
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.9963113281346655e-10,
+            2.531295182519017e-05
+          ]
+        },
+        {
+          "order": [
+            4,
+            10,
+            10,
+            4
+          ],
+          "first_cell_gain_loss_per_H": [
+            7.400337333602437e-06,
+            2.5312975377526462e-05
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "order": [
+            4,
+            8,
+            6,
+            8,
+            8
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.407768907143977e-05,
+            2.531297344753428e-05
+          ],
+          "first_cell_net_per_H": -1.1235284376094508e-05,
+          "rest_match": 9.923322163984949e-10
+        },
+        {
+          "order": [
+            6,
+            12,
+            9,
+            12,
+            12
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.4077689011232557e-05,
+            2.5312973447990135e-05
+          ],
+          "first_cell_net_per_H": -1.1235284436757577e-05,
+          "rest_match": 8.058468337068803e-10
+        },
+        {
+          "order": [
+            8,
+            18,
+            12,
+            18,
+            16
+          ],
+          "first_cell_gain_loss_per_H": [
+            1.4077689021603547e-05,
+            2.531297344797869e-05
+          ],
+          "first_cell_net_per_H": -1.1235284426375142e-05,
+          "rest_match": 1.3033559786990168e-09
+        }
+      ]
+    }
+  ]
+}

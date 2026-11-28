@@ -1,0 +1,65 @@
+{
+  "band": [
+    1e-06,
+    1.5e-05
+  ],
+  "full_pole_and_snapshot": {
+    "grid": "fine",
+    "time_x": 0.05,
+    "scalar_mass": 0.0008729364825319565,
+    "omega": 0.0023042221316844375,
+    "residue": 202.97270363749854,
+    "mesh": [
+      8,
+      10,
+      16,
+      24
+    ]
+  },
+  "accepted_meshes": [
+    [
+      4,
+      6,
+      10,
+      18
+    ],
+    [
+      8,
+      10,
+      16,
+      24
+    ]
+  ],
+  "raw_number_scalar_energy_and_excess": [
+    [
+      6.144016292518788e-07,
+      1.7872514461220037e-15,
+      6.144016274646272e-07
+    ],
+    [
+      5.363391845103451e-10,
+      1.5601733275217451e-18,
+      5.363391829501717e-10
+    ],
+    [
+      5.5874093068010246e-15,
+      1.6336743850554352e-23,
+      5.58740929046428e-15
+    ]
+  ],
+  "old_matched_pole_omega": 0.0023041975951177784,
+  "maximum_componentwise_mesh_difference": 5.775158129495139e-12,
+  "panels": 49,
+  "conditional_number_energy_neutral": [
+    2.9089301952164843e-09,
+    2.90893035064099e-09
+  ],
+  "number_A_B_D_new_to_old": [
+    1.3027112254147721,
+    1.294545548029154,
+    1.302711225438675
+  ],
+  "relative_neutrality_split": 5.343012566177809e-08,
+  "mesh_difference_in_relative_split": 5.861503729202221e-17,
+  "scope": "One evolved snapshot and continuum closure, not spatial convergence or full reaction."
+}

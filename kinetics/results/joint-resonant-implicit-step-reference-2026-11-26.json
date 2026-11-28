@@ -1,0 +1,34 @@
+{
+  "bins": 11,
+  "analytic_jacobian_relative_check": 6.954053884826938e-11,
+  "steps": [
+    {
+      "step_H": 5e-09,
+      "conserved_moment_error": 4.440892098500626e-16,
+      "fractional_scalar_heat_of_initial_dark_energy": -0.0007156274775244162,
+      "newton_iterations": 4,
+      "residual": 2.7379564204131658e-15,
+      "entropy_gain_relative": 1.905480082475819e-05
+    },
+    {
+      "step_H": 5e-08,
+      "conserved_moment_error": 2.220446049250313e-16,
+      "fractional_scalar_heat_of_initial_dark_energy": -0.0023362776889988817,
+      "newton_iterations": 4,
+      "residual": 3.431001639330249e-14,
+      "entropy_gain_relative": 3.3475811651362264e-05
+    },
+    {
+      "step_H": 2.5e-07,
+      "conserved_moment_error": 1.3322676295501878e-15,
+      "fractional_scalar_heat_of_initial_dark_energy": -0.003047723085432887,
+      "newton_iterations": 4,
+      "residual": 2.592930291269406e-13,
+      "entropy_gain_relative": 3.539632800486636e-05
+    }
+  ],
+  "BE_vs_explicit_heun_relative_l1": 0.0005720375041744945,
+  "refined_BE_vs_explicit_heun_relative_l1": 0.00029501126135374125,
+  "reduced_steps_terminal_state_relative_l1": 0.0022705644469207327,
+  "scope": "Strictly populated, manufactured near-thermal state on a finite support; an implicit collision-step prototype, not the fixed-background full evolved spectrum."
+}

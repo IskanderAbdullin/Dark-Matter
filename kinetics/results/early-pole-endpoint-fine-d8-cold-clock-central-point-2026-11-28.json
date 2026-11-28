@@ -1,0 +1,36 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "k": 0.0015,
+  "clock_steps": [
+    1024,
+    2048
+  ],
+  "sha256_uncompressed_states": [
+    "d598db0c750f4958cf5051d02d6c0db810548a600b7323c7da70e69959ce10a0",
+    "3fdf9924e6bce5ddbc382eb86ec5a7f1b87820af21519edacae7ea530112d2ed"
+  ],
+  "rows": [
+    {
+      "q": 3.5e-06,
+      "coarse": [
+        0.0024874649477015383,
+        4.875328373265548e-12,
+        0.0024874649428262086
+      ],
+      "fine": [
+        0.002497695906860215,
+        4.8973868755304055e-12,
+        0.0024976959019628276
+      ],
+      "coarse_fine_relative_difference": [
+        -0.004096158836060071,
+        -0.00450413717059428,
+        -0.004096158835260488
+      ],
+      "neutrality_coarse_fine_relative": -0.0004096563528227515,
+      "max_joint_mesh_defect": 2.76445533131664e-13
+    }
+  ],
+  "scope": "At fixed k and the declared q point set, independently recovered scalar gap and photon fits; same .04 restart only. No whole-history or band error bound."
+}

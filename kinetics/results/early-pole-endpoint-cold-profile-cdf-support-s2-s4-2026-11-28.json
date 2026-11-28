@@ -1,0 +1,882 @@
+{
+  "x": 0.05,
+  "grid": "fine",
+  "charge_div": 2,
+  "scalar_levels": [
+    2,
+    4
+  ],
+  "fixed": {
+    "Wasserstein1_q_lower_upper": [
+      4.1548462095565825e-10,
+      4.2463370966957946e-07
+    ],
+    "maximum_guaranteed_CDF_separation": 0.032693326430962455,
+    "nonzero_guaranteed_intervals": [
+      {
+        "q": [
+          1.0252078409605354e-06,
+          1.0254802670382072e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0,
+            2.191320478697222e-11
+          ],
+          [
+            3.4053383595004375e-11,
+            1.3752147119071749e-10
+          ]
+        ],
+        "guaranteed_absolute_separation": 1.2140178808032156e-11,
+        "largest_allowed_absolute_separation": 1.3752147119071749e-10
+      },
+      {
+        "q": [
+          1.5376631510721242e-06,
+          1.5825817619770524e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            9.577558678107427e-08,
+            1.1864294597788977e-07
+          ],
+          [
+            1.389811196264249e-07,
+            1.994951481549794e-07
+          ]
+        ],
+        "guaranteed_absolute_separation": 2.0338173648535142e-08,
+        "largest_allowed_absolute_separation": 1.0371956137390513e-07
+      },
+      {
+        "q": [
+          2.213745657140175e-06,
+          2.2406241590268915e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0005382510498024032,
+            0.0005933596510560157
+          ],
+          [
+            0.0007144817318612364,
+            0.0008475717398028473
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.00012112208080522068,
+        "largest_allowed_absolute_separation": 0.0003093206900004441
+      },
+      {
+        "q": [
+          2.2406241590268915e-06,
+          2.2408969645670657e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0005382510498024032,
+            0.0005933596510560157
+          ],
+          [
+            0.0008475717398028473,
+            0.0010872876129699597
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0002542120887468316,
+        "largest_allowed_absolute_separation": 0.0005490365631675565
+      },
+      {
+        "q": [
+          2.2408969645670657e-06,
+          2.287359695506477e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0005933596510560157,
+            0.0006900934126777953
+          ],
+          [
+            0.0008475717398028473,
+            0.0010872876129699597
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.00015747832712505205,
+        "largest_allowed_absolute_separation": 0.0004939279619139439
+      },
+      {
+        "q": [
+          2.889725069329756e-06,
+          2.889996276630551e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.08340347265330907,
+            0.2866133341747926
+          ],
+          [
+            0.03531502401386044,
+            0.07861663198977549
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.004786840663533576,
+        "largest_allowed_absolute_separation": 0.2512983101609322
+      },
+      {
+        "q": [
+          3.409820481420912e-06,
+          3.410093653437888e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.2866133341747926,
+            0.3470434274723035
+          ],
+          [
+            0.3671728269019689,
+            0.3708542000515096
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.020129399429665407,
+        "largest_allowed_absolute_separation": 0.08424086587671697
+      },
+      {
+        "q": [
+          3.410093653437888e-06,
+          3.4150045669854917e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.3470434274723035,
+            0.3501671726130052
+          ],
+          [
+            0.3671728269019689,
+            0.3708542000515096
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.017005654288963723,
+        "largest_allowed_absolute_separation": 0.023810772579206108
+      },
+      {
+        "q": [
+          3.4150045669854917e-06,
+          3.4152777396780863e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.3470434274723035,
+            0.3501671726130052
+          ],
+          [
+            0.3708542000515096,
+            0.5311705952825563
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.020687027438504424,
+        "largest_allowed_absolute_separation": 0.1841271678102528
+      },
+      {
+        "q": [
+          4.293153429774417e-06,
+          4.299334512264876e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.8281030381037393,
+            0.8296690466201585
+          ],
+          [
+            0.862362373051121,
+            0.8649280852957183
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.032693326430962455,
+        "largest_allowed_absolute_separation": 0.03682504719197899
+      },
+      {
+        "q": [
+          4.550395824724616e-06,
+          4.550669352848213e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.8296690466201585,
+            0.8954033314501064
+          ],
+          [
+            0.9185939281952494,
+            0.9585880451101049
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.02319059674514301,
+        "largest_allowed_absolute_separation": 0.12891899848994637
+      },
+      {
+        "q": [
+          5.099147524273144e-06,
+          5.099421225248827e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.963454961063422,
+            0.9726789504571673
+          ],
+          [
+            0.9772453155135787,
+            0.9864245253657841
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.004566365056411392,
+        "largest_allowed_absolute_separation": 0.022969564302362078
+      },
+      {
+        "q": [
+          5.648710611303254e-06,
+          5.648984483688362e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9726789504571673,
+            0.9924805505273495
+          ],
+          [
+            0.9938975023410618,
+            0.9958757720949222
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0014169518137122639,
+        "largest_allowed_absolute_separation": 0.023196821637754828
+      },
+      {
+        "q": [
+          5.7445396834586724e-06,
+          5.749790047821443e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9965102510512149,
+            0.9965210710360536
+          ],
+          [
+            0.9958757720949222,
+            0.9959010916328137
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0006091594184012283,
+        "largest_allowed_absolute_separation": 0.0006452989411314114
+      },
+      {
+        "q": [
+          5.749790047821443e-06,
+          5.7500603682626e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9965210710360536,
+            0.9983975899819261
+          ],
+          [
+            0.9958757720949222,
+            0.9959010916328137
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0006199794032398787,
+        "largest_allowed_absolute_separation": 0.0025218178870038965
+      },
+      {
+        "q": [
+          6.298647599479332e-06,
+          6.506218001620759e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9965210710360536,
+            0.9983975899819261
+          ],
+          [
+            0.9987798403582289,
+            0.9990457551723524
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0003822503763027951,
+        "largest_allowed_absolute_separation": 0.002524684136298805
+      },
+      {
+        "q": [
+          6.506488089220403e-06,
+          6.707052267433819e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9983975899819261,
+            0.9990166710001102
+          ],
+          [
+            0.9990457551723524,
+            0.9993272963630762
+          ]
+        ],
+        "guaranteed_absolute_separation": 2.908417224223303e-05,
+        "largest_allowed_absolute_separation": 0.0009297063811500861
+      },
+      {
+        "q": [
+          6.707052267433819e-06,
+          6.707326472819103e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9983975899819261,
+            0.9990166710001102
+          ],
+          [
+            0.9993272963630762,
+            0.9993341828135583
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0003106253629659994,
+        "largest_allowed_absolute_separation": 0.0009365928316322769
+      },
+      {
+        "q": [
+          6.707326472819103e-06,
+          6.7117383421999235e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9990166710001102,
+            0.9990317744517069
+          ],
+          [
+            0.9993272963630762,
+            0.9993341828135583
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.00029552191136927863,
+        "largest_allowed_absolute_separation": 0.00031751181344819024
+      },
+      {
+        "q": [
+          6.7117383421999235e-06,
+          6.712012548196608e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9990166710001102,
+            0.9990317744517069
+          ],
+          [
+            0.9993341828135583,
+            0.9996330177229693
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.00030240836185146946,
+        "largest_allowed_absolute_separation": 0.0006163467228591513
+      },
+      {
+        "q": [
+          7.572363697439932e-06,
+          7.741154954594289e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9997426606130261,
+            0.9998330375376832
+          ],
+          [
+            0.9998841788270215,
+            0.9998999192650451
+          ]
+        ],
+        "guaranteed_absolute_separation": 5.114128933836337e-05,
+        "largest_allowed_absolute_separation": 0.0001572586520189878
+      },
+      {
+        "q": [
+          7.741154954594289e-06,
+          7.741429484038451e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9997426606130261,
+            0.9998330375376832
+          ],
+          [
+            0.9998999192650451,
+            0.9999533619468843
+          ]
+        ],
+        "guaranteed_absolute_separation": 6.688172736191156e-05,
+        "largest_allowed_absolute_separation": 0.00021070133385825418
+      },
+      {
+        "q": [
+          8.239290410594122e-06,
+          8.239565097512943e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9998330375376832,
+            0.9999485998055975
+          ],
+          [
+            0.9999533619468843,
+            0.9999609905239647
+          ]
+        ],
+        "guaranteed_absolute_separation": 4.762141286862587e-06,
+        "largest_allowed_absolute_separation": 0.00012795298628154317
+      },
+      {
+        "q": [
+          8.738531773876086e-06,
+          8.738806617061801e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999650231983341,
+            0.9999710412156058
+          ],
+          [
+            0.9999736463943828,
+            0.9999768548811381
+          ]
+        ],
+        "guaranteed_absolute_separation": 2.6051787770375867e-06,
+        "largest_allowed_absolute_separation": 1.18316828039422e-05
+      },
+      {
+        "q": [
+          8.738806617061801e-06,
+          8.837727383882673e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999710412156058,
+            0.9999725574999324
+          ],
+          [
+            0.9999736463943828,
+            0.9999768548811381
+          ]
+        ],
+        "guaranteed_absolute_separation": 1.0888944503850695e-06,
+        "largest_allowed_absolute_separation": 5.813665532317103e-06
+      },
+      {
+        "q": [
+          8.837727383882673e-06,
+          8.837996750081392e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999725574999324,
+            0.9999726712427832
+          ],
+          [
+            0.9999736463943828,
+            0.9999768548811381
+          ]
+        ],
+        "guaranteed_absolute_separation": 9.751515995803928e-07,
+        "largest_allowed_absolute_separation": 4.2973812056645855e-06
+      },
+      {
+        "q": [
+          8.837996750081392e-06,
+          8.844995324615872e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999725574999324,
+            0.9999726712427832
+          ],
+          [
+            0.9999768548811381,
+            0.9999770942716996
+          ]
+        ],
+        "guaranteed_absolute_separation": 4.183638354859909e-06,
+        "largest_allowed_absolute_separation": 4.536771767149617e-06
+      },
+      {
+        "q": [
+          9.701086983365434e-06,
+          9.701362130460956e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999726712427832,
+            0.999988577469735
+          ],
+          [
+            0.9999918007166271,
+            0.999991846462575
+          ]
+        ],
+        "guaranteed_absolute_separation": 3.223246892058995e-06,
+        "largest_allowed_absolute_separation": 1.9175219791778275e-05
+      },
+      {
+        "q": [
+          9.701362130460956e-06,
+          9.705343560604871e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.999988577469735,
+            0.9999886702132789
+          ],
+          [
+            0.9999918007166271,
+            0.999991846462575
+          ]
+        ],
+        "guaranteed_absolute_separation": 3.1305033482142974e-06,
+        "largest_allowed_absolute_separation": 3.2689928399776136e-06
+      },
+      {
+        "q": [
+          9.705343560604871e-06,
+          9.705618708255049e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.999988577469735,
+            0.9999886702132789
+          ],
+          [
+            0.999991846462575,
+            0.9999949793750355
+          ]
+        ],
+        "guaranteed_absolute_separation": 3.176249296132916e-06,
+        "largest_allowed_absolute_separation": 6.40190530043494e-06
+      },
+      {
+        "q": [
+          9.9817731491033e-06,
+          9.986326744915062e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999950150975926,
+            0.9999950686453796
+          ],
+          [
+            0.9999949793750355,
+            0.9999950064323462
+          ]
+        ],
+        "guaranteed_absolute_separation": 8.665246409300664e-09,
+        "largest_allowed_absolute_separation": 8.927034411687629e-08
+      },
+      {
+        "q": [
+          9.990882418036608e-06,
+          9.995440169415567e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999950686453796,
+            0.9999951217013628
+          ],
+          [
+            0.9999950333649751,
+            0.9999950601735618
+          ]
+        ],
+        "guaranteed_absolute_separation": 8.471817802835346e-09,
+        "largest_allowed_absolute_separation": 8.833638776017949e-08
+      },
+      {
+        "q": [
+          1.0475850749715747e-05,
+          1.0476119611077981e-05
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999953604403293,
+            0.9999954548392104
+          ],
+          [
+            0.999995086858746,
+            0.9999953274520312
+          ]
+        ],
+        "guaranteed_absolute_separation": 3.298829809317283e-08,
+        "largest_allowed_absolute_separation": 3.6798046432195974e-07
+      },
+      {
+        "q": [
+          1.1327882206624732e-05,
+          1.132815080716161e-05
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999959060596504,
+            0.9999960800708635
+          ],
+          [
+            0.9999957111223852,
+            0.9999958770241859
+          ]
+        ],
+        "guaranteed_absolute_separation": 2.903546447718952e-08,
+        "largest_allowed_absolute_separation": 3.6894847832424915e-07
+      },
+      {
+        "q": [
+          1.2181965621468093e-05,
+          1.2182233958058867e-05
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999966450225688,
+            0.9999969058889446
+          ],
+          [
+            0.9999960518551958,
+            0.9999966213392609
+          ]
+        ],
+        "guaranteed_absolute_separation": 2.368330787039241e-08,
+        "largest_allowed_absolute_separation": 8.540337488316396e-07
+      },
+      {
+        "q": [
+          1.2432229380276038e-05,
+          1.2435836941668624e-05
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999969058889446,
+            0.999996910113606
+          ],
+          [
+            0.999996883498854,
+            0.9999968877533278
+          ]
+        ],
+        "guaranteed_absolute_separation": 1.8135616786096875e-08,
+        "largest_allowed_absolute_separation": 2.6614752068887526e-08
+      },
+      {
+        "q": [
+          1.3960405156927493e-05,
+          1.3960672947605814e-05
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.999999069886773,
+            0.9999990847497121
+          ],
+          [
+            0.9999986262458829,
+            0.9999990637602848
+          ]
+        ],
+        "guaranteed_absolute_separation": 6.12648820563777e-09,
+        "largest_allowed_absolute_separation": 4.585038292370669e-07
+      },
+      {
+        "q": [
+          1.3968654681614871e-05,
+          1.3968922471223229e-05
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9999990847497121,
+            0.9999993776864039
+          ],
+          [
+            0.9999990637602848,
+            0.9999990787308205
+          ]
+        ],
+        "guaranteed_absolute_separation": 6.018891607340038e-09,
+        "largest_allowed_absolute_separation": 3.13926119099861e-07
+      }
+    ]
+  },
+  "count_only": {
+    "Wasserstein1_q_lower_upper": [
+      0.0,
+      6.902814115547443e-07
+    ],
+    "maximum_guaranteed_CDF_separation": 0.0,
+    "nonzero_guaranteed_intervals": []
+  },
+  "count_and_mean_excess": {
+    "Wasserstein1_q_lower_upper": [
+      4.967689909166133e-11,
+      4.575466910686067e-07
+    ],
+    "maximum_guaranteed_CDF_separation": 0.008774402424462813,
+    "nonzero_guaranteed_intervals": [
+      {
+        "q": [
+          1.0252078409605354e-06,
+          1.0254802670382072e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0,
+            2.191405869400157e-11
+          ],
+          [
+            3.405337150822756e-11,
+            1.375219499983938e-10
+          ]
+        ],
+        "guaranteed_absolute_separation": 1.2139312814225988e-11,
+        "largest_allowed_absolute_separation": 1.375219499983938e-10
+      },
+      {
+        "q": [
+          1.5376631510721242e-06,
+          1.5825817619770524e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            9.577318628836497e-08,
+            1.186475657550773e-07
+          ],
+          [
+            1.3898107045348906e-07,
+            1.9949584268043553e-07
+          ]
+        ],
+        "guaranteed_absolute_separation": 2.0333504698411755e-08,
+        "largest_allowed_absolute_separation": 1.0372265639207055e-07
+      },
+      {
+        "q": [
+          2.2406241590268915e-06,
+          2.2408969645670657e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0005150162721659,
+            0.0006901204999917432
+          ],
+          [
+            0.0007586458746948481,
+            0.001087291584093961
+          ]
+        ],
+        "guaranteed_absolute_separation": 6.852537470310486e-05,
+        "largest_allowed_absolute_separation": 0.0005722753119280609
+      },
+      {
+        "q": [
+          2.2408969645670657e-06,
+          2.287359695506477e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.0005489055900257248,
+            0.0006901204999917439
+          ],
+          [
+            0.0007586458746948481,
+            0.001087291584093961
+          ]
+        ],
+        "guaranteed_absolute_separation": 6.852537470310421e-05,
+        "largest_allowed_absolute_separation": 0.0005383859940682361
+      },
+      {
+        "q": [
+          2.889725069329756e-06,
+          2.889996276630551e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.08340138217933829,
+            0.28662449458959083
+          ],
+          [
+            0.03531501145902869,
+            0.07861690585294775
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0047844763263905354,
+        "largest_allowed_absolute_separation": 0.2513094831305621
+      },
+      {
+        "q": [
+          3.4150045669854917e-06,
+          3.4152777396780863e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.2866075913103494,
+            0.3608778394873637
+          ],
+          [
+            0.3696522419118265,
+            0.5311710984639356
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.008774402424462813,
+        "largest_allowed_absolute_separation": 0.2445635071535862
+      },
+      {
+        "q": [
+          5.7445396834586724e-06,
+          5.749790047821443e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.9965065896897908,
+            0.9977727161251939
+          ],
+          [
+            0.9958755549423998,
+            0.9959013155650004
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0006052741247903892,
+        "largest_allowed_absolute_separation": 0.0018971611827941492
+      },
+      {
+        "q": [
+          5.749790047821443e-06,
+          5.7500603682626e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.996509242546421,
+            0.9985896403457253
+          ],
+          [
+            0.9958755549423998,
+            0.9959013155650004
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.0006079269814206478,
+        "largest_allowed_absolute_separation": 0.002714085403325517
+      },
+      {
+        "q": [
+          6.298647599479332e-06,
+          6.506218001620759e-06
+        ],
+        "left_right_CDF_intervals": [
+          [
+            0.996509242546421,
+            0.9985896403457253
+          ],
+          [
+            0.9987796320706956,
+            0.9991854797520929
+          ]
+        ],
+        "guaranteed_absolute_separation": 0.00018999172497036199,
+        "largest_allowed_absolute_separation": 0.002676237205671894
+      }
+    ]
+  },
+  "scope": "Outward CDF envelopes over finite panel amounts and unconstrained within-panel position. Lower bound zero does not exhibit a common distribution."
+}

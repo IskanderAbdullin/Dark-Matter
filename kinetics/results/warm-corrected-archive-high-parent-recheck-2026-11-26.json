@@ -1,0 +1,82 @@
+{
+  "scope": "Instantaneous resolved support of the selected archived dark phase only; quasi-static occupied heavy parent used as the blocking convention. No old exterior interactions, coherent heavy evolution or unknown high tails.",
+  "columns": [
+    "high_inverse_count_times_rest_mass_over_rhoH",
+    "high_inverse_energy_over_rhoH",
+    "direct_tagged_daughter_energy_over_rhoH",
+    "high_quasistatic_heavy_energy_over_rho"
+  ],
+  "cases": [
+    {
+      "snapshot_sha256": "27950d8171d19c25c85f7c3e96af08755883de82e7d342f6c9629772c2b86d9f",
+      "endpoint_T_GeV": 0.0073940494651975755,
+      "momentum_cut_GeV": 0.7077920751642219,
+      "represented_max_pair_energy_GeV": 0.4309121519419463,
+      "closure": "Geometrically closed on represented support.",
+      "orders": [
+        6,
+        10,
+        14
+      ],
+      "normalized_rates": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "fine_relative_rate_shift": null
+    },
+    {
+      "snapshot_sha256": "4d24a8be25500bda3e6108edbe0ed6d83c999b41077346cb493eb31715e2db0e",
+      "endpoint_T_GeV": 0.007394049465197431,
+      "momentum_cut_GeV": 0.7077920751642082,
+      "represented_max_pair_energy_GeV": 0.8604326593879252,
+      "closure": "Open on represented support.",
+      "orders": [
+        6,
+        10,
+        14
+      ],
+      "normalized_rates": [
+        [
+          5.726311899314091e-33,
+          4.130000951357018e-32,
+          2.4593111847112584e-32,
+          2.6385430809884292e-45
+        ],
+        [
+          5.726311899434772e-33,
+          4.130000951437851e-32,
+          2.45931118475013e-32,
+          2.638543081036387e-45
+        ],
+        [
+          5.726311899434781e-33,
+          4.1300009514378583e-32,
+          2.459311184750134e-32,
+          2.6385430810363897e-45
+        ]
+      ],
+      "fine_relative_rate_shift": [
+        1.5543122344752192e-15,
+        1.7763568394002505e-15,
+        1.7763568394002505e-15,
+        1.1102230246251565e-15
+      ]
+    }
+  ]
+}

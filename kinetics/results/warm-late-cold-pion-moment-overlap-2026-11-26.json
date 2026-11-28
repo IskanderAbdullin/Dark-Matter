@@ -1,0 +1,70 @@
+{
+  "scope": "Illustrative deterministic consistency of whole theory and BABAR upper inputs with piecewise KLOE lower spectral assumptions on their overlapping measured ranges. No statistical combination, covariance inference, or claim that the assumed lower spectrum is covered.",
+  "KLOE_sha256": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+  "scenarios": [
+    {
+      "marginal_subtractions": 0,
+      "compatible": true,
+      "measured_moment_lower_to_point50": 5.651331111971642e-09,
+      "measured_moment_lower_to_point63": 1.3175172145404575e-08,
+      "independent_exact_integral_to_point50": 5.70157935519409e-09,
+      "independent_exact_integral_to_point63": 1.3294316991015492e-08,
+      "shared_remaining_dispersion_cap": 2.6782785459542674e-10,
+      "separate_gap_dispersion_cap": 1.0386688880283587e-09,
+      "extremal_budget_split_threshold_gap": [
+        0.0,
+        2.6782785459542674e-10
+      ],
+      "cold_yield_joint_upper": 6.385145008496757e-13,
+      "held_fraction_upper": 0.00015274656000281676
+    },
+    {
+      "marginal_subtractions": 1,
+      "compatible": true,
+      "measured_moment_lower_to_point50": 5.0408783716846675e-09,
+      "measured_moment_lower_to_point63": 1.2304994575778926e-08,
+      "independent_exact_integral_to_point50": 5.08569731867828e-09,
+      "independent_exact_integral_to_point63": 1.2416343798661961e-08,
+      "shared_remaining_dispersion_cap": 1.138005424221076e-09,
+      "separate_gap_dispersion_cap": 1.6491216283153332e-09,
+      "extremal_budget_split_threshold_gap": [
+        0.0,
+        1.138005424221076e-09
+      ],
+      "cold_yield_joint_upper": 2.713059724532294e-12,
+      "held_fraction_upper": 0.0006490229109175101
+    },
+    {
+      "marginal_subtractions": 2,
+      "compatible": true,
+      "measured_moment_lower_to_point50": 4.430425631397692e-09,
+      "measured_moment_lower_to_point63": 1.1434817006153277e-08,
+      "independent_exact_integral_to_point50": 4.469815282162473e-09,
+      "independent_exact_integral_to_point63": 1.1538370606308436e-08,
+      "shared_remaining_dispersion_cap": 2.008182993846725e-09,
+      "separate_gap_dispersion_cap": 2.2595743686023085e-09,
+      "extremal_budget_split_threshold_gap": [
+        0.0,
+        2.008182993846725e-09
+      ],
+      "cold_yield_joint_upper": 4.787604948214912e-12,
+      "held_fraction_upper": 0.0011452992618322035
+    },
+    {
+      "marginal_subtractions": 3,
+      "compatible": true,
+      "measured_moment_lower_to_point50": 3.819972891110717e-09,
+      "measured_moment_lower_to_point63": 1.0564639436527622e-08,
+      "independent_exact_integral_to_point50": 3.853933245646665e-09,
+      "independent_exact_integral_to_point63": 1.066039741395491e-08,
+      "shared_remaining_dispersion_cap": 2.8783605634723793e-09,
+      "separate_gap_dispersion_cap": 2.870027108889284e-09,
+      "extremal_budget_split_threshold_gap": [
+        8.333454583095487e-12,
+        2.870027108889284e-09
+      ],
+      "cold_yield_joint_upper": 6.855389361425826e-12,
+      "held_fraction_upper": 0.0016399582797951633
+    }
+  ]
+}

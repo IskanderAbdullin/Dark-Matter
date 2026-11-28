@@ -1,0 +1,219 @@
+{
+  "rows": [
+    {
+      "x": 0.01,
+      "state_sha256": "203cdaafc116e252729d2d8b0a97eb68cad4785d5b150396f158d48aff9312a3",
+      "reference_and_prior_sha256": [
+        "fb3836f9f4ec3259f8da23d6daddc2f6e72abed7f57b5796228391ce3519ef8a",
+        "cedae593e85a605f9d62cfaf7d764f59fa6496b6020c46dd7986b875c08aa8b6"
+      ],
+      "orders": [
+        {
+          "order": 8,
+          "nodes": 299,
+          "polynomial_exactness_error": 1.432187701766452e-14,
+          "aggregate_residual": -0.00023254885668810767,
+          "l1_net_cell_residual": 0.0002447031737368214,
+          "paired_radial_defect": 1.5590148268341265e-14
+        },
+        {
+          "order": 9,
+          "nodes": 321,
+          "polynomial_exactness_error": 7.993605777301127e-15,
+          "aggregate_residual": 4.111427004865479e-05,
+          "l1_net_cell_residual": 0.00013636274335336135,
+          "paired_radial_defect": 1.8466732817398167e-14
+        },
+        {
+          "order": 10,
+          "nodes": 343,
+          "polynomial_exactness_error": 1.7763568394002505e-14,
+          "aggregate_residual": 0.00010084879973618282,
+          "l1_net_cell_residual": 0.00015560163491673204,
+          "paired_radial_defect": 2.3876583702357316e-14
+        },
+        {
+          "order": 12,
+          "nodes": 387,
+          "polynomial_exactness_error": 1.9984014443252818e-14,
+          "aggregate_residual": 0.00011969648436923668,
+          "l1_net_cell_residual": 0.00012715351029790286,
+          "paired_radial_defect": 2.6333459020427262e-14
+        }
+      ],
+      "adjacent_changes": [
+        {
+          "orders": [
+            8,
+            9
+          ],
+          "total_relative_components": [
+            0.0002736631267386881,
+            -9.351036121517427e-17,
+            0.00027366312673676247
+          ],
+          "normalized_l1_local_net_drift": 0.00028721224178349016,
+          "largest_parent_q_bounds": [
+            3.9636789434531003,
+            5.728841112042199
+          ],
+          "largest_parent_drift": [
+            0.00023268421471141993,
+            4.988982792624462e-18,
+            0.00023268421471137217
+          ]
+        },
+        {
+          "orders": [
+            9,
+            10
+          ],
+          "total_relative_components": [
+            5.973452968621358e-05,
+            5.902061777685003e-17,
+            5.9734529687528025e-05
+          ],
+          "normalized_l1_local_net_drift": 0.00014923651525633686,
+          "largest_parent_q_bounds": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "largest_parent_drift": [
+            0.00010316226150193568,
+            1.0467673150086686e-19,
+            0.00010316226150192672
+          ]
+        },
+        {
+          "orders": [
+            10,
+            12
+          ],
+          "total_relative_components": [
+            1.8847684633033233e-05,
+            -5.3308982790726216e-18,
+            1.8847684633053863e-05
+          ],
+          "normalized_l1_local_net_drift": 9.668449353461995e-05,
+          "largest_parent_q_bounds": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "largest_parent_drift": [
+            -3.8063235462323025e-05,
+            -1.048130181757277e-19,
+            -3.8063235462367795e-05
+          ]
+        }
+      ]
+    },
+    {
+      "x": 0.05,
+      "state_sha256": "cd4d6b834aab835535e64ececa68468224f79902c848e9c2c03fae6eb97e3688",
+      "reference_and_prior_sha256": [
+        "04dfa7aa123b046781b43f27cdfb89efb966c0c5ca909d183228dd233b5e7e86",
+        "ec257a792128eead583cf01ea5bfd92518e0d4a031a370ec4bf484760143100f"
+      ],
+      "orders": [
+        {
+          "order": 8,
+          "nodes": 299,
+          "polynomial_exactness_error": 1.432187701766452e-14,
+          "aggregate_residual": -0.00027587614963953247,
+          "l1_net_cell_residual": 0.0002860172600719572,
+          "paired_radial_defect": 2.39344124494537e-13
+        },
+        {
+          "order": 9,
+          "nodes": 321,
+          "polynomial_exactness_error": 7.993605777301127e-15,
+          "aggregate_residual": 7.878505607343474e-05,
+          "l1_net_cell_residual": 0.00017837425713034105,
+          "paired_radial_defect": 2.3772510651065937e-13
+        },
+        {
+          "order": 10,
+          "nodes": 343,
+          "polynomial_exactness_error": 1.7763568394002505e-14,
+          "aggregate_residual": 0.00010837913655492336,
+          "l1_net_cell_residual": 0.00016566042200789899,
+          "paired_radial_defect": 2.3975853656432084e-13
+        },
+        {
+          "order": 12,
+          "nodes": 387,
+          "polynomial_exactness_error": 1.9984014443252818e-14,
+          "aggregate_residual": 0.00014892292295736736,
+          "l1_net_cell_residual": 0.00014994530420731235,
+          "paired_radial_defect": 2.4527303929671955e-13
+        }
+      ],
+      "adjacent_changes": [
+        {
+          "orders": [
+            8,
+            9
+          ],
+          "total_relative_components": [
+            0.00035466120516863993,
+            -5.426053173096124e-13,
+            0.0003546612057129672
+          ],
+          "normalized_l1_local_net_drift": 0.00037330174692671973,
+          "largest_parent_q_bounds": [
+            3.9636789434531003,
+            5.728841112042199
+          ],
+          "largest_parent_drift": [
+            0.0002417714617005162,
+            -1.341253172822818e-14,
+            0.0002417714617136546
+          ]
+        },
+        {
+          "orders": [
+            9,
+            10
+          ],
+          "total_relative_components": [
+            2.9594080064832075e-05,
+            -4.1732714732258213e-13,
+            2.959408048148863e-05
+          ],
+          "normalized_l1_local_net_drift": 0.0001921650067276411,
+          "largest_parent_q_bounds": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "largest_parent_drift": [
+            0.00010975334666604136,
+            -9.626575022556592e-17,
+            0.00010975334666628516
+          ]
+        },
+        {
+          "orders": [
+            10,
+            12
+          ],
+          "total_relative_components": [
+            4.054378705361931e-05,
+            6.513429085122503e-13,
+            4.054378640244401e-05
+          ],
+          "normalized_l1_local_net_drift": 0.00012214180860222105,
+          "largest_parent_q_bounds": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "largest_parent_drift": [
+            -3.995910502685658e-05,
+            1.0201416626629602e-16,
+            -3.995910502700483e-05
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Frozen S4 warm pressure source on held states only. Neither the compared Volume64 nor G12 is assumed exact or an evolved history."
+}

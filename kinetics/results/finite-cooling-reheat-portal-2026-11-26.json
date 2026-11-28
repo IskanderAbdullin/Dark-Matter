@@ -1,0 +1,452 @@
+{
+  "controls": [
+    {
+      "production_quadrature": [
+        7,
+        18,
+        14
+      ],
+      "rate_log_grid_nodes": 130,
+      "fixed_Tmax_cases": [
+        {
+          "fixed_Tmax_GeV": 0.01,
+          "T_R_GeV": 0.006604166178451299,
+          "prompt_scalar_fixed_count_omega_h2": 4.377938424335838e-12,
+          "pre_fraction_stable": 0.814056622214915
+        },
+        {
+          "fixed_Tmax_GeV": 0.02,
+          "T_R_GeV": 0.006258054987481221,
+          "prompt_scalar_fixed_count_omega_h2": 7.330235129348426e-10,
+          "pre_fraction_stable": 0.867139242334932
+        },
+        {
+          "fixed_Tmax_GeV": 0.04,
+          "T_R_GeV": 0.006231632949386819,
+          "prompt_scalar_fixed_count_omega_h2": 2.871543186003027e-09,
+          "pre_fraction_stable": 0.8706896667591592
+        }
+      ],
+      "max_independent_rate_interpolation_relative_error": 0.00012838054070085647,
+      "rows": [
+        {
+          "Tmax_over_TR": 1.0,
+          "T_R_GeV": 0.009019069957670343,
+          "Tmax_GeV": 0.009019069957670343,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.0,
+            0.0
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 2.363534420864373e-12,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            0.0,
+            0.0
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927482928885e-07,
+            5.942185880237641e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            null,
+            [
+              6.696283934702942,
+              4.456621799240557
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            6.696283934702942,
+            4.456621799240557
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            20.978725596419597,
+            0.0002468128449280034
+          ]
+        },
+        {
+          "Tmax_over_TR": 1.5,
+          "T_R_GeV": 0.006617909856163088,
+          "Tmax_GeV": 0.009926864784244632,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.999782602447556,
+            0.8116849837835528
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 4.032808392678911e-12,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            7.111977380424541e-08,
+            1.0861437282139879e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927482988922e-07,
+            5.898678363702572e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              3.706890992783599,
+              3.4682632136656837
+            ],
+            [
+              8.57104769715605,
+              4.592708124446139
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            3.708641828135499,
+            3.706178528422348
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            13.583357912073621,
+            0.00020531096368536352
+          ]
+        },
+        {
+          "Tmax_over_TR": 2.0,
+          "T_R_GeV": 0.0063637786525671735,
+          "Tmax_GeV": 0.012727557305134347,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.999994393305291,
+            0.8522409593893014
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 4.7785441243223046e-11,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            7.765528478196427e-08,
+            1.1122698382652125e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927485125788e-07,
+            5.885615432988204e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              2.079845021910148,
+              3.2039691147993823
+            ],
+            [
+              8.853375210954887,
+              4.617235735915687
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            2.079944837570474,
+            3.4494441470949577
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            8.703933041761742,
+            0.0001911051197425386
+          ]
+        },
+        {
+          "Tmax_over_TR": 3.0,
+          "T_R_GeV": 0.00626420809416284,
+          "Tmax_GeV": 0.01879262428248852,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.9999997099087857,
+            0.8663026232767894
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 5.653615947964833e-10,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            8.019127794545551e-08,
+            1.1176775967030741e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927510141646e-07,
+            5.880048271451692e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              1.0316065672741503,
+              3.080107675891763
+            ],
+            [
+              8.970309512728265,
+              4.627618700946028
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            1.0316177313014565,
+            3.3289304190570497
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            4.972760658386307,
+            0.0001844355315673703
+          ]
+        },
+        {
+          "Tmax_over_TR": 5.0,
+          "T_R_GeV": 0.006236182405706868,
+          "Tmax_GeV": 0.03118091202853434,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.9999999361977215,
+            0.8700831898462186
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 2.232558507608047e-09,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            8.09031919876088e-08,
+            1.1189810140346656e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927590721827e-07,
+            5.878749318945188e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              0.6039639887301985,
+              3.042517615621327
+            ],
+            [
+              9.003902799620118,
+              4.630624431946564
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            0.6039682515474064,
+            3.2924230748173775
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            3.205107037631136,
+            0.00018241495827989518
+          ]
+        }
+      ]
+    },
+    {
+      "production_quadrature": [
+        10,
+        26,
+        20
+      ],
+      "rate_log_grid_nodes": 230,
+      "fixed_Tmax_cases": [
+        {
+          "fixed_Tmax_GeV": 0.01,
+          "T_R_GeV": 0.006604166191265754,
+          "prompt_scalar_fixed_count_omega_h2": 4.377941753931576e-12,
+          "pre_fraction_stable": 0.8140565902139028
+        },
+        {
+          "fixed_Tmax_GeV": 0.02,
+          "T_R_GeV": 0.006258054967510036,
+          "prompt_scalar_fixed_count_omega_h2": 7.330235298279208e-10,
+          "pre_fraction_stable": 0.8671392224121449
+        },
+        {
+          "fixed_Tmax_GeV": 0.04,
+          "T_R_GeV": 0.0062316329459181875,
+          "prompt_scalar_fixed_count_omega_h2": 2.8715433196370535e-09,
+          "pre_fraction_stable": 0.8706896393889599
+        }
+      ],
+      "max_independent_rate_interpolation_relative_error": 6.409737973567253e-05,
+      "rows": [
+        {
+          "Tmax_over_TR": 1.0,
+          "T_R_GeV": 0.009019069895524137,
+          "Tmax_GeV": 0.009019069895524137,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.0,
+            0.0
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 2.3635374628016354e-12,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            0.0,
+            0.0
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927482928867e-07,
+            5.942185877455238e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            null,
+            [
+              6.696282682875891,
+              4.456621754971879
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            6.696282682875891,
+            4.456621754971879
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            20.978722791262673,
+            0.0002468128424808616
+          ]
+        },
+        {
+          "Tmax_over_TR": 1.5,
+          "T_R_GeV": 0.006617909860626673,
+          "Tmax_GeV": 0.00992686479094001,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.9997826026918931,
+            0.811684951924755
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 4.032811368181317e-12,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            7.111977096481278e-08,
+            1.0861436720826754e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927482988932e-07,
+            5.898678360942093e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              3.7068910865466833,
+              3.468263139918574
+            ],
+            [
+              8.571048073450385,
+              4.592707973153415
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            3.708641920055672,
+            3.7061784760579743
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            13.583358165994493,
+            0.00020531096078826657
+          ]
+        },
+        {
+          "Tmax_over_TR": 2.0,
+          "T_R_GeV": 0.006363778627679109,
+          "Tmax_GeV": 0.012727557255358218,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.9999943933042854,
+            0.852240944618008
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 4.7785438884804154e-11,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            7.765528373972106e-08,
+            1.112269823544288e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927485125771e-07,
+            5.885615432599223e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              2.0798451120523094,
+              3.2039691284966185
+            ],
+            [
+              8.853375802831694,
+              4.617235521568259
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            2.079944927739829,
+            3.4494441392101676
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            8.703933337505616,
+            0.00019110511930619595
+          ]
+        },
+        {
+          "Tmax_over_TR": 3.0,
+          "T_R_GeV": 0.006264208067228849,
+          "Tmax_GeV": 0.018792624201686547,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.9999997099087814,
+            0.8663026059899215
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 5.653615867785447e-10,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            8.019127669005278e-08,
+            1.1176775710659223e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.79992751014165e-07,
+            5.880048269759682e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              1.0316065564944294,
+              3.0801076428836605
+            ],
+            [
+              8.97031045356757,
+              4.627618486376095
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            1.0316177205243946,
+            3.32893038369039
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            4.972760616221108,
+            0.00018443552960996354
+          ]
+        },
+        {
+          "Tmax_over_TR": 5.0,
+          "T_R_GeV": 0.006236182402767521,
+          "Tmax_GeV": 0.031180912013837606,
+          "pre_fraction_of_scalar_and_stable_number": [
+            0.9999999361977596,
+            0.8700831628847681
+          ],
+          "scalar_prompt_fixed_count_Omega_h2": 2.2325586236734442e-09,
+          "pre_dark_to_visible_at_TR_energy_interval": [
+            8.090318951877718e-08,
+            1.118980967273149e-07
+          ],
+          "combined_dark_to_visible_at_1MeV_energy_interval": [
+            5.799927590721828e-07,
+            5.878749316937483e-07
+          ],
+          "pre_versus_post_rms_momentum_over_1MeV": [
+            [
+              0.6039639785328245,
+              3.0425175447455928
+            ],
+            [
+              9.003904362065853,
+              4.630624234414724
+            ]
+          ],
+          "combined_rms_momentum_over_1MeV": [
+            0.6039682413490517,
+            3.2924230316313463
+          ],
+          "post_1MeV_mean_streaming_distance_upper_to_equality_Mpc": [
+            3.2051069927823947,
+            0.00018241495588963613
+          ]
+        }
+      ]
+    }
+  ],
+  "variant_cooling_clock_at_TR_ratio3": [
+    {
+      "T_power_exponent": 0.25,
+      "Tmax_over_TR": 3.0,
+      "T_R_GeV": 0.0070171014048903725,
+      "stable_pre_fraction": 0.7332660747014189,
+      "scalar_prompt_omega_h2": 2.3867016048798845e-11
+    },
+    {
+      "T_power_exponent": 0.375,
+      "Tmax_over_TR": 3.0,
+      "T_R_GeV": 0.006264208067228849,
+      "stable_pre_fraction": 0.8663026059899215,
+      "scalar_prompt_omega_h2": 5.653615867785447e-10
+    },
+    {
+      "T_power_exponent": 0.5,
+      "Tmax_over_TR": 3.0,
+      "T_R_GeV": 0.0051356485224986126,
+      "stable_pre_fraction": 0.9666057012050004,
+      "scalar_prompt_omega_h2": 6.845985881605601e-10
+    }
+  ],
+  "analytical_cross_checks": {
+    "independent_angular_relative_defect": 1.1102230246251565e-15,
+    "matter_cooling_power_law_source_quadrature_defect": 1.7763568394002505e-15
+  },
+  "max_relative_root_change": 6.890533921222186e-09,
+  "target_stable_Omega_h2": 0.12,
+  "streaming_bound_scope": "In the existing reference radiation+matter background, from the 1 MeV snapshot to equality only. Jensen bounds mean speed using the collisionless redshifted RMS momentum. Not a transfer function or a claimed actual mean.",
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "scope": "Prescribed cooling branch of matter-dominated reheating with T~a^-3/8, H~a^-3/2, glued continuously in H to entropy-conserving radiation at T_R. No heating branch, inflaton dynamics, nonthermal SM, backreaction, inverse, scalar pairs or deformation of the vacuum matrix elements. Momentum is collisionless after the moment of instantaneous parent decay. Fixed-count calibration, not full reheating/BBN or scalar abundance fit."
+}

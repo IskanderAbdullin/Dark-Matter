@@ -1,0 +1,223 @@
+{
+  "scope": "Snapshot counterfactuals only; substitution order explicit, not separate evolved paths.",
+  "fine_steps": 64,
+  "duration": 3.3333333333333335e-07,
+  "rows": [
+    {
+      "step": 0,
+      "exposure": 0.0,
+      "native_rate": 0.07863619024795206,
+      "continuous_rate": 0.056903950942538625,
+      "total_continuous_minus_native": -0.021732239305413445,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.006227023136042237,
+          "original_two_cells_swap": -0.006227023136042237,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": -0.01551119464307013,
+          "original_two_cells_swap": -0.01551119464307013,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": 1.3877787807814457e-17,
+      "subsequent_dispersion_change": 5.9784736989124685e-06,
+      "subsequent_cold_seed_change": 0.0
+    },
+    {
+      "step": 1,
+      "exposure": 5.208333333333334e-09,
+      "native_rate": 0.0697872069911869,
+      "continuous_rate": 0.056835434110018145,
+      "total_continuous_minus_native": -0.012951772881168763,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.004590792386073613,
+          "original_two_cells_swap": -0.004590792386073613,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": -0.008367574173231536,
+          "original_two_cells_swap": -0.008367574173231536,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -1.0408340855860843e-17,
+      "subsequent_dispersion_change": 6.588620226416453e-06,
+      "subsequent_cold_seed_change": 5.057909980047318e-09
+    },
+    {
+      "step": 2,
+      "exposure": 1.0416666666666667e-08,
+      "native_rate": 0.06523475564686351,
+      "continuous_rate": 0.05687188907099554,
+      "total_continuous_minus_native": -0.008362866575867984,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.003516934913715361,
+          "original_two_cells_swap": -0.003516934913715361,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": -0.004852702009956655,
+          "original_two_cells_swap": -0.004852702009956655,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -6.938893903907228e-18,
+      "subsequent_dispersion_change": 6.7619536729183255e-06,
+      "subsequent_cold_seed_change": 8.394131120790962e-09
+    },
+    {
+      "step": 4,
+      "exposure": 2.0833333333333335e-08,
+      "native_rate": 0.06156602769444915,
+      "continuous_rate": 0.057343104011968,
+      "total_continuous_minus_native": -0.004222923682481151,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.002314123033953806,
+          "original_two_cells_swap": -0.002314123033953806,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": -0.00191540777737261,
+          "original_two_cells_swap": -0.00191540777737261,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -6.938893903907228e-18,
+      "subsequent_dispersion_change": 6.59540906128827e-06,
+      "subsequent_cold_seed_change": 1.1719783983245201e-08
+    },
+    {
+      "step": 8,
+      "exposure": 4.166666666666667e-08,
+      "native_rate": 0.06072854751642571,
+      "continuous_rate": 0.05900504139264978,
+      "total_continuous_minus_native": -0.0017235061237759312,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.0014079157674482116,
+          "original_two_cells_swap": -0.0014079157674482116,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": -0.00032145705145814686,
+          "original_two_cells_swap": -0.00032145705145814686,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -8.456776945386935e-18,
+      "subsequent_dispersion_change": 5.853522325863819e-06,
+      "subsequent_cold_seed_change": 1.3172804571633739e-08
+    },
+    {
+      "step": 16,
+      "exposure": 8.333333333333334e-08,
+      "native_rate": 0.06299753024344437,
+      "continuous_rate": 0.0622846793024542,
+      "total_continuous_minus_native": -0.0007128509409901741,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.0008485739012828972,
+          "original_two_cells_swap": -0.0008485739012828972,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": 0.0001310397342310945,
+          "original_two_cells_swap": 0.0001310397342310945,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": 1.0191500421363742e-17,
+      "subsequent_dispersion_change": 4.671017718648852e-06,
+      "subsequent_cold_seed_change": 1.2208342969653158e-08
+    },
+    {
+      "step": 32,
+      "exposure": 1.6666666666666668e-07,
+      "native_rate": 0.06691745947753537,
+      "continuous_rate": 0.06659778246447053,
+      "total_continuous_minus_native": -0.0003196770130648389,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.00044952423191151893,
+          "original_two_cells_swap": -0.00044952423191151893,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": 0.0001264243988780202,
+          "original_two_cells_swap": 0.0001264243988780202,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -6.776263578034403e-18,
+      "subsequent_dispersion_change": 3.412904945703067e-06,
+      "subsequent_cold_seed_change": 9.915022963493564e-09
+    },
+    {
+      "step": 48,
+      "exposure": 2.5000000000000004e-07,
+      "native_rate": 0.0693605398384135,
+      "continuous_rate": 0.06917384921926725,
+      "total_continuous_minus_native": -0.00018669061914625037,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.00028013645801485944,
+          "original_two_cells_swap": -0.00028013645801485944,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": 9.066990645361975e-05,
+          "original_two_cells_swap": 9.066990645361975e-05,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -4.960224939121183e-18,
+      "subsequent_dispersion_change": 2.7675255146912375e-06,
+      "subsequent_cold_seed_change": 8.406900303073707e-09
+    },
+    {
+      "step": 64,
+      "exposure": 3.3333333333333335e-07,
+      "native_rate": 0.07105719562284481,
+      "continuous_rate": 0.07093544157798462,
+      "total_continuous_minus_native": -0.00012175404486018265,
+      "occupation_swaps": [
+        {
+          "species": "parent",
+          "all_retained_swap": -0.00019296925800152333,
+          "original_two_cells_swap": -0.00019296925800152333,
+          "outside_original_two_cell_difference": 0.0
+        },
+        {
+          "species": "daughter",
+          "all_retained_swap": 6.883774872990967e-05,
+          "original_two_cells_swap": 6.883774872990967e-05,
+          "outside_original_two_cell_difference": 0.0
+        }
+      ],
+      "occupation_cross_difference": -1.7076184216646695e-18,
+      "subsequent_dispersion_change": 2.3700998959460813e-06,
+      "subsequent_cold_seed_change": 7.3645154866405454e-09
+    }
+  ]
+}

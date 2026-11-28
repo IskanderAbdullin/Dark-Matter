@@ -1,0 +1,83 @@
+{
+  "complete": true,
+  "grid": "fine",
+  "charge_div": 2,
+  "scalar_div": 4,
+  "cut": 1e-05,
+  "gauss_floor": 0.01,
+  "reference_x": 0.005,
+  "nodes": [
+    219,
+    448,
+    488
+  ],
+  "scalar_cell_count": 145,
+  "scalar_nodal_rule": "gauss-volume-v3-targeted",
+  "targeted_rule": {
+    "baseline_gauss_order": 4,
+    "target_q_lower_edges": [
+      3.9636789434531003,
+      5.728841112042199
+    ],
+    "split_fraction": 0.5,
+    "gauss_order_per_half": 4
+  },
+  "checked_epoch_pairs": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.782325963081014e-08,
+      "pole_mass": 4.6915287845754835e-05,
+      "relative_time_drift": 5.1155568628891146e-05,
+      "maximum_absolute_continuity": 3.348143363577326e-16,
+      "maximum_pair_number_error": 5.664871647942035e-17,
+      "verified_previous_raw_sha256": null,
+      "source_report_sha256": "cb934690f9d0e4acb1ab11b9190209408cc75b5a28005cc531761a40ca38618b",
+      "uncompressed_state_sha256": "3f4882c27332fe0583dca91d41b299c3ee355856e854177d56354894b5326bd7"
+    },
+    {
+      "x": 0.01,
+      "scalar_yield": 3.474976546238101e-07,
+      "pole_mass": 8.535844546380708e-05,
+      "relative_time_drift": 1.2523085768378905e-07,
+      "maximum_absolute_continuity": 1.999717733525315e-16,
+      "maximum_pair_number_error": 4.7183123293853546e-17,
+      "verified_previous_raw_sha256": "3f4882c27332fe0583dca91d41b299c3ee355856e854177d56354894b5326bd7",
+      "source_report_sha256": "4cc217435a95618c8d14d4471cedcce5a2659ce5fbddc179fe1cd2804f275eb4",
+      "uncompressed_state_sha256": "a219ea839d4c582a6f9a220a2fafbc01a20914b41b96e0c692058c890378bc79"
+    },
+    {
+      "x": 0.02,
+      "scalar_yield": 1.0218140687103956e-05,
+      "pole_mass": 0.00026353938455561925,
+      "relative_time_drift": 2.184742514899085e-06,
+      "maximum_absolute_continuity": 1.6838337026244508e-13,
+      "maximum_pair_number_error": 4.3395191953732315e-17,
+      "verified_previous_raw_sha256": "a219ea839d4c582a6f9a220a2fafbc01a20914b41b96e0c692058c890378bc79",
+      "source_report_sha256": "e1fb84cbaac33886d185a07889894a49c17b04e8e657154b76fbc2663f9360f3",
+      "uncompressed_state_sha256": "1a12422b8f3be5bb8846893b9cdb8c31ef6d654bb5b1eca23a3b191b40b25b37"
+    },
+    {
+      "x": 0.04,
+      "scalar_yield": 0.0001732092293190964,
+      "pole_mass": 0.0006770053079677061,
+      "relative_time_drift": 0.00012767093461962808,
+      "maximum_absolute_continuity": 7.203145415204948e-11,
+      "maximum_pair_number_error": 9.8879238130678e-17,
+      "verified_previous_raw_sha256": "1a12422b8f3be5bb8846893b9cdb8c31ef6d654bb5b1eca23a3b191b40b25b37",
+      "source_report_sha256": "ef3e25e73a62d856e06fbda02d9467c81bbdbbf7f1ec0defbf6686182c6d84c6",
+      "uncompressed_state_sha256": "5d097c9bb3a1120fa5cbdeeec09afdd61c4c080b443b97606060563a3b5d1eff"
+    },
+    {
+      "x": 0.05,
+      "scalar_yield": 0.00037162729032886525,
+      "pole_mass": 0.0008731830054590315,
+      "relative_time_drift": 3.180095611265976e-05,
+      "maximum_absolute_continuity": 2.7740141130341844e-11,
+      "maximum_pair_number_error": 8.760353553682876e-17,
+      "verified_previous_raw_sha256": "5d097c9bb3a1120fa5cbdeeec09afdd61c4c080b443b97606060563a3b5d1eff",
+      "source_report_sha256": "945e785301db87fed1e609a503fc2e58503d87b9964ac08bd094cb38731d92a9",
+      "uncompressed_state_sha256": "c8c26bbaf9a809346ec696a86da907f06d1fbd142e506f59d0e62ced4a2cbb3e"
+    }
+  ],
+  "scope": "Check actual paired trajectory archives and restart links, not a replay of the ODE."
+}

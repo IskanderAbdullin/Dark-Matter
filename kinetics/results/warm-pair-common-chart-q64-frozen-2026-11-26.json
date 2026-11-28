@@ -1,0 +1,124 @@
+{
+  "thermal": null,
+  "archives": [
+    {
+      "file": "warm-cold-pair-spike-q64-step12-2026-11-26.json.gz",
+      "T_GeV": 0.007754805139316106,
+      "snapshot_sha256": "c755c6c77eae7ae7cff583f1f7498e0a56a08c69e7ec808c0058a7a69cc64d71",
+      "controls": [
+        {
+          "quadrature": [
+            3,
+            7,
+            6,
+            2
+          ],
+          "direction_gross_number_energy": [
+            [
+              1.6308140549983462e-34,
+              1.1427397508013983e-35
+            ],
+            [
+              3.0147407450644475e-34,
+              2.1102950822046495e-35
+            ]
+          ],
+          "inverse_over_original_number_energy": [
+            0.9999728534899585,
+            0.9999876246949122
+          ],
+          "forward_match": 8.918866031176126e-16,
+          "ledger_closure": 6.815103339434972e-16,
+          "max_exterior_p_GeV": 0.8817150121535327,
+          "first_cell_gain_over_loss_original": 5.054174654819352,
+          "first_cell_gain_over_loss_common": 0.5028568992248738,
+          "normalized_signed_change": [
+            [
+              0.0006671445798734658,
+              0.0003190338935024592
+            ],
+            [
+              0.0025951101552436507,
+              0.003062101880777879
+            ]
+          ]
+        },
+        {
+          "quadrature": [
+            4,
+            10,
+            10,
+            4
+          ],
+          "direction_gross_number_energy": [
+            [
+              1.6308286221362901e-34,
+              1.1427482320941292e-35
+            ],
+            [
+              3.0147534484076607e-34,
+              2.1103006904663463e-35
+            ]
+          ],
+          "inverse_over_original_number_energy": [
+            1.0000385086515207,
+            1.000023133717342
+          ],
+          "forward_match": 9.93449982971277e-16,
+          "ledger_closure": 1.0681038637393135e-15,
+          "max_exterior_p_GeV": 0.8817150121535327,
+          "first_cell_gain_over_loss_original": 0.8310230119183801,
+          "first_cell_gain_over_loss_common": 0.502856142153695,
+          "normalized_signed_change": [
+            [
+              0.0005940494411300402,
+              0.0004168454413239816
+            ],
+            [
+              0.0007472324884353495,
+              0.000698204677314607
+            ]
+          ]
+        },
+        {
+          "quadrature": [
+            6,
+            14,
+            14,
+            6
+          ],
+          "direction_gross_number_energy": [
+            [
+              1.6308403700554232e-34,
+              1.1427564842641697e-35
+            ],
+            [
+              3.0147532241033495e-34,
+              2.1103003463918734e-35
+            ]
+          ],
+          "inverse_over_original_number_energy": [
+            1.0000051157200325,
+            1.0000037070475547
+          ],
+          "forward_match": 8.634806508029277e-16,
+          "ledger_closure": 5.956718605577067e-16,
+          "max_exterior_p_GeV": 0.8817150121535327,
+          "first_cell_gain_over_loss_original": 0.8448286685964544,
+          "first_cell_gain_over_loss_common": 0.5028559537653847,
+          "normalized_signed_change": [
+            [
+              8.031382707044428e-05,
+              7.721022331115582e-05
+            ],
+            [
+              0.0002141618511352478,
+              8.661524668922623e-05
+            ]
+          ],
+          "independent_first_cell_gain_over_loss": 0.5028560944866567
+        }
+      ]
+    }
+  ]
+}

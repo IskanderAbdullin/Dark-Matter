@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "x": 0.005002,
+      "grid": "fine",
+      "lifted_histogram": false,
+      "reference_nodal_mass": 2.738404231450651e-10,
+      "reconstructed_frozen_shape_root": 2.7477858444793926e-10,
+      "induced_relative_root_shift": 0.0034259416199382553,
+      "admissible_root_range": [
+        2.733265368114369e-10,
+        2.777375634480571e-10
+      ],
+      "admissible_root_relative_width": 0.016108018626174524,
+      "inverse_moment_range": [
+        1.952033867320123e-12,
+        2.0155685730993183e-12
+      ],
+      "inverse_moment_relative_width": 0.03242586812638204,
+      "numeric_margin_relative": 5e-12
+    },
+    {
+      "x": 0.05,
+      "grid": "fine",
+      "lifted_histogram": true,
+      "reference_nodal_mass": 0.0008731828113828929,
+      "reconstructed_frozen_shape_root": 0.0008731828113838861,
+      "induced_relative_root_shift": 1.1375345110309354e-12,
+      "admissible_root_range": [
+        0.0008731828111940053,
+        0.0008731828117941496
+      ],
+      "admissible_root_relative_width": 6.873065701753352e-10,
+      "inverse_moment_range": [
+        19.928727984177826,
+        19.92872801157212
+      ],
+      "inverse_moment_relative_width": 1.3746131748057549e-09,
+      "numeric_margin_relative": 5e-12
+    }
+  ],
+  "scope": "Frozen positive shapes matching moments at one reference mass; no evolving or physical gap envelope."
+}

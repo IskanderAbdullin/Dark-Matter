@@ -1,0 +1,52 @@
+{
+  "scope": "Same inherited q32 input and same combined endpoint: coarse versus two half-size splitting blocks. Samples only the declared explicit interface states, not the continuous solution.",
+  "endpoint_T_GeV": 0.010187141866276936,
+  "coarse": {
+    "start": 5.795670076057429e-05,
+    "end": 5.7861688054814086e-05,
+    "first_kick": 5.8031893808343745e-05,
+    "peak": 5.8031893808343745e-05,
+    "max_excess": 7.519304776945618e-08,
+    "first_pair_gain": 7.519304776945618e-08
+  },
+  "fine": [
+    {
+      "start": 5.795670076057429e-05,
+      "end": 5.7911388065632154e-05,
+      "first_kick": 5.799490036807647e-05,
+      "peak": 5.799490036807647e-05,
+      "max_excess": 3.819960750218028e-08,
+      "first_pair_gain": 3.819960750218028e-08
+    },
+    {
+      "start": 5.7911388065632154e-05,
+      "end": 5.785685798554806e-05,
+      "first_kick": 5.795265536863962e-05,
+      "peak": 5.795265536863962e-05,
+      "max_excess": 4.126730300746872e-08,
+      "first_pair_gain": 4.126730300746872e-08
+    }
+  ],
+  "refined_combined_peak": 5.799490036807647e-05,
+  "refined_combined_excess_over_shared_interval_endpoints": 3.819960750218028e-08,
+  "fine_over_coarse_within_interval_excess": 0.5080204704469655,
+  "scalar_stable_shell_L1_number_and_kinetic": [
+    [
+      0.00047305260664851165,
+      0.0005918621670758377
+    ],
+    [
+      0.00029000019706297147,
+      0.00028621285799175093
+    ]
+  ],
+  "gross_new_high_exterior_creation_coarse_fine_GeV4": [
+    4.065189944350293e-24,
+    4.0601836150555815e-24
+  ],
+  "gross_new_high_exterior_creation_relative_change": -0.0012315117776154905,
+  "relative_total_counts": [
+    6.266783732389314e-06,
+    -2.8729024934559533e-06
+  ]
+}

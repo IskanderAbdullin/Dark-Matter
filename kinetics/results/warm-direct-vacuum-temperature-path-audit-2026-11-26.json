@@ -1,0 +1,80 @@
+{
+  "scope": "Number-weighted ballistic path after the common 6 MeV end of the represented cutoff, through equality, in one prescribed background. Monotone momentum endpoints, exact for the shell bounds up to positive quadrature error. Not a transfer function or an observation-derived constraint.",
+  "scale_factor_start": 2.8008726825992668e-11,
+  "scale_factor_equality": 0.000292389101279115,
+  "massless_tail_upper": 270.97722332215534,
+  "rows": [
+    {
+      "T_reheat_GeV": 0.025,
+      "mean_path_Mpc_mixture_lower_upper": [
+        10.98312819969515,
+        11.911875778806252
+      ],
+      "mean_path_Mpc_per_species_lower_upper": [
+        [
+          10.968867389508421,
+          11.896586788068973
+        ],
+        [
+          13.530750171084861,
+          14.643177031165424
+        ]
+      ],
+      "pion_mixture_fraction": 0.005566535006708195
+    },
+    {
+      "T_reheat_GeV": 0.05,
+      "mean_path_Mpc_mixture_lower_upper": [
+        8.452868852889427,
+        9.180106114024786
+      ],
+      "mean_path_Mpc_per_species_lower_upper": [
+        [
+          8.274660639889703,
+          8.98832836082433
+        ],
+        [
+          10.43749586522875,
+          11.31585116730111
+        ]
+      ],
+      "pion_mixture_fraction": 0.08239564942899741
+    },
+    {
+      "T_reheat_GeV": 0.075,
+      "mean_path_Mpc_mixture_lower_upper": [
+        7.881445491459254,
+        8.561343318053613
+      ],
+      "mean_path_Mpc_per_species_lower_upper": [
+        [
+          7.455834818491886,
+          8.102385772047416
+        ],
+        [
+          9.021748170072474,
+          9.790989453174719
+        ]
+      ],
+      "pion_mixture_fraction": 0.27179707774875855
+    },
+    {
+      "T_reheat_GeV": 0.1,
+      "mean_path_Mpc_mixture_lower_upper": [
+        7.404386290973885,
+        8.045775479446384
+      ],
+      "mean_path_Mpc_per_species_lower_upper": [
+        [
+          7.075824482593535,
+          7.6908900092928425
+        ],
+        [
+          7.8602413066110355,
+          8.538152613428322
+        ]
+      ],
+      "pion_mixture_fraction": 0.41886124611348136
+    }
+  ]
+}

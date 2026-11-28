@@ -1,0 +1,146 @@
+{
+  "steps": {
+    "grid": "fine",
+    "projection": "steps",
+    "order": 8,
+    "snapshot_exposure": 7.2e-05,
+    "rows": [
+      {
+        "q_interval": [
+          1e-05,
+          0.001
+        ],
+        "scalar_net_count_and_energy": [
+          1.3704248765248754e-07,
+          1.197691574232351e-10
+        ],
+        "parent_daughter_counts": [
+          -1.3704248765248744e-07,
+          1.3704248765248744e-07
+        ],
+        "parent_daughter_energies": [
+          -1.959872732412018e-07,
+          1.958675040837786e-07
+        ],
+        "number_defect": 1.0587911840678754e-22,
+        "energy_defect": 3.1458712671157334e-23,
+        "positive_entropy_rate": 2.748088062363083e-07
+      },
+      {
+        "q_interval": [
+          0.001,
+          0.1
+        ],
+        "scalar_net_count_and_energy": [
+          2.5873681257365695e-08,
+          1.2663327384242355e-09
+        ],
+        "parent_daughter_counts": [
+          -2.58736812573657e-08,
+          2.58736812573657e-08
+        ],
+        "parent_daughter_energies": [
+          -4.12735848663718e-08,
+          4.000725212794755e-08
+        ],
+        "number_defect": 6.617444900424222e-24,
+        "energy_defect": -9.305781891221561e-24,
+        "positive_entropy_rate": 2.1571426207581098e-07
+      },
+      {
+        "q_interval": [
+          0.1,
+          5.0
+        ],
+        "scalar_net_count_and_energy": [
+          2.6142891684566395e-07,
+          2.689747726847522e-07
+        ],
+        "parent_daughter_counts": [
+          -2.6142891684566395e-07,
+          2.6142891684566395e-07
+        ],
+        "parent_daughter_energies": [
+          -6.353876847753457e-07,
+          3.6641291209059344e-07
+        ],
+        "number_defect": 0.0,
+        "energy_defect": -5.293955920339377e-23,
+        "positive_entropy_rate": 3.707640147564655e-06
+      }
+    ],
+    "scope": "Frozen reciprocal derivative only; no exterior trajectory or photon scattering invoked."
+  },
+  "cell-conservative": {
+    "grid": "fine",
+    "projection": "cell-conservative",
+    "order": 8,
+    "snapshot_exposure": 7.2e-05,
+    "rows": [
+      {
+        "q_interval": [
+          1e-05,
+          0.001
+        ],
+        "scalar_net_count_and_energy": [
+          1.3683051714356296e-07,
+          1.19584031149083e-10
+        ],
+        "parent_daughter_counts": [
+          -1.3683051714356296e-07,
+          1.3683051714356294e-07
+        ],
+        "parent_daughter_energies": [
+          -1.9568594353176276e-07,
+          1.9556635950061354e-07
+        ],
+        "number_defect": 2.6469779601696886e-23,
+        "energy_defect": -1.3358966892731397e-22,
+        "positive_entropy_rate": 2.746320157600188e-07
+      },
+      {
+        "q_interval": [
+          0.001,
+          0.1
+        ],
+        "scalar_net_count_and_energy": [
+          2.5873059883477114e-08,
+          1.266369775413309e-09
+        ],
+        "parent_daughter_counts": [
+          -2.5873059883477114e-08,
+          2.5873059883477107e-08
+        ],
+        "parent_daughter_energies": [
+          -4.1393162565050495e-08,
+          4.0126792789637187e-08
+        ],
+        "number_defect": 6.617444900424222e-24,
+        "energy_defect": 4.1359030627651384e-25,
+        "positive_entropy_rate": 2.1582391684275718e-07
+      },
+      {
+        "q_interval": [
+          0.1,
+          5.0
+        ],
+        "scalar_net_count_and_energy": [
+          2.626505211679086e-07,
+          2.712042873358249e-07
+        ],
+        "parent_daughter_counts": [
+          -2.626505211679086e-07,
+          2.626505211679086e-07
+        ],
+        "parent_daughter_energies": [
+          -6.402680370764553e-07,
+          3.690637497406304e-07
+        ],
+        "number_defect": 0.0,
+        "energy_defect": -5.293955920339377e-23,
+        "positive_entropy_rate": 3.7292856716002052e-06
+      }
+    ],
+    "scope": "Frozen reciprocal derivative only; no exterior trajectory or photon scattering invoked."
+  }
+}

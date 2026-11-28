@@ -1,0 +1,107 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "rows": [
+        {
+          "log_a": 0.91,
+          "state": [
+            0.3862403300205801,
+            -0.07564016820551382,
+            -0.9597891827190308
+          ],
+          "comoving_number_ratio": 1.1019627243167973,
+          "relative_entropy_added": 1.6924115140277984e-05,
+          "normalized_work": 0.5637062547739251,
+          "entropy_energy_absolute_defects": [
+            1.4564435064934062e-08,
+            8.873566326172977e-09
+          ]
+        },
+        {
+          "log_a": 0.93,
+          "state": [
+            0.3793577902591518,
+            -0.07583767666036365,
+            -0.979461440808669
+          ],
+          "comoving_number_ratio": 1.1028234661702125,
+          "relative_entropy_added": 1.823728434874747e-05,
+          "normalized_work": 0.5712173537673921,
+          "entropy_energy_absolute_defects": [
+            1.4564186805208297e-08,
+            8.873566326172977e-09
+          ]
+        },
+        {
+          "log_a": 0.96,
+          "state": [
+            0.3693189757741581,
+            -0.07593584215537909,
+            -1.0090476598294402
+          ],
+          "comoving_number_ratio": 1.1040567445547929,
+          "relative_entropy_added": 2.0256761753955613e-05,
+          "normalized_work": 0.5821984143331702,
+          "entropy_energy_absolute_defects": [
+            1.4561451566177854e-08,
+            8.873566326172977e-09
+          ]
+        }
+      ]
+    },
+    {
+      "operator": "combined",
+      "rows": [
+        {
+          "log_a": 0.91,
+          "state": [
+            0.386238924222015,
+            -0.07535528947830952,
+            -0.9597879775331215
+          ],
+          "comoving_number_ratio": 1.1022546453155604,
+          "relative_entropy_added": 1.7014971381849167e-05,
+          "normalized_work": 0.563706401115461,
+          "entropy_energy_absolute_defects": [
+            2.1898292033997258e-09,
+            1.575494290584345e-09
+          ]
+        },
+        {
+          "log_a": 0.93,
+          "state": [
+            0.3793562175837159,
+            -0.07562107195514055,
+            -0.9794400590178407
+          ],
+          "comoving_number_ratio": 1.1031133460076605,
+          "relative_entropy_added": 1.833808497262152e-05,
+          "normalized_work": 0.5712175109938432,
+          "entropy_energy_absolute_defects": [
+            2.1900786991125795e-09,
+            1.5754946236512524e-09
+          ]
+        },
+        {
+          "log_a": 0.96,
+          "state": [
+            0.3693171213061519,
+            -0.07583754740978221,
+            -1.0089911496190596
+          ],
+          "comoving_number_ratio": 1.1043435548083602,
+          "relative_entropy_added": 2.038189541347003e-05,
+          "normalized_work": 0.5821985918050568,
+          "entropy_energy_absolute_defects": [
+            2.1928085551673273e-09,
+            1.5754948456958573e-09
+          ]
+        }
+      ]
+    }
+  ],
+  "previous_archive_sha256": "fef144005f2f2ea07f89c7e94a5ccf3e5f1c9cf96a2be38885348ee5dfb5bc52",
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Independent extensive numerical continuation of restricted FD histories, not a full reaction model or cosmological threshold."
+}

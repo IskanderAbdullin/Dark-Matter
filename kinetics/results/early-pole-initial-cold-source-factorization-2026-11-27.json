@@ -1,0 +1,135 @@
+{
+  "scope": "Static diagnostic with fixed scalar seed and scale; unmatched hybrid hard energies/occupations are not evolved.",
+  "cold_grid": [
+    1.1901242373952425e-06,
+    1.5870561775035875e-06,
+    2.1163734267482347e-06,
+    2.8222293230297076e-06,
+    3.763503288739904e-06,
+    5.0187122955518175e-06,
+    6.692560407979942e-06,
+    8.924672740088974e-06
+  ],
+  "scalar_pole": 0.0008720559389048292,
+  "scalar_occupation_range": [
+    12679308311.540619,
+    1.0549772704410422e+16
+  ],
+  "retained_aperture": "fine",
+  "cases": {
+    "native_dispersion_native_occupations": {
+      "total_net_rate": 0.07863619024795206,
+      "net_rate_each_mode": [
+        1.3622473144551476e-09,
+        2.2857338850257777e-06,
+        0.0010284242623745004,
+        0.013634192627122052,
+        0.035842628592705164,
+        0.027271218028337978,
+        0.0008521604836688252,
+        5.279157611208335e-06
+      ],
+      "spontaneous": 1.037418924755865e-16,
+      "signed_induced_contrast": 0.07863619024795196,
+      "gross_gain": 0.10773494834053463,
+      "gross_inverse": 0.02909875809258256,
+      "scalar_energy_source": 6.857592866150262e-05
+    },
+    "continuous_dispersion_native_occupations": {
+      "total_net_rate": 0.07863967740972341,
+      "net_rate_each_mode": [
+        1.3622562135136514e-09,
+        2.285748817149885e-06,
+        0.0010284309807916073,
+        0.013634281695953095,
+        0.035842862746988675,
+        0.02727429735777832,
+        0.0008522379762484172,
+        5.2795408899248715e-06
+      ],
+      "spontaneous": 1.03742854740558e-16,
+      "signed_induced_contrast": 0.07863967740972329,
+      "gross_gain": 0.10773586623576166,
+      "gross_inverse": 0.029096188826038268,
+      "scalar_energy_source": 6.857896971043794e-05
+    },
+    "native_dispersion_continuous_occupations": {
+      "total_net_rate": 0.056897972468839715,
+      "net_rate_each_mode": [
+        9.602196837194257e-10,
+        1.6105916982589922e-06,
+        0.000724196747017209,
+        0.009590101426328898,
+        0.025160531741193048,
+        0.02072084104404144,
+        0.0006961703773118804,
+        4.519581029292407e-06
+      ],
+      "spontaneous": 9.692052944649113e-17,
+      "signed_induced_contrast": 0.05689797246883962,
+      "gross_gain": 0.09970978635438373,
+      "gross_inverse": 0.04281181388554401,
+      "scalar_energy_source": 4.9618782109639874e-05
+    },
+    "continuous_dispersion_continuous_occupations": {
+      "total_net_rate": 0.056903950942538625,
+      "net_rate_each_mode": [
+        9.603366528828013e-10,
+        1.6107880001006993e-06,
+        0.0007242850994032843,
+        0.009591273452078782,
+        0.02516361615185434,
+        0.02072241178459494,
+        0.0006962326655343339,
+        4.520040736188037e-06
+      ],
+      "spontaneous": 9.69230266671297e-17,
+      "signed_induced_contrast": 0.05690395094253853,
+      "gross_gain": 0.09971240265711323,
+      "gross_inverse": 0.04280845171457458,
+      "scalar_energy_source": 4.962399572806673e-05
+    }
+  },
+  "single_occupation_swaps_at_native_dispersion": {
+    "parent_only": {
+      "total_net_rate": 0.07240916711190984,
+      "net_rate_each_mode": [
+        1.2575588465115386e-09,
+        2.1101207951070722e-06,
+        0.0009494464887387955,
+        0.012588007536997466,
+        0.03309631792771945,
+        0.02499434965723996,
+        0.0007741783158584014,
+        4.75580700180549e-06
+      ],
+      "spontaneous": 9.772878392487339e-17,
+      "signed_induced_contrast": 0.07240916711190973,
+      "gross_gain": 0.1017862102502473,
+      "gross_inverse": 0.02937704313833746,
+      "scalar_energy_source": 6.31455539630437e-05
+    },
+    "daughter_only": {
+      "total_net_rate": 0.06312499560488194,
+      "net_rate_each_mode": [
+        1.0649081516628506e-09,
+        1.7862047881776977e-06,
+        0.000803174520652914,
+        0.010636286516453484,
+        0.027906842406178748,
+        0.022997709415139463,
+        0.0007741525451223043,
+        5.042931638695269e-06
+      ],
+      "spontaneous": 1.0292824295748159e-16,
+      "signed_induced_contrast": 0.06312499560488184,
+      "gross_gain": 0.1055358329287152,
+      "gross_inverse": 0.04241083732383325,
+      "scalar_energy_source": 5.50491568080988e-05
+    }
+  },
+  "held_occupation_dispersion_difference": 3.4871617713566616e-06,
+  "held_dispersion_occupation_difference": -0.02173821777911234,
+  "mixed_rate_difference": 2.491311927546591e-06,
+  "total_continuous_minus_native": -0.02173223930541343
+}

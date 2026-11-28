@@ -1,0 +1,45 @@
+{
+  "rows": [
+    {
+      "method": "BDF",
+      "log_a_crossing": 0.29028541413165315,
+      "positive_local_difference_derivative": 1.3384081693673726e-08,
+      "sampled_bracket": [
+        0.29,
+        0.29125
+      ],
+      "interval_difference_endpoints": [
+        -3.049495307664375e-10,
+        1.477791705708906e-10
+      ],
+      "visible_temperatures": [
+        0.6840280028069186,
+        0.6840278059796902
+      ]
+    },
+    {
+      "method": "Radau",
+      "log_a_crossing": 0.2902854252589755,
+      "positive_local_difference_derivative": 1.3384082730372597e-08,
+      "sampled_bracket": [
+        0.29,
+        0.29125
+      ],
+      "interval_difference_endpoints": [
+        -3.049495307664375e-10,
+        1.4777899796654e-10
+      ],
+      "visible_temperatures": [
+        0.6840279956495834,
+        0.6840277988223431
+      ]
+    }
+  ],
+  "maximum_cross_mesh_log_a_shift": 1.1127322341319967e-08,
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "base_and_follow_sha256": [
+    "ba67169463c23512e2dbff92ca7e705c4f3f913ba220b0fa42b4840ee1e4ae70",
+    "53920cf458a096b4abf38667e89d32e2cb7672e85552e0a2705063287babd9d4"
+  ],
+  "scope": "Only the difference of two cumulative entropy histories crosses zero. No reaction threshold, entropy violation, or cosmological prediction."
+}

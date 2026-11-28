@@ -1,0 +1,24 @@
+{
+  "grid": "fine",
+  "scalar_div": 2,
+  "x": 0.05,
+  "charge_div": 2,
+  "nodal_gap": 0.000873183268934027,
+  "band": [
+    1e-06,
+    1.5e-05
+  ],
+  "base_step_continuum_root_relative_to_original_nodal_minus_one": -6.673312968885625e-08,
+  "count_only_root_min_max_relative_to_nodal_minus_one": [
+    -2.526631218691122e-07,
+    3.5815902710290004e-07
+  ],
+  "count_and_mean_excess_root_min_max_relative_to_nodal_minus_one": [
+    -6.673325136929975e-08,
+    -6.673303942772435e-08
+  ],
+  "count_only_root_width_relative_to_nodal": 6.108221488153759e-07,
+  "count_and_mean_excess_root_width_relative_to_nodal": 2.1195242445404523e-13,
+  "numerical_absolute_difference_between_meshes": 4.440892098500626e-16,
+  "scope": "Finite panel reweighting within the retained band, fixed original out-of-band shape and frozen Hartree closure. No re-evaluated cold rates, true continuum extremum or dynamic physical uncertainty."
+}

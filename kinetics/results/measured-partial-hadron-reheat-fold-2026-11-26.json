@@ -1,0 +1,538 @@
+{
+  "controls": [
+    {
+      "interpolation": "linear",
+      "invariant_nodes_per_interval": 8,
+      "rows": [
+        {
+          "convention": "leptons",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.3108499221360974,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3108499221360974,
+            0.3108499221360974
+          ],
+          "stable_no_loss_Omega_h2": 9319.443711699958,
+          "scalar_direct_prompt_Omega_h2": 0.019926391853251523,
+          "partial_hadron_count_contributions_omega_if_all_convert": [],
+          "energy_floor_over_radiation_at_1MeV": 0.006489725169264359
+        },
+        {
+          "convention": "leptons",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.42142755420139205,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.42142755420139205,
+            0.42142755420139205
+          ],
+          "stable_no_loss_Omega_h2": 18435.875563754336,
+          "scalar_direct_prompt_Omega_h2": 0.039525734411405916,
+          "partial_hadron_count_contributions_omega_if_all_convert": [],
+          "energy_floor_over_radiation_at_1MeV": 0.013363221699155286
+        },
+        {
+          "convention": "leptons",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.4226678736408541,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.4226678736408541,
+            0.4226678736408541
+          ],
+          "stable_no_loss_Omega_h2": 18621.923045298794,
+          "scalar_direct_prompt_Omega_h2": 0.03992572904013956,
+          "partial_hadron_count_contributions_omega_if_all_convert": [],
+          "energy_floor_over_radiation_at_1MeV": 0.013551462435012079
+        },
+        {
+          "convention": "plus KLOE pion band",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22278922202687348,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.2218321257056131,
+            0.22375066838257746
+          ],
+          "stable_no_loss_Omega_h2": 9320.884399419876,
+          "scalar_direct_prompt_Omega_h2": 0.0199201970592699,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025580422656520357
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006701096083183557
+        },
+        {
+          "convention": "plus KLOE pion band",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.37396568414204234,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.37325398091962614,
+            0.3746741731238765
+          ],
+          "stable_no_loss_Omega_h2": 18437.910600717987,
+          "scalar_direct_prompt_Omega_h2": 0.03951698435404027,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03236879666869378
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012122694248240794
+        },
+        {
+          "convention": "plus KLOE pion band",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.3761885284550874,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.37548778060595644,
+            0.3768860473776789
+          ],
+          "stable_no_loss_Omega_h2": 18623.962156691625,
+          "scalar_direct_prompt_Omega_h2": 0.039916962451577415,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03241647910790761
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012249585884541957
+        },
+        {
+          "convention": "plus BESIII measured continuum sub-bands",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22044021555960813,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.21950864381364246,
+            0.22137800646385342
+          ],
+          "stable_no_loss_Omega_h2": 9320.860366363528,
+          "scalar_direct_prompt_Omega_h2": 0.019920300423459242,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025377051403928857,
+            0.0007740168558305825
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006771724063664174
+        },
+        {
+          "convention": "plus BESIII measured continuum sub-bands",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.34862454291295597,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.34753581260708755,
+            0.3497219072676704
+          ],
+          "stable_no_loss_Omega_h2": 18437.850702853717,
+          "scalar_direct_prompt_Omega_h2": 0.039517241977134424,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.031762047902258186,
+            0.012458277007960835
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012394455115510891
+        },
+        {
+          "convention": "plus BESIII measured continuum sub-bands",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.3505381960834413,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3494482397334373,
+            0.35163668259013287
+          ],
+          "stable_no_loss_Omega_h2": 18623.90262149645,
+          "scalar_direct_prompt_Omega_h2": 0.03991721872652979,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03181215719662159,
+            0.012784554873992908
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012511214935593186
+        },
+        {
+          "convention": "plus illustrative narrow J/psi",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.220140431336355,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.2192221569681922,
+            0.22106454523517202
+          ],
+          "stable_no_loss_Omega_h2": 9320.85721192367,
+          "scalar_direct_prompt_Omega_h2": 0.019920313937220106,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.02535076157478104,
+            0.0007661626241279209,
+            0.00010658253331854483
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006783978054430593
+        },
+        {
+          "convention": "plus illustrative narrow J/psi",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.34264070488955645,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3416619321183826,
+            0.3436261140170009
+          ],
+          "stable_no_loss_Omega_h2": 18437.83388670572,
+          "scalar_direct_prompt_Omega_h2": 0.03951731427880837,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03160024056075937,
+            0.011468817641863634,
+            0.0036658506129720434
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.0125341895571538
+        },
+        {
+          "convention": "plus illustrative narrow J/psi",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.34442964867319814,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.343450305528649,
+            0.3454156771608812
+          ],
+          "stable_no_loss_Omega_h2": 18623.88571507671,
+          "scalar_direct_prompt_Omega_h2": 0.03991729141158899,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03164945120077527,
+            0.011759771262887549,
+            0.003783186116289919
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012652462094102751
+        },
+        {
+          "convention": "plus conditional near-pole CLEO point proxy",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22014043130291325,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.2192221569340463,
+            0.2210645452310657
+          ],
+          "stable_no_loss_Omega_h2": 9320.857213197643,
+          "scalar_direct_prompt_Omega_h2": 0.01992031393996143,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025350761571843673,
+            0.0007661626232551486,
+            0.00010658253315399103,
+            2.0271063199085825e-11
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.00678397806494647
+        },
+        {
+          "convention": "plus conditional near-pole CLEO point proxy",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.34256790057760983,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3415922103729586,
+            0.34355014156535235
+          ],
+          "stable_no_loss_Omega_h2": 18437.833667758765,
+          "scalar_direct_prompt_Omega_h2": 0.03951731521370822,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03159822230362982,
+            0.011457063919278357,
+            0.0036611245073344748,
+            4.8554701920915844e-05
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012546402900575255
+        },
+        {
+          "convention": "plus conditional near-pole CLEO point proxy",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.3443472775916026,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3433713791678716,
+            0.3453297952922277
+          ],
+          "stable_no_loss_Omega_h2": 18623.885469920926,
+          "scalar_direct_prompt_Omega_h2": 0.03991729245262042,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03164720130134718,
+            0.01174628386328914,
+            0.0037777324039486686,
+            5.554776977713695e-05
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012666324744354005
+        }
+      ]
+    },
+    {
+      "interpolation": "piecewise",
+      "invariant_nodes_per_interval": 14,
+      "rows": [
+        {
+          "convention": "leptons",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.3108499221360974,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3108499221360974,
+            0.3108499221360974
+          ],
+          "stable_no_loss_Omega_h2": 9319.443711699958,
+          "scalar_direct_prompt_Omega_h2": 0.019926391853251523,
+          "partial_hadron_count_contributions_omega_if_all_convert": [],
+          "energy_floor_over_radiation_at_1MeV": 0.006489725169264359
+        },
+        {
+          "convention": "leptons",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.42142755420139205,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.42142755420139205,
+            0.42142755420139205
+          ],
+          "stable_no_loss_Omega_h2": 18435.875563754336,
+          "scalar_direct_prompt_Omega_h2": 0.039525734411405916,
+          "partial_hadron_count_contributions_omega_if_all_convert": [],
+          "energy_floor_over_radiation_at_1MeV": 0.013363221699155286
+        },
+        {
+          "convention": "leptons",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.4226678736408541,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.4226678736408541,
+            0.4226678736408541
+          ],
+          "stable_no_loss_Omega_h2": 18621.923045298794,
+          "scalar_direct_prompt_Omega_h2": 0.03992572904013956,
+          "partial_hadron_count_contributions_omega_if_all_convert": [],
+          "energy_floor_over_radiation_at_1MeV": 0.013551462435012079
+        },
+        {
+          "convention": "plus KLOE pion band",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22278922202687348,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.2218321257056131,
+            0.22375066838257746
+          ],
+          "stable_no_loss_Omega_h2": 9320.884399419876,
+          "scalar_direct_prompt_Omega_h2": 0.0199201970592699,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025580422656520357
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006701096083183557
+        },
+        {
+          "convention": "plus KLOE pion band",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.37396568414204234,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.37325398091962614,
+            0.3746741731238765
+          ],
+          "stable_no_loss_Omega_h2": 18437.910600717987,
+          "scalar_direct_prompt_Omega_h2": 0.03951698435404027,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03236879666869378
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012122694248240794
+        },
+        {
+          "convention": "plus KLOE pion band",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.3761885284550874,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.37548778060595644,
+            0.3768860473776789
+          ],
+          "stable_no_loss_Omega_h2": 18623.962156691625,
+          "scalar_direct_prompt_Omega_h2": 0.039916962451577415,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03241647910790761
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012249585884541957
+        },
+        {
+          "convention": "plus BESIII measured continuum sub-bands",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22043952512405504,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.21950824636801272,
+            0.22137700767510654
+          ],
+          "stable_no_loss_Omega_h2": 9320.860359249042,
+          "scalar_direct_prompt_Omega_h2": 0.019920300454044745,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025376990951862716,
+            0.0007742442188362874
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006771740686799838
+        },
+        {
+          "convention": "plus BESIII measured continuum sub-bands",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.3486222535066524,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.34753454403983536,
+            0.349718582432071
+          ],
+          "stable_no_loss_Omega_h2": 18437.85069770735,
+          "scalar_direct_prompt_Omega_h2": 0.03951724199926431,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.031761987491643474,
+            0.012459316881732083
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012394452509560908
+        },
+        {
+          "convention": "plus BESIII measured continuum sub-bands",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.3505359089946763,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3494469729285731,
+            0.35163336123076394
+          ],
+          "stable_no_loss_Omega_h2": 18623.902616475214,
+          "scalar_direct_prompt_Omega_h2": 0.03991721874812216,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.031812097765479844,
+            0.012785604565478715
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012511211104441899
+        },
+        {
+          "convention": "plus illustrative narrow J/psi",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22013975535065397,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.21922176746080868,
+            0.22106356775334696
+          ],
+          "stable_no_loss_Omega_h2": 9320.857204922553,
+          "scalar_direct_prompt_Omega_h2": 0.019920313967267275,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025350702199038944,
+            0.0007663885918887835,
+            0.00010657920709517644
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006783994308754369
+        },
+        {
+          "convention": "plus illustrative narrow J/psi",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.34263863883924023,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.34166078416208673,
+            0.34362311713805654
+          ],
+          "stable_no_loss_Omega_h2": 18437.833881815288,
+          "scalar_direct_prompt_Omega_h2": 0.039517314299843766,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03160018330329425,
+            0.011469862192244523,
+            0.003665716442176458
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.01253418791252222
+        },
+        {
+          "convention": "plus illustrative narrow J/psi",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.34442758329985346,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.3434491587511183,
+            0.3454126812198314
+          ],
+          "stable_no_loss_Omega_h2": 18623.885710298102,
+          "scalar_direct_prompt_Omega_h2": 0.03991729143214702,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03164939480547112,
+            0.011760826128497104,
+            0.0037830493094265093
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.012652459492669497
+        },
+        {
+          "convention": "plus conditional near-pole CLEO point proxy",
+          "target_mass_fraction": 0.5,
+          "T_R_GeV": 0.22013975531641095,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.21922176742591212,
+            0.22106356774864352
+          ],
+          "stable_no_loss_Omega_h2": 9320.857206207713,
+          "scalar_direct_prompt_Omega_h2": 0.019920313970032702,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.025350702196031166,
+            0.0007663885909948958,
+            0.00010657920692668383,
+            2.0632229291313187e-11
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.006783994319450573
+        },
+        {
+          "convention": "plus conditional near-pole CLEO point proxy",
+          "target_mass_fraction": 0.99,
+          "T_R_GeV": 0.342564547389973,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.34158982457300696,
+            0.34354580714203176
+          ],
+          "stable_no_loss_Omega_h2": 18437.833658997828,
+          "scalar_direct_prompt_Omega_h2": 0.0395173152513097,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.03159812931812656,
+            0.01145790030388647,
+            0.003660906926686022,
+            4.941291836364165e-05
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.01254661733506571
+        },
+        {
+          "convention": "plus conditional near-pole CLEO point proxy",
+          "target_mass_fraction": 1.0,
+          "T_R_GeV": 0.34434375669150913,
+          "coherent_input_error_shift_bounds_GeV": [
+            0.34336883195492013,
+            0.3453252880611427
+          ],
+          "stable_no_loss_Omega_h2": 18623.88546081206,
+          "scalar_direct_prompt_Omega_h2": 0.039917292491619356,
+          "partial_hadron_count_contributions_omega_if_all_convert": [
+            0.031647105096706395,
+            0.011747100007887213,
+            0.0037774993986000667,
+            5.6529026603799716e-05
+          ],
+          "energy_floor_over_radiation_at_1MeV": 0.01266656727193552
+        }
+      ]
+    }
+  ],
+  "independent_KLOE_kernel_relative_error": 3.3306690738754696e-16,
+  "lepton_only_local_thermal_checks_at_99_percent_thresholds": [
+    {
+      "convention": "leptons",
+      "T_GeV": 0.42142755420139205,
+      "lepton_only_local_FD_mode_rates_over_H": [
+        0.3065116365393005,
+        4.06898676633353
+      ]
+    },
+    {
+      "convention": "plus KLOE pion band",
+      "T_GeV": 0.37396568414204234,
+      "lepton_only_local_FD_mode_rates_over_H": [
+        0.16851879497619268,
+        0.6774409063642265
+      ]
+    },
+    {
+      "convention": "plus BESIII measured continuum sub-bands",
+      "T_GeV": 0.34862454291295597,
+      "lepton_only_local_FD_mode_rates_over_H": [
+        0.09550946702397252,
+        0.35569470483732685
+      ]
+    },
+    {
+      "convention": "plus illustrative narrow J/psi",
+      "T_GeV": 0.34264070488955645,
+      "lepton_only_local_FD_mode_rates_over_H": [
+        0.08276405164962705,
+        0.3197435617570713
+      ]
+    },
+    {
+      "convention": "plus conditional near-pole CLEO point proxy",
+      "T_GeV": 0.34256790057760983,
+      "lepton_only_local_FD_mode_rates_over_H": [
+        0.08262257120311504,
+        0.3193541915399862
+      ]
+    }
+  ],
+  "data_hashes": {
+    "KLOExSec.data": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "BESIII-2112.11728.txt": "f39acd7455ce32dbdb69a6bb3369b64f903bca369b7611a4327af3ba60032e5a"
+  },
+  "scope": "Only the specified disjoint vacuum hadronic sub-bands plus a separate isolated J/psi convention. An optional CLEO point proxy is not a measured continuous band. They are added with classical thermal weights to the FD lepton source on a prescribed radiation background. No complete hadronic spectral function, finite-temperature QCD, inverse depletion or self-consistent relic inference."
+}

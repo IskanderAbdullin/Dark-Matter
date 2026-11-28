@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "maximum_coordinate_absolute_defects": [
+        0.0,
+        4.531930386519889e-13,
+        5.011685511036035e-13,
+        1.7386092565629951e-13,
+        1.0938312430298913e-15,
+        2.8033131371785203e-13,
+        3.8836989180168757e-13
+      ],
+      "maximum_temperature_state_defect": 5.011685511036035e-13
+    },
+    {
+      "operator": "combined",
+      "maximum_coordinate_absolute_defects": [
+        0.0,
+        3.549938121238938e-13,
+        4.915512441527881e-13,
+        1.9761969838327786e-13,
+        1.1506061674184526e-15,
+        2.865485626557529e-13,
+        3.927969061123804e-13
+      ],
+      "maximum_temperature_state_defect": 4.915512441527881e-13
+    }
+  ],
+  "fields": [
+    "log_a",
+    "T_visible",
+    "eta_dark",
+    "log_T_dark",
+    "entropy",
+    "pressure_work",
+    "number"
+  ],
+  "input_sha256": [
+    "2b7ec60b6632a1c2ff45f0be5b8b877f9c4764aabfc25680e9d55a3ec4f69470",
+    "14d17315a5789256a621a518b1746dc82da8151fa27660d761904da4a6e6c94a"
+  ],
+  "scope": "Same finite restricted FD dynamics in two numerical coordinate systems only."
+}

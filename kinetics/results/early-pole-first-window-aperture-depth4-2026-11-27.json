@@ -1,0 +1,128 @@
+{
+  "cases": {
+    "steps": {
+      "1": {
+        "mean": 0.06694243427293745,
+        "relative_to_depth1_ppm": 0.0,
+        "initial": 0.07863619024759733,
+        "terminal": 0.07091673045410277,
+        "hard_cells": [
+          7,
+          20,
+          20
+        ],
+        "closure": {
+          "terminal_energy_drift": 2.6645352591003757e-15,
+          "terminal_entropy_closure": -1.6586176876387526e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.9984014443252818e-15,
+          "signed_elastic_energy_defect": 1.9984014443252818e-15,
+          "nonelastic_energy_remainder": 6.661338147750939e-16
+        }
+      },
+      "2": {
+        "mean": 0.0669809402109589,
+        "relative_to_depth1_ppm": 575.2097072608819,
+        "initial": 0.0786356454808569,
+        "terminal": 0.07077187424856872,
+        "hard_cells": [
+          7,
+          24,
+          24
+        ],
+        "closure": {
+          "terminal_energy_drift": 1.3322676295501878e-15,
+          "terminal_entropy_closure": -1.8027029521916482e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.220446049250313e-15,
+          "signed_elastic_energy_defect": 1.5543122344752192e-15,
+          "nonelastic_energy_remainder": -2.220446049250313e-16
+        }
+      },
+      "4": {
+        "mean": 0.06680149350346554,
+        "relative_to_depth1_ppm": -2105.4025149020995,
+        "initial": 0.07863542794459422,
+        "terminal": 0.07043922522658559,
+        "hard_cells": [
+          7,
+          32,
+          32
+        ],
+        "closure": {
+          "terminal_energy_drift": 1.9984014443252818e-15,
+          "terminal_entropy_closure": -2.072883531489822e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.5543122344752192e-15,
+          "signed_elastic_energy_defect": 2.886579864025407e-15,
+          "nonelastic_energy_remainder": -8.881784197001252e-16
+        }
+      }
+    },
+    "cell-conservative": {
+      "1": {
+        "mean": 0.06528878623152101,
+        "relative_to_depth1_ppm": 0.0,
+        "initial": 0.0569039509421017,
+        "terminal": 0.0707825124007722,
+        "hard_cells": [
+          7,
+          20,
+          20
+        ],
+        "closure": {
+          "terminal_energy_drift": 2.220446049250313e-15,
+          "terminal_entropy_closure": -1.5778984022163378e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 2.220446049250313e-15,
+          "signed_elastic_energy_defect": 3.9968028886505635e-15,
+          "nonelastic_energy_remainder": -1.7763568394002505e-15
+        }
+      },
+      "2": {
+        "mean": 0.06542048070976025,
+        "relative_to_depth1_ppm": 2017.107160979137,
+        "initial": 0.060545767413262064,
+        "terminal": 0.07061249949464515,
+        "hard_cells": [
+          7,
+          24,
+          24
+        ],
+        "closure": {
+          "terminal_energy_drift": 1.5543122344752192e-15,
+          "terminal_entropy_closure": -1.713257140323332e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.3322676295501878e-15,
+          "signed_elastic_energy_defect": 4.440892098500626e-16,
+          "nonelastic_energy_remainder": 1.1102230246251565e-15
+        }
+      },
+      "4": {
+        "mean": 0.06507936700997363,
+        "relative_to_depth1_ppm": -3207.5833176735678,
+        "initial": 0.060328215881798944,
+        "terminal": 0.07026708405844546,
+        "hard_cells": [
+          7,
+          32,
+          32
+        ],
+        "closure": {
+          "terminal_energy_drift": 6.661338147750939e-16,
+          "terminal_entropy_closure": -1.966438296918671e-12,
+          "elastic_energy_budget": 5e-15,
+          "largest_step_energy_defect": 1.5543122344752192e-15,
+          "signed_elastic_energy_defect": 6.661338147750939e-16,
+          "nonelastic_energy_remainder": 0.0
+        }
+      }
+    }
+  },
+  "contrast_percent": {
+    "1": 2.4702538223724924,
+    "2": 2.329706773723883,
+    "4": 2.5779760349258662
+  },
+  "scope": "Finite hard aperture depths at held elastic quadrature and macro count."
+}

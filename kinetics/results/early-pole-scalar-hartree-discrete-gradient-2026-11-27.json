@@ -1,0 +1,62 @@
+[
+  {
+    "domain": [
+      1e-06,
+      1e-05
+    ],
+    "bare_pole": 0.0,
+    "tests": 80,
+    "ordered": true,
+    "max_error": {
+      "discrete_gradient": 1.0164395367051604e-20,
+      "endpoint_average": 1.7243598420753527e-07,
+      "midpoint": 8.378357670150557e-08,
+      "entropy_secant": 6.846680952296623e-32
+    }
+  },
+  {
+    "domain": [
+      1e-06,
+      1e-05
+    ],
+    "bare_pole": 0.00075,
+    "tests": 80,
+    "ordered": true,
+    "max_error": {
+      "discrete_gradient": 6.776263578034403e-21,
+      "endpoint_average": 3.9631656132557507e-07,
+      "midpoint": 1.9065546940932345e-07,
+      "entropy_secant": 5.421492793450069e-32
+    }
+  },
+  {
+    "domain": [
+      1e-06,
+      0.003
+    ],
+    "bare_pole": 0.0,
+    "tests": 80,
+    "ordered": true,
+    "max_error": {
+      "discrete_gradient": 2.0328790734103208e-20,
+      "endpoint_average": 1.576425451856362e-07,
+      "midpoint": 7.63658374770628e-08,
+      "entropy_secant": 1.2149215246872594e-24
+    }
+  },
+  {
+    "domain": [
+      1e-06,
+      0.003
+    ],
+    "bare_pole": 0.00075,
+    "tests": 80,
+    "ordered": true,
+    "max_error": {
+      "discrete_gradient": 1.0164395367051604e-20,
+      "endpoint_average": 8.093776717518148e-08,
+      "midpoint": 3.981895208375055e-08,
+      "entropy_secant": 1.0081263715490025e-24
+    }
+  }
+]

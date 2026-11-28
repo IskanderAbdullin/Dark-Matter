@@ -1,0 +1,326 @@
+{
+  "scope": "Illustrative capped monotone energy-dependent scalar DF, spherical self-gravitating isothermal local core, no finite halo fit, baryons, mean-field interaction, collisionless formation or observational inference.",
+  "reference_critical_radial_linear_coefficient": 0.5539795457971796,
+  "cases": [
+    {
+      "cap": 1.0,
+      "minimum_Bose_exponent": 0.6931471805599453,
+      "central_density_over_critical_at_fixed_V0": 0.5243083908165573,
+      "density_quadratic_coefficient_at_fixed_central_scale": 0.15649480717907693,
+      "leading_rounding_radius_over_R": 2.039333980337618,
+      "numerical_y_equals_delta_radius_over_R": null,
+      "matched_profile_radius_over_R": [
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        2.0
+      ],
+      "density_over_center": [
+        0.9999843506457001,
+        0.9998591649102174,
+        0.9984363151234421,
+        0.9860173744508078,
+        0.8555331322444933,
+        0.5420157621315034
+      ],
+      "velocity_over_V0_squared": [
+        3.333302034668571e-05,
+        0.000299974649067793,
+        0.003330205241818248,
+        0.02974778996244147,
+        0.30377147636174145,
+        0.9323862249899365
+      ],
+      "matching_controls": [
+        {
+          "w": 0.01,
+          "exact_scaled_density_drop": 0.009475877821652727,
+          "inner_scaling_limit": 0.01998331662184949,
+          "relative": 0.47418944517407735
+        },
+        {
+          "w": 0.1,
+          "exact_scaled_density_drop": 0.09354280978468199,
+          "inner_scaling_limit": 0.19831620200044475,
+          "relative": 0.47168516158085866
+        },
+        {
+          "w": 1.0,
+          "exact_scaled_density_drop": 0.7928717662654682,
+          "inner_scaling_limit": 1.8082593202564599,
+          "relative": 0.43847237914582826
+        },
+        {
+          "w": 3.0,
+          "exact_scaled_density_drop": 1.3186155767447871,
+          "inner_scaling_limit": 4.10806475936932,
+          "relative": 0.32098217871015844
+        },
+        {
+          "w": 10.0,
+          "exact_scaled_density_drop": 1.456950289771915,
+          "inner_scaling_limit": 8.601254932462767,
+          "relative": 0.16938810687648712
+        }
+      ]
+    },
+    {
+      "cap": 100.0,
+      "minimum_Bose_exponent": 0.009950330853168083,
+      "central_density_over_critical_at_fixed_V0": 0.9425518215095191,
+      "density_quadratic_coefficient_at_fixed_central_scale": 1.4325057666858614,
+      "leading_rounding_radius_over_R": 0.24433989669926706,
+      "numerical_y_equals_delta_radius_over_R": 0.2474270817790076,
+      "matched_profile_radius_over_R": [
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        2.0
+      ],
+      "density_over_center": [
+        0.9998567769448934,
+        0.9987129747949449,
+        0.9859514650186811,
+        0.8963417296133028,
+        0.6118433543999138,
+        0.36904039519359844
+      ],
+      "velocity_over_V0_squared": [
+        3.3330468694218474e-05,
+        0.0002997682207423281,
+        0.003305077800055119,
+        0.027991399153763457,
+        0.23466684688757938,
+        0.6454581411680326
+      ],
+      "matching_controls": [
+        {
+          "w": 0.01,
+          "exact_scaled_density_drop": 0.0186923929767509,
+          "inner_scaling_limit": 0.01998331662184949,
+          "relative": 0.9353999303755659
+        },
+        {
+          "w": 0.1,
+          "exact_scaled_density_drop": 0.1854077519594605,
+          "inner_scaling_limit": 0.19831620200044475,
+          "relative": 0.934909755679189
+        },
+        {
+          "w": 1.0,
+          "exact_scaled_density_drop": 1.679254176844019,
+          "inner_scaling_limit": 1.8082593202564599,
+          "relative": 0.9286578302308186
+        },
+        {
+          "w": 3.0,
+          "exact_scaled_density_drop": 3.721592624470581,
+          "inner_scaling_limit": 4.10806475936932,
+          "relative": 0.9059235534159225
+        },
+        {
+          "w": 10.0,
+          "exact_scaled_density_drop": 7.319375441486129,
+          "inner_scaling_limit": 8.601254932462767,
+          "relative": 0.85096599263224
+        }
+      ]
+    },
+    {
+      "cap": 5000.0,
+      "minimum_Bose_exponent": 0.00019998000266626675,
+      "central_density_over_critical_at_fixed_V0": 0.9918557423660086,
+      "density_quadratic_coefficient_at_fixed_central_scale": 10.171006347572636,
+      "leading_rounding_radius_over_R": 0.03463928428818356,
+      "numerical_y_equals_delta_radius_over_R": 0.03470023679125042,
+      "matched_profile_radius_over_R": [
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        2.0
+      ],
+      "density_over_center": [
+        0.9989903941592507,
+        0.9915004728195186,
+        0.9538304697923244,
+        0.8545932964978333,
+        0.5890620664424727,
+        0.35929311170093103
+      ],
+      "velocity_over_V0_squared": [
+        3.3313098204695594e-05,
+        0.0002984346532368457,
+        0.0032238515141666544,
+        0.026726839459053332,
+        0.22513561424525597,
+        0.6243879600816137
+      ],
+      "matching_controls": [
+        {
+          "w": 0.01,
+          "exact_scaled_density_drop": 0.019800297525187655,
+          "inner_scaling_limit": 0.01998331662184949,
+          "relative": 0.9908414053520163
+        },
+        {
+          "w": 0.1,
+          "exact_scaled_density_drop": 0.19648601336409927,
+          "inner_scaling_limit": 0.19831620200044475,
+          "relative": 0.9907713609988286
+        },
+        {
+          "w": 1.0,
+          "exact_scaled_density_drop": 1.7899576671791042,
+          "inner_scaling_limit": 1.8082593202564599,
+          "relative": 0.9898788559404411
+        },
+        {
+          "w": 3.0,
+          "exact_scaled_density_drop": 4.053161361355025,
+          "inner_scaling_limit": 4.10806475936932,
+          "relative": 0.9866352160371679
+        },
+        {
+          "w": 10.0,
+          "exact_scaled_density_drop": 8.418261837274203,
+          "inner_scaling_limit": 8.601254932462767,
+          "relative": 0.9787248376399224
+        }
+      ]
+    },
+    {
+      "cap": 7000.0,
+      "minimum_Bose_exponent": 0.0001428469397472234,
+      "central_density_over_critical_at_fixed_V0": 0.9931167476893518,
+      "density_quadratic_coefficient_at_fixed_central_scale": 12.036231350490935,
+      "leading_rounding_radius_over_R": 0.029275956662137285,
+      "numerical_y_equals_delta_radius_over_R": 0.029319475420249954,
+      "matched_profile_radius_over_R": [
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        2.0
+      ],
+      "density_over_center": [
+        0.9988087367796057,
+        0.9903065004926006,
+        0.9526493499004732,
+        0.8535958359311248,
+        0.588507069563604,
+        0.35905194467183477
+      ],
+      "velocity_over_V0_squared": [
+        3.3309436980279695e-05,
+        0.00029819056176297364,
+        0.0032198688485444472,
+        0.026694939035200226,
+        0.22490441062742708,
+        0.6238716394397738
+      ],
+      "matching_controls": [
+        {
+          "w": 0.01,
+          "exact_scaled_density_drop": 0.019828635030530724,
+          "inner_scaling_limit": 0.01998331662184949,
+          "relative": 0.9922594635192019
+        },
+        {
+          "w": 0.1,
+          "exact_scaled_density_drop": 0.1967693874955653,
+          "inner_scaling_limit": 0.19831620200044475,
+          "relative": 0.9922002615556546
+        },
+        {
+          "w": 1.0,
+          "exact_scaled_density_drop": 1.7927913161535274,
+          "inner_scaling_limit": 1.8082593202564599,
+          "relative": 0.9914459149029915
+        },
+        {
+          "w": 3.0,
+          "exact_scaled_density_drop": 4.061661689754232,
+          "inner_scaling_limit": 4.10806475936932,
+          "relative": 0.988704396757803
+        },
+        {
+          "w": 10.0,
+          "exact_scaled_density_drop": 8.446589040782326,
+          "inner_scaling_limit": 8.601254932462767,
+          "relative": 0.982018217935071
+        }
+      ]
+    },
+    {
+      "cap": 200000.0,
+      "minimum_Bose_exponent": 4.999987500041667e-06,
+      "central_density_over_critical_at_fixed_V0": 0.9987122170278825,
+      "density_quadratic_coefficient_at_fixed_central_scale": 64.37904681153807,
+      "leading_rounding_radius_over_R": 0.005477218728538236,
+      "numerical_y_equals_delta_radius_over_R": 0.0054787389353417775,
+      "matched_profile_radius_over_R": [
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        2.0
+      ],
+      "density_over_center": [
+        0.9957562686578886,
+        0.9847903959425707,
+        0.9474533641062528,
+        0.8492013976923571,
+        0.5860583091943737,
+        0.3579860748730869
+      ],
+      "velocity_over_V0_squared": [
+        3.323738552468237e-05,
+        0.00029666757117775453,
+        0.003202218139817596,
+        0.026554411805851576,
+        0.2238848132037423,
+        0.6215922260417108
+      ],
+      "matching_controls": [
+        {
+          "w": 0.01,
+          "exact_scaled_density_drop": 0.019954377343295155,
+          "inner_scaling_limit": 0.01998331662184949,
+          "relative": 0.9985518280522717
+        },
+        {
+          "w": 0.1,
+          "exact_scaled_density_drop": 0.19802680922785984,
+          "inner_scaling_limit": 0.19831620200044475,
+          "relative": 0.9985407507320846
+        },
+        {
+          "w": 1.0,
+          "exact_scaled_density_drop": 1.8053653934593348,
+          "inner_scaling_limit": 1.8082593202564599,
+          "relative": 0.9983996063149202
+        },
+        {
+          "w": 3.0,
+          "exact_scaled_density_drop": 4.099382985157317,
+          "inner_scaling_limit": 4.10806475936932,
+          "relative": 0.9978866510825559
+        },
+        {
+          "w": 10.0,
+          "exact_scaled_density_drop": 8.572315757181688,
+          "inner_scaling_limit": 8.601254932462767,
+          "relative": 0.9966354705786178
+        }
+      ]
+    }
+  ]
+}

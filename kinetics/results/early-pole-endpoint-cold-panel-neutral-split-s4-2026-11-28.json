@@ -1,0 +1,77 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "scalar_div": 4,
+  "charge_div": 2,
+  "band": [
+    1e-06,
+    1.5e-05
+  ],
+  "count_only": {
+    "conditional_relative_split_interval": [
+      2.8589619562187014e-08,
+      4.398147783212644e-08
+    ],
+    "linear_numerator_change_interval": [
+      -4.65832131182053e-12,
+      7.316195650592117e-12
+    ],
+    "quadratic_numerator_change_interval": [
+      -3.8304170133242345e-13,
+      3.5319657256915043e-13
+    ],
+    "independently_boxed_quadratic_interval": [
+      -3.65633114311274e-12,
+      3.626482661326669e-12
+    ],
+    "correlated_linear_deviations": [
+      [
+        -0.0010647923874048076,
+        0.0015042632771875173
+      ],
+      [
+        -0.001033230010273791,
+        0.0009027088701875733
+      ]
+    ],
+    "positive_denominator_interval": [
+      0.0008637385565385049,
+      0.0008841580730325486
+    ],
+    "baseline_relative_split": 3.472219748621684e-08
+  },
+  "count_and_mean_excess": {
+    "conditional_relative_split_interval": [
+      3.461689223283911e-08,
+      3.475149516068883e-08
+    ],
+    "linear_numerator_change_interval": [
+      -9.192657682792348e-14,
+      2.537167748279893e-14
+    ],
+    "quadratic_numerator_change_interval": [
+      -2.351028825218612e-19,
+      5.34871049500038e-19
+    ],
+    "independently_boxed_quadratic_interval": [
+      -2.074821716621876e-18,
+      2.3163994035656325e-18
+    ],
+    "correlated_linear_deviations": [
+      [
+        -1.1338490017569323e-05,
+        3.2792429842233926e-06
+      ],
+      [
+        -4.3712266060677825e-07,
+        2.9061623726777094e-07
+      ]
+    ],
+    "positive_denominator_interval": [
+      0.0008731848234452269,
+      0.0008731915892029222
+    ],
+    "baseline_relative_split": 3.472219748621684e-08
+  },
+  "scope": "Conservative correlated finite-panel bounds. Fixed pole and charge; moments of each occupied in-band shell constrained. No continuum, physical population, or dynamic error guarantee."
+}

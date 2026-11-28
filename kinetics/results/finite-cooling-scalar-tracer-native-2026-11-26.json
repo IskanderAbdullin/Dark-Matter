@@ -1,0 +1,448 @@
+{
+  "rows": [
+    {
+      "z": 0,
+      "k_h_per_Mpc": [
+        0.015,
+        0.03,
+        0.1,
+        0.3,
+        0.7,
+        1.0
+      ],
+      "cases": [
+        {
+          "case": "finite_cooling_tracer_instant_s10_sync",
+          "ratio_at_probes": [
+            0.9999871640212479,
+            0.9999464831259777,
+            0.9993605940058115,
+            0.9956318362083966,
+            0.9853137932097594,
+            0.9751838206457062
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9342412007219516,
+            0.842701049102487,
+            0.6759157762144699,
+            0.6065754949244624
+          ],
+          "native_k_max_h_per_Mpc": 10.54726627626
+        },
+        {
+          "case": "finite_cooling_tracer_instant_s14_sync",
+          "ratio_at_probes": [
+            0.9999871642245626,
+            0.9999464906737756,
+            0.9993612877533162,
+            0.9956376003220181,
+            0.9853169592624924,
+            0.9751832434023927
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9342411063802551,
+            0.842701147963665,
+            0.6759157280257946,
+            0.606575546796827
+          ],
+          "native_k_max_h_per_Mpc": 10.54726627626
+        },
+        {
+          "case": "finite_cooling_tracer_ratio5_s10_sync",
+          "ratio_at_probes": [
+            0.9999998950538626,
+            0.9999995624904816,
+            0.9999945410221812,
+            0.999946942443538,
+            0.99970300824615,
+            0.999404660574382
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9979744737039428,
+            0.9946204289916066,
+            0.9846455421334737,
+            0.9786460063885053
+          ],
+          "native_k_max_h_per_Mpc": 10.54726634164
+        },
+        {
+          "case": "finite_cooling_tracer_ratio5_s14_sync",
+          "ratio_at_probes": [
+            0.9999998955019617,
+            0.9999995626408161,
+            0.9999945414256508,
+            0.9999469644740535,
+            0.9997033057890959,
+            0.9994053257709244
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9979753510611838,
+            0.9946196405684502,
+            0.9846451177760391,
+            0.9786462507768335
+          ],
+          "native_k_max_h_per_Mpc": 10.54726634164
+        }
+      ],
+      "per_history_control_comparison": [
+        {
+          "history": "instant",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 6.4049426422574385e-06,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.6065754949244624
+        },
+        {
+          "history": "ratio5",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 1.1843269401845546e-06,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.9786460063885053
+        }
+      ]
+    },
+    {
+      "z": 5,
+      "k_h_per_Mpc": [
+        0.015,
+        0.03,
+        0.1,
+        0.3,
+        0.7,
+        1.0
+      ],
+      "cases": [
+        {
+          "case": "finite_cooling_tracer_instant_s10_sync",
+          "ratio_at_probes": [
+            0.9999525513318898,
+            0.9997973527214732,
+            0.9975163486902817,
+            0.9837167274054163,
+            0.9518322675764129,
+            0.923227644209108
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": 6.181801741925497,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.8227959052777009,
+            0.6450707931109068,
+            0.4101531793600081,
+            0.3347911986850808
+          ],
+          "native_k_max_h_per_Mpc": 10.54726627626
+        },
+        {
+          "case": "finite_cooling_tracer_instant_s14_sync",
+          "ratio_at_probes": [
+            0.9999525521581861,
+            0.9997973867507352,
+            0.9975195219668205,
+            0.9837446006084609,
+            0.951846597761359,
+            0.9232246106914627
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": 6.181793512704399,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.8227957416820465,
+            0.6450712118171456,
+            0.41015284691873827,
+            0.3347911330396502
+          ],
+          "native_k_max_h_per_Mpc": 10.54726627626
+        },
+        {
+          "case": "finite_cooling_tracer_ratio5_s10_sync",
+          "ratio_at_probes": [
+            0.9999996115583893,
+            0.9999983418189548,
+            0.9999786479576437,
+            0.9997887722837985,
+            0.9988097591214813,
+            0.9976178028501208
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9920754115253638,
+            0.980688981070175,
+            0.9498594297204652,
+            0.9327784761704833
+          ],
+          "native_k_max_h_per_Mpc": 10.54726634164
+        },
+        {
+          "case": "finite_cooling_tracer_ratio5_s14_sync",
+          "ratio_at_probes": [
+            0.9999996136722158,
+            0.9999983425284766,
+            0.999978649809002,
+            0.9997888741441643,
+            0.9988111437828504,
+            0.9976209108872712
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9920796476592462,
+            0.9806850703572522,
+            0.9498572093471237,
+            0.9327797505038223
+          ],
+          "native_k_max_h_per_Mpc": 10.54726634164
+        }
+      ],
+      "per_history_control_comparison": [
+        {
+          "history": "instant",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 3.038889937823086e-05,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.3347911330396502
+        },
+        {
+          "history": "ratio5",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 5.536175089471129e-06,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.9327784761704833
+        }
+      ]
+    },
+    {
+      "z": 20,
+      "k_h_per_Mpc": [
+        0.015,
+        0.03,
+        0.1,
+        0.3,
+        0.7,
+        1.0
+      ],
+      "cases": [
+        {
+          "case": "finite_cooling_tracer_instant_s10_sync",
+          "ratio_at_probes": [
+            0.9998771340995407,
+            0.9994502705277439,
+            0.9929796623054866,
+            0.9553268770184016,
+            0.8853504858516787,
+            0.8286792055873913
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": 3.264015709507361,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.6596193527591548,
+            0.42978829706445976,
+            0.2125714749842442,
+            0.15897448261512886
+          ],
+          "native_k_max_h_per_Mpc": 10.54726627626
+        },
+        {
+          "case": "finite_cooling_tracer_instant_s14_sync",
+          "ratio_at_probes": [
+            0.9998771362279143,
+            0.99945037942999,
+            0.9929900697934407,
+            0.9554267394717338,
+            0.8853957042220336,
+            0.828667185230644
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": 3.264010414058869,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.6596203835226138,
+            0.4297886843242985,
+            0.21257187991644474,
+            0.15897417959253168
+          ],
+          "native_k_max_h_per_Mpc": 10.54726627626
+        },
+        {
+          "case": "finite_cooling_tracer_ratio5_s10_sync",
+          "ratio_at_probes": [
+            0.9999989921645158,
+            0.99999549715152,
+            0.9999392688971658,
+            0.9993843662326132,
+            0.9964986561672198,
+            0.9929958140629013
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9771406171518622,
+            0.949068223194186,
+            0.8811297842514765,
+            0.8470876024663604
+          ],
+          "native_k_max_h_per_Mpc": 10.54726634164
+        },
+        {
+          "case": "finite_cooling_tracer_ratio5_s14_sync",
+          "ratio_at_probes": [
+            0.9999989995110967,
+            0.999995499600553,
+            0.999939275006712,
+            0.9993847069151202,
+            0.9965033389754235,
+            0.9930063939026839
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9771557921911908,
+            0.9490536894485374,
+            0.8811209463161672,
+            0.8470926276939755
+          ],
+          "native_k_max_h_per_Mpc": 10.54726634164
+        }
+      ],
+      "per_history_control_comparison": [
+        {
+          "history": "instant",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 0.00010623747064630873,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.15897417959253168
+        },
+        {
+          "history": "ratio5",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 1.8963855785036898e-05,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.8470876024663604
+        }
+      ]
+    }
+  ],
+  "anchor_diagnostics": [
+    {
+      "case": "finite_cooling_tracer_instant_s10_sync",
+      "tau_at_archive_Mpc": 7.834949407006399e-05,
+      "largest_mode_k_times_tau_at_archive": 0.0005566448712004454,
+      "largest_k_times_tau_at_native_perturbation_start": 0.07003858387449001,
+      "present_NATIVE_energy_density_omega_h2": 2.363537648023711e-12,
+      "target_fixed_count_scalar_omega_h2": 2.3635376480246177e-12,
+      "relative_native_density_defect": 3.836930773104541e-13
+    },
+    {
+      "case": "finite_cooling_tracer_instant_s14_sync",
+      "tau_at_archive_Mpc": 7.834949407006399e-05,
+      "largest_mode_k_times_tau_at_archive": 0.0005566448712004454,
+      "largest_k_times_tau_at_native_perturbation_start": 0.07003730466467001,
+      "present_NATIVE_energy_density_omega_h2": 2.363537648023711e-12,
+      "target_fixed_count_scalar_omega_h2": 2.3635376480246177e-12,
+      "relative_native_density_defect": 3.836930773104541e-13
+    },
+    {
+      "case": "finite_cooling_tracer_ratio5_s10_sync",
+      "tau_at_archive_Mpc": 7.834949407006399e-05,
+      "largest_mode_k_times_tau_at_archive": 0.0005566448712004454,
+      "largest_k_times_tau_at_native_perturbation_start": 0.07000206696424,
+      "present_NATIVE_energy_density_omega_h2": 2.2325586277108363e-09,
+      "target_fixed_count_scalar_omega_h2": 2.2325586277116858e-09,
+      "relative_native_density_defect": 3.8047343053904115e-13
+    },
+    {
+      "case": "finite_cooling_tracer_ratio5_s14_sync",
+      "tau_at_archive_Mpc": 7.834949407006399e-05,
+      "largest_mode_k_times_tau_at_archive": 0.0005566448712004454,
+      "largest_k_times_tau_at_native_perturbation_start": 0.07000206696424,
+      "present_NATIVE_energy_density_omega_h2": 2.2325586277108363e-09,
+      "target_fixed_count_scalar_omega_h2": 2.2325586277116858e-09,
+      "relative_native_density_defect": 3.8047343053904115e-13
+    }
+  ],
+  "scope": "Adiabatic collisionless scalar tracer: scalar contrast relative to CDM in the same run, cold approximation for dominant stable matter, actual prompt-only scalar density. Not total-matter suppression, pre-1MeV perturbations, a dominant scalar transfer, or an observational constraint."
+}

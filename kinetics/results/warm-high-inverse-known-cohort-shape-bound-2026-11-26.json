@@ -1,0 +1,57 @@
+{
+  "scope": "At the archived anchor only, specified bare inverse decay and known exterior cohorts with arbitrary birth distributions of the same number and mean energy, conditioned on admitted present support and collisionless transport before activation. No untracked tails, further re-heating, recycling, or total heavy bound.",
+  "snapshots_sha256": "b494c58f1d2433b5aeda0d4f0320792a5897898a02970715802a6cd18b0ccf53",
+  "controls": [
+    {
+      "ratio_outer_to_q32_support": 1.75,
+      "admitted_max_momentum_GeV": 0.5289376692891257,
+      "each_incoming_energy_necessary_GeV": [
+        0.47567191149044663,
+        0.4760498928229563
+      ],
+      "per_species_eligible_particle_number_upper_GeV3": [
+        1.7248441527350018e-23,
+        5.388537777805918e-24
+      ],
+      "normalized_initial_high_inverse_energy_upper": 5.269683800328163e-20
+    },
+    {
+      "ratio_outer_to_q32_support": 2.0,
+      "admitted_max_momentum_GeV": 0.6045001934732864,
+      "each_incoming_energy_necessary_GeV": [
+        0.4001566072914542,
+        0.4004873686387964
+      ],
+      "per_species_eligible_particle_number_upper_GeV3": [
+        3.0552166698592247e-23,
+        9.561047036062216e-24
+      ],
+      "normalized_initial_high_inverse_energy_upper": 3.780139016264552e-19
+    },
+    {
+      "ratio_outer_to_q32_support": 2.15,
+      "admitted_max_momentum_GeV": 0.6498377079837829,
+      "each_incoming_energy_necessary_GeV": [
+        0.3548421578234665,
+        0.35514985412830036
+      ],
+      "per_species_eligible_particle_number_upper_GeV3": [
+        5.687656976231018e-23,
+        1.7858468284897765e-23
+      ],
+      "normalized_initial_high_inverse_energy_upper": 2.285713591520696e-18
+    }
+  ],
+  "explicit_moment_matched_tests": [
+    {
+      "hard_packet_momentum_GeV": 0.52,
+      "initial_normalized_high_inverse_energy": 1.4914625302086147e-20,
+      "upper_over_test": 25.34518259560845
+    },
+    {
+      "hard_packet_momentum_GeV": 0.58,
+      "initial_normalized_high_inverse_energy": 6.639121181251313e-21,
+      "upper_over_test": 56.93734024526553
+    }
+  ]
+}

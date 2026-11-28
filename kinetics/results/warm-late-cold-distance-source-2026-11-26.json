@@ -1,0 +1,106 @@
+{
+  "scope": "Reference ballistic travel to equality, not a transfer scale. Later birth allows a shorter path at fixed comoving momentum, so use the latest tested birth as a conservative momentum cut for the whole 50 to .1 MeV direct thermal charged-lepton vacuum interval. No initial parent, hadronic, later scattering or growing perturbations covered.",
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "monotone_EOS_lower": [
+    3.0,
+    4.0
+  ],
+  "rows": [
+    {
+      "max_path_Mpc": 0.0556,
+      "archive_momentum_cut_over_T": 0.0058621388483889,
+      "conservative_late_placement_cut_q_over_today_T": 0.004891552720065441,
+      "upper_q_over_today_T_using_post_EOS_only": [
+        0.004902936442972787,
+        0.004893800272748504,
+        0.004891552720065441
+      ],
+      "numeric_late_placement_crossing_q_over_today_T": 0.004282053055691753,
+      "archive_held_distance_selected_yield": 3.3262444693217623e-13,
+      "controls": [
+        {
+          "time_bins": 96,
+          "log10_direct_lepton_yield_upper": -53.816473129072214,
+          "log10_upper_relative_to_held_distance_selected_yield": -41.33842729451365
+        },
+        {
+          "time_bins": 384,
+          "log10_direct_lepton_yield_upper": -54.52656648628997,
+          "log10_upper_relative_to_held_distance_selected_yield": -42.04852065173141
+        }
+      ]
+    },
+    {
+      "max_path_Mpc": 0.1,
+      "archive_momentum_cut_over_T": 0.011247189452065987,
+      "conservative_late_placement_cut_q_over_today_T": 0.008923728692382898,
+      "upper_q_over_today_T_using_post_EOS_only": [
+        0.00894523204446735,
+        0.008927973781454445,
+        0.008923728692382898
+      ],
+      "numeric_late_placement_crossing_q_over_today_T": 0.008141813120040043,
+      "archive_held_distance_selected_yield": 2.3542914078478075e-12,
+      "controls": [
+        {
+          "time_bins": 96,
+          "log10_direct_lepton_yield_upper": -30.40138440406505,
+          "log10_upper_relative_to_held_distance_selected_yield": -18.773244621700556
+        },
+        {
+          "time_bins": 384,
+          "log10_direct_lepton_yield_upper": -31.071897884846805,
+          "log10_upper_relative_to_held_distance_selected_yield": -19.443758102482317
+        }
+      ]
+    },
+    {
+      "max_path_Mpc": 0.3,
+      "archive_momentum_cut_over_T": 0.03860163798595704,
+      "conservative_late_placement_cut_q_over_today_T": 0.028749614552604788,
+      "upper_q_over_today_T_using_post_EOS_only": [
+        0.028828252407633,
+        0.02876513392510487,
+        0.028749614552604788
+      ],
+      "numeric_late_placement_crossing_q_over_today_T": 0.02772899917310383,
+      "archive_held_distance_selected_yield": 9.429480456737532e-11,
+      "controls": [
+        {
+          "time_bins": 96,
+          "log10_direct_lepton_yield_upper": -11.76957344564286,
+          "log10_upper_relative_to_held_distance_selected_yield": -1.744061210385719
+        },
+        {
+          "time_bins": 384,
+          "log10_direct_lepton_yield_upper": -12.193616262599244,
+          "log10_upper_relative_to_held_distance_selected_yield": -2.168104027342102
+        }
+      ]
+    },
+    {
+      "max_path_Mpc": 1.0,
+      "archive_momentum_cut_over_T": 0.15332723817135288,
+      "conservative_late_placement_cut_q_over_today_T": 0.11111953713674598,
+      "upper_q_over_today_T_using_post_EOS_only": [
+        0.11148921639223972,
+        0.11119245722516419,
+        0.11111953713674598
+      ],
+      "numeric_late_placement_crossing_q_over_today_T": 0.10983783254303447,
+      "archive_held_distance_selected_yield": 5.4645389730917865e-09,
+      "controls": [
+        {
+          "time_bins": 96,
+          "log10_direct_lepton_yield_upper": -6.303675485887288,
+          "log10_upper_relative_to_held_distance_selected_yield": 1.9587709864158378
+        },
+        {
+          "time_bins": 384,
+          "log10_direct_lepton_yield_upper": -6.521359161821926,
+          "log10_upper_relative_to_held_distance_selected_yield": 1.7410873104811995
+        }
+      ]
+    }
+  ]
+}

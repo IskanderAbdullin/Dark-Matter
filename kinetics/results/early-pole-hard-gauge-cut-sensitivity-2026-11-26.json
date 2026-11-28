@@ -1,0 +1,54 @@
+{
+  "cuts": [
+    {
+      "p_min": 0.5,
+      "s_min": 1.0,
+      "cos_cm_max": 0.8,
+      "unblocked_number_rate_per_e4": 0.0007031568725271977,
+      "relative_hard_subset": 1.0,
+      "e_reweight_if_only_normalization_changed": 1.0
+    },
+    {
+      "p_min": 0.5,
+      "s_min": 1.0,
+      "cos_cm_max": 0.6,
+      "unblocked_number_rate_per_e4": 0.0003957073359232465,
+      "relative_hard_subset": 0.5627582569178982,
+      "e_reweight_if_only_normalization_changed": 1.1545680388860209
+    },
+    {
+      "p_min": 0.75,
+      "s_min": 1.5,
+      "cos_cm_max": 0.6,
+      "unblocked_number_rate_per_e4": 0.0002874860431996717,
+      "relative_hard_subset": 0.40885050609891027,
+      "e_reweight_if_only_normalization_changed": 1.2505724733185342
+    },
+    {
+      "p_min": 1.0,
+      "s_min": 2.0,
+      "cos_cm_max": 0.5,
+      "unblocked_number_rate_per_e4": 0.0001582616898626312,
+      "relative_hard_subset": 0.2250730897272283,
+      "e_reweight_if_only_normalization_changed": 1.4518411673966598
+    }
+  ],
+  "line_scale_comparison": [
+    {
+      "e": 0.003,
+      "single_line_width_proxy_over_angular_split": 0.5073784818444792
+    },
+    {
+      "e": 0.004,
+      "single_line_width_proxy_over_angular_split": 0.8573371403887534
+    },
+    {
+      "e": 0.0045,
+      "single_line_width_proxy_over_angular_split": 1.0619210869595865
+    },
+    {
+      "e": 0.005,
+      "single_line_width_proxy_over_angular_split": 1.2854520089803956
+    }
+  ]
+}

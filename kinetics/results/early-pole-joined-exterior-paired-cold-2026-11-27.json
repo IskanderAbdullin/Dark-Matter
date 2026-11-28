@@ -1,0 +1,120 @@
+{
+  "6": {
+    "grid": "fine",
+    "projection": "steps",
+    "duration": 2e-06,
+    "common_rk4_steps": 6,
+    "radial_order": 8,
+    "energy_closure": [
+      -2.220446049250313e-16,
+      -2.220446049250313e-16
+    ],
+    "entropy_change": [
+      0.0007900549669352941,
+      0.000790054974725729
+    ],
+    "rows": [
+      {
+        "exposure": 3.333333333333333e-07,
+        "cold_gain": 3.924891489538502e-08,
+        "outer_feedback_on_cold": -2.1566505841023755e-20,
+        "warm_gain": 9.16110260242493e-14
+      },
+      {
+        "exposure": 6.666666666666666e-07,
+        "cold_gain": 7.850732894079809e-08,
+        "outer_feedback_on_cold": -8.723020377270575e-20,
+        "warm_gain": 1.8322346581079238e-13
+      },
+      {
+        "exposure": 1e-06,
+        "cold_gain": 1.1777515292854142e-07,
+        "outer_feedback_on_cold": -1.9790374485221117e-19,
+        "warm_gain": 2.7483727899339516e-13
+      },
+      {
+        "exposure": 1.3333333333333332e-06,
+        "cold_gain": 1.5705229828060552e-07,
+        "outer_feedback_on_cold": -3.00349724216981e-19,
+        "warm_gain": 3.6645242552902346e-13
+      },
+      {
+        "exposure": 1.6666666666666665e-06,
+        "cold_gain": 1.9633867704286557e-07,
+        "outer_feedback_on_cold": -5.0635457750801805e-19,
+        "warm_gain": 4.580688656940405e-13
+      },
+      {
+        "exposure": 2e-06,
+        "cold_gain": 2.3563420187887926e-07,
+        "outer_feedback_on_cold": -7.489684040026357e-19,
+        "warm_gain": 5.496865600804623e-13
+      }
+    ],
+    "joined_macro_steps": 6,
+    "slow_rk4_half_steps": 12,
+    "total_hard_count_defect": [
+      0.0,
+      -1.1102230246251565e-16
+    ],
+    "summed_elastic_energy_defects": [
+      4.440892098500626e-16,
+      -6.661338147750939e-16
+    ],
+    "maximum_elastic_hard_pair_reconstruction_residual": 8.673617379884035e-19,
+    "scope": "Short fixed-scale all-channel matched split on one grid; explicit difference variable."
+  },
+  "12": {
+    "grid": "fine",
+    "projection": "steps",
+    "duration": 2e-06,
+    "common_rk4_steps": 12,
+    "radial_order": 8,
+    "energy_closure": [
+      9.22151244253655e-13,
+      9.2237328885858e-13
+    ],
+    "entropy_change": [
+      0.0007902189162058981,
+      0.0007902189239952229
+    ],
+    "rows": [
+      {
+        "exposure": 5e-07,
+        "cold_gain": 5.887757401863856e-08,
+        "outer_feedback_on_cold": -4.4497572534178416e-20,
+        "warm_gain": 1.3741711273961549e-13
+      },
+      {
+        "exposure": 1e-06,
+        "cold_gain": 1.1777665238784002e-07,
+        "outer_feedback_on_cold": -1.402078837922678e-19,
+        "warm_gain": 2.748374359848453e-13
+      },
+      {
+        "exposure": 1.4999999999999998e-06,
+        "cold_gain": 1.7669675937636698e-07,
+        "outer_feedback_on_cold": -3.8341535668489736e-19,
+        "warm_gain": 4.122608297575854e-13
+      },
+      {
+        "exposure": 2e-06,
+        "cold_gain": 2.3563759048431677e-07,
+        "outer_feedback_on_cold": -7.491554011052773e-19,
+        "warm_gain": 5.496871559853717e-13
+      }
+    ],
+    "joined_macro_steps": 12,
+    "slow_rk4_half_steps": 24,
+    "total_hard_count_defect": [
+      2.2465362903290043e-13,
+      2.2465362903290043e-13
+    ],
+    "summed_elastic_energy_defects": [
+      9.2237328885858e-13,
+      9.22151244253655e-13
+    ],
+    "maximum_elastic_hard_pair_reconstruction_residual": 3.3881317890172014e-21,
+    "scope": "Short fixed-scale all-channel matched split on one grid; explicit difference variable."
+  }
+}

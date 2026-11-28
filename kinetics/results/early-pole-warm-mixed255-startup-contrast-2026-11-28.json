@@ -1,0 +1,71 @@
+{
+  "charts": [
+    "mixed255",
+    "G7"
+  ],
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "budget_reference_sha256": "69542a8a854756a3337b25d79a7c3b35affacf175725695a84a53f73c9b88e02",
+  "contrasts": [
+    {
+      "x": 0.0075,
+      "steps": [
+        2048,
+        4096
+      ],
+      "common_native_sha256": "18df7a81fb8808c7d5f0e28cafa9081ff07bc022a1282cc6e10816fd0a7052ac",
+      "fixed_native_mass": 4.69152878376991e-05,
+      "moments": [
+        [
+          2.7076198086822986e-06,
+          4.294167666756034e-10,
+          4.286279298089819e-10
+        ],
+        [
+          2.7076198151834027e-06,
+          4.294795153959316e-10,
+          4.286906785293119e-10
+        ]
+      ],
+      "mixed255_over_G7_minus_one": [
+        -2.4010402555063592e-09,
+        -0.00014610410526882944,
+        -0.00014637295251029858
+      ],
+      "conditional_pressure_contrast": [
+        -0.00014610434600792477,
+        -0.0001461038645416135
+      ]
+    }
+  ],
+  "mixed_trace": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.782325983190108e-08,
+      "pole_mass": 4.691528784583019e-05,
+      "relative_time_drift": 5.1155568446148436e-05,
+      "maximum_absolute_continuity": 2.9113517660843326e-16,
+      "maximum_pair_number_error": 8.051048163652125e-17,
+      "previous_state_sha256": null,
+      "report_sha256": "ba1a75eeff559d17c0ac3d3721d81540ba519b42ac6c84ed8355ac6686f8f75d",
+      "state_sha256": "f49f3e28f7f33a8e28cb21d7199823729410d2ee7455bf3c6698f12bf9791bf1"
+    }
+  ],
+  "uniform_trace": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.7823259970737054e-08,
+      "pole_mass": 4.6915287845809444e-05,
+      "relative_time_drift": 5.115556832535617e-05,
+      "maximum_absolute_continuity": 1.773252887165037e-16,
+      "maximum_pair_number_error": 4.115118991821886e-17,
+      "verified_previous_raw_sha256": null,
+      "source_report_sha256": "484304d52c914fc81dba6b1b186f227fa2c6de39582bdb0b8462862255287eb1",
+      "uncompressed_state_sha256": "636561cceb30fb04bdf134299e16a24b584ea6f8ab06cb5c3b4fe34c0258726b"
+    }
+  ],
+  "scope": "Actual paired prefixes at common S4 measurement mass. Cell count/energy bounds do not include solver error; held-source ranking and physical pressure are not inferred."
+}

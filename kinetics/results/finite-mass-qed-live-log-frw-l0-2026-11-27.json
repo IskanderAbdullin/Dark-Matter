@@ -1,0 +1,93 @@
+{
+  "scope": "Live finite reciprocal log plus vacuum packets and prescribed expansion. No matched rates, Friedmann evolution or exterior exchange.",
+  "level": 0,
+  "packet_quad": [
+    2,
+    3,
+    10,
+    -3
+  ],
+  "log_quadrature_relative_defects": [
+    1.931354765958627e-09,
+    2.0796828590502435e-09
+  ],
+  "fixed": [
+    {
+      "log_scale": 0.0,
+      "log_energy": -1.6026594234558015e-12,
+      "log_trace": -3.194189120084798e-12,
+      "tested_energy_variation_error": 8.208863276626399e-14,
+      "tested_trace_error": 2.132164887355681e-15,
+      "tested_log_trace_error": 3.360421238496675e-25,
+      "tested_log_variation_error": 3.1322826647067583e-25
+    },
+    {
+      "log_scale": 0.028,
+      "log_energy": -1.6946300147010557e-12,
+      "log_trace": -3.3768190174019187e-12,
+      "tested_energy_variation_error": 6.985991646279999e-14,
+      "tested_trace_error": 8.69858249015823e-14,
+      "tested_log_trace_error": 2.0194839173657902e-27,
+      "tested_log_variation_error": 1.7402902657899697e-25
+    }
+  ],
+  "rows": [
+    {
+      "include_log": false,
+      "result": {
+        "closed": true,
+        "decay": 1.0,
+        "pairs": 1.0,
+        "log_scale": 0.028,
+        "scalar_gain": 0.0007119574577896734,
+        "comoving_redshift_trace_integral": 1.409182664974679e-06,
+        "trace_defect_fixed_state": -2.0488703100654884e-13,
+        "redshift_subtracted_drift": -5.593890286962125e-17,
+        "collision_work": -5.318545711440253e-17,
+        "entropy_gain": 0.019274858657574945,
+        "remap_rejection": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "include_log": true,
+      "result": {
+        "closed": true,
+        "decay": 1.0,
+        "pairs": 1.0,
+        "log_scale": 0.028,
+        "scalar_gain": 0.0007119572100397417,
+        "comoving_redshift_trace_integral": 1.4091825251418374e-06,
+        "trace_defect_fixed_state": -1.7551938906196912e-14,
+        "redshift_subtracted_drift": 2.757939276260002e-17,
+        "collision_work": -5.533846260867052e-18,
+        "entropy_gain": 0.019274858551432184,
+        "remap_rejection": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "include_log": true,
+      "result": {
+        "closed": true,
+        "decay": 1.0,
+        "pairs": 1.0,
+        "log_scale": 0.0,
+        "scalar_gain": 0.0006161730237106318,
+        "comoving_redshift_trace_integral": 0.0,
+        "trace_defect_fixed_state": -1.7551938906196912e-14,
+        "redshift_subtracted_drift": -8.326672684688674e-17,
+        "collision_work": 2.128635296264567e-18,
+        "entropy_gain": 0.019253343447732107,
+        "remap_rejection": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

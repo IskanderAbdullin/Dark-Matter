@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {
+      "a_start": 0.001,
+      "z_final": 20,
+      "k_Mpc_minus1": 6.736,
+      "normalized_joined_prompt_recoil_late_response": [
+        0.8052540209274821,
+        0.9031770645700237,
+        0.37611816144835397
+      ],
+      "weighted_split_response": 0.8052540127167245,
+      "joined_split_difference": 8.210757629356635e-09,
+      "time_quadrature_defect": 7.129316897724891e-06,
+      "removed_number_fraction": [
+        1.0657616011894021e-12,
+        6.496585335893671e-19,
+        5.736330752952053e-12
+      ],
+      "positive_or_negative_metric_drive_sign": 1.0
+    },
+    {
+      "a_start": 0.005,
+      "z_final": 20,
+      "k_Mpc_minus1": 6.736,
+      "normalized_joined_prompt_recoil_late_response": [
+        0.8643979781268267,
+        0.9566252343913132,
+        0.4602232158647847
+      ],
+      "weighted_split_response": 0.8643979703936902,
+      "joined_split_difference": 7.733136575538424e-09,
+      "time_quadrature_defect": 2.540624363334132e-06,
+      "removed_number_fraction": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "positive_or_negative_metric_drive_sign": 1.0
+    },
+    {
+      "a_start": 0.01,
+      "z_final": 20,
+      "k_Mpc_minus1": 6.736,
+      "normalized_joined_prompt_recoil_late_response": [
+        0.9022068733295099,
+        0.978816383915086,
+        0.5664749868776404
+      ],
+      "weighted_split_response": 0.9022068669058619,
+      "joined_split_difference": 6.423647946895983e-09,
+      "time_quadrature_defect": 1.4507810186525916e-06,
+      "removed_number_fraction": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "positive_or_negative_metric_drive_sign": 1.0
+    }
+  ],
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "934ac2a9b8b35a42d300dfe6215c4bc12970e25e08308542fa7b8f4f31080844",
+    "bc8c0b74b1353d20b1e3a4c7dc333932335c80d3d309f1f2e68204504adf072c",
+    "7a389d4ffe05683cf77af6aedff4e1ec5d6d29b867c65772904fdaaf7170461a",
+    "c3dfaa516d54c8cc22acca4680d02c7d920e987d26f6908d82acb5ad2c2341d2"
+  ],
+  "scope": "Newtonian nonrelativistic Green function, zero tracer perturbation at chosen a_start, same recorded metric potential drives every synthetic component. Uses no feedback or earlier hierarchy data, not the native evolving tracer or the physical total-matter transfer."
+}

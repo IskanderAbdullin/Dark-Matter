@@ -1,0 +1,152 @@
+{
+  "rows": [
+    {
+      "T_SM": 0.05,
+      "initial_forces": [
+        0.6,
+        0.16
+      ],
+      "total_local_time": 5.761601313413407e+22,
+      "independent_DOP853_force": [
+        0.5045195738760787,
+        0.14469464808123697
+      ],
+      "levels": [
+        {
+          "steps": 2,
+          "force": [
+            0.5044387249561219,
+            0.14468040550820863
+          ],
+          "error_over_initial_state_scale": 8.776627114216116e-05,
+          "max_entropy_error": 3.2709594438672418e-15,
+          "max_rate_residual": 2.521278759140815e-16
+        },
+        {
+          "steps": 4,
+          "force": [
+            0.5044993890660202,
+            0.14469109156544185
+          ],
+          "error_over_initial_state_scale": 2.1915670374928416e-05,
+          "max_entropy_error": 5.99291117834897e-15,
+          "max_rate_residual": 1.162656706367938e-15
+        },
+        {
+          "steps": 8,
+          "force": [
+            0.5045145293856225,
+            0.14469375920988367
+          ],
+          "error_over_initial_state_scale": 5.477300975939291e-06,
+          "max_entropy_error": 5.916923270172731e-15,
+          "max_rate_residual": 4.746465270267297e-16
+        }
+      ],
+      "error_halving_ratios": [
+        4.004726738478691,
+        4.001180594456952
+      ],
+      "independent_mesh_four_step_max_force_difference": 3.3306690738754696e-16
+    },
+    {
+      "T_SM": 0.3,
+      "initial_forces": [
+        -1.5,
+        0.16
+      ],
+      "total_local_time": 6.704064546574076e+19,
+      "independent_DOP853_force": [
+        -1.2272195953118212,
+        0.12525944847757678
+      ],
+      "levels": [
+        {
+          "steps": 2,
+          "force": [
+            -1.2276044246470093,
+            0.12510697763767123
+          ],
+          "error_over_initial_state_scale": 0.0007596777859694108,
+          "max_entropy_error": 5.195657258216286e-16,
+          "max_rate_residual": 3.976631261408942e-16
+        },
+        {
+          "steps": 4,
+          "force": [
+            -1.2273102208902653,
+            0.12522219637443535
+          ],
+          "error_over_initial_state_scale": 0.00018466744373625668,
+          "max_entropy_error": 1.1397297687239391e-15,
+          "max_rate_residual": 5.439871618504882e-16
+        },
+        {
+          "steps": 8,
+          "force": [
+            -1.2272419192577673,
+            0.12525018692668657
+          ],
+          "error_over_initial_state_scale": 4.585430728716307e-05,
+          "max_entropy_error": 8.082344228190325e-16,
+          "max_rate_residual": 1.3553630884055905e-15
+        }
+      ],
+      "error_halving_ratios": [
+        4.113761313847978,
+        4.0272649323819225
+      ],
+      "independent_mesh_four_step_max_force_difference": 8.623413094710486e-11
+    },
+    {
+      "T_SM": 0.6882487043,
+      "initial_forces": [
+        1.8,
+        -0.16
+      ],
+      "total_local_time": 1210014303834219.0,
+      "independent_DOP853_force": [
+        1.5777406428632204,
+        -0.11279165512166855
+      ],
+      "levels": [
+        {
+          "steps": 2,
+          "force": [
+            1.5749117455847232,
+            -0.11217803538876593
+          ],
+          "error_over_initial_state_scale": 0.0011536125987013292,
+          "max_entropy_error": 4.933977496626188e-16,
+          "max_rate_residual": 6.28248722271449e-16
+        },
+        {
+          "steps": 4,
+          "force": [
+            1.5770487869589958,
+            -0.11264158776298103
+          ],
+          "error_over_initial_state_scale": 0.0002818775149743037,
+          "max_entropy_error": 7.789950430209674e-16,
+          "max_rate_residual": 6.579481340791085e-16
+        },
+        {
+          "steps": 8,
+          "force": [
+            1.5775686070503874,
+            -0.11275433984509728
+          ],
+          "error_over_initial_state_scale": 7.007561427998014e-05,
+          "max_entropy_error": 1.756213511779724e-15,
+          "max_rate_residual": 1.9651509879613888e-15
+        }
+      ],
+      "error_halving_ratios": [
+        4.092602415650266,
+        4.022476547234965
+      ],
+      "independent_mesh_four_step_max_force_difference": 2.524143116744426e-10
+    }
+  ],
+  "scope": "Symmetric local collision update on thermodynamic moments for a fixed reservoir, not a cosmological trajectory or global convergence/positivity guarantee."
+}

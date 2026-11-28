@@ -1,0 +1,95 @@
+{
+  "width_GeV": 2.7501974166242444e-09,
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "scope": "Vacuum exponential decay of freely redshifting heavy parents on the prescribed cooling clock. Weighted moment bounds refer to the integrated quadrature source, not an independently bounded physical reheating solution.",
+  "cases": [
+    {
+      "T_R_GeV": 0.009019069895524137,
+      "Tmax_GeV": 0.009019069895524137,
+      "H_max_GeV": 3.624926161092415e-23,
+      "width_over_H_max": 75869060345092.38,
+      "parent_E_over_M_moments_2_4": [
+        1.347615517082311,
+        1.911572469978714
+      ],
+      "relative_prompt_scalar_count_defect": 7.391280321122906e-08,
+      "max_relative_quadrature_change": 1.6672088098301785e-05,
+      "bounds": [
+        {
+          "delta_ln_a": 1e-09,
+          "fraction_born_after_one_delay_before_anchor": 6.619420946871943e-84,
+          "fraction_earlier_parents_delayed_longer_than_delta_bounds_n2_n4": [
+            1.2673822487454283e-10,
+            2.705166396068352e-19
+          ],
+          "missing_decay_fraction_upper_at_anchor": 2.705166396068352e-19,
+          "absolute_p_over_T_difference_upper_for_prompt_decay_class": 4.8000000023959954e-08
+        },
+        {
+          "delta_ln_a": 1e-08,
+          "fraction_born_after_one_delay_before_anchor": 6.61942439651009e-83,
+          "fraction_earlier_parents_delayed_longer_than_delta_bounds_n2_n4": [
+            1.2673822487454282e-12,
+            2.705166396068352e-23
+          ],
+          "missing_decay_fraction_upper_at_anchor": 2.705166396068352e-23,
+          "absolute_p_over_T_difference_upper_for_prompt_decay_class": 4.800000023995995e-07
+        },
+        {
+          "delta_ln_a": 1e-07,
+          "fraction_born_after_one_delay_before_anchor": 6.61948197039733e-82,
+          "fraction_earlier_parents_delayed_longer_than_delta_bounds_n2_n4": [
+            1.2673822487454285e-14,
+            2.7051663960683533e-27
+          ],
+          "missing_decay_fraction_upper_at_anchor": 2.7051663960683533e-27,
+          "absolute_p_over_T_difference_upper_for_prompt_decay_class": 4.800000239996003e-06
+        }
+      ]
+    },
+    {
+      "T_R_GeV": 0.006236182402767521,
+      "Tmax_GeV": 0.031180912013837606,
+      "H_max_GeV": 1.082830139361272e-20,
+      "width_over_H_max": 253982348353.03906,
+      "parent_E_over_M_moments_2_4": [
+        2.307937455382492,
+        7.343096203212724
+      ],
+      "relative_prompt_scalar_count_defect": 4.449423052221846e-10,
+      "max_relative_quadrature_change": 2.108442223036633e-07,
+      "bounds": [
+        {
+          "delta_ln_a": 1e-09,
+          "fraction_born_after_one_delay_before_anchor": 7.007766951116417e-87,
+          "fraction_earlier_parents_delayed_longer_than_delta_bounds_n2_n4": [
+            1.9368143494392775e-05,
+            8.274221029607095e-09
+          ],
+          "missing_decay_fraction_upper_at_anchor": 8.274221029607095e-09,
+          "absolute_p_over_T_difference_upper_for_prompt_decay_class": 4.8000000023959954e-08
+        },
+        {
+          "delta_ln_a": 1e-08,
+          "fraction_born_after_one_delay_before_anchor": 7.007770603136797e-86,
+          "fraction_earlier_parents_delayed_longer_than_delta_bounds_n2_n4": [
+            1.9368143494392776e-07,
+            8.274221029607098e-13
+          ],
+          "missing_decay_fraction_upper_at_anchor": 8.274221029607098e-13,
+          "absolute_p_over_T_difference_upper_for_prompt_decay_class": 4.800000023995995e-07
+        },
+        {
+          "delta_ln_a": 1e-07,
+          "fraction_born_after_one_delay_before_anchor": 7.007831554749858e-85,
+          "fraction_earlier_parents_delayed_longer_than_delta_bounds_n2_n4": [
+            1.936814349439278e-09,
+            8.274221029607098e-17
+          ],
+          "missing_decay_fraction_upper_at_anchor": 8.274221029607098e-17,
+          "absolute_p_over_T_difference_upper_for_prompt_decay_class": 4.800000239996003e-06
+        }
+      ]
+    }
+  ]
+}

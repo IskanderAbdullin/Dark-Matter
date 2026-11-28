@@ -1,0 +1,173 @@
+{
+  "rows": [
+    {
+      "x": 0.01,
+      "rank_correlation": [
+        0.9683794466403164,
+        0.9548277809147376
+      ],
+      "number_underestimated_by_both": 8,
+      "number_worse_against_both_after_split": 5,
+      "strongest_underestimate": {
+        "edges": [
+          0.6284300306709397,
+          0.9082914754476046
+        ],
+        "excess_under_both_references": 1.4440865136792547e-06,
+        "estimate": 2.1958975415571523e-06,
+        "unrefined_L1_contribution": [
+          3.778587393005202e-06,
+          3.639984055236407e-06
+        ],
+        "refined_L1_contribution": [
+          1.58268985144805e-06,
+          1.4440865136792552e-06
+        ]
+      },
+      "strongest_degradation_after_split": {
+        "edges": [
+          8.280090530852393,
+          11.967498811408152
+        ],
+        "excess_under_both_references": 1.6367262248292117e-05,
+        "estimate": 1.9873023185015134e-05,
+        "unrefined_L1_contribution": [
+          1.7528804683615082e-06,
+          5.65840651930694e-07
+        ],
+        "refined_L1_contribution": [
+          1.8120142716653626e-05,
+          1.930718253308444e-05
+        ]
+      }
+    },
+    {
+      "x": 0.02,
+      "rank_correlation": [
+        0.9740259740259741,
+        0.9570863918690007
+      ],
+      "number_underestimated_by_both": 11,
+      "number_worse_against_both_after_split": 4,
+      "strongest_underestimate": {
+        "edges": [
+          0.6284300306709397,
+          0.9082914754476046
+        ],
+        "excess_under_both_references": 2.2040287064443494e-06,
+        "estimate": 1.0268025632943985e-05,
+        "unrefined_L1_contribution": [
+          1.2505074756603871e-05,
+          1.2472054339388334e-05
+        ],
+        "refined_L1_contribution": [
+          2.237049123659885e-06,
+          2.204028706444348e-06
+        ]
+      },
+      "strongest_degradation_after_split": {
+        "edges": [
+          8.280090530852393,
+          11.967498811408152
+        ],
+        "excess_under_both_references": 1.641882133475168e-05,
+        "estimate": 2.0734361441723365e-05,
+        "unrefined_L1_contribution": [
+          2.157770053485842e-06,
+          9.608973283496222e-07
+        ],
+        "refined_L1_contribution": [
+          1.857659138823752e-05,
+          1.977346411337374e-05
+        ]
+      }
+    },
+    {
+      "x": 0.04,
+      "rank_correlation": [
+        0.9717673630717111,
+        0.9638622247317901
+      ],
+      "number_underestimated_by_both": 9,
+      "number_worse_against_both_after_split": 5,
+      "strongest_underestimate": {
+        "edges": [
+          0.9082914754476046,
+          1.3127848194809963
+        ],
+        "excess_under_both_references": 1.9082597398469294e-05,
+        "estimate": 6.95824316732919e-05,
+        "unrefined_L1_contribution": [
+          8.948965096650583e-05,
+          8.86650290717612e-05
+        ],
+        "refined_L1_contribution": [
+          1.990721929321393e-05,
+          1.908259739846929e-05
+        ]
+      },
+      "strongest_degradation_after_split": {
+        "edges": [
+          8.280090530852393,
+          11.967498811408152
+        ],
+        "excess_under_both_references": 1.544581745000978e-05,
+        "estimate": 1.9507996387582042e-05,
+        "unrefined_L1_contribution": [
+          2.0310894687861303e-06,
+          7.850027801885661e-07
+        ],
+        "refined_L1_contribution": [
+          1.747690691879591e-05,
+          1.8722993607393477e-05
+        ]
+      }
+    },
+    {
+      "x": 0.05,
+      "rank_correlation": [
+        0.9717673630717111,
+        0.9672501411631848
+      ],
+      "number_underestimated_by_both": 6,
+      "number_worse_against_both_after_split": 4,
+      "strongest_underestimate": {
+        "edges": [
+          0.6284300306709397,
+          0.9082914754476046
+        ],
+        "excess_under_both_references": 1.2725514452268744e-06,
+        "estimate": 1.755975279574771e-06,
+        "unrefined_L1_contribution": [
+          3.4253494844391336e-06,
+          3.0285267248016454e-06
+        ],
+        "refined_L1_contribution": [
+          1.6693742048643625e-06,
+          1.2725514452268744e-06
+        ]
+      },
+      "strongest_degradation_after_split": {
+        "edges": [
+          8.280090530852393,
+          11.967498811408152
+        ],
+        "excess_under_both_references": 1.7331504159427128e-05,
+        "estimate": 2.2054064131639533e-05,
+        "unrefined_L1_contribution": [
+          2.361279986106203e-06,
+          1.0831161198751233e-06
+        ],
+        "refined_L1_contribution": [
+          1.969278414553333e-05,
+          2.097094801176441e-05
+        ]
+      }
+    }
+  ],
+  "reference_order": [
+    32,
+    64
+  ],
+  "scope": "Both references finite: these are numerical counterexamples to a local surrogate bound, not rigorous continuum error intervals."
+}

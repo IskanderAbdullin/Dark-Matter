@@ -1,0 +1,133 @@
+{
+  "scope": "Initially empty 50 MeV, tabulated EOS. Distinct charged pion regions below .30 (conditioned cap), .30\u2013sqrt(.10) (whole BABAR moment cap), and sqrt(.10)\u2013sqrt(.95) (KLOE effective band). Extra neutral window and elastic heating use separately stated form-factor caps. No full thermal hadronic spectrum or abundance prediction.",
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "f1660dc40468638c1e2e1dde2a478227b792a8231ae86e6cbd519dcc7dfa2e54",
+    "dca2531750911e72fd1e203c1f487e4e79d2f9a124177e22fed5db7a8bd86190",
+    "4e1cee3cfe8acaa6d05091ceb58fa6590a13eab90981b598bfc1899c2d46af55",
+    "ace21c47f1fcd2d5f8b661fd245dee393c224226216c18fa4f9eaff89a2d0b02"
+  ],
+  "cases": [
+    {
+      "case": "measured charged pion and BABAR gap only",
+      "sub_point30_timelike_Fpi_squared_cap": 0.0,
+      "spacelike_Fpi_squared_cap": 0.0,
+      "neutral_Fhat_cap_GeVminus1": 0.0,
+      "controls": [
+        {
+          "time_panels": 781,
+          "kernel_step": 0.012,
+          "charged_including_below_without_BABAR_base": 0.0293510316136078,
+          "neutral_energy_GeV4": 0.0,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 0.0,
+          "joint_upper_scalar_Omega_h2": 0.032330564631586435,
+          "remaining_early_input_allowance_GeV4": 9.37755845893965e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 22.78199854940163
+        },
+        {
+          "time_panels": 1321,
+          "kernel_step": 0.006,
+          "charged_including_below_without_BABAR_base": 0.027781678559775588,
+          "neutral_energy_GeV4": 0.0,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 0.0,
+          "joint_upper_scalar_Omega_h2": 0.03068304260481434,
+          "remaining_early_input_allowance_GeV4": 1.0046330906563794e-09,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 23.580372925369513
+        }
+      ]
+    },
+    {
+      "case": "unit conditional pion form-factor caps",
+      "sub_point30_timelike_Fpi_squared_cap": 1.0,
+      "spacelike_Fpi_squared_cap": 1.0,
+      "neutral_Fhat_cap_GeVminus1": 1.0,
+      "controls": [
+        {
+          "time_panels": 781,
+          "kernel_step": 0.012,
+          "charged_including_below_without_BABAR_base": 0.02943658281779331,
+          "neutral_energy_GeV4": 1.8067836024477554e-12,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 0.0,
+          "joint_upper_scalar_Omega_h2": 0.03246916920672737,
+          "remaining_early_input_allowance_GeV4": 9.311152500368786e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 22.72320596282026
+        },
+        {
+          "time_panels": 1321,
+          "kernel_step": 0.006,
+          "charged_including_below_without_BABAR_base": 0.027862711032816356,
+          "neutral_energy_GeV4": 1.8067836024477554e-12,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 0.0,
+          "joint_upper_scalar_Omega_h2": 0.030815755543064226,
+          "remaining_early_input_allowance_GeV4": 9.980081464672094e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 23.523759932192917
+        }
+      ]
+    },
+    {
+      "case": "wider charged and neutral form-factor caps",
+      "sub_point30_timelike_Fpi_squared_cap": 4.0,
+      "spacelike_Fpi_squared_cap": 4.0,
+      "neutral_Fhat_cap_GeVminus1": 10.0,
+      "controls": [
+        {
+          "time_panels": 781,
+          "kernel_step": 0.012,
+          "charged_including_below_without_BABAR_base": 0.029694747673734805,
+          "neutral_energy_GeV4": 1.8067836024477554e-10,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 0.0,
+          "joint_upper_scalar_Omega_h2": 0.03743167287030146,
+          "remaining_early_input_allowance_GeV4": 7.377699674244009e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 22.546248720233354
+        },
+        {
+          "time_panels": 1321,
+          "kernel_step": 0.006,
+          "charged_including_below_without_BABAR_base": 0.028107241405237262,
+          "neutral_energy_GeV4": 1.8067836024477554e-10,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 0.0,
+          "joint_upper_scalar_Omega_h2": 0.03564790971468421,
+          "remaining_early_input_allowance_GeV4": 8.047098489780252e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 23.353426479126657
+        }
+      ]
+    },
+    {
+      "case": "dispersive threshold and wider elastic and neutral caps",
+      "sub_point30_timelike_Fpi_squared_cap": 0.0,
+      "spacelike_Fpi_squared_cap": 4.0,
+      "neutral_Fhat_cap_GeVminus1": 10.0,
+      "controls": [
+        {
+          "time_panels": 781,
+          "kernel_step": 0.012,
+          "charged_including_below_without_BABAR_base": 0.02964467362260003,
+          "neutral_energy_GeV4": 1.8067836024477554e-10,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 2.273426714293298e-10,
+          "joint_upper_scalar_Omega_h2": 0.0437661022176517,
+          "remaining_early_input_allowance_GeV4": 5.124767813815023e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 19.58673981477023
+        },
+        {
+          "time_panels": 1321,
+          "kernel_step": 0.006,
+          "charged_including_below_without_BABAR_base": 0.028059432140889854,
+          "neutral_energy_GeV4": 1.8067836024477554e-10,
+          "BABAR_early_energy_upper_GeV4": 1.2188060639297197e-10,
+          "dispersive_theory_early_energy_upper_GeV4": 2.273426714293298e-10,
+          "joint_upper_scalar_Omega_h2": 0.04183709592089685,
+          "remaining_early_input_allowance_GeV4": 5.793759186550055e-10,
+          "total_neutral_amplitude_budget_at_fixed_charged_caps": 20.510168765952976
+        }
+      ]
+    }
+  ]
+}

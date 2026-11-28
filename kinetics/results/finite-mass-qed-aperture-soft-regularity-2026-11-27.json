@@ -1,0 +1,125 @@
+{
+  "scope": "One-parameter exact Born aperture regularity test; not real-photon recoil or inclusive thermal rates.",
+  "rows": [
+    {
+      "grid": "fine",
+      "q": 4.1e-06,
+      "native_scalar_energy": 0.0008720655769947503,
+      "native_bare_stimulus": 0.0012971200265904175,
+      "tuned_p": 1.4138888888888888,
+      "tuned_scalar_energy": 0.000876527514405467,
+      "tuned_shell_jump": 0.03726203160586396,
+      "tuned_lower_endpoint_derivative": -1605.5506256975114,
+      "predicted_cusp_coefficient": -59.82607815955532,
+      "ladder": [
+        {
+          "shift": 1e-07,
+          "nominal_quadratic_response": 218258.7565744277,
+          "tuned_linear_response": -59.79779290600552,
+          "tuned_relative_to_predicted_cusp": -0.00047279137158827254
+        },
+        {
+          "shift": 1e-09,
+          "nominal_quadratic_response": 218258.75363613578,
+          "tuned_linear_response": -59.82579529938386,
+          "tuned_relative_to_predicted_cusp": -4.72804135191292e-06
+        },
+        {
+          "shift": 1e-11,
+          "nominal_quadratic_response": 218258.75363584197,
+          "tuned_linear_response": -59.82607533095285,
+          "tuned_relative_to_predicted_cusp": -4.728042628892036e-08
+        },
+        {
+          "shift": 1e-13,
+          "nominal_quadratic_response": 218258.75363584195,
+          "tuned_linear_response": -59.8260781312693,
+          "tuned_relative_to_predicted_cusp": -4.728042641661888e-10
+        },
+        {
+          "shift": 1e-15,
+          "nominal_quadratic_response": 218258.75363584195,
+          "tuned_linear_response": -59.82607815927246,
+          "tuned_relative_to_predicted_cusp": -4.7280426417895874e-12
+        }
+      ],
+      "finite_resolution": [
+        {
+          "top_hat_half_width": 1e-07,
+          "finite_curvature": -298847542.1169744,
+          "aperture_smearing_scaled_cusp_error": 0.0009455698568368315
+        },
+        {
+          "top_hat_half_width": 1e-09,
+          "finite_curvature": -29912756219.644783,
+          "aperture_smearing_scaled_cusp_error": 9.456081413954135e-06
+        },
+        {
+          "top_hat_half_width": 1e-11,
+          "finite_curvature": -2991303625117.5186,
+          "aperture_smearing_scaled_cusp_error": 9.45608524488523e-08
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "q": 4.1e-06,
+      "native_scalar_energy": 0.0008672511387733416,
+      "native_bare_stimulus": 0.0011069898630992503,
+      "tuned_p": 1.4314814814814814,
+      "tuned_scalar_energy": 0.0008657114566523852,
+      "tuned_shell_jump": 0.06335863224304418,
+      "tuned_lower_endpoint_derivative": -1645.7412687433616,
+      "predicted_cusp_coefficient": -104.27191581351158,
+      "ladder": [
+        {
+          "shift": 1e-07,
+          "nominal_quadratic_response": 593648.35869986,
+          "tuned_linear_response": -104.22422479970962,
+          "tuned_relative_to_predicted_cusp": -0.0004573716079722017
+        },
+        {
+          "shift": 1e-09,
+          "nominal_quadratic_response": 593648.3507199439,
+          "tuned_linear_response": -104.27143888973156,
+          "tuned_relative_to_predicted_cusp": -4.573846910841862e-06
+        },
+        {
+          "shift": 1e-11,
+          "nominal_quadratic_response": 593648.3507191458,
+          "tuned_linear_response": -104.27191104427243,
+          "tuned_relative_to_predicted_cusp": -4.5738482197670183e-08
+        },
+        {
+          "shift": 1e-13,
+          "nominal_quadratic_response": 593648.3507191457,
+          "tuned_linear_response": -104.2719157658192,
+          "tuned_relative_to_predicted_cusp": -4.5738482328563314e-10
+        },
+        {
+          "shift": 1e-15,
+          "nominal_quadratic_response": 593648.3507191457,
+          "tuned_linear_response": -104.27191581303467,
+          "tuned_relative_to_predicted_cusp": -4.573848232987225e-12
+        }
+      ],
+      "finite_resolution": [
+        {
+          "top_hat_half_width": 1e-07,
+          "finite_curvature": -520882675.8162419,
+          "aperture_smearing_scaled_cusp_error": 0.0009147300068197922
+        },
+        {
+          "top_hat_half_width": 1e-09,
+          "finite_curvature": -52135480983.04469,
+          "aperture_smearing_scaled_cusp_error": 9.147692499543243e-06
+        },
+        {
+          "top_hat_half_width": 1e-11,
+          "finite_curvature": -5213595313751.664,
+          "aperture_smearing_scaled_cusp_error": 9.147696426312509e-08
+        }
+      ]
+    }
+  ]
+}

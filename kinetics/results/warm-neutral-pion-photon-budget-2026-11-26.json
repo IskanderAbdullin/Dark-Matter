@@ -1,0 +1,97 @@
+{
+  "scope": "One additional neutral pion/photon vacuum channel, conditioned on a uniform timelike form-factor magnitude cap only in the stated band. Bose factors use massless photons and massive neutral pion at zero chemical potential. No evidence for any assigned form-factor cap or full photon bath.",
+  "headroom_GeV4": 1.0821957111115005e-09,
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "7b374acad92ef49b37d742c4042d5b545e693cf6dfcd052cd70b14a92284a34a"
+  ],
+  "windows": [
+    {
+      "invariant_E_max": 0.28,
+      "controls": [
+        {
+          "s_panels": 250,
+          "energy_per_unit_form_factor_squared": [
+            9.806591167858092e-14,
+            2.2715654289421003e-13
+          ],
+          "cold_tail_fraction": [
+            9.471673228370934e-08,
+            4.0890832854122684e-08
+          ],
+          "form_factor_amplitude_budget_GeVminus1": 69.02243540137206
+        },
+        {
+          "s_panels": 500,
+          "energy_per_unit_form_factor_squared": [
+            9.714842017646647e-14,
+            2.2510396363588696e-13
+          ],
+          "cold_tail_fraction": [
+            9.561125837914659e-08,
+            4.126369023973358e-08
+          ],
+          "form_factor_amplitude_budget_GeVminus1": 69.33640704884549
+        }
+      ]
+    },
+    {
+      "invariant_E_max": 0.42,
+      "controls": [
+        {
+          "s_panels": 250,
+          "energy_per_unit_form_factor_squared": [
+            5.728097508120175e-13,
+            1.071137673640652e-12
+          ],
+          "cold_tail_fraction": [
+            5.827776099700669e-08,
+            3.116523544841808e-08
+          ],
+          "form_factor_amplitude_budget_GeVminus1": 31.785588525116044
+        },
+        {
+          "s_panels": 500,
+          "energy_per_unit_form_factor_squared": [
+            5.64879741048632e-13,
+            1.0562157904284422e-12
+          ],
+          "cold_tail_fraction": [
+            5.9095887724009864e-08,
+            3.160552805515299e-08
+          ],
+          "form_factor_amplitude_budget_GeVminus1": 32.00932944093738
+        }
+      ]
+    },
+    {
+      "invariant_E_max": 0.6,
+      "controls": [
+        {
+          "s_panels": 250,
+          "energy_per_unit_form_factor_squared": [
+            1.0772893562365468e-12,
+            1.8502315426317154e-12
+          ],
+          "cold_tail_fraction": [
+            7.5327178767444e-08,
+            4.385904013162228e-08
+          ],
+          "form_factor_amplitude_budget_GeVminus1": 24.1846531907106
+        },
+        {
+          "s_panels": 500,
+          "energy_per_unit_form_factor_squared": [
+            1.0528331779483513e-12,
+            1.8067836024477554e-12
+          ],
+          "cold_tail_fraction": [
+            7.707694782152463e-08,
+            4.4913723686190194e-08
+          ],
+          "form_factor_amplitude_budget_GeVminus1": 24.473711375693817
+        }
+      ]
+    }
+  ]
+}

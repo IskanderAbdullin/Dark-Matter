@@ -1,0 +1,445 @@
+{
+  "scope": "Single reversible edge with held charged reservoirs, not a population model.",
+  "independent_tests": {
+    "cases": 60,
+    "direct_dop853_max_abs_defect": 1.3855583347321954e-13,
+    "pair_number_max_rel_defect": 2.220446049250313e-16,
+    "semigroup_max_abs_defect": 3.552713678800501e-15,
+    "min_instant_entropy_production": 0.0
+  },
+  "thermal_fixed_point_max_rel": 2.020605904817785e-14,
+  "archived_shapes": [
+    {
+      "grid": "fine",
+      "k": 0.0012,
+      "polarization": "L",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 1.4215821075334896e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.002999999857841789,
+      "direct_scalar_update_error": -0.002999999857841789,
+      "energy_ledger": [
+        2.6161966070129686e-06,
+        -5.755604985624534e-06,
+        3.1394083786115655e-06
+      ],
+      "energy_defect": 4.235164736271502e-22
+    },
+    {
+      "grid": "fine",
+      "k": 0.0012,
+      "polarization": "L",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 1.4215821075334896e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.2999999857841789,
+      "direct_scalar_update_error": -0.2999999857841789,
+      "energy_ledger": [
+        0.0002616196607012969,
+        -0.0005755604985624534,
+        0.00031394083786115656
+      ],
+      "energy_defect": 5.421010862427522e-20
+    },
+    {
+      "grid": "fine",
+      "k": 0.0012,
+      "polarization": "L",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 1.4215821075334896e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.99999857841789,
+      "direct_scalar_update_error": 1.4215821089180736e-06,
+      "energy_ledger": [
+        0.026161966070129685,
+        -0.05755604985624534,
+        0.031394083786115655
+      ],
+      "energy_defect": 3.469446951953614e-18
+    },
+    {
+      "grid": "fine",
+      "k": 0.00256,
+      "polarization": "L",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 5.654114279315768e-07,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.0029999943458857204,
+      "direct_scalar_update_error": -0.0029999943458857204,
+      "energy_ledger": [
+        2.6161918002258193e-06,
+        -8.247421928913943e-06,
+        5.631230128688124e-06
+      ],
+      "energy_defect": 8.470329472543003e-22
+    },
+    {
+      "grid": "fine",
+      "k": 0.00256,
+      "polarization": "L",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 5.654114279315768e-07,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.29999943458857203,
+      "direct_scalar_update_error": -0.29999943458857203,
+      "energy_ledger": [
+        0.0002616191800225819,
+        -0.0008247421928913943,
+        0.0005631230128688125
+      ],
+      "energy_defect": 5.421010862427522e-20
+    },
+    {
+      "grid": "fine",
+      "k": 0.00256,
+      "polarization": "L",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 5.654114279315768e-07,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.999943458857203,
+      "direct_scalar_update_error": 5.654114279707301e-05,
+      "energy_ledger": [
+        0.02616191800225819,
+        -0.08247421928913944,
+        0.05631230128688124
+      ],
+      "energy_defect": 3.469446951953614e-18
+    },
+    {
+      "grid": "fine",
+      "k": 0.0015,
+      "polarization": "T",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 2.831256116330663e-09,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.0029999999716874386,
+      "direct_scalar_update_error": -0.0029999999716874386,
+      "energy_ledger": [
+        2.6161967062938405e-06,
+        -6.912592720115599e-06,
+        4.296396013821759e-06
+      ],
+      "energy_defect": 4.235164736271502e-22
+    },
+    {
+      "grid": "fine",
+      "k": 0.0015,
+      "polarization": "T",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 2.831256116330663e-09,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.29999999716874387,
+      "direct_scalar_update_error": -0.29999999716874387,
+      "energy_ledger": [
+        0.00026161967062938405,
+        -0.0006912592720115599,
+        0.00042963960138217593
+      ],
+      "energy_defect": 5.421010862427522e-20
+    },
+    {
+      "grid": "fine",
+      "k": 0.0015,
+      "polarization": "T",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 2.8312561163306637e-09,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.999999716874388,
+      "direct_scalar_update_error": 2.831256118440706e-07,
+      "energy_ledger": [
+        0.02616196706293841,
+        -0.069125927201156,
+        0.04296396013821759
+      ],
+      "energy_defect": 3.469446951953614e-18
+    },
+    {
+      "grid": "fine",
+      "k": 0.00256,
+      "polarization": "T",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 4.948697628226415e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.002999999505130237,
+      "direct_scalar_update_error": -0.002999999505130237,
+      "energy_ledger": [
+        2.6161962994253654e-06,
+        -9.422212620649093e-06,
+        6.8060163212237285e-06
+      ],
+      "energy_defect": 8.470329472543003e-22
+    },
+    {
+      "grid": "fine",
+      "k": 0.00256,
+      "polarization": "T",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 4.948697628226416e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.2999999505130237,
+      "direct_scalar_update_error": -0.2999999505130237,
+      "energy_ledger": [
+        0.00026161962994253655,
+        -0.0009422212620649094,
+        0.0006806016321223729
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "fine",
+      "k": 0.00256,
+      "polarization": "T",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 4.9486976282264145e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.99999505130237,
+      "direct_scalar_update_error": 4.94869762945882e-06,
+      "energy_ledger": [
+        0.026161962994253656,
+        -0.09422212620649094,
+        0.06806016321223729
+      ],
+      "energy_defect": 6.938893903907228e-18
+    },
+    {
+      "grid": "third",
+      "k": 0.0012,
+      "polarization": "L",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 1.3866692464801742e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.0029999998613330753,
+      "direct_scalar_update_error": -0.0029999998613330753,
+      "energy_ledger": [
+        2.6017532960609764e-06,
+        -5.759122066259211e-06,
+        3.1573687701982354e-06
+      ],
+      "energy_defect": 4.235164736271502e-22
+    },
+    {
+      "grid": "third",
+      "k": 0.0012,
+      "polarization": "L",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 1.3866692464801738e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.29999998613330753,
+      "direct_scalar_update_error": -0.04999998613330753,
+      "energy_ledger": [
+        0.00026017532960609765,
+        -0.0005759122066259212,
+        0.0003157368770198235
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "third",
+      "k": 0.0012,
+      "polarization": "L",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 1.3866692464801742e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.999998613330753,
+      "direct_scalar_update_error": 1.3866692469832742e-06,
+      "energy_ledger": [
+        0.02601753296060976,
+        -0.05759122066259211,
+        0.03157368770198235
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "third",
+      "k": 0.00256,
+      "polarization": "L",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 5.40704599977834e-07,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.0029999945929540003,
+      "direct_scalar_update_error": -0.0029999945929540003,
+      "energy_ledger": [
+        2.601748727053224e-06,
+        -8.249310305131217e-06,
+        5.647561578077993e-06
+      ],
+      "energy_defect": 4.235164736271502e-22
+    },
+    {
+      "grid": "third",
+      "k": 0.00256,
+      "polarization": "L",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 5.40704599977834e-07,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.2999994592954,
+      "direct_scalar_update_error": -0.049999459295400006,
+      "energy_ledger": [
+        0.0002601748727053224,
+        -0.0008249310305131216,
+        0.0005647561578077992
+      ],
+      "energy_defect": 5.421010862427522e-20
+    },
+    {
+      "grid": "third",
+      "k": 0.00256,
+      "polarization": "L",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 5.407045999778341e-07,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.99994592954,
+      "direct_scalar_update_error": 5.407045999916704e-05,
+      "energy_ledger": [
+        0.026017487270532238,
+        -0.08249310305131216,
+        0.05647561578077993
+      ],
+      "energy_defect": 3.469446951953614e-18
+    },
+    {
+      "grid": "third",
+      "k": 0.0015,
+      "polarization": "T",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 2.2630444783793685e-09,
+      "late_log_affinity_defect": 7.105427357601002e-15,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.0029999999773695552,
+      "direct_scalar_update_error": -0.0029999999773695552,
+      "energy_ledger": [
+        2.6017533966937456e-06,
+        -6.9156712941997075e-06,
+        4.313917897505962e-06
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "third",
+      "k": 0.0015,
+      "polarization": "T",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 2.263044478379368e-09,
+      "late_log_affinity_defect": 7.105427357601002e-15,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.2999999977369555,
+      "direct_scalar_update_error": -0.049999997736955515,
+      "energy_ledger": [
+        0.00026017533966937457,
+        -0.0006915671294199708,
+        0.0004313917897505962
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "third",
+      "k": 0.0015,
+      "polarization": "T",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 2.2630444783793685e-09,
+      "late_log_affinity_defect": 7.105427357601002e-15,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.999999773695553,
+      "direct_scalar_update_error": 2.2630444718174658e-07,
+      "energy_ledger": [
+        0.026017533966937456,
+        -0.06915671294199707,
+        0.04313917897505962
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "third",
+      "k": 0.00256,
+      "polarization": "T",
+      "capacity_ratio": 0.01,
+      "minority_photon_occupation": 4.4779334128536185e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.0029999995522066586,
+      "direct_scalar_update_error": -0.0029999995522066586,
+      "energy_ledger": [
+        2.6017530279707393e-06,
+        -9.424618786479089e-06,
+        6.822865758508349e-06
+      ],
+      "energy_defect": 4.235164736271502e-22
+    },
+    {
+      "grid": "third",
+      "k": 0.00256,
+      "polarization": "T",
+      "capacity_ratio": 1.0,
+      "minority_photon_occupation": 4.477933412853617e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 0.29999995522066586,
+      "direct_scalar_update_error": -0.04999995522066586,
+      "energy_ledger": [
+        0.00026017530279707395,
+        -0.0009424618786479089,
+        0.0006822865758508349
+      ],
+      "energy_defect": 0.0
+    },
+    {
+      "grid": "third",
+      "k": 0.00256,
+      "polarization": "T",
+      "capacity_ratio": 100.0,
+      "minority_photon_occupation": 4.477933412853618e-08,
+      "late_log_affinity_defect": 0.0,
+      "scaled_deadline": 60.0,
+      "same_fixed_scalar_mode": 4.1e-06,
+      "extent_from_photon": 29.999995522066587,
+      "direct_scalar_update_error": 4.477933412516677e-06,
+      "energy_ledger": [
+        0.026017530279707393,
+        -0.0942461878647909,
+        0.06822865758508351
+      ],
+      "energy_defect": 0.0
+    }
+  ]
+}

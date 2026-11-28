@@ -1,0 +1,126 @@
+{
+  "rows": [
+    {
+      "initial_visible_T": 0.05,
+      "initial_dark_T": 0.057999999999999996,
+      "initial_eta": 0.3,
+      "total_energy": 5.093168832842733e-05,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.050692156594375204,
+          "dark_T": 0.05712214353329691,
+          "eta": 0.2616577073116378,
+          "normalized_reference_error": 1.4283619927565925e-05,
+          "total_entropy_produced": 6.510504711327211e-06,
+          "max_entropy_balance_error": 9.680508771852376e-14
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.050692240290981704,
+          "dark_T": 0.0571220280176375,
+          "eta": 0.2616529885508396,
+          "normalized_reference_error": 3.5542599995538798e-06,
+          "total_entropy_produced": 6.511231816250384e-06,
+          "max_entropy_balance_error": 1.827548076742519e-13
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.05069226109335057,
+          "dark_T": 0.057121999331085964,
+          "eta": 0.2616518134707789,
+          "normalized_reference_error": 8.875229081717408e-07,
+          "total_entropy_produced": 6.511412547813766e-06,
+          "max_entropy_balance_error": 1.9174248826630084e-13
+        }
+      ],
+      "halving_ratios": [
+        4.01873243076161,
+        4.00469663016981
+      ],
+      "independent_mesh_difference": 2.3869795029440866e-15
+    },
+    {
+      "initial_visible_T": 0.3,
+      "initial_dark_T": 0.348,
+      "initial_eta": -0.75,
+      "total_energy": 0.1527009540093446,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.30005602702698453,
+          "dark_T": 0.33789728122077367,
+          "eta": -0.577227657892927,
+          "normalized_reference_error": 0.000501076256842716,
+          "total_entropy_produced": 0.00044469809779785065,
+          "max_entropy_balance_error": 2.100011488433487e-14
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.30005838069268065,
+          "dark_T": 0.33787364524552527,
+          "eta": -0.5773751016879342,
+          "normalized_reference_error": 0.0001247149148010887,
+          "total_entropy_produced": 0.0004448441795584121,
+          "max_entropy_balance_error": 1.1032095756784864e-14
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.30005896573012475,
+          "dark_T": 0.3378677708491469,
+          "eta": -0.577411795530797,
+          "normalized_reference_error": 3.114368743352225e-05,
+          "total_entropy_produced": 0.00044488016298623707,
+          "max_entropy_balance_error": 6.005239103133466e-15
+        }
+      ],
+      "halving_ratios": [
+        4.017773316382379,
+        4.004500593171533
+      ],
+      "independent_mesh_difference": 2.8983926370074187e-11
+    },
+    {
+      "initial_visible_T": 0.6882487043,
+      "initial_dark_T": 0.5918938856979999,
+      "initial_eta": 0.9,
+      "total_energy": 5.211691976901698,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.6873576174776131,
+          "dark_T": 0.6144901964266367,
+          "eta": 0.799667509196831,
+          "normalized_reference_error": 0.00017820418602865163,
+          "total_entropy_produced": 0.0014048834865444538,
+          "max_entropy_balance_error": 1.446617292850713e-13
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.6873593016233138,
+          "dark_T": 0.6144505330490884,
+          "eta": 0.7998321995039018,
+          "normalized_reference_error": 4.366486346058533e-05,
+          "total_entropy_produced": 0.0014036827755698712,
+          "max_entropy_balance_error": 7.391758122801642e-14
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.6873597122485919,
+          "dark_T": 0.6144408650661811,
+          "eta": 0.79987233220868,
+          "normalized_reference_error": 1.0861577149607228e-05,
+          "total_entropy_produced": 0.0014033904356318704,
+          "max_entropy_balance_error": 3.856992032416472e-14
+        }
+      ],
+      "halving_ratios": [
+        4.081180425298021,
+        4.020121834899853
+      ],
+      "independent_mesh_difference": 1.2645551272782996e-10
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Fixed-energy positive-filter trajectories compared against the unmodified timelike moment ODE, not expanding or abundance estimates."
+}

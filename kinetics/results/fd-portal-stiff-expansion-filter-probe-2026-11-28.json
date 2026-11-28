@@ -1,0 +1,422 @@
+{
+  "rows": [
+    {
+      "maximum_mesh_endpoint_difference": 3.887451341735848e-13,
+      "initial_visible_T": 0.64135,
+      "initial_state": [
+        0.64135,
+        0.002,
+        -0.44468007427795964
+      ],
+      "horizon": 3.0072005485855e+16,
+      "initial_local_mode_rates": [
+        1.549878385819373e-18,
+        4.712110402240237e-16
+      ],
+      "continuous_state_and_ledgers": [
+        0.013811272764299427,
+        0.6330811129121768,
+        -0.0006672447939307258,
+        -0.45715154408664016,
+        1.6580572847127485e-08,
+        0.012649846404259002
+      ],
+      "steps": [
+        {
+          "method": "unfiltered",
+          "count": 4,
+          "initial_fast_rate_times_step": 3.5425652466530706,
+          "terminal_coordinates": [
+            0.013811279216170678,
+            0.633081124972294,
+            -0.0006659571788941457,
+            -0.45715216597117275
+          ],
+          "component_scaled_errors": [
+            6.451871250798269e-07,
+            1.88042677589105e-08,
+            1.2876150365801397e-06,
+            -6.218845325922651e-07
+          ],
+          "maximum_scaled_state_error": 1.2876150365801397e-06,
+          "ledger_abs_errors_entropy_energy": [
+            4.576616217663127e-15,
+            1.813636046898992e-13
+          ],
+          "relative_entropy_minus_physical": -1.1085151611214569e-11
+        },
+        {
+          "method": "unfiltered",
+          "count": 8,
+          "initial_fast_rate_times_step": 1.7712826233265353,
+          "terminal_coordinates": [
+            0.013811274377266989,
+            0.633081110262039,
+            -0.0006673513463244997,
+            -0.45715148573054465
+          ],
+          "component_scaled_errors": [
+            1.612967561598344e-07,
+            -4.132124248720725e-09,
+            -1.065523937738861e-07,
+            5.835609551141374e-08
+          ],
+          "maximum_scaled_state_error": 1.612967561598344e-07,
+          "ledger_abs_errors_entropy_energy": [
+            6.501801791697695e-15,
+            1.669202970289163e-13
+          ],
+          "relative_entropy_minus_physical": 1.1120043941592165e-12
+        },
+        {
+          "method": "unfiltered",
+          "count": 16,
+          "initial_fast_rate_times_step": 0.8856413116632676,
+          "terminal_coordinates": [
+            0.013811273167541367,
+            0.6330811122454553,
+            -0.0006672717488323057,
+            -0.45715152933948616
+          ],
+          "component_scaled_errors": [
+            4.032419398392051e-08,
+            -1.03955962710584e-09,
+            -2.69549015798759e-08,
+            1.474715399796267e-08
+          ],
+          "maximum_scaled_state_error": 4.032419398392051e-08,
+          "ledger_abs_errors_entropy_energy": [
+            1.5134521264367075e-14,
+            1.5563765554116316e-13
+          ],
+          "relative_entropy_minus_physical": 2.8069641343930615e-13
+        },
+        {
+          "method": "unfiltered",
+          "count": 32,
+          "initial_fast_rate_times_step": 0.4428206558316338,
+          "terminal_coordinates": [
+            0.013811272865110084,
+            0.6330811127450707,
+            -0.00066725156533824,
+            -0.4571515403835414
+          ],
+          "component_scaled_errors": [
+            1.008106566974254e-08,
+            -2.6055368633332056e-10,
+            -6.771407514132716e-09,
+            3.703098772067648e-09
+          ],
+          "maximum_scaled_state_error": 1.008106566974254e-08,
+          "ledger_abs_errors_entropy_energy": [
+            3.441356405578465e-14,
+            1.3072876114961218e-13
+          ],
+          "relative_entropy_minus_physical": 7.045901041236165e-14
+        },
+        {
+          "method": "filtered",
+          "count": 4,
+          "initial_fast_rate_times_step": 3.5425652466530706,
+          "terminal_coordinates": [
+            0.013811279253218768,
+            0.6330827117226943,
+            -0.0005490919834537305,
+            -0.45721143628053146
+          ],
+          "component_scaled_errors": [
+            6.488919341088306e-07,
+            2.492883008376861e-06,
+            0.00011815281047699536,
+            -5.989219389129774e-05
+          ],
+          "maximum_scaled_state_error": 0.00011815281047699536,
+          "ledger_abs_errors_entropy_energy": [
+            3.0050792803466385e-15,
+            1.7912581140588912e-13
+          ],
+          "relative_entropy_minus_physical": 7.246554431575008e-09
+        },
+        {
+          "method": "filtered",
+          "count": 8,
+          "initial_fast_rate_times_step": 1.7712826233265353,
+          "terminal_coordinates": [
+            0.0138112743886659,
+            0.6330815528248165,
+            -0.0006347964708682581,
+            -0.4571680083092658
+          ],
+          "component_scaled_errors": [
+            1.6243664729270746e-07,
+            6.859166440309733e-07,
+            3.2448323062467753e-05,
+            -1.6464222625633962e-05
+          ],
+          "maximum_scaled_state_error": 3.2448323062467753e-05,
+          "ledger_abs_errors_entropy_energy": [
+            5.805319411771022e-15,
+            1.6781714906599632e-13
+          ],
+          "relative_entropy_minus_physical": 2.163433467761812e-09
+        },
+        {
+          "method": "filtered",
+          "count": 16,
+          "initial_fast_rate_times_step": 0.8856413116632676,
+          "terminal_coordinates": [
+            0.013811273170567625,
+            0.6330812258721538,
+            -0.000658917567777918,
+            -0.4571557705882585
+          ],
+          "component_scaled_errors": [
+            4.062681979027927e-08,
+            1.7612844301526466e-07,
+            8.327226152807883e-06,
+            -4.226501618354028e-06
+          ],
+          "maximum_scaled_state_error": 8.327226152807883e-06,
+          "ledger_abs_errors_entropy_energy": [
+            1.481225946990545e-14,
+            1.5594296687293507e-13
+          ],
+          "relative_entropy_minus_physical": 5.688995043054017e-10
+        },
+        {
+          "method": "filtered",
+          "count": 32,
+          "initial_fast_rate_times_step": 0.4428206558316338,
+          "terminal_coordinates": [
+            0.013811272865878603,
+            0.633081141347326,
+            -0.0006651489209983828,
+            -0.45715260793746415
+          ],
+          "component_scaled_errors": [
+            1.0157917562647611e-08,
+            4.433639841616326e-08,
+            2.0958729323430816e-06,
+            -1.0638508239901867e-06
+          ],
+          "maximum_scaled_state_error": 2.0958729323430816e-06,
+          "ledger_abs_errors_entropy_energy": [
+            3.473589739806054e-14,
+            1.3019793576596328e-13
+          ],
+          "relative_entropy_minus_physical": 1.441015901077409e-10
+        }
+      ]
+    },
+    {
+      "maximum_mesh_endpoint_difference": 3.0565437333929246e-13,
+      "initial_visible_T": 0.6882487043,
+      "initial_state": [
+        0.6882487043,
+        -0.002,
+        -0.3731051425203407
+      ],
+      "horizon": 2.5951256336416096e+16,
+      "initial_local_mode_rates": [
+        3.8374129253731104e-18,
+        1.039885225441043e-15
+      ],
+      "continuous_state_and_ledgers": [
+        0.013811056199766058,
+        0.6793800204744435,
+        -0.003103161087236695,
+        -0.38623113059273606,
+        1.0748711456330601e-08,
+        0.012712555494296693
+      ],
+      "steps": [
+        {
+          "method": "unfiltered",
+          "count": 4,
+          "initial_fast_rate_times_step": 6.746582011468087,
+          "terminal_coordinates": [
+            0.013811062673200687,
+            0.6793792815034188,
+            -0.003149892484388733,
+            -0.3862060054960611
+          ],
+          "component_scaled_errors": [
+            6.473434628617714e-07,
+            -1.0736976620345452e-06,
+            -4.6731397152038195e-05,
+            2.5125096674960545e-05
+          ],
+          "maximum_scaled_state_error": 4.6731397152038195e-05,
+          "ledger_abs_errors_entropy_energy": [
+            6.03916243457131e-15,
+            2.491045564267935e-13
+          ],
+          "relative_entropy_minus_physical": 1.8924792679327556e-10
+        },
+        {
+          "method": "unfiltered",
+          "count": 8,
+          "initial_fast_rate_times_step": 3.3732910057340435,
+          "terminal_coordinates": [
+            0.013811057818086179,
+            0.6793800180332327,
+            -0.003103230445255581,
+            -0.3862310877321904
+          ],
+          "component_scaled_errors": [
+            1.6183201202724096e-07,
+            -3.546989298810884e-09,
+            -6.935801888591567e-08,
+            4.2860545668155225e-08
+          ],
+          "maximum_scaled_state_error": 1.6183201202724096e-07,
+          "ledger_abs_errors_entropy_energy": [
+            3.600270704274841e-15,
+            2.456888859025952e-13
+          ],
+          "relative_entropy_minus_physical": -3.458372171145088e-12
+        },
+        {
+          "method": "unfiltered",
+          "count": 16,
+          "initial_fast_rate_times_step": 1.6866455028670218,
+          "terminal_coordinates": [
+            0.013811056604346016,
+            0.6793800198788605,
+            -0.0031031774903028477,
+            -0.3862311203810825
+          ],
+          "component_scaled_errors": [
+            4.0457995807707814e-08,
+            -8.653600255218802e-10,
+            -1.6403066152755053e-08,
+            1.0211653578284796e-08
+          ],
+          "maximum_scaled_state_error": 4.0457995807707814e-08,
+          "ledger_abs_errors_entropy_energy": [
+            3.632349995965676e-15,
+            2.4573051926601863e-13
+          ],
+          "relative_entropy_minus_physical": -8.702523354306138e-13
+        },
+        {
+          "method": "unfiltered",
+          "count": 32,
+          "initial_fast_rate_times_step": 0.8433227514335109,
+          "terminal_coordinates": [
+            0.013811056300911055,
+            0.6793800203255477,
+            -0.003103165188160526,
+            -0.38623112803977716
+          ],
+          "component_scaled_errors": [
+            1.011449968918443e-08,
+            -2.1634008703612678e-10,
+            -4.100923830987341e-09,
+            2.552958899837421e-09
+          ],
+          "maximum_scaled_state_error": 1.011449968918443e-08,
+          "ledger_abs_errors_entropy_energy": [
+            4.69994915305161e-15,
+            2.467210463708014e-13
+          ],
+          "relative_entropy_minus_physical": -2.1762061768840758e-13
+        },
+        {
+          "method": "filtered",
+          "count": 4,
+          "initial_fast_rate_times_step": 6.746582011468087,
+          "terminal_coordinates": [
+            0.013811062682608554,
+            0.6793825943671615,
+            -0.0029412677365266535,
+            -0.3863189044292665
+          ],
+          "component_scaled_errors": [
+            6.48284249546438e-07,
+            3.7397712512799954e-06,
+            0.0001618933507100415,
+            -8.777383653041371e-05
+          ],
+          "maximum_scaled_state_error": 0.0001618933507100415,
+          "ledger_abs_errors_entropy_energy": [
+            2.3308836673686518e-15,
+            2.4290292000017644e-13
+          ],
+          "relative_entropy_minus_physical": 4.6382692338452955e-09
+        },
+        {
+          "method": "filtered",
+          "count": 8,
+          "initial_fast_rate_times_step": 3.3732910057340435,
+          "terminal_coordinates": [
+            0.01381105782215862,
+            0.6793808536681664,
+            -0.003050874501457267,
+            -0.3862595116600469
+          ],
+          "component_scaled_errors": [
+            1.6223925623087831e-07,
+            1.2105997696746677e-06,
+            5.2286585779427915e-05,
+            -2.838106731084533e-05
+          ],
+          "maximum_scaled_state_error": 5.2286585779427915e-05,
+          "ledger_abs_errors_entropy_energy": [
+            3.0697139359493357e-15,
+            2.441640639672116e-13
+          ],
+          "relative_entropy_minus_physical": 1.8031301487018118e-09
+        },
+        {
+          "method": "filtered",
+          "count": 16,
+          "initial_fast_rate_times_step": 1.6866455028670218,
+          "terminal_coordinates": [
+            0.013811056605567043,
+            0.6793802486775381,
+            -0.0030888523732795973,
+            -0.38623890078512896
+          ],
+          "component_scaled_errors": [
+            4.0580098482900784e-08,
+            3.315706854476676e-07,
+            1.4308713957097638e-05,
+            -7.770192392897446e-06
+          ],
+          "maximum_scaled_state_error": 1.4308713957097638e-05,
+          "ledger_abs_errors_entropy_energy": [
+            4.864429896843968e-15,
+            2.4734554682215304e-13
+          ],
+          "relative_entropy_minus_physical": 5.249210362183407e-10
+        },
+        {
+          "method": "filtered",
+          "count": 32,
+          "initial_fast_rate_times_step": 0.8433227514335109,
+          "terminal_coordinates": [
+            0.013811056301232149,
+            0.6793800789940841,
+            -0.0030994926987580698,
+            -0.38623312293068834
+          ],
+          "component_scaled_errors": [
+            1.0146609073780066e-08,
+            8.502688101437583e-08,
+            3.6683884786252105e-06,
+            -1.992337952283485e-06
+          ],
+          "maximum_scaled_state_error": 3.6683884786252105e-06,
+          "ledger_abs_errors_entropy_energy": [
+            4.922989202015039e-15,
+            2.470940119181364e-13
+          ],
+          "relative_entropy_minus_physical": 1.3692267750369002e-10
+        }
+      ]
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Stiff near-equilibrium short expansion with purely timelike vacuum FD kinetics. Not a claim of unconditional accuracy or abundance."
+}

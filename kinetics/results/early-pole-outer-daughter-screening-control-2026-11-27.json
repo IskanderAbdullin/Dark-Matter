@@ -1,0 +1,103 @@
+{
+  "cases": {
+    "unlike": {
+      "active": {
+        "native_mean": 0.06670942047717898,
+        "outer_mean": 0.06595707495796188,
+        "outer_effect": -0.0007523455192171014,
+        "closure": [
+          {
+            "terminal_energy_drift": 3.1086244689504383e-15,
+            "terminal_entropy_closure": -1.6584602614833077e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.7763568394002505e-15,
+            "signed_elastic_energy_defect": 1.9984014443252818e-15,
+            "nonelastic_energy_remainder": 1.1102230246251565e-15
+          },
+          {
+            "terminal_energy_drift": 2.886579864025407e-15,
+            "terminal_entropy_closure": -1.5691037878740044e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.5543122344752192e-15,
+            "signed_elastic_energy_defect": 2.220446049250313e-15,
+            "nonelastic_energy_remainder": 6.661338147750939e-16
+          }
+        ]
+      },
+      "held": {
+        "native_mean": 0.06670938224734302,
+        "outer_mean": 0.06595703931980279,
+        "outer_effect": -0.0007523429275402282,
+        "closure": [
+          {
+            "terminal_energy_drift": 8.881784197001252e-16,
+            "terminal_entropy_closure": -1.6575109340610794e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.7763568394002505e-15,
+            "signed_elastic_energy_defect": 1.9984014443252818e-15,
+            "nonelastic_energy_remainder": -1.1102230246251565e-15
+          },
+          {
+            "terminal_energy_drift": 1.5543122344752192e-15,
+            "terminal_entropy_closure": -1.5689329176116207e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.5543122344752192e-15,
+            "signed_elastic_energy_defect": 3.3306690738754696e-15,
+            "nonelastic_energy_remainder": -1.7763568394002505e-15
+          }
+        ]
+      },
+      "active_minus_held_outer_effect": -2.59167687310935e-09
+    },
+    "both": {
+      "active": {
+        "native_mean": 0.06694243427293745,
+        "outer_mean": 0.06620059799303246,
+        "outer_effect": -0.0007418362799049838,
+        "closure": [
+          {
+            "terminal_energy_drift": 2.6645352591003757e-15,
+            "terminal_entropy_closure": -1.6586176876387526e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.9984014443252818e-15,
+            "signed_elastic_energy_defect": 1.9984014443252818e-15,
+            "nonelastic_energy_remainder": 6.661338147750939e-16
+          },
+          {
+            "terminal_energy_drift": 2.4424906541753444e-15,
+            "terminal_entropy_closure": -1.5730654626122664e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.9984014443252818e-15,
+            "signed_elastic_energy_defect": 2.6645352591003757e-15,
+            "nonelastic_energy_remainder": -2.220446049250313e-16
+          }
+        ]
+      },
+      "held": {
+        "native_mean": 0.06694247062927206,
+        "outer_mean": 0.0662006361396017,
+        "outer_effect": -0.0007418344896703566,
+        "closure": [
+          {
+            "terminal_energy_drift": 2.220446049250313e-15,
+            "terminal_entropy_closure": -1.6602717464730965e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 2.4424906541753444e-15,
+            "signed_elastic_energy_defect": -2.220446049250313e-16,
+            "nonelastic_energy_remainder": 2.4424906541753444e-15
+          },
+          {
+            "terminal_energy_drift": 2.220446049250313e-15,
+            "terminal_entropy_closure": -1.575037843204452e-12,
+            "elastic_energy_budget": 5e-15,
+            "largest_step_energy_defect": 1.9984014443252818e-15,
+            "signed_elastic_energy_defect": 1.5543122344752192e-15,
+            "nonelastic_energy_remainder": 6.661338147750939e-16
+          }
+        ]
+      },
+      "active_minus_held_outer_effect": -1.790234627208065e-09
+    }
+  },
+  "scope": "Deterministic conditional finite source sensitivity to response refresh."
+}

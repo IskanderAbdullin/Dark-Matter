@@ -1,0 +1,140 @@
+{
+  "manufactured": [
+    {
+      "z": 0.05,
+      "steady": -0.4,
+      "compensation_offset": 4.064045292743318e-06,
+      "maximum_full_step_affine_error": 2.220446049250313e-16,
+      "isolated_equilibrium_free_energy_increase": 8.258232070734561e-12
+    },
+    {
+      "z": 0.05,
+      "steady": 0.7,
+      "compensation_offset": -7.112079262301674e-06,
+      "maximum_full_step_affine_error": 1.1102230246251565e-16,
+      "isolated_equilibrium_free_energy_increase": 2.529083571663076e-11
+    },
+    {
+      "z": 0.25,
+      "steady": -0.4,
+      "compensation_offset": 0.0004603523821321981,
+      "maximum_full_step_affine_error": 2.220446049250313e-16,
+      "isolated_equilibrium_free_energy_increase": 1.0596215786739467e-07
+    },
+    {
+      "z": 0.25,
+      "steady": 0.7,
+      "compensation_offset": -0.0008056166687313571,
+      "maximum_full_step_affine_error": 2.220446049250313e-16,
+      "isolated_equilibrium_free_energy_increase": 3.2450910846890455e-07
+    },
+    {
+      "z": 1.0,
+      "steady": -0.4,
+      "compensation_offset": 0.02072766470286541,
+      "maximum_full_step_affine_error": 1.1102230246251565e-16,
+      "isolated_equilibrium_free_energy_increase": 0.00021481804201720634
+    },
+    {
+      "z": 1.0,
+      "steady": 0.7,
+      "compensation_offset": -0.03627341323001443,
+      "maximum_full_step_affine_error": 2.220446049250313e-16,
+      "isolated_equilibrium_free_energy_increase": 0.0006578802536776929
+    },
+    {
+      "z": 2.0,
+      "steady": -0.4,
+      "compensation_offset": 0.1082682265892902,
+      "maximum_full_step_affine_error": 1.1102230246251565e-16,
+      "isolated_equilibrium_free_energy_increase": 0.005861004444394942
+    },
+    {
+      "z": 2.0,
+      "steady": 0.7,
+      "compensation_offset": -0.18946939653125783,
+      "maximum_full_step_affine_error": 1.1102230246251565e-16,
+      "isolated_equilibrium_free_energy_increase": 0.017949326110959507
+    },
+    {
+      "z": 4.0,
+      "steady": -0.4,
+      "compensation_offset": 0.42197876666648115,
+      "maximum_full_step_affine_error": 1.1102230246251565e-16,
+      "isolated_equilibrium_free_energy_increase": 0.08903303975868228
+    },
+    {
+      "z": 4.0,
+      "steady": 0.7,
+      "compensation_offset": -0.7384628416663417,
+      "maximum_full_step_affine_error": 1.1102230246251565e-16,
+      "isolated_equilibrium_free_energy_increase": 0.2726636842609642
+    },
+    {
+      "z": 8.0,
+      "steady": -0.4,
+      "compensation_offset": 1.200670925255805,
+      "maximum_full_step_affine_error": 2.220446049250313e-16,
+      "isolated_equilibrium_free_energy_increase": 0.7208053353773154
+    },
+    {
+      "z": 8.0,
+      "steady": 0.7,
+      "compensation_offset": -2.1011741191976583,
+      "maximum_full_step_affine_error": 4.440892098500626e-16,
+      "isolated_equilibrium_free_energy_increase": 2.2074663395930276
+    },
+    {
+      "z": 20.0,
+      "steady": -0.4,
+      "compensation_offset": 3.6000000090690762,
+      "maximum_full_step_affine_error": 4.996003610813204e-16,
+      "isolated_equilibrium_free_energy_increase": 6.480000032648674
+    },
+    {
+      "z": 20.0,
+      "steady": 0.7,
+      "compensation_offset": -6.300000015870883,
+      "maximum_full_step_affine_error": 4.440892098500626e-16,
+      "isolated_equilibrium_free_energy_increase": 19.845000099986564
+    },
+    {
+      "z": 80.0,
+      "steady": -0.4,
+      "compensation_offset": 15.6,
+      "maximum_full_step_affine_error": 3.3306690738754696e-16,
+      "isolated_equilibrium_free_energy_increase": 121.67999999999999
+    },
+    {
+      "z": 80.0,
+      "steady": 0.7,
+      "compensation_offset": -27.3,
+      "maximum_full_step_affine_error": 6.661338147750939e-16,
+      "isolated_equilibrium_free_energy_increase": 372.64500000000004
+    }
+  ],
+  "archived_step_parameters": [
+    {
+      "T_SM": 0.64135,
+      "unit_steady_case": {
+        "z": 1.7712826233265353,
+        "steady": 1.0,
+        "compensation_offset": -0.20641653437817897,
+        "maximum_full_step_affine_error": 1.1102230246251565e-16,
+        "isolated_equilibrium_free_energy_increase": 0.021303892832348972
+      }
+    },
+    {
+      "T_SM": 0.6882487043,
+      "unit_steady_case": {
+        "z": 3.3732910057340435,
+        "steady": 1.0,
+        "compensation_offset": -0.778734702054891,
+        "maximum_full_step_affine_error": 1.1102230246251565e-16,
+        "isolated_equilibrium_free_energy_increase": 0.30321386809226
+      }
+    }
+  ],
+  "forcing_comparison_sha256": "721fedc69a6fff68a5bb4f490a119f0a0b026002c94594f625b16d29f2951f56",
+  "scope": "Scalar affine numerical obstruction only. Do not reassign this offset to the isolated physical FD collision step."
+}

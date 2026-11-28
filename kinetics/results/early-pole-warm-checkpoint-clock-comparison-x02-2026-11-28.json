@@ -1,0 +1,84 @@
+{
+  "x": 0.02,
+  "steps": [
+    1024,
+    2048
+  ],
+  "mass": 0.0002635393844550805,
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "rows": [
+    {
+      "chart": "G9",
+      "sha256": [
+        "3a536d165a3de21a67120fec7135082e354836f7fe00b3a931fcf449682e3bd3",
+        "645413d73d4791989ec1d129a22606c6e1e68bc4cc63b889d9241d6dddd15f09",
+        "0768a0c6406661d23a0fb292718e76d86381acef1ca1f99267697351fd7f4a84",
+        "8ba8f2a22333a5dad9e84e4ace0c5612b87d896d5c92a7024f195be0a5633ab2"
+      ],
+      "provenance_hash": "37bee821a3a6510395137a6f0dc5fbe6f8182a51d63190daab56dd51adbff7b5",
+      "coarse": [
+        0.0004784714624302107,
+        1.1374280600603483e-08,
+        1.1349450902272445e-08
+      ],
+      "fine": [
+        0.00047847250776941947,
+        1.1374282019495605e-08,
+        1.1349452263792859e-08
+      ],
+      "coarse_over_fine_minus_one": [
+        -2.1847424706011864e-06,
+        -1.247456428155047e-07,
+        -1.199635349946604e-07
+      ]
+    },
+    {
+      "chart": "mixed300",
+      "sha256": [
+        "273ce72ecdff713a6e6a347245579acef4c9eb0511a4e7cfc8d7a2ff91843ed2",
+        "c0c8183baa87a7728afc3d961318bc901751393c4bdb895a5ecb280ade0f8054",
+        "82968e9307c997c040a48fab7f05b70fac0ad81b683ae275864810d883945693",
+        "9af6f05f2c8c14fbb1b2ee90b4ee07e84c1dc920736b492176c1e5549e5ee572"
+      ],
+      "provenance_hash": "e86d94f282d6acbf4bb036e3cb2e9ed200951ade55e9fd9bf5d99ddabc7c43e7",
+      "coarse": [
+        0.0004784714623791839,
+        1.1373805668281363e-08,
+        1.1348975969949855e-08
+      ],
+      "fine": [
+        0.0004784725077183589,
+        1.1373807087796506e-08,
+        1.134897733209329e-08
+      ],
+      "coarse_over_fine_minus_one": [
+        -2.1847424004350913e-06,
+        -1.2480562860961442e-07,
+        -1.2002345184392027e-07
+      ]
+    }
+  ],
+  "mixed300_over_G9_by_clock": [
+    [
+      -1.066454702325359e-10,
+      -4.1754932799342726e-05,
+      -4.184628196368667e-05
+    ],
+    [
+      -1.0671574734999467e-10,
+      -4.175487281610213e-05,
+      -4.18462220492799e-05
+    ]
+  ],
+  "fine_minus_coarse_chart_contrast": [
+    -7.027711745877241e-14,
+    5.998324059675042e-11,
+    5.991440676922366e-11
+  ],
+  "accepted_sha256": "469c1d2cc1bdbed3c7f5867860b129e234e1fe7209acb64b91e2beded4de26af",
+  "scope": "Same-start two-clock sensitivity from exact .01 to .02. Not a full-history time-error or continuum estimate."
+}

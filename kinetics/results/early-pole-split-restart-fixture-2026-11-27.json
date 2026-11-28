@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "grid": "fine",
+    "duration": 2e-07,
+    "count": 2,
+    "pair": true,
+    "compton_strength": 1.0,
+    "conversion_strength": 1.0,
+    "same_soft_strength": 1.0,
+    "screening_update": "full",
+    "snapshots": true
+  },
+  "first": {
+    "checkpoint_only": true,
+    "steps_done": 1,
+    "total_steps": 2,
+    "scalar_gain_so_far": 7.154452846130921e-09,
+    "tampered_state_error": "invalid checkpoint state or history"
+  },
+  "identical_output_hashes": [
+    "bb29cc564223a9388e7535a804b326a1fb819bb067746c637eb55684228fda35",
+    "bb29cc564223a9388e7535a804b326a1fb819bb067746c637eb55684228fda35"
+  ],
+  "identical_final_gain": 1.3725869239811228e-08,
+  "energy": -2.220446049250313e-16,
+  "entropy": -2.0055099074489657e-12
+}

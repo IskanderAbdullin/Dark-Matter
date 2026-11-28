@@ -1,0 +1,80 @@
+{
+  "scope": "Vacuum fermion forward sigma times relative velocity, unpolarized, with the identical scalar-pair symmetry. Multiply any outgoing Bose factors separately.",
+  "max_pair_K_GeVminus2": 2.7020486207710894e-12,
+  "cases": [
+    {
+      "initial_mass_GeV": 0.02,
+      "exchange_mass_GeV": 0.1,
+      "split_s_GeV2": 2.0,
+      "sampled_peak": 2.661981036531223e-12,
+      "analytic_tail_upper": 2.807028527612528e-13,
+      "final_uniform_K_GeVminus2": 2.7020486207710894e-12,
+      "controls": [
+        {
+          "s_cells": 220,
+          "angle_cells": 440,
+          "upper_on_finite_s": 2.8255472075208334e-12,
+          "dominant_s_cell": [
+            0.0054832847937307,
+            0.005663927254355567
+          ]
+        },
+        {
+          "s_cells": 440,
+          "angle_cells": 880,
+          "upper_on_finite_s": 2.7426250718997743e-12,
+          "dominant_s_cell": [
+            0.00539513568237469,
+            0.0054832847937307
+          ]
+        },
+        {
+          "s_cells": 880,
+          "angle_cells": 1760,
+          "upper_on_finite_s": 2.7020486207710894e-12,
+          "dominant_s_cell": [
+            0.005439031664485788,
+            0.0054832847937307
+          ]
+        }
+      ]
+    },
+    {
+      "initial_mass_GeV": 0.1,
+      "exchange_mass_GeV": 0.02,
+      "split_s_GeV2": 2.0,
+      "sampled_peak": 6.547599688266867e-13,
+      "analytic_tail_upper": 1.3321059448314606e-12,
+      "final_uniform_K_GeVminus2": 1.3321059448314606e-12,
+      "controls": [
+        {
+          "s_cells": 220,
+          "angle_cells": 440,
+          "upper_on_finite_s": 7.308867647190502e-13,
+          "dominant_s_cell": [
+            0.0646502109661347,
+            0.06581009797144624
+          ]
+        },
+        {
+          "s_cells": 440,
+          "angle_cells": 880,
+          "upper_on_finite_s": 6.917926433509785e-13,
+          "dominant_s_cell": [
+            0.0652275763581324,
+            0.06581009797144624
+          ]
+        },
+        {
+          "s_cells": 880,
+          "angle_cells": 1760,
+          "upper_on_finite_s": 6.730291407534981e-13,
+          "dominant_s_cell": [
+            0.06581009797144624,
+            0.06610330673512796
+          ]
+        }
+      ]
+    }
+  ]
+}

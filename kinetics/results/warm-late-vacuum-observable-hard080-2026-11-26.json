@@ -1,0 +1,60 @@
+{
+  "scope": "Phase-measure comparison on the same reconstructed finite mesh. The numerical positive majorant bounds bounded single-particle test functions up to floating evaluation; the sampled instantaneous velocity factor is not a cosmological transfer function.",
+  "source_sha256": [
+    "0ed23423ba2a7f8afa75032c6b1ddfdf4e681f9c2389bf8b6e7b22a4fe3ce825",
+    "91daa7fc6f8b5be453db08ad77ed61acdf59177e8010cc5355613de748ef0616"
+  ],
+  "time_H": 1e-06,
+  "hard_GeV": 0.8,
+  "velocity_frequencies": [
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    300.0
+  ],
+  "species": [
+    "scalar",
+    "light"
+  ],
+  "controls": [
+    {
+      "estimated_L1_before_number_renormalization": 4.321140786019058e-11,
+      "certified_formula_upper_before_number_renormalization": [
+        5.720606915489763e-11,
+        4.640093855144098e-11,
+        4.399099605102551e-11
+      ],
+      "normalized_L1_numerical_majorant": 8.798199210141688e-11,
+      "sampled_isotropic_velocity_characteristic_changes": [
+        -1.2147599659738701e-23,
+        -1.2304392391082981e-22,
+        -4.23773402468537e-22,
+        -3.206488096379385e-22,
+        7.648017835714745e-23,
+        3.5442380725344197e-22,
+        -7.700746560797165e-24
+      ]
+    },
+    {
+      "estimated_L1_before_number_renormalization": 4.8529053328819017e-11,
+      "certified_formula_upper_before_number_renormalization": [
+        6.386739662578733e-11,
+        5.201507653023221e-11,
+        4.9379712698637977e-11
+      ],
+      "normalized_L1_numerical_majorant": 9.875942539713778e-11,
+      "sampled_isotropic_velocity_characteristic_changes": [
+        -1.2185001079175605e-13,
+        -1.2738801027920521e-12,
+        -6.4196186907475245e-12,
+        -1.6394758586603993e-12,
+        3.3254230304856413e-13,
+        -4.135335246153301e-15,
+        -1.1826807120904946e-15
+      ]
+    }
+  ]
+}

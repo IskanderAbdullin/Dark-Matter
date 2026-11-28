@@ -1,0 +1,360 @@
+{
+  "rows": [
+    {
+      "steps": 4,
+      "initial_temperature_GeV": 0.01199970971956467,
+      "with_pair": false,
+      "acceptances": 4,
+      "rejections": 0,
+      "maximum_stiff_residual": 6.781770031559789e-12,
+      "energy_ledger": -5.511510917280672e-14,
+      "count_ledger": -6.417089082333405e-14,
+      "collision_number_ledger": 0.0,
+      "max_atomic_pair_error": 0.0,
+      "maximum_midpoint_inverse_over_forward": 0.0,
+      "exterior": {
+        "exterior_cohorts": 0,
+        "exterior_a4_energy_one_mean_per_cohort": 0.0,
+        "exterior_a4_energy_distribution_independent_upper_bound": 0.0,
+        "exterior_a4_pressure_trace": 0.0,
+        "exterior_a4_portal_injection": 0.0,
+        "exterior_relative_energy_ledger_defect": 0.0
+      },
+      "endpoint": {
+        "b": 1.2,
+        "equivalent_T_GeV": [
+          0.00915328445625466,
+          0.00908183173583677
+        ],
+        "scalar_count_over_own_saturation": 0.00031986081579561313,
+        "maximum_resolved_scalar_occupation": 0.00037082590545249643,
+        "scalar_first_cell_number_fraction": 1.9711532096845927e-08,
+        "count_defect": 6.472600233564663e-14,
+        "dark_entropy_a3": 2.2613275583981395e-09,
+        "retained_counts_relative_to_start": [
+          0.9999999999999373,
+          0.9999999999999355
+        ],
+        "inclusive_counts_relative_to_start": [
+          0.9999999999999373,
+          0.9999999999999355
+        ],
+        "cold_count_relative_to_initial_total_scalar": 1.9711532096844693e-08,
+        "photon_temperature_GeV": 0.010008161617660712
+      },
+      "trajectory": [
+        {
+          "b": 1.0466351393921056,
+          "equivalent_T_GeV": [
+            0.010690964855526832,
+            0.01062569326205498
+          ],
+          "scalar_count_over_own_saturation": 0.00030255185430157243,
+          "maximum_resolved_scalar_occupation": 0.0003478697030069518,
+          "scalar_first_cell_number_fraction": 1.8489038097701564e-08,
+          "count_defect": 1.9206858326015208e-13,
+          "dark_entropy_a3": 2.2612985670227306e-09,
+          "retained_counts_relative_to_start": [
+            0.9999999999998079,
+            0.999999999999915
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.9999999999998079,
+            0.999999999999915
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.8489038097698014e-08,
+          "photon_temperature_GeV": 0.01146849412770756
+        },
+        {
+          "b": 1.0954451150103321,
+          "equivalent_T_GeV": [
+            0.01015150161074603,
+            0.010089042936205212
+          ],
+          "scalar_count_over_own_saturation": 0.00030822898239755444,
+          "maximum_resolved_scalar_occupation": 0.0003562232006450477,
+          "scalar_first_cell_number_fraction": 1.893391551457585e-08,
+          "count_defect": 6.838973831690964e-14,
+          "dark_entropy_a3": 2.2613077320060742e-09,
+          "retained_counts_relative_to_start": [
+            0.9999999999999316,
+            0.9999999999999549
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.9999999999999316,
+            0.9999999999999549
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.8933915514574552e-08,
+          "photon_temperature_GeV": 0.01095998638358461
+        },
+        {
+          "b": 1.1465313506452401,
+          "equivalent_T_GeV": [
+            0.00963856000014063,
+            0.009575101763506984
+          ],
+          "scalar_count_over_own_saturation": 0.00031408100217560346,
+          "maximum_resolved_scalar_occupation": 0.0003637721521584091,
+          "scalar_first_cell_number_fraction": 1.9336318040538524e-08,
+          "count_defect": 1.8829382497642655e-13,
+          "dark_entropy_a3": 2.261317366673982e-09,
+          "retained_counts_relative_to_start": [
+            0.9999999999998117,
+            0.9999999999998945
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.9999999999998117,
+            0.9999999999998945
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.9336318040534878e-08,
+          "photon_temperature_GeV": 0.010473407165393401
+        },
+        {
+          "b": 1.2,
+          "equivalent_T_GeV": [
+            0.00915328445625466,
+            0.00908183173583677
+          ],
+          "scalar_count_over_own_saturation": 0.00031986081579561313,
+          "maximum_resolved_scalar_occupation": 0.00037082590545249643,
+          "scalar_first_cell_number_fraction": 1.9711532096845927e-08,
+          "count_defect": 6.472600233564663e-14,
+          "dark_entropy_a3": 2.2613275583981395e-09,
+          "retained_counts_relative_to_start": [
+            0.9999999999999373,
+            0.9999999999999355
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.9999999999999373,
+            0.9999999999999355
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.9711532096844693e-08,
+          "photon_temperature_GeV": 0.010008161617660712
+        }
+      ],
+      "scope": "Radiation plus retained and newly produced exterior gravity; prompt and below-pole elastic medium plus optionally pair conversion. Prior exterior cohorts, visible slow source, heavy recycling and number-changing scalar self-interactions are not evolved."
+    },
+    {
+      "steps": 8,
+      "initial_temperature_GeV": 0.01199970971956467,
+      "with_pair": false,
+      "acceptances": 8,
+      "rejections": 0,
+      "maximum_stiff_residual": 6.098758020861244e-12,
+      "energy_ledger": -8.713851252617664e-15,
+      "count_ledger": -5.728750807065808e-14,
+      "collision_number_ledger": 0.0,
+      "max_atomic_pair_error": 0.0,
+      "maximum_midpoint_inverse_over_forward": 0.0,
+      "exterior": {
+        "exterior_cohorts": 0,
+        "exterior_a4_energy_one_mean_per_cohort": 0.0,
+        "exterior_a4_energy_distribution_independent_upper_bound": 0.0,
+        "exterior_a4_pressure_trace": 0.0,
+        "exterior_a4_portal_injection": 0.0,
+        "exterior_relative_energy_ledger_defect": 0.0
+      },
+      "endpoint": {
+        "b": 1.2,
+        "equivalent_T_GeV": [
+          0.009138227390816541,
+          0.009088856161969194
+        ],
+        "scalar_count_over_own_saturation": 0.0003214445204605421,
+        "maximum_resolved_scalar_occupation": 0.0003725770141437489,
+        "scalar_first_cell_number_fraction": 1.980418649481707e-08,
+        "count_defect": 8.08242361927114e-14,
+        "dark_entropy_a3": 2.261315945279477e-09,
+        "retained_counts_relative_to_start": [
+          1.0000000000000018,
+          0.9999999999999192
+        ],
+        "inclusive_counts_relative_to_start": [
+          1.0000000000000018,
+          0.9999999999999192
+        ],
+        "cold_count_relative_to_initial_total_scalar": 1.98041864948171e-08,
+        "photon_temperature_GeV": 0.010008161617660712
+      },
+      "trajectory": [
+        {
+          "b": 1.023051875220463,
+          "equivalent_T_GeV": [
+            0.010956160011130795,
+            0.01090988140339714
+          ],
+          "scalar_count_over_own_saturation": 0.0003010013951725781,
+          "maximum_resolved_scalar_occupation": 0.0003436262001283782,
+          "scalar_first_cell_number_fraction": 1.82620631971025e-08,
+          "count_defect": 9.658940314238862e-15,
+          "dark_entropy_a3": 2.2612940711728766e-09,
+          "retained_counts_relative_to_start": [
+            0.999999999999996,
+            0.9999999999999906
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.999999999999996,
+            0.9999999999999906
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.8262063197102428e-08,
+          "photon_temperature_GeV": 0.011731199153215131
+        },
+        {
+          "b": 1.0466351393921056,
+          "equivalent_T_GeV": [
+            0.01067532899884771,
+            0.01063309502559106
+          ],
+          "scalar_count_over_own_saturation": 0.0003038832153047798,
+          "maximum_resolved_scalar_occupation": 0.0003485987196696328,
+          "scalar_first_cell_number_fraction": 1.8524973864578835e-08,
+          "count_defect": 6.183942247162122e-14,
+          "dark_entropy_a3": 2.2612973476860036e-09,
+          "retained_counts_relative_to_start": [
+            0.9999999999999383,
+            0.9999999999999609
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.9999999999999383,
+            0.9999999999999609
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.8524973864577686e-08,
+          "photon_temperature_GeV": 0.01146849412770756
+        },
+        {
+          "b": 1.070762042026724,
+          "equivalent_T_GeV": [
+            0.0104020321186774,
+            0.010361938825111987
+          ],
+          "scalar_count_over_own_saturation": 0.0003067629131379159,
+          "maximum_resolved_scalar_occupation": 0.0003532851917368723,
+          "scalar_first_cell_number_fraction": 1.877424533104186e-08,
+          "count_defect": 3.863576125695545e-14,
+          "dark_entropy_a3": 2.261300308881653e-09,
+          "retained_counts_relative_to_start": [
+            0.999999999999966,
+            0.9999999999999614
+          ],
+          "inclusive_counts_relative_to_start": [
+            0.999999999999966,
+            0.9999999999999614
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.877424533104122e-08,
+          "photon_temperature_GeV": 0.011211454593387
+        },
+        {
+          "b": 1.0954451150103321,
+          "equivalent_T_GeV": [
+            0.010135575936497877,
+            0.010096549358475699
+          ],
+          "scalar_count_over_own_saturation": 0.0003096841889884203,
+          "maximum_resolved_scalar_occupation": 0.0003576324521681548,
+          "scalar_first_cell_number_fraction": 1.900637102515649e-08,
+          "count_defect": 9.792167077193881e-14,
+          "dark_entropy_a3": 2.26130320971777e-09,
+          "retained_counts_relative_to_start": [
+            1.0000000000000981,
+            0.9999999999999996
+          ],
+          "inclusive_counts_relative_to_start": [
+            1.0000000000000981,
+            0.9999999999999996
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.9006371025158355e-08,
+          "photon_temperature_GeV": 0.01095998638358461
+        },
+        {
+          "b": 1.120697179112416,
+          "equivalent_T_GeV": [
+            0.009875833790839781,
+            0.009836796296601545
+          ],
+          "scalar_count_over_own_saturation": 0.00031264386553482484,
+          "maximum_resolved_scalar_occupation": 0.00036167690002364585,
+          "scalar_first_cell_number_fraction": 1.9222616198064844e-08,
+          "count_defect": 1.1080025785759062e-13,
+          "dark_entropy_a3": 2.2613061621436276e-09,
+          "retained_counts_relative_to_start": [
+            1.000000000000111,
+            0.9999999999999928
+          ],
+          "inclusive_counts_relative_to_start": [
+            1.000000000000111,
+            0.9999999999999928
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.922261619806697e-08,
+          "photon_temperature_GeV": 0.010714007583809195
+        },
+        {
+          "b": 1.1465313506452401,
+          "equivalent_T_GeV": [
+            0.009623666473621173,
+            0.009582072938469367
+          ],
+          "scalar_count_over_own_saturation": 0.00031554146352339845,
+          "maximum_resolved_scalar_occupation": 0.0003654702409145842,
+          "scalar_first_cell_number_fraction": 1.9425386077013126e-08,
+          "count_defect": 1.2789769243681803e-13,
+          "dark_entropy_a3": 2.2613091985621683e-09,
+          "retained_counts_relative_to_start": [
+            1.0000000000001277,
+            0.9999999999999888
+          ],
+          "inclusive_counts_relative_to_start": [
+            1.0000000000001277,
+            0.9999999999999888
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.942538607701561e-08,
+          "photon_temperature_GeV": 0.010473407165393401
+        },
+        {
+          "b": 1.172961048276663,
+          "equivalent_T_GeV": [
+            0.009378064441021135,
+            0.009332687618645063
+          ],
+          "scalar_count_over_own_saturation": 0.0003184530268083844,
+          "maximum_resolved_scalar_occupation": 0.00036907917881379203,
+          "scalar_first_cell_number_fraction": 1.9617993536954956e-08,
+          "count_defect": 8.126832540256146e-14,
+          "dark_entropy_a3": 2.261312384290874e-09,
+          "retained_counts_relative_to_start": [
+            1.0000000000000813,
+            0.9999999999999591
+          ],
+          "inclusive_counts_relative_to_start": [
+            1.0000000000000813,
+            0.9999999999999591
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.961799353695655e-08,
+          "photon_temperature_GeV": 0.010238133515156672
+        },
+        {
+          "b": 1.2,
+          "equivalent_T_GeV": [
+            0.009138227390816541,
+            0.009088856161969194
+          ],
+          "scalar_count_over_own_saturation": 0.0003214445204605421,
+          "maximum_resolved_scalar_occupation": 0.0003725770141437489,
+          "scalar_first_cell_number_fraction": 1.980418649481707e-08,
+          "count_defect": 8.08242361927114e-14,
+          "dark_entropy_a3": 2.261315945279477e-09,
+          "retained_counts_relative_to_start": [
+            1.0000000000000018,
+            0.9999999999999192
+          ],
+          "inclusive_counts_relative_to_start": [
+            1.0000000000000018,
+            0.9999999999999192
+          ],
+          "cold_count_relative_to_initial_total_scalar": 1.98041864948171e-08,
+          "photon_temperature_GeV": 0.010008161617660712
+        }
+      ],
+      "scope": "Radiation plus retained and newly produced exterior gravity; prompt and below-pole elastic medium plus optionally pair conversion. Prior exterior cohorts, visible slow source, heavy recycling and number-changing scalar self-interactions are not evolved."
+    }
+  ]
+}

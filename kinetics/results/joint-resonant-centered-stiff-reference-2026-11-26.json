@@ -1,0 +1,52 @@
+{
+  "direct_flux_relative_check": 1.2237224818715032e-14,
+  "centered_JVP_finite_difference_error": 1.9052287221422763e-11,
+  "steps": [
+    {
+      "step_over_Hubble_time": 5e-09,
+      "invariant_defect": 2.220446049250313e-16,
+      "vs_previous_small_step": 1.9531996847922546e-15,
+      "newton_iterations": 4,
+      "residual": 1.689832478223751e-15,
+      "entropy_gain_relative": 1.9054800824980234e-05,
+      "maximum_exponent_departure_from_eq": 0.27737065433904107
+    },
+    {
+      "step_over_Hubble_time": 2.5e-07,
+      "invariant_defect": 6.661338147750939e-16,
+      "vs_previous_small_step": 3.286651984867924e-15,
+      "newton_iterations": 4,
+      "residual": 2.837207340653143e-13,
+      "entropy_gain_relative": 3.539632800375614e-05,
+      "maximum_exponent_departure_from_eq": 0.27737065433904107
+    },
+    {
+      "step_over_Hubble_time": 5e-05,
+      "invariant_defect": 4.440892098500626e-16,
+      "vs_previous_small_step": null,
+      "newton_iterations": 5,
+      "residual": 1.808076803484362e-15,
+      "entropy_gain_relative": 3.555125792753522e-05,
+      "maximum_exponent_departure_from_eq": 0.27737065433904107
+    },
+    {
+      "step_over_Hubble_time": 0.002,
+      "invariant_defect": 3.3306690738754696e-15,
+      "vs_previous_small_step": null,
+      "newton_iterations": 5,
+      "residual": 4.1283249151542266e-14,
+      "entropy_gain_relative": 3.555126267906772e-05,
+      "maximum_exponent_departure_from_eq": 0.27737065433904107
+    },
+    {
+      "step_over_Hubble_time": 0.02,
+      "invariant_defect": 2.4424906541753444e-14,
+      "vs_previous_small_step": null,
+      "newton_iterations": 5,
+      "residual": 3.1961636979145415e-13,
+      "entropy_gain_relative": 3.555126273901976e-05,
+      "maximum_exponent_departure_from_eq": 0.27737065433904107
+    }
+  ],
+  "scope": "Fixed-background strictly populated conservative two-moment collision test, not a physical long-term cosmological result."
+}

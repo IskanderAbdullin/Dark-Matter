@@ -1,0 +1,110 @@
+{
+  "assumed_pion_control": "Bose_and_widened_threshold_and_elastic_caps",
+  "comoving_energy_headroom_GeV4": 1.0821957111115005e-09,
+  "anchor_energy_upper_over_gauss_moment": 1.0052501803043576,
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "1f2e44c667793351db5d797f293c73c55b71204b57d1353d857860c0b2fe7446"
+  ],
+  "scope": "Piecewise hypothetical nonnegative effective spectral caps. No additional hadronic rate is supplied or measured.",
+  "cases": [
+    {
+      "E_lower": 0.13,
+      "E_upper": 0.28,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 5.876804326954867e-10,
+          "constant_R_ceiling_if_only_extra_band": 1.8414697017354202
+        },
+        {
+          "E_GeV4_per_unit": 5.804125981774022e-10,
+          "constant_R_ceiling_if_only_extra_band": 1.8645282933378526
+        }
+      ]
+    },
+    {
+      "E_lower": 0.28,
+      "E_upper": 0.316,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 1.837599095587176e-10,
+          "constant_R_ceiling_if_only_extra_band": 5.889182867526944
+        },
+        {
+          "E_GeV4_per_unit": 1.8334576117851397e-10,
+          "constant_R_ceiling_if_only_extra_band": 5.902485577824864
+        }
+      ]
+    },
+    {
+      "E_lower": 0.316,
+      "E_upper": 0.42,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 3.811191168104344e-10,
+          "constant_R_ceiling_if_only_extra_band": 2.83952093552362
+        },
+        {
+          "E_GeV4_per_unit": 3.7892616436944113e-10,
+          "constant_R_ceiling_if_only_extra_band": 2.8559540429527943
+        }
+      ]
+    },
+    {
+      "E_lower": 0.42,
+      "E_upper": 0.6,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 2.2347201783397768e-10,
+          "constant_R_ceiling_if_only_extra_band": 4.842645274342525
+        },
+        {
+          "E_GeV4_per_unit": 2.215697829152331e-10,
+          "constant_R_ceiling_if_only_extra_band": 4.884220658940307
+        }
+      ]
+    },
+    {
+      "E_lower": 0.6,
+      "E_upper": 0.975,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 3.526834896932727e-11,
+          "constant_R_ceiling_if_only_extra_band": 30.68461503691827
+        },
+        {
+          "E_GeV4_per_unit": 3.4730492126721335e-11,
+          "constant_R_ceiling_if_only_extra_band": 31.159815045605665
+        }
+      ]
+    },
+    {
+      "E_lower": 0.975,
+      "E_upper": 2.0,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 2.1752075496027798e-13,
+          "constant_R_ceiling_if_only_extra_band": 4975.137711843282
+        },
+        {
+          "E_GeV4_per_unit": 2.0983257414114582e-13,
+          "constant_R_ceiling_if_only_extra_band": 5157.4247494269
+        }
+      ]
+    },
+    {
+      "E_lower": 2.0,
+      "E_upper": null,
+      "controls": [
+        {
+          "E_GeV4_per_unit": 3.7776495263508457e-14,
+          "constant_R_ceiling_if_only_extra_band": 28647.329604366074
+        },
+        {
+          "E_GeV4_per_unit": 3.7776495263508457e-14,
+          "constant_R_ceiling_if_only_extra_band": 28647.329604366074
+        }
+      ]
+    }
+  ]
+}

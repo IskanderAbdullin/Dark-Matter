@@ -1,0 +1,107 @@
+{
+  "scope": "Conditional instantaneous 50 MeV vacuum benchmark with fixed mediator width and visible clock. Changes only the source coupling and the specified dark Yukawa kernel, not other reactions.",
+  "epsi_ref": 1e-05,
+  "y_ref": 0.001,
+  "reference_half": 0.06,
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "f1660dc40468638c1e2e1dde2a478227b792a8231ae86e6cbd519dcc7dfa2e54",
+    "2a06e71a7ff517a5eb6b5efd7a62d3ebaa476e7ebb75822ac38ec04139549d47",
+    "1f2e44c667793351db5d797f293c73c55b71204b57d1353d857860c0b2fe7446"
+  ],
+  "cases": [
+    {
+      "model": "vacuum_leptons_only",
+      "original_direct": 0.0005748322513006774,
+      "original_recycling": 0.0209668601481608,
+      "original_heat_exponent": 0.007919566409540892,
+      "original_upper": 0.02154169239946148,
+      "epsilon_over_reference_for_upper_to_touch_half_at_fixed_y": 1.291972667107582,
+      "y_over_reference_for_upper_to_touch_half_at_fixed_epsilon": 1.2975056405129721,
+      "grid": [
+        {
+          "epsilon_over_reference": 0.7,
+          "y_over_reference_for_upper_to_touch_half": 1.8596130322821391,
+          "upper_at_unmodified_y": 0.005275309135439712
+        },
+        {
+          "epsilon_over_reference": 0.85,
+          "y_over_reference_for_upper_to_touch_half": 1.5291799825434478,
+          "upper_at_unmodified_y": 0.011312147439743738
+        },
+        {
+          "epsilon_over_reference": 1.0,
+          "y_over_reference_for_upper_to_touch_half": 1.2975056405129721,
+          "upper_at_unmodified_y": 0.02154169239946148
+        },
+        {
+          "epsilon_over_reference": 1.1,
+          "y_over_reference_for_upper_to_touch_half": 1.1779711436096665,
+          "upper_at_unmodified_y": 0.031495403809879
+        },
+        {
+          "epsilon_over_reference": 1.2,
+          "y_over_reference_for_upper_to_touch_half": 1.078222118022837,
+          "upper_at_unmodified_y": 0.0446086978205587
+        },
+        {
+          "epsilon_over_reference": 1.35,
+          "y_over_reference_for_upper_to_touch_half": 0.9560788980416671,
+          "upper_at_unmodified_y": 0.07160239274393161
+        },
+        {
+          "epsilon_over_reference": 1.5,
+          "y_over_reference_for_upper_to_touch_half": 0.8581190322507662,
+          "upper_at_unmodified_y": 0.10956059484560021
+        }
+      ]
+    },
+    {
+      "model": "with_selected_pions_and_stated_caps",
+      "original_direct": 0.0006293454484095794,
+      "original_recycling": 0.02807038692225607,
+      "original_heat_exponent": 0.01300704278093346,
+      "original_upper": 0.02869973237066565,
+      "epsilon_over_reference_for_upper_to_touch_half_at_fixed_y": 1.2010753145746604,
+      "y_over_reference_for_upper_to_touch_half_at_fixed_epsilon": 1.2059543252691867,
+      "grid": [
+        {
+          "epsilon_over_reference": 0.7,
+          "y_over_reference_for_upper_to_touch_half": 1.7308469579842691,
+          "upper_at_unmodified_y": 0.006959252873831544
+        },
+        {
+          "epsilon_over_reference": 0.85,
+          "y_over_reference_for_upper_to_touch_half": 1.422376687598294,
+          "upper_at_unmodified_y": 0.015002222310236929
+        },
+        {
+          "epsilon_over_reference": 1.0,
+          "y_over_reference_for_upper_to_touch_half": 1.2059543252691867,
+          "upper_at_unmodified_y": 0.02869973237066565
+        },
+        {
+          "epsilon_over_reference": 1.1,
+          "y_over_reference_for_upper_to_touch_half": 1.0942160496194981,
+          "upper_at_unmodified_y": 0.042084491710237766
+        },
+        {
+          "epsilon_over_reference": 1.2,
+          "y_over_reference_for_upper_to_touch_half": 1.000919782882839,
+          "upper_at_unmodified_y": 0.059783085363665237
+        },
+        {
+          "epsilon_over_reference": 1.35,
+          "y_over_reference_for_upper_to_touch_half": 0.8865907818455868,
+          "upper_at_unmodified_y": 0.09639937437442989
+        },
+        {
+          "epsilon_over_reference": 1.5,
+          "y_over_reference_for_upper_to_touch_half": 0.7948053680625361,
+          "upper_at_unmodified_y": 0.14821927123343737
+        }
+      ]
+    }
+  ]
+}

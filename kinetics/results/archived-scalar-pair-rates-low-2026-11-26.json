@@ -1,0 +1,199 @@
+{
+  "controls": {
+    "max_spin_trace_relative_defect": 5.268008251846368e-13,
+    "degenerate_internal_mass_pwave_relative_defect": 1.8662471457098206e-08
+  },
+  "thermal_balance": [
+    {
+      "order": [
+        4,
+        12,
+        12,
+        9
+      ],
+      "inverse_over_forward_number": 0.999996378577596,
+      "inverse_over_forward_energy": 0.9999957015101679
+    },
+    {
+      "order": [
+        6,
+        18,
+        16,
+        12
+      ],
+      "inverse_over_forward_number": 0.9999995847598913,
+      "inverse_over_forward_energy": 0.9999994704579352
+    }
+  ],
+  "archives": [
+    {
+      "snapshot": "low-reheat-matched-vacuum-shape-2026-11-26.json",
+      "T_GeV": 0.0031566743518062898,
+      "rows": [
+        {
+          "order": [
+            3,
+            7,
+            6,
+            2
+          ],
+          "relative_population_quadrature_defect": 1.4503034651003333e-07,
+          "average_vacuum_sigma_v_GeV_minus2": 7.257956665113334e-13,
+          "conditional_net_stable_number_loss_per_Hubble": 0.00025908517765411233,
+          "conditional_net_scalar_number_gain_per_Hubble": 57.80081178038181,
+          "mean_injected_scalar_energy_GeV": 0.025298666293457877,
+          "stimulated_over_vacuum_forward": 1.0000000000000502,
+          "reverse_over_stimulated_forward": 2.4267492747817713e-11,
+          "retained_fraction_of_produced_scalar_number": 0.9980022152176434,
+          "retained_fraction_of_produced_scalar_energy": 0.9957322649071695,
+          "retained_fraction_of_produced_stable_number": 0.9971132571559298,
+          "retained_fraction_of_produced_stable_energy": 0.9970303739133344,
+          "produced_scalar_number_fraction_below_p_lab_0p25_MeV": 0.0,
+          "net_stable_number_loss_per_Hubble_in_retained_cells": 0.00025908517765413055,
+          "net_scalar_number_gain_per_Hubble_in_retained_cells": 57.685338198196305,
+          "net_scalar_energy_gain_rate_in_total_energy_units_GeV5": 9.214145336068825e-44
+        },
+        {
+          "order": [
+            5,
+            10,
+            8,
+            3
+          ],
+          "relative_population_quadrature_defect": 5.6621374255882984e-14,
+          "average_vacuum_sigma_v_GeV_minus2": 7.257956596181956e-13,
+          "conditional_net_stable_number_loss_per_Hubble": 0.0002590851735183546,
+          "conditional_net_scalar_number_gain_per_Hubble": 57.80080210112471,
+          "mean_injected_scalar_energy_GeV": 0.02529866615213688,
+          "stimulated_over_vacuum_forward": 1.00000000000005,
+          "reverse_over_stimulated_forward": 2.4268281855340138e-11,
+          "retained_fraction_of_produced_scalar_number": 0.9980021993120592,
+          "retained_fraction_of_produced_scalar_energy": 0.9957322532856381,
+          "retained_fraction_of_produced_stable_number": 0.9970521608433822,
+          "retained_fraction_of_produced_stable_energy": 0.9969867945202278,
+          "produced_scalar_number_fraction_below_p_lab_0p25_MeV": 0.0,
+          "net_stable_number_loss_per_Hubble_in_retained_cells": 0.00025908517351837316,
+          "net_scalar_number_gain_per_Hubble_in_retained_cells": 57.68532761892075,
+          "net_scalar_energy_gain_rate_in_total_energy_units_GeV5": 9.214145077938191e-44
+        }
+      ],
+      "pair_number_ledger_defect": 5.248855979553868e-16,
+      "opposite_energy_ledger_defect": 2.1612041833116946e-16,
+      "shell_lab_momentum_edges_GeV": [
+        0.0025237660510784234,
+        0.002980770491787283,
+        0.003520529456727251,
+        0.004158028164138427,
+        0.0049109653608297695,
+        0.005800244688883007,
+        0.006850555029211434,
+        0.008091055933933665,
+        0.009556187177081746,
+        0.011286624899035126,
+        0.01333041088992369,
+        0.015744286364065076,
+        0.018595267254744353,
+        0.0219625047639243,
+        0.02593948282094905,
+        0.03063661345783965,
+        0.036184302156057446,
+        0.04273656826733322,
+        0.050475321021568466
+      ],
+      "shell_signed_rates_phi_then_stable_N_then_K_lo_to_hi_including_tails": [
+        [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            6.846055972955841e-53,
+            8.280259693689495e-51,
+            4.14502402870997e-49,
+            1.333953575459577e-47,
+            2.4007494326798633e-46,
+            2.798800822732915e-45,
+            2.1697522438452693e-44,
+            1.0964170965068348e-43,
+            3.5033337539236045e-43,
+            7.244461385798073e-43,
+            9.476636625087219e-43,
+            8.062759382293693e-43,
+            4.56075760432441e-43,
+            1.7252105413829684e-43,
+            4.3162512329581225e-44,
+            7.276282972898457e-45
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.277202038535759e-55,
+            4.631143230363146e-53,
+            2.730937305254783e-51,
+            1.032315832856252e-49,
+            2.186949475083849e-48,
+            2.9953489984125304e-47,
+            2.7286105230326284e-46,
+            1.620874648320839e-45,
+            6.081710441521467e-45,
+            1.4758723268534188e-44,
+            2.2660345356310884e-44,
+            2.263677585668707e-44,
+            1.50387971569513e-44,
+            6.682098711572534e-45,
+            1.9634688658837488e-45,
+            3.9323574807049835e-46
+          ]
+        ],
+        [
+          [
+            1.9983288609313734e-55,
+            -1.6868602379606762e-44,
+            -2.7122878423614977e-44,
+            -4.23674681685254e-44,
+            -6.648249837449275e-44,
+            -1.0138308457278009e-43,
+            -1.5105583082099085e-43,
+            -2.1689048554751552e-43,
+            -2.970658605833072e-43,
+            -3.851498482477739e-43,
+            -4.607748193783853e-43,
+            -4.989243795359335e-43,
+            -4.778030688202729e-43,
+            -3.94867837880913e-43,
+            -2.6894409300847467e-43,
+            -1.4798916872553714e-43,
+            -6.356334404455367e-44,
+            -2.0312420086403123e-44,
+            -4.580906226672579e-45,
+            6.07226082641284e-56
+          ],
+          [
+            1.8722144597904244e-59,
+            -3.2144973463276176e-48,
+            -7.18700571324317e-48,
+            -1.5629014773980534e-47,
+            -3.406393789244654e-47,
+            -7.209499387267186e-47,
+            -1.487011720940926e-46,
+            -2.9467037757246647e-46,
+            -5.5524409878309895e-46,
+            -9.853136930536565e-46,
+            -1.606530178219686e-45,
+            -2.352374956871723e-45,
+            -3.0211760379078696e-45,
+            -3.317309222460546e-45,
+            -2.971263069700374e-45,
+            -2.125100477758891e-45,
+            -1.1749976618385866e-45,
+            -4.777569307897707e-46,
+            -1.3589155622489054e-46,
+            2.2625836513083833e-57
+          ]
+        ]
+      ]
+    }
+  ]
+}

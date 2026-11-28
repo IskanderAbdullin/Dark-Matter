@@ -1,0 +1,123 @@
+{
+  "scope": "Direct thermal charged-lepton vacuum source only, with immediate two-body decay, no initially present heavy, hadronic production, inverse reactions or later scattering. For each row integrate from that start to 0.1 MeV. The denominator is only the same known archive's held equality-cold yield, not its earlier-temperature history.",
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "minimum_log_entropy_slope_on_EOS_cubics": 3.0,
+  "comparison_archive_held_equality_cold_yield": 4.18022180557062e-09,
+  "rows": [
+    {
+      "T_max_GeV": 0.0073940494651976016,
+      "T_min_GeV": 0.0001,
+      "p_over_T_at_start": 0.1397654901709253,
+      "earliest_one_parent_plus_partner_at_rest_over_T": 327.7545365835092,
+      "refinements": [
+        {
+          "temperature_panels": 32,
+          "log10_vacuum_soft_yield_upper": -125.79280991100998,
+          "log10_upper_over_archive_cold_yield": -117.41400923737345
+        },
+        {
+          "temperature_panels": 128,
+          "log10_vacuum_soft_yield_upper": -126.61388281324669,
+          "log10_upper_over_archive_cold_yield": -118.23508213961016
+        },
+        {
+          "temperature_panels": 512,
+          "log10_vacuum_soft_yield_upper": -127.26866701124032,
+          "log10_upper_over_archive_cold_yield": -118.88986633760379
+        }
+      ]
+    },
+    {
+      "T_max_GeV": 0.010442,
+      "T_min_GeV": 0.0001,
+      "p_over_T_at_start": 0.1398287265238433,
+      "earliest_one_parent_plus_partner_at_rest_over_T": 167.13785278401187,
+      "refinements": [
+        {
+          "temperature_panels": 32,
+          "log10_vacuum_soft_yield_upper": -57.28612373455857,
+          "log10_upper_over_archive_cold_yield": -48.907323060922046
+        },
+        {
+          "temperature_panels": 128,
+          "log10_vacuum_soft_yield_upper": -58.124377942623845,
+          "log10_upper_over_archive_cold_yield": -49.745577268987326
+        },
+        {
+          "temperature_panels": 512,
+          "log10_vacuum_soft_yield_upper": -58.76102858694517,
+          "log10_upper_over_archive_cold_yield": -50.382227913308654
+        }
+      ]
+    },
+    {
+      "T_max_GeV": 0.012,
+      "T_min_GeV": 0.0001,
+      "p_over_T_at_start": 0.13992772945420487,
+      "earliest_one_parent_plus_partner_at_rest_over_T": 127.58819664053115,
+      "refinements": [
+        {
+          "temperature_panels": 32,
+          "log10_vacuum_soft_yield_upper": -40.60832468185307,
+          "log10_upper_over_archive_cold_yield": -32.22952400821655
+        },
+        {
+          "temperature_panels": 128,
+          "log10_vacuum_soft_yield_upper": -41.453199900395354,
+          "log10_upper_over_archive_cold_yield": -33.074399226758835
+        },
+        {
+          "temperature_panels": 512,
+          "log10_vacuum_soft_yield_upper": -42.0681063187318,
+          "log10_upper_over_archive_cold_yield": -33.68930564509528
+        }
+      ]
+    },
+    {
+      "T_max_GeV": 0.025,
+      "T_min_GeV": 0.0001,
+      "p_over_T_at_start": 0.14411310709436764,
+      "earliest_one_parent_plus_partner_at_rest_over_T": 30.795855163832403,
+      "refinements": [
+        {
+          "temperature_panels": 32,
+          "log10_vacuum_soft_yield_upper": -1.1431835965073458,
+          "log10_upper_over_archive_cold_yield": 7.2356170771291755
+        },
+        {
+          "temperature_panels": 128,
+          "log10_vacuum_soft_yield_upper": -1.9794672228818386,
+          "log10_upper_over_archive_cold_yield": 6.399333450754683
+        },
+        {
+          "temperature_panels": 512,
+          "log10_vacuum_soft_yield_upper": -2.336584800151194,
+          "log10_upper_over_archive_cold_yield": 6.042215873485327
+        }
+      ]
+    },
+    {
+      "T_max_GeV": 0.05,
+      "T_min_GeV": 0.0001,
+      "p_over_T_at_start": 0.1538227885780543,
+      "earliest_one_parent_plus_partner_at_rest_over_T": 8.401179910471694,
+      "refinements": [
+        {
+          "temperature_panels": 32,
+          "log10_vacuum_soft_yield_upper": 6.444379372071372,
+          "log10_upper_over_archive_cold_yield": 14.823180045707895
+        },
+        {
+          "temperature_panels": 128,
+          "log10_vacuum_soft_yield_upper": 5.865894171110156,
+          "log10_upper_over_archive_cold_yield": 14.244694844746677
+        },
+        {
+          "temperature_panels": 512,
+          "log10_vacuum_soft_yield_upper": 5.707287578963313,
+          "log10_upper_over_archive_cold_yield": 14.086088252599836
+        }
+      ]
+    }
+  ]
+}

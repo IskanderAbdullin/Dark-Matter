@@ -1,0 +1,129 @@
+{
+  "scope": "Archived q32 end profiles are solver seeds only; the accepted trajectory uses the full original q64 operators and physical moment targets. Old exterior cohorts remain collisionless. Not a full cosmology.",
+  "plan": {
+    "source_sha256": "c359d8500345462dbb30609526066da3389f65ded1687bb4cb170f54e0f37c7c",
+    "guides_sha256": "af13ea4a6f4dd3b5dee974acbc0ee2a89634cecefcb51e115d97fbde712b1efb",
+    "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "kernel_sha256": "ebbbee140933d87f9fa90a373b30e92fc0c6d988edf5bd465383c2192482e550",
+    "solver_wrapper_sha256": "ff7c18598ed8f8fabfa3d2eeab1394c6274eea3046c8b2c1a342e98b0f7ea566",
+    "guide_snapshots": [
+      "0cb58ac4a2c2fb97ceea975f0c3ce287ad40b947ace7b849b1504d6ea54fe356",
+      "7346aec3a34b38ebbd10a1a03157df408f6f7d2ac4abdf9f86c0e37539dc0776"
+    ]
+  },
+  "steps": [
+    {
+      "T_GeV": 0.010187141866276936,
+      "scale_factor": 5.39963432981637,
+      "trial": {
+        "used_q32_guess": true,
+        "observations": [
+          [
+            0,
+            5662.588739804113,
+            48
+          ],
+          [
+            1,
+            45.11326418076009,
+            48
+          ],
+          [
+            2,
+            0.002197416771978681,
+            48
+          ],
+          [
+            3,
+            9.251721509084662e-12,
+            56
+          ],
+          [
+            4,
+            4.616856696280533e-12,
+            110
+          ]
+        ],
+        "newton_iterations": 4,
+        "residual": 4.616856696280533e-12,
+        "entropy_gain_relative": 3.7953189968575884e-07,
+        "maximum_exponent_departure_from_eq": 0.07459353957500557,
+        "structurally_inactive_cells": 0,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "common_grid_count_L1": [
+        6.103287397072323e-07,
+        1.073767705893101e-07
+      ],
+      "common_grid_full_energy_L1_over_total": [
+        8.844121503765716e-08,
+        9.40227940322218e-08
+      ],
+      "final_added_region_count_fraction": [
+        1.1118971727172956e-11,
+        2.188965333740783e-11
+      ],
+      "full_energy_and_count_defects": [
+        -5.391348131153649e-15,
+        -6.439293542825908e-15
+      ]
+    },
+    {
+      "T_GeV": 0.010136743377811933,
+      "scale_factor": 5.426565341418897,
+      "trial": {
+        "used_q32_guess": true,
+        "observations": [
+          [
+            0,
+            5760.349974473564,
+            48
+          ],
+          [
+            1,
+            46.2740952497776,
+            48
+          ],
+          [
+            2,
+            0.0022903142724753087,
+            48
+          ],
+          [
+            3,
+            9.56883713654964e-12,
+            56
+          ],
+          [
+            4,
+            3.0290631339449476e-12,
+            114
+          ]
+        ],
+        "newton_iterations": 4,
+        "residual": 3.0290631339449476e-12,
+        "entropy_gain_relative": 3.899027791742782e-07,
+        "maximum_exponent_departure_from_eq": 0.07520550166686961,
+        "structurally_inactive_cells": 0,
+        "structurally_inactive_vacuum_cells": 0
+      },
+      "common_grid_count_L1": [
+        7.210915837710005e-07,
+        1.2875339010766244e-07
+      ],
+      "common_grid_full_energy_L1_over_total": [
+        1.046145068075384e-07,
+        1.1233958560158563e-07
+      ],
+      "final_added_region_count_fraction": [
+        1.1018832818302585e-11,
+        2.1813323864705382e-11
+      ],
+      "full_energy_and_count_defects": [
+        6.104246516372336e-16,
+        -3.552713678800501e-15
+      ]
+    }
+  ],
+  "final_snapshot_sha256": "dcf83e8bb46b68cceba4e475002b3857738bb3aa9d8557ebec491436a3b2f447"
+}

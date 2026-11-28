@@ -1,0 +1,145 @@
+{
+  "scope": "Specified post-10.442 MeV homogeneous isotropic warm signed network, fermion occupancies per spin <= 1/2. Retains vacuum charged leptons, adds the effective massive charged pion pair in the selected KLOE window plus a bounded threshold strip and capped spacelike heating. Not the full hadronic or radiative reverse theory.",
+  "cases": [
+    {
+      "q": 16,
+      "fermion_per_spin_cap": 0.5,
+      "controls": [
+        {
+          "time_cells": 1000,
+          "pion_injection_GeV4": 3.7703510782185365e-22,
+          "pion_injection_relative_to_previous_energy_upper": 8.471179993234945e-11,
+          "pion_extra_heat_exponent": 1.3902533840565736e-07,
+          "effective_global_pion_R_cap": 8.872454888424494,
+          "new_available_energy_upper_GeV4": 4.450798596799136e-12,
+          "pion_pair_sigma_v_cap_with_stated_support": 6.2693681750587344e-18,
+          "with_charged_pions_lower_Omega_h2": 1.049839980962481,
+          "weaker_unspecific_subpole_R_lower_Omega_h2": 1.0293119308473129,
+          "no_pion_control_lower_Omega_h2": 1.0498420470729735,
+          "sensitivity_to_extra_energy": [
+            {
+              "extra_gross_energy_fraction": 0.02,
+              "lower_Omega_h2": 0.8729259770327125
+            },
+            {
+              "extra_gross_energy_fraction": 0.05,
+              "lower_Omega_h2": 0.6502266320365784
+            },
+            {
+              "extra_gross_energy_fraction": 0.1,
+              "lower_Omega_h2": 0.3166621617875375
+            },
+            {
+              "extra_gross_energy_fraction": 0.2,
+              "lower_Omega_h2": 0.0
+            }
+          ]
+        },
+        {
+          "time_cells": 2800,
+          "pion_injection_GeV4": 3.353805790195771e-22,
+          "pion_injection_relative_to_previous_energy_upper": 7.535290990600742e-11,
+          "pion_extra_heat_exponent": 1.3902533840565736e-07,
+          "effective_global_pion_R_cap": 8.872454888424494,
+          "new_available_energy_upper_GeV4": 4.4507985967574815e-12,
+          "pion_pair_sigma_v_cap_with_stated_support": 6.2693681750587344e-18,
+          "with_charged_pions_lower_Omega_h2": 1.1181849640498358,
+          "weaker_unspecific_subpole_R_lower_Omega_h2": 1.0974894717622266,
+          "no_pion_control_lower_Omega_h2": 1.118187054621678,
+          "sensitivity_to_extra_energy": [
+            {
+              "extra_gross_energy_fraction": 0.02,
+              "lower_Omega_h2": 0.9396981486106297
+            },
+            {
+              "extra_gross_energy_fraction": 0.05,
+              "lower_Omega_h2": 0.7148128488190874
+            },
+            {
+              "extra_gross_energy_fraction": 0.1,
+              "lower_Omega_h2": 0.3763445762257225
+            },
+            {
+              "extra_gross_energy_fraction": 0.2,
+              "lower_Omega_h2": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "fermion_per_spin_cap": 0.5,
+      "controls": [
+        {
+          "time_cells": 1000,
+          "pion_injection_GeV4": 3.7703510782172613e-22,
+          "pion_injection_relative_to_previous_energy_upper": 8.472192829921437e-11,
+          "pion_extra_heat_exponent": 1.3902533840563862e-07,
+          "effective_global_pion_R_cap": 8.872454888424494,
+          "new_available_energy_upper_GeV4": 4.4502665111625255e-12,
+          "pion_pair_sigma_v_cap_with_stated_support": 6.2693681750587344e-18,
+          "with_charged_pions_lower_Omega_h2": 1.050867824952037,
+          "weaker_unspecific_subpole_R_lower_Omega_h2": 1.030334290839453,
+          "no_pion_control_lower_Omega_h2": 1.0508698918158215,
+          "sensitivity_to_extra_energy": [
+            {
+              "extra_gross_energy_fraction": 0.02,
+              "lower_Omega_h2": 0.8739193042450845
+            },
+            {
+              "extra_gross_energy_fraction": 0.05,
+              "lower_Omega_h2": 0.6511764620411926
+            },
+            {
+              "extra_gross_energy_fraction": 0.1,
+              "lower_Omega_h2": 0.31750932060412895
+            },
+            {
+              "extra_gross_energy_fraction": 0.2,
+              "lower_Omega_h2": 0.0
+            }
+          ]
+        },
+        {
+          "time_cells": 2800,
+          "pion_injection_GeV4": 3.35380579019465e-22,
+          "pion_injection_relative_to_previous_energy_upper": 7.536191929922657e-11,
+          "pion_extra_heat_exponent": 1.3902533840563862e-07,
+          "effective_global_pion_R_cap": 8.872454888424494,
+          "new_available_energy_upper_GeV4": 4.450266511120871e-12,
+          "pion_pair_sigma_v_cap_with_stated_support": 6.2693681750587344e-18,
+          "with_charged_pions_lower_Omega_h2": 1.1192253951715045,
+          "weaker_unspecific_subpole_R_lower_Omega_h2": 1.098524358591146,
+          "no_pion_control_lower_Omega_h2": 1.1192274864996552,
+          "sensitivity_to_extra_energy": [
+            {
+              "extra_gross_energy_fraction": 0.02,
+              "lower_Omega_h2": 0.9407043346784814
+            },
+            {
+              "extra_gross_energy_fraction": 0.05,
+              "lower_Omega_h2": 0.7157760449541564
+            },
+            {
+              "extra_gross_energy_fraction": 0.1,
+              "lower_Omega_h2": 0.3772054065555529
+            },
+            {
+              "extra_gross_energy_fraction": 0.2,
+              "lower_Omega_h2": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "c15c7566d2e35a427fa7a2b42734e9db68d420f02ed6302a6fcb547bc66a7765",
+    "fe499aa8725b2a48f7b08685e434312c7efc885277f2e83311adf646017513c3",
+    "9414d360773d770e4925120e458fb7d90284eb28912a1065343328703979e18f",
+    "6bb1e4e74ff83b86f87a1f8941f590b31d3fc9d800594e737151b71621521012"
+  ]
+}

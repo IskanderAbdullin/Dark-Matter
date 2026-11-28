@@ -1,0 +1,83 @@
+{
+  "scope": "Paired signed recoil with leading soft reference only over lab photon band [1e-5,2e-4].",
+  "data": [
+    {
+      "grid": "fine",
+      "baseline_max_abs_defect": 2.412561592017061e-17,
+      "window_integrals": [
+        {
+          "edges": [
+            1e-05,
+            2e-05
+          ],
+          "vacuum_G_L_then_thermal_G_L": [
+            -4.4066320411046565e-07,
+            -2.210206841305128e-06,
+            -3.542856984235715e-05,
+            0.00016483054881636934
+          ],
+          "unscaled_net_ratio_to_Born": -0.15302329079235416,
+          "net_ratio_to_Born_at_g_point005": -9.690313092454357e-08
+        },
+        {
+          "edges": [
+            2e-05,
+            4e-05
+          ],
+          "vacuum_G_L_then_thermal_G_L": [
+            -8.816712792954149e-07,
+            -4.414243344923906e-06,
+            -7.952786390703093e-05,
+            0.0003545570585474634
+          ],
+          "unscaled_net_ratio_to_Born": -0.3319294603141748,
+          "net_ratio_to_Born_at_g_point005": -2.1019678627996612e-07
+        },
+        {
+          "edges": [
+            4e-05,
+            8e-05
+          ],
+          "vacuum_G_L_then_thermal_G_L": [
+            -1.7646984904948513e-06,
+            -8.803044152507383e-06,
+            -0.00016861931131804673,
+            0.00074117128275307
+          ],
+          "unscaled_net_ratio_to_Born": -0.6959666259891607,
+          "net_ratio_to_Born_at_g_point005": -4.407260145049123e-07
+        },
+        {
+          "edges": [
+            8e-05,
+            0.00016
+          ],
+          "vacuum_G_L_then_thermal_G_L": [
+            -3.5346591343032306e-06,
+            -1.7500290352283078e-05,
+            -0.000350627617100387,
+            0.0015413456511722645
+          ],
+          "unscaled_net_ratio_to_Born": -1.4478287271465242,
+          "net_ratio_to_Born_at_g_point005": -9.168482521616572e-07
+        },
+        {
+          "edges": [
+            0.00016,
+            0.0002
+          ],
+          "vacuum_G_L_then_thermal_G_L": [
+            -1.7698941211556545e-06,
+            -8.69513450978026e-06,
+            -0.00017940734930997835,
+            0.0007930764596113993
+          ],
+          "unscaled_net_ratio_to_Born": -0.7443864474676248,
+          "net_ratio_to_Born_at_g_point005": -4.713882246545915e-07
+        }
+      ],
+      "max_mesh_drift_in_unscaled_net_over_Born": 1.2079199222803094e-06,
+      "whole_bridge_scaled_net_ratio_to_Born": -2.1360624085256705e-06
+    }
+  ]
+}

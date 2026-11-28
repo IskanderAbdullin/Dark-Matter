@@ -1,0 +1,115 @@
+{
+  "scope": "All core leaves light or scalar on retained support, all propagating intermediates light or scalar with only collisionless redshift between events, and no energy from other ancestors. Bounds apply to H creation only, not subsequent heavy elastic redistribution.",
+  "cases": [
+    {
+      "q": 16,
+      "P_GeV": 0.15187507164237002,
+      "high_cut_GeV": 1.0,
+      "controls": [
+        {
+          "core_leaves": 1,
+          "initial_heavy_ceiling_GeV": 0.11604325653123936,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 2,
+          "initial_heavy_ceiling_GeV": 0.2895930757899783,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 3,
+          "initial_heavy_ceiling_GeV": 0.44854691669587393,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 4,
+          "initial_heavy_ceiling_GeV": 0.6045300639190746,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 5,
+          "initial_heavy_ceiling_GeV": 0.7593753582118501,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 6,
+          "initial_heavy_ceiling_GeV": 0.9136615051043252,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": 6.208913206221051
+        },
+        {
+          "core_leaves": 7,
+          "initial_heavy_ceiling_GeV": 1.0676309436937355,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 8,
+          "initial_heavy_ceiling_GeV": 1.2214034520697907,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "P_GeV": 0.30375014328474004,
+      "high_cut_GeV": 1.0,
+      "controls": [
+        {
+          "core_leaves": 1,
+          "initial_heavy_ceiling_GeV": 0.28751373801176894,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 2,
+          "initial_heavy_ceiling_GeV": 0.6005469158875103,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 3,
+          "initial_heavy_ceiling_GeV": 0.9077319791158076,
+          "exclude_all_b_ge_1": true,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 4,
+          "initial_heavy_ceiling_GeV": 1.2135181880499368,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 5,
+          "initial_heavy_ceiling_GeV": 1.5187507164237002,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 6,
+          "initial_heavy_ceiling_GeV": 1.823707592690781,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 7,
+          "initial_heavy_ceiling_GeV": 2.128507300370263,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        },
+        {
+          "core_leaves": 8,
+          "initial_heavy_ceiling_GeV": 2.4332089040836604,
+          "exclude_all_b_ge_1": false,
+          "b_cross_if_initially_excluded": null
+        }
+      ]
+    }
+  ]
+}

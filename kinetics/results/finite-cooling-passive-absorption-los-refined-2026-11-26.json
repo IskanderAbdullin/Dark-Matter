@@ -1,0 +1,40 @@
+{
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "a1e016ba45773a9cfcbe1bb2af0dc79172bbf6077f101f6ecfffadd54511ee0f",
+    "bc8c0b74b1353d20b1e3a4c7dc333932335c80d3d309f1f2e68204504adf072c",
+    "2b707d386ada0d98c268493d8a4eb2c1461e2e2a3b94eb206d65c0cd5185658c",
+    "1c62d8c918ac762d67d3b5ba3c36ab7e0a70bf386044c98da74120a530f8e21c",
+    "ca63579f11f236428adea604d9705f0e64fee4b82ee9a77496c5adc9241f2156"
+  ],
+  "max_resolved_absorption_CDF_between_controls": null,
+  "scope": "Signed passive subtraction on the same fixed metric; inverse removes stocked prompt particles without recomputing the forward source or evolving feedback. Positivity checked on archive knot union, not rigorous positivity between knots. Not a coupled Boltzmann or total matter result.",
+  "cases": [
+    {
+      "control": [
+        104,
+        11,
+        0
+      ],
+      "absorption_rest_omega_h2": 4.402522489032224e-12,
+      "removed_mixed_energy_fraction_at_z20": 0.0016055889180183842,
+      "worst_tested_negative_number_fraction": 0.0,
+      "z20": [
+        {
+          "k_h_per_Mpc": 4.0,
+          "conditional_absorbed_population_delta_over_cdm": 0.9599001637759131,
+          "previous_forward_only_tracer_delta_over_cdm": 0.8813054703812164,
+          "after_passive_subtraction_delta_over_cdm": 0.8811790766761547,
+          "signed_absolute_change": -0.00012639370506173364
+        },
+        {
+          "k_h_per_Mpc": 10.0,
+          "conditional_absorbed_population_delta_over_cdm": 0.8850420008649997,
+          "previous_forward_only_tracer_delta_over_cdm": 0.7596729637004925,
+          "after_passive_subtraction_delta_over_cdm": 0.759471348853194,
+          "signed_absolute_change": -0.00020161484729852575
+        }
+      ]
+    }
+  ]
+}

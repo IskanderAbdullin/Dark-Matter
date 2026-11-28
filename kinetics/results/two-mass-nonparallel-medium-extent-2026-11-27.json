@@ -1,0 +1,141 @@
+{
+  "scope": "Overlapping but nonparallel brackets in a prescribed reciprocal quadratic medium.",
+  "fixed_extent_tangents": [
+    {
+      "extents": [
+        0.0,
+        0.0
+      ],
+      "weights": [
+        0.27139758384466234,
+        0.6781345474739952
+      ],
+      "weight_derivative_error": 7.448811465099285e-14,
+      "count_derivative_error": 2.439454888092385e-19,
+      "contraction_bound": 0.0,
+      "energy_tangent_defect": 6.776263578034403e-21
+    },
+    {
+      "extents": [
+        0.003,
+        -0.001
+      ],
+      "weights": [
+        0.2713587113979606,
+        0.6780928460221893
+      ],
+      "weight_derivative_error": 7.539468554410966e-14,
+      "count_derivative_error": 2.0897996874658098e-16,
+      "contraction_bound": 5.237645564917949e-06,
+      "energy_tangent_defect": 2.0328790734103208e-20
+    },
+    {
+      "extents": [
+        0.02,
+        -0.01
+      ],
+      "weights": [
+        0.2712067155518443,
+        0.6779298501659745
+      ],
+      "weight_derivative_error": 4.611774896971961e-14,
+      "count_derivative_error": 1.2374541495663305e-15,
+      "contraction_bound": 3.9739540015451715e-05,
+      "energy_tangent_defect": 4.0657581468206416e-20
+    },
+    {
+      "extents": [
+        -0.0025,
+        0.007
+      ],
+      "weights": [
+        0.2713036511006532,
+        0.6780336637276936
+      ],
+      "weight_derivative_error": 6.305644279836799e-14,
+      "count_derivative_error": 5.866617955319064e-16,
+      "contraction_bound": 1.3284504276072673e-05,
+      "energy_tangent_defect": 6.776263578034403e-21
+    }
+  ],
+  "steps": [
+    {
+      "time": 0.03,
+      "extents": [
+        0.0032905532997422283,
+        -0.0012178255295806645
+      ],
+      "weights": [
+        0.27135742474640373,
+        0.6780914679845447
+      ],
+      "full_solve_extent_difference": 4.336808689942018e-19,
+      "full_solve_weight_difference": 2.6942423986264785e-17,
+      "reduced_jacobian_defect": 3.7723719547438916e-13,
+      "energy_identity_defect": 5.293955920339377e-23,
+      "entropy_identity_defect": 6.157929526538763e-19
+    },
+    {
+      "time": 0.1,
+      "extents": [
+        0.01073242725500945,
+        -0.004574583030322744
+      ],
+      "weights": [
+        0.2712789436518508,
+        0.6780072915056751
+      ],
+      "full_solve_extent_difference": 3.469446951953614e-18,
+      "full_solve_weight_difference": 2.1304572689340162e-17,
+      "reduced_jacobian_defect": 4.1902310614350124e-13,
+      "energy_identity_defect": 0.0,
+      "entropy_identity_defect": 2.778268066994105e-19
+    },
+    {
+      "time": 0.25,
+      "extents": [
+        0.025846949247212564,
+        -0.013325117505973936
+      ],
+      "weights": [
+        0.2711591424943335,
+        0.6778788403130208
+      ],
+      "full_solve_extent_difference": 0.0,
+      "full_solve_weight_difference": 3.480288973678469e-17,
+      "reduced_jacobian_defect": 2.7063350475572956e-13,
+      "energy_identity_defect": 2.117582368135751e-22,
+      "entropy_identity_defect": 2.4530074152484538e-18
+    }
+  ],
+  "time_mesh": {
+    "duration": 0.5,
+    "order": 2.0010126658912055,
+    "mesh": [
+      {
+        "steps": 4,
+        "full_energy_defect": 4.235164736271502e-22,
+        "maximum_step_entropy_defect": 2.2497195079074217e-18,
+        "maximum_count_error": 0.00010817239001670127
+      },
+      {
+        "steps": 8,
+        "full_energy_defect": 1.5246593050577406e-20,
+        "maximum_step_entropy_defect": 1.9244588561617704e-18,
+        "maximum_count_error": 2.672787335859786e-05
+      },
+      {
+        "steps": 16,
+        "full_energy_defect": 1.0164395367051604e-20,
+        "maximum_step_entropy_defect": 8.334804200982315e-19,
+        "maximum_count_error": 6.662982994467805e-06
+      },
+      {
+        "steps": 32,
+        "full_energy_defect": 1.2705494208814505e-21,
+        "maximum_step_entropy_defect": 6.729676765935416e-19,
+        "maximum_count_error": 1.6645769277826635e-06
+      }
+    ]
+  }
+}

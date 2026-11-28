@@ -1,0 +1,62 @@
+{
+  "complete": true,
+  "scalar_nodal_rule": "gauss-volume-v1",
+  "nodal_counts": [
+    167,
+    448,
+    488
+  ],
+  "checked_epoch_pairs": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.782324968453995e-08,
+      "pole_mass": 4.6915287846337105e-05,
+      "relative_time_drift": 5.115557743096133e-05,
+      "maximum_absolute_continuity": 3.2147737908674e-16,
+      "maximum_pair_number_error": 1.0025439612054536e-16,
+      "source_report_sha256": "ec6518c7535fb0863fc0a2ebca87889025faf20caef1c8be55f9d24a8011caa7",
+      "uncompressed_state_sha256": "ab6b407eec1c52f5bb757615ca35b9266ec7855417824b75c1914ce040e9bfb1"
+    },
+    {
+      "x": 0.01,
+      "scalar_yield": 3.474976254111909e-07,
+      "pole_mass": 8.535844546996965e-05,
+      "relative_time_drift": 1.2523086601046174e-07,
+      "maximum_absolute_continuity": 1.255239300359829e-16,
+      "maximum_pair_number_error": 1.870587560716397e-17,
+      "source_report_sha256": "8aea0cde66a98702de54762719e9342de1973c4af976252097445d0b484048e6",
+      "uncompressed_state_sha256": "c362a057f44949b3c6bfa7641d6f47e710c0ba1d8fcf04f88be3a696c89f34bb"
+    },
+    {
+      "x": 0.02,
+      "scalar_yield": 1.0218140413265873e-05,
+      "pole_mass": 0.0002635393844669137,
+      "relative_time_drift": 2.1847425958343436e-06,
+      "maximum_absolute_continuity": 1.6863215739158083e-13,
+      "maximum_pair_number_error": 5.5294310796760726e-17,
+      "source_report_sha256": "bb5df4e60d2a712161f56523e4217adc0e6e1ba9647bec16442f6ba06bef5201",
+      "uncompressed_state_sha256": "0e3772bdc6ec73711c2667626c9e7336f62d32d372dc4afe68a437699f65347d"
+    },
+    {
+      "x": 0.04,
+      "scalar_yield": 0.0001732092271254085,
+      "pole_mass": 0.0006770053079453506,
+      "relative_time_drift": 0.00012767093955867725,
+      "maximum_absolute_continuity": 7.203148811468253e-11,
+      "maximum_pair_number_error": 8.456776945386935e-17,
+      "source_report_sha256": "9d1878c1a766c82edb3db4c01442939cdb9c7b5946a3a22a69cab778bf99396b",
+      "uncompressed_state_sha256": "bdab6dd7ff742d41dabed9e64f8f4a7e8b00c59fe92220864ba0a1277e3d299f"
+    },
+    {
+      "x": 0.05,
+      "scalar_yield": 0.0003716272886594719,
+      "pole_mass": 0.0008731830070656699,
+      "relative_time_drift": 3.180095540433747e-05,
+      "maximum_absolute_continuity": 2.7740160903478965e-11,
+      "maximum_pair_number_error": 7.37257477290143e-17,
+      "source_report_sha256": "57cd44661ebf93dd3fc3a2ee8f8c2a5cc7a88ccc411a8aa881e61851e33920ed",
+      "uncompressed_state_sha256": "9e946fb849c565ccddd8f5372755db89c67698a6aae52fc72c2b3f11b0a4cc48"
+    }
+  ],
+  "scope": "Archived trace and saved-state audit; hashes bind endpoint artifacts, not a claim of bytewise replay of every trajectory."
+}

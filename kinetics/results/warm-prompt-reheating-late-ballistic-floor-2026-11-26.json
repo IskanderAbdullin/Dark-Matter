@@ -1,0 +1,67 @@
+{
+  "scope": "Charge-symmetric light fermions in freely redshifting momentum cells with loss only, hard retained cutoff 35 MeV and no exterior or new population, elastic momentum transport or signed inverse/source. The final scalar Bose factor is limited by an assumed uniform cap on the whole later history. Neither this cap nor the cold phase history is shown to hold in the actual model. The positive shellwise floor uses photons alone for the expansion bound.",
+  "visible_anchor_GeV": 0.001999999933137417,
+  "fermion_temperature_GeV": 0.0003266088624537293,
+  "controls": [
+    {
+      "momentum_panels": 320,
+      "pmax_GeV": 0.035,
+      "controls": [
+        {
+          "assumed_scalar_occupation_supremum": 0.5,
+          "retained_lower_fraction": 0.8741578296933384,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 168.30050757698862
+        },
+        {
+          "assumed_scalar_occupation_supremum": 1.0,
+          "retained_lower_fraction": 0.7880516191561122,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 151.72258715267571
+        },
+        {
+          "assumed_scalar_occupation_supremum": 4.0,
+          "retained_lower_fraction": 0.22579607641925686,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 43.47223462333421
+        },
+        {
+          "assumed_scalar_occupation_supremum": 10.0,
+          "retained_lower_fraction": 0.0,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 0.0
+        }
+      ]
+    },
+    {
+      "momentum_panels": 960,
+      "pmax_GeV": 0.035,
+      "controls": [
+        {
+          "assumed_scalar_occupation_supremum": 0.5,
+          "retained_lower_fraction": 0.8931058948422851,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 171.94855473031367
+        },
+        {
+          "assumed_scalar_occupation_supremum": 1.0,
+          "retained_lower_fraction": 0.818918903078196,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 157.66542650633363
+        },
+        {
+          "assumed_scalar_occupation_supremum": 4.0,
+          "retained_lower_fraction": 0.3056416044590811,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 58.84479372009284
+        },
+        {
+          "assumed_scalar_occupation_supremum": 10.0,
+          "retained_lower_fraction": 0.0,
+          "initial_omega_h2_if_passively_retained": 192.5287423622686,
+          "late_conditional_omega_h2_lower": 0.0
+        }
+      ]
+    }
+  ]
+}

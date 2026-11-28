@@ -1,0 +1,157 @@
+{
+  "illustrative_local_c6_GeV_minus2": 2.12e-16,
+  "independent_angle_relative_error": 1.653122083666858e-13,
+  "represented_rate_controls": [
+    {
+      "snapshot": "12-quantum-48-shape-2026-11-26.json",
+      "T_GeV": 0.01199970971941998,
+      "controls": [
+        {
+          "radial_order": 6,
+          "rows": [
+            {
+              "max_cm_energy_GeV": 0.005,
+              "pointwise_phase_space_upper_weight_fraction": 3.1022838871674724e-06,
+              "upper_contact_number_gain_over_H_Nscalar": 8.963635557880317e-37
+            },
+            {
+              "max_cm_energy_GeV": 0.01,
+              "pointwise_phase_space_upper_weight_fraction": 0.00015905243216984903,
+              "upper_contact_number_gain_over_H_Nscalar": 4.595607908297278e-35
+            }
+          ]
+        },
+        {
+          "radial_order": 12,
+          "rows": [
+            {
+              "max_cm_energy_GeV": 0.005,
+              "pointwise_phase_space_upper_weight_fraction": 3.1020471870857924e-06,
+              "upper_contact_number_gain_over_H_Nscalar": 8.962951644401682e-37
+            },
+            {
+              "max_cm_energy_GeV": 0.01,
+              "pointwise_phase_space_upper_weight_fraction": 0.00015905674169489208,
+              "upper_contact_number_gain_over_H_Nscalar": 4.595732426194002e-35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot": "early-9p3-quantum-shape-2026-11-26.json",
+      "T_GeV": 0.009299772934104809,
+      "controls": [
+        {
+          "radial_order": 6,
+          "rows": [
+            {
+              "max_cm_energy_GeV": 0.005,
+              "pointwise_phase_space_upper_weight_fraction": 1.642669532893853e-05,
+              "upper_contact_number_gain_over_H_Nscalar": 2.0552007965316686e-36
+            },
+            {
+              "max_cm_energy_GeV": 0.01,
+              "pointwise_phase_space_upper_weight_fraction": 0.000760495741012964,
+              "upper_contact_number_gain_over_H_Nscalar": 9.514825845313724e-35
+            }
+          ]
+        },
+        {
+          "radial_order": 12,
+          "rows": [
+            {
+              "max_cm_energy_GeV": 0.005,
+              "pointwise_phase_space_upper_weight_fraction": 1.6428680793457147e-05,
+              "upper_contact_number_gain_over_H_Nscalar": 2.0554492048136e-36
+            },
+            {
+              "max_cm_energy_GeV": 0.01,
+              "pointwise_phase_space_upper_weight_fraction": 0.0007603440567843312,
+              "upper_contact_number_gain_over_H_Nscalar": 9.512928071038528e-35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot": "low-reheat-early-pair-vacuum-shape-2026-11-26.json",
+      "T_GeV": 0.0031566743516918488,
+      "controls": [
+        {
+          "radial_order": 6,
+          "rows": [
+            {
+              "max_cm_energy_GeV": 0.005,
+              "pointwise_phase_space_upper_weight_fraction": 1.238375504746715e-05,
+              "upper_contact_number_gain_over_H_Nscalar": 5.106403204105297e-43
+            },
+            {
+              "max_cm_energy_GeV": 0.01,
+              "pointwise_phase_space_upper_weight_fraction": 0.0007922589146728054,
+              "upper_contact_number_gain_over_H_Nscalar": 3.2668552025289327e-41
+            }
+          ]
+        },
+        {
+          "radial_order": 12,
+          "rows": [
+            {
+              "max_cm_energy_GeV": 0.005,
+              "pointwise_phase_space_upper_weight_fraction": 1.2383755047467196e-05,
+              "upper_contact_number_gain_over_H_Nscalar": 5.106403204105319e-43
+            },
+            {
+              "max_cm_energy_GeV": 0.01,
+              "pointwise_phase_space_upper_weight_fraction": 0.0007922586036487363,
+              "upper_contact_number_gain_over_H_Nscalar": 3.266853920030776e-41
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "global_optimistic_contacts": [
+    {
+      "snapshot": "12-quantum-48-2026-11-26.json",
+      "T_GeV": 0.01199970971941998,
+      "rows": [
+        {
+          "max_cm_energy_GeV": 0.005,
+          "contact_growth_optical_upper": 4.062336219613534e-32,
+          "combined_with_halo_reference_quartic_upper": 2.393534295295422e-08,
+          "optimistic_min_abs_c6_GeV_minus2_with_halo_reference_quartic_for_99_percent_mass": 1.049346522012007,
+          "ratio_of_min_contact_to_illustrative_matching": 4949747745339656.0
+        },
+        {
+          "max_cm_energy_GeV": 0.01,
+          "contact_growth_optical_upper": 1.6249344878454136e-31,
+          "combined_with_halo_reference_quartic_upper": 2.393534295301659e-08,
+          "optimistic_min_abs_c6_GeV_minus2_with_halo_reference_quartic_for_99_percent_mass": 0.5246732610060035,
+          "ratio_of_min_contact_to_illustrative_matching": 2474873872669828.0
+        }
+      ]
+    },
+    {
+      "snapshot": "early-9p3-quantum-2026-11-26.json",
+      "T_GeV": 0.009299772934104809,
+      "rows": [
+        {
+          "max_cm_energy_GeV": 0.005,
+          "contact_growth_optical_upper": 3.143725309348545e-32,
+          "combined_with_halo_reference_quartic_upper": 1.8522874366193644e-08,
+          "optimistic_min_abs_c6_GeV_minus2_with_halo_reference_quartic_for_99_percent_mass": 1.1928631171846864,
+          "ratio_of_min_contact_to_illustrative_matching": 5626712816908898.0
+        },
+        {
+          "max_cm_energy_GeV": 0.01,
+          "contact_growth_optical_upper": 1.257490123739418e-31,
+          "combined_with_halo_reference_quartic_upper": 1.8522874366241912e-08,
+          "optimistic_min_abs_c6_GeV_minus2_with_halo_reference_quartic_for_99_percent_mass": 0.5964315585923432,
+          "ratio_of_min_contact_to_illustrative_matching": 2813356408454449.0
+        }
+      ]
+    }
+  ],
+  "scope": "A local sextic EFT toy coefficient only, below the stated CM cutoff. The true momentum-dependent fermion loop, hard states above cutoff, coherent fields, arbitrary Bose stimulation, additional particles and interactions are not constrained."
+}

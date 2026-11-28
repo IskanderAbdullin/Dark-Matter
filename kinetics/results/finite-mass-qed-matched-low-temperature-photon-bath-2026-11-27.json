@@ -1,0 +1,974 @@
+{
+  "scope": "Isotropic low-T photon-only rest-bath control, equal charges and no thermal final-state factors or charged-particle occupations. Not a high-T archive application.",
+  "normalization": "multiply the T^2 coefficient by g^2/(4 pi^2) (pi^2/6) (T/M)^2 relative to Born",
+  "archive_masses_only": [
+    {
+      "grid": "fine",
+      "current": "scalar",
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.017441118778096624,
+      "soft_angular": 3.6668907564882716,
+      "real_coefficient": 18.780120339142076,
+      "independent_derivative": 18.78012035975522,
+      "scalar_complex_contour": [
+        18.780120333002504,
+        18.78012033291525
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 18.78010272982067,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 18.780115932592878,
+          "richardson": 18.780120333516948
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 18.780119237504778,
+          "richardson": 18.780120339142076
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 18.780109066474093,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 18.780117513883532,
+          "richardson": 18.780120329686678
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 18.780119648287297,
+          "richardson": 18.78012035975522
+        }
+      ],
+      "external": {
+        "phase": -6.002452665710906,
+        "trace": -14.777667667213946,
+        "combined": -20.780120332924852
+      },
+      "total_T2_in_J1_units": -1.999999993782776,
+      "photon_real_vertex_pole_soft_defect": 3.223425463325365e-16,
+      "finite_temperature_ladder": [
+        {
+          "temperature_over_parent_mass": 0.001,
+          "raw_real_subtracted": 3.089203117410919e-05,
+          "normalized_full_thermal_correction": -2.000017350864411
+        },
+        {
+          "temperature_over_parent_mass": 0.002,
+          "raw_real_subtracted": 0.00012356778166851693,
+          "normalized_full_thermal_correction": -2.0000694848566987
+        },
+        {
+          "temperature_over_parent_mass": 0.004,
+          "raw_real_subtracted": 0.0004942656347067838,
+          "normalized_full_thermal_correction": -2.0002781545913493
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "current": "scalar",
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.017344828943563068,
+      "soft_angular": 3.666897255867317,
+      "real_coefficient": 18.780011127539353,
+      "independent_derivative": 18.780011120748487,
+      "scalar_complex_contour": [
+        18.780011128093474,
+        18.780011127869418
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 18.77999352450921,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 18.780006725727105,
+          "richardson": 18.780011126133072
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 18.78001002708629,
+          "richardson": 18.780011127539353
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 18.77999986181489,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 18.78000831373461,
+          "richardson": 18.78001113104118
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 18.78001041899502,
+          "richardson": 18.780011120748487
+        }
+      ],
+      "external": {
+        "phase": -6.002425642427914,
+        "trace": -14.777585485468721,
+        "combined": -20.780011127896636
+      },
+      "total_T2_in_J1_units": -2.000000000357282,
+      "photon_real_vertex_pole_soft_defect": 4.783495072785985e-16,
+      "finite_temperature_ladder": [
+        {
+          "temperature_over_parent_mass": 0.001,
+          "raw_real_subtracted": 3.089185143706547e-05,
+          "normalized_full_thermal_correction": -2.000017412856277
+        },
+        {
+          "temperature_over_parent_mass": 0.002,
+          "raw_real_subtracted": 0.0001235670629673972,
+          "normalized_full_thermal_correction": -2.0000695093006833
+        },
+        {
+          "temperature_over_parent_mass": 0.004,
+          "raw_real_subtracted": 0.0004942627604295106,
+          "normalized_full_thermal_correction": -2.0002781590039227
+        }
+      ]
+    }
+  ],
+  "independent_mass_and_current_controls": [
+    {
+      "current": "left",
+      "m_over_M": 0.1,
+      "scalar_over_M": 0.0,
+      "soft_angular": 2.698203927119163,
+      "real_coefficient": 16.50173091771734,
+      "independent_derivative": 16.50173092893059,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 16.501710635274947,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 16.50172584799492,
+          "richardson": 16.501730918901576
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 16.501729650286734,
+          "richardson": 16.50173091771734
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 16.501717937239533,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 16.50172767597713,
+          "richardson": 16.501730922222993
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 16.501730115692226,
+          "richardson": 16.50173092893059
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -12.50173091704407,
+        "combined": -18.50173091704407
+      },
+      "total_T2_in_J1_units": -1.9999999993267323,
+      "photon_real_vertex_pole_soft_defect": 3.2416480307531843e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.03,
+      "scalar_over_M": 0.0,
+      "soft_angular": 5.025750774552236,
+      "real_coefficient": 26.059679416453225,
+      "independent_derivative": 26.059679430108968,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 26.059658188692936,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 26.059674118172893,
+          "richardson": 26.059679427999544
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 26.059678091883143,
+          "richardson": 26.059679416453225
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 26.059665835659327,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 26.059676036527257,
+          "richardson": 26.059679436816566
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 26.05967858171354,
+          "richardson": 26.059679430108968
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -22.05967942690019,
+        "combined": -28.05967942690019
+      },
+      "total_T2_in_J1_units": -2.000000010446964,
+      "photon_real_vertex_pole_soft_defect": 3.4472241198245914e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.01,
+      "scalar_over_M": 0.0,
+      "soft_angular": 7.2121826242758065,
+      "real_coefficient": 34.842161788025315,
+      "independent_derivative": 34.8421618168171,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 34.84214045368361,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 34.842156447112416,
+          "richardson": 34.84216177825535
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 34.84216045279709,
+          "richardson": 34.842161788025315
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 34.84214813054276,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 34.84215837512572,
+          "richardson": 34.842161789986704
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 34.84216095639425,
+          "richardson": 34.8421618168171
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -30.84216177632635,
+        "combined": -36.84216177632635
+      },
+      "total_T2_in_J1_units": -1.9999999883010346,
+      "photon_real_vertex_pole_soft_defect": 3.451992065808067e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.003,
+      "scalar_over_M": 0.0,
+      "soft_angular": 9.618495111657886,
+      "real_coefficient": 44.47321591882769,
+      "independent_derivative": 44.47321591549703,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 44.473194593663834,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 44.47321058975717,
+          "richardson": 44.47321592178829
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 44.47321458656006,
+          "richardson": 44.47321591882769
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 44.47320227363161,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 44.47321251821457,
+          "richardson": 44.47321593307555
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 44.47321506617641,
+          "richardson": 44.47321591549703
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -40.47321592562855,
+        "combined": -46.47321592562855
+      },
+      "total_T2_in_J1_units": -2.0000000068008603,
+      "photon_real_vertex_pole_soft_defect": 3.213088866089381e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.1,
+      "soft_angular": 1.470300376252776,
+      "real_coefficient": 11.406173546261536,
+      "independent_derivative": 11.40617353253178,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 11.406155555060415,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 11.406169051486614,
+          "richardson": 11.406173550295348
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 11.406172422567806,
+          "richardson": 11.406173546261536
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 11.406162033281152,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 11.406170671857119,
+          "richardson": 11.406173551382443
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 11.406172817363114,
+          "richardson": 11.40617353253178
+        }
+      ],
+      "external": {
+        "phase": -6.088800088800089,
+        "trace": -7.317373461222645,
+        "combined": -13.406173550022734
+      },
+      "total_T2_in_J1_units": -2.0000000037611976,
+      "photon_real_vertex_pole_soft_defect": 5.386104186072167e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.5,
+      "scalar_over_M": 0.12,
+      "soft_angular": 0.2937457249505555,
+      "real_coefficient": 5.753783972051174,
+      "independent_derivative": 5.753783971958655,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 5.753781477518816,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 5.753783348105834,
+          "richardson": 5.753783971634841
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 5.753783816064839,
+          "richardson": 5.753783972051174
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 5.753782375550465,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 5.7537835732035525,
+          "richardson": 5.753783972421249
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 5.75378387226988,
+          "richardson": 5.753783971958655
+        }
+      ],
+      "external": {
+        "phase": -6.21871727784476,
+        "trace": -1.535066693987918,
+        "combined": -7.753783971832678
+      },
+      "total_T2_in_J1_units": -1.9999999997815037,
+      "photon_real_vertex_pole_soft_defect": 3.8411878909019246e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.4,
+      "soft_angular": 3.3306799994046283,
+      "real_coefficient": 28.314494905146148,
+      "independent_derivative": 28.314494901945007,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 28.31445456230597,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 28.3144848154393,
+          "richardson": 28.314494899817078
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 28.314492382719436,
+          "richardson": 28.314494905146148
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 28.31446908359292,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 28.31448844969886,
+          "richardson": 28.314494905067505
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 28.31449328888347,
+          "richardson": 28.314494901945007
+        }
+      ],
+      "external": {
+        "phase": -7.835754578888226,
+        "trace": -22.478740322665043,
+        "combined": -30.314494901553267
+      },
+      "total_T2_in_J1_units": -1.9999999964071193,
+      "photon_real_vertex_pole_soft_defect": 2.720093564979342e-16
+    },
+    {
+      "current": "left",
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.65,
+      "soft_angular": 0.6267413964658672,
+      "real_coefficient": 35.872676089102974,
+      "independent_derivative": 35.87267609038435,
+      "scalar_complex_contour": null,
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 35.87256099041314,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 35.872647319523665,
+          "richardson": 35.87267609589384
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 35.87266889670815,
+          "richardson": 35.872676089102974
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 35.872602429428554,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 35.87265767872327,
+          "richardson": 35.872676095154844
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 35.872671487469084,
+          "richardson": 35.87267609038435
+        }
+      ],
+      "external": {
+        "phase": -21.27295320398769,
+        "trace": -16.599722889051698,
+        "combined": -37.87267609303939
+      },
+      "total_T2_in_J1_units": -2.000000003936414,
+      "photon_real_vertex_pole_soft_defect": 3.485490265717583e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.1,
+      "scalar_over_M": 0.0,
+      "soft_angular": 2.698203927119163,
+      "real_coefficient": 14.435329102132263,
+      "independent_derivative": 14.435329105666474,
+      "scalar_complex_contour": [
+        14.43532911262106,
+        14.435329112559257
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 14.435313910432512,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 14.43532531020253,
+          "richardson": 14.435329110125869
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 14.435328154149829,
+          "richardson": 14.435329102132263
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 14.435319382888334,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 14.435326679829164,
+          "richardson": 14.435329112142773
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 14.435328499207145,
+          "richardson": 14.435329105666474
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -10.435329112573974,
+        "combined": -16.435329112573974
+      },
+      "total_T2_in_J1_units": -2.0000000104417115,
+      "photon_real_vertex_pole_soft_defect": 2.387356055418657e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.03,
+      "scalar_over_M": 0.0,
+      "soft_angular": 5.025750774552236,
+      "real_coefficient": 24.8120776025947,
+      "independent_derivative": 24.81207761473314,
+      "scalar_complex_contour": [
+        24.81207761220739,
+        24.812077611849176
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 24.812058176948426,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 24.812072751956293,
+          "richardson": 24.81207761029225
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 24.8120763899351,
+          "richardson": 24.8120776025947
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 24.81206517399026,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 24.812074506108672,
+          "richardson": 24.812077616814808
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 24.812076837577024,
+          "richardson": 24.81207761473314
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -20.8120776118243,
+        "combined": -26.8120776118243
+      },
+      "total_T2_in_J1_units": -2.0000000092295984,
+      "photon_real_vertex_pole_soft_defect": 2.1054215159035307e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.01,
+      "scalar_over_M": 0.0,
+      "soft_angular": 7.2121826242758065,
+      "real_coefficient": 34.23747279048447,
+      "independent_derivative": 34.23747282534547,
+      "scalar_complex_contour": [
+        34.23747279201632,
+        34.23747278975861
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 34.23745209296669,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 34.2374676129964,
+          "richardson": 34.23747278633963
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 34.23747149611245,
+          "richardson": 34.23747279048447
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 34.23745954522772,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 34.23746948727491,
+          "richardson": 34.237472801290636
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 34.23747199082783,
+          "richardson": 34.23747282534547
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -30.23747278943631,
+        "combined": -36.23747278943631
+      },
+      "total_T2_in_J1_units": -1.9999999989518429,
+      "photon_real_vertex_pole_soft_defect": 3.941326800973325e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.003,
+      "scalar_over_M": 0.0,
+      "soft_angular": 9.618495111657886,
+      "real_coefficient": 44.231827166877714,
+      "independent_derivative": 44.231827219428276,
+      "scalar_complex_contour": [
+        44.231827154088016,
+        44.23182713095946
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 44.23180599477661,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 44.231821856755005,
+          "richardson": 44.23182714408114
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 44.23182583934704,
+          "richardson": 44.231827166877714
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 44.231813607631395,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 44.23182377033541,
+          "richardson": 44.23182715790341
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 44.23182635715506,
+          "richardson": 44.231827219428276
+        }
+      ],
+      "external": {
+        "phase": -6.0,
+        "trace": -40.23182713531577,
+        "combined": -46.23182713531577
+      },
+      "total_T2_in_J1_units": -1.999999968438054,
+      "photon_real_vertex_pole_soft_defect": 2.2358044925228316e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.1,
+      "soft_angular": 1.470300376252776,
+      "real_coefficient": 9.359355792752192,
+      "independent_derivative": 9.359355793159274,
+      "scalar_complex_contour": [
+        9.359355798651894,
+        9.359355798633285
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 9.359345702342203,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 9.359353273286075,
+          "richardson": 9.359355796934032
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 9.359355162885663,
+          "richardson": 9.359355792752192
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 9.35934933755933,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 9.359354183335888,
+          "richardson": 9.359355798594741
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 9.359355390703428,
+          "richardson": 9.359355793159274
+        }
+      ],
+      "external": {
+        "phase": -6.088800088800089,
+        "trace": -5.2705557098316955,
+        "combined": -11.359355798631784
+      },
+      "total_T2_in_J1_units": -2.000000005879592,
+      "photon_real_vertex_pole_soft_defect": 4.0825980502236543e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.5,
+      "scalar_over_M": 0.12,
+      "soft_angular": 0.2937457249505555,
+      "real_coefficient": 5.067137570831844,
+      "independent_derivative": 5.06713757041551,
+      "scalar_complex_contour": [
+        5.067137570888726,
+        5.067137570874898
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 5.067138196090948,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 5.067137727299276,
+          "richardson": 5.067137571035385
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 5.067137609948702,
+          "richardson": 5.067137570831844
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 5.067137970934249,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 5.0671376712607685,
+          "richardson": 5.067137571369608
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 5.067137595626825,
+          "richardson": 5.06713757041551
+        }
+      ],
+      "external": {
+        "phase": -6.21871727784476,
+        "trace": -0.8484202930271388,
+        "combined": -7.067137570871899
+      },
+      "total_T2_in_J1_units": -2.000000000040055,
+      "photon_real_vertex_pole_soft_defect": 3.808724612770708e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.4,
+      "soft_angular": 3.3306799994046283,
+      "real_coefficient": 25.515149904897783,
+      "independent_derivative": 25.515149915111834,
+      "scalar_complex_contour": [
+        25.51514990503892,
+        25.515149904971413
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 25.515117603625015,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 25.51514182957959,
+          "richardson": 25.515149904897783
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 25.515147886068235,
+          "richardson": 25.515149904897783
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 25.515129233391608,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 25.51514474147254,
+          "richardson": 25.51514991083285
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 25.51514862170201,
+          "richardson": 25.515149915111834
+        }
+      ],
+      "external": {
+        "phase": -7.835754578888226,
+        "trace": -19.679395326069148,
+        "combined": -27.515149904957372
+      },
+      "total_T2_in_J1_units": -2.0000000000595897,
+      "photon_real_vertex_pole_soft_defect": 4.3064955069669606e-16
+    },
+    {
+      "current": "scalar",
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.65,
+      "soft_angular": 0.6267413964658672,
+      "real_coefficient": 29.346986502550482,
+      "independent_derivative": 29.346986498909875,
+      "scalar_complex_contour": [
+        29.346986505230046,
+        29.346986505211127
+      ],
+      "first_ladder": [
+        {
+          "step": 0.002,
+          "even_second_derivative": 29.34706637136575,
+          "richardson": null
+        },
+        {
+          "step": 0.001,
+          "even_second_derivative": 29.347006471169834,
+          "richardson": 29.346986504437865
+        },
+        {
+          "step": 0.0005,
+          "even_second_derivative": 29.34699149470532,
+          "richardson": 29.346986502550482
+        }
+      ],
+      "independent_ladder": [
+        {
+          "step": 0.0016,
+          "even_second_derivative": 29.347037618868836,
+          "richardson": null
+        },
+        {
+          "step": 0.0008,
+          "even_second_derivative": 29.346999284515785,
+          "richardson": 29.3469865063981
+        },
+        {
+          "step": 0.0004,
+          "even_second_derivative": 29.346989695311354,
+          "richardson": 29.346986498909875
+        }
+      ],
+      "external": {
+        "phase": -21.27295320398769,
+        "trace": -10.074033301218106,
+        "combined": -31.3469865052058
+      },
+      "total_T2_in_J1_units": -2.000000002655316,
+      "photon_real_vertex_pole_soft_defect": 2.6438089126628214e-16
+    }
+  ]
+}

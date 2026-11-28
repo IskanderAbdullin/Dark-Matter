@@ -1,0 +1,82 @@
+{
+  "grid": "fine",
+  "subcells_per_archived_cell": 4,
+  "counts": [
+    67,
+    896,
+    976
+  ],
+  "x_end": 0.0075,
+  "time_refinement": 2048,
+  "endpoint_yield_relative_drift": null,
+  "original_archive_yield": 5.7640287118356973e-08,
+  "checkpoint_trajectories": [
+    [
+      {
+        "x": 0.005259947527543221,
+        "scalar_yield": 6.10496319461963e-13,
+        "pair_number_error": 1.0087253537100674e-17,
+        "continuity_residual": -4.197447947317044e-17,
+        "max_charged": 0.4986916185830788,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.005533409598501607,
+        "scalar_yield": 1.396243990642033e-12,
+        "pair_number_error": 2.0758805861740002e-17,
+        "continuity_residual": -4.320858000754035e-17,
+        "max_charged": 0.4986916185808091,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.005821088827304492,
+        "scalar_yield": 7.062755917601616e-11,
+        "pair_number_error": 1.5741546909856167e-17,
+        "continuity_residual": -9.704350597574112e-18,
+        "max_charged": 0.49869159513072386,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.006123724356957945,
+        "scalar_yield": 3.581608660587184e-09,
+        "pair_number_error": 1.0609484711054137e-17,
+        "continuity_residual": 8.676158478725798e-18,
+        "max_charged": 0.49869155417929384,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.00644209375814743,
+        "scalar_yield": 1.1450701984255365e-08,
+        "pair_number_error": 1.6897248506539224e-18,
+        "continuity_residual": 4.7572123174880084e-17,
+        "max_charged": 0.49869153966840857,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.006777015027073836,
+        "scalar_yield": 2.2713441997226832e-08,
+        "pair_number_error": 3.375362767337343e-17,
+        "continuity_residual": -3.991219247462263e-17,
+        "max_charged": 0.4986915140969801,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.007129348687156055,
+        "scalar_yield": 3.7857843931286514e-08,
+        "pair_number_error": 5.0132280257956206e-17,
+        "continuity_residual": -9.902196318229035e-17,
+        "max_charged": 0.4986914751715953,
+        "max_limited_extent": 0.0
+      },
+      {
+        "x": 0.0075,
+        "scalar_yield": 5.7796051121154176e-08,
+        "pair_number_error": 5.580210704863968e-17,
+        "continuity_residual": -1.0982205677625631e-16,
+        "max_charged": 0.49869145114180313,
+        "max_limited_extent": 0.0
+      }
+    ]
+  ],
+  "scope": "Opt-in startup check; cannot stand in for the full archived production history"
+}

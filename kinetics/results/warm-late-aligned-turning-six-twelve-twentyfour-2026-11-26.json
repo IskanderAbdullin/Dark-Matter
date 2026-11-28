@@ -1,0 +1,88 @@
+{
+  "scope": "Exact discrete ledger on the selected locked interval. Sign brackets are sampled properties of these time-discrete trajectories, not a continuum enclosure.",
+  "native_seed_sha256": "58371a4edd868528490a0e80d3b2ea2115e1d44a0c86873beb1460374ea6c3b1",
+  "results": [
+    {
+      "substeps": 6,
+      "sign_brackets": [
+        [
+          6.999999999999999e-08,
+          8.5e-08
+        ]
+      ],
+      "max_sampled_excess": 2.4277453378909474e-18,
+      "first_maximum_sample_time": 6.999999999999999e-08,
+      "signed_clock_integral": 1.1960011684965828e-18,
+      "independent_angular_gross_scale_error": 5.504708917778311e-08,
+      "gross_consumed_at_start_and_end": [
+        5.128311830571657e-11,
+        1.0221083734227525e-10
+      ],
+      "gross_emitted_at_start_and_end": [
+        1.4151177609265193e-10,
+        9.755044725857252e-11
+      ],
+      "accumulated_discrete_ledger_residual": 2.7733391199176196e-32
+    },
+    {
+      "substeps": 12,
+      "sign_brackets": [
+        [
+          6.25e-08,
+          6.999999999999999e-08
+        ]
+      ],
+      "max_sampled_excess": 2.4886403745472105e-18,
+      "first_maximum_sample_time": 6.25e-08,
+      "signed_clock_integral": 1.2170811272355646e-18,
+      "independent_angular_gross_scale_error": 5.584737986959613e-08,
+      "gross_consumed_at_start_and_end": [
+        5.128311830571657e-11,
+        1.0308856559788383e-10
+      ],
+      "gross_emitted_at_start_and_end": [
+        1.4151177609265193e-10,
+        9.699193504700907e-11
+      ],
+      "accumulated_discrete_ledger_residual": -3.6785261937796205e-32
+    },
+    {
+      "substeps": 24,
+      "sign_brackets": [
+        [
+          6.25e-08,
+          6.625e-08
+        ]
+      ],
+      "max_sampled_excess": 2.5246696538803096e-18,
+      "first_maximum_sample_time": 6.25e-08,
+      "signed_clock_integral": 1.2261341417161408e-18,
+      "independent_angular_gross_scale_error": 5.6281353544674494e-08,
+      "gross_consumed_at_start_and_end": [
+        5.128311830571657e-11,
+        1.0345739681419139e-10
+      ],
+      "gross_emitted_at_start_and_end": [
+        1.4151177609265193e-10,
+        9.670541519300239e-11
+      ],
+      "accumulated_discrete_ledger_residual": 3.485933199340897e-32
+    }
+  ],
+  "refinements": [
+    {
+      "coarse_and_fine_substeps": [
+        6,
+        12
+      ],
+      "max_matched_excess_difference_over_fine_peak": 0.03816323563920014
+    },
+    {
+      "coarse_and_fine_substeps": [
+        12,
+        24
+      ],
+      "max_matched_excess_difference_over_fine_peak": 0.022400817797442945
+    }
+  ]
+}

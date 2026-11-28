@@ -1,0 +1,41 @@
+{
+  "scope": "Only archived stable phase free redshifting after the 7.394 MeV anchor, rescaled to the same present dark density as CDM. Homogeneous proxy, no self-consistent production, clustering backreaction, or total bound for unrepresented phases.",
+  "archive": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "scales": [
+    2.2726553772203093e-11,
+    1e-10,
+    1e-08,
+    1e-06,
+    0.00029381287516550925,
+    0.047619047619047616,
+    1.0
+  ],
+  "controls": [
+    {
+      "nodes_per_cell": 16,
+      "homogeneous_delta_H_over_H": [
+        2.5801982647588385e-08,
+        8.513876954515106e-09,
+        7.440614065373972e-11,
+        7.41567954118294e-13,
+        1.2662682604889138e-15,
+        9.558214586897511e-20,
+        0.0
+      ],
+      "delta_conformal_Mpc_from_anchor_to_equality": -5.594459669242484e-12
+    },
+    {
+      "nodes_per_cell": 28,
+      "homogeneous_delta_H_over_H": [
+        2.5801982647588385e-08,
+        8.513876954515102e-09,
+        7.440614065373966e-11,
+        7.415679541182938e-13,
+        1.2662682604889122e-15,
+        9.558214586897504e-20,
+        0.0
+      ],
+      "delta_conformal_Mpc_from_anchor_to_equality": -5.59445966924248e-12
+    }
+  ]
+}

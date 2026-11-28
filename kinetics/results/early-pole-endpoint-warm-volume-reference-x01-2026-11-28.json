@@ -1,0 +1,157 @@
+{
+  "x": 0.01,
+  "complete_warm_cell_floor": 0.010929632120873948,
+  "mass_held": 8.535844540506035e-05,
+  "clock_held": 0.984079963061715,
+  "ref_16_to_32_and_32_to_64_relative_defects": [
+    1.228286636067999e-05,
+    2.575039330654505e-07
+  ],
+  "results": [
+    {
+      "rule": "geometric_W1",
+      "scalar_nodes": 145,
+      "number_and_warm_pressure_affine": [
+        [
+          8.831000874383628e-05,
+          5.116141600949119e-07,
+          8.779839458374137e-05
+        ],
+        [
+          4.730830271398709e-09,
+          6.766787346637851e-20,
+          4.730830271331042e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 5.13280231071562e-11,
+      "relative_net_warm_pressure_vs_volume64": 0.0925720655265978
+    },
+    {
+      "rule": "geometric_W2",
+      "scalar_nodes": 167,
+      "number_and_warm_pressure_affine": [
+        [
+          8.830985722442592e-05,
+          5.1161416009487e-07,
+          8.779824306433105e-05
+        ],
+        [
+          4.433804932793476e-09,
+          6.447528299667655e-20,
+          4.433804932729001e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 4.764676748124206e-11,
+      "relative_net_warm_pressure_vs_volume64": 0.02397489143714071
+    },
+    {
+      "rule": "geometric_W4",
+      "scalar_nodes": 211,
+      "number_and_warm_pressure_affine": [
+        [
+          8.830981839374123e-05,
+          5.116141600948597e-07,
+          8.779820423364637e-05
+        ],
+        [
+          4.353911145674918e-09,
+          6.368431837761871e-20,
+          4.353911145611233e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 3.8522602374419126e-11,
+      "relative_net_warm_pressure_vs_volume64": 0.005523643980012594
+    },
+    {
+      "rule": "positive_Gauss2_volume",
+      "scalar_nodes": 167,
+      "number_and_warm_pressure_affine": [
+        [
+          8.830980125612822e-05,
+          5.116141600948556e-07,
+          8.779818709603336e-05
+        ],
+        [
+          4.328483059220224e-09,
+          6.341747541283687e-20,
+          4.328483059156807e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 4.6867451620413684e-11,
+      "relative_net_warm_pressure_vs_volume64": -0.0003489017141886652
+    },
+    {
+      "rule": "Legendre_volume_8",
+      "scalar_nodes": 299,
+      "number_and_warm_pressure_affine": [
+        [
+          8.830980566104196e-05,
+          5.116141600948563e-07,
+          8.779819150094711e-05
+        ],
+        [
+          4.32864756574639e-09,
+          6.342284878244725e-20,
+          4.328647565682968e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 4.25142388946314e-11,
+      "relative_net_warm_pressure_vs_volume64": -0.00031090939047973
+    },
+    {
+      "rule": "Legendre_volume_16",
+      "scalar_nodes": 475,
+      "number_and_warm_pressure_affine": [
+        [
+          8.830980592703986e-05,
+          5.116141600948563e-07,
+          8.7798191766945e-05
+        ],
+        [
+          4.330046546651059e-09,
+          6.342294521684471e-20,
+          4.3300465465876365e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 4.269428528176454e-11,
+      "relative_net_warm_pressure_vs_volume64": 1.2181350253159806e-05
+    },
+    {
+      "rule": "Legendre_volume_32",
+      "scalar_nodes": 827,
+      "number_and_warm_pressure_affine": [
+        [
+          8.830980590391695e-05,
+          5.116141600948563e-07,
+          8.779819174382209e-05
+        ],
+        [
+          4.3299933619212535e-09,
+          6.342278495803571e-20,
+          4.32999336185783e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 4.3196389873190666e-11,
+      "relative_net_warm_pressure_vs_volume64": -1.0151486051768188e-07
+    },
+    {
+      "rule": "Legendre_volume_64",
+      "scalar_nodes": 1531,
+      "number_and_warm_pressure_affine": [
+        [
+          8.83098059081297e-05,
+          5.116141600948563e-07,
+          8.779819174803484e-05
+        ],
+        [
+          4.3299938014799695e-09,
+          6.342276862642334e-20,
+          4.329993801416547e-09
+        ]
+      ],
+      "charge_radial_mesh_drift": 4.2590019181037295e-11,
+      "relative_net_warm_pressure_vs_volume64": 0.0
+    }
+  ],
+  "scope": "Frozen constant occupations; warm pressure collision source only, no time evolution or physical pressure."
+}

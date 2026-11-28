@@ -1,0 +1,731 @@
+{
+  "rows": [
+    {
+      "independent_mesh_max_absolute_amplitude_difference": 5.223574463588687e-12,
+      "T_SM": 0.05,
+      "relaxation_rates": [
+        2.9288065101163617e-25,
+        1.5883753755276716e-24
+      ],
+      "rows": [
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 0.25,
+          "exact_damping": 0.9549488327759992,
+          "samples": [
+            {
+              "central_factors": [
+                0.9549488332268092,
+                -3.738653227988768e-11
+              ],
+              "maximum_entropy_error": 3.591455641081922e-16,
+              "filtered_over_physical_entropy": [
+                0.9998229494243075,
+                0.9998229622175624
+              ]
+            },
+            {
+              "central_factors": [
+                0.954948832891199,
+                -9.207175819438948e-12
+              ],
+              "maximum_entropy_error": 2.0960471586703008e-16,
+              "filtered_over_physical_entropy": [
+                0.9998229526491024,
+                0.9998229590457324
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 4.0,
+          "exact_damping": 0.47827935576778163,
+          "samples": [
+            {
+              "central_factors": [
+                0.4782793576639648,
+                9.338621435602196e-11
+              ],
+              "maximum_entropy_error": 5.95046242682786e-16,
+              "filtered_over_physical_entropy": [
+                0.9570033790489687,
+                0.9570056077937532
+              ]
+            },
+            {
+              "central_factors": [
+                0.4782793562436128,
+                2.4201641966393092e-11
+              ],
+              "maximum_entropy_error": 3.6172138664881508e-16,
+              "filtered_over_physical_entropy": [
+                0.9570039390104816,
+                0.9570050533826415
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 20.0,
+          "exact_damping": 0.025026964520509433,
+          "samples": [
+            {
+              "central_factors": [
+                0.025026967577666284,
+                4.1517767093465114e-10
+              ],
+              "maximum_entropy_error": 1.0401177219016542e-15,
+              "filtered_over_physical_entropy": [
+                0.5158416640648108,
+                0.5158496329292592
+              ]
+            },
+            {
+              "central_factors": [
+                0.025026965286123692,
+                1.033701518149544e-10
+              ],
+              "maximum_entropy_error": 3.874919575194984e-16,
+              "filtered_over_physical_entropy": [
+                0.515843663067324,
+                0.5158476474991016
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 80.0,
+          "exact_damping": 3.923130110630426e-07,
+          "samples": [
+            {
+              "central_factors": [
+                3.9575629598208526e-07,
+                4.2744199554324587e-10
+              ],
+              "maximum_entropy_error": 9.505992965194408e-16,
+              "filtered_over_physical_entropy": [
+                0.13558077433170743,
+                0.13558328057754065
+              ]
+            },
+            {
+              "central_factors": [
+                3.9317735984096886e-07,
+                1.0731315040417968e-10
+              ],
+              "maximum_entropy_error": 3.182211840369794e-16,
+              "filtered_over_physical_entropy": [
+                0.13558140285170306,
+                0.13558265597449845
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 0.25,
+          "exact_damping": 0.7788007830714049,
+          "samples": [
+            {
+              "central_factors": [
+                7.0032706258880435e-09,
+                0.7788007650278921
+              ],
+              "maximum_entropy_error": 5.264513685246468e-16,
+              "filtered_over_physical_entropy": [
+                0.99481624999306,
+                0.9948317642804256
+              ]
+            },
+            {
+              "central_factors": [
+                1.7475535545764786e-09,
+                0.7788007785599755
+              ],
+              "maximum_entropy_error": 3.8294611813489103e-16,
+              "filtered_over_physical_entropy": [
+                0.9948201338437098,
+                0.994827890983818
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 4.0,
+          "exact_damping": 0.01831563888873418,
+          "samples": [
+            {
+              "central_factors": [
+                7.088425719810688e-08,
+                0.018315708003500616
+              ],
+              "maximum_entropy_error": 5.644579117185063e-16,
+              "filtered_over_physical_entropy": [
+                0.48183617771959847,
+                0.4821913133740122
+              ]
+            },
+            {
+              "central_factors": [
+                1.771729150330107e-08,
+                0.01831565616736529
+              ],
+              "maximum_entropy_error": 8.639746211845627e-16,
+              "filtered_over_physical_entropy": [
+                0.481924995002016,
+                0.4821025628282485
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 20.0,
+          "exact_damping": 2.061153622438558e-09,
+          "samples": [
+            {
+              "central_factors": [
+                1.2070152460993385e-07,
+                7.218075095943824e-08
+              ],
+              "maximum_entropy_error": 8.798207694879601e-16,
+              "filtered_over_physical_entropy": [
+                0.09995760416933641,
+                0.10004238284430758
+              ]
+            },
+            {
+              "central_factors": [
+                3.017474855003746e-08,
+                1.9591092326081787e-08
+              ],
+              "maximum_entropy_error": 4.676057582984359e-16,
+              "filtered_over_physical_entropy": [
+                0.0999788033984823,
+                0.10002119273658243
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 80.0,
+          "exact_damping": 1.804851387845415e-35,
+          "samples": [
+            {
+              "central_factors": [
+                1.229946640706265e-07,
+                7.011895117766635e-08
+              ],
+              "maximum_entropy_error": 5.988131976097853e-16,
+              "filtered_over_physical_entropy": [
+                0.02498940114445135,
+                0.02501059581498648
+              ]
+            },
+            {
+              "central_factors": [
+                3.075586670427577e-08,
+                1.752934970425706e-08
+              ],
+              "maximum_entropy_error": 8.852044139007982e-16,
+              "filtered_over_physical_entropy": [
+                0.024994700952219364,
+                0.025005298287640067
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "independent_mesh_max_absolute_amplitude_difference": 1.811956140684856e-11,
+      "T_SM": 0.3,
+      "relaxation_rates": [
+        3.543705722881327e-21,
+        1.5723816102934244e-20
+      ],
+      "rows": [
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 0.25,
+          "exact_damping": 0.9452149040406613,
+          "samples": [
+            {
+              "central_factors": [
+                0.9452149042441129,
+                -6.5473668427447e-11
+              ],
+              "maximum_entropy_error": 3.6675763055310184e-16,
+              "filtered_over_physical_entropy": [
+                0.9997355233230962,
+                0.9997355561771463
+              ]
+            },
+            {
+              "central_factors": [
+                0.9452149040912746,
+                -1.6735514331370864e-11
+              ],
+              "maximum_entropy_error": 7.154765588199051e-16,
+              "filtered_over_physical_entropy": [
+                0.9997355315778331,
+                0.9997355480048523
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 4.0,
+          "exact_damping": 0.4059653570238973,
+          "samples": [
+            {
+              "central_factors": [
+                0.40596535738563044,
+                7.906574477801463e-11
+              ],
+              "maximum_entropy_error": 5.066974124995827e-16,
+              "filtered_over_physical_entropy": [
+                0.9373596517275481,
+                0.9373648557719866
+              ]
+            },
+            {
+              "central_factors": [
+                0.4059653571163409,
+                1.889284739523572e-11
+              ],
+              "maximum_entropy_error": 1.3647536435947923e-16,
+              "filtered_over_physical_entropy": [
+                0.9373609565247756,
+                0.9373635585465118
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 20.0,
+          "exact_damping": 0.011026682597487906,
+          "samples": [
+            {
+              "central_factors": [
+                0.011026685327689396,
+                3.237399002370209e-10
+              ],
+              "maximum_entropy_error": 4.640236357594324e-16,
+              "filtered_over_physical_entropy": [
+                0.43402619242917034,
+                0.4340388158692449
+              ]
+            },
+            {
+              "central_factors": [
+                0.011026683278916144,
+                8.02592848528619e-11
+              ],
+              "maximum_entropy_error": 9.284495771909553e-16,
+              "filtered_over_physical_entropy": [
+                0.4340293546249484,
+                0.4340356663444283
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 80.0,
+          "exact_damping": 1.4783575869091449e-08,
+          "samples": [
+            {
+              "central_factors": [
+                1.7817919874801243e-08,
+                3.285620979622446e-10
+              ],
+              "maximum_entropy_error": 2.210663081777656e-16,
+              "filtered_over_physical_entropy": [
+                0.11092600104411386,
+                0.11092954435131605
+              ]
+            },
+            {
+              "central_factors": [
+                1.554277714470029e-08,
+                8.155780475566299e-11
+              ],
+              "maximum_entropy_error": 6.748917289753285e-16,
+              "filtered_over_physical_entropy": [
+                0.110926888567361,
+                0.1109286602208193
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 0.25,
+          "exact_damping": 0.7788007830714049,
+          "samples": [
+            {
+              "central_factors": [
+                -2.8913804316832403e-08,
+                0.778800749845487
+              ],
+              "maximum_entropy_error": 3.7905397411649713e-16,
+              "filtered_over_physical_entropy": [
+                0.9948140255936485,
+                0.994833978828343
+              ]
+            },
+            {
+              "central_factors": [
+                -7.228456885355713e-09,
+                0.7788007747635365
+              ],
+              "maximum_entropy_error": 5.115816805262967e-16,
+              "filtered_over_physical_entropy": [
+                0.9948190228777989,
+                0.9948289994868559
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 4.0,
+          "exact_damping": 0.01831563888873418,
+          "samples": [
+            {
+              "central_factors": [
+                1.1585938109287274e-07,
+                0.018315749989711975
+              ],
+              "maximum_entropy_error": 1.1553166872018897e-16,
+              "filtered_over_physical_entropy": [
+                0.4817853396627262,
+                0.4822420865029105
+              ]
+            },
+            {
+              "central_factors": [
+                2.8965787957759497e-08,
+                0.018315666663482954
+              ],
+              "maximum_entropy_error": 9.630393119469098e-16,
+              "filtered_over_physical_entropy": [
+                0.4818995840917516,
+                0.4821279575065159
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 20.0,
+          "exact_damping": 2.061153622438558e-09,
+          "samples": [
+            {
+              "central_factors": [
+                2.522529306017378e-07,
+                1.1436404586651826e-07
+              ],
+              "maximum_entropy_error": 4.337853176954894e-16,
+              "filtered_over_physical_entropy": [
+                0.09994547093527904,
+                0.10005450642804264
+              ]
+            },
+            {
+              "central_factors": [
+                6.306244075127362e-08,
+                3.013656600344518e-08
+              ],
+              "maximum_entropy_error": 3.7126240022553317e-16,
+              "filtered_over_physical_entropy": [
+                0.09997273798770334,
+                0.10002725573478019
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 80.0,
+          "exact_damping": 1.804851387845415e-35,
+          "samples": [
+            {
+              "central_factors": [
+                2.5272668325721855e-07,
+                1.122849100754222e-07
+              ],
+              "maximum_entropy_error": 6.023833153836169e-16,
+              "filtered_over_physical_entropy": [
+                0.024986367835182936,
+                0.02501362671067683
+              ]
+            },
+            {
+              "central_factors": [
+                6.318018005717301e-08,
+                2.807157966675444e-08
+              ],
+              "maximum_entropy_error": 3.7084809522633346e-16,
+              "filtered_over_physical_entropy": [
+                0.024993184599271905,
+                0.025006814037192848
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "independent_mesh_max_absolute_amplitude_difference": 1.0198042410536345e-10,
+      "T_SM": 0.6882487043,
+      "relaxation_rates": [
+        3.802650728044622e-18,
+        9.846651908050199e-16
+      ],
+      "rows": [
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 0.25,
+          "exact_damping": 0.9990349979654365,
+          "samples": [
+            {
+              "central_factors": [
+                0.999034997976727,
+                3.9701078671224605e-12
+              ],
+              "maximum_entropy_error": 1.5886172893176366e-15,
+              "filtered_over_physical_entropy": [
+                0.999999922321105,
+                0.9999999223203189
+              ]
+            },
+            {
+              "central_factors": [
+                0.9990349979657276,
+                -6.896610048742159e-13
+              ],
+              "maximum_entropy_error": 1.4384606406581666e-15,
+              "filtered_over_physical_entropy": [
+                0.999999922322385,
+                0.9999999223220051
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 4.0,
+          "exact_damping": 0.9846712132556491,
+          "samples": [
+            {
+              "central_factors": [
+                0.9846712132382306,
+                2.2236908322938663e-11
+              ],
+              "maximum_entropy_error": 8.470252287229528e-16,
+              "filtered_over_physical_entropy": [
+                0.9999801150519274,
+                0.9999801148531847
+              ]
+            },
+            {
+              "central_factors": [
+                0.9846712132521291,
+                4.629596087522553e-12
+              ],
+              "maximum_entropy_error": 1.0419910431035034e-15,
+              "filtered_over_physical_entropy": [
+                0.9999801150898524,
+                0.9999801149906081
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 20.0,
+          "exact_damping": 0.9256700402096906,
+          "samples": [
+            {
+              "central_factors": [
+                0.9256700398538561,
+                8.478898292616196e-11
+              ],
+              "maximum_entropy_error": 8.438069346806458e-16,
+              "filtered_over_physical_entropy": [
+                0.9995031628065705,
+                0.9995031579935142
+              ]
+            },
+            {
+              "central_factors": [
+                0.925670040121799,
+                2.055000151570829e-11
+              ],
+              "maximum_entropy_error": 6.17498182654915e-16,
+              "filtered_over_physical_entropy": [
+                0.9995031622540772,
+                0.9995031598474359
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 0,
+          "fast_dt_times_rate": 80.0,
+          "exact_damping": 0.734217668226561,
+          "samples": [
+            {
+              "central_factors": [
+                0.7342176672645753,
+                1.7570678055102997e-10
+              ],
+              "maximum_entropy_error": 5.519404666108984e-16,
+              "filtered_over_physical_entropy": [
+                0.9921210609369228,
+                0.992120992807288
+              ]
+            },
+            {
+              "central_factors": [
+                0.7342176679860143,
+                4.3698079875446496e-11
+              ],
+              "maximum_entropy_error": 7.382158116730821e-16,
+              "filtered_over_physical_entropy": [
+                0.9921210493574035,
+                0.9921210152917468
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 0.25,
+          "exact_damping": 0.7788007830714049,
+          "samples": [
+            {
+              "central_factors": [
+                2.1163926528737384e-08,
+                0.77880076906383
+              ],
+              "maximum_entropy_error": 4.986539047492826e-16,
+              "filtered_over_physical_entropy": [
+                0.9948164301128909,
+                0.9948315855342612
+              ]
+            },
+            {
+              "central_factors": [
+                5.29501062604213e-09,
+                0.7788007795702236
+              ],
+              "maximum_entropy_error": 3.652097136491136e-16,
+              "filtered_over_physical_entropy": [
+                0.99482022373155,
+                0.9948278014393924
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 4.0,
+          "exact_damping": 0.01831563888873418,
+          "samples": [
+            {
+              "central_factors": [
+                3.714198354977155e-08,
+                0.018315687000014284
+              ],
+              "maximum_entropy_error": 1.4346555532329744e-15,
+              "filtered_over_physical_entropy": [
+                0.4818402998196906,
+                0.48218722074895376
+              ]
+            },
+            {
+              "central_factors": [
+                9.284887068197492e-09,
+                0.01831565091666876
+              ],
+              "maximum_entropy_error": 8.794085830521777e-16,
+              "filtered_over_physical_entropy": [
+                0.48192705236633876,
+                0.48210051283268274
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 20.0,
+          "exact_damping": 2.061153622438558e-09,
+          "samples": [
+            {
+              "central_factors": [
+                3.543776894252484e-08,
+                4.673343578425196e-08
+              ],
+              "maximum_entropy_error": 1.1622442217845759e-15,
+              "filtered_over_physical_entropy": [
+                0.09995858801781939,
+                0.1000414056589197
+              ]
+            },
+            {
+              "central_factors": [
+                8.863115621996099e-09,
+                1.322960403344475e-08
+              ],
+              "maximum_entropy_error": 1.6317140060445137e-16,
+              "filtered_over_physical_entropy": [
+                0.09997929448977239,
+                0.10002070331106605
+              ]
+            }
+          ]
+        },
+        {
+          "initial_mode": 1,
+          "fast_dt_times_rate": 80.0,
+          "exact_damping": 1.804851387845415e-35,
+          "samples": [
+            {
+              "central_factors": [
+                2.871407150396594e-08,
+                4.4619301322824344e-08
+              ],
+              "maximum_entropy_error": 1.2931824941099738e-15,
+              "filtered_over_physical_entropy": [
+                0.024989647112018395,
+                0.02501035152404422
+              ]
+            },
+            {
+              "central_factors": [
+                7.1779661858059345e-09,
+                1.1154957321398306e-08
+              ],
+              "maximum_entropy_error": 2.411493188434229e-16,
+              "filtered_over_physical_entropy": [
+                0.024994823726408568,
+                0.025005175932606996
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Finite-step modified mobility preserves a discrete entropy identity, but its finite-step entropy is not the unfiltered physical rate. Tests are local, not an expanding history."
+}

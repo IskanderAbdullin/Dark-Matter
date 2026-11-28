@@ -1,0 +1,128 @@
+{
+  "rows": [
+    {
+      "smooth": {
+        "TR": 0.02,
+        "TF": 0.018000000000000002,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.2865480783586022,
+        "max_decay_over_H": 9149059.395277947,
+        "occupation_interpolation_scale": 1.0040392114895393,
+        "first_passage_H_time": 4.072127105435576,
+        "first_cell_direct_H_rate": 0.0,
+        "mc_mean": 4.080923885272926,
+        "mc_se": 0.016240323866099405,
+        "mean_jump_count": 4.8950555555555555
+      },
+      "refined": {
+        "TR": 0.02,
+        "TF": 0.018000000000000002,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.2865480783586022,
+        "max_decay_over_H": 9149059.395277947,
+        "occupation_interpolation_scale": 1.0040392114895393,
+        "first_passage_H_time": 4.071735817034214,
+        "first_cell_direct_H_rate": 0.0,
+        "mc_mean": 4.080149104039752,
+        "mc_se": 0.016437808457076195,
+        "mean_jump_count": 4.893388888888889
+      },
+      "piecewise_constant": {
+        "TR": 0.02,
+        "TF": 0.018000000000000002,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.28337976669375264,
+        "max_decay_over_H": 9129997.80268693,
+        "occupation_interpolation_scale": 0.9998032129361512,
+        "first_passage_H_time": 4.042351617748198,
+        "first_cell_direct_H_rate": 0.0,
+        "mc_mean": 4.056083118112502,
+        "mc_se": 0.016222087051386554,
+        "mean_jump_count": 4.882888888888889
+      }
+    },
+    {
+      "smooth": {
+        "TR": 0.05,
+        "TF": 0.045000000000000005,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.03950056124908817,
+        "max_decay_over_H": 684679124.5964462,
+        "occupation_interpolation_scale": 1.0046919834097352,
+        "first_passage_H_time": 0.02764199425668484,
+        "first_cell_direct_H_rate": 0.0,
+        "mc_mean": 0.02769358734423061,
+        "mc_se": 0.0001309873994740902,
+        "mean_jump_count": 3.2464444444444442
+      },
+      "refined": {
+        "TR": 0.05,
+        "TF": 0.045000000000000005,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.03950056124908817,
+        "max_decay_over_H": 684679124.5964462,
+        "occupation_interpolation_scale": 1.0046919834097352,
+        "first_passage_H_time": 0.02764077270795753,
+        "first_cell_direct_H_rate": 0.0,
+        "mc_mean": 0.02775674126733356,
+        "mc_se": 0.0001315014952474253,
+        "mean_jump_count": 3.245388888888889
+      },
+      "piecewise_constant": {
+        "TR": 0.05,
+        "TF": 0.045000000000000005,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.03898092209687386,
+        "max_decay_over_H": 684700290.9030917,
+        "occupation_interpolation_scale": 0.9995126585728453,
+        "first_passage_H_time": 0.027506730629234137,
+        "first_cell_direct_H_rate": 0.0,
+        "mc_mean": 0.02749081481086011,
+        "mc_se": 0.00013204252810233196,
+        "mean_jump_count": 3.229111111111111
+      }
+    },
+    {
+      "smooth": {
+        "TR": 0.1,
+        "TF": 0.09000000000000001,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.008989426393680862,
+        "max_decay_over_H": 11131793055.876965,
+        "occupation_interpolation_scale": 1.0041537326087986,
+        "first_passage_H_time": 0.0011585936781061356,
+        "first_cell_direct_H_rate": 0.12501151607005193,
+        "mc_mean": 0.0011563269981109934,
+        "mc_se": 6.117755410021868e-06,
+        "mean_jump_count": 2.4797777777777776
+      },
+      "refined": {
+        "TR": 0.1,
+        "TF": 0.09000000000000001,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.008989426393680862,
+        "max_decay_over_H": 11131793055.876965,
+        "occupation_interpolation_scale": 1.0041537326087986,
+        "first_passage_H_time": 0.0011586736765060862,
+        "first_cell_direct_H_rate": 0.10129594802683972,
+        "mc_mean": 0.0011571201162383347,
+        "mc_se": 6.177070830902772e-06,
+        "mean_jump_count": 2.480888888888889
+      },
+      "piecewise_constant": {
+        "TR": 0.1,
+        "TF": 0.09000000000000001,
+        "has_fast_decay": true,
+        "fast_threshold_p_over_T": 0.00904072619530123,
+        "max_decay_over_H": 11137063496.193344,
+        "occupation_interpolation_scale": 1.000479714459066,
+        "first_passage_H_time": 0.0011602732327713327,
+        "first_cell_direct_H_rate": 0.10592707683287095,
+        "mc_mean": 0.001158637540692113,
+        "mc_se": 6.167478258848659e-06,
+        "mean_jump_count": 2.4827222222222223
+      }
+    }
+  ],
+  "scope": "Tag-particle diagnostic in the fixed collisionless injection spectrum; no scalar Bose effects, no evolving bath, no thermalization or actual late abundance claim."
+}

@@ -1,0 +1,102 @@
+{
+  "scope": "Only number-changing route for stable light fermions is light-antilight to scalar pair and its inverse, optionally also to and from three charged leptons with a fixed vacuum vector width. Elastic scattering and particle momenta need not be bounded, but the scalar occupation has an assumed uniform upper cap at all later times. Photon-only expansion floor assumes T_gamma>=anchor/b; the chosen normalizer uses conserved visible entropy. A prior or later nonstandard cosmology, extra loss channels, or unbounded occupations are not excluded or solved here.",
+  "invariant_vacuum_upper_GeVminus2": 3.978873577297384e-12,
+  "vector_width_uniform_upper_GeVminus2": 7.778375136198458e-10,
+  "sampled_max_over_analytic_upper": 0.6689964047931037,
+  "anchors": [
+    {
+      "T_visible_GeV": 0.001999999841639969,
+      "initial_Y_light": 3.197856386027043e-05,
+      "initial_Omega_h2_if_counts_freeze": 176.47583896543,
+      "exposure_coefficient_per_Bose_multiplier": 3.1015821401595813,
+      "uniform_vector_exposure_coefficient": 606.3341529509308,
+      "necessary_Bose_cap_for_floor_to_drop_to_point12": 20.767705593893833,
+      "with_three_leptons_necessary_Bose_cap_for_bound_to_drop_to_point12": 15.683558293855185,
+      "controls": [
+        {
+          "scalar_occupation_cap": 0.5,
+          "retained_light_lower_fraction": 0.12533590311311055,
+          "source_referenced_Omega_h2_lower": 22.118758654376034,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.28727362351130237
+        },
+        {
+          "scalar_occupation_cap": 1.0,
+          "retained_light_lower_fraction": 0.07459163748500479,
+          "source_referenced_Omega_h2_lower": 13.163621804971438,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.2847576432880407
+        },
+        {
+          "scalar_occupation_cap": 4.0,
+          "retained_light_lower_fraction": 0.012732438056821949,
+          "source_referenced_Omega_h2_lower": 2.2469676881530227,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.25767646983983894
+        },
+        {
+          "scalar_occupation_cap": 10.0,
+          "retained_light_lower_fraction": 0.0026575146188965943,
+          "source_referenced_Omega_h2_lower": 0.46898712193267145,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.1795962169297444
+        },
+        {
+          "scalar_occupation_cap": 30.0,
+          "retained_light_lower_fraction": 0.00033538809557832536,
+          "source_referenced_Omega_h2_lower": 0.05918789554620279,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.04918563893611761
+        },
+        {
+          "scalar_occupation_cap": 100.0,
+          "retained_light_lower_fraction": 3.160532342963474e-05,
+          "source_referenced_Omega_h2_lower": 0.005577575968018552,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.0054727004905263275
+        }
+      ]
+    },
+    {
+      "T_visible_GeV": 8.000008136535843e-05,
+      "initial_Y_light": 3.0363864982806685e-05,
+      "initial_Omega_h2_if_counts_freeze": 167.56501544245825,
+      "exposure_coefficient_per_Bose_multiplier": 0.047373345132894144,
+      "uniform_vector_exposure_coefficient": 9.261104750921596,
+      "necessary_Bose_cap_for_floor_to_drop_to_point12": 170.6241750696117,
+      "with_three_leptons_necessary_Bose_cap_for_bound_to_drop_to_point12": 170.05369209358435,
+      "controls": [
+        {
+          "scalar_occupation_cap": 0.5,
+          "retained_light_lower_fraction": 0.9036770402843578,
+          "source_referenced_Omega_h2_lower": 151.42465721024337,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 16.162224972766687
+        },
+        {
+          "scalar_occupation_cap": 1.0,
+          "retained_light_lower_fraction": 0.8406940436718586,
+          "source_referenced_Omega_h2_lower": 140.87091041025766,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 16.03401196129987
+        },
+        {
+          "scalar_occupation_cap": 4.0,
+          "retained_light_lower_fraction": 0.4578055234025929,
+          "source_referenced_Omega_h2_lower": 76.71218959859816,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 14.640331797717222
+        },
+        {
+          "scalar_occupation_cap": 10.0,
+          "retained_light_lower_fraction": 0.14854041011846042,
+          "source_referenced_Omega_h2_lower": 24.890176115328902,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 10.477214214677668
+        },
+        {
+          "scalar_occupation_cap": 30.0,
+          "retained_light_lower_fraction": 0.0214934580262228,
+          "source_referenced_Omega_h2_lower": 3.6015516260758518,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 3.003662996336072
+        },
+        {
+          "scalar_occupation_cap": 100.0,
+          "retained_light_lower_fraction": 0.0020650256176921325,
+          "source_referenced_Omega_h2_lower": 0.3460260495176541,
+          "with_three_leptons_width_uniform_Omega_h2_lower": 0.3395326843477995
+        }
+      ]
+    }
+  ]
+}

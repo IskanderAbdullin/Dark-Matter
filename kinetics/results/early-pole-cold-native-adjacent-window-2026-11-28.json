@@ -1,0 +1,175 @@
+{
+  "native_mass_mean_speed": {
+    "forward_number": {
+      "shared_mass_speed_difference": [
+        -0.00038770719159624423,
+        -1.6123125862395858e-05
+      ],
+      "native_mass_speed_difference": [
+        -0.00036702089301917686,
+        5.315794591041062e-06
+      ],
+      "third_mass_correction_only": [
+        2.068629857706728e-05,
+        2.143892045343683e-05
+      ],
+      "signed_order": [
+        "third_lower",
+        "unresolved"
+      ]
+    },
+    "inverse_number": {
+      "shared_mass_speed_difference": [
+        -0.0003878569480349585,
+        -1.6039940303537968e-05
+      ],
+      "native_mass_speed_difference": [
+        -0.0003671147648838125,
+        5.455919681381961e-06
+      ],
+      "third_mass_correction_only": [
+        2.074218315114575e-05,
+        2.149585998491968e-05
+      ],
+      "signed_order": [
+        "third_lower",
+        "unresolved"
+      ]
+    },
+    "forward_excess": {
+      "shared_mass_speed_difference": [
+        -0.00041387430077625357,
+        -3.599522075408649e-05
+      ],
+      "native_mass_speed_difference": [
+        -0.000391794972799433,
+        -1.3135398260605106e-05
+      ],
+      "third_mass_correction_only": [
+        2.2079327976820673e-05,
+        2.2859822493481826e-05
+      ],
+      "signed_order": [
+        "third_lower",
+        "third_lower"
+      ]
+    }
+  },
+  "accepted_prior_sha256": "90a58669c6781a78feba04c90f2b51fe1c094018437b8fe8f293971033f1578a",
+  "retained_plus_sideband_q": [
+    1e-06,
+    1.8e-05
+  ],
+  "new_sideband_q": [
+    1.5e-05,
+    1.8e-05
+  ],
+  "actual_native_momentum_results": {
+    "forward_number": {
+      "allowance_q": 3.2437918982472334e-07,
+      "minimum_q_bracket": [
+        1.1755218396542123e-07,
+        1.1755218947235134e-07
+      ],
+      "sharp_upper_q": 4.024388615754562e-07,
+      "minimum_TV_bracket": [
+        0.26233428628898137,
+        0.262334286289024
+      ],
+      "mean_rms_speed_shift": [
+        [
+          -3.3845455793933246e-07,
+          -1.4075368114609497e-08
+        ],
+        [
+          -3.4570679924402863e-07,
+          -2.4645187727536355e-08
+        ],
+        [
+          -0.00038770719159624423,
+          -1.6123125862395858e-05
+        ]
+      ],
+      "signed_order": [
+        "third_lower",
+        "third_lower",
+        "third_lower"
+      ],
+      "sideband_fraction_by_chart": [
+        2.2817875795941795e-07,
+        6.592958164553509e-07
+      ]
+    },
+    "inverse_number": {
+      "allowance_q": 3.2458260093693646e-07,
+      "minimum_q_bracket": [
+        1.1799317616168392e-07,
+        1.1799318240910023e-07
+      ],
+      "sharp_upper_q": 4.03318345112294e-07,
+      "minimum_TV_bracket": [
+        0.2640742576228695,
+        0.26407425762291203
+      ],
+      "mean_rms_speed_shift": [
+        [
+          -3.385853176134094e-07,
+          -1.4002716676472592e-08
+        ],
+        [
+          -3.453057463740203e-07,
+          -2.3940475429966064e-08
+        ],
+        [
+          -0.0003878569480349585,
+          -1.6039940303537968e-05
+        ]
+      ],
+      "signed_order": [
+        "third_lower",
+        "third_lower",
+        "third_lower"
+      ],
+      "sideband_fraction_by_chart": [
+        3.0430263725095286e-07,
+        9.09478014392367e-07
+      ]
+    },
+    "forward_excess": {
+      "allowance_q": 3.2987616070744264e-07,
+      "minimum_q_bracket": [
+        1.4099836735779162e-07,
+        1.409983753437629e-07
+      ],
+      "sharp_upper_q": 4.401054071437916e-07,
+      "minimum_TV_bracket": [
+        0.31493704178888493,
+        0.31493704178892756
+      ],
+      "mean_rms_speed_shift": [
+        [
+          -3.6129835120681145e-07,
+          -3.142219049936875e-08
+        ],
+        [
+          -3.5633782005961064e-07,
+          -2.68434455709911e-08
+        ],
+        [
+          -0.00041387430077625357,
+          -3.599522075408649e-05
+        ]
+      ],
+      "signed_order": [
+        "third_lower",
+        "third_lower",
+        "third_lower"
+      ],
+      "sideband_fraction_by_chart": [
+        4.028099790783365e-06,
+        1.2839196202103062e-05
+      ]
+    }
+  },
+  "scope": "Two directly integrated adjacent D2 intervals on exactly the previous held states, without intra-panel interpolation or extrapolating past the new upper boundary."
+}

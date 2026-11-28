@@ -1,0 +1,327 @@
+{
+  "equal_number_kinetic_energy_ratio_saturated_over_flat": 0.5555555588615078,
+  "cases": 40,
+  "max_relative_number_residual": 1.7974767061222848e-11,
+  "samples": [
+    {
+      "statistics": "BE",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "thermal-inversion",
+      "target": 120000000624.75003,
+      "relative_number_residual": 2.5431314971764874e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "thermal-inversion",
+      "target": 240000001249.50006,
+      "relative_number_residual": 1.2715657485882437e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 240000001249.5001,
+      "relative_number_residual": 1.2715657485882437e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 2400000012495.0005,
+      "relative_number_residual": 2.0345051977411904e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "thermal-inversion",
+      "target": 1e-13,
+      "relative_number_residual": 1.135959703518257e-15
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "thermal-inversion",
+      "target": 0.2,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "thermal-inversion",
+      "target": 0.999999999999,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0,
+      "qhi": 1e-07,
+      "kind": "exact-boundary",
+      "target": 1.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "thermal-inversion",
+      "target": 108727.12000670054,
+      "relative_number_residual": 1.3383887320357661e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "thermal-inversion",
+      "target": 217454.24001340108,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 217454.2400134011,
+      "relative_number_residual": 1.338388732035766e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 2174542.4001340107,
+      "relative_number_residual": 2.141421971257226e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "thermal-inversion",
+      "target": 1e-13,
+      "relative_number_residual": 1.0097419586828951e-15
+    },
+    {
+      "statistics": "FD",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "thermal-inversion",
+      "target": 0.2,
+      "relative_number_residual": 1.3877787807814457e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "thermal-inversion",
+      "target": 0.999999999999,
+      "relative_number_residual": 1.1102230246262669e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 1e-05,
+      "qhi": 0.0001,
+      "kind": "exact-boundary",
+      "target": 1.0,
+      "relative_number_residual": 2.220446049250313e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "thermal-inversion",
+      "target": 7.313793182640019,
+      "relative_number_residual": 1.7974767061222848e-11
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "thermal-inversion",
+      "target": 14.627586365280038,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 14.62758636528004,
+      "relative_number_residual": 1.214388208034513e-16
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 146.27586365280038,
+      "relative_number_residual": 1.943021132855221e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "thermal-inversion",
+      "target": 1e-13,
+      "relative_number_residual": 7.573064690121713e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "thermal-inversion",
+      "target": 0.2,
+      "relative_number_residual": 1.3877787807814457e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "thermal-inversion",
+      "target": 0.999999999999,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.0001,
+      "qhi": 0.1,
+      "kind": "exact-boundary",
+      "target": 1.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "thermal-inversion",
+      "target": 0.085439393602029,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "thermal-inversion",
+      "target": 0.170878787204058,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 0.17087878720405802,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "BE",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "artificial-saturated-shape-rescaled",
+      "target": 1.70878787204058,
+      "relative_number_residual": 1.2994275565630784e-16
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "exact-boundary",
+      "target": 0.0,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "thermal-inversion",
+      "target": 1e-13,
+      "relative_number_residual": 2.5243548967072378e-15
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "thermal-inversion",
+      "target": 0.2,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "thermal-inversion",
+      "target": 0.999999999999,
+      "relative_number_residual": 0.0
+    },
+    {
+      "statistics": "FD",
+      "qlo": 0.1,
+      "qhi": 3.0,
+      "kind": "exact-boundary",
+      "target": 1.0,
+      "relative_number_residual": 0.0
+    }
+  ]
+}

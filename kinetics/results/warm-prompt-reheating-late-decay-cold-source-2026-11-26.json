@@ -1,0 +1,48 @@
+{
+  "scope": "One collisionless scalar per unpolarized vacuum heavy decay after the modeled 80 keV anchor; no angular Bose enhancement, final-state blocking, late cooling, inverse prompt decays, additional heavy sources or coherent field. The bound assumes the previously allowed lepton energy and dark recycling.",
+  "T_visible_GeV": 8.000008136535843e-05,
+  "energy_budget_GeV4": 6.322329527254005e-19,
+  "rest_frame_scalar_E_GeV": 0.04800000000003699,
+  "admitted_heavy_yield_upper": 6.619110952328001e-06,
+  "granted_initial_heavy_yield": 6.549448960676257e-06,
+  "regeneration_yield_upper": 6.966195874353595e-08,
+  "direct_visible_heavy_yield_upper": 3.2908207330404024e-14,
+  "examples": [
+    {
+      "q_cut_over_Tgamma0": 0.01,
+      "lab_p_cut_GeV": 8.24175260024343e-07,
+      "min_parent_energy_GeV": 2904.118210886039,
+      "one_decay_cold_probability_upper": 7.370495434976043e-11,
+      "sampled_max_one_decay_probability": 7.369233771504065e-11,
+      "integrated_cold_scalar_yield_upper": 4.878612705773345e-16,
+      "ratio_to_reference_half_abundance": 1.9294780706866462e-13
+    },
+    {
+      "q_cut_over_Tgamma0": 0.1,
+      "lab_p_cut_GeV": 8.24175260024343e-06,
+      "min_parent_energy_GeV": 291.1922816991121,
+      "one_decay_cold_probability_upper": 7.370495488757004e-09,
+      "sampled_max_one_decay_probability": 7.3693495266772235e-09,
+      "integrated_cold_scalar_yield_upper": 4.8786127413715605e-14,
+      "ratio_to_reference_half_abundance": 1.9294780847656437e-11
+    },
+    {
+      "q_cut_over_Tgamma0": 1.0,
+      "lab_p_cut_GeV": 8.24175260024343e-05,
+      "min_parent_energy_GeV": 29.120097857735136,
+      "one_decay_cold_probability_upper": 7.370500866861104e-07,
+      "sampled_max_one_decay_probability": 7.365872736137978e-07,
+      "integrated_cold_scalar_yield_upper": 4.878616301198336e-12,
+      "ratio_to_reference_half_abundance": 1.929479492667462e-09
+    },
+    {
+      "q_cut_over_Tgamma0": 10.0,
+      "lab_p_cut_GeV": 0.0008241752600243429,
+      "min_parent_energy_GeV": 2.9128605012478794,
+      "one_decay_cold_probability_upper": 7.371038756556305e-05,
+      "sampled_max_one_decay_probability": 7.367258228567185e-05,
+      "integrated_cold_scalar_yield_upper": 4.878972336355601e-10,
+      "ratio_to_reference_half_abundance": 1.929620303604867e-07
+    }
+  ]
+}

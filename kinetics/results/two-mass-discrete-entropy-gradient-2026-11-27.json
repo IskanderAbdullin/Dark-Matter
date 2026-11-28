@@ -1,0 +1,76 @@
+{
+  "scope": "Manufactured fixed-chart entropy gradient and time integration, no physical dynamics.",
+  "cases": [
+    {
+      "title": "ordinary",
+      "last_mesh_order": 2.000150210792154,
+      "mesh": [
+        {
+          "steps": 8,
+          "maximum_count_error": 0.0008542377395902832,
+          "maximum_entropy_identity_defect": 8.088148206741863e-17,
+          "maximum_newton_iterations": 3
+        },
+        {
+          "steps": 16,
+          "maximum_count_error": 0.00021321310569282783,
+          "maximum_entropy_identity_defect": 1.8976324883947736e-13,
+          "maximum_newton_iterations": 3
+        },
+        {
+          "steps": 32,
+          "maximum_count_error": 5.3281281134279234e-05,
+          "maximum_entropy_identity_defect": 5.921012175024755e-13,
+          "maximum_newton_iterations": 2
+        },
+        {
+          "steps": 64,
+          "maximum_count_error": 1.3318933468168279e-05,
+          "maximum_entropy_identity_defect": 6.370148549275645e-15,
+          "maximum_newton_iterations": 2
+        }
+      ],
+      "stiff_solver": "backward_fallback",
+      "stiff_substeps": [
+        500.0
+      ],
+      "stiff_entropy_increase": 4.7575624306011814
+    },
+    {
+      "title": "near-rest",
+      "last_mesh_order": 1.9995404121251663,
+      "mesh": [
+        {
+          "steps": 8,
+          "maximum_count_error": 0.0006494748970248687,
+          "maximum_entropy_identity_defect": 2.0014812984731458e-14,
+          "maximum_newton_iterations": 3
+        },
+        {
+          "steps": 16,
+          "maximum_count_error": 0.0001632424669793661,
+          "maximum_entropy_identity_defect": 1.6314294597733923e-13,
+          "maximum_newton_iterations": 3
+        },
+        {
+          "steps": 32,
+          "maximum_count_error": 4.086312362183356e-05,
+          "maximum_entropy_identity_defect": 2.004654275423231e-13,
+          "maximum_newton_iterations": 3
+        },
+        {
+          "steps": 64,
+          "maximum_count_error": 1.0219035783873184e-05,
+          "maximum_entropy_identity_defect": 5.062200252080665e-14,
+          "maximum_newton_iterations": 2
+        }
+      ],
+      "stiff_solver": "backward_fallback",
+      "stiff_substeps": [
+        250.0,
+        250.0
+      ],
+      "stiff_entropy_increase": 4.591047531223425
+    }
+  ]
+}

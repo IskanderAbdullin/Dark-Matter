@@ -1,0 +1,71 @@
+{
+  "scope": "Same physical q64 endpoint, same original operators. Guiding interpolation affects only seeds. Observed finite-step error ratio, not an exact continuum result.",
+  "field_order": [
+    "number",
+    "full_energy"
+  ],
+  "controls": [
+    {
+      "steps": 2,
+      "temperature_GeV": 0.010136743377811933,
+      "snapshot_sha256": "dcf83e8bb46b68cceba4e475002b3857738bb3aa9d8557ebec491436a3b2f447",
+      "endpoint_retained_number": [
+        5.471213806586582e-09,
+        1.1883586448522212e-08
+      ],
+      "final_trial": 4
+    },
+    {
+      "steps": 4,
+      "temperature_GeV": 0.010136743377811942,
+      "snapshot_sha256": "edc29f4660161f5f4a9377b2f0127f702c5e1418c1e29c3a02e52408e941cf98",
+      "endpoint_retained_number": [
+        5.471294114545231e-09,
+        1.1883506140563588e-08
+      ],
+      "final_trial": 3
+    },
+    {
+      "steps": 8,
+      "temperature_GeV": 0.010136743377811933,
+      "snapshot_sha256": "8c2342e912b4fbeed439a584a8f74f5b206a74ba4fe21d6c53f0d138264494bf",
+      "endpoint_retained_number": [
+        5.471341767930044e-09,
+        1.1883458487178522e-08
+      ],
+      "final_trial": 3
+    }
+  ],
+  "L1_changes": [
+    [
+      [
+        0.0004878829362840344,
+        0.00029798414000641493
+      ],
+      [
+        0.00014826757936019762,
+        0.00022291645030029773
+      ]
+    ],
+    [
+      [
+        0.0002471938011255983,
+        0.00015044227968552494
+      ],
+      [
+        7.481382530073387e-05,
+        0.00011258413633311445
+      ]
+    ]
+  ],
+  "consecutive_difference_ratio": [
+    [
+      1.9736859664864443,
+      1.9807207164721394
+    ],
+    [
+      1.9818205894992942,
+      1.9799987596896558
+    ]
+  ]
+}

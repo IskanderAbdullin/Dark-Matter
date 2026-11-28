@@ -1,0 +1,71 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "archived_bracket": [
+        0.96,
+        0.99
+      ],
+      "maximum_method_defect": 2.012250366334456e-10,
+      "x": 0.9601145252728931,
+      "T_SM": 0.3692812783215377,
+      "eta": -0.07593584341093142,
+      "T_dark": 0.3645247782238965,
+      "rate_eta_bracket": [
+        -2.1927287817691266e-05,
+        0.004773988416846453
+      ],
+      "eta_derivative_pieces": [
+        0.0018078049687152377,
+        0.09858070787163056,
+        -0.10038851284034722
+      ],
+      "normalized_count_source_per_log_a": 0.04017922112540975,
+      "normalized_entropy_source_per_log_a": 6.85789588204515e-05,
+      "ledger_defects": [
+        1.4565264463282159e-08,
+        8.875338242120279e-09,
+        4.418687638008123e-14
+      ]
+    },
+    {
+      "operator": "combined",
+      "archived_bracket": [
+        0.99,
+        1.02
+      ],
+      "maximum_method_defect": 2.555173517215792e-09,
+      "x": 0.9905445078669136,
+      "T_SM": 0.3594092492500395,
+      "eta": -0.0758983393185,
+      "T_dark": 0.35375788532435837,
+      "rate_eta_bracket": [
+        -6.139270548678744e-05,
+        0.0026493940090650675
+      ],
+      "eta_derivative_pieces": [
+        0.001919183463602,
+        0.09466611152417127,
+        -0.09658529498777124
+      ],
+      "normalized_count_source_per_log_a": 0.038634632624250466,
+      "normalized_entropy_source_per_log_a": 7.30775303428154e-05,
+      "ledger_defects": [
+        2.1932485956105115e-09,
+        1.5780059481329545e-09,
+        4.0648040489088544e-14
+      ]
+    }
+  ],
+  "eta_piece_fields": [
+    "adiabatic_expansion",
+    "number_exchange",
+    "energy_exchange"
+  ],
+  "input_sha256": [
+    "2b7ec60b6632a1c2ff45f0be5b8b877f9c4764aabfc25680e9d55a3ec4f69470",
+    "e83a57a475ace1b1e361d5bcf822614c0e5da16e19b74dcf2791edc309e62cbf"
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Minimum of mu_dark/T_dark on restricted direct histories. Not a zero net source or a physical freeze-out label."
+}

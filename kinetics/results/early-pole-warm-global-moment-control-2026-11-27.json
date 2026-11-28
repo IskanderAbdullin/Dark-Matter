@@ -1,0 +1,164 @@
+{
+  "steps": {
+    "grid": "fine",
+    "projection": "steps",
+    "order": 12,
+    "marker_nodes": [
+      0.12000292989339252,
+      0.17312821566578732,
+      0.2502281475644967,
+      0.36166332329348394,
+      0.5227244044636229,
+      0.7555115086970491,
+      1.0919666939204746,
+      1.5782569119138967,
+      2.2811088413887064,
+      3.296964839489703,
+      4.765216352505949
+    ],
+    "marker_warm_energy": 1.7818815109610846e-07,
+    "marker_inverse_energy_moment": 2.7427176944771286e-07,
+    "marker_pole": 0.0008721874799955858,
+    "marker_cold_rate": 0.1177324264270372,
+    "marker_warm_rate": 2.748309241804533e-07,
+    "cases": [
+      {
+        "shape": "volume_uniform",
+        "partition_count_error": 5.293955920339377e-23,
+        "warm_energy_difference_at_fixed_pole": 6.993075579015443e-09,
+        "warm_inverse_energy_difference_at_fixed_pole": -7.511555846267251e-09,
+        "scalar_pole": 0.0008721874798857525,
+        "pole_displacement": -1.098332579399508e-13,
+        "scalar_field_energy_difference": 6.993075579014434e-09,
+        "cold_rate_difference": 2.7520624668042615e-11,
+        "warm_rate_and_energy": [
+          2.614457123551481e-07,
+          2.6905143200377596e-07
+        ]
+      },
+      {
+        "shape": "energy_matched",
+        "partition_count_error": 0.0,
+        "warm_energy_difference_at_fixed_pole": -6.203854594147708e-25,
+        "warm_inverse_energy_difference_at_fixed_pole": 3.0509553375955037e-09,
+        "scalar_pole": 0.0008721874800401965,
+        "pole_displacement": 4.4610691009305814e-14,
+        "scalar_field_energy_difference": -1.6940658945086007e-21,
+        "cold_rate_difference": -1.2567516471939655e-11,
+        "warm_rate_and_energy": [
+          2.6144603172492135e-07,
+          2.6905147514133205e-07
+        ]
+      },
+      {
+        "shape": "global_nej_matched",
+        "partition_count_error": 0.0,
+        "warm_energy_difference_at_fixed_pole": -6.203854594147708e-25,
+        "warm_inverse_energy_difference_at_fixed_pole": 3.0509553375955037e-09,
+        "scalar_pole": 0.0008721874799955858,
+        "pole_displacement": 0.0,
+        "scalar_field_energy_difference": 0.0,
+        "cold_rate_difference": 0.0,
+        "warm_rate_and_energy": [
+          2.6144603172492844e-07,
+          2.690514751413396e-07
+        ],
+        "outer_adjustment_bins": 30,
+        "maximum_relative_occupation_adjustment": 0.00035601831513254413,
+        "total_abs_count_moved": 5.468942389884367e-12,
+        "adjusted_other_marker_moments": [
+          -5.871849242380042e-28,
+          6.203888034069332e-25,
+          -3.0509553375955037e-09
+        ],
+        "moment_defect": [
+          -5.871849242380042e-28,
+          3.3439921624395576e-30,
+          0.0
+        ]
+      }
+    ],
+    "scope": "Warm shell reconstruction controls; fixed hard snapshots, no trajectory."
+  },
+  "cell-conservative": {
+    "grid": "fine",
+    "projection": "cell-conservative",
+    "order": 12,
+    "marker_nodes": [
+      0.12000292989339252,
+      0.17312821566578732,
+      0.2502281475644967,
+      0.36166332329348394,
+      0.5227244044636229,
+      0.7555115086970491,
+      1.0919666939204746,
+      1.5782569119138967,
+      2.2811088413887064,
+      3.296964839489703,
+      4.765216352505949
+    ],
+    "marker_warm_energy": 1.7818815109606246e-07,
+    "marker_inverse_energy_moment": 2.7427176944867885e-07,
+    "marker_pole": 0.0008721872875913467,
+    "marker_cold_rate": 0.11754952860201917,
+    "marker_warm_rate": 2.761075621533916e-07,
+    "cases": [
+      {
+        "shape": "volume_uniform",
+        "partition_count_error": 5.293955920339377e-23,
+        "warm_energy_difference_at_fixed_pole": 6.993075579016702e-09,
+        "warm_inverse_energy_difference_at_fixed_pole": -7.511555846314156e-09,
+        "scalar_pole": 0.0008721872874815134,
+        "pole_displacement": -1.0983336636016805e-13,
+        "scalar_field_energy_difference": 6.993075579019516e-09,
+        "cold_rate_difference": 2.9515362376386634e-11,
+        "warm_rate_and_energy": [
+          2.62667775408563e-07,
+          2.71283032244769e-07
+        ]
+      },
+      {
+        "shape": "energy_matched",
+        "partition_count_error": 2.6469779601696886e-23,
+        "warm_energy_difference_at_fixed_pole": -1.8611563782443123e-24,
+        "warm_inverse_energy_difference_at_fixed_pole": 3.050955337650349e-09,
+        "scalar_pole": 0.0008721872876359573,
+        "pole_displacement": 4.4610582589088565e-14,
+        "scalar_field_energy_difference": 0.0,
+        "cold_rate_difference": -1.3227752226896428e-11,
+        "warm_rate_and_energy": [
+          2.626680951095944e-07,
+          2.7128307543280653e-07
+        ]
+      },
+      {
+        "shape": "global_nej_matched",
+        "partition_count_error": 2.6469779601696886e-23,
+        "warm_energy_difference_at_fixed_pole": -1.8611563782443123e-24,
+        "warm_inverse_energy_difference_at_fixed_pole": 3.050955337650349e-09,
+        "scalar_pole": 0.0008721872875913466,
+        "pole_displacement": -1.0842021724855044e-19,
+        "scalar_field_energy_difference": 0.0,
+        "cold_rate_difference": 0.0,
+        "warm_rate_and_energy": [
+          2.6266809510960176e-07,
+          2.7128307543281405e-07
+        ],
+        "outer_adjustment_bins": 30,
+        "maximum_relative_occupation_adjustment": 0.00035601823458733084,
+        "total_abs_count_moved": 5.468941162821595e-12,
+        "adjusted_other_marker_moments": [
+          3.4991364120746436e-28,
+          1.8613254088340324e-24,
+          -3.0509553376503483e-09
+        ],
+        "moment_defect": [
+          3.4991364120746436e-28,
+          1.6903058972010683e-28,
+          8.271806125530277e-25
+        ]
+      }
+    ],
+    "scope": "Warm shell reconstruction controls; fixed hard snapshots, no trajectory."
+  }
+}

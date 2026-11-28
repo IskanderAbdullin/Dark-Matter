@@ -1,0 +1,607 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "spectrum_sha256": [
+    "c71faab7e14e6c4082902ebde060cd137c248c10132d0c5c7910409c1561f113",
+    "cb42542796b6fb1b6edff026344ebbad7a5deb87141301c59fefd30ef5a341e4",
+    "bbda4d4c3651bf7d3256950227f8fcdcc72629004791c19ecfb42750351e7bb4"
+  ],
+  "z": 0.0,
+  "results": [
+    {
+      "k_Mpc_minus1": 0.6736,
+      "k_h_per_Mpc": 1.0,
+      "tau_final_Mpc": 14174.560219749997,
+      "initial_k_tau": 0.07001335544491183,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "a3abf11c8d58bc638632e4908dc478091ab61d69b8c57236dfd88a75f267fc7e",
+      "original_native_metric_sha256": "a3abf11c8d58bc638632e4908dc478091ab61d69b8c57236dfd88a75f267fc7e",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 1.1031142665984817e-09,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.9606043757147759,
+              0.9606043757149402,
+              0.9606043787603067
+            ],
+            [
+              0.9641305440582046,
+              0.9641305440590543,
+              0.9641305426208608
+            ],
+            [
+              0.9605767922964068,
+              0.9605767922965656,
+              0.9605767953770046
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 8.496536807456323e-13,
+          "summed_prompt_recoil_with_full_IC": 0.9606043757185507,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.1453252979460927e-10,
+            9.557789748283373e-11,
+            1.1468135077948958e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2033187857861198,
+            -1.2033154396277663,
+            -1.203318810505902
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.960604374611943,
+              0.9606043746118259,
+              0.9606043776574741
+            ],
+            [
+              0.9641305438224437,
+              0.9641305438222102,
+              0.9641305423850995
+            ],
+            [
+              0.960576791198493,
+              0.9605767911983769,
+              0.9605767942790917
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 2.334799020786704e-13,
+          "summed_prompt_recoil_with_full_IC": 0.9606043746273288,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.1453252997161957e-10,
+            9.557789748325357e-11,
+            1.1468135095941826e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2033187848923217,
+            -1.2033154394974754,
+            -1.2033188096311942
+          ]
+        }
+      ]
+    },
+    {
+      "k_Mpc_minus1": 1.3472,
+      "k_h_per_Mpc": 2.0,
+      "tau_final_Mpc": 14174.56021975,
+      "initial_k_tau": 0.07000667838118009,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "b172cfe4ed654e3a065f3740dfa6649676f4befc3641bdc4b79c0ddf7acaf3e6",
+      "original_native_metric_sha256": "b172cfe4ed654e3a065f3740dfa6649676f4befc3641bdc4b79c0ddf7acaf3e6",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 9.664742339765553e-10,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.9026307927726245,
+              0.9026307927725837,
+              0.9026307927620912
+            ],
+            [
+              0.9094415708417772,
+              0.9094415708417505,
+              0.9094415711347517
+            ],
+            [
+              0.9025775155250128,
+              0.9025775155249721,
+              0.9025775155121052
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 4.0745185003743245e-14,
+          "summed_prompt_recoil_with_full_IC": 0.9026307927790563,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.1191025996043256e-10,
+            9.474766056561695e-11,
+            1.1204553523222526e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2033197859893463,
+            -1.2033189517342986,
+            -1.20331979215314
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.9026307929155678,
+              0.9026307929155797,
+              0.9026307929050345
+            ],
+            [
+              0.9094415718082228,
+              0.9094415718082247,
+              0.9094415721011975
+            ],
+            [
+              0.902577515671928,
+              0.9025775156719398,
+              0.9025775156590203
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.1879386363489175e-14,
+          "summed_prompt_recoil_with_full_IC": 0.9026307929323325,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.1191026010000253e-10,
+            9.474766056682987e-11,
+            1.1204553537446624e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2033197850955382,
+            -1.2033189516040075,
+            -1.203319791278424
+          ]
+        }
+      ]
+    },
+    {
+      "k_Mpc_minus1": 2.6944,
+      "k_h_per_Mpc": 4.0,
+      "tau_final_Mpc": 14174.56021975,
+      "initial_k_tau": 0.07000333984759655,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "96f4355852dc833610dbe64ebdb5784f93944482578e21cf1e40cdd68741678e",
+      "original_native_metric_sha256": "96f4355852dc833610dbe64ebdb5784f93944482578e21cf1e40cdd68741678e",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 4.3876313693402835e-10,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.7875415066044497,
+              0.7875415066044551,
+              0.787541506591463
+            ],
+            [
+              0.7973352276136706,
+              0.7973352276136672,
+              0.797335227613278
+            ],
+            [
+              0.7874648953131839,
+              0.7874648953131895,
+              0.7874648953000986
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 5.662137425588298e-15,
+          "summed_prompt_recoil_with_full_IC": 0.787541506613239,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.074710687723193e-10,
+            9.329753434956412e-11,
+            1.0758333082295896e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.203300473057537,
+            -1.2033002647527355,
+            -1.2033004745973215
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.7875415061656913,
+              0.787541506165692,
+              0.7875415061527046
+            ],
+            [
+              0.7973352278751213,
+              0.7973352278751193,
+              0.7973352278747292
+            ],
+            [
+              0.7874648948769972,
+              0.7874648948769978,
+              0.7874648948639119
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.9984014443252818e-15,
+          "summed_prompt_recoil_with_full_IC": 0.787541506182467,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.074710688579558e-10,
+            9.329753435112907e-11,
+            1.0758333091090327e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2033004721637413,
+            -1.2033002646224464,
+            -1.2033004737226172
+          ]
+        }
+      ]
+    },
+    {
+      "k_Mpc_minus1": 5.3888,
+      "k_h_per_Mpc": 8.0,
+      "tau_final_Mpc": 14174.56021975,
+      "initial_k_tau": 0.07000167057928243,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "40fafd90a591de1e3a53e17c1658b8c1f5047af0b054b26e0fe7c5405bd21478",
+      "original_native_metric_sha256": "40fafd90a591de1e3a53e17c1658b8c1f5047af0b054b26e0fe7c5405bd21478",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 8.624960745606813e-10,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.6048226936232057,
+              0.6048226936232041,
+              0.6048226936232114
+            ],
+            [
+              0.6136582094938938,
+              0.6136582094938924,
+              0.6136582094938938
+            ],
+            [
+              0.604753577882605,
+              0.6047535778826036,
+              0.6047535778826111
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.6653345369377348e-15,
+          "summed_prompt_recoil_with_full_IC": 0.6048226936310402,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.0139076521680903e-10,
+            9.132303483897112e-11,
+            1.0147067956039806e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032858625538174,
+            -1.2032858105892812,
+            -1.2032858629386898
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.6048226927607097,
+              0.6048226927607097,
+              0.6048226927607155
+            ],
+            [
+              0.6136582091171443,
+              0.6136582091171443,
+              0.6136582091171443
+            ],
+            [
+              0.6047535770211376,
+              0.6047535770211376,
+              0.6047535770211436
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 0.0,
+          "summed_prompt_recoil_with_full_IC": 0.6048226927733349,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            1.0139076524290794e-10,
+            9.132303483993926e-11,
+            1.0147067958837991e-10
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032858616600315,
+            -1.2032858104589943,
+            -1.2032858620639952
+          ]
+        }
+      ]
+    },
+    {
+      "k_Mpc_minus1": 6.736,
+      "k_h_per_Mpc": 10.0,
+      "tau_final_Mpc": 14174.56021975,
+      "initial_k_tau": 0.07000133672808768,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "447fd0f7cfe1c7dced71539a7d75c0f138f114e0e24f4c20bdf5517836045987",
+      "original_native_metric_sha256": "447fd0f7cfe1c7dced71539a7d75c0f138f114e0e24f4c20bdf5517836045987",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 1.4126857461604914e-09,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.535377421178277,
+              0.535377421178278,
+              0.5353774211783674
+            ],
+            [
+              0.5426649687506011,
+              0.5426649687506021,
+              0.5426649687506016
+            ],
+            [
+              0.5353204144053055,
+              0.5353204144053065,
+              0.5353204144053963
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 9.992007221626409e-16,
+          "summed_prompt_recoil_with_full_IC": 0.5353774211847724,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            9.924926556542067e-11,
+            9.06665373323727e-11,
+            9.93173250100233e-11
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032825441823929,
+            -1.2032825109737748,
+            -1.2032825444287114
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.5353774197656805,
+              0.5353774197656807,
+              0.5353774197656817
+            ],
+            [
+              0.5426649677351758,
+              0.5426649677351759,
+              0.5426649677351758
+            ],
+            [
+              0.5353204129933875,
+              0.5353204129933876,
+              0.5353204129933886
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.1102230246251565e-16,
+          "summed_prompt_recoil_with_full_IC": 0.5353774197759317,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            9.924926557129171e-11,
+            9.066653733266568e-11,
+            9.931732501762445e-11
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032825432886098,
+            -1.203282510843488,
+            -1.20328254355402
+          ]
+        }
+      ]
+    },
+    {
+      "k_Mpc_minus1": 10.7776,
+      "k_h_per_Mpc": 16.0,
+      "tau_final_Mpc": 14174.56021975,
+      "initial_k_tau": 0.07000083594760423,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "95bb76e12366fda563b236066f862270b620caa2f77fb7b393e10da869ee214d",
+      "original_native_metric_sha256": "95bb76e12366fda563b236066f862270b620caa2f77fb7b393e10da869ee214d",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 3.848739105194454e-10,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.38570106970826995,
+              0.38570106970827195,
+              0.3857010697242323
+            ],
+            [
+              0.388428513352116,
+              0.3884285133521167,
+              0.3884285133551832
+            ],
+            [
+              0.3856797343059529,
+              0.3856797343059549,
+              0.38567973432201613
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.9984014443252818e-15,
+          "summed_prompt_recoil_with_full_IC": 0.38570106971086937,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            9.481333001971456e-11,
+            8.948368847180487e-11,
+            9.485531822795843e-11
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.203277318981291,
+            -1.2032773060900677,
+            -1.2032773190775217
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.3857010700833783,
+              0.38570107008337823,
+              0.385701070083379
+            ],
+            [
+              0.3884285137369899,
+              0.3884285137369897,
+              0.3884285137369899
+            ],
+            [
+              0.38567973468289213,
+              0.38567973468289213,
+              0.38567973468289285
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.6653345369377348e-16,
+          "summed_prompt_recoil_with_full_IC": 0.3857010700878701,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            9.481333021285142e-11,
+            8.948368852181283e-11,
+            9.485531842386753e-11
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032773180875114,
+            -1.203277305959781,
+            -1.2032773182028338
+          ]
+        }
+      ]
+    },
+    {
+      "k_Mpc_minus1": 14.8192,
+      "k_h_per_Mpc": 22.0,
+      "tau_final_Mpc": 14174.56021975,
+      "initial_k_tau": 0.07000060831934114,
+      "first_recorded_relative_density": null,
+      "metric_sha256": "2ba9b0a916466bb5a3c1865ff7ede19e5b43220bdea6f37b3afe4f5d58a79226",
+      "original_native_metric_sha256": "2ba9b0a916466bb5a3c1865ff7ede19e5b43220bdea6f37b3afe4f5d58a79226",
+      "joined_kinematic_density_probe_relative_defect": null,
+      "max_time_and_momentum_refinement_difference": 1.5674448405889052e-09,
+      "cases": [
+        {
+          "q_nodes": 720,
+          "tau_nodes": 10000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.29100890459373735,
+              0.29100890459373874,
+              0.29100890466779017
+            ],
+            [
+              0.29059251797724245,
+              0.2905925179772439,
+              0.2905925180427098
+            ],
+            [
+              0.2910121617744588,
+              0.29101216177446015,
+              0.29101216184857875
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 1.4432899320127035e-15,
+          "summed_prompt_recoil_with_full_IC": 0.2910089045936582,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            9.209335431244611e-11,
+            8.899849293155254e-11,
+            9.211752892647455e-11
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032748456564561,
+            -1.2032748389001173,
+            -1.2032748457073674
+          ]
+        },
+        {
+          "q_nodes": 1300,
+          "tau_nodes": 23000,
+          "los_over_cdm_joined_prompt_recoil_losIBP_direct_monopoleIC": [
+            [
+              0.2910089061462252,
+              0.29100890614622515,
+              0.29100890614741726
+            ],
+            [
+              0.2905925195446873,
+              0.29059251954468734,
+              0.2905925195447082
+            ],
+            [
+              0.2910121633278334,
+              0.2910121633278334,
+              0.29101216332903457
+            ]
+          ],
+          "max_absolute_ibp_vs_direct_phi_dot": 5.551115123125783e-17,
+          "summed_prompt_recoil_with_full_IC": 0.2910089061471421,
+          "native_raw_trace_delta_over_cdm": null,
+          "independent_deltaP_over_deltaRho_joined_prompt_recoil": [
+            9.209335456710374e-11,
+            8.899849322698224e-11,
+            9.211752918245075e-11
+          ],
+          "native_raw_deltaP_over_deltaRho": null,
+          "initial_joined_LOS_vs_native_delta": null,
+          "initial_joined_prompt_recoil_delta": [
+            -1.2032748447626784,
+            -1.203274838769831,
+            -1.2032748448326809
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Collisionless Newtonian-gauge line-of-sight density on a fixed recorded metric, with approximate early adiabatic monopole/dipole/quadrupole and identical histories for all scalar shapes. Independent time/angular propagation, not metric generation, nonlinear production or total matter transfer."
+}

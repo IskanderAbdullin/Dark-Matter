@@ -1,0 +1,103 @@
+{
+  "scope": "Numerical sampling audit of a convention-dependent aperture-scale finite part. Cold scalar weight q\u00b2 f_s/E_s on 1e-6 to 1e-5. Not a physical rate.",
+  "rows": [
+    {
+      "grid": "fine",
+      "full_split_weighted_average": -502.09022895565744,
+      "scalar_weight_integral": 392.3618342593256,
+      "mesh_defect": 1.1368683772161603e-13,
+      "input_pointwise_replay_defect": 5.684341886080802e-14,
+      "cold_grid_ladder": [
+        {
+          "cold_cells": 8,
+          "node_weighted_average": -509.20072384583017,
+          "exact_cell_scalar_weight_average": -497.85152949346946,
+          "relative_integrated_scalar_weight_error": -0.35215594085032076,
+          "default_node_relative_error": 0.01416178702573534,
+          "exact_cell_weight_relative_error": -0.00844210705116577
+        },
+        {
+          "cold_cells": 16,
+          "node_weighted_average": -500.81854355370007,
+          "exact_cell_scalar_weight_average": -501.7900318690151,
+          "relative_integrated_scalar_weight_error": 0.05388063729539683,
+          "default_node_relative_error": -0.0025327826128034303,
+          "exact_cell_weight_relative_error": -0.0005978946996574308
+        },
+        {
+          "cold_cells": 32,
+          "node_weighted_average": -500.7127858465729,
+          "exact_cell_scalar_weight_average": -501.84236692392216,
+          "relative_integrated_scalar_weight_error": 0.07445942137677708,
+          "default_node_relative_error": -0.0027434174768737885,
+          "exact_cell_weight_relative_error": -0.0004936603372083237
+        },
+        {
+          "cold_cells": 64,
+          "node_weighted_average": -503.2928502582181,
+          "exact_cell_scalar_weight_average": -502.01608209973466,
+          "relative_integrated_scalar_weight_error": -0.054248346725788155,
+          "default_node_relative_error": 0.0023952294492208814,
+          "exact_cell_weight_relative_error": -0.00014767635705037474
+        },
+        {
+          "cold_cells": 128,
+          "node_weighted_average": -502.06528283937615,
+          "exact_cell_scalar_weight_average": -502.0835903416387,
+          "relative_integrated_scalar_weight_error": 0.0036450295686139,
+          "default_node_relative_error": -4.968452848241878e-05,
+          "exact_cell_weight_relative_error": -1.3221954214381881e-05
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "full_split_weighted_average": -417.74261754564895,
+      "scalar_weight_integral": 388.04140808511704,
+      "mesh_defect": 5.684341886080802e-14,
+      "input_pointwise_replay_defect": 5.684341886080802e-14,
+      "cold_grid_ladder": [
+        {
+          "cold_cells": 8,
+          "node_weighted_average": -419.468231889314,
+          "exact_cell_scalar_weight_average": -418.858690112312,
+          "relative_integrated_scalar_weight_error": 0.18981404049074224,
+          "default_node_relative_error": 0.004130807514453494,
+          "exact_cell_weight_relative_error": 0.0026716751410720274
+        },
+        {
+          "cold_cells": 16,
+          "node_weighted_average": -417.34027322405615,
+          "exact_cell_scalar_weight_average": -418.1436459044123,
+          "relative_integrated_scalar_weight_error": 0.07110985522636315,
+          "default_node_relative_error": -0.0009631392745051981,
+          "exact_cell_weight_relative_error": 0.0009599890983580384
+        },
+        {
+          "cold_cells": 32,
+          "node_weighted_average": -418.66447187074453,
+          "exact_cell_scalar_weight_average": -417.8701223525896,
+          "relative_integrated_scalar_weight_error": 0.08795575151246737,
+          "default_node_relative_error": 0.0022067519242152667,
+          "exact_cell_weight_relative_error": 0.0003052233638256574
+        },
+        {
+          "cold_cells": 64,
+          "node_weighted_average": -417.4637780990388,
+          "exact_cell_scalar_weight_average": -417.759192421447,
+          "relative_integrated_scalar_weight_error": -0.017838195478333208,
+          "default_node_relative_error": -0.0006674910217406849,
+          "exact_cell_weight_relative_error": 3.9677244077829243e-05
+        },
+        {
+          "cold_cells": 128,
+          "node_weighted_average": -417.4617938410757,
+          "exact_cell_scalar_weight_average": -417.7495524080247,
+          "relative_integrated_scalar_weight_error": -0.017838195478333208,
+          "default_node_relative_error": -0.0006722409751324099,
+          "exact_cell_weight_relative_error": 1.660080174858969e-05
+        }
+      ]
+    }
+  ]
+}

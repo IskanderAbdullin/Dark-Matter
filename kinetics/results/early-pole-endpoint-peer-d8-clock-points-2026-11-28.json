@@ -1,0 +1,43 @@
+{
+  "x": 0.05,
+  "k": 0.0015,
+  "rows": [
+    {
+      "grid": "fine",
+      "q": 3.5e-06,
+      "relative_coarse_fine_coefficients": [
+        -0.004096158836060071,
+        -0.00450413717059428,
+        -0.004096158835260488
+      ],
+      "relative_coarse_fine_scalar_count": -3.261128107701072e-05,
+      "forward_relative_shift_over_count_relative_shift": 125.60557882982562,
+      "maximum_fine_point_crosscheck_relative_difference": 0.0
+    },
+    {
+      "grid": "third",
+      "q": 3.5e-06,
+      "relative_coarse_fine_coefficients": [
+        -0.004329378310694576,
+        -0.004844814652000706,
+        -0.004329378309789744
+      ],
+      "relative_coarse_fine_scalar_count": -3.2682456337806975e-05,
+      "forward_relative_shift_over_count_relative_shift": 132.46795975020896,
+      "maximum_fine_point_crosscheck_relative_difference": 0.0
+    },
+    {
+      "grid": "third",
+      "q": 1.5e-05,
+      "relative_coarse_fine_coefficients": [
+        -0.00311740499137092,
+        -0.003371304772117778,
+        -0.003117404990713113
+      ],
+      "relative_coarse_fine_scalar_count": -3.2682456337806975e-05,
+      "forward_relative_shift_over_count_relative_shift": 95.384660172091,
+      "maximum_fine_point_crosscheck_relative_difference": 0.0
+    }
+  ],
+  "scope": "Late same-restart diagnostic at three benchmark points, not a whole-history or band error estimate."
+}

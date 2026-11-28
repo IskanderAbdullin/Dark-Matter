@@ -1,0 +1,88 @@
+{
+  "changes": {
+    "P_k_max_h/Mpc": [
+      "10",
+      "22"
+    ],
+    "ncdm_fluid_trigger_tau_over_tau_k": [
+      "20",
+      "42"
+    ],
+    "l_max_ncdm": [
+      "14",
+      "22"
+    ]
+  },
+  "data": [
+    {
+      "z": 0,
+      "probes": [
+        4.0,
+        8.0,
+        10.0,
+        16.0,
+        20.0,
+        22.0
+      ],
+      "wide_higher_delta_over_cdm": [
+        0.9668956747996589,
+        0.914203353777523,
+        0.8861025062710683,
+        0.802537968323545,
+        0.7499957652367779,
+        0.7250520878479911
+      ],
+      "max_overlap_abs_defect": 0.00022245201716897256,
+      "overlap_k_at_max_h_per_Mpc": 1.6836391075532355,
+      "absolute_difference_at_k10": 1.1526167284947597e-05,
+      "wide_fluid_first_half_h_per_Mpc": null
+    },
+    {
+      "z": 5,
+      "probes": [
+        4.0,
+        8.0,
+        10.0,
+        16.0,
+        20.0,
+        22.0
+      ],
+      "wide_higher_delta_over_cdm": [
+        0.9013975872584615,
+        0.779426092589018,
+        0.7233301360009131,
+        0.5800583727252124,
+        0.5037766942129837,
+        0.4706195699775599
+      ],
+      "max_overlap_abs_defect": 0.0010578570996072623,
+      "overlap_k_at_max_h_per_Mpc": 1.705677114523561,
+      "absolute_difference_at_k10": -1.2158944694640184e-05,
+      "wide_fluid_first_half_h_per_Mpc": 20.21876469659534
+    },
+    {
+      "z": 20,
+      "probes": [
+        4.0,
+        8.0,
+        10.0,
+        16.0,
+        20.0,
+        22.0
+      ],
+      "wide_higher_delta_over_cdm": [
+        0.789142570986076,
+        0.5966313179096705,
+        0.5223751377640933,
+        0.36121042966721767,
+        0.28936987393366165,
+        0.2608088469974422
+      ],
+      "max_overlap_abs_defect": 0.0036936708921395667,
+      "overlap_k_at_max_h_per_Mpc": 1.7280035881546125,
+      "absolute_difference_at_k10": -9.491143481188402e-05,
+      "wide_fluid_first_half_h_per_Mpc": 10.676592821734278
+    }
+  ],
+  "scope": "Closure retained; later switch, higher lmax and wider native k grid changed together. Any half crossing remains numerical and is not a physical transfer cutoff."
+}

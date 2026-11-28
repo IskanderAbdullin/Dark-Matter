@@ -1,0 +1,97 @@
+{
+  "independent_massless_limit": {
+    "T": 0.017,
+    "fractional_number_and_energy_shifts": [
+      6.922741833559343e-06,
+      5.618479855584724e-06
+    ],
+    "independent_small_mass_leading_terms": [
+      6.922659933843394e-06,
+      5.618463649296985e-06
+    ]
+  },
+  "scope": "Compare to a saturated thermal normal phase at fixed light-equivalent number and total dark energy, with the same fast heavy decay affinity. Does not determine kinetic condensation, the validity of the thermal closure, or whether an evolving history reaches saturation.",
+  "rows": [
+    {
+      "T_visible": 0.09998024707143943,
+      "T_dark": 0.09213340518673589,
+      "peak": [
+        1.7368215014826097e-06,
+        4.2260941276765215e-06,
+        3.080308396578852e-12
+      ],
+      "controls": [
+        {
+          "order": 22,
+          "T_saturated": 0.005304969045657621,
+          "scalar_invariant_at_saturation": 1.8183752634023437e-08,
+          "scalar_invariant_over_capacity": 0.018416659413181016,
+          "cap_heavy_fraction": 8.045144789929446e-08,
+          "eta_light_saturated": -2.685423220560683
+        },
+        {
+          "order": 38,
+          "T_saturated": 0.005304969045657621,
+          "scalar_invariant_at_saturation": 1.818375263402343e-08,
+          "scalar_invariant_over_capacity": 0.018416659413181023,
+          "cap_heavy_fraction": 8.045144789929445e-08,
+          "eta_light_saturated": -2.685423220560683
+        }
+      ]
+    },
+    {
+      "T_visible": 0.06334739086950497,
+      "T_dark": 0.015555084139154674,
+      "peak": [
+        0.1764572556938918,
+        0.6387647788216251,
+        0.0006582649258353049
+      ],
+      "controls": [
+        {
+          "order": 22,
+          "T_saturated": 0.014353693334408623,
+          "scalar_invariant_at_saturation": 3.7453612628789633e-07,
+          "scalar_invariant_over_capacity": 0.7520849161043474,
+          "cap_heavy_fraction": 0.013642392695835295,
+          "eta_light_saturated": -0.15292684755502078
+        },
+        {
+          "order": 38,
+          "T_saturated": 0.014353693334408621,
+          "scalar_invariant_at_saturation": 3.74536126287896e-07,
+          "scalar_invariant_over_capacity": 0.752084916104348,
+          "cap_heavy_fraction": 0.013642392695835283,
+          "eta_light_saturated": -0.15292684755502034
+        }
+      ]
+    },
+    {
+      "T_visible": 0.0400000000406652,
+      "T_dark": 0.010678803219394524,
+      "peak": [
+        0.09457745064865279,
+        0.6148059359524001,
+        3.243563349472634e-05
+      ],
+      "controls": [
+        {
+          "order": 22,
+          "T_saturated": 0.009711654658976197,
+          "scalar_invariant_at_saturation": 1.1184163136912035e-07,
+          "scalar_invariant_over_capacity": 0.7467055308454247,
+          "cap_heavy_fraction": 0.0010287138713080688,
+          "eta_light_saturated": -0.09264724678733495
+        },
+        {
+          "order": 38,
+          "T_saturated": 0.009711654658976197,
+          "scalar_invariant_at_saturation": 1.118416313691203e-07,
+          "scalar_invariant_over_capacity": 0.746705530845425,
+          "cap_heavy_fraction": 0.0010287138713080692,
+          "eta_light_saturated": -0.09264724678733491
+        }
+      ]
+    }
+  ]
+}

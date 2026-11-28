@@ -1,0 +1,62 @@
+[
+  {
+    "scope": "Frozen scalar-pair sign at tagged f=1/2 for fixed retained data. Exterior fermions can be arbitrary Pauli occupations; scalar tails require the stated finite support and pointwise upper bounds.",
+    "snapshot_sha256": "f3d677c9a1f6864d9a1f8ce485018d24eb38a5de080f18643dd1cea09879eeb8",
+    "T_GeV": 0.007394049465197431,
+    "retained_outer_edge_GeV": 0.21499194424690202,
+    "retained_max_scalar_occupation": 0.0004615004955297761,
+    "protected_negative_rate_margin_GeV": 8.331840856621175e-27,
+    "controls": [
+      {
+        "exterior_support_max_GeV": 0.5,
+        "strict_sufficient_per_mode_sup_bound": 2.6081918795473545e-13,
+        "exact_boundary_growth_bound_check": 1.0000000000000002
+      },
+      {
+        "exterior_support_max_GeV": 0.6,
+        "strict_sufficient_per_mode_sup_bound": 8.836644084688843e-14,
+        "exact_boundary_growth_bound_check": 1.0
+      },
+      {
+        "exterior_support_max_GeV": 1.0,
+        "strict_sufficient_per_mode_sup_bound": 4.174031072556676e-15,
+        "exact_boundary_growth_bound_check": 1.0
+      },
+      {
+        "exterior_support_max_GeV": 2.0,
+        "strict_sufficient_per_mode_sup_bound": 6.515364017686069e-17,
+        "exact_boundary_growth_bound_check": 1.0
+      }
+    ]
+  },
+  {
+    "scope": "Frozen scalar-pair sign at tagged f=1/2 for fixed retained data. Exterior fermions can be arbitrary Pauli occupations; scalar tails require the stated finite support and pointwise upper bounds.",
+    "snapshot_sha256": "82337f88f81e65df77d35b04c20597a37bc6135e41fb6aa62372107c7b6a2ecd",
+    "T_GeV": 0.007754805139316106,
+    "retained_outer_edge_GeV": 0.45097090682290913,
+    "retained_max_scalar_occupation": 0.0004500158329796105,
+    "protected_negative_rate_margin_GeV": 1.8232947389728355e-27,
+    "controls": [
+      {
+        "exterior_support_max_GeV": 0.5,
+        "strict_sufficient_per_mode_sup_bound": 5.853287133483501e-14,
+        "exact_boundary_growth_bound_check": 1.0
+      },
+      {
+        "exterior_support_max_GeV": 0.6,
+        "strict_sufficient_per_mode_sup_bound": 1.9831138778431737e-14,
+        "exact_boundary_growth_bound_check": 1.0
+      },
+      {
+        "exterior_support_max_GeV": 1.0,
+        "strict_sufficient_per_mode_sup_bound": 9.367333194824766e-16,
+        "exact_boundary_growth_bound_check": 1.0
+      },
+      {
+        "exterior_support_max_GeV": 2.0,
+        "strict_sufficient_per_mode_sup_bound": 1.462173725550503e-17,
+        "exact_boundary_growth_bound_check": 1.0
+      }
+    ]
+  }
+]

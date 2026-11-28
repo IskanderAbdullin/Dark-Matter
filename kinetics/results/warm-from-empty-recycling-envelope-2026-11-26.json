@@ -1,0 +1,80 @@
+{
+  "scope": "Initially empty fixed-RD g*=10.75 instantaneous vacuum charged-lepton benchmark, plus an optional tabulated visible EOS clock. No other channels or alternative reheating histories tested.",
+  "K_GeVminus2": 2.070805438883012e-12,
+  "cosmology": {
+    "gstar": 10.75,
+    "Planck": 1.2209e+19,
+    "S0": 2891.2,
+    "rhoc_over_h2": 1.05375e-05
+  },
+  "fixed_g_controls": [
+    {
+      "TR_GeV": 0.05,
+      "time_panels": 250,
+      "invariant_panel_width": 0.03,
+      "conservative_energy_input_GeV4": 2.6653437842177337e-09,
+      "terminal_source_energy_tail_relative": 3.977787752104514e-09,
+      "heating_exponent": 0.007961127789204502,
+      "Omega_phi_direct_count_ceiling": 0.0008138521487176995,
+      "Omega_phi_recycle_ceiling": 0.04113034917594366,
+      "Omega_phi_total_ceiling": 0.041944201324661354
+    },
+    {
+      "TR_GeV": 0.05,
+      "time_panels": 500,
+      "invariant_panel_width": 0.015,
+      "conservative_energy_input_GeV4": 2.49745094435251e-09,
+      "terminal_source_energy_tail_relative": 4.245197241605048e-09,
+      "heating_exponent": 0.007961127789204502,
+      "Omega_phi_direct_count_ceiling": 0.0007648752785995672,
+      "Omega_phi_recycle_ceiling": 0.03594021195175933,
+      "Omega_phi_total_ceiling": 0.036705087230358896
+    },
+    {
+      "TR_GeV": 0.05,
+      "time_panels": 1000,
+      "invariant_panel_width": 0.0075,
+      "conservative_energy_input_GeV4": 2.417481483353952e-09,
+      "terminal_source_energy_tail_relative": 4.3856269150405305e-09,
+      "heating_exponent": 0.007961127789204502,
+      "Omega_phi_direct_count_ceiling": 0.0007415022693098482,
+      "Omega_phi_recycle_ceiling": 0.03359544703746493,
+      "Omega_phi_total_ceiling": 0.03433694930677477
+    },
+    {
+      "TR_GeV": 0.05,
+      "time_panels": 1500,
+      "invariant_panel_width": 0.005,
+      "conservative_energy_input_GeV4": 2.3913922945197236e-09,
+      "terminal_source_energy_tail_relative": 4.433472452138385e-09,
+      "heating_exponent": 0.007961127789204502,
+      "Omega_phi_direct_count_ceiling": 0.0007338702997289133,
+      "Omega_phi_recycle_ceiling": 0.032848220306609555,
+      "Omega_phi_total_ceiling": 0.03358209060633847
+    }
+  ],
+  "tabulated_EOS_controls": [
+    {
+      "TR_GeV": 0.05,
+      "time_panels": 621,
+      "invariant_panel_width": 0.015,
+      "conservative_energy_input_GeV4": 2.5658931760130865e-09,
+      "terminal_source_energy_tail_relative": 2.7216911731332703e-08,
+      "heating_exponent": 0.007919566409540892,
+      "Omega_phi_direct_count_ceiling": 0.0005973643655640161,
+      "Omega_phi_recycle_ceiling": 0.02280519504092932,
+      "Omega_phi_total_ceiling": 0.023402559406493335
+    },
+    {
+      "TR_GeV": 0.05,
+      "time_panels": 1321,
+      "invariant_panel_width": 0.006,
+      "conservative_energy_input_GeV4": 2.4647792044883304e-09,
+      "terminal_source_energy_tail_relative": 2.8333445834177455e-08,
+      "heating_exponent": 0.007919566409540892,
+      "Omega_phi_direct_count_ceiling": 0.0005748322513006774,
+      "Omega_phi_recycle_ceiling": 0.0209668601481608,
+      "Omega_phi_total_ceiling": 0.02154169239946148
+    }
+  ]
+}

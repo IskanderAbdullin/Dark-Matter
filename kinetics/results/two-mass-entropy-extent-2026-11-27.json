@@ -1,0 +1,385 @@
+{
+  "scope": "Manufactured entropy-coordinate stoichiometry, no physical source rate or actual cosmological dynamics.",
+  "cases": [
+    {
+      "case": "ordinary",
+      "largest_thermal_equilibrium_affinity": 3.7947076036992655e-19,
+      "experiments": [
+        {
+          "direction": "forward",
+          "scenario": "perturbed_parent",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": 0.17038820105900992,
+              "entropy_gain": 0.7071572170475265,
+              "two_mass_excess_balance": 0.0,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.5106797766011
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": 0.5338406386751116,
+              "entropy_gain": 1.4125482470733892,
+              "two_mass_excess_balance": -5.0129197425803876e-21,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": 0.5743803096758184,
+              "entropy_gain": 1.4363290198568024,
+              "two_mass_excess_balance": -5.0129197425803876e-21,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": 0.5718242972764808,
+              "entropy_gain": 1.4561875786262926,
+              "two_mass_excess_balance": 0.0,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": 0.5688689017352807,
+              "entropy_gain": 1.4648152081007133,
+              "two_mass_excess_balance": -1.0025839485160775e-20,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            }
+          ]
+        },
+        {
+          "direction": "inverse",
+          "scenario": "perturbed_parent",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": -0.0034067774414096082,
+              "entropy_gain": 0.004924009247825817,
+              "two_mass_excess_balance": -1.3707202421118248e-21,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": -0.010849276194077854,
+              "entropy_gain": 0.008294255220915616,
+              "two_mass_excess_balance": -7.832687097781856e-22,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": -0.011710632625031529,
+              "entropy_gain": 0.00832225238749628,
+              "two_mass_excess_balance": -3.2897285810683797e-21,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": -0.011678812748618905,
+              "entropy_gain": 0.008350735696046595,
+              "two_mass_excess_balance": -1.0965761936894599e-21,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": -0.011654869098210917,
+              "entropy_gain": 0.008367374372876081,
+              "two_mass_excess_balance": -7.832687097781856e-22,
+              "smallest_population_fraction": 5.2458935623624513e-05,
+              "max_fermi_population_fraction": 0.4297588157859007
+            }
+          ]
+        },
+        {
+          "direction": "forward",
+          "scenario": "almost_empty_daughters",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": 0.2462158622075472,
+              "entropy_gain": 2.4508890710109474,
+              "two_mass_excess_balance": 0.0,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.7264258197693919
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": 0.8186775729710473,
+              "entropy_gain": 4.621075843603883,
+              "two_mass_excess_balance": -1.0025839485160775e-20,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.2853791460332269
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": 0.8832533962309078,
+              "entropy_gain": 4.663552684324547,
+              "two_mass_excess_balance": -4.01033579406431e-20,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.2950153935563338
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": 0.8822447454094634,
+              "entropy_gain": 4.703555829105386,
+              "two_mass_excess_balance": 0.0,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.269144976767847
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": 0.879704667128462,
+              "entropy_gain": 4.726513302666838,
+              "two_mass_excess_balance": -1.0025839485160775e-20,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.2501345033583195
+            }
+          ]
+        },
+        {
+          "direction": "inverse",
+          "scenario": "crowded_daughters",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": -0.40635058738622204,
+              "entropy_gain": 1.9276884635796427,
+              "two_mass_excess_balance": -5.0129197425803876e-21,
+              "smallest_population_fraction": 0.4515006527513578,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": -0.7552180611221486,
+              "entropy_gain": 2.304192327745753,
+              "two_mass_excess_balance": 2.005167897032155e-20,
+              "smallest_population_fraction": 0.7612524093851298,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": -0.756415716198231,
+              "entropy_gain": 2.3312447941940566,
+              "two_mass_excess_balance": 2.005167897032155e-20,
+              "smallest_population_fraction": 0.7973925664057725,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": -0.7471889119095333,
+              "entropy_gain": 2.3400007893960115,
+              "two_mass_excess_balance": 1.0025839485160775e-20,
+              "smallest_population_fraction": 0.8204919751329818,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": -0.7413348389168672,
+              "entropy_gain": 2.341695250310335,
+              "two_mass_excess_balance": 1.0025839485160775e-20,
+              "smallest_population_fraction": 0.8237053766742969,
+              "max_fermi_population_fraction": 0.999999
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "near-rest",
+      "largest_thermal_equilibrium_affinity": 1.0842021724855044e-19,
+      "experiments": [
+        {
+          "direction": "forward",
+          "scenario": "perturbed_parent",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": 0.1741040118254787,
+              "entropy_gain": 0.42992438021251733,
+              "two_mass_excess_balance": -4.68076853958299e-21,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.5065510979716903
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": 0.46300065495495274,
+              "entropy_gain": 0.7179315102783871,
+              "two_mass_excess_balance": -1.310615191083237e-20,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": 0.4851560406161804,
+              "entropy_gain": 0.7225671839525059,
+              "two_mass_excess_balance": -1.310615191083237e-20,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": 0.4798018874003357,
+              "entropy_gain": 0.728074681953713,
+              "two_mass_excess_balance": -1.685076674249876e-20,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": 0.4743322861647503,
+              "entropy_gain": 0.7304545391009748,
+              "two_mass_excess_balance": -1.4978459326665567e-20,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            }
+          ]
+        },
+        {
+          "direction": "inverse",
+          "scenario": "perturbed_parent",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": -0.02841810685792178,
+              "entropy_gain": 0.05622761696939595,
+              "two_mass_excess_balance": -1.755288202343621e-21,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": -0.07653202100312555,
+              "entropy_gain": 0.07940760791698244,
+              "two_mass_excess_balance": -8.42538337124938e-21,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": -0.08051703344817536,
+              "entropy_gain": 0.07957605306892063,
+              "two_mass_excess_balance": -1.1701921348957474e-20,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": -0.07984790658060689,
+              "entropy_gain": 0.07982048006533121,
+              "two_mass_excess_balance": -9.829613933124278e-21,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": -0.07908169016872377,
+              "entropy_gain": 0.0799385228687918,
+              "two_mass_excess_balance": -1.1233844494999174e-20,
+              "smallest_population_fraction": 5.657115485015009e-05,
+              "max_fermi_population_fraction": 0.43779494428296234
+            }
+          ]
+        },
+        {
+          "direction": "forward",
+          "scenario": "almost_empty_daughters",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": 0.24733369887370102,
+              "entropy_gain": 2.408119884055273,
+              "two_mass_excess_balance": -1.872307415833196e-21,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.725183779029221
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": 0.81632617521371,
+              "entropy_gain": 4.492388636400847,
+              "two_mass_excess_balance": -3.744614831666392e-21,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.2510085628545428
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": 0.8787375922171355,
+              "entropy_gain": 4.51717019400097,
+              "two_mass_excess_balance": -7.489229663332783e-21,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.26662829780378633
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": 0.8773226765273161,
+              "entropy_gain": 4.539827581488251,
+              "two_mass_excess_balance": -7.489229663332783e-21,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.25965671859113504
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": 0.8735066188442624,
+              "entropy_gain": 4.55566447393993,
+              "two_mass_excess_balance": -1.4978459326665567e-20,
+              "smallest_population_fraction": 1e-10,
+              "max_fermi_population_fraction": 0.25215040341791267
+            }
+          ]
+        },
+        {
+          "direction": "inverse",
+          "scenario": "crowded_daughters",
+          "updates": [
+            {
+              "dt": 0.1,
+              "cumulative_event_extent": -0.40813004985298956,
+              "entropy_gain": 1.862942535311944,
+              "two_mass_excess_balance": -3.744614831666392e-21,
+              "smallest_population_fraction": 0.45347783326998836,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 1.0,
+              "cumulative_event_extent": -0.7445887446586732,
+              "entropy_gain": 2.1897293204123915,
+              "two_mass_excess_balance": -1.4978459326665567e-20,
+              "smallest_population_fraction": 0.7835149124227676,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 8.0,
+              "cumulative_event_extent": -0.7435941492759333,
+              "entropy_gain": 2.2155437931567596,
+              "two_mass_excess_balance": -2.621230382166474e-20,
+              "smallest_population_fraction": 0.8010060364774386,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 50.0,
+              "cumulative_event_extent": -0.7308713824644167,
+              "entropy_gain": 2.2278203963551357,
+              "two_mass_excess_balance": -2.2467688989998347e-20,
+              "smallest_population_fraction": 0.812079313949352,
+              "max_fermi_population_fraction": 0.999999
+            },
+            {
+              "dt": 10.0,
+              "cumulative_event_extent": -0.7228834844425797,
+              "entropy_gain": 2.232554930324949,
+              "two_mass_excess_balance": -4.1190763148330306e-20,
+              "smallest_population_fraction": 0.8032038717028662,
+              "max_fermi_population_fraction": 0.999999
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "local_independent_controls": {
+    "max_direct_azimuth_vs_p2_error": 4.440892098500626e-16,
+    "max_uncut_MB_q_weight_vs_Bessel_error": 1.1102230246251565e-15
+  },
+  "data_sha256": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+  "scope": "Numerical 12\u201350 MeV, KLOE exclusive vacuum bin centers treated as constant cross sections. Incoming thermal charged pions including BE; open unpolarized heavy decay; no initial heavy and no unmeasured bins, scattering or full thermal hadronic response.",
+  "controls": [
+    {
+      "kinetic_order": 8,
+      "time_order": 14,
+      "MB": 4.92377927204256e-10,
+      "BE": 4.944394476616818e-10,
+      "linear_published_marginal_variation": 1.1557586171045568e-11,
+      "BE_over_held_yield": 0.11828067281089849
+    },
+    {
+      "kinetic_order": 12,
+      "time_order": 20,
+      "MB": 4.923751713660275e-10,
+      "BE": 4.944366849533568e-10,
+      "linear_published_marginal_variation": 1.1557567533435647e-11,
+      "BE_over_held_yield": 0.11828001191096217
+    }
+  ]
+}

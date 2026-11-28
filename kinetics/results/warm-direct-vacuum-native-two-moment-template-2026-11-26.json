@@ -1,0 +1,191 @@
+{
+  "scope": "Thermal-shaped controls are synthetic scalar PSDs at the same amplified abundance, not FD scalar microphysics. Number, mean q and mean q\u00b2 are matched by the positive two-temperature mixture.",
+  "source_moments_q1_q2_q4": [
+    1.609540461750634,
+    3.759723841574549,
+    44.88099730578818
+  ],
+  "reference_single_moments": [
+    1.6987153308459881,
+    3.759723841574549,
+    33.46341098126815
+  ],
+  "two_temperature_controls_in_photon_units": [
+    0.3383886167896747,
+    0.6830961526396712
+  ],
+  "matched_mixture_moments": [
+    1.6095404617506337,
+    3.759723841574548,
+    45.74891937515576
+  ],
+  "psd_sha256": "1c9514f6db7edea806ffae61eb392923d06a2c832f644b3bb4ff110d4afde929",
+  "max_sound_speed_defect_via_log_a_finite_difference": 1.5877321679624856e-10,
+  "column_order": [
+    "direct",
+    "q2_matched_single_FD_shape",
+    "q1_q2_matched_double_FD_shape"
+  ],
+  "rows": [
+    {
+      "scale": 1e-08,
+      "controls": [
+        {
+          "scaled_rho": 1.6095472556465606,
+          "pressure_to_rho": 0.33333051938706615,
+          "adiabatic_sound_speed_squared": 0.33333192630476766
+        },
+        {
+          "scaled_rho": 1.6987210036862337,
+          "pressure_to_rho": 0.3333311070903067,
+          "adiabatic_sound_speed_squared": 0.3333322201386646
+        },
+        {
+          "scaled_rho": 1.6095472181156878,
+          "pressure_to_rho": 0.33333053504504195,
+          "adiabatic_sound_speed_squared": 0.333331934030104
+        }
+      ]
+    },
+    {
+      "scale": 1e-07,
+      "controls": [
+        {
+          "scaled_rho": 1.6102186221003176,
+          "pressure_to_rho": 0.3330530639924648,
+          "adiabatic_sound_speed_squared": 0.3331926741515327
+        },
+        {
+          "scaled_rho": 1.6992814255001323,
+          "pressure_to_rho": 0.3331116411711326,
+          "adiabatic_sound_speed_squared": 0.33322210611742115
+        },
+        {
+          "scaled_rho": 1.6102137340075564,
+          "pressure_to_rho": 0.33305540297736824,
+          "adiabatic_sound_speed_squared": 0.33319360482395516
+        }
+      ]
+    },
+    {
+      "scale": 1e-06,
+      "controls": [
+        {
+          "scaled_rho": 1.6709254551062986,
+          "pressure_to_rho": 0.3105617710729278,
+          "adiabatic_sound_speed_squared": 0.32045216512399194
+        },
+        {
+          "scaled_rho": 1.7513712707388702,
+          "pressure_to_rho": 0.31429795365814556,
+          "adiabatic_sound_speed_squared": 0.3228878702960953
+        },
+        {
+          "scaled_rho": 1.6701764440760938,
+          "pressure_to_rho": 0.31078154544837416,
+          "adiabatic_sound_speed_squared": 0.32063085669310487
+        }
+      ]
+    },
+    {
+      "scale": 2e-06,
+      "controls": [
+        {
+          "scaled_rho": 1.8228998073602471,
+          "pressure_to_rho": 0.26594664087559444,
+          "adiabatic_sound_speed_squared": 0.29071330389988675
+        },
+        {
+          "scaled_rho": 1.8883073625610443,
+          "pressure_to_rho": 0.27352731471231156,
+          "adiabatic_sound_speed_squared": 0.2968837395100557
+        },
+        {
+          "scaled_rho": 1.821235537805576,
+          "pressure_to_rho": 0.26610748620496927,
+          "adiabatic_sound_speed_squared": 0.290976399608193
+        }
+      ]
+    },
+    {
+      "scale": 5e-06,
+      "controls": [
+        {
+          "scaled_rho": 2.5477155639367774,
+          "pressure_to_rho": 0.14926748734122744,
+          "adiabatic_sound_speed_squared": 0.19058321442874426
+        },
+        {
+          "scaled_rho": 2.5799696391635973,
+          "pressure_to_rho": 0.15635745826581254,
+          "adiabatic_sound_speed_squared": 0.1992117583343521
+        },
+        {
+          "scaled_rho": 2.545918283515207,
+          "pressure_to_rho": 0.14899686206019977,
+          "adiabatic_sound_speed_squared": 0.19036606686621532
+        }
+      ]
+    },
+    {
+      "scale": 1e-05,
+      "controls": [
+        {
+          "scaled_rho": 4.1053808180695945,
+          "pressure_to_rho": 0.06434925275934007,
+          "adiabatic_sound_speed_squared": 0.09369682595866659
+        },
+        {
+          "scaled_rho": 4.116859279473881,
+          "pressure_to_rho": 0.06680819818597139,
+          "adiabatic_sound_speed_squared": 0.09774427784563189
+        },
+        {
+          "scaled_rho": 4.104556157103256,
+          "pressure_to_rho": 0.06418588808620489,
+          "adiabatic_sound_speed_squared": 0.09344800680263297
+        }
+      ]
+    },
+    {
+      "scale": 0.000292389101279115,
+      "controls": [
+        {
+          "scaled_rho": 107.08162232507455,
+          "pressure_to_rho": 0.00010925722758801485,
+          "adiabatic_sound_speed_squared": 0.00018203766651584275
+        },
+        {
+          "scaled_rho": 107.08162348548925,
+          "pressure_to_rho": 0.00010927165977537591,
+          "adiabatic_sound_speed_squared": 0.00018207130496661716
+        },
+        {
+          "scaled_rho": 107.08162223683016,
+          "pressure_to_rho": 0.00010925612987502214,
+          "adiabatic_sound_speed_squared": 0.00018203510755779304
+        }
+      ]
+    },
+    {
+      "scale": 0.047619047619047616,
+      "controls": [
+        {
+          "scaled_rho": 17436.65885718815,
+          "pressure_to_rho": 4.1220014881953726e-09,
+          "adiabatic_sound_speed_squared": 6.870002398060516e-09
+        },
+        {
+          "scaled_rho": 17436.65885718816,
+          "pressure_to_rho": 4.122001508781274e-09,
+          "adiabatic_sound_speed_squared": 6.8700024460942835e-09
+        },
+        {
+          "scaled_rho": 17436.65885718815,
+          "pressure_to_rho": 4.122001486630508e-09,
+          "adiabatic_sound_speed_squared": 6.870002394409167e-09
+        }
+      ]
+    }
+  ]
+}

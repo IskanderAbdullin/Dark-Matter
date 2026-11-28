@@ -1,0 +1,119 @@
+{
+  "scope": "Finite shared band of the real absorption only; no virtual term or new physical rate.",
+  "data": [
+    {
+      "grid": "fine",
+      "band_edges": [
+        4e-06,
+        1e-05
+      ],
+      "increasing_normed_incoming_and_outgoing_separately": [
+        791362.1209439763,
+        226403.72980317698
+      ],
+      "soft_photon_quadrature_relative_defect": 1.070127098046214e-09,
+      "inverse_chart": [
+        {
+          "mesh": [
+            7,
+            6,
+            22
+          ],
+          "cumulative_lo": [
+            1319097.933959827,
+            376628.3146257935
+          ],
+          "cumulative_hi": [
+            527751.9067594369,
+            150127.1626609596
+          ],
+          "finite_band": [
+            791346.0272003901,
+            226501.15196483387
+          ]
+        },
+        {
+          "mesh": [
+            11,
+            10,
+            32
+          ],
+          "cumulative_lo": [
+            1319114.533582862,
+            376527.82980827
+          ],
+          "cumulative_hi": [
+            527760.3040872194,
+            150076.3298734863
+          ],
+          "finite_band": [
+            791354.2294956426,
+            226451.49993478367
+          ]
+        }
+      ],
+      "inverse_chart_refinement": 0.00021921314580297668,
+      "chart_relative_defects": [
+        -9.971981378531503e-06,
+        0.00021099533849655572
+      ]
+    },
+    {
+      "grid": "third",
+      "band_edges": [
+        4e-06,
+        1e-05
+      ],
+      "increasing_normed_incoming_and_outgoing_separately": [
+        855202.5844444152,
+        370190.80346693646
+      ],
+      "soft_photon_quadrature_relative_defect": 1.0701046715411167e-09,
+      "inverse_chart": [
+        {
+          "mesh": [
+            7,
+            6,
+            22
+          ],
+          "cumulative_lo": [
+            1425876.6811010703,
+            615769.5791781468
+          ],
+          "cumulative_hi": [
+            570786.9740982312,
+            245027.05684762658
+          ],
+          "finite_band": [
+            855089.7070028391,
+            370742.5223305202
+          ]
+        },
+        {
+          "mesh": [
+            11,
+            10,
+            32
+          ],
+          "cumulative_lo": [
+            1425928.3625316047,
+            615523.6709029488
+          ],
+          "cumulative_hi": [
+            570813.6264935177,
+            244897.4322006586
+          ],
+          "finite_band": [
+            855114.736038087,
+            370626.2387022902
+          ]
+        }
+      ],
+      "inverse_chart_refinement": 0.00031365063683286287,
+      "chart_relative_defects": [
+        -0.0001027223349484574,
+        0.001176245415271726
+      ]
+    }
+  ]
+}

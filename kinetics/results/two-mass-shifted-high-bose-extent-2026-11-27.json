@@ -1,0 +1,93 @@
+{
+  "scope": "Manufactured nonlinear single-event scaled limit; no physical abundance.",
+  "cases": [
+    {
+      "start": [
+        0.34,
+        -0.1
+      ],
+      "rows": [
+        {
+          "inverse_bose_count": 0.001,
+          "scaled_extent": 0.2661329984978581,
+          "leading_solution": 0.2661167636411554,
+          "leading_error": 1.6234856702724204e-05,
+          "entropy_increase_over_inverse_count_squared": 0.4547742793337863,
+          "independent_scaled_entropy_error": 2.220446049250313e-16,
+          "naive_rounded_fermi_change": false
+        },
+        {
+          "inverse_bose_count": 1e-07,
+          "scaled_extent": 0.2661167652659428,
+          "leading_solution": 0.2661167636411554,
+          "leading_error": 1.6247874272954429e-09,
+          "entropy_increase_over_inverse_count_squared": 0.4549100756819867,
+          "independent_scaled_entropy_error": 1.1102230246251565e-16,
+          "naive_rounded_fermi_change": false
+        },
+        {
+          "inverse_bose_count": 1e-12,
+          "scaled_extent": 0.2661167636411658,
+          "leading_solution": 0.2661167636411554,
+          "leading_error": 1.0447670289667754e-14,
+          "entropy_increase_over_inverse_count_squared": 0.45491008926837545,
+          "independent_scaled_entropy_error": 2.220446049250313e-16,
+          "naive_rounded_fermi_change": false
+        },
+        {
+          "inverse_bose_count": 1e-24,
+          "scaled_extent": 0.2661167636411496,
+          "leading_solution": 0.2661167636411554,
+          "leading_error": 5.761585869859531e-15,
+          "entropy_increase_over_inverse_count_squared": 0.4549100892685113,
+          "independent_scaled_entropy_error": 0.0,
+          "naive_rounded_fermi_change": true
+        }
+      ]
+    },
+    {
+      "start": [
+        -0.5,
+        0.1
+      ],
+      "rows": [
+        {
+          "inverse_bose_count": 0.001,
+          "scaled_extent": -0.13794368503260568,
+          "leading_solution": -0.13785555308166114,
+          "leading_error": 8.813195094454911e-05,
+          "entropy_increase_over_inverse_count_squared": 0.12220294985414483,
+          "independent_scaled_entropy_error": 2.220446049250313e-16,
+          "naive_rounded_fermi_change": false
+        },
+        {
+          "inverse_bose_count": 1e-07,
+          "scaled_extent": -0.13785556189912876,
+          "leading_solution": -0.13785555308166114,
+          "leading_error": 8.81746762964339e-09,
+          "entropy_increase_over_inverse_count_squared": 0.12207582777929042,
+          "independent_scaled_entropy_error": 0.0,
+          "naive_rounded_fermi_change": false
+        },
+        {
+          "inverse_bose_count": 1e-12,
+          "scaled_extent": -0.13785555308174618,
+          "leading_solution": -0.13785555308166114,
+          "leading_error": 8.505556556379773e-14,
+          "entropy_increase_over_inverse_count_squared": 0.1220758150683874,
+          "independent_scaled_entropy_error": 1.1102230246251565e-16,
+          "naive_rounded_fermi_change": false
+        },
+        {
+          "inverse_bose_count": 1e-24,
+          "scaled_extent": -0.137855553081658,
+          "leading_solution": -0.13785555308166114,
+          "leading_error": 3.123898167055328e-15,
+          "entropy_increase_over_inverse_count_squared": 0.12207581506826032,
+          "independent_scaled_entropy_error": 2.220446049250313e-16,
+          "naive_rounded_fermi_change": true
+        }
+      ]
+    }
+  ]
+}

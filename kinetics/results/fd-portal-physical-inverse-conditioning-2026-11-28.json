@@ -1,0 +1,105 @@
+{
+  "rows": [
+    {
+      "independent_two_order_defect": 3.4416913763379853e-15,
+      "T_SM": 0.05,
+      "forces": [
+        0.6,
+        0.16
+      ],
+      "scaled_tangent_condition_number": 43.19264088682087,
+      "exact_physical_roundtrips": [
+        {
+          "direction": "strong",
+          "expected_normalized_gain": 1.954769857046588,
+          "measured_normalized_gain": 1.9547698570906213,
+          "finite_derivative_direction_error": 2.2658745280789382e-11,
+          "roundtrip_force_max_absolute_error": 4.107825191113079e-15
+        },
+        {
+          "direction": "weak",
+          "expected_normalized_gain": 0.045257011771258376,
+          "measured_normalized_gain": 0.04525701179108559,
+          "finite_derivative_direction_error": 1.3458564149848562e-09,
+          "roundtrip_force_max_absolute_error": 1.6964207816272392e-13
+        }
+      ]
+    },
+    {
+      "independent_two_order_defect": 6.818769993088836e-10,
+      "T_SM": 0.3,
+      "forces": [
+        -1.5,
+        0.16
+      ],
+      "scaled_tangent_condition_number": 19.119354740533247,
+      "exact_physical_roundtrips": [
+        {
+          "direction": "strong",
+          "expected_normalized_gain": 1.9005932654180302,
+          "measured_normalized_gain": 1.9005932654755961,
+          "finite_derivative_direction_error": 3.028853630485913e-11,
+          "roundtrip_force_max_absolute_error": 6.661338147750939e-16
+        },
+        {
+          "direction": "weak",
+          "expected_normalized_gain": 0.09940676823097755,
+          "measured_normalized_gain": 0.09940676824442049,
+          "finite_derivative_direction_error": 1.352660586418318e-10,
+          "roundtrip_force_max_absolute_error": 2.220446049250313e-16
+        }
+      ]
+    },
+    {
+      "independent_two_order_defect": 7.156912840144969e-10,
+      "T_SM": 0.64135,
+      "forces": [
+        -0.034187877771,
+        0.002
+      ],
+      "scaled_tangent_condition_number": 492.475892384994,
+      "exact_physical_roundtrips": [
+        {
+          "direction": "strong",
+          "expected_normalized_gain": 1.995947117111772,
+          "measured_normalized_gain": 1.9959471171154444,
+          "finite_derivative_direction_error": 1.8399562317503156e-12,
+          "roundtrip_force_max_absolute_error": 3.469446951953614e-17
+        },
+        {
+          "direction": "weak",
+          "expected_normalized_gain": 0.004052882888227626,
+          "measured_normalized_gain": 0.004052882888304008,
+          "finite_derivative_direction_error": 5.301584731674214e-10,
+          "roundtrip_force_max_absolute_error": 4.163336342344337e-17
+        }
+      ]
+    },
+    {
+      "independent_two_order_defect": 1.0687275509013716e-09,
+      "T_SM": 0.6882487043,
+      "forces": [
+        1.8,
+        -0.16
+      ],
+      "scaled_tangent_condition_number": 419.28137297029997,
+      "exact_physical_roundtrips": [
+        {
+          "direction": "strong",
+          "expected_normalized_gain": 1.9952413924088883,
+          "measured_normalized_gain": 1.995241392388163,
+          "finite_derivative_direction_error": 1.181111505665405e-11,
+          "roundtrip_force_max_absolute_error": 1.5765166949677223e-14
+        },
+        {
+          "direction": "weak",
+          "expected_normalized_gain": 0.004758716988246035,
+          "measured_normalized_gain": 0.004758716966850862,
+          "finite_derivative_direction_error": 4.536130229910318e-09,
+          "roundtrip_force_max_absolute_error": 3.8768988019910466e-13
+        }
+      ]
+    }
+  ],
+  "scope": "Diagonal-normalized local sensitivity of the true two-bath FD number/heat response. Numerical direction and finite oracle controls only; no assumed observational noise or cosmological error bar."
+}

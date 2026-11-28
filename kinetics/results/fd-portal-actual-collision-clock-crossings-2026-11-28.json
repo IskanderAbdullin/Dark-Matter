@@ -1,0 +1,151 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "mode": "slow",
+      "bracket": [
+        0.5,
+        0.55
+      ],
+      "reference_log_a": 0.5111848972498244,
+      "reference_visible_T": 0.5561481775480923,
+      "live_minus_reference_log_a": -0.0016418709822251243,
+      "live_minus_reference_visible_T": 0.0008511076823748409,
+      "independent_root_defect": 2.3113168323707356e-10,
+      "x": 0.5095430262675993,
+      "state": [
+        0.5569992852304672,
+        -0.033737178843510574,
+        -0.582011644508235
+      ],
+      "rates_over_H": [
+        1.0000000000005116,
+        220.2209021193798
+      ],
+      "bracket_sample_rate_minus_one": [
+        0.061234614224645156,
+        -0.017796347839578175,
+        -0.08749161300227115,
+        -0.14919354458544376,
+        -0.20403423086708017
+      ],
+      "absolute_ledger_defects": [
+        5.274366828007054e-10,
+        5.221273413624772e-10,
+        6.00908212078366e-14
+      ]
+    },
+    {
+      "operator": "timelike",
+      "mode": "fast",
+      "bracket": [
+        0.85,
+        0.91
+      ],
+      "reference_log_a": 0.9130472623169359,
+      "reference_visible_T": 0.3851821875686101,
+      "live_minus_reference_log_a": -0.016607713648243094,
+      "live_minus_reference_visible_T": 0.005806379109836446,
+      "independent_root_defect": 1.4543222182084037e-10,
+      "x": 0.8964395486686928,
+      "state": [
+        0.39098856667844656,
+        -0.07543073789785967,
+        -0.9464808332226025
+      ],
+      "rates_over_H": [
+        0.19235806683985124,
+        1.000000000001643
+      ],
+      "bracket_sample_rate_minus_one": [
+        1.0108813619651618,
+        0.5947242842124179,
+        0.2710272185468381,
+        0.02075984335763459,
+        -0.17170475520954098
+      ],
+      "absolute_ledger_defects": [
+        1.4603296513162977e-08,
+        8.89574325313447e-09,
+        4.7253867485608225e-14
+      ]
+    },
+    {
+      "operator": "combined",
+      "mode": "slow",
+      "bracket": [
+        0.5,
+        0.55
+      ],
+      "reference_log_a": 0.5194655024153013,
+      "reference_visible_T": 0.551875954351779,
+      "live_minus_reference_log_a": -0.001924802274891002,
+      "live_minus_reference_visible_T": 0.0009897437315156132,
+      "independent_root_defect": 5.912444006606066e-10,
+      "x": 0.5175407001404103,
+      "state": [
+        0.5528656980832947,
+        -0.03454245468844554,
+        -0.5894316919496864
+      ],
+      "rates_over_H": [
+        0.9999999999991189,
+        201.57425687861914
+      ],
+      "bracket_sample_rate_minus_one": [
+        0.11217151518468427,
+        0.030259259178365028,
+        -0.04214426195642318,
+        -0.10638995529890849,
+        -0.16361754889305757
+      ],
+      "absolute_ledger_defects": [
+        1.7205062997890747e-10,
+        1.8307760862867895e-10,
+        2.0349000262598338e-13
+      ]
+    },
+    {
+      "operator": "combined",
+      "mode": "fast",
+      "bracket": [
+        0.85,
+        0.91
+      ],
+      "reference_log_a": 0.9210747269259651,
+      "reference_visible_T": 0.3824093505472154,
+      "live_minus_reference_log_a": -0.017544886797426495,
+      "live_minus_reference_visible_T": 0.00608725031998969,
+      "independent_root_defect": 2.521761688356605e-10,
+      "x": 0.9035298401285387,
+      "state": [
+        0.3884966008672051,
+        -0.07524341147411567,
+        -0.9534407812095469
+      ],
+      "rates_over_H": [
+        0.20925474322966187,
+        0.9999999999996712
+      ],
+      "bracket_sample_rate_minus_one": [
+        1.1294809375481476,
+        0.7070665088233452,
+        0.3768431701489141,
+        0.11972673373506848,
+        -0.07994209804697638
+      ],
+      "absolute_ledger_defects": [
+        2.833231366930597e-09,
+        1.9469038603503463e-09,
+        2.2355728379608308e-13
+      ]
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "input_sha256": [
+    "53920cf458a096b4abf38667e89d32e2cb7672e85552e0a2705063287babd9d4",
+    "2b7ec60b6632a1c2ff45f0be5b8b877f9c4764aabfc25680e9d55a3ec4f69470",
+    "e8412eba83a27753b77688805880d2a0fb7a0816023dd7de39abe0c29b6d266d"
+  ],
+  "scope": "Local unity crossing of collision-only fixed-total-energy Jacobian rate divided by H along a restricted direct history; not a freeze-out threshold or integrated expanding-system stability test."
+}

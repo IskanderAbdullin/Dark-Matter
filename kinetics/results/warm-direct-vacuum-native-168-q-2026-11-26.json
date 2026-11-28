@@ -1,0 +1,54 @@
+{
+  "scope": "Exact RKq168 at same common early start and lmax=20. Fine NDF comparison is independent; no continuum or untested scale claim.",
+  "modes": [
+    0.1,
+    0.3,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "rows": [
+    {
+      "z": 5,
+      "physical_minus_trace": [
+        -8.331151482672513e-08,
+        -9.665598548683033e-07,
+        -5.115221982511997e-06,
+        -6.77961370601071e-06,
+        -7.92412168958981e-06
+      ],
+      "q168_minus_q96_resolved": [
+        -3.629557062046243e-09,
+        -1.4650288491091414e-08,
+        -2.7028122184335613e-08,
+        -3.333822393673672e-08,
+        -3.815212662563811e-08
+      ],
+      "q168_minus_fine_ndf_at_k2": -5.36999810732648e-09
+    },
+    {
+      "z": 20,
+      "physical_minus_trace": [
+        -8.30067674629072e-08,
+        -9.640550397597918e-07,
+        -5.091250362170657e-06,
+        -6.730773665367773e-06,
+        -7.845136107802561e-06
+      ],
+      "q168_minus_q96_resolved": [
+        -3.62660242417018e-09,
+        -1.4638736683878677e-08,
+        -2.6940147129454327e-08,
+        -3.3163834302229666e-08,
+        -3.7871165271465164e-08
+      ],
+      "q168_minus_fine_ndf_at_k2": -5.23604754452992e-09
+    }
+  ],
+  "native_input_sha256": {
+    "trace_z1": "a5c0ccbddaeb4714b7a1aa416f382431c440b59a56d5d8a88375524fc47d97a4",
+    "physical_z1": "2ef358e78148c8d04e63d482007ad4e7672d0823eeba455ab2ded3be8cb83286",
+    "trace_z2": "5f670ddb63c88f84a5d17325e872f8bd36548883a090824df5c0c6a59b44af36",
+    "physical_z2": "b7af36b1b09c0f2f130c895e8ad0bca44f2fc634fde2c2e18336456ff3d89a4d"
+  }
+}

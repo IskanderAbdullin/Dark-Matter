@@ -1,0 +1,292 @@
+{
+  "coordinates": [
+    "2 eta_D",
+    "1 - T_SM / T_D"
+  ],
+  "oriented_flow": [
+    "F",
+    "Q / T_SM"
+  ],
+  "rectangles": [
+    {
+      "label": "same_sign_hot",
+      "fixed_T_SM": 0.05,
+      "coordinate_box": [
+        [
+          0.24,
+          0.72
+        ],
+        [
+          0.06,
+          0.18
+        ]
+      ],
+      "paired_fd_curl_drift": 5.1842097614773763e-08,
+      "quadratures": [
+        {
+          "0.0": {
+            "boundary_CCW_circulation": -1.6098284031161185e-36,
+            "integrated_CCW_curl": 0.0,
+            "oriented_boundary_segments": [
+              1.2455716007017968e-29,
+              9.627727614641266e-29,
+              -5.491885121562415e-29,
+              -5.381414254763488e-29
+            ],
+            "absolute_boundary_scale": 2.1746598591668966e-28,
+            "stokes_relative_closure": 7.402667577323275e-09
+          },
+          "0.5": {
+            "boundary_CCW_circulation": -1.810682592814724e-31,
+            "integrated_CCW_curl": -1.8106674864413867e-31,
+            "oriented_boundary_segments": [
+              1.1855986059474217e-29,
+              9.202033747484205e-29,
+              -5.211624581754761e-29,
+              -5.194114597605014e-29
+            ],
+            "absolute_boundary_scale": 2.07933715327914e-28,
+            "stokes_relative_closure": 7.26499467080748e-09
+          },
+          "1.0": {
+            "boundary_CCW_circulation": -3.621349087345305e-31,
+            "integrated_CCW_curl": -3.6213349728827734e-31,
+            "oriented_boundary_segments": [
+              1.1256256111930473e-29,
+              8.776339880327146e-29,
+              -4.9313640419471064e-29,
+              -5.00681494044654e-29
+            ],
+            "absolute_boundary_scale": 1.984014447391384e-28,
+            "stokes_relative_closure": 7.114092616645394e-09
+          }
+        },
+        {
+          "0.0": {
+            "boundary_CCW_circulation": -3.659911329123557e-41,
+            "integrated_CCW_curl": 0.0,
+            "oriented_boundary_segments": [
+              1.2455716007048442e-29,
+              9.627728037489898e-29,
+              -5.491885121783129e-29,
+              -5.381414516415273e-29
+            ],
+            "absolute_boundary_scale": 2.1746599276393143e-28,
+            "stokes_relative_closure": 1.6829809951464672e-13
+          },
+          "0.5": {
+            "boundary_CCW_circulation": -1.8106675806431651e-31,
+            "integrated_CCW_curl": -1.810667580310192e-31,
+            "oriented_boundary_segments": [
+              1.1855986059491416e-29,
+              9.202034148270089e-29,
+              -5.211624581944198e-29,
+              -5.194114848081464e-29
+            ],
+            "absolute_boundary_scale": 2.0793372184244892e-28,
+            "stokes_relative_closure": 1.601342172382195e-13
+          },
+          "1.0": {
+            "boundary_CCW_circulation": -3.6213351609199188e-31,
+            "integrated_CCW_curl": -3.621335160620384e-31,
+            "oriented_boundary_segments": [
+              1.1256256111934398e-29,
+              8.776340259050285e-29,
+              -4.931364042105267e-29,
+              -5.006815179747657e-29
+            ],
+            "absolute_boundary_scale": 1.9840145092096649e-28,
+            "stokes_relative_closure": 1.5097397314955692e-13
+          }
+        }
+      ]
+    },
+    {
+      "label": "same_sign_cold",
+      "fixed_T_SM": 0.05,
+      "coordinate_box": [
+        [
+          -0.72,
+          -0.24
+        ],
+        [
+          -0.18,
+          -0.06
+        ]
+      ],
+      "paired_fd_curl_drift": 2.561169498704885e-09,
+      "quadratures": [
+        {
+          "0.0": {
+            "boundary_CCW_circulation": -9.898799677310562e-39,
+            "integrated_CCW_curl": 0.0,
+            "oriented_boundary_segments": [
+              -5.985473576431926e-30,
+              -1.0879534608088234e-29,
+              4.372295908457428e-30,
+              1.2492712266163932e-29
+            ],
+            "absolute_boundary_scale": 3.373001635914152e-29,
+            "stokes_relative_closure": 2.93471535024257e-10
+          },
+          "0.5": {
+            "boundary_CCW_circulation": 1.6117841600747497e-32,
+            "integrated_CCW_curl": 1.6117851100865708e-32,
+            "oriented_boundary_segments": [
+              -5.859682130126933e-30,
+              -1.0662139412421914e-29,
+              4.2556553713298435e-30,
+              1.2282284012819751e-29
+            ],
+            "absolute_boundary_scale": 3.3059760926698444e-29,
+            "stokes_relative_closure": 2.873619755423492e-10
+          },
+          "1.0": {
+            "boundary_CCW_circulation": 3.223569310029187e-32,
+            "integrated_CCW_curl": 3.2235702201731416e-32,
+            "oriented_boundary_segments": [
+              -5.733890683821942e-30,
+              -1.0444744216755594e-29,
+              4.139014834202258e-30,
+              1.207185575947557e-29
+            ],
+            "absolute_boundary_scale": 3.238950549425536e-29,
+            "stokes_relative_closure": 2.8099964504269036e-10
+          }
+        },
+        {
+          "0.0": {
+            "boundary_CCW_circulation": -5.114739394785582e-44,
+            "integrated_CCW_curl": 0.0,
+            "oriented_boundary_segments": [
+              -5.985473576430215e-30,
+              -1.0879534582115247e-29,
+              4.372295908453202e-30,
+              1.2492712250092209e-29
+            ],
+            "absolute_boundary_scale": 3.3730016317090874e-29,
+            "stokes_relative_closure": 1.5163761993776336e-15
+          },
+          "0.5": {
+            "boundary_CCW_circulation": 1.611785105953385e-32,
+            "integrated_CCW_curl": 1.611785105958516e-32,
+            "oriented_boundary_segments": [
+              -5.859682130125814e-30,
+              -1.066213938733062e-29,
+              4.2556553713271586e-30,
+              1.2282283997188809e-29
+            ],
+            "absolute_boundary_scale": 3.30597608859724e-29,
+            "stokes_relative_closure": 1.552003714653352e-15
+          },
+          "1.0": {
+            "boundary_CCW_circulation": 3.2235702119124455e-32,
+            "integrated_CCW_curl": 3.223570211917032e-32,
+            "oriented_boundary_segments": [
+              -5.7338906838214114e-30,
+              -1.0444744192545993e-29,
+              4.1390148342011154e-30,
+              1.2071855744285413e-29
+            ],
+            "absolute_boundary_scale": 3.238950545485393e-29,
+            "stokes_relative_closure": 1.4160498887497835e-15
+          }
+        }
+      ]
+    },
+    {
+      "label": "mixed_force",
+      "fixed_T_SM": 0.3,
+      "coordinate_box": [
+        [
+          -1.64,
+          -1.28
+        ],
+        [
+          0.11,
+          0.17
+        ]
+      ],
+      "paired_fd_curl_drift": 1.2387866288321447e-09,
+      "quadratures": [
+        {
+          "0.0": {
+            "boundary_CCW_circulation": -7.133072977636692e-32,
+            "integrated_CCW_curl": 0.0,
+            "oriented_boundary_segments": [
+              -4.118032628826809e-24,
+              4.804341558997031e-24,
+              -2.21848028868098e-24,
+              1.5321712871800282e-24
+            ],
+            "absolute_boundary_scale": 1.2673025763684848e-23,
+            "stokes_relative_closure": 5.62854768123083e-09
+          },
+          "0.5": {
+            "boundary_CCW_circulation": 3.474300268026365e-27,
+            "integrated_CCW_curl": 3.474371561253881e-27,
+            "oriented_boundary_segments": [
+              -3.948903809434423e-24,
+              4.866410899511782e-24,
+              -2.2996427401448076e-24,
+              1.3856099503354747e-24
+            ],
+            "absolute_boundary_scale": 1.2500567399426487e-23,
+            "stokes_relative_closure": 5.703199321863565e-09
+          },
+          "1.0": {
+            "boundary_CCW_circulation": 6.948671866780487e-27,
+            "integrated_CCW_curl": 6.948743122507761e-27,
+            "oriented_boundary_segments": [
+              -3.779774990042037e-24,
+              4.9284802400265284e-24,
+              -2.3808051916086354e-24,
+              1.2390486134909246e-24
+            ],
+            "absolute_boundary_scale": 1.2328109035168126e-23,
+            "stokes_relative_closure": 5.7799397353951206e-09
+          }
+        },
+        {
+          "0.0": {
+            "boundary_CCW_circulation": -5.065645968074795e-37,
+            "integrated_CCW_curl": 0.0,
+            "oriented_boundary_segments": [
+              -4.118032628915556e-24,
+              4.8043417925880865e-24,
+              -2.2184802878659727e-24,
+              1.5321711241929355e-24
+            ],
+            "absolute_boundary_scale": 1.2673025833562551e-23,
+            "stokes_relative_closure": 3.9971874393715936e-14
+          },
+          "0.5": {
+            "boundary_CCW_circulation": 3.4743715564431205e-27,
+            "integrated_CCW_curl": 3.474371556949876e-27,
+            "oriented_boundary_segments": [
+              -3.9489038095235255e-24,
+              4.866411133000442e-24,
+              -2.2996427393291655e-24,
+              1.3856097874086922e-24
+            ],
+            "absolute_boundary_scale": 1.2500567469261825e-23,
+            "stokes_relative_closure": 4.053859504330626e-14
+          },
+          "1.0": {
+            "boundary_CCW_circulation": 6.948743113396112e-27,
+            "integrated_CCW_curl": 6.948743113899752e-27,
+            "oriented_boundary_segments": [
+              -3.7797749901314944e-24,
+              4.928480473412802e-24,
+              -2.380805190792358e-24,
+              1.239048450624447e-24
+            ],
+            "absolute_boundary_scale": 1.2328109104961102e-23,
+            "stokes_relative_closure": 4.0852997482316456e-14
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Local charged-lepton timelike FD kernel. Blocking toggle keeps the same visible occupations, phase-space kernel and affinity; no alteration of numerical bath trajectory or omitted physical processes."
+}

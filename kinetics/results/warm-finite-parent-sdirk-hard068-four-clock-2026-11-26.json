@@ -1,0 +1,65 @@
+{
+  "scope": "Observed discrete refinement changes; no asymptotic order or continuum accuracy is asserted.",
+  "identical_clock_and_chart": [
+    "b69387bf9cebc0f6576d0ed4e2da256a06519d1eb7e0fda3653fe0387bfc6708",
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    0.7148213914435242,
+    2.48475682546712e-18,
+    "5890e828b8ca0e45ce32ea8e8063a466da5addee8e1d37744f25ca86d3c7fac1",
+    "393294f1ed1d731cdcce55c98a0c0df3f11ac21875f2cea66be69c409cbb30f7",
+    1.0000000150000001,
+    8.5e-08
+  ],
+  "methods": [
+    {
+      "method": "sdirk2",
+      "grid": [
+        {
+          "blocks": 1,
+          "W": 2.442816594128499e-18,
+          "max_invariant_defect": 4.1522341120980855e-14
+        },
+        {
+          "blocks": 2,
+          "W": 2.4416621246773795e-18,
+          "max_invariant_defect": 8.237854842718662e-14
+        },
+        {
+          "blocks": 4,
+          "W": 2.441392796947918e-18,
+          "max_invariant_defect": 1.6542323066914832e-13
+        }
+      ],
+      "absolute_change": [
+        1.1544694511194602e-21,
+        2.6932772946164167e-22
+      ],
+      "coarse_to_fine_difference_ratio": 4.286485663496757
+    },
+    {
+      "method": "be",
+      "grid": [
+        {
+          "blocks": 1,
+          "W": 2.4264732331267503e-18,
+          "max_invariant_defect": 4.196643033083092e-14
+        },
+        {
+          "blocks": 2,
+          "W": 2.432645581976743e-18,
+          "max_invariant_defect": 8.193445921733655e-14
+        },
+        {
+          "blocks": 4,
+          "W": 2.4365818115890936e-18,
+          "max_invariant_defect": 1.6586731987899839e-13
+        }
+      ],
+      "absolute_change": [
+        6.172348849992671e-21,
+        3.936229612350642e-21
+      ],
+      "coarse_to_fine_difference_ratio": 1.5680865848439824
+    }
+  ]
+}

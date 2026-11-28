@@ -1,0 +1,49 @@
+{
+  "grid": "fine",
+  "x_start": 0.0075,
+  "x_end": 0.01,
+  "steps": [
+    512,
+    1024
+  ],
+  "levels": [
+    5,
+    6
+  ],
+  "fixed_mass": 8.535844540506035e-05,
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "G6_over_G5_minus_one_at_each_clock": [
+    [
+      -1.2095081602936375e-08,
+      -0.0008015228884139525,
+      -0.0008031755436637145
+    ],
+    [
+      -1.2095079271468023e-08,
+      -0.0008015228852844558,
+      -0.0008031755406282537
+    ]
+  ],
+  "fine_minus_coarse_of_G6_over_G5": [
+    2.3314683517128287e-15,
+    3.1294966618133913e-12,
+    3.0354607716276405e-12
+  ],
+  "G5_and_G6_individual_coarse_over_fine_minus_one": [
+    [
+      -1.2523085601845452e-07,
+      -5.872336494849861e-08,
+      -5.859829610432854e-08
+    ],
+    [
+      -1.2523085834992287e-07,
+      -5.872649699867338e-08,
+      -5.8601334118613124e-08
+    ]
+  ],
+  "scope": "Each order holds its own earlier startup state fixed. This does not test startup pressure error or subsequent evolution."
+}

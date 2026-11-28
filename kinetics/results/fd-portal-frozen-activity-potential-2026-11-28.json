@@ -1,0 +1,365 @@
+{
+  "rows": [
+    {
+      "T_SM": 0.05,
+      "forces": [
+        0.0,
+        0.0
+      ],
+      "actual_flows": [
+        0.0,
+        0.0
+      ],
+      "convex_test_force_hessian": [
+        [
+          1.345864137807653e-29,
+          1.1784350572932839e-28
+        ],
+        [
+          1.1784350572932839e-28,
+          1.1319608506406335e-27
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          1.345864137807653e-29,
+          1.1784350572932839e-28
+        ],
+        [
+          1.1784350572932839e-28,
+          1.1319608506406335e-27
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "potential_value": 0.0,
+      "max_exact_split_error_scaled": 0.0,
+      "max_frozen_finite_difference_error": 1.7430180881721365e-15,
+      "max_activity_response_relative_to_physical": 0.0
+    },
+    {
+      "T_SM": 0.05,
+      "forces": [
+        0.6,
+        0.16
+      ],
+      "actual_flows": [
+        9.21549987611333e-29,
+        9.652749196858457e-28
+      ],
+      "convex_test_force_hessian": [
+        [
+          5.85774610296139e-29,
+          5.934196738034452e-28
+        ],
+        [
+          5.934196738034452e-28,
+          6.62312677002042e-27
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          1.001357192957771e-28,
+          1.049501799439819e-27
+        ],
+        [
+          1.038167495529e-27,
+          1.1936835728494352e-26
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          4.155825826616322e-29,
+          4.560821256363733e-28
+        ],
+        [
+          4.447478217255546e-28,
+          5.313708958473933e-27
+        ]
+      ],
+      "potential_value": 9.366727164684387e-29,
+      "max_exact_split_error_scaled": 6.010510909701557e-17,
+      "max_frozen_finite_difference_error": 9.712985630077716e-14,
+      "max_activity_response_relative_to_physical": 0.4451522228616759
+    },
+    {
+      "T_SM": 0.05,
+      "forces": [
+        -0.6,
+        -0.16
+      ],
+      "actual_flows": [
+        -1.190612312591636e-29,
+        -1.056442369324643e-28
+      ],
+      "convex_test_force_hessian": [
+        [
+          8.036668436886737e-30,
+          6.878073032583197e-29
+        ],
+        [
+          6.878073032583197e-29,
+          6.475885429011961e-28
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          2.3200937528704603e-30,
+          1.7027388459876375e-29
+        ],
+        [
+          1.7594697076650512e-29,
+          1.4171415794898888e-28
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          -5.7165746840162875e-30,
+          -5.175334186595569e-29
+        ],
+        [
+          -5.118603324918156e-29,
+          -5.0587438495220815e-28
+        ]
+      ],
+      "potential_value": 1.0991080881742966e-29,
+      "max_exact_split_error_scaled": 1.3848778317634847e-15,
+      "max_frozen_finite_difference_error": 6.360051442373803e-14,
+      "max_activity_response_relative_to_physical": 0.7811663601797081
+    },
+    {
+      "T_SM": 0.3,
+      "forces": [
+        -1.5,
+        0.16
+      ],
+      "actual_flows": [
+        1.3376250473871353e-24,
+        8.616096334935474e-23
+      ],
+      "convex_test_force_hessian": [
+        [
+          3.019997160459118e-23,
+          2.988543275852053e-22
+        ],
+        [
+          2.988543275852053e-22,
+          3.575768683409076e-21
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          3.114328232154459e-23,
+          3.42959251785169e-22
+        ],
+        [
+          3.43098991043165e-22,
+          4.6584369879062815e-21
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          9.43310716953397e-25,
+          4.4104924199963435e-23
+        ],
+        [
+          4.424466345795942e-23,
+          1.0826683044972017e-21
+        ]
+      ],
+      "potential_value": 5.4105377983167585e-24,
+      "max_exact_split_error_scaled": 8.882249831083677e-16,
+      "max_frozen_finite_difference_error": 6.254920704911994e-14,
+      "max_activity_response_relative_to_physical": 0.2324102069659642
+    },
+    {
+      "T_SM": 0.3,
+      "forces": [
+        1.5,
+        -0.16
+      ],
+      "actual_flows": [
+        5.880897828081778e-24,
+        1.0520634909325559e-23
+      ],
+      "convex_test_force_hessian": [
+        [
+          3.063157639599353e-23,
+          2.4969068536815e-22
+        ],
+        [
+          2.4969068536815e-22,
+          2.2848149790259544e-21
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          3.259513720880983e-23,
+          2.5123838659313263e-22
+        ],
+        [
+          2.5023377374692582e-22,
+          2.1327455758456164e-21
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          1.9635608128162633e-24,
+          1.5477012249823031e-24
+        ],
+        [
+          5.430883787755308e-25,
+          -1.520694031803408e-22
+        ]
+      ],
+      "potential_value": 3.517468623638888e-24,
+      "max_exact_split_error_scaled": 1.2244652545781756e-15,
+      "max_frozen_finite_difference_error": 1.5874831888766465e-13,
+      "max_activity_response_relative_to_physical": 0.06655655034490798
+    },
+    {
+      "T_SM": 0.64135,
+      "forces": [
+        -0.03418787777103929,
+        0.002
+      ],
+      "actual_flows": [
+        -3.309641549175513e-22,
+        3.690809226176566e-21
+      ],
+      "convex_test_force_hessian": [
+        [
+          1.971953429566571e-18,
+          3.354296631815035e-17
+        ],
+        [
+          3.354296631815035e-17,
+          5.752268303621834e-16
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          1.971800856890685e-18,
+          3.354486796715015e-17
+        ],
+        [
+          3.3544867967150144e-17,
+          5.753293966149022e-16
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          -1.5257267588544796e-22,
+          1.9016489998005207e-21
+        ],
+        [
+          1.9016489998005335e-21,
+          1.0256625271899337e-19
+        ]
+      ],
+      "potential_value": 9.348259765161951e-24,
+      "max_exact_split_error_scaled": 1.9499337235439057e-16,
+      "max_frozen_finite_difference_error": 6.341552696792403e-15,
+      "max_activity_response_relative_to_physical": 0.00017827396500590473
+    },
+    {
+      "T_SM": 0.6882487043,
+      "forces": [
+        0.0,
+        0.0
+      ],
+      "actual_flows": [
+        0.0,
+        0.0
+      ],
+      "convex_test_force_hessian": [
+        [
+          6.305257724765682e-18,
+          1.0084762086073986e-16
+        ],
+        [
+          1.0084762086073986e-16,
+          1.6251630738156646e-15
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          6.305257724765682e-18,
+          1.0084762086073986e-16
+        ],
+        [
+          1.0084762086073986e-16,
+          1.6251630738156646e-15
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "potential_value": 0.0,
+      "max_exact_split_error_scaled": 0.0,
+      "max_frozen_finite_difference_error": 6.310253988109231e-15,
+      "max_activity_response_relative_to_physical": 0.0
+    },
+    {
+      "T_SM": 0.6882487043,
+      "forces": [
+        1.8,
+        -0.16
+      ],
+      "actual_flows": [
+        -3.277912104477506e-18,
+        -5.3431378807993175e-17
+      ],
+      "convex_test_force_hessian": [
+        [
+          4.663964984816776e-18,
+          7.410666668112538e-17
+        ],
+        [
+          7.410666668112538e-17,
+          1.1873210679050658e-15
+        ]
+      ],
+      "physical_differential_jacobian": [
+        [
+          3.0282367176389516e-18,
+          4.743656296043294e-17
+        ],
+        [
+          4.7468102992921765e-17,
+          7.507036108837677e-16
+        ]
+      ],
+      "separately_derived_activity_response": [
+        [
+          -1.6357282671778375e-18,
+          -2.6670103720692665e-17
+        ],
+        [
+          -2.663856368820384e-17,
+          -4.366174570213017e-16
+        ]
+      ],
+      "potential_value": 1.3030331603792887e-18,
+      "max_exact_split_error_scaled": 2.9898181456158488e-15,
+      "max_frozen_finite_difference_error": 8.191894092727313e-14,
+      "max_activity_response_relative_to_physical": 0.36773326846771
+    }
+  ],
+  "scope": "The activity is held fixed only while varying a mathematical test force; the physical bath derivative changes it. No global potential of the physical force-dependent flow or cosmological stability claim."
+}

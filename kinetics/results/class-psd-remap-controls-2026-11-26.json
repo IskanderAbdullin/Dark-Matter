@@ -1,0 +1,70 @@
+[
+  {
+    "snapshot_a": 5.326008998418959e-10,
+    "sigma_log_q": 0.01,
+    "grid_nodes": 3200,
+    "components": [
+      {
+        "file": "stable.dat",
+        "mass_eV": 20000000.0,
+        "q_max_recommended": 19.836652584823533,
+        "rest_number_per_today_Tgamma_cube": 3.692248452227043e-08,
+        "table_q_moments_1_2_3_over_shell": [
+          1.0000501436155593,
+          1.0002005894133508,
+          1.0004513824771204
+        ],
+        "clipped_probability": 5.4478888694764074e-15,
+        "omega_h2_from_retained_rest_count": 0.11816900374571636
+      },
+      {
+        "file": "scalar.dat",
+        "mass_eV": 86.0,
+        "q_max_recommended": 94.44473436450082,
+        "rest_number_per_today_Tgamma_cube": 2.172523795019247e-11,
+        "table_q_moments_1_2_3_over_shell": [
+          1.0000502623636343,
+          1.0002010711468718,
+          1.0004525140639327
+        ],
+        "clipped_probability": 7.965576813139799e-14,
+        "omega_h2_from_retained_rest_count": 2.9898242112084535e-10
+      }
+    ],
+    "convention": "q=p_comoving/Tgamma_today, T_ncdm=1, deg_ncdm=1. File f0 includes spin counts divided by (2 pi)^3; exterior vacuum. Positive log smoothing exactly normalizes number and audits moment drift."
+  },
+  {
+    "snapshot_a": 5.326008998418959e-10,
+    "sigma_log_q": 0.006,
+    "grid_nodes": 6200,
+    "components": [
+      {
+        "file": "stable.dat",
+        "mass_eV": 20000000.0,
+        "q_max_recommended": 19.836652584823533,
+        "rest_number_per_today_Tgamma_cube": 3.692248452227043e-08,
+        "table_q_moments_1_2_3_over_shell": [
+          1.000018037151231,
+          1.0000721536112687,
+          1.000162357085681
+        ],
+        "clipped_probability": 5.4478888694764074e-15,
+        "omega_h2_from_retained_rest_count": 0.11816900374571636
+      },
+      {
+        "file": "scalar.dat",
+        "mass_eV": 86.0,
+        "q_max_recommended": 94.44473436450082,
+        "rest_number_per_today_Tgamma_cube": 2.172523795019247e-11,
+        "table_q_moments_1_2_3_over_shell": [
+          1.0000180696376317,
+          1.0000722807970088,
+          1.0001626394106
+        ],
+        "clipped_probability": 7.965576813139799e-14,
+        "omega_h2_from_retained_rest_count": 2.9898242112084535e-10
+      }
+    ],
+    "convention": "q=p_comoving/Tgamma_today, T_ncdm=1, deg_ncdm=1. File f0 includes spin counts divided by (2 pi)^3; exterior vacuum. Positive log smoothing exactly normalizes number and audits moment drift."
+  }
+]

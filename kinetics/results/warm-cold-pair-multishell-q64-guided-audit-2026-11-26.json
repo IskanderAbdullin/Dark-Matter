@@ -1,0 +1,113 @@
+{
+  "snapshot_sha256": "850b41b6ee16d4978cdaa67a76ea39948e688048aaa9121afc7cefa7b7ac2094",
+  "source_sha256": "e5be41935ce381f184225796700c67643d3c78925b0ddd6bebd80c9a388e995c",
+  "original_output_sha256": "c755c6c77eae7ae7cff583f1f7498e0a56a08c69e7ec808c0058a7a69cc64d71",
+  "guide_sha256": "911cc34e502cff523c69300644e0d28d104f2920b868eaa9f1f630fc6e2b4255",
+  "solver": {
+    "used_guide": true,
+    "observation": [
+      [
+        0,
+        3881.4160619670984,
+        40
+      ],
+      [
+        1,
+        19.70521888272848,
+        40
+      ],
+      [
+        2,
+        0.00047635111023784323,
+        40
+      ],
+      [
+        3,
+        1.343055568510964e-11,
+        48
+      ],
+      [
+        4,
+        1.0048656341938831e-11,
+        106
+      ],
+      [
+        5,
+        8.534505786108326e-12,
+        48
+      ],
+      [
+        6,
+        5.216009407120657e-12,
+        50
+      ]
+    ],
+    "newton_iterations": 6,
+    "residual": 5.216009407120657e-12,
+    "entropy_gain_relative": 1.2781890994517653e-06,
+    "maximum_exponent_departure_from_eq": 0.12489301620538244,
+    "structurally_inactive_cells": 0,
+    "structurally_inactive_vacuum_cells": 0
+  },
+  "corrections": [
+    {
+      "total_number_ledger": 6.598340862376275e-17,
+      "total_energy_ledger": 6.065607041833031e-17,
+      "tag_closure": 8.484693202902189e-11,
+      "cold_reverse_event_fraction": 0.0002553305906201517,
+      "both_cold_event_fraction": 1.705571175475834e-10,
+      "cold_gain": 8.978115705662216e-43,
+      "cold_loss": 1.7563033302118726e-42
+    },
+    {
+      "total_number_ledger": 5.71592863585157e-17,
+      "total_energy_ledger": 1.2124762146931285e-16,
+      "tag_closure": 8.474697771083558e-11,
+      "cold_reverse_event_fraction": 0.0002551537765960087,
+      "both_cold_event_fraction": 1.7023991042272004e-10,
+      "cold_gain": 8.995397055320365e-43,
+      "cold_loss": 1.755252575205947e-42
+    },
+    {
+      "total_number_ledger": 5.601446097555205e-16,
+      "total_energy_ledger": 3.237119290122145e-16,
+      "tag_closure": 8.508055112677406e-11,
+      "cold_reverse_event_fraction": 0.00025570425840220284,
+      "both_cold_event_fraction": 1.712781235400801e-10,
+      "cold_gain": 8.986287148145275e-43,
+      "cold_loss": 1.7496914620431975e-42
+    },
+    {
+      "total_number_ledger": 1.5747525247718754e-17,
+      "total_energy_ledger": 3.2353918760761973e-16,
+      "tag_closure": 8.49797073512115e-11,
+      "cold_reverse_event_fraction": 0.00025552584123827754,
+      "both_cold_event_fraction": 1.7095795452287213e-10,
+      "cold_gain": 9.00356859820769e-43,
+      "cold_loss": 1.7486465309171396e-42
+    }
+  ],
+  "ledgers": [
+    1.4117433362005738e-14,
+    7.993605777301127e-15
+  ],
+  "slopes": [
+    0.00014355429766505908,
+    -4.7172025913432026e-05,
+    -4.717237971215993e-05
+  ],
+  "L1_vs_native": [
+    [
+      4.3105650588515954e-08,
+      4.448561493057726e-08
+    ],
+    [
+      6.699010105114131e-08,
+      3.58441909543725e-08
+    ],
+    [
+      6.699010099263087e-08,
+      2.1938601758991953e-08
+    ]
+  ]
+}

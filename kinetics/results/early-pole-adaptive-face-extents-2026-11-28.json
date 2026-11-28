@@ -1,0 +1,106 @@
+[
+  {
+    "comparison_to_fixed_512": [
+      -2.1708169944401057e-05,
+      -5.272144743106999e-06
+    ],
+    "grid": "fine",
+    "scope": "Archive-started bounded adaptive pilot",
+    "cases": [
+      {
+        "span": 5e-05,
+        "tol": 0.002,
+        "accepted": 45,
+        "rejected": 2,
+        "min_max_accepted_step": [
+          7.853724993574365e-08,
+          2.805732745650637e-06
+        ],
+        "max_error_estimate": 0.7934132168235664,
+        "paired_count_changes": [
+          8.221692820308101e-07,
+          8.221692820399642e-07,
+          -8.22169282085112e-07
+        ],
+        "number_defect": 5.4301905819933906e-17,
+        "maximum_charged_occupation": 0.9999042458309245,
+        "maximum_limited_extent_fraction": 1.4779773430181727e-07,
+        "continuity_residual": -1.798328801260133e-16,
+        "integrated_collision_energy_jumps": -1.798322599703333e-16
+      },
+      {
+        "span": 5e-05,
+        "tol": 0.0005,
+        "accepted": 91,
+        "rejected": 9,
+        "min_max_accepted_step": [
+          5.192101310256507e-08,
+          1.515324935323591e-06
+        ],
+        "max_error_estimate": 0.9508727550795674,
+        "paired_count_changes": [
+          8.221827955192024e-07,
+          8.221827955151175e-07,
+          -8.221827955236922e-07
+        ],
+        "number_defect": 4.489804016039826e-18,
+        "maximum_charged_occupation": 0.9999402606623907,
+        "maximum_limited_extent_fraction": 1.3882952701842483e-07,
+        "continuity_residual": -2.353065799278572e-17,
+        "integrated_collision_energy_jumps": -2.3530035371757607e-17
+      }
+    ]
+  },
+  {
+    "comparison_to_fixed_512": [
+      -1.8530739139821506e-05,
+      -5.145295112529702e-06
+    ],
+    "grid": "third",
+    "scope": "Archive-started bounded adaptive pilot",
+    "cases": [
+      {
+        "span": 5e-05,
+        "tol": 0.002,
+        "accepted": 71,
+        "rejected": 12,
+        "min_max_accepted_step": [
+          2.619130140470019e-10,
+          2.7265052961413903e-06
+        ],
+        "max_error_estimate": 0.9414118568592765,
+        "paired_count_changes": [
+          5.359967551180506e-07,
+          5.35996755119439e-07,
+          -5.35996755109969e-07
+        ],
+        "number_defect": 8.08154134975328e-18,
+        "maximum_charged_occupation": 0.9999147919686181,
+        "maximum_limited_extent_fraction": 2.16720431637472e-07,
+        "continuity_residual": 2.4085491043016887e-17,
+        "integrated_collision_energy_jumps": 2.408633016219871e-17
+      },
+      {
+        "span": 5e-05,
+        "tol": 0.0005,
+        "accepted": 132,
+        "rejected": 20,
+        "min_max_accepted_step": [
+          2.3480179438215465e-10,
+          1.4138057378623836e-06
+        ],
+        "max_error_estimate": 0.9518909840346164,
+        "paired_count_changes": [
+          5.360039298055673e-07,
+          5.360039298047311e-07,
+          -5.360039297688462e-07
+        ],
+        "number_defect": 3.672110172496046e-17,
+        "maximum_charged_occupation": 1.0,
+        "maximum_limited_extent_fraction": 2.2006869702135184e-07,
+        "continuity_residual": 2.415730686379874e-16,
+        "integrated_collision_energy_jumps": 2.4157385536708365e-16
+      }
+    ]
+  }
+]

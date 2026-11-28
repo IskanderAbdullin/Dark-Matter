@@ -1,0 +1,69 @@
+{
+  "scope": "Modewise heavy-fermion barrier under a cap on the light occupations, finite energy and spatial homogeneity/isotropy, with the specified number-changing channels and positive budgets. Does not bound gains from elastic redistribution of the heavy fermion, or the light cap itself.",
+  "results": [
+    {
+      "q": 16,
+      "cases": [
+        {
+          "cap": 0.001,
+          "total_bounded_input_over_outgoing_decay_margin": 1.9391342306686472e-11,
+          "remaining_source_budget_in_units_Gamma_M_over_E_parent": 0.0009989999999806282,
+          "external_E_budget_GeV4": 4.4507985967574815e-12,
+          "scalar_pair_upper_in_units_Gamma_M_over_E_parent": 1.8103055163977113e-15,
+          "light_pair_upper_in_units_Gamma_M_over_E_parent": 1.054806007204608e-14,
+          "conservative_spin_and_channel_overcount": 32.0
+        },
+        {
+          "cap": 0.1,
+          "total_bounded_input_over_outgoing_decay_margin": 2.439784144340846e-12,
+          "remaining_source_budget_in_units_Gamma_M_over_E_parent": 0.08999999999978044,
+          "external_E_budget_GeV4": 4.4507985967574815e-12,
+          "scalar_pair_upper_in_units_Gamma_M_over_E_parent": 1.8103055163977113e-15,
+          "light_pair_upper_in_units_Gamma_M_over_E_parent": 2.1075668209834249e-13,
+          "conservative_spin_and_channel_overcount": 32.0
+        },
+        {
+          "cap": 0.5,
+          "total_bounded_input_over_outgoing_decay_margin": 2.4826784102145048e-12,
+          "remaining_source_budget_in_units_Gamma_M_over_E_parent": 0.24999999999937933,
+          "external_E_budget_GeV4": 4.4507985967574815e-12,
+          "scalar_pair_upper_in_units_Gamma_M_over_E_parent": 1.8103055163977113e-15,
+          "light_pair_upper_in_units_Gamma_M_over_E_parent": 6.118457116612925e-13,
+          "conservative_spin_and_channel_overcount": 32.0
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "cases": [
+        {
+          "cap": 0.001,
+          "total_bounded_input_over_outgoing_decay_margin": 1.9389180238568762e-11,
+          "remaining_source_budget_in_units_Gamma_M_over_E_parent": 0.0009989999999806304,
+          "external_E_budget_GeV4": 4.450266511120871e-12,
+          "scalar_pair_upper_in_units_Gamma_M_over_E_parent": 1.8098727041886296e-15,
+          "light_pair_upper_in_units_Gamma_M_over_E_parent": 1.0546332978205572e-14,
+          "conservative_spin_and_channel_overcount": 32.0
+        },
+        {
+          "cap": 0.1,
+          "total_bounded_input_over_outgoing_decay_margin": 2.43940442540255e-12,
+          "remaining_source_budget_in_units_Gamma_M_over_E_parent": 0.08999999999978046,
+          "external_E_budget_GeV4": 4.450266511120871e-12,
+          "scalar_pair_upper_in_units_Gamma_M_over_E_parent": 1.8098727041886296e-15,
+          "light_pair_upper_in_units_Gamma_M_over_E_parent": 2.1072294020610488e-13,
+          "conservative_spin_and_channel_overcount": 32.0
+        },
+        {
+          "cap": 0.5,
+          "total_bounded_input_over_outgoing_decay_margin": 2.4822856141936e-12,
+          "remaining_source_budget_in_units_Gamma_M_over_E_parent": 0.24999999999937944,
+          "external_E_budget_GeV4": 4.450266511120871e-12,
+          "scalar_pair_upper_in_units_Gamma_M_over_E_parent": 1.8098727041886296e-15,
+          "light_pair_upper_in_units_Gamma_M_over_E_parent": 6.117479454682754e-13,
+          "conservative_spin_and_channel_overcount": 32.0
+        }
+      ]
+    }
+  ]
+}

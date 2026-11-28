@@ -1,0 +1,77 @@
+{
+  "scope": "One-charge bare emission in finite bands. Upper threshold is the certified limit of the monotone parent chart, not a physical separation.",
+  "data": [
+    {
+      "grid": "fine",
+      "bridge_endpoint_abs_defect": 0.0,
+      "windows": [
+        {
+          "edges": [
+            4e-05,
+            8e-05
+          ],
+          "gain_loss_one_charge": [
+            65922.00516692777,
+            19001.129602640816
+          ],
+          "max_two_rule_relative_drift": 7.349676423018536e-14
+        },
+        {
+          "edges": [
+            8e-05,
+            0.00016
+          ],
+          "gain_loss_one_charge": [
+            32949.7782665015,
+            9560.91878107086
+          ],
+          "max_two_rule_relative_drift": 2.5635049638594865e-13
+        },
+        {
+          "edges": [
+            0.00016,
+            0.00032
+          ],
+          "gain_loss_one_charge": [
+            16463.61439224226,
+            4840.709410405399
+          ],
+          "max_two_rule_relative_drift": 2.653433028854124e-13
+        },
+        {
+          "edges": [
+            0.00032,
+            0.00064
+          ],
+          "gain_loss_one_charge": [
+            8220.43894153328,
+            2480.393387099797
+          ],
+          "max_two_rule_relative_drift": 6.328271240363392e-14
+        },
+        {
+          "edges": [
+            0.00064,
+            0.00128
+          ],
+          "gain_loss_one_charge": [
+            4098.6900561550765,
+            1299.8030217220014
+          ],
+          "max_two_rule_relative_drift": 5.5067062021407764e-14
+        },
+        {
+          "edges": [
+            0.00128,
+            0.00256
+          ],
+          "gain_loss_one_charge": [
+            2037.5801378825151,
+            708.6028787351627
+          ],
+          "max_two_rule_relative_drift": 1.2634338020234281e-13
+        }
+      ]
+    }
+  ]
+}

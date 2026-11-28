@@ -1,0 +1,221 @@
+{
+  "scope": "Analytic O(T\u00b2) rest-frame photon-only equal-charge benchmark, for the scalar and chiral currents; away from mass/phase-space endpoints. Not a hot-medium rate.",
+  "symbolic_sum_plus_two": "0",
+  "integrand_r_power_coefficients": [
+    "-4*a*m**2/w**2 + 8*a*u/w - 4*a - 4*m**2*u/w**2 + 8*u**2/w - 4*u",
+    "8*a - 8*a/w + 8*u - 8*u/w",
+    "4*w - 8 + 4/w"
+  ],
+  "direct_signed_real_checks": [
+    {
+      "m_over_M": 0.003,
+      "scalar_over_M": 0,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 1.0231815394945443e-12,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.224997975,
+        0.40499635500000003
+      ],
+      "external_K_and_phase_coefficient": -46.47321592562855
+    },
+    {
+      "m_over_M": 0.003,
+      "scalar_over_M": 0,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 1.0338396805309458e-12,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.224997975,
+        0.40499635500000003
+      ],
+      "external_K_and_phase_coefficient": -46.23182713531577
+    },
+    {
+      "m_over_M": 0.03,
+      "scalar_over_M": 0.04,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 9.237055564881302e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.2238975,
+        0.4030155
+      ],
+      "external_K_and_phase_coefficient": -28.13694868814689
+    },
+    {
+      "m_over_M": 0.03,
+      "scalar_over_M": 0.04,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 9.059419880941277e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.2238975,
+        0.4030155
+      ],
+      "external_K_and_phase_coefficient": -26.883814484075863
+    },
+    {
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.0174,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 7.283063041541027e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.223652079,
+        0.40257374220000003
+      ],
+      "external_K_and_phase_coefficient": -22.547561694571453
+    },
+    {
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.0174,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 7.37188088351104e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.223652079,
+        0.40257374220000003
+      ],
+      "external_K_and_phase_coefficient": -20.78007362486018
+    },
+    {
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.4,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 7.016609515630989e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.17739,
+        0.31930200000000003
+      ],
+      "external_K_and_phase_coefficient": -30.314494901553267
+    },
+    {
+      "m_over_M": 0.06,
+      "scalar_over_M": 0.4,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 7.105427357601002e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.17739,
+        0.31930200000000003
+      ],
+      "external_K_and_phase_coefficient": -27.515149904957372
+    },
+    {
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.1,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 3.3306690738754696e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.20475,
+        0.36855
+      ],
+      "external_K_and_phase_coefficient": -13.406173550022734
+    },
+    {
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.1,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 3.241851231905457e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.20475,
+        0.36855
+      ],
+      "external_K_and_phase_coefficient": -11.359355798631784
+    },
+    {
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.65,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 2.6645352591003757e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.06243749999999997,
+        0.11238749999999995
+      ],
+      "external_K_and_phase_coefficient": -37.87267609303939
+    },
+    {
+      "m_over_M": 0.2,
+      "scalar_over_M": 0.65,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 2.6645352591003757e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.06243749999999997,
+        0.11238749999999995
+      ],
+      "external_K_and_phase_coefficient": -31.3469865052058
+    },
+    {
+      "m_over_M": 0.5,
+      "scalar_over_M": 0.12,
+      "current": "left",
+      "maximum_signed_real_absolute_defect": 1.0103029524088925e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.13851,
+        0.24931799999999998
+      ],
+      "external_K_and_phase_coefficient": -7.753783971832678
+    },
+    {
+      "m_over_M": 0.5,
+      "scalar_over_M": 0.12,
+      "current": "scalar",
+      "maximum_signed_real_absolute_defect": 1.0325074129013956e-14,
+      "points": [
+        -0.21,
+        -0.04,
+        0.0,
+        0.01,
+        0.13851,
+        0.24931799999999998
+      ],
+      "external_K_and_phase_coefficient": -7.067137570871899
+    }
+  ]
+}

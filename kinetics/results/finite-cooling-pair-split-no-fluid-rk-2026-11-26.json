@@ -1,0 +1,109 @@
+{
+  "z": 20,
+  "probe_k_h_per_Mpc": [
+    4.0,
+    10.0
+  ],
+  "wide_default_reference": [
+    0.7867425865333763,
+    0.5224700491989052
+  ],
+  "cases": [
+    {
+      "case": "joined_on_l36",
+      "lmax": 36,
+      "ncdm_fluid_approximation": 2,
+      "native_k": [
+        2.513619710303,
+        3.983818763993,
+        4.0,
+        6.313927239051,
+        10.0,
+        10.00690029887
+      ],
+      "component_delta_over_cdm": [
+        [
+          0.7864681898735226
+        ],
+        [
+          0.5226051715735364
+        ]
+      ],
+      "summed_tracer_delta_over_cdm": [
+        0.7864681898735226,
+        0.5226051715735364
+      ],
+      "hot_energy_fraction": null,
+      "explicit_rk": false,
+      "difference_from_wide_default": [
+        -0.00027439665985362627,
+        0.00013512237463120247
+      ]
+    },
+    {
+      "case": "joined_off_l36",
+      "lmax": 36,
+      "ncdm_fluid_approximation": 3,
+      "native_k": [
+        2.513619710303,
+        3.983818763993,
+        4.0,
+        6.313927239051,
+        10.0,
+        10.00690029887
+      ],
+      "component_delta_over_cdm": [
+        [
+          0.8812974441958652
+        ],
+        [
+          0.7596603696165449
+        ]
+      ],
+      "summed_tracer_delta_over_cdm": [
+        0.8812974441958652,
+        0.7596603696165449
+      ],
+      "hot_energy_fraction": null,
+      "explicit_rk": false,
+      "difference_from_wide_default": [
+        0.09455485766248894,
+        0.23719032041763977
+      ]
+    },
+    {
+      "case": "split_off_l36_rk",
+      "lmax": 36,
+      "ncdm_fluid_approximation": 3,
+      "native_k": [
+        2.513619710303,
+        3.983818763992,
+        4.0,
+        6.313927239051,
+        10.0,
+        10.00690029887
+      ],
+      "component_delta_over_cdm": [
+        [
+          0.9456900675173125,
+          0.5991061313673475
+        ],
+        [
+          0.8533825791011362,
+          0.34893340272538603
+        ]
+      ],
+      "summed_tracer_delta_over_cdm": [
+        0.8812977307436545,
+        0.7596602282870273
+      ],
+      "hot_energy_fraction": 0.18579146364647406,
+      "explicit_rk": true,
+      "difference_from_wide_default": [
+        0.09455514421027822,
+        0.23719017908812212
+      ]
+    }
+  ],
+  "scope": "Diagnostic native sensitivity of an extremely subdominant scalar tracer; the configuration switch can be isolated when the matching focused on/off pair is available. Sparse k and tested finite hierarchies, not total matter transfer or full physical convergence."
+}

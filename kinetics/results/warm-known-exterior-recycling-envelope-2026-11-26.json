@@ -1,0 +1,85 @@
+{
+  "scope": "After the anchor, known old and new cohorts can re-enter and interact arbitrarily inside the specified isolated network. Does not redo evolution or allow transfer from the core into old tails before the anchor, new visible energy, or unknown sources.",
+  "input_sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "fb375d7a5c7334aa6a0e0752725e7719a83696478a4231a0b76e5ef717a17005",
+    "19b05f819150e1164951161eb748ae7d202baf36f8c7aef54a7ba2e38702dbca",
+    "5a389304a66bfc8b3656f0869b5c58d3e042a0a1a31d3d1d8129b89967cd6c7c",
+    "348f80af30c07495650b0fbdf0c51376088953c96026c786eb5ce1430fa40f2f",
+    "0c91426fadf25079f6ef30607a461e02a465b3ff3bfaf7d34ac06c2537412488",
+    "f1f72bab783feb0f883a32543c6961789700259843322b4a238f0dc0f68c51c3",
+    "1bf79c945c89c1125cef02cbd6b624260c16e034d4e4ff14b6a91fb3a59e2ddc",
+    "5d46a76b985155ede5e35ce728bb98cf485f660e5740a6f5d8dc8bdd8d0d7a61",
+    "d9bc63e8f2bbb77e459656bc5070da030f42abc540283c948b714c1d50bdfb5e",
+    "9414d360773d770e4925120e458fb7d90284eb28912a1065343328703979e18f",
+    "81551ed68e4acc0a93659362b4ab5134048edfe465a2559ac8071d37b2851894"
+  ],
+  "cases": [
+    {
+      "q": 16,
+      "anchor_T_GeV": 0.01044191650938716,
+      "known_new_count_over_core": 6.586782929856674e-06,
+      "known_old_count_over_core": 0.00013627015179377234,
+      "new_exterior_rho_upper_GeV4": 1.2621881549176398e-16,
+      "old_exterior_rho_ballistic_interval_GeV4": [
+        2.3626952845661225e-15,
+        2.6798943806734528e-15
+      ],
+      "old_exterior_rho_pressure_only_upper_GeV4": 3.0439596700819243e-15,
+      "same_total": 0.12,
+      "bounds": [
+        {
+          "history": "retained_only",
+          "added_energy_over_core": 0.0,
+          "inventory_ratio_upper": 5.347210643671087,
+          "scalar_Omega_h2_upper_if_total_fixed": 0.002806788971572358
+        },
+        {
+          "history": "all_known_old_ballistic_and_new",
+          "added_energy_over_core": 0.000643912997142175,
+          "inventory_ratio_upper": 5.3528108969982755,
+          "scalar_Omega_h2_upper_if_total_fixed": 0.0028097291248723806
+        },
+        {
+          "history": "all_known_old_pressure_only_and_new",
+          "added_energy_over_core": 0.0007274543068722333,
+          "inventory_ratio_upper": 5.3535377383817195,
+          "scalar_Omega_h2_upper_if_total_fixed": 0.0028101107192337917
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "anchor_T_GeV": 0.010441916509387049,
+      "known_new_count_over_core": 3.4968784382658895e-12,
+      "known_old_count_over_core": 1.7879008236150545e-10,
+      "new_exterior_rho_upper_GeV4": 1.3007277402600217e-22,
+      "old_exterior_rho_ballistic_interval_GeV4": [
+        5.907653787878569e-21,
+        6.737285698802744e-21
+      ],
+      "old_exterior_rho_pressure_only_upper_GeV4": 7.69111009912181e-21,
+      "same_total": 0.12,
+      "bounds": [
+        {
+          "history": "retained_only",
+          "added_energy_over_core": 0.0,
+          "inventory_ratio_upper": 5.35185383870645,
+          "scalar_Omega_h2_upper_if_total_fixed": 0.002809226667762689
+        },
+        {
+          "history": "all_known_old_ballistic_and_new",
+          "added_energy_over_core": 1.5748851793818994e-09,
+          "inventory_ratio_upper": 5.35185385241379,
+          "scalar_Omega_h2_upper_if_total_fixed": 0.0028092266749590927
+        },
+        {
+          "history": "all_known_old_pressure_only_and_new",
+          "added_energy_over_core": 1.7936248764195242e-09,
+          "inventory_ratio_upper": 5.351853854317637,
+          "scalar_Omega_h2_upper_if_total_fixed": 0.0028092266759586195
+        }
+      ]
+    }
+  ]
+}

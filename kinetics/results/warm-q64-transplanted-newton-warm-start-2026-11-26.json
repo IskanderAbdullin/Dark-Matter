@@ -1,0 +1,90 @@
+{
+  "scope": "Actual first q64 checkpoint and an independently archived q32 end shape as a borrowed initial guess for a single replayed coupled block. The wider physical equations, target and outside modes are not replaced. Only the retained endpoint is compared here; no production solver changes.",
+  "wider_initial_sha256": "d7213652c9c24ec5380c7faf2437d1c16d89d6a05232bbc044c5da7cabf4a498",
+  "wider_reference_endpoint_sha256": "036cb4982764539ea51f8ab5f8c69960341afe6f228d414323375a6b1449ee68",
+  "narrower_initial_guess_sha256": "9673cdf1b4c51baf810d81f52ac96d5120b2a1f128e108a3c3063ea3f4d0ccd5",
+  "baseline_initial_newton_systems": [
+    {
+      "equilibrium_trial": false,
+      "max_residual": 12259.5727887869,
+      "species_and_shell": [
+        0,
+        19
+      ],
+      "shell_momentum_range_GeV": [
+        0.1500069526097713,
+        0.17231273970096245
+      ],
+      "min_to_max_number_ratio": 3.527148657116137e-21,
+      "singular_condition_original": 131581723.17892733,
+      "singular_condition_equilibrated": 27221905.636740837,
+      "ordinary_linear_residual": 5.269133596279063e-16,
+      "equilibrated_linear_residual": 5.143673643116297e-16,
+      "difference_between_updates_over_norm": 4.747150403357831e-10
+    },
+    {
+      "equilibrium_trial": true,
+      "max_residual": 0.06601438801118482,
+      "species_and_shell": [
+        0,
+        0
+      ],
+      "shell_momentum_range_GeV": [
+        0.0,
+        4.6877172690553486e-05
+      ],
+      "min_to_max_number_ratio": 3.54943257377133e-21,
+      "singular_condition_original": 131622502.1564208,
+      "singular_condition_equilibrated": 27259831.21958179,
+      "ordinary_linear_residual": 3.0972666977039585e-11,
+      "equilibrated_linear_residual": 6.767006086600164e-11,
+      "difference_between_updates_over_norm": 5.213425925153275e-11
+    }
+  ],
+  "transplanted_iterations_and_residuals": [
+    [
+      0,
+      5486.367378176582,
+      48
+    ],
+    [
+      1,
+      43.11233226574676,
+      48
+    ],
+    [
+      2,
+      0.002046806729269202,
+      48
+    ],
+    [
+      3,
+      8.629677833585929e-12,
+      56
+    ],
+    [
+      4,
+      4.192139767032722e-12,
+      110
+    ]
+  ],
+  "solve": {
+    "newton_iterations": 4,
+    "residual": 4.192139767032722e-12,
+    "entropy_gain_relative": 3.5908819517871393e-07,
+    "maximum_exponent_departure_from_eq": 0.07342015984264005,
+    "structurally_inactive_cells": 0,
+    "structurally_inactive_vacuum_cells": 0
+  },
+  "retained_L1_number_and_kinetic_differences_vs_archived": [
+    [
+      1.0488248180263899e-14,
+      4.095808426670093e-15
+    ],
+    [
+      8.653153665780347e-15,
+      5.352199619641952e-15
+    ]
+  ],
+  "full_retained_energy_relative_difference": 1.021405182655144e-14
+}

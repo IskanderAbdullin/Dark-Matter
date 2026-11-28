@@ -1,0 +1,91 @@
+{
+  "rows": [
+    {
+      "operator": "timelike",
+      "mode": "slow",
+      "local_crossing_T": 0.5561481775480923,
+      "bracket_log_a": [
+        0.5,
+        0.55
+      ],
+      "independent_maximum_difference": 2.6074398196129778e-09,
+      "instantaneous_algebraic_eta_and_beta": [
+        -0.19418471326567374,
+        0.019629627432395953
+      ],
+      "log_a": 0.5111848972498244,
+      "actual_eta": -0.03396746176370381,
+      "actual_beta": 0.0031881499763817267,
+      "comoving_count_over_initial": 1.070232967136535,
+      "combined_total_ledger_defect": 5.424213306705165e-10,
+      "visible_temperature_derivative": -0.5179571733423567
+    },
+    {
+      "operator": "timelike",
+      "mode": "fast",
+      "local_crossing_T": 0.3851821875686101,
+      "bracket_log_a": [
+        0.91,
+        0.93
+      ],
+      "independent_maximum_difference": 4.9255415301985295e-09,
+      "instantaneous_algebraic_eta_and_beta": [
+        -0.9093751547668169,
+        0.008787751221555173
+      ],
+      "log_a": 0.9130472623169359,
+      "actual_eta": -0.07567834856669056,
+      "actual_beta": -0.008782814991774801,
+      "comoving_count_over_initial": 1.1020962845282627,
+      "combined_total_ledger_defect": 1.4615431971325295e-08,
+      "visible_temperature_derivative": -0.34669648247605805
+    },
+    {
+      "operator": "combined",
+      "mode": "slow",
+      "local_crossing_T": 0.551875954351779,
+      "bracket_log_a": [
+        0.5,
+        0.55
+      ],
+      "independent_maximum_difference": 2.603262140576934e-09,
+      "instantaneous_algebraic_eta_and_beta": [
+        -0.1964142723407828,
+        0.019670831028702193
+      ],
+      "log_a": 0.5194655024153013,
+      "actual_eta": -0.03481283621563771,
+      "actual_beta": 0.0032183212620146007,
+      "comoving_count_over_initial": 1.0713265418887483,
+      "combined_total_ledger_defect": 1.9356638514267388e-10,
+      "visible_temperature_derivative": -0.5137101785261642
+    },
+    {
+      "operator": "combined",
+      "mode": "fast",
+      "local_crossing_T": 0.3824093505472154,
+      "bracket_log_a": [
+        0.91,
+        0.93
+      ],
+      "independent_maximum_difference": 7.353756714678639e-09,
+      "instantaneous_algebraic_eta_and_beta": [
+        -0.9040200315106657,
+        -0.0002910671860275049
+      ],
+      "log_a": 0.9210747269259651,
+      "actual_eta": -0.07551644489304812,
+      "actual_beta": -0.00944511316753327,
+      "comoving_count_over_initial": 1.1027346183886222,
+      "combined_total_ledger_defect": 2.2573251780158912e-09,
+      "visible_temperature_derivative": -0.34376041839083854
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "prior_continuation_and_clocks_sha256": [
+    "53920cf458a096b4abf38667e89d32e2cb7672e85552e0a2705063287babd9d4",
+    "2b7ec60b6632a1c2ff45f0be5b8b877f9c4764aabfc25680e9d55a3ec4f69470",
+    "b760138fd01760878c3478343842b732ac8a4aca6c215fcd1aee19113ce5cfaf"
+  ],
+  "scope": "Just a label on a smooth, finite restricted FD trajectory; not a decoupling time or an equilibrium transition."
+}

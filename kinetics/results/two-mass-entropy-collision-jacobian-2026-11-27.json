@@ -1,0 +1,41 @@
+{
+  "scope": "Manufactured Jacobian regression; detailed-balance spectral sign not assumed away from equilibrium.",
+  "cases": [
+    {
+      "parent_excess": 0.093,
+      "scaled_finite_difference_error": 9.506265065965455e-16,
+      "off_equilibrium_scaled_finite_difference": 1.485417655198697e-11,
+      "normalized_left_ledger_defects": [
+        2.908846367041783e-20,
+        5.0420003695390905e-20,
+        1.9392309113611888e-20
+      ],
+      "negative_eigenvalues": [
+        -3.791012456751142,
+        -0.3082573079264652,
+        -0.10216901997215773
+      ],
+      "off_equilibrium_left_ledger_defect": 2.3270770936334264e-20,
+      "maximum_event_space_solve_relative_error": 9.218011160856871e-15,
+      "maximum_event_space_solve_ledger_defect": 3.2036993701552136e-17
+    },
+    {
+      "parent_excess": 2e-23,
+      "scaled_finite_difference_error": 6.697321615009885e-16,
+      "off_equilibrium_scaled_finite_difference": 2.6698451134812866e-12,
+      "normalized_left_ledger_defects": [
+        2.3144865135917746e-21,
+        2.468785614497893e-20,
+        2.468785614497893e-20
+      ],
+      "negative_eigenvalues": [
+        -5.022710057834449,
+        -0.4551457008757158,
+        -0.15931757424408227
+      ],
+      "off_equilibrium_left_ledger_defect": 4.937571228995786e-20,
+      "maximum_event_space_solve_relative_error": 2.2264871139300982e-14,
+      "maximum_event_space_solve_ledger_defect": 5.403282751530133e-17
+    }
+  ]
+}

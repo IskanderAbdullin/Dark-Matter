@@ -1,0 +1,335 @@
+{
+  "time_grid": {
+    "6": {
+      "fixed": {
+        "scope": "Short comoving warm continuation under prescribed radiation clock and held polarization.",
+        "projection": "steps",
+        "grid": "fine",
+        "duration": 2e-06,
+        "panels": 6,
+        "expands": false,
+        "final_log_scale": 0.0,
+        "initial_warm_nodes": [
+          0.12000292989339252,
+          0.17312821566578732,
+          0.2502281475644967,
+          0.36166332329348394,
+          0.5227244044636229,
+          0.7555115086970491,
+          1.0919666939204746,
+          1.5782569119138967,
+          2.2811088413887064,
+          3.296964839489703,
+          4.765216352505949
+        ],
+        "arms": [
+          {
+            "warm_active": false,
+            "cold_gain": 2.3563525931740637e-07,
+            "warm_gain": 0.0,
+            "initial_count_rates": [
+              0.11773242642683411,
+              0.0
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.000872191430270955,
+            "hard_count_defect": -2.220446049250313e-16,
+            "redshift_trace_integral": 0.0,
+            "collision_work": 1.0788382085055127e-18,
+            "energy_change": -2.220446049250313e-16,
+            "redshift_subtracted_defect": -2.220446049250313e-16,
+            "entropy_defect": 7.878897187452161e-16,
+            "maximum_decay_work": 4.66613509983449e-17,
+            "elastic_splits": 0
+          },
+          {
+            "warm_active": true,
+            "cold_gain": 2.3563525930127908e-07,
+            "warm_gain": 5.496873110318989e-13,
+            "initial_count_rates": [
+              0.11773242642683411,
+              2.7483092418045343e-07
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.0008721914302709707,
+            "hard_count_defect": 0.0,
+            "redshift_trace_integral": 0.0,
+            "collision_work": 5.532297015138537e-19,
+            "energy_change": 2.220446049250313e-16,
+            "redshift_subtracted_defect": 2.220446049250313e-16,
+            "entropy_defect": 2.2898349882893854e-16,
+            "maximum_decay_work": 1.441040212504796e-16,
+            "elastic_splits": 0
+          }
+        ]
+      },
+      "expands": {
+        "scope": "Short comoving warm continuation under prescribed radiation clock and held polarization.",
+        "projection": "steps",
+        "grid": "fine",
+        "duration": 2e-06,
+        "panels": 6,
+        "expands": true,
+        "final_log_scale": 2e-06,
+        "initial_warm_nodes": [
+          0.12000292989339252,
+          0.17312821566578732,
+          0.2502281475644967,
+          0.36166332329348394,
+          0.5227244044636229,
+          0.7555115086970491,
+          1.0919666939204746,
+          1.5782569119138967,
+          2.2811088413887064,
+          3.296964839489703,
+          4.765216352505949
+        ],
+        "arms": [
+          {
+            "warm_active": false,
+            "cold_gain": 2.356359777598569e-07,
+            "warm_gain": 0.0,
+            "initial_count_rates": [
+              0.11773242642683411,
+              0.0
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.0008721914302829991,
+            "hard_count_defect": 5.551115123125783e-17,
+            "redshift_trace_integral": 7.785594746639122e-10,
+            "collision_work": 3.1879559276567444e-18,
+            "energy_change": 7.785603273191555e-10,
+            "redshift_subtracted_defect": 8.526552433164083e-16,
+            "entropy_defect": 8.839500312274318e-16,
+            "maximum_decay_work": 4.820633909413674e-17,
+            "elastic_splits": 0
+          },
+          {
+            "warm_active": true,
+            "cold_gain": 2.3563597777330313e-07,
+            "warm_gain": 5.496889610280919e-13,
+            "initial_count_rates": [
+              0.11773242642683411,
+              2.7483092418045343e-07
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.0008721914302830154,
+            "hard_count_defect": 5.551115123125783e-17,
+            "redshift_trace_integral": 7.785594746632208e-10,
+            "collision_work": 8.887852875050846e-20,
+            "energy_change": 7.785596611853407e-10,
+            "redshift_subtracted_defect": 1.8652211985751134e-16,
+            "entropy_defect": 4.61111183958085e-16,
+            "maximum_decay_work": 8.803721640582296e-17,
+            "elastic_splits": 0
+          }
+        ]
+      },
+      "warm_gain_expands_vs_fixed_ppm": 3.0016996206416735
+    },
+    "12": {
+      "fixed": {
+        "scope": "Short comoving warm continuation under prescribed radiation clock and held polarization.",
+        "projection": "steps",
+        "grid": "fine",
+        "duration": 2e-06,
+        "panels": 12,
+        "expands": false,
+        "final_log_scale": 0.0,
+        "initial_warm_nodes": [
+          0.12000292989339252,
+          0.17312821566578732,
+          0.2502281475644967,
+          0.36166332329348394,
+          0.5227244044636229,
+          0.7555115086970491,
+          1.0919666939204746,
+          1.5782569119138967,
+          2.2811088413887064,
+          3.296964839489703,
+          4.765216352505949
+        ],
+        "arms": [
+          {
+            "warm_active": false,
+            "cold_gain": 2.356386436129237e-07,
+            "warm_gain": 0.0,
+            "initial_count_rates": [
+              0.11773242642683411,
+              0.0
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.0008721914303276902,
+            "hard_count_defect": 2.278177646530821e-13,
+            "redshift_trace_integral": 0.0,
+            "collision_work": -1.731346010788685e-19,
+            "energy_change": 9.35473920549157e-13,
+            "redshift_subtracted_defect": 9.35473920549157e-13,
+            "entropy_defect": -2.6906645314572764e-15,
+            "maximum_decay_work": 5.93465164164253e-17,
+            "elastic_splits": 0
+          },
+          {
+            "warm_active": true,
+            "cold_gain": 2.3563864361647551e-07,
+            "warm_gain": 5.496879106534706e-13,
+            "initial_count_rates": [
+              0.11773242642683411,
+              2.7483092418045343e-07
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.0008721914303277063,
+            "hard_count_defect": 2.277067423506196e-13,
+            "redshift_trace_integral": 0.0,
+            "collision_work": -5.7720764109627395e-19,
+            "energy_change": 9.345857421294568e-13,
+            "redshift_subtracted_defect": 9.345857421294568e-13,
+            "entropy_defect": 2.391749992503023e-16,
+            "maximum_decay_work": 1.2537442872079252e-16,
+            "elastic_splits": 0
+          }
+        ]
+      },
+      "expands": {
+        "scope": "Short comoving warm continuation under prescribed radiation clock and held polarization.",
+        "projection": "steps",
+        "grid": "fine",
+        "duration": 2e-06,
+        "panels": 12,
+        "expands": true,
+        "final_log_scale": 2e-06,
+        "initial_warm_nodes": [
+          0.12000292989339252,
+          0.17312821566578732,
+          0.2502281475644967,
+          0.36166332329348394,
+          0.5227244044636229,
+          0.7555115086970491,
+          1.0919666939204746,
+          1.5782569119138967,
+          2.2811088413887064,
+          3.296964839489703,
+          4.765216352505949
+        ],
+        "arms": [
+          {
+            "warm_active": false,
+            "cold_gain": 2.3563936177533486e-07,
+            "warm_gain": 0.0,
+            "initial_count_rates": [
+              0.11773242642683411,
+              0.0
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.0008721914303397297,
+            "hard_count_defect": 2.2792878695554464e-13,
+            "redshift_trace_integral": 7.785598557488107e-10,
+            "collision_work": 4.818181241002321e-19,
+            "energy_change": 7.794958012397046e-10,
+            "redshift_subtracted_defect": 9.359454908939831e-13,
+            "entropy_defect": 2.0105445086571194e-15,
+            "maximum_decay_work": 5.732718987017105e-17,
+            "elastic_splits": 0
+          },
+          {
+            "warm_active": true,
+            "cold_gain": 2.3563936179184096e-07,
+            "warm_gain": 5.496895606587626e-13,
+            "initial_count_rates": [
+              0.11773242642683411,
+              2.7483092418045343e-07
+            ],
+            "initial_gap": 0.0008721874799955858,
+            "final_gap": 0.000872191430339746,
+            "hard_count_defect": 2.278732758043134e-13,
+            "redshift_trace_integral": 7.785598557481192e-10,
+            "collision_work": 6.073562005918291e-19,
+            "energy_change": 7.794955791950997e-10,
+            "redshift_subtracted_defect": 9.357234469804777e-13,
+            "entropy_defect": 3.348449989504232e-15,
+            "maximum_decay_work": 1.3028044355128943e-16,
+            "elastic_splits": 0
+          }
+        ]
+      },
+      "warm_gain_expands_vs_fixed_ppm": 3.0017128993531372
+    }
+  },
+  "restart_verification": {
+    "stops": [
+      {
+        "checkpoint_only": true,
+        "steps_done": 1,
+        "total_steps": 4
+      },
+      {
+        "checkpoint_only": true,
+        "steps_done": 3,
+        "total_steps": 4
+      }
+    ],
+    "identical_sha256": "8580465450584988cd703d9c2547faa3177b341d6d2c59faa5e4eb1d5f2ae1fc",
+    "accepted_output": {
+      "scope": "Short comoving warm continuation under prescribed radiation clock and held polarization.",
+      "projection": "steps",
+      "grid": "fine",
+      "duration": 6e-07,
+      "panels": 2,
+      "expands": true,
+      "final_log_scale": 6e-07,
+      "initial_warm_nodes": [
+        0.12000292989339252,
+        0.17312821566578732,
+        0.2502281475644967,
+        0.36166332329348394,
+        0.5227244044636229,
+        0.7555115086970491,
+        1.0919666939204746,
+        1.5782569119138967,
+        2.2811088413887064,
+        3.296964839489703,
+        4.765216352505949
+      ],
+      "arms": [
+        {
+          "warm_active": false,
+          "cold_gain": 7.065517747549648e-08,
+          "warm_gain": 0.0,
+          "initial_count_rates": [
+            0.11773242642683411,
+            0.0
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008721886644884887,
+          "hard_count_defect": -1.1102230246251565e-16,
+          "redshift_trace_integral": 2.335271055080882e-10,
+          "collision_work": -8.09843365052998e-19,
+          "energy_change": 2.3352719757951945e-10,
+          "redshift_subtracted_defect": 9.207143126075481e-17,
+          "entropy_defect": -7.760177049564998e-16,
+          "maximum_decay_work": 5.875020522155827e-17,
+          "elastic_splits": 0
+        },
+        {
+          "warm_active": true,
+          "cold_gain": 7.065517747183698e-08,
+          "warm_gain": 1.6490109525624002e-13,
+          "initial_count_rates": [
+            0.11773242642683411,
+            2.7483092418045343e-07
+          ],
+          "initial_gap": 0.0008721874799955858,
+          "final_gap": 0.0008721886644884935,
+          "hard_count_defect": 5.551115123125783e-17,
+          "redshift_trace_integral": 2.335271055080257e-10,
+          "collision_work": -1.1934865869754594e-18,
+          "energy_change": 2.3352697553491453e-10,
+          "redshift_subtracted_defect": -1.2997311116044146e-16,
+          "entropy_defect": 1.5241172039714979e-15,
+          "maximum_decay_work": 8.261620554339544e-17,
+          "elastic_splits": 0
+        }
+      ]
+    }
+  }
+}

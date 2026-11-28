@@ -1,0 +1,560 @@
+{
+  "scope": "One top-hat comoving scalar shell, imposed radiation expansion T proportional to 1/a and fixed parent FD pole; no energy closure, no evolving fermion daughter, no other scalar momenta or spectral-width effects. Only illustrative Hartree tadpole, not a real early-Universe self-energy or bound on the full production network.",
+  "shell_nominal_target_Y": 0.004652370770624215,
+  "independent_thermal_tadpole_integral": 0.08333333333333334,
+  "max_gap_equation_residual": 8.283596031333218e-11,
+  "examples": [
+    {
+      "lambda_self_quartic": 0.0,
+      "fermion_pole_over_T": 0.0,
+      "held_fermion_mu_over_T": null,
+      "shell_edges_relative_to_pivot": [
+        0.5,
+        1.5
+      ],
+      "completed_to_x": 0.007202124942224016,
+      "reached_nominal_cold_count": true,
+      "final_scalar_pole_over_T": 7.202124942224016e-12,
+      "final_shell_yield": 0.004652370770624227,
+      "final_count_over_goal": 1.0000000000000024,
+      "final_seed_over_H": 83.76146709617109,
+      "points": [
+        {
+          "parent_over_T": 0.005,
+          "scalar_over_T": 5.0000000000000005e-12,
+          "shell_n_over_T3": 0.0,
+          "shell_yield": 0.0,
+          "seed_over_H": 112.99607021662925,
+          "stimulus_over_H": 112.99607021662925
+        },
+        {
+          "parent_over_T": 0.0055,
+          "scalar_over_T": 5.5e-12,
+          "shell_n_over_T3": 1.9802240002033052e-13,
+          "shell_yield": 4.228917461822188e-15,
+          "seed_over_H": 114.044005500619,
+          "stimulus_over_H": 114.044005500619
+        },
+        {
+          "parent_over_T": 0.006,
+          "scalar_over_T": 6e-12,
+          "shell_n_over_T3": 3.4600192954695847e-09,
+          "shell_yield": 7.389131742343686e-11,
+          "seed_over_H": 109.58591713302714,
+          "stimulus_over_H": 109.58591713302714
+        }
+      ]
+    },
+    {
+      "lambda_self_quartic": 7.65175e-08,
+      "fermion_pole_over_T": 0.0,
+      "held_fermion_mu_over_T": null,
+      "shell_edges_relative_to_pivot": [
+        0.5,
+        1.5
+      ],
+      "completed_to_x": 0.05000000000000001,
+      "reached_nominal_cold_count": false,
+      "final_scalar_pole_over_T": 0.0011284943310931627,
+      "final_shell_yield": 0.0008022066532682894,
+      "final_count_over_goal": 0.1724296477687345,
+      "final_seed_over_H": 4.679767613009325,
+      "points": [
+        {
+          "parent_over_T": 0.005,
+          "scalar_over_T": 5.0000000000000005e-12,
+          "shell_n_over_T3": 0.0,
+          "shell_yield": 0.0,
+          "seed_over_H": 112.99607021662925,
+          "stimulus_over_H": 112.99607021662925
+        },
+        {
+          "parent_over_T": 0.0055,
+          "scalar_over_T": 4.129874093830731e-08,
+          "shell_n_over_T3": 1.9802180038130323e-13,
+          "shell_yield": 4.228904656079237e-15,
+          "seed_over_H": 114.04374107466957,
+          "stimulus_over_H": 114.04374107466957
+        },
+        {
+          "parent_over_T": 0.006,
+          "scalar_over_T": 4.557035143407275e-06,
+          "shell_n_over_T3": 3.5445706001177563e-09,
+          "shell_yield": 7.569697420069938e-11,
+          "seed_over_H": 110.93085230181087,
+          "stimulus_over_H": 110.93085230181087
+        },
+        {
+          "parent_over_T": 0.008,
+          "scalar_over_T": 5.133211409801773e-05,
+          "shell_n_over_T3": 3.551078163042796e-06,
+          "shell_yield": 7.583594810710989e-08,
+          "seed_over_H": 7.293582602879798,
+          "stimulus_over_H": 7.293582602879798
+        },
+        {
+          "parent_over_T": 0.01,
+          "scalar_over_T": 8.169156874540529e-05,
+          "shell_n_over_T3": 1.4274566967881592e-05,
+          "shell_yield": 3.048441262414102e-07,
+          "seed_over_H": 5.583524959323912,
+          "stimulus_over_H": 5.583524959323912
+        },
+        {
+          "parent_over_T": 0.02,
+          "scalar_over_T": 0.0002632001500860252,
+          "shell_n_over_T3": 0.0004766517291760215,
+          "shell_yield": 1.0179256591745522e-05,
+          "seed_over_H": 4.85130654927675,
+          "stimulus_over_H": 4.85130654927675
+        },
+        {
+          "parent_over_T": 0.05,
+          "scalar_over_T": 0.0011284943310931627,
+          "shell_n_over_T3": 0.03756396009772562,
+          "shell_yield": 0.0008022066532682894,
+          "seed_over_H": 4.679767613009323,
+          "stimulus_over_H": 4.679767613009323
+        }
+      ]
+    },
+    {
+      "lambda_self_quartic": 1.08515714e-06,
+      "fermion_pole_over_T": 0.0,
+      "held_fermion_mu_over_T": null,
+      "shell_edges_relative_to_pivot": [
+        0.5,
+        1.5
+      ],
+      "completed_to_x": 0.05000000000000001,
+      "reached_nominal_cold_count": false,
+      "final_scalar_pole_over_T": 0.0011285052254701472,
+      "final_shell_yield": 5.656749892483098e-05,
+      "final_count_over_goal": 0.01215885442364286,
+      "final_seed_over_H": 4.679669592409172,
+      "points": [
+        {
+          "parent_over_T": 0.005,
+          "scalar_over_T": 5.0000000000000005e-12,
+          "shell_n_over_T3": 0.0,
+          "shell_yield": 0.0,
+          "seed_over_H": 112.99607021662925,
+          "stimulus_over_H": 112.99607021662925
+        },
+        {
+          "parent_over_T": 0.0055,
+          "scalar_over_T": 1.55465811140639e-07,
+          "shell_n_over_T3": 1.9801389359340673e-13,
+          "shell_yield": 4.2287358006699544e-15,
+          "seed_over_H": 114.04025117447233,
+          "stimulus_over_H": 114.04025117447233
+        },
+        {
+          "parent_over_T": 0.006,
+          "scalar_over_T": 1.0709462784256856e-05,
+          "shell_n_over_T3": 2.4803964695234005e-09,
+          "shell_yield": 5.297073432668573e-11,
+          "seed_over_H": 72.71877193948933,
+          "stimulus_over_H": 72.71877193948933
+        },
+        {
+          "parent_over_T": 0.008,
+          "scalar_over_T": 5.231463427566346e-05,
+          "shell_n_over_T3": 2.6500819257599667e-07,
+          "shell_yield": 5.659449501649864e-09,
+          "seed_over_H": 6.944698593510324,
+          "stimulus_over_H": 6.944698593510324
+        },
+        {
+          "parent_over_T": 0.01,
+          "scalar_over_T": 8.21634908112533e-05,
+          "shell_n_over_T3": 1.024064501754179e-06,
+          "shell_yield": 2.186966854788077e-08,
+          "seed_over_H": 5.500546880385357,
+          "stimulus_over_H": 5.500546880385357
+        },
+        {
+          "parent_over_T": 0.02,
+          "scalar_over_T": 0.0002632771636640856,
+          "shell_n_over_T3": 3.363957061670594e-05,
+          "shell_yield": 7.183983608651492e-07,
+          "seed_over_H": 4.847784330290655,
+          "stimulus_over_H": 4.847784330290655
+        },
+        {
+          "parent_over_T": 0.05,
+          "scalar_over_T": 0.0011285052254701472,
+          "shell_n_over_T3": 0.002648817812446936,
+          "shell_yield": 5.656749892483098e-05,
+          "seed_over_H": 4.679669592409171,
+          "stimulus_over_H": 4.679669592409171
+        }
+      ]
+    },
+    {
+      "lambda_self_quartic": 7.65175e-08,
+      "fermion_pole_over_T": 0.003,
+      "held_fermion_mu_over_T": null,
+      "shell_edges_relative_to_pivot": [
+        0.5,
+        1.5
+      ],
+      "completed_to_x": 0.05000000000000001,
+      "reached_nominal_cold_count": false,
+      "final_scalar_pole_over_T": 0.001206012919500449,
+      "final_shell_yield": 0.0009791370787009218,
+      "final_count_over_goal": 0.21045981220657306,
+      "final_seed_over_H": 4.538337779192027,
+      "points": [
+        {
+          "parent_over_T": 0.005,
+          "scalar_over_T": 5.0000000000000005e-12,
+          "shell_n_over_T3": 0.0,
+          "shell_yield": 0.0,
+          "seed_over_H": 465.7254035198797,
+          "stimulus_over_H": 465.7254035198797
+        },
+        {
+          "parent_over_T": 0.0055,
+          "scalar_over_T": 2.1702561061306132e-05,
+          "shell_n_over_T3": 2.7371847970001956e-07,
+          "shell_yield": 5.845464241964513e-09,
+          "seed_over_H": 26.405612523897496,
+          "stimulus_over_H": 26.405612523897496
+        },
+        {
+          "parent_over_T": 0.006,
+          "scalar_over_T": 3.469622093593252e-05,
+          "shell_n_over_T3": 1.1022983481640586e-06,
+          "shell_yield": 2.3540411247465704e-08,
+          "seed_over_H": 10.88449513323414,
+          "stimulus_over_H": 10.88449513323414
+        },
+        {
+          "parent_over_T": 0.008,
+          "scalar_over_T": 6.926505128556599e-05,
+          "shell_n_over_T3": 8.707044515786461e-06,
+          "shell_yield": 1.8594549197410049e-07,
+          "seed_over_H": 5.573010839938834,
+          "stimulus_over_H": 5.573010839938834
+        },
+        {
+          "parent_over_T": 0.01,
+          "scalar_over_T": 0.00010189357212059987,
+          "shell_n_over_T3": 2.7682146874526247e-05,
+          "shell_yield": 5.911730909553248e-07,
+          "seed_over_H": 4.915373596698141,
+          "stimulus_over_H": 4.915373596698141
+        },
+        {
+          "parent_over_T": 0.02,
+          "scalar_over_T": 0.0002995043841620777,
+          "shell_n_over_T3": 0.0007023208788226112,
+          "shell_yield": 1.4998591209632429e-05,
+          "seed_over_H": 4.572667930070155,
+          "stimulus_over_H": 4.572667930070155
+        },
+        {
+          "parent_over_T": 0.05,
+          "scalar_over_T": 0.001206012919500449,
+          "shell_n_over_T3": 0.04584886700288223,
+          "shell_yield": 0.0009791370787009218,
+          "seed_over_H": 4.538337779192025,
+          "stimulus_over_H": 4.538337779192025
+        }
+      ]
+    },
+    {
+      "lambda_self_quartic": 1.08515714e-06,
+      "fermion_pole_over_T": 0.003,
+      "held_fermion_mu_over_T": null,
+      "shell_edges_relative_to_pivot": [
+        0.5,
+        1.5
+      ],
+      "completed_to_x": 0.05000000000000001,
+      "reached_nominal_cold_count": false,
+      "final_scalar_pole_over_T": 0.001206014363761557,
+      "final_shell_yield": 6.904197357426218e-05,
+      "final_count_over_goal": 0.01484017009353679,
+      "final_seed_over_H": 4.538325600098606,
+      "points": [
+        {
+          "parent_over_T": 0.005,
+          "scalar_over_T": 5.0000000000000005e-12,
+          "shell_n_over_T3": 0.0,
+          "shell_yield": 0.0,
+          "seed_over_H": 465.7254035198797,
+          "stimulus_over_H": 465.7254035198797
+        },
+        {
+          "parent_over_T": 0.0055,
+          "scalar_over_T": 2.2599799167461538e-05,
+          "shell_n_over_T3": 2.1754928292625583e-08,
+          "shell_yield": 4.6459287498751896e-10,
+          "seed_over_H": 23.729367977506822,
+          "stimulus_over_H": 23.729367977506822
+        },
+        {
+          "parent_over_T": 0.006,
+          "scalar_over_T": 3.510669986869882e-05,
+          "shell_n_over_T3": 8.049977247259288e-08,
+          "shell_yield": 1.7191332568795766e-09,
+          "seed_over_H": 10.53878487830366,
+          "stimulus_over_H": 10.53878487830366
+        },
+        {
+          "parent_over_T": 0.008,
+          "scalar_over_T": 6.938710414485834e-05,
+          "shell_n_over_T3": 6.17204382395837e-07,
+          "shell_yield": 1.3180864336352658e-08,
+          "seed_over_H": 5.546030018324951,
+          "stimulus_over_H": 5.546030018324951
+        },
+        {
+          "parent_over_T": 0.01,
+          "scalar_over_T": 0.00010195588044462359,
+          "shell_n_over_T3": 1.955526858801609e-06,
+          "shell_yield": 4.1761748566825666e-08,
+          "seed_over_H": 4.907192091773224,
+          "stimulus_over_H": 4.907192091773224
+        },
+        {
+          "parent_over_T": 0.02,
+          "scalar_over_T": 0.000299514846691279,
+          "shell_n_over_T3": 4.95278217506454e-05,
+          "shell_yield": 1.0577039275648484e-06,
+          "seed_over_H": 4.572257239213347,
+          "stimulus_over_H": 4.572257239213347
+        },
+        {
+          "parent_over_T": 0.05,
+          "scalar_over_T": 0.001206014363761557,
+          "shell_n_over_T3": 0.003232944939867566,
+          "shell_yield": 6.904197357426218e-05,
+          "seed_over_H": 4.538325600098589,
+          "stimulus_over_H": 4.538325600098589
+        }
+      ]
+    },
+    {
+      "lambda_self_quartic": 7.65175e-08,
+      "fermion_pole_over_T": 0.0,
+      "held_fermion_mu_over_T": -3e-05,
+      "shell_edges_relative_to_pivot": [
+        0.5,
+        1.5
+      ],
+      "completed_to_x": 0.05000000000000001,
+      "reached_nominal_cold_count": false,
+      "final_scalar_pole_over_T": 1.3370345248914665e-09,
+      "final_shell_yield": 4.425960861881676e-18,
+      "final_count_over_goal": 9.513345088116952e-16,
+      "final_seed_over_H": 6.230569949881553e-41,
+      "points": [
+        {
+          "parent_over_T": 0.005,
+          "scalar_over_T": 5.0000000000000005e-12,
+          "shell_n_over_T3": 0.0,
+          "shell_yield": 0.0,
+          "seed_over_H": 101.43620605046404,
+          "stimulus_over_H": 0.002581742023402757
+        },
+        {
+          "parent_over_T": 0.0055,
+          "scalar_over_T": 5.668133777275533e-10,
+          "shell_n_over_T3": 3.729533233923932e-17,
+          "shell_yield": 7.964699052111189e-19,
+          "seed_over_H": 104.55934767559366,
+          "stimulus_over_H": 0.0026514008508751966
+        },
+        {
+          "parent_over_T": 0.006,
+          "scalar_over_T": 7.847787144218075e-10,
+          "shell_n_over_T3": 7.149641056519263e-17,
+          "shell_yield": 1.5268596838827812e-18,
+          "seed_over_H": 102.32082930327499,
+          "stimulus_over_H": 0.002585001993100608
+        },
+        {
+          "parent_over_T": 0.008,
+          "scalar_over_T": 1.1897326435920305e-09,
+          "shell_n_over_T3": 1.6432147419556627e-16,
+          "shell_yield": 3.50920881428894e-18,
+          "seed_over_H": 61.002152346523495,
+          "stimulus_over_H": 0.0015206900885258562
+        },
+        {
+          "parent_over_T": 0.01,
+          "scalar_over_T": 1.3057276101965496e-09,
+          "shell_n_over_T3": 1.9792238288286322e-16,
+          "shell_yield": 4.226781520539417e-18,
+          "seed_over_H": 20.96609888234614,
+          "stimulus_over_H": 0.0005175402862750512
+        },
+        {
+          "parent_over_T": 0.02,
+          "scalar_over_T": 1.3362488743593797e-09,
+          "shell_n_over_T3": 2.0724908175429798e-16,
+          "shell_yield": 4.425960197873488e-18,
+          "seed_over_H": 0.0002732448195157754,
+          "stimulus_over_H": 6.6008980431801585e-09
+        },
+        {
+          "parent_over_T": 0.05,
+          "scalar_over_T": 1.3370345248914665e-09,
+          "shell_n_over_T3": 2.0724911284700581e-16,
+          "shell_yield": 4.425960861881676e-18,
+          "seed_over_H": 6.230569949881825e-41,
+          "stimulus_over_H": 1.48991396256593e-45
+        }
+      ]
+    }
+  ],
+  "independent_refined_quadrature_case": {
+    "lambda_self_quartic": 7.65175e-08,
+    "fermion_pole_over_T": 0.0,
+    "held_fermion_mu_over_T": null,
+    "shell_edges_relative_to_pivot": [
+      0.5,
+      1.5
+    ],
+    "completed_to_x": 0.05000000000000001,
+    "reached_nominal_cold_count": false,
+    "final_scalar_pole_over_T": 0.0011284943310931653,
+    "final_shell_yield": 0.000802206653268295,
+    "final_count_over_goal": 0.17242964776873573,
+    "final_seed_over_H": 4.67976761300931,
+    "points": [
+      {
+        "parent_over_T": 0.005,
+        "scalar_over_T": 5.0000000000000005e-12,
+        "shell_n_over_T3": 0.0,
+        "shell_yield": 0.0,
+        "seed_over_H": 112.99607021670616,
+        "stimulus_over_H": 112.99607021670616
+      },
+      {
+        "parent_over_T": 0.0055,
+        "scalar_over_T": 4.1298740938408805e-08,
+        "shell_n_over_T3": 1.9802180038227657e-13,
+        "shell_yield": 4.228904656100023e-15,
+        "seed_over_H": 114.04374107468628,
+        "stimulus_over_H": 114.04374107468628
+      },
+      {
+        "parent_over_T": 0.006,
+        "scalar_over_T": 4.557035143414004e-06,
+        "shell_n_over_T3": 3.544570600130878e-09,
+        "shell_yield": 7.56969742009796e-11,
+        "seed_over_H": 110.93085230180517,
+        "stimulus_over_H": 110.93085230180517
+      },
+      {
+        "parent_over_T": 0.008,
+        "scalar_over_T": 5.13321140980192e-05,
+        "shell_n_over_T3": 3.5510781630430986e-06,
+        "shell_yield": 7.583594810711634e-08,
+        "seed_over_H": 7.29358260287926,
+        "stimulus_over_H": 7.29358260287926
+      },
+      {
+        "parent_over_T": 0.01,
+        "scalar_over_T": 8.169156874540598e-05,
+        "shell_n_over_T3": 1.4274566967881946e-05,
+        "shell_yield": 3.048441262414178e-07,
+        "seed_over_H": 5.583524959323791,
+        "stimulus_over_H": 5.583524959323791
+      },
+      {
+        "parent_over_T": 0.02,
+        "scalar_over_T": 0.0002632001500860252,
+        "shell_n_over_T3": 0.0004766517291760215,
+        "shell_yield": 1.0179256591745522e-05,
+        "seed_over_H": 4.851306549276751,
+        "stimulus_over_H": 4.851306549276751
+      },
+      {
+        "parent_over_T": 0.05,
+        "scalar_over_T": 0.0011284943310931653,
+        "shell_n_over_T3": 0.03756396009772588,
+        "shell_yield": 0.000802206653268295,
+        "seed_over_H": 4.679767613009308,
+        "stimulus_over_H": 4.679767613009308
+      }
+    ]
+  },
+  "alternative_narrow_shell_case": {
+    "lambda_self_quartic": 7.65175e-08,
+    "fermion_pole_over_T": 0.0,
+    "held_fermion_mu_over_T": null,
+    "shell_edges_relative_to_pivot": [
+      0.8,
+      1.2
+    ],
+    "completed_to_x": 0.05000000000000001,
+    "reached_nominal_cold_count": false,
+    "final_scalar_pole_over_T": 0.0011285024741451227,
+    "final_shell_yield": 0.0008022222716962408,
+    "final_count_over_goal": 0.17243300485885513,
+    "final_seed_over_H": 4.6797114562712565,
+    "points": [
+      {
+        "parent_over_T": 0.005,
+        "scalar_over_T": 5.0000000000000005e-12,
+        "shell_n_over_T3": 0.0,
+        "shell_yield": 0.0,
+        "seed_over_H": 124.63501751085884,
+        "stimulus_over_H": 124.63501751085884
+      },
+      {
+        "parent_over_T": 0.0055,
+        "scalar_over_T": 4.389349904865655e-08,
+        "shell_n_over_T3": 2.0923341049820172e-13,
+        "shell_yield": 4.468337032384274e-15,
+        "seed_over_H": 123.88663426130891,
+        "stimulus_over_H": 123.88663426130891
+      },
+      {
+        "parent_over_T": 0.006,
+        "scalar_over_T": 6.194953630439017e-06,
+        "shell_n_over_T3": 7.513182839167701e-09,
+        "shell_yield": 1.6044967690098228e-10,
+        "seed_over_H": 113.2156029658881,
+        "stimulus_over_H": 113.2156029658881
+      },
+      {
+        "parent_over_T": 0.008,
+        "scalar_over_T": 5.1721659405959674e-05,
+        "shell_n_over_T3": 3.6285749900365435e-06,
+        "shell_yield": 7.74909512020932e-08,
+        "seed_over_H": 7.162691389267665,
+        "stimulus_over_H": 7.162691389267665
+      },
+      {
+        "parent_over_T": 0.01,
+        "scalar_over_T": 8.188718680035323e-05,
+        "shell_n_over_T3": 1.4371318036026802e-05,
+        "shell_yield": 3.069103181544828e-07,
+        "seed_over_H": 5.552068791945936,
+        "stimulus_over_H": 5.552068791945936
+      },
+      {
+        "parent_over_T": 0.02,
+        "scalar_over_T": 0.0002632388998059295,
+        "shell_n_over_T3": 0.0004768431805836064,
+        "shell_yield": 1.0183345180715976e-05,
+        "seed_over_H": 4.849819236618181,
+        "stimulus_over_H": 4.849819236618181
+      },
+      {
+        "parent_over_T": 0.05,
+        "scalar_over_T": 0.0011285024741451227,
+        "shell_n_over_T3": 0.037564691442949404,
+        "shell_yield": 0.0008022222716962408,
+        "seed_over_H": 4.6797114562712405,
+        "stimulus_over_H": 4.6797114562712405
+      }
+    ]
+  }
+}

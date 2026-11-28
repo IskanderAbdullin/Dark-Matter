@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "M": 0.1,
+      "n": 24,
+      "gain_events": 10112,
+      "loss_events": 3776,
+      "entropy_production": 0.00021423506094720435,
+      "free_energy_derivative": -0.00021423506094720663,
+      "finite_difference_free_energy_derivative": -0.00021423502887114274,
+      "max_log_affinity_identity_error": 6.321332346459485e-14,
+      "relative_finite_difference_residual": 1.49723679555252e-07
+    },
+    {
+      "M": 0.005,
+      "n": 24,
+      "gain_events": 13248,
+      "loss_events": 5184,
+      "entropy_production": 1.1541424555520392e-05,
+      "free_energy_derivative": -1.1541424555520743e-05,
+      "finite_difference_free_energy_derivative": -1.154145114981557e-05,
+      "max_log_affinity_identity_error": 1.3344880755994382e-13,
+      "relative_finite_difference_residual": 2.304247196699157e-06
+    },
+    {
+      "M": 0.1,
+      "n": 48,
+      "gain_events": 33280,
+      "loss_events": 11840,
+      "entropy_production": 0.00039213916376351345,
+      "free_energy_derivative": -0.0003921391637635109,
+      "finite_difference_free_energy_derivative": -0.00039213908839888566,
+      "max_log_affinity_identity_error": 6.21100393338736e-14,
+      "relative_finite_difference_residual": 1.921884747849452e-07
+    },
+    {
+      "M": 0.005,
+      "n": 48,
+      "gain_events": 45120,
+      "loss_events": 19392,
+      "entropy_production": 2.0149314001218127e-05,
+      "free_energy_derivative": -2.01493140012182e-05,
+      "finite_difference_free_energy_derivative": -2.014928611703892e-05,
+      "max_log_affinity_identity_error": 7.636946630640296e-14,
+      "relative_finite_difference_residual": 1.3838773472237108e-06
+    }
+  ],
+  "status": "fixed-T thermal domain only; no expanding-background H theorem"
+}

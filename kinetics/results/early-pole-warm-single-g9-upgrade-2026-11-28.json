@@ -1,0 +1,68 @@
+{
+  "training_x": 0.01,
+  "held_check_x": 0.05,
+  "assigned_and_control_parent_q": [
+    [
+      3.9636789434531003,
+      5.728841112042199
+    ],
+    [
+      5.728841112042199,
+      8.280090530852393
+    ]
+  ],
+  "rows": [
+    {
+      "x": 0.01,
+      "baseline_nodes": [
+        299,
+        321
+      ],
+      "options": [
+        {
+          "upgraded_parent_index": 17,
+          "total_nodes": 300,
+          "normalized_signed_net_residual": 1.353580232644945e-07,
+          "normalized_l1_net_residual": 0.00017053808168221674,
+          "direct_mask_model_defect": 0.0,
+          "fraction_of_uniform_G8_to_G9_signed_change": 0.8502578242307081
+        },
+        {
+          "upgraded_parent_index": 18,
+          "total_nodes": 300,
+          "normalized_signed_net_residual": -0.00022420543106518726,
+          "normalized_l1_net_residual": 0.00023635974811390097,
+          "direct_mask_model_defect": 0.0,
+          "fraction_of_uniform_G8_to_G9_signed_change": 0.030487942319485303
+        }
+      ]
+    },
+    {
+      "x": 0.05,
+      "baseline_nodes": [
+        299,
+        321
+      ],
+      "options": [
+        {
+          "upgraded_parent_index": 17,
+          "total_nodes": 300,
+          "normalized_signed_net_residual": -3.410468792587787e-05,
+          "normalized_l1_net_residual": 0.00020630391578784277,
+          "direct_mask_model_defect": 0.0,
+          "fraction_of_uniform_G8_to_G9_signed_change": 0.6816969485783679
+        },
+        {
+          "upgraded_parent_index": 18,
+          "total_nodes": 300,
+          "normalized_signed_net_residual": -0.00026824609718407186,
+          "normalized_l1_net_residual": 0.0002783872076164966,
+          "direct_mask_model_defect": 0.0,
+          "fraction_of_uniform_G8_to_G9_signed_change": 0.02151363705010278
+        }
+      ]
+    }
+  ],
+  "held_order_comparison_sha256": "2d6e757f222197a92ff5b94da0648ee329b302787382dc1685762144ff6926d0",
+  "scope": "Direct one-node intervention in a held collision source, not an evolved adaptive chart."
+}

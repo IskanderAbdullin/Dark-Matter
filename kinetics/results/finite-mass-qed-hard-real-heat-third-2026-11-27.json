@@ -1,0 +1,63 @@
+{
+  "scope": "Two IR-finite bare real crossings only, one frozen scalar momentum, fixed temperature and stored spectra; no background evolution or full thermal heat.",
+  "data": [
+    {
+      "grid": "third",
+      "pair_annihilation": {
+        "net": -6606743909898738.0,
+        "scalar_energy_gain": -5729706179443.521,
+        "photon_bath_gain": -2.2032208856892496e+16,
+        "charged_energy_gain": 2.203793856307269e+16,
+        "photon_heat_over_unsigned_turnover": -0.8852933585684758,
+        "signed_heat_ledger_scaled_defect": 1.0846430667629058e-14,
+        "photon_weighted_scalar_gain": 0.7623317300459217,
+        "photon_weighted_scalar_loss": 12.529518166911634
+      },
+      "parent_scalar_absorption": {
+        "gain": 0.06520870883573363,
+        "loss": 0.8236975123457012,
+        "net": -1420151182630303.5,
+        "net_over_positive_turnover": -0.8532832659241253,
+        "photon_bath_gain": 2797071917629337.5,
+        "scalar_energy_gain": -1231627730366.4385,
+        "charged_energy_gain": -2795840289898973.0,
+        "signed_heat_ledger_scaled_defect": -2.271249119339119e-16,
+        "photon_weighted_scalar_gain": 0.11069322968382,
+        "photon_weighted_scalar_loss": 1.6045818790631252,
+        "photon_heat_over_unsigned_turnover": 0.8709323896565088
+      },
+      "total_photon_heat_over_Born_scalar_energy_at_g_point005": -0.008513232934590055,
+      "scalar_energy_or_number_correction_at_g_point005": -3.081000010387392e-06,
+      "one_charge_born_net": 6.5132222212486904e+16,
+      "max_relative_heat_mesh_drift": 1.744892008659349e-09,
+      "thermal_absorption": [
+        {
+          "gain": 0.03745956677345644,
+          "loss": 0.03754087201153761,
+          "net": -4.371503159461554e-15,
+          "net_over_positive_turnover": -1.263723961109579e-16,
+          "photon_bath_gain": 3.122502256758253e-17,
+          "scalar_energy_gain": -3.791191093194293e-18,
+          "charged_energy_gain": -2.5396351688300456e-15,
+          "signed_heat_ledger_scaled_defect": -9.714807430251569e-17,
+          "photon_weighted_scalar_gain": 0.02800299094901843,
+          "photon_weighted_scalar_loss": 0.028063770879012385,
+          "photon_heat_over_unsigned_turnover": 1.207487141809361e-18
+        },
+        {
+          "gain": 0.6096187933069949,
+          "loss": 0.6101477152206226,
+          "net": 8.404388296412435e-14,
+          "net_over_positive_turnover": 5.975501199180784e-17,
+          "photon_bath_gain": -5.39346345362901e-13,
+          "scalar_energy_gain": 7.288715320757029e-17,
+          "charged_energy_gain": 3.552713678800501e-14,
+          "signed_heat_ledger_scaled_defect": -1.9598711027203923e-16,
+          "photon_weighted_scalar_gain": 1.1140660859463787,
+          "photon_weighted_scalar_loss": 1.1150326801074442,
+          "photon_heat_over_unsigned_turnover": -2.0983762494808204e-16
+        }
+      ]
+    }
+  ]
+}

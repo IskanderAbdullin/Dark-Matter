@@ -1,0 +1,60 @@
+{
+  "scope": "Decay/inverse-decay stationary heavy state on frozen retained daughter shapes, vacuum outside their mesh, no additional sources. Not a time-dependent upper on the heavy energy fraction.",
+  "radial_panel_orders": [
+    4,
+    8,
+    14
+  ],
+  "cases": [
+    {
+      "name": "warm-early-q16-time32-checkpoint-2026-11-26.json.gz",
+      "T": 0.010441916509387224,
+      "fractions": [
+        1.4251679915382604e-06,
+        1.4251683092276948e-06,
+        1.4251680448004106e-06
+      ],
+      "maximum_heavy_P": 0.28820553476563654
+    },
+    {
+      "name": "warm-early-q32-time32-checkpoint-2026-11-26.json.gz",
+      "T": 0.010441916509387113,
+      "fractions": [
+        1.4290014901644624e-06,
+        1.4290014930073228e-06,
+        1.4290014925417954e-06
+      ],
+      "maximum_heavy_P": 0.5998801260097022
+    },
+    {
+      "name": "warm-coupled-pair-b35-48-shape-2026-11-26.json",
+      "T": 0.0034338651304354024,
+      "fractions": [
+        4.0114216505023706e-14,
+        4.0114276387512545e-14,
+        4.0114281443501266e-14
+      ],
+      "maximum_heavy_P": 0.02731067245510115
+    },
+    {
+      "name": "warm-coupled-pair-b10-42-shape-2026-11-26.json",
+      "T": 0.0012061354624147524,
+      "fractions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_heavy_P": 0.0
+    },
+    {
+      "name": "warm-coupled-pair-b30-32-shape-2026-11-26.json",
+      "T": 0.00041376297480725746,
+      "fractions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_heavy_P": 0.0
+    }
+  ]
+}

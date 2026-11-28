@@ -1,0 +1,158 @@
+{
+  "target_total_Omega_h2": 0.12,
+  "mp_over_stable_mass": 4.3e-06,
+  "cases": [
+    {
+      "case": "low_reheat_prompt_0",
+      "snapshot_scalar_stable_Omega_h2": [
+        2.369883270992132e-12,
+        0.12007082595957291
+      ],
+      "scalar_equivalent_inventory": 5.163069215094345e-07,
+      "all_stable_endpoint": 0.12007137709521731,
+      "absolute_scalar_fraction_of_target_upper": 4.302557679245288e-06,
+      "closed_partition_at_target_scalar_stable": [
+        3.0692282920261423e-10,
+        0.11999999969307716
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 2.5576902433551185e-09,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 116210.44673309424,
+        "0.9": 209178.00459513406,
+        "1.0": 232419.894060644
+      }
+    },
+    {
+      "case": "low_reheat_early_forward_proxy_0",
+      "snapshot_scalar_stable_Omega_h2": [
+        3.049272707297244e-10,
+        0.12000046377644298
+      ],
+      "scalar_equivalent_inventory": 5.163069215094346e-07,
+      "all_stable_endpoint": 0.12007137709521733,
+      "absolute_scalar_fraction_of_target_upper": 4.3025576792452885e-06,
+      "closed_partition_at_target_scalar_stable": [
+        3.069228292027201e-10,
+        0.11999999969307716
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 2.557690243356001e-09,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 116210.44673309421,
+        "0.9": 209178.00459513403,
+        "1.0": 232419.89406064394
+      }
+    },
+    {
+      "case": "low_reheat_prompt_1",
+      "snapshot_scalar_stable_Omega_h2": [
+        2.236505150290285e-09,
+        0.1201187843923758
+      ],
+      "scalar_equivalent_inventory": 5.187472780375063e-07,
+      "all_stable_endpoint": 0.12063890186918749,
+      "absolute_scalar_fraction_of_target_upper": 4.322893983645886e-06,
+      "closed_partition_at_target_scalar_stable": [
+        2.7472898508526275e-09,
+        0.11999999725271014
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 2.2894082090438564e-08,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 115663.75485764358,
+        "0.9": 208193.9629805468,
+        "1.0": 231326.5150112726
+      }
+    },
+    {
+      "case": "low_reheat_early_forward_proxy_1",
+      "snapshot_scalar_stable_Omega_h2": [
+        2.7470208829621967e-09,
+        0.12000005980338234
+      ],
+      "scalar_equivalent_inventory": 5.187472780375063e-07,
+      "all_stable_endpoint": 0.12063890186918749,
+      "absolute_scalar_fraction_of_target_upper": 4.322893983645886e-06,
+      "closed_partition_at_target_scalar_stable": [
+        2.7472898508526275e-09,
+        0.11999999725271014
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 2.2894082090438564e-08,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 115663.75485764358,
+        "0.9": 208193.9629805468,
+        "1.0": 231326.5150112726
+      }
+    },
+    {
+      "case": "warm_q16_12MeV",
+      "snapshot_scalar_stable_Omega_h2": [
+        0.0001500961556217562,
+        87.18725866953491
+      ],
+      "scalar_equivalent_inventory": 0.0005250013679007564,
+      "all_stable_endpoint": 122.09334137226892,
+      "absolute_scalar_fraction_of_target_upper": 0.00437501139917297,
+      "closed_partition_at_target_scalar_stable": [
+        0.0005244876231975361,
+        0.11947551237680246
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 0.004370730193312801,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 114.28590793946682,
+        "0.9": 205.7138480073747,
+        "1.0": 228.57083302435163
+      }
+    },
+    {
+      "case": "warm_q32_12MeV",
+      "snapshot_scalar_stable_Omega_h2": [
+        0.00015011450800201065,
+        87.18299075942042
+      ],
+      "scalar_equivalent_inventory": 0.0005250013682675185,
+      "all_stable_endpoint": 122.09334145756242,
+      "absolute_scalar_fraction_of_target_upper": 0.004375011402229321,
+      "closed_partition_at_target_scalar_stable": [
+        0.0005244876235642997,
+        0.1194755123764357
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 0.004370730196369165,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 114.28590785962754,
+        "0.9": 205.71384786366454,
+        "1.0": 228.57083286467375
+      }
+    },
+    {
+      "case": "warm_q16_1.206MeV",
+      "snapshot_scalar_stable_Omega_h2": [
+        0.0002779782284594183,
+        57.44724173055141
+      ],
+      "scalar_equivalent_inventory": 0.0005250013679007894,
+      "all_stable_endpoint": 122.09334137227658,
+      "absolute_scalar_fraction_of_target_upper": 0.004375011399173245,
+      "closed_partition_at_target_scalar_stable": [
+        0.0005244876231975691,
+        0.11947551237680243
+      ],
+      "resulting_scalar_fraction_if_total_matches_target": 0.004370730193313076,
+      "required_inventory_multipliers_at_target": {
+        "0.5": 114.28590793945965,
+        "0.9": 205.71384800736178,
+        "1.0": 228.5708330243373
+      }
+    }
+  ],
+  "low_early_forward_inventory_identity_relative_defects": [
+    2.220446049250313e-16,
+    0.0
+  ],
+  "warm_closed_count_12_to_1p206_relative_defect": 6.283862319378386e-14,
+  "sha256": {
+    "finite-cooling-shifted-dist-2026-11-26.json": "1e598a3ecf218ab22676d07a57a1a63cc1372158d7e062ce4e33a09c1bf54c57",
+    "finite-cooling-shifted-spectrum-shape-2026-11-26.json": "554568448656df427ad65e2494265a8aafefcadaf1ee62c0a23f29bd507a2082",
+    "50MeV-from-empty-pair-quantum-q32-audit-2026-11-26.json": "d9bc63e8f2bbb77e459656bc5070da030f42abc540283c948b714c1d50bdfb5e",
+    "warm-coupled-pair-b10-count-audit-2026-11-26.json": "128d5e4e68e9c2024071629ccf4afa913ab85ccf316917ef870ca4d227c59211"
+  },
+  "scope": "Rest-count inventory comparison under fixed visible comoving entropy and no further net number injection/removal in the two tracked species. Equal-number conversion or elastic scattering alone cannot raise this inventory. This is not a reaction-rate, thermalization, transfer, observational, or existence claim for an alternative physical model."
+}

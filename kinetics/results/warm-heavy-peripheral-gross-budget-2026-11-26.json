@@ -1,0 +1,21 @@
+{
+  "scope": "Conditional budget on the gross received energy from above-cut light/scalar inputs to high heavy production. Does not bound actual gross usage from an instantaneous or net exterior reservoir, nor include elastic heavy transfer across the cut.",
+  "cases": [
+    {
+      "q": 16,
+      "comoving_high_cut_GeV": 1.0,
+      "core_daughter_energy_over_high_parent_max": 0.19999999999999998,
+      "needed_min_outside_energy_share_per_event": 0.8,
+      "remaining_high_H_fraction_budget": 0.020199646874089552,
+      "max_gross_comoving_peripheral_input_fraction_for_test": 0.016159717499271642
+    },
+    {
+      "q": 32,
+      "comoving_high_cut_GeV": 1.0,
+      "core_daughter_energy_over_high_parent_max": 0.30375014328474004,
+      "needed_min_outside_energy_share_per_event": 0.69624985671526,
+      "remaining_high_H_fraction_budget": 0.020213721481933664,
+      "max_gross_comoving_peripheral_input_fraction_for_test": 0.014073800685478486
+    }
+  ]
+}

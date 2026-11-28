@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "ratio": 1.0,
+      "test_root_GeV": 0.009020180962883081,
+      "prompt_stable_omega_archive_defect": -1.3169065837814742e-10,
+      "prior_gross_early_scalar_omega": 3.0214642929195713e-10,
+      "new_gross_early_scalar_omega": 3.0255738745873225e-10,
+      "relative_change_early_forward_by_matched_quadrature": [
+        0.0013600777364830563,
+        0.0013601291524052428
+      ],
+      "new_gross_late_scalar_omega": 2.4085666727958304e-12,
+      "previous_and_new_scalar_rms_ptf": [
+        7.373796954389368,
+        7.373451879856284
+      ],
+      "late_after_density_only_control_scalar_omega": 2.4057446325178537e-12,
+      "recovered_stable_omega": 0.1199999044326377,
+      "residual_stable_omega": -9.556736230154073e-08,
+      "one_step_temperature_update_keV": 0.0014994759092917156
+    },
+    {
+      "ratio": 5.0,
+      "test_root_GeV": 0.0062374894765339275,
+      "prompt_stable_omega_archive_defect": -1.834583041038229e-10,
+      "prior_gross_early_scalar_omega": 5.094399153774671e-10,
+      "new_gross_early_scalar_omega": 5.105157326719119e-10,
+      "relative_change_early_forward_by_matched_quadrature": [
+        0.002111564207283534,
+        0.002111764826373319
+      ],
+      "new_gross_late_scalar_omega": 1.3364949644831095e-12,
+      "previous_and_new_scalar_rms_ptf": [
+        2.047294907308454,
+        2.0476362858795
+      ],
+      "late_after_density_only_control_scalar_omega": 1.3338543050791944e-12,
+      "recovered_stable_omega": 0.11999974978816504,
+      "residual_stable_omega": -2.5021183495954613e-07,
+      "one_step_temperature_update_keV": 0.0027541741472967636
+    }
+  ],
+  "record_sha256": {
+    "finite-cooling-frozen-count-retarget-2026-11-26.json": "56b4df09bb28cf6a892847b3b013f9f4585a502bbac33729d32c33227414f31f",
+    "finite-cooling-shifted-count-input-2026-11-26.json": "98c0191e64062774bbbc9a73bbf27f1a7db905c9c261926f9427f60a235fa2fa",
+    "finite-cooling-during-production-pair-shape-2026-11-26.json": "2b01128e50b215cde0dfee1fc0ca9cf5d872cae85a66b5d4bffaffe427a9eff0",
+    "finite-cooling-shifted-forward-2026-11-26.json": "3c92a2ad5b041dced73e71fce5ab033372b32e6e4ec54130abaf99763111cfa4",
+    "finite-cooling-shifted-dist-2026-11-26.json": "1e598a3ecf218ab22676d07a57a1a63cc1372158d7e062ce4e33a09c1bf54c57",
+    "finite-cooling-shifted-post-anchor-2026-11-26.json": "518a5694f15530a054342d0eefd7a32f80cc82e0b5941da5365d5e88f1177804"
+  },
+  "scope": "Recomputed first-order forward conversion at the fixed-loss displaced roots. Prompt stable spectra and the radiation clock are regenerated; optional late density-only attenuation does not change the distribution shape. The final one-step temperature is a slope proxy, not a jointly iterated signed kinetic solution."
+}

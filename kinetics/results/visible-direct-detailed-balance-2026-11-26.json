@@ -1,0 +1,177 @@
+{
+  "T_GeV": 0.045000000000000005,
+  "maximum_raw_bin_occupation": 0.00047262739826871736,
+  "controls": [
+    {
+      "order": [
+        8,
+        22,
+        16
+      ],
+      "angle": 32,
+      "results": {
+        "vacuum": {
+          "net": [
+            1.0,
+            1.0
+          ],
+          "forward_pauli": [
+            1.0,
+            1.0
+          ],
+          "inverse": [
+            0.0,
+            0.0
+          ],
+          "net_partner_exchange_L1": 0.0
+        },
+        "detailed_balance": {
+          "net": [
+            -3.1532877277049497e-17,
+            -4.070191053108233e-17
+          ],
+          "forward_pauli": [
+            0.9216087709233173,
+            0.9378982080461745
+          ],
+          "inverse": [
+            0.9216087709233174,
+            0.9378982080461747
+          ],
+          "net_partner_exchange_L1": 2.145327503788148e-16
+        },
+        "overpopulated_equal_T": {
+          "net": [
+            -0.44606321045917774,
+            -0.4554449401139394
+          ],
+          "forward_pauli": [
+            0.906955694983275,
+            0.9260310478473244
+          ],
+          "inverse": [
+            1.3530189054424526,
+            1.381475987961264
+          ],
+          "net_partner_exchange_L1": 3.219746792753693e-16
+        },
+        "raw_empty_production_snapshot": {
+          "net": [
+            0.9999935047546222,
+            0.9999949439125527
+          ],
+          "forward_pauli": [
+            0.9999935135866039,
+            0.9999949540248848
+          ],
+          "inverse": [
+            8.831981522153573e-09,
+            1.0112332396674562e-08
+          ],
+          "net_partner_exchange_L1": 0.0
+        },
+        "FD_moment_matched_snapshot": {
+          "net": [
+            0.9999933664778673,
+            0.9999947534180195
+          ],
+          "forward_pauli": [
+            0.9999933751147424,
+            0.9999947629872965
+          ],
+          "inverse": [
+            8.636875112864182e-09,
+            9.56927705437809e-09
+          ],
+          "net_partner_exchange_L1": 1.0006368667098704e-42
+        }
+      }
+    },
+    {
+      "order": [
+        12,
+        32,
+        20
+      ],
+      "angle": 48,
+      "results": {
+        "vacuum": {
+          "net": [
+            1.0,
+            1.0
+          ],
+          "forward_pauli": [
+            1.0,
+            1.0
+          ],
+          "inverse": [
+            0.0,
+            0.0
+          ],
+          "net_partner_exchange_L1": 0.0
+        },
+        "detailed_balance": {
+          "net": [
+            -2.4468128404884975e-18,
+            3.576376424094993e-18
+          ],
+          "forward_pauli": [
+            0.9216087709414367,
+            0.9378982080542435
+          ],
+          "inverse": [
+            0.9216087709414367,
+            0.9378982080542433
+          ],
+          "net_partner_exchange_L1": 2.1797139883953306e-16
+        },
+        "overpopulated_equal_T": {
+          "net": [
+            -0.4460632104729378,
+            -0.45544494011924463
+          ],
+          "forward_pauli": [
+            0.9069556950112524,
+            0.9260310478581114
+          ],
+          "inverse": [
+            1.3530189054841906,
+            1.3814759879773564
+          ],
+          "net_partner_exchange_L1": 3.357762107980099e-16
+        },
+        "raw_empty_production_snapshot": {
+          "net": [
+            0.9999934972786035,
+            0.9999949381861057
+          ],
+          "forward_pauli": [
+            0.9999935060762694,
+            0.999994948247209
+          ],
+          "inverse": [
+            8.797665825295722e-09,
+            1.0061103276318967e-08
+          ],
+          "net_partner_exchange_L1": 0.0
+        },
+        "FD_moment_matched_snapshot": {
+          "net": [
+            0.999993366477868,
+            0.9999947534180192
+          ],
+          "forward_pauli": [
+            0.9999933751147431,
+            0.9999947629872961
+          ],
+          "inverse": [
+            8.636875113151518e-09,
+            9.569277055157212e-09
+          ],
+          "net_partner_exchange_L1": 2.8039747088963375e-29
+        }
+      }
+    }
+  ],
+  "moments": "number and total energy, as fractions of their separate vacuum production rates"
+}

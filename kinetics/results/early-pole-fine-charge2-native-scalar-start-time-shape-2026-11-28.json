@@ -1,0 +1,114 @@
+{
+  "clock_startup_steps": [
+    2048,
+    4096
+  ],
+  "reports": [
+    {
+      "x": 0.0075,
+      "node_counts": [
+        67,
+        448,
+        488
+      ],
+      "segment_steps": [
+        2048,
+        4096
+      ],
+      "yields": [
+        5.779621413769804e-08,
+        5.7799089503792955e-08
+      ],
+      "relative_yield_change": 4.975007684859811e-05,
+      "native_normalized_tv": 6.227585560073295e-05,
+      "cdf_max_abs": 6.22464725773689e-05,
+      "cdf_max_abs_upper_q": 3.3059994133202632e-06,
+      "relative_pole_mass_change": 1.6678107729983793e-05
+    },
+    {
+      "x": 0.01,
+      "node_counts": [
+        67,
+        448,
+        488
+      ],
+      "segment_steps": [
+        1024,
+        1024
+      ],
+      "yields": [
+        3.475404723987892e-07,
+        3.475438208234211e-07
+      ],
+      "relative_yield_change": 9.634632216481975e-06,
+      "native_normalized_tv": 6.234859844097346e-05,
+      "cdf_max_abs": 6.231952089347951e-05,
+      "cdf_max_abs_upper_q": 3.3059994133202632e-06,
+      "relative_pole_mass_change": 3.2311812427909814e-06
+    },
+    {
+      "x": 0.02,
+      "node_counts": [
+        67,
+        448,
+        488
+      ],
+      "segment_steps": [
+        2048,
+        2048
+      ],
+      "yields": [
+        1.0219573262146557e-05,
+        1.0219580685885036e-05
+      ],
+      "relative_yield_change": 7.264235293291676e-07,
+      "native_normalized_tv": 6.216815502008036e-05,
+      "cdf_max_abs": 6.213929097373638e-05,
+      "cdf_max_abs_upper_q": 3.3059994133202632e-06,
+      "relative_pole_mass_change": 2.439858215463886e-07
+    },
+    {
+      "x": 0.04,
+      "node_counts": [
+        67,
+        448,
+        488
+      ],
+      "segment_steps": [
+        2048,
+        2048
+      ],
+      "yields": [
+        0.00017314776855665727,
+        0.00017314784805799927
+      ],
+      "relative_yield_change": 4.591531421738182e-07,
+      "native_normalized_tv": 6.203931805698326e-05,
+      "cdf_max_abs": 6.201093203221897e-05,
+      "cdf_max_abs_upper_q": 3.3059994133202632e-06,
+      "relative_pole_mass_change": 1.5333174285814266e-07
+    },
+    {
+      "x": 0.05,
+      "node_counts": [
+        67,
+        448,
+        488
+      ],
+      "segment_steps": [
+        2048,
+        2048
+      ],
+      "yields": [
+        0.00037131297307404246,
+        0.0003713133140562329
+      ],
+      "relative_yield_change": 9.18314777997864e-07,
+      "native_normalized_tv": 6.19148008663479e-05,
+      "cdf_max_abs": 6.188675552505983e-05,
+      "cdf_max_abs_upper_q": 3.3059994133202632e-06,
+      "relative_pole_mass_change": 3.062770888018207e-07
+    }
+  ],
+  "scope": "Only startup time refinements compared; later each segment keeps the same step count."
+}

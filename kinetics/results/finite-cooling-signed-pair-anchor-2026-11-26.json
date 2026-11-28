@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "history": "instant",
+      "shape_sigma_ln_q": 0.1,
+      "max_reconstructed_scalar_occupation": 8.785030383311841e-14,
+      "max_reconstructed_fermion_occupation": 4.8406961449562606e-08,
+      "relative_vacuum_event_rate_difference": 8.881784197001252e-16,
+      "vacuum_event_rate_GeV4": 3.011442375074823e-46,
+      "forward_over_vacuum": 1.0,
+      "inverse_over_quantum_forward": 1.0102096936856781e-19
+    },
+    {
+      "history": "instant",
+      "shape_sigma_ln_q": 0.14,
+      "max_reconstructed_scalar_occupation": 8.299954105691538e-14,
+      "max_reconstructed_fermion_occupation": 4.684362861382904e-08,
+      "relative_vacuum_event_rate_difference": 2.220446049250313e-16,
+      "vacuum_event_rate_GeV4": 3.0034213087205398e-46,
+      "forward_over_vacuum": 1.0,
+      "inverse_over_quantum_forward": 7.215974611779114e-19
+    },
+    {
+      "history": "ratio5",
+      "shape_sigma_ln_q": 0.1,
+      "max_reconstructed_scalar_occupation": 1.6854566313365297e-06,
+      "max_reconstructed_fermion_occupation": 1.4898782332501617e-06,
+      "relative_vacuum_event_rate_difference": 8.881784197001252e-16,
+      "vacuum_event_rate_GeV4": 1.6859435253339004e-46,
+      "forward_over_vacuum": 1.0,
+      "inverse_over_quantum_forward": 3.8940253784818914e-24
+    },
+    {
+      "history": "ratio5",
+      "shape_sigma_ln_q": 0.14,
+      "max_reconstructed_scalar_occupation": 1.6346386507400292e-06,
+      "max_reconstructed_fermion_occupation": 1.432791250731486e-06,
+      "relative_vacuum_event_rate_difference": 2.220446049250313e-16,
+      "vacuum_event_rate_GeV4": 1.6822708466187535e-46,
+      "forward_over_vacuum": 1.0,
+      "inverse_over_quantum_forward": 3.184290843030461e-23
+    }
+  ],
+  "anchor_temperature_GeV": 0.001,
+  "scope": "Anchor pair rates on smooth synthetic reconstructions of the prompt source only. No time evolution. Tiny inverse counts depend on unresolved tails and are not a general bound."
+}

@@ -1,0 +1,129 @@
+{
+  "scope": "Evaluated scalar-only stress in the fixed held conformal Hartree model; no gravity or inferred physical relic.",
+  "conformal_scalar_arms": [
+    {
+      "energy": 1.1520387994161913e-05,
+      "pressure": 3.840129331387304e-06,
+      "pressure_to_energy": 0.33333333333333326,
+      "relative_trace": 1.4704937849029805e-16,
+      "pressure_from_dilation": 3.840129331255331e-06,
+      "hartree_pressure_fraction": 0.9841042432796655
+    },
+    {
+      "energy": 1.1520388141888149e-05,
+      "pressure": 3.840129380629384e-06,
+      "pressure_to_energy": 0.3333333333333334,
+      "relative_trace": -2.940987532093601e-16,
+      "pressure_from_dilation": 3.840129380498089e-06,
+      "hartree_pressure_fraction": 0.9841042434833184
+    }
+  ],
+  "paired_conformal_scalar": {
+    "retained_kinetic_pressure_term": 6.868247216608311e-19,
+    "exterior_kinetic_pressure_term": -7.642388895118821e-22,
+    "hartree_pressure_term": 4.9241392373047995e-14,
+    "total_pressure": 4.9242078433530765e-14,
+    "total_energy": 1.4772623530059235e-13,
+    "relative_pressure": 1.2823026045255963e-08,
+    "relative_energy": 1.2823026045255966e-08
+  },
+  "hard_depth": 1,
+  "cold_modes": 32,
+  "initial_gap": 0.0008720559389048312,
+  "native_final_gap": 0.000872056310629382,
+  "local_final_gap": 0.0008720563134700985,
+  "stable_gap_difference_from_subtracted_equations": 2.8407165724919323e-12,
+  "independent_gap_difference_discrepancy": 8.666592088089596e-20,
+  "native_and_local": {
+    "increment": {
+      "native_count": 2.2166732692880683e-08,
+      "paired_count": 1.693981191050746e-10,
+      "native_kinetic_pressure": 1.3243308784306106e-16,
+      "stable_paired_pressure": 1.0241839368602422e-18,
+      "relative_paired_pressure": 0.007733595535233192,
+      "count_term": 1.012053345827407e-18,
+      "shape_term": 1.2131025758714001e-20,
+      "pole_term": -4.347258789262826e-25,
+      "count_term_rel": 0.007641997648100859,
+      "shape_term_rel": 9.160116974007123e-05,
+      "pole_term_rel": -3.2826077380409013e-09,
+      "paired_group_count": [
+        2.8863432708644256e-18,
+        4.822458597027223e-15,
+        2.1528200097088124e-12,
+        2.8293070577362078e-11,
+        7.333504766990351e-11,
+        6.311624382588765e-11,
+        2.4772087085067337e-12,
+        1.8902968765515036e-14
+      ],
+      "paired_group_pressure_at_native_pole": [
+        1.646881305155098e-27,
+        5.1944539400734376e-24,
+        4.316057229359705e-21,
+        8.558062652231465e-20,
+        3.9576968841526504e-19,
+        4.998000868243872e-19,
+        3.8138440960039236e-20,
+        5.7427553393370715e-22
+      ],
+      "paired_pressure_nonzero_groups": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "paired_conditional_mean_p_shift": 1.6142087939167053e-10,
+      "native_retained_kinetic_energy_at_midpoint_pole": 1.9865078898898631e-16
+    },
+    "terminal": {
+      "native_count": 0.01733430185689515,
+      "paired_count": 1.693981191050746e-10,
+      "native_kinetic_pressure": 1.035666388387079e-10,
+      "stable_paired_pressure": 6.868247216608311e-19,
+      "relative_paired_pressure": 6.631717794090767e-09,
+      "count_term": 1.0120969373989022e-18,
+      "shape_term": 1.20874341872188e-20,
+      "pole_term": -3.3735964992529e-19,
+      "count_term_rel": 9.772422362524642e-09,
+      "shape_term_rel": 1.1671165852976526e-10,
+      "pole_term_rel": -3.2574162269636413e-09,
+      "paired_group_count": [
+        2.8863432708644256e-18,
+        4.822458597027223e-15,
+        2.1528200097088124e-12,
+        2.8293070577362078e-11,
+        7.333504766990351e-11,
+        6.311624382588765e-11,
+        2.4772087085067337e-12,
+        1.8902968765515036e-14
+      ],
+      "paired_group_pressure_at_native_pole": [
+        1.646881305155098e-27,
+        5.1944539400734376e-24,
+        4.316057229359705e-21,
+        8.558062652231465e-20,
+        3.9576968841526504e-19,
+        4.998000868243872e-19,
+        3.8138440960039236e-20,
+        5.7427553393370715e-22
+      ],
+      "paired_pressure_nonzero_groups": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "paired_conditional_mean_p_shift": 2.07136225330699e-16,
+      "native_retained_kinetic_energy_at_midpoint_pole": 1.553508632799196e-10
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "conversion": {
+    "CMB_temperature_K": 2.72548,
+    "late_standard_model_entropy_degrees": 3.93094,
+    "entropy_cm3": 2907.3806566818816,
+    "critical_kg_per_m3_over_h2": 1.8783416169331677e-26,
+    "Omega_h2_per_GeV_times_yield": 275928337.0831426
+  },
+  "Planck_cold_dark_matter_Omega_h2_reference": 0.12,
+  "at_fixed_archive_counts": [
+    {
+      "archive": "12-quantum-48-2026-11-26.json",
+      "final_visible_temperature_GeV": 0.01199970971941998,
+      "yield_per_retained_species": [
+        6.143734637394492e-06,
+        1.5978359502812717e-05
+      ],
+      "visible_entropy_ratio": 0.9999268846007564,
+      "conditional_Omega_h2": [
+        0.0001457898214499675,
+        88.17764333855483
+      ],
+      "stable_proxy_over_Planck": 734.8136944879569,
+      "stable_depletion_fraction_if_no_extra_dilution": 0.998639110828362
+    },
+    {
+      "archive": "early-9p3-quantum-2026-11-26.json",
+      "final_visible_temperature_GeV": 0.009299772934104809,
+      "yield_per_retained_species": [
+        6.1425612890168965e-06,
+        1.60267099815208e-05
+      ],
+      "visible_entropy_ratio": 0.9999266693952347,
+      "conditional_Omega_h2": [
+        0.00014576197808423565,
+        88.44446868229674
+      ],
+      "stable_proxy_over_Planck": 737.0372390191395,
+      "stable_depletion_fraction_if_no_extra_dilution": 0.9986432164522232
+    }
+  ],
+  "prescribed_vacuum_sweep": {
+    "rows": [
+      {
+        "T_R_GeV": 0.003,
+        "conditional_Omega_h2": [
+          2.259231284454976e-31,
+          1.8665212153128088e-05
+        ]
+      },
+      {
+        "T_R_GeV": 0.005,
+        "conditional_Omega_h2": [
+          5.866133689699365e-20,
+          0.0032584854592658716
+        ]
+      },
+      {
+        "T_R_GeV": 0.007,
+        "conditional_Omega_h2": [
+          4.4306185616854325e-15,
+          0.031557794457040836
+        ]
+      },
+      {
+        "T_R_GeV": 0.009,
+        "conditional_Omega_h2": [
+          2.25700191156226e-12,
+          0.11878857567780966
+        ]
+      },
+      {
+        "T_R_GeV": 0.012,
+        "conditional_Omega_h2": [
+          5.282442758853122e-10,
+          0.419102141853996
+        ]
+      },
+      {
+        "T_R_GeV": 0.015,
+        "conditional_Omega_h2": [
+          1.4028263501686376e-08,
+          0.9864661038663454
+        ]
+      },
+      {
+        "T_R_GeV": 0.018,
+        "conditional_Omega_h2": [
+          1.2532004878638195e-07,
+          1.903934665698592
+        ]
+      },
+      {
+        "T_R_GeV": 0.02,
+        "conditional_Omega_h2": [
+          3.7470789146306383e-07,
+          2.7729670078715074
+        ]
+      },
+      {
+        "T_R_GeV": 0.024,
+        "conditional_Omega_h2": [
+          1.934716723540028e-06,
+          5.392623806405906
+        ]
+      },
+      {
+        "T_R_GeV": 0.03,
+        "conditional_Omega_h2": [
+          9.973410304525254e-06,
+          12.68329803837197
+        ]
+      },
+      {
+        "T_R_GeV": 0.05,
+        "conditional_Omega_h2": [
+          0.00014587652027177542,
+          88.64868534982067
+        ]
+      }
+    ],
+    "vacuum_only_nominal_T_reheat_for_Planck_stable_count_GeV": 0.009019069876770808,
+    "fine_proxy_at_nominal_T": [
+      2.363537330362595e-12,
+      0.11999999923148086
+    ],
+    "scope": "prescribed radiation, vacuum direct+prompt pair production only; no inverse/depletion or visible feedback"
+  }
+}

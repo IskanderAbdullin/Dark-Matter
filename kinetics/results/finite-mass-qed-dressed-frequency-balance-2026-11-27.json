@@ -1,0 +1,955 @@
+{
+  "scope": "Manufactured positive Lorentzian mismatch test: comparing occupation weights evaluated on conserving frequencies to those frozen at peak energies. Not an archive width or a QED spectral ansatz.",
+  "data": [
+    {
+      "grid": "fine",
+      "scalar_E": 0.0008720655769947503,
+      "fixed_reference_daughter_E": 1.4278138189498386,
+      "controls": [
+        {
+          "T": 0.1,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": 0.3186634464677056,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": 6.313700372300587e-05,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31568501861502934,
+              "independent_net_difference_over_turnover": 2.3322081071643975e-16,
+              "off_shell_matched_max_net_over_turnover": 2.827779116663485e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": 6.367288312414701e-06,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31836441562073503,
+              "independent_net_difference_over_turnover": 3.887852130231681e-15,
+              "off_shell_matched_max_net_over_turnover": 2.8279396588150294e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": 6.372684476988852e-07,
+              "pole_frozen_net_over_turnover_per_gamma": 0.3186342238494426,
+              "independent_net_difference_over_turnover": 1.384248471896059e-12,
+              "off_shell_matched_max_net_over_turnover": 2.827955863052322e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": 6.37325822753163e-08,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31866291137658154,
+              "independent_net_difference_over_turnover": 4.912600160396566e-13,
+              "off_shell_matched_max_net_over_turnover": 2.8279574849829185e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": 6.373267937333072e-09,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31866339686665357,
+              "independent_net_difference_over_turnover": 4.9871267649391055e-15,
+              "off_shell_matched_max_net_over_turnover": 2.827957647191053e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.09966799462495576,
+              "expected": 0.0996679946249558
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.04995837495788001,
+              "expected": 0.04995837495787996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 5.000000000045181e-06,
+              "expected": 4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999999617406e-06,
+              "expected": -4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.04995837495787954,
+              "expected": -0.04995837495787996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.09966799462495617,
+              "expected": -0.0996679946249558
+            }
+          ]
+        },
+        {
+          "T": 0.1,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.7,
+          "extrapolated_small_gamma_ratio_per_gamma": -0.7978998623215887,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -0.00015812723755553006,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7906361877776502,
+              "independent_net_difference_over_turnover": 5.859376885897369e-16,
+              "off_shell_matched_max_net_over_turnover": 2.828404841789964e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -1.5943416944816458e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7971708472408229,
+              "independent_net_difference_over_turnover": 6.2646121757642645e-15,
+              "off_shell_matched_max_net_over_turnover": 2.8280027524662447e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -1.595653512006762e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -0.797826756003381,
+              "independent_net_difference_over_turnover": 3.579504917502501e-13,
+              "off_shell_matched_max_net_over_turnover": 2.8279621776503096e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -1.5957974211685234e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7978987105842618,
+              "independent_net_difference_over_turnover": 1.2281413947141711e-12,
+              "off_shell_matched_max_net_over_turnover": 2.827958116495067e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -1.5957995138364392e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7978997569182196,
+              "independent_net_difference_over_turnover": 1.2466735724815315e-14,
+              "off_shell_matched_max_net_over_turnover": 2.827957710342791e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.09966799462495576,
+              "expected": 0.0996679946249558
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.04995837495788001,
+              "expected": 0.04995837495787996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 5.000000000045181e-06,
+              "expected": 4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999999617406e-06,
+              "expected": -4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.04995837495787954,
+              "expected": -0.04995837495787996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.09966799462495617,
+              "expected": -0.0996679946249558
+            }
+          ]
+        },
+        {
+          "T": 0.1,
+          "window": [
+            -0.006,
+            0.024
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": -1.9744860961529318,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -0.00040119618148712506,
+              "pole_frozen_net_over_turnover_per_gamma": -2.0059809074356254,
+              "independent_net_difference_over_turnover": 7.76834796873946e-16,
+              "off_shell_matched_max_net_over_turnover": 2.829092229614749e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -3.955356430238582e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9776782151192907,
+              "independent_net_difference_over_turnover": 1.5029806954184672e-14,
+              "off_shell_matched_max_net_over_turnover": 2.8280695208801094e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -3.9496114350337165e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9748057175168583,
+              "independent_net_difference_over_turnover": 8.562648478504465e-15,
+              "off_shell_matched_max_net_over_turnover": 2.8279688345343627e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -3.949031304069885e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9745156520349427,
+              "independent_net_difference_over_turnover": 4.821592352268904e-13,
+              "off_shell_matched_max_net_over_turnover": 2.827958781983654e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -3.948978087549017e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9744890437745086,
+              "independent_net_difference_over_turnover": 4.981786616305579e-15,
+              "off_shell_matched_max_net_over_turnover": 2.827957776889651e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.006,
+              "raw_ratio": 0.02999100323882056,
+              "expected": 0.029991003238820143
+            },
+            {
+              "energy_mismatch": -0.003,
+              "raw_ratio": 0.014998875101240665,
+              "expected": 0.01499887510124078
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 5.000000000045181e-06,
+              "expected": 4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999999617406e-06,
+              "expected": -4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 0.012,
+              "raw_ratio": -0.05992810352914373,
+              "expected": -0.059928103529143496
+            },
+            {
+              "energy_mismatch": 0.024,
+              "raw_ratio": -0.11942729853438568,
+              "expected": -0.11942729853438588
+            }
+          ]
+        },
+        {
+          "T": 1.0,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": 0.0019524715239636842,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": 3.868620921035104e-07,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019343104605175521,
+              "independent_net_difference_over_turnover": 2.21143832505655e-21,
+              "off_shell_matched_max_net_over_turnover": 2.3019657764320504e-17
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": 3.90129657185264e-08,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019506482859263199,
+              "independent_net_difference_over_turnover": 4.160585759336286e-21,
+              "off_shell_matched_max_net_over_turnover": 3.032987785940153e-17
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": 3.904578257841078e-09,
+              "pole_frozen_net_over_turnover_per_gamma": 0.001952289128920539,
+              "independent_net_difference_over_turnover": 3.4779948626817566e-21,
+              "off_shell_matched_max_net_over_turnover": 1.9217739242541374e-17
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": 3.904937236302193e-10,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019524686181510967,
+              "independent_net_difference_over_turnover": 3.066698067143775e-15,
+              "off_shell_matched_max_net_over_turnover": 2.123413852684894e-17
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": 3.904942461461e-11,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019524712307305,
+              "independent_net_difference_over_turnover": 3.0610085379056345e-17,
+              "off_shell_matched_max_net_over_turnover": 1.7110128208517472e-17
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.009999666679999507,
+              "expected": 0.00999966667999946
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.0049999583337500065,
+              "expected": 0.004999958333749996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999999374104e-07,
+              "expected": 4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999998708003e-07,
+              "expected": -4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.004999958333749984,
+              "expected": -0.004999958333749996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.009999666679999353,
+              "expected": -0.00999966667999946
+            }
+          ]
+        },
+        {
+          "T": 1.0,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.7,
+          "extrapolated_small_gamma_ratio_per_gamma": -0.10945614799719015,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -2.168790412692961e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10843952063464804,
+              "independent_net_difference_over_turnover": 2.977093835311009e-19,
+              "off_shell_matched_max_net_over_turnover": 2.2986413139230946e-17
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -2.187081759562403e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10935408797812014,
+              "independent_net_difference_over_turnover": 3.548349510982439e-19,
+              "off_shell_matched_max_net_over_turnover": 3.032033775424371e-17
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -2.1889187605405325e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10944593802702662,
+              "independent_net_difference_over_turnover": 1.8580250294475116e-19,
+              "off_shell_matched_max_net_over_turnover": 1.921634597979833e-17
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -2.1891025392099157e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -0.1094551269604958,
+              "independent_net_difference_over_turnover": 1.5660558173387753e-19,
+              "off_shell_matched_max_net_over_turnover": 2.1234102977522607e-17
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -2.1891226371933404e-09,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10945613185966702,
+              "independent_net_difference_over_turnover": 1.719769278005302e-15,
+              "off_shell_matched_max_net_over_turnover": 1.7110094994305106e-17
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.009999666679999507,
+              "expected": 0.00999966667999946
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.0049999583337500065,
+              "expected": 0.004999958333749996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999999374104e-07,
+              "expected": 4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999998708003e-07,
+              "expected": -4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.004999958333749984,
+              "expected": -0.004999958333749996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.009999666679999353,
+              "expected": -0.00999966667999946
+            }
+          ]
+        },
+        {
+          "T": 1.0,
+          "window": [
+            -0.006,
+            0.024
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": -0.2191717098981099,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -4.4413900097925206e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -0.222069500489626,
+              "independent_net_difference_over_turnover": 0.0,
+              "off_shell_matched_max_net_over_turnover": 2.2507644933255027e-17
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -4.389312167854286e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -0.2194656083927143,
+              "independent_net_difference_over_turnover": 1.1957410831576277e-19,
+              "off_shell_matched_max_net_over_turnover": 3.0365320755078904e-17
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -4.3840227931194235e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -0.21920113965597118,
+              "independent_net_difference_over_turnover": 5.327413816611242e-19,
+              "off_shell_matched_max_net_over_turnover": 1.9212198315649725e-17
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -4.383492912056017e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -0.21917464560280084,
+              "independent_net_difference_over_turnover": 1.533511888641924e-15,
+              "off_shell_matched_max_net_over_turnover": 2.123456824141734e-17
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -4.383440054141795e-09,
+              "pole_frozen_net_over_turnover_per_gamma": -0.21917200270708975,
+              "independent_net_difference_over_turnover": 3.123782001990086e-17,
+              "off_shell_matched_max_net_over_turnover": 1.711018218766682e-17
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.006,
+              "raw_ratio": 0.002999991000032525,
+              "expected": 0.0029999910000324
+            },
+            {
+              "energy_mismatch": -0.003,
+              "raw_ratio": 0.0014999988750010573,
+              "expected": 0.0014999988750010126
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999999374104e-07,
+              "expected": 4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999998708003e-07,
+              "expected": -4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 0.012,
+              "raw_ratio": -0.005999928001036822,
+              "expected": -0.005999928001036785
+            },
+            {
+              "energy_mismatch": 0.024,
+              "raw_ratio": -0.011999424033175582,
+              "expected": -0.011999424033175667
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "scalar_E": 0.0008672511387733415,
+      "fixed_reference_daughter_E": 1.4357453333148091,
+      "controls": [
+        {
+          "T": 0.1,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": 0.31866347698498176,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": 6.313700976927788e-05,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31568504884638937,
+              "independent_net_difference_over_turnover": 2.3327027226418733e-16,
+              "off_shell_matched_max_net_over_turnover": 2.9400442687268917e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": 6.3672889221861874e-06,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31836444610930936,
+              "independent_net_difference_over_turnover": 3.887876070795109e-15,
+              "off_shell_matched_max_net_over_turnover": 3.1038059140088717e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": 6.372684917679531e-07,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31863424588397654,
+              "independent_net_difference_over_turnover": 1.3672887212043089e-12,
+              "off_shell_matched_max_net_over_turnover": 2.965966228435437e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": 6.37325883787622e-08,
+              "pole_frozen_net_over_turnover_per_gamma": 0.318662941893811,
+              "independent_net_difference_over_turnover": 4.912600630337153e-13,
+              "off_shell_matched_max_net_over_turnover": 2.950786919192706e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": 6.3732685476785935e-09,
+              "pole_frozen_net_over_turnover_per_gamma": 0.31866342738392966,
+              "independent_net_difference_over_turnover": 4.987127438495146e-15,
+              "off_shell_matched_max_net_over_turnover": 2.991571423861246e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.09966799462495572,
+              "expected": 0.0996679946249558
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.04995837495788009,
+              "expected": 0.04995837495787996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999999128885e-06,
+              "expected": 4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.99999999948091e-06,
+              "expected": -4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.04995837495788048,
+              "expected": -0.04995837495787996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.09966799462495607,
+              "expected": -0.0996679946249558
+            }
+          ]
+        },
+        {
+          "T": 0.1,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.7,
+          "extrapolated_small_gamma_ratio_per_gamma": -0.7978998325151191,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -0.00015812723165165626,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7906361582582813,
+              "independent_net_difference_over_turnover": 5.861227422784417e-16,
+              "off_shell_matched_max_net_over_turnover": 2.939574157967325e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -1.594341634926367e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7971708174631834,
+              "independent_net_difference_over_turnover": 6.264540640250637e-15,
+              "off_shell_matched_max_net_over_turnover": 3.103611950349452e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -1.595653452399602e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -0.797826726199801,
+              "independent_net_difference_over_turnover": 3.5795046837234886e-13,
+              "off_shell_matched_max_net_over_turnover": 2.9659642688932624e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -1.5957973615556768e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7978986807778384,
+              "independent_net_difference_over_turnover": 1.228141347188694e-12,
+              "off_shell_matched_max_net_over_turnover": 2.950786139645616e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -1.595799454223498e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -0.7978997271117491,
+              "independent_net_difference_over_turnover": 1.2466735224017484e-14,
+              "off_shell_matched_max_net_over_turnover": 2.9915713592143646e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.09966799462495572,
+              "expected": 0.0996679946249558
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.04995837495788009,
+              "expected": 0.04995837495787996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999999128885e-06,
+              "expected": 4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.99999999948091e-06,
+              "expected": -4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.04995837495788048,
+              "expected": -0.04995837495787996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.09966799462495607,
+              "expected": -0.0996679946249558
+            }
+          ]
+        },
+        {
+          "T": 0.1,
+          "window": [
+            -0.006,
+            0.024
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": -1.9744860752941849,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -0.00040119617736637017,
+              "pole_frozen_net_over_turnover_per_gamma": -2.0059808868318507,
+              "independent_net_difference_over_turnover": 7.76513930223856e-16,
+              "off_shell_matched_max_net_over_turnover": 2.930082142821315e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -3.955356388572395e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9776781942861972,
+              "independent_net_difference_over_turnover": 1.5029776182984124e-14,
+              "off_shell_matched_max_net_over_turnover": 3.1040733500872656e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -3.949611233936919e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9748056169684596,
+              "independent_net_difference_over_turnover": 1.6794708266736556e-13,
+              "off_shell_matched_max_net_over_turnover": 2.9659845146409154e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -3.949031262352455e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -1.9745156311762275,
+              "independent_net_difference_over_turnover": 4.821592790795917e-13,
+              "off_shell_matched_max_net_over_turnover": 2.9507870915811057e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -3.948978045831522e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -1.974489022915761,
+              "independent_net_difference_over_turnover": 4.98178734116589e-15,
+              "off_shell_matched_max_net_over_turnover": 2.991571726975092e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.006,
+              "raw_ratio": 0.029991003238819806,
+              "expected": 0.029991003238820143
+            },
+            {
+              "energy_mismatch": -0.003,
+              "raw_ratio": 0.0149988751012397,
+              "expected": 0.01499887510124078
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999999128885e-06,
+              "expected": 4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.99999999948091e-06,
+              "expected": -4.999999999958333e-06
+            },
+            {
+              "energy_mismatch": 0.012,
+              "raw_ratio": -0.059928103529143746,
+              "expected": -0.059928103529143496
+            },
+            {
+              "energy_mismatch": 0.024,
+              "raw_ratio": -0.11942729853438572,
+              "expected": -0.11942729853438588
+            }
+          ]
+        },
+        {
+          "T": 1.0,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": 0.0019603215740099135,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": 3.884174984123059e-07,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019420874920615294,
+              "independent_net_difference_over_turnover": 2.5147947854511785e-21,
+              "off_shell_matched_max_net_over_turnover": 1.5879797875148585e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": 3.916982010895831e-08,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019584910054479153,
+              "independent_net_difference_over_turnover": 6.2746227346760704e-21,
+              "off_shell_matched_max_net_over_turnover": 1.5879801290693133e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": 3.920276891255833e-09,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019601384456279162,
+              "independent_net_difference_over_turnover": 3.179884252567714e-21,
+              "off_shell_matched_max_net_over_turnover": 1.58798016354238e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": 3.9206373130168285e-10,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019603186565084144,
+              "independent_net_difference_over_turnover": 3.079027593516875e-15,
+              "off_shell_matched_max_net_over_turnover": 1.5879801669928764e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": 3.920642559195379e-11,
+              "pole_frozen_net_over_turnover_per_gamma": 0.0019603212795976897,
+              "independent_net_difference_over_turnover": 3.073314833645528e-17,
+              "off_shell_matched_max_net_over_turnover": 1.587980167337958e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.009999666679999485,
+              "expected": 0.00999966667999946
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.004999958333749965,
+              "expected": 0.004999958333749996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999998639985e-07,
+              "expected": 4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999999635855e-07,
+              "expected": -4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.004999958333750069,
+              "expected": -0.004999958333749996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.00999966667999954,
+              "expected": -0.00999966667999946
+            }
+          ]
+        },
+        {
+          "T": 1.0,
+          "window": [
+            -0.02,
+            0.02
+          ],
+          "linear_phase_slope": 0.7,
+          "extrapolated_small_gamma_ratio_per_gamma": -0.10944830920477538,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -2.168635210328336e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -0.1084317605164168,
+              "independent_net_difference_over_turnover": 2.9507326627823326e-19,
+              "off_shell_matched_max_net_over_turnover": 1.5880013760217241e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -2.1869251418304186e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10934625709152092,
+              "independent_net_difference_over_turnover": 3.582364614163737e-19,
+              "off_shell_matched_max_net_over_turnover": 1.5879823061278847e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -2.188762000511557e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10943810002557786,
+              "independent_net_difference_over_turnover": 1.8579282358595417e-19,
+              "off_shell_matched_max_net_over_turnover": 1.587980381431099e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -2.1889457649436292e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10944728824718147,
+              "independent_net_difference_over_turnover": 1.5662946376406188e-19,
+              "off_shell_matched_max_net_over_turnover": 1.5879801887835778e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -2.188965861379949e-09,
+              "pole_frozen_net_over_turnover_per_gamma": -0.10944829306899745,
+              "independent_net_difference_over_turnover": 1.719645979250349e-15,
+              "off_shell_matched_max_net_over_turnover": 1.5879801695170464e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.02,
+              "raw_ratio": 0.009999666679999485,
+              "expected": 0.00999966667999946
+            },
+            {
+              "energy_mismatch": -0.01,
+              "raw_ratio": 0.004999958333749965,
+              "expected": 0.004999958333749996
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999998639985e-07,
+              "expected": 4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999999635855e-07,
+              "expected": -4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 0.01,
+              "raw_ratio": -0.004999958333750069,
+              "expected": -0.004999958333749996
+            },
+            {
+              "energy_mismatch": 0.02,
+              "raw_ratio": -0.00999966667999954,
+              "expected": -0.00999966667999946
+            }
+          ]
+        },
+        {
+          "T": 1.0,
+          "window": [
+            -0.006,
+            0.024
+          ],
+          "linear_phase_slope": 0.0,
+          "extrapolated_small_gamma_ratio_per_gamma": -0.21916585491159893,
+          "finite_width": [
+            {
+              "gamma": 0.0002,
+              "pole_frozen_net_over_turnover": -4.441274282685806e-05,
+              "pole_frozen_net_over_turnover_per_gamma": -0.2220637141342903,
+              "independent_net_difference_over_turnover": 9.822766170568751e-21,
+              "off_shell_matched_max_net_over_turnover": 1.5880236017958116e-16
+            },
+            {
+              "gamma": 2e-05,
+              "pole_frozen_net_over_turnover": -4.389195206101342e-06,
+              "pole_frozen_net_over_turnover_per_gamma": -0.21945976030506706,
+              "independent_net_difference_over_turnover": 1.1828163496978883e-19,
+              "off_shell_matched_max_net_over_turnover": 1.5879844598863729e-16
+            },
+            {
+              "gamma": 2e-06,
+              "pole_frozen_net_over_turnover": -4.3839057071941584e-07,
+              "pole_frozen_net_over_turnover_per_gamma": -0.21919528535970792,
+              "independent_net_difference_over_turnover": 5.328423280751335e-19,
+              "off_shell_matched_max_net_over_turnover": 1.5879805961100102e-16
+            },
+            {
+              "gamma": 2e-07,
+              "pole_frozen_net_over_turnover": -4.38337581308976e-08,
+              "pole_frozen_net_over_turnover_per_gamma": -0.21916879065448802,
+              "independent_net_difference_over_turnover": 1.5396779465796348e-15,
+              "off_shell_matched_max_net_over_turnover": 1.5879802102444913e-16
+            },
+            {
+              "gamma": 2e-08,
+              "pole_frozen_net_over_turnover": -4.383322954426454e-09,
+              "pole_frozen_net_over_turnover_per_gamma": -0.2191661477213227,
+              "independent_net_difference_over_turnover": 3.136098379536856e-17,
+              "off_shell_matched_max_net_over_turnover": 1.5879801716630683e-16
+            }
+          ],
+          "points": [
+            {
+              "energy_mismatch": -0.006,
+              "raw_ratio": 0.0029999910000322975,
+              "expected": 0.0029999910000324
+            },
+            {
+              "energy_mismatch": -0.003,
+              "raw_ratio": 0.0014999988750008773,
+              "expected": 0.0014999988750010126
+            },
+            {
+              "energy_mismatch": -1e-06,
+              "raw_ratio": 4.999999998639985e-07,
+              "expected": 4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 1e-06,
+              "raw_ratio": -4.999999999635855e-07,
+              "expected": -4.999999999999583e-07
+            },
+            {
+              "energy_mismatch": 0.012,
+              "raw_ratio": -0.00599992800103686,
+              "expected": -0.005999928001036785
+            },
+            {
+              "energy_mismatch": 0.024,
+              "raw_ratio": -0.011999424033175747,
+              "expected": -0.011999424033175667
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

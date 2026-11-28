@@ -1,0 +1,297 @@
+{
+  "scope": "Instantaneous finite energy windows in the retained held-parent model. The Pauli minimum is necessary, not sufficient; arbitrary daughter shape allowed by covering the lowest energetic states first. Final binned occupations used only as a piecewise constant diagnostic.",
+  "normalization_support_control": {
+    "scalar_q_over_T": 4.1e-06,
+    "fermion_min_energy_over_T": 1.1030858451220247,
+    "parent_E_lower": 1.10421435256994,
+    "parent_E_upper": 1.1122588598762304,
+    "mean_parent_for_sign_flip": 0.24820003919527742,
+    "measured_mean_daughter_over_mode_window": 0.0,
+    "B_over_I": 0.0,
+    "remaining_seed_fraction_of_empty": 1.0,
+    "minimum_global_daughter_Y_for_sign_flip": 1.053297174298967e-05
+  },
+  "tests": [
+    {
+      "name": "small",
+      "x": 0.05000000000000001,
+      "m": 0.0009262667117107608,
+      "b": 0.0,
+      "p_over_T_with_most_scalar_count_per_log_bin": 3.3901164602157494e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.0004436074916710734,
+      "mode_tests": [
+        {
+          "scalar_q_over_T": 3.3901164602157494e-06,
+          "fermion_min_energy_over_T": 1.3441117608651383,
+          "parent_E_lower": 1.3450380337807053,
+          "parent_E_upper": 1.3549129505291557,
+          "mean_parent_for_sign_flip": 0.2058747693220224,
+          "measured_mean_daughter_over_mode_window": 0.11568785633617566,
+          "B_over_I": 0.5619331437123342,
+          "remaining_seed_fraction_of_empty": 0.8843121436638232,
+          "minimum_global_daughter_Y_for_sign_flip": 1.591875811507575e-05
+        },
+        {
+          "scalar_q_over_T": 4.1e-06,
+          "fermion_min_energy_over_T": 1.3430820472326455,
+          "parent_E_lower": 1.3440083230183721,
+          "parent_E_upper": 1.3559510273896758,
+          "mean_parent_for_sign_flip": 0.20587426621759758,
+          "measured_mean_daughter_over_mode_window": 0.11568785633617641,
+          "B_over_I": 0.5619345169342381,
+          "remaining_seed_fraction_of_empty": 0.8843121436638233,
+          "minimum_global_daughter_Y_for_sign_flip": 1.922869303316215e-05
+        },
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 1.3345545260013552,
+          "parent_E_lower": 1.3354808466916257,
+          "parent_E_upper": 1.3646093939387076,
+          "mean_parent_for_sign_flip": 0.20586639525166198,
+          "measured_mean_daughter_over_mode_window": 0.115687856336176,
+          "B_over_I": 0.5619560015841976,
+          "remaining_seed_fraction_of_empty": 0.8843121436638232,
+          "minimum_global_daughter_Y_for_sign_flip": 4.642715110334115e-05
+        }
+      ]
+    },
+    {
+      "name": "fine",
+      "x": 0.05000000000000001,
+      "m": 0.0009221410561292795,
+      "b": 0.0,
+      "p_over_T_with_most_scalar_count_per_log_bin": 3.6248901419464983e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.0004377063691855786,
+      "mode_tests": [
+        {
+          "scalar_q_over_T": 3.6248901419464983e-06,
+          "fermion_min_energy_over_T": 1.3497636378171678,
+          "parent_E_lower": 1.3506857859979,
+          "parent_E_upper": 1.3613392881024287,
+          "mean_parent_for_sign_flip": 0.20488958852739508,
+          "measured_mean_daughter_over_mode_window": 0.10832352786133732,
+          "B_over_I": 0.5286922026633567,
+          "remaining_seed_fraction_of_empty": 0.8916764721386581,
+          "minimum_global_daughter_Y_for_sign_flip": 1.7237529043044485e-05
+        },
+        {
+          "scalar_q_over_T": 4.1e-06,
+          "fermion_min_energy_over_T": 1.349068391464365,
+          "parent_E_lower": 1.349990541635107,
+          "parent_E_upper": 1.3620403850560479,
+          "mean_parent_for_sign_flip": 0.20488923881407703,
+          "measured_mean_daughter_over_mode_window": 0.10832352786133703,
+          "B_over_I": 0.5286931050567923,
+          "remaining_seed_fraction_of_empty": 0.8916764721386581,
+          "minimum_global_daughter_Y_for_sign_flip": 1.9480862033035685e-05
+        },
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 1.3404646642962712,
+          "parent_E_lower": 1.341386859572446,
+          "parent_E_upper": 1.3707767215747417,
+          "mean_parent_for_sign_flip": 0.20488131249493904,
+          "measured_mean_daughter_over_mode_window": 0.11662558456236033,
+          "B_over_I": 0.5692348567185267,
+          "remaining_seed_fraction_of_empty": 0.8831942153910977,
+          "minimum_global_daughter_Y_for_sign_flip": 4.703327124815542e-05
+        }
+      ]
+    },
+    {
+      "name": "small-direct",
+      "x": 0.05000000000000001,
+      "m": 0.0009262667160064494,
+      "b": 0.0,
+      "p_over_T_with_most_scalar_count_per_log_bin": 3.3901164602157494e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.00044360749784149475,
+      "mode_tests": [
+        {
+          "scalar_q_over_T": 3.3901164602157494e-06,
+          "fermion_min_energy_over_T": 1.3441117546501704,
+          "parent_E_lower": 1.345038027570033,
+          "parent_E_upper": 1.3549129442268597,
+          "mean_parent_for_sign_flip": 0.20587477034489232,
+          "measured_mean_daughter_over_mode_window": 0.11568794634744876,
+          "B_over_I": 0.5619335781341356,
+          "remaining_seed_fraction_of_empty": 0.8843120536525522,
+          "minimum_global_daughter_Y_for_sign_flip": 1.591875789926084e-05
+        },
+        {
+          "scalar_q_over_T": 4.1e-06,
+          "fermion_min_energy_over_T": 1.3430820410272122,
+          "parent_E_lower": 1.3440083168172345,
+          "parent_E_upper": 1.3559510210777286,
+          "mean_parent_for_sign_flip": 0.20587426724047247,
+          "measured_mean_daughter_over_mode_window": 0.11568794634745026,
+          "B_over_I": 0.5619349513570843,
+          "remaining_seed_fraction_of_empty": 0.884312053652552,
+          "minimum_global_daughter_Y_for_sign_flip": 1.922869277261274e-05
+        },
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 1.334554519874741,
+          "parent_E_lower": 1.335480840569307,
+          "parent_E_upper": 1.3646093875461212,
+          "mean_parent_for_sign_flip": 0.2058663962745907,
+          "measured_mean_daughter_over_mode_window": 0.11568794634744776,
+          "B_over_I": 0.5619564360233894,
+          "remaining_seed_fraction_of_empty": 0.8843120536525522,
+          "minimum_global_daughter_Y_for_sign_flip": 4.6427150477047606e-05
+        }
+      ]
+    },
+    {
+      "name": "fine-direct",
+      "x": 0.05000000000000001,
+      "m": 0.0009221410343193563,
+      "b": 0.0,
+      "p_over_T_with_most_scalar_count_per_log_bin": 3.6248901419464983e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.00043770633812746423,
+      "mode_tests": [
+        {
+          "scalar_q_over_T": 3.6248901419464983e-06,
+          "fermion_min_energy_over_T": 1.3497636696371969,
+          "parent_E_lower": 1.3506858177961194,
+          "parent_E_upper": 1.3613393204047606,
+          "mean_parent_for_sign_flip": 0.20488958330615328,
+          "measured_mean_daughter_over_mode_window": 0.10832368877848104,
+          "B_over_I": 0.5286930015208238,
+          "remaining_seed_fraction_of_empty": 0.891676311221521,
+          "minimum_global_daughter_Y_for_sign_flip": 1.7237530232122333e-05
+        },
+        {
+          "scalar_q_over_T": 4.1e-06,
+          "fermion_min_energy_over_T": 1.3490684232515653,
+          "parent_E_lower": 1.3499905734004973,
+          "parent_E_upper": 1.3620404173916238,
+          "mean_parent_for_sign_flip": 0.20488923359281794,
+          "measured_mean_daughter_over_mode_window": 0.10832368877847842,
+          "B_over_I": 0.5286939039156792,
+          "remaining_seed_fraction_of_empty": 0.8916763112215211,
+          "minimum_global_daughter_Y_for_sign_flip": 1.948086337637893e-05
+        },
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 1.3404646956779196,
+          "parent_E_lower": 1.341386890932286,
+          "parent_E_upper": 1.370776754325278,
+          "mean_parent_for_sign_flip": 0.20488130727338455,
+          "measured_mean_daughter_over_mode_window": 0.11662552042812561,
+          "B_over_I": 0.569234558194739,
+          "remaining_seed_fraction_of_empty": 0.8831942788538429,
+          "minimum_global_daughter_Y_for_sign_flip": 4.703327447690029e-05
+        }
+      ]
+    },
+    {
+      "name": "vacuum-direct",
+      "x": 0.024999999999999994,
+      "m": 2.4999999999999994e-11,
+      "b": 0.0,
+      "p_over_T_with_most_scalar_count_per_log_bin": 4.729315747386766e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.004819687900572679,
+      "mode_tests": [
+        null,
+        null,
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 15.624999999975577,
+          "parent_E_lower": 15.625009999975576,
+          "parent_E_upper": 10000000000015.625,
+          "mean_parent_for_sign_flip": 1.6373606228938677e-20,
+          "measured_mean_daughter_over_mode_window": 1.772097462368378e-20,
+          "B_over_I": 1.0822890434706904,
+          "remaining_seed_fraction_of_empty": 0.9999687050993189,
+          "minimum_global_daughter_Y_for_sign_flip": 1.7299340131590524e-07
+        }
+      ]
+    },
+    {
+      "name": "only-pauli",
+      "x": 0.05000000000000001,
+      "m": 0.0010356527632087683,
+      "b": 0.0,
+      "p_over_T_with_most_scalar_count_per_log_bin": 3.3901164602157494e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.0006200569854496128,
+      "mode_tests": [
+        {
+          "scalar_q_over_T": 3.3901164602157494e-06,
+          "fermion_min_energy_over_T": 1.202507676904966,
+          "parent_E_lower": 1.203543335216781,
+          "parent_E_upper": 1.2114417497709755,
+          "mean_parent_for_sign_flip": 0.23014526590450943,
+          "measured_mean_daughter_over_mode_window": 0.14545841583069752,
+          "B_over_I": 0.632028711340299,
+          "remaining_seed_fraction_of_empty": 0.8545415841693014,
+          "minimum_global_daughter_Y_for_sign_flip": 1.139250334772265e-05
+        },
+        {
+          "scalar_q_over_T": 4.1e-06,
+          "fermion_min_energy_over_T": 1.201683711240648,
+          "parent_E_lower": 1.2027193721194795,
+          "parent_E_upper": 1.212271698728972,
+          "mean_parent_for_sign_flip": 0.2301448506193978,
+          "measured_mean_daughter_over_mode_window": 0.1454584158306953,
+          "B_over_I": 0.6320298518051454,
+          "remaining_seed_fraction_of_empty": 0.8545415841693014,
+          "minimum_global_daughter_Y_for_sign_flip": 1.3763541312489736e-05
+        },
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 1.1948574811641521,
+          "parent_E_lower": 1.1958931822049654,
+          "parent_E_upper": 1.2191915397890936,
+          "mean_parent_for_sign_flip": 0.23013835346745515,
+          "measured_mean_daughter_over_mode_window": 0.2192126283634412,
+          "B_over_I": 0.9525254050904687,
+          "remaining_seed_fraction_of_empty": 0.780271322976183,
+          "minimum_global_daughter_Y_for_sign_flip": 3.327660966524792e-05
+        }
+      ]
+    },
+    {
+      "name": "finite-daughter",
+      "x": 0.05000000000000001,
+      "m": 0.0009613376640824402,
+      "b": 0.003,
+      "p_over_T_with_most_scalar_count_per_log_bin": 1.7419963184750955e-06,
+      "final_total_daughter_Y_by_pair_conservation": 0.0004959253803601782,
+      "mode_tests": [
+        {
+          "scalar_q_over_T": 1.7419963184750955e-06,
+          "fermion_min_energy_over_T": 1.2927652112687225,
+          "parent_E_lower": 1.2937265505110997,
+          "parent_E_upper": 1.2984201575325,
+          "mean_parent_for_sign_flip": 0.21482669505278656,
+          "measured_mean_daughter_over_mode_window": 0.09785168324522507,
+          "B_over_I": 0.4554912657441444,
+          "remaining_seed_fraction_of_empty": 0.9021483167547697,
+          "minimum_global_daughter_Y_for_sign_flip": 7.298219932082735e-06
+        },
+        {
+          "scalar_q_over_T": 4.1e-06,
+          "fermion_min_energy_over_T": 1.28959817980481,
+          "parent_E_lower": 1.2905595262118785,
+          "parent_E_upper": 1.3016065006421045,
+          "mean_parent_for_sign_flip": 0.2148254666178901,
+          "measured_mean_daughter_over_mode_window": 0.09785168324522932,
+          "B_over_I": 0.45549387037654165,
+          "remaining_seed_fraction_of_empty": 0.9021483167547698,
+          "minimum_global_daughter_Y_for_sign_flip": 1.7111215593090366e-05
+        },
+        {
+          "scalar_q_over_T": 1e-05,
+          "fermion_min_energy_over_T": 1.2817080353797874,
+          "parent_E_lower": 1.2826694250533244,
+          "parent_E_upper": 1.3096132651270465,
+          "mean_parent_for_sign_flip": 0.2148180485242498,
+          "measured_mean_daughter_over_mode_window": 0.12098972506293623,
+          "B_over_I": 0.5632195520539712,
+          "remaining_seed_fraction_of_empty": 0.8788305711475225,
+          "minimum_global_daughter_Y_for_sign_flip": 4.1334450471685176e-05
+        }
+      ]
+    }
+  ]
+}

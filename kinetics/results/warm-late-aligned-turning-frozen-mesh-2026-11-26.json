@@ -1,0 +1,56 @@
+{
+  "scope": "Same exact initial entropy functions on every partition; rate comparison is frozen, not a time convergence proof.",
+  "source_sha256": "58371a4edd868528490a0e80d3b2ea2115e1d44a0c86873beb1460374ea6c3b1",
+  "controls": [
+    {
+      "factor": 1,
+      "shells": 41,
+      "accepted_exact_phase_moment_defect": 0.0,
+      "independent_angular_flux": 9.022865778693399e-11,
+      "native": [
+        {
+          "radial_and_angular": [
+            5,
+            4
+          ],
+          "first_native_tail_flux": 9.022865402790049e-11,
+          "tail_energy_over_rho": 1.129759165147958e-18
+        },
+        {
+          "radial_and_angular": [
+            6,
+            6
+          ],
+          "first_native_tail_flux": 9.022865778627559e-11,
+          "tail_energy_over_rho": 1.129759165147958e-18
+        }
+      ],
+      "snapshot_sha256": "58371a4edd868528490a0e80d3b2ea2115e1d44a0c86873beb1460374ea6c3b1"
+    },
+    {
+      "factor": 2,
+      "shells": 53,
+      "accepted_exact_phase_moment_defect": 2.220446049250313e-16,
+      "independent_angular_flux": 9.022865778693448e-11,
+      "native": [
+        {
+          "radial_and_angular": [
+            5,
+            4
+          ],
+          "first_native_tail_flux": 9.022865660085939e-11,
+          "tail_energy_over_rho": 1.1297591651479586e-18
+        },
+        {
+          "radial_and_angular": [
+            6,
+            6
+          ],
+          "first_native_tail_flux": 9.022865778674816e-11,
+          "tail_energy_over_rho": 1.1297591651479586e-18
+        }
+      ],
+      "snapshot_sha256": "1d28940d4286a61c914c6d2059b17b89b67bed4cfe54600d9c5170f039c069b8"
+    }
+  ]
+}

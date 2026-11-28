@@ -1,0 +1,36 @@
+{
+  "seed_ini_sha256": "3f5593622531598d19c7c177f2c2a414c91ab046846aca6285545ec795ca9819",
+  "k_h_per_Mpc": [
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    10.0,
+    16.0,
+    22.0
+  ],
+  "native_parameters": {
+    "output": "mPk,dTk",
+    "P_k_max_h/Mpc": "22",
+    "z_pk": "0,5,20",
+    "h": "0.6736",
+    "T_cmb": "2.72548",
+    "omega_b": "0.02237",
+    "A_s": "2.1e-9",
+    "n_s": "0.965",
+    "tau_reio": "0.054",
+    "N_ur": "3.044",
+    "gauge": "synchronous",
+    "background_verbose": "2",
+    "thermodynamics_verbose": "0",
+    "perturbations_verbose": "3",
+    "write background": "no",
+    "headers": "yes",
+    "k_per_decade_for_pk": "6",
+    "tol_perturbations_integration": "1e-07",
+    "omega_cdm": "0.12",
+    "k_min_tau0": "2500",
+    "k_output_values": "0.6736, 1.3472, 2.6944, 5.3888, 6.736, 10.7776, 14.819199999999999"
+  },
+  "scope": "CDM+baryon+radiation metric with no scalar feedback. The synthetic tracer enters only in the separately evaluated LOS, not in this native CLASS background."
+}

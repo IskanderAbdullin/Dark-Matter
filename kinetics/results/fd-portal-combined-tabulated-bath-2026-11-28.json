@@ -1,0 +1,173 @@
+{
+  "phase_space_checks": [
+    {
+      "T_SM": 0.05,
+      "initial_T_ratio": 1.16,
+      "eta": 0.3,
+      "combined_number_and_heat": [
+        1.4314749106156998e-28,
+        3.979234874483517e-29
+      ],
+      "timelike_number_and_heat": [
+        1.4314749106156998e-28,
+        3.6695557963517374e-29
+      ],
+      "elastic_heat_mobility_at_common_state": 4.0132654319434805e-31,
+      "elastic_entropy_fraction_at_initial_state": 0.055939505223392416
+    },
+    {
+      "T_SM": 0.3,
+      "initial_T_ratio": 1.16,
+      "eta": -0.75,
+      "combined_number_and_heat": [
+        -1.0478377093472506e-23,
+        1.469393638957293e-23
+      ],
+      "timelike_number_and_heat": [
+        -1.0478377093472506e-23,
+        7.265879550725682e-26
+      ],
+      "elastic_heat_mobility_at_common_state": 3.0785788281117263e-23,
+      "elastic_entropy_fraction_at_initial_state": 0.4599796973311341
+    },
+    {
+      "T_SM": 0.6882487043,
+      "initial_T_ratio": 0.86,
+      "eta": 0.9,
+      "combined_number_and_heat": [
+        -6.8148427276157294e-18,
+        -3.821401491222883e-17
+      ],
+      "timelike_number_and_heat": [
+        -6.8148427276157294e-18,
+        -3.8184439327349665e-17
+      ],
+      "elastic_heat_mobility_at_common_state": 1.1608583649698705e-19,
+      "elastic_entropy_fraction_at_initial_state": 0.002407784398991253
+    }
+  ],
+  "combined_trajectories": [
+    {
+      "initial_visible_T": 0.05,
+      "initial_dark_T": 0.057999999999999996,
+      "initial_eta": 0.3,
+      "total_energy": 5.093168832842733e-05,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.050694018190056554,
+          "dark_T": 0.05689707379745483,
+          "eta": 0.28189456874987484,
+          "normalized_reference_error": 9.640440248659616e-05,
+          "total_entropy_produced": 6.379532437101581e-06,
+          "max_entropy_balance_error": 9.763538442984335e-14
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.050693453925955805,
+          "dark_T": 0.056898159348049156,
+          "eta": 0.2818979855318273,
+          "normalized_reference_error": 2.4062341228185184e-05,
+          "total_entropy_produced": 6.374819770350683e-06,
+          "max_entropy_balance_error": 1.8268601887178692e-13
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.050693313140240226,
+          "dark_T": 0.056898430176724954,
+          "eta": 0.28189883828621154,
+          "normalized_reference_error": 6.013168189225075e-06,
+          "total_entropy_produced": 6.373643839571033e-06,
+          "max_entropy_balance_error": 1.915549056374458e-13
+        }
+      ],
+      "halving_ratios": [
+        4.006443162466411,
+        4.001607883062744
+      ],
+      "independent_mesh_difference": 5.412401637983066e-10
+    },
+    {
+      "initial_visible_T": 0.3,
+      "initial_dark_T": 0.348,
+      "initial_eta": -0.75,
+      "total_energy": 0.1527009540093446,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.3003211219478146,
+          "dark_T": 0.3286242222286928,
+          "eta": -0.4736919995046111,
+          "normalized_reference_error": 0.0005457523020410396,
+          "total_entropy_produced": 0.0006862030985636154,
+          "max_entropy_balance_error": 7.913230235768735e-14
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.3003185158737968,
+          "dark_T": 0.32869678355604004,
+          "eta": -0.4743639557874415,
+          "normalized_reference_error": 0.0001327265866722093,
+          "total_entropy_produced": 0.0006847849817661202,
+          "max_entropy_balance_error": 6.411795804788851e-14
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.30031788637746726,
+          "dark_T": 0.32871458343670906,
+          "eta": -0.4745312634064924,
+          "normalized_reference_error": 3.2962144162289366e-05,
+          "total_entropy_produced": 0.0006844330749194945,
+          "max_entropy_balance_error": 6.490540366284227e-14
+        }
+      ],
+      "halving_ratios": [
+        4.1118536664313305,
+        4.026636920787948
+      ],
+      "independent_mesh_difference": 3.0781532878165763e-10
+    },
+    {
+      "initial_visible_T": 0.6882487043,
+      "initial_dark_T": 0.5918938856979999,
+      "initial_eta": 0.9,
+      "total_energy": 5.211691976901698,
+      "levels": [
+        {
+          "steps": 2,
+          "visible_T": 0.6873504205933266,
+          "dark_T": 0.61467544571886,
+          "eta": 0.7988363838116631,
+          "normalized_reference_error": 0.0007508747145612847,
+          "total_entropy_produced": 0.0014143336386423116,
+          "max_entropy_balance_error": 1.460724684183074e-13
+        },
+        {
+          "steps": 4,
+          "visible_T": 0.6873575071315562,
+          "dark_T": 0.6145064810728826,
+          "eta": 0.7995460801722911,
+          "normalized_reference_error": 0.00018477269367108068,
+          "total_entropy_produced": 0.001408736816055238,
+          "max_entropy_balance_error": 7.443486480304377e-14
+        },
+        {
+          "steps": 8,
+          "visible_T": 0.6873592441044316,
+          "dark_T": 0.6144650494915329,
+          "eta": 0.7997201668178935,
+          "normalized_reference_error": 4.6013283821069384e-05,
+          "total_entropy_produced": 0.0014073545163543271,
+          "max_entropy_balance_error": 3.849881254699695e-14
+        }
+      ],
+      "halving_ratios": [
+        4.063775331965116,
+        4.01563805768789
+      ],
+      "independent_mesh_difference": 1.9241408466541543e-10
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Local closed-system thermal FD benchmark with direct charged-lepton elastic and timelike vacuum terms, not a complete interaction history."
+}

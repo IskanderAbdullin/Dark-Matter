@@ -1,0 +1,96 @@
+{
+  "results": [
+    {
+      "k_h_Mpc": 22.0,
+      "metric_sha256": "2ba9b0a916466bb5a3c1865ff7ede19e5b43220bdea6f37b3afe4f5d58a79226",
+      "data": [
+        {
+          "nodes": [
+            460,
+            9000
+          ],
+          "start_k_tau": 0.07000060831934114,
+          "cold_over_native": 1.0000000298254117,
+          "kinetic_minus_cold_over_cold": [
+            -2.537975763532468e-09,
+            -1.3853030908703022e-09
+          ],
+          "cold_delta": -5809.056614199247,
+          "native_cdm_delta": -5809.056440941747,
+          "exact_baryon_delta": -5384.1002953867,
+          "mass_eV": 40000000.0,
+          "weighted_tail_boundary_defect": [
+            7.753927406288021e-45,
+            2.6955330873425214e-46
+          ]
+        },
+        {
+          "nodes": [
+            460,
+            9000
+          ],
+          "start_k_tau": 0.15,
+          "cold_over_native": 1.0000000258105337,
+          "kinetic_minus_cold_over_cold": [
+            -2.3995926124040803e-09,
+            -1.3097692789849206e-09
+          ],
+          "cold_delta": -5809.056590876594,
+          "native_cdm_delta": -5809.056440941747,
+          "exact_baryon_delta": -5384.1002953867,
+          "mass_eV": 40000000.0,
+          "weighted_tail_boundary_defect": [
+            7.753927406288021e-45,
+            2.6955330873425214e-46
+          ]
+        },
+        {
+          "nodes": [
+            850,
+            18000
+          ],
+          "start_k_tau": 0.07000060831934114,
+          "cold_over_native": 1.0000000291945397,
+          "kinetic_minus_cold_over_cold": [
+            -2.5379759964806206e-09,
+            -1.3853030999690119e-09
+          ],
+          "cold_delta": -5809.056610534475,
+          "native_cdm_delta": -5809.056440941747,
+          "exact_baryon_delta": -5384.1002953867,
+          "mass_eV": 40000000.0,
+          "weighted_tail_boundary_defect": [
+            7.755323695158769e-45,
+            2.696018485580106e-46
+          ]
+        },
+        {
+          "nodes": [
+            850,
+            18000
+          ],
+          "start_k_tau": 0.15,
+          "cold_over_native": 1.000000028286556,
+          "kinetic_minus_cold_over_cold": [
+            -2.3995926793069723e-09,
+            -1.3097691974633986e-09
+          ],
+          "cold_delta": -5809.056605259947,
+          "native_cdm_delta": -5809.056440941747,
+          "exact_baryon_delta": -5384.1002953867,
+          "mass_eV": 40000000.0,
+          "weighted_tail_boundary_defect": [
+            7.755323695158769e-45,
+            2.696018485580106e-46
+          ]
+        }
+      ]
+    }
+  ],
+  "spectrum_sha256": [
+    "25b968f409c70a6b7c9c440f81a6ec682c608c94bb3d45be477038329932e885",
+    "ad1fb488e3b598f7550283735b7f93743b507916e2914c608204ab741c526691"
+  ],
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "scope": "Fixed Newtonian metric, stable test-particle density and velocity matched to CDM initially. The numerical cold comparator follows the same metric. No prehistory, gravitational feedback, absolute matter transfer, or likelihood."
+}

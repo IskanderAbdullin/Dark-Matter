@@ -1,0 +1,229 @@
+{
+  "multi-verify": {
+    "T": 0.045000000000000005,
+    "bins": 25,
+    "method": "heun",
+    "log_time_H_units": 1.5e-09,
+    "entropy_controls": {
+      "exact_continuum_KMS_from_cell_shapes": 1.2006835236467663e-16,
+      "microscopic_entropy_relative_check": 2.90878432451791e-14,
+      "entropy_production": 1.4586305508521593e-18
+    },
+    "steps": 8,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 1.0000000000000007e-10,
+    "total_energy_relative_error": 0.0,
+    "separate_number_relative_error": 0.0,
+    "maximum_moment_shape_error": 1.0014211682118912e-13,
+    "relative_entropy_gain": 0.0029020245718498483,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.012531691436207661
+  },
+  "timefine": {
+    "T": 0.045000000000000005,
+    "bins": 25,
+    "method": "heun",
+    "log_time_H_units": 1.5e-09,
+    "steps": 15,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 9.999999999999986e-11,
+    "total_energy_relative_error": 0.0,
+    "separate_number_relative_error": 0.0,
+    "maximum_moment_shape_error": 1.461053500406706e-13,
+    "relative_entropy_gain": 0.002903112414247566,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.012541108814426775
+  },
+  "timeeuler": {
+    "T": 0.045000000000000005,
+    "bins": 25,
+    "method": "euler",
+    "log_time_H_units": 1.5e-09,
+    "steps": 15,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 9.999999999999986e-11,
+    "total_energy_relative_error": 0.0,
+    "separate_number_relative_error": 2.220446049250313e-16,
+    "maximum_moment_shape_error": 1.509903313490213e-13,
+    "relative_entropy_gain": 0.002928538214761245,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.012719126355810328
+  },
+  "meshfine": {
+    "T": 0.045000000000000005,
+    "bins": 33,
+    "method": "heun",
+    "log_time_H_units": 1.5e-09,
+    "steps": 15,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 9.999999999999986e-11,
+    "total_energy_relative_error": 2.220446049250313e-16,
+    "separate_number_relative_error": 4.440892098500626e-16,
+    "maximum_moment_shape_error": 1.2234657731369225e-13,
+    "relative_entropy_gain": 0.0024036290687778905,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.012980209543200564
+  },
+  "angular-refine": {
+    "T": 0.045000000000000005,
+    "bins": 25,
+    "method": "heun",
+    "log_time_H_units": 1.5e-09,
+    "entropy_controls": {
+      "exact_continuum_KMS_from_cell_shapes": 1.2381279628408468e-16,
+      "microscopic_entropy_relative_check": 2.6478819137309983e-13,
+      "entropy_production": 1.4586305608304085e-18
+    },
+    "true_finite_box_common_temperature": 0.047717562771555914,
+    "physical_cutoff_p_over_T": 90.0,
+    "removed_by_initial_support_fraction": [
+      0.0,
+      0.0
+    ],
+    "parent_and_angle_orders": [
+      8,
+      7
+    ],
+    "finite_box_common_temperature_limit_scalar_heat": 0.08100107633969095,
+    "fractional_progress_towards_maximum_entropy": 0.2418223613783912,
+    "terminal_total_variation_from_common_temperature": [
+      0.20336283643473163,
+      0.07830830171571151
+    ],
+    "steps": 15,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 9.999999999999986e-11,
+    "total_energy_relative_error": 2.220446049250313e-16,
+    "separate_number_relative_error": 0.0,
+    "maximum_moment_shape_error": 8.992806499463768e-14,
+    "relative_entropy_gain": 0.0029031124142491205,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.012541108814441109
+  },
+  "cap": {
+    "T": 0.045000000000000005,
+    "bins": 21,
+    "method": "heun",
+    "log_time_H_units": 1.5e-09,
+    "entropy_controls": {
+      "exact_continuum_KMS_from_cell_shapes": 1.2222902177114234e-16,
+      "microscopic_entropy_relative_check": 7.327471962526033e-14,
+      "entropy_production": 1.4586285401025407e-18
+    },
+    "true_finite_box_common_temperature": 0.04771470350379897,
+    "physical_cutoff_p_over_T": 17.580467726696,
+    "removed_by_initial_support_fraction": [
+      7.852253327194317e-07,
+      1.6906223843772908e-05
+    ],
+    "parent_and_angle_orders": [
+      5,
+      4
+    ],
+    "finite_box_common_temperature_limit_scalar_heat": 0.08098026999995096,
+    "fractional_progress_towards_maximum_entropy": 0.24196028118949953,
+    "terminal_total_variation_from_common_temperature": [
+      0.20332862238861835,
+      0.07832004497609034
+    ],
+    "steps": 15,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 9.999999999999986e-11,
+    "total_energy_relative_error": 0.0,
+    "separate_number_relative_error": 2.220446049250313e-16,
+    "maximum_moment_shape_error": 5.617728504603292e-14,
+    "relative_entropy_gain": 0.002903126859988614,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.012542578715017213
+  },
+  "long-verify": {
+    "T": 0.045000000000000005,
+    "bins": 25,
+    "method": "heun",
+    "log_time_H_units": 1.5e-08,
+    "entropy_controls": {
+      "exact_continuum_KMS_from_cell_shapes": 1.2006835236467663e-16,
+      "microscopic_entropy_relative_check": 2.90878432451791e-14,
+      "entropy_production": 1.4586305508521593e-18
+    },
+    "true_finite_box_common_temperature": 0.047717562771555914,
+    "finite_box_common_temperature_limit_scalar_heat": 0.08100107633969095,
+    "fractional_progress_towards_maximum_entropy": 0.6724131777557258,
+    "terminal_total_variation_from_common_temperature": [
+      0.10666400568065783,
+      0.05667288936861169
+    ],
+    "steps": 60,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 2.4999999999998404e-10,
+    "total_energy_relative_error": 2.220446049250313e-16,
+    "separate_number_relative_error": 3.3306690738754696e-16,
+    "maximum_moment_shape_error": 1.475486399726833e-13,
+    "relative_entropy_gain": 0.008072417425420753,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.04172640904967165
+  },
+  "longfine": {
+    "T": 0.045000000000000005,
+    "bins": 33,
+    "method": "heun",
+    "log_time_H_units": 1.5e-08,
+    "entropy_controls": {
+      "exact_continuum_KMS_from_cell_shapes": 1.4927817565750592e-16,
+      "microscopic_entropy_relative_check": 6.17284001691587e-14,
+      "entropy_production": 7.288483211844221e-19
+    },
+    "true_finite_box_common_temperature": 0.04656256323125503,
+    "physical_cutoff_p_over_T": 90.0,
+    "removed_by_initial_support_fraction": [
+      0.0,
+      0.0
+    ],
+    "parent_and_angle_orders": [
+      5,
+      4
+    ],
+    "finite_box_common_temperature_limit_scalar_heat": 0.08044636153695708,
+    "fractional_progress_towards_maximum_entropy": 0.6966450657290486,
+    "terminal_total_variation_from_common_temperature": [
+      0.09941264807782953,
+      0.060195896929546584
+    ],
+    "steps": 60,
+    "rejections": 0,
+    "minimum_accepted_step_H_units": 2.4999999999998404e-10,
+    "total_energy_relative_error": 8.881784197001252e-16,
+    "separate_number_relative_error": 1.1102230246251565e-15,
+    "maximum_moment_shape_error": 1.3522516439934407e-13,
+    "relative_entropy_gain": 0.006472914933574714,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.04301936829764639
+  },
+  "stiff": {
+    "T": 0.045000000000000005,
+    "bins": 25,
+    "method": "heun",
+    "log_time_H_units": 5e-08,
+    "entropy_controls": {
+      "exact_continuum_KMS_from_cell_shapes": 1.2006835236467663e-16,
+      "microscopic_entropy_relative_check": 2.90878432451791e-14,
+      "entropy_production": 1.4586305508521593e-18
+    },
+    "true_finite_box_common_temperature": 0.047717562771555914,
+    "physical_cutoff_p_over_T": 90.0,
+    "removed_by_initial_support_fraction": [
+      0.0,
+      0.0
+    ],
+    "parent_and_angle_orders": [
+      5,
+      4
+    ],
+    "finite_box_common_temperature_limit_scalar_heat": 0.08100107633969095,
+    "fractional_progress_towards_maximum_entropy": 0.8663112306751495,
+    "terminal_total_variation_from_common_temperature": [
+      0.04910243486927013,
+      0.03260255210932376
+    ],
+    "steps": 21,
+    "rejections": 11,
+    "minimum_accepted_step_H_units": 9.999999999999957e-10,
+    "total_energy_relative_error": 2.220446049250313e-16,
+    "separate_number_relative_error": 3.3306690738754696e-16,
+    "maximum_moment_shape_error": 8.43769498715119e-14,
+    "relative_entropy_gain": 0.010400191587084162,
+    "fractional_scalar_heat_of_initial_dark_energy": 0.06125808952068866
+  }
+}

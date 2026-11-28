@@ -1,0 +1,77 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "scalar_div": 2,
+  "charge_div": 2,
+  "band": [
+    1e-06,
+    1.5e-05
+  ],
+  "count_only": {
+    "conditional_relative_split_interval": [
+      1.3299092172784276e-08,
+      7.44787055672147e-08
+    ],
+    "linear_numerator_change_interval": [
+      -1.45127253590516e-11,
+      2.323704662101628e-11
+    ],
+    "quadratic_numerator_change_interval": [
+      -7.325659130092713e-12,
+      4.3172140279566935e-12
+    ],
+    "independently_boxed_quadratic_interval": [
+      -6.072335251245963e-11,
+      5.771490741032363e-11
+    ],
+    "correlated_linear_deviations": [
+      [
+        -0.004605430870093103,
+        0.0035341717638513294
+      ],
+      [
+        -0.002193400072197157,
+        0.004781136882180835
+      ]
+    ],
+    "positive_denominator_interval": [
+      0.0008232175480515261,
+      0.000896266608736594
+    ],
+    "baseline_relative_split": 3.866039083174872e-08
+  },
+  "count_and_mean_excess": {
+    "conditional_relative_split_interval": [
+      3.7148330215910765e-08,
+      3.994929012907876e-08
+    ],
+    "linear_numerator_change_interval": [
+      -1.3180317875577437e-12,
+      1.122037663729072e-12
+    ],
+    "quadratic_numerator_change_interval": [
+      -1.6452457710156004e-16,
+      1.7325336733350123e-16
+    ],
+    "independently_boxed_quadratic_interval": [
+      -6.685927477046138e-16,
+      6.495797943737135e-16
+    ],
+    "correlated_linear_deviations": [
+      [
+        -0.0001745810128897733,
+        0.0001513781194649364
+      ],
+      [
+        -1.5709319327378902e-05,
+        1.5568365239808193e-05
+      ]
+    ],
+    "positive_denominator_interval": [
+      0.0008731100736588183,
+      0.0008732484133053216
+    ],
+    "baseline_relative_split": 3.866039083174872e-08
+  },
+  "scope": "Conservative correlated finite-panel bounds. Fixed pole and charge; moments of each occupied in-band shell constrained. No continuum, physical population, or dynamic error guarantee."
+}

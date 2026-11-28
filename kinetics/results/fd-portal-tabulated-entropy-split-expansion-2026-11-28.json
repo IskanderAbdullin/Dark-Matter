@@ -1,0 +1,219 @@
+{
+  "rows": [
+    {
+      "initial_state": [
+        0.05,
+        0.3,
+        -2.8473122684357177
+      ],
+      "horizon": 7.091641985598275e+18,
+      "independent_terminal_coordinates": [
+        0.01186017805594249,
+        0.049458186506495465,
+        0.3008112140367006,
+        -2.8592506949445484,
+        8.003840173661435e-07,
+        0.011146211504717422
+      ],
+      "levels": [
+        {
+          "steps": 2,
+          "log_a": 0.01186019472557871,
+          "state": [
+            0.04945818574369937,
+            0.3008112155122922,
+            -2.8592507116188792
+          ],
+          "relative_comoving_entropy_added": 8.003347870429838e-07,
+          "scaled_independent_error": 1.6669636219990291e-06,
+          "entropy_ledger_defect": 1.3611683513588572e-14,
+          "max_collision_entropy_defect": 2.2264694285831407e-16,
+          "normalized_pressure_work": 0.011146227087932925,
+          "comoving_energy_ledger_defect": 9.100532827321928e-14,
+          "max_drift_energy_defect": 2.8404307452413333e-13
+        },
+        {
+          "steps": 4,
+          "log_a": 0.01186018222335066,
+          "state": [
+            0.04945818631579673,
+            0.300811214405606,
+            -2.859250699113129
+          ],
+          "relative_comoving_entropy_added": 8.003717088119474e-07,
+          "scaled_independent_error": 4.1674081702886e-07,
+          "entropy_ledger_defect": 1.7638474333187253e-14,
+          "max_collision_entropy_defect": 3.7063874631388676e-16,
+          "normalized_pressure_work": 0.011146215400522411,
+          "comoving_energy_ledger_defect": 8.503961423933504e-14,
+          "max_drift_energy_defect": 2.0657177108220646e-13
+        },
+        {
+          "steps": 8,
+          "log_a": 0.011860179097794176,
+          "state": [
+            0.049458186458816306,
+            0.3008112141289289,
+            -2.859250695986694
+          ],
+          "relative_comoving_entropy_added": 8.003809401668198e-07,
+          "scaled_independent_error": 1.0418516865201566e-07,
+          "entropy_ledger_defect": 1.840504942072688e-13,
+          "max_collision_entropy_defect": 3.987302821947272e-16,
+          "normalized_pressure_work": 0.011146212478669154,
+          "comoving_energy_ledger_defect": 3.2845427766492463e-13,
+          "max_drift_energy_defect": 1.1238507937846478e-13
+        }
+      ],
+      "error_halving_ratios": [
+        4.000000849169495,
+        4.00000136699685
+      ],
+      "independent_mesh_force_defect": 3.219646771412954e-15
+    },
+    {
+      "initial_state": [
+        0.3,
+        -0.75,
+        -1.0555527992076628
+      ],
+      "horizon": 1.2951496835881702e+17,
+      "independent_terminal_coordinates": [
+        0.011864310848796966,
+        0.2969455629641801,
+        -0.749623764595953,
+        -1.0674703854201795,
+        1.5113723853873508e-06,
+        0.009756324959463072
+      ],
+      "levels": [
+        {
+          "steps": 2,
+          "log_a": 0.011864326190685092,
+          "state": [
+            0.29694555873502504,
+            -0.7496237955520085,
+            -1.0674703840833146
+          ],
+          "relative_comoving_entropy_added": 1.51106958904383e-06,
+          "scaled_independent_error": 1.5341888126227388e-06,
+          "entropy_ledger_defect": 1.0247065782703624e-14,
+          "max_collision_entropy_defect": 1.114930982237514e-16,
+          "normalized_pressure_work": 0.009756337558756089,
+          "comoving_energy_ledger_defect": 4.254195953845574e-12,
+          "max_drift_energy_defect": 4.64670938621756e-12
+        },
+        {
+          "steps": 4,
+          "log_a": 0.011864314684267522,
+          "state": [
+            0.29694556190685584,
+            -0.749623772338807,
+            -1.0674703850840448
+          ],
+          "relative_comoving_entropy_added": 1.5112966476716802e-06,
+          "scaled_independent_error": 3.8354705557408497e-07,
+          "entropy_ledger_defect": 2.2271175772044195e-14,
+          "max_collision_entropy_defect": 7.298035881434435e-16,
+          "normalized_pressure_work": 0.009756328109297035,
+          "comoving_energy_ledger_defect": 4.238703138481625e-12,
+          "max_drift_energy_defect": 4.493927990508538e-12
+        },
+        {
+          "steps": 8,
+          "log_a": 0.01186431180766416,
+          "state": [
+            0.29694556269984285,
+            -0.7496237665319057,
+            -1.0674703853360268
+          ],
+          "relative_comoving_entropy_added": 1.5113534485420532e-06,
+          "scaled_independent_error": 9.588671939786408e-08,
+          "entropy_ledger_defect": 5.0554916876109396e-14,
+          "max_collision_entropy_defect": 6.337436864429457e-16,
+          "normalized_pressure_work": 0.009756325746922596,
+          "comoving_energy_ledger_defect": 4.202700687461203e-12,
+          "max_drift_energy_defect": 4.400295243258737e-12
+        }
+      ],
+      "error_halving_ratios": [
+        4.000001539123793,
+        4.000001856176015
+      ],
+      "independent_mesh_force_defect": 5.5844218138645374e-14
+    },
+    {
+      "initial_state": [
+        0.6882487043,
+        0.9,
+        -0.5244279072965753
+      ],
+      "horizon": 1057993344534724.5,
+      "independent_terminal_coordinates": [
+        0.0005723591514711233,
+        0.6869366722152517,
+        0.7941013262763659,
+        -0.4854382395529769,
+        0.00014746179333555544,
+        0.0005306747711784801
+      ],
+      "levels": [
+        {
+          "steps": 2,
+          "log_a": 0.0005723591542830416,
+          "state": [
+            0.6869251033014038,
+            0.7929523518599548,
+            -0.4849922171516085
+          ],
+          "relative_comoving_entropy_added": 0.0001483053028787509,
+          "scaled_independent_error": 0.0011489744164110416,
+          "entropy_ledger_defect": 2.133429338139342e-13,
+          "max_collision_entropy_defect": 1.6442237452592572e-13,
+          "normalized_pressure_work": 0.0005306728572645781,
+          "comoving_energy_ledger_defect": 9.079184886545688e-14,
+          "max_drift_energy_defect": 2.860926443870443e-14
+        },
+        {
+          "steps": 4,
+          "log_a": 0.000572359152172603,
+          "state": [
+            0.6869338343153644,
+            0.7938192651124611,
+            -0.4853287662791455
+          ],
+          "relative_comoving_entropy_added": 0.00014767040812992582,
+          "scaled_independent_error": 0.00028206116390472324,
+          "entropy_ledger_defect": 2.024120888260983e-13,
+          "max_collision_entropy_defect": 8.398026519848974e-14,
+          "normalized_pressure_work": 0.0005306743023574844,
+          "comoving_energy_ledger_defect": 1.027543935355757e-13,
+          "max_drift_energy_defect": 1.942226172858797e-14
+        },
+        {
+          "steps": 8,
+          "log_a": 0.00057235915164635,
+          "state": [
+            0.6869359660396577,
+            0.794031125952576,
+            -0.48541099472750737
+          ],
+          "relative_comoving_entropy_added": 0.00014751380774153343,
+          "scaled_independent_error": 7.020032378990404e-05,
+          "entropy_ledger_defect": 2.0445266573493326e-13,
+          "max_collision_entropy_defect": 4.442672808616757e-14,
+          "normalized_pressure_work": 0.0005306746545590492,
+          "comoving_energy_ledger_defect": 9.905422836131716e-14,
+          "max_drift_energy_defect": 1.0232935214993445e-14
+        }
+      ],
+      "error_halving_ratios": [
+        4.073493849721016,
+        4.017946765443385
+      ],
+      "independent_mesh_force_defect": 1.2784084901795723e-10
+    }
+  ],
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "scope": "Short homogeneous expansion, tabulated visible EOS and restricted timelike vacuum FD collisions only. No cosmological duration or abundance inference."
+}

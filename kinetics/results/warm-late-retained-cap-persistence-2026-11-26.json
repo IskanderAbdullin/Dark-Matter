@@ -1,0 +1,42 @@
+{
+  "scope": "Counts only the occupation above the original pointwise ceiling in retained cells. Positive violation means the instantaneous anchor upper cannot be presumed persistent.",
+  "original_snapshot_sha256": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+  "selected_states": [
+    {
+      "source_sha256": "79960d9f8c9f69d6a2774ed0455f4bd396c49dd06e1a68d002ab252bd9190cd9",
+      "H_times_elapsed": 0.0,
+      "species": [
+        {
+          "fraction_of_initial_retained_count_above_ceiling": 4.915245483518815e-12,
+          "cells_exceeding_original_envelope": 1,
+          "biggest_occupied_cell_maximum_over_original": 3.4396977518472087,
+          "largest_reduction_in_minimum_entropy": 1.2353836046900284
+        },
+        {
+          "fraction_of_initial_retained_count_above_ceiling": 1.412883802958593e-13,
+          "cells_exceeding_original_envelope": 1,
+          "biggest_occupied_cell_maximum_over_original": 1.122983088774787,
+          "largest_reduction_in_minimum_entropy": 0.11598861667122407
+        }
+      ]
+    },
+    {
+      "source_sha256": "3d0348af0cbf7d36756b83552f236cb1adf0ecab5006af06ff34ccb8b4052454",
+      "H_times_elapsed": 1e-08,
+      "species": [
+        {
+          "fraction_of_initial_retained_count_above_ceiling": 5.785541959719629e-10,
+          "cells_exceeding_original_envelope": 5,
+          "biggest_occupied_cell_maximum_over_original": 115217.71060903158,
+          "largest_reduction_in_minimum_entropy": 11.654578753353086
+        },
+        {
+          "fraction_of_initial_retained_count_above_ceiling": 2.4069624676695413e-10,
+          "cells_exceeding_original_envelope": 22,
+          "biggest_occupied_cell_maximum_over_original": 17753.062811694752,
+          "largest_reduction_in_minimum_entropy": 9.78431333278958
+        }
+      ]
+    }
+  ]
+}

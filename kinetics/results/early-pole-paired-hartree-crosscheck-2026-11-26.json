@@ -1,0 +1,120 @@
+{
+  "scope": "Common-event streaming-only held-parent comparison. No reaction including energy-resolved parent evolution, actual reheating, additional scattering or field dynamics.",
+  "paired_vs_empty_daughter_previous_fine_yield": 0.5456071181310659,
+  "inverse_enabled_over_Pauli_only_on_fixed_coarse_grids": 0.7154302076281395,
+  "combined_momentum_grid_relative_change": 0.013482006541819969,
+  "runs": {
+    "small": {
+      "final": {
+        "x": 0.05000000000000001,
+        "Y": 0.0004436074916710734,
+        "Y_sub_1e_5": 0.00044360337835413,
+        "scalar_pole_over_T": 0.0009262667117107608,
+        "max_fermion_occupation": 0.1668449196635811,
+        "peak_scalar_occupation": 2.399929649358029e+16,
+        "pair_number_relative_mismatch": 7.034724384769977e-08,
+        "fermion_mean_p_over_T": 1.1441971697397393
+      },
+      "worst_number_defect": 7.558093239838447e-06,
+      "scalar_bins": 67,
+      "fermion_bins": 112,
+      "solver_calls": 11513
+    },
+    "fine": {
+      "final": {
+        "x": 0.05000000000000001,
+        "Y": 0.0004377063691855786,
+        "Y_sub_1e_5": 0.0004377022311303719,
+        "scalar_pole_over_T": 0.0009221410561292795,
+        "max_fermion_occupation": 0.1667129482405399,
+        "peak_scalar_occupation": 2.1772059260639972e+16,
+        "pair_number_relative_mismatch": 2.1073374374197935e-07,
+        "fermion_mean_p_over_T": 1.142108336221465
+      },
+      "worst_number_defect": 8.158712330727506e-06,
+      "scalar_bins": 132,
+      "fermion_bins": 237,
+      "solver_calls": 23795
+    },
+    "small-direct": {
+      "final": {
+        "x": 0.05000000000000001,
+        "Y": 0.00044360749784149475,
+        "Y_sub_1e_5": 0.0004436033845344647,
+        "scalar_pole_over_T": 0.0009262667160064494,
+        "max_fermion_occupation": 0.16684496329092674,
+        "peak_scalar_occupation": 2.3999316348443784e+16,
+        "pair_number_relative_mismatch": -3.3404598654048108e-16,
+        "fermion_mean_p_over_T": 1.1441972056431018
+      },
+      "worst_number_defect": 3.5199777498185404e-15,
+      "scalar_bins": 67,
+      "fermion_bins": 112,
+      "solver_calls": 18172
+    },
+    "fine-direct": {
+      "final": {
+        "x": 0.05000000000000001,
+        "Y": 0.00043770633812746423,
+        "Y_sub_1e_5": 0.00043770220007683904,
+        "scalar_pole_over_T": 0.0009221410343193563,
+        "max_fermion_occupation": 0.16671293249239075,
+        "peak_scalar_occupation": 2.1772072825614984e+16,
+        "pair_number_relative_mismatch": 6.77099193432577e-16,
+        "fermion_mean_p_over_T": 1.142108340336372
+      },
+      "worst_number_defect": 1.5865546162280049e-15,
+      "scalar_bins": 132,
+      "fermion_bins": 237,
+      "solver_calls": 33588
+    },
+    "vacuum-direct": {
+      "final": {
+        "x": 0.024999999999999994,
+        "Y": 0.004819687900572679,
+        "Y_sub_1e_5": 0.004780451831280278,
+        "scalar_pole_over_T": 2.4999999999999994e-11,
+        "max_fermion_occupation": 0.06426153827231985,
+        "peak_scalar_occupation": 8.184519365172891e+16,
+        "pair_number_relative_mismatch": -3.689499585289137e-16,
+        "fermion_mean_p_over_T": 4.0024495649271286
+      },
+      "worst_number_defect": 1.6713478301666652e-15,
+      "scalar_bins": 67,
+      "fermion_bins": 112,
+      "solver_calls": 13206
+    },
+    "only-pauli": {
+      "final": {
+        "x": 0.05000000000000001,
+        "Y": 0.0006200569854496128,
+        "Y_sub_1e_5": 0.0006200525488693463,
+        "scalar_pole_over_T": 0.0010356527632087683,
+        "max_fermion_occupation": 0.47960439988528936,
+        "peak_scalar_occupation": 3.3471633462524164e+16,
+        "pair_number_relative_mismatch": 1.1949329475400153e-15,
+        "fermion_mean_p_over_T": 1.0698471397788036
+      },
+      "worst_number_defect": 1.1949329475400153e-15,
+      "scalar_bins": 67,
+      "fermion_bins": 112,
+      "solver_calls": 13200
+    },
+    "finite-daughter": {
+      "final": {
+        "x": 0.05000000000000001,
+        "Y": 0.0004959253803601782,
+        "Y_sub_1e_5": 0.0004959215300491524,
+        "scalar_pole_over_T": 0.0009613376640824402,
+        "max_fermion_occupation": 0.18750954542067583,
+        "peak_scalar_occupation": 1.3929877136851624e+17,
+        "pair_number_relative_mismatch": 2.9880564722376814e-16,
+        "fermion_mean_p_over_T": 1.068781708555694
+      },
+      "worst_number_defect": 2.0183514194072612e-15,
+      "scalar_bins": 67,
+      "fermion_bins": 112,
+      "solver_calls": 21848
+    }
+  }
+}

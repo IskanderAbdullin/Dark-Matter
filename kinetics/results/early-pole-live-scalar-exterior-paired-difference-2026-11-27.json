@@ -1,0 +1,220 @@
+{
+  "steps": {
+    "24": {
+      "grid": "fine",
+      "projection": "steps",
+      "duration": 7.2e-05,
+      "common_rk4_steps": 24,
+      "radial_order": 10,
+      "energy_closure": [
+        0.0,
+        -2.220446049250313e-16
+      ],
+      "entropy_change": [
+        1.6679221745752315e-05,
+        1.667950214390146e-05
+      ],
+      "rows": [
+        {
+          "exposure": 1.8e-05,
+          "cold_gain": 2.1154615040631396e-06,
+          "outer_feedback_on_cold": -6.75550397407144e-17,
+          "warm_gain": 4.946928441900274e-12
+        },
+        {
+          "exposure": 3.6e-05,
+          "cold_gain": 4.223481447376632e-06,
+          "outer_feedback_on_cold": -2.5329617657272575e-16,
+          "warm_gain": 9.893800626104466e-12
+        },
+        {
+          "exposure": 5.4e-05,
+          "cold_gain": 6.324065678228408e-06,
+          "outer_feedback_on_cold": -5.596187637669779e-16,
+          "warm_gain": 1.4840616746090928e-11
+        },
+        {
+          "exposure": 7.2e-05,
+          "cold_gain": 8.417277010539377e-06,
+          "outer_feedback_on_cold": -9.805760748592066e-16,
+          "warm_gain": 1.9787376994461443e-11
+        }
+      ],
+      "scope": "Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid."
+    },
+    "48": {
+      "grid": "fine",
+      "projection": "steps",
+      "duration": 7.2e-05,
+      "common_rk4_steps": 48,
+      "radial_order": 10,
+      "energy_closure": [
+        -2.220446049250313e-16,
+        0.0
+      ],
+      "entropy_change": [
+        1.6679219698279013e-05,
+        1.6679500096206112e-05
+      ],
+      "rows": [
+        {
+          "exposure": 1.8e-05,
+          "cold_gain": 2.1154615040544774e-06,
+          "outer_feedback_on_cold": -6.303538921939086e-17,
+          "warm_gain": 4.946928441900273e-12
+        },
+        {
+          "exposure": 3.6e-05,
+          "cold_gain": 4.223481447385141e-06,
+          "outer_feedback_on_cold": -2.523909541491453e-16,
+          "warm_gain": 9.893800626104464e-12
+        },
+        {
+          "exposure": 5.4e-05,
+          "cold_gain": 6.324064654889243e-06,
+          "outer_feedback_on_cold": -5.712500858476314e-16,
+          "warm_gain": 1.4840616746111207e-11
+        },
+        {
+          "exposure": 7.2e-05,
+          "cold_gain": 8.417275986331337e-06,
+          "outer_feedback_on_cold": -9.938266460342476e-16,
+          "warm_gain": 1.9787376994509277e-11
+        }
+      ],
+      "scope": "Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid."
+    }
+  },
+  "cell-conservative": {
+    "24": {
+      "grid": "fine",
+      "projection": "cell-conservative",
+      "duration": 7.2e-05,
+      "common_rk4_steps": 24,
+      "radial_order": 10,
+      "energy_closure": [
+        0.0,
+        0.0
+      ],
+      "entropy_change": [
+        1.666814690315377e-05,
+        1.6668428928445778e-05
+      ],
+      "rows": [
+        {
+          "exposure": 1.8e-05,
+          "cold_gain": 2.112175289597238e-06,
+          "outer_feedback_on_cold": -6.149764419912249e-17,
+          "warm_gain": 4.9699079369083774e-12
+        },
+        {
+          "exposure": 3.6e-05,
+          "cold_gain": 4.216920923490457e-06,
+          "outer_feedback_on_cold": -2.530826781438194e-16,
+          "warm_gain": 9.939759639057375e-12
+        },
+        {
+          "exposure": 5.4e-05,
+          "cold_gain": 6.3142426594253235e-06,
+          "outer_feedback_on_cold": -5.69954723932139e-16,
+          "warm_gain": 1.4909555299829577e-11
+        },
+        {
+          "exposure": 7.2e-05,
+          "cold_gain": 8.40419929951349e-06,
+          "outer_feedback_on_cold": -1.0073360294773704e-15,
+          "warm_gain": 1.987929511183341e-11
+        }
+      ],
+      "scope": "Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid."
+    },
+    "48": {
+      "grid": "fine",
+      "projection": "cell-conservative",
+      "duration": 7.2e-05,
+      "common_rk4_steps": 48,
+      "radial_order": 10,
+      "energy_closure": [
+        2.220446049250313e-16,
+        0.0
+      ],
+      "entropy_change": [
+        1.6668144713349875e-05,
+        1.666842673841984e-05
+      ],
+      "rows": [
+        {
+          "exposure": 1.8e-05,
+          "cold_gain": 2.11217528959661e-06,
+          "outer_feedback_on_cold": -6.144796100942759e-17,
+          "warm_gain": 4.969907936908377e-12
+        },
+        {
+          "exposure": 3.6e-05,
+          "cold_gain": 4.216920923493009e-06,
+          "outer_feedback_on_cold": -2.5184503617743643e-16,
+          "warm_gain": 9.939759639057377e-12
+        },
+        {
+          "exposure": 5.4e-05,
+          "cold_gain": 6.314241453419116e-06,
+          "outer_feedback_on_cold": -5.670446688321173e-16,
+          "warm_gain": 1.490955529985016e-11
+        },
+        {
+          "exposure": 7.2e-05,
+          "cold_gain": 8.404198102939153e-06,
+          "outer_feedback_on_cold": -1.0012190349320391e-15,
+          "warm_gain": 1.9879295111886334e-11
+        }
+      ],
+      "scope": "Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid."
+    }
+  },
+  "broad_short": {
+    "grid": "fine",
+    "projection": "steps",
+    "duration": 2e-06,
+    "common_rk4_steps": 12,
+    "radial_order": 10,
+    "energy_closure": [
+      0.0,
+      -4.440892098500626e-16
+    ],
+    "entropy_change": [
+      4.7168336814173983e-07,
+      4.716921577774258e-07
+    ],
+    "rows": [
+      {
+        "exposure": 5e-07,
+        "cold_gain": 5.886334065306038e-08,
+        "outer_feedback_on_cold": -1.919321145645217e-18,
+        "warm_gain": 2.1948436438829005e-13
+      },
+      {
+        "exposure": 1e-06,
+        "cold_gain": 1.1772093624347817e-07,
+        "outer_feedback_on_cold": -7.586522064370425e-18,
+        "warm_gain": 4.389652772762447e-13
+      },
+      {
+        "exposure": 1.4999999999999998e-06,
+        "cold_gain": 1.7657278685895604e-07,
+        "outer_feedback_on_cold": -1.704143808094223e-17,
+        "warm_gain": 6.584427390288171e-13
+      },
+      {
+        "exposure": 2e-06,
+        "cold_gain": 2.3541889258724742e-07,
+        "outer_feedback_on_cold": -2.979516770944487e-17,
+        "warm_gain": 8.779167500090646e-13
+      }
+    ],
+    "warm_node_cuts": [
+      1.00001e-05,
+      5.0
+    ],
+    "scope": "Same cold hard box and decay-only physics; explicit difference variable on a shared RK4 grid."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "fixed_initial_state": [
+    0.6882487043,
+    0.9,
+    -0.5244279072965753
+  ],
+  "horizon": 1057174514792946.6,
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "combined_reference_sha256": "e7512515db05383909829154da25b2610bb1e461f174e76713f84b050cc8ac39",
+  "fields": [
+    "log_a",
+    "T_vis",
+    "eta_dark",
+    "ln_T_dark",
+    "comoving_entropy_added_normalized",
+    "pressure_work_normalized"
+  ],
+  "combined_continuous": [
+    0.0005719164250322593,
+    0.6869369257677592,
+    0.7939846482720114,
+    -0.4854137326273215,
+    0.0001478551310880244,
+    0.0005302644070616304
+  ],
+  "timelike_continuous": [
+    0.0005719164250395293,
+    0.686937409504641,
+    0.7941489280299501,
+    -0.48545577888252495,
+    0.0001474194316168867,
+    0.0005302643402787631
+  ],
+  "continuous_combined_minus_timelike": [
+    -7.270009247384301e-15,
+    -4.837368817733889e-07,
+    -0.0001642797579386457,
+    4.204625520343175e-05,
+    4.3569947113771337e-07,
+    6.678286732213906e-11
+  ],
+  "eight_step_combined_minus_timelike": [
+    -7.227400102005621e-15,
+    -4.849003399920448e-07,
+    -0.00016440432596720456,
+    4.209232391955142e-05,
+    4.3577546223703143e-07,
+    6.66774905688089e-11
+  ],
+  "timelike_steps": [
+    {
+      "steps": 4,
+      "state_and_normalized_budgets": [
+        0.0005719164257393917,
+        0.6869345764379602,
+        0.7938673243403751,
+        -0.4853464854492813,
+        0.00014762787163017388,
+        0.0005302638722105807
+      ],
+      "ledger_defects": [
+        2.0231605561867039e-13,
+        1.022753930157716e-13
+      ]
+    },
+    {
+      "steps": 8,
+      "state_and_normalized_budgets": [
+        0.0005719164252143528,
+        0.6869367045269853,
+        0.7940788411138179,
+        -0.4854285786375589,
+        0.00014747140253684084,
+        0.0005302642238457232
+      ],
+      "ledger_defects": [
+        2.04663136481667e-13,
+        9.869980267113165e-14
+      ]
+    }
+  ],
+  "max_timelike_independent_mesh_difference": 1.2661749426712277e-10,
+  "scope": "Direct and split 0.688-GeV scenarios compared at identical physical duration, fixed numerical model and initial state, not cosmological abundance."
+}

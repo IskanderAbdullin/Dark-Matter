@@ -1,0 +1,700 @@
+{
+  "scope": "Exact positive panel enclosures conditional on instantaneous specified reheating, adiabatic visible radiation, vacuum direct thermal lepton and charged-pion channels, two scalar daughters per heavy-pair event, and free survival. Entire lower omits unmeasured pion windows. Pion upper uses two given positive moments and the assumed high-band R_pi<=1; measured bin choices +/- two stated marginal errors are not a statistical interval. No stable prediction, nonlinear recycling, elastic heating, or other number-changing source.",
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "KLOE_sha256": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+  "log_slope_lower": [
+    3.0,
+    4.0
+  ],
+  "Y_to_Omega_h2": 23.72983698915026,
+  "rows": [
+    {
+      "T_reheat_GeV": 0.025,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 1.2171504768256766e-06,
+          "upper": 4.572647689227165e-06,
+          "lepton_lower_by_species": [
+            2.3834574263497492e-08,
+            2.7084965663089558e-08,
+            6.746284062444856e-64
+          ],
+          "KLOE_lower": 3.7244650307874583e-10,
+          "high_pion_Omega_per_unit_R_upper": 1.3089804435985656e-16,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 1.7061299372473057e-07,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.0499319288847e-09,
+            "additional_conditional_low_moment_upper_each": [
+              1.5407727696547602e-08,
+              5.6254739425349154e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 5.5161796694897514e-18,
+            "total_known_plus_unit_high_yield_upper": 1.9269612729821394e-07
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 1.5127182320938337e-06,
+          "upper": 3.804489526366797e-06,
+          "lepton_lower_by_species": [
+            2.9483845718273932e-08,
+            3.385600875319399e-08,
+            2.0239202970847044e-62
+          ],
+          "KLOE_lower": 4.0766443418144215e-10,
+          "high_pion_Omega_per_unit_R_upper": 8.55489339766049e-17,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.4008915322840053e-07,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 9.149003550328355e-10,
+            "additional_conditional_low_moment_upper_each": [
+              1.4151795993286023e-08,
+              5.169294166186816e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.605121013503781e-18,
+            "total_known_plus_unit_high_yield_upper": 1.6032514374651133e-07
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 1.6825762008817787e-06,
+          "upper": 3.4680279050880177e-06,
+          "lepton_lower_by_species": [
+            3.2727681895098726e-08,
+            3.7751470445022345e-08,
+            5.474250583719913e-62
+          ],
+          "KLOE_lower": 4.263579527260717e-10,
+          "high_pion_Omega_per_unit_R_upper": 6.858842203777107e-17,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.2675610337894476e-07,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.758355421435311e-10,
+            "additional_conditional_low_moment_upper_each": [
+              1.3560155227299554e-08,
+              4.954207092749133e-09
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.8903874084398903e-18,
+            "total_known_plus_unit_high_yield_upper": 1.4614630124402738e-07
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        2.685753064968755e-06,
+        1.5033959160466757e-08
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 4.208363400648452e-06,
+      "central_fraction_from_top_tenth": 0.5840197734144035,
+      "dose_above_T_GeV": 0.022500000000000003,
+      "fraction_attributed_to_top_tenth_lower": 0.296985292845803
+    },
+    {
+      "T_reheat_GeV": 0.04,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 2.757515182997185e-05,
+          "upper": 8.9898160971367e-05,
+          "lepton_lower_by_species": [
+            4.62608845759987e-07,
+            6.438701693138028e-07,
+            4.8032962245707795e-40
+          ],
+          "KLOE_lower": 5.556654986539366e-08,
+          "high_pion_Omega_per_unit_R_upper": 1.1323823918520377e-10,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 3.1808158374438773e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.271667772048734e-07,
+            "additional_conditional_low_moment_upper_each": [
+              3.222784582247564e-07,
+              1.58136115620916e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 4.771977120490903e-12,
+            "total_known_plus_unit_high_yield_upper": 3.7884019604715436e-06
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 3.279571187171297e-05,
+          "upper": 7.70986198646612e-05,
+          "lepton_lower_by_species": [
+            5.500534731898128e-07,
+            7.715297385107631e-07,
+            3.5739940647635055e-39
+          ],
+          "KLOE_lower": 6.046218063430644e-08,
+          "high_pion_Omega_per_unit_R_upper": 8.251451066552049e-11,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 2.6899207601031243e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.136336596544714e-07,
+            "additional_conditional_low_moment_upper_each": [
+              2.986825792528052e-07,
+              1.4677551571532078e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.4772472606216267e-12,
+            "total_known_plus_unit_high_yield_upper": 3.2490159919729823e-06
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 3.5735319134591525e-05,
+          "upper": 7.14263694924319e-05,
+          "lepton_lower_by_species": [
+            5.992447911303798e-07,
+            8.436220147416759e-07,
+            6.924072472749096e-39
+          ],
+          "KLOE_lower": 6.305669250386647e-08,
+          "high_pion_Omega_per_unit_R_upper": 7.019770375277159e-11,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 2.4719776879032178e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.0909349080214286e-07,
+            "additional_conditional_low_moment_upper_each": [
+              2.8751523375068156e-07,
+              1.413920938179631e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.958204212901561e-12,
+            "total_known_plus_unit_high_yield_upper": 3.0099814644782184e-06
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        5.2147520567559654e-05,
+        1.971492150945921e-06
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 2.3463973861659326e-06,
+      "central_fraction_from_top_tenth": 0.4333071747588026,
+      "dose_above_T_GeV": 0.036000000000000004,
+      "fraction_attributed_to_top_tenth_lower": 0.22718711215324996
+    },
+    {
+      "T_reheat_GeV": 0.045,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 5.075284716155886e-05,
+          "upper": 0.00016040237410150796,
+          "lepton_lower_by_species": [
+            8.133188947263999e-07,
+            1.1652336807943654e-06,
+            1.1779106931436969e-35
+          ],
+          "KLOE_lower": 1.602251659683163e-07,
+          "high_pion_Omega_per_unit_R_upper": 1.3784793534015362e-09,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 5.577342794942003e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.482441162096867e-07,
+            "additional_conditional_low_moment_upper_each": [
+              5.558315077158344e-07,
+              2.7804628775869446e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 5.809055300429597e-11,
+            "total_known_plus_unit_high_yield_upper": 6.7595227971792235e-06
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 5.9844281131911484e-05,
+          "upper": 0.00013828832577762463,
+          "lepton_lower_by_species": [
+            9.608887578815518e-07,
+            1.3867116016036387e-06,
+            6.887764886633069e-35
+          ],
+          "KLOE_lower": 1.7429986086918653e-07,
+          "high_pion_Omega_per_unit_R_upper": 1.0260990179231072e-09,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 4.740431935419014e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.125851929133812e-07,
+            "additional_conditional_low_moment_upper_each": [
+              5.161353069455811e-07,
+              2.584181351323621e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 4.3240879336518813e-11,
+            "total_known_plus_unit_high_yield_upper": 5.827613811289674e-06
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 6.494466569214395e-05,
+          "upper": 0.00012848402977014468,
+          "lepton_lower_by_species": [
+            1.04365470404607e-06,
+            1.511421405130259e-06,
+            1.2539745103271283e-34
+          ],
+          "KLOE_lower": 1.8175961884986452e-07,
+          "high_pion_Omega_per_unit_R_upper": 8.828747922049872e-10,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 4.367881810172857e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.000990674703504e-07,
+            "additional_conditional_low_moment_upper_each": [
+              4.973211145790411e-07,
+              2.491113876124899e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.720526157042944e-11,
+            "total_known_plus_unit_high_yield_upper": 5.4144505850963096e-06
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        9.17667576000105e-05,
+        5.4721051241809974e-06
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 1.1021217873885547e-06,
+      "central_fraction_from_top_tenth": 0.40664882677307473,
+      "dose_above_T_GeV": 0.0405,
+      "fraction_attributed_to_top_tenth_lower": 0.21566486390782202
+    },
+    {
+      "T_reheat_GeV": 0.05,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 8.482516830090068e-05,
+          "upper": 0.000260421163100957,
+          "lepton_lower_by_species": [
+            1.291692148007475e-06,
+            1.8866429162335868e-06,
+            3.7601064646880716e-32
+          ],
+          "KLOE_lower": 3.9628571126971744e-07,
+          "high_pion_Omega_per_unit_R_upper": 1.0140111128442646e-08,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 8.852035743029312e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.289313154208474e-07,
+            "additional_conditional_low_moment_upper_each": [
+              8.521525542006055e-07,
+              4.4087161657232093e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 4.2731482450043376e-10,
+            "total_known_plus_unit_high_yield_upper": 1.0974418544047587e-05
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 9.92715269345808e-05,
+          "upper": 0.0002255086673976285,
+          "lepton_lower_by_species": [
+            1.5187768507614643e-06,
+            2.2336767100343755e-06,
+            1.821722902627221e-31
+          ],
+          "KLOE_lower": 4.3095178581356466e-07,
+          "high_pion_Omega_per_unit_R_upper": 7.67934846017301e-09,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 7.5526787439309496e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 7.467220893432637e-07,
+            "additional_conditional_low_moment_upper_each": [
+              7.929155712886851e-07,
+              4.1052966017288985e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.2361572747778064e-10,
+            "total_known_plus_unit_high_yield_upper": 9.503169680463267e-06
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 0.00010735026822059925,
+          "upper": 0.00021003735634028925,
+          "lepton_lower_by_species": [
+            1.645865850819278e-06,
+            2.4286627286114884e-06,
+            3.1545384882523074e-31
+          ],
+          "KLOE_lower": 4.4932332354192817e-07,
+          "high_pion_Omega_per_unit_R_upper": 6.667912341048277e-09,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 6.973127389041641e-06,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 7.168577474383912e-07,
+            "additional_conditional_low_moment_upper_each": [
+              7.648054014634502e-07,
+              3.9612101800097146e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.8099275794001346e-10,
+            "total_known_plus_unit_high_yield_upper": 8.851192548702394e-06
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        0.00014587652841340464,
+        1.3098871698541397e-05
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 6.626732762526899e-07,
+      "central_fraction_from_top_tenth": 0.3883401919056746,
+      "dose_above_T_GeV": 0.045000000000000005,
+      "fraction_attributed_to_top_tenth_lower": 0.2088145444088218
+    },
+    {
+      "T_reheat_GeV": 0.0555,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 0.00013849207090175247,
+          "upper": 0.00041170191046348834,
+          "lepton_lower_by_species": [
+            1.977066369581967e-06,
+            2.9267625073442453e-06,
+            4.9457732991210493e-29
+          ],
+          "KLOE_lower": 9.323709657053963e-07,
+          "high_pion_Omega_per_unit_R_upper": 6.010860828305534e-08,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 1.3558720496830252e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.9004709880205076e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.2313928987865735e-06,
+              6.564290848250024e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 2.5330392412951743e-09,
+            "total_known_plus_unit_high_yield_upper": 1.734954650770363e-05
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 0.00016086360883919127,
+          "upper": 0.00035797590001492285,
+          "lepton_lower_by_species": [
+            2.315481826447486e-06,
+            3.450238709510047e-06,
+            2.0338805885880906e-28
+          ],
+          "KLOE_lower": 1.0132391725622186e-06,
+          "high_pion_Omega_per_unit_R_upper": 4.6232877922257114e-08,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.1605822830252584e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.7175765973983255e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.1478062532537268e-06,
+              6.12322591988807e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.948301538834661e-09,
+            "total_known_plus_unit_high_yield_upper": 1.5085476574432279e-05
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 0.00017333404376254624,
+          "upper": 0.00033419797148565565,
+          "lepton_lower_by_species": [
+            2.504555974093118e-06,
+            3.743841017080493e-06,
+            3.366815265798198e-28
+          ],
+          "KLOE_lower": 1.0560798091431342e-06,
+          "high_pion_Omega_per_unit_R_upper": 4.04716986911553e-08,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.0733363019614632e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.6489260901801902e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.1080993754647475e-06,
+              5.913559422199689e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.7055194567775471e-09,
+            "total_known_plus_unit_high_yield_upper": 1.4083449946936315e-05
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        0.0002235043423777345,
+        2.9944853582534184e-05
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 4.518649496798588e-07,
+      "central_fraction_from_top_tenth": 0.37560350793789016,
+      "dose_above_T_GeV": 0.04995,
+      "fraction_attributed_to_top_tenth_lower": 0.20585511879451895
+    },
+    {
+      "T_reheat_GeV": 0.06,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 0.00019838618171513574,
+          "upper": 0.0005747979041871555,
+          "lepton_lower_by_species": [
+            2.6693085030128656e-06,
+            3.977829834490692e-06,
+            6.561856292302837e-27
+          ],
+          "KLOE_lower": 1.7130616000620363e-06,
+          "high_pion_Omega_per_unit_R_upper": 2.0260020020974043e-07,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 1.832997661639184e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.4580406432500347e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.5712686963626422e-06,
+              8.547574969556512e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 8.537783057775456e-09,
+            "total_known_plus_unit_high_yield_upper": 2.422258123601794e-05
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 0.00022911472240515194,
+          "upper": 0.000501308845210238,
+          "lepton_lower_by_species": [
+            3.1184701761248528e-06,
+            4.67647984873634e-06,
+            2.4185175911402603e-26
+          ],
+          "KLOE_lower": 1.8601825624341862e-06,
+          "high_pion_Omega_per_unit_R_upper": 1.574916903192493e-07,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 1.5722097895989644e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.1324189996709702e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.4662862403429313e-06,
+              7.982358927539957e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 6.6368635566800365e-09,
+            "total_known_plus_unit_high_yield_upper": 2.1125675892314222e-05
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 0.0002462005761356264,
+          "upper": 0.0004688304424813048,
+          "lepton_lower_by_species": [
+            3.369162926278724e-06,
+            5.067899531262702e-06,
+            3.881576136259946e-26
+          ],
+          "KLOE_lower": 1.938085768221526e-06,
+          "high_pion_Omega_per_unit_R_upper": 1.3863258029982828e-07,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 1.455585661244721e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 3.0075727229487275e-06,
+            "additional_conditional_low_moment_upper_each": [
+              1.4163812983385655e-06,
+              7.713494823379293e-07
+            ],
+            "high_yield_upper_per_unit_R_pi": 5.842121054738546e-09,
+            "total_known_plus_unit_high_yield_upper": 1.975700223712717e-05
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        0.00030201156743144106,
+        5.402255885130124e-05
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 2.7566164417791583e-07,
+      "central_fraction_from_top_tenth": 0.3692321718994152,
+      "dose_above_T_GeV": 0.054,
+      "fraction_attributed_to_top_tenth_lower": 0.20569906853823675
+    },
+    {
+      "T_reheat_GeV": 0.075,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 0.0005447915078045104,
+          "upper": 0.0014779415138674611,
+          "lepton_lower_by_species": [
+            5.903362205255949e-06,
+            8.839768571789878e-06,
+            1.0872127398079669e-21
+          ],
+          "KLOE_lower": 8.214949721088212e-06,
+          "high_pion_Omega_per_unit_R_upper": 4.12987580716731e-06,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 4.08097711573391e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.6910730283267515e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.791793588228806e-06,
+              1.5956595573738704e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.7403725988743914e-07,
+            "total_known_plus_unit_high_yield_upper": 6.228199184609673e-05
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 0.0006189957441250578,
+          "upper": 0.0013006277416336318,
+          "lepton_lower_by_species": [
+            6.861456969115211e-06,
+            1.0331757075282924e-05,
+            3.0856837481954244e-21
+          ],
+          "KLOE_lower": 8.891910114190671e-06,
+          "high_pion_Omega_per_unit_R_upper": 3.2949624040778065e-06,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 3.5155271744094476e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.540991864313921e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.6118456532444605e-06,
+              1.4939159691256156e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.3885314111446813e-07,
+            "total_known_plus_unit_high_yield_upper": 5.480980515071823e-05
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 0.0006599429591274525,
+          "upper": 0.0012226764986100077,
+          "lepton_lower_by_species": [
+            7.395190346078811e-06,
+            1.1165778972701212e-05,
+            4.584604316665074e-21
+          ],
+          "KLOE_lower": 9.249713048283478e-06,
+          "high_pion_Omega_per_unit_R_upper": 2.9398962028524734e-06,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 3.262160108030301e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 1.480774546914496e-05,
+            "additional_conditional_low_moment_upper_each": [
+              2.5261756428013207e-06,
+              1.4454462579276944e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 1.2389028227191997e-07,
+            "total_known_plus_unit_high_yield_upper": 5.15248587324489e-05
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        0.0006698398019807056,
+        0.00025001336994247693
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 1.24275849167077e-07,
+      "central_fraction_from_top_tenth": 0.3587703530728708,
+      "dose_above_T_GeV": 0.0675,
+      "fraction_attributed_to_top_tenth_lower": 0.20694946424644975
+    },
+    {
+      "T_reheat_GeV": 0.1,
+      "controls": [
+        {
+          "invariant_panels": 120,
+          "lower": 0.0018356915089019043,
+          "upper": 0.004994219748534383,
+          "lepton_lower_by_species": [
+            1.4858031113698556e-05,
+            2.1838730441522443e-05,
+            1.640116564744474e-16
+          ],
+          "KLOE_lower": 4.066118699441825e-05,
+          "high_pion_Omega_per_unit_R_upper": 0.0001072707637121082,
+          "upper_terms": {
+            "invariant_base_bins": 120,
+            "temperature_panels": 360,
+            "lepton_yield_upper": 0.00010458524097108509,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 9.37429251675937e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.758603624581305e-06,
+              2.8543408754974528e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 4.5205015003328705e-06,
+            "total_known_plus_unit_high_yield_upper": 0.0002104616121390904
+          }
+        },
+        {
+          "invariant_panels": 240,
+          "lower": 0.0020518517501596774,
+          "upper": 0.004438583191563531,
+          "lepton_lower_by_species": [
+            1.722046786519126e-05,
+            2.542839619255883e-05,
+            3.641312992048523e-16
+          ],
+          "KLOE_lower": 4.381830177609794e-05,
+          "high_pion_Omega_per_unit_R_upper": 8.750418332902147e-05,
+          "upper_terms": {
+            "invariant_base_bins": 240,
+            "temperature_panels": 720,
+            "lepton_yield_upper": 9.02894197157955e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.593318529211931e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.459481673388103e-06,
+              2.6769060595197786e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.68751725387031e-06,
+            "total_known_plus_unit_high_yield_upper": 0.00018704650999469303
+          }
+        },
+        {
+          "invariant_panels": 480,
+          "lower": 0.002170134063523869,
+          "upper": 0.00419554778911957,
+          "lepton_lower_by_species": [
+            1.85358728994032e-05,
+            2.7432921573228968e-05,
+            5.003896705535903e-16
+          ],
+          "KLOE_lower": 4.548291101123702e-05,
+          "high_pion_Omega_per_unit_R_upper": 7.893378830463972e-05,
+          "upper_terms": {
+            "invariant_base_bins": 480,
+            "temperature_panels": 1440,
+            "lepton_yield_upper": 8.387993401574383e-05,
+            "KLOE_fixed_bin_plus_two_marginals_upper": 8.26892332858651e-05,
+            "additional_conditional_low_moment_upper_each": [
+              4.316932138698039e-06,
+              2.592294140615031e-06
+            ],
+            "high_yield_upper_per_unit_R_pi": 3.326351897854577e-06,
+            "total_known_plus_unit_high_yield_upper": 0.00017680474547877658
+          }
+        }
+      ],
+      "central_lepton_and_KLOE_Omega_h2": [
+        0.0016949984246530823,
+        0.001221685246296374
+      ],
+      "central_lower_fold_cutoff_GeV": 0.006,
+      "central_max_relative_quadrature_change": 1.5255703684768918e-06,
+      "central_fraction_from_top_tenth": 0.33546609216570855,
+      "dose_above_T_GeV": 0.09000000000000001,
+      "fraction_attributed_to_top_tenth_lower": 0.1831924536323572
+    }
+  ]
+}

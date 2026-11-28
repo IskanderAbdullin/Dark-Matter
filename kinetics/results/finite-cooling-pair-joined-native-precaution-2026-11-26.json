@@ -1,0 +1,250 @@
+{
+  "rows": [
+    {
+      "z": 0,
+      "k_h_per_Mpc": [
+        0.015,
+        0.03,
+        0.1,
+        0.3,
+        0.7,
+        1.0
+      ],
+      "cases": [
+        {
+          "case": "finite_cooling_pairmix_tracer_ratio5_s10_sync",
+          "ratio_at_probes": [
+            0.9999987997850621,
+            0.9999949975545144,
+            0.9999395758505591,
+            0.9994883436567712,
+            0.9975662911781547,
+            0.9955839642884756
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.988185775733485,
+            0.9667290591135782,
+            0.9142116122522714,
+            0.8860913172153366
+          ],
+          "native_k_max_h_per_Mpc": 10.54726635657
+        },
+        {
+          "case": "finite_cooling_pairmix_tracer_ratio5_s14_sync",
+          "ratio_at_probes": [
+            0.9999987989995579,
+            0.9999949980289439,
+            0.999939638667756,
+            0.9994892423884413,
+            0.9975667381366939,
+            0.9955838106623975
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9881862514306439,
+            0.9667289505071274,
+            0.9142119484307569,
+            0.8860909801037834
+          ],
+          "native_k_max_h_per_Mpc": 10.54726635657
+        }
+      ],
+      "per_history_control_comparison": [
+        {
+          "history": "ratio5",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 1.1170279095029656e-06,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.8860909801037834
+        }
+      ]
+    },
+    {
+      "z": 5,
+      "k_h_per_Mpc": [
+        0.015,
+        0.03,
+        0.1,
+        0.3,
+        0.7,
+        1.0
+      ],
+      "cases": [
+        {
+          "case": "finite_cooling_pairmix_tracer_ratio5_s10_sync",
+          "ratio_at_probes": [
+            0.9999955629919257,
+            0.9999810588839383,
+            0.9997651465756355,
+            0.9980230406839234,
+            0.9907995125848238,
+            0.983648316532005
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9607230157789746,
+            0.9006316975574025,
+            0.7795102217794434,
+            0.7233436277917781
+          ],
+          "native_k_max_h_per_Mpc": 10.54726635657
+        },
+        {
+          "case": "finite_cooling_pairmix_tracer_ratio5_s14_sync",
+          "ratio_at_probes": [
+            0.9999955592637033,
+            0.9999810609616855,
+            0.9997654333435771,
+            0.9980272095029209,
+            0.9908016854087611,
+            0.9836476863337477
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9607250462868081,
+            0.9006319661122414,
+            0.7795128489059423,
+            0.7233422949456078
+          ],
+          "native_k_max_h_per_Mpc": 10.54726635657
+        }
+      ],
+      "per_history_control_comparison": [
+        {
+          "history": "ratio5",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 5.2218745891785545e-06,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.7233422949456078
+        }
+      ]
+    },
+    {
+      "z": 20,
+      "k_h_per_Mpc": [
+        0.015,
+        0.03,
+        0.1,
+        0.3,
+        0.7,
+        1.0
+      ],
+      "cases": [
+        {
+          "case": "finite_cooling_pairmix_tracer_ratio5_s10_sync",
+          "ratio_at_probes": [
+            0.9999885090084419,
+            0.9999486229457922,
+            0.9993364033024296,
+            0.9944170086726194,
+            0.9745081962358636,
+            0.9554859048708816
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9052607610103096,
+            0.7867375219152567,
+            0.5971089165451994,
+            0.5224715949607613
+          ],
+          "native_k_max_h_per_Mpc": 10.54726635657
+        },
+        {
+          "case": "finite_cooling_pairmix_tracer_ratio5_s14_sync",
+          "ratio_at_probes": [
+            0.9999884959744233,
+            0.9999486292404864,
+            0.9993373409329422,
+            0.9944310258388125,
+            0.9745160586450899,
+            0.9554842614814357
+          ],
+          "first_sample_bracketed_amplitude_half_h_per_Mpc": null,
+          "optional_high_k_h_per_Mpc": [
+            2.0,
+            4.0,
+            8.0,
+            10.0
+          ],
+          "optional_high_k_ratio": [
+            0.9052664739604255,
+            0.7867425865333763,
+            0.5971216865301631,
+            0.5224700491989052
+          ],
+          "native_k_max_h_per_Mpc": 10.54726635657
+        }
+      ],
+      "per_history_control_comparison": [
+        {
+          "history": "ratio5",
+          "smoothing_control_count": 2,
+          "max_spread_between_shape_and_momentum_grid_controls": 1.7784491201155994e-05,
+          "common_test_range_h_per_Mpc": [
+            0.015,
+            10.0
+          ],
+          "minimum_amplitude_on_control_grid": 0.5224700491989052
+        }
+      ]
+    }
+  ],
+  "anchor_diagnostics": [
+    {
+      "case": "finite_cooling_pairmix_tracer_ratio5_s10_sync",
+      "tau_at_archive_Mpc": 7.834949407006399e-05,
+      "largest_mode_k_times_tau_at_archive": 0.0005566448712004454,
+      "largest_k_times_tau_at_native_perturbation_start": 0.07000341327473,
+      "present_NATIVE_energy_density_omega_h2": 2.7419985430884703e-09,
+      "target_fixed_count_scalar_omega_h2": 2.7419985430891527e-09,
+      "relative_native_density_defect": 2.489120021209601e-13
+    },
+    {
+      "case": "finite_cooling_pairmix_tracer_ratio5_s14_sync",
+      "tau_at_archive_Mpc": 7.834949407006399e-05,
+      "largest_mode_k_times_tau_at_archive": 0.0005566448712004454,
+      "largest_k_times_tau_at_native_perturbation_start": 0.07000341327473,
+      "present_NATIVE_energy_density_omega_h2": 2.7419985430884703e-09,
+      "target_fixed_count_scalar_omega_h2": 2.7419985430891527e-09,
+      "relative_native_density_defect": 2.489120021209601e-13
+    }
+  ],
+  "scope": "Adiabatic collisionless scalar tracer: scalar contrast relative to CDM in the same run, cold approximation for dominant stable matter, first-order prompt plus pre-anchor spontaneous pair count. Not total-matter suppression, pre-1MeV perturbations, a dominant scalar transfer, or an observational constraint."
+}

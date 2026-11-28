@@ -1,0 +1,26 @@
+{
+  "source_table_1": "https://astroweb.case.edu/SPARC/SPARC_Lelli2016c.mrt",
+  "source_table_2": "https://astroweb.case.edu/SPARC/MassModels_Lelli2016c.mrt",
+  "galaxy": "F583-4",
+  "distance_Mpc": 53.30,
+  "distance_error_Mpc": 10.70,
+  "inclination_deg": 55.0,
+  "inclination_error_deg": 10.0,
+  "stellar_disk_kpc": 1.93,
+  "quality_flag": 1,
+  "columns": ["radius_kpc", "observed_km_s", "error_km_s", "gas_km_s", "disk_km_s", "bulge_km_s"],
+  "table": [
+    [0.22, 10.70, 4.90, 0.47, 5.59, 0.0],
+    [0.76, 24.70, 4.90, 1.87, 17.63, 0.0],
+    [1.31, 38.90, 4.90, 3.27, 26.64, 0.0],
+    [1.94, 42.70, 7.89, 4.87, 32.27, 0.0],
+    [3.92, 55.00, 4.90, 8.50, 38.26, 0.0],
+    [4.35, 57.20, 4.90, 9.17, 38.43, 0.0],
+    [5.00, 59.80, 4.90, 10.30, 39.09, 0.0],
+    [5.05, 62.50, 3.43, 10.40, 39.06, 0.0],
+    [5.83, 61.80, 3.98, 12.10, 38.38, 0.0],
+    [6.09, 64.40, 4.90, 12.72, 38.13, 0.0],
+    [6.74, 67.20, 4.90, 14.18, 39.23, 0.0],
+    [7.29, 69.90, 4.90, 15.33, 36.96, 0.0]
+  ]
+}

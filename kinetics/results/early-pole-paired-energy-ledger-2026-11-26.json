@@ -1,0 +1,67 @@
+{
+  "time_quadrature_orders": [
+    4,
+    8
+  ],
+  "time_quadrature_repeat_columns": [
+    "net exact parent energy",
+    "projected energy",
+    "gross forward exact parent energy",
+    "vacuum trace work",
+    "integral of daughter energy over log expansion (quadrature witness only)"
+  ],
+  "coarse": {
+    "scalar_bins": 67,
+    "fermion_bins": 112,
+    "integrated_parent_net_energy_over_T4": 0.02364111097807581,
+    "integrated_centroid_energy_over_T4": 0.0237792705651262,
+    "integrated_parent_gross_forward_energy_over_T4": 0.03541916950518313,
+    "explicit_vacuum_trace_work_over_T4": 1.2280038733515737e-20,
+    "final_daughter_energy_over_T4": 0.023779273106787138,
+    "signed_projected_energy_relative_defect": 0.005844039528367206,
+    "projected_continuity_defect": -1.0688556062454779e-07,
+    "multiquadrature_repeat": [
+      [
+        0.023641110977400914,
+        0.023779270564290834,
+        0.03541916950521639,
+        1.2280038733515692e-20,
+        0.005344092108345244
+      ],
+      [
+        0.02364111097807581,
+        0.0237792705651262,
+        0.03541916950518313,
+        1.2280038733515737e-20,
+        0.005344092108345199
+      ]
+    ]
+  },
+  "fine": {
+    "scalar_bins": 132,
+    "fermion_bins": 237,
+    "integrated_parent_net_energy_over_T4": 0.023379596777146516,
+    "integrated_centroid_energy_over_T4": 0.023422935529954482,
+    "integrated_parent_gross_forward_energy_over_T4": 0.03537637151811861,
+    "explicit_vacuum_trace_work_over_T4": 1.2208699019838244e-20,
+    "final_daughter_energy_over_T4": 0.02342292910346488,
+    "signed_projected_energy_relative_defect": 0.0018536997545794964,
+    "projected_continuity_defect": 2.743674616390024e-07,
+    "multiquadrature_repeat": [
+      [
+        0.023379596799222725,
+        0.023422935553312672,
+        0.03537637152457133,
+        1.2208699019838196e-20,
+        0.005294869737184245
+      ],
+      [
+        0.023379596777146516,
+        0.023422935529954482,
+        0.03537637151811861,
+        1.2208699019838244e-20,
+        0.005294869737184266
+      ]
+    ]
+  }
+}

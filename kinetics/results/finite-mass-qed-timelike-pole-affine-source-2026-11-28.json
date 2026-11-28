@@ -1,0 +1,229 @@
+{
+  "scope": "Fixed-k,c conditional pole absorption/inverse kernel only, bare vertices with retarded frozen residues.",
+  "data": [
+    {
+      "grid": "fine",
+      "polarization": "L",
+      "k": 0.0012,
+      "omega": 0.0019185350861200164,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        0.03200832124802285,
+        4.550245613151853e-10,
+        0.03200832079299831
+      ],
+      "support_parent_energy": 8.112106116496003,
+      "pole_residue_omega": 492.58749167359105,
+      "pole_residue_derivative_mesh_error": 1.1096552565703632e-09,
+      "pole_population_neutral": 1.4215821075334888e-08,
+      "largest_ward_squared": 1.6809629722731528e-17,
+      "weighted_ward_squared": 4.697877203634055e-19,
+      "single_diagram_ward_squared": 3.7752221438798097e-26,
+      "common_thermal_relative_defect": 1.5543122344752192e-15,
+      "thermal_neutral_I2_relative_defect": 6.551426068313049e-13,
+      "longitudinal_density_vs_current_gauge_defect": 8.72883977292069e-10,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 1.554457673691445e-09,
+      "neutral_population_max_mesh_relative_defect": 6.161249288538784e-11
+    },
+    {
+      "grid": "fine",
+      "polarization": "L",
+      "k": 0.00256,
+      "omega": 0.002749145824299535,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        2629.6691925252044,
+        0.0014868441724546658,
+        2629.667705681035
+      ],
+      "support_parent_energy": 1.8241286870136173,
+      "pole_residue_omega": 57.98810651963485,
+      "pole_residue_derivative_mesh_error": 6.09977401921924e-10,
+      "pole_population_neutral": 5.654114279315761e-07,
+      "largest_ward_squared": 5.933542880783697e-18,
+      "weighted_ward_squared": 9.694520802462063e-22,
+      "single_diagram_ward_squared": 1.1768915077911119e-25,
+      "common_thermal_relative_defect": 1.2212453270876722e-15,
+      "thermal_neutral_I2_relative_defect": 3.83026943495679e-13,
+      "longitudinal_density_vs_current_gauge_defect": 6.292667353111644e-12,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 2.435625923169482e-09,
+      "neutral_population_max_mesh_relative_defect": 9.576732740157468e-10
+    },
+    {
+      "grid": "fine",
+      "polarization": "T",
+      "k": 0.0015,
+      "omega": 0.0023041975951177784,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        9.587126672855822e-10,
+        2.7143610953709374e-18,
+        9.58712664571222e-10
+      ],
+      "support_parent_energy": 18.35032977200392,
+      "pole_residue_omega": 202.97469605902313,
+      "pole_residue_derivative_mesh_error": 5.40960609640706e-11,
+      "pole_population_neutral": 2.831256116330661e-09,
+      "largest_ward_squared": 1.0511278174761536e-16,
+      "weighted_ward_squared": 1.0006963927959919e-17,
+      "single_diagram_ward_squared": 6.713749001262887e-26,
+      "common_thermal_relative_defect": 1.7763568394002505e-15,
+      "thermal_neutral_I2_relative_defect": 6.047384815133228e-13,
+      "longitudinal_density_vs_current_gauge_defect": null,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 1.9843187093471215e-09,
+      "neutral_population_max_mesh_relative_defect": 4.2617775974918004e-10
+    },
+    {
+      "grid": "fine",
+      "polarization": "T",
+      "k": 0.00256,
+      "omega": 0.0031407380583017975,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        0.2331670137570288,
+        1.153872990858359e-08,
+        0.23316700221829895
+      ],
+      "support_parent_energy": 4.2753636821201,
+      "pole_residue_omega": 146.56891125408225,
+      "pole_residue_derivative_mesh_error": 3.61790597480649e-11,
+      "pole_population_neutral": 4.948697628226413e-08,
+      "largest_ward_squared": 4.834705922564508e-18,
+      "weighted_ward_squared": 1.2408238565734348e-19,
+      "single_diagram_ward_squared": 8.220372714385218e-26,
+      "common_thermal_relative_defect": 3.3306690738754696e-16,
+      "thermal_neutral_I2_relative_defect": 9.725553695716371e-14,
+      "longitudinal_density_vs_current_gauge_defect": null,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 2.5392431579618346e-07,
+      "neutral_population_max_mesh_relative_defect": 1.4632280942450393e-08
+    },
+    {
+      "grid": "third",
+      "polarization": "L",
+      "k": 0.0012,
+      "omega": 0.0019197074441530463,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        0.020949543448676583,
+        2.905008722525141e-10,
+        0.02094954315817571
+      ],
+      "support_parent_energy": 8.441244505492373,
+      "pole_residue_omega": 493.1269119134046,
+      "pole_residue_derivative_mesh_error": 1.099315971586634e-09,
+      "pole_population_neutral": 1.386669246480174e-08,
+      "largest_ward_squared": 8.948888492114625e-18,
+      "weighted_ward_squared": 4.196533158271042e-19,
+      "single_diagram_ward_squared": 6.050488904359752e-26,
+      "common_thermal_relative_defect": 2.4424906541753444e-15,
+      "thermal_neutral_I2_relative_defect": 9.183764859699295e-13,
+      "longitudinal_density_vs_current_gauge_defect": 9.316020471520231e-10,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 2.0197421513046265e-10,
+      "neutral_population_max_mesh_relative_defect": 2.4945379095697717e-11
+    },
+    {
+      "grid": "third",
+      "polarization": "L",
+      "k": 0.00256,
+      "omega": 0.0027497750577638144,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        2539.0633761029158,
+        0.001372882504770211,
+        2539.062003220408
+      ],
+      "support_parent_energy": 1.8387803578683237,
+      "pole_residue_omega": 58.11825937882135,
+      "pole_residue_derivative_mesh_error": 6.812974628900292e-10,
+      "pole_population_neutral": 5.407045999778348e-07,
+      "largest_ward_squared": 4.825437073677855e-18,
+      "weighted_ward_squared": 6.86329587913282e-22,
+      "single_diagram_ward_squared": 2.070612112697638e-25,
+      "common_thermal_relative_defect": 2.7755575615628914e-15,
+      "thermal_neutral_I2_relative_defect": 8.331113576787175e-13,
+      "longitudinal_density_vs_current_gauge_defect": 6.088950824001531e-12,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 9.924252530879585e-10,
+      "neutral_population_max_mesh_relative_defect": 4.113609453071376e-11
+    },
+    {
+      "grid": "third",
+      "polarization": "T",
+      "k": 0.0015,
+      "omega": 0.002305223782122649,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        1.2108747573460097e-10,
+        2.740263427419508e-19,
+        1.2108747546057467e-10
+      ],
+      "support_parent_energy": 20.078072378615452,
+      "pole_residue_omega": 202.89259034000696,
+      "pole_residue_derivative_mesh_error": 4.6392445440801566e-11,
+      "pole_population_neutral": 2.263044478379367e-09,
+      "largest_ward_squared": 3.406956447443836e-16,
+      "weighted_ward_squared": 1.599390833602005e-17,
+      "single_diagram_ward_squared": 8.176742474831502e-26,
+      "common_thermal_relative_defect": 1.5543122344752192e-15,
+      "thermal_neutral_I2_relative_defect": 5.144773496112975e-13,
+      "longitudinal_density_vs_current_gauge_defect": null,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 2.791964659465407e-09,
+      "neutral_population_max_mesh_relative_defect": 2.7874480501566268e-11
+    },
+    {
+      "grid": "third",
+      "polarization": "T",
+      "k": 0.00256,
+      "omega": 0.0031415400644132707,
+      "c": 0.0,
+      "mesh": [
+        6,
+        12
+      ],
+      "raw_kernel": [
+        0.1977381558995372,
+        8.854582556483646e-09,
+        0.19773814704495457
+      ],
+      "support_parent_energy": 4.359401005150466,
+      "pole_residue_omega": 146.53213138510688,
+      "pole_residue_derivative_mesh_error": 3.714584195790849e-11,
+      "pole_population_neutral": 4.4779334128536185e-08,
+      "largest_ward_squared": 6.292983693642494e-18,
+      "weighted_ward_squared": 1.5955561202843814e-19,
+      "single_diagram_ward_squared": 7.994268811908811e-26,
+      "common_thermal_relative_defect": 2.220446049250313e-16,
+      "thermal_neutral_I2_relative_defect": 4.440892098500626e-14,
+      "longitudinal_density_vs_current_gauge_defect": null,
+      "joint_phase_and_azimuth_max_mesh_relative_defect": 5.1331052519643094e-08,
+      "neutral_population_max_mesh_relative_defect": 9.774499876158416e-09
+    }
+  ]
+}

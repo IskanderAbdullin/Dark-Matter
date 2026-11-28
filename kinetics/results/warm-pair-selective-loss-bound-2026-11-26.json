@@ -1,0 +1,189 @@
+{
+  "input_sha256": [
+    "9973aef78dfae74650e23d2a8f5ecbffa7a6be003926dbb1ac0394a9f45c6baa",
+    "128d5e4e68e9c2024071629ccf4afa913ab85ccf316917ef870ca4d227c59211"
+  ],
+  "temperature_GeV": 0.0012061354624147524,
+  "retained_number_GeV3_at_anchor": 8.495225459382743e-14,
+  "stable_retained_p2_GeV2_lower_reconstruction_upper": [
+    5.103263911808849e-05,
+    5.1921009417327595e-05,
+    5.3314148647036525e-05
+  ],
+  "maximum_event_angle_average_pCM2_over_moment_bound": 1.0000000000000002,
+  "sampled_amp_coefficient_fraction": 0.7310079622772324,
+  "anchor_inclusive_omega": 57.44724173055141,
+  "inert_exterior_omega": 0.013882056070473933,
+  "target_omega": 0.12,
+  "controls": [
+    {
+      "charge_scope": "equal charge populations",
+      "photon_floor": 1.0,
+      "support_exposure_at_zero_cap": 0.2796593621800316,
+      "moment_exposure_at_zero_cap": 0.02443842275791779,
+      "ratio_moment_to_support": 0.08738639238612536,
+      "transition_mu": 27.892394174996653,
+      "occupation_cap_necessary_for_target": 43.65543380964,
+      "floor_ODE_independent_integration_defect": 2.746295413302846e-10,
+      "cases": [
+        {
+          "scalar_occupation_cap": 0.0,
+          "retained_number_floor": 0.9758577776989529,
+          "inclusive_fixed_count_Omega_floor": 56.0606727937941,
+          "same_external_support_only_floor": 44.89563838272078
+        },
+        {
+          "scalar_occupation_cap": 0.001,
+          "retained_number_floor": 0.9758100581674646,
+          "inclusive_fixed_count_Omega_floor": 56.05793210077863,
+          "same_external_support_only_floor": 44.87602005251894
+        },
+        {
+          "scalar_occupation_cap": 1.0,
+          "retained_number_floor": 0.906872247014636,
+          "inclusive_fixed_count_Omega_floor": 52.09860199766678,
+          "same_external_support_only_floor": 27.12251251531991
+        },
+        {
+          "scalar_occupation_cap": 2.0,
+          "retained_number_floor": 0.8025622917907435,
+          "inclusive_fixed_count_Omega_floor": 46.107730821663964,
+          "same_external_support_only_floor": 16.344400466352585
+        },
+        {
+          "scalar_occupation_cap": 40.0,
+          "retained_number_floor": 0.002204301627588252,
+          "inclusive_fixed_count_Omega_floor": 0.14048250427879375,
+          "same_external_support_only_floor": 0.13579345283222488
+        }
+      ]
+    },
+    {
+      "charge_scope": "asymmetric charges, conservative",
+      "photon_floor": 1.0,
+      "support_exposure_at_zero_cap": 0.2796593621800316,
+      "moment_exposure_at_zero_cap": 0.04887684551583558,
+      "ratio_moment_to_support": 0.17477278477225072,
+      "transition_mu": 9.980206721989207,
+      "occupation_cap_necessary_for_target": 43.164661611523165,
+      "floor_ODE_independent_integration_defect": 1.2334000487612684e-10,
+      "cases": [
+        {
+          "scalar_occupation_cap": 0.0,
+          "retained_number_floor": 0.9522984022955389,
+          "inclusive_fixed_count_Omega_floor": 54.7075787125437,
+          "same_external_support_only_floor": 44.89563838272078
+        },
+        {
+          "scalar_occupation_cap": 0.001,
+          "retained_number_floor": 0.9522052696207907,
+          "inclusive_fixed_count_Omega_floor": 54.70222979013744,
+          "same_external_support_only_floor": 44.87602005251894
+        },
+        {
+          "scalar_occupation_cap": 1.0,
+          "retained_number_floor": 0.8224172724053749,
+          "inclusive_fixed_count_Omega_floor": 47.24806906463394,
+          "same_external_support_only_floor": 27.12251251531991
+        },
+        {
+          "scalar_occupation_cap": 2.0,
+          "retained_number_floor": 0.6441062322044104,
+          "inclusive_fixed_count_Omega_floor": 37.007066958841115,
+          "same_external_support_only_floor": 16.344400466352585
+        },
+        {
+          "scalar_occupation_cap": 40.0,
+          "retained_number_floor": 0.002146618805271298,
+          "inclusive_fixed_count_Omega_floor": 0.13716958599762494,
+          "same_external_support_only_floor": 0.13579345283222488
+        }
+      ]
+    },
+    {
+      "charge_scope": "equal charge populations",
+      "photon_floor": 0.98,
+      "support_exposure_at_zero_cap": 0.2911905062266052,
+      "moment_exposure_at_zero_cap": 0.025446087836232603,
+      "ratio_moment_to_support": 0.08738639238612536,
+      "transition_mu": 27.892394174996653,
+      "occupation_cap_necessary_for_target": 42.7623251334472,
+      "floor_ODE_independent_integration_defect": 2.746295413302846e-10,
+      "cases": [
+        {
+          "scalar_occupation_cap": 0.0,
+          "retained_number_floor": 0.9748749351661765,
+          "inclusive_fixed_count_Omega_floor": 56.004224845105774,
+          "same_external_support_only_floor": 44.49481604490924
+        },
+        {
+          "scalar_occupation_cap": 0.001,
+          "retained_number_floor": 0.9748252981166751,
+          "inclusive_fixed_count_Omega_floor": 56.00137402258858,
+          "same_external_support_only_floor": 44.47475230289187
+        },
+        {
+          "scalar_occupation_cap": 1.0,
+          "retained_number_floor": 0.9032243097760895,
+          "inclusive_fixed_count_Omega_floor": 51.88908870617541,
+          "same_external_support_only_floor": 26.544909029792308
+        },
+        {
+          "scalar_occupation_cap": 2.0,
+          "retained_number_floor": 0.7953167702646587,
+          "inclusive_fixed_count_Omega_floor": 45.691596177827144,
+          "same_external_support_only_floor": 15.876319921734472
+        },
+        {
+          "scalar_occupation_cap": 40.0,
+          "retained_number_floor": 0.0021139759607437646,
+          "inclusive_fixed_count_Omega_floor": 0.13529479776707695,
+          "same_external_support_only_floor": 0.13097560408421716
+        }
+      ]
+    },
+    {
+      "charge_scope": "asymmetric charges, conservative",
+      "photon_floor": 0.98,
+      "support_exposure_at_zero_cap": 0.2911905062266052,
+      "moment_exposure_at_zero_cap": 0.050892175672465206,
+      "ratio_moment_to_support": 0.17477278477225072,
+      "transition_mu": 9.980206721989207,
+      "occupation_cap_necessary_for_target": 42.2813683792927,
+      "floor_ODE_independent_integration_defect": 1.2334000487612684e-10,
+      "cases": [
+        {
+          "scalar_occupation_cap": 0.0,
+          "retained_number_floor": 0.9503811392152569,
+          "inclusive_fixed_count_Omega_floor": 54.597463852463264,
+          "same_external_support_only_floor": 44.49481604490924
+        },
+        {
+          "scalar_occupation_cap": 0.001,
+          "retained_number_floor": 0.9502843618482645,
+          "inclusive_fixed_count_Omega_floor": 54.59190560313644,
+          "same_external_support_only_floor": 44.47475230289187
+        },
+        {
+          "scalar_occupation_cap": 1.0,
+          "retained_number_floor": 0.8158141537704933,
+          "inclusive_fixed_count_Omega_floor": 46.868829777103514,
+          "same_external_support_only_floor": 26.544909029792308
+        },
+        {
+          "scalar_occupation_cap": 2.0,
+          "retained_number_floor": 0.6325287650642081,
+          "inclusive_fixed_count_Omega_floor": 36.34213412445839,
+          "same_external_support_only_floor": 15.876319921734472
+        },
+        {
+          "scalar_occupation_cap": 40.0,
+          "retained_number_floor": 0.0020608666713312113,
+          "inclusive_fixed_count_Omega_floor": 0.1322445528461897,
+          "same_external_support_only_floor": 0.13097560408421716
+        }
+      ]
+    }
+  ],
+  "scope": "Post-anchor isotropic uncorrelated forward pair annihilation only on freely redshifting retained particles. Allows selective destruction (no renormalized-moment assumption), no inverse, redistribution, gains, re-entry or initial-tail gravity correction. Fixed photon floor and a cap on future scalar occupations are assumptions. Not a bound for the general signed coupled model."
+}

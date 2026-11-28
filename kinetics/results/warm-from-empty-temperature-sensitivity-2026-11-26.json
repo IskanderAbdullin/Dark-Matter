@@ -1,0 +1,114 @@
+{
+  "half_reference": 0.06,
+  "controls": [
+    {
+      "T_R_GeV": 0.0545,
+      "coarse": {
+        "TR_GeV": 0.0545,
+        "time_panels": 822,
+        "invariant_panel_width": 0.01,
+        "conservative_energy_input_GeV4": 4.847407848943071e-09,
+        "terminal_source_energy_tail_relative": 2.8160651872448576e-08,
+        "heating_exponent": 0.010133969952446599,
+        "Omega_phi_direct_count_ceiling": 0.0008067689597816474,
+        "Omega_phi_recycle_ceiling": 0.050905805682098335,
+        "Omega_phi_total_ceiling": 0.051712574641879984
+      },
+      "refined": {
+        "TR_GeV": 0.0545,
+        "time_panels": 1422,
+        "invariant_panel_width": 0.006,
+        "conservative_energy_input_GeV4": 4.740426337610966e-09,
+        "terminal_source_energy_tail_relative": 2.8796178907962035e-08,
+        "heating_exponent": 0.010133969952446599,
+        "Omega_phi_direct_count_ceiling": 0.0007898789295338042,
+        "Omega_phi_recycle_ceiling": 0.048574984033168324,
+        "Omega_phi_total_ceiling": 0.049364862962702136
+      },
+      "fine_upper_excludes_half": true
+    },
+    {
+      "T_R_GeV": 0.055,
+      "coarse": {
+        "TR_GeV": 0.055,
+        "time_panels": 821,
+        "invariant_panel_width": 0.01,
+        "conservative_energy_input_GeV4": 5.195124951955707e-09,
+        "terminal_source_energy_tail_relative": 2.8205497112336427e-08,
+        "heating_exponent": 0.010401145464417148,
+        "Omega_phi_direct_count_ceiling": 0.0008341919108056446,
+        "Omega_phi_recycle_ceiling": 0.05565821246223583,
+        "Omega_phi_total_ceiling": 0.056492404373041476
+      },
+      "refined": {
+        "TR_GeV": 0.055,
+        "time_panels": 1421,
+        "invariant_panel_width": 0.006,
+        "conservative_energy_input_GeV4": 5.07930169254692e-09,
+        "terminal_source_energy_tail_relative": 2.8848666745986964e-08,
+        "heating_exponent": 0.010401145464417148,
+        "Omega_phi_direct_count_ceiling": 0.0008165951044503042,
+        "Omega_phi_recycle_ceiling": 0.05308129406381558,
+        "Omega_phi_total_ceiling": 0.05389788916826588
+      },
+      "fine_upper_excludes_half": true
+    },
+    {
+      "T_R_GeV": 0.0555,
+      "coarse": {
+        "TR_GeV": 0.0555,
+        "time_panels": 821,
+        "invariant_panel_width": 0.01,
+        "conservative_energy_input_GeV4": 5.562277965910077e-09,
+        "terminal_source_energy_tail_relative": 2.8259512742314826e-08,
+        "heating_exponent": 0.010674566530903623,
+        "Omega_phi_direct_count_ceiling": 0.0008619911719505777,
+        "Omega_phi_recycle_ceiling": 0.06075822459696827,
+        "Omega_phi_total_ceiling": 0.06162021576891885
+      },
+      "refined": {
+        "TR_GeV": 0.0555,
+        "time_panels": 1421,
+        "invariant_panel_width": 0.006,
+        "conservative_energy_input_GeV4": 5.43867843154412e-09,
+        "terminal_source_energy_tail_relative": 2.890173909570621e-08,
+        "heating_exponent": 0.010674566530903623,
+        "Omega_phi_direct_count_ceiling": 0.0008438694914051401,
+        "Omega_phi_recycle_ceiling": 0.05795466126345554,
+        "Omega_phi_total_ceiling": 0.05879853075486068
+      },
+      "fine_upper_excludes_half": true
+    },
+    {
+      "T_R_GeV": 0.056,
+      "coarse": {
+        "TR_GeV": 0.056,
+        "time_panels": 821,
+        "invariant_panel_width": 0.01,
+        "conservative_energy_input_GeV4": 5.952128892076519e-09,
+        "terminal_source_energy_tail_relative": 2.8310603601576964e-08,
+        "heating_exponent": 0.010954311041605469,
+        "Omega_phi_direct_count_ceiling": 0.0008904459146756518,
+        "Omega_phi_recycle_ceiling": 0.06628671447461881,
+        "Omega_phi_total_ceiling": 0.06717716038929446
+      },
+      "refined": {
+        "TR_GeV": 0.056,
+        "time_panels": 1421,
+        "invariant_panel_width": 0.006,
+        "conservative_energy_input_GeV4": 5.8197127126514044e-09,
+        "terminal_source_energy_tail_relative": 2.895475601102327e-08,
+        "heating_exponent": 0.010954311041605469,
+        "Omega_phi_direct_count_ceiling": 0.0008717148504485038,
+        "Omega_phi_recycle_ceiling": 0.06322419948393249,
+        "Omega_phi_total_ceiling": 0.06409591433438099
+      },
+      "fine_upper_excludes_half": false
+    }
+  ],
+  "sha256": [
+    "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "f1660dc40468638c1e2e1dde2a478227b792a8231ae86e6cbd519dcc7dfa2e54"
+  ],
+  "scope": "Only the numerical upper on vacuum charged-lepton instantaneous production. Crossing the reference is loss of exclusion by the upper, not a valid solution or a physical threshold."
+}

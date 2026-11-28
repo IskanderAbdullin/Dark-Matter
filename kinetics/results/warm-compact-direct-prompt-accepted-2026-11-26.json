@@ -1,0 +1,46 @@
+{
+  "scope": "Same exact-vacuum old moments and timestep. Local Jacobian changes no rate.",
+  "input_state_sha256": "79960d9f8c9f69d6a2774ed0455f4bd396c49dd06e1a68d002ab252bd9190cd9",
+  "reference_end_sha256": "cde94878020f86ae999d3de8c6b7bfffddbbc2e2f6c747f6a6717400723bd856",
+  "maximum_shell_relative_errors_number_kinetic_total": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "normalized_global_errors": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initial_moment_ledgers": [
+    5.551115123125783e-16,
+    3.3306690738754696e-16
+  ],
+  "solver": [
+    {
+      "newton_iterations": 4,
+      "residual": 4.353522054088624e-12,
+      "entropy_gain_relative": 3.4661162828797387e-13,
+      "maximum_exponent_departure_from_eq": 60.92920737988566,
+      "structurally_inactive_cells": 10,
+      "structurally_inactive_vacuum_cells": 0
+    },
+    {
+      "newton_iterations": 4,
+      "residual": 7.780988882704353e-14,
+      "entropy_gain_relative": 7.580602812140569e-13,
+      "maximum_exponent_departure_from_eq": 60.9291920231094,
+      "structurally_inactive_cells": 10,
+      "structurally_inactive_vacuum_cells": 0
+    },
+    {
+      "newton_iterations": 5,
+      "residual": 1.1335213386616761e-14,
+      "entropy_gain_relative": 4.218847493575595e-15,
+      "maximum_exponent_departure_from_eq": 60.92917666633051,
+      "structurally_inactive_cells": 10,
+      "structurally_inactive_vacuum_cells": 0
+    }
+  ],
+  "local_control_wall_time_seconds": 25.505624320001516
+}

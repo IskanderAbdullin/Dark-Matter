@@ -1,0 +1,327 @@
+{
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "partition_fields": [
+    "pressure_difference",
+    "changed_count",
+    "changed_pressure_per_particle"
+  ],
+  "rows": [
+    {
+      "x": 0.0075,
+      "paired_steps": [
+        2048,
+        4096
+      ],
+      "common_native_sha256": "18df7a81fb8808c7d5f0e28cafa9081ff07bc022a1282cc6e10816fd0a7052ac",
+      "mass": 4.69152878376991e-05,
+      "G7_over_G6_minus_one": [
+        1.8081170116701628e-08,
+        0.0005908166380925728,
+        0.0005919044476303537
+      ],
+      "pressure_interval": [
+        0.0005908163971533043,
+        0.000590816879079803
+      ],
+      "all_cell_partition": [
+        0.0005908166380923934,
+        0.0005678634659902044,
+        2.2953172102196594e-05
+      ],
+      "largest_native_cells": [
+        {
+          "interval_q": [
+            3.9636789434531003,
+            5.728841112042199
+          ],
+          "contributions": [
+            0.0005064041201610461,
+            0.000504227021052584,
+            2.1770991084618333e-06
+          ]
+        },
+        {
+          "interval_q": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "contributions": [
+            0.00011512519786273617,
+            9.369591270839323e-05,
+            2.1429285154342895e-05
+          ]
+        },
+        {
+          "interval_q": [
+            8.280090530852393,
+            11.967498811408152
+          ],
+          "contributions": [
+            -2.0125619411471226e-05,
+            -2.197682255539204e-05,
+            1.851203143920871e-06
+          ]
+        },
+        {
+          "interval_q": [
+            1.3127848194809963,
+            1.8974129217831404
+          ],
+          "contributions": [
+            -8.380799916831405e-06,
+            -7.010305464954736e-06,
+            -1.3704944518651638e-06
+          ]
+        },
+        {
+          "interval_q": [
+            0.6284300306709397,
+            0.9082914754476046
+          ],
+          "contributions": [
+            -5.649055305378687e-06,
+            -5.313429508179983e-06,
+            -3.3562579721129136e-07
+          ]
+        }
+      ]
+    },
+    {
+      "x": 0.01,
+      "paired_steps": [
+        512,
+        1024
+      ],
+      "common_native_sha256": "203cdaafc116e252729d2d8b0a97eb68cad4785d5b150396f158d48aff9312a3",
+      "mass": 8.535844540506035e-05,
+      "G7_over_G6_minus_one": [
+        8.852756749888613e-09,
+        0.0005908024146563662,
+        0.0005920215658532513
+      ],
+      "pressure_interval": [
+        0.0005908016173981068,
+        0.0005908032120764961
+      ],
+      "all_cell_partition": [
+        0.0005908024146562979,
+        0.0005678587976740535,
+        2.2943616982263125e-05
+      ],
+      "largest_native_cells": [
+        {
+          "interval_q": [
+            3.9636789434531003,
+            5.728841112042199
+          ],
+          "contributions": [
+            0.0005065770389365153,
+            0.0005044068168126218,
+            2.1702221238966046e-06
+          ]
+        },
+        {
+          "interval_q": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "contributions": [
+            0.00011509376006695259,
+            9.365631681347967e-05,
+            2.1437443253473874e-05
+          ]
+        },
+        {
+          "interval_q": [
+            8.280090530852393,
+            11.967498811408152
+          ],
+          "contributions": [
+            -2.011474912979945e-05,
+            -2.1966425520842472e-05,
+            1.8516763910431792e-06
+          ]
+        },
+        {
+          "interval_q": [
+            1.3127848194809963,
+            1.8974129217831404
+          ],
+          "contributions": [
+            -8.37248326009411e-06,
+            -7.0019539106345335e-06,
+            -1.3705293494788255e-06
+          ]
+        },
+        {
+          "interval_q": [
+            0.6284300306709397,
+            0.9082914754476046
+          ],
+          "contributions": [
+            -5.6379421421658105e-06,
+            -5.302148871401517e-06,
+            -3.357932707638929e-07
+          ]
+        }
+      ]
+    },
+    {
+      "x": 0.02,
+      "paired_steps": [
+        1024,
+        2048
+      ],
+      "common_native_sha256": "498b8bc9f33dec775ac98ebb5a284054d22285347388af6bac637da30f1e6a2e",
+      "mass": 0.0002635393844550805,
+      "G7_over_G6_minus_one": [
+        2.6735964553381564e-09,
+        0.000591566394698706,
+        0.0005928610941683399
+      ],
+      "pressure_interval": [
+        0.0005915588191875987,
+        0.0005915739717521351
+      ],
+      "all_cell_partition": [
+        0.0005915663946989045,
+        0.0005686982882871051,
+        2.286810641177178e-05
+      ],
+      "largest_native_cells": [
+        {
+          "interval_q": [
+            3.9636789434531003,
+            5.728841112042199
+          ],
+          "contributions": [
+            0.0005061500421609348,
+            0.0005041050866286281,
+            2.0449555323009148e-06
+          ]
+        },
+        {
+          "interval_q": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "contributions": [
+            0.00011393045522089536,
+            9.24790933148281e-05,
+            2.145136190606888e-05
+          ]
+        },
+        {
+          "interval_q": [
+            8.280090530852393,
+            11.967498811408152
+          ],
+          "contributions": [
+            -1.9705746681698102e-05,
+            -2.1574293299079797e-05,
+            1.8685466173816667e-06
+          ]
+        },
+        {
+          "interval_q": [
+            1.3127848194809963,
+            1.8974129217831404
+          ],
+          "contributions": [
+            -8.33823926493192e-06,
+            -6.96328894160415e-06,
+            -1.3749503233418873e-06
+          ]
+        },
+        {
+          "interval_q": [
+            0.6284300306709397,
+            0.9082914754476046
+          ],
+          "contributions": [
+            -6.243942031313144e-06,
+            -5.911402265968777e-06,
+            -3.3253976535303955e-07
+          ]
+        }
+      ]
+    }
+  ],
+  "audit_receipts": [
+    [
+      {
+        "x": 0.0075,
+        "scalar_yield": 5.782325892522487e-08,
+        "pole_mass": 4.691528784578627e-05,
+        "relative_time_drift": 5.115556924784048e-05,
+        "maximum_absolute_continuity": 2.5498846910082962e-16,
+        "maximum_pair_number_error": 4.6173698248742835e-17,
+        "verified_previous_raw_sha256": null,
+        "source_report_sha256": "322e3fe6b8ae0e6e2be711a2be037c79ce7ed1eb921dc73da41f6172ab73a684",
+        "uncompressed_state_sha256": "054802a5ce43bb37865ea99dadfd343c70c9530e2108a5d7b3b767a0ded63103"
+      },
+      {
+        "x": 0.01,
+        "scalar_yield": 3.474976525366598e-07,
+        "pole_mass": 8.535844546341171e-05,
+        "relative_time_drift": 1.2523085846094517e-07,
+        "maximum_absolute_continuity": 1.2710745813087482e-16,
+        "maximum_pair_number_error": 5.507408223047461e-17,
+        "verified_previous_raw_sha256": "054802a5ce43bb37865ea99dadfd343c70c9530e2108a5d7b3b767a0ded63103",
+        "source_report_sha256": "ee73d5bb9b6c833cdc282e3f2faf5c1816b1b9d916c9bf3ee3db72a287545db4",
+        "uncompressed_state_sha256": "b127c38593a03564acf481824825e8412a2127491040e2da135f4cfd44ce777f"
+      },
+      {
+        "x": 0.02,
+        "scalar_yield": 1.021814067210444e-05,
+        "pole_mass": 0.00026353938459140107,
+        "relative_time_drift": 2.1847423961052215e-06,
+        "maximum_absolute_continuity": 1.6852494334924917e-13,
+        "maximum_pair_number_error": 2.9327668765732895e-17,
+        "verified_previous_raw_sha256": "b127c38593a03564acf481824825e8412a2127491040e2da135f4cfd44ce777f",
+        "source_report_sha256": "c5533952d12c8302afda1b7304f9a2671c3a997f75fac80f510d62793e405f7a",
+        "uncompressed_state_sha256": "7180ea4056da7528a10dbefa732e1791a1cf9a6d4cfaf5e4eae6323e07b02678"
+      }
+    ],
+    [
+      {
+        "x": 0.0075,
+        "scalar_yield": 5.7823259970737054e-08,
+        "pole_mass": 4.6915287845809444e-05,
+        "relative_time_drift": 5.115556832535617e-05,
+        "maximum_absolute_continuity": 1.773252887165037e-16,
+        "maximum_pair_number_error": 4.115118991821886e-17,
+        "verified_previous_raw_sha256": null,
+        "source_report_sha256": "484304d52c914fc81dba6b1b186f227fa2c6de39582bdb0b8462862255287eb1",
+        "uncompressed_state_sha256": "636561cceb30fb04bdf134299e16a24b584ea6f8ab06cb5c3b4fe34c0258726b"
+      },
+      {
+        "x": 0.01,
+        "scalar_yield": 3.4749765561297193e-07,
+        "pole_mass": 8.53584454631252e-05,
+        "relative_time_drift": 1.2523085746174445e-07,
+        "maximum_absolute_continuity": 9.388873176369248e-17,
+        "maximum_pair_number_error": 2.9932450290072465e-17,
+        "verified_previous_raw_sha256": "636561cceb30fb04bdf134299e16a24b584ea6f8ab06cb5c3b4fe34c0258726b",
+        "source_report_sha256": "557d25cf5c119f813bee74c4b031e99f519510153c08d0ecccbcbbf4a5416ea2",
+        "uncompressed_state_sha256": "f61960ad7aaaaac5bfe6946aa47ba5f357eea7ed24208e268c7547cbd20ac7f6"
+      },
+      {
+        "x": 0.02,
+        "scalar_yield": 1.0218140699423625e-05,
+        "pole_mass": 0.0002635393845886534,
+        "relative_time_drift": 2.184742465716205e-06,
+        "maximum_absolute_continuity": 1.6798872067166036e-13,
+        "maximum_pair_number_error": 1.0245710529988017e-16,
+        "verified_previous_raw_sha256": "f61960ad7aaaaac5bfe6946aa47ba5f357eea7ed24208e268c7547cbd20ac7f6",
+        "source_report_sha256": "3f4b1895f27c626a5a64c66ca6ae801f8fc3ac661213302666f46b3bdaf123a8",
+        "uncompressed_state_sha256": "e5048c2d11af8195e4cdba3899e0a69e156009f7e302bb3a014cf6f4a8870c34"
+      }
+    ]
+  ],
+  "scope": "Actual matched time pairs at a common native mass; count-energy pressure bounds are not a time-mesh or physical error bound."
+}

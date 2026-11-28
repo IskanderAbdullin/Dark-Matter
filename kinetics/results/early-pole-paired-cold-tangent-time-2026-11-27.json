@@ -1,0 +1,346 @@
+{
+  "arms": {
+    "6": {
+      "1": {
+        "grid": "fine",
+        "projection": "steps",
+        "duration": 2e-06,
+        "common_rk4_steps": 6,
+        "radial_order": 8,
+        "energy_closure": [
+          -2.220446049250313e-16,
+          -2.220446049250313e-16
+        ],
+        "entropy_change": [
+          0.0007900549669352941,
+          0.000790054974725729
+        ],
+        "rows": [
+          {
+            "exposure": 3.333333333333333e-07,
+            "cold_gain": 3.924891489538502e-08,
+            "outer_feedback_on_cold": -2.162904798884983e-20,
+            "warm_gain": 9.16110260242493e-14
+          },
+          {
+            "exposure": 6.666666666666666e-07,
+            "cold_gain": 7.850732894079809e-08,
+            "outer_feedback_on_cold": -8.679696481985045e-20,
+            "warm_gain": 1.8322346581079238e-13
+          },
+          {
+            "exposure": 1e-06,
+            "cold_gain": 1.1777515292854142e-07,
+            "outer_feedback_on_cold": -1.960073574247212e-19,
+            "warm_gain": 2.7483727899339516e-13
+          },
+          {
+            "exposure": 1.3333333333333332e-06,
+            "cold_gain": 1.5705229828060552e-07,
+            "outer_feedback_on_cold": -2.997977691682117e-19,
+            "warm_gain": 3.6645242552902346e-13
+          },
+          {
+            "exposure": 1.6666666666666665e-06,
+            "cold_gain": 1.9633867704286557e-07,
+            "outer_feedback_on_cold": -4.981419175217846e-19,
+            "warm_gain": 4.580688656940406e-13
+          },
+          {
+            "exposure": 2e-06,
+            "cold_gain": 2.3563420187887926e-07,
+            "outer_feedback_on_cold": -7.4141627570744e-19,
+            "warm_gain": 5.496865600804623e-13
+          }
+        ],
+        "uses_anchored_live_gap": true,
+        "maximum_pole_difference_from_independent_root": 2.168404344971009e-19,
+        "cold_pole_linearized_at_common_state": true,
+        "maximum_active_decay_work": 6.487905439967165e-17,
+        "maximum_cold_rate_tangent": 4.326701861141305e-15,
+        "joined_macro_steps": 6,
+        "slow_rk4_half_steps": 12,
+        "total_hard_count_defect": [
+          0.0,
+          0.0
+        ],
+        "summed_elastic_energy_defects": [
+          4.440892098500626e-16,
+          -6.661338147750939e-16
+        ],
+        "maximum_elastic_hard_pair_reconstruction_residual": 8.673617379884035e-19,
+        "scope": "Short fixed-scale all-channel matched split on one grid; explicit difference variable."
+      },
+      "4": {
+        "grid": "fine",
+        "projection": "steps",
+        "duration": 2e-06,
+        "common_rk4_steps": 6,
+        "radial_order": 8,
+        "energy_closure": [
+          -2.220446049250313e-16,
+          2.220446049250313e-16
+        ],
+        "entropy_change": [
+          0.0007900549669361823,
+          0.0007900549743253826
+        ],
+        "rows": [
+          {
+            "exposure": 3.333333333333333e-07,
+            "cold_gain": 3.924891489105692e-08,
+            "outer_feedback_on_cold": -2.1234870166970943e-20,
+            "warm_gain": 8.714866849015328e-14
+          },
+          {
+            "exposure": 6.666666666666666e-07,
+            "cold_gain": 7.850732893238316e-08,
+            "outer_feedback_on_cold": -8.484406346534184e-20,
+            "warm_gain": 1.7429868469796096e-13
+          },
+          {
+            "exposure": 1e-06,
+            "cold_gain": 1.1777515291610973e-07,
+            "outer_feedback_on_cold": -1.9079014923111854e-19,
+            "warm_gain": 2.6145000993292844e-13
+          },
+          {
+            "exposure": 1.3333333333333332e-06,
+            "cold_gain": 1.5705229826430034e-07,
+            "outer_feedback_on_cold": -2.856946560894674e-19,
+            "warm_gain": 3.4860260581460653e-13
+          },
+          {
+            "exposure": 1.6666666666666665e-06,
+            "cold_gain": 1.9633867702267824e-07,
+            "outer_feedback_on_cold": -4.766625583192979e-19,
+            "warm_gain": 4.3575643426895747e-13
+          },
+          {
+            "exposure": 2e-06,
+            "cold_gain": 2.356342018546325e-07,
+            "outer_feedback_on_cold": -7.103558162029747e-19,
+            "warm_gain": 5.229114575247758e-13
+          }
+        ],
+        "uses_anchored_live_gap": true,
+        "maximum_pole_difference_from_independent_root": 1.0842021724855044e-19,
+        "cold_pole_linearized_at_common_state": true,
+        "maximum_active_decay_work": 6.715909774820707e-17,
+        "maximum_cold_rate_tangent": 4.115840577384398e-15,
+        "warm_quadrature_order": 4,
+        "original_marker_pole": 0.0008721874799955858,
+        "common_initial_pole": 0.0008721874800401043,
+        "initial_energy_change": -1.6940658945086007e-21,
+        "joined_macro_steps": 6,
+        "slow_rk4_half_steps": 12,
+        "total_hard_count_defect": [
+          -5.551115123125783e-17,
+          -5.551115123125783e-17
+        ],
+        "summed_elastic_energy_defects": [
+          2.220446049250313e-16,
+          2.220446049250313e-16
+        ],
+        "maximum_elastic_hard_pair_reconstruction_residual": 8.673617379884035e-19,
+        "scope": "Short fixed-scale all-channel matched split on one grid; explicit difference variable."
+      }
+    },
+    "12": {
+      "1": {
+        "grid": "fine",
+        "projection": "steps",
+        "duration": 2e-06,
+        "common_rk4_steps": 12,
+        "radial_order": 8,
+        "energy_closure": [
+          -6.661338147750939e-16,
+          -2.220446049250313e-16
+        ],
+        "entropy_change": [
+          0.0007902189145112537,
+          0.0007902189223001344
+        ],
+        "rows": [
+          {
+            "exposure": 5e-07,
+            "cold_gain": 5.8877574018639115e-08,
+            "outer_feedback_on_cold": -4.871240430819348e-20,
+            "warm_gain": 1.3741711273961809e-13
+          },
+          {
+            "exposure": 1e-06,
+            "cold_gain": 1.1777665238784199e-07,
+            "outer_feedback_on_cold": -1.4495549388293597e-19,
+            "warm_gain": 2.7483743598485544e-13
+          },
+          {
+            "exposure": 1.4999999999999998e-06,
+            "cold_gain": 1.766967593763714e-07,
+            "outer_feedback_on_cold": -3.817544007965009e-19,
+            "warm_gain": 4.122608297576076e-13
+          },
+          {
+            "exposure": 2e-06,
+            "cold_gain": 2.3563759048432481e-07,
+            "outer_feedback_on_cold": -7.301869249668865e-19,
+            "warm_gain": 5.496871559854105e-13
+          }
+        ],
+        "uses_anchored_live_gap": true,
+        "maximum_pole_difference_from_independent_root": 2.168404344971009e-19,
+        "cold_pole_linearized_at_common_state": true,
+        "cold_pole_relative_probe": 5e-05,
+        "maximum_active_decay_work": 7.167873010997912e-17,
+        "maximum_cold_rate_tangent": 4.325921250705294e-15,
+        "elastic_energy_budget": 5e-15,
+        "peak_step_energy_defects": [
+          6.661338147750939e-16,
+          6.661338147750939e-16
+        ],
+        "joined_macro_steps": 12,
+        "slow_rk4_half_steps": 24,
+        "total_hard_count_defect": [
+          -1.1102230246251565e-16,
+          -1.6653345369377348e-16
+        ],
+        "summed_elastic_energy_defects": [
+          -1.1102230246251565e-15,
+          -1.1102230246251565e-15
+        ],
+        "maximum_elastic_hard_pair_reconstruction_residual": 1.6543612251060553e-24,
+        "scope": "Short fixed-scale all-channel matched split on one grid; explicit difference variable."
+      },
+      "4": {
+        "grid": "fine",
+        "projection": "steps",
+        "duration": 2e-06,
+        "common_rk4_steps": 12,
+        "radial_order": 8,
+        "energy_closure": [
+          -4.440892098500626e-16,
+          -4.440892098500626e-16
+        ],
+        "entropy_change": [
+          0.0007902189145116978,
+          0.00079021892190001
+        ],
+        "rows": [
+          {
+            "exposure": 5e-07,
+            "cold_gain": 5.8877574012390566e-08,
+            "outer_feedback_on_cold": -4.7675028206106966e-20,
+            "warm_gain": 1.3072355229474654e-13
+          },
+          {
+            "exposure": 1e-06,
+            "cold_gain": 1.1777665237550056e-07,
+            "outer_feedback_on_cold": -1.6610786847661464e-19,
+            "warm_gain": 2.6145016641639385e-13
+          },
+          {
+            "exposure": 1.4999999999999998e-06,
+            "cold_gain": 1.766967593579693e-07,
+            "outer_feedback_on_cold": -4.2047972901537e-19,
+            "warm_gain": 3.9217970707681335e-13
+          },
+          {
+            "exposure": 2e-06,
+            "cold_gain": 2.3563759046012932e-07,
+            "outer_feedback_on_cold": -7.54698019880199e-19,
+            "warm_gain": 5.229120418325008e-13
+          }
+        ],
+        "uses_anchored_live_gap": true,
+        "maximum_pole_difference_from_independent_root": 2.168404344971009e-19,
+        "cold_pole_linearized_at_common_state": true,
+        "cold_pole_relative_probe": 5e-05,
+        "maximum_active_decay_work": 7.808595017772317e-17,
+        "maximum_cold_rate_tangent": 4.114848132555865e-15,
+        "warm_quadrature_order": 4,
+        "original_marker_pole": 0.0008721874799955858,
+        "common_initial_pole": 0.0008721874800401043,
+        "initial_energy_change": -1.6940658945086007e-21,
+        "elastic_energy_budget": 5e-15,
+        "peak_step_energy_defects": [
+          6.661338147750939e-16,
+          6.661338147750939e-16
+        ],
+        "joined_macro_steps": 12,
+        "slow_rk4_half_steps": 24,
+        "total_hard_count_defect": [
+          -1.1102230246251565e-16,
+          -1.1102230246251565e-16
+        ],
+        "summed_elastic_energy_defects": [
+          -1.3322676295501878e-15,
+          -1.5543122344752192e-15
+        ],
+        "maximum_elastic_hard_pair_reconstruction_residual": 1.6543612251060553e-24,
+        "scope": "Short fixed-scale all-channel matched split on one grid; explicit difference variable."
+      }
+    }
+  },
+  "initial_warm_coefficients": {
+    "1": {
+      "probe": [
+        {
+          "diagnostic_offset": 0.003,
+          "hard_only": -3.84898874346747e-07,
+          "gap_only": -2.6524014466270765e-09,
+          "combined": -3.8700584172509284e-07,
+          "linear_additivity_defect": 5.454340682812622e-10
+        },
+        {
+          "diagnostic_offset": 0.001,
+          "hard_only": -3.8419311482185137e-07,
+          "gap_only": -2.7058980056615667e-09,
+          "combined": -3.87962523218377e-07,
+          "linear_additivity_defect": -1.063510390864053e-09
+        },
+        {
+          "diagnostic_offset": 0.0003,
+          "hard_only": -3.8518274218339127e-07,
+          "gap_only": -4.160260099380272e-09,
+          "combined": -3.8628813111193005e-07,
+          "linear_additivity_defect": 3.0548711708414866e-09
+        }
+      ],
+      "leading_quadratic_coefficients": [
+        -1.9350292086254642e-07,
+        -1.939812616091885e-07,
+        -1.9314406555596503e-07
+      ]
+    },
+    "4": {
+      "probe": [
+        {
+          "diagnostic_offset": 0.003,
+          "hard_only": -3.8227468875569787e-07,
+          "gap_only": -1.998387566537474e-09,
+          "combined": -3.8374250305173163e-07,
+          "linear_additivity_defect": 5.3057327050371e-10
+        },
+        {
+          "diagnostic_offset": 0.001,
+          "hard_only": -3.8229925475308235e-07,
+          "gap_only": -2.100257467940736e-09,
+          "combined": -3.842390364217074e-07,
+          "linear_additivity_defect": 1.6047579931566247e-10
+        },
+        {
+          "diagnostic_offset": 0.0003,
+          "hard_only": -3.8024414635480974e-07,
+          "gap_only": -2.485719963196687e-09,
+          "combined": -3.845797291734954e-07,
+          "linear_additivity_defect": -1.8498628554889916e-09
+        }
+      ],
+      "leading_quadratic_coefficients": [
+        -1.9187125152586582e-07,
+        -1.921195182108537e-07,
+        -1.922898645867477e-07
+      ]
+    }
+  }
+}

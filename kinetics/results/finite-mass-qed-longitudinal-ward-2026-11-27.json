@@ -1,0 +1,537 @@
+{
+  "scope": "Ward algebra with a common smooth longitudinal loop regulator and bare on-shell charged cuts; not a real-time double-pole or screened medium calculation.",
+  "vertex_and_residue": [
+    {
+      "parent": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "daughter": [
+        0.50164862,
+        0.2988285154754238,
+        0.0,
+        0.3984380206338984
+      ],
+      "vacuum_longitudinal_loops": [
+        {
+          "loop_momentum": [
+            0.18,
+            0.21,
+            -0.16,
+            0.06
+          ],
+          "normalized_longitudinal_vertex": 0.9999999999999996,
+          "symmetrized_onshell_shift": [
+            2.7755575615628914e-17,
+            5.724587470723463e-17
+          ],
+          "parent_residue_derivative": [
+            -1.000000030805757,
+            -1.0000000034239562,
+            -1.0000000002993725
+          ],
+          "daughter_residue_derivative": [
+            -1.0000008395765374,
+            -1.0000000932846707,
+            -1.0000000083888216
+          ],
+          "maximum_matrix_ward_defect": 9.949512507731418e-16,
+          "common_vertex_and_residue_defect": 4.835431388784343e-08,
+          "extrapolated_common_defect": 8.565892310275575e-12
+        },
+        {
+          "loop_momentum": [
+            0.54,
+            -0.18,
+            0.34,
+            0.27
+          ],
+          "normalized_longitudinal_vertex": 1.0000000000000004,
+          "symmetrized_onshell_shift": [
+            1.6653345369377348e-16,
+            2.7755575615628914e-17
+          ],
+          "parent_residue_derivative": [
+            -1.0000000033066891,
+            -1.0000000003729246,
+            -1.0000000000195037
+          ],
+          "daughter_residue_derivative": [
+            -1.000000006324183,
+            -1.0000000006935015,
+            -1.0000000000750149
+          ],
+          "maximum_matrix_ward_defect": 7.772800161809615e-16,
+          "common_vertex_and_residue_defect": 5.332126482708889e-10,
+          "extrapolated_common_defect": 1.0066009408343284e-12
+        },
+        {
+          "loop_momentum": [
+            -0.09,
+            0.07,
+            0.29,
+            -0.35
+          ],
+          "normalized_longitudinal_vertex": 1.000000000000009,
+          "symmetrized_onshell_shift": [
+            -2.0816681711721685e-17,
+            1.6653345369377348e-16
+          ],
+          "parent_residue_derivative": [
+            -1.0000037754842825,
+            -1.000000419516464,
+            -1.0000000377902163
+          ],
+          "daughter_residue_derivative": [
+            -1.0000000932278152,
+            -1.0000000103461968,
+            -1.0000000009562544
+          ],
+          "maximum_matrix_ward_defect": 1.7764956118577415e-14,
+          "common_vertex_and_residue_defect": 2.1493132141117542e-07,
+          "extrapolated_common_defect": 3.2348449040150526e-11
+        },
+        {
+          "loop_momentum": [
+            0.09,
+            0.2,
+            -0.1,
+            -0.75
+          ],
+          "normalized_longitudinal_vertex": 0.9999999999999998,
+          "symmetrized_onshell_shift": [
+            -5.551115123125783e-17,
+            8.881784197001252e-16
+          ],
+          "parent_residue_derivative": [
+            -1.0000000155580002,
+            -1.000000001732601,
+            -1.0000000001467169
+          ],
+          "daughter_residue_derivative": [
+            -1.0000002669939094,
+            -1.0000000296300768,
+            -1.0000000028968317
+          ],
+          "maximum_matrix_ward_defect": 3.553161077129679e-15,
+          "common_vertex_and_residue_defect": 1.5681339117066884e-08,
+          "extrapolated_common_defect": 1.2138230611566642e-10
+        }
+      ],
+      "charged_on_shell_cuts": [
+        {
+          "cut_leg": "parent",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 1.0766241118793604e-16,
+          "projected_self_energy_cut_abs": 1.3897144593742024e-15,
+          "unprojected_longitudinal_cut_identity_abs": 3.483165504507259e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 2.8424590206425294e-16,
+          "projected_self_energy_cut_abs": 1.3592537854709283e-15,
+          "unprojected_longitudinal_cut_identity_abs": 3.544779382973535e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 2.318374447714351e-16,
+          "projected_self_energy_cut_abs": 1.4791733631764188e-15,
+          "unprojected_longitudinal_cut_identity_abs": 3.552822097363439e-15
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 1.621556698064797e-16,
+          "projected_self_energy_cut_abs": 2.525036210988495e-17,
+          "unprojected_longitudinal_cut_identity_abs": 3.0531133177191805e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 2.1308738910477708e-16,
+          "projected_self_energy_cut_abs": 7.523644857094948e-17,
+          "unprojected_longitudinal_cut_identity_abs": 2.220446049250313e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 1.8968429471613402e-16,
+          "projected_self_energy_cut_abs": 1.4084302773335815e-16,
+          "unprojected_longitudinal_cut_identity_abs": 2.237726045655905e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 1.0474529398483922e-17,
+          "projected_self_energy_cut_abs": 6.103295695354477e-17,
+          "unprojected_longitudinal_cut_identity_abs": 8.326894686180354e-17
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 7.045327981114399e-17,
+          "projected_self_energy_cut_abs": 7.727447354475433e-17,
+          "unprojected_longitudinal_cut_identity_abs": 9.3519346931887e-17
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 1.8399360842182906e-16,
+          "projected_self_energy_cut_abs": 8.847883270960186e-17,
+          "unprojected_longitudinal_cut_identity_abs": 2.2227302887698073e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 2.192277007387438e-17,
+          "projected_self_energy_cut_abs": 2.227687065636895e-18,
+          "unprojected_longitudinal_cut_identity_abs": 7.829900307567093e-18
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 4.484328188106852e-17,
+          "projected_self_energy_cut_abs": 1.694692851567904e-16,
+          "unprojected_longitudinal_cut_identity_abs": 1.1813799603444977e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 1.0306461613590289e-17,
+          "projected_self_energy_cut_abs": 1.5334477335831614e-16,
+          "unprojected_longitudinal_cut_identity_abs": 1.1799906742570352e-16
+        }
+      ]
+    },
+    {
+      "parent": [
+        1.149377557279424,
+        0.0,
+        0.0,
+        0.5666293049054344
+      ],
+      "daughter": [
+        0.802350324147877,
+        0.2988285154754238,
+        0.0,
+        0.7422045277408093
+      ],
+      "vacuum_longitudinal_loops": [
+        {
+          "loop_momentum": [
+            0.18,
+            0.21,
+            -0.16,
+            0.06
+          ],
+          "normalized_longitudinal_vertex": 0.9999999999999993,
+          "symmetrized_onshell_shift": [
+            5.551115123125783e-17,
+            -7.979727989493313e-17
+          ],
+          "parent_residue_derivative": [
+            -1.0000000441633592,
+            -1.0000000049151245,
+            -1.0000000004312115
+          ],
+          "daughter_residue_derivative": [
+            -1.000001567748668,
+            -1.0000001741779923,
+            -1.000000015677696
+          ],
+          "maximum_matrix_ward_defect": 6.774485652422609e-15,
+          "common_vertex_and_residue_defect": 8.954655905739732e-08,
+          "extrapolated_common_defect": 5.5884259142076836e-12
+        },
+        {
+          "loop_momentum": [
+            0.54,
+            -0.18,
+            0.34,
+            0.27
+          ],
+          "normalized_longitudinal_vertex": 1.0000000000000002,
+          "symmetrized_onshell_shift": [
+            0.0,
+            5.551115123125783e-17
+          ],
+          "parent_residue_derivative": [
+            -1.0000000057311387,
+            -1.0000000006366025,
+            -1.000000000061137
+          ],
+          "daughter_residue_derivative": [
+            -1.000000007798929,
+            -1.0000000008572594,
+            -1.000000000070389
+          ],
+          "maximum_matrix_ward_defect": 1.2770581337226242e-15,
+          "common_vertex_and_residue_defect": 7.469308582033011e-10,
+          "extrapolated_common_defect": 1.6290496787483702e-12
+        },
+        {
+          "loop_momentum": [
+            -0.09,
+            0.07,
+            0.29,
+            -0.35
+          ],
+          "normalized_longitudinal_vertex": 1.0000000000000004,
+          "symmetrized_onshell_shift": [
+            1.1171619185290638e-15,
+            6.938893903907228e-17
+          ],
+          "parent_residue_derivative": [
+            -1.0000104763202335,
+            -1.00000116403931,
+            -1.0000001047343516
+          ],
+          "daughter_residue_derivative": [
+            -1.0000000491797167,
+            -1.0000000054563583,
+            -1.0000000004913485
+          ],
+          "maximum_matrix_ward_defect": 2.842170943040401e-14,
+          "common_vertex_and_residue_defect": 5.847478337095909e-07,
+          "extrapolated_common_defect": 1.5885194795117005e-11
+        },
+        {
+          "loop_momentum": [
+            0.09,
+            0.2,
+            -0.1,
+            -0.75
+          ],
+          "normalized_longitudinal_vertex": 1.0000000000000004,
+          "symmetrized_onshell_shift": [
+            8.326672684688674e-17,
+            1.1102230246251565e-16
+          ],
+          "parent_residue_derivative": [
+            -1.000000011168456,
+            -1.0000000012458374,
+            -1.0000000001027705
+          ],
+          "daughter_residue_derivative": [
+            -1.0000000028959066,
+            -1.0000000003229645,
+            -1.0000000000380074
+          ],
+          "maximum_matrix_ward_defect": 8.881784197001252e-16,
+          "common_vertex_and_residue_defect": 7.844005519876863e-10,
+          "extrapolated_common_defect": 2.7706634697426996e-13
+        }
+      ],
+      "charged_on_shell_cuts": [
+        {
+          "cut_leg": "parent",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 6.582677055350699e-16,
+          "projected_self_energy_cut_abs": 6.230331386600626e-16,
+          "unprojected_longitudinal_cut_identity_abs": 4.440900568822021e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 3.0780757230191827e-16,
+          "projected_self_energy_cut_abs": 7.289191488255535e-16,
+          "unprojected_longitudinal_cut_identity_abs": 1.7763568394002505e-15
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 3.3787072451183796e-16,
+          "projected_self_energy_cut_abs": 2.858124050092559e-15,
+          "unprojected_longitudinal_cut_identity_abs": 1.7764110486817194e-15
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 2.0061193777864164e-16,
+          "projected_self_energy_cut_abs": 1.725110802589778e-17,
+          "unprojected_longitudinal_cut_identity_abs": 3.330849769336005e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 2.9194035526507147e-16,
+          "projected_self_energy_cut_abs": 7.006105629307283e-17,
+          "unprojected_longitudinal_cut_identity_abs": 2.220446049250313e-16
+        },
+        {
+          "cut_leg": "parent",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 4.221416840940598e-16,
+          "projected_self_energy_cut_abs": 4.448357685131939e-16,
+          "unprojected_longitudinal_cut_identity_abs": 4.449557262054371e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 4.424686033164292e-18,
+          "projected_self_energy_cut_abs": 7.488283044295255e-17,
+          "unprojected_longitudinal_cut_identity_abs": 2.2206284407551624e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 4.195974170333918e-17,
+          "projected_self_energy_cut_abs": 5.1025064590083846e-17,
+          "unprojected_longitudinal_cut_identity_abs": 1.4367068330207642e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": -1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 1.6521987429644631e-16,
+          "projected_self_energy_cut_abs": 2.2366300525618302e-17,
+          "unprojected_longitudinal_cut_identity_abs": 3.533094740927671e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.14,
+            -0.08,
+            0.22
+          ],
+          "projected_vertex_cut_abs": 6.554562338209974e-17,
+          "projected_self_energy_cut_abs": 5.063131561329028e-18,
+          "unprojected_longitudinal_cut_identity_abs": 4.5110336199122776e-17
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            -0.43,
+            0.19,
+            0.08
+          ],
+          "projected_vertex_cut_abs": 1.5237381768307695e-17,
+          "projected_self_energy_cut_abs": 7.118525222271296e-17,
+          "unprojected_longitudinal_cut_identity_abs": 1.1120731670520366e-16
+        },
+        {
+          "cut_leg": "daughter",
+          "energy_sign": 1,
+          "internal_charge_spatial_momentum": [
+            0.074,
+            0.66,
+            -0.16
+          ],
+          "projected_vertex_cut_abs": 2.56930700900956e-16,
+          "projected_self_energy_cut_abs": 1.0637172013331244e-16,
+          "unprojected_longitudinal_cut_identity_abs": 2.227578048500076e-16
+        }
+      ]
+    }
+  ]
+}

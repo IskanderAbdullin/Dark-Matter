@@ -1,0 +1,83 @@
+{
+  "scope": "Only algebraic anchored moment modifications; not a realizable thermal or production history. Assumes same post-anchor cap-free channel and ordinary cosmology except the separately labelled after-reaction dilution scenario. All quoted changes are necessary to escape a comparison, not sufficient.",
+  "anchor_visible_T_GeV": 8.000008136535843e-05,
+  "modified_count_scenarios": [
+    {
+      "anchored_stable_target": 0.12,
+      "energy_export_fraction_per_removed_stable_rest_mass": 0.0,
+      "remaining_initial_stable_fraction_threshold_for_obstruction": 0.436111328125,
+      "necessary_earlier_stable_fraction_removed_to_escape_obstruction": 0.563888671875,
+      "fixed_count_band_checks": [
+        0.4380625,
+        0.436111328125
+      ]
+    },
+    {
+      "anchored_stable_target": 0.06,
+      "energy_export_fraction_per_removed_stable_rest_mass": 0.0,
+      "remaining_initial_stable_fraction_threshold_for_obstruction": 0.436111328125,
+      "necessary_earlier_stable_fraction_removed_to_escape_obstruction": 0.563888671875,
+      "fixed_count_band_checks": [
+        0.4380625,
+        0.436111328125
+      ]
+    },
+    {
+      "anchored_stable_target": 0.12,
+      "energy_export_fraction_per_removed_stable_rest_mass": 0.5,
+      "remaining_initial_stable_fraction_threshold_for_obstruction": 0.1990439453125,
+      "necessary_earlier_stable_fraction_removed_to_escape_obstruction": 0.8009560546875,
+      "fixed_count_band_checks": [
+        0.203921875,
+        0.1990439453125
+      ]
+    },
+    {
+      "anchored_stable_target": 0.06,
+      "energy_export_fraction_per_removed_stable_rest_mass": 0.5,
+      "remaining_initial_stable_fraction_threshold_for_obstruction": 0.198068359375,
+      "necessary_earlier_stable_fraction_removed_to_escape_obstruction": 0.801931640625,
+      "fixed_count_band_checks": [
+        0.203921875,
+        0.198068359375
+      ]
+    },
+    {
+      "anchored_stable_target": 0.12,
+      "energy_export_fraction_per_removed_stable_rest_mass": 1.0,
+      "remaining_initial_stable_fraction_threshold_for_obstruction": 0.0058779296875,
+      "necessary_earlier_stable_fraction_removed_to_escape_obstruction": 0.9941220703125,
+      "fixed_count_band_checks": [
+        0.0088046875,
+        0.0058779296875
+      ]
+    },
+    {
+      "anchored_stable_target": 0.06,
+      "energy_export_fraction_per_removed_stable_rest_mass": 1.0,
+      "remaining_initial_stable_fraction_threshold_for_obstruction": 0.0058779296875,
+      "necessary_earlier_stable_fraction_removed_to_escape_obstruction": 0.9941220703125,
+      "fixed_count_band_checks": [
+        0.0088046875,
+        0.0058779296875
+      ]
+    }
+  ],
+  "scalar_goal_yield": 0.002528462375339247,
+  "scalar_max_before_any_new_channel_yield": 0.0006593600883755889,
+  "scalar_deficit_to_half_without_dilution": 0.0018691022869636582,
+  "pure_dilution_scenarios": [
+    {
+      "stable_goal": 0.12,
+      "minimum_pure_late_entropy_multiplier": 1215.5268513068124,
+      "scalar_omega_upper_after_dilution": 1.2872202203910906e-05,
+      "missing_scalar_omega_to_reference_half": 0.05998712779779609
+    },
+    {
+      "stable_goal": 0.06,
+      "minimum_pure_late_entropy_multiplier": 2431.053702613625,
+      "scalar_omega_upper_after_dilution": 6.436101101955453e-06,
+      "missing_scalar_omega_to_reference_half": 0.05999356389889804
+    }
+  ]
+}

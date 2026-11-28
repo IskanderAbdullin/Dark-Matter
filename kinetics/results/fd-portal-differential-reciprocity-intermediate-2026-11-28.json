@@ -1,0 +1,84 @@
+{
+  "visible_temperature": 0.64135,
+  "both_signs": [
+    {
+      "beta": -0.002,
+      "by_independent_order": [
+        {
+          "orders": [
+            13,
+            36,
+            26
+          ],
+          "alpha_zeros": [
+            0.034010909581104774,
+            0.03428957660562889,
+            0.0341236969096961
+          ],
+          "flows_number_heat_over_T_entropy": [
+            2.2243262285044475e-22,
+            -5.563161505143693e-21,
+            1.8716546415264703e-23
+          ]
+        },
+        {
+          "orders": [
+            17,
+            44,
+            32
+          ],
+          "alpha_zeros": [
+            0.034010909580680065,
+            0.034289576605404645,
+            0.03412369690480787
+          ],
+          "flows_number_heat_over_T_entropy": [
+            2.2243261359369827e-22,
+            -5.563161650135434e-21,
+            1.8716546388286472e-23
+          ]
+        }
+      ]
+    },
+    {
+      "beta": 0.002,
+      "by_independent_order": [
+        {
+          "orders": [
+            13,
+            36,
+            26
+          ],
+          "alpha_zeros": [
+            -0.03402004314829674,
+            -0.034297909858384094,
+            -0.03418787777583619
+          ],
+          "flows_number_heat_over_T_entropy": [
+            -3.309641642251308e-22,
+            3.690809080261322e-21,
+            1.8696580555233194e-23
+          ]
+        },
+        {
+          "orders": [
+            17,
+            44,
+            32
+          ],
+          "alpha_zeros": [
+            -0.03402004314787794,
+            -0.034297909858162764,
+            -0.03418787777103929
+          ],
+          "flows_number_heat_over_T_entropy": [
+            -3.309641549175511e-22,
+            3.69080922617657e-21,
+            1.869658052726969e-23
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Direct small finite displacements between the two sampled common-slope intersections. The differential cross terms balance while the two finite fluxes have opposite signs and entropy is positive."
+}

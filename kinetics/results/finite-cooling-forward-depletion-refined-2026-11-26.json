@@ -1,0 +1,94 @@
+{
+  "eos_sha256": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+  "independent_matrix_mean_relative_defect": 0.0,
+  "reference_sha256": "02d3220b70065ec64ff3d7239bbe208b9e95984ecdcb976c86713b1a54f9ceae",
+  "cases": [
+    {
+      "T_R": 0.009019069895524137,
+      "T_max": 0.009019069895524137,
+      "panels": 96,
+      "nodes": 96,
+      "maximum_accumulated_node_optical_depth": 0.001009289117909747,
+      "spontaneous_frozen_omega_scalar": [
+        0.0,
+        3.009517615472271e-10
+      ],
+      "feedback_midpoint_converted_omega_scalar": [
+        0.0,
+        3.007635206805218e-10
+      ],
+      "absorbing_linear_lower_omega_scalar": [
+        0.0,
+        3.00763480604988e-10
+      ],
+      "emitted_scalar_p_over_TF2_moment_yield_lower_feedback_upper": [
+        [
+          0.0,
+          6.913044452521747e-10
+        ],
+        [
+          0.0,
+          6.913045881704651e-10
+        ],
+        [
+          0.0,
+          6.918747680885184e-10
+        ]
+      ],
+      "emitted_scalar_rms_p_over_TF_feedback": [
+        0.0,
+        7.385323391123768
+      ],
+      "conservative_global_suppression_bound_for_split_operator": 0.002016542276916951,
+      "stable_omega_before_after": [
+        0.11999999906043826,
+        0.11993005405562886
+      ],
+      "p2_projection_defect": -6.661338147750939e-16
+    },
+    {
+      "T_R": 0.006236182402767521,
+      "T_max": 0.031180912013837606,
+      "panels": 96,
+      "nodes": 96,
+      "maximum_accumulated_node_optical_depth": 0.00471327171218504,
+      "spontaneous_frozen_omega_scalar": [
+        3.552978475388917e-10,
+        1.522898316718077e-10
+      ],
+      "feedback_midpoint_converted_omega_scalar": [
+        3.547105358273978e-10,
+        1.5206481015958233e-10
+      ],
+      "absorbing_linear_lower_omega_scalar": [
+        3.54710026244592e-10,
+        1.520646282250006e-10
+      ],
+      "emitted_scalar_p_over_TF2_moment_yield_lower_feedback_upper": [
+        [
+          1.23252663742055e-10,
+          3.2533260328452287e-10
+        ],
+        [
+          1.2325281222993704e-10,
+          3.253329966556837e-10
+        ],
+        [
+          1.2342166826042187e-10,
+          3.258202918612438e-10
+        ]
+      ],
+      "emitted_scalar_rms_p_over_TF_feedback": [
+        2.8714995455809684,
+        7.125200211714513
+      ],
+      "conservative_global_suppression_bound_for_split_operator": 0.0093822528421912,
+      "stable_omega_before_after": [
+        0.12000000146591079,
+        0.11988214673428593
+      ],
+      "p2_projection_defect": -6.661338147750939e-16
+    }
+  ],
+  "scope": "Forward-only positive depletion on fixed comoving nodes with externally injected prompt production. Exact analytic bounds refer to the split fixed-kernel dynamics, not integration with continuous thermal source between panels or a continuum physical bound. Feedback column uses a positive exponential midpoint approximation. Omits inverse, Bose response, scalar feedback and unrepresented physics."
+}

@@ -1,0 +1,206 @@
+{
+  "x": 0.05,
+  "k": 0.0015,
+  "fixed_S2_mass": 0.000873183268934027,
+  "original_S2_normalizers": [
+    6.470290051255009e-07,
+    1.8862383838375645e-15,
+    5.193006106254998e-15
+  ],
+  "maximum_mesh_absolute_endpoint_defect": 1.4921397450962104e-13,
+  "count_only": {
+    "forward_number": {
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.9733570040878385,
+          1.0120306197041578
+        ],
+        [
+          0.9730086994191662,
+          1.0179896459695215
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "inverse_number": {
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.9685758672195959,
+          1.0142240197699608
+        ],
+        [
+          0.9681913028776333,
+          1.02126063622288
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "forward_excess": {
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.8318377544646186,
+          1.0817419891549354
+        ],
+        [
+          0.8303286072084589,
+          1.1183252278380857
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "coupled_three": {
+      "weights": [
+        0.6903,
+        0.71998,
+        -0.07156
+      ],
+      "S2_S4_ranges": [
+        [
+          1.3097372827936993,
+          1.3514163524401748
+        ],
+        [
+          1.3093279640237032,
+          1.3579781947854301
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "coupled_numbers": {
+      "weights": [
+        0.90785,
+        -0.41929,
+        0.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.47754798079464,
+          0.4935180088490728
+        ],
+        [
+          0.4773930163841273,
+          0.4959775279315388
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    }
+  },
+  "count_and_mean": {
+    "forward_number": {
+      "weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.9999610630313555,
+          1.0000250643438149
+        ],
+        [
+          0.9998584467508966,
+          0.9999670036541284
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "inverse_number": {
+      "weights": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.999945926480574,
+          1.000040341848684
+        ],
+        [
+          0.999849193292311,
+          0.9999895258692139
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "forward_excess": {
+      "weights": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.9990776339717046,
+          1.0007035560785957
+        ],
+        [
+          0.9985938932793622,
+          1.0010236250713853
+        ]
+      ],
+      "disjoint_gap": 0.0,
+      "guaranteed_linf_fraction_at_least": 0.0
+    },
+    "coupled_three": {
+      "weights": [
+        0.6903,
+        0.71998,
+        -0.07156
+      ],
+      "S2_S4_ranges": [
+        [
+          1.3387143893964817,
+          1.3387214950863215
+        ],
+        [
+          1.3386072454677942,
+          1.3386232195057979
+        ]
+      ],
+      "disjoint_gap": 9.116989068380654e-05,
+      "guaranteed_linf_fraction_at_least": 6.152478721306385e-05
+    },
+    "coupled_numbers": {
+      "weights": [
+        0.90785,
+        -0.41929,
+        0.0
+      ],
+      "S2_S4_ranges": [
+        [
+          0.48854675643592177,
+          0.48856640685385233
+        ],
+        [
+          0.4884941519051056,
+          0.4885350067197618
+        ]
+      ],
+      "disjoint_gap": 1.1749716159970003e-05,
+      "guaranteed_linf_fraction_at_least": 8.853411215071509e-06
+    }
+  },
+  "scope": "Fixed optimizer-free separating projections of finite positive panel families; not a continuum or physical bound."
+}

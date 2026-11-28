@@ -1,0 +1,519 @@
+{
+  "scope": "Photon cut of scalar vertex only, Feynman gauge and vacuum external spinors. No finite thermal charged cut, residues or rate.",
+  "rows": [
+    {
+      "grid": "fine",
+      "bare_photon_integrated_leading": 5.666890756487682,
+      "null_point_tests": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": -2.220446049250313e-16,
+              "max_direct_spin_trace_defect": 6.321831946820566e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 4.698130773306275e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 1.9133583606389948e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": -1.1102230246251565e-16,
+              "max_direct_spin_trace_defect": 7.257527911974648e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 3.055333763768431e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 2.0370372055822372e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 5.416778137146139e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 3.3519853559482726e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 5.041411732520373e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.6,
+            0.0,
+            0.8
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 4.136357922845946e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 4.21818135976082e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 2.826072709183336e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.8,
+            -0.6
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": -1.1102230246251565e-16,
+              "max_direct_spin_trace_defect": 1.919242542669508e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": -1.1102230246251565e-16,
+              "max_direct_spin_trace_defect": 1.9370061110635106e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": -1.1102230246251565e-16,
+              "max_direct_spin_trace_defect": 1.2954082251326327e-12
+            }
+          ]
+        }
+      ],
+      "null_integrated_differences": [
+        -8.444717412729678e-18,
+        -4.854907479735915e-18
+      ],
+      "timelike_toy_point_tests": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 1.3432344125874351e-10,
+              "max_direct_spin_trace_defect": 5.375033751420233e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 1.3431478151915144e-12,
+              "max_direct_spin_trace_defect": 4.255928942598075e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 1.3322676295501878e-14,
+              "max_direct_spin_trace_defect": 5.930145263732811e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 9.504761644407722e-09,
+              "max_direct_spin_trace_defect": 7.1027628223419015e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 9.50475254057892e-11,
+              "max_direct_spin_trace_defect": 1.9996226896523694e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 9.50350909079134e-13,
+              "max_direct_spin_trace_defect": 1.6495693699880576e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 2.3104052004896403e-10,
+              "max_direct_spin_trace_defect": 3.910205492729801e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 2.3103741142449508e-12,
+              "max_direct_spin_trace_defect": 5.014877402231832e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 2.3092638912203256e-14,
+              "max_direct_spin_trace_defect": 1.3660184094987926e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.6,
+            0.0,
+            0.8
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 6.384051065566609e-10,
+              "max_direct_spin_trace_defect": 6.1743943291503456e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 6.384004436199575e-12,
+              "max_direct_spin_trace_defect": 4.55935289522813e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 6.350475700855895e-14,
+              "max_direct_spin_trace_defect": 2.2304380564719395e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.8,
+            -0.6
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 1.9974688569845966e-10,
+              "max_direct_spin_trace_defect": 8.433254095052689e-13
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 1.9977353105105067e-12,
+              "max_direct_spin_trace_defect": 5.070055486555702e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 1.9984014443252818e-14,
+              "max_direct_spin_trace_defect": 2.368993889945159e-12
+            }
+          ]
+        }
+      ],
+      "timelike_integrated_differences": [
+        1.8693403126226297e-11,
+        1.8693344343420268e-13
+      ],
+      "timelike_ratio": 100.00031445847756
+    },
+    {
+      "grid": "third",
+      "bare_photon_integrated_leading": 5.6668972558667585,
+      "null_point_tests": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": -2.220446049250313e-16,
+              "max_direct_spin_trace_defect": 3.3497649098990223e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": -2.220446049250313e-16,
+              "max_direct_spin_trace_defect": 3.740119325357227e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 2.419398015263141e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 2.220446049250313e-16,
+              "max_direct_spin_trace_defect": 1.4992451724538114e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 2.220446049250313e-16,
+              "max_direct_spin_trace_defect": 2.5444091278359338e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 5.928146862288486e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 3.625100220006061e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 2.220224004645388e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 3.5009772858529686e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.6,
+            0.0,
+            0.8
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": -1.1102230246251565e-16,
+              "max_direct_spin_trace_defect": 2.6256774532384952e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": -1.1102230246251565e-16,
+              "max_direct_spin_trace_defect": 3.1603608618979706e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 4.50506298932396e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.8,
+            -0.6
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 9.412470802772077e-13
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 2.5275337378616314e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 0.0,
+              "max_direct_spin_trace_defect": 1.701527807540515e-12
+            }
+          ]
+        }
+      ],
+      "null_integrated_differences": [
+        5.933836379194659e-19,
+        3.995564214753339e-18
+      ],
+      "timelike_toy_point_tests": [
+        {
+          "direction": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 1.3285550437558413e-10,
+              "max_direct_spin_trace_defect": 4.305444889496357e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 1.3284928712664623e-12,
+              "max_direct_spin_trace_defect": 1.9040324872321435e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 1.3322676295501878e-14,
+              "max_direct_spin_trace_defect": 3.5266234377218098e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 9.400940248482925e-09,
+              "max_direct_spin_trace_defect": 1.1668443988810395e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 9.400924483315976e-11,
+              "max_direct_spin_trace_defect": 5.28621590945022e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 9.401368572525826e-13,
+              "max_direct_spin_trace_defect": 3.916977853180015e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 2.2849588887652317e-10,
+              "max_direct_spin_trace_defect": 5.466072039439496e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 2.284838984678572e-12,
+              "max_direct_spin_trace_defect": 1.2370104940373494e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 2.2870594307278225e-14,
+              "max_direct_spin_trace_defect": 4.357181282443889e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.6,
+            0.0,
+            0.8
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 6.314382350325332e-10,
+              "max_direct_spin_trace_defect": 1.4459544672718039e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 6.314282430253115e-12,
+              "max_direct_spin_trace_defect": 5.278222303672919e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 6.328271240363392e-14,
+              "max_direct_spin_trace_defect": 1.9459989175629744e-12
+            }
+          ]
+        },
+        {
+          "direction": [
+            0.0,
+            0.8,
+            -0.6
+          ],
+          "cases": [
+            {
+              "plasma_photon_energy": 0.0001,
+              "relative_to_eikonal": 1.9754708979746738e-10,
+              "max_direct_spin_trace_defect": 5.245692769051402e-12
+            },
+            {
+              "plasma_photon_energy": 1e-05,
+              "relative_to_eikonal": 1.9750867608081535e-12,
+              "max_direct_spin_trace_defect": 3.1181723869622147e-12
+            },
+            {
+              "plasma_photon_energy": 1e-06,
+              "relative_to_eikonal": 1.9761969838327786e-14,
+              "max_direct_spin_trace_defect": 7.139178137549607e-12
+            }
+          ]
+        }
+      ],
+      "timelike_integrated_differences": [
+        1.828631436733756e-11,
+        1.828626537293648e-13
+      ],
+      "timelike_ratio": 100.00026793005614
+    }
+  ]
+}

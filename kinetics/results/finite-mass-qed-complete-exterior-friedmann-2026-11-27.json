@@ -1,0 +1,89 @@
+{
+  "scope": "Finite tagged archived-plus-fixed spectator control. Optional conditional Friedmann clock, arbitrary reaction calibration, hard-only log.",
+  "rows": [
+    {
+      "archive": "fine",
+      "external_self_log_initial": -7.772630272834431e-12,
+      "external_self_log_final": -7.959654178797579e-12,
+      "self_log_tabulation_defects": [
+        8.077935669463161e-27,
+        6.772541265277914e-24
+      ],
+      "self_log_quadrature_relative_defect": 1.963906814950178e-09,
+      "imposed_clock": {
+        "conditional_dark_H": false,
+        "scalar_gain": 0.0021216780702065386,
+        "dark_relative_energy_initial": 0.046157056601153934,
+        "dark_relative_energy_final": 0.046157185954029935,
+        "redshift_work": 4.542787932496899e-06,
+        "energy_ledger_defect": 8.771004831820652e-16,
+        "entropy_production": 0.007554095291005092,
+        "entropy_ledger_defect": 8.742607332523633e-13,
+        "sampled_clock_factor_range": [
+          0.9776908004775897,
+          0.977690860921245
+        ],
+        "sampled_pure_log_clock_increase_max": 1.0832305178775955e-13,
+        "analytical_pure_log_clock_bound": 1.1334822074443462e-13
+      },
+      "conditional_clock": {
+        "conditional_dark_H": true,
+        "scalar_gain": 0.002104333954493283,
+        "dark_relative_energy_initial": 0.046157056601153934,
+        "dark_relative_energy_final": 0.0461571859644178,
+        "redshift_work": 4.543152747983368e-06,
+        "energy_ledger_defect": 2.369571511460517e-16,
+        "entropy_production": 0.007454837299059547,
+        "entropy_ledger_defect": 8.597775269514329e-13,
+        "sampled_clock_factor_range": [
+          0.9776908004727357,
+          0.977690860921245
+        ],
+        "sampled_pure_log_clock_increase_max": 1.0832305178668394e-13,
+        "analytical_pure_log_clock_bound": 1.1334822074443462e-13
+      }
+    },
+    {
+      "archive": "third",
+      "external_self_log_initial": -7.805483154418104e-12,
+      "external_self_log_final": -7.993299994682605e-12,
+      "self_log_tabulation_defects": [
+        9.693522803355793e-27,
+        1.400067810231355e-23
+      ],
+      "self_log_quadrature_relative_defect": 1.629996138063916e-09,
+      "imposed_clock": {
+        "conditional_dark_H": false,
+        "scalar_gain": 0.0021482193369180905,
+        "dark_relative_energy_initial": 0.046251374674730505,
+        "dark_relative_energy_final": 0.046251504453420876,
+        "redshift_work": 4.557742253546273e-06,
+        "energy_ledger_defect": 2.7662617955501137e-16,
+        "entropy_production": 0.007690227695031804,
+        "entropy_ledger_defect": 8.963663145067358e-13,
+        "sampled_clock_factor_range": [
+          0.9776467305732085,
+          0.9776467912076371
+        ],
+        "sampled_pure_log_clock_increase_max": 1.0877113170527991e-13,
+        "analytical_pure_log_clock_bound": 1.138273141199232e-13
+      },
+      "conditional_clock": {
+        "conditional_dark_H": true,
+        "scalar_gain": 0.0021309035905596463,
+        "dark_relative_energy_initial": 0.046251374674730505,
+        "dark_relative_energy_final": 0.04625150446407286,
+        "redshift_work": 4.558116344351004e-06,
+        "energy_ledger_defect": 2.4846402754863634e-16,
+        "entropy_production": 0.007589996043552705,
+        "entropy_ledger_defect": 8.796453149217953e-13,
+        "sampled_clock_factor_range": [
+          0.9776467305682319,
+          0.9776467912076371
+        ],
+        "sampled_pure_log_clock_increase_max": 1.0877113170417251e-13,
+        "analytical_pure_log_clock_bound": 1.138273141199232e-13
+      }
+    }
+  ]
+}

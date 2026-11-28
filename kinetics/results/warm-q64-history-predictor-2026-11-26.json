@@ -1,0 +1,83 @@
+{
+  "scope": "The q32 guide is unavailable to the history predictor's solve; it sets only the matching interval and provides a separate wider control. All accepted targets and collision operators remain q64. Valid for this tested block only.",
+  "final_T_GeV": 0.010087326311159108,
+  "history_seed": {
+    "newton_iterations": 3,
+    "residual": 5.325762123191459e-12,
+    "entropy_gain_relative": 3.9424540188015555e-07,
+    "maximum_exponent_departure_from_eq": 0.07584688459347652,
+    "structurally_inactive_cells": 0,
+    "structurally_inactive_vacuum_cells": 0,
+    "history_only_accepted": true
+  },
+  "observations": [
+    [
+      0,
+      2480.157863839199,
+      36
+    ],
+    [
+      1,
+      6.403377735835054,
+      36
+    ],
+    [
+      2,
+      4.570571585424789e-05,
+      38
+    ],
+    [
+      3,
+      5.325762123191459e-12,
+      110
+    ]
+  ],
+  "narrow_seed": {
+    "used_q32_guess": true,
+    "observations": [
+      [
+        0,
+        5737.422607288268,
+        48
+      ],
+      [
+        1,
+        46.03717637635486,
+        48
+      ],
+      [
+        2,
+        0.0022722838543854282,
+        48
+      ],
+      [
+        3,
+        8.895482490573044e-12,
+        56
+      ],
+      [
+        4,
+        2.545873215604718e-12,
+        114
+      ]
+    ],
+    "newton_iterations": 4,
+    "residual": 2.545873215604718e-12,
+    "entropy_gain_relative": 3.942453996597095e-07,
+    "maximum_exponent_departure_from_eq": 0.07584688459347892,
+    "structurally_inactive_cells": 0,
+    "structurally_inactive_vacuum_cells": 0
+  },
+  "retained_number_and_energy_L1_between_solutions": [
+    [
+      3.66490318211929e-15,
+      1.7054414352185096e-15
+    ],
+    [
+      1.2490960612243126e-15,
+      1.7217380016169028e-15
+    ]
+  ],
+  "history_sha256": "009e33f03c19b0e92107a7765f83eaee5ba5fb7642093572e7d31f931a97df5b",
+  "narrow_seed_control_sha256": "7137a3c8af1da0a8b784351c2d3121e604967e60ffb1cdb7b283d567fc086a1d"
+}

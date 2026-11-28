@@ -1,0 +1,249 @@
+{
+  "scope": "Fixed halo, standard Born real scalar quartic, linear local kinetic rates only. Requirements concern rates larger than the specified circular frequency, not a galaxy-age equilibrium criterion or a universal observational limit. Static plasma curvature benchmark is separate and conditional.",
+  "Born_cross_section_over_mass": {
+    "7.65175e-08": 5.000003415340595,
+    "1.08515714e-06": 1005.6202756195897
+  },
+  "rows": [
+    {
+      "central_cap": 100.0,
+      "radius_R": 0.1,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 17.403146632601864,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.4275440275862397e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.2873043654435079,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 57.783819032802356
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 40.76837729089188,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.1849290275461208e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.12264407691098014,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 24.666674085266003
+        }
+      ]
+    },
+    {
+      "central_cap": 100.0,
+      "radius_R": 0.3,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 18.755138497767526,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.481957535781659e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.2665936058320851,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 53.61838707505633
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 42.542670313684795,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.2319681594069232e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.11752905878105255,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 23.63792089694261
+        }
+      ]
+    },
+    {
+      "central_cap": 100.0,
+      "radius_R": 1.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 26.587101106968113,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.764457147275959e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.1880611195588213,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 37.8236149768141
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 52.657789151250995,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.483172741966986e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.0949527141300655,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 19.097274910860914
+        }
+      ]
+    },
+    {
+      "central_cap": 100.0,
+      "radius_R": 3.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 58.20375197255721,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.610664793025914e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.08590511488602103,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 17.277585061762597
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 96.13265327945929,
+          "necessary_quartic_lambda_for_that_contact_kernel": 3.3551433957732493e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.052011463633120716,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 10.460756478823424
+        }
+      ]
+    },
+    {
+      "central_cap": 100.0,
+      "radius_R": 10.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 246.88033394715603,
+          "necessary_quartic_lambda_for_that_contact_kernel": 5.376737941711608e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.020252726979339854,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 4.073310577402409
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 373.69765745749345,
+          "necessary_quartic_lambda_for_that_contact_kernel": 6.615090794909648e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.013379800221436308,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 2.6909996772831652
+        }
+      ]
+    },
+    {
+      "central_cap": 100.0,
+      "radius_R": 20.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 616.6936876493268,
+          "necessary_quartic_lambda_for_that_contact_kernel": 8.497875679729091e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.008107752844136734,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 1.630664129955259
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 925.9101838710164,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.0412620783100619e-06,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.005400091809225119,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 1.0860883627128106
+        }
+      ]
+    },
+    {
+      "central_cap": 7000.0,
+      "radius_R": 0.1,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 17.160473584040243,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.4175561034790224e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.2913672501818452,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 58.60096288687784
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 41.92154638627248,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.2156148580502484e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.11927040939590164,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 23.988148393993583
+        }
+      ]
+    },
+    {
+      "central_cap": 7000.0,
+      "radius_R": 0.3,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 19.116439863489276,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.496163753475173e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.26155497758500323,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 52.60499772974131
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 44.45210380795078,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.2815068742112505e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.11248061557675233,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 22.62255752763096
+        }
+      ]
+    },
+    {
+      "central_cap": 7000.0,
+      "radius_R": 1.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 27.348228582992416,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.7895351050378994e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.1828271979235046,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 36.7709474333184
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 54.90557543010428,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.5356181128843474e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.09106543298804115,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 18.315449164170243
+        }
+      ]
+    },
+    {
+      "central_cap": 7000.0,
+      "radius_R": 3.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 58.512967596563676,
+          "necessary_quartic_lambda_for_that_contact_kernel": 2.617590369006291e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.08545114365885688,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 17.186280527645764
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 97.46718551291961,
+          "necessary_quartic_lambda_for_that_contact_kernel": 3.378351505852687e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.051299316520607166,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 10.317526563709908
+        }
+      ]
+    },
+    {
+      "central_cap": 7000.0,
+      "radius_R": 10.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 241.89337450194446,
+          "necessary_quartic_lambda_for_that_contact_kernel": 5.322156099011103e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.020670264368732462,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 4.157287390322905
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 366.6929819396614,
+          "necessary_quartic_lambda_for_that_contact_kernel": 6.552800118721287e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.013635385039419,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 2.7424039323039526
+        }
+      ]
+    },
+    {
+      "central_cap": 7000.0,
+      "radius_R": 20.0,
+      "data": [
+        {
+          "trial_function": "local_shear_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 606.5008365062895,
+          "necessary_quartic_lambda_for_that_contact_kernel": 8.427355678489679e-07,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.008244011712831577,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 1.6580690661737634
+        },
+        {
+          "trial_function": "local_shape_rayleigh_over_circular_frequency",
+          "necessary_sigma_over_mass_cm2_per_g_for_rate_to_beat_circular_clock": 910.8945116752925,
+          "necessary_quartic_lambda_for_that_contact_kernel": 1.0327843881485645e-06,
+          "quotient_over_circular_frequency_at_5_cm2_per_g": 0.0054891098100966,
+          "quotient_over_circular_frequency_at_static_curvature_lambda": 1.1039920240271073
+        }
+      ]
+    }
+  ]
+}

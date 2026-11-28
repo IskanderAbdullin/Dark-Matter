@@ -1,0 +1,155 @@
+{
+  "rows": [
+    {
+      "T_SM": 0.05,
+      "initial_forces": [
+        0.6,
+        0.16
+      ],
+      "target_forces": [
+        0.63,
+        0.1582
+      ],
+      "physical_inverse_forces": [
+        0.6299999999999975,
+        0.15820000000000026
+      ],
+      "paired_analytic_iterations": [
+        3,
+        3
+      ],
+      "paired_analytic_residuals": [
+        2.1524747574671173e-16,
+        4.620553687682765e-16
+      ],
+      "independent_finite_difference_iterations": 3,
+      "independent_finite_difference_residual": 7.700922812804609e-16,
+      "frozen_activity_surrogate_forces": [
+        0.6462427425087687,
+        0.1573177267920037
+      ],
+      "frozen_surrogate_actual_physical_residual": 0.007147509264813776
+    },
+    {
+      "T_SM": 0.05,
+      "initial_forces": [
+        -0.6,
+        -0.16
+      ],
+      "target_forces": [
+        -0.57,
+        -0.1618
+      ],
+      "physical_inverse_forces": [
+        -0.5699999999999926,
+        -0.16180000000000108
+      ],
+      "paired_analytic_iterations": [
+        3,
+        3
+      ],
+      "paired_analytic_residuals": [
+        0.0,
+        0.0
+      ],
+      "independent_finite_difference_iterations": 3,
+      "independent_finite_difference_residual": 0.0,
+      "frozen_activity_surrogate_forces": [
+        -0.5862196451824923,
+        -0.16103894622369996
+      ],
+      "frozen_surrogate_actual_physical_residual": 0.0018856397531899695
+    },
+    {
+      "T_SM": 0.3,
+      "initial_forces": [
+        -1.5,
+        0.16
+      ],
+      "target_forces": [
+        -1.47,
+        0.1582
+      ],
+      "physical_inverse_forces": [
+        -1.4699999999999998,
+        0.15819999999999998
+      ],
+      "paired_analytic_iterations": [
+        3,
+        3
+      ],
+      "paired_analytic_residuals": [
+        1.0453291171933697e-15,
+        8.183184326967337e-16
+      ],
+      "independent_finite_difference_iterations": 3,
+      "independent_finite_difference_residual": 4.969601475860326e-17,
+      "frozen_activity_surrogate_forces": [
+        -1.4697569085556161,
+        0.1580140329922838
+      ],
+      "frozen_surrogate_actual_physical_residual": 0.011516705041626411
+    },
+    {
+      "T_SM": 0.64135,
+      "initial_forces": [
+        -0.034187877771,
+        0.002
+      ],
+      "target_forces": [
+        -0.0041878777709999995,
+        0.0002000000000000001
+      ],
+      "physical_inverse_forces": [
+        -0.004187877771000002,
+        0.00020000000000000023
+      ],
+      "paired_analytic_iterations": [
+        3,
+        3
+      ],
+      "paired_analytic_residuals": [
+        8.751325867778772e-17,
+        4.456688246277736e-16
+      ],
+      "independent_finite_difference_iterations": 3,
+      "independent_finite_difference_residual": 1.256547379580957e-15,
+      "frozen_activity_surrogate_forces": [
+        -0.004202556599836315,
+        0.0002008537560945909
+      ],
+      "frozen_surrogate_actual_physical_residual": 0.00014921804904055136
+    },
+    {
+      "T_SM": 0.6882487043,
+      "initial_forces": [
+        1.8,
+        -0.16
+      ],
+      "target_forces": [
+        1.83,
+        -0.1618
+      ],
+      "physical_inverse_forces": [
+        1.829999999999967,
+        -0.1617999999999979
+      ],
+      "paired_analytic_iterations": [
+        3,
+        3
+      ],
+      "paired_analytic_residuals": [
+        1.1657051051859895e-16,
+        1.1657051076063065e-16
+      ],
+      "independent_finite_difference_iterations": 3,
+      "independent_finite_difference_residual": 1.8342331148968119e-16,
+      "frozen_activity_surrogate_forces": [
+        1.8238856505339565,
+        -0.16142934507552179
+      ],
+      "frozen_surrogate_actual_physical_residual": 0.00025707445457472556
+    }
+  ],
+  "scope": "Local numerical inverse at fixed visible temperature and one timelike two-bath kernel. Starts from nearby specified states; no global inverse or cosmological evolution/stability claim."
+}

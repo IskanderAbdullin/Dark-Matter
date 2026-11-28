@@ -1,0 +1,162 @@
+{
+  "scope": "Vacuum O(g\u00b2) on-shell fermion, MS-bar Yukawa at parent scale, parent-rest photon cap; no finite thermal contributions.",
+  "equal_mass_zero_transfer_scalar_factor": -2.0,
+  "independent_self_energy_derivative_defects": [
+    6.993078651438218e-14,
+    7.165656434386309e-14
+  ],
+  "rows": [
+    {
+      "grid": "fine",
+      "mu_over_M": 1.0,
+      "scheme_scale_defect": 1.794120407794253e-13,
+      "rows": [
+        {
+          "rest_photon_cap_over_parent_mass": 0.001,
+          "absolute_vacuum_coefficient_before_gauge": -19.52779114358837,
+          "coefficient_relative_to_zero_transfer": 0.004589712509577737,
+          "at_g_005_relative_to_born": -1.236611820367959e-05,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 0.0001,
+              "combined": -19.494447834161058,
+              "defect": 0.03334330942731256
+            },
+            {
+              "photon_mass_over_M": 1e-06,
+              "combined": -19.527823798138755,
+              "defect": 3.2654550384592085e-05
+            },
+            {
+              "photon_mass_over_M": 1e-08,
+              "combined": -19.52779146600244,
+              "defect": 3.224140705526679e-07
+            }
+          ]
+        },
+        {
+          "rest_photon_cap_over_parent_mass": 0.01,
+          "absolute_vacuum_coefficient_before_gauge": -11.167668039426468,
+          "coefficient_relative_to_zero_transfer": 0.0032108197761981927,
+          "at_g_005_relative_to_born": -7.072008401746221e-06,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 0.0001,
+              "combined": -11.170919865748955,
+              "defect": 0.0032518263224865507
+            },
+            {
+              "photon_mass_over_M": 1e-06,
+              "combined": -11.16770069457451,
+              "defect": 3.265514804162706e-05
+            },
+            {
+              "photon_mass_over_M": 1e-08,
+              "combined": -11.167668361840526,
+              "defect": 3.2241405811817003e-07
+            }
+          ]
+        },
+        {
+          "rest_photon_cap_over_parent_mass": 0.05,
+          "absolute_vacuum_coefficient_before_gauge": -5.626724395431961,
+          "coefficient_relative_to_zero_transfer": 0.0021769336359156455,
+          "at_g_005_relative_to_born": -3.5631648485898983e-06,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 0.0001,
+              "combined": -5.629982153379206,
+              "defect": 0.0032577579472450324
+            },
+            {
+              "photon_mass_over_M": 1e-06,
+              "combined": -5.626757050580061,
+              "defect": 3.2655148099358655e-05
+            },
+            {
+              "photon_mass_over_M": 1e-08,
+              "combined": -5.626724717846017,
+              "defect": 3.224140554536348e-07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "mu_over_M": 1.0,
+      "scheme_scale_defect": 1.794120407794253e-13,
+      "rows": [
+        {
+          "rest_photon_cap_over_parent_mass": 0.001,
+          "absolute_vacuum_coefficient_before_gauge": -19.52784168751446,
+          "coefficient_relative_to_zero_transfer": 0.004539168583487907,
+          "at_g_005_relative_to_born": -1.23661502109947e-05,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 0.0001,
+              "combined": -19.49449798605768,
+              "defect": 0.03334370145677923
+            },
+            {
+              "photon_mass_over_M": 1e-06,
+              "combined": -19.527874342091298,
+              "defect": 3.265457683809814e-05
+            },
+            {
+              "photon_mass_over_M": 1e-08,
+              "combined": -19.527842009928726,
+              "defect": 3.2241426595192024e-07
+            }
+          ]
+        },
+        {
+          "rest_photon_cap_over_parent_mass": 0.01,
+          "absolute_vacuum_coefficient_before_gauge": -11.16770339785541,
+          "coefficient_relative_to_zero_transfer": 0.0031754613472561033,
+          "at_g_005_relative_to_born": -7.0720307927329225e-06,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 0.0001,
+              "combined": -11.17095522674386,
+              "defect": 0.0032518288884499924
+            },
+            {
+              "photon_mass_over_M": 1e-06,
+              "combined": -11.167736053029916,
+              "defect": 3.265517450579125e-05
+            },
+            {
+              "photon_mass_over_M": 1e-08,
+              "combined": -11.167703720269685,
+              "defect": 3.2241427483370444e-07
+            }
+          ]
+        },
+        {
+          "rest_photon_cap_over_parent_mass": 0.05,
+          "absolute_vacuum_coefficient_before_gauge": -5.626748367811427,
+          "coefficient_relative_to_zero_transfer": 0.0021529612564501477,
+          "at_g_005_relative_to_born": -3.563180029276537e-06,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 0.0001,
+              "combined": -5.630006128404467,
+              "defect": 0.003257760593040615
+            },
+            {
+              "photon_mass_over_M": 1e-06,
+              "combined": -5.626781022986002,
+              "defect": 3.265517457506917e-05
+            },
+            {
+              "photon_mass_over_M": 1e-08,
+              "combined": -5.626748690225675,
+              "defect": 3.2241424818835185e-07
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

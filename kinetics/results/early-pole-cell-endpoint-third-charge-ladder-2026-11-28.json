@@ -1,0 +1,92 @@
+{
+  "grid": "third",
+  "charge_divisions": [
+    1,
+    2,
+    4
+  ],
+  "scalar_bins": 97,
+  "matched_checkpoints": [
+    {
+      "x": 0.01,
+      "yields": [
+        3.474126479621265e-07,
+        3.472955338834703e-07,
+        3.472589807031535e-07
+      ],
+      "relative_time_drifts": [
+        1.3540285659363605e-07,
+        1.3122900766049383e-07,
+        1.3004405874372793e-07
+      ],
+      "signed_relative_nested_changes": [
+        -0.0003371036700683394,
+        -0.00010525093688373843
+      ],
+      "signed_successive_increment_ratios": [
+        0.31211602171316716
+      ]
+    },
+    {
+      "x": 0.02,
+      "yields": [
+        1.0257437706555764e-05,
+        1.0215157406348768e-05,
+        1.0198877029445605e-05
+      ],
+      "relative_time_drifts": [
+        1.739918454646272e-06,
+        2.1374627372505728e-06,
+        1.6616324155505069e-06
+      ],
+      "signed_relative_nested_changes": [
+        -0.004121916351485511,
+        -0.0015937470423162958
+      ],
+      "signed_successive_increment_ratios": [
+        0.3850582144274742
+      ]
+    },
+    {
+      "x": 0.04,
+      "yields": [
+        0.0001749065174502661,
+        0.00017162303977212177,
+        0.0001695173686067124
+      ],
+      "relative_time_drifts": [
+        9.547310608137849e-05,
+        0.00016035526234081665,
+        0.00014415863768690862
+      ],
+      "signed_relative_nested_changes": [
+        -0.018772757733730328,
+        -0.012269163675257433
+      ],
+      "signed_successive_increment_ratios": [
+        0.6412929740394657
+      ]
+    },
+    {
+      "x": 0.05,
+      "yields": [
+        0.00037652201018816635,
+        0.0003658861830375407,
+        0.0003577553917385009
+      ],
+      "relative_time_drifts": [
+        2.46552201734751e-05,
+        4.1704885555993165e-05,
+        3.742708038556586e-05
+      ],
+      "signed_relative_nested_changes": [
+        -0.02824755754732744,
+        -0.02222218732486414
+      ],
+      "signed_successive_increment_ratios": [
+        0.7644719290649123
+      ]
+    }
+  ],
+  "scope": "Charge-only finite-grid comparison, not a limit or a physical transfer spectrum."
+}

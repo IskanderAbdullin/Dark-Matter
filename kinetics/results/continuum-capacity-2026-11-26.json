@@ -1,0 +1,179 @@
+{
+  "controls": {
+    "massless_exact_relative_defect": 2.220446049250313e-16,
+    "nonrelativistic_asymptotic_relative_defect": 1.312369316264217e-05,
+    "manufactured_normal": {
+      "saturation_T_GeV": 0.008358708503978369,
+      "common_T_GeV": 0.010000000000000075,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 1.2279015608939758,
+      "total_energy_over_saturation": 1.1212865605180848,
+      "scalar_kinetic_fugacity": 0.6376281516217386,
+      "fermion_kinetic_fugacity": 0.22313016014842615,
+      "entropy_density_GeV3": 1.8113336319208013e-06,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 2.220446049250313e-16
+    },
+    "manufactured_condensed": {
+      "saturation_T_GeV": 0.010772176479359692,
+      "common_T_GeV": 0.009999999999997322,
+      "normal_common_phase": false,
+      "kinetic_energy_over_saturation": 0.8545990645984702,
+      "total_energy_over_saturation": 0.9053672603788655,
+      "scalar_kinetic_fugacity": 1.0,
+      "fermion_kinetic_fugacity": 0.2231301601485627,
+      "entropy_density_GeV3": 1.94759632858832e-06,
+      "continuum_common_state_condensate_fraction": 0.20000000000064294,
+      "closure_kinetic_relative_defect": 5.465627950229646e-13
+    }
+  },
+  "rows": [
+    {
+      "run": "visible-bath-50-exterior-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 2.3314683517128287e-15,
+      "nsteps": 12,
+      "actual_visible_T_GeV": 0.04499968776883943,
+      "species_counts_GeV3": [
+        1.267156215504688e-09,
+        2.8352332424485095e-09
+      ],
+      "retained_dark_kinetic_energy_GeV4": 5.097857098385154e-10,
+      "saturation_T_GeV": 0.002183033939405904,
+      "common_T_GeV": 0.04511582239058497,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 28.400619231963027,
+      "total_energy_over_saturation": 7.588154097393749,
+      "scalar_kinetic_fugacity": 0.0001361868100792677,
+      "fermion_kinetic_fugacity": 5.120473718414689e-05,
+      "entropy_density_GeV3": 5.469264200194618e-08,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 4.440892098500626e-16
+    },
+    {
+      "run": "visible-bath-100-exterior-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 8.43769498715119e-15,
+      "nsteps": 12,
+      "actual_visible_T_GeV": 0.08999542571020887,
+      "species_counts_GeV3": [
+        1.0701881793253322e-07,
+        2.164967063421094e-07
+      ],
+      "retained_dark_kinetic_energy_GeV4": 7.626447835772504e-08,
+      "saturation_T_GeV": 0.00957803700599316,
+      "common_T_GeV": 0.08252499379466575,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 10.608541826497525,
+      "total_energy_over_saturation": 6.996704146629246,
+      "scalar_kinetic_fugacity": 0.001878888021582743,
+      "fermion_kinetic_fugacity": 0.0007567268134302283,
+      "entropy_density_GeV3": 3.4752739566027033e-06,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 3.823608096809039e-13
+    },
+    {
+      "run": "extended-frw-20-vacuum-zero-edge-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 1.7763568394002505e-15,
+      "nsteps": 24,
+      "actual_visible_T_GeV": 0.019999550055187557,
+      "species_counts_GeV3": [
+        2.4147017984107086e-10,
+        6.128806196601889e-10
+      ],
+      "retained_dark_kinetic_energy_GeV4": 4.2586141867894565e-11,
+      "saturation_T_GeV": 0.0012562204095245692,
+      "common_T_GeV": 0.019602279366331535,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 20.642233710086593,
+      "total_energy_over_saturation": 3.829687503188011,
+      "scalar_kinetic_fugacity": 0.0003163912361788888,
+      "fermion_kinetic_fugacity": 8.976439740090177e-05,
+      "entropy_density_GeV3": 1.0683775558335513e-08,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 3.3306690738754696e-16
+    },
+    {
+      "run": "extended-frw-15-vacuum-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 4.440892098500626e-16,
+      "nsteps": 24,
+      "actual_visible_T_GeV": 0.014999644813005537,
+      "species_counts_GeV3": [
+        9.876627127871184e-11,
+        2.5529589655601116e-10
+      ],
+      "retained_dark_kinetic_energy_GeV4": 1.2385640124397853e-11,
+      "saturation_T_GeV": 0.0009324871448056638,
+      "common_T_GeV": 0.014269070721936944,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 19.770586949111514,
+      "total_energy_over_saturation": 3.0513543282857896,
+      "scalar_kinetic_fugacity": 0.00033550616093765763,
+      "fermion_kinetic_fugacity": 7.765131858716313e-05,
+      "entropy_density_GeV3": 4.428122899398337e-09,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 9.414691248821327e-14
+    },
+    {
+      "run": "12-vacuum-24-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 0.0,
+      "nsteps": 24,
+      "actual_visible_T_GeV": 0.01199971004650734,
+      "species_counts_GeV3": [
+        5.006944838448931e-11,
+        1.3026763142401972e-10
+      ],
+      "retained_dark_kinetic_energy_GeV4": 4.769177877851291e-12,
+      "saturation_T_GeV": 0.0007435204622226105,
+      "common_T_GeV": 0.011109834549143868,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 18.883103490513072,
+      "total_energy_over_saturation": 2.580385158209001,
+      "scalar_kinetic_fugacity": 0.00036035192977747405,
+      "fermion_kinetic_fugacity": 6.855502284559512e-05,
+      "entropy_density_GeV3": 2.2555740927305105e-09,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 6.661338147750939e-16
+    },
+    {
+      "run": "12-vacuum-48-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 4.440892098500626e-16,
+      "nsteps": 48,
+      "actual_visible_T_GeV": 0.011999709717942168,
+      "species_counts_GeV3": [
+        5.014982662987293e-11,
+        1.3042841669184513e-10
+      ],
+      "retained_dark_kinetic_energy_GeV4": 4.773910328277924e-12,
+      "saturation_T_GeV": 0.0007439181370067414,
+      "common_T_GeV": 0.01110613873924711,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 18.86540717670529,
+      "total_energy_over_saturation": 2.579823157136211,
+      "scalar_kinetic_fugacity": 0.0003612908143787814,
+      "fermion_kinetic_fugacity": 6.868858062898092e-05,
+      "entropy_density_GeV3": 2.2581787341064543e-09,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 2.220446049250313e-16
+    },
+    {
+      "run": "12-quantum-48-2026-11-26.json",
+      "quadrature_refinement_relative_defect": 0.0,
+      "nsteps": 48,
+      "actual_visible_T_GeV": 0.01199970971941998,
+      "species_counts_GeV3": [
+        5.0149826620298566e-11,
+        1.3042750151765793e-10
+      ],
+      "retained_dark_kinetic_energy_GeV4": 4.773889485296816e-12,
+      "saturation_T_GeV": 0.0007439181369593974,
+      "common_T_GeV": 0.011106140678862985,
+      "normal_common_phase": true,
+      "kinetic_energy_over_saturation": 18.865404589479656,
+      "total_energy_over_saturation": 2.579826943128383,
+      "scalar_kinetic_fugacity": 0.00036129062502754486,
+      "fermion_kinetic_fugacity": 6.868807295770009e-05,
+      "entropy_density_GeV3": 2.2581680845279126e-09,
+      "continuum_common_state_condensate_fraction": 0.0,
+      "closure_kinetic_relative_defect": 0.0
+    }
+  ]
+}

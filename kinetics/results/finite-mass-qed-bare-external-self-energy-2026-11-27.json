@@ -1,0 +1,499 @@
+{
+  "scope": "Bare Feynman-gauge on-shell self-energy projection and fixed-spin energy derivative; no thermal sign, medium pole normalization, width or matched rate assigned.",
+  "photon_rest_limit_defect": 0.0,
+  "rows": [
+    {
+      "grid": "fine",
+      "species": "parent",
+      "energy": 1.4286858845268333,
+      "maximum_independent_angular_and_trace_defect": 2.0228912165146107e-10,
+      "central_charged": [
+        {
+          "sign": -1,
+          "onshell_projection": 0.5218224417208377,
+          "fixed_spin_energy_derivative": -2.6085879289265987,
+          "analytic_odd_component": 0.0,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": -2.6085879289266254,
+              "subtracted_guarded_derivative": -2.6085879289266254
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": -2.6085879289266254,
+              "subtracted_guarded_derivative": -2.6085879289266254
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": -2.6085879289266254,
+              "subtracted_guarded_derivative": -2.6085879289266254
+            }
+          ],
+          "measured_step_log_coefficient": 0.0,
+          "quadrature_defect": 1.021405182655144e-14,
+          "guard_replay_defect": 2.6645352591003757e-14
+        },
+        {
+          "sign": 1,
+          "onshell_projection": 0.5166588023006345,
+          "fixed_spin_energy_derivative": 0.3032492302226677,
+          "analytic_odd_component": -0.07043960309286239,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": 0.30324903163049205,
+              "subtracted_guarded_derivative": 0.30324903163049205
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": 0.30324922823674866,
+              "subtracted_guarded_derivative": 0.30324922823674866
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": 0.3032492302028111,
+              "subtracted_guarded_derivative": 0.3032492302028111
+            }
+          ],
+          "measured_step_log_coefficient": 4.269250309047915e-10,
+          "quadrature_defect": 1.7763568394002505e-15,
+          "guard_replay_defect": 1.985661635117708e-11
+        }
+      ],
+      "tuned_energy": null,
+      "tuned_charged": null,
+      "bare_null_photon": {
+        "angular_remainder_after_minus4_over_k2": 7.932432190470786,
+        "bare_onshell_at_T1": -2.3027232013186896,
+        "bare_regular_derivative_at_T1": 6.524163971534447,
+        "controls": [
+          {
+            "k": 1e-06,
+            "angular_onshell": -2.79977568429903,
+            "angular_energy_derivative": -3999999999992.068,
+            "relative_defect": 1.3022916078853086e-13
+          },
+          {
+            "k": 0.0005,
+            "angular_onshell": -2.7997756842993917,
+            "angular_energy_derivative": -15999992.067567812,
+            "relative_defect": 9.992007221626409e-16
+          },
+          {
+            "k": 0.01,
+            "angular_onshell": -2.799775684299393,
+            "angular_energy_derivative": -39992.06756780953,
+            "relative_defect": 4.440892098500626e-16
+          },
+          {
+            "k": 0.8,
+            "angular_onshell": -2.799775684299393,
+            "angular_energy_derivative": 1.6824321904707875,
+            "relative_defect": 4.440892098500626e-16
+          },
+          {
+            "k": 4.0,
+            "angular_onshell": -2.7997756842993935,
+            "angular_energy_derivative": 7.682432190470787,
+            "relative_defect": 3.3306690738754696e-16
+          }
+        ]
+      }
+    },
+    {
+      "grid": "fine",
+      "species": "fermion",
+      "energy": 1.4278138189498386,
+      "maximum_independent_angular_and_trace_defect": 1.1227556617711063e-10,
+      "central_charged": [
+        {
+          "sign": -1,
+          "onshell_projection": 0.05298891310956648,
+          "fixed_spin_energy_derivative": -0.5369028949206534,
+          "analytic_odd_component": 0.0,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": -0.536902894920659,
+              "subtracted_guarded_derivative": -0.536902894920659
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": -0.536902894920659,
+              "subtracted_guarded_derivative": -0.536902894920659
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": -0.536902894920659,
+              "subtracted_guarded_derivative": -0.536902894920659
+            }
+          ],
+          "measured_step_log_coefficient": 0.0,
+          "quadrature_defect": 2.220446049250313e-15,
+          "guard_replay_defect": 5.662137425588298e-15
+        },
+        {
+          "sign": 1,
+          "onshell_projection": 0.052984509225158086,
+          "fixed_spin_energy_derivative": -0.26049623686193557,
+          "analytic_odd_component": -0.3977919670829335,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": -0.2604962935474831,
+              "subtracted_guarded_derivative": -0.2604962935474831
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": -0.2604962374287924,
+              "subtracted_guarded_derivative": -0.2604962374287924
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": -0.26049623686760554,
+              "subtracted_guarded_derivative": -0.26049623686760554
+            }
+          ],
+          "measured_step_log_coefficient": 1.218601815097791e-10,
+          "quadrature_defect": 5.551115123125783e-16,
+          "guard_replay_defect": 5.669964497911906e-12
+        }
+      ],
+      "tuned_energy": 1.4222253862812027,
+      "tuned_charged": {
+        "sign": 1,
+        "onshell_projection": 0.05319268422780946,
+        "fixed_spin_energy_derivative": -0.419336886030212,
+        "analytic_odd_component": -0.556062621826344,
+        "radial_step_jump": -0.056034228171934014,
+        "expected_step_log_coefficient": -0.05603410351124059,
+        "guard_ladder": [
+          {
+            "guard": 1e-06,
+            "raw_guarded_derivative": -0.7389433199264,
+            "subtracted_guarded_derivative": -0.4193369823359145
+          },
+          {
+            "guard": 1e-08,
+            "raw_guarded_derivative": -0.9969898074684096,
+            "subtracted_guarded_derivative": -0.4193368869893882
+          },
+          {
+            "guard": 1e-10,
+            "raw_guarded_derivative": -1.2550363894015535,
+            "subtracted_guarded_derivative": -0.4193368860339962
+          }
+        ],
+        "measured_step_log_coefficient": -0.05603410330377987,
+        "quadrature_defect": 5.551115123125783e-16,
+        "guard_replay_defect": 3.784195179434846e-12
+      },
+      "bare_null_photon": {
+        "angular_remainder_after_minus4_over_k2": 13.456828665392612,
+        "bare_onshell_at_T1": -2.3041296351341947,
+        "bare_regular_derivative_at_T1": 11.06779795172203,
+        "controls": [
+          {
+            "k": 1e-06,
+            "angular_onshell": -2.8014857027662172,
+            "angular_energy_derivative": -3999999999986.542,
+            "relative_defect": 1.3322676295501878e-15
+          },
+          {
+            "k": 0.0005,
+            "angular_onshell": -2.8014857027662154,
+            "angular_energy_derivative": -15999986.543171328,
+            "relative_defect": 6.661338147750939e-16
+          },
+          {
+            "k": 0.01,
+            "angular_onshell": -2.8014857027662154,
+            "angular_energy_derivative": -39986.543171334575,
+            "relative_defect": 7.771561172376096e-16
+          },
+          {
+            "k": 0.8,
+            "angular_onshell": -2.8014857027662154,
+            "angular_energy_derivative": 7.206828665392615,
+            "relative_defect": 6.661338147750939e-16
+          },
+          {
+            "k": 4.0,
+            "angular_onshell": -2.8014857027662154,
+            "angular_energy_derivative": 13.206828665392608,
+            "relative_defect": 6.661338147750939e-16
+          }
+        ]
+      }
+    },
+    {
+      "grid": "third",
+      "species": "parent",
+      "energy": 1.4366125844535822,
+      "maximum_independent_angular_and_trace_defect": 1.340177131596565e-10,
+      "central_charged": [
+        {
+          "sign": -1,
+          "onshell_projection": 0.5207073159646104,
+          "fixed_spin_energy_derivative": -2.597302894185293,
+          "analytic_odd_component": 0.0,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": -2.5973028941853205,
+              "subtracted_guarded_derivative": -2.5973028941853205
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": -2.5973028941853205,
+              "subtracted_guarded_derivative": -2.5973028941853205
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": -2.5973028941853205,
+              "subtracted_guarded_derivative": -2.5973028941853205
+            }
+          ],
+          "measured_step_log_coefficient": 0.0,
+          "quadrature_defect": 1.0658141036401503e-14,
+          "guard_replay_defect": 2.7533531010703882e-14
+        },
+        {
+          "sign": 1,
+          "onshell_projection": 0.5155791042245923,
+          "fixed_spin_energy_derivative": 0.41671481123725984,
+          "analytic_odd_component": 0.03687306279112915,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": 0.4167145787653159,
+              "subtracted_guarded_derivative": 0.4167145787653159
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": 0.41671480891254387,
+              "subtracted_guarded_derivative": 0.41671480891254387
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": 0.41671481121401577,
+              "subtracted_guarded_derivative": 0.41671481121401577
+            }
+          ],
+          "measured_step_log_coefficient": 4.997582736348948e-10,
+          "quadrature_defect": 1.8318679906315083e-15,
+          "guard_replay_defect": 2.3244073332762127e-11
+        }
+      ],
+      "tuned_energy": 1.432354436522056,
+      "tuned_charged": {
+        "sign": 1,
+        "onshell_projection": 0.5171054917345352,
+        "fixed_spin_energy_derivative": 0.5796042059659391,
+        "analytic_odd_component": 0.20285317431604102,
+        "radial_step_jump": 0.06335863224304418,
+        "expected_step_log_coefficient": 0.06332001803138664,
+        "guard_ladder": [
+          {
+            "guard": 1e-06,
+            "raw_guarded_derivative": 0.9407676262033591,
+            "subtracted_guarded_derivative": 0.5796040170610213
+          },
+          {
+            "guard": 1e-08,
+            "raw_guarded_derivative": 1.2323672724292147,
+            "subtracted_guarded_derivative": 0.5796042040725069
+          },
+          {
+            "guard": 1e-10,
+            "raw_guarded_derivative": 1.5239667335115201,
+            "subtracted_guarded_derivative": 0.5796042059404422
+          }
+        ],
+        "measured_step_log_coefficient": 0.06332001843700362,
+        "quadrature_defect": 2.3314683517128287e-15,
+        "guard_replay_defect": 2.5496937894331495e-11
+      },
+      "bare_null_photon": {
+        "angular_remainder_after_minus4_over_k2": 7.855820750669174,
+        "bare_onshell_at_T1": -2.290017621520251,
+        "bare_regular_derivative_at_T1": 6.461153587914466,
+        "controls": [
+          {
+            "k": 1e-06,
+            "angular_onshell": -2.7843275516904455,
+            "angular_energy_derivative": -3999999999992.1445,
+            "relative_defect": 1.6853185513809876e-13
+          },
+          {
+            "k": 0.0005,
+            "angular_onshell": -2.7843275516909127,
+            "angular_energy_derivative": -15999992.144179253,
+            "relative_defect": 7.771561172376096e-16
+          },
+          {
+            "k": 0.01,
+            "angular_onshell": -2.784327551690913,
+            "angular_energy_derivative": -39992.14417924933,
+            "relative_defect": 6.661338147750939e-16
+          },
+          {
+            "k": 0.8,
+            "angular_onshell": -2.7843275516909136,
+            "angular_energy_derivative": 1.6058207506691737,
+            "relative_defect": 9.992007221626409e-16
+          },
+          {
+            "k": 4.0,
+            "angular_onshell": -2.784327551690913,
+            "angular_energy_derivative": 7.605820750669174,
+            "relative_defect": 6.661338147750939e-16
+          }
+        ]
+      }
+    },
+    {
+      "grid": "third",
+      "species": "fermion",
+      "energy": 1.435745333314809,
+      "maximum_independent_angular_and_trace_defect": 9.716572403443979e-11,
+      "central_charged": [
+        {
+          "sign": -1,
+          "onshell_projection": 0.051869368371420255,
+          "fixed_spin_energy_derivative": -0.5246045289597406,
+          "analytic_odd_component": 0.0,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": -0.5246045289597464,
+              "subtracted_guarded_derivative": -0.5246045289597464
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": -0.5246045289597464,
+              "subtracted_guarded_derivative": -0.5246045289597464
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": -0.5246045289597464,
+              "subtracted_guarded_derivative": -0.5246045289597464
+            }
+          ],
+          "measured_step_log_coefficient": 0.0,
+          "quadrature_defect": 2.1094237467877974e-15,
+          "guard_replay_defect": 5.773159728050814e-15
+        },
+        {
+          "sign": 1,
+          "onshell_projection": 0.05186508576885431,
+          "fixed_spin_energy_derivative": -0.351917142392004,
+          "analytic_odd_component": -0.4880799470496784,
+          "radial_step_jump": 0.0,
+          "expected_step_log_coefficient": 0.0,
+          "guard_ladder": [
+            {
+              "guard": 1e-06,
+              "raw_guarded_derivative": -0.3519172680657586,
+              "subtracted_guarded_derivative": -0.3519172680657586
+            },
+            {
+              "guard": 1e-08,
+              "raw_guarded_derivative": -0.35191714364874416,
+              "subtracted_guarded_derivative": -0.35191714364874416
+            },
+            {
+              "guard": 1e-10,
+              "raw_guarded_derivative": -0.3519171424045743,
+              "subtracted_guarded_derivative": -0.3519171424045743
+            }
+          ],
+          "measured_step_log_coefficient": 2.7016805633362197e-10,
+          "quadrature_defect": 5.551115123125783e-16,
+          "guard_replay_defect": 1.257027815171341e-11
+        }
+      ],
+      "tuned_energy": 1.4400031249966092,
+      "tuned_charged": {
+        "sign": 1,
+        "onshell_projection": 0.05171174854655256,
+        "fixed_spin_energy_derivative": -0.5883488264308653,
+        "analytic_odd_component": -0.7249094657618466,
+        "radial_step_jump": -0.08952466519565117,
+        "expected_step_log_coefficient": -0.08952447091532614,
+        "guard_ladder": [
+          {
+            "guard": 1e-06,
+            "raw_guarded_derivative": -1.0989769978201769,
+            "subtracted_guarded_derivative": -0.5883488895604708
+          },
+          {
+            "guard": 1e-08,
+            "raw_guarded_derivative": -1.5112523596912837,
+            "subtracted_guarded_derivative": -0.5883488270559596
+          },
+          {
+            "guard": 1e-10,
+            "raw_guarded_derivative": -1.9235277834387767,
+            "subtracted_guarded_derivative": -0.5883488264278347
+          }
+        ],
+        "measured_step_log_coefficient": -0.08952447077893054,
+        "quadrature_defect": 5.551115123125783e-16,
+        "guard_replay_defect": 3.03057579031929e-12
+      },
+      "bare_null_photon": {
+        "angular_remainder_after_minus4_over_k2": 13.319308902678967,
+        "bare_onshell_at_T1": -2.2914008893909457,
+        "bare_regular_derivative_at_T1": 10.95469248044575,
+        "controls": [
+          {
+            "k": 1e-06,
+            "angular_onshell": -2.7860094037463528,
+            "angular_energy_derivative": -3999999999986.6797,
+            "relative_defect": 2.220446049250313e-16
+          },
+          {
+            "k": 0.0005,
+            "angular_onshell": -2.7860094037463523,
+            "angular_energy_derivative": -15999986.680691091,
+            "relative_defect": 3.3306690738754696e-16
+          },
+          {
+            "k": 0.01,
+            "angular_onshell": -2.7860094037463523,
+            "angular_energy_derivative": -39986.680691097295,
+            "relative_defect": 7.771561172376096e-16
+          },
+          {
+            "k": 0.8,
+            "angular_onshell": -2.7860094037463523,
+            "angular_energy_derivative": 7.06930890267897,
+            "relative_defect": 3.3306690738754696e-16
+          },
+          {
+            "k": 4.0,
+            "angular_onshell": -2.7860094037463523,
+            "angular_energy_derivative": 13.069308902678966,
+            "relative_defect": 3.3306690738754696e-16
+          }
+        ]
+      }
+    }
+  ]
+}

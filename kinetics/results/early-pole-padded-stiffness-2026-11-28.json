@@ -1,0 +1,152 @@
+[
+  {
+    "grid": "fine",
+    "rows": [
+      {
+        "eta": 0.0,
+        "dimension": 301,
+        "jacobian_nonzeros": 20172,
+        "largest_daughter_or_parent_diagonal_magnitude": 21.40657448934784,
+        "inverse_diagonal_scale_log_a": 0.04671462033767297,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          1.4222222222222223,
+          1.4666666666666668
+        ],
+        "finite_difference_relative_defect": 1.2453462841508713e-11,
+        "relative_weighted_jacobian_left_null_defect": 4.946181096504542e-16
+      },
+      {
+        "eta": 0.125,
+        "dimension": 769,
+        "jacobian_nonzeros": 68264,
+        "largest_daughter_or_parent_diagonal_magnitude": 209.80450950604072,
+        "inverse_diagonal_scale_log_a": 0.004766341783379102,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          1.4222222222222223,
+          1.4277777777777778
+        ],
+        "finite_difference_relative_defect": 3.4000300371801606e-12,
+        "relative_weighted_jacobian_left_null_defect": 2.049899262390646e-16
+      },
+      {
+        "eta": 0.015625,
+        "dimension": 769,
+        "jacobian_nonzeros": 68120,
+        "largest_daughter_or_parent_diagonal_magnitude": 1485.6908377599073,
+        "inverse_diagonal_scale_log_a": 0.0006730875459310085,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          1.4222222222222223,
+          1.4229166666666668
+        ],
+        "finite_difference_relative_defect": 1.0112217364583983e-11,
+        "relative_weighted_jacobian_left_null_defect": 2.059244244800075e-16
+      },
+      {
+        "eta": 0.001953125,
+        "dimension": 769,
+        "jacobian_nonzeros": 68070,
+        "largest_daughter_or_parent_diagonal_magnitude": 68837.47079961658,
+        "inverse_diagonal_scale_log_a": 1.4526971842282879e-05,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          0.0,
+          8.680555555555556e-05
+        ],
+        "finite_difference_relative_defect": 2.610088219330479e-11,
+        "relative_weighted_jacobian_left_null_defect": 6.07458431370886e-16
+      },
+      {
+        "eta": 0.000244140625,
+        "dimension": 769,
+        "jacobian_nonzeros": 68060,
+        "largest_daughter_or_parent_diagonal_magnitude": 35324086.66024304,
+        "inverse_diagonal_scale_log_a": 2.830929528676226e-08,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          0.0,
+          1.0850694444444445e-05
+        ],
+        "finite_difference_relative_defect": 1.5759442766597743e-11,
+        "relative_weighted_jacobian_left_null_defect": 3.771863392221791e-16
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "rows": [
+      {
+        "eta": 0.0,
+        "dimension": 429,
+        "jacobian_nonzeros": 40843,
+        "largest_daughter_or_parent_diagonal_magnitude": 131.42709027904473,
+        "inverse_diagonal_scale_log_a": 0.007608781400218248,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          1.44,
+          1.472
+        ],
+        "finite_difference_relative_defect": 2.7475424900653274e-12,
+        "relative_weighted_jacobian_left_null_defect": 9.298894016319242e-16
+      },
+      {
+        "eta": 0.125,
+        "dimension": 1093,
+        "jacobian_nonzeros": 139055,
+        "largest_daughter_or_parent_diagonal_magnitude": 238.67745860476222,
+        "inverse_diagonal_scale_log_a": 0.004189754683352605,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          1.44,
+          1.444
+        ],
+        "finite_difference_relative_defect": 4.085446521724795e-12,
+        "relative_weighted_jacobian_left_null_defect": 3.4110946091650194e-16
+      },
+      {
+        "eta": 0.015625,
+        "dimension": 1093,
+        "jacobian_nonzeros": 138771,
+        "largest_daughter_or_parent_diagonal_magnitude": 1601.032979648597,
+        "inverse_diagonal_scale_log_a": 0.0006245967526661975,
+        "smallest_scale_cell_species": "parent",
+        "smallest_scale_cell_edges": [
+          1.4314814814814814,
+          1.4320312499999999
+        ],
+        "finite_difference_relative_defect": 4.310514350507583e-12,
+        "relative_weighted_jacobian_left_null_defect": 7.279248356666301e-16
+      },
+      {
+        "eta": 0.001953125,
+        "dimension": 1093,
+        "jacobian_nonzeros": 138733,
+        "largest_daughter_or_parent_diagonal_magnitude": 109359.4816656693,
+        "inverse_diagonal_scale_log_a": 9.144154533003106e-06,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          0.0,
+          6.25e-05
+        ],
+        "finite_difference_relative_defect": 2.0040363926886623e-11,
+        "relative_weighted_jacobian_left_null_defect": 4.613042488347961e-16
+      },
+      {
+        "eta": 0.000244140625,
+        "dimension": 1093,
+        "jacobian_nonzeros": 138729,
+        "largest_daughter_or_parent_diagonal_magnitude": 56128635.824350595,
+        "inverse_diagonal_scale_log_a": 1.781621778817871e-08,
+        "smallest_scale_cell_species": "daughter",
+        "smallest_scale_cell_edges": [
+          0.0,
+          7.8125e-06
+        ],
+        "finite_difference_relative_defect": 1.0345623748868757e-11,
+        "relative_weighted_jacobian_left_null_defect": 6.498374695649665e-16
+      }
+    ]
+  }
+]

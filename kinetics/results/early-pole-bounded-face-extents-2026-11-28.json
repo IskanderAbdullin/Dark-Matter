@@ -1,0 +1,278 @@
+[
+  {
+    "grid": "fine",
+    "scheme": "step",
+    "scope": "Frozen chart advance, no mass or expansion feedback",
+    "last_scalar_number_step_relative": 0.00010896526971677203,
+    "last_delta_ratio": 2.0009787584415584,
+    "trials": [
+      {
+        "steps": 32,
+        "delta_species": [
+          7.231725603969407e-08,
+          7.231725603383419e-08,
+          -7.231725608107019e-08
+        ],
+        "energy_residual": -2.128649129693886e-16,
+        "min_occupation": 1.3522531746800301e-20,
+        "max_fermion": 0.9999970708519358,
+        "max_limited_absolute_extent_fraction": 6.15002887238612e-08
+      },
+      {
+        "steps": 64,
+        "delta_species": [
+          7.225410186183735e-08,
+          7.22541018654422e-08,
+          -7.225410191844734e-08
+        ],
+        "energy_residual": -4.973043901513171e-19,
+        "min_occupation": 1.3522531746800258e-20,
+        "max_fermion": 0.9999981189267629,
+        "max_limited_absolute_extent_fraction": 3.4815620309423204e-08
+      },
+      {
+        "steps": 128,
+        "delta_species": [
+          7.222258674993955e-08,
+          7.222258677656226e-08,
+          -7.222258665722039e-08
+        ],
+        "energy_residual": 1.0840552246654991e-16,
+        "min_occupation": 1.3522531746800258e-20,
+        "max_fermion": 0.9999988757280691,
+        "max_limited_absolute_extent_fraction": 2.1859797673452788e-08
+      },
+      {
+        "steps": 256,
+        "delta_species": [
+          7.22068446877551e-08,
+          7.220684471516625e-08,
+          -7.220684390818095e-08
+        ],
+        "energy_residual": 3.564958113010059e-15,
+        "min_occupation": 1.3522531746800258e-20,
+        "max_fermion": 0.9999993619207427,
+        "max_limited_absolute_extent_fraction": 1.208350081033642e-08
+      },
+      {
+        "steps": 512,
+        "delta_species": [
+          7.21989775066978e-08,
+          7.219897742209683e-08,
+          -7.219897941496625e-08
+        ],
+        "energy_residual": -5.7079437522674406e-15,
+        "min_occupation": 1.3522531746800643e-20,
+        "max_fermion": 0.9999996443239324,
+        "max_limited_absolute_extent_fraction": 1.773296101008281e-08
+      }
+    ]
+  },
+  {
+    "grid": "fine",
+    "scheme": "ssp",
+    "scope": "Frozen chart advance, no mass or expansion feedback",
+    "last_scalar_number_step_relative": 2.2150222239665313e-08,
+    "last_delta_ratio": 4.236321884802228,
+    "trials": [
+      {
+        "steps": 32,
+        "delta_species": [
+          7.219096802588557e-08,
+          7.219096802249283e-08,
+          -7.219096807186573e-08
+        ],
+        "energy_residual": -2.1798252275923062e-16,
+        "min_occupation": 1.3522531746800301e-20,
+        "max_fermion": 0.9999969729576155,
+        "max_limited_absolute_extent_fraction": 6.15002887238612e-08
+      },
+      {
+        "steps": 64,
+        "delta_species": [
+          7.219107672135445e-08,
+          7.219107672554264e-08,
+          -7.219107677767105e-08
+        ],
+        "energy_residual": 1.7912181418405587e-18,
+        "min_occupation": 1.3522531746800258e-20,
+        "max_fermion": 0.9999981189267616,
+        "max_limited_absolute_extent_fraction": 3.512202731273612e-08
+      },
+      {
+        "steps": 128,
+        "delta_species": [
+          7.219110385387695e-08,
+          7.219110386532119e-08,
+          -7.219110374062384e-08
+        ],
+        "energy_residual": 1.167794726126205e-16,
+        "min_occupation": 1.3522531746800258e-20,
+        "max_fermion": 0.9999988757280684,
+        "max_limited_absolute_extent_fraction": 2.5997133600297587e-08
+      },
+      {
+        "steps": 256,
+        "delta_species": [
+          7.219111062796399e-08,
+          7.219111066397588e-08,
+          -7.219110985164157e-08
+        ],
+        "energy_residual": 3.572648847543782e-15,
+        "min_occupation": 1.3522531746800258e-20,
+        "max_fermion": 0.9999993619207425,
+        "max_limited_absolute_extent_fraction": 2.1285969892485297e-08
+      },
+      {
+        "steps": 512,
+        "delta_species": [
+          7.219111222701316e-08,
+          7.219111225121925e-08,
+          -7.219111423863702e-08
+        ],
+        "energy_residual": -5.699522987447801e-15,
+        "min_occupation": 1.3522531746800643e-20,
+        "max_fermion": 0.9999996443239323,
+        "max_limited_absolute_extent_fraction": 1.8276137985050698e-08
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "scheme": "step",
+    "scope": "Frozen chart advance, no mass or expansion feedback",
+    "last_scalar_number_step_relative": 0.00014900668593846093,
+    "last_delta_ratio": 2.0013835981708996,
+    "trials": [
+      {
+        "steps": 32,
+        "delta_species": [
+          5.773865061107289e-08,
+          5.773865061787812e-08,
+          -5.773865056854576e-08
+        ],
+        "energy_residual": 1.8772883654881263e-16,
+        "min_occupation": 1.852884572118782e-21,
+        "max_fermion": 0.9999963215651898,
+        "max_limited_absolute_extent_fraction": 6.940341951295763e-08
+      },
+      {
+        "steps": 64,
+        "delta_species": [
+          5.7669645268598994e-08,
+          5.7669645266112754e-08,
+          -5.766964533433083e-08
+        ],
+        "energy_residual": -2.520925891301721e-16,
+        "min_occupation": 8.999725064576941e-22,
+        "max_fermion": 0.999997596033922,
+        "max_limited_absolute_extent_fraction": 3.255027553845568e-08
+      },
+      {
+        "steps": 128,
+        "delta_species": [
+          5.7635237452082566e-08,
+          5.763523745372514e-08,
+          -5.763523712141427e-08
+        ],
+        "energy_residual": 1.4276818821142283e-15,
+        "min_occupation": 1.1346241223221323e-20,
+        "max_fermion": 0.9999985314292611,
+        "max_limited_absolute_extent_fraction": 1.240758570822708e-08
+      },
+      {
+        "steps": 256,
+        "delta_species": [
+          5.7618057181707455e-08,
+          5.761805718678753e-08,
+          -5.761805737661724e-08
+        ],
+        "energy_residual": -6.641363442837337e-16,
+        "min_occupation": 1.1346241223221516e-20,
+        "max_fermion": 0.9999991494447535,
+        "max_limited_absolute_extent_fraction": 1.6077885570465027e-08
+      },
+      {
+        "steps": 512,
+        "delta_species": [
+          5.760947298505929e-08,
+          5.760947287090624e-08,
+          -5.7609472521483664e-08
+        ],
+        "energy_residual": -6.289215562218012e-16,
+        "min_occupation": 1.1580528575742387e-22,
+        "max_fermion": 0.9999995206623733,
+        "max_limited_absolute_extent_fraction": 9.999868778338403e-09
+      }
+    ]
+  },
+  {
+    "grid": "third",
+    "scheme": "ssp",
+    "scope": "Frozen chart advance, no mass or expansion feedback",
+    "last_scalar_number_step_relative": 5.362936371050042e-08,
+    "last_delta_ratio": 4.0069488717016695,
+    "trials": [
+      {
+        "steps": 32,
+        "delta_species": [
+          5.7600628233174116e-08,
+          5.760062823965802e-08,
+          -5.760062818986101e-08
+        ],
+        "energy_residual": 1.854181661928085e-16,
+        "min_occupation": 1.1346241223221323e-20,
+        "max_fermion": 0.9999955712680253,
+        "max_limited_absolute_extent_fraction": 6.940341951295763e-08
+      },
+      {
+        "steps": 64,
+        "delta_species": [
+          5.760082670370571e-08,
+          5.76008267029308e-08,
+          -5.7600826773736114e-08
+        ],
+        "energy_residual": -2.5400802023572275e-16,
+        "min_occupation": 1.1346241223221323e-20,
+        "max_fermion": 0.9999975960339158,
+        "max_limited_absolute_extent_fraction": 3.802719668838553e-08
+      },
+      {
+        "steps": 128,
+        "delta_species": [
+          5.760087618358229e-08,
+          5.760087617518106e-08,
+          -5.760087583979799e-08
+        ],
+        "energy_residual": 1.4326594870260942e-15,
+        "min_occupation": 1.1346241223221323e-20,
+        "max_fermion": 0.9999985314292605,
+        "max_limited_absolute_extent_fraction": 2.498778271857254e-08
+      },
+      {
+        "steps": 256,
+        "delta_species": [
+          5.7600888561444716e-08,
+          5.760088853337537e-08,
+          -5.760088872415363e-08
+        ],
+        "energy_residual": -6.646811384630915e-16,
+        "min_occupation": 1.1346241223221516e-20,
+        "max_fermion": 0.9999991494447533,
+        "max_limited_absolute_extent_fraction": 1.9514072738439292e-08
+      },
+      {
+        "steps": 512,
+        "delta_species": [
+          5.7600891650543885e-08,
+          5.760089153385984e-08,
+          -5.7600891198029384e-08
+        ],
+        "energy_residual": -6.520096487728308e-16,
+        "min_occupation": 1.1346241223221131e-20,
+        "max_fermion": 0.9999995206623732,
+        "max_limited_absolute_extent_fraction": 1.6326643315208488e-08
+      }
+    ]
+  }
+]

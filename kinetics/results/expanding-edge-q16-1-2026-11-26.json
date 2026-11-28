@@ -1,0 +1,78 @@
+{
+  "nsteps": 1,
+  "elastic_orders": [
+    3,
+    2,
+    2,
+    8
+  ],
+  "elastic": true,
+  "prompt_until": 20.0,
+  "initial": {
+    "b": 1.0,
+    "equivalent_T_GeV": [
+      0.011158478726692058,
+      0.011087615990452755
+    ],
+    "scalar_count_over_own_saturation": 0.00029588842458695073,
+    "maximum_resolved_scalar_occupation": 0.00034845288914548724,
+    "scalar_first_cell_number_fraction": 1.9085208815865598e-08,
+    "count_defect": 0.0,
+    "dark_entropy_a3": 2.255564933350742e-09,
+    "scalar_count_below_archived_first_edge": 1.9085208815865598e-08,
+    "exterior_count_fractions_beyond_q16": [
+      0.0,
+      0.0
+    ]
+  },
+  "steps": [
+    {
+      "b": 1.1066819197,
+      "equivalent_T_GeV": [
+        0.009978275740468357,
+        0.009864887698262777
+      ],
+      "scalar_count_over_own_saturation": 0.0003052863985340266,
+      "maximum_resolved_scalar_occupation": 0.0003586832461242116,
+      "scalar_first_cell_number_fraction": 1.9653304109628674e-08,
+      "count_defect": 2.5424107263916085e-13,
+      "dark_entropy_a3": 2.2555875065818258e-09,
+      "scalar_count_below_archived_first_edge": 1.9653304109628674e-08,
+      "exterior_count_fractions_beyond_q16": [
+        0.0,
+        0.0
+      ],
+      "H_GeV": 5.249972239333046e-23,
+      "photon_temperature_GeV": 0.010849164441695078
+    }
+  ],
+  "compact_elastic": true,
+  "pivoted_prompt": false,
+  "prompt_only": false,
+  "preroll_stop": null,
+  "preroll_steps": 0,
+  "upper_support_kinematic_prompt_end": 3.6386735914348214,
+  "intervals_with_prompt": 1,
+  "actual_intervals": 1,
+  "background": "tabulated radiation",
+  "includes_retained_dark_energy_in_H": true,
+  "initial_first_cell_upper_q_over_TR": 0.005,
+  "initial_archive_shells": 19,
+  "shells": 19,
+  "refinement_stride": 0,
+  "accepted_collision_solves": 1,
+  "rejected_collision_attempts": 0,
+  "max_collision_residual": 5.083888590686912e-12,
+  "energy_ledger_defect": 5.983526380649762e-15,
+  "opposite_heat_defect": 1.5540737853632679e-13,
+  "pressure_trace_a4_energy": [
+    1.872399051496085e-24,
+    1.5011307631135462e-13
+  ],
+  "collision_energy_a4": [
+    -1.738009702831117e-14,
+    1.7380097029457227e-14
+  ],
+  "energy_ledger_defect_in_initial_kinetic_units": 9.25227045931089e-15,
+  "collision_scalar_a3_heat_over_initial_a3_kinetic": -0.0034641546224532657
+}

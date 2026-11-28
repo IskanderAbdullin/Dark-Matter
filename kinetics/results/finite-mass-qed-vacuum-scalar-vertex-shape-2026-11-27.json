@@ -1,0 +1,330 @@
+{
+  "scope": "Feynman-gauge vacuum scalar current shape relative to q\u00b2=0, common IR subtraction at M; includes relative vacuum real shape in a declared window, not an absolute or thermal correction.",
+  "stripped_amplitude_prefactor": "g^2/(16 pi^2)",
+  "rows": [
+    {
+      "grid": "fine",
+      "rows": [
+        {
+          "scalar_q2": 7.604815605791867e-07,
+          "soft_coefficient": 11.333781512976543,
+          "soft_coefficient_difference": -0.0011803310233471365,
+          "independent_spin_trace_relative_defect": 3.00523560888599e-16,
+          "subtracted_vertex_shape_difference": -0.0009625649933084901,
+          "photon_mass_ladder": [
+            {
+              "photon_mass_over_M": 0.001,
+              "vertex_shape_difference": -0.0009578260985918519,
+              "cutoff_defect": 4.738894716638242e-06
+            },
+            {
+              "photon_mass_over_M": 1e-05,
+              "vertex_shape_difference": -0.0009625168516436133,
+              "cutoff_defect": 4.81416648767663e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "vertex_shape_difference": -0.0009625645147934847,
+              "cutoff_defect": 4.785150053976395e-10
+            }
+          ]
+        },
+        {
+          "scalar_q2": 0.00055225,
+          "soft_coefficient": 10.372535495055272,
+          "soft_coefficient_difference": -0.9624263489446179,
+          "independent_spin_trace_relative_defect": 3.4694469519536137e-16,
+          "subtracted_vertex_shape_difference": -0.8828098095496912,
+          "photon_mass_ladder": [
+            {
+              "photon_mass_over_M": 0.001,
+              "vertex_shape_difference": -0.8785296069197486,
+              "cutoff_defect": 0.004280202629942664
+            },
+            {
+              "photon_mass_over_M": 1e-05,
+              "vertex_shape_difference": -0.882766306978958,
+              "cutoff_defect": 4.350257073326702e-05
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "vertex_shape_difference": -0.8828093771343859,
+              "cutoff_defect": 4.324153053403279e-07
+            }
+          ]
+        },
+        {
+          "scalar_q2": 0.0017672,
+          "soft_coefficient": 6.800079337286234,
+          "soft_coefficient_difference": -4.5348825067136564,
+          "independent_spin_trace_relative_defect": 8.033764051584277e-16,
+          "subtracted_vertex_shape_difference": -5.881023927255104,
+          "photon_mass_ladder": [
+            {
+              "photon_mass_over_M": 0.001,
+              "vertex_shape_difference": -5.851425287681014,
+              "cutoff_defect": 0.029598639574089702
+            },
+            {
+              "photon_mass_over_M": 1e-05,
+              "vertex_shape_difference": -5.880722387753163,
+              "cutoff_defect": 0.00030153950194033996
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "vertex_shape_difference": -5.881020929648088,
+              "cutoff_defect": 2.9976070159420942e-06
+            }
+          ]
+        }
+      ],
+      "vacuum_cap_shape": [
+        {
+          "parent_rest_photon_cap_over_M": 0.001,
+          "shapes_exchange_only_and_real": [
+            -0.00048128249665424505,
+            0.0040767189286933375,
+            0.000996521503657366,
+            -2.2454261211588694e-06
+          ],
+          "inclusive_shape_relative_to_q2_zero": 0.004589712509575397,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 1e-05,
+              "relative_shape": 0.004589729315887875,
+              "regulator_defect": 1.6806312477975205e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "relative_shape": 0.004589712748939476,
+              "regulator_defect": 2.393640789050133e-10
+            }
+          ]
+        },
+        {
+          "parent_rest_photon_cap_over_M": 0.01,
+          "shapes_exchange_only_and_real": [
+            -0.00048128249665424505,
+            0.0027178126191288914,
+            0.000996521503657366,
+            -2.223184993242755e-05
+          ],
+          "inclusive_shape_relative_to_q2_zero": 0.00321081977619965,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 1e-05,
+              "relative_shape": 0.003210843846365603,
+              "regulator_defect": 2.407016595328687e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "relative_shape": 0.003210820015557873,
+              "regulator_defect": 2.3935822334592016e-10
+            }
+          ]
+        },
+        {
+          "parent_rest_photon_cap_over_M": 0.05,
+          "shapes_exchange_only_and_real": [
+            -0.00048128249665424505,
+            0.0017679778700403876,
+            0.000996521503657366,
+            -0.0001062832411272141
+          ],
+          "inclusive_shape_relative_to_q2_zero": 0.002176933635916478,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 1e-05,
+              "relative_shape": 0.0021769577068308336,
+              "regulator_defect": 2.4070914355495132e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "relative_shape": 0.0021769338752787235,
+              "regulator_defect": 2.393622453022992e-10
+            }
+          ]
+        }
+      ],
+      "interchange_mass_defect": 1.7763568394002505e-15,
+      "real_band_checks": [
+        {
+          "caps": [
+            0.001,
+            0.01
+          ],
+          "absolute_defect": 1.4455450725314734e-14
+        },
+        {
+          "caps": [
+            0.01,
+            0.05
+          ],
+          "absolute_defect": 9.145462165349727e-15
+        }
+      ]
+    },
+    {
+      "grid": "third",
+      "rows": [
+        {
+          "scalar_q2": 7.521077277036578e-07,
+          "soft_coefficient": 11.333794511734634,
+          "soft_coefficient_difference": -0.0011673322652558937,
+          "independent_spin_trace_relative_defect": 2.219927793094636e-16,
+          "subtracted_vertex_shape_difference": -0.0009519628493919186,
+          "photon_mass_ladder": [
+            {
+              "photon_mass_over_M": 0.001,
+              "vertex_shape_difference": -0.0009472761496596149,
+              "cutoff_defect": 4.686699732303623e-06
+            },
+            {
+              "photon_mass_over_M": 1e-05,
+              "vertex_shape_difference": -0.0009519152379695583,
+              "cutoff_defect": 4.7611422360205324e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "vertex_shape_difference": -0.0009519623761420348,
+              "cutoff_defect": 4.732498837256571e-10
+            }
+          ]
+        },
+        {
+          "scalar_q2": 0.00055225,
+          "soft_coefficient": 10.372535495055272,
+          "soft_coefficient_difference": -0.9624263489446179,
+          "independent_spin_trace_relative_defect": 3.4694469519536137e-16,
+          "subtracted_vertex_shape_difference": -0.8828098095496912,
+          "photon_mass_ladder": [
+            {
+              "photon_mass_over_M": 0.001,
+              "vertex_shape_difference": -0.8785296069197486,
+              "cutoff_defect": 0.004280202629942664
+            },
+            {
+              "photon_mass_over_M": 1e-05,
+              "vertex_shape_difference": -0.882766306978958,
+              "cutoff_defect": 4.350257073326702e-05
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "vertex_shape_difference": -0.8828093771343859,
+              "cutoff_defect": 4.324153053403279e-07
+            }
+          ]
+        },
+        {
+          "scalar_q2": 0.0017672,
+          "soft_coefficient": 6.800079337286234,
+          "soft_coefficient_difference": -4.5348825067136564,
+          "independent_spin_trace_relative_defect": 8.033764051584277e-16,
+          "subtracted_vertex_shape_difference": -5.881023927255104,
+          "photon_mass_ladder": [
+            {
+              "photon_mass_over_M": 0.001,
+              "vertex_shape_difference": -5.851425287681014,
+              "cutoff_defect": 0.029598639574089702
+            },
+            {
+              "photon_mass_over_M": 1e-05,
+              "vertex_shape_difference": -5.880722387753163,
+              "cutoff_defect": 0.00030153950194033996
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "vertex_shape_difference": -5.881020929648088,
+              "cutoff_defect": 2.9976070159420942e-06
+            }
+          ]
+        }
+      ],
+      "vacuum_cap_shape": [
+        {
+          "parent_rest_photon_cap_over_M": 0.001,
+          "shapes_exchange_only_and_real": [
+            -0.0004759814246959593,
+            0.0040318228087563,
+            0.0009855478951039665,
+            -2.2206956752281876e-06
+          ],
+          "inclusive_shape_relative_to_q2_zero": 0.004539168583488915,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 1e-05,
+              "relative_shape": 0.004539185204677225,
+              "regulator_defect": 1.6621188310243784e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "relative_shape": 0.0045391688202773214,
+              "regulator_defect": 2.3678840659069333e-10
+            }
+          ]
+        },
+        {
+          "parent_rest_photon_cap_over_M": 0.01,
+          "shapes_exchange_only_and_real": [
+            -0.0004759814246959593,
+            0.0026878818725041996,
+            0.0009855478951039665,
+            -2.198699565585105e-05
+          ],
+          "inclusive_shape_relative_to_q2_zero": 0.0031754613472563947,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 1e-05,
+              "relative_shape": 0.0031754851523512714,
+              "regulator_defect": 2.3805094876653415e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "relative_shape": 0.003175461584040206,
+              "regulator_defect": 2.3678381130820547e-10
+            }
+          ]
+        },
+        {
+          "parent_rest_photon_cap_over_M": 0.05,
+          "shapes_exchange_only_and_real": [
+            -0.0004759814246959593,
+            0.0017485074704647163,
+            0.0009855478951039665,
+            -0.00010511268442231492
+          ],
+          "inclusive_shape_relative_to_q2_zero": 0.0021529612564505363,
+          "regulator_ladder": [
+            {
+              "photon_mass_over_M": 1e-05,
+              "relative_shape": 0.002152985062285925,
+              "regulator_defect": 2.3805835388905627e-08
+            },
+            {
+              "photon_mass_over_M": 1e-07,
+              "relative_shape": 0.0021529614932415814,
+              "regulator_defect": 2.367910451051003e-10
+            }
+          ]
+        }
+      ],
+      "interchange_mass_defect": 1.7763568394002505e-15,
+      "real_band_checks": [
+        {
+          "caps": [
+            0.001,
+            0.01
+          ],
+          "absolute_defect": 2.0599841277224584e-14
+        },
+        {
+          "caps": [
+            0.01,
+            0.05
+          ],
+          "absolute_defect": 1.697253448895708e-14
+        }
+      ]
+    }
+  ]
+}

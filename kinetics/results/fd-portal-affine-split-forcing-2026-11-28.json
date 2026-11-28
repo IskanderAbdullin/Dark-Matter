@@ -1,0 +1,86 @@
+{
+  "manufactured_samples": [
+    {
+      "z": 0.05,
+      "homogeneous_exact": 0.951229424500714,
+      "homogeneous_midpoint": 0.951219512195122,
+      "homogeneous_exact_split_steady_forcing_ratio": 1.0002083246532945,
+      "midpoint_split_steady_forcing_ratio": 1.0000000000000013
+    },
+    {
+      "z": 0.25,
+      "homogeneous_exact": 0.7788007830714049,
+      "homogeneous_midpoint": 0.7777777777777778,
+      "homogeneous_exact_split_steady_forcing_ratio": 1.0052029160469498,
+      "midpoint_split_steady_forcing_ratio": 1.0
+    },
+    {
+      "z": 1.0,
+      "homogeneous_exact": 0.36787944117144233,
+      "homogeneous_midpoint": 0.3333333333333333,
+      "homogeneous_exact_split_steady_forcing_ratio": 1.0819767068693265,
+      "midpoint_split_steady_forcing_ratio": 0.9999999999999999
+    },
+    {
+      "z": 2.0,
+      "homogeneous_exact": 0.1353352832366127,
+      "homogeneous_midpoint": 0.0,
+      "homogeneous_exact_split_steady_forcing_ratio": 1.3130352854993315,
+      "midpoint_split_steady_forcing_ratio": 1.0
+    },
+    {
+      "z": 4.0,
+      "homogeneous_exact": 0.01831563888873418,
+      "homogeneous_midpoint": -0.3333333333333333,
+      "homogeneous_exact_split_steady_forcing_ratio": 2.0746294414550963,
+      "midpoint_split_steady_forcing_ratio": 1.0000000000000002
+    },
+    {
+      "z": 8.0,
+      "homogeneous_exact": 0.00033546262790251185,
+      "homogeneous_midpoint": -0.6,
+      "homogeneous_exact_split_steady_forcing_ratio": 4.002684601606729,
+      "midpoint_split_steady_forcing_ratio": 1.0
+    },
+    {
+      "z": 20.0,
+      "homogeneous_exact": 2.061153622438558e-09,
+      "homogeneous_midpoint": -0.8181818181818182,
+      "homogeneous_exact_split_steady_forcing_ratio": 10.000000041223073,
+      "midpoint_split_steady_forcing_ratio": 0.9999999999999997
+    },
+    {
+      "z": 80.0,
+      "homogeneous_exact": 1.804851387845415e-35,
+      "homogeneous_midpoint": -0.9512195121951219,
+      "homogeneous_exact_split_steady_forcing_ratio": 40.0,
+      "midpoint_split_steady_forcing_ratio": 1.0000000000000009
+    }
+  ],
+  "compared_probe": [
+    {
+      "T_SM": 0.64135,
+      "linear_constant_forcing_model": {
+        "z": 1.7712826233265353,
+        "homogeneous_exact": 0.17011465581010474,
+        "homogeneous_midpoint": 0.060647105910009984,
+        "homogeneous_exact_split_steady_forcing_ratio": 1.2487289790370686,
+        "midpoint_split_steady_forcing_ratio": 1.0
+      },
+      "observed_nonlinear_eight_step_error_ratio": 201.17157861695378
+    },
+    {
+      "T_SM": 0.6882487043,
+      "linear_constant_forcing_model": {
+        "z": 3.3732910057340435,
+        "homogeneous_exact": 0.03427664687789936,
+        "homogeneous_midpoint": -0.2555772624763022,
+        "homogeneous_exact_split_steady_forcing_ratio": 1.806374516612142,
+        "midpoint_split_steady_forcing_ratio": 1.0
+      },
+      "observed_nonlinear_eight_step_error_ratio": 323.0917364521587
+    }
+  ],
+  "probe_sha256": "519af1ff86d29efe958bc15c9f6b395902bafd380e912cc7c68508d47c55762e",
+  "scope": "Exact scalar constant forcing identity suggests a mechanism; does not predict the nonlinear expanding endpoint errors quantitatively."
+}

@@ -1,0 +1,76 @@
+{
+  "reference_sha256": "ba67169463c23512e2dbff92ca7e705c4f3f913ba220b0fa42b4840ee1e4ae70",
+  "table_input_sha256": "906d2b43bfd925c65aea3ff25ce2840cf5da7a49fcf31d8190199ae1004168ad",
+  "fields": [
+    "log_a",
+    "combined_path_timelike_entropy",
+    "combined_path_elastic_entropy",
+    "timelike_path_timelike_entropy",
+    "combined_minus_timelike_total_entropy"
+  ],
+  "rows": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.025,
+      3.0051129717646504e-09,
+      7.59510968095744e-12,
+      3.013442263268457e-09,
+      -7.341818228490912e-13
+    ],
+    [
+      0.05,
+      9.033966625732417e-09,
+      2.918764110338767e-11,
+      9.075843327886088e-09,
+      -1.268906105028346e-11
+    ],
+    [
+      0.1,
+      2.9192429855253728e-08,
+      1.248180948643994e-10,
+      2.9382611244877924e-08,
+      -6.536329475979685e-11
+    ],
+    [
+      0.15,
+      6.900335677091856e-08,
+      3.8544483704114064e-10,
+      6.955409005626686e-08,
+      -1.6528844830715696e-10
+    ],
+    [
+      0.2,
+      1.376476883668077e-07,
+      9.982617466188796e-10,
+      1.3894296605616579e-07,
+      -2.970159427392206e-10
+    ],
+    [
+      0.25,
+      2.497186448770217e-07,
+      2.3442923778987654e-09,
+      2.523678862371857e-07,
+      -3.049489822652232e-10
+    ]
+  ],
+  "maximum_integral_mesh_defect": 8.595158504689993e-15,
+  "replays": [
+    {
+      "state_archive_defect": 3.295086209095799e-10,
+      "total_entropy_archive_defect": 8.447411421203152e-15,
+      "evaluations": 649
+    },
+    {
+      "state_archive_defect": 1.8332391160669204e-11,
+      "total_entropy_archive_defect": 5.485012142526465e-16,
+      "evaluations": 2295
+    }
+  ],
+  "scope": "Separate integrated histories; the extra positive elastic term does not imply larger total integrated entropy than a different solution."
+}

@@ -1,0 +1,523 @@
+{
+  "scope": "Initial held-graph derivatives for native, aperture-local and outside daughter inputs. Recompute dressed energies at each trial, not a time integral.",
+  "channels": {
+    "native": {
+      "initial_rate": 0.07863619024759733,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": -2780012.488829774,
+            "in_aperture": -2779918.7626527185,
+            "outside": -20.155037387564576,
+            "mode_additivity_relative_defect": 6.007966149866191e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -2779834.3132819664,
+            "in_aperture": -2779669.0823134533,
+            "outside": -152.01163644880563,
+            "mode_additivity_relative_defect": 8.310059753754538e-06
+          },
+          {
+            "probe": 1e-15,
+            "total": -2779545.80030654,
+            "in_aperture": -2780052.0316483197,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.00033841526181858223
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -777080.7413601447,
+            "in_aperture": -777080.6268683954,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 2.9271636761671907e-07
+          },
+          {
+            "probe": 3e-15,
+            "total": -777079.3798602718,
+            "in_aperture": -777079.3798602718,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": -777079.3811246095,
+            "in_aperture": -777079.3811246095,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -3557092.824681894,
+            "in_aperture": -3557008.8634459693,
+            "outside": -35.92738820737394,
+            "mode_additivity_relative_defect": 5.207685782587348e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -3556913.694822963,
+            "in_aperture": -3556748.459950899,
+            "outside": -152.01163644880563,
+            "mode_additivity_relative_defect": 6.605398353549168e-06
+          },
+          {
+            "probe": 1e-15,
+            "total": -3556625.1795882173,
+            "in_aperture": -3556625.1795882173,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ]
+      }
+    },
+    "outer_daughter": {
+      "initial_rate": 0.07863573739222642,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": -2787986.1975131095,
+            "in_aperture": -2787963.0469200565,
+            "outside": -40.17600160133908,
+            "mode_additivity_relative_defect": 1.7677160900324538e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -2788082.803074185,
+            "in_aperture": -2788071.316818484,
+            "outside": -25.915554424026148,
+            "mode_additivity_relative_defect": 5.54427823762511e-06
+          },
+          {
+            "probe": 1e-15,
+            "total": -2787961.674592169,
+            "in_aperture": -2787961.674592169,
+            "outside": 0.004445229010588144,
+            "mode_additivity_relative_defect": 2.287398501151938e-09
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -778116.3524072204,
+            "in_aperture": -778116.3524072204,
+            "outside": -0.19315061701795286,
+            "mode_additivity_relative_defect": 4.93420381830696e-07
+          },
+          {
+            "probe": 3e-15,
+            "total": -778116.8020076295,
+            "in_aperture": -778116.803438127,
+            "outside": 0.0014817430035293819,
+            "mode_additivity_relative_defect": 3.65248325232746e-09
+          },
+          {
+            "probe": 1e-15,
+            "total": -778118.0906820466,
+            "in_aperture": -778118.0906820466,
+            "outside": 0.004445229010588144,
+            "mode_additivity_relative_defect": 8.858495273492266e-09
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -3566102.517865172,
+            "in_aperture": -3566079.36957144,
+            "outside": -40.17598760042833,
+            "mode_additivity_relative_defect": 1.404944567178372e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -3566204.1239104727,
+            "in_aperture": -3566050.7861309955,
+            "outside": -97.96310204097315,
+            "mode_additivity_relative_defect": 2.4485922921940644e-05
+          },
+          {
+            "probe": 1e-15,
+            "total": -3566079.7724847957,
+            "in_aperture": -3566079.7724847957,
+            "outside": 0.004445229010588144,
+            "mode_additivity_relative_defect": 1.8179707418624839e-09
+          }
+        ]
+      }
+    },
+    "local_daughter": {
+      "initial_rate": 0.06312562923491541,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": 173993.9677443969,
+            "in_aperture": 173993.9677443969,
+            "outside": 0.000542164624053554,
+            "mode_additivity_relative_defect": 2.5635914332706053e-09
+          },
+          {
+            "probe": 3e-15,
+            "total": 173993.9724448439,
+            "in_aperture": 173993.9724448439,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": 173993.97168583196,
+            "in_aperture": 173993.97168583196,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -633541.2963942159,
+            "in_aperture": -633562.9943169358,
+            "outside": -2.0679515313825692e-11,
+            "mode_additivity_relative_defect": 6.977607531412994e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -633560.8194560575,
+            "in_aperture": -633581.4975767316,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 6.648956852473726e-05
+          },
+          {
+            "probe": 1e-15,
+            "total": -633581.4976848694,
+            "in_aperture": -633581.4976848694,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -459547.3297178535,
+            "in_aperture": -459547.3297178535,
+            "outside": 0.0005421646137137963,
+            "mode_additivity_relative_defect": 1.7232625181319852e-09
+          },
+          {
+            "probe": 3e-15,
+            "total": -459566.84796963143,
+            "in_aperture": -459566.84796963143,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": -459587.53331952036,
+            "in_aperture": -459587.53331952036,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ]
+      }
+    },
+    "retuned_local": {
+      "initial_rate": 0.06312511737619404,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": 166454.72145830592,
+            "in_aperture": 166454.72145830592,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 3e-15,
+            "total": 166454.71533404235,
+            "in_aperture": 166454.71533404235,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": 166454.72236434554,
+            "in_aperture": 166454.72236434554,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -633839.0705819203,
+            "in_aperture": -633839.0705818144,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 2.722521312840751e-13
+          },
+          {
+            "probe": 3e-15,
+            "total": -633839.0719389518,
+            "in_aperture": -633839.0684695048,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 1.1151446285259165e-08
+          },
+          {
+            "probe": 1e-15,
+            "total": -633839.0631922778,
+            "in_aperture": -633839.0631922778,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -467384.34929161286,
+            "in_aperture": -467384.34929161286,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 3e-15,
+            "total": -467384.3487438435,
+            "in_aperture": -467384.3487438435,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": -467384.3285766594,
+            "in_aperture": -467384.3285766594,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ]
+      }
+    },
+    "complement_only": {
+      "initial_rate": 0.07863578502796771,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": -2786550.328916564,
+            "in_aperture": -2786462.579876817,
+            "outside": -110.73732336856692,
+            "mode_additivity_relative_defect": 1.3327584103670926e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -2786468.3165226346,
+            "in_aperture": -2786421.9286396448,
+            "outside": -72.01512355923751,
+            "mode_additivity_relative_defect": 3.076408148536239e-05
+          },
+          {
+            "probe": 1e-15,
+            "total": -2786444.7547010127,
+            "in_aperture": -2786205.422695835,
+            "outside": -365.8947998708723,
+            "mode_additivity_relative_defect": 8.341098315460764e-05
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -777953.1496781221,
+            "in_aperture": -777953.1916150834,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 1.0506600927974441e-07
+          },
+          {
+            "probe": 3e-15,
+            "total": -777953.1934032738,
+            "in_aperture": -777953.1933958449,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 1.8969732062357925e-11
+          },
+          {
+            "probe": 1e-15,
+            "total": -777953.1993139092,
+            "in_aperture": -777953.1993139092,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -3564503.709906625,
+            "in_aperture": -3564415.0951898983,
+            "outside": -95.72553530485835,
+            "mode_additivity_relative_defect": 1.4068057083157025e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -3564421.511108988,
+            "in_aperture": -3564375.1237859577,
+            "outside": -72.01512355923751,
+            "mode_additivity_relative_defect": 2.4452818053549267e-05
+          },
+          {
+            "probe": 1e-15,
+            "total": -3564259.052481468,
+            "in_aperture": -3564308.4552856167,
+            "outside": -216.04894513534663,
+            "mode_additivity_relative_defect": 7.275857857100614e-05
+          }
+        ]
+      }
+    },
+    "retuned_no_neighbors": {
+      "initial_rate": 0.06312513025323677,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": 173294.173717616,
+            "in_aperture": 173294.173717616,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 3e-15,
+            "total": 173252.59182107548,
+            "in_aperture": 173252.59182107548,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": 173281.40704140192,
+            "in_aperture": 173281.40704140192,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -633590.7549642785,
+            "in_aperture": -633590.7483616673,
+            "outside": -26.94424544591456,
+            "mode_additivity_relative_defect": 8.66438701965657e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -633661.0345803575,
+            "in_aperture": -633661.0345803575,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": -633827.7638951734,
+            "in_aperture": -633827.7638951734,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -460304.16380424047,
+            "in_aperture": -460304.16441141267,
+            "outside": -26.94424544591456,
+            "mode_additivity_relative_defect": 0.00013361643608936896
+          },
+          {
+            "probe": 3e-15,
+            "total": -460433.71543964243,
+            "in_aperture": -460433.71543964243,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": -460546.35842554714,
+            "in_aperture": -460546.35842554714,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ]
+      }
+    },
+    "comp_no_neighbors": {
+      "initial_rate": 0.07863579522089988,
+      "directions": {
+        "unlike": [
+          {
+            "probe": 1e-14,
+            "total": -2780640.3696447914,
+            "in_aperture": -2780416.816758259,
+            "outside": -115.36422256866265,
+            "mode_additivity_relative_defect": 5.25665937576948e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -2780636.639860359,
+            "in_aperture": -2780641.9351564655,
+            "outside": -1.213670229825226,
+            "mode_additivity_relative_defect": 4.330841295119249e-06
+          },
+          {
+            "probe": 1e-15,
+            "total": -2780640.830433204,
+            "in_aperture": -2780596.7241618675,
+            "outside": -3.6410106894756566,
+            "mode_additivity_relative_defect": 2.6626580205031473e-05
+          }
+        ],
+        "same": [
+          {
+            "probe": 1e-14,
+            "total": -777698.1866533762,
+            "in_aperture": -777697.7208803887,
+            "outside": -12.222260765602726,
+            "mode_additivity_relative_defect": 4.050827174698798e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -777695.6527894954,
+            "in_aperture": -777695.6527894954,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          },
+          {
+            "probe": 1e-15,
+            "total": -777698.558586278,
+            "in_aperture": -777698.558586278,
+            "outside": 0.0,
+            "mode_additivity_relative_defect": 0.0
+          }
+        ],
+        "both": [
+          {
+            "probe": 1e-14,
+            "total": -3558325.326451314,
+            "in_aperture": -3558134.0745396377,
+            "outside": -129.78437167124127,
+            "mode_additivity_relative_defect": 3.7283085478593105e-05
+          },
+          {
+            "probe": 3e-15,
+            "total": -3558332.2265492063,
+            "in_aperture": -3558382.937413672,
+            "outside": -1.213670229825226,
+            "mode_additivity_relative_defect": 2.384630155338177e-05
+          },
+          {
+            "probe": 1e-15,
+            "total": -3558339.2163067115,
+            "in_aperture": -3558431.3511571377,
+            "outside": -3.6410106894756566,
+            "mode_additivity_relative_defect": 7.15341955366961e-05
+          }
+        ]
+      }
+    }
+  }
+}

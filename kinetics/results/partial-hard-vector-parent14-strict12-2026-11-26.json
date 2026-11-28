@@ -1,0 +1,161 @@
+{
+  "controls": [
+    {
+      "Born_T_min_GeV": 0.25,
+      "measured_plus_disjoint_Born_root_GeV": 0.3244979259884976,
+      "results": [
+        {
+          "interpolation": "linear",
+          "nodes_per_panel": 4,
+          "alpha_cases": [
+            {
+              "alpha_s": 0.2,
+              "T_R_GeV": 0.3231056412619859,
+              "root_shift_GeV": -0.0013922847265117055,
+              "incremental_omega_at_baseline_without_overlap": 0.001047343596049454,
+              "incremental_energy_floor_at_baseline_without_overlap": 8.999253585697032e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.2845094124172626
+            },
+            {
+              "alpha_s": 0.3,
+              "T_R_GeV": 0.32242620563354546,
+              "root_shift_GeV": -0.0020717203549521224,
+              "incremental_omega_at_baseline_without_overlap": 0.0015710153940741807,
+              "incremental_energy_floor_at_baseline_without_overlap": 0.0001349888037854555,
+              "fraction_of_strict_increment_cut_for_overlap": 0.2845094124172627
+            },
+            {
+              "alpha_s": 0.4,
+              "T_R_GeV": 0.321757589835929,
+              "root_shift_GeV": -0.0027403361525685788,
+              "incremental_omega_at_baseline_without_overlap": 0.002094687192098908,
+              "incremental_energy_floor_at_baseline_without_overlap": 0.00017998507171394063,
+              "fraction_of_strict_increment_cut_for_overlap": 0.2845094124172626
+            }
+          ]
+        },
+        {
+          "interpolation": "pchip",
+          "nodes_per_panel": 8,
+          "alpha_cases": [
+            {
+              "alpha_s": 0.2,
+              "T_R_GeV": 0.3231053230874658,
+              "root_shift_GeV": -0.0013926029010317698,
+              "incremental_omega_at_baseline_without_overlap": 0.00104758460848911,
+              "incremental_energy_floor_at_baseline_without_overlap": 9.001346151024803e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.28454547350504933
+            },
+            {
+              "alpha_s": 0.3,
+              "T_R_GeV": 0.32242573383934403,
+              "root_shift_GeV": -0.002072192149153551,
+              "incremental_omega_at_baseline_without_overlap": 0.0015713769127336649,
+              "incremental_energy_floor_at_baseline_without_overlap": 0.00013502019226537204,
+              "fraction_of_strict_increment_cut_for_overlap": 0.28454547350504955
+            },
+            {
+              "alpha_s": 0.4,
+              "T_R_GeV": 0.32175696794582564,
+              "root_shift_GeV": -0.002740958042671937,
+              "incremental_omega_at_baseline_without_overlap": 0.00209516921697822,
+              "incremental_energy_floor_at_baseline_without_overlap": 0.00018002692302049607,
+              "fraction_of_strict_increment_cut_for_overlap": 0.28454547350504933
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Born_T_min_GeV": 0.3,
+      "measured_plus_disjoint_Born_root_GeV": 0.33679145052283066,
+      "results": [
+        {
+          "interpolation": "linear",
+          "nodes_per_panel": 4,
+          "alpha_cases": [
+            {
+              "alpha_s": 0.2,
+              "T_R_GeV": 0.3361376042100538,
+              "root_shift_GeV": -0.0006538463127768734,
+              "incremental_omega_at_baseline_without_overlap": 0.0005196981677838046,
+              "incremental_energy_floor_at_baseline_without_overlap": 4.382249547040048e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.36700236737347736
+            },
+            {
+              "alpha_s": 0.3,
+              "T_R_GeV": 0.33581876233716385,
+              "root_shift_GeV": -0.0009726881856668146,
+              "incremental_omega_at_baseline_without_overlap": 0.0007795472516757068,
+              "incremental_energy_floor_at_baseline_without_overlap": 6.573374320560073e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.36700236737347747
+            },
+            {
+              "alpha_s": 0.4,
+              "T_R_GeV": 0.33550514500456874,
+              "root_shift_GeV": -0.001286305518261921,
+              "incremental_omega_at_baseline_without_overlap": 0.0010393963355676092,
+              "incremental_energy_floor_at_baseline_without_overlap": 8.764499094080096e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.36700236737347736
+            }
+          ]
+        },
+        {
+          "interpolation": "pchip",
+          "nodes_per_panel": 8,
+          "alpha_cases": [
+            {
+              "alpha_s": 0.2,
+              "T_R_GeV": 0.3361375273900617,
+              "root_shift_GeV": -0.0006539231327689632,
+              "incremental_omega_at_baseline_without_overlap": 0.0005197595734567087,
+              "incremental_energy_floor_at_baseline_without_overlap": 4.3827014632994434e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.36710633379362334
+            },
+            {
+              "alpha_s": 0.3,
+              "T_R_GeV": 0.33581864841042536,
+              "root_shift_GeV": -0.0009728021124053021,
+              "incremental_omega_at_baseline_without_overlap": 0.0007796393601850631,
+              "incremental_energy_floor_at_baseline_without_overlap": 6.574052194949166e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.36710633379362323
+            },
+            {
+              "alpha_s": 0.4,
+              "T_R_GeV": 0.33550499483652607,
+              "root_shift_GeV": -0.0012864556863045884,
+              "incremental_omega_at_baseline_without_overlap": 0.0010395191469134174,
+              "incremental_energy_floor_at_baseline_without_overlap": 8.765402926598887e-05,
+              "fraction_of_strict_increment_cut_for_overlap": 0.36710633379362334
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mass_over_T_interval": [
+    4.0,
+    12.0
+  ],
+  "independent_native_point_interpolation_checks": [],
+  "data_hashes": {
+    "dm-eos-low-official-1314.dat": "bc95d6e13617c5ae8078c6f7bf2f8323beee2b8f4aee56082c7635fa038a238f",
+    "KLOExSec.data": "e95c33bdb57abc6900e3a30c80822c28c085140b609243a2e89d27674b8a9b76",
+    "BESIII-2112.11728.txt": "f39acd7455ce32dbdb69a6bb3369b64f903bca369b7611a4327af3ba60032e5a",
+    "hard-vector-nlo-through-x12-strips-2026-11-26.txt": "afcb538e864d895247b2683b83a3a4dec3bab40c26f8302934297f9d2aa169f6"
+  },
+  "scope": "Conditional addition to the previous disjoint hard Born comparator, using strict NLO only in the supplied bounded mass interval with resolved boost probes and finite-band interpolation. Same radiation clock, same optimistic conversion. Not a complete finite-T QCD spectrum, QCD error bars, a full NLO root, a physical dark-matter abundance, nor a production fit.",
+  "parent_born_mass_panels": [
+    4.0,
+    4.5,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    12.0,
+    13.0,
+    14.0
+  ]
+}

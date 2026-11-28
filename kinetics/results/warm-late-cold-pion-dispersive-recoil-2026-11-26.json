@@ -1,0 +1,109 @@
+{
+  "scope": "Conditional positive BABAR/theory caps on separate unmatched vacuum charged-pion intervals. Adiabatic 50 to .1 MeV, exact recoil inequality, bounded physical massive pion Bose occupation; not a statistical combination, unmeasured high bands or full thermal hadronic source.",
+  "entropy_radiation_log_slope_lower": [
+    3.0,
+    4.0
+  ],
+  "held_equality_cold_yield": 4.18022180557062e-09,
+  "bands": [
+    {
+      "name": "lower threshold theory",
+      "s_GeV2": [
+        0.07791957505900839,
+        0.09
+      ],
+      "assumed_positive_dispersion_cap": 1.3443000000000002e-08,
+      "controls": [
+        {
+          "s_bins": 12,
+          "T_bins": 24,
+          "Q_base_bins": 20,
+          "parent_angle_bins": 18,
+          "max_yield_per_dispersion_unit": 0.003739184250666246,
+          "cold_yield_upper": 5.026585388170635e-11,
+          "held_fraction_upper": 0.012024685822824377,
+          "controlling_s_GeV2": [
+            0.08899329792158403,
+            0.09
+          ]
+        },
+        {
+          "s_bins": 24,
+          "T_bins": 48,
+          "Q_base_bins": 36,
+          "parent_angle_bins": 30,
+          "max_yield_per_dispersion_unit": 0.0020678475692930695,
+          "cold_yield_upper": 2.7798074874006738e-11,
+          "held_fraction_upper": 0.00664990427947212,
+          "controlling_s_GeV2": [
+            0.08949664896079201,
+            0.09
+          ]
+        },
+        {
+          "s_bins": 32,
+          "T_bins": 96,
+          "Q_base_bins": 48,
+          "parent_angle_bins": 42,
+          "max_yield_per_dispersion_unit": 0.0015727626960172056,
+          "cold_yield_upper": 2.1142648922559298e-11,
+          "held_fraction_upper": 0.005057781597709556,
+          "controlling_s_GeV2": [
+            0.089622486720594,
+            0.09
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BABAR low gap",
+      "s_GeV2": [
+        0.09,
+        0.1
+      ],
+      "assumed_positive_dispersion_cap": 6.690000000000001e-09,
+      "controls": [
+        {
+          "s_bins": 12,
+          "T_bins": 24,
+          "Q_base_bins": 20,
+          "parent_angle_bins": 18,
+          "max_yield_per_dispersion_unit": 0.0056599860029919935,
+          "cold_yield_upper": 3.786530636001644e-11,
+          "held_fraction_upper": 0.0090582050716918,
+          "controlling_s_GeV2": [
+            0.09916666666666667,
+            0.1
+          ]
+        },
+        {
+          "s_bins": 24,
+          "T_bins": 48,
+          "Q_base_bins": 36,
+          "parent_angle_bins": 30,
+          "max_yield_per_dispersion_unit": 0.003132258540339411,
+          "cold_yield_upper": 2.0954809634870662e-11,
+          "held_fraction_upper": 0.005012846353498754,
+          "controlling_s_GeV2": [
+            0.09958333333333334,
+            0.1
+          ]
+        },
+        {
+          "s_bins": 32,
+          "T_bins": 96,
+          "Q_base_bins": 48,
+          "parent_angle_bins": 42,
+          "max_yield_per_dispersion_unit": 0.0023840481484429534,
+          "cold_yield_upper": 1.594928211308336e-11,
+          "held_fraction_upper": 0.0038154152709861306,
+          "controlling_s_GeV2": [
+            0.09968750000000001,
+            0.1
+          ]
+        }
+      ]
+    }
+  ],
+  "sum_of_conditional_outside_KLOE_cold_yield_upper": 3.709193103564266e-11
+}

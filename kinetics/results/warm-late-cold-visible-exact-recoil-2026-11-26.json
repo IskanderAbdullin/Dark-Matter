@@ -1,0 +1,115 @@
+{
+  "detailed_50_MeV": {
+    "flavors": [
+      "electron",
+      "muon",
+      "tau"
+    ],
+    "FD_fraction_by_incoming_flavor": [
+      0.5037384848811558,
+      0.4962615151188443,
+      2.9773067581579178e-24
+    ],
+    "invariant_mass_edges_GeV": [
+      0.2,
+      0.28,
+      0.4,
+      0.6,
+      1.0,
+      null
+    ],
+    "FD_fraction_by_pair_invariant_mass": [
+      0.012843063199317179,
+      0.17464003345454746,
+      0.5525248834726088,
+      0.2580221356872306,
+      0.0019698841862964187
+    ],
+    "FD_total_yield": 7.563627638486329e-10
+  },
+  "independent_local_chart_checks": [
+    {
+      "T_GeV": 0.035,
+      "total_energy_first": 7.984409563095385e-37,
+      "alternate_invariant_mass_first": 7.983563548870948e-37
+    },
+    {
+      "T_GeV": 0.05,
+      "total_energy_first": 1.1758712312555581e-32,
+      "alternate_invariant_mass_first": 1.1755663829150002e-32
+    }
+  ],
+  "scope": "Positive numerical FD and MB estimates, not certified full upper. Open unpolarized vacuum decay; direct thermal charged leptons into heavy pair only; 12\u2013TR MeV, adiabatic and no later scattering.",
+  "held_equality_cold_yield": 4.18022180557062e-09,
+  "rows": [
+    {
+      "start_temperature_GeV": 0.025,
+      "controls": [
+        {
+          "kinetic_order": 8,
+          "temperature_order": 12,
+          "FD_yield": 5.53401833969298e-20,
+          "MB_yield": 5.545780337836376e-20,
+          "integrated_sample_of_local_tail_upper": 1.997179929505665e-36,
+          "FD_to_held": 1.3238575839009958e-11,
+          "MB_to_held": 1.3266713097486822e-11
+        },
+        {
+          "kinetic_order": 12,
+          "temperature_order": 20,
+          "FD_yield": 5.533897065231219e-20,
+          "MB_yield": 5.545646306650523e-20,
+          "integrated_sample_of_local_tail_upper": 1.997116704768198e-36,
+          "FD_to_held": 1.3238285724113187e-11,
+          "MB_to_held": 1.3266392465730694e-11
+        }
+      ]
+    },
+    {
+      "start_temperature_GeV": 0.035,
+      "controls": [
+        {
+          "kinetic_order": 8,
+          "temperature_order": 12,
+          "FD_yield": 1.8742110124856906e-13,
+          "MB_yield": 1.8867729372978203e-13,
+          "integrated_sample_of_local_tail_upper": 5.114586757070442e-30,
+          "FD_to_held": 4.483520491635376e-05,
+          "MB_to_held": 4.513571348734369e-05
+        },
+        {
+          "kinetic_order": 12,
+          "temperature_order": 20,
+          "FD_yield": 1.8744906467632245e-13,
+          "MB_yield": 1.8870525852230735e-13,
+          "integrated_sample_of_local_tail_upper": 5.1147946764700035e-30,
+          "FD_to_held": 4.4841894376639365e-05,
+          "MB_to_held": 4.514240327411243e-05
+        }
+      ]
+    },
+    {
+      "start_temperature_GeV": 0.05,
+      "controls": [
+        {
+          "kinetic_order": 8,
+          "temperature_order": 12,
+          "FD_yield": 7.567479525557555e-10,
+          "MB_yield": 7.71092028868435e-10,
+          "integrated_sample_of_local_tail_upper": 1.8749472444391585e-26,
+          "FD_to_held": 0.18103057391531305,
+          "MB_to_held": 0.18446198903629166
+        },
+        {
+          "kinetic_order": 12,
+          "temperature_order": 20,
+          "FD_yield": 7.564820906870448e-10,
+          "MB_yield": 7.708264781426336e-10,
+          "integrated_sample_of_local_tail_upper": 1.8749607103985884e-26,
+          "FD_to_held": 0.1809669739722774,
+          "MB_to_held": 0.18439846352540906
+        }
+      ]
+    }
+  ]
+}

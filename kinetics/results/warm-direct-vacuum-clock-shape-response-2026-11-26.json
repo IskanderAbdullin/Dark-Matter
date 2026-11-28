@@ -1,0 +1,95 @@
+{
+  "scope": "Same thermal source kernels, peak temperature and entropy-to-q map. Alternate clock changes only production duration; final scalar uses same fixed metric. No self-consistent alternative expansion history or physical transfer.",
+  "scalar_rest_fractions_in_same_stable_background": [
+    2.099185018297396e-06,
+    1.2355210790784191e-06,
+    9.220414065512589e-07,
+    1.4470264137736372e-06
+  ],
+  "clock_labels": [
+    "radiation",
+    "stiff_extra_fluid_equal_at_30_MeV",
+    "stiff_extra_fluid_equal_at_20_MeV",
+    "imposed_20_percent_residence_above_45_MeV"
+  ],
+  "combined_total_yield": [
+    6.69937830360502e-06,
+    3.943061659610236e-06,
+    2.942616715004771e-06,
+    4.618064131808111e-06
+  ],
+  "yield_ratios_vs_standard": [
+    1.0,
+    0.5885712794407243,
+    0.4392372816775121,
+    0.6893272662812716
+  ],
+  "equality_cut_cold_yield_ratios_vs_standard": [
+    1.0,
+    0.5352715630187065,
+    0.3893382324715519,
+    0.31548044542672116
+  ],
+  "largest_normalized_CDF_shift_vs_standard": [
+    0.0,
+    0.0063128145377084055,
+    0.008384786923641144,
+    0.019329709533934536
+  ],
+  "metrics": [
+    {
+      "k_per_Mpc": 2.6944,
+      "scalar_shape_only_response_over_CDM": [
+        0.7150837391798411,
+        0.7128458786225853,
+        0.7120988531220351,
+        0.7086497079824845
+      ],
+      "scalar_response_change_vs_standard": [
+        0.0,
+        -0.002237860557255833,
+        -0.002984886057806002,
+        -0.006434031197356638
+      ],
+      "normalized_matter_proxy_difference_shape_only": [
+        0.0,
+        -4.697683354830107e-09,
+        -6.2658280938711346e-09,
+        -1.350622189674911e-08
+      ],
+      "normalized_matter_proxy_difference_shape_and_count": [
+        0.0,
+        2.4330697627695205e-07,
+        3.3263516776791153e-07,
+        1.7650037797298343e-07
+      ]
+    },
+    {
+      "k_per_Mpc": 6.736,
+      "scalar_shape_only_response_over_CDM": [
+        0.46303309941282045,
+        0.4598392824533492,
+        0.45879602925782154,
+        0.4532742826763067
+      ],
+      "scalar_response_change_vs_standard": [
+        0.0,
+        -0.0031938169594712407,
+        -0.004237070154998912,
+        -0.009758816736513742
+      ],
+      "normalized_matter_proxy_difference_shape_only": [
+        0.0,
+        -6.70441271250617e-09,
+        -8.894394190848742e-09,
+        -2.0485561889599534e-08
+      ],
+      "normalized_matter_proxy_difference_shape_and_count": [
+        0.0,
+        4.5981292041518346e-07,
+        6.281804026199499e-07,
+        3.360663189774714e-07
+      ]
+    }
+  ]
+}

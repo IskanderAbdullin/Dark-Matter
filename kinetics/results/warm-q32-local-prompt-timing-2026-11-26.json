@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "b": 1.0002,
+      "relative_weighted_shell_defect": 1.7016960543822944e-15,
+      "resources": {
+        "standard": {
+          "exit_code": 0,
+          "wall_seconds": 11.588508718999947,
+          "user_seconds": 9.670599,
+          "kernel_seconds": 1.8987699999999998,
+          "peak_RSS_KiB": 222844
+        },
+        "local": {
+          "exit_code": 0,
+          "wall_seconds": 9.850264224001876,
+          "user_seconds": 8.279957,
+          "kernel_seconds": 1.546671,
+          "peak_RSS_KiB": 270196
+        }
+      },
+      "ratios": {
+        "wall_local_vs_standard": 0.8500027452067123,
+        "rss_local_vs_standard": 1.2124894545062914
+      },
+      "maximum_residual": [
+        6.849576072022784e-14,
+        1.451564944987122e-13
+      ],
+      "accepted_rejected": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "b": 1.03,
+      "relative_weighted_shell_defect": 2.3199455101771764e-14,
+      "resources": {
+        "standard": {
+          "exit_code": 0,
+          "wall_seconds": 73.37502267499804,
+          "user_seconds": 70.900368,
+          "kernel_seconds": 2.302013,
+          "peak_RSS_KiB": 233444
+        },
+        "local": {
+          "exit_code": 0,
+          "wall_seconds": 62.90652591399703,
+          "user_seconds": 60.627263,
+          "kernel_seconds": 1.9707789999999998,
+          "peak_RSS_KiB": 281224
+        }
+      },
+      "ratios": {
+        "wall_local_vs_standard": 0.8573288786925573,
+        "rss_local_vs_standard": 1.2046743544490328
+      },
+      "maximum_residual": [
+        5.410794941668134e-12,
+        4.592954737828942e-12
+      ],
+      "accepted_rejected": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "scope": "Matched individual q32 one-block runs, unequal sequential wall clocks and fixed cloud environment; no whole-solve performance guarantee."
+}

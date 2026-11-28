@@ -1,0 +1,62 @@
+{
+  "x": 0.05,
+  "source_sha256": [
+    "e273215a64417c3c5744dae064d41cd14d72e862cb3c33e2648b4e81bde0ff3f",
+    "a1b4281d7989cc541541669d694c2137ca24d290799fbaee9feb3ee1305a600c"
+  ],
+  "chart_results": [
+    {
+      "chart": "G7",
+      "source_sha256": "754e24a56064b7127fce2c4515256deb841d204ddb10ffaf2acdbc41d3e5ed56",
+      "denominator_Volume96": 5.021643519960141e-07,
+      "checks": {
+        "volume96": {
+          "allowed_relative_local_net_L1": [
+            0.00033841650810143513,
+            0.00033857037875932117
+          ],
+          "actual_relative_local_net_L1": 0.0003384558961297596
+        },
+        "volume64": {
+          "allowed_relative_local_net_L1": [
+            0.00034215730827040004,
+            0.00034231098220827865
+          ],
+          "actual_relative_local_net_L1": 0.0003421965135575502
+        }
+      }
+    },
+    {
+      "chart": "mixed255",
+      "source_sha256": "c6426bd2269854e612b48da2fa7ca137951da175e2f3ff485b7a51d5f94de93a",
+      "denominator_Volume96": 5.0216438694533e-07,
+      "checks": {
+        "volume96": {
+          "allowed_relative_local_net_L1": [
+            0.0002504924887058091,
+            0.0002506373170562591
+          ],
+          "actual_relative_local_net_L1": 0.0002505401711832336
+        },
+        "volume64": {
+          "allowed_relative_local_net_L1": [
+            0.0002583335228459427,
+            0.0002584785064776215
+          ],
+          "actual_relative_local_net_L1": 0.00025838139242270036
+        }
+      }
+    }
+  ],
+  "ranking": {
+    "volume96": {
+      "minimum_gap_G7_minus_mixed255": 8.777919104517606e-05,
+      "equal_independent_normalized_L1_change_per_reference_strictly_below_to_preserve_gap": 4.388959552258803e-05
+    },
+    "volume64": {
+      "minimum_gap_G7_minus_mixed255": 8.367880179277855e-05,
+      "equal_independent_normalized_L1_change_per_reference_strictly_below_to_preserve_gap": 4.183940089638928e-05
+    }
+  },
+  "scope": "Sharp L1 intervals on fixed evolved nodes under each stored count/mean and a specified Volume64 or Volume96 reference. The ranking need not hold for arbitrary continuum reconstructions or time histories."
+}

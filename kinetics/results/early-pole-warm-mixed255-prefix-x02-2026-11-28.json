@@ -1,0 +1,382 @@
+{
+  "charts": [
+    "mixed255",
+    "G7"
+  ],
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "budget_reference_sha256": "69542a8a854756a3337b25d79a7c3b35affacf175725695a84a53f73c9b88e02",
+  "contrasts": [
+    {
+      "x": 0.0075,
+      "steps": [
+        2048,
+        4096
+      ],
+      "common_native_sha256": "18df7a81fb8808c7d5f0e28cafa9081ff07bc022a1282cc6e10816fd0a7052ac",
+      "fixed_native_mass": 4.69152878376991e-05,
+      "moments": [
+        [
+          2.7076198086822986e-06,
+          4.294167666756034e-10,
+          4.286279298089819e-10
+        ],
+        [
+          2.7076198151834027e-06,
+          4.294795153959316e-10,
+          4.286906785293119e-10
+        ]
+      ],
+      "mixed255_over_G7_minus_one": [
+        -2.4010402555063592e-09,
+        -0.00014610410526882944,
+        -0.00014637295251029858
+      ],
+      "conditional_pressure_contrast": [
+        -0.00014610434600792477,
+        -0.0001461038645416135
+      ],
+      "cell_partition": {
+        "fields": [
+          "total",
+          "changed_count",
+          "changed_pressure_per_particle"
+        ],
+        "all_cells": [
+          -0.0001461041052688534,
+          -0.00011436729890633071,
+          -3.173680636250483e-05
+        ],
+        "leading": [
+          {
+            "q": [
+              5.728841112042199,
+              8.280090530852393
+            ],
+            "contributions": [
+              -9.912661696726464e-05,
+              -9.783819436483253e-05,
+              -1.2884226024314547e-06
+            ]
+          },
+          {
+            "q": [
+              3.9636789434531003,
+              5.728841112042199
+            ],
+            "contributions": [
+              -4.157054271909061e-05,
+              -5.302990714079819e-06,
+              -3.626755200501186e-05
+            ]
+          },
+          {
+            "q": [
+              1.8974129217831404,
+              2.7423959679644474
+            ],
+            "contributions": [
+              -7.664283135467274e-06,
+              -8.771494795203825e-06,
+              1.107211659739259e-06
+            ]
+          },
+          {
+            "q": [
+              0.6284300306709397,
+              0.9082914754476046
+            ],
+            "contributions": [
+              4.342194093675494e-06,
+              4.426317838987813e-06,
+              -8.412374530399178e-08
+            ]
+          },
+          {
+            "q": [
+              8.280090530852393,
+              11.967498811408152
+            ],
+            "contributions": [
+              -3.5016723838960577e-06,
+              -5.657725386254054e-06,
+              2.1560530023580213e-06
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "x": 0.01,
+      "steps": [
+        512,
+        1024
+      ],
+      "common_native_sha256": "203cdaafc116e252729d2d8b0a97eb68cad4785d5b150396f158d48aff9312a3",
+      "fixed_native_mass": 8.535844540506035e-05,
+      "moments": [
+        [
+          1.627185214747036e-05,
+          1.2658288719357671e-09,
+          1.263223306014287e-09
+        ],
+        [
+          1.6271852167166348e-05,
+          1.2660140933530046e-09,
+          1.263408527431462e-09
+        ]
+      ],
+      "mixed255_over_G7_minus_one": [
+        -1.2104331981177552e-09,
+        -0.00014630280832572673,
+        -0.00014660453301795773
+      ],
+      "conditional_pressure_contrast": [
+        -0.00014630360492329242,
+        -0.00014630201176890623
+      ],
+      "cell_partition": {
+        "fields": [
+          "total",
+          "changed_count",
+          "changed_pressure_per_particle"
+        ],
+        "all_cells": [
+          -0.0001463028083257778,
+          -0.00011457138945341503,
+          -3.1731418872400325e-05
+        ],
+        "leading": [
+          {
+            "q": [
+              5.728841112042199,
+              8.280090530852393
+            ],
+            "contributions": [
+              -9.909370106631167e-05,
+              -9.780427841935376e-05,
+              -1.2894226469584952e-06
+            ]
+          },
+          {
+            "q": [
+              3.9636789434531003,
+              5.728841112042199
+            ],
+            "contributions": [
+              -4.174699176046949e-05,
+              -5.489370755792012e-06,
+              -3.625762100467544e-05
+            ]
+          },
+          {
+            "q": [
+              1.8974129217831404,
+              2.7423959679644474
+            ],
+            "contributions": [
+              -7.661559004027041e-06,
+              -8.769254576960099e-06,
+              1.1076955729051875e-06
+            ]
+          },
+          {
+            "q": [
+              0.6284300306709397,
+              0.9082914754476046
+            ],
+            "contributions": [
+              4.337072699631328e-06,
+              4.42195674356356e-06,
+              -8.488404393925376e-08
+            ]
+          },
+          {
+            "q": [
+              8.280090530852393,
+              11.967498811408152
+            ],
+            "contributions": [
+              -3.5094593542618308e-06,
+              -5.666270622137139e-06,
+              2.1568112678752037e-06
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "x": 0.02,
+      "steps": [
+        1024,
+        2048
+      ],
+      "common_native_sha256": "498b8bc9f33dec775ac98ebb5a284054d22285347388af6bac637da30f1e6a2e",
+      "fixed_native_mass": 0.0002635393844550805,
+      "moments": [
+        [
+          0.0004784725081399368,
+          1.13749913676551e-08,
+          1.1350161611946954e-08
+        ],
+        [
+          0.0004784725082275354,
+          1.1376621442801687e-08,
+          1.1351791687098639e-08
+        ]
+      ],
+      "mixed255_over_G7_minus_one": [
+        -1.830796625412745e-10,
+        -0.00014328288541387568,
+        -0.00014359628828786164
+      ],
+      "conditional_pressure_contrast": [
+        -0.0001432904546467828,
+        -0.0001432753165604428
+      ],
+      "cell_partition": {
+        "fields": [
+          "total",
+          "changed_count",
+          "changed_pressure_per_particle"
+        ],
+        "all_cells": [
+          -0.0001432828854139871,
+          -0.00011168078463953581,
+          -3.160210077444573e-05
+        ],
+        "leading": [
+          {
+            "q": [
+              5.728841112042199,
+              8.280090530852393
+            ],
+            "contributions": [
+              -9.93978626869884e-05,
+              -9.816559262150061e-05,
+              -1.2322700654870911e-06
+            ]
+          },
+          {
+            "q": [
+              3.9636789434531003,
+              5.728841112042199
+            ],
+            "contributions": [
+              -3.808690639405956e-05,
+              -1.8219443924270047e-06,
+              -3.6264962001629666e-05
+            ]
+          },
+          {
+            "q": [
+              1.8974129217831404,
+              2.7423959679644474
+            ],
+            "contributions": [
+              -7.669069103954777e-06,
+              -8.783311550567097e-06,
+              1.1142424466252652e-06
+            ]
+          },
+          {
+            "q": [
+              8.280090530852393,
+              11.967498811408152
+            ],
+            "contributions": [
+              -4.039887758686927e-06,
+              -6.229365466421961e-06,
+              2.1894777077350214e-06
+            ]
+          },
+          {
+            "q": [
+              0.6284300306709397,
+              0.9082914754476046
+            ],
+            "contributions": [
+              3.5040185240051734e-06,
+              3.5310180679391488e-06,
+              -2.6999543932840475e-08
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "mixed_trace": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.782325983190108e-08,
+      "pole_mass": 4.691528784583019e-05,
+      "relative_time_drift": 5.1155568446148436e-05,
+      "maximum_absolute_continuity": 2.9113517660843326e-16,
+      "maximum_pair_number_error": 8.051048163652125e-17,
+      "previous_state_sha256": null,
+      "report_sha256": "ba1a75eeff559d17c0ac3d3721d81540ba519b42ac6c84ed8355ac6686f8f75d",
+      "state_sha256": "f49f3e28f7f33a8e28cb21d7199823729410d2ee7455bf3c6698f12bf9791bf1"
+    },
+    {
+      "x": 0.01,
+      "scalar_yield": 3.4749765519234924e-07,
+      "pole_mass": 8.53584454623274e-05,
+      "relative_time_drift": 1.2523085723969984e-07,
+      "maximum_absolute_continuity": 2.3878748167693344e-16,
+      "maximum_pair_number_error": 7.034608626946964e-17,
+      "previous_state_sha256": "f49f3e28f7f33a8e28cb21d7199823729410d2ee7455bf3c6698f12bf9791bf1",
+      "report_sha256": "44f880f401cae708abb99d2527537a55d60e298cda6d3b4f5d1659edd351a18c",
+      "state_sha256": "a6ddfde1fc8434c321724f008043fb76e5bdf22b4e9f21ad7fffad437e424b57"
+    },
+    {
+      "x": 0.02,
+      "scalar_yield": 1.0218140697552892e-05,
+      "pole_mass": 0.0002635393846046497,
+      "relative_time_drift": 2.184742465716205e-06,
+      "maximum_absolute_continuity": 1.6848632881124974e-13,
+      "maximum_pair_number_error": 3.564314642046096e-17,
+      "previous_state_sha256": "a6ddfde1fc8434c321724f008043fb76e5bdf22b4e9f21ad7fffad437e424b57",
+      "report_sha256": "a8505dc04b1efe75b9a231e12c81c101d3b23ce753562483be9e5074eff5a878",
+      "state_sha256": "08e8f2a63a4e14fbcbbcb9291a0f9bdfd20f6cce32fd82925685234b21141aab"
+    }
+  ],
+  "uniform_trace": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.7823259970737054e-08,
+      "pole_mass": 4.6915287845809444e-05,
+      "relative_time_drift": 5.115556832535617e-05,
+      "maximum_absolute_continuity": 1.773252887165037e-16,
+      "maximum_pair_number_error": 4.115118991821886e-17,
+      "verified_previous_raw_sha256": null,
+      "source_report_sha256": "484304d52c914fc81dba6b1b186f227fa2c6de39582bdb0b8462862255287eb1",
+      "uncompressed_state_sha256": "636561cceb30fb04bdf134299e16a24b584ea6f8ab06cb5c3b4fe34c0258726b"
+    },
+    {
+      "x": 0.01,
+      "scalar_yield": 3.4749765561297193e-07,
+      "pole_mass": 8.53584454631252e-05,
+      "relative_time_drift": 1.2523085746174445e-07,
+      "maximum_absolute_continuity": 9.388873176369248e-17,
+      "maximum_pair_number_error": 2.9932450290072465e-17,
+      "verified_previous_raw_sha256": "636561cceb30fb04bdf134299e16a24b584ea6f8ab06cb5c3b4fe34c0258726b",
+      "source_report_sha256": "557d25cf5c119f813bee74c4b031e99f519510153c08d0ecccbcbbf4a5416ea2",
+      "uncompressed_state_sha256": "f61960ad7aaaaac5bfe6946aa47ba5f357eea7ed24208e268c7547cbd20ac7f6"
+    },
+    {
+      "x": 0.02,
+      "scalar_yield": 1.0218140699423625e-05,
+      "pole_mass": 0.0002635393845886534,
+      "relative_time_drift": 2.184742465716205e-06,
+      "maximum_absolute_continuity": 1.6798872067166036e-13,
+      "maximum_pair_number_error": 1.0245710529988017e-16,
+      "verified_previous_raw_sha256": "f61960ad7aaaaac5bfe6946aa47ba5f357eea7ed24208e268c7547cbd20ac7f6",
+      "source_report_sha256": "3f4b1895f27c626a5a64c66ca6ae801f8fc3ac661213302666f46b3bdaf123a8",
+      "uncompressed_state_sha256": "e5048c2d11af8195e4cdba3899e0a69e156009f7e302bb3a014cf6f4a8870c34"
+    }
+  ],
+  "scope": "Actual paired prefixes at common S4 measurement mass. Cell count/energy bounds do not include solver error; held-source ranking and physical pressure are not inferred."
+}

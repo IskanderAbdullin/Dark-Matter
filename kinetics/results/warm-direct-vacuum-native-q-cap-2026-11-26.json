@@ -1,0 +1,172 @@
+{
+  "scope": "Early exact-mode RK values, separating closer radial spacing from removal of a negligibly populated high-q region. Native models renormalize to the same present scalar abundance.",
+  "k_h_per_Mpc": [
+    0.1,
+    0.3,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "full_cap_168_results": [
+    {
+      "z": 5,
+      "physical_minus_trace": [
+        -8.331151482672513e-08,
+        -9.665598548683033e-07,
+        -5.115221982511997e-06,
+        -6.77961370601071e-06,
+        -7.92412168958981e-06
+      ],
+      "exact_mode_trace_and_physical_sha256": [
+        "a5c0ccbddaeb4714b7a1aa416f382431c440b59a56d5d8a88375524fc47d97a4",
+        "2ef358e78148c8d04e63d482007ad4e7672d0823eeba455ab2ded3be8cb83286"
+      ]
+    },
+    {
+      "z": 20,
+      "physical_minus_trace": [
+        -8.30067674629072e-08,
+        -9.640550397597918e-07,
+        -5.091250362170657e-06,
+        -6.730773665367773e-06,
+        -7.845136107802561e-06
+      ],
+      "exact_mode_trace_and_physical_sha256": [
+        "5f670ddb63c88f84a5d17325e872f8bd36548883a090824df5c0c6a59b44af36",
+        "b7af36b1b09c0f2f130c895e8ad0bca44f2fc634fde2c2e18336456ff3d89a4d"
+      ]
+    }
+  ],
+  "cap_controls": [
+    {
+      "sampling": "step70",
+      "initial_all_mode_1e_minus8_target_met": false,
+      "retained_q_max": 18.228571428571428,
+      "unchanged_linear_step": 0.41428571428571426,
+      "retained_number_and_q2_fraction": [
+        0.9999999986752822,
+        0.9999998497808138
+      ],
+      "max_exact_power_response_change_due_only_to_shorter_q_cap": 1.0978415509808972e-08,
+      "changes_due_to_shorter_q_cap": [
+        [
+          -1.0978415509808972e-08,
+          -1.0892700114396843e-08,
+          1.6389944484326992e-09,
+          1.6070133197202522e-09,
+          1.589874291487353e-09
+        ],
+        [
+          -1.0977577733034728e-08,
+          -1.0892259662240483e-08,
+          1.6392811813884984e-09,
+          1.607478650061718e-09,
+          1.5903068234696566e-09
+        ]
+      ],
+      "shorter_q_results": [
+        {
+          "z": 5,
+          "physical_minus_trace": [
+            -5.60347886025926e-08,
+            -9.263519578821013e-07,
+            -5.050721809639715e-06,
+            -6.712713208076954e-06,
+            -7.857541525638877e-06
+          ],
+          "exact_mode_trace_and_physical_sha256": [
+            "0104c51ad47ae400e2618271efc8e977c618192646cd64f0915d8ada42a26309",
+            "7d65903e83a7c9f6bcab2542988bbc729338bba1dbac7afb653bd57f392f740b"
+          ]
+        },
+        {
+          "z": 20,
+          "physical_minus_trace": [
+            -5.5812324542967887e-08,
+            -9.239392970216029e-07,
+            -5.0268694348369016e-06,
+            -6.664019087397767e-06,
+            -7.77873330628681e-06
+          ],
+          "exact_mode_trace_and_physical_sha256": [
+            "2a653294e64f292079809d13f6b816154a9f6229190fbe5ab75397db3594d089",
+            "80122b324d625b9187936d266c2188f9a82e7100bb3bbaff3bef270676a5d023"
+          ]
+        }
+      ]
+    },
+    {
+      "sampling": "step168",
+      "initial_all_mode_1e_minus8_target_met": false,
+      "retained_q_max": 17.952380952380953,
+      "unchanged_linear_step": 0.17261904761904762,
+      "retained_number_and_q2_fraction": [
+        0.999999998176888,
+        0.9999998064377202
+      ],
+      "max_exact_power_response_change_due_only_to_shorter_q_cap": 1.7877928147287012e-08,
+      "changes_due_to_shorter_q_cap": [
+        [
+          -1.1973552996941978e-08,
+          -1.7877928147287012e-08,
+          -3.3756287297671025e-09,
+          -3.3658509964870837e-09,
+          -3.363654591299637e-09
+        ],
+        [
+          -1.1972679580756637e-08,
+          -1.787567101688096e-08,
+          -3.3748303944261933e-09,
+          -3.365366327508447e-09,
+          -3.3641722487260284e-09
+        ]
+      ],
+      "shorter_q_results": [
+        {
+          "z": 5,
+          "physical_minus_trace": [
+            -9.528506782366711e-08,
+            -9.844377830155903e-07,
+            -5.118597611241764e-06,
+            -6.782979557007197e-06,
+            -7.92748534418111e-06
+          ],
+          "exact_mode_trace_and_physical_sha256": [
+            "46ea07dc9ceedd1aed4fed9380b193aa49905df65a410b7ed2fd4b5e32239cdf",
+            "26b770d0aaa47f5d958001f01229b73facc0f0d6a8dcf3c1d50d5394f9a60f1a"
+          ]
+        },
+        {
+          "z": 20,
+          "physical_minus_trace": [
+            -9.497944704366383e-08,
+            -9.819307107766728e-07,
+            -5.094625192565083e-06,
+            -6.734139031695281e-06,
+            -7.848500280051287e-06
+          ],
+          "exact_mode_trace_and_physical_sha256": [
+            "19935089510126f701b97b832021e3fef54df3444d6199b791d10eb85de67f1c",
+            "42abbb78c5d768e38901968e0d07fd185613202442bcc0dc678228ed8fea83e3"
+          ]
+        }
+      ]
+    }
+  ],
+  "full_168_minus_96": [
+    [
+      -3.629557062046243e-09,
+      -1.4650288491091414e-08,
+      -2.7028122184335613e-08,
+      -3.333822393673672e-08,
+      -3.815212662563811e-08
+    ],
+    [
+      -3.62660242417018e-09,
+      -1.4638736683878677e-08,
+      -2.6940147129454327e-08,
+      -3.3163834302229666e-08,
+      -3.7871165271465164e-08
+    ]
+  ]
+}

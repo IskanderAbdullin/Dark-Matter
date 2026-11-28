@@ -1,0 +1,181 @@
+{
+  "thermal": [
+    {
+      "T": 0.018,
+      "eta_phi": -0.3,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.4643143865695966e-16,
+      "FD_parent_relative_error": 1.0103029524088925e-14
+    },
+    {
+      "T": 0.018,
+      "eta_phi": -1e-05,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.516035709172441e-16,
+      "FD_parent_relative_error": 7.327471962526033e-15
+    },
+    {
+      "T": 0.018,
+      "eta_phi": 0.0,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.5048347186757854e-16,
+      "FD_parent_relative_error": 8.659739592076221e-15
+    },
+    {
+      "T": 0.045,
+      "eta_phi": -0.3,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.613840039204861e-16,
+      "FD_parent_relative_error": 9.43689570931383e-15
+    },
+    {
+      "T": 0.045,
+      "eta_phi": -1e-05,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.5998956707759338e-16,
+      "FD_parent_relative_error": 7.549516567451064e-15
+    },
+    {
+      "T": 0.045,
+      "eta_phi": 0.0,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.5580954408519767e-16,
+      "FD_parent_relative_error": 7.549516567451064e-15
+    },
+    {
+      "T": 0.09,
+      "eta_phi": -0.3,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.4591474525718768e-16,
+      "FD_parent_relative_error": 9.103828801926284e-15
+    },
+    {
+      "T": 0.09,
+      "eta_phi": -1e-05,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.616477944455003e-16,
+      "FD_parent_relative_error": 1.0103029524088925e-14
+    },
+    {
+      "T": 0.09,
+      "eta_phi": 0.0,
+      "exact_thermal_kinetic_equilibrium_relative_defect": 1.4784998023641753e-16,
+      "FD_parent_relative_error": 7.771561172376096e-15
+    }
+  ],
+  "nonthermal_synthetic": [
+    {
+      "T": 0.018000000000000002,
+      "controlled_scalar_f_peak": 0.0001,
+      "nonthermal_parent_maximum": 3.3678111838863903e-12,
+      "maximum_parent_occupation_analytic_bound": 6.978983038513786e-11,
+      "relative_linear_tag_defect": 1.5603516649418244e-05,
+      "jacobian_refinement": 7.70505895539519e-10
+    },
+    {
+      "T": 0.018000000000000002,
+      "controlled_scalar_f_peak": 0.003,
+      "nonthermal_parent_maximum": 1.0094791951232401e-10,
+      "maximum_parent_occupation_analytic_bound": 2.0936949073166958e-09,
+      "relative_linear_tag_defect": 0.0004674142264914781,
+      "jacobian_refinement": 1.7973010842713846e-10
+    },
+    {
+      "T": 0.018000000000000002,
+      "controlled_scalar_f_peak": 0.1,
+      "nonthermal_parent_maximum": 3.2713416452913365e-09,
+      "maximum_parent_occupation_analytic_bound": 6.978982551938839e-08,
+      "relative_linear_tag_defect": 0.014847447478480501,
+      "jacobian_refinement": 4.1652272250691735e-10
+    },
+    {
+      "T": 0.018000000000000002,
+      "controlled_scalar_f_peak": 1.0,
+      "nonthermal_parent_maximum": 2.600308019863489e-08,
+      "maximum_parent_occupation_analytic_bound": 6.97897816838382e-07,
+      "relative_linear_tag_defect": 0.10346228413549435,
+      "jacobian_refinement": 1.20443209873535e-09
+    },
+    {
+      "T": 0.018000000000000002,
+      "controlled_scalar_f_peak": 10.0,
+      "nonthermal_parent_maximum": 8.522110211882414e-08,
+      "maximum_parent_occupation_analytic_bound": 6.9789343331365054e-06,
+      "relative_linear_tag_defect": 0.257837873571837,
+      "jacobian_refinement": 9.261980329888519e-10
+    },
+    {
+      "T": 0.045000000000000005,
+      "controlled_scalar_f_peak": 0.0001,
+      "nonthermal_parent_maximum": 5.690379462474965e-10,
+      "maximum_parent_occupation_analytic_bound": 4.750578584561082e-08,
+      "relative_linear_tag_defect": 1.32922150950624e-05,
+      "jacobian_refinement": 4.951619030871724e-10
+    },
+    {
+      "T": 0.045000000000000005,
+      "controlled_scalar_f_peak": 0.003,
+      "nonthermal_parent_maximum": 1.705807204090108e-08,
+      "maximum_parent_occupation_analytic_bound": 1.4251716119553002e-06,
+      "relative_linear_tag_defect": 0.00039820955154722153,
+      "jacobian_refinement": 9.472423699351657e-10
+    },
+    {
+      "T": 0.045000000000000005,
+      "controlled_scalar_f_peak": 0.1,
+      "nonthermal_parent_maximum": 5.54408706423785e-07,
+      "maximum_parent_occupation_analytic_bound": 4.750353140971335e-05,
+      "relative_linear_tag_defect": 0.012681861464275187,
+      "jacobian_refinement": 3.7918231134111406e-10
+    },
+    {
+      "T": 0.045000000000000005,
+      "controlled_scalar_f_peak": 1.0,
+      "nonthermal_parent_maximum": 4.501495176079201e-06,
+      "maximum_parent_occupation_analytic_bound": 0.00047483230819393376,
+      "relative_linear_tag_defect": 0.08990519795571092,
+      "jacobian_refinement": 6.517962137317501e-10
+    },
+    {
+      "T": 0.045000000000000005,
+      "controlled_scalar_f_peak": 10.0,
+      "nonthermal_parent_maximum": 1.710804799664221e-05,
+      "maximum_parent_occupation_analytic_bound": 0.004728117515360262,
+      "relative_linear_tag_defect": 0.23269252657494632,
+      "jacobian_refinement": 1.3807507843046946e-09
+    },
+    {
+      "T": 0.09000000000000001,
+      "controlled_scalar_f_peak": 0.0001,
+      "nonthermal_parent_maximum": 1.7462301567281878e-08,
+      "maximum_parent_occupation_analytic_bound": 2.760419227139567e-06,
+      "relative_linear_tag_defect": 1.2792508920252078e-05,
+      "jacobian_refinement": 3.0080193119426486e-10
+    },
+    {
+      "T": 0.09000000000000001,
+      "controlled_scalar_f_peak": 0.003,
+      "nonthermal_parent_maximum": 5.236128890177286e-07,
+      "maximum_parent_occupation_analytic_bound": 8.280594801938704e-05,
+      "relative_linear_tag_defect": 0.00038325407391926646,
+      "jacobian_refinement": 2.786655024120325e-10
+    },
+    {
+      "T": 0.09000000000000001,
+      "controlled_scalar_f_peak": 0.1,
+      "nonthermal_parent_maximum": 1.71728948561981e-05,
+      "maximum_parent_occupation_analytic_bound": 0.002752827867125123,
+      "relative_linear_tag_defect": 0.012220882791813426,
+      "jacobian_refinement": 5.414163294408364e-10
+    },
+    {
+      "T": 0.09000000000000001,
+      "controlled_scalar_f_peak": 1.0,
+      "nonthermal_parent_maximum": 0.00014941938476866734,
+      "maximum_parent_occupation_analytic_bound": 0.026862742125262854,
+      "relative_linear_tag_defect": 0.08743022710148268,
+      "jacobian_refinement": 1.3250652718358402e-09
+    },
+    {
+      "T": 0.09000000000000001,
+      "controlled_scalar_f_peak": 10.0,
+      "nonthermal_parent_maximum": 0.0006498995938647972,
+      "maximum_parent_occupation_analytic_bound": 0.21632715583551873,
+      "relative_linear_tag_defect": 0.23223085368158672,
+      "jacobian_refinement": 4.692236835999896e-10
+    }
+  ],
+  "scope": "Instantaneous prompt-parent elimination in a prescribed bath; no full stimulated time history or condition for a condensate."
+}

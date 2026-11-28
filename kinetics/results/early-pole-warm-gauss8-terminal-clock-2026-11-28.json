@@ -1,0 +1,27 @@
+{
+  "x_start": 0.04,
+  "x_end": 0.05,
+  "steps": [
+    1024,
+    2048
+  ],
+  "fixed_pressure_mass": 0.0008731829968237441,
+  "maximum_trace_absolute_difference": 0.0,
+  "warm_gauss_order": 8,
+  "coarse_count_and_pressures": [
+    0.017401187981188337,
+    1.7373456109891093e-07,
+    1.7345980565586174e-07
+  ],
+  "fine_count_and_pressures": [
+    0.017401741373210763,
+    1.7373451776832512e-07,
+    1.7345975398667736e-07
+  ],
+  "coarse_over_fine_minus_one": [
+    -3.180095661448057e-05,
+    2.494068902514357e-07,
+    2.978741937553764e-07
+  ],
+  "scope": "One conditional last-segment clock test with identical warm Gauss .04 restart; not a full-history error bound."
+}

@@ -1,0 +1,166 @@
+{
+  "scope": "Exact signed vacuum matrix recoil with a parent-rest photon bath and leading-soft virtual counterterm only.",
+  "upper_photon_energy_over_parent_mass": 0.01,
+  "rows": [
+    {
+      "grid": "fine",
+      "independent_signed_trace_defect": 4.3298697960381105e-15,
+      "coarse": {
+        "normalized_soft_coefficients": [
+          3.6668907564882756,
+          -9.296550259311173,
+          9.390060166462419,
+          -2.220561992985952,
+          -2.2003986169991583
+        ],
+        "analytic_zero_soft": 3.6668907564882725,
+        "max_series_test_relative_defect": 9.228998029530576e-17,
+        "angle_nodes": 28,
+        "cutoff_ladder": [
+          {
+            "normalized_ir_cut": 0.0,
+            "vacuum_residual": -0.09249674533560222,
+            "thermal_even_residual": 3.3799257830327547,
+            "sum_after_eikonal_subtraction": 3.2874290376971524
+          },
+          {
+            "normalized_ir_cut": 0.0001,
+            "vacuum_residual": -0.09156713725923168,
+            "thermal_even_residual": 3.346121613410167,
+            "sum_after_eikonal_subtraction": 3.2545544761509353
+          },
+          {
+            "normalized_ir_cut": 1e-06,
+            "vacuum_residual": -0.09248744879003792,
+            "thermal_even_residual": 3.3795877408714574,
+            "sum_after_eikonal_subtraction": 3.2871002920814196
+          },
+          {
+            "normalized_ir_cut": 1e-10,
+            "vacuum_residual": -0.09249674440594718,
+            "thermal_even_residual": 3.3799257492285384,
+            "sum_after_eikonal_subtraction": 3.287429004822591
+          }
+        ]
+      },
+      "fine": {
+        "normalized_soft_coefficients": [
+          3.666890756488301,
+          -9.296550259311237,
+          9.39006016646245,
+          -2.220561992985896,
+          -2.200398616999168
+        ],
+        "analytic_zero_soft": 3.6668907564882725,
+        "max_series_test_relative_defect": 1.1254324028384146e-16,
+        "angle_nodes": 52,
+        "cutoff_ladder": [
+          {
+            "normalized_ir_cut": 0.0,
+            "vacuum_residual": -0.09249674533560709,
+            "thermal_even_residual": 3.3799257824183186,
+            "sum_after_eikonal_subtraction": 3.2874290370827115
+          },
+          {
+            "normalized_ir_cut": 0.0001,
+            "vacuum_residual": -0.09156713725923656,
+            "thermal_even_residual": 3.3461216127957303,
+            "sum_after_eikonal_subtraction": 3.254554475536494
+          },
+          {
+            "normalized_ir_cut": 1e-06,
+            "vacuum_residual": -0.09248744879004281,
+            "thermal_even_residual": 3.379587740257021,
+            "sum_after_eikonal_subtraction": 3.2871002914669782
+          },
+          {
+            "normalized_ir_cut": 1e-10,
+            "vacuum_residual": -0.09249674440595207,
+            "thermal_even_residual": 3.379925748614102,
+            "sum_after_eikonal_subtraction": 3.2874290042081498
+          }
+        ]
+      }
+    },
+    {
+      "grid": "third",
+      "independent_signed_trace_defect": 4.6629367034256575e-15,
+      "coarse": {
+        "normalized_soft_coefficients": [
+          3.6668972558673207,
+          -9.296525501579334,
+          9.390005563948314,
+          -2.2205409738542494,
+          -2.20037042332787
+        ],
+        "analytic_zero_soft": 3.666897255867317,
+        "max_series_test_relative_defect": 8.800718864044538e-17,
+        "angle_nodes": 28,
+        "cutoff_ladder": [
+          {
+            "normalized_ir_cut": 0.0,
+            "vacuum_residual": -0.09249650048132874,
+            "thermal_even_residual": 3.379906129049879,
+            "sum_after_eikonal_subtraction": 3.2874096285685503
+          },
+          {
+            "normalized_ir_cut": 0.0001,
+            "vacuum_residual": -0.09156689488045838,
+            "thermal_even_residual": 3.346102155996068,
+            "sum_after_eikonal_subtraction": 3.2545352611156098
+          },
+          {
+            "normalized_ir_cut": 1e-06,
+            "vacuum_residual": -0.09248720396052215,
+            "thermal_even_residual": 3.379568088854272,
+            "sum_after_eikonal_subtraction": 3.28708088489375
+          },
+          {
+            "normalized_ir_cut": 1e-10,
+            "vacuum_residual": -0.09249649955167619,
+            "thermal_even_residual": 3.379906095245859,
+            "sum_after_eikonal_subtraction": 3.2874095956941827
+          }
+        ]
+      },
+      "fine": {
+        "normalized_soft_coefficients": [
+          3.666897255867345,
+          -9.296525501579392,
+          9.390005563948339,
+          -2.220540973854202,
+          -2.2003704233278754
+        ],
+        "analytic_zero_soft": 3.666897255867317,
+        "max_series_test_relative_defect": 1.386959271476878e-16,
+        "angle_nodes": 52,
+        "cutoff_ladder": [
+          {
+            "normalized_ir_cut": 0.0,
+            "vacuum_residual": -0.09249650048132771,
+            "thermal_even_residual": 3.379906129104231,
+            "sum_after_eikonal_subtraction": 3.2874096286229033
+          },
+          {
+            "normalized_ir_cut": 0.0001,
+            "vacuum_residual": -0.09156689488045736,
+            "thermal_even_residual": 3.3461021560504203,
+            "sum_after_eikonal_subtraction": 3.2545352611699627
+          },
+          {
+            "normalized_ir_cut": 1e-06,
+            "vacuum_residual": -0.09248720396052114,
+            "thermal_even_residual": 3.379568088908624,
+            "sum_after_eikonal_subtraction": 3.287080884948103
+          },
+          {
+            "normalized_ir_cut": 1e-10,
+            "vacuum_residual": -0.09249649955167516,
+            "thermal_even_residual": 3.379906095300211,
+            "sum_after_eikonal_subtraction": 3.2874095957485356
+          }
+        ]
+      }
+    }
+  ]
+}

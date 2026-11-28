@@ -1,0 +1,655 @@
+{
+  "scope": "Cold bare photon-only isotropic bath in its rest frame: moving equal charges, no plasma dispersion, charged occupations or hot-archive claim.",
+  "controls": [
+    {
+      "mass_fixture": "fine",
+      "m_over_M": 0.06,
+      "scalar_mass_over_M": 0.017441118778096624,
+      "current": "scalar",
+      "signed_even_recoil_coefficients": {
+        "2": 18.780120332924852,
+        "4": -4.40079723399833,
+        "6": -9.693956635571602,
+        "8": -27.596397155909475
+      },
+      "independent_contour_defects": {
+        "4": 6.089796327932973e-45,
+        "6": 2.301118472636879e-44,
+        "8": 8.704295557725195e-44
+      },
+      "boosted_bose_checks": [
+        {
+          "beta": 0.0,
+          "gamma": 1.0,
+          "leading_T4_before_bose_moment": -4.40079723399833,
+          "boosted_T4_in_fixed_bath_temperature": -4.40079723399833,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0004,
+              "directly_integrated_higher_recoil_over_sigma4": -28.578699914750775,
+              "expansion_through_T8_over_sigma4": -28.578699914750654,
+              "T8_replay_defect": 1.2079226507921703e-13,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0008,
+              "directly_integrated_higher_recoil_over_sigma4": -28.579268024166286,
+              "expansion_through_T8_over_sigma4": -28.5792680241581,
+              "T8_replay_defect": 8.185452315956354e-12,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0016,
+              "directly_integrated_higher_recoil_over_sigma4": -28.58154110583303,
+              "expansion_through_T8_over_sigma4": -28.58154110530867,
+              "T8_replay_defect": 5.243592227088811e-10,
+              "independent_photon_tail_defect": 3.552713678800501e-15
+            }
+          ]
+        },
+        {
+          "beta": 0.8,
+          "gamma": 1.6666666666666667,
+          "leading_T4_before_bose_moment": -4.40079723399833,
+          "boosted_T4_in_fixed_bath_temperature": -14.832316603475855,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0001333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -1.1891425759818837,
+              "expansion_through_T8_over_sigma4": -1.189142575981949,
+              "T8_replay_defect": 6.52811138479592e-14,
+              "independent_photon_tail_defect": 1.5543122344752192e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0002666666666666666,
+              "directly_integrated_higher_recoil_over_sigma4": -1.1891567780936316,
+              "expansion_through_T8_over_sigma4": -1.189156778093585,
+              "T8_replay_defect": 4.6629367034256575e-14,
+              "independent_photon_tail_defect": 1.5543122344752192e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0005333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -1.1892135980387837,
+              "expansion_through_T8_over_sigma4": -1.1892135980315692,
+              "T8_replay_defect": 7.214451258619192e-12,
+              "independent_photon_tail_defect": 1.3322676295501878e-15
+            }
+          ]
+        },
+        {
+          "beta": 0.985,
+          "gamma": 5.795275877997445,
+          "leading_T4_before_bose_moment": -4.40079723399833,
+          "boosted_T4_in_fixed_bath_temperature": -195.6020733092752,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 3.47716552679847e-05,
+              "directly_integrated_higher_recoil_over_sigma4": -0.07253454781721612,
+              "expansion_through_T8_over_sigma4": -0.07253454781722017,
+              "T8_replay_defect": 4.052314039881821e-15,
+              "independent_photon_tail_defect": 8.326672684688674e-17
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 6.95433105359694e-05,
+              "directly_integrated_higher_recoil_over_sigma4": -0.07253541293511967,
+              "expansion_through_T8_over_sigma4": -0.07253541293511688,
+              "T8_replay_defect": 2.789435349370706e-15,
+              "independent_photon_tail_defect": 9.71445146547012e-17
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0001390866210719388,
+              "directly_integrated_higher_recoil_over_sigma4": -0.0725388741071295,
+              "expansion_through_T8_over_sigma4": -0.07253887410669009,
+              "T8_replay_defect": 4.3941239535882914e-13,
+              "independent_photon_tail_defect": 8.326672684688674e-17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mass_fixture": "third",
+      "m_over_M": 0.06,
+      "scalar_mass_over_M": 0.017344828943563068,
+      "current": "scalar",
+      "signed_even_recoil_coefficients": {
+        "2": 18.780011127896636,
+        "4": -4.400740846655743,
+        "6": -9.693765909129253,
+        "8": -27.595662283468528
+      },
+      "independent_contour_defects": {
+        "4": 6.092873292107875e-45,
+        "6": 2.302256274582327e-44,
+        "8": 8.708504084471428e-44
+      },
+      "boosted_bose_checks": [
+        {
+          "beta": 0.0,
+          "gamma": 1.0,
+          "leading_T4_before_bose_moment": -4.400740846655743,
+          "boosted_T4_in_fixed_bath_temperature": -4.400740846655743,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0004,
+              "directly_integrated_higher_recoil_over_sigma4": -28.57833373503941,
+              "expansion_through_T8_over_sigma4": -28.578333735039283,
+              "T8_replay_defect": 1.2789769243681803e-13,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0008,
+              "directly_integrated_higher_recoil_over_sigma4": -28.578901833277126,
+              "expansion_through_T8_over_sigma4": -28.578901833268933,
+              "T8_replay_defect": 8.192557743313955e-12,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0016,
+              "directly_integrated_higher_recoil_over_sigma4": -28.58117487021551,
+              "expansion_through_T8_over_sigma4": -28.581174869691168,
+              "T8_replay_defect": 5.243414591404871e-10,
+              "independent_photon_tail_defect": 3.552713678800501e-15
+            }
+          ]
+        },
+        {
+          "beta": 0.8,
+          "gamma": 1.6666666666666667,
+          "leading_T4_before_bose_moment": -4.400740846655743,
+          "boosted_T4_in_fixed_bath_temperature": -14.832126557247134,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0001333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -1.1891273394851307,
+              "expansion_through_T8_over_sigma4": -1.1891273394851956,
+              "T8_replay_defect": 6.483702463810914e-14,
+              "independent_photon_tail_defect": 1.5543122344752192e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0002666666666666666,
+              "directly_integrated_higher_recoil_over_sigma4": -1.1891415413174484,
+              "expansion_through_T8_over_sigma4": -1.1891415413174016,
+              "T8_replay_defect": 4.6851411639181606e-14,
+              "independent_photon_tail_defect": 1.5543122344752192e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0005333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -1.189198360144574,
+              "expansion_through_T8_over_sigma4": -1.1891983601373597,
+              "T8_replay_defect": 7.214229214014267e-12,
+              "independent_photon_tail_defect": 1.3322676295501878e-15
+            }
+          ]
+        },
+        {
+          "beta": 0.985,
+          "gamma": 5.795275877997445,
+          "leading_T4_before_bose_moment": -4.400740846655743,
+          "boosted_T4_in_fixed_bath_temperature": -195.5995670631266,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 3.47716552679847e-05,
+              "directly_integrated_higher_recoil_over_sigma4": -0.07253361843126913,
+              "expansion_through_T8_over_sigma4": -0.07253361843127315,
+              "T8_replay_defect": 4.0245584642661925e-15,
+              "independent_photon_tail_defect": 8.326672684688674e-17
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 6.95433105359694e-05,
+              "directly_integrated_higher_recoil_over_sigma4": -0.07253448353215124,
+              "expansion_through_T8_over_sigma4": -0.07253448353214846,
+              "T8_replay_defect": 2.7755575615628914e-15,
+              "independent_photon_tail_defect": 8.326672684688674e-17
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0001390866210719388,
+              "directly_integrated_higher_recoil_over_sigma4": -0.07253794463605678,
+              "expansion_through_T8_over_sigma4": -0.0725379446356174,
+              "T8_replay_defect": 4.393846397832135e-13,
+              "independent_photon_tail_defect": 8.326672684688674e-17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "m_over_M": 0.2,
+      "scalar_mass_over_M": 0.65,
+      "current": "scalar",
+      "signed_even_recoil_coefficients": {
+        "2": 29.3469865052058,
+        "4": 19.96598331912732,
+        "6": 158.1267858008395,
+        "8": -1863.832425371
+      },
+      "independent_contour_defects": {
+        "4": 1.6838668139232701e-44,
+        "6": 8.308143376713999e-43,
+        "8": 4.106067665194134e-41
+      },
+      "boosted_bose_checks": [
+        {
+          "beta": 0.0,
+          "gamma": 1.0,
+          "leading_T4_before_bose_moment": 19.96598331912732,
+          "boosted_T4_in_fixed_bath_temperature": 19.96598331912732,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0004,
+              "directly_integrated_higher_recoil_over_sigma4": 129.6609742277239,
+              "expansion_through_T8_over_sigma4": 129.66097422804174,
+              "T8_replay_defect": 3.17839976560208e-10,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0008,
+              "directly_integrated_higher_recoil_over_sigma4": 129.67023665099896,
+              "expansion_through_T8_over_sigma4": 129.67023667140185,
+              "T8_replay_defect": 2.0402893596838112e-08,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0016,
+              "directly_integrated_higher_recoil_over_sigma4": 129.7072416604413,
+              "expansion_through_T8_over_sigma4": 129.70724298210826,
+              "T8_replay_defect": 1.3216669572102546e-06,
+              "independent_photon_tail_defect": 0.0
+            }
+          ]
+        },
+        {
+          "beta": 0.8,
+          "gamma": 1.6666666666666667,
+          "leading_T4_before_bose_moment": 19.96598331912732,
+          "boosted_T4_in_fixed_bath_temperature": 67.29275859409579,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0001333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": 5.3950784032088475,
+              "expansion_through_T8_over_sigma4": 5.3950784032135655,
+              "T8_replay_defect": 4.718003765447065e-12,
+              "independent_photon_tail_defect": 6.217248937900877e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0002666666666666666,
+              "directly_integrated_higher_recoil_over_sigma4": 5.395309985961743,
+              "expansion_through_T8_over_sigma4": 5.395309986245217,
+              "T8_replay_defect": 2.8347457714517077e-10,
+              "independent_photon_tail_defect": 6.217248937900877e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0005333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": 5.396235523948894,
+              "expansion_through_T8_over_sigma4": 5.3962355422517305,
+              "T8_replay_defect": 1.8302836579664472e-08,
+              "independent_photon_tail_defect": 5.329070518200751e-15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "m_over_M": 0.2,
+      "scalar_mass_over_M": 0.65,
+      "current": "left",
+      "signed_even_recoil_coefficients": {
+        "2": 35.87267609303939,
+        "4": -28.773057171655537,
+        "6": -642.0031125462613,
+        "8": -23157.123106565094
+      },
+      "independent_contour_defects": {
+        "4": 3.0127230259598203e-44,
+        "6": 1.4813600614370165e-42,
+        "8": 7.298037924366299e-41
+      },
+      "boosted_bose_checks": [
+        {
+          "beta": 0.0,
+          "gamma": 1.0,
+          "leading_T4_before_bose_moment": -28.773057171655537,
+          "boosted_T4_in_fixed_bath_temperature": -28.773057171655537,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0004,
+              "directly_integrated_higher_recoil_over_sigma4": -186.86303293036593,
+              "expansion_through_T8_over_sigma4": -186.8630329290137,
+              "T8_replay_defect": 1.3522196695703315e-09,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0008,
+              "directly_integrated_higher_recoil_over_sigma4": -186.90069873079688,
+              "expansion_through_T8_over_sigma4": -186.90069864406956,
+              "T8_replay_defect": 8.672731155456859e-08,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0016,
+              "directly_integrated_higher_recoil_over_sigma4": -187.05190710523996,
+              "expansion_through_T8_over_sigma4": -187.05190150556692,
+              "T8_replay_defect": 5.599673045253439e-06,
+              "independent_photon_tail_defect": 0.0
+            }
+          ]
+        },
+        {
+          "beta": 0.8,
+          "gamma": 1.6666666666666667,
+          "leading_T4_before_bose_moment": -28.773057171655537,
+          "boosted_T4_in_fixed_bath_temperature": -96.97585935632053,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0001333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -7.775071012790346,
+              "expansion_through_T8_over_sigma4": -7.775071012772005,
+              "T8_replay_defect": 1.8340884366807586e-11,
+              "independent_photon_tail_defect": 9.769962616701378e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0002666666666666666,
+              "directly_integrated_higher_recoil_over_sigma4": -7.776012319494616,
+              "expansion_through_T8_over_sigma4": -7.776012318291152,
+              "T8_replay_defect": 1.2034639951252757e-09,
+              "independent_photon_tail_defect": 7.993605777301127e-15
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0005333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -7.779787260851705,
+              "expansion_through_T8_over_sigma4": -7.7797871832456105,
+              "T8_replay_defect": 7.760609488371983e-08,
+              "independent_photon_tail_defect": 8.881784197001252e-16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "m_over_M": 0.5,
+      "scalar_mass_over_M": 0.12,
+      "current": "scalar",
+      "signed_even_recoil_coefficients": {
+        "2": 5.067137570871899,
+        "4": 0.15627842932074096,
+        "6": 3.088428983046883,
+        "8": 13.88045502422616
+      },
+      "independent_contour_defects": {
+        "4": 4.945975769838106e-48,
+        "6": 6.190626789714792e-47,
+        "8": 7.353573100254446e-46
+      },
+      "boosted_bose_checks": [
+        {
+          "beta": 0.0,
+          "gamma": 1.0,
+          "leading_T4_before_bose_moment": 0.15627842932074096,
+          "boosted_T4_in_fixed_bath_temperature": 0.15627842932074096,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0004,
+              "directly_integrated_higher_recoil_over_sigma4": 1.0149229779311526,
+              "expansion_through_T8_over_sigma4": 1.0149229779310736,
+              "T8_replay_defect": 7.904787935331115e-14,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0008,
+              "directly_integrated_higher_recoil_over_sigma4": 1.015103983636927,
+              "expansion_through_T8_over_sigma4": 1.0151039836318676,
+              "T8_replay_defect": 5.059508367821763e-12,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0016,
+              "directly_integrated_higher_recoil_over_sigma4": 1.0158283304376403,
+              "expansion_through_T8_over_sigma4": 1.0158283301135675,
+              "T8_replay_defect": 3.2407276862045364e-10,
+              "independent_photon_tail_defect": 0.0
+            }
+          ]
+        },
+        {
+          "beta": 0.8,
+          "gamma": 1.6666666666666667,
+          "leading_T4_before_bose_moment": 0.15627842932074096,
+          "boosted_T4_in_fixed_bath_temperature": 0.5267161877106455,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0001333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": 0.042229446498260874,
+              "expansion_through_T8_over_sigma4": 0.04222944649826216,
+              "T8_replay_defect": 1.2836953722228372e-15,
+              "independent_photon_tail_defect": 4.85722573273506e-17
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0002666666666666666,
+              "directly_integrated_higher_recoil_over_sigma4": 0.04223397137156173,
+              "expansion_through_T8_over_sigma4": 0.04223397137149386,
+              "T8_replay_defect": 6.78693212741166e-14,
+              "independent_photon_tail_defect": 4.163336342344337e-17
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0005333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": 0.042252076648890705,
+              "expansion_through_T8_over_sigma4": 0.04225207664439308,
+              "T8_replay_defect": 4.497624495058972e-12,
+              "independent_photon_tail_defect": 6.938893903907228e-18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "m_over_M": 0.5,
+      "scalar_mass_over_M": 0.12,
+      "current": "left",
+      "signed_even_recoil_coefficients": {
+        "2": 5.753783971832678,
+        "4": -0.6235977692320994,
+        "6": 6.171605201014395,
+        "8": 29.683618568645848
+      },
+      "independent_contour_defects": {
+        "4": 3.0888396636613705e-47,
+        "6": 3.235318374677253e-46,
+        "8": 3.3769214113395614e-45
+      },
+      "boosted_bose_checks": [
+        {
+          "beta": 0.0,
+          "gamma": 1.0,
+          "leading_T4_before_bose_moment": -0.6235977692320994,
+          "boosted_T4_in_fixed_bath_temperature": -0.6235977692320994,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0004,
+              "directly_integrated_higher_recoil_over_sigma4": -4.049485571053486,
+              "expansion_through_T8_over_sigma4": -4.049485571053648,
+              "T8_replay_defect": 1.616484723854228e-13,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0008,
+              "directly_integrated_higher_recoil_over_sigma4": -4.049123863712013,
+              "expansion_through_T8_over_sigma4": -4.049123863722326,
+              "T8_replay_defect": 1.0313527809557854e-11,
+              "independent_photon_tail_defect": 0.0
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0016,
+              "directly_integrated_higher_recoil_over_sigma4": -4.047676341543764,
+              "expansion_through_T8_over_sigma4": -4.047676342204329,
+              "T8_replay_defect": 6.605649360835741e-10,
+              "independent_photon_tail_defect": 0.0
+            }
+          ]
+        },
+        {
+          "beta": 0.8,
+          "gamma": 1.6666666666666667,
+          "leading_T4_before_bose_moment": -0.6235977692320994,
+          "boosted_T4_in_fixed_bath_temperature": -2.1017554444489277,
+          "rows": [
+            {
+              "max_directional_T_over_M": 0.0004,
+              "bath_temperature_over_M": 0.0001333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -0.1684991157986887,
+              "expansion_through_T8_over_sigma4": -0.16849911579870042,
+              "T8_replay_defect": 1.1712852909795402e-14,
+              "independent_photon_tail_defect": 2.220446049250313e-16
+            },
+            {
+              "max_directional_T_over_M": 0.0008,
+              "bath_temperature_over_M": 0.0002666666666666666,
+              "directly_integrated_higher_recoil_over_sigma4": -0.1684900736803986,
+              "expansion_through_T8_over_sigma4": -0.16849007368055127,
+              "T8_replay_defect": 1.5268342146157465e-13,
+              "independent_photon_tail_defect": 2.220446049250313e-16
+            },
+            {
+              "max_directional_T_over_M": 0.0016,
+              "bath_temperature_over_M": 0.0005333333333333333,
+              "directly_integrated_higher_recoil_over_sigma4": -0.16845389283819098,
+              "expansion_through_T8_over_sigma4": -0.1684538928473732,
+              "T8_replay_defect": 9.18221054746482e-12,
+              "independent_photon_tail_defect": 3.0531133177191805e-16
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "independent_spin_and_clock": [
+    {
+      "beta": 0.0,
+      "gamma": 1.0,
+      "spin_trace_relative_defect": 8.659739592076221e-15,
+      "doppler_average_inverse_2": 1.0,
+      "doppler_average_inverse_4": 1.0,
+      "doppler_average_inverse_6": 1.0,
+      "bose_and_angle_relative_defects": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ],
+      "proper_clock_T2_coefficient": -2.0,
+      "bath_clock_fixed_momentum_T2_coefficient": -2.0
+    },
+    {
+      "beta": 0.4,
+      "gamma": 1.0910894511799618,
+      "spin_trace_relative_defect": 8.881784197001252e-15,
+      "doppler_average_inverse_2": 0.9999999999999999,
+      "doppler_average_inverse_4": 1.253968253968254,
+      "doppler_average_inverse_6": 1.878004535147392,
+      "bose_and_angle_relative_defects": [
+        8.881784197001252e-16,
+        1.1857181902996672e-13,
+        5.995204332975845e-15
+      ],
+      "proper_clock_T2_coefficient": -2.0,
+      "bath_clock_fixed_momentum_T2_coefficient": -1.68
+    },
+    {
+      "beta": 0.8,
+      "gamma": 1.6666666666666667,
+      "spin_trace_relative_defect": 9.103828801926284e-15,
+      "doppler_average_inverse_2": 1.0,
+      "doppler_average_inverse_4": 3.3703703703703707,
+      "doppler_average_inverse_6": 18.2246913580247,
+      "bose_and_angle_relative_defects": [
+        6.661338147750939e-16,
+        1.1013412404281553e-13,
+        7.838174553853605e-14
+      ],
+      "proper_clock_T2_coefficient": -2.0,
+      "bath_clock_fixed_momentum_T2_coefficient": -0.7199999999999999
+    },
+    {
+      "beta": 0.95,
+      "gamma": 3.2025630761017414,
+      "spin_trace_relative_defect": 9.992007221626409e-15,
+      "doppler_average_inverse_2": 1.0,
+      "doppler_average_inverse_4": 13.341880341880328,
+      "doppler_average_inverse_6": 312.2052596975665,
+      "bose_and_angle_relative_defects": [
+        1.9984014443252818e-15,
+        1.092459456231154e-13,
+        6.539213615042172e-13
+      ],
+      "proper_clock_T2_coefficient": -2.0,
+      "bath_clock_fixed_momentum_T2_coefficient": -0.19500000000000015
+    },
+    {
+      "beta": 0.985,
+      "gamma": 5.795275877997445,
+      "spin_trace_relative_defect": 1.1546319456101628e-14,
+      "doppler_average_inverse_2": 1.0000000000000002,
+      "doppler_average_inverse_4": 44.44696333613207,
+      "doppler_average_inverse_6": 3529.0904116445663,
+      "bose_and_angle_relative_defects": [
+        2.6645352591003757e-15,
+        1.0969003483296547e-13,
+        2.8133051444001467e-13
+      ],
+      "proper_clock_T2_coefficient": -2.0,
+      "bath_clock_fixed_momentum_T2_coefficient": -0.05955000000000004
+    },
+    {
+      "beta": 0.998,
+      "gamma": 15.819299929208308,
+      "spin_trace_relative_defect": 9.992007221626409e-15,
+      "doppler_average_inverse_2": 1.0,
+      "doppler_average_inverse_4": 333.33366700033315,
+      "doppler_average_inverse_6": 199800.20020040058,
+      "bose_and_angle_relative_defects": [
+        5.662137425588298e-15,
+        9.036477122137399e-10,
+        9.289236047038685e-12
+      ],
+      "proper_clock_T2_coefficient": -2.0,
+      "bath_clock_fixed_momentum_T2_coefficient": -0.00799200000000001
+    }
+  ]
+}

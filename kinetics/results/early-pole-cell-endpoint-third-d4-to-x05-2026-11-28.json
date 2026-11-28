@@ -1,0 +1,609 @@
+{
+  "scope": "Matched scalar/number and energy checks on one fixed spatial chart, not spatial convergence",
+  "segments": [
+    {
+      "grid": "third",
+      "subcells_per_archived_cell": 4,
+      "counts": [
+        97,
+        1248,
+        1408
+      ],
+      "x_end": 0.01,
+      "time_refinement": 512,
+      "endpoint_yield_relative_drift": 1.3004405874372793e-07,
+      "original_archive_yield": 3.4782717273523103e-07,
+      "checkpoint_trajectories": [
+        [
+          {
+            "x": 0.007774609872210581,
+            "scalar_yield": 7.568541418668217e-08,
+            "pair_number_error": 9.216459619955635e-18,
+            "continuity_residual": -2.952010406343723e-17,
+            "max_charged": 0.49869144061427373,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008059274488676564,
+            "scalar_yield": 9.701767193194781e-08,
+            "pair_number_error": 1.4009713189349314e-17,
+            "continuity_residual": -4.443185440205317e-17,
+            "max_charged": 0.4986914295382588,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008354362000335961,
+            "scalar_yield": 1.226005293450925e-07,
+            "pair_number_error": 1.242978498448323e-17,
+            "continuity_residual": -5.1084133532433226e-17,
+            "max_charged": 0.4986913598441935,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008660254037844385,
+            "scalar_yield": 1.5321895880346874e-07,
+            "pair_number_error": 8.216219588366713e-18,
+            "continuity_residual": -2.2168334537302735e-17,
+            "max_charged": 0.4986913412813928,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008977346205130202,
+            "scalar_yield": 1.8979789345540364e-07,
+            "pair_number_error": 3.942938369468768e-18,
+            "continuity_residual": -5.946171289725188e-19,
+            "max_charged": 0.498691307847573,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.009306048591020995,
+            "scalar_yield": 2.3342979269716286e-07,
+            "pair_number_error": 1.6737371037744975e-18,
+            "continuity_residual": 1.4426665157635243e-17,
+            "max_charged": 0.4986912640094209,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.009646786299603095,
+            "scalar_yield": 2.8539653583020037e-07,
+            "pair_number_error": 4.734914175151539e-18,
+            "continuity_residual": 5.899796235863015e-17,
+            "max_charged": 0.4986912301387363,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.01,
+            "scalar_yield": 3.472589355441862e-07,
+            "pair_number_error": 6.661067097207818e-18,
+            "continuity_residual": 4.4540804014893756e-17,
+            "max_charged": 0.4986912236008995,
+            "max_limited_extent": 0.0
+          }
+        ],
+        [
+          {
+            "x": 0.007774609872210581,
+            "scalar_yield": 7.568541688033547e-08,
+            "pair_number_error": 1.7615108929337243e-18,
+            "continuity_residual": -7.599950179680006e-18,
+            "max_charged": 0.49869144061427373,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008059274488676564,
+            "scalar_yield": 9.701767797308905e-08,
+            "pair_number_error": 1.063619271867225e-17,
+            "continuity_residual": -2.2911817706755197e-17,
+            "max_charged": 0.49869142953754236,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008354362000335961,
+            "scalar_yield": 1.22600539415696e-07,
+            "pair_number_error": 5.365953720855993e-18,
+            "continuity_residual": -1.5286827115571985e-18,
+            "max_charged": 0.4986913598443702,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008660254037844385,
+            "scalar_yield": 1.5321897347107655e-07,
+            "pair_number_error": 1.468416317360055e-17,
+            "continuity_residual": -3.264422627070711e-17,
+            "max_charged": 0.49869134128159165,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.008977346205130202,
+            "scalar_yield": 1.897979136194314e-07,
+            "pair_number_error": 1.2562345640728528e-17,
+            "continuity_residual": -5.135560759202823e-17,
+            "max_charged": 0.49869130784736637,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.009306048591020995,
+            "scalar_yield": 2.3342981948587864e-07,
+            "pair_number_error": 4.0826988057657276e-19,
+            "continuity_residual": 1.6086849734253672e-17,
+            "max_charged": 0.4986912640095901,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.009646786299603095,
+            "scalar_yield": 2.853965709425974e-07,
+            "pair_number_error": 5.717472393966527e-18,
+            "continuity_residual": 6.858341070623344e-17,
+            "max_charged": 0.49869123013694744,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.01,
+            "scalar_yield": 3.472589807031535e-07,
+            "pair_number_error": 1.589711435406871e-17,
+            "continuity_residual": 1.2646667770627694e-16,
+            "max_charged": 0.49869122359629986,
+            "max_limited_extent": 0.0
+          }
+        ]
+      ],
+      "scope": "Opt-in startup check; cannot stand in for the full archived production history",
+      "starting_x": 0.0075,
+      "starting_scalar_yield": 5.7954565933670424e-08,
+      "signed_endpoint_yield_change_from_original": -0.0016335469929200652
+    },
+    {
+      "grid": "third",
+      "subcells_per_archived_cell": 4,
+      "counts": [
+        97,
+        1248,
+        1408
+      ],
+      "x_end": 0.02,
+      "time_refinement": 1024,
+      "endpoint_yield_relative_drift": 1.6616324155505069e-06,
+      "original_archive_yield": 1.0311320150736508e-05,
+      "checkpoint_trajectories": [
+        [
+          {
+            "x": 0.010905077326652577,
+            "scalar_yield": 5.486390053101149e-07,
+            "pair_number_error": 1.0159313169368078e-17,
+            "continuity_residual": -8.49508401042651e-17,
+            "max_charged": 0.4986910657492814,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.01189207115002721,
+            "scalar_yield": 8.529654072678007e-07,
+            "pair_number_error": 2.256495771485456e-18,
+            "continuity_residual": -5.005202388620386e-16,
+            "max_charged": 0.4986909607751301,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.012968395546510096,
+            "scalar_yield": 1.3134041060132377e-06,
+            "pair_number_error": 1.2326023448444579e-17,
+            "continuity_residual": -1.7087085530677858e-15,
+            "max_charged": 0.4986908668968269,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.014142135623730949,
+            "scalar_yield": 2.0079638038541507e-06,
+            "pair_number_error": 1.0015317568334847e-17,
+            "continuity_residual": -4.8338120480070565e-15,
+            "max_charged": 0.49869056694790337,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.015422108254079407,
+            "scalar_yield": 3.0462225691755524e-06,
+            "pair_number_error": 2.168404344971009e-18,
+            "continuity_residual": -1.2823479122103451e-14,
+            "max_charged": 0.4986903500679808,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.01681792830507429,
+            "scalar_yield": 4.591469475319379e-06,
+            "pair_number_error": 1.49890950346121e-17,
+            "continuity_residual": -3.321394740729393e-14,
+            "max_charged": 0.4986902783745677,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.018340080864093423,
+            "scalar_yield": 6.869886267201191e-06,
+            "pair_number_error": 1.5504091066542713e-17,
+            "continuity_residual": -8.495617132963512e-14,
+            "max_charged": 0.49868970339358204,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.02,
+            "scalar_yield": 1.0198860082660931e-05,
+            "pair_number_error": 5.7462715141731735e-18,
+            "continuity_residual": -2.1154338182430635e-13,
+            "max_charged": 0.49868933220482403,
+            "max_limited_extent": 0.0
+          }
+        ],
+        [
+          {
+            "x": 0.010905077326652577,
+            "scalar_yield": 5.486390594946526e-07,
+            "pair_number_error": 2.050836171892112e-17,
+            "continuity_residual": -1.2973114268499501e-16,
+            "max_charged": 0.49869106574929284,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.01189207115002721,
+            "scalar_yield": 8.529655533398196e-07,
+            "pair_number_error": 2.925990612995255e-17,
+            "continuity_residual": -2.498870014177538e-16,
+            "max_charged": 0.49869096077471226,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.012968395546510096,
+            "scalar_yield": 1.3134043941063842e-06,
+            "pair_number_error": 1.452830911130576e-17,
+            "continuity_residual": -5.151036051149159e-16,
+            "max_charged": 0.49869086689470177,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.014142135623730949,
+            "scalar_yield": 2.00796425232671e-06,
+            "pair_number_error": 8.294146619514109e-18,
+            "continuity_residual": -1.2078164667419025e-15,
+            "max_charged": 0.49869056694957875,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.015422108254079407,
+            "scalar_yield": 3.0462235198306484e-06,
+            "pair_number_error": 6.207057437479513e-18,
+            "continuity_residual": -3.183248071603542e-15,
+            "max_charged": 0.49869035007004514,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.01681792830507429,
+            "scalar_yield": 4.591471247945708e-06,
+            "pair_number_error": 2.9327668765732895e-17,
+            "continuity_residual": -8.174964001637745e-15,
+            "max_charged": 0.4986902783881635,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.018340080864093423,
+            "scalar_yield": 6.869891871737453e-06,
+            "pair_number_error": 3.008661028647275e-17,
+            "continuity_residual": -2.1067959117722357e-14,
+            "max_charged": 0.4986897033893718,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.02,
+            "scalar_yield": 1.0198877029445605e-05,
+            "pair_number_error": 1.3660947373317356e-17,
+            "continuity_residual": -5.2735874884633424e-14,
+            "max_charged": 0.4986893322089532,
+            "max_limited_extent": 0.0
+          }
+        ]
+      ],
+      "scope": "Opt-in startup check; cannot stand in for the full archived production history",
+      "starting_x": 0.01,
+      "starting_scalar_yield": 3.472589807031535e-07,
+      "signed_endpoint_yield_change_from_original": -0.010904823014623588
+    },
+    {
+      "grid": "third",
+      "subcells_per_archived_cell": 4,
+      "counts": [
+        97,
+        1248,
+        1408
+      ],
+      "x_end": 0.04,
+      "time_refinement": 1024,
+      "endpoint_yield_relative_drift": 0.00014415863768690862,
+      "original_archive_yield": 0.00017120917364802678,
+      "checkpoint_trajectories": [
+        [
+          {
+            "x": 0.021810154653305155,
+            "scalar_yield": 1.5017382790300546e-05,
+            "pair_number_error": 9.18861341181465e-18,
+            "continuity_residual": -2.98293666345015e-13,
+            "max_charged": 0.4986892945625299,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.02378414230005442,
+            "scalar_yield": 2.1916364374021578e-05,
+            "pair_number_error": 2.1575623232461538e-17,
+            "continuity_residual": -9.793126155659398e-13,
+            "max_charged": 0.4986881862454687,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.025936791093020193,
+            "scalar_yield": 3.167581298564368e-05,
+            "pair_number_error": 1.0625181290357943e-17,
+            "continuity_residual": -2.485842511923495e-12,
+            "max_charged": 0.4986877107945557,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.028284271247461898,
+            "scalar_yield": 4.5310836368376206e-05,
+            "pair_number_error": 1.3660947373317356e-17,
+            "continuity_residual": -5.717745660347839e-12,
+            "max_charged": 0.4986876648582118,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.030844216508158814,
+            "scalar_yield": 6.414183127178411e-05,
+            "pair_number_error": 2.992397996059992e-17,
+            "continuity_residual": -1.247105900264913e-11,
+            "max_charged": 0.49868546909739786,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.03363585661014858,
+            "scalar_yield": 8.972374912116282e-05,
+            "pair_number_error": 4.0766001685454967e-17,
+            "continuity_residual": -2.6005749562531353e-11,
+            "max_charged": 0.4986850229542708,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.03668016172818685,
+            "scalar_yield": 0.00012406007091219655,
+            "pair_number_error": 4.0766001685454967e-17,
+            "continuity_residual": -5.2328388475651744e-11,
+            "max_charged": 0.49868496581325583,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04,
+            "scalar_yield": 0.0001694929312137898,
+            "pair_number_error": 3.209238430557093e-17,
+            "continuity_residual": -1.0211320154783314e-10,
+            "max_charged": 0.4986805864674641,
+            "max_limited_extent": 0.0
+          }
+        ],
+        [
+          {
+            "x": 0.021810154653305155,
+            "scalar_yield": 1.5017451543435011e-05,
+            "pair_number_error": 9.839134715305953e-18,
+            "continuity_residual": -7.423628497951057e-14,
+            "max_charged": 0.4986892945625299,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.02378414230005442,
+            "scalar_yield": 2.1916508867893378e-05,
+            "pair_number_error": 1.680513367352532e-17,
+            "continuity_residual": -2.433663876297938e-13,
+            "max_charged": 0.49868818622386246,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.025936791093020193,
+            "scalar_yield": 3.1676175011371036e-05,
+            "pair_number_error": 2.3418766925686896e-17,
+            "continuity_residual": -6.16277838358598e-13,
+            "max_charged": 0.4986877107944098,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.028284271247461898,
+            "scalar_yield": 4.5311709693338216e-05,
+            "pair_number_error": 3.924811864397526e-17,
+            "continuity_residual": -1.413311057540858e-12,
+            "max_charged": 0.49868766485393334,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.030844216508158814,
+            "scalar_yield": 6.414392080933228e-05,
+            "pair_number_error": 3.5128150388530344e-17,
+            "continuity_residual": -3.070060522534883e-12,
+            "max_charged": 0.49868546912725353,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.03363585661014858,
+            "scalar_yield": 8.972879410117664e-05,
+            "pair_number_error": 3.5128150388530344e-17,
+            "continuity_residual": -6.367241647397149e-12,
+            "max_charged": 0.49868502283483135,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.03668016172818685,
+            "scalar_yield": 0.0001240714056886076,
+            "pair_number_error": 3.8163916471489756e-17,
+            "continuity_residual": -1.2722142865009486e-11,
+            "max_charged": 0.49868496597018236,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04,
+            "scalar_yield": 0.0001695173686067124,
+            "pair_number_error": 3.8163916471489756e-17,
+            "continuity_residual": -2.4611180430319894e-11,
+            "max_charged": 0.4986805863514827,
+            "max_limited_extent": 0.0
+          }
+        ]
+      ],
+      "scope": "Opt-in startup check; cannot stand in for the full archived production history",
+      "starting_x": 0.02,
+      "starting_scalar_yield": 1.0198877029445605e-05,
+      "signed_endpoint_yield_change_from_original": -0.009881509298049651
+    },
+    {
+      "grid": "third",
+      "subcells_per_archived_cell": 4,
+      "counts": [
+        97,
+        1248,
+        1408
+      ],
+      "x_end": 0.05,
+      "time_refinement": 1024,
+      "endpoint_yield_relative_drift": 3.742708038556586e-05,
+      "original_archive_yield": 0.00036409278799470697,
+      "checkpoint_trajectories": [
+        [
+          {
+            "x": 0.04113142377191559,
+            "scalar_yield": 0.00018693558483639313,
+            "pair_number_error": 1.1167282376600696e-17,
+            "continuity_residual": -2.3001521096260575e-12,
+            "max_charged": 0.4986805674137158,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.042294850537622566,
+            "scalar_yield": 0.0002058768773710021,
+            "pair_number_error": 1.3010426069826053e-17,
+            "continuity_residual": -5.061348819644282e-12,
+            "max_charged": 0.4986805674137158,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04349118552081964,
+            "scalar_yield": 0.0002264743942911217,
+            "pair_number_error": 1.7780915628762273e-17,
+            "continuity_residual": -8.347660345082997e-12,
+            "max_charged": 0.4986805674137158,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.044721359549995794,
+            "scalar_yield": 0.0002487731395637126,
+            "pair_number_error": 3.382710778154774e-17,
+            "continuity_residual": -1.2310409676775762e-11,
+            "max_charged": 0.4986805674137158,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04598632978267703,
+            "scalar_yield": 0.00027301277144216915,
+            "pair_number_error": 3.122502256758253e-17,
+            "continuity_residual": -1.7064966105516995e-11,
+            "max_charged": 0.4986805674137158,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.047287080450158794,
+            "scalar_yield": 0.0002991082052856155,
+            "pair_number_error": 1.5612511283791264e-17,
+            "continuity_residual": -2.2622436157704057e-11,
+            "max_charged": 0.4986805244529047,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04862462362330366,
+            "scalar_yield": 0.0003273763173954447,
+            "pair_number_error": 1.9081958235744878e-17,
+            "continuity_residual": -2.9342855951280684e-11,
+            "max_charged": 0.498680424782762,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.05,
+            "scalar_yield": 0.00035774200199869595,
+            "pair_number_error": 1.734723475976807e-17,
+            "continuity_residual": -3.713210289376864e-11,
+            "max_charged": 0.49867498205102956,
+            "max_limited_extent": 0.0
+          }
+        ],
+        [
+          {
+            "x": 0.04113142377191559,
+            "scalar_yield": 0.00018693723474460567,
+            "pair_number_error": 1.723881454251952e-17,
+            "continuity_residual": -5.652927085781387e-13,
+            "max_charged": 0.49868056737518907,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.042294850537622566,
+            "scalar_yield": 0.00020587940294404042,
+            "pair_number_error": 8.023096076392733e-18,
+            "continuity_residual": -1.2422922628476437e-12,
+            "max_charged": 0.49868056737518907,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04349118552081964,
+            "scalar_yield": 0.00022647786135659767,
+            "pair_number_error": 1.6046192152785466e-17,
+            "continuity_residual": -2.0475122485886284e-12,
+            "max_charged": 0.49868056737518907,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.044721359549995794,
+            "scalar_yield": 0.00024877789476023963,
+            "pair_number_error": 2.3418766925686896e-17,
+            "continuity_residual": -3.016514040507859e-12,
+            "max_charged": 0.49868056737518907,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04598632978267703,
+            "scalar_yield": 0.00027301914284119547,
+            "pair_number_error": 1.734723475976807e-18,
+            "continuity_residual": -4.176624791732506e-12,
+            "max_charged": 0.49868056737518907,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.047287080450158794,
+            "scalar_yield": 0.0002991164704601921,
+            "pair_number_error": 9.540979117872439e-18,
+            "continuity_residual": -5.530254761619037e-12,
+            "max_charged": 0.4986805244529047,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.04862462362330366,
+            "scalar_yield": 0.00032738687634007677,
+            "pair_number_error": 2.3418766925686896e-17,
+            "continuity_residual": -7.164277051924413e-12,
+            "max_charged": 0.49868042470520096,
+            "max_limited_extent": 0.0
+          },
+          {
+            "x": 0.05,
+            "scalar_yield": 0.0003577553917385009,
+            "pair_number_error": 1.3877787807814457e-17,
+            "continuity_residual": -9.054243601614234e-12,
+            "max_charged": 0.49867498203395955,
+            "max_limited_extent": 0.0
+          }
+        ]
+      ],
+      "scope": "Opt-in startup check; cannot stand in for the full archived production history",
+      "starting_x": 0.04,
+      "starting_scalar_yield": 0.0001695173686067124,
+      "signed_endpoint_yield_change_from_original": -0.01740599227771078
+    }
+  ]
+}

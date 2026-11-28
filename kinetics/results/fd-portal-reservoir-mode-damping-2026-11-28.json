@@ -1,0 +1,386 @@
+{
+  "rows": [
+    {
+      "relative_mesh_rate_discrepancy": 1.84297022087776e-14,
+      "T_SM": 0.05,
+      "positive_rate_eigenvalues": [
+        2.9288065101163617e-25,
+        1.588375375527671e-24
+      ],
+      "force_basis_condition": 5.4145612792653015,
+      "steps": [
+        {
+          "fast_mode_dt_times_rate": 0.25,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": 0.7777777777777778,
+              "central_amplitude_factors": [
+                0.7777777581945187,
+                0.777777772881988
+              ],
+              "cross_mode_amplitudes": [
+                7.2415627171071125e-09,
+                1.8090667843514508e-09
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.8,
+              "central_amplitude_factors": [
+                0.79999998806621,
+                0.7999999970168201
+              ],
+              "cross_mode_amplitudes": [
+                7.4068364253689095e-09,
+                1.850408866789468e-09
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 4.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.3333333333333333,
+              "central_amplitude_factors": [
+                -0.3333334003485957,
+                -0.3333333500867783
+              ],
+              "cross_mode_amplitudes": [
+                2.503339936578136e-09,
+                6.266138679527811e-10
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.2,
+              "central_amplitude_factors": [
+                0.20000000337626747,
+                0.20000000084427738
+              ],
+              "cross_mode_amplitudes": [
+                5.752061876955189e-08,
+                1.4378363743182372e-08
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 20.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.8181818181818182,
+              "central_amplitude_factors": [
+                -0.8181820007890669,
+                -0.8181818638340369
+              ],
+              "cross_mode_amplitudes": [
+                2.1374235045558277e-07,
+                5.3432505863698265e-08
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.047619047619047616,
+              "central_amplitude_factors": [
+                0.04761905140543801,
+                0.047619048565656234
+              ],
+              "cross_mode_amplitudes": [
+                3.755012739163808e-08,
+                9.387204716145658e-09
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 80.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.9512195121951219,
+              "central_amplitude_factors": [
+                -0.9512197563150423,
+                -0.9512195732249603
+              ],
+              "cross_mode_amplitudes": [
+                3.6657886607351045e-07,
+                9.164526711915631e-08
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.012345679012345678,
+              "central_amplitude_factors": [
+                0.01234568027113796,
+                0.012345679327046475
+              ],
+              "cross_mode_amplitudes": [
+                1.2892544881991403e-08,
+                3.223212193655261e-09
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "relative_mesh_rate_discrepancy": 4.8167025923362417e-11,
+      "T_SM": 0.3,
+      "positive_rate_eigenvalues": [
+        3.543705722881328e-21,
+        1.5723816102934244e-20
+      ],
+      "force_basis_condition": 4.35370501948977,
+      "steps": [
+        {
+          "fast_mode_dt_times_rate": 0.25,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": 0.7777777777777778,
+              "central_amplitude_factors": [
+                0.7777777419103237,
+                0.7777777688099379
+              ],
+              "cross_mode_amplitudes": [
+                2.909810745203423e-08,
+                7.274686025995797e-09
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.8,
+              "central_amplitude_factors": [
+                0.7999999785738878,
+                0.7999999946422265
+              ],
+              "cross_mode_amplitudes": [
+                1.4863459533177863e-08,
+                3.7159820303702245e-09
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 4.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.3333333333333333,
+              "central_amplitude_factors": [
+                -0.33333344470685006,
+                -0.33333336117667206
+              ],
+              "cross_mode_amplitudes": [
+                8.528167093948263e-08,
+                2.1321830691137337e-08
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.2,
+              "central_amplitude_factors": [
+                0.20000000492280381,
+                0.20000000123058542
+              ],
+              "cross_mode_amplitudes": [
+                8.813521113537253e-08,
+                2.2035864322772247e-08
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 20.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.8181818181818182,
+              "central_amplitude_factors": [
+                -0.8181821105592526,
+                -0.8181818912753678
+              ],
+              "cross_mode_amplitudes": [
+                4.926850925022396e-07,
+                1.231675390198675e-07
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.047619047619047616,
+              "central_amplitude_factors": [
+                0.047619053662442686,
+                0.047619049129837186
+              ],
+              "cross_mode_amplitudes": [
+                6.268978097193334e-08,
+                1.5672328418802505e-08
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 80.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.9512195121951219,
+              "central_amplitude_factors": [
+                -0.9512199019241899,
+                -0.9512196096257584
+              ],
+              "cross_mode_amplitudes": [
+                7.784866755822891e-07,
+                1.9462443997512298e-07
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.012345679012345678,
+              "central_amplitude_factors": [
+                0.0123456810354246,
+                0.01234567951809281
+              ],
+              "cross_mode_amplitudes": [
+                2.149147897662478e-08,
+                5.3729713766910954e-09
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "relative_mesh_rate_discrepancy": 2.062566117899678e-09,
+      "T_SM": 0.6882487043,
+      "positive_rate_eigenvalues": [
+        3.802650728044757e-18,
+        9.846651908050195e-16
+      ],
+      "force_basis_condition": 9.770424665497405,
+      "steps": [
+        {
+          "fast_mode_dt_times_rate": 0.25,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": 0.7777777777777778,
+              "central_amplitude_factors": [
+                0.7777777622597142,
+                0.7777777738978168
+              ],
+              "cross_mode_amplitudes": [
+                2.1446987546297723e-08,
+                5.363594902910681e-09
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.8,
+              "central_amplitude_factors": [
+                0.7999999937299116,
+                0.7999999984307764
+              ],
+              "cross_mode_amplitudes": [
+                1.7540677998262426e-08,
+                4.386057313451399e-09
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 4.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.3333333333333333,
+              "central_amplitude_factors": [
+                -0.33333338150183917,
+                -0.3333333453737165
+              ],
+              "cross_mode_amplitudes": [
+                3.436566411514602e-08,
+                8.593519961976433e-09
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.2,
+              "central_amplitude_factors": [
+                0.20000000272116286,
+                0.20000000068052273
+              ],
+              "cross_mode_amplitudes": [
+                3.562226588710578e-08,
+                8.908567786126515e-09
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 20.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.8181818181818182,
+              "central_amplitude_factors": [
+                -0.8181819297745923,
+                -0.818181846078584
+              ],
+              "cross_mode_amplitudes": [
+                1.6095017624841698e-08,
+                4.0237974801800065e-09
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.047619047619047616,
+              "central_amplitude_factors": [
+                0.047619050168437115,
+                0.047619048256421506
+              ],
+              "cross_mode_amplitudes": [
+                3.758802030497218e-08,
+                9.396219899134752e-09
+              ]
+            }
+          ]
+        },
+        {
+          "fast_mode_dt_times_rate": 80.0,
+          "damping": [
+            {
+              "method": "discrete_gradient",
+              "expected_factor": -0.9512195121951219,
+              "central_amplitude_factors": [
+                -0.9512196580818133,
+                -0.9512195486653261
+              ],
+              "cross_mode_amplitudes": [
+                6.498359158377577e-10,
+                1.645035582101892e-10
+              ]
+            },
+            {
+              "method": "backward_euler",
+              "expected_factor": 0.012345679012345678,
+              "central_amplitude_factors": [
+                0.012345679862200629,
+                0.012345679224816006
+              ],
+              "cross_mode_amplitudes": [
+                3.16719815059298e-08,
+                7.91702886400133e-09
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Local two-bath FD near-equilibrium numerical damping, not a global timestep or expanding-history criterion."
+}

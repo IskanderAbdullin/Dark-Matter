@@ -1,0 +1,135 @@
+{
+  "scope": "Native first- and second-moment PSD controls, conditional amplified fraction 1e-3. Common reference dark density and 86 eV scalar mass. No thermal scalar microphysics or extrapolation.",
+  "k_h_per_Mpc": [
+    0.002,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0
+  ],
+  "reports": [
+    {
+      "method": "standard NDF",
+      "cases": [
+        {
+          "z": 5,
+          "raw_power_sha256": [
+            "ca327f982fdd376158232ea7a7ca2fa62397462f0eeceb1605f4b8e86be49b9e",
+            "d66d814b983d322016f8bb154fbb74cd177fc29af0ffbc061ff8c066d6ab2413",
+            "57d1eec23f6b3d2ebcac512741d254a5885f499c0487902372437a0c353b2623"
+          ],
+          "single_q2_and_double_q1_q2_delta_logP_vs_direct": [
+            [
+              -4.909198128899561e-06,
+              -5.949496969748225e-06,
+              -8.612996947654494e-06,
+              -1.3925412043924723e-05,
+              -4.104279689132184e-05,
+              -0.00023128342341638408
+            ],
+            [
+              -3.5058160321455034e-06,
+              -4.248650838256651e-06,
+              -6.147261399469528e-06,
+              -9.80955762130975e-06,
+              -1.2192115178777385e-05,
+              -3.1903783906495065e-05
+            ]
+          ],
+          "residual_double_over_single_at_k1": 0.13794237146454744,
+          "max_alternative_interpolation_shift": 5.3598905758178716e-08
+        },
+        {
+          "z": 20,
+          "raw_power_sha256": [
+            "350dd6be377e637eddaefe6d89d71e22ae8c94fba52cd40ea62f4500433d8cca",
+            "096ad0731ee5f4c8d160c349e7b684cefb740984cd43be2fa5cc1fdf8e6b520f",
+            "79d90d822b5029130aca21aae6ff145ce8269732af5adcf92d9af5a632fb2020"
+          ],
+          "single_q2_and_double_q1_q2_delta_logP_vs_direct": [
+            [
+              -4.948838531859678e-06,
+              -5.91912609593237e-06,
+              -8.582055672334832e-06,
+              -1.389350269231926e-05,
+              -4.099656427514198e-05,
+              -0.0002309605283830063
+            ],
+            [
+              -3.534127821946953e-06,
+              -4.226952226460412e-06,
+              -6.125141089441399e-06,
+              -9.78662904937977e-06,
+              -1.2164235438705262e-05,
+              -3.1857093796494595e-05
+            ]
+          ],
+          "residual_double_over_single_at_k1": 0.13793306596383154,
+          "max_alternative_interpolation_shift": 5.342838260702365e-08
+        }
+      ]
+    },
+    {
+      "method": "exact early RK",
+      "cases": [
+        {
+          "z": 5,
+          "raw_power_sha256": [
+            "b6cc2040eaa88abb70453234582b701b439c53a896aa16ffd95c1d97efd506f1",
+            "6e1d2624e1d73f2aee03e6d340e194dfa687952582b0aa2dda878c82f8fae83e",
+            "8d7885a5db1e7c360cd4e769b625246576c90b75dae906a90271bc5c044b6bb8"
+          ],
+          "single_q2_and_double_q1_q2_delta_logP_vs_direct": [
+            [
+              1.1703158442344375e-06,
+              1.4207108902652976e-06,
+              2.043427229203587e-06,
+              2.8206459017354746e-06,
+              -2.073970059290886e-05,
+              -0.0002124024316199069
+            ],
+            [
+              1.5438734672912346e-06,
+              1.8687389538030175e-06,
+              2.6853847430174937e-06,
+              4.127055487579412e-06,
+              4.9411763418660826e-06,
+              -1.5062878136351543e-05
+            ]
+          ],
+          "residual_double_over_single_at_k1": 0.07091669347414294,
+          "max_alternative_interpolation_shift": 0.0
+        },
+        {
+          "z": 20,
+          "raw_power_sha256": [
+            "b05d0b6bbc14d505f3b47828a4f90cbbcfa541d06fc914b9eb8e7607263aa086",
+            "df353bca0917cdcbb8373b26b07d91eb704790db395db9f674535bd8f34526fe",
+            "b1ee2eee74c6778f7ca6035dacd48f113964db4114584628a344be64aa2e004d"
+          ],
+          "single_q2_and_double_q1_q2_delta_logP_vs_direct": [
+            [
+              1.1797762331511308e-06,
+              1.4134752346350865e-06,
+              2.036108410763404e-06,
+              2.8139479848476867e-06,
+              -2.073352337772505e-05,
+              -0.00021209546877654084
+            ],
+            [
+              1.5563378843452824e-06,
+              1.8591963888425767e-06,
+              2.6757241169406143e-06,
+              4.1178082907933344e-06,
+              4.9354954774205595e-06,
+              -1.5036821111369392e-05
+            ]
+          ],
+          "residual_double_over_single_at_k1": 0.07089647505488134,
+          "max_alternative_interpolation_shift": 0.0
+        }
+      ]
+    }
+  ]
+}

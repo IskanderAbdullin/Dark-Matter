@@ -1,0 +1,417 @@
+{
+  "scope": "Static local limit with ideal thermal species and scaled timelike kernel, not the physical decoupling transition.",
+  "rows": [
+    {
+      "T": 0.015,
+      "enthalpy_ratio": 10.0,
+      "frozen_sound_speed": 0.5754306617886045,
+      "full_equilibrium_sound_speed": 0.5750240085363365,
+      "projected_chemical_rate_per_timelike_weight": 2.4903278318388384,
+      "projected_singular_attenuation_weight": 9.39306318014376e-05,
+      "sweep": [
+        {
+          "timelike_weight": 0.001,
+          "chemical_rate": 0.002489863486386719,
+          "pair_scaled_secondary_damping": 9.398908969443265e-05,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.4898634863867187e-05,
+              "phase_speed": 0.5750240219862177,
+              "damping_over_k_squared": 0.09398598553056463
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 0.00012449317431933595,
+              "phase_speed": 0.5750243445150088,
+              "damping_over_k_squared": 0.09391154690904129
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 0.0004979726972773438,
+              "phase_speed": 0.5750293185424654,
+              "damping_over_k_squared": 0.0927635375266109
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 0.002489863486386719,
+              "phase_speed": 0.5751251212768844,
+              "damping_over_k_squared": 0.07064444176183567
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 0.009959453945546875,
+              "phase_speed": 0.575366014359175,
+              "damping_over_k_squared": 0.01496188155180145
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 0.04979726972773438,
+              "phase_speed": 0.5754274665169017,
+              "damping_over_k_squared": 0.0007542008023782539
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.2489863486386719,
+              "phase_speed": 0.5754316479429614,
+              "damping_over_k_squared": 7.82439013468531e-05
+            }
+          ]
+        },
+        {
+          "timelike_weight": 0.0001,
+          "chemical_rate": 0.00024902814784270134,
+          "pair_scaled_secondary_damping": 9.393648120433678e-05,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.4902814784270135e-06,
+              "phase_speed": 0.5750240219829508,
+              "damping_over_k_squared": 0.939333795751453
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 1.2451407392135068e-05,
+              "phase_speed": 0.5750243444205803,
+              "damping_over_k_squared": 0.9385900176725339
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 4.980562956854027e-05,
+              "phase_speed": 0.5750293171180628,
+              "damping_over_k_squared": 0.9271191911324312
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 0.00024902814784270134,
+              "phase_speed": 0.5751251118620675,
+              "damping_over_k_squared": 0.7060659277104494
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 0.0009961125913708054,
+              "phase_speed": 0.5753661315615871,
+              "damping_over_k_squared": 0.14924338887150446
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 0.004980562956854027,
+              "phase_speed": 0.5754275985705931,
+              "damping_over_k_squared": 0.007089307855495863
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.024902814784270134,
+              "phase_speed": 0.5754305317697225,
+              "damping_over_k_squared": 0.00033450454147648014
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-05,
+          "chemical_rate": 2.4903231973323924e-05,
+          "pair_scaled_secondary_damping": 9.393121678296542e-05,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.4903231973323925e-07,
+              "phase_speed": 0.5750240219838182,
+              "damping_over_k_squared": 9.392811544584864
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 1.2451615986661963e-06,
+              "phase_speed": 0.5750243444148658,
+              "damping_over_k_squared": 9.385374368498946
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 4.980646394664785e-06,
+              "phase_speed": 0.5750293169659709,
+              "damping_over_k_squared": 9.270675375004446
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 2.4903231973323924e-05,
+              "phase_speed": 0.5751251109295832,
+              "damping_over_k_squared": 7.060280510352569
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 9.96129278932957e-05,
+              "phase_speed": 0.5753661434931483,
+              "damping_over_k_squared": 1.492057937617195
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 0.0004980646394664785,
+              "phase_speed": 0.5754276166578831,
+              "damping_over_k_squared": 0.07043925787316045
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.002490323197332392,
+              "phase_speed": 0.5754305372152235,
+              "damping_over_k_squared": 0.002886829344768201
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-06,
+          "chemical_rate": 2.4903273686301958e-06,
+          "pair_scaled_secondary_damping": 9.393069027519164e-05,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.490327368630196e-08,
+              "phase_speed": 0.5750240221270592,
+              "damping_over_k_squared": 93.92758900669163
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 1.245163684315098e-07,
+              "phase_speed": 0.5750243443849439,
+              "damping_over_k_squared": 93.85321792304246
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 4.980654737260392e-07,
+              "phase_speed": 0.5750293167830617,
+              "damping_over_k_squared": 92.706237137206
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 2.4903273686301958e-06,
+              "phase_speed": 0.5751251108614227,
+              "damping_over_k_squared": 70.60242640534287
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 9.961309474520783e-06,
+              "phase_speed": 0.5753661446813514,
+              "damping_over_k_squared": 14.920203364707053
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 4.980654737260391e-05,
+              "phase_speed": 0.5754276185185335,
+              "damping_over_k_squared": 0.7039386813607139
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.0002490327368630196,
+              "phase_speed": 0.5754305389778821,
+              "damping_over_k_squared": 0.028409904485924876
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "T": 0.05,
+      "enthalpy_ratio": 10.0,
+      "frozen_sound_speed": 0.5771223977804169,
+      "full_equilibrium_sound_speed": 0.5771165864183792,
+      "projected_chemical_rate_per_timelike_weight": 2.1269314327390783,
+      "projected_singular_attenuation_weight": 1.5768492844349645e-06,
+      "sweep": [
+        {
+          "timelike_weight": 0.001,
+          "chemical_rate": 0.0021259544250207553,
+          "pair_scaled_secondary_damping": 1.5789740364686763e-06,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.1259544250207555e-05,
+              "phase_speed": 0.5771165866121928,
+              "damping_over_k_squared": 0.0015789214394939118
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 0.00010629772125103778,
+              "phase_speed": 0.5771165912564267,
+              "damping_over_k_squared": 0.0015776601627163626
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 0.0004251908850041511,
+              "phase_speed": 0.5771166628718598,
+              "damping_over_k_squared": 0.0015582113663017657
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 0.0021259544250207553,
+              "phase_speed": 0.5771180390345226,
+              "damping_over_k_squared": 0.0011844817799855731
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 0.008503817700083021,
+              "phase_speed": 0.5771214793635396,
+              "damping_over_k_squared": 0.0002501714119300158
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 0.04251908850041511,
+              "phase_speed": 0.5771223543841985,
+              "damping_over_k_squared": 1.2777864986308737e-05
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.21259544250207554,
+              "phase_speed": 0.5771224181464721,
+              "damping_over_k_squared": 1.4889313958340184e-06
+            }
+          ]
+        },
+        {
+          "timelike_weight": 0.0001,
+          "chemical_rate": 0.00021268338473430805,
+          "pair_scaled_secondary_damping": 1.5770618786720394e-06,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.1268338473430807e-06,
+              "phase_speed": 0.5771165866126586,
+              "damping_over_k_squared": 0.015770093547307282
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 1.0634169236715403e-05,
+              "phase_speed": 0.5771165912518346,
+              "damping_over_k_squared": 0.015757498181476134
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 4.253667694686161e-05,
+              "phase_speed": 0.5771166628271724,
+              "damping_over_k_squared": 0.015563276711904103
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 0.00021268338473430805,
+              "phase_speed": 0.5771180384527175,
+              "damping_over_k_squared": 0.011830396467215109
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 0.0008507335389372322,
+              "phase_speed": 0.577121479570294,
+              "damping_over_k_squared": 0.0024924615084195444
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 0.004253667694686161,
+              "phase_speed": 0.5771223543904211,
+              "damping_over_k_squared": 0.00011850891323919397
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.021268338473430806,
+              "phase_speed": 0.5771223961648985,
+              "damping_over_k_squared": 5.767883614558844e-06
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-05,
+          "chemical_rate": 2.1269216753667816e-05,
+          "pair_scaled_secondary_damping": 1.5768705440438265e-06,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.1269216753667815e-07,
+              "phase_speed": 0.5771165866019021,
+              "damping_over_k_squared": 0.1576818025432234
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 1.0634608376833908e-06,
+              "phase_speed": 0.5771165912325464,
+              "damping_over_k_squared": 0.15755586562093812
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 4.253843350733563e-06,
+              "phase_speed": 0.5771166628518077,
+              "damping_over_k_squared": 0.15561391862175955
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 2.1269216753667816e-05,
+              "phase_speed": 0.5771180383936024,
+              "damping_over_k_squared": 0.11828953147286238
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 8.507686701467126e-05,
+              "phase_speed": 0.5771214795929307,
+              "damping_over_k_squared": 0.024915342281654627
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 0.00042538433507335633,
+              "phase_speed": 0.5771223544760004,
+              "damping_over_k_squared": 0.0011757875862449892
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.0021269216753667815,
+              "phase_speed": 0.5771223960275795,
+              "damping_over_k_squared": 4.836408121178284e-05
+            }
+          ]
+        },
+        {
+          "timelike_weight": 1e-06,
+          "chemical_rate": 2.1269304571412654e-06,
+          "pair_scaled_secondary_damping": 1.5768513987824187e-06,
+          "frequency_path": [
+            {
+              "k_over_slow_chemical_rate": 0.01,
+              "wave_number": 2.1269304571412652e-08,
+              "phase_speed": 0.5771165866582408,
+              "damping_over_k_squared": 1.5767988574320602
+            },
+            {
+              "k_over_slow_chemical_rate": 0.05,
+              "wave_number": 1.0634652285706328e-07,
+              "phase_speed": 0.5771165911485567,
+              "damping_over_k_squared": 1.5755395293855492
+            },
+            {
+              "k_over_slow_chemical_rate": 0.2,
+              "wave_number": 4.253860914282531e-07,
+              "phase_speed": 0.5771166628476684,
+              "damping_over_k_squared": 1.556120323549429
+            },
+            {
+              "k_over_slow_chemical_rate": 1.0,
+              "wave_number": 2.1269304571412654e-06,
+              "phase_speed": 0.577118038402255,
+              "damping_over_k_squared": 1.182880885965226
+            },
+            {
+              "k_over_slow_chemical_rate": 4.0,
+              "wave_number": 8.507721828565061e-06,
+              "phase_speed": 0.5771214796009695,
+              "damping_over_k_squared": 0.2491441454177481
+            },
+            {
+              "k_over_slow_chemical_rate": 20.0,
+              "wave_number": 4.253860914282531e-05,
+              "phase_speed": 0.5771223544834772,
+              "damping_over_k_squared": 0.011748571661100882
+            },
+            {
+              "k_over_slow_chemical_rate": 100.0,
+              "wave_number": 0.00021269304571412654,
+              "phase_speed": 0.5771223960351042,
+              "damping_over_k_squared": 0.0004743218013175577
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

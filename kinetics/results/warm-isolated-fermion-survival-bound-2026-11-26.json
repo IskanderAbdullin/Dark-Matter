@@ -1,0 +1,100 @@
+{
+  "scope": "After the 10.442 MeV warm anchor, the specified isolated network with arbitrary internal dark reentry/redistribution and arbitrary reverse gains, but a uniform outgoing scalar occupation cap. No visible or new fermion-number loss channel, no inference of the scalar cap.",
+  "target": 0.12,
+  "cases": [
+    {
+      "q": 16,
+      "anchor_T_GeV": 0.01044191650938716,
+      "core_start_fermion_number_GeV3": 8.19675965424321e-11,
+      "known_energy_upper_GeV4": 4.361077548921259e-12,
+      "conservative_initial_fermion_Omega": 84.27585940417862,
+      "integration_time_energy_assisted": 2.059178135036497e+22,
+      "coarse_minimum_cap_to_reach_goal": 1.8903365878244909,
+      "energy_weighted_minimum_cap_to_reach_goal": 1.8927793822560273,
+      "controls": [
+        {
+          "F_upper": 0.0,
+          "coarse_fermion_rest_Omega_lower": 0.9920968370753294,
+          "energy_weighted_fermion_rest_Omega_lower": 1.0061432617035655
+        },
+        {
+          "F_upper": 0.01,
+          "coarse_fermion_rest_Omega_lower": 0.9727742500971587,
+          "energy_weighted_fermion_rest_Omega_lower": 0.9862751293440004
+        },
+        {
+          "F_upper": 0.1,
+          "coarse_fermion_rest_Omega_lower": 0.821593320050536,
+          "energy_weighted_fermion_rest_Omega_lower": 0.8312031563214041
+        },
+        {
+          "F_upper": 1.0,
+          "coarse_fermion_rest_Omega_lower": 0.2502335242167378,
+          "energy_weighted_fermion_rest_Omega_lower": 0.2511177737720872
+        },
+        {
+          "F_upper": 2.0,
+          "coarse_fermion_rest_Omega_lower": 0.11139865913509511,
+          "energy_weighted_fermion_rest_Omega_lower": 0.11157356048476252
+        },
+        {
+          "F_upper": 2.5,
+          "coarse_fermion_rest_Omega_lower": 0.08187262478861326,
+          "energy_weighted_fermion_rest_Omega_lower": 0.08196705913361825
+        },
+        {
+          "F_upper": 3.0,
+          "coarse_fermion_rest_Omega_lower": 0.06269800415609277,
+          "energy_weighted_fermion_rest_Omega_lower": 0.06275337009580065
+        }
+      ]
+    },
+    {
+      "q": 32,
+      "anchor_T_GeV": 0.010441916509387049,
+      "core_start_fermion_number_GeV3": 8.19690442518404e-11,
+      "known_energy_upper_GeV4": 4.3605455020165135e-12,
+      "conservative_initial_fermion_Omega": 84.2815870508982,
+      "integration_time_energy_assisted": 2.059178135036541e+22,
+      "coarse_minimum_cap_to_reach_goal": 1.8904094192339933,
+      "energy_weighted_minimum_cap_to_reach_goal": 1.892853709251129,
+      "controls": [
+        {
+          "F_upper": 0.0,
+          "coarse_fermion_rest_Omega_lower": 0.992146946041519,
+          "energy_weighted_fermion_rest_Omega_lower": 1.0062031679388939
+        },
+        {
+          "F_upper": 0.01,
+          "coarse_fermion_rest_Omega_lower": 0.9728233791760369,
+          "energy_weighted_fermion_rest_Omega_lower": 0.9863336726587175
+        },
+        {
+          "F_upper": 0.1,
+          "coarse_fermion_rest_Omega_lower": 0.82163478784222,
+          "energy_weighted_fermion_rest_Omega_lower": 0.8312513111042941
+        },
+        {
+          "F_upper": 1.0,
+          "coarse_fermion_rest_Omega_lower": 0.2502461241403969,
+          "energy_weighted_fermion_rest_Omega_lower": 0.2511309841798541
+        },
+        {
+          "F_upper": 2.0,
+          "coarse_fermion_rest_Omega_lower": 0.11140426511257387,
+          "energy_weighted_fermion_rest_Omega_lower": 0.11157928698440113
+        },
+        {
+          "F_upper": 2.5,
+          "coarse_fermion_rest_Omega_lower": 0.0818767444041988,
+          "energy_weighted_fermion_rest_Omega_lower": 0.08197124379635887
+        },
+        {
+          "F_upper": 3.0,
+          "coarse_fermion_rest_Omega_lower": 0.06270115870313686,
+          "energy_weighted_fermion_rest_Omega_lower": 0.06275656276936191
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "scope": "Finite leading soft subtraction and real photon heat in an extended support; finite virtual terms not included.",
+  "data": [
+    {
+      "grid": "fine",
+      "overlapping_unweighted_sign_controls": [
+        {
+          "k": 0.00016,
+          "absolute_defect": [
+            2.296975952236662e-11,
+            1.3905142525405435e-10
+          ],
+          "relative_defect": [
+            3.442997819355989e-09,
+            7.423095648464951e-08
+          ]
+        },
+        {
+          "k": 0.00019,
+          "absolute_defect": [
+            8.396773601506726e-12,
+            5.082887959823041e-11
+          ],
+          "relative_defect": [
+            1.2583722723774962e-09,
+            2.7227449339247995e-08
+          ]
+        },
+        {
+          "k": 0.0002,
+          "absolute_defect": [
+            1.5219912673174033e-12,
+            9.212456198033897e-12
+          ],
+          "relative_defect": [
+            2.280767924241027e-10,
+            4.940447128763854e-09
+          ]
+        }
+      ],
+      "refined": [
+        {
+          "k_band": [
+            0.0002,
+            0.00032
+          ],
+          "local_leading_subtracted_scalar_ratio": -1.4620783833245667e-06,
+          "real_photon_heat_over_Born_scalar_energy": -3.4604225076602615e-05
+        },
+        {
+          "k_band": [
+            0.00032,
+            0.0004339827884973751
+          ],
+          "local_leading_subtracted_scalar_ratio": -1.458310388292692e-06,
+          "real_photon_heat_over_Born_scalar_energy": -3.2635053561223174e-05
+        },
+        {
+          "k_band": [
+            0.0004339827884973751,
+            0.00043808278849737515
+          ],
+          "local_leading_subtracted_scalar_ratio": -5.3807156717923934e-08,
+          "real_photon_heat_over_Born_scalar_energy": -1.1693631810393086e-06
+        },
+        {
+          "k_band": [
+            0.00043808278849737515,
+            0.00064
+          ],
+          "local_leading_subtracted_scalar_ratio": -2.7822571568557227e-06,
+          "real_photon_heat_over_Born_scalar_energy": -5.7159153163368686e-05
+        },
+        {
+          "k_band": [
+            0.00064,
+            0.00128
+          ],
+          "local_leading_subtracted_scalar_ratio": -1.2535886196444306e-05,
+          "real_photon_heat_over_Born_scalar_energy": -0.0001718448439098222
+        },
+        {
+          "k_band": [
+            0.00128,
+            0.00256
+          ],
+          "local_leading_subtracted_scalar_ratio": -4.2763893024176854e-05,
+          "real_photon_heat_over_Born_scalar_energy": -0.00027603122150768366
+        }
+      ],
+      "max_scaled_band_absolute_change": 5.8035237772842115e-08,
+      "gain_and_heat_totals": [
+        -6.105623230581207e-05,
+        -0.0005734438603997396
+      ]
+    }
+  ]
+}

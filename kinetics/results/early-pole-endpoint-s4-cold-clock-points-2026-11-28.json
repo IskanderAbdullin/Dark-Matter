@@ -1,0 +1,71 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "k": 0.0015,
+  "charge_subcells": 2,
+  "cold_scalar_subcells": 4,
+  "step_pair": [
+    1024,
+    2048
+  ],
+  "state_hashes_uncompressed": [
+    "b9ed8d78fea795969850fd7121536a8de3b7396f7a34e0eff690bb1baaab2bb8",
+    "cd4d6b834aab835535e64ececa68468224f79902c848e9c2c03fae6eb97e3688"
+  ],
+  "optical_parameters": [
+    [
+      0.0008731737405577067,
+      0.002304222133817107,
+      202.97270344950195
+    ],
+    [
+      0.0008731829968237441,
+      0.0023042221339116186,
+      202.97270344168
+    ]
+  ],
+  "rows": [
+    {
+      "q": 3.5e-06,
+      "coarse": [
+        0.48442524576903623,
+        1.4067052970468795e-09,
+        0.48442524436233103
+      ],
+      "fine": [
+        0.4858086707293432,
+        1.4110766253282927e-09,
+        0.48580866931826633
+      ],
+      "relative_coarse_fine": [
+        -0.0028476744933968456,
+        -0.0030978674034771725,
+        -0.0028476744926694275
+      ],
+      "independent_fine_point_max_relative_difference": 2.3869795029440866e-14,
+      "max_pair_mesh_defect": 5.166977956605479e-13
+    },
+    {
+      "q": 4.7e-06,
+      "coarse": [
+        0.11504038562850472,
+        3.414388879769352e-10,
+        0.11504038528706574
+      ],
+      "fine": [
+        0.11536322429706901,
+        3.424753804610542e-10,
+        0.11536322395459368
+      ],
+      "relative_coarse_fine": [
+        -0.002798453931323497,
+        -0.0030264729766082965,
+        -0.002798453930647815
+      ],
+      "independent_fine_point_max_relative_difference": 1.2156942119645464e-13,
+      "max_pair_mesh_defect": 8.372191828698305e-13
+    }
+  ],
+  "relative_count_coarse_fine": -3.180097697585982e-05,
+  "scope": "Two conditional last-segment S4 sensitivities. Not full-band time or spatial convergence."
+}

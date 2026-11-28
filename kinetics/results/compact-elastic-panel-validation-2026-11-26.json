@@ -1,0 +1,28 @@
+{
+  "panels": 5635,
+  "global_dimension": 36,
+  "mean_active_local_columns": 6.569299023957409,
+  "measured_geometry_dense_seconds": 2.3687391140001637,
+  "measured_geometry_cache_only_seconds": 0.8741185199996835,
+  "measured_dense_value_and_JVP_seconds": 0.40819864199966105,
+  "checks": [
+    {
+      "pairwise": false,
+      "flux_error": 0.0,
+      "JVP_error": 4.6056382644014694e-17,
+      "finite_difference_error": 2.9355574428411864e-11,
+      "invariant_defect": 9.992007221626409e-16,
+      "measured_value_and_JVP_seconds": 0.3143129760001102,
+      "converged_residual": 6.6124947586051625e-12
+    },
+    {
+      "pairwise": true,
+      "flux_error": 1.8785392422554344e-16,
+      "JVP_error": 2.137390856775218e-16,
+      "finite_difference_error": 2.91017720156475e-11,
+      "invariant_defect": 9.992007221626409e-16,
+      "measured_value_and_JVP_seconds": 0.32333887799995864,
+      "converged_residual": 6.609930442630018e-12
+    }
+  ]
+}

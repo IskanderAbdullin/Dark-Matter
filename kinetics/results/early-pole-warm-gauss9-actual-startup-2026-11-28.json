@@ -1,0 +1,123 @@
+{
+  "fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "partition_fields": [
+    "pressure_difference",
+    "changed_count",
+    "changed_pressure_per_particle"
+  ],
+  "rows": [
+    {
+      "x": 0.0075,
+      "paired_steps": [
+        2048,
+        4096
+      ],
+      "common_native_sha256": "18df7a81fb8808c7d5f0e28cafa9081ff07bc022a1282cc6e10816fd0a7052ac",
+      "mass": 4.69152878376991e-05,
+      "G9_over_G8_minus_one": [
+        7.964526371750935e-09,
+        0.00027301234604593105,
+        0.0002735149585069152
+      ],
+      "pressure_interval": [
+        0.00027301210515950913,
+        0.0002730125869554456
+      ],
+      "all_cell_partition": [
+        0.0002730123460460293,
+        0.00024652815486122956,
+        2.6484191184757867e-05
+      ],
+      "largest_native_cells": [
+        {
+          "interval_q": [
+            3.9636789434531003,
+            5.728841112042199
+          ],
+          "contributions": [
+            0.0002317659104468143,
+            0.00020677797338923773,
+            2.4987937057580127e-05
+          ]
+        },
+        {
+          "interval_q": [
+            1.8974129217831404,
+            2.7423959679644474
+          ],
+          "contributions": [
+            1.7386322336124598e-05,
+            1.861120044134721e-05,
+            -1.2248781052213295e-06
+          ]
+        },
+        {
+          "interval_q": [
+            8.280090530852393,
+            11.967498811408152
+          ],
+          "contributions": [
+            1.6051720810199952e-05,
+            1.6990765779108404e-05,
+            -9.390449689081537e-07
+          ]
+        },
+        {
+          "interval_q": [
+            5.728841112042199,
+            8.280090530852393
+          ],
+          "contributions": [
+            8.319540511966104e-06,
+            5.470522414798505e-06,
+            2.8490180971676313e-06
+          ]
+        },
+        {
+          "interval_q": [
+            0.6284300306709397,
+            0.9082914754476046
+          ],
+          "contributions": [
+            -3.7075593598159133e-06,
+            -3.95040071551757e-06,
+            2.42841355693417e-07
+          ]
+        }
+      ]
+    }
+  ],
+  "audit_receipts": [
+    [
+      {
+        "x": 0.0075,
+        "scalar_yield": 5.782325914710265e-08,
+        "pole_mass": 4.691528784581049e-05,
+        "relative_time_drift": 5.11555690547727e-05,
+        "maximum_absolute_continuity": 1.759850708357106e-16,
+        "maximum_pair_number_error": 8.761878212987934e-17,
+        "verified_previous_raw_sha256": null,
+        "source_report_sha256": "bce85c8786de64a2311c15a1546ea72f0b5c94de32ef203438067d8da61e939e",
+        "uncompressed_state_sha256": "0ef43c220479c6f35569dc4199e9acfa3ba3d6f9d4cb348eb9f711a7bd9ea803"
+      }
+    ],
+    [
+      {
+        "x": 0.0075,
+        "scalar_yield": 5.782325960763753e-08,
+        "pole_mass": 4.69152878458148e-05,
+        "relative_time_drift": 5.115556864543347e-05,
+        "maximum_absolute_continuity": 2.307063638436538e-16,
+        "maximum_pair_number_error": 6.512518694083095e-17,
+        "verified_previous_raw_sha256": null,
+        "source_report_sha256": "5d8f6af3f2f071b43de714aa8b9c35cd6cb74568b86d56fe68dd00a5eb96b780",
+        "uncompressed_state_sha256": "c1c002f82bbcffa7d3e2a99705221d509a16ba918f77182b54301ab2df4b6a43"
+      }
+    ]
+  ],
+  "scope": "Actual matched time pairs at a common native mass; count-energy pressure bounds are not a time-mesh or physical error bound."
+}

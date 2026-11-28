@@ -1,0 +1,69 @@
+{
+  "x_start": 0.05,
+  "x_end": 0.050002500062501044,
+  "log_span": 5e-05,
+  "fixed_measurement_mass": 0.0008731829968237441,
+  "complete_warm_floor": 0.010929632120873948,
+  "number_and_pressure_gain_relative_change": [
+    -2.92922720857014e-07,
+    -0.08198546223086045
+  ],
+  "initial_frozen_pressure_slope_relative_change": -0.08198533725501822,
+  "rows": [
+    {
+      "scalar_nodes": 145,
+      "mesh_drift": 1.9796756944856497e-07,
+      "frozen_pressure_slope": 5.484671165071205e-07,
+      "clock_arms": [
+        {
+          "steps": 16,
+          "number_and_pressure_gains": [
+            2.9593101827291756e-06,
+            2.7425288049302704e-11
+          ],
+          "relative_pressure_gain_to_frozen_slope": 7.045906266855972e-05,
+          "max_continuity_residual": 2.58273448158739e-17,
+          "max_pair_number_error": 6.8690136857587486e-18
+        },
+        {
+          "steps": 32,
+          "number_and_pressure_gains": [
+            2.9593107685767357e-06,
+            2.7425288052220645e-11
+          ],
+          "relative_pressure_gain_to_frozen_slope": 7.045916907189032e-05,
+          "max_continuity_residual": 2.622483736024952e-17,
+          "max_pair_number_error": 6.858214015681256e-18
+        }
+      ]
+    },
+    {
+      "scalar_nodes": 153,
+      "mesh_drift": 1.979659157713698e-07,
+      "frozen_pressure_slope": 5.035008549869968e-07,
+      "clock_arms": [
+        {
+          "steps": 16,
+          "number_and_pressure_gains": [
+            2.9593093158848786e-06,
+            2.5176813131663504e-11
+          ],
+          "relative_pressure_gain_to_frozen_slope": 7.032291191277906e-05,
+          "max_continuity_residual": 1.1349959424618744e-17,
+          "max_pair_number_error": 4.281539790133675e-18
+        },
+        {
+          "steps": 32,
+          "number_and_pressure_gains": [
+            2.9593099017273735e-06,
+            2.517681313444484e-11
+          ],
+          "relative_pressure_gain_to_frozen_slope": 7.032302239262656e-05,
+          "max_continuity_residual": 3.6827220312154584e-17,
+          "max_pair_number_error": 8.66821754484529e-18
+        }
+      ]
+    }
+  ],
+  "scope": "A paired local continuation at x=.05, with fixed endpoint measurement weights but evolved state and mass. No whole-history validation."
+}

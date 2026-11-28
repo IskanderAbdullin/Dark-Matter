@@ -1,0 +1,14 @@
+# Similar final scalar yields do not resolve the cold spectral shape
+
+Hold the fine parent and fermion charts at two charge subcells, exactly as in the earlier [frozen scalar-only fixture](INDEPENDENT-EARLY-POLE-ENDPOINT-SCALAR-SUBSHELL-FIXTURE-2026-11-28.md). Subdivide only the native scalar shells at or below q=1e−5, increasing the scalar grid from 67 shells to 93 (S2) or 145 (S4). Both S2 and S4 are independently evolved from zero daughter occupations and retain the same 4096-step fine arm at startup. They then use matching temporal refinement at every join through x=.05.
+
+| x | S2 retained yield | S4 retained yield | S4 relative to S2 | Normalized histogram TV, on native bins |
+| --- | ---: | ---: | ---: | ---: |
+| .01 | 3.47513221e−7 | 3.47498917e−7 | −4.12e−5 | .01308 |
+| .02 | 1.02181894e−5 | 1.02181520e−5 | −3.66e−6 | .01313 |
+| .04 | 1.73209470e−4 | 1.73209315e−4 | −8.91e−7 | .01319 |
+| .05 | 3.71627794e−4 | 3.71627447e−4 | −9.35e−7 | .01324 |
+
+The tiny last yield difference is smaller than the fixed-restart time drift of the last segment, so it is not a resolved scalar discretization error. The binned shape difference is a separate observable; aggregating both solutions to common original shell counts still gives 1.32% total variation at x=.05. The median q from the explicitly piecewise-constant within-shell reconstruction is 3.6100e−6 vs 3.5571e−6. This quantile uses a declared interpolation convention, and neither the native-coarsened shape nor the quantile is separately certified in time. The original unrefined scalar control is also shown in each machine-readable ladder. That control used one 2048-step startup, so its roughly 8% coarsened shape difference from S2 does not isolate the scalar grid from startup time order as cleanly as the matched S2/S4 pair. A later [4096-step startup control](INDEPENDENT-EARLY-POLE-FINE-NATIVE-SCALAR-STARTUP-CLOCK-2026-11-28.md) matched the startup clock on all three charts and found that the coarse difference persists.
+
+Replay using `early_pole_endpoint_scalar_subshell_pilot.py fine --charge-div 2 --scalar-div 2` or `--scalar-div 4`. Use 2048 coarse steps through .0075 and save with `--state`; then use `--restart` from the previous exact state and coarse step counts 512, 1024, 1024, 1024 at the four joins. The [S2 chain](results/early-pole-fine-charge2-scalar2-chain-2026-11-28.json) and [S4 chain](results/early-pole-fine-charge2-scalar4-chain-2026-11-28.json) validate each saved endpoint against the reported budgets, mass and scalar number. The [x=.05 comparison](results/early-pole-fine-charge2-scalar-ladder-x05-2026-11-28.json) retains the distributions' common-grid metrics and reconstructed quantiles. The cold-pole integrator can inspect the exact scalar-refined panel topology via `--topology-only`; this publication does not infer or integrate a physical photon occupation on those cards.

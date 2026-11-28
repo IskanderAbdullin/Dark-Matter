@@ -1,0 +1,99 @@
+{
+  "scope": "Manufactured shared quadratic medium with parallel affine energy brackets only.",
+  "rows": [
+    {
+      "step": 0.03,
+      "extents": [
+        0.0032917652623783264,
+        -0.001211386810647918
+      ],
+      "weight_root": 0.0016748846806427698,
+      "weights": [
+        0.6327303182123678,
+        0.3367338968170796
+      ],
+      "max_jacobian_defect": 1.550359233354337e-13,
+      "tangent_abs_defect": 1.3552527156068805e-20,
+      "compared_extent_error": 0.0,
+      "compared_weight_error": 5.274643569141979e-17,
+      "energy_defect": 2.6469779601696886e-23,
+      "number_defect": 0.0,
+      "entropy_defect": 7.27601301691444e-19,
+      "solver_evaluations": 7
+    },
+    {
+      "step": 0.1,
+      "extents": [
+        0.010739814838233502,
+        -0.0045385664229744
+      ],
+      "weight_root": 0.005266872116585691,
+      "weights": [
+        0.6326897549690407,
+        0.33669193296231936
+      ],
+      "max_jacobian_defect": 2.567189082841592e-13,
+      "tangent_abs_defect": 1.3552527156068805e-20,
+      "compared_extent_error": 0.0,
+      "compared_weight_error": 4.694595406862234e-17,
+      "energy_defect": 1.0587911840678754e-22,
+      "number_defect": 0.0,
+      "entropy_defect": 2.9375102610779136e-18,
+      "solver_evaluations": 8
+    },
+    {
+      "step": 0.25,
+      "extents": [
+        0.02587516289432532,
+        -0.013180790660412407
+      ],
+      "weight_root": 0.011932316791642628,
+      "weights": [
+        0.6326270448765772,
+        0.33662707801139086
+      ],
+      "max_jacobian_defect": 3.097757510575616e-13,
+      "tangent_abs_defect": 1.3552527156068805e-20,
+      "compared_extent_error": 1.734723475976807e-18,
+      "compared_weight_error": 2.0789576657409548e-17,
+      "energy_defect": 4.235164736271502e-22,
+      "number_defect": 0.0,
+      "entropy_defect": 5.339695699491109e-18,
+      "solver_evaluations": 8
+    }
+  ],
+  "trajectory": {
+    "duration": 0.5,
+    "order_last_two": 2.001000204978477,
+    "steps": [
+      {
+        "steps": 4,
+        "maximum_count_error": 0.00010565724884213984,
+        "full_energy_defect": 3.1763735522036263e-21,
+        "maximum_entropy_identity_defect": 1.6534083130403943e-18,
+        "max_nonlinear_evaluations": 8
+      },
+      {
+        "steps": 8,
+        "maximum_count_error": 2.6108860068383566e-05,
+        "full_energy_defect": 9.952637130238029e-21,
+        "maximum_entropy_identity_defect": 1.0706496453294356e-18,
+        "max_nonlinear_evaluations": 8
+      },
+      {
+        "steps": 16,
+        "maximum_count_error": 6.508867440874162e-06,
+        "full_energy_defect": 6.352747104407253e-22,
+        "maximum_entropy_identity_defect": 6.742382260144231e-19,
+        "max_nonlinear_evaluations": 7
+      },
+      {
+        "steps": 32,
+        "maximum_count_error": 1.6260891192148707e-06,
+        "full_energy_defect": 4.446922973085077e-21,
+        "maximum_entropy_identity_defect": 6.810144895924575e-19,
+        "max_nonlinear_evaluations": 12
+      }
+    ]
+  }
+}

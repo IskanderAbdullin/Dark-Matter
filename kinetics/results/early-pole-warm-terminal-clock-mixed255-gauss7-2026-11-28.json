@@ -1,0 +1,49 @@
+{
+  "x": 0.05,
+  "starts": 0.04,
+  "steps": [
+    1024,
+    2048
+  ],
+  "measurement_mass": 0.0008731829968237441,
+  "g7_clock_sha256": "a2600b345422afc47d06e59f9fdd3df3ecde400c958ccb93551cd0dbf0f60a6e",
+  "mixed_report_sha256": "b28e23dc9e34827fecaad95721f288fb41025a55a9f34a9430a9288caccca78d",
+  "mixed_fine_state_sha256": "c6426bd2269854e612b48da2fa7ca137951da175e2f3ff485b7a51d5f94de93a",
+  "mixed_start_sha256": "6936a326dd64d3349f16548e7b4798291b36cde77d70f2ae5506a558e00b8519",
+  "mixed_coarse_trace_maximum_defect": 0.0,
+  "aligned_fields": [
+    "count",
+    "pressure",
+    "warm_pressure"
+  ],
+  "mixed_coarse_fine_moments": [
+    [
+      0.017401187996280713,
+      1.7379310647556814e-07,
+      1.735183510324959e-07
+    ],
+    [
+      0.017401741388310674,
+      1.7379306271887497e-07,
+      1.7351829893720392e-07
+    ]
+  ],
+  "mixed255_over_G7_minus_one": [
+    [
+      1.569966379122434e-11,
+      -0.00016225500263700177,
+      -0.0001625118820115512
+    ],
+    [
+      1.5832890554179357e-11,
+      -0.00016225821588822242,
+      -0.00016251510822196114
+    ]
+  ],
+  "fine_clock_minus_coarse": [
+    1.3322676295501878e-13,
+    -3.2132512206572983e-09,
+    -3.226210409934538e-09
+  ],
+  "scope": "Recovered same 1024-step branch from the same .04 state; no full-history error bound."
+}

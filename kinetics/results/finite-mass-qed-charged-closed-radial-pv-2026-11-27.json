@@ -1,0 +1,455 @@
+{
+  "scope": "Paired radial PV diagnostic with frozen bare occupations; no physical thermal cut coefficients or inclusive decay.",
+  "rows": [
+    {
+      "grid": "fine",
+      "controls": [
+        {
+          "cut_species": "parent",
+          "tuned_to_step": false,
+          "external_parent_energy": 1.4286858845268333,
+          "occupation_jump": 0.0,
+          "leading_bare_odd_pv": 13.26911184122435,
+          "even_angular_log_coefficient": 0.05528019233306579,
+          "predicted_radial_log_coefficient": 0.0,
+          "measured_radial_cutoff_log_slope": -1.2723791940093205e-07,
+          "relative_step_slope_defect": null,
+          "subtracted_radial_changes": [
+            0.002928833763821456,
+            0.0002929065664032948,
+            2.9292975642372654e-05,
+            2.929529464512637e-06,
+            2.9297613647616405e-07
+          ],
+          "rows": [
+            {
+              "radial_lower_cut": 1e-05,
+              "subtracted_radial_value": -0.09436294449263165,
+              "raw_radial_value": -0.09436294449263165,
+              "resolution_error": 0.0
+            },
+            {
+              "radial_lower_cut": 1e-06,
+              "subtracted_radial_value": -0.0972917782564531,
+              "raw_radial_value": -0.0972917782564531,
+              "resolution_error": 1.3877787807814457e-17
+            },
+            {
+              "radial_lower_cut": 1e-07,
+              "subtracted_radial_value": -0.0975846848228564,
+              "raw_radial_value": -0.0975846848228564,
+              "resolution_error": 5.551115123125783e-17
+            },
+            {
+              "radial_lower_cut": 1e-08,
+              "subtracted_radial_value": -0.09761397779849877,
+              "raw_radial_value": -0.09761397779849877,
+              "resolution_error": 1.3877787807814457e-17
+            },
+            {
+              "radial_lower_cut": 1e-09,
+              "subtracted_radial_value": -0.09761690732796328,
+              "raw_radial_value": -0.09761690732796328,
+              "resolution_error": 1.3877787807814457e-17
+            },
+            {
+              "radial_lower_cut": 1e-10,
+              "subtracted_radial_value": -0.09761720030409976,
+              "raw_radial_value": -0.09761720030409976,
+              "resolution_error": 1.1102230246251565e-16
+            }
+          ],
+          "full_archived_support": {
+            "step": {
+              "value": -575.4716954722346,
+              "analytic_odd_full_support": -0.6676756118228322,
+              "independent_guarded_replay_defect": 6.1870650824857876e-09,
+              "quadrature_resolution_defect": 1.9326762412674725e-12
+            },
+            "linear_energy": {
+              "value": -591.7355698115507,
+              "analytic_odd_full_support": -0.5609335796741143,
+              "independent_guarded_replay_defect": 4.7300545702455565e-09,
+              "quadrature_resolution_defect": 2.604565452202223e-10
+            }
+          }
+        },
+        {
+          "cut_species": "daughter",
+          "tuned_to_step": false,
+          "external_parent_energy": 1.4286858845268333,
+          "occupation_jump": 0.0,
+          "leading_bare_odd_pv": -17.2384799243678,
+          "even_angular_log_coefficient": 0.9254987345481833,
+          "predicted_radial_log_coefficient": -0.0,
+          "measured_radial_cutoff_log_slope": 3.5664449554354604e-08,
+          "relative_step_slope_defect": null,
+          "subtracted_radial_changes": [
+            0.0008256370937351938,
+            8.245288950897364e-05,
+            8.234206964479601e-06,
+            8.223124977786711e-07,
+            8.212042989369506e-08
+          ],
+          "rows": [
+            {
+              "radial_lower_cut": 1e-05,
+              "subtracted_radial_value": 0.026654459076957068,
+              "raw_radial_value": 0.026654459076957068,
+              "resolution_error": 6.245004513516506e-17
+            },
+            {
+              "radial_lower_cut": 1e-06,
+              "subtracted_radial_value": 0.02748009617069226,
+              "raw_radial_value": 0.02748009617069226,
+              "resolution_error": 2.42861286636753e-17
+            },
+            {
+              "radial_lower_cut": 1e-07,
+              "subtracted_radial_value": 0.027562549060201235,
+              "raw_radial_value": 0.027562549060201235,
+              "resolution_error": 3.469446951953614e-17
+            },
+            {
+              "radial_lower_cut": 1e-08,
+              "subtracted_radial_value": 0.027570783267165715,
+              "raw_radial_value": 0.027570783267165715,
+              "resolution_error": 0.0
+            },
+            {
+              "radial_lower_cut": 1e-09,
+              "subtracted_radial_value": 0.027571605579663493,
+              "raw_radial_value": 0.027571605579663493,
+              "resolution_error": 3.469446951953614e-18
+            },
+            {
+              "radial_lower_cut": 1e-10,
+              "subtracted_radial_value": 0.027571687700093387,
+              "raw_radial_value": 0.027571687700093387,
+              "resolution_error": 3.122502256758253e-17
+            }
+          ],
+          "full_archived_support": {
+            "step": {
+              "value": -606.3050434433393,
+              "analytic_odd_full_support": 4.895494438442385,
+              "independent_guarded_replay_defect": 6.484469849965535e-09,
+              "quadrature_resolution_defect": 1.5278374121407978e-09
+            },
+            "linear_energy": {
+              "value": -533.9594285180337,
+              "analytic_odd_full_support": 4.6436232998478815,
+              "independent_guarded_replay_defect": 4.682192411564756e-09,
+              "quadrature_resolution_defect": 4.6281911636469886e-10
+            }
+          }
+        },
+        {
+          "cut_species": "daughter",
+          "tuned_to_step": true,
+          "external_parent_energy": 1.4230974518581974,
+          "occupation_jump": -0.056034228171934014,
+          "leading_bare_odd_pv": -18.137123937629152,
+          "even_angular_log_coefficient": 0.932786288212342,
+          "predicted_radial_log_coefficient": 0.7227020381182281,
+          "measured_radial_cutoff_log_slope": 0.7226864959081976,
+          "relative_step_slope_defect": 2.1505695585122275e-05,
+          "subtracted_radial_changes": [
+            0.35819509141563266,
+            0.03578997382065019,
+            0.0035787209174973356,
+            0.000357871023565437,
+            3.578726112962727e-05
+          ],
+          "rows": [
+            {
+              "radial_lower_cut": 1e-05,
+              "subtracted_radial_value": -11.892320446437324,
+              "raw_radial_value": -9.434268166667705,
+              "resolution_error": 3.552713678800501e-15
+            },
+            {
+              "radial_lower_cut": 1e-06,
+              "subtracted_radial_value": -12.250515537852957,
+              "raw_radial_value": -8.128380318435891,
+              "resolution_error": 3.552713678800501e-15
+            },
+            {
+              "radial_lower_cut": 1e-07,
+              "subtracted_radial_value": -12.286305511673607,
+              "raw_radial_value": -6.5000873526090945,
+              "resolution_error": 3.552713678800501e-15
+            },
+            {
+              "radial_lower_cut": 1e-08,
+              "subtracted_radial_value": -12.289884232591104,
+              "raw_radial_value": -4.839583133879144,
+              "resolution_error": 3.552713678800501e-15
+            },
+            {
+              "radial_lower_cut": 1e-09,
+              "subtracted_radial_value": -12.29024210361467,
+              "raw_radial_value": -3.175858065255266,
+              "resolution_error": 3.552713678800501e-15
+            },
+            {
+              "radial_lower_cut": 1e-10,
+              "subtracted_radial_value": -12.2902778908758,
+              "raw_radial_value": -1.5118109128689476,
+              "resolution_error": 3.552713678800501e-15
+            }
+          ],
+          "full_archived_support": {
+            "step": {
+              "value": -604.2787871113715,
+              "analytic_odd_full_support": 7.171839378757056,
+              "independent_guarded_replay_defect": 7.507868531320128e-07,
+              "quadrature_resolution_defect": 1.5190835256362334e-09
+            },
+            "linear_energy": {
+              "value": -534.0022701848609,
+              "analytic_odd_full_support": 4.8097994653656775,
+              "independent_guarded_replay_defect": 7.534490578109398e-07,
+              "quadrature_resolution_defect": 4.5633896661456674e-10
+            }
+          }
+        }
+      ],
+      "independent_angular_checks": {
+        "parent": {
+          "resolved_and_outside_aperture_relative_defect": 7.748261667689382e-14,
+          "overlap_relative_defect": 2.3200492091715597e-12
+        },
+        "daughter": {
+          "resolved_and_outside_aperture_relative_defect": 5.115162850580224e-14,
+          "overlap_relative_defect": 1.1426522705457187e-12
+        }
+      }
+    },
+    {
+      "grid": "third",
+      "controls": [
+        {
+          "cut_species": "parent",
+          "tuned_to_step": false,
+          "external_parent_energy": 1.4366125844535822,
+          "occupation_jump": 0.0,
+          "leading_bare_odd_pv": 13.19581300705342,
+          "even_angular_log_coefficient": 0.05467383604654084,
+          "predicted_radial_log_coefficient": 0.0,
+          "measured_radial_cutoff_log_slope": -1.5060166185907162e-07,
+          "relative_step_slope_defect": null,
+          "subtracted_radial_changes": [
+            0.00346664551222578,
+            0.0003466916988102975,
+            3.4671884639778106e-05,
+            3.467459939870965e-06,
+            3.4677314157682826e-07
+          ],
+          "rows": [
+            {
+              "radial_lower_cut": 1e-05,
+              "subtracted_radial_value": -0.11169062725226445,
+              "raw_radial_value": -0.11169062725226445,
+              "resolution_error": 1.249000902703301e-16
+            },
+            {
+              "radial_lower_cut": 1e-06,
+              "subtracted_radial_value": -0.11515727276449023,
+              "raw_radial_value": -0.11515727276449023,
+              "resolution_error": 4.579669976578771e-16
+            },
+            {
+              "radial_lower_cut": 1e-07,
+              "subtracted_radial_value": -0.11550396446330052,
+              "raw_radial_value": -0.11550396446330052,
+              "resolution_error": 4.440892098500626e-16
+            },
+            {
+              "radial_lower_cut": 1e-08,
+              "subtracted_radial_value": -0.1155386363479403,
+              "raw_radial_value": -0.1155386363479403,
+              "resolution_error": 2.7755575615628914e-16
+            },
+            {
+              "radial_lower_cut": 1e-09,
+              "subtracted_radial_value": -0.11554210380788017,
+              "raw_radial_value": -0.11554210380788017,
+              "resolution_error": 1.3877787807814457e-16
+            },
+            {
+              "radial_lower_cut": 1e-10,
+              "subtracted_radial_value": -0.11554245058102175,
+              "raw_radial_value": -0.11554245058102175,
+              "resolution_error": 6.938893903907228e-17
+            }
+          ],
+          "full_archived_support": {
+            "step": {
+              "value": -787.7328554355312,
+              "analytic_odd_full_support": 0.34950632248248725,
+              "independent_guarded_replay_defect": 1.945295480254572e-09,
+              "quadrature_resolution_defect": 1.7280399333685637e-09
+            },
+            "linear_energy": {
+              "value": -706.6880435028793,
+              "analytic_odd_full_support": 0.08964984376918769,
+              "independent_guarded_replay_defect": 3.5105358620057814e-09,
+              "quadrature_resolution_defect": 6.687059794785455e-10
+            }
+          }
+        },
+        {
+          "cut_species": "daughter",
+          "tuned_to_step": false,
+          "external_parent_energy": 1.4366125844535822,
+          "occupation_jump": 0.0,
+          "leading_bare_odd_pv": -17.14325274978296,
+          "even_angular_log_coefficient": 0.9153015989092105,
+          "predicted_radial_log_coefficient": -0.0,
+          "measured_radial_cutoff_log_slope": 7.996449392977786e-08,
+          "relative_step_slope_defect": null,
+          "subtracted_radial_changes": [
+            0.0018510781725321335,
+            0.0001848621258629321,
+            1.846164344710549e-05,
+            1.8437074308375045e-06,
+            1.8412505169151938e-07
+          ],
+          "rows": [
+            {
+              "radial_lower_cut": 1e-05,
+              "subtracted_radial_value": 0.05975802785927319,
+              "raw_radial_value": 0.05975802785927319,
+              "resolution_error": 3.469446951953614e-17
+            },
+            {
+              "radial_lower_cut": 1e-06,
+              "subtracted_radial_value": 0.061609106031805326,
+              "raw_radial_value": 0.061609106031805326,
+              "resolution_error": 1.1796119636642288e-16
+            },
+            {
+              "radial_lower_cut": 1e-07,
+              "subtracted_radial_value": 0.06179396815766826,
+              "raw_radial_value": 0.06179396815766826,
+              "resolution_error": 1.734723475976807e-16
+            },
+            {
+              "radial_lower_cut": 1e-08,
+              "subtracted_radial_value": 0.061812429801115364,
+              "raw_radial_value": 0.061812429801115364,
+              "resolution_error": 1.8041124150158794e-16
+            },
+            {
+              "radial_lower_cut": 1e-09,
+              "subtracted_radial_value": 0.0618142735085462,
+              "raw_radial_value": 0.0618142735085462,
+              "resolution_error": 1.1796119636642288e-16
+            },
+            {
+              "radial_lower_cut": 1e-10,
+              "subtracted_radial_value": 0.06181445763359789,
+              "raw_radial_value": 0.06181445763359789,
+              "resolution_error": 7.632783294297951e-17
+            }
+          ],
+          "full_archived_support": {
+            "step": {
+              "value": -772.429281707379,
+              "analytic_odd_full_support": 6.006640094697327,
+              "independent_guarded_replay_defect": 1.1475094652269036e-08,
+              "quadrature_resolution_defect": 2.440060598019045e-09
+            },
+            "linear_energy": {
+              "value": -667.9537462985638,
+              "analytic_odd_full_support": 5.617253216691267,
+              "independent_guarded_replay_defect": 7.065409590722993e-09,
+              "quadrature_resolution_defect": 1.0363692126702517e-09
+            }
+          }
+        },
+        {
+          "cut_species": "parent",
+          "tuned_to_step": true,
+          "external_parent_energy": 1.432354436522056,
+          "occupation_jump": 0.06335863224304418,
+          "leading_bare_odd_pv": 13.582826110055924,
+          "even_angular_log_coefficient": 0.05499978859358563,
+          "predicted_radial_log_coefficient": 0.6159588118386468,
+          "measured_radial_cutoff_log_slope": 0.6159776784780308,
+          "relative_step_slope_defect": 3.062970935951981e-05,
+          "subtracted_radial_changes": [
+            0.4342363858305536,
+            0.04344025391688078,
+            0.004344190283168459,
+            0.00043442047941866235,
+            4.3442042599650676e-05
+          ],
+          "rows": [
+            {
+              "radial_lower_cut": 1e-05,
+              "subtracted_radial_value": 13.851079994945746,
+              "raw_radial_value": 15.94607749298308,
+              "resolution_error": 5.329070518200751e-15
+            },
+            {
+              "radial_lower_cut": 1e-06,
+              "subtracted_radial_value": 14.2853163807763,
+              "raw_radial_value": 17.798611456851624,
+              "resolution_error": 7.105427357601002e-15
+            },
+            {
+              "radial_lower_cut": 1e-07,
+              "subtracted_radial_value": 14.32875663469318,
+              "raw_radial_value": 19.2603492888065,
+              "resolution_error": 7.105427357601002e-15
+            },
+            {
+              "radial_lower_cut": 1e-08,
+              "subtracted_radial_value": 14.333100824976349,
+              "raw_radial_value": 20.682991057127662,
+              "resolution_error": 7.105427357601002e-15
+            },
+            {
+              "radial_lower_cut": 1e-09,
+              "subtracted_radial_value": 14.333535245455767,
+              "raw_radial_value": 22.10172305564507,
+              "resolution_error": 7.105427357601002e-15
+            },
+            {
+              "radial_lower_cut": 1e-10,
+              "subtracted_radial_value": 14.333578687498367,
+              "raw_radial_value": 23.520064075725664,
+              "resolution_error": 7.105427357601002e-15
+            }
+          ],
+          "full_archived_support": {
+            "step": {
+              "value": -786.1182540415241,
+              "analytic_odd_full_support": 1.973296978018409,
+              "independent_guarded_replay_defect": 9.224982022715267e-07,
+              "quadrature_resolution_defect": 1.7321326595265418e-09
+            },
+            "linear_energy": {
+              "value": -706.6896169366465,
+              "analytic_odd_full_support": 0.08836542486323036,
+              "independent_guarded_replay_defect": 9.198964789902675e-07,
+              "quadrature_resolution_defect": 6.737082003382966e-10
+            }
+          }
+        }
+      ],
+      "independent_angular_checks": {
+        "parent": {
+          "resolved_and_outside_aperture_relative_defect": 1.2739061108074656e-13,
+          "overlap_relative_defect": 1.2669688974169258e-12
+        },
+        "daughter": {
+          "resolved_and_outside_aperture_relative_defect": 1.028884009240949e-13,
+          "overlap_relative_defect": 5.66545562633719e-13
+        }
+      }
+    }
+  ]
+}

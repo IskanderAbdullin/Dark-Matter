@@ -1,0 +1,194 @@
+{
+  "spectrum-fine-extend.json": {
+    "x": 0.1,
+    "mass_ratio": 0.06,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "active_parent_cells": 2,
+    "fraction_positive_drain_kept": 0.9999926207292518,
+    "maximum_local_fractional_drain_per_reference_efold": 99.649307692803,
+    "maximum_local_drain_cell": [
+      3.155555555555556,
+      3.2083333333333335
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      52.77416688781273,
+      90.27427953180495,
+      98.7118048767032
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 30.78606711166177,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.07250709949334788
+  },
+  "spectrum-fine-fast.json": {
+    "x": 0.05,
+    "mass_ratio": 0.06,
+    "snapshot_elastic_rate": 100.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "active_parent_cells": 2,
+    "fraction_positive_drain_kept": 0.9999891824671547,
+    "maximum_local_fractional_drain_per_reference_efold": 8.120530329054755,
+    "maximum_local_drain_cell": [
+      1.3083333333333333,
+      1.3611111111111112
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      5.427100555801112,
+      7.581844374404026,
+      8.066661733589683
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 82.88533446642776,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.9999891824671547
+  },
+  "spectrum-fine-m06.json": {
+    "x": 0.05,
+    "mass_ratio": 0.06,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "active_parent_cells": 3,
+    "fraction_positive_drain_kept": 0.9999942377661247,
+    "maximum_local_fractional_drain_per_reference_efold": 22.87418042680452,
+    "maximum_local_drain_cell": [
+      1.4138888888888888,
+      1.4666666666666666
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      11.154086441363907,
+      20.5301616297164,
+      22.63977854709571
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 103.28605964722679,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.9233380724258846
+  },
+  "spectrum-fine-null-extend.json": {
+    "x": 0.1,
+    "mass_ratio": 0.0,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      67,
+      112,
+      122
+    ],
+    "active_parent_cells": 3,
+    "fraction_positive_drain_kept": 0.9999252319353006,
+    "maximum_local_fractional_drain_per_reference_efold": 11.849286162529932,
+    "maximum_local_drain_cell": [
+      3.155555555555556,
+      3.2083333333333335
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      5.697016783963852,
+      10.618832286816716,
+      11.72624077495861
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 50.70534364953199,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.9393867717126575
+  },
+  "spectrum-third-extend.json": {
+    "x": 0.1,
+    "mass_ratio": 0.06,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      97,
+      156,
+      176
+    ],
+    "active_parent_cells": 2,
+    "fraction_positive_drain_kept": 0.9999917337519394,
+    "maximum_local_fractional_drain_per_reference_efold": 108.77766982769211,
+    "maximum_local_drain_cell": [
+      3.1555555555555554,
+      3.1907407407407407
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      56.45887249987189,
+      98.31391036212807,
+      107.73129388113571
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 0.0,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.0
+  },
+  "spectrum-third-m06.json": {
+    "x": 0.05,
+    "mass_ratio": 0.06,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      97,
+      156,
+      176
+    ],
+    "active_parent_cells": 3,
+    "fraction_positive_drain_kept": 0.999988257857441,
+    "maximum_local_fractional_drain_per_reference_efold": 9.55284006992548,
+    "maximum_local_drain_cell": [
+      1.3962962962962961,
+      1.4314814814814814
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      6.456202602702805,
+      9.164154474065969,
+      9.513971510339529
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 250.1195064538957,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.9058521356190177
+  },
+  "spectrum-third-m30.json": {
+    "x": 0.05,
+    "mass_ratio": 0.3,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      97,
+      156,
+      176
+    ],
+    "active_parent_cells": 2,
+    "fraction_positive_drain_kept": 0.9999816909064696,
+    "maximum_local_fractional_drain_per_reference_efold": 11.44989967656855,
+    "maximum_local_drain_cell": [
+      1.2907407407407405,
+      1.3259259259259257
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      9.996995041347404,
+      11.15931874952432,
+      11.420841583864128
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 45.81015971113351,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.9999816909064696
+  },
+  "spectrum-third-null.json": {
+    "x": 0.05,
+    "mass_ratio": 0.0,
+    "snapshot_elastic_rate": 0.0,
+    "cells": [
+      97,
+      156,
+      176
+    ],
+    "active_parent_cells": 3,
+    "fraction_positive_drain_kept": 0.9999857921921284,
+    "maximum_local_fractional_drain_per_reference_efold": 13.648559514142026,
+    "maximum_local_drain_cell": [
+      1.4314814814814814,
+      1.4666666666666666
+    ],
+    "gross_positive_drain_weighted_quantiles_per_reference_efold": [
+      6.375300598148687,
+      12.193907730943359,
+      13.503094335822158
+    ],
+    "max_local_restoration_rate_to_cancel_drain_where_BGK_target_higher": 22.840172755851263,
+    "fraction_of_gross_drain_with_BGK_target_higher": 0.7837479244867975
+  }
+}

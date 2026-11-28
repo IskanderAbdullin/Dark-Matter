@@ -1,0 +1,49 @@
+{
+  "scope": "Instantaneous resolved support of the selected archived dark phase only; quasi-static occupied heavy parent used as the blocking convention. No old exterior interactions, coherent heavy evolution or unknown high tails.",
+  "columns": [
+    "high_inverse_count_times_rest_mass_over_rhoH",
+    "high_inverse_energy_over_rhoH",
+    "direct_tagged_daughter_energy_over_rhoH",
+    "high_quasistatic_heavy_energy_over_rho"
+  ],
+  "cases": [
+    {
+      "snapshot_sha256": "b9941900a4c3bea1b7fc6e734c91377a464b9bfb08b404cd6ff04aa3f0191f35",
+      "endpoint_T_GeV": 0.0073940494651976016,
+      "momentum_cut_GeV": 0.7077920751642245,
+      "represented_max_pair_energy_GeV": 0.8604326593879281,
+      "closure": "Open on represented support.",
+      "orders": [
+        6,
+        10,
+        14
+      ],
+      "normalized_rates": [
+        [
+          5.708656290055262e-33,
+          4.1172681735871254e-32,
+          2.4517847166209944e-32,
+          2.630409119678409e-45
+        ],
+        [
+          5.708656290175532e-33,
+          4.117268173667685e-32,
+          2.45178471665976e-32,
+          2.630409119726201e-45
+        ],
+        [
+          5.708656290175524e-33,
+          4.117268173667679e-32,
+          2.4517847166597565e-32,
+          2.630409119726199e-45
+        ]
+      ],
+      "fine_relative_rate_shift": [
+        -1.4432899320127035e-15,
+        -1.3322676295501878e-15,
+        -1.4432899320127035e-15,
+        -6.661338147750939e-16
+      ]
+    }
+  ]
+}

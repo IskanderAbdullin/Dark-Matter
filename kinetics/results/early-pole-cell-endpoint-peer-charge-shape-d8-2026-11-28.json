@@ -1,0 +1,291 @@
+{
+  "x": 0.05,
+  "fixed_measurement_mass": 0.0008784877046665521,
+  "cold_support_upper": 1e-05,
+  "columns": [
+    "count",
+    "q",
+    "q2",
+    "kinetic_energy",
+    "pressure_numerator"
+  ],
+  "chart_order": [
+    "fine",
+    "third"
+  ],
+  "comparisons": [
+    {
+      "charge_subcells": 1,
+      "scalar_bins": [
+        67,
+        97
+      ],
+      "supports": [
+        [
+          1e-09,
+          25.0
+        ],
+        [
+          1e-09,
+          25.0
+        ]
+      ],
+      "conditional_cold": {
+        "wasserstein1_q": 2.4046147697604504e-07,
+        "total_variation": 0.37577845245468383,
+        "maximum_absolute_cdf_difference": 0.28078564108661463,
+        "means": [
+          3.853669547079272e-06,
+          3.6697260945396593e-06
+        ],
+        "signed_mean_shift": -1.8394345253961263e-07,
+        "transport_over_old_mean": 0.06239805308638692,
+        "absolute_mean_shift_over_transport": 0.7649601709713245
+      },
+      "cold_count_only_wasserstein1_interval": [
+        0.0,
+        1.5259484996414324e-06
+      ],
+      "cold_common_count_only_atom_witness": null,
+      "cold_exact_shared_edge_mass_differences": [
+        {
+          "q": 1.2011244339814313e-07,
+          "third_minus_fine_strict_lower_mass": -1.4464234012884967e-16
+        }
+      ],
+      "cold_count_only_tv_lower_bound": 1.4464234012884967e-16,
+      "full_distribution": {
+        "wasserstein1_q": 6.829618653617138e-07,
+        "total_variation": 0.37577657476103843,
+        "maximum_absolute_cdf_difference": 0.280782355439203,
+        "means": [
+          1.4537777876910215e-05,
+          1.3944310983851052e-05
+        ],
+        "signed_mean_shift": -5.934668930591631e-07,
+        "transport_over_old_mean": 0.04697842209065771,
+        "absolute_mean_shift_over_transport": 0.8689605132562536
+      },
+      "third_relative_moment": [
+        -0.005072899169050404,
+        -0.045688205053473596,
+        -0.06850887252543236,
+        -0.043272235736871334,
+        -0.04330608689928983
+      ],
+      "third_relative_per_particle_moment": [
+        -0.04082239377186703,
+        -0.06375941845729305,
+        -0.0383941059962255,
+        -0.03842812975775578
+      ],
+      "scalar_mass_third_relative": -0.0016936168110871508,
+      "maximum_moment_check": 3.3326367650236197e-16
+    },
+    {
+      "charge_subcells": 2,
+      "scalar_bins": [
+        67,
+        97
+      ],
+      "supports": [
+        [
+          1e-09,
+          25.0
+        ],
+        [
+          1e-09,
+          25.0
+        ]
+      ],
+      "conditional_cold": {
+        "wasserstein1_q": 2.387480479667207e-07,
+        "total_variation": 0.3749063129954606,
+        "maximum_absolute_cdf_difference": 0.2784229522849119,
+        "means": [
+          3.859349022345657e-06,
+          3.6790098447280858e-06
+        ],
+        "signed_mean_shift": -1.803391776175712e-07,
+        "transport_over_old_mean": 0.06186225878622739,
+        "absolute_mean_shift_over_transport": 0.7553535166189457
+      },
+      "cold_count_only_wasserstein1_interval": [
+        0.0,
+        1.531122635045538e-06
+      ],
+      "cold_common_count_only_atom_witness": null,
+      "cold_exact_shared_edge_mass_differences": [
+        {
+          "q": 1.2011244339814313e-07,
+          "third_minus_fine_strict_lower_mass": -1.94196098628505e-15
+        }
+      ],
+      "cold_count_only_tv_lower_bound": 1.94196098628505e-15,
+      "full_distribution": {
+        "wasserstein1_q": 6.003821539876607e-07,
+        "total_variation": 0.3749043705781077,
+        "maximum_absolute_cdf_difference": 0.27841941408115256,
+        "means": [
+          1.4758613947188253e-05,
+          1.4262080737512848e-05
+        ],
+        "signed_mean_shift": -4.965332096754045e-07,
+        "transport_over_old_mean": 0.040680117803477266,
+        "absolute_mean_shift_over_transport": 0.8270285956661021
+      },
+      "third_relative_moment": [
+        -0.014615137175451265,
+        -0.0477670517424047,
+        -0.06852013847597316,
+        -0.04326984998149341,
+        -0.04330804978776048
+      ],
+      "third_relative_per_particle_moment": [
+        -0.03364362069854143,
+        -0.054704515295684875,
+        -0.02907971685692945,
+        -0.029118483239190973
+      ],
+      "scalar_mass_third_relative": -0.004895475958923257,
+      "maximum_moment_check": 3.7651158200827513e-16
+    },
+    {
+      "charge_subcells": 4,
+      "scalar_bins": [
+        67,
+        97
+      ],
+      "supports": [
+        [
+          1e-09,
+          25.0
+        ],
+        [
+          1e-09,
+          25.0
+        ]
+      ],
+      "conditional_cold": {
+        "wasserstein1_q": 2.385329306012185e-07,
+        "total_variation": 0.37510460843237536,
+        "maximum_absolute_cdf_difference": 0.2767669376321725,
+        "means": [
+          3.873182967348473e-06,
+          3.6936983412558214e-06
+        ],
+        "signed_mean_shift": -1.794846260926515e-07,
+        "transport_over_old_mean": 0.06158576359859261,
+        "absolute_mean_shift_over_transport": 0.7524521903129406
+      },
+      "cold_count_only_wasserstein1_interval": [
+        0.0,
+        1.539265462278058e-06
+      ],
+      "cold_common_count_only_atom_witness": null,
+      "cold_exact_shared_edge_mass_differences": [
+        {
+          "q": 1.2011244339814313e-07,
+          "third_minus_fine_strict_lower_mass": -2.8411221106408378e-15
+        }
+      ],
+      "cold_count_only_tv_lower_bound": 2.8411221106408378e-15,
+      "full_distribution": {
+        "wasserstein1_q": 6.710561323807971e-07,
+        "total_variation": 0.3751026463309929,
+        "maximum_absolute_cdf_difference": 0.27676329952007706,
+        "means": [
+          1.5098065544276114e-05,
+          1.4524528965590539e-05
+        ],
+        "signed_mean_shift": -5.735365786855749e-07,
+        "transport_over_old_mean": 0.04444649749419082,
+        "absolute_mean_shift_over_transport": 0.8546775016432101
+      },
+      "third_relative_moment": [
+        -0.008643993089113788,
+        -0.0463030515158811,
+        -0.06867502690778848,
+        -0.04350722031523624,
+        -0.04353895915397332
+      ],
+      "third_relative_per_particle_moment": [
+        -0.0379874214351259,
+        -0.060554466206074964,
+        -0.03516721236678422,
+        -0.035199227947984135
+      ],
+      "scalar_mass_third_relative": -0.0028894753863570877,
+      "maximum_moment_check": 6.41594304880001e-16
+    },
+    {
+      "charge_subcells": 8,
+      "scalar_bins": [
+        67,
+        97
+      ],
+      "supports": [
+        [
+          1e-09,
+          25.0
+        ],
+        [
+          1e-09,
+          25.0
+        ]
+      ],
+      "conditional_cold": {
+        "wasserstein1_q": 2.409449165614523e-07,
+        "total_variation": 0.37680736065678827,
+        "maximum_absolute_cdf_difference": 0.2778694841118189,
+        "means": [
+          3.886214124689181e-06,
+          3.7023428990219674e-06
+        ],
+        "signed_mean_shift": -1.8387122566721353e-07,
+        "transport_over_old_mean": 0.06199990757861884,
+        "absolute_mean_shift_over_transport": 0.7631255653418929
+      },
+      "cold_count_only_wasserstein1_interval": [
+        0.0,
+        1.5438231350674017e-06
+      ],
+      "cold_common_count_only_atom_witness": null,
+      "cold_exact_shared_edge_mass_differences": [
+        {
+          "q": 1.2011244339814313e-07,
+          "third_minus_fine_strict_lower_mass": -5.093461642317214e-16
+        }
+      ],
+      "cold_count_only_tv_lower_bound": 5.093461642317214e-16,
+      "full_distribution": {
+        "wasserstein1_q": 7.408285368035363e-07,
+        "total_variation": 0.3768053877410984,
+        "maximum_absolute_cdf_difference": 0.27786583204508425,
+        "means": [
+          1.5272755010031564e-05,
+          1.4621537188744016e-05
+        ],
+        "signed_mean_shift": -6.512178212875482e-07,
+        "transport_over_old_mean": 0.04850654229161273,
+        "absolute_mean_shift_over_transport": 0.879039870814598
+      },
+      "third_relative_moment": [
+        -0.002716177746461823,
+        -0.04523954681161746,
+        -0.06879809665656333,
+        -0.04370621469803804,
+        -0.04373444930823567
+      ],
+      "third_relative_per_particle_moment": [
+        -0.04263918466968275,
+        -0.06626189800289539,
+        -0.041101676410384425,
+        -0.04112998791967348
+      ],
+      "scalar_mass_third_relative": -0.0009059751926702164,
+      "maximum_moment_check": 5.231265682399369e-16
+    }
+  ],
+  "scope": "Only cross-grid numerical histogram transport and common-mass moments. Narrower number spread does not imply more closely matching spectra."
+}

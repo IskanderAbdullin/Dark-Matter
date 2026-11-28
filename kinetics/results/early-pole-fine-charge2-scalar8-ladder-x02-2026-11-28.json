@@ -1,0 +1,109 @@
+{
+  "grid": "fine",
+  "x": 0.02,
+  "cuts": [
+    1e-06,
+    1e-05,
+    0.0003
+  ],
+  "quantile_levels": [
+    0.1,
+    0.5,
+    0.9,
+    0.999
+  ],
+  "scope": "One matched charge chart. Coarsening TV does not measure intrabin shape.",
+  "rows": [
+    {
+      "scalar_div": 1,
+      "scalar_bins": 67,
+      "total_yield": 1.0219580685885036e-05,
+      "scalar_mass": 0.0002635511934374284,
+      "node_rms_q": 0.0072237268426996615,
+      "mean_excess": 2.4956497682870775e-05,
+      "cut_fractions": [
+        2.1008484692145782e-11,
+        0.9999759868260081,
+        0.9999771571847257
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.8015276736500924e-06,
+        3.94952514659991e-06,
+        4.656021113671663e-06,
+        6.824417093895187e-06
+      ]
+    },
+    {
+      "scalar_div": 2,
+      "scalar_bins": 93,
+      "total_yield": 1.0218189421145235e-05,
+      "scalar_mass": 0.0002635397062439801,
+      "node_rms_q": 0.007224219935812447,
+      "mean_excess": 2.4958481709404018e-05,
+      "cut_fractions": [
+        5.352832777439288e-11,
+        0.9999759931848198,
+        0.9999771540599143
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.9077078228815664e-06,
+        3.606927069647851e-06,
+        4.510428404284737e-06,
+        6.524626086569374e-06
+      ],
+      "yield_change_from_previous": -0.00013613716477844928,
+      "pole_change_from_previous": -4.358619400834929e-05,
+      "native_coarsened_total_variation": 0.07961929772995521,
+      "native_max_signed_cdf_difference": 0.0673667616429718,
+      "native_max_cdf_difference_upper_q": 3.3059994133202632e-06
+    },
+    {
+      "scalar_div": 4,
+      "scalar_bins": 145,
+      "total_yield": 1.0218152024631534e-05,
+      "scalar_mass": 0.0002635393844550805,
+      "node_rms_q": 0.007224233287890942,
+      "mean_excess": 2.4958574821171247e-05,
+      "cut_fractions": [
+        1.1135282630509609e-10,
+        0.9999759887633393,
+        0.9999771539748601
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.927951421892527e-06,
+        3.554057068381703e-06,
+        4.348723523848033e-06,
+        6.248063958842292e-06
+      ],
+      "yield_change_from_previous": -3.6597984398589745e-06,
+      "pole_change_from_previous": -1.2210262514411596e-06,
+      "native_coarsened_total_variation": 0.013129038365005273,
+      "native_max_signed_cdf_difference": 0.008585719458696192,
+      "native_max_cdf_difference_upper_q": 3.3059994133202632e-06
+    },
+    {
+      "scalar_div": 8,
+      "scalar_bins": 249,
+      "total_yield": 1.021814272319787e-05,
+      "scalar_mass": 0.0002635393041973437,
+      "node_rms_q": 0.007224236610258737,
+      "mean_excess": 2.4958598657853637e-05,
+      "cut_fractions": [
+        1.1440166260304539e-10,
+        0.9999759876494132,
+        0.9999771539536649
+      ],
+      "q_quantiles_from_piecewise_constant_cells": [
+        2.9327701424760694e-06,
+        3.5507732831796486e-06,
+        4.3538811028114095e-06,
+        6.238808777691949e-06
+      ],
+      "yield_change_from_previous": -9.102853080200646e-07,
+      "pole_change_from_previous": -3.0453792299045546e-07,
+      "native_coarsened_total_variation": 0.0030481919368233867,
+      "native_max_signed_cdf_difference": 0.0018535413241346308,
+      "native_max_cdf_difference_upper_q": 3.3059994133202632e-06
+    }
+  ]
+}

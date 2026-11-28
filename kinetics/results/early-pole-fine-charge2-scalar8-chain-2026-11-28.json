@@ -1,0 +1,55 @@
+{
+  "grid": "fine",
+  "charge_div": 2,
+  "scalar_div": 8,
+  "cut": 1e-05,
+  "counts": [
+    249,
+    448,
+    488
+  ],
+  "reference_x": 0.005,
+  "validated_chain": [
+    {
+      "x": 0.0075,
+      "scalar_yield": 5.7820454502145374e-08,
+      "gate_temporal_relative_drift": 5.1235953765882414e-05,
+      "max_absolute_continuity": 2.3744451093906174e-16,
+      "source_report_sha256": "4103f879243337a4e89c9f1d2192b1ac99442f7b3ac76ce397887472c6a61489",
+      "uncompressed_state_sha256": "cc557a965e8057a604c3c0f09a606e2b14bd758b6cba802b5004919d8c914e15"
+    },
+    {
+      "x": 0.01,
+      "scalar_yield": 3.4749510285296327e-07,
+      "gate_temporal_relative_drift": 1.243948363205405e-07,
+      "max_absolute_continuity": 2.7137538025664813e-16,
+      "source_report_sha256": "6e3e77cac348ed2e805438a6d82325a999044dbb4a845e70d9e7e3077fb59737",
+      "uncompressed_state_sha256": "3de3320044f2066a3eb542571e3e2a1eae8b8cf6de348dedd0c7226b8a24099a"
+    },
+    {
+      "x": 0.02,
+      "scalar_yield": 1.021814272319787e-05,
+      "gate_temporal_relative_drift": 2.15871473741025e-06,
+      "max_absolute_continuity": 1.685716419696972e-13,
+      "source_report_sha256": "a431ba300abfb7479556e5239b9619ad0de6d8336703e9649a8b42b9cde26a21",
+      "uncompressed_state_sha256": "ce091d078d24bf7c69cd79c56706594d7276b13ca3c47c10c39b75ba4a20f12b"
+    },
+    {
+      "x": 0.04,
+      "scalar_yield": 0.00017320926924833488,
+      "gate_temporal_relative_drift": 0.00012851111820078032,
+      "max_absolute_continuity": 7.20367338236062e-11,
+      "source_report_sha256": "47f3fd01448d2790164667f3e4b214b7356f0de12b93bc19d7bfe1e95712359e",
+      "uncompressed_state_sha256": "85ace134169b2b77813f797a66b65601362f08d12fd778423f3ab41d0e5d7493"
+    },
+    {
+      "x": 0.05,
+      "scalar_yield": 0.00037162721520894346,
+      "gate_temporal_relative_drift": 3.186961979295688e-05,
+      "max_absolute_continuity": 2.7733248382792904e-11,
+      "source_report_sha256": "e63c167dcdf67871e1259dcc4a5ef62304e82f20d3e45d10496e1d171894e6c6",
+      "uncompressed_state_sha256": "34c9bf3096d05ecc3a320e34c6a1d2787d2e4083e84533c95f5524deea628c17"
+    }
+  ],
+  "scope": "All clocks, saved states and reported budgets checked; optional diagnostic, not spatial convergence."
+}
