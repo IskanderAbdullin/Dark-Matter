@@ -19,9 +19,10 @@ EDGES=(0.,16.,18.,20.,22.,24.,26.,28.,30.,40.)
 def measure(c):
     g=c['grid']
     x=c['x_end']
-    if x!=.05 or c['subcells_per_archived_cell']!=4:
-        raise ArithmeticError('Use a four-charge-subcell final state')
-    d=CellChart(load(g)[0],SPECS[g],4,reference_x=c['reference_x'])
+    n=c['subcells_per_archived_cell']
+    if x!=.05 or n not in (4,8):
+        raise ArithmeticError('Use a four- or eight-charge-subcell final state')
+    d=CellChart(load(g)[0],SPECS[g],n,reference_x=c['reference_x'])
     y=np.asarray(c['endpoint_occupation'])
     if c['counts']!=[d.ns,d.nf,d.np] or y.shape!=(d.n,) or not np.all(np.isfinite(y)) or min(y)<0 or max(y[d.ns:])>1:
         raise ArithmeticError('Invalid final state')
