@@ -46,7 +46,7 @@ def full_vertex(p,b,K,m0,m1,e):
              +slash(e)@(slash(b-K)+m1*I)/(s-2*dot(b,K))[...,None,None])
 
 
-def radial(ch,k,w,R,es,c,name,n,az,audit=False):
+def radial(ch,k,w,R,es,c,name,n,az,audit=False,extra_energy_breaks=None):
     P,F=ch
     M,m=P.m,F.m
     T=np.array([es-w,Q*np.sqrt((1-c)*(1+c)),0.,Q*c-k])
@@ -62,7 +62,8 @@ def radial(ch,k,w,R,es,c,name,n,az,audit=False):
     hi=max(P.E[-1],F.E[-1]+t)
     if not lo<hi:
         return np.zeros(3),False,0.
-    ee=np.unique(np.clip(np.r_[lo,hi,P.E,F.E+t],lo,hi))
+    extras=[] if extra_energy_breaks is None else extra_energy_breaks(M,m,T,s,A,v,lo,hi)
+    ee=np.unique(np.clip(np.r_[lo,hi,P.E,F.E+t,extras],lo,hi))
     a,b=ee[:-1],ee[1:]
     c0=(a+b)/2
     ff=np.r_[0.,P.f,0.][np.searchsorted(P.E,c0)]
