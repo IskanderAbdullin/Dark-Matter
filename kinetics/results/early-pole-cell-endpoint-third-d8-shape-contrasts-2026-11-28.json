@@ -1,0 +1,156 @@
+{
+  "grid": "third",
+  "x": 0.05,
+  "fixed_moment_mass": 0.0008769998831215954,
+  "moments": [
+    "count",
+    "q",
+    "q2",
+    "kinetic_energy",
+    "pressure_numerator"
+  ],
+  "cuts": [
+    1e-05,
+    0.0003,
+    0.01,
+    0.1
+  ],
+  "rows": [
+    {
+      "subcells": [
+        1,
+        2
+      ],
+      "cold": {
+        "wasserstein1_q": 9.283750188427221e-09,
+        "total_variation": 0.004627674365078743,
+        "maximum_absolute_cdf_difference": 0.004627674365078743,
+        "means": [
+          3.6697260945396593e-06,
+          3.6790098447280858e-06
+        ],
+        "signed_mean_shift": 9.283750188426488e-09,
+        "transport_over_old_mean": 0.0025298210136829847,
+        "absolute_mean_shift_over_transport": 0.9999999999999211
+      },
+      "full": {
+        "wasserstein1_q": 3.177697536617956e-07,
+        "total_variation": 0.004628092991961957,
+        "maximum_absolute_cdf_difference": 0.004628092991961957,
+        "means": [
+          1.3944310983851052e-05,
+          1.4262080737512848e-05
+        ],
+        "signed_mean_shift": 3.1776975366179576e-07,
+        "transport_over_old_mean": 0.022788487292760874,
+        "absolute_mean_shift_over_transport": 1.0000000000000004
+      },
+      "total_moment_relative_changes": [
+        -0.028247557547327884,
+        -0.006102789360785454,
+        0.0005569649821062228,
+        0.0009092489914812596,
+        0.0008913096957636757
+      ],
+      "above_point01_moment_relative_changes": [
+        0.001623075535618801,
+        0.0009282698783263932,
+        0.0005569795526818577,
+        0.000927740811982769,
+        0.0009282686861875611
+      ],
+      "gap_relative_change": -0.0095060903815255
+    },
+    {
+      "subcells": [
+        2,
+        4
+      ],
+      "cold": {
+        "wasserstein1_q": 1.4688496527735219e-08,
+        "total_variation": 0.007470980945832262,
+        "maximum_absolute_cdf_difference": 0.007470980945832262,
+        "means": [
+          3.6790098447280858e-06,
+          3.6936983412558214e-06
+        ],
+        "signed_mean_shift": 1.468849652773565e-08,
+        "transport_over_old_mean": 0.0039925135152283995,
+        "absolute_mean_shift_over_transport": 1.0000000000000293
+      },
+      "full": {
+        "wasserstein1_q": 2.6244822807769256e-07,
+        "total_variation": 0.007470989199081013,
+        "maximum_absolute_cdf_difference": 0.007470989199081013,
+        "means": [
+          1.4262080737512848e-05,
+          1.4524528965590539e-05
+        ],
+        "signed_mean_shift": 2.62448228077691e-07,
+        "transport_over_old_mean": 0.018401818984756405,
+        "absolute_mean_shift_over_transport": 0.9999999999999939
+      },
+      "total_moment_relative_changes": [
+        -0.022222187324863696,
+        -0.004229297008705113,
+        0.0003948521256789128,
+        0.0006567955010279292,
+        0.0006460358179647407
+      ],
+      "above_point01_moment_relative_changes": [
+        0.0011604943652732125,
+        0.000668316488595222,
+        0.0003948608726804803,
+        0.0006679414232340086,
+        0.0006683156749969221
+      ],
+      "gap_relative_change": -0.0074630948050521395
+    },
+    {
+      "subcells": [
+        4,
+        8
+      ],
+      "cold": {
+        "wasserstein1_q": 8.644557766145974e-09,
+        "total_variation": 0.004586459592863079,
+        "maximum_absolute_cdf_difference": 0.004586459592863079,
+        "means": [
+          3.6936983412558214e-06,
+          3.7023428990219674e-06
+        ],
+        "signed_mean_shift": 8.644557766145923e-09,
+        "transport_over_old_mean": 0.0023403529382983964,
+        "absolute_mean_shift_over_transport": 0.9999999999999941
+      },
+      "full": {
+        "wasserstein1_q": 9.70082231534739e-08,
+        "total_variation": 0.004586438997443237,
+        "maximum_absolute_cdf_difference": 0.004586438997443237,
+        "means": [
+          1.4524528965590539e-05,
+          1.4621537188744016e-05
+        ],
+        "signed_mean_shift": 9.700822315347724e-08,
+        "transport_over_old_mean": 0.006678923866191604,
+        "absolute_mean_shift_over_transport": 1.0000000000000344
+      },
+      "total_moment_relative_changes": [
+        -0.007861440213451143,
+        -0.0012350223079239386,
+        0.00013685344075620165,
+        0.0002302542424772458,
+        0.0002278898401542051
+      ],
+      "above_point01_moment_relative_changes": [
+        0.00040513993753976685,
+        0.00023288087612316488,
+        0.0001368553676459605,
+        0.00023274954131236036,
+        0.00023288059098414138
+      ],
+      "gap_relative_change": -0.002627433694791015
+    }
+  ],
+  "scope": "Charge refinement sensitivity on archived scalar histograms; not a continuum or cosmological prediction."
+}
