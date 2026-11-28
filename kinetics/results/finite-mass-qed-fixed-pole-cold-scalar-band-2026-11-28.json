@@ -1,0 +1,86 @@
+[
+  {
+    "grid": "fine",
+    "region": "cold",
+    "q_range": [
+      1e-06,
+      1.5e-05
+    ],
+    "panels": 31,
+    "pole_k": 0.0015,
+    "pole_omega": 0.0023041975951177784,
+    "integrated_number_scalar_energy_and_excess_coefficients": [
+      [
+        4.7163301986306176e-07,
+        1.3806014387388352e-15,
+        4.716330184824603e-07
+      ],
+      [
+        4.1129470630243905e-10,
+        1.2039744334071716e-18,
+        4.1129470509846464e-10
+      ],
+      [
+        4.3303472358311616e-15,
+        1.2749494415908156e-23,
+        4.330347223081667e-15
+      ]
+    ],
+    "number_and_scalar_energy_threshold": [
+      2.9272790170228058e-09,
+      2.9272791953860387e-09
+    ],
+    "relative_scalar_heat_neutral_shift": 6.093140833608198e-08,
+    "mesh_discrepancy_of_shift": 6.950964123405602e-20,
+    "whole_coefficient_resolution_max_relative": 1.1812772982011666e-13,
+    "coarse_to_intermediate_max_relative": 5.3505626937622175e-05,
+    "all_centered_threshold_shifts": [
+      6.087586174368768e-08,
+      6.093140833615149e-08,
+      6.093140833608198e-08
+    ],
+    "common_prefactor_excluding_g2y2_and_dk": 1.148823155760956e-10
+  },
+  {
+    "grid": "third",
+    "region": "cold",
+    "q_range": [
+      1e-06,
+      1.5e-05
+    ],
+    "panels": 48,
+    "pole_k": 0.0015,
+    "pole_omega": 0.002305223782122649,
+    "integrated_number_scalar_energy_and_excess_coefficients": [
+      [
+        6.23522513571527e-08,
+        1.481269928761722e-16,
+        6.235225120902571e-08
+      ],
+      [
+        5.4074975379213426e-11,
+        1.2846310693062992e-19,
+        5.407497525075031e-11
+      ],
+      [
+        5.186774203380967e-16,
+        1.2392625503232592e-24,
+        5.18677419098834e-16
+      ]
+    ],
+    "number_and_scalar_energy_threshold": [
+      2.375647871631783e-09,
+      2.375648002332603e-09
+    ],
+    "relative_scalar_heat_neutral_shift": 5.5016916026359283e-08,
+    "mesh_discrepancy_of_shift": 4.253031837502647e-20,
+    "whole_coefficient_resolution_max_relative": 1.7785772854495008e-13,
+    "coarse_to_intermediate_max_relative": 4.765815260987516e-06,
+    "all_centered_threshold_shifts": [
+      5.501150472014042e-08,
+      5.5016916026401814e-08,
+      5.5016916026359283e-08
+    ],
+    "common_prefactor_excluding_g2y2_and_dk": 1.148823155760956e-10
+  }
+]
