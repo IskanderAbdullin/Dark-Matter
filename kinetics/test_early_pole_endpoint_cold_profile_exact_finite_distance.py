@@ -27,6 +27,12 @@ class JointProfileLP(unittest.TestCase):
         self.assertAlmostEqual(r['minimum_finite_common_bin_TV'],0.,places=10)
         self.assertAlmostEqual(r['direct_witness_TV'],0.,places=10)
 
+    def test_inverse_style_zero_offset_retains_uniformly_positive_total(self):
+        c=dict(offset=np.zeros(2),base=np.array([.35,.65]),total=1.,
+               count_only=[np.array([[.3,.7],[.4,.6]])])
+        r=solve(fixed([.8,.2]),c,'count_only')
+        self.assertAlmostEqual(r['minimum_finite_common_bin_TV'],.4,places=10)
+
 
 if __name__=='__main__':
     unittest.main()

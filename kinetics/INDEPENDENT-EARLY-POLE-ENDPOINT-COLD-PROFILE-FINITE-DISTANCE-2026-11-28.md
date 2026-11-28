@@ -22,3 +22,15 @@ python -W error early_pole_endpoint_cold_profile_exact_finite_distance.py \
  --states "$s"{2,4}-x05-state-$d.json.gz --levels 2 4 \
  --archive results/finite-mass-qed-fixed-pole-cold-scalar-band-$d.json
 ```
+
+## Independent inverse and excess projections
+
+Repeat the very same normalized finite minimization for inverse number and forward excess. The inverse has no spontaneous offset, so verify a strictly positive lower total from the feasible nonnegative per-shell vertices before normalizing. The forward excess retains its spontaneous term.
+
+| Normalized observable | Minimum with counts only | Minimum with counts and means | Original step-shape TV |
+| --- | ---: | ---: | ---: |
+| Forward number | 0.883307% | 2.022556% | 2.024020% |
+| Inverse number | 0.796710% | 2.020395% | 2.022563% |
+| Forward excess | 0.151856% | 1.871110% | 1.907637% |
+
+Thus count-only gives less protection for the **shape** of forward excess than for number. A known in-band mean substantially constrains all three original profile differences, but the norms are distinct diagnostics, not physical errors. The forward-number receipt is unchanged. Use the preceding CLI with `--observable inverse_number` or `--observable forward_excess` to reproduce the other two.

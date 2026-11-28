@@ -26,7 +26,7 @@ def as_system(card,mode):
         k=l
     eq[-1]=qs.sum(axis=0)
     target=np.r_[np.zeros(len(V)),1.]
-    if np.min(qs)<0 or np.min(qs[:,0])<0 or not qs[:,0].sum()>0:
+    if np.min(qs)<0 or not qs[:,0].sum()+fsum(min(v.sum(axis=1))/card['total'] for v in V)>0:
         raise ArithmeticError('Need a strictly positive total forward coefficient')
     return qs,eq,target
 
@@ -67,7 +67,7 @@ def solve(a,b,mode):
                 chart_total_response_relative_to_separate_original=[1/w[0],1/w[k]])
 
 
-def run(left,right,states,archive,levels):
+def run(left,right,states,archive,levels,observable='forward_number'):
     if tuple(levels) not in ((2,4),(4,8),(8,16)):
         raise ArithmeticError('The accepted pair must be independent and adjacent')
     entries=[fit_state(p,archive,n,pair) for p,n,pair in zip(states,levels,(left,right),strict=True)]
@@ -77,8 +77,8 @@ def run(left,right,states,archive,levels):
         common=np.intersect1d(a[0],b[0])
         if len(common)<5 or [common[0],common[-1]]!=[1e-6,1.5e-5]:
             raise ArithmeticError('Need complete exactly shared cold band edges')
-        p,q=[build(d,e,common,raw=True) for d,e in zip((a,b),entries,strict=True)]
-        x,y=[build(d,e,common) for d,e in zip((a,b),entries,strict=True)]
+        p,q=[build(d,e,common,raw=True,observable=observable) for d,e in zip((a,b),entries,strict=True)]
+        x,y=[build(d,e,common,observable=observable) for d,e in zip((a,b),entries,strict=True)]
         outer=compare(x,y,common)
         r={}
         for mode in ('count_only','count_and_mean_excess'):
@@ -93,7 +93,8 @@ def run(left,right,states,archive,levels):
     err=max(abs(a[m]['minimum_finite_common_bin_TV']-b[m]['minimum_finite_common_bin_TV']) for m in b)
     if u!=v or err>2e-9:
         raise ArithmeticError('Finite optima disagree across the two accepted panel meshes')
-    return dict(grid='fine',x=.05,charge_div=2,scalar_levels=levels,common_q_edges=v,
+    tag={} if observable=='forward_number' else dict(observable=observable)
+    return dict(grid='fine',x=.05,charge_div=2,scalar_levels=levels,**tag,common_q_edges=v,
                 **b,paired_mesh_absolute_optimum_defect=err,
                 scope='Numerically resolved minimum on finite, conditional panel variables and exact common coarse q bins. Not the physical or continuum profile distance; no directed rounding.')
 
@@ -104,5 +105,6 @@ if __name__=='__main__':
         p.add_argument('--'+k,nargs=2,type=Path,required=True)
     p.add_argument('--levels',nargs=2,type=int,required=True)
     p.add_argument('--archive',type=Path,required=True)
+    p.add_argument('--observable',choices=('forward_number','inverse_number','forward_excess'),default='forward_number')
     a=p.parse_args()
-    print(json.dumps(run(a.left,a.right,a.states,a.archive,a.levels),indent=2,allow_nan=False))
+    print(json.dumps(run(a.left,a.right,a.states,a.archive,a.levels,a.observable),indent=2,allow_nan=False))

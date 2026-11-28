@@ -17,10 +17,12 @@ from early_pole_endpoint_stencil_remap_pilot import SPECS,load
 
 def shares(offset,vertices,base):
     const=fsum(offset)
-    if np.min(base)<0 or not const>0 or any(np.min(a)<0 for a in vertices):
+    if np.min(base)<0 or const<0 or any(np.min(a)<0 for a in vertices):
         raise ArithmeticError('Need positive finite panel totals')
     totals=[a.sum(axis=1) for a in vertices]
     S=fsum(base)
+    if min(S,const+fsum(min(z) for z in totals))<=0:
+        raise ArithmeticError('No uniform positive band total for normalization')
     results=[]
     for j,b in enumerate(base):
         limits=[]
@@ -55,7 +57,7 @@ def geometry(path):
     return e,H
 
 
-def build(book,pop,common,*,raw=False):
+def build(book,pop,common,*,raw=False,observable='forward_number'):
     (e,z),(d,y,m,_)=book,pop
     a,b=e[:-1],e[1:]
     ix=np.searchsorted(d.ds.ed,(a+b)/2)-1
@@ -71,12 +73,20 @@ def build(book,pop,common,*,raw=False):
         raise ArithmeticError('The within-panel conditioning means did not close')
     U=[]; W=[]
     total=len(common)-1
-    # Preserve the complete gross number profile, including spontaneous A.
-    A=z[:,0,0]/(1+f)
-    C=np.bincount(kk,weights=A,minlength=total)
-    T=np.bincount(kk,weights=z[:,0,0],minlength=total)
+    fields={'forward_number':(0,0),'inverse_number':(0,1),'forward_excess':(2,0)}
+    i,j=fields[observable]
+    h=z[:,i,j]
+    if j==0: # Spontaneous and stimulated forward share the same kernel.
+        response=h/(1+f)
+        C=np.bincount(kk,weights=response,minlength=total)
+    else:  # Inverse weight is strictly proportional to the scalar occupation.
+        if np.any((f==0)&(h!=0)):
+            raise ArithmeticError('Unphysical inverse contribution in an empty scalar cell')
+        response=np.divide(h,f,out=np.zeros_like(f),where=f>0)
+        C=np.zeros(total)
+    T=np.bincount(kk,weights=h,minlength=total)
     P=np.zeros((len(f),total))
-    P[np.arange(len(f)),kk]=A/V
+    P[np.arange(len(f)),kk]=response/V
     if np.max(abs((C+(V*f)@P-T)/np.maximum(T,1e-100)))>4e-14:
         raise ArithmeticError('Original profile fails panel normalization')
     for j in np.unique(ix):
