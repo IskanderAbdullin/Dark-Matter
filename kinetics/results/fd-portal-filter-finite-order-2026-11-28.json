@@ -1,0 +1,269 @@
+{
+  "rows": [
+    {
+      "T_SM": 0.05,
+      "initial_forces": [
+        0.6,
+        0.16
+      ],
+      "local_time": 5.761601313413407e+22,
+      "steps": [
+        {
+          "steps": 2,
+          "filtered_force": [
+            0.5045955029535383,
+            0.14471284852609434
+          ],
+          "unfiltered_force": [
+            0.5044387249561219,
+            0.14468040550820863
+          ],
+          "filtered_moment_error": 0.00010273535798083883,
+          "unfiltered_moment_error": 8.776627114186874e-05,
+          "maximum_entropy_identity_error": 9.908851430747433e-16,
+          "step_entropy_rate_ratio_range": [
+            0.9976972988815791,
+            0.998072598646935
+          ]
+        },
+        {
+          "steps": 4,
+          "filtered_force": [
+            0.5045385298576791,
+            0.14469919688595767
+          ],
+          "unfiltered_force": [
+            0.5044993890660202,
+            0.14469109156544185
+          ],
+          "filtered_moment_error": 2.5668020146413118e-05,
+          "unfiltered_moment_error": 2.1915670374635997e-05,
+          "maximum_entropy_identity_error": 2.929276291901795e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9993964477589349,
+            0.9995380014475744
+          ]
+        },
+        {
+          "steps": 8,
+          "filtered_force": [
+            0.5045243112146797,
+            0.14469578519963788
+          ],
+          "unfiltered_force": [
+            0.5045145293856225,
+            0.14469375920988367
+          ],
+          "filtered_moment_error": 6.416006953640551e-06,
+          "unfiltered_moment_error": 5.4773009756468705e-06,
+          "maximum_entropy_identity_error": 3.243114699971633e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9998454099763622,
+            0.9998868486638686
+          ]
+        },
+        {
+          "steps": 16,
+          "filtered_force": [
+            0.5045207581069585,
+            0.14469493235564565
+          ],
+          "unfiltered_force": [
+            0.5045183128604429,
+            0.14469442587949172
+          ],
+          "filtered_moment_error": 1.6039392095133253e-06,
+          "unfiltered_moment_error": 1.3692242389553994e-06,
+          "maximum_entropy_identity_error": 4.335510885563015e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9999608754318839,
+            0.999971997737918
+          ]
+        }
+      ],
+      "filtered_error_halving_ratios": [
+        4.002465223060658,
+        4.000622245561727,
+        4.000155938320958
+      ],
+      "independent_mesh_difference_in_eight_step_forces": 3.3306690738754696e-15
+    },
+    {
+      "T_SM": 0.3,
+      "initial_forces": [
+        -1.5,
+        0.16
+      ],
+      "local_time": 6.704064546574076e+19,
+      "steps": [
+        {
+          "steps": 2,
+          "filtered_force": [
+            -1.2265833685949086,
+            0.1253461352941646
+          ],
+          "unfiltered_force": [
+            -1.2276044246470093,
+            0.12510697763767123
+          ],
+          "filtered_moment_error": 0.0006030382521808201,
+          "unfiltered_moment_error": 0.0007596777859692907,
+          "maximum_entropy_identity_error": 1.0565579381837487e-15,
+          "step_entropy_rate_ratio_range": [
+            0.992748237028083,
+            0.9958290635666897
+          ]
+        },
+        {
+          "steps": 4,
+          "filtered_force": [
+            -1.2270613605572218,
+            0.125280677929297
+          ],
+          "unfiltered_force": [
+            -1.2273102208902653,
+            0.12522219637443535
+          ],
+          "filtered_moment_error": 0.00014880227037418375,
+          "unfiltered_moment_error": 0.00018466744373613655,
+          "maximum_entropy_identity_error": 4.1352233794929744e-16,
+          "step_entropy_rate_ratio_range": [
+            0.997889174946645,
+            0.9990800945231906
+          ]
+        },
+        {
+          "steps": 8,
+          "filtered_force": [
+            -1.2271800870347942,
+            0.12526472785948797
+          ],
+          "unfiltered_force": [
+            -1.2272419192577673,
+            0.12525018692668657
+          ],
+          "filtered_moment_error": 3.7077592845151616e-05,
+          "unfiltered_moment_error": 4.585430728704295e-05,
+          "maximum_entropy_identity_error": 1.0135706585393707e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9994251493035385,
+            0.9997821891950452
+          ]
+        },
+        {
+          "steps": 16,
+          "filtered_force": [
+            -1.2272097213752158,
+            0.1252607665687243
+          ],
+          "unfiltered_force": [
+            -1.227225155760687,
+            0.12525713626824475
+          ],
+          "filtered_moment_error": 9.26170300702535e-06,
+          "unfiltered_moment_error": 1.14442735793406e-05,
+          "maximum_entropy_identity_error": 1.3584882711328451e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9998496209630303,
+            0.9999469007740865
+          ]
+        }
+      ],
+      "filtered_error_halving_ratios": [
+        4.052614591594588,
+        4.013266745649633,
+        4.0033234511003934
+      ],
+      "independent_mesh_difference_in_eight_step_forces": 8.625633540759736e-11
+    },
+    {
+      "T_SM": 0.6882487043,
+      "initial_forces": [
+        1.8,
+        -0.16
+      ],
+      "local_time": 1210014303834219.0,
+      "steps": [
+        {
+          "steps": 2,
+          "filtered_force": [
+            1.5771741035242863,
+            -0.11266654233314131
+          ],
+          "unfiltered_force": [
+            1.5749117455847232,
+            -0.11217803538876593
+          ],
+          "filtered_moment_error": 0.00023945516836554684,
+          "unfiltered_moment_error": 0.0011536125987017783,
+          "maximum_entropy_identity_error": 8.993501716575684e-16,
+          "step_entropy_rate_ratio_range": [
+            0.9824634407340245,
+            0.9847186977261757
+          ]
+        },
+        {
+          "steps": 4,
+          "filtered_force": [
+            1.5776036113503633,
+            -0.11276137305984746
+          ],
+          "unfiltered_force": [
+            1.5770487869589958,
+            -0.11264158776298103
+          ],
+          "filtered_moment_error": 5.798731226448673e-05,
+          "unfiltered_moment_error": 0.0002818775149747528,
+          "maximum_entropy_identity_error": 1.2155198579627077e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9955656356598319,
+            0.9963403197101063
+          ]
+        },
+        {
+          "steps": 8,
+          "filtered_force": [
+            1.5777066675618665,
+            -0.11278414574343
+          ],
+          "unfiltered_force": [
+            1.5775686070503874,
+            -0.11275433984509728
+          ],
+          "filtered_moment_error": 1.4381721040211067e-05,
+          "unfiltered_moment_error": 7.007561428042924e-05,
+          "maximum_entropy_identity_error": 1.3676525471585861e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9988794485146638,
+            0.9991141505974547
+          ]
+        },
+        {
+          "steps": 16,
+          "filtered_force": [
+            1.577732166621564,
+            -0.1127897815812742
+          ],
+          "unfiltered_force": [
+            1.5776976914324958,
+            -0.11278233879420103
+          ],
+          "filtered_moment_error": 3.5882688451414193e-06,
+          "unfiltered_moment_error": 1.7494505386872182e-05,
+          "maximum_entropy_identity_error": 1.3783219279644262e-15,
+          "step_entropy_rate_ratio_range": [
+            0.9997191163024705,
+            0.9997826940452451
+          ]
+        }
+      ],
+      "filtered_error_halving_ratios": [
+        4.129440717537736,
+        4.032014812577376,
+        4.007983141977831
+      ],
+      "independent_mesh_difference_in_eight_step_forces": 2.496862716583337e-10
+    }
+  ],
+  "scope": "Fixed visible reservoir finite-displacement temporal refinement. The exact target is the unfiltered moment ODE, not a cosmological trajectory."
+}
