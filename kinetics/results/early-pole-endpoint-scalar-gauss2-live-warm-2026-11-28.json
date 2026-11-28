@@ -1,0 +1,60 @@
+{
+  "grid": "fine",
+  "x": 0.05,
+  "chart": {
+    "charge_div": 2,
+    "scalar_div": 4,
+    "cut": 1e-05
+  },
+  "gauss_floor": 0.01,
+  "gauss_shells": 22,
+  "old_single": {
+    "scalar_nodes": 145,
+    "initial_gap": 0.0008731829968237441,
+    "thermal_affine_relative_defect": 4.34485530829754e-15,
+    "event_max_energy_projection": 4.02596611079808e-16,
+    "event_scalar_gain": 0.06016872045562604,
+    "event_pair_absolute_defect": 9.71445146547012e-17,
+    "event_energy_absolute_defect": 2.2786016312362377e-16,
+    "short_live_arms": [
+      {
+        "steps": 32,
+        "scalar_number_gain": 6.319830980191848e-08,
+        "max_pair_error": 6.858214015681256e-18,
+        "max_continuity": 2.622483736024952e-17
+      },
+      {
+        "steps": 64,
+        "scalar_number_gain": 6.31983129285407e-08,
+        "max_pair_error": 1.4749384710539132e-17,
+        "max_continuity": 6.777549099424371e-17
+      }
+    ]
+  },
+  "new_gauss2": {
+    "scalar_nodes": 167,
+    "initial_gap": 0.0008731829965961239,
+    "thermal_affine_relative_defect": 4.686868833269616e-15,
+    "event_max_energy_projection": 4.265555434952702e-16,
+    "event_scalar_gain": 0.06016870025493475,
+    "event_pair_absolute_defect": 2.0816681711721685e-17,
+    "event_energy_absolute_defect": 3.358682449807266e-18,
+    "short_live_arms": [
+      {
+        "steps": 32,
+        "scalar_number_gain": 6.319828854396648e-08,
+        "max_pair_error": 7.583062460294124e-18,
+        "max_continuity": 4.132274221417868e-17
+      },
+      {
+        "steps": 64,
+        "scalar_number_gain": 6.319829167069713e-08,
+        "max_pair_error": 2.886370646887435e-17,
+        "max_continuity": 1.4417642436949637e-16
+      }
+    ]
+  },
+  "max_legacy_volume_roundoff_renormalization": 9.658940314238862e-14,
+  "relative_change_in_fine_short_gain": -3.363672634870696e-07,
+  "scope": "Independent scalar nodal occupations in a short local history; no whole trajectory or physical distribution."
+}
