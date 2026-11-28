@@ -1,0 +1,114 @@
+{
+  "source_sha256": "90a58669c6781a78feba04c90f2b51fe1c094018437b8fe8f293971033f1578a",
+  "columns": [
+    "mean_q",
+    "RMS_q",
+    "mean_speed_at_common_mass"
+  ],
+  "mass": 0.0008729364825319565,
+  "response_thresholds": {
+    "forward_number": [
+      {
+        "outer_q_cap": 0.0003,
+        "max_equal_cap_per_chart": [
+          4.6934856920857774e-05,
+          2.1241840648982443e-06,
+          4.962587654479295e-05
+        ]
+      },
+      {
+        "outer_q_cap": 0.0015,
+        "max_equal_cap_per_chart": [
+          9.387323858333282e-06,
+          8.496753586314804e-08,
+          1.8661906628055437e-05
+        ]
+      },
+      {
+        "outer_q_cap": 0.015,
+        "max_equal_cap_per_chart": [
+          9.387403168667643e-07,
+          8.496754301043598e-10,
+          1.6156740536490886e-05
+        ]
+      },
+      {
+        "outer_q_cap": null,
+        "max_equal_cap_per_chart": [
+          0.0,
+          0.0,
+          1.6129450878371467e-05
+        ]
+      }
+    ],
+    "inverse_number": [
+      {
+        "outer_q_cap": 0.0003,
+        "max_equal_cap_per_chart": [
+          4.670043488558897e-05,
+          2.0695888036414383e-06,
+          4.937812251492082e-05
+        ]
+      },
+      {
+        "outer_q_cap": 0.0015,
+        "max_equal_cap_per_chart": [
+          9.340435939054092e-06,
+          8.278371662078043e-08,
+          1.8568735376476878e-05
+        ]
+      },
+      {
+        "outer_q_cap": 0.015,
+        "max_equal_cap_per_chart": [
+          9.340514459083341e-07,
+          8.278372340539328e-10,
+          1.6076076351442926e-05
+        ]
+      },
+      {
+        "outer_q_cap": null,
+        "max_equal_cap_per_chart": [
+          0.0,
+          0.0,
+          1.6048922937555343e-05
+        ]
+      }
+    ],
+    "forward_excess": [
+      {
+        "outer_q_cap": 0.0003,
+        "max_equal_cap_per_chart": [
+          0.00010511562936835222,
+          2.4978499253135277e-06,
+          0.00011114683573659235
+        ]
+      },
+      {
+        "outer_q_cap": 0.0015,
+        "max_equal_cap_per_chart": [
+          2.1024893909635015e-05,
+          9.991423660047878e-08,
+          4.179858659245597e-05
+        ]
+      },
+      {
+        "outer_q_cap": 0.015,
+        "max_equal_cap_per_chart": [
+          2.1025291758710796e-06,
+          9.99142464835059e-10,
+          3.618767521172065e-05
+        ]
+      },
+      {
+        "outer_q_cap": null,
+        "max_equal_cap_per_chart": [
+          0.0,
+          0.0,
+          3.6126553382476e-05
+        ]
+      }
+    ]
+  },
+  "scope": "Each chart may place an independent unknown fraction of its total normalized response outside the retained support. Thresholds are conditional sharp suprema from endpoint witnesses, not estimates of how much exterior response exists."
+}
