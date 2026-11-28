@@ -1,12 +1,14 @@
 # An imposed expanded clock isolates the effect of velocity rescaling
 
-This extends the frozen ballistic stress test to an **imposed** conformal interval with a linear scale-factor clock. At each momentum, average the free speed (q/sqrt{q^2+(M a)^2}) uniformly over (ain[1,A]). The exact average is
-[
- \bar v(q)=\frac{q[\operatorname{asinh}(MA/q)-\operatorname{asinh}(M/q)]}{M(A-1)}.
-]
+This extends the frozen ballistic stress test to an **imposed** conformal interval with a linear scale-factor clock. At each momentum, average the free speed $q/\sqrt{q^2+(M a)^2}$ uniformly over $a\in[1,A]$. The exact average is
+
+$$
+\bar v(q)=\frac{q[\operatorname{asinh}(MA/q)-\operatorname{asinh}(M/q)]}{M(A-1)}.
+$$
+
 An independent numerical clock integral checks this on each chart to 5.9e-15 relative. No background parameters are fitted. Use the same scalar distributions and common initial formal measurement mass as the original ballistic test.
 
-The counterfactual equal-rms distance uses a chart-specific phase (b=u/sqrt{\langle \bar v^2\rangle}). For G3 and G4 evaluate each distribution at **both** chosen phases. Averaging the two routes through this 2×2 table exactly decomposes the difference into a fixed-phase shape term and a phase-rescaling term. The numbers at (u=1) are:
+The counterfactual equal-rms distance uses a chart-specific phase $b=u/\sqrt{\langle \bar v^2\rangle}$. For G3 and G4 evaluate each distribution at **both** chosen phases. Averaging the two routes through this 2×2 table exactly decomposes the difference into a fixed-phase shape term and a phase-rescaling term. The numbers at $u=1$ are:
 
 | A | G4−G3 equal-rms loss | Fixed-phase part | Phase-rescaling part |
 | ---: | ---: | ---: | ---: |
