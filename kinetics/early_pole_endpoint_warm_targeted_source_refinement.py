@@ -15,11 +15,11 @@ PARENTS=(3.9636789434531003,5.728841112042199)
 
 
 class Targeted(WarmGauss):
-    def __init__(self,bundle):
+    def __init__(self,bundle,parents=PARENTS):
         super().__init__(bundle,4)
         edges=self.ds.ed
-        i=np.searchsorted(edges,PARENTS)
-        if list(edges[i])!=list(PARENTS) or np.any(self.repeats[i]!=4):
+        i=np.searchsorted(edges,parents)
+        if np.any(i>=len(self.repeats)) or len(set(i))!=len(parents) or list(edges[i])!=list(parents) or np.any(self.repeats[i]!=4):
             raise ArithmeticError('Expected exact predeclared warm parent boundaries')
         target=set(i.tolist())
         start=np.r_[0,np.cumsum(self.repeats)]
